@@ -8,232 +8,232 @@
             "implemented-requirements": [
               {
                 "control-id": "bc-1-1",
-                "description": "Component capability addressing control bc-1-1 (Control BC.1.1).",
+                "description": "Component capability addressing control bc-1-1 (Severity-Based Incident Response Planning (Planification de l'intervention selon la gravité de l'incident)).",
                 "uuid": "84d530c1-5fee-54c2-9e6f-08a75c970bd9"
               },
               {
                 "control-id": "bc-1-2",
-                "description": "Component capability addressing control bc-1-2 (Control BC.1.2).",
+                "description": "Component capability addressing control bc-1-2 (Written Incident Response Responsibilities and Hard-Copy Availability (Plan écrit des responsabilités d'intervention et copie papier)).",
                 "uuid": "611dab2a-e2f4-5921-8440-66399c04a77f"
               },
               {
                 "control-id": "bc-1-3",
-                "description": "Component capability addressing control bc-1-3 (Control BC.1.3).",
+                "description": "Component capability addressing control bc-1-3 (Cyber Security Insurance Coverage Evaluation (Évaluation de la couverture d'assurance cybersécurité)).",
                 "uuid": "40c80f59-9be3-5bbf-a4a9-db32907b2112"
               },
               {
                 "control-id": "bc-10-1",
-                "description": "Component capability addressing control bc-10-1 (Control BC.10.1).",
+                "description": "Component capability addressing control bc-10-1 (Cloud Service Provider SOC 3 Trust Services Attestation (Attestation SOC 3 SSAE 18 des fournisseurs de services infonuagiques)).",
                 "uuid": "b3da8ad9-92dd-53de-97e6-76103fcdf332"
               },
               {
                 "control-id": "bc-10-2",
-                "description": "Component capability addressing control bc-10-2 (Control BC.10.2).",
+                "description": "Component capability addressing control bc-10-2 (Outsourced IT Provider Sensitive Information Handling Evaluation (Évaluation du traitement des renseignements sensibles par les fournisseurs TI impartis)).",
                 "uuid": "03b09eb8-def7-54dc-8111-952248b1faeb"
               },
               {
                 "control-id": "bc-10-3",
-                "description": "Component capability addressing control bc-10-3 (Control BC.10.3).",
+                "description": "Component capability addressing control bc-10-3 (Data Residency and Legal Jurisdiction Assessment (Évaluation des juridictions légales d'hébergement des données)).",
                 "uuid": "924c316a-8b5a-580b-b140-54ae47406318"
               },
               {
                 "control-id": "bc-10-4",
-                "description": "Component capability addressing control bc-10-4 (Control BC.10.4).",
+                "description": "Component capability addressing control bc-10-4 (Encrypted Communication with Cloud Services (Communications chiffrées avec les services et applications infonuagiques)).",
                 "uuid": "92fefd59-226c-59ad-b4d8-ddac2998c6c7"
               },
               {
                 "control-id": "bc-10-5",
-                "description": "Component capability addressing control bc-10-5 (Control BC.10.5).",
+                "description": "Component capability addressing control bc-10-5 (Separate Cloud Administrative Accounts with Two-Factor Authentication (Comptes administrateurs infonuagiques distincts avec authentification à deux facteurs)).",
                 "uuid": "52301a07-fe6a-5582-852a-3780b9cd3e57"
               },
               {
                 "control-id": "bc-11-1",
-                "description": "Component capability addressing control bc-11-1 (Control BC.11.1).",
+                "description": "Component capability addressing control bc-11-1 (OWASP Top 10 Web Vulnerability Mitigation (Atténuation des 10 principales vulnérabilités Web de l'OWASP)).",
                 "uuid": "6ac24c57-7ea9-51e4-ab27-f97f50c924bf"
               },
               {
                 "control-id": "bc-11-2",
-                "description": "Component capability addressing control bc-11-2 (Control BC.11.2).",
+                "description": "Component capability addressing control bc-11-2 (OWASP ASVS Verification Level Determination (Détermination du niveau de vérification de sécurité des applications ASVS)).",
                 "uuid": "3291c7ae-09d7-59f6-9f0a-bb2f0b32ce42"
               },
               {
                 "control-id": "bc-12-1",
-                "description": "Component capability addressing control bc-12-1 (Control BC.12.1).",
+                "description": "Component capability addressing control bc-12-1 (Least Privilege Account Provisioning and Admin Restriction (Attribution des privilèges minimaux et restriction des droits d'administrateur)).",
                 "uuid": "8b5f395a-5046-5eff-9e9f-d6f7d4bc9661"
               },
               {
                 "control-id": "bc-12-2",
-                "description": "Component capability addressing control bc-12-2 (Control BC.12.2).",
+                "description": "Component capability addressing control bc-12-2 (Dedicated Administrative Account Usage (Utilisation dédiée des comptes d'administrateur)).",
                 "uuid": "dbbdbd52-5fa8-554c-b7e6-59c3e04ab76b"
               },
               {
                 "control-id": "bc-12-3",
-                "description": "Component capability addressing control bc-12-3 (Control BC.12.3).",
+                "description": "Component capability addressing control bc-12-3 (Timely Account and Privilege Revocation (Révocation rapide des comptes et des privilèges inutilisés)).",
                 "uuid": "8ab0a23f-1f04-50ff-a799-9748ea791fb9"
               },
               {
                 "control-id": "bc-12-4",
-                "description": "Component capability addressing control bc-12-4 (Control BC.12.4).",
+                "description": "Component capability addressing control bc-12-4 (Centralized Authorization Control System Evaluation (Évaluation d'un système centralisé de contrôle des autorisations)).",
                 "uuid": "56776a38-26b0-5f48-b26f-d69ae38a1fe3"
               },
               {
                 "control-id": "bc-13-1",
-                "description": "Component capability addressing control bc-13-1 (Control BC.13.1).",
+                "description": "Component capability addressing control bc-13-1 (Organization-Owned Encrypted Portable Media Mandate (Utilisation obligatoire de supports amovibles chiffrés appartenant à l'organisation)).",
                 "uuid": "a710499c-6cfc-5d3f-a4ce-b09055f085d9"
               },
               {
                 "control-id": "bc-13-2",
-                "description": "Component capability addressing control bc-13-2 (Control BC.13.2).",
+                "description": "Component capability addressing control bc-13-2 (Portable Media Sanitization and Destruction Prior to Disposal (Nettoyage ou destruction des supports amovibles avant leur mise au rebut)).",
                 "uuid": "0143d22b-4d29-5040-92f6-78e56d0c1fa8"
               },
               {
                 "control-id": "bc-2-1",
-                "description": "Component capability addressing control bc-2-1 (Control BC.2.1).",
+                "description": "Component capability addressing control bc-2-1 (Automatic Software and Hardware Patching (Application automatique des correctifs logiciels et matériels)).",
                 "uuid": "a43ad69a-6bf0-5cdb-86fb-2949c0e46eee"
               },
               {
                 "control-id": "bc-2-2",
-                "description": "Component capability addressing control bc-2-2 (Control BC.2.2).",
+                "description": "Component capability addressing control bc-2-2 (Legacy Device Replacement Risk Assessment and Manual Update Process (Évaluation des risques liés aux appareils sans mise à jour automatique)).",
                 "uuid": "ad930c9a-81b8-55b7-9555-b7b04bc5b3bb"
               },
               {
                 "control-id": "bc-3-1",
-                "description": "Component capability addressing control bc-3-1 (Control BC.3.1).",
+                "description": "Component capability addressing control bc-3-1 (Automatic Anti-Malware Updates and Scanning (Mises à jour et analyses automatiques des logiciels anti-malveillants)).",
                 "uuid": "4762aef0-abab-53c6-abf8-1503eb4bdfa0"
               },
               {
                 "control-id": "bc-3-2",
-                "description": "Component capability addressing control bc-3-2 (Control BC.3.2).",
+                "description": "Component capability addressing control bc-3-2 (Host Software Firewalls Activation (Activation des pare-feu logiciels sur les appareils)).",
                 "uuid": "40d35ec1-9d55-59a3-b9ff-70e7e7ec91d8"
               },
               {
                 "control-id": "bc-4-1",
-                "description": "Component capability addressing control bc-4-1 (Control BC.4.1).",
+                "description": "Component capability addressing control bc-4-1 (Secure Device Configuration and Default Credential Removal (Configuration sécuritaire des appareils et retrait des mots de passe par défaut)).",
                 "uuid": "9b79904e-7acc-519f-b0cf-f34357476187"
               },
               {
                 "control-id": "bc-5-1",
-                "description": "Component capability addressing control bc-5-1 (Control BC.5.1).",
+                "description": "Component capability addressing control bc-5-1 (Two-Factor Authentication Enforcement (Application de l'authentification à deux facteurs)).",
                 "uuid": "10a64464-d33b-5197-aba2-9adb4a99b232"
               },
               {
                 "control-id": "bc-5-2",
-                "description": "Component capability addressing control bc-5-2 (Control BC.5.2).",
+                "description": "Component capability addressing control bc-5-2 (Compromise-Driven Password Rotation (Changement de mot de passe uniquement en cas de compromission)).",
                 "uuid": "fd4eb821-36c2-575b-a343-99cfa5fd61ea"
               },
               {
                 "control-id": "bc-5-3",
-                "description": "Component capability addressing control bc-5-3 (Control BC.5.3).",
+                "description": "Component capability addressing control bc-5-3 (Password Length, Reuse, and Password Manager Policy (Politique sur la longueur, la réutilisation et les gestionnaires de mots de passe)).",
                 "uuid": "3b77bfde-08f0-51cc-b29e-7cf2984e1eef"
               },
               {
                 "control-id": "bc-6-1",
-                "description": "Component capability addressing control bc-6-1 (Control BC.6.1).",
+                "description": "Component capability addressing control bc-6-1 (Employee Cyber Security Awareness and Training Program (Programme de sensibilisation et de formation en cybersécurité)).",
                 "uuid": "6c1cf7cd-2f2c-5a8b-81b0-8243163b6e6f"
               },
               {
                 "control-id": "bc-7-1",
-                "description": "Component capability addressing control bc-7-1 (Control BC.7.1).",
+                "description": "Component capability addressing control bc-7-1 (Essential Business System Backup and Offsite Recovery Verification (Sauvegarde des systèmes essentiels et vérification de la restauration)).",
                 "uuid": "5a2aff58-c90c-5f43-9b78-a0a222220847"
               },
               {
                 "control-id": "bc-7-2",
-                "description": "Component capability addressing control bc-7-2 (Control BC.7.2).",
+                "description": "Component capability addressing control bc-7-2 (Encrypted Backup Storage and Access Restriction (Chiffrement des sauvegardes et restriction d'accès)).",
                 "uuid": "a99da977-8ec8-51d2-bc44-39e874533bfb"
               },
               {
                 "control-id": "bc-8-1",
-                "description": "Component capability addressing control bc-8-1 (Control BC.8.1).",
+                "description": "Component capability addressing control bc-8-1 (Mobile Device Ownership Model and Risk Documentation (Modèle de propriété des appareils mobiles et documentation des risques)).",
                 "uuid": "09cf9818-711e-588d-9344-a5e5caec8639"
               },
               {
                 "control-id": "bc-8-2",
-                "description": "Component capability addressing control bc-8-2 (Control BC.8.2).",
+                "description": "Component capability addressing control bc-8-2 (Work and Personal Data Separation on Mobile Devices (Séparation des données professionnelles et personnelles sur les appareils mobiles)).",
                 "uuid": "820293f8-9d7c-5d62-9dc7-a710e5050d86"
               },
               {
                 "control-id": "bc-8-3",
-                "description": "Component capability addressing control bc-8-3 (Control BC.8.3).",
+                "description": "Component capability addressing control bc-8-3 (Trusted Mobile Application Sources (Sources fiables d'applications mobiles)).",
                 "uuid": "3823b7dd-b70c-5635-b05c-563342a33c27"
               },
               {
                 "control-id": "bc-8-4",
-                "description": "Component capability addressing control bc-8-4 (Control BC.8.4).",
+                "description": "Component capability addressing control bc-8-4 (Mobile Device Sensitive Information Encryption (Chiffrement des renseignements sensibles sur les appareils mobiles)).",
                 "uuid": "4d07e138-19f3-57da-9c23-def179ce5f3e"
               },
               {
                 "control-id": "bc-8-5",
-                "description": "Component capability addressing control bc-8-5 (Control BC.8.5).",
+                "description": "Component capability addressing control bc-8-5 (Enterprise Mobility Management Evaluation (Évaluation d'une solution de gestion de la mobilité d'entreprise)).",
                 "uuid": "02b53b7a-0c69-5c36-b0c2-9e8d3858fe4f"
               },
               {
                 "control-id": "bc-8-6",
-                "description": "Component capability addressing control bc-8-6 (Control BC.8.6).",
+                "description": "Component capability addressing control bc-8-6 (Wireless Connectivity Restrictions for Mobile Devices (Restrictions relatives aux connexions sans fil des appareils mobiles)).",
                 "uuid": "5084d54c-2ab1-5d1d-a639-733c7e410844"
               },
               {
                 "control-id": "bc-8-7",
-                "description": "Component capability addressing control bc-8-7 (Control BC.8.7).",
+                "description": "Component capability addressing control bc-8-7 (VPN Usage on Public Wi-Fi Networks (Utilisation d'un RPV sur les réseaux Wi-Fi publics)).",
                 "uuid": "a92cdd0f-5e96-5877-9eac-cdcf4d84925f"
               },
               {
                 "control-id": "bc-9-1",
-                "description": "Component capability addressing control bc-9-1 (Control BC.9.1).",
+                "description": "Component capability addressing control bc-9-1 (Network Boundary Firewalls and DMZ Server Isolation (Pare-feu de périmètre réseau et isolation des serveurs accessibles par Internet)).",
                 "uuid": "a9748870-eba6-51a5-855a-992ad735a651"
               },
               {
                 "control-id": "bc-9-2",
-                "description": "Component capability addressing control bc-9-2 (Control BC.9.2).",
+                "description": "Component capability addressing control bc-9-2 (Outbound DNS Firewall Implementation (Mise en œuvre d'un pare-feu DNS sortant)).",
                 "uuid": "e8bd1460-fe33-5033-81ee-930525fc2046"
               },
               {
                 "control-id": "bc-9-3",
-                "description": "Component capability addressing control bc-9-3 (Control BC.9.3).",
+                "description": "Component capability addressing control bc-9-3 (Secure Remote Access with VPN and Two-Factor Authentication (Accès à distance sécurisé par RPV et authentification à deux facteurs)).",
                 "uuid": "b0b5880e-5e18-5c08-8e80-71ad72d1fb01"
               },
               {
                 "control-id": "bc-9-4",
-                "description": "Component capability addressing control bc-9-4 (Control BC.9.4).",
+                "description": "Component capability addressing control bc-9-4 (Secure Corporate Wi-Fi Authentication (Authentification Wi-Fi d'entreprise sécurisée WPA2-Enterprise)).",
                 "uuid": "a6ee7cb9-8b30-5bd6-9f7b-714391cbe0d2"
               },
               {
                 "control-id": "bc-9-5",
-                "description": "Component capability addressing control bc-9-5 (Control BC.9.5).",
+                "description": "Component capability addressing control bc-9-5 (Public and Corporate Wi-Fi Network Segregation (Séparation des réseaux Wi-Fi publics et d'entreprise)).",
                 "uuid": "a6b90c81-f5b4-5c04-9f5d-4745ca495bb5"
               },
               {
                 "control-id": "bc-9-6",
-                "description": "Component capability addressing control bc-9-6 (Control BC.9.6).",
+                "description": "Component capability addressing control bc-9-6 (Point-of-Sale System Isolation and PCI DSS Alignment (Isolation des systèmes de point de vente et conformité PCI DSS)).",
                 "uuid": "665c9356-4a69-583a-83d5-3681d7d3ab7b"
               },
               {
                 "control-id": "bc-9-7",
-                "description": "Component capability addressing control bc-9-7 (Control BC.9.7).",
+                "description": "Component capability addressing control bc-9-7 (DMARC Email Authentication Implementation (Mise en œuvre du protocole DMARC pour les services de courriel)).",
                 "uuid": "f6726b25-8a96-5a6d-bbdc-e77643ca05ee"
               },
               {
                 "control-id": "bc-9-8",
-                "description": "Component capability addressing control bc-9-8 (Control BC.9.8).",
+                "description": "Component capability addressing control bc-9-8 (Ingress and Egress Email Filtering (Filtrage des courriels aux points d'entrée et de sortie)).",
                 "uuid": "7f38d86e-ebd2-5849-a092-e3bf73155fa5"
               },
               {
                 "control-id": "oc-1",
-                "description": "Component capability addressing control oc-1 (Control OC.1).",
+                "description": "Component capability addressing control oc-1 (Organizational Size Scope (Portée relative à la taille de l'organisation)).",
                 "uuid": "ce8d335a-fe75-5dd9-b122-c27720bd68ac"
               },
               {
                 "control-id": "oc-2",
-                "description": "Component capability addressing control oc-2 (Control OC.2).",
+                "description": "Component capability addressing control oc-2 (In-Scope Information Systems and Risk Acceptance (Systèmes d'information visés et acceptation des risques)).",
                 "uuid": "8d0c4e6d-4ae3-5b18-9859-7dbc3842b77c"
               },
               {
                 "control-id": "oc-3",
-                "description": "Component capability addressing control oc-3 (Control OC.3).",
+                "description": "Component capability addressing control oc-3 (Confidentiality, Integrity, and Availability Injury Assessment (Évaluation des préjudices à la confidentialité, à l'intégrité et à la disponibilité)).",
                 "uuid": "be529cb4-67ed-5b4d-ae84-21ab92dc6b61"
               },
               {
                 "control-id": "oc-4",
-                "description": "Component capability addressing control oc-4 (Control OC.4).",
+                "description": "Component capability addressing control oc-4 (Primary Cyber Threat Identification (Identification de la menace cybernétique principale)).",
                 "uuid": "521e375c-3acb-5240-b6d8-93949010cda6"
               }
             ],
@@ -248,7 +248,7 @@
       }
     ],
     "metadata": {
-      "last-modified": "2026-10-25T23:17:26Z",
+      "last-modified": "2026-11-08T01:42:11Z",
       "oscal-version": "1.2.3",
       "title": "CyberSecure Canada (CAN/DGSI 104) Component Definition Template",
       "version": "CAN/DGSI 104"

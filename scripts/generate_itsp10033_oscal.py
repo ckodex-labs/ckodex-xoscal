@@ -23,6 +23,7 @@ if not os.path.exists(PDF_PATH) and os.path.exists("itsp.10.033-2026-eng.pdf"):
     PDF_PATH = "itsp.10.033-2026-eng.pdf"
 OUTPUT_DIR = "data/frameworks/cccs-itsp-10-033"
 OUTPUT_FILE = os.path.join(OUTPUT_DIR, "catalog.json")
+XOSCAL_PROP_NS = "https://ckodex.io/ns/xoscal/props"
 
 # Namespace UUID for deterministic UUIDv5 generation
 NS_UUID = uuid.uuid5(uuid.NAMESPACE_DNS, "cyber.gc.ca/itsp.10.033")
@@ -116,34 +117,36 @@ def extract_params(text: str, prefix: str):
     # Regex to match innermost [Assignment: ...] or [Selection...: ...]
     # Content must NOT contain unescaped '[' or ']' brackets.
     inner_odp = re.compile(r"\[(Assignment|Selection(?:\s*\([^\]\[]+\))?):\s*([^\[\]]+)\]")
+    unclosed_odp = re.compile(r"\[(Assignment|Selection(?:\s*\([^\]\[]+\))?):\s*([^\[\]\n]+)(?=\n|$)")
     params = []
     p_count = 0
 
     # Iteratively substitute innermost ODPs until none remain (up to 50 iterations)
-    for _ in range(50):
-        m = inner_odp.search(text)
-        if not m:
-            break
-        p_count += 1
-        p_type = m.group(1)
-        raw_desc = m.group(2)
-        clean_desc = re.sub(r"\s+", " ", raw_desc).strip()
-        pid = f"{prefix}_prm_{p_count}"
+    for pattern in (inner_odp, unclosed_odp):
+        for _ in range(50):
+            m = pattern.search(text)
+            if not m:
+                break
+            p_count += 1
+            p_type = m.group(1)
+            raw_desc = m.group(2)
+            clean_desc = re.sub(r"\s+", " ", raw_desc).strip()
+            pid = f"{prefix}_prm_{p_count}"
 
-        param = {
-            "id": pid,
-            "label": clean_desc
-        }
-        if "Selection" in p_type:
-            raw_choices = [re.sub(r"\s+", " ", c).strip() for c in clean_desc.split(";")]
-            choices = [c for c in raw_choices if c]
-            if not choices:
-                choices = [clean_desc]
-            how_many = "one-or-more" if ("1 or more" in p_type or "one or more" in p_type) else "one"
-            param["select"] = {"how-many": how_many, "choice": choices}
+            param = {
+                "id": pid,
+                "label": clean_desc
+            }
+            if "Selection" in p_type:
+                raw_choices = [re.sub(r"\s+", " ", c).strip() for c in clean_desc.split(";")]
+                choices = [c for c in raw_choices if c]
+                if not choices:
+                    choices = [clean_desc]
+                how_many = "one-or-more" if ("1 or more" in p_type or "one or more" in p_type) else "one"
+                param["select"] = {"how-many": how_many, "choice": choices}
 
-        params.append(param)
-        text = text[:m.start()] + f"{{{{ insert: param, {pid} }}}}" + text[m.end():]
+            params.append(param)
+            text = text[:m.start()] + f"{{{{ insert: param, {pid} }}}}" + text[m.end():]
 
     return text, params
 
@@ -209,8 +212,8 @@ def parse_statement_parts(stmt_text: str, norm_id: str):
                 "prose": prose
             }
             if lvl1 and len(lvl1) > 1: # AA, BB (Canadian specific)
-                new_part["props"].append({"name": "jurisdiction", "value": "ca"})
-                new_part["props"].append({"name": "sovereign-specification", "value": "true"})
+                new_part["props"].append({"name": "jurisdiction", "ns": XOSCAL_PROP_NS, "value": "ca"})
+                new_part["props"].append({"name": "sovereign-specification", "ns": XOSCAL_PROP_NS, "value": "true"})
 
             if "parts" not in parent_part:
                 parent_part["parts"] = []
@@ -310,8 +313,8 @@ def parse_enhancement(enh_match, next_enh_start, enh_text, base_norm_id, base_ra
             "name": "guidance",
             "title": "GC Discussion",
             "props": [
-                {"name": "jurisdiction", "value": "ca"},
-                {"name": "sovereign-guidance", "value": "true"}
+                {"name": "jurisdiction", "ns": XOSCAL_PROP_NS, "value": "ca"},
+                {"name": "sovereign-guidance", "ns": XOSCAL_PROP_NS, "value": "true"}
             ],
             "prose": gc_disc_text
         })
@@ -324,11 +327,11 @@ def parse_enhancement(enh_match, next_enh_start, enh_text, base_norm_id, base_ra
 
     props = [
         {"name": "label", "value": label},
-        {"name": "sort-id", "value": f"{base_norm_id}.{enh_num:03d}"}
+        {"name": "sort-id", "value": f"{base_norm_id}.{enh_num:03d}"},
+        {"name": "jurisdiction", "ns": XOSCAL_PROP_NS, "value": "ca"}
     ]
     if is_canadian:
-        props.append({"name": "jurisdiction", "value": "ca"})
-        props.append({"name": "sovereign-control", "value": "true"})
+        props.append({"name": "sovereign-control", "ns": XOSCAL_PROP_NS, "value": "true"})
 
     enh_ctrl = {
         "id": norm_id,
@@ -355,41 +358,47 @@ def parse_control_body(base_norm_id, base_raw_id, title, kind, body):
     if num_part and int(num_part.group(0)) >= 400:
         is_canadian = True
 
-    disc_idx = body.find("Discussion:")
-    gc_disc_idx = body.find("GC discussion:")
-    rel_idx = body.find("Related controls and activities:")
-    if rel_idx == -1:
-        rel_idx = body.find("Related controls:")
     enh_idx = body.find("Enhancements:")
     ref_idx = body.find("References:")
 
-    stmt_end = len(body)
-    for pos in [disc_idx, gc_disc_idx, rel_idx, enh_idx, ref_idx]:
+    base_end = len(body)
+    for pos in [enh_idx, ref_idx]:
+        if pos != -1 and pos < base_end:
+            base_end = pos
+    base_body = body[:base_end]
+
+    disc_idx = base_body.find("Discussion:")
+    gc_disc_idx = base_body.find("GC discussion:")
+    rel_idx = base_body.find("Related controls and activities:")
+    if rel_idx == -1:
+        rel_idx = base_body.find("Related controls:")
+
+    stmt_end = len(base_body)
+    for pos in [disc_idx, gc_disc_idx, rel_idx]:
         if pos != -1 and pos < stmt_end:
             stmt_end = pos
 
-    raw_stmt_text = body[:stmt_end].strip()
+    raw_stmt_text = base_body[:stmt_end].strip()
 
     disc_text = ""
     if disc_idx != -1:
-        d_end = len(body)
-        for pos in [gc_disc_idx, rel_idx, enh_idx, ref_idx]:
+        d_end = len(base_body)
+        for pos in [gc_disc_idx, rel_idx]:
             if pos != -1 and pos > disc_idx and pos < d_end:
                 d_end = pos
-        disc_text = body[disc_idx + len("Discussion:"):d_end].strip()
+        disc_text = base_body[disc_idx + len("Discussion:"):d_end].strip()
 
     gc_disc_text = ""
     if gc_disc_idx != -1:
-        gcd_end = len(body)
-        for pos in [rel_idx, enh_idx, ref_idx]:
+        gcd_end = len(base_body)
+        for pos in [rel_idx]:
             if pos != -1 and pos > gc_disc_idx and pos < gcd_end:
                 gcd_end = pos
-        gc_disc_text = body[gc_disc_idx + len("GC discussion:"):gcd_end].strip()
+        gc_disc_text = base_body[gc_disc_idx + len("GC discussion:"):gcd_end].strip()
 
     rel_text = ""
     if rel_idx != -1:
-        r_end = enh_idx if enh_idx != -1 else (ref_idx if ref_idx != -1 else len(body))
-        raw_r = body[rel_idx:r_end].strip()
+        raw_r = base_body[rel_idx:].strip()
         rel_text = re.sub(r"^Related controls(?: and activities)?:\s*", "", raw_r).strip()
 
     ref_text = ""
@@ -416,6 +425,7 @@ def parse_control_body(base_norm_id, base_raw_id, title, kind, body):
         parts.append({
             "id": f"{base_norm_id}_wth",
             "name": "withdrawn",
+            "ns": XOSCAL_PROP_NS,
             "prose": raw_stmt_text or "This control has been withdrawn."
         })
     else:
@@ -437,22 +447,23 @@ def parse_control_body(base_norm_id, base_raw_id, title, kind, body):
                 "name": "guidance",
                 "title": "GC Discussion",
                 "props": [
-                    {"name": "jurisdiction", "value": "ca"},
-                    {"name": "sovereign-guidance", "value": "true"}
+                    {"name": "jurisdiction", "ns": XOSCAL_PROP_NS, "value": "ca"},
+                    {"name": "sovereign-guidance", "ns": XOSCAL_PROP_NS, "value": "true"}
                 ],
                 "prose": gc_disc_text
             })
 
+    status_prop = {"name": "status", "value": "withdrawn"} if is_withdrawn else {"name": "status", "ns": XOSCAL_PROP_NS, "value": "active"}
     props = [
         {"name": "label", "value": base_raw_id},
         {"name": "sort-id", "value": base_norm_id},
-        {"name": "status", "value": "withdrawn" if is_withdrawn else "active"}
+        status_prop,
+        {"name": "jurisdiction", "ns": XOSCAL_PROP_NS, "value": "ca"}
     ]
     if not is_withdrawn:
-        props.append({"name": "type", "value": kind})
+        props.append({"name": "type", "ns": XOSCAL_PROP_NS, "value": kind})
     if is_canadian:
-        props.append({"name": "jurisdiction", "value": "ca"})
-        props.append({"name": "sovereign-control", "value": "true"})
+        props.append({"name": "sovereign-control", "ns": XOSCAL_PROP_NS, "value": "true"})
 
     ctrl_obj = {
         "id": base_norm_id,
@@ -562,12 +573,12 @@ def build_oscal_catalog():
                 "version": "1.0 (2026-03-31)",
                 "oscal-version": "1.2.3",
                 "props": [
-                    {"name": "jurisdiction", "value": "ca"},
-                    {"name": "standard-id", "value": "ITSP.10.033"},
-                    {"name": "isbn", "value": "978-0-660-76132-9"},
-                    {"name": "cat-number", "value": "D97-3/10-033-2026E-PDF"},
-                    {"name": "supersedes", "value": "ITSG-33 Annex 3A - Security control catalogue"},
-                    {"name": "alignment", "value": "NIST SP 800-53 Rev. 5"}
+                    {"name": "jurisdiction", "ns": XOSCAL_PROP_NS, "value": "ca"},
+                    {"name": "standard-id", "ns": XOSCAL_PROP_NS, "value": "ITSP.10.033"},
+                    {"name": "isbn", "ns": XOSCAL_PROP_NS, "value": "978-0-660-76132-9"},
+                    {"name": "cat-number", "ns": XOSCAL_PROP_NS, "value": "D97-3/10-033-2026E-PDF"},
+                    {"name": "supersedes", "ns": XOSCAL_PROP_NS, "value": "ITSG-33 Annex 3A - Security control catalogue"},
+                    {"name": "alignment", "ns": XOSCAL_PROP_NS, "value": "NIST SP 800-53 Rev. 5"}
                 ],
                 "roles": [
                     {"id": "creator", "title": "Document Creator / Author"},
@@ -662,6 +673,12 @@ def build_oscal_catalog():
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(catalog, f, indent=2, ensure_ascii=False)
+
+    embed_file = "server/internal/canadianframeworks/itsp10033_catalog.json"
+    if os.path.exists(os.path.dirname(embed_file)):
+        with open(embed_file, "w", encoding="utf-8") as f:
+            json.dump(catalog, f, indent=2, ensure_ascii=False)
+        print(f"Updated embedded catalog: {embed_file}")
 
     size_mb = os.path.getsize(OUTPUT_FILE) / (1024 * 1024)
     print(f"\nSuccessfully generated OSCAL 1.2.3 catalog: {OUTPUT_FILE} ({size_mb:.2f} MB)")

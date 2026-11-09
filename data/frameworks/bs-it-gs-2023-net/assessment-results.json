@@ -1,0 +1,353 @@
+{
+  "assessment-results": {
+    "import-ap": {
+      "href": "./assessment-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:12Z",
+      "oscal-version": "1.2.3",
+      "title": "IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - NET: Netze und Kommunikation Assessment Results Template",
+      "version": "1"
+    },
+    "results": [
+      {
+        "description": "Assessment evaluation findings and observations for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - NET: Netze und Kommunikation.",
+        "findings": [
+          {
+            "description": "Control net.1.1.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "3a9f9ec6-4454-5099-b2b8-336cff3f7b34"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "net.1.1.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for net.1.1.a1.1",
+            "uuid": "ba968e90-fda0-5f20-a667-438cabb7831e"
+          },
+          {
+            "description": "Control net.1.2.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "b7c7d7b2-4e34-56f0-94d9-091d21468190"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "net.1.2.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for net.1.2.a1.1",
+            "uuid": "25d0813c-35d2-5749-b518-75dbaae638f2"
+          },
+          {
+            "description": "Control net.2.1.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "65c32c7a-e20b-5bc2-8692-c108a77a3851"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "net.2.1.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for net.2.1.a1.1",
+            "uuid": "1c6322b6-1cde-553c-ba8e-67966c81ec03"
+          },
+          {
+            "description": "Control net.2.2.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "560dfea1-7880-5cb8-bcef-57311fc72e54"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "net.2.2.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for net.2.2.a1.1",
+            "uuid": "b96474b0-91a3-50db-9b8e-3f168b982401"
+          },
+          {
+            "description": "Control net.3.1.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "34b1c300-bf49-5329-8edb-00511b30d16b"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "net.3.1.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for net.3.1.a1.1",
+            "uuid": "aa72504a-0173-5287-b7ab-b70a648d3e58"
+          },
+          {
+            "description": "Control net.3.2.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "c057ea3c-4992-51ae-94a7-faa362577fd1"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "net.3.2.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for net.3.2.a1.1",
+            "uuid": "f9bdf4d5-afa5-5eca-bf59-298aa72c12ff"
+          },
+          {
+            "description": "Control net.3.3.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "7be83709-70ea-5589-a180-056722bde94e"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "net.3.3.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for net.3.3.a1.1",
+            "uuid": "3028d7d0-8b3f-5ace-a837-0b5ca4fa829c"
+          },
+          {
+            "description": "Control net.3.4.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "7f902071-a132-5a58-bb04-568e7aeb5870"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "net.3.4.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for net.3.4.a1.1",
+            "uuid": "dd0af58f-b1c1-52c9-811e-8d6e4cc35647"
+          },
+          {
+            "description": "Control net.4.1.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "df7e2984-aefa-5f89-afb6-b80b188cfa4f"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "net.4.1.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for net.4.1.a1.1",
+            "uuid": "621ef1d8-f0ca-5157-883f-7349f6273086"
+          },
+          {
+            "description": "Control net.4.2.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "ed9bc153-90f2-5138-b7aa-4d814e1d3527"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "net.4.2.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for net.4.2.a1.1",
+            "uuid": "9c5b7257-cf40-50ed-bf12-3f00539c847e"
+          },
+          {
+            "description": "Control net.4.3.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "a75f1183-aafb-5b77-adb6-b78a25c8500c"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "net.4.3.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for net.4.3.a1.1",
+            "uuid": "61c3f2fd-d7e1-579b-bab0-ff0b2bd9df3e"
+          }
+        ],
+        "observations": [
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control net.1.1.a1.1 (Sicherheitsrichtlinie für das Netz — NET.1.1.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "3a9f9ec6-4454-5099-b2b8-336cff3f7b34"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control net.1.2.a1.1 (Planung des Netzmanagements — NET.1.2.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "b7c7d7b2-4e34-56f0-94d9-091d21468190"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control net.2.1.a1.1 (Festlegung einer Strategie für den Einsatz von WLANs — NET.2.1.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "65c32c7a-e20b-5bc2-8692-c108a77a3851"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control net.2.2.a1.1 (Erstellung einer Nutzungsrichtlinie für WLAN — NET.2.2.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "560dfea1-7880-5cb8-bcef-57311fc72e54"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control net.3.1.a1.1 (Sichere Grundkonfiguration eines Routers oder Switches — NET.3.1.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "34b1c300-bf49-5329-8edb-00511b30d16b"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control net.3.2.a1.1 (Erstellung einer Sicherheitsrichtlinie — NET.3.2.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "c057ea3c-4992-51ae-94a7-faa362577fd1"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control net.3.3.a1.1 (Planung des VPN-Einsatzes — NET.3.3.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "7be83709-70ea-5589-a180-056722bde94e"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control net.3.4.a1.1 (Begründete Entscheidung für den Einsatz von NAC — NET.3.4.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "7f902071-a132-5a58-bb04-568e7aeb5870"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control net.4.1.a1.1 (Anforderungsanalyse und Planung für TK-Anlagen — NET.4.1.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "df7e2984-aefa-5f89-afb6-b80b188cfa4f"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control net.4.2.a1.1 (Planung des VoIP-Einsatzes — NET.4.2.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "ed9bc153-90f2-5138-b7aa-4d814e1d3527"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control net.4.3.a1.1 (Geeignete Aufstellung eines Faxgerätes — NET.4.3.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "a75f1183-aafb-5b77-adb6-b78a25c8500c"
+          }
+        ],
+        "reviewed-controls": {
+          "control-selections": [
+            {
+              "description": "All controls evaluated for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - NET: Netze und Kommunikation",
+              "include-all": {}
+            }
+          ]
+        },
+        "start": "2026-11-08T01:42:12Z",
+        "title": "IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - NET: Netze und Kommunikation Assessment Results",
+        "uuid": "f55dcbe6-4999-5f26-94a2-d65bb44d06b1"
+      }
+    ],
+    "uuid": "4f745f19-cf9c-54a9-98ac-56fd5b40d1ed"
+  }
+}

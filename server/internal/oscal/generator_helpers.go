@@ -33,18 +33,45 @@ func extractGuidance(text string) string {
 // marking, sort-id, status in the default namespace).
 const xoscalPropNamespace = "https://ckodex.io/ns/xoscal/props"
 
+func normalizePropNs(name, ns string) string {
+	if ns != "" {
+		return ns
+	}
+	switch name {
+	case "alt-identifier", "label", "marking", "sort-id", "status":
+		return ""
+	default:
+		return xoscalPropNamespace
+	}
+}
+
 func requirementToProps(req kg.Requirement) []*commonv1.Property {
 	var props []*commonv1.Property
-	if req.Role != "" {
+	seen := make(map[string]bool)
+	for _, p := range req.Props {
+		val := singleLine(p.Value)
+		if p.Name == "" || val == "" {
+			continue
+		}
+		seen[strings.ToLower(p.Name)] = true
+		props = append(props, &commonv1.Property{
+			Id:    p.ID,
+			Name:  p.Name,
+			Value: val,
+			Class: p.Class,
+			Ns:    normalizePropNs(p.Name, p.Ns),
+		})
+	}
+	if req.Role != "" && !seen["role"] {
 		props = append(props, &commonv1.Property{Name: "role", Value: req.Role, Ns: xoscalPropNamespace})
 	}
-	if req.RiskLevel != "" {
+	if req.RiskLevel != "" && !seen["risk-level"] {
 		props = append(props, &commonv1.Property{Name: "risk-level", Value: req.RiskLevel, Ns: xoscalPropNamespace})
 	}
-	if req.Lifecycle != "" {
+	if req.Lifecycle != "" && !seen["lifecycle"] {
 		props = append(props, &commonv1.Property{Name: "lifecycle", Value: req.Lifecycle, Ns: xoscalPropNamespace})
 	}
-	if len(req.ImplementationGroups) > 0 {
+	if len(req.ImplementationGroups) > 0 && !seen["implementation-groups"] {
 		props = append(props, &commonv1.Property{
 			Name:  "implementation-groups",
 			Value: fmt.Sprintf("%v", req.ImplementationGroups),

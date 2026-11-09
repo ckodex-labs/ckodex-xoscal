@@ -1,0 +1,42 @@
+{
+  "assessment-plan": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:13Z",
+      "oscal-version": "1.2.3",
+      "title": "Criminal Justice Information Services (CJIS) Security Policy 5.9.5 Security Assessment Plan Template",
+      "version": "1"
+    },
+    "reviewed-controls": {
+      "control-selections": [
+        {
+          "description": "All controls in Criminal Justice Information Services (CJIS) Security Policy 5.9.5",
+          "include-all": {}
+        }
+      ]
+    },
+    "tasks": [
+      {
+        "description": "Verify and examine implementation of 52 controls in the ROLES AND RESPONSIBILITIES family for Criminal Justice Information Services (CJIS) Security Policy 5.9.5.",
+        "title": "Assess Family _3 (ROLES AND RESPONSIBILITIES)",
+        "type": "examination",
+        "uuid": "65c2aa77-b163-5570-88ea-db1ee998d011"
+      },
+      {
+        "description": "Verify and examine implementation of 20 controls in the CRIMINAL JUSTICE INFORMATION AND PERSONALLY IDENTIFIABLE INFORMATION family for Criminal Justice Information Services (CJIS) Security Policy 5.9.5.",
+        "title": "Assess Family _4 (CRIMINAL JUSTICE INFORMATION AND PERSONALLY IDENTIFIABLE INFORMATION)",
+        "type": "examination",
+        "uuid": "4d87594b-6189-5c58-8adb-41f86e4cbf72"
+      },
+      {
+        "description": "Verify and examine implementation of 1495 controls in the POLICY AND IMPLEMENTATION family for Criminal Justice Information Services (CJIS) Security Policy 5.9.5.",
+        "title": "Assess Family _5 (POLICY AND IMPLEMENTATION)",
+        "type": "examination",
+        "uuid": "e4a850c4-ae76-5398-ac2f-e20402304503"
+      }
+    ],
+    "uuid": "f20260bf-1879-505c-8752-2072a7356d45"
+  }
+}

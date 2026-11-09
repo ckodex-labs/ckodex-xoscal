@@ -1,0 +1,56 @@
+{
+  "profile": {
+    "imports": [
+      {
+        "href": "./catalog.json",
+        "include-controls": [
+          {
+            "with-ids": [
+              "_1.a",
+              "_1.b",
+              "_1.c",
+              "_1.d",
+              "_1.e",
+              "_2.a",
+              "_2.b",
+              "_2.c",
+              "_2.d",
+              "_2.e",
+              "_3.a",
+              "_3.b",
+              "_3.c",
+              "_3.d",
+              "_3.e",
+              "_3.f",
+              "_3.g",
+              "_3.h",
+              "_3.i",
+              "_3.j",
+              "_3.k",
+              "_3.l",
+              "_3.m",
+              "_3.n",
+              "_3.o",
+              "_3.p",
+              "_3.q",
+              "_3.r",
+              "_3.s",
+              "_4.a",
+              "_4.b",
+              "_5.a",
+              "_5.b",
+              "_6.a"
+            ]
+          }
+        ]
+      }
+    ],
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:13Z",
+      "oscal-version": "1.2.3",
+      "title": "CISA Cybersecurity Performance Goals v2.0 Security Baseline Profile",
+      "version": "1"
+    },
+    "uuid": "ef51c6f1-a13e-5c77-9925-fd7ecdcb98d2"
+  }
+}

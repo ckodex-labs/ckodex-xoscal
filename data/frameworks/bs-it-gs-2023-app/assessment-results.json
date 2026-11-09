@@ -1,0 +1,614 @@
+{
+  "assessment-results": {
+    "import-ap": {
+      "href": "./assessment-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:12Z",
+      "oscal-version": "1.2.3",
+      "title": "IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - APP: Anwendungen Assessment Results Template",
+      "version": "1"
+    },
+    "results": [
+      {
+        "description": "Assessment evaluation findings and observations for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - APP: Anwendungen.",
+        "findings": [
+          {
+            "description": "Control app.1.1.a10.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "379c82a9-b7d4-5398-9ef1-09786f7c1b29"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "app.1.1.a10.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for app.1.1.a10.1",
+            "uuid": "843ccf4e-dadc-5eff-9657-78fbfd5dddb4"
+          },
+          {
+            "description": "Control app.1.2.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "a6c81d71-12b3-50a8-b638-08f9375a5ac1"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "app.1.2.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for app.1.2.a1.1",
+            "uuid": "dd5b3bee-807e-50ec-8b89-6d2dcc5df1a6"
+          },
+          {
+            "description": "Control app.1.4.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "93666a25-3233-5ccd-aeec-521a0bf344c9"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "app.1.4.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for app.1.4.a1.1",
+            "uuid": "88fc207d-5219-5e54-92e6-fb0bd8ab2798"
+          },
+          {
+            "description": "Control app.2.1.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "a88ede66-cd07-5e28-a588-a1a7ab1a1659"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "app.2.1.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for app.2.1.a1.1",
+            "uuid": "b86c7f89-40fa-50ec-81d5-7f1431276d19"
+          },
+          {
+            "description": "Control app.2.2.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "bfea8cfd-6560-5d76-a1de-d821d4fbc856"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "app.2.2.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for app.2.2.a1.1",
+            "uuid": "fdf87c8c-6052-5fbd-a014-b38aab9427bc"
+          },
+          {
+            "description": "Control app.2.3.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "d8dc48ef-40aa-54e5-ae2f-aeeabb19753d"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "app.2.3.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for app.2.3.a1.1",
+            "uuid": "91d9fceb-f988-521f-8ffb-337e8406c0bc"
+          },
+          {
+            "description": "Control app.3.1.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "6efd02ea-0c70-58b2-b31b-437a85c08bf8"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "app.3.1.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for app.3.1.a1.1",
+            "uuid": "e32ddab4-beb3-5445-86c2-1c18e9629b15"
+          },
+          {
+            "description": "Control app.3.2.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "d98b1779-9793-525b-8086-6b3297d904e0"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "app.3.2.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for app.3.2.a1.1",
+            "uuid": "c7f79a31-ac0b-5d5c-bab9-ffccd060f539"
+          },
+          {
+            "description": "Control app.3.3.a11.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "07d1651d-3c99-5ee0-a1ef-e59b11573b69"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "app.3.3.a11.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for app.3.3.a11.1",
+            "uuid": "e36e8209-eeb5-52a6-9bf4-345f4f4f2861"
+          },
+          {
+            "description": "Control app.3.4.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "01507277-df69-5766-b3fc-bed7c5a33b56"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "app.3.4.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for app.3.4.a1.1",
+            "uuid": "17c3c1e3-e541-5103-8875-4eb53030aad4"
+          },
+          {
+            "description": "Control app.3.6.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "92a90d7e-d768-5281-8913-6df820dd5fd8"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "app.3.6.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for app.3.6.a1.1",
+            "uuid": "2f0ae557-cf15-5511-934a-af49917bcdf2"
+          },
+          {
+            "description": "Control app.4.2.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "15705216-a151-588c-a3a3-6a22f11aa511"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "app.4.2.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for app.4.2.a1.1",
+            "uuid": "21c772d1-affd-5c7e-8f59-02aca72e5986"
+          },
+          {
+            "description": "Control app.4.3.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "54b8919b-0751-5d2f-b824-bd7c567b38f6"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "app.4.3.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for app.4.3.a1.1",
+            "uuid": "d39496d3-a823-5e99-8b02-785d5bc23252"
+          },
+          {
+            "description": "Control app.4.4.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "bf43d456-cda6-5001-b397-c5c77b758cfc"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "app.4.4.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for app.4.4.a1.1",
+            "uuid": "46eab861-3b32-58cb-8a37-82e5a4d26f0a"
+          },
+          {
+            "description": "Control app.4.6.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "1b639e63-b8a5-5239-8642-866500fe0c1f"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "app.4.6.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for app.4.6.a1.1",
+            "uuid": "f131cf94-139e-5eea-b341-504595c99fb8"
+          },
+          {
+            "description": "Control app.5.2.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "758e68e3-cc0e-5bd7-91e9-d80f9e7beb13"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "app.5.2.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for app.5.2.a1.1",
+            "uuid": "82a9e5d1-98f2-55a3-b5a2-0cd3608ed4a0"
+          },
+          {
+            "description": "Control app.5.3.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "db60ea46-ebc1-5cb9-b240-fd90c8d91375"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "app.5.3.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for app.5.3.a1.1",
+            "uuid": "ba9b721b-cfe3-5e75-95c1-b3cffa3be05e"
+          },
+          {
+            "description": "Control app.5.4.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "e2708742-f575-51cf-a912-fc29ee524bde"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "app.5.4.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for app.5.4.a1.1",
+            "uuid": "eccc422e-77ec-511b-9405-38f67d0d5fd3"
+          },
+          {
+            "description": "Control app.6.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "952d9e0d-e779-530a-a872-38fba083beb1"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "app.6.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for app.6.a1.1",
+            "uuid": "3110e75a-5022-5f65-8a2e-8031c84e120c"
+          },
+          {
+            "description": "Control app.7.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "166c6251-7788-5da6-80ef-39f71811440f"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "app.7.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for app.7.a1.1",
+            "uuid": "3da8be10-1ae8-5843-a4af-23f36d422370"
+          }
+        ],
+        "observations": [
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control app.1.1.a10.1 (Regelung der Software-Entwicklung durch Endbenutzende — APP.1.1.A10.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "379c82a9-b7d4-5398-9ef1-09786f7c1b29"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control app.1.2.a1.1 (Verwendung von grundlegenden Sicherheitsmechanismen — APP.1.2.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "a6c81d71-12b3-50a8-b638-08f9375a5ac1"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control app.1.4.a1.1 (Anforderungsanalyse für die Nutzung von Apps — APP.1.4.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "93666a25-3233-5ccd-aeec-521a0bf344c9"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control app.2.1.a1.1 (Erstellung einer Sicherheitsrichtlinie für Verzeichnisdienste — APP.2.1.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "a88ede66-cd07-5e28-a588-a1a7ab1a1659"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control app.2.2.a1.1 (Planung von Active Directory Domain Services — APP.2.2.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "bfea8cfd-6560-5d76-a1de-d821d4fbc856"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control app.2.3.a1.1 (Planung und Auswahl von Backends und Overlays für OpenLDAP — APP.2.3.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "d8dc48ef-40aa-54e5-ae2f-aeeabb19753d"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control app.3.1.a1.1 (Authentisierung — APP.3.1.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "6efd02ea-0c70-58b2-b31b-437a85c08bf8"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control app.3.2.a1.1 (Sichere Konfiguration eines Webservers — APP.3.2.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "d98b1779-9793-525b-8086-6b3297d904e0"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control app.3.3.a11.1 (Einsatz von Speicherbeschränkungen — APP.3.3.A11.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "07d1651d-3c99-5ee0-a1ef-e59b11573b69"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control app.3.4.a1.1 (Planung des Einsatzes eines Samba-Servers — APP.3.4.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "01507277-df69-5766-b3fc-bed7c5a33b56"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control app.3.6.a1.1 (Planung des DNS-Einsatzes — APP.3.6.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "92a90d7e-d768-5281-8913-6df820dd5fd8"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control app.4.2.a1.1 (Sichere Konfiguration des SAP-ABAP-Stacks — APP.4.2.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "15705216-a151-588c-a3a3-6a22f11aa511"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control app.4.3.a1.1 (Erstellung einer Sicherheitsrichtlinie für Datenbanksysteme — APP.4.3.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "54b8919b-0751-5d2f-b824-bd7c567b38f6"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control app.4.4.a1.1 (Planung der Separierung der Anwendungen — APP.4.4.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "bf43d456-cda6-5001-b397-c5c77b758cfc"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control app.4.6.a1.1 (Absicherung von Reports mit Berechtigungsprüfungen — APP.4.6.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "1b639e63-b8a5-5239-8642-866500fe0c1f"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control app.5.2.a1.1 (Planung des Einsatzes von Exchange und Outlook — APP.5.2.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "758e68e3-cc0e-5bd7-91e9-d80f9e7beb13"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control app.5.3.a1.1 (Sichere Konfiguration der E-Mail-Clients — APP.5.3.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "db60ea46-ebc1-5cb9-b240-fd90c8d91375"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control app.5.4.a1.1 (Planung von UCC — APP.5.4.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "e2708742-f575-51cf-a912-fc29ee524bde"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control app.6.a1.1 (Planung des Software-Einsatzes — APP.6.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "952d9e0d-e779-530a-a872-38fba083beb1"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control app.7.a1.1 (Erweiterung der Planung des Software-Einsatzes um Aspekte von Individualsoftware — APP.7.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "166c6251-7788-5da6-80ef-39f71811440f"
+          }
+        ],
+        "reviewed-controls": {
+          "control-selections": [
+            {
+              "description": "All controls evaluated for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - APP: Anwendungen",
+              "include-all": {}
+            }
+          ]
+        },
+        "start": "2026-11-08T01:42:12Z",
+        "title": "IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - APP: Anwendungen Assessment Results",
+        "uuid": "00eb0729-52e4-5e96-9042-596146c8c808"
+      }
+    ],
+    "uuid": "97547da5-496e-504b-906e-36707ad7b89b"
+  }
+}

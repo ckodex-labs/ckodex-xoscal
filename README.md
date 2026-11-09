@@ -56,7 +56,7 @@ contains illustrative data; release verification requires the actual pinned proo
 | **Spreadsheet Synchronization** | GRC Analysts | Bi-directional OSCAL $\leftrightarrow$ CSV/Excel round-trip with strict schema enforcement | `xoscal tabular` |
 | **Rule 23 Derogation Lifecycle** | CISOs / Risk Officers | Time-bounded risk acceptances with strict TTLs, justifications, and compensating controls | `xoscal derogate` |
 | **Air-Gapped Audit Bundles** | 3PAO / SCIF Auditors | Immutable `.tar.gz` bundle with embedded zero-dependency offline WebCrypto viewer | `xoscal bundle-export` |
-| **Sovereign Framework Registry** | GRC Architects / SecOps | Unified compliance framework registry, authoritative Canadian suites (ITSP.10.033, ITSG-33, PBMM), schema-verified exports & SHA-256 sidecars | `xoscal frameworks` |
+| **Sovereign Framework Registry** | GRC Architects / SecOps | Unified compliance framework registry across 36 sovereign & international frameworks (16,237 controls, 252 7-layer artifacts), schema-verified exports & SHA-256 sidecars | `xoscal frameworks` |
 | **Shell Autocompletions** | Terminal Users | Fast tab-completion for bash, zsh, and fish shells | `xoscal completion` |
 
 *Note: `xoscal-ctl` remains fully supported as a backward-compatible command alias.*
@@ -286,11 +286,13 @@ xoscal-ctl frameworks seed -db oscal.db
 
 | Framework ID | Jurisdiction | Standard / Authority | Description |
 | :--- | :--- | :--- | :--- |
-| `cccs-itsp-10-033` | Canada (`ca`) | CCCS ITSP.10.033 (2026) | Security & privacy controls and assurance activities catalogue (330 base, 918 enhancements, 1,272 ODP params) |
-| `cccs-itsg-33` | Canada (`ca`) | CCCS ITSG-33 Annex 3A | IT security risk management baseline security control catalogue |
-| `cybersecure-canada` | Canada (`ca`) | ISED CyberSecure Canada | Small and medium organization baseline cybersecurity controls |
-| `cccs-itsp-10-171` | Canada (`ca`) | CCCS ITSP.10.171 | Security requirements for non-federal systems and organizations |
-| `cccs-medium-cloud-pbmm`| Canada (`ca`) | TBS / CCCS PBMM Cloud | Protected B, Medium Confidentiality, Medium Availability cloud security profile |
+| `cccs-itsp-10-033` | Canada (`ca`) | CCCS ITSP.10.033 (2026) | Security & privacy controls and assurance activities catalogue (330 base, 918 enhancements, 1,273 ODP params) |
+| `cccs-itsg-33` | Canada (`ca`) | CCCS ITSG-33 Annex 3A | IT security risk management baseline security control catalogue (234 controls) |
+| `cybersecure-canada` | Canada (`ca`) | ISED CyberSecure Canada | Small and medium organization baseline cybersecurity controls (46 controls) |
+| `cccs-itsp-10-171` | Canada (`ca`) | CCCS ITSP.10.171 | Security requirements for non-federal systems and organizations (267 controls) |
+| `cccs-medium-cloud-pbmm`| Canada (`ca`) | TBS / CCCS PBMM Cloud | Protected B, Medium Confidentiality, Medium Availability cloud security profile (384 controls) |
+
+In addition to the 5 Canadian frameworks (`2,179` controls), the registry ships with **31 international and sovereign frameworks** (`14,058` controls) across the United States (`7`, incl. NIST SP 800-53 Rev 5, NIST CSF 2.0, FedRAMP Rev 5, CMMC 2.0), United Kingdom (`1`, Cyber Essentials), France (`6`, ANSSI SecNumCloud, EBIOS RM, RGS, PSSI, Hygiene), Germany (`13`, BSI IT-Grundschutz 2023 & C5:2020), and the European Union (`4`, NIS2, DORA, EUCS, E-ITS), totaling **36 registered frameworks**, **16,237 controls**, and **252 7-layer OSCAL 1.2.3 artifacts**.
 
 ---
 

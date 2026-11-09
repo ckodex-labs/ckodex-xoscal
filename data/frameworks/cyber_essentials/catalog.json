@@ -1,0 +1,1325 @@
+{
+  "catalog": {
+    "back-matter": {
+      "resources": [
+        {
+          "description": "Source framework metadata for cyber_essentials snapshot portal",
+          "props": [
+            {
+              "name": "type",
+              "value": "standard"
+            },
+            {
+              "name": "version",
+              "value": "portal"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "https://raw.githubusercontent.com/intuitem/ciso-assistant-community/main/backend/library/libraries/cyber_essentials.yaml"
+            }
+          ],
+          "title": "cyber_essentials Framework Reference",
+          "uuid": "946af72f-f210-5916-b54d-6c88055a1ca0"
+        }
+      ]
+    },
+    "groups": [
+      {
+        "groups": [
+          {
+            "controls": [
+              {
+                "id": "node85",
+                "parts": [
+                  {
+                    "id": "node85-stmt",
+                    "name": "statement",
+                    "prose": "In cases where the cloud provider implements one of the controls on your behalf, you must make sure that the cloud provider has committed to implementing this via contractual clauses or documents referenced by contract, such as security statements or privacy statements. Cloud providers will often explain how they implement security in documents published in their trust centres, referencing a ‘shared responsibility model.’"
+                  }
+                ],
+                "title": "Cloud services — node85"
+              }
+            ],
+            "id": "C.iv",
+            "title": "Cloud services"
+          }
+        ],
+        "id": "C",
+        "title": "Scope"
+      },
+      {
+        "groups": [
+          {
+            "groups": [
+              {
+                "controls": [
+                  {
+                    "id": "node128",
+                    "parts": [
+                      {
+                        "id": "node128-stmt",
+                        "name": "statement",
+                        "prose": "Applies to: boundary firewalls, desktop computers, laptops, routers, servers, IaaS, PaaS, SaaS"
+                      }
+                    ],
+                    "title": "Firewalls — node128"
+                  }
+                ],
+                "id": "D.1-controls",
+                "title": "Firewalls"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "node136",
+                    "parts": [
+                      {
+                        "id": "node136-stmt",
+                        "name": "statement",
+                        "prose": "You must protect every device in scope with a correctly configured firewall (or network device with firewall functionality)."
+                      }
+                    ],
+                    "title": "Requirements — node136"
+                  },
+                  {
+                    "controls": [
+                      {
+                        "id": "node139",
+                        "parts": [
+                          {
+                            "id": "node139-stmt",
+                            "name": "statement",
+                            "prose": "• change default administrative passwords to a strong and unique password (see password- based authentication) – or disable remote administrative access entirely"
+                          }
+                        ],
+                        "title": "For all firewalls (or network devices with firewall functionality), your organisation must: — node139"
+                      },
+                      {
+                        "controls": [
+                          {
+                            "id": "node141",
+                            "parts": [
+                              {
+                                "id": "node141-stmt",
+                                "name": "statement",
+                                "prose": "o multi-factor authentication (see MFA details below)"
+                              }
+                            ],
+                            "title": "For all firewalls (or network devices with firewall functionality), your organisation must: — node141"
+                          },
+                          {
+                            "id": "node142",
+                            "parts": [
+                              {
+                                "id": "node142-stmt",
+                                "name": "statement",
+                                "prose": "o an IP allow list that limits access to a small range of trusted addresses combined with a properly managed password authentication approach"
+                              }
+                            ],
+                            "title": "For all firewalls (or network devices with firewall functionality), your organisation must: — node142"
+                          }
+                        ],
+                        "id": "node140",
+                        "parts": [
+                          {
+                            "id": "node140-stmt",
+                            "name": "statement",
+                            "prose": "•  prevent access to the administrative interface (used to manage firewall configuration) from the internet, unless there is a clear and documented business need, and the interface is protected by one of the following controls:"
+                          }
+                        ],
+                        "title": "For all firewalls (or network devices with firewall functionality), your organisation must: — node140"
+                      },
+                      {
+                        "id": "node143",
+                        "parts": [
+                          {
+                            "id": "node143-stmt",
+                            "name": "statement",
+                            "prose": "• block unauthenticated inbound connections by default"
+                          }
+                        ],
+                        "title": "For all firewalls (or network devices with firewall functionality), your organisation must: — node143"
+                      },
+                      {
+                        "id": "node144",
+                        "parts": [
+                          {
+                            "id": "node144-stmt",
+                            "name": "statement",
+                            "prose": "• ensure inbound firewall rules are approved and documented by an authorised person, and include the business need in the documentation"
+                          }
+                        ],
+                        "title": "For all firewalls (or network devices with firewall functionality), your organisation must: — node144"
+                      },
+                      {
+                        "id": "node145",
+                        "parts": [
+                          {
+                            "id": "node145-stmt",
+                            "name": "statement",
+                            "prose": "• remove or disable unnecessary firewall rules quickly, when they are no longer needed"
+                          }
+                        ],
+                        "title": "For all firewalls (or network devices with firewall functionality), your organisation must: — node145"
+                      }
+                    ],
+                    "id": "node138",
+                    "parts": [
+                      {
+                        "id": "node138-stmt",
+                        "name": "statement",
+                        "prose": "For all firewalls (or network devices with firewall functionality), your organisation must:"
+                      }
+                    ],
+                    "title": "Requirements — node138"
+                  },
+                  {
+                    "id": "node146",
+                    "parts": [
+                      {
+                        "id": "node146-stmt",
+                        "name": "statement",
+                        "prose": "Make sure you use a software firewall on devices which are used on untrusted networks, such as public wifi hotspots."
+                      }
+                    ],
+                    "title": "Requirements — node146"
+                  }
+                ],
+                "id": "node135",
+                "title": "Requirements"
+              }
+            ],
+            "id": "D.1",
+            "title": "Firewalls"
+          },
+          {
+            "groups": [
+              {
+                "groups": [
+                  {
+                    "controls": [
+                      {
+                        "controls": [
+                          {
+                            "id": "node163",
+                            "parts": [
+                              {
+                                "id": "node163-stmt",
+                                "name": "statement",
+                                "prose": "• remove and disable unnecessary user accounts (such as guest accounts and administrative accounts that won’t be used)"
+                              }
+                            ],
+                            "title": "Your organisation must proactively manage your computers and network devices. You must regularly: — node163"
+                          },
+                          {
+                            "id": "node164",
+                            "parts": [
+                              {
+                                "id": "node164-stmt",
+                                "name": "statement",
+                                "prose": "• change any default or guessable account passwords (see password-based authentication)"
+                              }
+                            ],
+                            "title": "Your organisation must proactively manage your computers and network devices. You must regularly: — node164"
+                          },
+                          {
+                            "id": "node165",
+                            "parts": [
+                              {
+                                "id": "node165-stmt",
+                                "name": "statement",
+                                "prose": "• remove or disable unnecessary software (including applications, system utilities and network services)"
+                              }
+                            ],
+                            "title": "Your organisation must proactively manage your computers and network devices. You must regularly: — node165"
+                          },
+                          {
+                            "id": "node166",
+                            "parts": [
+                              {
+                                "id": "node166-stmt",
+                                "name": "statement",
+                                "prose": "• disable any auto-run feature which allows file execution without user authorisation (such as when they are downloaded)"
+                              }
+                            ],
+                            "title": "Your organisation must proactively manage your computers and network devices. You must regularly: — node166"
+                          },
+                          {
+                            "id": "node167",
+                            "parts": [
+                              {
+                                "id": "node167-stmt",
+                                "name": "statement",
+                                "prose": "• ensure users are authenticated before allowing them access to organisational data or services"
+                              }
+                            ],
+                            "title": "Your organisation must proactively manage your computers and network devices. You must regularly: — node167"
+                          },
+                          {
+                            "id": "node168",
+                            "parts": [
+                              {
+                                "id": "node168-stmt",
+                                "name": "statement",
+                                "prose": "• ensure appropriate device locking controls (see ‘device unlocking’, below) for users that are physically present"
+                              }
+                            ],
+                            "title": "Your organisation must proactively manage your computers and network devices. You must regularly: — node168"
+                          }
+                        ],
+                        "id": "node162",
+                        "parts": [
+                          {
+                            "id": "node162-stmt",
+                            "name": "statement",
+                            "prose": "Your organisation must proactively manage your computers and network devices. You must regularly:"
+                          }
+                        ],
+                        "title": "Computers and network devices — node162"
+                      }
+                    ],
+                    "id": "node161",
+                    "title": "Computers and network devices"
+                  },
+                  {
+                    "controls": [
+                      {
+                        "id": "node170",
+                        "parts": [
+                          {
+                            "id": "node170-stmt",
+                            "name": "statement",
+                            "prose": "If a device requires a user’s physical presence to access a device’s services (such as logging on to a laptop or unlocking a mobile phone), a credential such as a biometric, password or PIN must be in place before a user can gain access to the services."
+                          }
+                        ],
+                        "title": "Device unlocking credentials — node170"
+                      },
+                      {
+                        "controls": [
+                          {
+                            "id": "node172",
+                            "parts": [
+                              {
+                                "id": "node172-stmt",
+                                "name": "statement",
+                                "prose": "• ‘throttling' the rate of attempts, so that the number of times the user must wait between attempts increases with each unsuccessful attempt you shouldn’t allow more than 10 guesses in 5 minutes"
+                              }
+                            ],
+                            "title": "Device unlocking credentials — node172"
+                          },
+                          {
+                            "id": "node173",
+                            "parts": [
+                              {
+                                "id": "node173-stmt",
+                                "name": "statement",
+                                "prose": "• locking devices after more than 10 unsuccessful attempts."
+                              }
+                            ],
+                            "title": "Device unlocking credentials — node173"
+                          }
+                        ],
+                        "id": "node171",
+                        "parts": [
+                          {
+                            "id": "node171-stmt",
+                            "name": "statement",
+                            "prose": "You must protect your chosen authentication method (which can be biometric authentication, password or PIN) against brute-force attacks. When it's possible to configure, you should apply one of the following:"
+                          }
+                        ],
+                        "title": "Device unlocking credentials — node171"
+                      },
+                      {
+                        "id": "node174",
+                        "parts": [
+                          {
+                            "id": "node174-stmt",
+                            "name": "statement",
+                            "prose": "When the vendor doesn't allow you to configure the above, use the vendor’s default setting."
+                          }
+                        ],
+                        "title": "Device unlocking credentials — node174"
+                      },
+                      {
+                        "id": "node175",
+                        "parts": [
+                          {
+                            "id": "node175-stmt",
+                            "name": "statement",
+                            "prose": "Technical controls must be used to manage the quality of credentials. If credentials are just to unlock a device, use a minimum password or PIN length of at least 6 characters. When the device unlocking credentials are also used for authentication, you must apply the full password requirements to the credentials described in ‘user access controls.’"
+                          }
+                        ],
+                        "title": "Device unlocking credentials — node175"
+                      }
+                    ],
+                    "id": "node169",
+                    "title": "Device unlocking credentials"
+                  }
+                ],
+                "id": "node160",
+                "title": "Requirements"
+              }
+            ],
+            "id": "D.2",
+            "title": "Secure configuration"
+          },
+          {
+            "groups": [
+              {
+                "controls": [
+                  {
+                    "controls": [
+                      {
+                        "id": "node186",
+                        "parts": [
+                          {
+                            "id": "node186-stmt",
+                            "name": "statement",
+                            "prose": "• be licensed and supported"
+                          }
+                        ],
+                        "title": "You must make sure that all software in scope is kept up to date. All software on in-scope devices must: — node186"
+                      },
+                      {
+                        "id": "node187",
+                        "parts": [
+                          {
+                            "id": "node187-stmt",
+                            "name": "statement",
+                            "prose": "• removed from devices when it becomes unsupported or removed from scope by using a defined sub-set that prevents all traffic to / from the internet"
+                          }
+                        ],
+                        "title": "You must make sure that all software in scope is kept up to date. All software on in-scope devices must: — node187"
+                      },
+                      {
+                        "id": "node188",
+                        "parts": [
+                          {
+                            "id": "node188-stmt",
+                            "name": "statement",
+                            "prose": "• have automatic updates enabled where possible"
+                          }
+                        ],
+                        "title": "You must make sure that all software in scope is kept up to date. All software on in-scope devices must: — node188"
+                      },
+                      {
+                        "controls": [
+                          {
+                            "id": "node190",
+                            "parts": [
+                              {
+                                "id": "node190-stmt",
+                                "name": "statement",
+                                "prose": "o the update fixes vulnerabilities described by the vendor as ‘critical’ or ‘high risk’"
+                              }
+                            ],
+                            "title": "You must make sure that all software in scope is kept up to date. All software on in-scope devices must: — node190"
+                          },
+                          {
+                            "id": "node191",
+                            "parts": [
+                              {
+                                "id": "node191-stmt",
+                                "name": "statement",
+                                "prose": "o the update addresses vulnerabilities with a CVSS v3 base score of 7 or above"
+                              }
+                            ],
+                            "title": "You must make sure that all software in scope is kept up to date. All software on in-scope devices must: — node191"
+                          },
+                          {
+                            "id": "node192",
+                            "parts": [
+                              {
+                                "id": "node192-stmt",
+                                "name": "statement",
+                                "prose": "o there are no details of the level of vulnerabilities the update fixes provided by the vendor"
+                              }
+                            ],
+                            "title": "You must make sure that all software in scope is kept up to date. All software on in-scope devices must: — node192"
+                          }
+                        ],
+                        "id": "node189",
+                        "parts": [
+                          {
+                            "id": "node189-stmt",
+                            "name": "statement",
+                            "prose": "• be updated, including applying any manual configuration changes required to make the update effective, within 14 days* of an update being released, where:"
+                          }
+                        ],
+                        "title": "You must make sure that all software in scope is kept up to date. All software on in-scope devices must: — node189"
+                      }
+                    ],
+                    "id": "node185",
+                    "parts": [
+                      {
+                        "id": "node185-stmt",
+                        "name": "statement",
+                        "prose": "You must make sure that all software in scope is kept up to date. All software on in-scope devices must:"
+                      }
+                    ],
+                    "title": "Requirements — node185"
+                  }
+                ],
+                "id": "node184",
+                "title": "Requirements"
+              }
+            ],
+            "id": "D.3",
+            "title": "Security update management"
+          },
+          {
+            "groups": [
+              {
+                "controls": [
+                  {
+                    "id": "node204",
+                    "parts": [
+                      {
+                        "id": "node204-stmt",
+                        "name": "statement",
+                        "prose": "Every active user account in your organisation facilitates access to devices and applications, and to sensitive business information. By making sure that only authorised individuals have user accounts, and that they're only granted as much access as they need to carry out their role, you reduce the risk of information being stolen or damaged."
+                      }
+                    ],
+                    "title": "Introduction — node204"
+                  },
+                  {
+                    "id": "node205",
+                    "parts": [
+                      {
+                        "id": "node205-stmt",
+                        "name": "statement",
+                        "prose": "Compared to normal user accounts, accounts with special access privileges have enhanced access to devices, applications and information. If these accounts are compromised, an attacker could take advantage of their greater accesses to corrupt information on a large scale, disrupt business processes or gain unauthorised access to other devices in the organisation."
+                      }
+                    ],
+                    "title": "Introduction — node205"
+                  },
+                  {
+                    "controls": [
+                      {
+                        "id": "node207",
+                        "parts": [
+                          {
+                            "id": "node207-stmt",
+                            "name": "statement",
+                            "prose": "• execute software that can make significant and security-related changes to the operating system"
+                          }
+                        ],
+                        "title": "Administrative accounts are especially highly privileged, for example. These accounts typically allow the user to: — node207"
+                      },
+                      {
+                        "id": "node208",
+                        "parts": [
+                          {
+                            "id": "node208-stmt",
+                            "name": "statement",
+                            "prose": "• make changes to the operating system for some or all users"
+                          }
+                        ],
+                        "title": "Administrative accounts are especially highly privileged, for example. These accounts typically allow the user to: — node208"
+                      },
+                      {
+                        "id": "node209",
+                        "parts": [
+                          {
+                            "id": "node209-stmt",
+                            "name": "statement",
+                            "prose": "• create new accounts and allocate privileges"
+                          }
+                        ],
+                        "title": "Administrative accounts are especially highly privileged, for example. These accounts typically allow the user to: — node209"
+                      }
+                    ],
+                    "id": "node206",
+                    "parts": [
+                      {
+                        "id": "node206-stmt",
+                        "name": "statement",
+                        "prose": "Administrative accounts are especially highly privileged, for example. These accounts typically allow the user to:"
+                      }
+                    ],
+                    "title": "Introduction — node206"
+                  },
+                  {
+                    "id": "node210",
+                    "parts": [
+                      {
+                        "id": "node210-stmt",
+                        "name": "statement",
+                        "prose": "All types of administrators will have this kind of account, including domain administrators and local administrators."
+                      }
+                    ],
+                    "title": "Introduction — node210"
+                  },
+                  {
+                    "id": "node211",
+                    "parts": [
+                      {
+                        "id": "node211-stmt",
+                        "name": "statement",
+                        "prose": "This is important because if a user opens a malicious URL or email attachment, the malware would typically be executed with the same privilege level of the user’s account. This is why it’s important to take special care allocating and using privileged accounts."
+                      }
+                    ],
+                    "title": "Introduction — node211"
+                  }
+                ],
+                "id": "node203",
+                "title": "Introduction"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "node214",
+                    "parts": [
+                      {
+                        "id": "node214-stmt",
+                        "name": "statement",
+                        "prose": "Your organisation must be in control of your user accounts and the access privileges that allow access to your organisational data and services. It’s important to note that this also includes third party accounts – for example accounts used by your support services. You also need to understand how user accounts authenticate and manage the authentication accordingly."
+                      }
+                    ],
+                    "title": "Requirements — node214"
+                  },
+                  {
+                    "controls": [
+                      {
+                        "id": "node216",
+                        "parts": [
+                          {
+                            "id": "node216-stmt",
+                            "name": "statement",
+                            "prose": "• have in place a process to create and approve user accounts"
+                          }
+                        ],
+                        "title": "This means your organisation must: — node216"
+                      },
+                      {
+                        "id": "node217",
+                        "parts": [
+                          {
+                            "id": "node217-stmt",
+                            "name": "statement",
+                            "prose": "• authenticate users with unique credentials before granting access to applications or devices (see password-based authentication)"
+                          }
+                        ],
+                        "title": "This means your organisation must: — node217"
+                      },
+                      {
+                        "id": "node218",
+                        "parts": [
+                          {
+                            "id": "node218-stmt",
+                            "name": "statement",
+                            "prose": "• remove or disable user accounts when they’re no longer required (for example, when a user leaves the organisation or after a defined period of account inactivity)"
+                          }
+                        ],
+                        "title": "This means your organisation must: — node218"
+                      },
+                      {
+                        "id": "node219",
+                        "parts": [
+                          {
+                            "id": "node219-stmt",
+                            "name": "statement",
+                            "prose": "• implement MFA, where available – authentication to cloud services must always use MFA"
+                          }
+                        ],
+                        "title": "This means your organisation must: — node219"
+                      },
+                      {
+                        "id": "node220",
+                        "parts": [
+                          {
+                            "id": "node220-stmt",
+                            "name": "statement",
+                            "prose": "• use separate accounts to perform administrative activities only (no emailing, web browsing or other standard user activities that may expose administrative privileges to avoidable risks)"
+                          }
+                        ],
+                        "title": "This means your organisation must: — node220"
+                      },
+                      {
+                        "id": "node221",
+                        "parts": [
+                          {
+                            "id": "node221-stmt",
+                            "name": "statement",
+                            "prose": "• remove or disable special access privileges when no longer required (when a member of staff changes role, for example)"
+                          }
+                        ],
+                        "title": "This means your organisation must: — node221"
+                      }
+                    ],
+                    "id": "node215",
+                    "parts": [
+                      {
+                        "id": "node215-stmt",
+                        "name": "statement",
+                        "prose": "This means your organisation must:"
+                      }
+                    ],
+                    "title": "Requirements — node215"
+                  }
+                ],
+                "id": "node213",
+                "title": "Requirements"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "node223",
+                    "parts": [
+                      {
+                        "id": "node223-stmt",
+                        "name": "statement",
+                        "prose": "All user accounts require the user to authenticate."
+                      }
+                    ],
+                    "title": "Password-based authentication — node223"
+                  },
+                  {
+                    "controls": [
+                      {
+                        "controls": [
+                          {
+                            "id": "node226",
+                            "parts": [
+                              {
+                                "id": "node226-stmt",
+                                "name": "statement",
+                                "prose": "o multi-factor authentication (see below)"
+                              }
+                            ],
+                            "title": "• Passwords are protected against brute-force password guessing by implementing at least one of: — node226"
+                          },
+                          {
+                            "id": "node227",
+                            "parts": [
+                              {
+                                "id": "node227-stmt",
+                                "name": "statement",
+                                "prose": "o ‘throttling' the rate of attempts, so that the number of times the user must wait between attempts increases with each unsuccessful attempt – you shouldn’t allow more than 10 guesses in 5 minutes"
+                              }
+                            ],
+                            "title": "• Passwords are protected against brute-force password guessing by implementing at least one of: — node227"
+                          },
+                          {
+                            "id": "node228",
+                            "parts": [
+                              {
+                                "id": "node228-stmt",
+                                "name": "statement",
+                                "prose": "o locking accounts after no more than 10 unsuccessful attempts"
+                              }
+                            ],
+                            "title": "• Passwords are protected against brute-force password guessing by implementing at least one of: — node228"
+                          }
+                        ],
+                        "id": "node225",
+                        "parts": [
+                          {
+                            "id": "node225-stmt",
+                            "name": "statement",
+                            "prose": "• Passwords are protected against brute-force password guessing by implementing at least one of:"
+                          }
+                        ],
+                        "title": "Where this is carried out using a password, you should put in place the following protective measures: — node225"
+                      },
+                      {
+                        "controls": [
+                          {
+                            "id": "node230",
+                            "parts": [
+                              {
+                                "id": "node230-stmt",
+                                "name": "statement",
+                                "prose": "o Using multi-factor authentication (see below)"
+                              }
+                            ],
+                            "title": "• Use technical controls to manage the quality of passwords. This will include one of the following: — node230"
+                          },
+                          {
+                            "id": "node231",
+                            "parts": [
+                              {
+                                "id": "node231-stmt",
+                                "name": "statement",
+                                "prose": "o A minimum password length of at least 12 characters, with no maximum length restrictions"
+                              }
+                            ],
+                            "title": "• Use technical controls to manage the quality of passwords. This will include one of the following: — node231"
+                          },
+                          {
+                            "id": "node232",
+                            "parts": [
+                              {
+                                "id": "node232-stmt",
+                                "name": "statement",
+                                "prose": "o A minimum password length of at least 8 characters, with no maximum length restrictions and use automatic blocking of common passwords using a deny list."
+                              }
+                            ],
+                            "title": "• Use technical controls to manage the quality of passwords. This will include one of the following: — node232"
+                          }
+                        ],
+                        "id": "node229",
+                        "parts": [
+                          {
+                            "id": "node229-stmt",
+                            "name": "statement",
+                            "prose": "• Use technical controls to manage the quality of passwords. This will include one of the following:"
+                          }
+                        ],
+                        "title": "Where this is carried out using a password, you should put in place the following protective measures: — node229"
+                      },
+                      {
+                        "controls": [
+                          {
+                            "id": "node234",
+                            "parts": [
+                              {
+                                "id": "node234-stmt",
+                                "name": "statement",
+                                "prose": "o educating people about avoiding common passwords, such as a pet's name, common keyboard patterns or passwords they have used elsewhere. This could include teaching people to use the password generator feature built into some password managers."
+                              }
+                            ],
+                            "title": "• Support users to choose unique passwords for their work accounts by: — node234"
+                          },
+                          {
+                            "id": "node235",
+                            "parts": [
+                              {
+                                "id": "node235-stmt",
+                                "name": "statement",
+                                "prose": "o encouraging people to choose longer passwords by promoting the use of multiple words (a minimum of three) to create a password (such as the NCSC’s guidance on using three random words)"
+                              }
+                            ],
+                            "title": "• Support users to choose unique passwords for their work accounts by: — node235"
+                          },
+                          {
+                            "id": "node236",
+                            "parts": [
+                              {
+                                "id": "node236-stmt",
+                                "name": "statement",
+                                "prose": "o providing usable secure storage for passwords (for example a password manager or secure locked cabinet) with clear information about how and when it can be used."
+                              }
+                            ],
+                            "title": "• Support users to choose unique passwords for their work accounts by: — node236"
+                          },
+                          {
+                            "id": "node237",
+                            "parts": [
+                              {
+                                "id": "node237-stmt",
+                                "name": "statement",
+                                "prose": "o not enforcing regular password expiry"
+                              }
+                            ],
+                            "title": "• Support users to choose unique passwords for their work accounts by: — node237"
+                          },
+                          {
+                            "id": "node238",
+                            "parts": [
+                              {
+                                "id": "node238-stmt",
+                                "name": "statement",
+                                "prose": "o not enforcing password complexity requirements"
+                              }
+                            ],
+                            "title": "• Support users to choose unique passwords for their work accounts by: — node238"
+                          }
+                        ],
+                        "id": "node233",
+                        "parts": [
+                          {
+                            "id": "node233-stmt",
+                            "name": "statement",
+                            "prose": "• Support users to choose unique passwords for their work accounts by:"
+                          }
+                        ],
+                        "title": "Where this is carried out using a password, you should put in place the following protective measures: — node233"
+                      }
+                    ],
+                    "id": "node224",
+                    "parts": [
+                      {
+                        "id": "node224-stmt",
+                        "name": "statement",
+                        "prose": "Where this is carried out using a password, you should put in place the following protective measures:"
+                      }
+                    ],
+                    "title": "Password-based authentication — node224"
+                  },
+                  {
+                    "id": "node239",
+                    "parts": [
+                      {
+                        "id": "node239-stmt",
+                        "name": "statement",
+                        "prose": "You should also make sure there is an established process in place to change passwords promptly if you know or suspect a password or account has been compromised."
+                      }
+                    ],
+                    "title": "Password-based authentication — node239"
+                  }
+                ],
+                "id": "node222",
+                "title": "Password-based authentication"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "node241",
+                    "parts": [
+                      {
+                        "id": "node241-stmt",
+                        "name": "statement",
+                        "prose": "As well as providing an extra layer of security for passwords that aren’t protected by the other technical controls, you should always use multi-factor authentication to give administrative accounts extra security, and accounts that are accessible from the internet."
+                      }
+                    ],
+                    "title": "Multi-factor authentication (MFA) — node241"
+                  },
+                  {
+                    "id": "node242",
+                    "parts": [
+                      {
+                        "id": "node242-stmt",
+                        "name": "statement",
+                        "prose": "The password element of the multi-factor authentication approach must have a password length of at least 8 characters, with no maximum length restrictions."
+                      }
+                    ],
+                    "title": "Multi-factor authentication (MFA) — node242"
+                  },
+                  {
+                    "controls": [
+                      {
+                        "id": "node244",
+                        "parts": [
+                          {
+                            "id": "node244-stmt",
+                            "name": "statement",
+                            "prose": "• a managed/enterprise device"
+                          }
+                        ],
+                        "title": "There are four types of additional factor to consider: — node244"
+                      },
+                      {
+                        "id": "node245",
+                        "parts": [
+                          {
+                            "id": "node245-stmt",
+                            "name": "statement",
+                            "prose": "• an app on a trusted device"
+                          }
+                        ],
+                        "title": "There are four types of additional factor to consider: — node245"
+                      },
+                      {
+                        "id": "node246",
+                        "parts": [
+                          {
+                            "id": "node246-stmt",
+                            "name": "statement",
+                            "prose": "• a physically separate token"
+                          }
+                        ],
+                        "title": "There are four types of additional factor to consider: — node246"
+                      },
+                      {
+                        "id": "node247",
+                        "parts": [
+                          {
+                            "id": "node247-stmt",
+                            "name": "statement",
+                            "prose": "• a known or trusted account"
+                          }
+                        ],
+                        "title": "There are four types of additional factor to consider: — node247"
+                      }
+                    ],
+                    "id": "node243",
+                    "parts": [
+                      {
+                        "id": "node243-stmt",
+                        "name": "statement",
+                        "prose": "There are four types of additional factor to consider:"
+                      }
+                    ],
+                    "title": "Multi-factor authentication (MFA) — node243"
+                  },
+                  {
+                    "id": "node248",
+                    "parts": [
+                      {
+                        "id": "node248-stmt",
+                        "name": "statement",
+                        "prose": "Additional factors should be chosen so that they are usable and accessible. You might need to carry out user testing to decide what is best for your users. For more information see NCSC’s guidance on MFA."
+                      }
+                    ],
+                    "title": "Multi-factor authentication (MFA) — node248"
+                  },
+                  {
+                    "id": "node249",
+                    "parts": [
+                      {
+                        "id": "node249-stmt",
+                        "name": "statement",
+                        "prose": "SMS is not the most secure type of MFA, but still offers a huge advantage over not using any MFA at all. Any multi-factor authentication is better than not having it at all. However, if there are alternatives available that will work for your situation, we recommend you use these instead of SMS."
+                      }
+                    ],
+                    "title": "Information:"
+                  }
+                ],
+                "id": "node240",
+                "title": "Multi-factor authentication (MFA)"
+              }
+            ],
+            "id": "D.4",
+            "title": "User access control"
+          },
+          {
+            "groups": [
+              {
+                "controls": [
+                  {
+                    "id": "node255",
+                    "parts": [
+                      {
+                        "id": "node255-stmt",
+                        "name": "statement",
+                        "prose": "Malware, such as computer viruses, worms and ransomware, is software that has been written and distributed deliberately to perform malicious actions. Potential sources include: malicious email attachments, downloads (including those from application stores), and direct installation of unauthorised software."
+                      }
+                    ],
+                    "title": "Introduction — node255"
+                  },
+                  {
+                    "id": "node256",
+                    "parts": [
+                      {
+                        "id": "node256-stmt",
+                        "name": "statement",
+                        "prose": "If a system is infected, your organisation is likely to suffer from problems like malfunctioning systems, data loss, or onward infection that goes unseen until it causes harm elsewhere."
+                      }
+                    ],
+                    "title": "Introduction — node256"
+                  },
+                  {
+                    "controls": [
+                      {
+                        "id": "node258",
+                        "parts": [
+                          {
+                            "id": "node258-stmt",
+                            "name": "statement",
+                            "prose": "• preventing malware from being delivered to devices"
+                          }
+                        ],
+                        "title": "You can largely avoid the potential for harm by: — node258"
+                      },
+                      {
+                        "id": "node259",
+                        "parts": [
+                          {
+                            "id": "node259-stmt",
+                            "name": "statement",
+                            "prose": "• preventing malware from running on devices"
+                          }
+                        ],
+                        "title": "You can largely avoid the potential for harm by: — node259"
+                      }
+                    ],
+                    "id": "node257",
+                    "parts": [
+                      {
+                        "id": "node257-stmt",
+                        "name": "statement",
+                        "prose": "You can largely avoid the potential for harm by:"
+                      }
+                    ],
+                    "title": "Introduction — node257"
+                  }
+                ],
+                "id": "node254",
+                "title": "Introduction"
+              },
+              {
+                "groups": [
+                  {
+                    "controls": [
+                      {
+                        "id": "node262",
+                        "parts": [
+                          {
+                            "id": "node262-stmt",
+                            "name": "statement",
+                            "prose": "You must make sure that a malware protection mechanism is active on all devices in scope. For each device, you must use at least one of the options listed below. In most modern products these options are built in to the software supplied. Alternatively, you can purchase products from a third- party provider. In all cases the software must be active, kept up to date in accordance with the vendors instructions, and configured to work as detailed below:"
+                          }
+                        ],
+                        "title": "Requirements — node262"
+                      }
+                    ],
+                    "id": "node261-controls",
+                    "title": "Requirements"
+                  },
+                  {
+                    "controls": [
+                      {
+                        "controls": [
+                          {
+                            "id": "node265",
+                            "parts": [
+                              {
+                                "id": "node265-stmt",
+                                "name": "statement",
+                                "prose": "• prevent connections to malicious websites over the internet."
+                              }
+                            ],
+                            "title": "If you use anti-malware software to protect your device it must be configured to: — node265"
+                          },
+                          {
+                            "id": "node266",
+                            "parts": [
+                              {
+                                "id": "node266-stmt",
+                                "name": "statement",
+                                "prose": "• be updated in line with vendor recommendations"
+                              }
+                            ],
+                            "title": "If you use anti-malware software to protect your device it must be configured to: — node266"
+                          },
+                          {
+                            "id": "node267",
+                            "parts": [
+                              {
+                                "id": "node267-stmt",
+                                "name": "statement",
+                                "prose": "• prevent malware from running"
+                              }
+                            ],
+                            "title": "If you use anti-malware software to protect your device it must be configured to: — node267"
+                          },
+                          {
+                            "id": "node268",
+                            "parts": [
+                              {
+                                "id": "node268-stmt",
+                                "name": "statement",
+                                "prose": "• prevent the execution of malicious code"
+                              }
+                            ],
+                            "title": "If you use anti-malware software to protect your device it must be configured to: — node268"
+                          },
+                          {
+                            "id": "node269",
+                            "parts": [
+                              {
+                                "id": "node269-stmt",
+                                "name": "statement",
+                                "prose": "• prevent connections to malicious websites over the internet."
+                              }
+                            ],
+                            "title": "If you use anti-malware software to protect your device it must be configured to: — node269"
+                          }
+                        ],
+                        "id": "node264",
+                        "parts": [
+                          {
+                            "id": "node264-stmt",
+                            "name": "statement",
+                            "prose": "If you use anti-malware software to protect your device it must be configured to:"
+                          }
+                        ],
+                        "title": "Anti-malware software — node264"
+                      }
+                    ],
+                    "id": "node263",
+                    "title": "Anti-malware software"
+                  },
+                  {
+                    "controls": [
+                      {
+                        "controls": [
+                          {
+                            "id": "node272",
+                            "parts": [
+                              {
+                                "id": "node272-stmt",
+                                "name": "statement",
+                                "prose": "• actively approve such applications before deploying them to devices"
+                              }
+                            ],
+                            "title": "Only approved applications, restricted by code signing, are allowed to execute on devices. You must: — node272"
+                          },
+                          {
+                            "id": "node273",
+                            "parts": [
+                              {
+                                "id": "node273-stmt",
+                                "name": "statement",
+                                "prose": "• maintain a current list of approved applications, users must not be able to install any application that is unsigned or has an invalid signature."
+                              }
+                            ],
+                            "title": "Only approved applications, restricted by code signing, are allowed to execute on devices. You must: — node273"
+                          }
+                        ],
+                        "id": "node271",
+                        "parts": [
+                          {
+                            "id": "node271-stmt",
+                            "name": "statement",
+                            "prose": "Only approved applications, restricted by code signing, are allowed to execute on devices. You must:"
+                          }
+                        ],
+                        "title": "Application allow listing — node271"
+                      }
+                    ],
+                    "id": "node270",
+                    "title": "Application allow listing"
+                  }
+                ],
+                "id": "node261",
+                "title": "Requirements"
+              }
+            ],
+            "id": "D.5",
+            "title": "Malware protection"
+          }
+        ],
+        "id": "D",
+        "title": "Requirements by technical control theme"
+      },
+      {
+        "groups": [
+          {
+            "controls": [
+              {
+                "id": "node276",
+                "parts": [
+                  {
+                    "id": "node276-stmt",
+                    "name": "statement",
+                    "prose": "Backing up means creating a copy of your information and saving it to another device or to cloud storage (online)."
+                  }
+                ],
+                "title": "Backing up your data — node276"
+              },
+              {
+                "id": "node277",
+                "parts": [
+                  {
+                    "id": "node277-stmt",
+                    "name": "statement",
+                    "prose": "Backing up regularly means you will always have a recent version of your information saved. This will help you recover quicker if your data is lost or stolen."
+                  }
+                ],
+                "title": "Backing up your data — node277"
+              },
+              {
+                "id": "node278",
+                "parts": [
+                  {
+                    "id": "node278-stmt",
+                    "name": "statement",
+                    "prose": "You can also turn on automatic backup. This will regularly save your information into cloud storage, without you having to remember."
+                  }
+                ],
+                "title": "Backing up your data — node278"
+              },
+              {
+                "id": "node279",
+                "parts": [
+                  {
+                    "id": "node279-stmt",
+                    "name": "statement",
+                    "prose": "If you back up your information to a USB stick or an external hard drive, disconnect it from your computer when a backup isn’t being done."
+                  }
+                ],
+                "title": "Backing up your data — node279"
+              },
+              {
+                "id": "node280",
+                "parts": [
+                  {
+                    "id": "node280-stmt",
+                    "name": "statement",
+                    "prose": "Backing up your data is not a technical requirement of Cyber Essentials; however we highly recommend implementing an appropriate backup solution."
+                  }
+                ],
+                "title": "Backing up your data — node280"
+              }
+            ],
+            "id": "node275",
+            "title": "Backing up your data"
+          },
+          {
+            "controls": [
+              {
+                "id": "node282",
+                "parts": [
+                  {
+                    "id": "node282-stmt",
+                    "name": "statement",
+                    "prose": "Network architecture is changing. More services are moving to the cloud and use of Software as a Service (SaaS) continues to grow."
+                  }
+                ],
+                "title": "Zero trust and Cyber Essentials — node282"
+              },
+              {
+                "id": "node283",
+                "parts": [
+                  {
+                    "id": "node283-stmt",
+                    "name": "statement",
+                    "prose": "At the same time, many organisations are embracing flexible working, which means lots of different device types may connect to your systems from many locations. It's also increasingly common for organisations to share data with their partners and guest users, which requires more granular access control policies."
+                  }
+                ],
+                "title": "Zero trust and Cyber Essentials — node283"
+              },
+              {
+                "id": "node284",
+                "parts": [
+                  {
+                    "id": "node284-stmt",
+                    "name": "statement",
+                    "prose": "Zero trust architecture is designed to cope with these changing conditions by enabling an improved user experience for remote access and data sharing."
+                  }
+                ],
+                "title": "Zero trust and Cyber Essentials — node284"
+              },
+              {
+                "id": "node285",
+                "parts": [
+                  {
+                    "id": "node285-stmt",
+                    "name": "statement",
+                    "prose": "A zero trust architecture is an approach to system design where inherent trust in the network is removed. Instead, the network is assumed hostile and each access request is verified, based on an access policy. Confidence in a request is achieved by building context, which relies on strong authentication, authorisation, device health, and value of the data being accessed."
+                  }
+                ],
+                "title": "Zero trust and Cyber Essentials — node285"
+              },
+              {
+                "id": "node286",
+                "parts": [
+                  {
+                    "id": "node286-stmt",
+                    "name": "statement",
+                    "prose": "As organisations move towards zero trust architecture models, we have considered it in this context, and are confident that implementing the technical controls doesn't prevent you using a zero trust architecture as defined by the NCSC guidance."
+                  }
+                ],
+                "title": "Zero trust and Cyber Essentials — node286"
+              }
+            ],
+            "id": "node281",
+            "title": "Zero trust and Cyber Essentials"
+          }
+        ],
+        "id": "E",
+        "title": "Further guidance"
+      }
+    ],
+    "metadata": {
+      "last-modified": "2026-11-08T00:30:48Z",
+      "oscal-version": "1.2.3",
+      "title": "Cyber Essentials: Requirements for IT infrastructure v3.1",
+      "version": "2"
+    },
+    "uuid": "c03a8779-16be-5010-b326-2ec65bd1b362"
+  }
+}

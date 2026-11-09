@@ -1,0 +1,138 @@
+{
+  "assessment-plan": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:13Z",
+      "oscal-version": "1.2.3",
+      "title": "Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Security Assessment Plan Template",
+      "version": "1"
+    },
+    "reviewed-controls": {
+      "control-selections": [
+        {
+          "description": "All controls in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1)",
+          "include-all": {}
+        }
+      ]
+    },
+    "tasks": [
+      {
+        "description": "Verify and examine implementation of 4 controls in the Strategie für die Cloud-Nutzung family for Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "title": "Assess Family NCD.2.1.01 (Strategie für die Cloud-Nutzung)",
+        "type": "examination",
+        "uuid": "0d30bdae-bc53-5a9b-be7c-e1dd3c3a7acd"
+      },
+      {
+        "description": "Verify and examine implementation of 3 controls in the Sicherheitsrichtlinie für externe Cloud-Dienste family for Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "title": "Assess Family NCD.2.1.02 (Sicherheitsrichtlinie für externe Cloud-Dienste)",
+        "type": "examination",
+        "uuid": "5695f587-d4b3-59c1-b391-03e299036031"
+      },
+      {
+        "description": "Verify and examine implementation of 11 controls in the Sicherheitskonzept für den externen Cloud-Dienst family for Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "title": "Assess Family NCD.2.1.03 (Sicherheitskonzept für den externen Cloud-Dienst)",
+        "type": "examination",
+        "uuid": "a5cca1d3-0705-5179-818c-da81fcb91534"
+      },
+      {
+        "description": "Verify and examine implementation of 3 controls in the Notfall- und Kontinuitätsmanagement family for Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "title": "Assess Family NCD.2.1.04 (Notfall- und Kontinuitätsmanagement)",
+        "type": "examination",
+        "uuid": "7d018c32-5bbd-56eb-ac62-e0eaf8c762a2"
+      },
+      {
+        "description": "Verify and examine implementation of 16 controls in the Umsetzung der Sicherheitsanforderungen family for Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "title": "Assess Family NCD.2.2.01 (Umsetzung der Sicherheitsanforderungen)",
+        "type": "examination",
+        "uuid": "d1af9ee0-81c5-5eac-ba05-197e1aa1b3ed"
+      },
+      {
+        "description": "Verify and examine implementation of 6 controls in the Umgang mit Unterauftragnehmern und anderen externen Dritten vertraglich zusichern family for Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "title": "Assess Family NCD.2.2.02 (Umgang mit Unterauftragnehmern und anderen externen Dritten vertraglich zusichern)",
+        "type": "examination",
+        "uuid": "578a2dde-1eee-5cc1-b44e-23189dacd310"
+      },
+      {
+        "description": "Verify and examine implementation of 3 controls in the Gerichtsbarkeit family for Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "title": "Assess Family NCD.2.2.03 (Gerichtsbarkeit)",
+        "type": "examination",
+        "uuid": "21403445-f149-5aa5-961b-6bb99059b4b3"
+      },
+      {
+        "description": "Verify and examine implementation of 2 controls in the Lokation der Datenverarbeitung family for Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "title": "Assess Family NCD.2.2.04 (Lokation der Datenverarbeitung)",
+        "type": "examination",
+        "uuid": "698f7ae5-e047-515c-8975-3141e75eca40"
+      },
+      {
+        "description": "Verify and examine implementation of 3 controls in the Meldepflicht sicherheitsrelevanter Vorfälle family for Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "title": "Assess Family NCD.2.2.05 (Meldepflicht sicherheitsrelevanter Vorfälle)",
+        "type": "examination",
+        "uuid": "0aca40e2-0aae-5b87-9240-e9b6cc71e921"
+      },
+      {
+        "description": "Verify and examine implementation of 2 controls in the Beendigung des Vertragsverhältnisses family for Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "title": "Assess Family NCD.2.2.06 (Beendigung des Vertragsverhältnisses)",
+        "type": "examination",
+        "uuid": "9e678461-4d2f-53c3-9e5c-17aa62594868"
+      },
+      {
+        "description": "Verify and examine implementation of 2 controls in the Regelung der Datenrückgabe und Datenlöschung family for Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "title": "Assess Family NCD.2.2.07 (Regelung der Datenrückgabe und Datenlöschung)",
+        "type": "examination",
+        "uuid": "9c87e54d-027c-5b20-97a4-576ada7c2da1"
+      },
+      {
+        "description": "Verify and examine implementation of 2 controls in the Einbindung in das ISMS family for Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "title": "Assess Family NCD.2.3.01 (Einbindung in das ISMS)",
+        "type": "examination",
+        "uuid": "aa2cf2c1-ef20-562e-85ec-91a16412aec0"
+      },
+      {
+        "description": "Verify and examine implementation of 4 controls in the Auswertung von Sicherheitsnachweisen family for Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "title": "Assess Family NCD.2.3.02 (Auswertung von Sicherheitsnachweisen)",
+        "type": "examination",
+        "uuid": "2866237b-d5bd-5305-a353-37f8ff1ae93a"
+      },
+      {
+        "description": "Verify and examine implementation of 3 controls in the Prüfung der Leistungsfähigkeit family for Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "title": "Assess Family NCD.2.3.03 (Prüfung der Leistungsfähigkeit)",
+        "type": "examination",
+        "uuid": "e5db1bb8-7f97-54c6-ae76-3f95f0e4eede"
+      },
+      {
+        "description": "Verify and examine implementation of 2 controls in the Informationspflichten family for Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "title": "Assess Family NCD.2.3.04 (Informationspflichten)",
+        "type": "examination",
+        "uuid": "bb2744ac-5174-5c36-a807-f7a52b165b1f"
+      },
+      {
+        "description": "Verify and examine implementation of 2 controls in the Multi-Faktor-Authentisierung family for Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "title": "Assess Family NCD.2.3.05 (Multi-Faktor-Authentisierung)",
+        "type": "examination",
+        "uuid": "011f5b19-6631-5889-a873-d40a3bdc4b5c"
+      },
+      {
+        "description": "Verify and examine implementation of 2 controls in the Datenrückgabe bei Beendigung family for Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "title": "Assess Family NCD.2.4.01 (Datenrückgabe bei Beendigung)",
+        "type": "examination",
+        "uuid": "eeca1fa8-b0f3-52ec-a86a-4d9f265625fb"
+      },
+      {
+        "description": "Verify and examine implementation of 3 controls in the Datenlöschung bei Beendigung family for Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "title": "Assess Family NCD.2.4.02 (Datenlöschung bei Beendigung)",
+        "type": "examination",
+        "uuid": "a9543cb0-648d-5457-a7a5-268a0cb142f9"
+      },
+      {
+        "description": "Verify and examine implementation of 15 controls in the Mitnutzung externer Cloud-Dienste family for Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "title": "Assess Family NCD.2.5.01 (Mitnutzung externer Cloud-Dienste)",
+        "type": "examination",
+        "uuid": "b01d3299-e826-5190-9c35-fdebbf058b99"
+      }
+    ],
+    "uuid": "d546dd0f-cbc3-57cf-9ab0-f64934fcb3f2"
+  }
+}

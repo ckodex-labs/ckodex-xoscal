@@ -1,0 +1,21 @@
+{
+  "plan-of-action-and-milestones": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:13Z",
+      "oscal-version": "1.2.3",
+      "title": "Cyber Essentials: Requirements for IT infrastructure v3.1 Plan of Action and Milestones Template",
+      "version": "2"
+    },
+    "poam-items": [
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "title": "Compliance Roadmap and Parameter Tailoring for Cyber Essentials: Requirements for IT infrastructure v3.1",
+        "uuid": "33dc3660-a91d-5390-abad-3155ae917259"
+      }
+    ],
+    "uuid": "e7f60207-8790-59fc-a48b-597c5c1e0be6"
+  }
+}

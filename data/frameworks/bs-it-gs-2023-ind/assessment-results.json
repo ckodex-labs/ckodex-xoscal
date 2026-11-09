@@ -1,0 +1,237 @@
+{
+  "assessment-results": {
+    "import-ap": {
+      "href": "./assessment-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:12Z",
+      "oscal-version": "1.2.3",
+      "title": "IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT Assessment Results Template",
+      "version": "1"
+    },
+    "results": [
+      {
+        "description": "Assessment evaluation findings and observations for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "findings": [
+          {
+            "description": "Control ind.1.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "ac5088a2-e901-5e68-ae46-355f646b11ac"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "ind.1.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for ind.1.a1.1",
+            "uuid": "2cbfc395-c100-5952-a154-9d9d3c9d57f8"
+          },
+          {
+            "description": "Control ind.2.1.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "82ba44c4-91a1-5c0f-8c9d-86a10d71e3f8"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "ind.2.1.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for ind.2.1.a1.1",
+            "uuid": "353a7b10-7733-5c9a-8661-d0a2c35a3e87"
+          },
+          {
+            "description": "Control ind.2.2.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "b4a70583-abc9-5b29-841c-a7f16f0ffcc3"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "ind.2.2.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for ind.2.2.a1.1",
+            "uuid": "e6789b7d-ea48-592a-8020-096d5397b505"
+          },
+          {
+            "description": "Control ind.2.3.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "5f5a54f6-35e8-5bd2-8303-c651a14539eb"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "ind.2.3.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for ind.2.3.a1.1",
+            "uuid": "65314c23-c196-56f9-81ad-ac158f3bf4ce"
+          },
+          {
+            "description": "Control ind.2.4.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "c1b6c201-0b6e-5808-b4c0-dea69cb4a039"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "ind.2.4.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for ind.2.4.a1.1",
+            "uuid": "9bfd47bf-ff61-5c73-b29f-2c90ed99f737"
+          },
+          {
+            "description": "Control ind.2.7.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "b47d0a96-6a21-528c-89f9-8c0bd53a6a61"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "ind.2.7.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for ind.2.7.a1.1",
+            "uuid": "243c4af4-893d-5132-9e40-a7b58cb0b8f6"
+          },
+          {
+            "description": "Control ind.3.2.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "2c740e63-a059-5be4-926a-76d745dcb891"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "ind.3.2.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for ind.3.2.a1.1",
+            "uuid": "42170085-24a1-5611-8c6e-84181c4da16a"
+          }
+        ],
+        "observations": [
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control ind.1.a1.1 (Einbindung in die Sicherheitsorganisation — IND.1.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "ac5088a2-e901-5e68-ae46-355f646b11ac"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control ind.2.1.a1.1 (Einschränkung des Zugriffs auf Konfigurations- und Wartungsschnittstellen — IND.2.1.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "82ba44c4-91a1-5c0f-8c9d-86a10d71e3f8"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control ind.2.2.a1.1 (Erweiterte Systemdokumentation für Speicherprogrammierbare Steuerungen — IND.2.2.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "b4a70583-abc9-5b29-841c-a7f16f0ffcc3"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control ind.2.3.a1.1 (Installation von Sensoren — IND.2.3.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "5f5a54f6-35e8-5bd2-8303-c651a14539eb"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control ind.2.4.a1.1 (Fernwartung durch Maschinen- und Anlagenbauende — IND.2.4.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "c1b6c201-0b6e-5808-b4c0-dea69cb4a039"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control ind.2.7.a1.1 (Erfassung und Dokumentation — IND.2.7.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "b47d0a96-6a21-528c-89f9-8c0bd53a6a61"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control ind.3.2.a1.1 (Planung des Einsatzes der Fernwartung in der OT — IND.3.2.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "2c740e63-a059-5be4-926a-76d745dcb891"
+          }
+        ],
+        "reviewed-controls": {
+          "control-selections": [
+            {
+              "description": "All controls evaluated for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT",
+              "include-all": {}
+            }
+          ]
+        },
+        "start": "2026-11-08T01:42:12Z",
+        "title": "IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT Assessment Results",
+        "uuid": "27976aec-1e62-5831-a21a-ee326752ce6e"
+      }
+    ],
+    "uuid": "fb419f38-4947-5eac-8943-c4f3a40b4d69"
+  }
+}

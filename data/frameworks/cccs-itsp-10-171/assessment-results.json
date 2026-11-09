@@ -4,7 +4,7 @@
       "href": "./assessment-plan.json"
     },
     "metadata": {
-      "last-modified": "2026-10-25T23:17:26Z",
+      "last-modified": "2026-11-08T01:42:11Z",
       "oscal-version": "1.2.3",
       "title": "CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Assessment Results Template",
       "version": "1.2.3"
@@ -29,12 +29,284 @@
             },
             "title": "Assessment Finding for _03.01.01.a",
             "uuid": "9fa28614-a725-559b-84ad-5e969753cf1a"
+          },
+          {
+            "description": "Control _03.02.01.a.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "528a9dec-c2bf-5715-9717-846b52dde55d"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_03.02.01.a.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _03.02.01.a.1",
+            "uuid": "23bcd99b-f585-501f-8554-3a95dea323cd"
+          },
+          {
+            "description": "Control _03.03.01.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "00cf980d-e8a8-5d30-a421-e78528589e19"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_03.03.01.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _03.03.01.a",
+            "uuid": "48184a61-5dde-5a2b-bf68-a4f69ac2972f"
+          },
+          {
+            "description": "Control _03.04.01.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "14f7e4e3-c0bc-5c73-9a6d-8da857831f4e"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_03.04.01.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _03.04.01.a",
+            "uuid": "c0a62c7e-74b5-5678-9c9b-92afaca03df5"
+          },
+          {
+            "description": "Control _03.05.01.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "78c99760-9cb9-51e9-ac87-4cda127635c9"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_03.05.01.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _03.05.01.a",
+            "uuid": "f5e04147-c9f8-5421-ad55-eb78b421710f"
+          },
+          {
+            "description": "Control _03.06.01.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "80d4dc1d-701b-51d9-8b89-d28366a685b5"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_03.06.01.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _03.06.01.a",
+            "uuid": "7aaf1450-1e3f-5ae0-93ed-f37dde6c7bf2"
+          },
+          {
+            "description": "Control _03.07.04.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "c52e1035-b5aa-57ce-bb4c-985bd5678bd4"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_03.07.04.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _03.07.04.a",
+            "uuid": "9899a6b3-d8b0-5ddd-a312-4f8520569749"
+          },
+          {
+            "description": "Control _03.08.01.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "396f2b26-af6c-5453-bae8-4b2e46dcf9ed"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_03.08.01.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _03.08.01.a",
+            "uuid": "869c12b6-c934-52d2-b0ea-81dd3ba20f45"
+          },
+          {
+            "description": "Control _03.09.01.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "4aac3c23-2e93-50f4-8f99-254848685ac9"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_03.09.01.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _03.09.01.a",
+            "uuid": "52029329-c58d-52fa-aa35-75b622e33eeb"
+          },
+          {
+            "description": "Control _03.10.01.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "9179ca7d-3a7a-5f45-8130-a1c1d96d5da8"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_03.10.01.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _03.10.01.a",
+            "uuid": "78e8d6aa-a3d6-5e95-9034-f6e82775b56e"
+          },
+          {
+            "description": "Control _03.11.01.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "270bbc53-2e7c-5fba-a43d-211417c789c4"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_03.11.01.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _03.11.01.a",
+            "uuid": "d846880d-1d47-5056-9b73-86bb1d01091b"
+          },
+          {
+            "description": "Control _03.12.01.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "346eb03d-355c-5286-b450-05498a4b1597"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_03.12.01.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _03.12.01.a",
+            "uuid": "037cf7ae-7096-52c1-97df-db8a28af97e5"
+          },
+          {
+            "description": "Control _03.13.01.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "a81d9edf-d652-527d-97b6-3f64416b930d"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_03.13.01.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _03.13.01.a",
+            "uuid": "1165073f-2fc5-56cb-95ef-8443f88e418b"
+          },
+          {
+            "description": "Control _03.14.01.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "159fc494-4554-5592-b2d3-991a728fd070"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_03.14.01.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _03.14.01.a",
+            "uuid": "923a4dae-5ef2-5cbd-a9bc-4697a3e5b0af"
+          },
+          {
+            "description": "Control _03.15.01.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "a65d0f74-4892-5df8-8bd1-41ec98bc1257"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_03.15.01.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _03.15.01.a",
+            "uuid": "55a4e8f9-1094-5c7a-bf7f-56f3425aad6f"
+          },
+          {
+            "description": "Control _03.16.01.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "d8abd90c-0a97-5dd4-b7ca-4c75609ff3b1"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_03.16.01.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _03.16.01.a",
+            "uuid": "8f7c1f78-0f02-5062-98d9-d1b7056515cd"
+          },
+          {
+            "description": "Control _03.17.01.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "01ef2a04-296b-5916-875d-b0bd64e62286"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_03.17.01.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _03.17.01.a",
+            "uuid": "f97749b6-a6a2-553e-b471-f2d27313b61e"
           }
         ],
         "observations": [
           {
-            "collected": "2026-10-25T23:17:26Z",
-            "description": "Verified control _03.01.01.a (03.01.01.A) implementation and supporting evidence.",
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control _03.01.01.a (Account Management (Gestion des comptes) — 03.01.01.A) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
               "TEST"
@@ -43,6 +315,198 @@
               "finding"
             ],
             "uuid": "7ba37fe1-5da9-5cc7-a2a0-cc5871d7bbef"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control _03.02.01.a.1 (Literacy Training and Awareness (Formation de base et sensibilisation) — 03.02.01.A.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "528a9dec-c2bf-5715-9717-846b52dde55d"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control _03.03.01.a (Event Logging (Journalisation des événements) — 03.03.01.A) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "00cf980d-e8a8-5d30-a421-e78528589e19"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control _03.04.01.a (Baseline Configuration (Configuration de référence) — 03.04.01.A) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "14f7e4e3-c0bc-5c73-9a6d-8da857831f4e"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control _03.05.01.a (Identification and Authentication — Organizational Users (Identification et authentification des utilisateurs) — 03.05.01.A) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "78c99760-9cb9-51e9-ac87-4cda127635c9"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control _03.06.01.a (Incident Handling (Traitement des incidents) — 03.06.01.A) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "80d4dc1d-701b-51d9-8b89-d28366a685b5"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control _03.07.04.a (Maintenance Tools (Outils de maintenance) — 03.07.04.A) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "c52e1035-b5aa-57ce-bb4c-985bd5678bd4"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control _03.08.01.a (Media Storage (Stockage des supports) — 03.08.01.A) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "396f2b26-af6c-5453-bae8-4b2e46dcf9ed"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control _03.09.01.a (Personnel Screening (Filtrage de sécurité du personnel) — 03.09.01.A) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "4aac3c23-2e93-50f4-8f99-254848685ac9"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control _03.10.01.a (Physical Access Authorizations (Autorisations d'accès physique) — 03.10.01.A) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "9179ca7d-3a7a-5f45-8130-a1c1d96d5da8"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control _03.11.01.a (Risk Assessment (Évaluation des risques) — 03.11.01.A) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "270bbc53-2e7c-5fba-a43d-211417c789c4"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control _03.12.01.a (Security Control Assessment (Évaluation des contrôles de sécurité) — 03.12.01.A) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "346eb03d-355c-5286-b450-05498a4b1597"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control _03.13.01.a (Boundary Protection (Protection de la frontière) — 03.13.01.A) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "a81d9edf-d652-527d-97b6-3f64416b930d"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control _03.14.01.a (Flaw Remediation (Correction des défauts) — 03.14.01.A) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "159fc494-4554-5592-b2d3-991a728fd070"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control _03.15.01.a (Policy and Procedures (Politiques et procédures) — 03.15.01.A) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "a65d0f74-4892-5df8-8bd1-41ec98bc1257"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control _03.16.01.a (Security Engineering Principles (Principes d'ingénierie de sécurité) — 03.16.01.A) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "d8abd90c-0a97-5dd4-b7ca-4c75609ff3b1"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control _03.17.01.a (Supply Chain Risk Management Plan (Plan de gestion des risques liés à la chaîne d'approvisionnement) — 03.17.01.A) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "01ef2a04-296b-5916-875d-b0bd64e62286"
           }
         ],
         "reviewed-controls": {
@@ -53,7 +517,7 @@
             }
           ]
         },
-        "start": "2026-10-25T23:17:26Z",
+        "start": "2026-11-08T01:42:11Z",
         "title": "CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Assessment Results",
         "uuid": "145b6b35-cb5a-5105-933c-e672bd33ea28"
       }

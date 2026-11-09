@@ -1,0 +1,60 @@
+{
+  "assessment-plan": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:13Z",
+      "oscal-version": "1.2.3",
+      "title": "CISA Cybersecurity Performance Goals v2.0 Security Assessment Plan Template",
+      "version": "1"
+    },
+    "reviewed-controls": {
+      "control-selections": [
+        {
+          "description": "All controls in CISA Cybersecurity Performance Goals v2.0",
+          "include-all": {}
+        }
+      ]
+    },
+    "tasks": [
+      {
+        "description": "Verify and examine implementation of 2 controls in the DETECT family for CISA Cybersecurity Performance Goals v2.0.",
+        "title": "Assess Family DE (DETECT)",
+        "type": "examination",
+        "uuid": "407f2872-f2b8-5b65-9cf0-5ab074a9741e"
+      },
+      {
+        "description": "Verify and examine implementation of 5 controls in the GOVERN family for CISA Cybersecurity Performance Goals v2.0.",
+        "title": "Assess Family GV (GOVERN)",
+        "type": "examination",
+        "uuid": "e25220a4-b621-5a43-a42f-f33325ff1236"
+      },
+      {
+        "description": "Verify and examine implementation of 5 controls in the IDENTIFY family for CISA Cybersecurity Performance Goals v2.0.",
+        "title": "Assess Family ID (IDENTIFY)",
+        "type": "examination",
+        "uuid": "b899d5fb-9405-5ab7-8c53-83b1081dc8b7"
+      },
+      {
+        "description": "Verify and examine implementation of 19 controls in the PROTECT family for CISA Cybersecurity Performance Goals v2.0.",
+        "title": "Assess Family PR (PROTECT)",
+        "type": "examination",
+        "uuid": "9fc2ac3d-40c7-5997-9056-2c364cb8ad86"
+      },
+      {
+        "description": "Verify and examine implementation of 1 controls in the RECOVER family for CISA Cybersecurity Performance Goals v2.0.",
+        "title": "Assess Family RC (RECOVER)",
+        "type": "examination",
+        "uuid": "fb6f5377-09dc-5d7d-bc9a-42e9cc4cc522"
+      },
+      {
+        "description": "Verify and examine implementation of 2 controls in the RESPOND family for CISA Cybersecurity Performance Goals v2.0.",
+        "title": "Assess Family RS (RESPOND)",
+        "type": "examination",
+        "uuid": "e1077517-f133-55e1-8795-d77f12d494cd"
+      }
+    ],
+    "uuid": "e250b0b3-2ec3-515d-95da-2fbd845562b3"
+  }
+}

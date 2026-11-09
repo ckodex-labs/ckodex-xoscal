@@ -1,0 +1,556 @@
+{
+  "assessment-results": {
+    "import-ap": {
+      "href": "./assessment-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:13Z",
+      "oscal-version": "1.2.3",
+      "title": "GSA FedRAMP Rev5 Assessment Results Template",
+      "version": "1"
+    },
+    "results": [
+      {
+        "description": "Assessment evaluation findings and observations for GSA FedRAMP Rev5.",
+        "findings": [
+          {
+            "description": "Control ac-1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "047d5806-7518-525d-b970-e88e2ce98570"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "ac-1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for ac-1",
+            "uuid": "1ee5503f-3aa2-528c-9ba7-c43d6b41932e"
+          },
+          {
+            "description": "Control at-1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "c335c45f-875d-5fcf-8f21-9b18c955debc"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "at-1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for at-1",
+            "uuid": "2568e669-13b5-5424-a2ef-1f7b4f8bd4b5"
+          },
+          {
+            "description": "Control au-1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "bc6d2989-c386-565a-9cd2-54d33bd6f826"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "au-1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for au-1",
+            "uuid": "6b09615c-3ceb-53f7-b786-e8e06943120c"
+          },
+          {
+            "description": "Control ca-1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "01913bbf-543d-5cff-acfc-0ec9c48df74b"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "ca-1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for ca-1",
+            "uuid": "4e98c788-c0f1-51c0-a1f1-f31a63c23cbc"
+          },
+          {
+            "description": "Control cm-1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "40030068-30f8-5fd2-b86c-729a63e4af96"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "cm-1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for cm-1",
+            "uuid": "61fd2ed9-5203-5c70-ae4c-f30e15d9721a"
+          },
+          {
+            "description": "Control cp-1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "bd3dc705-6d61-5e4a-a3da-0dd5ac34911f"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "cp-1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for cp-1",
+            "uuid": "767ebf78-a42d-5602-a507-713cfd4672ea"
+          },
+          {
+            "description": "Control ia-1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "d20571f3-76d2-585d-bf11-a65cd94b232d"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "ia-1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for ia-1",
+            "uuid": "ca271b45-9117-5be0-ba8f-58be9f624ef5"
+          },
+          {
+            "description": "Control ir-1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "bfa99b0c-b177-5153-9d68-3f98b5b73454"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "ir-1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for ir-1",
+            "uuid": "767b432b-0f8c-57da-88c3-af2633984712"
+          },
+          {
+            "description": "Control ma-1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "e0bb5eeb-1198-58e0-a269-cd629d76031f"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "ma-1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for ma-1",
+            "uuid": "bf51e857-724c-50c9-81bc-5f03317f2f72"
+          },
+          {
+            "description": "Control mp-1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "84fe294b-b373-5daf-bcbd-e70dd8da0ab4"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "mp-1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for mp-1",
+            "uuid": "03a652e4-30a1-54b6-b96b-3f0fb668f746"
+          },
+          {
+            "description": "Control pe-1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "d02a925a-1c87-5683-9475-36381a45da2c"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "pe-1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for pe-1",
+            "uuid": "c44ee546-44d6-503c-8329-320aad2b228a"
+          },
+          {
+            "description": "Control pl-1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "b675a3ff-8fd3-5c44-88b5-0a811c7e2761"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "pl-1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for pl-1",
+            "uuid": "69d43d13-c303-5fcd-962e-528e61d6e235"
+          },
+          {
+            "description": "Control ps-1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "0823ce00-bba0-5437-b6cc-01e511c2ab1a"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "ps-1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for ps-1",
+            "uuid": "80526abe-926f-5a6c-8bb2-6278d6fab134"
+          },
+          {
+            "description": "Control ra-1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "838a10be-4d4e-5ea4-8632-eccd9d011f2e"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "ra-1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for ra-1",
+            "uuid": "e7a92ba1-d2b0-57a0-ad97-152b05712801"
+          },
+          {
+            "description": "Control sa-1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "e69a532d-99aa-5924-984a-5d7aece84084"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "sa-1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for sa-1",
+            "uuid": "5ecd75dd-87e6-5a45-bc36-01ae3ad83fe4"
+          },
+          {
+            "description": "Control sc-1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "41139e75-6e83-5ca2-8486-5ef9e1d48584"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "sc-1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for sc-1",
+            "uuid": "59de896e-49cf-5487-b699-7cd5604e6d3c"
+          },
+          {
+            "description": "Control si-1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "c37f1014-dcca-5a0b-a6fb-06e9694cace4"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "si-1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for si-1",
+            "uuid": "37c3d02f-247f-50e7-b2bd-9975393a1170"
+          },
+          {
+            "description": "Control sr-1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "d5ea9887-56d6-59db-8920-9a4828734f0f"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "sr-1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for sr-1",
+            "uuid": "0d112c7e-b436-52ed-953b-e05679cb3e8b"
+          }
+        ],
+        "observations": [
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control ac-1 (Policy and Procedures) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "047d5806-7518-525d-b970-e88e2ce98570"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control at-1 (Policy and Procedures) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "c335c45f-875d-5fcf-8f21-9b18c955debc"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control au-1 (Policy and Procedures) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "bc6d2989-c386-565a-9cd2-54d33bd6f826"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control ca-1 (Policy and Procedures) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "01913bbf-543d-5cff-acfc-0ec9c48df74b"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control cm-1 (Policy and Procedures) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "40030068-30f8-5fd2-b86c-729a63e4af96"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control cp-1 (Policy and Procedures) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "bd3dc705-6d61-5e4a-a3da-0dd5ac34911f"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control ia-1 (Policy and Procedures) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "d20571f3-76d2-585d-bf11-a65cd94b232d"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control ir-1 (Policy and Procedures) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "bfa99b0c-b177-5153-9d68-3f98b5b73454"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control ma-1 (Policy and Procedures) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "e0bb5eeb-1198-58e0-a269-cd629d76031f"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control mp-1 (Policy and Procedures) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "84fe294b-b373-5daf-bcbd-e70dd8da0ab4"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control pe-1 (Policy and Procedures) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "d02a925a-1c87-5683-9475-36381a45da2c"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control pl-1 (Policy and Procedures) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "b675a3ff-8fd3-5c44-88b5-0a811c7e2761"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control ps-1 (Policy and Procedures) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "0823ce00-bba0-5437-b6cc-01e511c2ab1a"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control ra-1 (Policy and Procedures) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "838a10be-4d4e-5ea4-8632-eccd9d011f2e"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control sa-1 (Policy and Procedures) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "e69a532d-99aa-5924-984a-5d7aece84084"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control sc-1 (Policy and Procedures) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "41139e75-6e83-5ca2-8486-5ef9e1d48584"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control si-1 (Policy and Procedures) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "c37f1014-dcca-5a0b-a6fb-06e9694cace4"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control sr-1 (Policy and Procedures) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "d5ea9887-56d6-59db-8920-9a4828734f0f"
+          }
+        ],
+        "reviewed-controls": {
+          "control-selections": [
+            {
+              "description": "All controls evaluated for GSA FedRAMP Rev5",
+              "include-all": {}
+            }
+          ]
+        },
+        "start": "2026-11-08T01:42:13Z",
+        "title": "GSA FedRAMP Rev5 Assessment Results",
+        "uuid": "89351735-9f77-52f2-b334-3e0bc04d0378"
+      }
+    ],
+    "uuid": "f62b2c08-a9f3-537e-b11d-96c01b116d7c"
+  }
+}

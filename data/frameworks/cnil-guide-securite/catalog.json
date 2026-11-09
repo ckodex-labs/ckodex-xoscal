@@ -1,0 +1,979 @@
+{
+  "catalog": {
+    "back-matter": {
+      "resources": [
+        {
+          "description": "Source framework metadata for cnil-guide-securite snapshot portal",
+          "props": [
+            {
+              "name": "type",
+              "value": "standard"
+            },
+            {
+              "name": "version",
+              "value": "portal"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "https://raw.githubusercontent.com/intuitem/ciso-assistant-community/main/backend/library/libraries/cnil-guide-securite.yaml"
+            }
+          ],
+          "title": "cnil-guide-securite Framework Reference",
+          "uuid": "7e31d556-334f-5507-b6ba-210b59da66e8"
+        }
+      ]
+    },
+    "groups": [
+      {
+        "controls": [
+          {
+            "id": "_1.1",
+            "parts": [
+              {
+                "id": "_1.1-stmt",
+                "name": "statement",
+                "prose": "Faire de la sécurité un enjeu partagé et porté par l’équipe dirigeante"
+              }
+            ],
+            "title": "Piloter la sécurité des données — 1.1"
+          },
+          {
+            "id": "_1.2",
+            "parts": [
+              {
+                "id": "_1.2-stmt",
+                "name": "statement",
+                "prose": "Évaluer régulièrement l’efficacité des mesures de sécurité mises en œuvre et adopter une démarche d’amélioration continue"
+              }
+            ],
+            "title": "Piloter la sécurité des données — 1.2"
+          }
+        ],
+        "id": "_1",
+        "title": "Piloter la sécurité des données"
+      },
+      {
+        "controls": [
+          {
+            "id": "_10.1",
+            "parts": [
+              {
+                "id": "_10.1-stmt",
+                "name": "statement",
+                "prose": "Sécuriser les flux d’échange des données"
+              }
+            ],
+            "title": "Sécuriser les sites web — 10.1"
+          },
+          {
+            "id": "_10.2",
+            "parts": [
+              {
+                "id": "_10.2-stmt",
+                "name": "statement",
+                "prose": "Vérifier qu'aucun secret ou donnée personnelle ne passe par les URL"
+              }
+            ],
+            "title": "Sécuriser les sites web — 10.2"
+          },
+          {
+            "id": "_10.3",
+            "parts": [
+              {
+                "id": "_10.3-stmt",
+                "name": "statement",
+                "prose": "Contrôler que les entrées des utilisateurs correspondent à ce qui est attendu"
+              }
+            ],
+            "title": "Sécuriser les sites web — 10.3"
+          }
+        ],
+        "id": "_10",
+        "title": "Sécuriser les sites web"
+      },
+      {
+        "controls": [
+          {
+            "id": "_11.1",
+            "parts": [
+              {
+                "id": "_11.1-stmt",
+                "name": "statement",
+                "prose": "Prendre en compte la protection des données personnelles dès la conception"
+              }
+            ],
+            "title": "Encadrer les développements informatiques — 11.1"
+          },
+          {
+            "id": "_11.2",
+            "parts": [
+              {
+                "id": "_11.2-stmt",
+                "name": "statement",
+                "prose": "Proposer des paramètres respectueux de la vie privée par défaut"
+              }
+            ],
+            "title": "Encadrer les développements informatiques — 11.2"
+          },
+          {
+            "id": "_11.3",
+            "parts": [
+              {
+                "id": "_11.3-stmt",
+                "name": "statement",
+                "prose": "Réaliser des tests complets avant la mise à disposition ou la mise à jour d’un produit"
+              }
+            ],
+            "title": "Encadrer les développements informatiques — 11.3"
+          },
+          {
+            "id": "_11.4",
+            "parts": [
+              {
+                "id": "_11.4-stmt",
+                "name": "statement",
+                "prose": "Utiliser des données fictives ou anonymisées pour le développement et les tests"
+              }
+            ],
+            "title": "Encadrer les développements informatiques — 11.4"
+          }
+        ],
+        "id": "_11",
+        "title": "Encadrer les développements informatiques"
+      },
+      {
+        "controls": [
+          {
+            "id": "_12.1",
+            "parts": [
+              {
+                "id": "_12.1-stmt",
+                "name": "statement",
+                "prose": "Restreindre les accès aux locaux au moyen de portes verrouillées"
+              }
+            ],
+            "title": "Protéger les locaux — 12.1"
+          },
+          {
+            "id": "_12.2",
+            "parts": [
+              {
+                "id": "_12.2-stmt",
+                "name": "statement",
+                "prose": "Installer des alarmes anti-intrusion et les vérifier périodiquement"
+              }
+            ],
+            "title": "Protéger les locaux — 12.2"
+          }
+        ],
+        "id": "_12",
+        "title": "Protéger les locaux"
+      },
+      {
+        "controls": [
+          {
+            "id": "_13.1",
+            "parts": [
+              {
+                "id": "_13.1-stmt",
+                "name": "statement",
+                "prose": "Chiffrer les données avant leur envoi"
+              }
+            ],
+            "title": "Sécuriser les échanges avec l’extérieur — 13.1"
+          },
+          {
+            "id": "_13.2",
+            "parts": [
+              {
+                "id": "_13.2-stmt",
+                "name": "statement",
+                "prose": "S'assurer qu'il s'agit du bon destinataire"
+              }
+            ],
+            "title": "Sécuriser les échanges avec l’extérieur — 13.2"
+          },
+          {
+            "id": "_13.3",
+            "parts": [
+              {
+                "id": "_13.3-stmt",
+                "name": "statement",
+                "prose": "Transmettre le secret lors d'un envoi distinct et via un canal différent"
+              }
+            ],
+            "title": "Sécuriser les échanges avec l’extérieur — 13.3"
+          }
+        ],
+        "id": "_13",
+        "title": "Sécuriser les échanges avec l’extérieur"
+      },
+      {
+        "controls": [
+          {
+            "id": "_14.1",
+            "parts": [
+              {
+                "id": "_14.1-stmt",
+                "name": "statement",
+                "prose": "Prévoir des clauses spécifiques dans les contrats des sous-traitants"
+              }
+            ],
+            "title": "Gérer la sous-traitance — 14.1"
+          },
+          {
+            "id": "_14.2",
+            "parts": [
+              {
+                "id": "_14.2-stmt",
+                "name": "statement",
+                "prose": "Prévoir les conditions de restitution et de destruction des données"
+              }
+            ],
+            "title": "Gérer la sous-traitance — 14.2"
+          },
+          {
+            "id": "_14.3",
+            "parts": [
+              {
+                "id": "_14.3-stmt",
+                "name": "statement",
+                "prose": "S'assurer de l'effectivité des garanties prévues (ex. : audits de sécurité, visites)"
+              }
+            ],
+            "title": "Gérer la sous-traitance — 14.3"
+          }
+        ],
+        "id": "_14",
+        "title": "Gérer la sous-traitance"
+      },
+      {
+        "controls": [
+          {
+            "id": "_15.1",
+            "parts": [
+              {
+                "id": "_15.1-stmt",
+                "name": "statement",
+                "prose": "Enregistrer les interventions de maintenance dans une main courante"
+              }
+            ],
+            "title": "Encadrer la maintenance et la fin de vie des matériels et des logiciels — 15.1"
+          },
+          {
+            "id": "_15.2",
+            "parts": [
+              {
+                "id": "_15.2-stmt",
+                "name": "statement",
+                "prose": "Encadrer les interventions de tiers par un responsable de l'organisme"
+              }
+            ],
+            "title": "Encadrer la maintenance et la fin de vie des matériels et des logiciels — 15.2"
+          },
+          {
+            "id": "_15.3",
+            "parts": [
+              {
+                "id": "_15.3-stmt",
+                "name": "statement",
+                "prose": "Effacer les données de tout matériel avant sa mise au rebut"
+              }
+            ],
+            "title": "Encadrer la maintenance et la fin de vie des matériels et des logiciels — 15.3"
+          }
+        ],
+        "id": "_15",
+        "title": "Encadrer la maintenance et la fin de vie des matériels et des logiciels"
+      },
+      {
+        "controls": [
+          {
+            "id": "_16.1",
+            "parts": [
+              {
+                "id": "_16.1-stmt",
+                "name": "statement",
+                "prose": "Prévoir un système de journalisation"
+              }
+            ],
+            "title": "Tracer les opérations — 16.1"
+          },
+          {
+            "id": "_16.2",
+            "parts": [
+              {
+                "id": "_16.2-stmt",
+                "name": "statement",
+                "prose": "Informer les utilisateurs de la mise en place du système de journalisation"
+              }
+            ],
+            "title": "Tracer les opérations — 16.2"
+          },
+          {
+            "id": "_16.3",
+            "parts": [
+              {
+                "id": "_16.3-stmt",
+                "name": "statement",
+                "prose": "Protéger les équipements de journalisation et les informations journalisées"
+              }
+            ],
+            "title": "Tracer les opérations — 16.3"
+          },
+          {
+            "id": "_16.4",
+            "parts": [
+              {
+                "id": "_16.4-stmt",
+                "name": "statement",
+                "prose": "Analyser régulièrement les traces pour détecter la survenue d’un incident"
+              }
+            ],
+            "title": "Tracer les opérations — 16.4"
+          }
+        ],
+        "id": "_16",
+        "title": "Tracer les opérations"
+      },
+      {
+        "controls": [
+          {
+            "id": "_17.1",
+            "parts": [
+              {
+                "id": "_17.1-stmt",
+                "name": "statement",
+                "prose": "Effectuer des sauvegardes régulières"
+              }
+            ],
+            "title": "Sauvegarder — 17.1"
+          },
+          {
+            "id": "_17.2",
+            "parts": [
+              {
+                "id": "_17.2-stmt",
+                "name": "statement",
+                "prose": "Protéger les sauvegardes, autant pendant leur stockage que leur convoyage"
+              }
+            ],
+            "title": "Sauvegarder — 17.2"
+          },
+          {
+            "id": "_17.3",
+            "parts": [
+              {
+                "id": "_17.3-stmt",
+                "name": "statement",
+                "prose": "Tester régulièrement la restauration des sauvegardes et leur intégrité"
+              }
+            ],
+            "title": "Sauvegarder — 17.3"
+          }
+        ],
+        "id": "_17",
+        "title": "Sauvegarder"
+      },
+      {
+        "controls": [
+          {
+            "id": "_18.1",
+            "parts": [
+              {
+                "id": "_18.1-stmt",
+                "name": "statement",
+                "prose": "Prévoir un plan de continuité et de reprise d’activité"
+              }
+            ],
+            "title": "Prévoir la continuité et la reprise d’activité — 18.1"
+          },
+          {
+            "id": "_18.2",
+            "parts": [
+              {
+                "id": "_18.2-stmt",
+                "name": "statement",
+                "prose": "Effectuer des exercices régulièrement"
+              }
+            ],
+            "title": "Prévoir la continuité et la reprise d’activité — 18.2"
+          }
+        ],
+        "id": "_18",
+        "title": "Prévoir la continuité et la reprise d’activité"
+      },
+      {
+        "controls": [
+          {
+            "id": "_19.1",
+            "parts": [
+              {
+                "id": "_19.1-stmt",
+                "name": "statement",
+                "prose": "Traiter les alertes remontées par le système de journalisation"
+              }
+            ],
+            "title": "Gérer les incidents et les violations — 19.1"
+          },
+          {
+            "id": "_19.2",
+            "parts": [
+              {
+                "id": "_19.2-stmt",
+                "name": "statement",
+                "prose": "Prévoir les procédures et les responsabilités internes pour la gestion des incidents, dont la procédure\nde notification aux régulateurs des violations de données personnelles"
+              }
+            ],
+            "title": "Gérer les incidents et les violations — 19.2"
+          }
+        ],
+        "id": "_19",
+        "title": "Gérer les incidents et les violations"
+      },
+      {
+        "controls": [
+          {
+            "id": "_2.1",
+            "parts": [
+              {
+                "id": "_2.1-stmt",
+                "name": "statement",
+                "prose": "Rédiger une charte informatique comprenant les modalités d’utilisation des systèmes informatiques,\nles règles de sécurité et les moyens d’administration en place"
+              }
+            ],
+            "title": "Définir un cadre pour les utilisateurs — 2.1"
+          },
+          {
+            "id": "_2.2",
+            "parts": [
+              {
+                "id": "_2.2-stmt",
+                "name": "statement",
+                "prose": "Donner une force contraignante à la charte et y rappeler les sanctions encourues en cas de non-respect"
+              }
+            ],
+            "title": "Définir un cadre pour les utilisateurs — 2.2"
+          }
+        ],
+        "id": "_2",
+        "title": "Définir un cadre pour les utilisateurs"
+      },
+      {
+        "controls": [
+          {
+            "id": "_20.1",
+            "parts": [
+              {
+                "id": "_20.1-stmt",
+                "name": "statement",
+                "prose": "Mener une analyse de risques, même minimale, sur les traitements de données envisagés"
+              }
+            ],
+            "title": "Analyse de risques — 20.1"
+          },
+          {
+            "id": "_20.2",
+            "parts": [
+              {
+                "id": "_20.2-stmt",
+                "name": "statement",
+                "prose": "Suivre au cours du temps l’avancement du plan d’action décidé à l’issue de l’analyse de risques"
+              }
+            ],
+            "title": "Analyse de risques — 20.2"
+          },
+          {
+            "id": "_20.3",
+            "parts": [
+              {
+                "id": "_20.3-stmt",
+                "name": "statement",
+                "prose": "Revoir régulièrement l’analyse de risques"
+              }
+            ],
+            "title": "Analyse de risques — 20.3"
+          }
+        ],
+        "id": "_20",
+        "title": "Analyse de risques"
+      },
+      {
+        "controls": [
+          {
+            "id": "_21.1",
+            "parts": [
+              {
+                "id": "_21.1-stmt",
+                "name": "statement",
+                "prose": "Utiliser des algorithmes, des logiciels et des bibliothèques reconnues et sécurisées"
+              }
+            ],
+            "title": "Chiffrement, hachage, signature — 21.1"
+          },
+          {
+            "id": "_21.2",
+            "parts": [
+              {
+                "id": "_21.2-stmt",
+                "name": "statement",
+                "prose": "Conserver les secrets et les clés cryptographiques de manière sécurisée"
+              }
+            ],
+            "title": "Chiffrement, hachage, signature — 21.2"
+          }
+        ],
+        "id": "_21",
+        "title": "Chiffrement, hachage, signature"
+      },
+      {
+        "controls": [
+          {
+            "id": "_22.1",
+            "parts": [
+              {
+                "id": "_22.1-stmt",
+                "name": "statement",
+                "prose": "Inclure les services cloud dans l’analyse de risques"
+              }
+            ],
+            "title": "Cloud : Informatique en nuage — 22.1"
+          },
+          {
+            "id": "_22.2",
+            "parts": [
+              {
+                "id": "_22.2-stmt",
+                "name": "statement",
+                "prose": "Évaluer la sécurité mise en place par le fournisseur"
+              }
+            ],
+            "title": "Cloud : Informatique en nuage — 22.2"
+          },
+          {
+            "id": "_22.3",
+            "parts": [
+              {
+                "id": "_22.3-stmt",
+                "name": "statement",
+                "prose": "Veiller à la répartition des responsabilités de sécurité dans le contrat"
+              }
+            ],
+            "title": "Cloud : Informatique en nuage — 22.3"
+          },
+          {
+            "id": "_22.4",
+            "parts": [
+              {
+                "id": "_22.4-stmt",
+                "name": "statement",
+                "prose": "Assurer le même niveau de sécurité dans le cloud que sur site"
+              }
+            ],
+            "title": "Cloud : Informatique en nuage — 22.4"
+          }
+        ],
+        "id": "_22",
+        "title": "Cloud : Informatique en nuage"
+      },
+      {
+        "controls": [
+          {
+            "id": "_23.1",
+            "parts": [
+              {
+                "id": "_23.1-stmt",
+                "name": "statement",
+                "prose": "Prendre en compte les spécificités de l’environnement mobile pour réduire les données personnelles\ncollectées et limiter les permissions demandées"
+              }
+            ],
+            "title": "Applications mobiles : Conception et développement — 23.1"
+          },
+          {
+            "id": "_23.2",
+            "parts": [
+              {
+                "id": "_23.2-stmt",
+                "name": "statement",
+                "prose": "Encapsuler les communications dans un canal TLS"
+              }
+            ],
+            "title": "Applications mobiles : Conception et développement — 23.2"
+          },
+          {
+            "id": "_23.3",
+            "parts": [
+              {
+                "id": "_23.3-stmt",
+                "name": "statement",
+                "prose": "Utiliser les suites cryptographiques du système d’exploitation et les protections matérielles des secrets"
+              }
+            ],
+            "title": "Applications mobiles : Conception et développement — 23.3"
+          }
+        ],
+        "id": "_23",
+        "title": "Applications mobiles : Conception et développement"
+      },
+      {
+        "controls": [
+          {
+            "id": "_24.1",
+            "parts": [
+              {
+                "id": "_24.1-stmt",
+                "name": "statement",
+                "prose": "Adopter les bonnes pratiques de sécurité applicables au développement informatique"
+              }
+            ],
+            "title": "Intelligence artificielle : Conception et apprentissage — 24.1"
+          },
+          {
+            "id": "_24.2",
+            "parts": [
+              {
+                "id": "_24.2-stmt",
+                "name": "statement",
+                "prose": "Veiller à la qualité et l'intégrité des données utilisées pour l'apprentissage et l'inférence"
+              }
+            ],
+            "title": "Intelligence artificielle : Conception et apprentissage — 24.2"
+          },
+          {
+            "id": "_24.3",
+            "parts": [
+              {
+                "id": "_24.3-stmt",
+                "name": "statement",
+                "prose": "Documenter le fonctionnement et les limitations du système"
+              }
+            ],
+            "title": "Intelligence artificielle : Conception et apprentissage — 24.3"
+          }
+        ],
+        "id": "_24",
+        "title": "Intelligence artificielle : Conception et apprentissage"
+      },
+      {
+        "controls": [
+          {
+            "id": "_25.1",
+            "parts": [
+              {
+                "id": "_25.1-stmt",
+                "name": "statement",
+                "prose": "Organiser et documenter la sécurité des accès aux API et aux données"
+              }
+            ],
+            "title": "API : Interfaces de programmation applicative — 25.1"
+          },
+          {
+            "id": "_25.2",
+            "parts": [
+              {
+                "id": "_25.2-stmt",
+                "name": "statement",
+                "prose": "Limiter le partage des données uniquement aux personnes et aux finalités prévues"
+              }
+            ],
+            "title": "API : Interfaces de programmation applicative — 25.2"
+          }
+        ],
+        "id": "_25",
+        "title": "API : Interfaces de programmation applicative"
+      },
+      {
+        "controls": [
+          {
+            "id": "_3.1",
+            "parts": [
+              {
+                "id": "_3.1-stmt",
+                "name": "statement",
+                "prose": "Sensibiliser les personnes manipulant les données"
+              }
+            ],
+            "title": "Impliquer et former les utilisateurs — 3.1"
+          },
+          {
+            "id": "_3.2",
+            "parts": [
+              {
+                "id": "_3.2-stmt",
+                "name": "statement",
+                "prose": "Adapter le contenu des sensibilisations à la population ciblée et à leurs tâches"
+              }
+            ],
+            "title": "Impliquer et former les utilisateurs — 3.2"
+          }
+        ],
+        "id": "_3",
+        "title": "Impliquer et former les utilisateurs"
+      },
+      {
+        "controls": [
+          {
+            "id": "_4.1",
+            "parts": [
+              {
+                "id": "_4.1-stmt",
+                "name": "statement",
+                "prose": "Octroyer un identifiant (« login ») unique à chaque utilisateur"
+              }
+            ],
+            "title": "Authentifier les utilisateurs — 4.1"
+          },
+          {
+            "id": "_4.2",
+            "parts": [
+              {
+                "id": "_4.2-stmt",
+                "name": "statement",
+                "prose": "Adopter une politique de mot de passe conforme aux recommandations de la CNIL"
+              }
+            ],
+            "title": "Authentifier les utilisateurs — 4.2"
+          },
+          {
+            "id": "_4.3",
+            "parts": [
+              {
+                "id": "_4.3-stmt",
+                "name": "statement",
+                "prose": "Obliger l’utilisateur à changer le mot de passe attribué automatiquement ou par un administrateur"
+              }
+            ],
+            "title": "Authentifier les utilisateurs — 4.3"
+          }
+        ],
+        "id": "_4",
+        "title": "Authentifier les utilisateurs"
+      },
+      {
+        "controls": [
+          {
+            "id": "_5.1",
+            "parts": [
+              {
+                "id": "_5.1-stmt",
+                "name": "statement",
+                "prose": "Définir des profils d’habilitation"
+              }
+            ],
+            "title": "Gérer les habilitations — 5.1"
+          },
+          {
+            "id": "_5.2",
+            "parts": [
+              {
+                "id": "_5.2-stmt",
+                "name": "statement",
+                "prose": "Supprimer les permissions d’accès obsolètes"
+              }
+            ],
+            "title": "Gérer les habilitations — 5.2"
+          },
+          {
+            "id": "_5.3",
+            "parts": [
+              {
+                "id": "_5.3-stmt",
+                "name": "statement",
+                "prose": "Réaliser une revue annuelle des habilitations"
+              }
+            ],
+            "title": "Gérer les habilitations — 5.3"
+          }
+        ],
+        "id": "_5",
+        "title": "Gérer les habilitations"
+      },
+      {
+        "controls": [
+          {
+            "id": "_6.1",
+            "parts": [
+              {
+                "id": "_6.1-stmt",
+                "name": "statement",
+                "prose": "Prévoir une procédure de verrouillage automatique de session"
+              }
+            ],
+            "title": "Sécuriser les postes de travail — 6.1"
+          },
+          {
+            "id": "_6.2",
+            "parts": [
+              {
+                "id": "_6.2-stmt",
+                "name": "statement",
+                "prose": "Installer et configurer un pare-feu (« firewall » en anglais) logiciel"
+              }
+            ],
+            "title": "Sécuriser les postes de travail — 6.2"
+          },
+          {
+            "id": "_6.3",
+            "parts": [
+              {
+                "id": "_6.3-stmt",
+                "name": "statement",
+                "prose": "Utiliser des antivirus régulièrement mis à jour"
+              }
+            ],
+            "title": "Sécuriser les postes de travail — 6.3"
+          },
+          {
+            "id": "_6.4",
+            "parts": [
+              {
+                "id": "_6.4-stmt",
+                "name": "statement",
+                "prose": "Recueillir l’accord de l’utilisateur avant toute intervention sur son poste"
+              }
+            ],
+            "title": "Sécuriser les postes de travail — 6.4"
+          }
+        ],
+        "id": "_6",
+        "title": "Sécuriser les postes de travail"
+      },
+      {
+        "controls": [
+          {
+            "id": "_7.1",
+            "parts": [
+              {
+                "id": "_7.1-stmt",
+                "name": "statement",
+                "prose": "Sensibiliser les utilisateurs aux risques spécifiques du nomadisme"
+              }
+            ],
+            "title": "Sécuriser l’informatique mobile — 7.1"
+          },
+          {
+            "id": "_7.2",
+            "parts": [
+              {
+                "id": "_7.2-stmt",
+                "name": "statement",
+                "prose": "Prévoir des moyens de chiffrement des équipements mobiles"
+              }
+            ],
+            "title": "Sécuriser l’informatique mobile — 7.2"
+          },
+          {
+            "id": "_7.3",
+            "parts": [
+              {
+                "id": "_7.3-stmt",
+                "name": "statement",
+                "prose": "Exiger un secret pour le déverrouillage des smartphones"
+              }
+            ],
+            "title": "Sécuriser l’informatique mobile — 7.3"
+          }
+        ],
+        "id": "_7",
+        "title": "Sécuriser l’informatique mobile"
+      },
+      {
+        "controls": [
+          {
+            "id": "_8.1",
+            "parts": [
+              {
+                "id": "_8.1-stmt",
+                "name": "statement",
+                "prose": "Limiter les flux réseau au strict nécessaire"
+              }
+            ],
+            "title": "Protéger le réseau informatique — 8.1"
+          },
+          {
+            "id": "_8.2",
+            "parts": [
+              {
+                "id": "_8.2-stmt",
+                "name": "statement",
+                "prose": "Sécuriser les réseaux Wi-Fi, notamment en mettant en œuvre le protocole WPA3"
+              }
+            ],
+            "title": "Protéger le réseau informatique — 8.2"
+          },
+          {
+            "id": "_8.3",
+            "parts": [
+              {
+                "id": "_8.3-stmt",
+                "name": "statement",
+                "prose": "Sécuriser les accès distants des appareils informatiques nomades par VPN"
+              }
+            ],
+            "title": "Protéger le réseau informatique — 8.3"
+          },
+          {
+            "id": "_8.4",
+            "parts": [
+              {
+                "id": "_8.4-stmt",
+                "name": "statement",
+                "prose": "Cloisonner le réseau, entre autres en mettant en place une DMZ (zone démilitarisée)"
+              }
+            ],
+            "title": "Protéger le réseau informatique — 8.4"
+          }
+        ],
+        "id": "_8",
+        "title": "Protéger le réseau informatique"
+      },
+      {
+        "controls": [
+          {
+            "id": "_9.1",
+            "parts": [
+              {
+                "id": "_9.1-stmt",
+                "name": "statement",
+                "prose": "Désinstaller ou désactiver les services et interfaces inutiles"
+              }
+            ],
+            "title": "Sécuriser les serveurs — 9.1"
+          },
+          {
+            "id": "_9.2",
+            "parts": [
+              {
+                "id": "_9.2-stmt",
+                "name": "statement",
+                "prose": "Limiter l’accès aux outils et interfaces d’administration aux seules personnes habilitées"
+              }
+            ],
+            "title": "Sécuriser les serveurs — 9.2"
+          },
+          {
+            "id": "_9.3",
+            "parts": [
+              {
+                "id": "_9.3-stmt",
+                "name": "statement",
+                "prose": "Installer sans délai les mises à jour critiques après les avoir testées le cas échéant"
+              }
+            ],
+            "title": "Sécuriser les serveurs — 9.3"
+          }
+        ],
+        "id": "_9",
+        "title": "Sécuriser les serveurs"
+      }
+    ],
+    "metadata": {
+      "last-modified": "2026-11-08T00:30:51Z",
+      "oscal-version": "1.2.3",
+      "title": "CNIL : guide de sécurité des données",
+      "version": "1"
+    },
+    "uuid": "42aecaf0-57b3-5916-bbfc-6fbf68067171"
+  }
+}

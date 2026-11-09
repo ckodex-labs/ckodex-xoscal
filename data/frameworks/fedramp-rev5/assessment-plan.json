@@ -1,0 +1,132 @@
+{
+  "assessment-plan": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:13Z",
+      "oscal-version": "1.2.3",
+      "title": "GSA FedRAMP Rev5 Security Assessment Plan Template",
+      "version": "1"
+    },
+    "reviewed-controls": {
+      "control-selections": [
+        {
+          "description": "All controls in GSA FedRAMP Rev5",
+          "include-all": {}
+        }
+      ]
+    },
+    "tasks": [
+      {
+        "description": "Verify and examine implementation of 34 controls in the CONFIGURATION MANAGEMENT family for GSA FedRAMP Rev5.",
+        "title": "Assess Family NODE105 (CONFIGURATION MANAGEMENT)",
+        "type": "examination",
+        "uuid": "966a7331-895f-5eff-90ee-2d20021037d5"
+      },
+      {
+        "description": "Verify and examine implementation of 35 controls in the CONTINGENCY PLANNING family for GSA FedRAMP Rev5.",
+        "title": "Assess Family NODE140 (CONTINGENCY PLANNING)",
+        "type": "examination",
+        "uuid": "943128a5-4530-5f1d-8cec-0835f3beb605"
+      },
+      {
+        "description": "Verify and examine implementation of 30 controls in the IDENTIFICATION AND AUTHENTICATION family for GSA FedRAMP Rev5.",
+        "title": "Assess Family NODE176 (IDENTIFICATION AND AUTHENTICATION)",
+        "type": "examination",
+        "uuid": "7bac2d17-23a6-5f9d-8ec5-79bfae977f4f"
+      },
+      {
+        "description": "Verify and examine implementation of 50 controls in the ACCESS CONTROL family for GSA FedRAMP Rev5.",
+        "title": "Assess Family NODE2 (ACCESS CONTROL)",
+        "type": "examination",
+        "uuid": "76c4b074-17db-5d60-9a86-6e3b17d04fb1"
+      },
+      {
+        "description": "Verify and examine implementation of 24 controls in the INCIDENT RESPONSE family for GSA FedRAMP Rev5.",
+        "title": "Assess Family NODE207 (INCIDENT RESPONSE)",
+        "type": "examination",
+        "uuid": "d73391d3-cd79-5d59-9755-b8800efe3f70"
+      },
+      {
+        "description": "Verify and examine implementation of 12 controls in the MAINTENANCE family for GSA FedRAMP Rev5.",
+        "title": "Assess Family NODE232 (MAINTENANCE)",
+        "type": "examination",
+        "uuid": "d8196d23-3302-5f47-91f0-4d05165aa8df"
+      },
+      {
+        "description": "Verify and examine implementation of 10 controls in the MEDIA PROTECTION family for GSA FedRAMP Rev5.",
+        "title": "Assess Family NODE245 (MEDIA PROTECTION)",
+        "type": "examination",
+        "uuid": "c665a5f4-b8ee-526f-98c2-0e1b7a611f99"
+      },
+      {
+        "description": "Verify and examine implementation of 26 controls in the PHYSICAL AND ENVIRONMENTAL PROTECTION family for GSA FedRAMP Rev5.",
+        "title": "Assess Family NODE256 (PHYSICAL AND ENVIRONMENTAL PROTECTION)",
+        "type": "examination",
+        "uuid": "0199dd94-3876-5fde-a5f4-f563a2a24b47"
+      },
+      {
+        "description": "Verify and examine implementation of 7 controls in the PLANNING family for GSA FedRAMP Rev5.",
+        "title": "Assess Family NODE283 (PLANNING)",
+        "type": "examination",
+        "uuid": "74f7f504-0393-5169-ae30-27ec30451c0a"
+      },
+      {
+        "description": "Verify and examine implementation of 11 controls in the PERSONNEL SECURITY family for GSA FedRAMP Rev5.",
+        "title": "Assess Family NODE291 (PERSONNEL SECURITY)",
+        "type": "examination",
+        "uuid": "4c5d0f01-cae7-54de-aa78-fc852fc593d7"
+      },
+      {
+        "description": "Verify and examine implementation of 13 controls in the RISK ASSESSMENT family for GSA FedRAMP Rev5.",
+        "title": "Assess Family NODE303 (RISK ASSESSMENT)",
+        "type": "examination",
+        "uuid": "42a66165-9119-58a0-a86d-22443051394a"
+      },
+      {
+        "description": "Verify and examine implementation of 25 controls in the SYSTEM AND SERVICES ACQUISITION family for GSA FedRAMP Rev5.",
+        "title": "Assess Family NODE317 (SYSTEM AND SERVICES ACQUISITION)",
+        "type": "examination",
+        "uuid": "6b1a6115-c850-54f4-878e-3a646e0d3055"
+      },
+      {
+        "description": "Verify and examine implementation of 35 controls in the SYSTEM AND COMMUNICATIONS PROTECTION family for GSA FedRAMP Rev5.",
+        "title": "Assess Family NODE343 (SYSTEM AND COMMUNICATIONS PROTECTION)",
+        "type": "examination",
+        "uuid": "66e844a8-8f25-583d-a963-9b71b6f34057"
+      },
+      {
+        "description": "Verify and examine implementation of 35 controls in the SYSTEM AND INFORMATION INTEGRITY family for GSA FedRAMP Rev5.",
+        "title": "Assess Family NODE379 (SYSTEM AND INFORMATION INTEGRITY)",
+        "type": "examination",
+        "uuid": "fa969205-5896-5e45-9fe2-b72d0952de72"
+      },
+      {
+        "description": "Verify and examine implementation of 14 controls in the SUPPLY CHAIN RISK MANAGEMENT FAMILY family for GSA FedRAMP Rev5.",
+        "title": "Assess Family NODE415 (SUPPLY CHAIN RISK MANAGEMENT FAMILY)",
+        "type": "examination",
+        "uuid": "3f6fdf46-1b61-5b6c-b3c0-14a1f2262c05"
+      },
+      {
+        "description": "Verify and examine implementation of 6 controls in the AWARENESS AND TRAINING family for GSA FedRAMP Rev5.",
+        "title": "Assess Family NODE53 (AWARENESS AND TRAINING)",
+        "type": "examination",
+        "uuid": "b41fc578-9eed-5f65-bb85-66180709dc74"
+      },
+      {
+        "description": "Verify and examine implementation of 27 controls in the AUDIT AND ACCOUNTABILITY family for GSA FedRAMP Rev5.",
+        "title": "Assess Family NODE60 (AUDIT AND ACCOUNTABILITY)",
+        "type": "examination",
+        "uuid": "46951b60-78be-58ee-97f4-d7ea19a404ea"
+      },
+      {
+        "description": "Verify and examine implementation of 16 controls in the SECURITY ASSESSMENT AND AUTHORIZATION family for GSA FedRAMP Rev5.",
+        "title": "Assess Family NODE88 (SECURITY ASSESSMENT AND AUTHORIZATION)",
+        "type": "examination",
+        "uuid": "736ac4db-c952-5a6c-8e1a-d33f2c64dffd"
+      }
+    ],
+    "uuid": "f3736b28-cb23-5b95-a081-3d70b73ca0c1"
+  }
+}

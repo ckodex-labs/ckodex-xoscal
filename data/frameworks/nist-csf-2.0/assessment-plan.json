@@ -1,0 +1,60 @@
+{
+  "assessment-plan": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:13Z",
+      "oscal-version": "1.2.3",
+      "title": "NIST CSF version 2.0 Security Assessment Plan Template",
+      "version": "6"
+    },
+    "reviewed-controls": {
+      "control-selections": [
+        {
+          "description": "All controls in NIST CSF version 2.0",
+          "include-all": {}
+        }
+      ]
+    },
+    "tasks": [
+      {
+        "description": "Verify and examine implementation of 11 controls in the DETECT family for NIST CSF version 2.0.",
+        "title": "Assess Family DE (DETECT)",
+        "type": "examination",
+        "uuid": "05ef4ff3-57a1-537c-b4f6-ec8c355b4934"
+      },
+      {
+        "description": "Verify and examine implementation of 31 controls in the GOVERN family for NIST CSF version 2.0.",
+        "title": "Assess Family GV (GOVERN)",
+        "type": "examination",
+        "uuid": "76fa4d2e-1bc9-5399-be76-30ab471aaf16"
+      },
+      {
+        "description": "Verify and examine implementation of 21 controls in the IDENTIFY family for NIST CSF version 2.0.",
+        "title": "Assess Family ID (IDENTIFY)",
+        "type": "examination",
+        "uuid": "d0123b41-ef19-50c2-ad54-fc5008e39f0f"
+      },
+      {
+        "description": "Verify and examine implementation of 22 controls in the PROTECT family for NIST CSF version 2.0.",
+        "title": "Assess Family PR (PROTECT)",
+        "type": "examination",
+        "uuid": "3649db3b-8c3e-595d-a884-15a1bf98feaa"
+      },
+      {
+        "description": "Verify and examine implementation of 8 controls in the RECOVER family for NIST CSF version 2.0.",
+        "title": "Assess Family RC (RECOVER)",
+        "type": "examination",
+        "uuid": "a418673d-93cc-5df3-8da7-8a8890a9b237"
+      },
+      {
+        "description": "Verify and examine implementation of 13 controls in the RESPOND family for NIST CSF version 2.0.",
+        "title": "Assess Family RS (RESPOND)",
+        "type": "examination",
+        "uuid": "3a9af3b3-03e5-5c65-a1ee-816afab2829c"
+      }
+    ],
+    "uuid": "952de276-03ce-5c12-afd8-eeafeb7e29b8"
+  }
+}

@@ -1,0 +1,528 @@
+{
+  "component-definition": {
+    "components": [
+      {
+        "control-implementations": [
+          {
+            "description": "Security control implementations for Cyber Essentials: Requirements for IT infrastructure v3.1.",
+            "implemented-requirements": [
+              {
+                "control-id": "node128",
+                "description": "Component capability addressing control node128 (Firewalls — node128).",
+                "uuid": "27db092c-1754-5b51-a286-17c28eddd972"
+              },
+              {
+                "control-id": "node136",
+                "description": "Component capability addressing control node136 (Requirements — node136).",
+                "uuid": "94d4ed37-0547-5d54-a6c0-67965f0cf29d"
+              },
+              {
+                "control-id": "node138",
+                "description": "Component capability addressing control node138 (Requirements — node138).",
+                "uuid": "dab04064-50dd-5834-88ee-f8936cd8cda6"
+              },
+              {
+                "control-id": "node139",
+                "description": "Component capability addressing control node139 (For all firewalls (or network devices with firewall functionality), your organisation must: — node139).",
+                "uuid": "e4960101-8a40-5a42-9430-322ae2ac0c1f"
+              },
+              {
+                "control-id": "node140",
+                "description": "Component capability addressing control node140 (For all firewalls (or network devices with firewall functionality), your organisation must: — node140).",
+                "uuid": "97bf9e9e-c411-5e58-97ca-95f21eedbcc5"
+              },
+              {
+                "control-id": "node141",
+                "description": "Component capability addressing control node141 (For all firewalls (or network devices with firewall functionality), your organisation must: — node141).",
+                "uuid": "8e97f6c5-c009-5f3a-a7da-fd299735fcfa"
+              },
+              {
+                "control-id": "node142",
+                "description": "Component capability addressing control node142 (For all firewalls (or network devices with firewall functionality), your organisation must: — node142).",
+                "uuid": "609a119e-973f-5c90-b67b-4624557f024f"
+              },
+              {
+                "control-id": "node143",
+                "description": "Component capability addressing control node143 (For all firewalls (or network devices with firewall functionality), your organisation must: — node143).",
+                "uuid": "cc109152-098c-55a0-b1b7-6ca30a006e9f"
+              },
+              {
+                "control-id": "node144",
+                "description": "Component capability addressing control node144 (For all firewalls (or network devices with firewall functionality), your organisation must: — node144).",
+                "uuid": "b60e2b48-e767-5818-b354-fcbeab3198b2"
+              },
+              {
+                "control-id": "node145",
+                "description": "Component capability addressing control node145 (For all firewalls (or network devices with firewall functionality), your organisation must: — node145).",
+                "uuid": "29ced4d3-c157-50dd-b115-7ce5bf88175a"
+              },
+              {
+                "control-id": "node146",
+                "description": "Component capability addressing control node146 (Requirements — node146).",
+                "uuid": "4c8ed739-52d7-5353-bac1-b27240472d69"
+              },
+              {
+                "control-id": "node162",
+                "description": "Component capability addressing control node162 (Computers and network devices — node162).",
+                "uuid": "dee50f2b-acf8-59e4-a9ab-157ba53e8de2"
+              },
+              {
+                "control-id": "node163",
+                "description": "Component capability addressing control node163 (Your organisation must proactively manage your computers and network devices. You must regularly: — node163).",
+                "uuid": "ce378e5e-986d-5dd0-ad7a-76c0e5b7fca7"
+              },
+              {
+                "control-id": "node164",
+                "description": "Component capability addressing control node164 (Your organisation must proactively manage your computers and network devices. You must regularly: — node164).",
+                "uuid": "dda79b34-2f57-5178-87ac-5aa00212c0b6"
+              },
+              {
+                "control-id": "node165",
+                "description": "Component capability addressing control node165 (Your organisation must proactively manage your computers and network devices. You must regularly: — node165).",
+                "uuid": "3abd47b5-b7ee-5d8b-bd11-a4e41eb08256"
+              },
+              {
+                "control-id": "node166",
+                "description": "Component capability addressing control node166 (Your organisation must proactively manage your computers and network devices. You must regularly: — node166).",
+                "uuid": "3660ef94-3ece-580a-a3e8-23e9173deaca"
+              },
+              {
+                "control-id": "node167",
+                "description": "Component capability addressing control node167 (Your organisation must proactively manage your computers and network devices. You must regularly: — node167).",
+                "uuid": "9e1e01de-ad6f-552a-b14f-6a50038efffe"
+              },
+              {
+                "control-id": "node168",
+                "description": "Component capability addressing control node168 (Your organisation must proactively manage your computers and network devices. You must regularly: — node168).",
+                "uuid": "93950b33-0f0a-5183-b9c5-5e2786a3c21a"
+              },
+              {
+                "control-id": "node170",
+                "description": "Component capability addressing control node170 (Device unlocking credentials — node170).",
+                "uuid": "bfc6ea54-6401-5269-b607-578a50d06a2e"
+              },
+              {
+                "control-id": "node171",
+                "description": "Component capability addressing control node171 (Device unlocking credentials — node171).",
+                "uuid": "dfdf9748-0239-58ac-afc5-83cac9e5774b"
+              },
+              {
+                "control-id": "node172",
+                "description": "Component capability addressing control node172 (Device unlocking credentials — node172).",
+                "uuid": "5ccc44ca-402d-5ff0-b747-ffa44c227e8b"
+              },
+              {
+                "control-id": "node173",
+                "description": "Component capability addressing control node173 (Device unlocking credentials — node173).",
+                "uuid": "901c2379-355c-5076-8738-a8c8450d3092"
+              },
+              {
+                "control-id": "node174",
+                "description": "Component capability addressing control node174 (Device unlocking credentials — node174).",
+                "uuid": "f7d56d7d-394b-51a2-999c-50e0be5709d1"
+              },
+              {
+                "control-id": "node175",
+                "description": "Component capability addressing control node175 (Device unlocking credentials — node175).",
+                "uuid": "37d48a9b-a98f-540b-9c22-fa0f0c05a841"
+              },
+              {
+                "control-id": "node185",
+                "description": "Component capability addressing control node185 (Requirements — node185).",
+                "uuid": "9c96a90e-6f63-538d-aba2-b9be0e33b2ff"
+              },
+              {
+                "control-id": "node186",
+                "description": "Component capability addressing control node186 (You must make sure that all software in scope is kept up to date. All software on in-scope devices must: — node186).",
+                "uuid": "383c5501-b101-52e9-99c3-5b5b5104c780"
+              },
+              {
+                "control-id": "node187",
+                "description": "Component capability addressing control node187 (You must make sure that all software in scope is kept up to date. All software on in-scope devices must: — node187).",
+                "uuid": "0fbd8a35-e35b-5f6b-ac34-dacbae8b33ca"
+              },
+              {
+                "control-id": "node188",
+                "description": "Component capability addressing control node188 (You must make sure that all software in scope is kept up to date. All software on in-scope devices must: — node188).",
+                "uuid": "fa49e261-c004-5fd4-a79a-afb75caa8480"
+              },
+              {
+                "control-id": "node189",
+                "description": "Component capability addressing control node189 (You must make sure that all software in scope is kept up to date. All software on in-scope devices must: — node189).",
+                "uuid": "d8620254-7208-5a11-ab82-d4be9b9595bb"
+              },
+              {
+                "control-id": "node190",
+                "description": "Component capability addressing control node190 (You must make sure that all software in scope is kept up to date. All software on in-scope devices must: — node190).",
+                "uuid": "3af21174-c335-5494-9bf3-84377971f358"
+              },
+              {
+                "control-id": "node191",
+                "description": "Component capability addressing control node191 (You must make sure that all software in scope is kept up to date. All software on in-scope devices must: — node191).",
+                "uuid": "7e17ef61-aadc-5631-bd7d-8bcb65f4d471"
+              },
+              {
+                "control-id": "node192",
+                "description": "Component capability addressing control node192 (You must make sure that all software in scope is kept up to date. All software on in-scope devices must: — node192).",
+                "uuid": "0565ad97-da44-589f-9e7c-599c9340c58a"
+              },
+              {
+                "control-id": "node204",
+                "description": "Component capability addressing control node204 (Introduction — node204).",
+                "uuid": "be8b87c7-5d0c-5ba2-bf1b-f77bb62c5897"
+              },
+              {
+                "control-id": "node205",
+                "description": "Component capability addressing control node205 (Introduction — node205).",
+                "uuid": "a964e5cc-7756-5998-b782-6dcfbff98bef"
+              },
+              {
+                "control-id": "node206",
+                "description": "Component capability addressing control node206 (Introduction — node206).",
+                "uuid": "31aaa3a1-95bd-54b1-9b91-af37c11cccdd"
+              },
+              {
+                "control-id": "node207",
+                "description": "Component capability addressing control node207 (Administrative accounts are especially highly privileged, for example. These accounts typically allow the user to: — node207).",
+                "uuid": "0876859d-daad-5529-aa07-53c578559a50"
+              },
+              {
+                "control-id": "node208",
+                "description": "Component capability addressing control node208 (Administrative accounts are especially highly privileged, for example. These accounts typically allow the user to: — node208).",
+                "uuid": "1c416861-70ca-5111-8f14-a053a1aaf461"
+              },
+              {
+                "control-id": "node209",
+                "description": "Component capability addressing control node209 (Administrative accounts are especially highly privileged, for example. These accounts typically allow the user to: — node209).",
+                "uuid": "0df9ddc5-373a-5878-99db-45ae960e38b1"
+              },
+              {
+                "control-id": "node210",
+                "description": "Component capability addressing control node210 (Introduction — node210).",
+                "uuid": "16686ad3-7c11-56ad-8875-6fc230933b61"
+              },
+              {
+                "control-id": "node211",
+                "description": "Component capability addressing control node211 (Introduction — node211).",
+                "uuid": "e515dbeb-97a5-5ee6-9fcd-3e79be2fa758"
+              },
+              {
+                "control-id": "node214",
+                "description": "Component capability addressing control node214 (Requirements — node214).",
+                "uuid": "cbb8212a-e1be-59cf-ab3d-81cc7470459a"
+              },
+              {
+                "control-id": "node215",
+                "description": "Component capability addressing control node215 (Requirements — node215).",
+                "uuid": "98e62d59-7f7c-5e72-90e9-960fbfb55159"
+              },
+              {
+                "control-id": "node216",
+                "description": "Component capability addressing control node216 (This means your organisation must: — node216).",
+                "uuid": "c498857b-acef-5a98-9b6a-b9afb66bfd6d"
+              },
+              {
+                "control-id": "node217",
+                "description": "Component capability addressing control node217 (This means your organisation must: — node217).",
+                "uuid": "a4dd687b-0f55-503c-af19-cde497c84bdb"
+              },
+              {
+                "control-id": "node218",
+                "description": "Component capability addressing control node218 (This means your organisation must: — node218).",
+                "uuid": "44625edb-b8c4-5d4a-b501-5fae32c2ee86"
+              },
+              {
+                "control-id": "node219",
+                "description": "Component capability addressing control node219 (This means your organisation must: — node219).",
+                "uuid": "7f44cef6-389b-59ce-8d78-672d15906fca"
+              },
+              {
+                "control-id": "node220",
+                "description": "Component capability addressing control node220 (This means your organisation must: — node220).",
+                "uuid": "fa5044c9-6e29-59cb-8650-974203795fd5"
+              },
+              {
+                "control-id": "node221",
+                "description": "Component capability addressing control node221 (This means your organisation must: — node221).",
+                "uuid": "6d5b699d-7723-52a0-a976-69bcbb93d7ee"
+              },
+              {
+                "control-id": "node223",
+                "description": "Component capability addressing control node223 (Password-based authentication — node223).",
+                "uuid": "b654bd2b-4baa-5dee-b2bd-6ca210fb5f53"
+              },
+              {
+                "control-id": "node224",
+                "description": "Component capability addressing control node224 (Password-based authentication — node224).",
+                "uuid": "06c165c7-c7f1-5a2d-ae2f-7228b0e094f2"
+              },
+              {
+                "control-id": "node225",
+                "description": "Component capability addressing control node225 (Where this is carried out using a password, you should put in place the following protective measures: — node225).",
+                "uuid": "3d82a9f3-3060-54ac-9305-82929e75755e"
+              },
+              {
+                "control-id": "node226",
+                "description": "Component capability addressing control node226 (• Passwords are protected against brute-force password guessing by implementing at least one of: — node226).",
+                "uuid": "549c7edb-46b0-5657-a5af-1c5bcb8db7b4"
+              },
+              {
+                "control-id": "node227",
+                "description": "Component capability addressing control node227 (• Passwords are protected against brute-force password guessing by implementing at least one of: — node227).",
+                "uuid": "92a3f24d-99d2-5aaf-a320-05f3f515c81c"
+              },
+              {
+                "control-id": "node228",
+                "description": "Component capability addressing control node228 (• Passwords are protected against brute-force password guessing by implementing at least one of: — node228).",
+                "uuid": "d24f112d-6f58-51dc-9abe-4347ff938463"
+              },
+              {
+                "control-id": "node229",
+                "description": "Component capability addressing control node229 (Where this is carried out using a password, you should put in place the following protective measures: — node229).",
+                "uuid": "67c035ea-99d5-510d-9133-e753706e853a"
+              },
+              {
+                "control-id": "node230",
+                "description": "Component capability addressing control node230 (• Use technical controls to manage the quality of passwords. This will include one of the following: — node230).",
+                "uuid": "e210b937-51f7-57d5-bee4-b998cf51ec14"
+              },
+              {
+                "control-id": "node231",
+                "description": "Component capability addressing control node231 (• Use technical controls to manage the quality of passwords. This will include one of the following: — node231).",
+                "uuid": "16bea001-b541-5a00-96b1-79988cc06bd4"
+              },
+              {
+                "control-id": "node232",
+                "description": "Component capability addressing control node232 (• Use technical controls to manage the quality of passwords. This will include one of the following: — node232).",
+                "uuid": "183dde54-0bb1-55a0-9efc-ce4b37b22e2c"
+              },
+              {
+                "control-id": "node233",
+                "description": "Component capability addressing control node233 (Where this is carried out using a password, you should put in place the following protective measures: — node233).",
+                "uuid": "2fecabd9-96c9-5c04-bee1-4d003a0c5595"
+              },
+              {
+                "control-id": "node234",
+                "description": "Component capability addressing control node234 (• Support users to choose unique passwords for their work accounts by: — node234).",
+                "uuid": "c74e7cd0-efef-501b-b924-2dd2f43f3b1e"
+              },
+              {
+                "control-id": "node235",
+                "description": "Component capability addressing control node235 (• Support users to choose unique passwords for their work accounts by: — node235).",
+                "uuid": "f70b3013-6e9b-5aa4-b422-42b5086d3675"
+              },
+              {
+                "control-id": "node236",
+                "description": "Component capability addressing control node236 (• Support users to choose unique passwords for their work accounts by: — node236).",
+                "uuid": "1c43bde2-9603-5695-b29a-d0e03e52cb2f"
+              },
+              {
+                "control-id": "node237",
+                "description": "Component capability addressing control node237 (• Support users to choose unique passwords for their work accounts by: — node237).",
+                "uuid": "189b8fb8-9eb0-58aa-9b12-2e3a4be8efee"
+              },
+              {
+                "control-id": "node238",
+                "description": "Component capability addressing control node238 (• Support users to choose unique passwords for their work accounts by: — node238).",
+                "uuid": "c4ea1e62-1e41-52ad-aaf4-740852ea8e60"
+              },
+              {
+                "control-id": "node239",
+                "description": "Component capability addressing control node239 (Password-based authentication — node239).",
+                "uuid": "13c207d1-5ea7-5718-9cc8-336effde274f"
+              },
+              {
+                "control-id": "node241",
+                "description": "Component capability addressing control node241 (Multi-factor authentication (MFA) — node241).",
+                "uuid": "4c43560e-7345-5828-8ac5-7df0284ac9db"
+              },
+              {
+                "control-id": "node242",
+                "description": "Component capability addressing control node242 (Multi-factor authentication (MFA) — node242).",
+                "uuid": "8fedec07-b374-5251-8a38-81ccb2648d40"
+              },
+              {
+                "control-id": "node243",
+                "description": "Component capability addressing control node243 (Multi-factor authentication (MFA) — node243).",
+                "uuid": "5ebdfadb-571d-5c50-aed9-ac43f51cfdd2"
+              },
+              {
+                "control-id": "node244",
+                "description": "Component capability addressing control node244 (There are four types of additional factor to consider: — node244).",
+                "uuid": "c7bbe92c-4748-5541-96a0-f16369355f9b"
+              },
+              {
+                "control-id": "node245",
+                "description": "Component capability addressing control node245 (There are four types of additional factor to consider: — node245).",
+                "uuid": "e8326177-6b70-51b7-9db6-8f3389fbf41a"
+              },
+              {
+                "control-id": "node246",
+                "description": "Component capability addressing control node246 (There are four types of additional factor to consider: — node246).",
+                "uuid": "9afa42dc-2bf7-54b7-9900-63564d1e2808"
+              },
+              {
+                "control-id": "node247",
+                "description": "Component capability addressing control node247 (There are four types of additional factor to consider: — node247).",
+                "uuid": "59a468fa-97db-5ece-971a-7a8e1ee53e4b"
+              },
+              {
+                "control-id": "node248",
+                "description": "Component capability addressing control node248 (Multi-factor authentication (MFA) — node248).",
+                "uuid": "f43b73b8-a36a-5db3-b08d-bff1b77be2cc"
+              },
+              {
+                "control-id": "node249",
+                "description": "Component capability addressing control node249 (Information:).",
+                "uuid": "c12b7ce7-d42f-5cc6-bf02-7bef2f14d786"
+              },
+              {
+                "control-id": "node255",
+                "description": "Component capability addressing control node255 (Introduction — node255).",
+                "uuid": "41f5dcdb-46b1-55c4-8252-dc218918f198"
+              },
+              {
+                "control-id": "node256",
+                "description": "Component capability addressing control node256 (Introduction — node256).",
+                "uuid": "62ccb235-07cd-5b1a-9414-79b453fd3af4"
+              },
+              {
+                "control-id": "node257",
+                "description": "Component capability addressing control node257 (Introduction — node257).",
+                "uuid": "5878a09b-eb9b-574e-b507-010be112c8bf"
+              },
+              {
+                "control-id": "node258",
+                "description": "Component capability addressing control node258 (You can largely avoid the potential for harm by: — node258).",
+                "uuid": "219cba12-70af-5237-84f7-f44c75605d8f"
+              },
+              {
+                "control-id": "node259",
+                "description": "Component capability addressing control node259 (You can largely avoid the potential for harm by: — node259).",
+                "uuid": "a3112cbb-08ea-5575-92cd-10f56a5fff7a"
+              },
+              {
+                "control-id": "node262",
+                "description": "Component capability addressing control node262 (Requirements — node262).",
+                "uuid": "52b5dc16-42a1-587c-93ab-f46a2c14173f"
+              },
+              {
+                "control-id": "node264",
+                "description": "Component capability addressing control node264 (Anti-malware software — node264).",
+                "uuid": "b122b0c8-81bb-5425-9b32-19aa6475942d"
+              },
+              {
+                "control-id": "node265",
+                "description": "Component capability addressing control node265 (If you use anti-malware software to protect your device it must be configured to: — node265).",
+                "uuid": "0ad2e3ff-af0a-562d-8594-63c1899ce3c0"
+              },
+              {
+                "control-id": "node266",
+                "description": "Component capability addressing control node266 (If you use anti-malware software to protect your device it must be configured to: — node266).",
+                "uuid": "a11e58d8-5c6f-5519-b190-3b5288e611d6"
+              },
+              {
+                "control-id": "node267",
+                "description": "Component capability addressing control node267 (If you use anti-malware software to protect your device it must be configured to: — node267).",
+                "uuid": "44853cc1-38d0-5cfd-81e3-b0205c64cf12"
+              },
+              {
+                "control-id": "node268",
+                "description": "Component capability addressing control node268 (If you use anti-malware software to protect your device it must be configured to: — node268).",
+                "uuid": "6e8cd1df-387e-5177-8051-35c9aee8b174"
+              },
+              {
+                "control-id": "node269",
+                "description": "Component capability addressing control node269 (If you use anti-malware software to protect your device it must be configured to: — node269).",
+                "uuid": "40f132fc-4c14-5d96-b624-17a5130d40da"
+              },
+              {
+                "control-id": "node271",
+                "description": "Component capability addressing control node271 (Application allow listing — node271).",
+                "uuid": "11edf42f-43ed-589f-90e1-f1525cc28ae0"
+              },
+              {
+                "control-id": "node272",
+                "description": "Component capability addressing control node272 (Only approved applications, restricted by code signing, are allowed to execute on devices. You must: — node272).",
+                "uuid": "841840be-23ee-5fa7-badb-8f98b32c129a"
+              },
+              {
+                "control-id": "node273",
+                "description": "Component capability addressing control node273 (Only approved applications, restricted by code signing, are allowed to execute on devices. You must: — node273).",
+                "uuid": "0c6ddd3e-4deb-58f4-95c7-0b352f3e9b35"
+              },
+              {
+                "control-id": "node276",
+                "description": "Component capability addressing control node276 (Backing up your data — node276).",
+                "uuid": "79decaa6-36d2-53fa-811c-1f7ba37a09c2"
+              },
+              {
+                "control-id": "node277",
+                "description": "Component capability addressing control node277 (Backing up your data — node277).",
+                "uuid": "9a2634b7-d9fd-53e2-82ce-8ad82b243272"
+              },
+              {
+                "control-id": "node278",
+                "description": "Component capability addressing control node278 (Backing up your data — node278).",
+                "uuid": "9cfb60cd-36ea-5b75-b5be-3e6f6e74cc5a"
+              },
+              {
+                "control-id": "node279",
+                "description": "Component capability addressing control node279 (Backing up your data — node279).",
+                "uuid": "ce377534-f756-5ca0-9136-ff835bb02bd5"
+              },
+              {
+                "control-id": "node280",
+                "description": "Component capability addressing control node280 (Backing up your data — node280).",
+                "uuid": "ba158206-79e2-5f72-a74e-fe171593d6b6"
+              },
+              {
+                "control-id": "node282",
+                "description": "Component capability addressing control node282 (Zero trust and Cyber Essentials — node282).",
+                "uuid": "fe964d9a-f114-5c02-be3b-f48e3cb35734"
+              },
+              {
+                "control-id": "node283",
+                "description": "Component capability addressing control node283 (Zero trust and Cyber Essentials — node283).",
+                "uuid": "976493fe-0379-5306-b167-474a702ccf6c"
+              },
+              {
+                "control-id": "node284",
+                "description": "Component capability addressing control node284 (Zero trust and Cyber Essentials — node284).",
+                "uuid": "26e550be-5829-54be-96f7-98ac38133492"
+              },
+              {
+                "control-id": "node285",
+                "description": "Component capability addressing control node285 (Zero trust and Cyber Essentials — node285).",
+                "uuid": "404b515c-5ac8-5f8d-9ed0-53b379a42184"
+              },
+              {
+                "control-id": "node286",
+                "description": "Component capability addressing control node286 (Zero trust and Cyber Essentials — node286).",
+                "uuid": "750f9de4-7f99-53fb-acd4-01a060a87857"
+              },
+              {
+                "control-id": "node85",
+                "description": "Component capability addressing control node85 (Cloud services — node85).",
+                "uuid": "93afa81e-8aa1-5dd3-b156-1b3d05f25bae"
+              }
+            ],
+            "source": "./catalog.json",
+            "uuid": "d7cfeb4e-af3c-5935-b8b9-468fb2ad952e"
+          }
+        ],
+        "description": "Enterprise technical and operational capabilities implementing controls for Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "title": "Cyber Essentials: Requirements for IT infrastructure v3.1 Platform Component",
+        "type": "software",
+        "uuid": "43b965ef-f7a6-5e19-9a6f-6b60bc6011a0"
+      }
+    ],
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:13Z",
+      "oscal-version": "1.2.3",
+      "title": "Cyber Essentials: Requirements for IT infrastructure v3.1 Component Definition Template",
+      "version": "2"
+    },
+    "uuid": "3d87c8d7-5e24-5039-9d08-3c112c459a84"
+  }
+}

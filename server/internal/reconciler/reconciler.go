@@ -41,16 +41,51 @@ func NewReconciler(store kg.Store) *Reconciler {
 	return &Reconciler{store: store}
 }
 
+type bulkUpsertStore interface {
+	BulkUpsertEntities(ctx context.Context, entities []*kg.Entity) error
+}
+
 // Propose evaluates a batch of proposed entities, writes them to the KG, and
 // returns any conflicts detected.
 func (r *Reconciler) Propose(ctx context.Context, proposals []*kg.Entity) ([]*Conflict, error) {
 	var conflicts []*Conflict
+	var batch []*kg.Entity
+	seenInBatch := make(map[string]bool, len(proposals))
+
+	flushBatch := func() error {
+		if len(batch) == 0 {
+			return nil
+		}
+		if bs, ok := r.store.(bulkUpsertStore); ok {
+			if err := bs.BulkUpsertEntities(ctx, batch); err != nil {
+				return err
+			}
+		} else {
+			for _, item := range batch {
+				if err := r.store.CreateEntity(ctx, item); err != nil {
+					return fmt.Errorf("create entity %s: %w", item.URN, err)
+				}
+			}
+		}
+		batch = nil
+		seenInBatch = make(map[string]bool)
+		return nil
+	}
+
 	for _, p := range proposals {
+		if seenInBatch[p.URN] {
+			if err := flushBatch(); err != nil {
+				return nil, err
+			}
+		}
 		c, err := r.evaluate(ctx, p)
 		if err != nil {
 			return nil, fmt.Errorf("evaluate %s: %w", p.URN, err)
 		}
 		if c != nil {
+			if err := flushBatch(); err != nil {
+				return nil, err
+			}
 			if err := r.persistConflict(ctx, c); err != nil {
 				return nil, fmt.Errorf("persist conflict: %w", err)
 			}
@@ -64,17 +99,22 @@ func (r *Reconciler) Propose(ctx context.Context, proposals []*kg.Entity) ([]*Co
 		// No conflict: entity either doesn't exist or is identical.
 		existing, err := r.store.GetEntity(ctx, p.URN)
 		if err != nil {
-			// Not found → create.
-			if err := r.store.CreateEntity(ctx, p); err != nil {
-				return nil, fmt.Errorf("create entity %s: %w", p.URN, err)
-			}
+			// Not found → queue for creation.
+			batch = append(batch, p)
+			seenInBatch[p.URN] = true
 		} else if !jsonEqual(existing.Payload, p.Payload) {
+			if err := flushBatch(); err != nil {
+				return nil, err
+			}
 			// Different but no specific conflict rule matched → update anyway.
 			if err := r.store.UpdateEntity(ctx, p); err != nil {
 				return nil, fmt.Errorf("update entity %s: %w", p.URN, err)
 			}
 		}
 		// If identical → no-op.
+	}
+	if err := flushBatch(); err != nil {
+		return nil, err
 	}
 	return conflicts, nil
 }

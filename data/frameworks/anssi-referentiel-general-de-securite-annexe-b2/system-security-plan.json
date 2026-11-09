@@ -1,0 +1,798 @@
+{
+  "system-security-plan": {
+    "control-implementation": {
+      "description": "Control implementations for Référentiel Général de Sécurité 2.0 - Annexe B2.",
+      "implemented-requirements": [
+        {
+          "by-components": [
+            {
+              "component-uuid": "83409a03-826f-5dc8-992e-0c2496da920a",
+              "description": "Control _2.1.1 (RègleImpact-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "8afbd470-aa1f-5a80-9920-b9eecb0cbc93"
+            }
+          ],
+          "control-id": "_2.1.1",
+          "remarks": "Control _2.1.1 (RègleImpact-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "36d95686-ad4e-5973-a420-7e4fbd46d74d"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "83409a03-826f-5dc8-992e-0c2496da920a",
+              "description": "Control _2.1.2 (RègleDurée-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "3142f1ea-8d1d-5631-a8ab-0c2efa514c8a"
+            }
+          ],
+          "control-id": "_2.1.2",
+          "remarks": "Control _2.1.2 (RègleDurée-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "28f9da18-15d9-57c9-8a26-31d7ba6ca917"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "83409a03-826f-5dc8-992e-0c2496da920a",
+              "description": "Control _2.1.3 (RègleImpactSystémique-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "149e6e73-d240-5995-ab2e-345e571ef6ae"
+            }
+          ],
+          "control-id": "_2.1.3",
+          "remarks": "Control _2.1.3 (RègleImpactSystémique-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "adcb4b5c-9b85-5eb6-acf6-3e050aa56a09"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "83409a03-826f-5dc8-992e-0c2496da920a",
+              "description": "Control _2.1.4 (RecomImpactSystémique-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "4a1afea6-c7dc-5cbe-9a2c-30747b0bba76"
+            }
+          ],
+          "control-id": "_2.1.4",
+          "remarks": "Control _2.1.4 (RecomImpactSystémique-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "aec91da2-5400-5c9d-94f3-adfc86510120"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "83409a03-826f-5dc8-992e-0c2496da920a",
+              "description": "Control _2.3.1.1.1 (RègleAléaLocal-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "4d94e1b2-3ef3-5d2b-b289-54ebe8a68fa2"
+            }
+          ],
+          "control-id": "_2.3.1.1.1",
+          "remarks": "Control _2.3.1.1.1 (RègleAléaLocal-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "fe3e4bda-48fa-51bd-840a-259fd34c68c0"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "83409a03-826f-5dc8-992e-0c2496da920a",
+              "description": "Control _2.3.1.2.1 (RègleDifférentiation-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "42817230-0b7a-5fd1-bff4-b73a684b4f72"
+            }
+          ],
+          "control-id": "_2.3.1.2.1",
+          "remarks": "Control _2.3.1.2.1 (RègleDifférentiation-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "77092f9c-b97c-512a-815c-8badb5b3d656"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "83409a03-826f-5dc8-992e-0c2496da920a",
+              "description": "Control _2.3.1.3.1 (RègleÉchangeClés-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "d3964d60-cc70-5520-abc6-99909f3411c5"
+            }
+          ],
+          "control-id": "_2.3.1.3.1",
+          "remarks": "Control _2.3.1.3.1 (RègleÉchangeClés-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "3db83430-a2a1-57e6-907d-39c26fde4dcb"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "83409a03-826f-5dc8-992e-0c2496da920a",
+              "description": "Control _2.3.2.1.1 (RègleAléaCentral-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "364b493c-95a0-5637-bb86-6df92a2da084"
+            }
+          ],
+          "control-id": "_2.3.2.1.1",
+          "remarks": "Control _2.3.2.1.1 (RègleAléaCentral-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "543f0aa0-2b70-58c2-8e96-9ca05d879ec6"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "83409a03-826f-5dc8-992e-0c2496da920a",
+              "description": "Control _2.3.2.1.2 (RecomAléaCentral-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "039b9a1d-312d-583a-9fef-5af5da20a34a"
+            }
+          ],
+          "control-id": "_2.3.2.1.2",
+          "remarks": "Control _2.3.2.1.2 (RecomAléaCentral-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f84effba-ef26-5784-b690-a3c302fd4156"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "83409a03-826f-5dc8-992e-0c2496da920a",
+              "description": "Control _2.3.2.1.3 (RègleGénérationCentralisée-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "3f9ac9b3-a126-5a79-a8e7-c9373fa9ab76"
+            }
+          ],
+          "control-id": "_2.3.2.1.3",
+          "remarks": "Control _2.3.2.1.3 (RègleGénérationCentralisée-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f7dc532d-fa73-50a7-aeab-980283b668c7"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "83409a03-826f-5dc8-992e-0c2496da920a",
+              "description": "Control _2.3.2.1.4 (RecomGénérationCentralisée-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "720ac4fc-d3f6-55ba-90d3-3cf284209832"
+            }
+          ],
+          "control-id": "_2.3.2.1.4",
+          "remarks": "Control _2.3.2.1.4 (RecomGénérationCentralisée-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "1993d2a5-ea19-54c5-b1f1-98589bd3071f"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "83409a03-826f-5dc8-992e-0c2496da920a",
+              "description": "Control _2.3.2.2.1 (RègleDérivation-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "d8e23696-0552-5f73-8e9a-c5510bf173b2"
+            }
+          ],
+          "control-id": "_2.3.2.2.1",
+          "remarks": "Control _2.3.2.2.1 (RègleDérivation-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "a66a733a-65f9-5f42-9008-60585468d35c"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "83409a03-826f-5dc8-992e-0c2496da920a",
+              "description": "Control _2.3.2.2.2 (RecomDérivation-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "231b4ef5-bd30-559d-a803-44095a96b37b"
+            }
+          ],
+          "control-id": "_2.3.2.2.2",
+          "remarks": "Control _2.3.2.2.2 (RecomDérivation-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "9d2bac31-4573-559c-807b-292f77a5a1f5"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "83409a03-826f-5dc8-992e-0c2496da920a",
+              "description": "Control _2.3.2.2.3 (RecomDérivation-2) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "0c9f3ec0-c368-5d31-9be3-c99386dafc61"
+            }
+          ],
+          "control-id": "_2.3.2.2.3",
+          "remarks": "Control _2.3.2.2.3 (RecomDérivation-2) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "a483d636-0ee0-5a9e-b2fb-2d3434222c08"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "83409a03-826f-5dc8-992e-0c2496da920a",
+              "description": "Control _2.3.3.1 (RègleDérivationSignature-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "db77232e-e6d1-5125-ad4f-415d3a4500fd"
+            }
+          ],
+          "control-id": "_2.3.3.1",
+          "remarks": "Control _2.3.3.1 (RègleDérivationSignature-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "5294ea74-fcda-5022-abba-bda22588a9c5"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "83409a03-826f-5dc8-992e-0c2496da920a",
+              "description": "Control _2.3.3.2 (RecomGénérationAléatoireSignature-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "bd37c92e-4c12-5e16-960c-73217ec2740f"
+            }
+          ],
+          "control-id": "_2.3.3.2",
+          "remarks": "Control _2.3.3.2 (RecomGénérationAléatoireSignature-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "1b62733b-d636-5815-893e-cdacb5a77e20"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "83409a03-826f-5dc8-992e-0c2496da920a",
+              "description": "Control _2.3.3.3 (RecomGénérationAléatoireSignature-2) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "0a2df414-380b-5b09-99c3-781fbc4bca2c"
+            }
+          ],
+          "control-id": "_2.3.3.3",
+          "remarks": "Control _2.3.3.3 (RecomGénérationAléatoireSignature-2) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "9cb966aa-2bf2-5a9c-8b5d-70e5231f4367"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "83409a03-826f-5dc8-992e-0c2496da920a",
+              "description": "Control _2.4.1.1 (RègleUsage-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "efe8358c-2eef-5912-a97f-13af6ac53baf"
+            }
+          ],
+          "control-id": "_2.4.1.1",
+          "remarks": "Control _2.4.1.1 (RègleUsage-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "451d140f-fced-5383-88d6-2b89f81e45c2"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "83409a03-826f-5dc8-992e-0c2496da920a",
+              "description": "Control _2.4.2.1 (RègleAffectation-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "9b6dcd71-1103-5616-ba28-bcf8d40be3cd"
+            }
+          ],
+          "control-id": "_2.4.2.1",
+          "remarks": "Control _2.4.2.1 (RègleAffectation-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "76748835-1312-55eb-9519-08211816f4b6"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "83409a03-826f-5dc8-992e-0c2496da920a",
+              "description": "Control _2.4.2.2 (RecomAffectation-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "4bd3b897-7b18-59df-af6b-b7f7b5ebe8f6"
+            }
+          ],
+          "control-id": "_2.4.2.2",
+          "remarks": "Control _2.4.2.2 (RecomAffectation-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "d9d19ea9-8017-5521-afc0-8dc7362eef7f"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "83409a03-826f-5dc8-992e-0c2496da920a",
+              "description": "Control _2.4.3.1.1.1 (RègleEnrôlementPrivatif-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "dddbee2e-cda5-5ceb-9159-71fe16dce32f"
+            }
+          ],
+          "control-id": "_2.4.3.1.1.1",
+          "remarks": "Control _2.4.3.1.1.1 (RègleEnrôlementPrivatif-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "454c22d3-1f68-5692-9e0e-5ef4a1c8fe6c"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "83409a03-826f-5dc8-992e-0c2496da920a",
+              "description": "Control _2.4.3.1.1.2 (RecomContrôleIndépendant-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "d54ea4fb-1b4c-5f15-90fb-cdbf856c2949"
+            }
+          ],
+          "control-id": "_2.4.3.1.1.2",
+          "remarks": "Control _2.4.3.1.1.2 (RecomContrôleIndépendant-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "0516d90a-9412-51a6-b33b-51fed8ec5653"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "83409a03-826f-5dc8-992e-0c2496da920a",
+              "description": "Control _2.4.3.1.2.1 (RègleEnrôlementIGC-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "2b0f86cc-8109-52c3-9cf0-7889c0131727"
+            }
+          ],
+          "control-id": "_2.4.3.1.2.1",
+          "remarks": "Control _2.4.3.1.2.1 (RègleEnrôlementIGC-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "b1749ca0-b4b8-50a6-b7b3-49e0a6a251fc"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "83409a03-826f-5dc8-992e-0c2496da920a",
+              "description": "Control _2.4.3.1.2.2 (RecomContrôleIndépendant-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "95755e82-6e8e-5a97-89c3-04524305f5ab"
+            }
+          ],
+          "control-id": "_2.4.3.1.2.2",
+          "remarks": "Control _2.4.3.1.2.2 (RecomContrôleIndépendant-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "62679190-bfd5-5e18-a292-dd00a1f08256"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "83409a03-826f-5dc8-992e-0c2496da920a",
+              "description": "Control _2.4.3.2.1.1 (RègleEnrôlementCntralSécuritéPhysique-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "abdb0378-d580-540e-98a1-5e5473e647e4"
+            }
+          ],
+          "control-id": "_2.4.3.2.1.1",
+          "remarks": "Control _2.4.3.2.1.1 (RègleEnrôlementCntralSécuritéPhysique-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "76c3721b-7f29-52bc-b2c0-27132417a21c"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "83409a03-826f-5dc8-992e-0c2496da920a",
+              "description": "Control _2.4.3.2.1.2 (RègleEnrôlementCentral-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "e33b107e-b001-5e22-bf8d-a5027234c2eb"
+            }
+          ],
+          "control-id": "_2.4.3.2.1.2",
+          "remarks": "Control _2.4.3.2.1.2 (RègleEnrôlementCentral-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "057a9682-d7db-52a3-8ebc-77e1b632f715"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "83409a03-826f-5dc8-992e-0c2496da920a",
+              "description": "Control _2.4.3.2.2.1 (RègleEnrôlementDérivationSécuritéPhysique-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ab9657a2-059f-5caf-9a04-264eb2558543"
+            }
+          ],
+          "control-id": "_2.4.3.2.2.1",
+          "remarks": "Control _2.4.3.2.2.1 (RègleEnrôlementDérivationSécuritéPhysique-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "1bf85ceb-b4e2-556e-81b1-ad13dbe1932e"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "83409a03-826f-5dc8-992e-0c2496da920a",
+              "description": "Control _2.4.3.2.2.2 (RègleEnrôlementDérivation-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "7f767c0d-8c0d-5fd5-82a1-0bac74a793cb"
+            }
+          ],
+          "control-id": "_2.4.3.2.2.2",
+          "remarks": "Control _2.4.3.2.2.2 (RègleEnrôlementDérivation-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "b49ce5cc-8598-5893-8cc7-0f1feacef519"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "83409a03-826f-5dc8-992e-0c2496da920a",
+              "description": "Control _2.5.1.1.1 (RègleAcheminemementCléCentral-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "824a535b-2826-51a1-844d-a20507800168"
+            }
+          ],
+          "control-id": "_2.5.1.1.1",
+          "remarks": "Control _2.5.1.1.1 (RègleAcheminemementCléCentral-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "859ae918-8787-548a-99e3-79eace7e591e"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "83409a03-826f-5dc8-992e-0c2496da920a",
+              "description": "Control _2.5.1.1.2 (RecomAcheminementNoirCentralBout-en-bout-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "6042e90f-6187-5d3c-800d-c1d55810e9fb"
+            }
+          ],
+          "control-id": "_2.5.1.1.2",
+          "remarks": "Control _2.5.1.1.2 (RecomAcheminementNoirCentralBout-en-bout-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "1bf679ff-630a-5f40-84e7-85fe4b4157a5"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "83409a03-826f-5dc8-992e-0c2496da920a",
+              "description": "Control _2.5.1.2.1 (RègleAcheminemementCléDérivée-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "c104de77-3014-504f-8aba-c7045aec524a"
+            }
+          ],
+          "control-id": "_2.5.1.2.1",
+          "remarks": "Control _2.5.1.2.1 (RègleAcheminemementCléDérivée-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "8e7d00dd-03fb-5644-9b43-5c96efda6f63"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "83409a03-826f-5dc8-992e-0c2496da920a",
+              "description": "Control _2.5.1.2.2 (RecomAcheminementNoirDérivéeBout-en-bout-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "100654cd-ac58-5754-8ee9-4de1bc6c05bb"
+            }
+          ],
+          "control-id": "_2.5.1.2.2",
+          "remarks": "Control _2.5.1.2.2 (RecomAcheminementNoirDérivéeBout-en-bout-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "7c7440eb-2fad-580f-823d-dbcf13c45bba"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "83409a03-826f-5dc8-992e-0c2496da920a",
+              "description": "Control _2.5.2.1.1 (RecomInjectionCléLocale-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "15ed7052-4b22-55eb-9dc8-618513e0dccb"
+            }
+          ],
+          "control-id": "_2.5.2.1.1",
+          "remarks": "Control _2.5.2.1.1 (RecomInjectionCléLocale-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "82ce143c-6ff8-5c10-91b4-82376a7279af"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "83409a03-826f-5dc8-992e-0c2496da920a",
+              "description": "Control _2.5.2.1.2 (RègleInjectionCléLocale-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ef1a5d77-5931-5a37-a5df-c1dd600632f9"
+            }
+          ],
+          "control-id": "_2.5.2.1.2",
+          "remarks": "Control _2.5.2.1.2 (RègleInjectionCléLocale-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "e2645340-da1f-55d5-ba66-2e29ff2da91a"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "83409a03-826f-5dc8-992e-0c2496da920a",
+              "description": "Control _2.5.2.2.1.1 (RègleInjectionCléCentral-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "7ec23c58-1e7d-5878-83a2-5050c4be01aa"
+            }
+          ],
+          "control-id": "_2.5.2.2.1.1",
+          "remarks": "Control _2.5.2.2.1.1 (RègleInjectionCléCentral-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "91ddd973-91aa-5ad4-aa81-f83246d66271"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "83409a03-826f-5dc8-992e-0c2496da920a",
+              "description": "Control _2.5.2.2.1.2 (RecomInjectionCléCentral-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "52ee1ea6-d991-5000-aec1-e9115c2c6299"
+            }
+          ],
+          "control-id": "_2.5.2.2.1.2",
+          "remarks": "Control _2.5.2.2.1.2 (RecomInjectionCléCentral-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "200573f9-0103-5674-a731-4e8628a6380b"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "83409a03-826f-5dc8-992e-0c2496da920a",
+              "description": "Control _2.5.2.2.2.1 (RègleInjectionCléDérivée-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "b7b34e82-24f8-551b-8016-cc08d86123b8"
+            }
+          ],
+          "control-id": "_2.5.2.2.2.1",
+          "remarks": "Control _2.5.2.2.2.1 (RègleInjectionCléDérivée-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "ed0a8992-46f9-5708-967c-9bc763053fcf"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "83409a03-826f-5dc8-992e-0c2496da920a",
+              "description": "Control _2.5.2.2.2.2 (RecomInjectionCléDérivée-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "be8d53fe-1b3e-50f6-8c08-2bd3502fa6ac"
+            }
+          ],
+          "control-id": "_2.5.2.2.2.2",
+          "remarks": "Control _2.5.2.2.2.2 (RecomInjectionCléDérivée-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "6845577d-740c-5241-ba30-6a8cd8e2a3c4"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "83409a03-826f-5dc8-992e-0c2496da920a",
+              "description": "Control _2.6.1.1 (RecomDiffusion-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "51b2c7be-8008-5e53-85e8-21bdf2cc43a6"
+            }
+          ],
+          "control-id": "_2.6.1.1",
+          "remarks": "Control _2.6.1.1 (RecomDiffusion-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "590dc55d-d313-5ccc-add9-4f736abb11f2"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "83409a03-826f-5dc8-992e-0c2496da920a",
+              "description": "Control _2.6.2.1 (RègleEnvironnementConfiance-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "2478f92b-710d-5406-bf11-ba2248971685"
+            }
+          ],
+          "control-id": "_2.6.2.1",
+          "remarks": "Control _2.6.2.1 (RègleEnvironnementConfiance-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f4a9736f-2a72-5584-a87e-52d1f2d12537"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "83409a03-826f-5dc8-992e-0c2496da920a",
+              "description": "Control _2.6.2.2 (RègleVérificationAuthenticité-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "826b6d21-58fd-5b97-bba6-0a91bdd30b7d"
+            }
+          ],
+          "control-id": "_2.6.2.2",
+          "remarks": "Control _2.6.2.2 (RègleVérificationAuthenticité-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "59a359ac-7f98-5828-b14d-79fe78e0f45b"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "83409a03-826f-5dc8-992e-0c2496da920a",
+              "description": "Control _2.6.2.3 (RègleVérificationUtilisabilité-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "94346eee-a5b2-5594-adfd-3ebf2fa10266"
+            }
+          ],
+          "control-id": "_2.6.2.3",
+          "remarks": "Control _2.6.2.3 (RègleVérificationUtilisabilité-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "675d4c53-7384-52c6-9b2f-5ad33bffe70b"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "83409a03-826f-5dc8-992e-0c2496da920a",
+              "description": "Control _2.7.1 (RègleFinUtilisation-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "b3af140f-ac4b-5fa8-aff2-e59d7dc367d8"
+            }
+          ],
+          "control-id": "_2.7.1",
+          "remarks": "Control _2.7.1 (RègleFinUtilisation-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "c279641f-bc1e-5fcc-bf14-379f7e9659e9"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "83409a03-826f-5dc8-992e-0c2496da920a",
+              "description": "Control _2.7.2 (RecomCauseFinUtilisation-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "eddcffb8-2750-5342-ac6f-b2aac757e786"
+            }
+          ],
+          "control-id": "_2.7.2",
+          "remarks": "Control _2.7.2 (RecomCauseFinUtilisation-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "a658ab37-ba6c-53f5-98fe-57927a0e9b23"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "83409a03-826f-5dc8-992e-0c2496da920a",
+              "description": "Control _2.7.3 (RègleEffacement-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "c0bd58f7-2c6b-53d7-8811-fe0a8a1b0cb4"
+            }
+          ],
+          "control-id": "_2.7.3",
+          "remarks": "Control _2.7.3 (RègleEffacement-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "d53b9563-4b63-5b1e-b459-b25763a38249"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "83409a03-826f-5dc8-992e-0c2496da920a",
+              "description": "Control _2.8.1 (RègleRenouvellement-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "533f1ce4-e9da-5511-84ba-6e43300c61a3"
+            }
+          ],
+          "control-id": "_2.8.1",
+          "remarks": "Control _2.8.1 (RègleRenouvellement-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "8748a164-d22c-56bc-b2d1-5b2e3d89d766"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "83409a03-826f-5dc8-992e-0c2496da920a",
+              "description": "Control _2.8.2 (RègleRenouvellementEnrôlement-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "f829c364-9a1c-5f04-bbaa-e4170e89a958"
+            }
+          ],
+          "control-id": "_2.8.2",
+          "remarks": "Control _2.8.2 (RègleRenouvellementEnrôlement-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "c92c0321-a33b-5f16-9693-ee753fcfd80b"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "83409a03-826f-5dc8-992e-0c2496da920a",
+              "description": "Control _2.9.1 (RègleRecouvrement-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "aea8a4f6-55d1-50c7-a716-1c58bfd09b0c"
+            }
+          ],
+          "control-id": "_2.9.1",
+          "remarks": "Control _2.9.1 (RègleRecouvrement-1) is satisfied by the Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "48dc512a-a939-578c-8d0c-7e651197a96c"
+        }
+      ]
+    },
+    "import-profile": {
+      "href": "./catalog.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:12Z",
+      "oscal-version": "1.2.3",
+      "roles": [
+        {
+          "id": "sec-admin",
+          "title": "Security Administrator"
+        }
+      ],
+      "title": "Référentiel Général de Sécurité 2.0 - Annexe B2 System Security Plan Template",
+      "version": "1"
+    },
+    "system-characteristics": {
+      "authorization-boundary": {
+        "description": "The authorization boundary encompasses all computing resources, cloud tenancies, and network zones supporting Référentiel Général de Sécurité 2.0 - Annexe B2 operations."
+      },
+      "description": "Reference system architecture implementing security controls for Référentiel Général de Sécurité 2.0 - Annexe B2.",
+      "security-impact-level": {
+        "security-objective-availability": "moderate",
+        "security-objective-confidentiality": "moderate",
+        "security-objective-integrity": "high"
+      },
+      "security-sensitivity-level": "moderate",
+      "status": {
+        "state": "operational"
+      },
+      "system-ids": [
+        {
+          "id": "anssi-referentiel-general-de-securite-annexe-b2-system"
+        }
+      ],
+      "system-information": {
+        "information-types": [
+          {
+            "description": "Operational and compliance data processed within the france jurisdiction boundary.",
+            "title": "Sovereign Program Data",
+            "uuid": "dadf52a6-51eb-5c65-ac82-6830cff455a3"
+          }
+        ]
+      },
+      "system-name": "Référentiel Général de Sécurité 2.0 - Annexe B2 Reference System",
+      "system-name-short": "anssi-referentiel-general-de-securite-annexe-b2"
+    },
+    "system-implementation": {
+      "components": [
+        {
+          "description": "Central execution platform providing control implementations for Référentiel Général de Sécurité 2.0 - Annexe B2.",
+          "status": {
+            "state": "operational"
+          },
+          "title": "Référentiel Général de Sécurité 2.0 - Annexe B2 Core System Component",
+          "type": "software",
+          "uuid": "83409a03-826f-5dc8-992e-0c2496da920a"
+        }
+      ],
+      "users": [
+        {
+          "role-ids": [
+            "sec-admin"
+          ],
+          "title": "Security Administrator",
+          "uuid": "535a6012-c8b2-5f52-b9ba-18636ae1f3c1"
+        }
+      ]
+    },
+    "uuid": "3af6b5a5-b629-5919-a595-6bd37374d71d"
+  }
+}

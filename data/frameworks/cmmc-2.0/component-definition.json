@@ -1,0 +1,578 @@
+{
+  "component-definition": {
+    "components": [
+      {
+        "control-implementations": [
+          {
+            "description": "Security control implementations for CMMC version 2.0.",
+            "implemented-requirements": [
+              {
+                "control-id": "ac.l1-3.1.1",
+                "description": "Component capability addressing control ac.l1-3.1.1 (Authorized Access Control).",
+                "uuid": "1831956c-431b-56a5-8cef-8c0016ba9e95"
+              },
+              {
+                "control-id": "ac.l1-3.1.2",
+                "description": "Component capability addressing control ac.l1-3.1.2 (Transaction \u0026 Function Control).",
+                "uuid": "a63841c9-6833-5df4-8862-67986285ff44"
+              },
+              {
+                "control-id": "ac.l1-3.1.20",
+                "description": "Component capability addressing control ac.l1-3.1.20 (External Connections).",
+                "uuid": "eb7b6f13-3622-5d83-9e5c-c50237e2fb41"
+              },
+              {
+                "control-id": "ac.l1-3.1.22",
+                "description": "Component capability addressing control ac.l1-3.1.22 (Control Public Information).",
+                "uuid": "496b4cb1-0b81-59c0-9cb3-21d84369d197"
+              },
+              {
+                "control-id": "ac.l2-3.1.10",
+                "description": "Component capability addressing control ac.l2-3.1.10 (Session Lock).",
+                "uuid": "de55a080-c3e3-57ae-b95a-122003740449"
+              },
+              {
+                "control-id": "ac.l2-3.1.11",
+                "description": "Component capability addressing control ac.l2-3.1.11 (Session Termination).",
+                "uuid": "4864768b-3005-50c4-a57a-fe35151be05e"
+              },
+              {
+                "control-id": "ac.l2-3.1.12",
+                "description": "Component capability addressing control ac.l2-3.1.12 (ACCESS CONTROL — AC.L2-3.1.12).",
+                "uuid": "dd8f9846-4ca1-508c-969d-0c9e887259b9"
+              },
+              {
+                "control-id": "ac.l2-3.1.13",
+                "description": "Component capability addressing control ac.l2-3.1.13 (Remote Access Confidentiality).",
+                "uuid": "ffe9f6cd-4101-59e5-a45a-464a28e42490"
+              },
+              {
+                "control-id": "ac.l2-3.1.14",
+                "description": "Component capability addressing control ac.l2-3.1.14 (Remote Access Routing).",
+                "uuid": "dbfba977-0e2c-5f57-8296-a99feceb9d65"
+              },
+              {
+                "control-id": "ac.l2-3.1.15",
+                "description": "Component capability addressing control ac.l2-3.1.15 (Privileged Remote Access).",
+                "uuid": "361a81e3-7063-5547-98cb-5099a315f5d6"
+              },
+              {
+                "control-id": "ac.l2-3.1.16",
+                "description": "Component capability addressing control ac.l2-3.1.16 (Wireless Access Authorization).",
+                "uuid": "4e024ea7-3490-5a1a-be60-3683cc612d47"
+              },
+              {
+                "control-id": "ac.l2-3.1.17",
+                "description": "Component capability addressing control ac.l2-3.1.17 (Wireless Access Protection).",
+                "uuid": "cd0428ad-cf89-5e80-a536-87e38116aa34"
+              },
+              {
+                "control-id": "ac.l2-3.1.18",
+                "description": "Component capability addressing control ac.l2-3.1.18 (Mobile Device Connection).",
+                "uuid": "2c680b2d-9cbb-5d46-baa9-b45aa6fc49ab"
+              },
+              {
+                "control-id": "ac.l2-3.1.19",
+                "description": "Component capability addressing control ac.l2-3.1.19 (Encrypt CUI on Mobile).",
+                "uuid": "146fa6b2-8a20-51df-b708-bf755750a1f7"
+              },
+              {
+                "control-id": "ac.l2-3.1.21",
+                "description": "Component capability addressing control ac.l2-3.1.21 (Portable Storage Use).",
+                "uuid": "1f3187d1-a931-539f-86ba-1a86e3c77877"
+              },
+              {
+                "control-id": "ac.l2-3.1.3",
+                "description": "Component capability addressing control ac.l2-3.1.3 (ACCESS CONTROL — AC.L2-3.1.3).",
+                "uuid": "13eef4a0-82b5-5b79-a8bd-70aa35cc80f4"
+              },
+              {
+                "control-id": "ac.l2-3.1.4",
+                "description": "Component capability addressing control ac.l2-3.1.4 (Separation of Duties).",
+                "uuid": "c46bf6f7-8ae3-5b1a-b3b0-bbb3fbe6fe92"
+              },
+              {
+                "control-id": "ac.l2-3.1.5",
+                "description": "Component capability addressing control ac.l2-3.1.5 (Least Privilege).",
+                "uuid": "304da1bb-5178-5778-98d4-b990e0abd8de"
+              },
+              {
+                "control-id": "ac.l2-3.1.6",
+                "description": "Component capability addressing control ac.l2-3.1.6 (Non-Privileged Account Use).",
+                "uuid": "6344e206-eea4-5c4e-9b78-17ce9d0b30de"
+              },
+              {
+                "control-id": "ac.l2-3.1.7",
+                "description": "Component capability addressing control ac.l2-3.1.7 (Privileged Functions).",
+                "uuid": "7d5dd5b7-3b9d-5b31-aed2-8c281cca2c15"
+              },
+              {
+                "control-id": "ac.l2-3.1.8",
+                "description": "Component capability addressing control ac.l2-3.1.8 (Unsuccessful Logon Attempts).",
+                "uuid": "a272ccfe-a1a2-5e91-9d66-87341abc8c9a"
+              },
+              {
+                "control-id": "ac.l2-3.1.9",
+                "description": "Component capability addressing control ac.l2-3.1.9 (Privacy \u0026 Security Notices).",
+                "uuid": "44d27049-86bc-5a5a-9887-8f07650e0c10"
+              },
+              {
+                "control-id": "at.l2-3.2.1",
+                "description": "Component capability addressing control at.l2-3.2.1 (Role-Based Risk Awareness).",
+                "uuid": "360150f1-9631-55cd-8b6e-942af8778d26"
+              },
+              {
+                "control-id": "at.l2-3.2.2",
+                "description": "Component capability addressing control at.l2-3.2.2 (Role-Based Training).",
+                "uuid": "fd9960da-b4bb-53c1-aa3d-4aa2e675dd67"
+              },
+              {
+                "control-id": "at.l2-3.2.3",
+                "description": "Component capability addressing control at.l2-3.2.3 (Insider Threat Awareness).",
+                "uuid": "b90db053-4cce-5ad4-a9b8-88dee90d5c66"
+              },
+              {
+                "control-id": "au.l2-3.3.1",
+                "description": "Component capability addressing control au.l2-3.3.1 (System Auditing).",
+                "uuid": "c3d690f5-d168-53b4-bf9b-622a47888a4c"
+              },
+              {
+                "control-id": "au.l2-3.3.2",
+                "description": "Component capability addressing control au.l2-3.3.2 (User Accountability).",
+                "uuid": "467efde9-3c63-5c32-b8e8-d74bb7b8abb9"
+              },
+              {
+                "control-id": "au.l2-3.3.3",
+                "description": "Component capability addressing control au.l2-3.3.3 (Event Review).",
+                "uuid": "7eac7813-761a-5306-a5d6-08de87ba3de5"
+              },
+              {
+                "control-id": "au.l2-3.3.4",
+                "description": "Component capability addressing control au.l2-3.3.4 (Audit Failure Alerting).",
+                "uuid": "981e4c80-d36a-5a6f-bd91-7338bb468ee5"
+              },
+              {
+                "control-id": "au.l2-3.3.5",
+                "description": "Component capability addressing control au.l2-3.3.5 (Audit Correlation).",
+                "uuid": "aade65c5-555a-5846-a105-71d630235797"
+              },
+              {
+                "control-id": "au.l2-3.3.6",
+                "description": "Component capability addressing control au.l2-3.3.6 (Reduction \u0026 Reporting).",
+                "uuid": "a6a7b380-e537-5fa0-9fcf-b67bba8f98e8"
+              },
+              {
+                "control-id": "au.l2-3.3.7",
+                "description": "Component capability addressing control au.l2-3.3.7 (Authoritative Time Source).",
+                "uuid": "a7e4c59c-ab86-585e-bc01-6a90e128ea32"
+              },
+              {
+                "control-id": "au.l2-3.3.8",
+                "description": "Component capability addressing control au.l2-3.3.8 (Audit Protection).",
+                "uuid": "3ad1b535-8b29-5630-b0f2-37eb33ecd4d6"
+              },
+              {
+                "control-id": "au.l2-3.3.9",
+                "description": "Component capability addressing control au.l2-3.3.9 (Audit Management).",
+                "uuid": "d600e29b-09d6-59f1-b6ba-ccb299b7c1ea"
+              },
+              {
+                "control-id": "ca.l2-3.12.1",
+                "description": "Component capability addressing control ca.l2-3.12.1 (Security Control Assessment).",
+                "uuid": "d0ecebaa-bf6d-5265-bea1-574e60fa7aa5"
+              },
+              {
+                "control-id": "ca.l2-3.12.2",
+                "description": "Component capability addressing control ca.l2-3.12.2 (Plan of Action).",
+                "uuid": "04ef6ca6-af34-508e-96d1-a2f1ac9d10ac"
+              },
+              {
+                "control-id": "ca.l2-3.12.3",
+                "description": "Component capability addressing control ca.l2-3.12.3 (Security Control Monitoring).",
+                "uuid": "189ba3e5-fff3-5cc7-a3bf-ef1a3cffc52c"
+              },
+              {
+                "control-id": "ca.l2-3.12.4",
+                "description": "Component capability addressing control ca.l2-3.12.4 (System Security Plan).",
+                "uuid": "24ee7c84-45ff-506d-8630-fc370c2a62cb"
+              },
+              {
+                "control-id": "cm.l2-3.4.1",
+                "description": "Component capability addressing control cm.l2-3.4.1 (System Baselining).",
+                "uuid": "3213baa6-9075-50df-b53b-860e4397831e"
+              },
+              {
+                "control-id": "cm.l2-3.4.2",
+                "description": "Component capability addressing control cm.l2-3.4.2 (Security Configuration Enforcement).",
+                "uuid": "1826eda2-fd93-56e7-b8e2-3ca9d1892486"
+              },
+              {
+                "control-id": "cm.l2-3.4.3",
+                "description": "Component capability addressing control cm.l2-3.4.3 (System Change Management).",
+                "uuid": "84c3c262-8540-568a-8dd0-682100d76137"
+              },
+              {
+                "control-id": "cm.l2-3.4.4",
+                "description": "Component capability addressing control cm.l2-3.4.4 (Security Impact Analysis).",
+                "uuid": "be2b4cdd-4655-5713-b0a2-8acae574479d"
+              },
+              {
+                "control-id": "cm.l2-3.4.5",
+                "description": "Component capability addressing control cm.l2-3.4.5 (Access Restrictions for Change).",
+                "uuid": "203cbcc2-56f3-52a6-a2ab-93bfe4ac0d0e"
+              },
+              {
+                "control-id": "cm.l2-3.4.6",
+                "description": "Component capability addressing control cm.l2-3.4.6 (Least Functionality).",
+                "uuid": "f8a6365b-48ef-5d21-b010-6ad84f4233d6"
+              },
+              {
+                "control-id": "cm.l2-3.4.7",
+                "description": "Component capability addressing control cm.l2-3.4.7 (Nonessential Functionality).",
+                "uuid": "ca74f28b-f2a9-580e-a856-17c97d6bd5ef"
+              },
+              {
+                "control-id": "cm.l2-3.4.8",
+                "description": "Component capability addressing control cm.l2-3.4.8 (Application Execution Policy).",
+                "uuid": "2847a045-891a-540b-8243-56d297a87623"
+              },
+              {
+                "control-id": "cm.l2-3.4.9",
+                "description": "Component capability addressing control cm.l2-3.4.9 (User-Installed Software).",
+                "uuid": "1eac09f4-e619-56bd-84cf-6ab046a75023"
+              },
+              {
+                "control-id": "ia.l1-3.5.1",
+                "description": "Component capability addressing control ia.l1-3.5.1 (Identification).",
+                "uuid": "8d5a15da-5617-52d9-a305-ca640eb6c211"
+              },
+              {
+                "control-id": "ia.l1-3.5.2",
+                "description": "Component capability addressing control ia.l1-3.5.2 (Authentication).",
+                "uuid": "f64ec805-6132-5b21-ad3c-019085f1c86b"
+              },
+              {
+                "control-id": "ia.l2-3.5.10",
+                "description": "Component capability addressing control ia.l2-3.5.10 (Cryptographically-Protected Passwords).",
+                "uuid": "440dd4f4-6d68-5c13-847a-e6e3e2ff755f"
+              },
+              {
+                "control-id": "ia.l2-3.5.11",
+                "description": "Component capability addressing control ia.l2-3.5.11 (Obscure Feedback).",
+                "uuid": "fbbc903f-6f7d-5059-a3b5-9fa504ce9341"
+              },
+              {
+                "control-id": "ia.l2-3.5.3",
+                "description": "Component capability addressing control ia.l2-3.5.3 (Multifactor Authentication).",
+                "uuid": "3e2d53cb-eef0-55bb-b400-13840f34a9b0"
+              },
+              {
+                "control-id": "ia.l2-3.5.4",
+                "description": "Component capability addressing control ia.l2-3.5.4 (Replay-Resistant Authentication).",
+                "uuid": "a9047146-46ea-5810-9fe1-8366961a4c92"
+              },
+              {
+                "control-id": "ia.l2-3.5.5",
+                "description": "Component capability addressing control ia.l2-3.5.5 (Identifier Reuse).",
+                "uuid": "1eb0a346-5ddb-5f86-bb74-706b641f20a1"
+              },
+              {
+                "control-id": "ia.l2-3.5.6",
+                "description": "Component capability addressing control ia.l2-3.5.6 (Identifier Handling).",
+                "uuid": "b3fa0498-20bd-5550-8bdc-05099880a698"
+              },
+              {
+                "control-id": "ia.l2-3.5.7",
+                "description": "Component capability addressing control ia.l2-3.5.7 (Password Complexity).",
+                "uuid": "71d91762-6971-5db5-bb0e-c9968a41874f"
+              },
+              {
+                "control-id": "ia.l2-3.5.8",
+                "description": "Component capability addressing control ia.l2-3.5.8 (Password Reuse).",
+                "uuid": "3da5b48a-e518-574a-b26a-f8641c32c61b"
+              },
+              {
+                "control-id": "ia.l2-3.5.9",
+                "description": "Component capability addressing control ia.l2-3.5.9 (Temporary Passwords).",
+                "uuid": "3fead606-4897-5152-9b35-791b2dcf9ec5"
+              },
+              {
+                "control-id": "ir.l2-3.6.1",
+                "description": "Component capability addressing control ir.l2-3.6.1 (Incident Handling).",
+                "uuid": "2668c786-4a67-5a38-9716-42f521bea004"
+              },
+              {
+                "control-id": "ir.l2-3.6.2",
+                "description": "Component capability addressing control ir.l2-3.6.2 (Incident Reporting).",
+                "uuid": "c5a87da0-2910-5ad1-abd3-a84e82b65d41"
+              },
+              {
+                "control-id": "ir.l2-3.6.3",
+                "description": "Component capability addressing control ir.l2-3.6.3 (Incident Response Testing).",
+                "uuid": "30a31460-ed97-5f46-87d0-f749e66dcf53"
+              },
+              {
+                "control-id": "ma.l2-3.7.1",
+                "description": "Component capability addressing control ma.l2-3.7.1 (Perform Maintenance).",
+                "uuid": "a38bfe9a-a52d-56f8-b624-5170228a9ccb"
+              },
+              {
+                "control-id": "ma.l2-3.7.2",
+                "description": "Component capability addressing control ma.l2-3.7.2 (System Maintenance Control).",
+                "uuid": "43b31f85-e624-5b7d-8941-e7cb11fe04a2"
+              },
+              {
+                "control-id": "ma.l2-3.7.3",
+                "description": "Component capability addressing control ma.l2-3.7.3 (Equipment Sanitization).",
+                "uuid": "10459a19-e4e6-5387-b36a-b09e5b259932"
+              },
+              {
+                "control-id": "ma.l2-3.7.4",
+                "description": "Component capability addressing control ma.l2-3.7.4 (Media Inspection).",
+                "uuid": "35c35ad3-d818-549f-aec4-62e3cf4166a1"
+              },
+              {
+                "control-id": "ma.l2-3.7.5",
+                "description": "Component capability addressing control ma.l2-3.7.5 (Nonlocal Maintenance).",
+                "uuid": "33f0a801-92fb-592c-a0d9-244457a80b42"
+              },
+              {
+                "control-id": "ma.l2-3.7.6",
+                "description": "Component capability addressing control ma.l2-3.7.6 (Maintenance Personnel).",
+                "uuid": "7df16bca-abff-5e72-89c1-68826620417d"
+              },
+              {
+                "control-id": "mp.l1-3.8.3",
+                "description": "Component capability addressing control mp.l1-3.8.3 (Media Disposal).",
+                "uuid": "1e9d36fe-6347-59f9-8838-496ffeced3d2"
+              },
+              {
+                "control-id": "mp.l2-3.8.1",
+                "description": "Component capability addressing control mp.l2-3.8.1 (Media Protection).",
+                "uuid": "968f0886-2c76-5d6a-9a82-0df5290b9fcb"
+              },
+              {
+                "control-id": "mp.l2-3.8.2",
+                "description": "Component capability addressing control mp.l2-3.8.2 (Media Access).",
+                "uuid": "be6e6092-522c-58b2-8390-c249e43b5e5e"
+              },
+              {
+                "control-id": "mp.l2-3.8.4",
+                "description": "Component capability addressing control mp.l2-3.8.4 (Media Markings).",
+                "uuid": "82530387-9e72-5e14-ba3c-368753c082a0"
+              },
+              {
+                "control-id": "mp.l2-3.8.5",
+                "description": "Component capability addressing control mp.l2-3.8.5 (Media Accountability).",
+                "uuid": "d84b37f6-cc84-5ee3-b08d-e71f32a85a6d"
+              },
+              {
+                "control-id": "mp.l2-3.8.6",
+                "description": "Component capability addressing control mp.l2-3.8.6 (Portable Storage Encryption).",
+                "uuid": "6cc652ce-a44b-5198-9a0f-fa94e9064411"
+              },
+              {
+                "control-id": "mp.l2-3.8.7",
+                "description": "Component capability addressing control mp.l2-3.8.7 (Removable Media).",
+                "uuid": "7d79b800-b735-5186-8a36-898c0376afcc"
+              },
+              {
+                "control-id": "mp.l2-3.8.8",
+                "description": "Component capability addressing control mp.l2-3.8.8 (Shared Media).",
+                "uuid": "620764be-ebef-5fc2-b2de-f3491cc7ade2"
+              },
+              {
+                "control-id": "mp.l2-3.8.9",
+                "description": "Component capability addressing control mp.l2-3.8.9 (Protect Backups).",
+                "uuid": "56fab3be-83e7-59b8-834a-7aee4e42a06a"
+              },
+              {
+                "control-id": "pe.l1-3.10.1",
+                "description": "Component capability addressing control pe.l1-3.10.1 (Limit Physical Access).",
+                "uuid": "5fb0f74c-d593-59fe-b7a1-464dfb82d5e5"
+              },
+              {
+                "control-id": "pe.l1-3.10.3",
+                "description": "Component capability addressing control pe.l1-3.10.3 (Escort Visitors).",
+                "uuid": "5be28cb3-e519-5217-94f8-a6353ed50cb2"
+              },
+              {
+                "control-id": "pe.l1-3.10.4",
+                "description": "Component capability addressing control pe.l1-3.10.4 (Physical Access Logs).",
+                "uuid": "a403f1e0-7960-5c85-91ff-4d76e8cb4954"
+              },
+              {
+                "control-id": "pe.l1-3.10.5",
+                "description": "Component capability addressing control pe.l1-3.10.5 (Manage Physical Access).",
+                "uuid": "ac8933ce-edc4-5376-8695-ae5dd4e4f57b"
+              },
+              {
+                "control-id": "pe.l2-3.10.2",
+                "description": "Component capability addressing control pe.l2-3.10.2 (Monitor Facility).",
+                "uuid": "2629406a-0e00-5e9f-adf5-331bc5f43bb2"
+              },
+              {
+                "control-id": "pe.l2-3.10.6",
+                "description": "Component capability addressing control pe.l2-3.10.6 (Alternative Work Sites).",
+                "uuid": "3be7f9bd-11dd-526d-9057-5629f5c07cde"
+              },
+              {
+                "control-id": "ps.l2-3.9.1",
+                "description": "Component capability addressing control ps.l2-3.9.1 (Screen Individuals).",
+                "uuid": "1588aa48-390d-54bd-bf0a-29cb1a23c6c3"
+              },
+              {
+                "control-id": "ps.l2-3.9.2",
+                "description": "Component capability addressing control ps.l2-3.9.2 (Personnel Actions).",
+                "uuid": "1bd07ea1-486e-5ca4-97bd-744317abf703"
+              },
+              {
+                "control-id": "ra.l2-3.11.1",
+                "description": "Component capability addressing control ra.l2-3.11.1 (Risk Assessments).",
+                "uuid": "af596714-3dbc-5c33-aa8d-62897353eede"
+              },
+              {
+                "control-id": "ra.l2-3.11.2",
+                "description": "Component capability addressing control ra.l2-3.11.2 (Vulnerability Scan).",
+                "uuid": "c32321f0-4278-51d8-ac92-9702344703c4"
+              },
+              {
+                "control-id": "ra.l2-3.11.3",
+                "description": "Component capability addressing control ra.l2-3.11.3 (Vulnerability Remediation).",
+                "uuid": "33cb0396-d18a-59fc-a4b8-a3888a5a9ddb"
+              },
+              {
+                "control-id": "sc.l1-3.13.1",
+                "description": "Component capability addressing control sc.l1-3.13.1 (Boundary Protection).",
+                "uuid": "b274a4f5-1ce8-55de-b96c-4a6b3fa2ac99"
+              },
+              {
+                "control-id": "sc.l1-3.13.5",
+                "description": "Component capability addressing control sc.l1-3.13.5 (Public-Access System Separation).",
+                "uuid": "80037677-bd4b-5096-934e-2b15bb68b303"
+              },
+              {
+                "control-id": "sc.l2-3.13.10",
+                "description": "Component capability addressing control sc.l2-3.13.10 (Key Management).",
+                "uuid": "18608741-e72d-532c-82a0-81246218364b"
+              },
+              {
+                "control-id": "sc.l2-3.13.11",
+                "description": "Component capability addressing control sc.l2-3.13.11 (CUI Encryption).",
+                "uuid": "d73a3516-699b-5ead-b866-184edec1beba"
+              },
+              {
+                "control-id": "sc.l2-3.13.12",
+                "description": "Component capability addressing control sc.l2-3.13.12 (Collaborative Device Control).",
+                "uuid": "5044090b-4c34-5e31-9b0e-82ecde2e0cf7"
+              },
+              {
+                "control-id": "sc.l2-3.13.13",
+                "description": "Component capability addressing control sc.l2-3.13.13 (Mobile Code).",
+                "uuid": "1de730f7-b1d4-5a1f-ac70-3a75993a4e2b"
+              },
+              {
+                "control-id": "sc.l2-3.13.14",
+                "description": "Component capability addressing control sc.l2-3.13.14 (Voice over Internet Protocol).",
+                "uuid": "8979e3fa-d8ec-5de6-a0c2-b370cc678245"
+              },
+              {
+                "control-id": "sc.l2-3.13.15",
+                "description": "Component capability addressing control sc.l2-3.13.15 (Communications Authenticity).",
+                "uuid": "a02ad90a-dcef-55b3-9d28-ca520400ccd2"
+              },
+              {
+                "control-id": "sc.l2-3.13.16",
+                "description": "Component capability addressing control sc.l2-3.13.16 (Data at Rest).",
+                "uuid": "d7d3bd35-546b-5cb6-856a-9b683e63b1ad"
+              },
+              {
+                "control-id": "sc.l2-3.13.2",
+                "description": "Component capability addressing control sc.l2-3.13.2 (Security Engineering).",
+                "uuid": "03343f02-78e5-5401-acfd-327341d65590"
+              },
+              {
+                "control-id": "sc.l2-3.13.3",
+                "description": "Component capability addressing control sc.l2-3.13.3 (Role Separation).",
+                "uuid": "9b640fa2-7386-5eb9-85a9-af3bacc890b0"
+              },
+              {
+                "control-id": "sc.l2-3.13.4",
+                "description": "Component capability addressing control sc.l2-3.13.4 (Shared Resource Control).",
+                "uuid": "f736e364-efbf-5ee7-8b8a-a77a313615af"
+              },
+              {
+                "control-id": "sc.l2-3.13.6",
+                "description": "Component capability addressing control sc.l2-3.13.6 (Network Communication by Exception).",
+                "uuid": "366d9bcd-e8ab-5394-98f1-d8f3850d948c"
+              },
+              {
+                "control-id": "sc.l2-3.13.7",
+                "description": "Component capability addressing control sc.l2-3.13.7 (Split Tunneling).",
+                "uuid": "59edd2c8-1944-5df9-8d89-59cb6b7f7635"
+              },
+              {
+                "control-id": "sc.l2-3.13.8",
+                "description": "Component capability addressing control sc.l2-3.13.8 (Data in Transit).",
+                "uuid": "8000463f-88e2-5714-acb8-111efccfc088"
+              },
+              {
+                "control-id": "sc.l2-3.13.9",
+                "description": "Component capability addressing control sc.l2-3.13.9 (Connections Termination).",
+                "uuid": "d7065f37-ce53-5627-bf0b-2986d4c60fa1"
+              },
+              {
+                "control-id": "si.l1-3.14.1",
+                "description": "Component capability addressing control si.l1-3.14.1 (Flaw Remediation).",
+                "uuid": "ac52b46f-2450-507a-a67d-9b6a0ff0faa8"
+              },
+              {
+                "control-id": "si.l1-3.14.2",
+                "description": "Component capability addressing control si.l1-3.14.2 (Malicious Code Protection).",
+                "uuid": "23294ea4-ba8f-59ac-9eed-8f8c7c6bd4f0"
+              },
+              {
+                "control-id": "si.l1-3.14.4",
+                "description": "Component capability addressing control si.l1-3.14.4 (Update Malicious Code Protection).",
+                "uuid": "be2a637a-efb4-5d16-a45b-c106955551ac"
+              },
+              {
+                "control-id": "si.l1-3.14.5",
+                "description": "Component capability addressing control si.l1-3.14.5 (System \u0026 File Scanning).",
+                "uuid": "f0bd77ab-5164-58b3-b285-363d136f40d0"
+              },
+              {
+                "control-id": "si.l2-3.14.3",
+                "description": "Component capability addressing control si.l2-3.14.3 (Security Alerts \u0026 Advisories).",
+                "uuid": "d4aa0ad5-7545-5192-8281-392708318009"
+              },
+              {
+                "control-id": "si.l2-3.14.6",
+                "description": "Component capability addressing control si.l2-3.14.6 (Monitor Communications for Attacks).",
+                "uuid": "89df52bb-9f29-596e-80af-33e0307379ca"
+              },
+              {
+                "control-id": "si.l2-3.14.7",
+                "description": "Component capability addressing control si.l2-3.14.7 (Identify Unauthorized Use).",
+                "uuid": "9fc6477d-2a96-5e65-885f-99d2dfbd3eaa"
+              }
+            ],
+            "source": "./catalog.json",
+            "uuid": "703977e5-930d-5dc4-974b-6e0ed8c4cbb2"
+          }
+        ],
+        "description": "Enterprise technical and operational capabilities implementing controls for CMMC version 2.0.",
+        "title": "CMMC version 2.0 Platform Component",
+        "type": "software",
+        "uuid": "cb932293-b52a-5f99-8455-c77d8f7f6c32"
+      }
+    ],
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:13Z",
+      "oscal-version": "1.2.3",
+      "title": "CMMC version 2.0 Component Definition Template",
+      "version": "6"
+    },
+    "uuid": "4f178c07-fba4-519a-9a81-cae1c8301327"
+  }
+}

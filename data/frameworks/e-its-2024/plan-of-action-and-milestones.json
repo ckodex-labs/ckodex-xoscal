@@ -1,0 +1,21 @@
+{
+  "plan-of-action-and-milestones": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:13Z",
+      "oscal-version": "1.2.3",
+      "title": "E-ITS 2024 Plan of Action and Milestones Template",
+      "version": "1"
+    },
+    "poam-items": [
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for E-ITS 2024.",
+        "title": "Compliance Roadmap and Parameter Tailoring for E-ITS 2024",
+        "uuid": "a3f1fec5-e850-52b2-9354-a69189c3c099"
+      }
+    ],
+    "uuid": "65ba19f7-505f-5b9f-a8f2-ab01c242eee6"
+  }
+}

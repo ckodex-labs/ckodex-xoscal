@@ -1,0 +1,295 @@
+{
+  "assessment-results": {
+    "import-ap": {
+      "href": "./assessment-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:11Z",
+      "oscal-version": "1.2.3",
+      "title": "EU Artificial Intelligence Act (AI Act) Assessment Results Template",
+      "version": "2"
+    },
+    "results": [
+      {
+        "description": "Assessment evaluation findings and observations for EU Artificial Intelligence Act (AI Act).",
+        "findings": [
+          {
+            "description": "Control _10.2 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "14fd3ca0-d7f0-536e-9df7-5570f0cd83bc"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_10.2",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _10.2",
+            "uuid": "5262f27f-5fa9-59c2-be75-234e19645db3"
+          },
+          {
+            "description": "Control _5.1.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "b28d6863-2a1a-5d69-bb1f-bec3e7011be2"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_5.1.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _5.1.a",
+            "uuid": "3f5f4573-a76b-5090-8855-9afcb21d2bd9"
+          },
+          {
+            "description": "Control _50.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "25e824f9-9752-512d-8a55-e6657e155601"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_50.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _50.1",
+            "uuid": "6186305d-92d3-5c2b-a6ad-04b5360354d6"
+          },
+          {
+            "description": "Control _51.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "ec074059-482a-593c-86b9-85d365e1ed96"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_51.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _51.1",
+            "uuid": "d7d03270-21c3-5633-bbfc-fd7a3b4eecce"
+          },
+          {
+            "description": "Control _59.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "7644323e-bfad-5cee-bf12-6ed739245821"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_59.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _59.1",
+            "uuid": "8321f431-8167-50d3-ab22-3f42222df68e"
+          },
+          {
+            "description": "Control _71.2 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "3402cdbd-15b7-5065-a770-9b94435b5842"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_71.2",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _71.2",
+            "uuid": "1960bf51-1151-55f2-932d-f5242850e8e1"
+          },
+          {
+            "description": "Control _72.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "7749748e-ab44-5307-aec5-592f4955f1a2"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_72.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _72.1",
+            "uuid": "9ead15cd-6f81-5a7b-bcbe-019748b5524e"
+          },
+          {
+            "description": "Control node1131 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "07eaf83b-0d8d-55cc-8d2d-3673916fa9e8"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "node1131",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for node1131",
+            "uuid": "554ad856-df13-5330-a8b4-e96536c03787"
+          },
+          {
+            "description": "Control node271 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "1950398e-abcb-5474-80cb-32eb55ea58ac"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "node271",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for node271",
+            "uuid": "93524226-3856-5a44-9e33-026f1ae53dd8"
+          }
+        ],
+        "observations": [
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control _10.2 (Article 10 — 10.2) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "14fd3ca0-d7f0-536e-9df7-5570f0cd83bc"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control _5.1.a (The following AI practices shall be prohibited: — 5.1.a) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "b28d6863-2a1a-5d69-bb1f-bec3e7011be2"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control _50.1 (Article 50 — 50.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "25e824f9-9752-512d-8a55-e6657e155601"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control _51.1 (Article 51 — 51.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "ec074059-482a-593c-86b9-85d365e1ed96"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control _59.1 (Article 59 — 59.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "7644323e-bfad-5cee-bf12-6ed739245821"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control _71.2 (Article 71 — 71.2) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "3402cdbd-15b7-5065-a770-9b94435b5842"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control _72.1 (Article 72 — 72.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "7749748e-ab44-5307-aec5-592f4955f1a2"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control node1131 (Article 113 — node1131) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "07eaf83b-0d8d-55cc-8d2d-3673916fa9e8"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control node271 (Article 4 — node271) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "1950398e-abcb-5474-80cb-32eb55ea58ac"
+          }
+        ],
+        "reviewed-controls": {
+          "control-selections": [
+            {
+              "description": "All controls evaluated for EU Artificial Intelligence Act (AI Act)",
+              "include-all": {}
+            }
+          ]
+        },
+        "start": "2026-11-08T01:42:11Z",
+        "title": "EU Artificial Intelligence Act (AI Act) Assessment Results",
+        "uuid": "4a0842bb-1a3b-5855-b839-868becabb04b"
+      }
+    ],
+    "uuid": "5f2aea44-53bd-5c94-bf3f-32bf70fbbfb9"
+  }
+}

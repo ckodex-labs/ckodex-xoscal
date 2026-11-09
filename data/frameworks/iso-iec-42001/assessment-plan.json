@@ -1,0 +1,120 @@
+{
+  "assessment-plan": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:11Z",
+      "oscal-version": "1.2.3",
+      "title": "ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Security Assessment Plan Template",
+      "version": "2"
+    },
+    "reviewed-controls": {
+      "control-selections": [
+        {
+          "description": "All controls in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline",
+          "include-all": {}
+        }
+      ]
+    },
+    "tasks": [
+      {
+        "description": "Verify and examine implementation of 3 controls in the Third-party and customer relationships family for ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "title": "Assess Family A.10 (Third-party and customer relationships)",
+        "type": "examination",
+        "uuid": "f0da5f34-07b8-54ed-a76d-9052952a8f18"
+      },
+      {
+        "description": "Verify and examine implementation of 3 controls in the Policies related to AI family for ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "title": "Assess Family A.2 (Policies related to AI)",
+        "type": "examination",
+        "uuid": "430547cc-3dc5-554a-a5fd-9df43fe7575f"
+      },
+      {
+        "description": "Verify and examine implementation of 2 controls in the Internal organization family for ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "title": "Assess Family A.3 (Internal organization)",
+        "type": "examination",
+        "uuid": "acc6d5f0-3fa6-5c7c-9a71-0a4195f26071"
+      },
+      {
+        "description": "Verify and examine implementation of 5 controls in the Resources for AI systems family for ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "title": "Assess Family A.4 (Resources for AI systems)",
+        "type": "examination",
+        "uuid": "4a2ff269-77c2-5aed-91e9-1c6b0d4f1e20"
+      },
+      {
+        "description": "Verify and examine implementation of 4 controls in the Assessing impacts of AI systems family for ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "title": "Assess Family A.5 (Assessing impacts of AI systems)",
+        "type": "examination",
+        "uuid": "f71d55de-bf59-54cd-9fb3-2d171a81ceaa"
+      },
+      {
+        "description": "Verify and examine implementation of 9 controls in the AI system life cycle family for ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "title": "Assess Family A.6 (AI system life cycle)",
+        "type": "examination",
+        "uuid": "94c8f623-aade-587a-a168-488dc97b81b3"
+      },
+      {
+        "description": "Verify and examine implementation of 5 controls in the Data for AI systems family for ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "title": "Assess Family A.7 (Data for AI systems)",
+        "type": "examination",
+        "uuid": "7667b954-e063-5d62-a9d1-c8f2e7f1d1ad"
+      },
+      {
+        "description": "Verify and examine implementation of 4 controls in the Information for interested parties of AI systems family for ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "title": "Assess Family A.8 (Information for interested parties of AI systems)",
+        "type": "examination",
+        "uuid": "08b09dd7-f62e-5081-92b5-78a4623c75ca"
+      },
+      {
+        "description": "Verify and examine implementation of 3 controls in the Use of AI systems family for ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "title": "Assess Family A.9 (Use of AI systems)",
+        "type": "examination",
+        "uuid": "6d10b05e-90e8-5e4e-8943-d55ccb34852f"
+      },
+      {
+        "description": "Verify and examine implementation of 2 controls in the Improvement family for ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "title": "Assess Family _10 (Improvement)",
+        "type": "examination",
+        "uuid": "4b180e6e-9879-54fc-92fc-56106245ff36"
+      },
+      {
+        "description": "Verify and examine implementation of 4 controls in the Context of the organization family for ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "title": "Assess Family _4 (Context of the organization)",
+        "type": "examination",
+        "uuid": "919082e0-5222-590c-a101-2b0f5f74b309"
+      },
+      {
+        "description": "Verify and examine implementation of 3 controls in the Leadership family for ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "title": "Assess Family _5 (Leadership)",
+        "type": "examination",
+        "uuid": "fa57add0-7167-5c20-bb4f-f5945566edbe"
+      },
+      {
+        "description": "Verify and examine implementation of 3 controls in the Planning family for ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "title": "Assess Family _6 (Planning)",
+        "type": "examination",
+        "uuid": "477e9faa-26d1-5bf1-9f6f-b94d2c436d81"
+      },
+      {
+        "description": "Verify and examine implementation of 7 controls in the Support family for ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "title": "Assess Family _7 (Support)",
+        "type": "examination",
+        "uuid": "3a7f09ca-fb2c-5b3c-b4b5-0a567b150849"
+      },
+      {
+        "description": "Verify and examine implementation of 4 controls in the Operation family for ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "title": "Assess Family _8 (Operation)",
+        "type": "examination",
+        "uuid": "d90b454d-2836-5306-b6c6-9a01deca4840"
+      },
+      {
+        "description": "Verify and examine implementation of 6 controls in the Performance evaluation family for ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "title": "Assess Family _9 (Performance evaluation)",
+        "type": "examination",
+        "uuid": "83941963-de31-56e1-9c45-80c9f0a696f2"
+      }
+    ],
+    "uuid": "fc653763-30ae-5474-803d-2805db938d67"
+  }
+}

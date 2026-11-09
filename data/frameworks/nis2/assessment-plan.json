@@ -1,0 +1,102 @@
+{
+  "assessment-plan": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:11Z",
+      "oscal-version": "1.2.3",
+      "title": "NIS2 - Annex to the Commission Implementing Regulation 2024/2690 with Technical Implementation Guidance by ENISA Security Assessment Plan Template",
+      "version": "13"
+    },
+    "reviewed-controls": {
+      "control-selections": [
+        {
+          "description": "All controls in NIS2 - Annex to the Commission Implementing Regulation 2024/2690 with Technical Implementation Guidance by ENISA",
+          "include-all": {}
+        }
+      ]
+    },
+    "tasks": [
+      {
+        "description": "Verify and examine implementation of 18 controls in the POLICY ON THE SECURITY OF NETWORK AND INFORMATION SYSTEMS (ARTICLE 21(2), POINT (A) OF DIRECTIVE (EU) 2022/2555) family for NIS2 - Annex to the Commission Implementing Regulation 2024/2690 with Technical Implementation Guidance by ENISA.",
+        "title": "Assess Family _1 (POLICY ON THE SECURITY OF NETWORK AND INFORMATION SYSTEMS (ARTICLE 21(2), POINT (A) OF DIRECTIVE (EU) 2022/2555))",
+        "type": "examination",
+        "uuid": "cb298ef3-ed83-581f-ba01-11ab554b9a15"
+      },
+      {
+        "description": "Verify and examine implementation of 14 controls in the HUMAN RESOURCES SECURITY (ARTICLE 21(2), POINT (I), OF DIRECTIVE (EU) 2022/2555) family for NIS2 - Annex to the Commission Implementing Regulation 2024/2690 with Technical Implementation Guidance by ENISA.",
+        "title": "Assess Family _10 (HUMAN RESOURCES SECURITY (ARTICLE 21(2), POINT (I), OF DIRECTIVE (EU) 2022/2555))",
+        "type": "examination",
+        "uuid": "dc5d43d9-ed7d-5962-aa00-1b22d0980d81"
+      },
+      {
+        "description": "Verify and examine implementation of 41 controls in the ACCESS CONTROL (ARTICLE 21(2), POINTS (I) AND (J), OF DIRECTIVE (EU) 2022/2555) family for NIS2 - Annex to the Commission Implementing Regulation 2024/2690 with Technical Implementation Guidance by ENISA.",
+        "title": "Assess Family _11 (ACCESS CONTROL (ARTICLE 21(2), POINTS (I) AND (J), OF DIRECTIVE (EU) 2022/2555))",
+        "type": "examination",
+        "uuid": "1a036270-66bc-50cd-83e5-89655e6aad30"
+      },
+      {
+        "description": "Verify and examine implementation of 22 controls in the ASSET MANAGEMENT (ARTICLE 21(2), POINT (I), OF DIRECTIVE (EU) 2022/2555) family for NIS2 - Annex to the Commission Implementing Regulation 2024/2690 with Technical Implementation Guidance by ENISA.",
+        "title": "Assess Family _12 (ASSET MANAGEMENT (ARTICLE 21(2), POINT (I), OF DIRECTIVE (EU) 2022/2555))",
+        "type": "examination",
+        "uuid": "8f871d95-fd69-539f-a30b-7bdc9f690dcf"
+      },
+      {
+        "description": "Verify and examine implementation of 18 controls in the ENVIRONMENTAL AND PHYSICAL SECURITY (ARTICLE 21(2), POINTS (C), (E) AND (I) OF DIRECTIVE (EU) 2022/2555) family for NIS2 - Annex to the Commission Implementing Regulation 2024/2690 with Technical Implementation Guidance by ENISA.",
+        "title": "Assess Family _13 (ENVIRONMENTAL AND PHYSICAL SECURITY (ARTICLE 21(2), POINTS (C), (E) AND (I) OF DIRECTIVE (EU) 2022/2555))",
+        "type": "examination",
+        "uuid": "22fc8c79-349e-5294-9073-bf3ebc87741e"
+      },
+      {
+        "description": "Verify and examine implementation of 21 controls in the RISK MANAGEMENT POLICY (ARTICLE 21(2), POINT (A) OF DIRECTIVE (EU) 2022/2555) family for NIS2 - Annex to the Commission Implementing Regulation 2024/2690 with Technical Implementation Guidance by ENISA.",
+        "title": "Assess Family _2 (RISK MANAGEMENT POLICY (ARTICLE 21(2), POINT (A) OF DIRECTIVE (EU) 2022/2555))",
+        "type": "examination",
+        "uuid": "607f564f-8301-5db8-88a0-0b1a733554d0"
+      },
+      {
+        "description": "Verify and examine implementation of 45 controls in the INCIDENT HANDLING (ARTICLE 21(2), POINT (B), OF DIRECTIVE (EU) 2022/2555) family for NIS2 - Annex to the Commission Implementing Regulation 2024/2690 with Technical Implementation Guidance by ENISA.",
+        "title": "Assess Family _3 (INCIDENT HANDLING (ARTICLE 21(2), POINT (B), OF DIRECTIVE (EU) 2022/2555))",
+        "type": "examination",
+        "uuid": "f231c36e-46e6-5d26-900f-8bcbcca16576"
+      },
+      {
+        "description": "Verify and examine implementation of 36 controls in the BUSINESS CONTINUITY AND CRISIS MANAGEMENT (ARTICLE 21(2), POINT (C), OF DIRECTIVE (EU) 2022/2555) family for NIS2 - Annex to the Commission Implementing Regulation 2024/2690 with Technical Implementation Guidance by ENISA.",
+        "title": "Assess Family _4 (BUSINESS CONTINUITY AND CRISIS MANAGEMENT (ARTICLE 21(2), POINT (C), OF DIRECTIVE (EU) 2022/2555))",
+        "type": "examination",
+        "uuid": "cd629ddc-0a33-54a7-8c09-a5daebc494c9"
+      },
+      {
+        "description": "Verify and examine implementation of 25 controls in the SUPPLY CHAIN SECURITY (ARTICLE 21(2), POINT (D), OF DIRECTIVE (EU) 2022/2555) family for NIS2 - Annex to the Commission Implementing Regulation 2024/2690 with Technical Implementation Guidance by ENISA.",
+        "title": "Assess Family _5 (SUPPLY CHAIN SECURITY (ARTICLE 21(2), POINT (D), OF DIRECTIVE (EU) 2022/2555))",
+        "type": "examination",
+        "uuid": "dec2ca47-8bfe-5429-8cdb-0145deffcc36"
+      },
+      {
+        "description": "Verify and examine implementation of 71 controls in the SECURITY IN NETWORK AND INFORMATION SYSTEMS ACQUISITION, DEVELOPMENT AND MAINTENANCE (ARTICLE 21(2), POINT (E), OF DIRECTIVE (EU) 2022/2555) family for NIS2 - Annex to the Commission Implementing Regulation 2024/2690 with Technical Implementation Guidance by ENISA.",
+        "title": "Assess Family _6 (SECURITY IN NETWORK AND INFORMATION SYSTEMS ACQUISITION, DEVELOPMENT AND MAINTENANCE (ARTICLE 21(2), POINT (E), OF DIRECTIVE (EU) 2022/2555))",
+        "type": "examination",
+        "uuid": "875eca4f-d315-549a-aa09-55970e4360f3"
+      },
+      {
+        "description": "Verify and examine implementation of 9 controls in the POLICIES AND PROCEDURES TO ASSESS THE EFFECTIVENESS OF CYBERSECURITY RISK-MANAGEMENT MEASURES (ARTICLE 21(2), POINT (F), OF DIRECTIVE (EU) 2022/2555) family for NIS2 - Annex to the Commission Implementing Regulation 2024/2690 with Technical Implementation Guidance by ENISA.",
+        "title": "Assess Family _7 (POLICIES AND PROCEDURES TO ASSESS THE EFFECTIVENESS OF CYBERSECURITY RISK-MANAGEMENT MEASURES (ARTICLE 21(2), POINT (F), OF DIRECTIVE (EU) 2022/2555))",
+        "type": "examination",
+        "uuid": "ab0d0186-1556-5d0d-8508-5b1d866ff2fc"
+      },
+      {
+        "description": "Verify and examine implementation of 14 controls in the BASIC CYBER HYGIENE PRACTICES AND SECURITY TRAINING (ARTICLE 21(2), POINT (G), OF DIRECTIVE (EU) 2022/2555) family for NIS2 - Annex to the Commission Implementing Regulation 2024/2690 with Technical Implementation Guidance by ENISA.",
+        "title": "Assess Family _8 (BASIC CYBER HYGIENE PRACTICES AND SECURITY TRAINING (ARTICLE 21(2), POINT (G), OF DIRECTIVE (EU) 2022/2555))",
+        "type": "examination",
+        "uuid": "624d15e9-2c0f-56ab-a2aa-163c397ad28d"
+      },
+      {
+        "description": "Verify and examine implementation of 17 controls in the CRYPTOGRAPHY (ARTICLE 21(2), POINT (H), OF DIRECTIVE (EU) 2022/2555) family for NIS2 - Annex to the Commission Implementing Regulation 2024/2690 with Technical Implementation Guidance by ENISA.",
+        "title": "Assess Family _9 (CRYPTOGRAPHY (ARTICLE 21(2), POINT (H), OF DIRECTIVE (EU) 2022/2555))",
+        "type": "examination",
+        "uuid": "b08aa533-7bb7-5d3d-81e2-55760d69de6b"
+      }
+    ],
+    "uuid": "e5e05817-556c-541b-b73c-cdead9de0c20"
+  }
+}

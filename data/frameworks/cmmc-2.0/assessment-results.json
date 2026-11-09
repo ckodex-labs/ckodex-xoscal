@@ -1,0 +1,440 @@
+{
+  "assessment-results": {
+    "import-ap": {
+      "href": "./assessment-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:13Z",
+      "oscal-version": "1.2.3",
+      "title": "CMMC version 2.0 Assessment Results Template",
+      "version": "6"
+    },
+    "results": [
+      {
+        "description": "Assessment evaluation findings and observations for CMMC version 2.0.",
+        "findings": [
+          {
+            "description": "Control ac.l1-3.1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "b81d8102-5cb8-5e19-a1f2-107757c43452"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "ac.l1-3.1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for ac.l1-3.1.1",
+            "uuid": "a1dd0c48-b477-52d6-bc07-17285f3f5ab3"
+          },
+          {
+            "description": "Control at.l2-3.2.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "ff9909b8-7346-5a56-8bba-f15fece815a2"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "at.l2-3.2.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for at.l2-3.2.1",
+            "uuid": "9b16db32-52f5-51fc-8036-c70d705c1c6c"
+          },
+          {
+            "description": "Control au.l2-3.3.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "0a05508f-dd0a-5fac-b7da-7facf9782cea"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "au.l2-3.3.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for au.l2-3.3.1",
+            "uuid": "5decf3d8-e4d9-52f4-bc14-2b7d1fd2445e"
+          },
+          {
+            "description": "Control ca.l2-3.12.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "43c67fad-0f9a-5581-8645-ea7022105798"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "ca.l2-3.12.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for ca.l2-3.12.1",
+            "uuid": "82865fb2-c7d5-5552-88b1-e1251acb933d"
+          },
+          {
+            "description": "Control cm.l2-3.4.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "7c90f8ae-5290-51fc-87ce-0317572c7aca"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "cm.l2-3.4.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for cm.l2-3.4.1",
+            "uuid": "2427454d-3c04-59dd-838f-5c797f8426cd"
+          },
+          {
+            "description": "Control ia.l1-3.5.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "548afa3a-cdd2-586f-b7dc-a527cd881e3f"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "ia.l1-3.5.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for ia.l1-3.5.1",
+            "uuid": "7b5f57b3-0e8f-5e97-a9be-09083328c20c"
+          },
+          {
+            "description": "Control ir.l2-3.6.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "5c6f7ce8-650e-58f9-9664-a2859dbbb27d"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "ir.l2-3.6.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for ir.l2-3.6.1",
+            "uuid": "56f07a4c-8b6a-5281-be0a-0a59a150dbde"
+          },
+          {
+            "description": "Control ma.l2-3.7.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "ac4b5a43-747e-521c-8c1c-fca1c83554e7"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "ma.l2-3.7.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for ma.l2-3.7.1",
+            "uuid": "db011157-92a7-5bdf-a28b-7a2d09ca949a"
+          },
+          {
+            "description": "Control mp.l1-3.8.3 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "9d6cbafd-e080-58c1-931a-d5465ad56353"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "mp.l1-3.8.3",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for mp.l1-3.8.3",
+            "uuid": "7f8e3dd0-fc66-5077-a0ae-1728135a283b"
+          },
+          {
+            "description": "Control pe.l1-3.10.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "9b223f5e-7a23-51c3-9388-8fdc37d9d2a7"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "pe.l1-3.10.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for pe.l1-3.10.1",
+            "uuid": "45087601-fa3f-5010-b79e-32d4bea25450"
+          },
+          {
+            "description": "Control ps.l2-3.9.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "cf366634-5f83-59a7-8242-9198b185cb8b"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "ps.l2-3.9.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for ps.l2-3.9.1",
+            "uuid": "34e7f944-f286-50b3-beb5-8b745d65f565"
+          },
+          {
+            "description": "Control ra.l2-3.11.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "c803f284-800e-5d40-b86c-19ddab6beb6b"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "ra.l2-3.11.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for ra.l2-3.11.1",
+            "uuid": "05809fe6-4534-5dbd-944f-cd164ead2b24"
+          },
+          {
+            "description": "Control sc.l1-3.13.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "5ea94338-c9e2-5f1a-b269-116a2ebe54f3"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "sc.l1-3.13.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for sc.l1-3.13.1",
+            "uuid": "8ff389dd-470e-53d7-a675-8e6ae28aa5de"
+          },
+          {
+            "description": "Control si.l1-3.14.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "7e41f178-4368-512f-9949-78bebd10508b"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "si.l1-3.14.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for si.l1-3.14.1",
+            "uuid": "5410ada0-e51e-5878-a433-ed62356c168c"
+          }
+        ],
+        "observations": [
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control ac.l1-3.1.1 (Authorized Access Control) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "b81d8102-5cb8-5e19-a1f2-107757c43452"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control at.l2-3.2.1 (Role-Based Risk Awareness) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "ff9909b8-7346-5a56-8bba-f15fece815a2"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control au.l2-3.3.1 (System Auditing) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "0a05508f-dd0a-5fac-b7da-7facf9782cea"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control ca.l2-3.12.1 (Security Control Assessment) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "43c67fad-0f9a-5581-8645-ea7022105798"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control cm.l2-3.4.1 (System Baselining) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "7c90f8ae-5290-51fc-87ce-0317572c7aca"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control ia.l1-3.5.1 (Identification) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "548afa3a-cdd2-586f-b7dc-a527cd881e3f"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control ir.l2-3.6.1 (Incident Handling) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "5c6f7ce8-650e-58f9-9664-a2859dbbb27d"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control ma.l2-3.7.1 (Perform Maintenance) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "ac4b5a43-747e-521c-8c1c-fca1c83554e7"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control mp.l1-3.8.3 (Media Disposal) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "9d6cbafd-e080-58c1-931a-d5465ad56353"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control pe.l1-3.10.1 (Limit Physical Access) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "9b223f5e-7a23-51c3-9388-8fdc37d9d2a7"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control ps.l2-3.9.1 (Screen Individuals) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "cf366634-5f83-59a7-8242-9198b185cb8b"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control ra.l2-3.11.1 (Risk Assessments) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "c803f284-800e-5d40-b86c-19ddab6beb6b"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control sc.l1-3.13.1 (Boundary Protection) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "5ea94338-c9e2-5f1a-b269-116a2ebe54f3"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control si.l1-3.14.1 (Flaw Remediation) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "7e41f178-4368-512f-9949-78bebd10508b"
+          }
+        ],
+        "reviewed-controls": {
+          "control-selections": [
+            {
+              "description": "All controls evaluated for CMMC version 2.0",
+              "include-all": {}
+            }
+          ]
+        },
+        "start": "2026-11-08T01:42:13Z",
+        "title": "CMMC version 2.0 Assessment Results",
+        "uuid": "86cd894c-4b80-51fd-b1da-e81a2751adf5"
+      }
+    ],
+    "uuid": "83cc20be-9ea3-52ea-bf08-b382ef890173"
+  }
+}

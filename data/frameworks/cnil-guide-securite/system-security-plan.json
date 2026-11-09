@@ -1,0 +1,1158 @@
+{
+  "system-security-plan": {
+    "control-implementation": {
+      "description": "Control implementations for CNIL : guide de sécurité des données.",
+      "implemented-requirements": [
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _1.1 (Piloter la sécurité des données — 1.1) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "7607a338-403b-57cd-95ce-6700d713445a"
+            }
+          ],
+          "control-id": "_1.1",
+          "remarks": "Control _1.1 (Piloter la sécurité des données — 1.1) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "410259c2-2ce8-54a9-81f1-cbcf05cdbc8e"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _1.2 (Piloter la sécurité des données — 1.2) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "407c0032-1e4d-5a50-84b9-0c616fdc70d9"
+            }
+          ],
+          "control-id": "_1.2",
+          "remarks": "Control _1.2 (Piloter la sécurité des données — 1.2) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "16283d01-3084-5233-ad1f-fe91faa5226c"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _10.1 (Sécuriser les sites web — 10.1) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "4954df38-2ae7-5669-a331-02c3e30316fd"
+            }
+          ],
+          "control-id": "_10.1",
+          "remarks": "Control _10.1 (Sécuriser les sites web — 10.1) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "0f1d997e-8676-5277-a654-bf84bc7b0919"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _10.2 (Sécuriser les sites web — 10.2) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "bad75f2b-61f6-54b0-be54-6f32948b61f0"
+            }
+          ],
+          "control-id": "_10.2",
+          "remarks": "Control _10.2 (Sécuriser les sites web — 10.2) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "76b4ae72-2e60-5cca-955e-7fcf828ce860"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _10.3 (Sécuriser les sites web — 10.3) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "b1b1f382-75c3-5794-9334-3c05f30a8f7b"
+            }
+          ],
+          "control-id": "_10.3",
+          "remarks": "Control _10.3 (Sécuriser les sites web — 10.3) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "c6d456a4-8413-564c-a443-8441ce7432cd"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _11.1 (Encadrer les développements informatiques — 11.1) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "64134d32-32b8-5636-97d5-0a78249dd8a1"
+            }
+          ],
+          "control-id": "_11.1",
+          "remarks": "Control _11.1 (Encadrer les développements informatiques — 11.1) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "1b7c0c6b-293c-5f66-b125-6e025fabf74c"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _11.2 (Encadrer les développements informatiques — 11.2) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "667952ee-f6f2-5e82-9623-fbdef5e8ced1"
+            }
+          ],
+          "control-id": "_11.2",
+          "remarks": "Control _11.2 (Encadrer les développements informatiques — 11.2) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "6873893e-d5ac-5aa9-86eb-c6b7d070631c"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _11.3 (Encadrer les développements informatiques — 11.3) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "d40f3382-5c28-5457-b6d4-21a95a1139de"
+            }
+          ],
+          "control-id": "_11.3",
+          "remarks": "Control _11.3 (Encadrer les développements informatiques — 11.3) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "4e519951-00c5-5874-abec-4581c0ba6fd4"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _11.4 (Encadrer les développements informatiques — 11.4) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "33f7797d-3e34-5fd0-88b2-9a4ac0f5fcc6"
+            }
+          ],
+          "control-id": "_11.4",
+          "remarks": "Control _11.4 (Encadrer les développements informatiques — 11.4) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f5de8a37-8845-5c9a-a28d-6464fc184460"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _12.1 (Protéger les locaux — 12.1) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "1cc1f98c-3e7f-5b6e-8bad-95fed9c931a5"
+            }
+          ],
+          "control-id": "_12.1",
+          "remarks": "Control _12.1 (Protéger les locaux — 12.1) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "e9dccd91-0785-5b80-a7f2-268c293e0437"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _12.2 (Protéger les locaux — 12.2) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "28a1fadd-a8a9-5a7f-a18a-0096f8f50f0d"
+            }
+          ],
+          "control-id": "_12.2",
+          "remarks": "Control _12.2 (Protéger les locaux — 12.2) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "8dddee2a-d9fe-59ac-84c9-196cd6aba018"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _13.1 (Sécuriser les échanges avec l’extérieur — 13.1) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "f3f110be-6e6e-52ec-af34-f555d2d51fb0"
+            }
+          ],
+          "control-id": "_13.1",
+          "remarks": "Control _13.1 (Sécuriser les échanges avec l’extérieur — 13.1) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "803904d2-bf75-5f2a-9a6a-696c5044ea10"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _13.2 (Sécuriser les échanges avec l’extérieur — 13.2) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "d7c66e79-a57f-50f6-b73f-1d7280a29c2c"
+            }
+          ],
+          "control-id": "_13.2",
+          "remarks": "Control _13.2 (Sécuriser les échanges avec l’extérieur — 13.2) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "4e4c4a83-8bb7-55bd-8412-73442b7e60cd"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _13.3 (Sécuriser les échanges avec l’extérieur — 13.3) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "0bbd3576-7efe-52ef-a57a-04b40b5db84d"
+            }
+          ],
+          "control-id": "_13.3",
+          "remarks": "Control _13.3 (Sécuriser les échanges avec l’extérieur — 13.3) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "a993f2c6-5dd1-55d1-b0ba-c8f6e6832b41"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _14.1 (Gérer la sous-traitance — 14.1) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "3e0a3a58-5577-5c5b-bac3-15a8161ce7e3"
+            }
+          ],
+          "control-id": "_14.1",
+          "remarks": "Control _14.1 (Gérer la sous-traitance — 14.1) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "d4fc461b-e53e-53f8-8aca-4505dbe71d08"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _14.2 (Gérer la sous-traitance — 14.2) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "8ebd53cf-ce22-5fde-b332-3d7d0c9f4d75"
+            }
+          ],
+          "control-id": "_14.2",
+          "remarks": "Control _14.2 (Gérer la sous-traitance — 14.2) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "3dc18297-7d64-5c88-8bb9-cad25bc2ff90"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _14.3 (Gérer la sous-traitance — 14.3) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "060d83b4-e116-59a4-9d7f-ac7e4c61fe45"
+            }
+          ],
+          "control-id": "_14.3",
+          "remarks": "Control _14.3 (Gérer la sous-traitance — 14.3) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f8a5800a-5653-50d0-94c4-ab034f5c4ad5"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _15.1 (Encadrer la maintenance et la fin de vie des matériels et des logiciels — 15.1) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "e3a37943-d1a0-529c-9704-669cf9850aa9"
+            }
+          ],
+          "control-id": "_15.1",
+          "remarks": "Control _15.1 (Encadrer la maintenance et la fin de vie des matériels et des logiciels — 15.1) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "7239a7f2-e595-52a4-8c44-0aa11c2a2d44"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _15.2 (Encadrer la maintenance et la fin de vie des matériels et des logiciels — 15.2) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "5001b42c-89be-5b9c-bf74-bf8d3401003c"
+            }
+          ],
+          "control-id": "_15.2",
+          "remarks": "Control _15.2 (Encadrer la maintenance et la fin de vie des matériels et des logiciels — 15.2) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "6397825c-bb0a-5c2b-89d1-14ba2e5cc7e2"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _15.3 (Encadrer la maintenance et la fin de vie des matériels et des logiciels — 15.3) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "85bfc614-3168-5f5d-8d02-22ba3039aa38"
+            }
+          ],
+          "control-id": "_15.3",
+          "remarks": "Control _15.3 (Encadrer la maintenance et la fin de vie des matériels et des logiciels — 15.3) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "15fbb2ff-aafd-5c62-8799-2294af8b726e"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _16.1 (Tracer les opérations — 16.1) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "665e126f-3c59-52ed-b885-fc63009cff76"
+            }
+          ],
+          "control-id": "_16.1",
+          "remarks": "Control _16.1 (Tracer les opérations — 16.1) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "aea83248-1cff-5d70-a698-6fba36d29cad"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _16.2 (Tracer les opérations — 16.2) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "b533af3c-6823-5660-a8b3-f07e9928ce16"
+            }
+          ],
+          "control-id": "_16.2",
+          "remarks": "Control _16.2 (Tracer les opérations — 16.2) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "c0f9e431-0aff-57f6-a260-65e05252ff02"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _16.3 (Tracer les opérations — 16.3) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "70888837-9297-5d5a-a9f0-4736d4fb91ab"
+            }
+          ],
+          "control-id": "_16.3",
+          "remarks": "Control _16.3 (Tracer les opérations — 16.3) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "6387af99-aa5e-58d5-ae19-5d012c984fa5"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _16.4 (Tracer les opérations — 16.4) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "9c5c551e-8667-505b-a63c-f642ad08939d"
+            }
+          ],
+          "control-id": "_16.4",
+          "remarks": "Control _16.4 (Tracer les opérations — 16.4) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "9843b3be-67cc-5e20-b3bb-9f7abef4d324"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _17.1 (Sauvegarder — 17.1) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "9c4832c3-8d79-59c2-a936-28f52e6cb85d"
+            }
+          ],
+          "control-id": "_17.1",
+          "remarks": "Control _17.1 (Sauvegarder — 17.1) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "bb36fe36-4577-5a5e-8f82-7663e81c4266"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _17.2 (Sauvegarder — 17.2) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "727b28f3-69a5-5d46-911e-3c8503d81578"
+            }
+          ],
+          "control-id": "_17.2",
+          "remarks": "Control _17.2 (Sauvegarder — 17.2) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "3f19dc31-1994-56aa-ac01-6a5261cdc4e0"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _17.3 (Sauvegarder — 17.3) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "27f7ec48-bdfa-5888-a314-bb49ccc2ff9f"
+            }
+          ],
+          "control-id": "_17.3",
+          "remarks": "Control _17.3 (Sauvegarder — 17.3) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "06ef3491-e01e-576d-b89b-604d4f464359"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _18.1 (Prévoir la continuité et la reprise d’activité — 18.1) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "e447a787-904e-51be-850f-4f893831acf9"
+            }
+          ],
+          "control-id": "_18.1",
+          "remarks": "Control _18.1 (Prévoir la continuité et la reprise d’activité — 18.1) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "24fa17ab-8984-5b10-9b3d-365bd4631e77"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _18.2 (Prévoir la continuité et la reprise d’activité — 18.2) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "86d223d4-5175-5cee-9493-3371272380b2"
+            }
+          ],
+          "control-id": "_18.2",
+          "remarks": "Control _18.2 (Prévoir la continuité et la reprise d’activité — 18.2) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "98adc4cb-de8a-5ad8-ae59-e7552fa53a26"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _19.1 (Gérer les incidents et les violations — 19.1) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "c0ed3126-ba2f-54a1-97a5-3ef3c4895a34"
+            }
+          ],
+          "control-id": "_19.1",
+          "remarks": "Control _19.1 (Gérer les incidents et les violations — 19.1) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "c39257f5-4172-5683-97f7-fe66014784be"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _19.2 (Gérer les incidents et les violations — 19.2) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "93fe384e-48cb-5c5e-9c22-2c102088b8c6"
+            }
+          ],
+          "control-id": "_19.2",
+          "remarks": "Control _19.2 (Gérer les incidents et les violations — 19.2) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "582722fe-2245-51ca-bdf4-af5921f82399"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _2.1 (Définir un cadre pour les utilisateurs — 2.1) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "3cddf07c-c65a-52f4-9139-5c5b24824adf"
+            }
+          ],
+          "control-id": "_2.1",
+          "remarks": "Control _2.1 (Définir un cadre pour les utilisateurs — 2.1) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "21daf2d1-cc4c-5bad-ad8a-e97691a221cd"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _2.2 (Définir un cadre pour les utilisateurs — 2.2) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ce2698f8-f34c-58af-9680-2eba82643a62"
+            }
+          ],
+          "control-id": "_2.2",
+          "remarks": "Control _2.2 (Définir un cadre pour les utilisateurs — 2.2) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "a18a4029-7173-5796-b76b-b355de724ec0"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _20.1 (Analyse de risques — 20.1) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "7bf6ba26-9033-54a0-96a3-bab0b4ed5297"
+            }
+          ],
+          "control-id": "_20.1",
+          "remarks": "Control _20.1 (Analyse de risques — 20.1) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "0eef8b7d-a182-5d05-be2f-0b16546600db"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _20.2 (Analyse de risques — 20.2) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "03df6c75-c689-5d3f-8909-ac135ee4c832"
+            }
+          ],
+          "control-id": "_20.2",
+          "remarks": "Control _20.2 (Analyse de risques — 20.2) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "d499ff73-2970-5618-aa89-d6dbed04309f"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _20.3 (Analyse de risques — 20.3) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "c263f843-0eb8-5cbd-ad46-c82419c6ea93"
+            }
+          ],
+          "control-id": "_20.3",
+          "remarks": "Control _20.3 (Analyse de risques — 20.3) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "950d34b7-bfad-5565-908a-9ac96e27bcb2"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _21.1 (Chiffrement, hachage, signature — 21.1) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "f8b8b38f-241e-5546-a783-270e87e5dd53"
+            }
+          ],
+          "control-id": "_21.1",
+          "remarks": "Control _21.1 (Chiffrement, hachage, signature — 21.1) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "a812ce33-22df-5a5e-a836-bdbbadc80fe7"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _21.2 (Chiffrement, hachage, signature — 21.2) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "f33e6919-7936-500a-bcce-3a30468f0fcd"
+            }
+          ],
+          "control-id": "_21.2",
+          "remarks": "Control _21.2 (Chiffrement, hachage, signature — 21.2) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "c07eb715-b294-5daf-9165-5ec1b936ace3"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _22.1 (Cloud : Informatique en nuage — 22.1) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "5c1264ca-3838-5ee3-a129-002bcde09db4"
+            }
+          ],
+          "control-id": "_22.1",
+          "remarks": "Control _22.1 (Cloud : Informatique en nuage — 22.1) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "ac9de294-517a-5b40-8068-0089674c1158"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _22.2 (Cloud : Informatique en nuage — 22.2) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "6225f7c9-513b-5e7e-8aac-bf50b799dc5b"
+            }
+          ],
+          "control-id": "_22.2",
+          "remarks": "Control _22.2 (Cloud : Informatique en nuage — 22.2) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "466aebdf-d7c6-595a-8333-15dcbdc44742"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _22.3 (Cloud : Informatique en nuage — 22.3) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "a63ba84a-1d86-5689-a576-5405e3d46c51"
+            }
+          ],
+          "control-id": "_22.3",
+          "remarks": "Control _22.3 (Cloud : Informatique en nuage — 22.3) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "57e136e4-1f36-550c-988d-f58007469a89"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _22.4 (Cloud : Informatique en nuage — 22.4) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "82308823-2214-58b2-9707-2702dbc85067"
+            }
+          ],
+          "control-id": "_22.4",
+          "remarks": "Control _22.4 (Cloud : Informatique en nuage — 22.4) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "4a9b1e1c-0ff2-5a12-8936-c1ebe8915609"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _23.1 (Applications mobiles : Conception et développement — 23.1) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "22578008-5b38-5845-b25b-189ab3fafa8d"
+            }
+          ],
+          "control-id": "_23.1",
+          "remarks": "Control _23.1 (Applications mobiles : Conception et développement — 23.1) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "a6237847-b2f2-5623-a598-b9f06a25b0af"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _23.2 (Applications mobiles : Conception et développement — 23.2) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "131b2722-fb34-5bb9-b161-f108ef1b0e2e"
+            }
+          ],
+          "control-id": "_23.2",
+          "remarks": "Control _23.2 (Applications mobiles : Conception et développement — 23.2) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "7baa9a27-9fda-5148-9759-dec819949905"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _23.3 (Applications mobiles : Conception et développement — 23.3) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "9f2f739e-ae4a-5743-8d55-f423aa782513"
+            }
+          ],
+          "control-id": "_23.3",
+          "remarks": "Control _23.3 (Applications mobiles : Conception et développement — 23.3) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "b3850eac-8283-5d55-94e5-ae16ed6e7068"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _24.1 (Intelligence artificielle : Conception et apprentissage — 24.1) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "5950fc2c-0f0a-5c46-a9b8-f3681a0beece"
+            }
+          ],
+          "control-id": "_24.1",
+          "remarks": "Control _24.1 (Intelligence artificielle : Conception et apprentissage — 24.1) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "2480180c-fe92-5c34-b2d0-3c3f121c058c"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _24.2 (Intelligence artificielle : Conception et apprentissage — 24.2) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "5cafba80-3463-5c00-ae16-12e41732edc6"
+            }
+          ],
+          "control-id": "_24.2",
+          "remarks": "Control _24.2 (Intelligence artificielle : Conception et apprentissage — 24.2) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "b1ce7fc7-57b2-58f6-8541-241396a2c318"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _24.3 (Intelligence artificielle : Conception et apprentissage — 24.3) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "59059287-b8ee-527c-867e-1c97230c60a6"
+            }
+          ],
+          "control-id": "_24.3",
+          "remarks": "Control _24.3 (Intelligence artificielle : Conception et apprentissage — 24.3) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "796e02c0-0b4d-587f-8ad0-bb43d3f5a1cc"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _25.1 (API : Interfaces de programmation applicative — 25.1) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "961462fe-87d0-5933-9785-9930d954fe21"
+            }
+          ],
+          "control-id": "_25.1",
+          "remarks": "Control _25.1 (API : Interfaces de programmation applicative — 25.1) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "1155a26b-dd4a-54bc-96ba-f9a59b043244"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _25.2 (API : Interfaces de programmation applicative — 25.2) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "d95f2263-d875-525e-8e67-151b317d25c5"
+            }
+          ],
+          "control-id": "_25.2",
+          "remarks": "Control _25.2 (API : Interfaces de programmation applicative — 25.2) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "4e8df28f-b60f-59c5-92d4-9e5ffc7d0aa3"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _3.1 (Impliquer et former les utilisateurs — 3.1) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "aa072ac0-d028-58b8-af3c-b95384100674"
+            }
+          ],
+          "control-id": "_3.1",
+          "remarks": "Control _3.1 (Impliquer et former les utilisateurs — 3.1) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "e76c448b-dee1-587e-981c-0a13c29b64a9"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _3.2 (Impliquer et former les utilisateurs — 3.2) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "21e8d1ad-d80b-54ad-bd33-fbaf56699787"
+            }
+          ],
+          "control-id": "_3.2",
+          "remarks": "Control _3.2 (Impliquer et former les utilisateurs — 3.2) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "a9d68e5a-0016-5f3c-b557-c5624a0018e5"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _4.1 (Authentifier les utilisateurs — 4.1) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "0c09cfe8-7225-558e-a374-e4e05a90218c"
+            }
+          ],
+          "control-id": "_4.1",
+          "remarks": "Control _4.1 (Authentifier les utilisateurs — 4.1) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "c2349353-76bc-559c-92c2-3c5c8d117143"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _4.2 (Authentifier les utilisateurs — 4.2) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "cc3f583f-4b78-54bf-b716-127b08ca3e85"
+            }
+          ],
+          "control-id": "_4.2",
+          "remarks": "Control _4.2 (Authentifier les utilisateurs — 4.2) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "3a1aa513-8d3e-5d70-8296-a970d81cbace"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _4.3 (Authentifier les utilisateurs — 4.3) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "4034c288-6de5-59f3-9f61-ef3b792aa6d0"
+            }
+          ],
+          "control-id": "_4.3",
+          "remarks": "Control _4.3 (Authentifier les utilisateurs — 4.3) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "99630a6e-24bb-546f-bfa7-770808e62488"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _5.1 (Gérer les habilitations — 5.1) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "dac9fbd9-7751-5557-8425-22e458faaba5"
+            }
+          ],
+          "control-id": "_5.1",
+          "remarks": "Control _5.1 (Gérer les habilitations — 5.1) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "81bb5d9a-1f8e-59fa-8861-b78c80d7f6d4"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _5.2 (Gérer les habilitations — 5.2) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ce055af6-1369-53b8-a761-30c3723915c9"
+            }
+          ],
+          "control-id": "_5.2",
+          "remarks": "Control _5.2 (Gérer les habilitations — 5.2) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "5263087a-c989-5a9f-ad23-363144086144"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _5.3 (Gérer les habilitations — 5.3) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "e6dca06c-5498-530a-938e-bb068fe7c126"
+            }
+          ],
+          "control-id": "_5.3",
+          "remarks": "Control _5.3 (Gérer les habilitations — 5.3) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "8a3389ba-d305-5553-8cf7-7ee5027fa765"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _6.1 (Sécuriser les postes de travail — 6.1) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "73e28970-5f9e-58f3-a76d-80106759af8b"
+            }
+          ],
+          "control-id": "_6.1",
+          "remarks": "Control _6.1 (Sécuriser les postes de travail — 6.1) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "7eaa6c25-f873-5680-b37d-8afa0a0a4888"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _6.2 (Sécuriser les postes de travail — 6.2) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "5cfd1e0a-9011-5f0b-9eb2-eca6240d44e4"
+            }
+          ],
+          "control-id": "_6.2",
+          "remarks": "Control _6.2 (Sécuriser les postes de travail — 6.2) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "6a8b0b7d-7a71-50b4-808a-53f06403dac2"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _6.3 (Sécuriser les postes de travail — 6.3) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "b3f602fb-dcd1-5e9d-bdae-db612d17bb59"
+            }
+          ],
+          "control-id": "_6.3",
+          "remarks": "Control _6.3 (Sécuriser les postes de travail — 6.3) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "a80d4ed7-f5d2-5eae-94f9-7013ee3f3617"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _6.4 (Sécuriser les postes de travail — 6.4) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "343010bb-2ce2-5855-99af-60dd7fe309c4"
+            }
+          ],
+          "control-id": "_6.4",
+          "remarks": "Control _6.4 (Sécuriser les postes de travail — 6.4) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "a838f209-08e8-564b-a265-2fb458b933d2"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _7.1 (Sécuriser l’informatique mobile — 7.1) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "7354358a-0462-5dc1-ac78-3756195047f1"
+            }
+          ],
+          "control-id": "_7.1",
+          "remarks": "Control _7.1 (Sécuriser l’informatique mobile — 7.1) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "5c53afcc-36fb-5b34-8c62-b01cdfe04ed9"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _7.2 (Sécuriser l’informatique mobile — 7.2) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "4b163766-a158-586e-8286-c79d66748181"
+            }
+          ],
+          "control-id": "_7.2",
+          "remarks": "Control _7.2 (Sécuriser l’informatique mobile — 7.2) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "14b3f85f-8711-50b9-8d8a-afe18fa3d25f"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _7.3 (Sécuriser l’informatique mobile — 7.3) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "339ff69f-2652-5da3-8590-c0240eb772d8"
+            }
+          ],
+          "control-id": "_7.3",
+          "remarks": "Control _7.3 (Sécuriser l’informatique mobile — 7.3) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "7eac5596-3853-592b-b33c-8c6e6291776d"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _8.1 (Protéger le réseau informatique — 8.1) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "24ca1219-c8bd-55ab-b6ea-4a503092e2b2"
+            }
+          ],
+          "control-id": "_8.1",
+          "remarks": "Control _8.1 (Protéger le réseau informatique — 8.1) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "481ca720-d2d5-5c36-94cf-a3d02a225946"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _8.2 (Protéger le réseau informatique — 8.2) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "d1b85470-4466-515b-acb4-35454136608e"
+            }
+          ],
+          "control-id": "_8.2",
+          "remarks": "Control _8.2 (Protéger le réseau informatique — 8.2) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "3316135e-9ca4-51a8-8fa0-9690f94ee66d"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _8.3 (Protéger le réseau informatique — 8.3) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "3d019cd2-aa69-578b-ade9-5c81ddd51c66"
+            }
+          ],
+          "control-id": "_8.3",
+          "remarks": "Control _8.3 (Protéger le réseau informatique — 8.3) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "c789c355-21fd-5f69-bca5-fdfa999302d8"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _8.4 (Protéger le réseau informatique — 8.4) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "f51389c7-cad1-5115-87b0-47c6313bba38"
+            }
+          ],
+          "control-id": "_8.4",
+          "remarks": "Control _8.4 (Protéger le réseau informatique — 8.4) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "b6de3355-1c7a-562e-9442-2081a833175c"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _9.1 (Sécuriser les serveurs — 9.1) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "b0a8412e-30be-516e-a24a-3f4382b6a888"
+            }
+          ],
+          "control-id": "_9.1",
+          "remarks": "Control _9.1 (Sécuriser les serveurs — 9.1) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "2ffce607-3305-507d-9cdb-daf30ae865df"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _9.2 (Sécuriser les serveurs — 9.2) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "3e5e3c52-aa2f-5c5f-acc1-ff4254e2bccb"
+            }
+          ],
+          "control-id": "_9.2",
+          "remarks": "Control _9.2 (Sécuriser les serveurs — 9.2) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "ea3efb4a-0e8d-57ad-b273-084362e022c0"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7bf36c3f-2d77-5095-a828-f069e084d532",
+              "description": "Control _9.3 (Sécuriser les serveurs — 9.3) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "f70eec79-ab85-5f42-92a8-ab02dacbf096"
+            }
+          ],
+          "control-id": "_9.3",
+          "remarks": "Control _9.3 (Sécuriser les serveurs — 9.3) is satisfied by the CNIL : guide de sécurité des données Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "63745330-3835-5c39-b1dd-2926d7fc9ee9"
+        }
+      ]
+    },
+    "import-profile": {
+      "href": "./catalog.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:12Z",
+      "oscal-version": "1.2.3",
+      "roles": [
+        {
+          "id": "sec-admin",
+          "title": "Security Administrator"
+        }
+      ],
+      "title": "CNIL : guide de sécurité des données System Security Plan Template",
+      "version": "1"
+    },
+    "system-characteristics": {
+      "authorization-boundary": {
+        "description": "The authorization boundary encompasses all computing resources, cloud tenancies, and network zones supporting CNIL : guide de sécurité des données operations."
+      },
+      "description": "Reference system architecture implementing security controls for CNIL : guide de sécurité des données.",
+      "security-impact-level": {
+        "security-objective-availability": "moderate",
+        "security-objective-confidentiality": "moderate",
+        "security-objective-integrity": "high"
+      },
+      "security-sensitivity-level": "moderate",
+      "status": {
+        "state": "operational"
+      },
+      "system-ids": [
+        {
+          "id": "cnil-guide-securite-system"
+        }
+      ],
+      "system-information": {
+        "information-types": [
+          {
+            "description": "Operational and compliance data processed within the france jurisdiction boundary.",
+            "title": "Sovereign Program Data",
+            "uuid": "ef1fe27e-6f6c-5034-a0df-8ef54cb02c73"
+          }
+        ]
+      },
+      "system-name": "CNIL : guide de sécurité des données Reference System",
+      "system-name-short": "cnil-guide-securite"
+    },
+    "system-implementation": {
+      "components": [
+        {
+          "description": "Central execution platform providing control implementations for CNIL : guide de sécurité des données.",
+          "status": {
+            "state": "operational"
+          },
+          "title": "CNIL : guide de sécurité des données Core System Component",
+          "type": "software",
+          "uuid": "7bf36c3f-2d77-5095-a828-f069e084d532"
+        }
+      ],
+      "users": [
+        {
+          "role-ids": [
+            "sec-admin"
+          ],
+          "title": "Security Administrator",
+          "uuid": "f8f5612c-5c1d-5a7d-9732-e55333209f6c"
+        }
+      ]
+    },
+    "uuid": "4089a1e2-acd8-51a7-be57-f56505098e57"
+  }
+}

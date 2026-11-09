@@ -11795,6 +11795,12 @@
               "values": [
                 "organization-defined personnel or roles"
               ]
+            },
+            {
+              "param-id": "ma-4.5_prm_2",
+              "values": [
+                "organization-defined"
+              ]
             }
           ],
           "uuid": "6365f995-9d82-5d81-9c31-afd6b9da4c00"
@@ -27727,8 +27733,14 @@
       "href": "./profile.json"
     },
     "metadata": {
-      "last-modified": "2026-10-25T23:17:26Z",
+      "last-modified": "2026-11-08T01:42:11Z",
       "oscal-version": "1.2.3",
+      "roles": [
+        {
+          "id": "sec-admin",
+          "title": "Security Administrator"
+        }
+      ],
       "title": "CCCS ITSP.10.033 Security and Privacy Controls and Assurance Activities Catalogue System Security Plan Template",
       "version": "1.0 (2026-03-31)"
     },
@@ -27755,7 +27767,8 @@
         "information-types": [
           {
             "description": "Operational and compliance data processed within the ca jurisdiction boundary.",
-            "title": "Sovereign Program Data"
+            "title": "Sovereign Program Data",
+            "uuid": "9caf0781-6149-5610-821b-6ddd3bd59f4e"
           }
         ]
       },

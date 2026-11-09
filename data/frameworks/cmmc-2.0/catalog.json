@@ -1,0 +1,2101 @@
+{
+  "catalog": {
+    "back-matter": {
+      "resources": [
+        {
+          "description": "Source framework metadata for cmmc-2.0 snapshot portal",
+          "props": [
+            {
+              "name": "type",
+              "value": "standard"
+            },
+            {
+              "name": "version",
+              "value": "portal"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "https://raw.githubusercontent.com/intuitem/ciso-assistant-community/main/backend/library/libraries/cmmc-2.0.yaml"
+            }
+          ],
+          "title": "cmmc-2.0 Framework Reference",
+          "uuid": "db1cc40d-eabf-5e79-a9d2-5610f5891ff4"
+        }
+      ]
+    },
+    "groups": [
+      {
+        "controls": [
+          {
+            "id": "AC.L1-3.1.1",
+            "parts": [
+              {
+                "id": "AC.L1-3.1.1-stmt",
+                "name": "statement",
+                "prose": "Limit information system access to authorized users, processes acting on behalf of authorized users, or devices (including other information systems).\n• FAR Clause 52.204-21 b.1.i\n• NIST SP 800-171 Rev 2 3.1.1"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L1]"
+              }
+            ],
+            "title": "Authorized Access Control"
+          },
+          {
+            "id": "AC.L1-3.1.2",
+            "parts": [
+              {
+                "id": "AC.L1-3.1.2-stmt",
+                "name": "statement",
+                "prose": "Limit information system access to the types of transactions and functions that authorized users are permitted to execute. \n• FAR Clause 52.204-21 b.1.ii\n• NIST SP 800-171 Rev 2 3.1.2"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L1]"
+              }
+            ],
+            "title": "Transaction \u0026 Function Control"
+          },
+          {
+            "id": "AC.L1-3.1.20",
+            "parts": [
+              {
+                "id": "AC.L1-3.1.20-stmt",
+                "name": "statement",
+                "prose": "Verify and control/limit connections to and use of external information systems. \n• FAR Clause 52.204-21 b.1.iii\n• NIST SP 800-171 Rev 2 3.1.20"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L1]"
+              }
+            ],
+            "title": "External Connections"
+          },
+          {
+            "id": "AC.L1-3.1.22",
+            "parts": [
+              {
+                "id": "AC.L1-3.1.22-stmt",
+                "name": "statement",
+                "prose": "Control information posted or processed on publicly accessible information systems.\n• FAR Clause 52.204-21 b.1.iv\n• NIST SP 800-171 Rev 2 3.1.22"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L1]"
+              }
+            ],
+            "title": "Control Public Information"
+          },
+          {
+            "id": "AC.L2-3.1.10",
+            "parts": [
+              {
+                "id": "AC.L2-3.1.10-stmt",
+                "name": "statement",
+                "prose": "Use session lock with pattern-hiding displays to prevent access and viewing of data after a period of inactivity. \n• NIST SP 800-171 Rev 2 3.1.10"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Session Lock"
+          },
+          {
+            "id": "AC.L2-3.1.11",
+            "parts": [
+              {
+                "id": "AC.L2-3.1.11-stmt",
+                "name": "statement",
+                "prose": "Terminate (automatically) a user session after a defined condition.\n • NIST SP 800-171 Rev 2 3.1.11"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Session Termination"
+          },
+          {
+            "id": "AC.L2-3.1.12",
+            "parts": [
+              {
+                "id": "AC.L2-3.1.12-stmt",
+                "name": "statement",
+                "prose": "Monitor and control remote access sessions.\n• NIST SP 800-171 Rev 2 3.1.12"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "ACCESS CONTROL — AC.L2-3.1.12"
+          },
+          {
+            "id": "AC.L2-3.1.13",
+            "parts": [
+              {
+                "id": "AC.L2-3.1.13-stmt",
+                "name": "statement",
+                "prose": "Employ cryptographic mechanisms to protect the confidentiality of remote access sessions.\n• NIST SP 800-171 Rev 2 3.1.13"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Remote Access Confidentiality"
+          },
+          {
+            "id": "AC.L2-3.1.14",
+            "parts": [
+              {
+                "id": "AC.L2-3.1.14-stmt",
+                "name": "statement",
+                "prose": "Route remote access via managed access control points. \n• NIST SP 800-171 Rev 2 3.1.14"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Remote Access Routing"
+          },
+          {
+            "id": "AC.L2-3.1.15",
+            "parts": [
+              {
+                "id": "AC.L2-3.1.15-stmt",
+                "name": "statement",
+                "prose": "Authorize remote execution of privileged commands and remote access to security-relevant information. \n• NIST SP 800-171 Rev 2 3.1.15"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Privileged Remote Access"
+          },
+          {
+            "id": "AC.L2-3.1.16",
+            "parts": [
+              {
+                "id": "AC.L2-3.1.16-stmt",
+                "name": "statement",
+                "prose": "Authorize wireless access prior to allowing such connections.\n • NIST SP 800-171 Rev 2 3.1.16"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Wireless Access Authorization"
+          },
+          {
+            "id": "AC.L2-3.1.17",
+            "parts": [
+              {
+                "id": "AC.L2-3.1.17-stmt",
+                "name": "statement",
+                "prose": "Protect wireless access using authentication and encryption. \n• NIST SP 800-171 Rev 2 3.1.17"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Wireless Access Protection"
+          },
+          {
+            "id": "AC.L2-3.1.18",
+            "parts": [
+              {
+                "id": "AC.L2-3.1.18-stmt",
+                "name": "statement",
+                "prose": "Control connection of mobile devices.\n• NIST SP 800-171 Rev 2 3.1.18"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Mobile Device Connection"
+          },
+          {
+            "id": "AC.L2-3.1.19",
+            "parts": [
+              {
+                "id": "AC.L2-3.1.19-stmt",
+                "name": "statement",
+                "prose": "Encrypt CUI on mobile devices and mobile computing platforms. \n• NIST SP 800-171 Rev 2 3.1.19"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Encrypt CUI on Mobile"
+          },
+          {
+            "id": "AC.L2-3.1.21",
+            "parts": [
+              {
+                "id": "AC.L2-3.1.21-stmt",
+                "name": "statement",
+                "prose": "Limit use of portable storage devices on external systems.\n • NIST SP 800-171 Rev 2 3.1.21"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Portable Storage Use"
+          },
+          {
+            "id": "AC.L2-3.1.3",
+            "parts": [
+              {
+                "id": "AC.L2-3.1.3-stmt",
+                "name": "statement",
+                "prose": "Control the flow of CUI in accordance with approved authorizations. \n• NIST SP 800-171 Rev 2 3.1.3"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "ACCESS CONTROL — AC.L2-3.1.3"
+          },
+          {
+            "id": "AC.L2-3.1.4",
+            "parts": [
+              {
+                "id": "AC.L2-3.1.4-stmt",
+                "name": "statement",
+                "prose": "Separate the duties of individuals to reduce the risk of malevolent activity without collusion.\n• NIST SP 800-171 Rev 2 3.1.4"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Separation of Duties"
+          },
+          {
+            "id": "AC.L2-3.1.5",
+            "parts": [
+              {
+                "id": "AC.L2-3.1.5-stmt",
+                "name": "statement",
+                "prose": "Employ the principle of least privilege, including for specific security functions and privileged accounts.\n• NIST SP 800-171 Rev 2 3.1.5"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Least Privilege"
+          },
+          {
+            "id": "AC.L2-3.1.6",
+            "parts": [
+              {
+                "id": "AC.L2-3.1.6-stmt",
+                "name": "statement",
+                "prose": "Use non-privileged accounts or roles when accessing nonsecurity functions.\n• NIST SP 800-171 Rev 2 3.1.6"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Non-Privileged Account Use"
+          },
+          {
+            "id": "AC.L2-3.1.7",
+            "parts": [
+              {
+                "id": "AC.L2-3.1.7-stmt",
+                "name": "statement",
+                "prose": "Prevent non-privileged users from executing privileged functions and capture the execution of such functions in audit logs.\n• NIST SP 800-171 Rev 2 3.1.7"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Privileged Functions"
+          },
+          {
+            "id": "AC.L2-3.1.8",
+            "parts": [
+              {
+                "id": "AC.L2-3.1.8-stmt",
+                "name": "statement",
+                "prose": "Limit unsuccessful logon attempts. \n• NIST SP 800-171 Rev 2 3.1.8"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Unsuccessful Logon Attempts"
+          },
+          {
+            "id": "AC.L2-3.1.9",
+            "parts": [
+              {
+                "id": "AC.L2-3.1.9-stmt",
+                "name": "statement",
+                "prose": "Provide privacy and security notices consistent with applicable CUI rules.\n• NIST SP 800-171 Rev 2 3.1.9"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Privacy \u0026 Security Notices"
+          }
+        ],
+        "id": "AC",
+        "title": "ACCESS CONTROL"
+      },
+      {
+        "controls": [
+          {
+            "id": "AT.L2-3.2.1",
+            "parts": [
+              {
+                "id": "AT.L2-3.2.1-stmt",
+                "name": "statement",
+                "prose": "Ensure that managers, systems administrators, and users of organizational systems are made aware of the security risks associated with their activities and of the applicable policies, standards, and procedures related to the security of those systems.\n• NIST SP 800-171 Rev 2 3.2.1"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Role-Based Risk Awareness"
+          },
+          {
+            "id": "AT.L2-3.2.2",
+            "parts": [
+              {
+                "id": "AT.L2-3.2.2-stmt",
+                "name": "statement",
+                "prose": "Ensure that personnel are trained to carry out their assigned information security-related duties and responsibilities. \n• NIST SP 800-171 Rev 2 3.2.2"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Role-Based Training"
+          },
+          {
+            "id": "AT.L2-3.2.3",
+            "parts": [
+              {
+                "id": "AT.L2-3.2.3-stmt",
+                "name": "statement",
+                "prose": "Provide security awareness training on recognizing and reporting potential indicators of insider threat.\n• NIST SP 800-171 Rev 2 3.2.3"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Insider Threat Awareness"
+          }
+        ],
+        "id": "AT",
+        "title": "AWARENESS AND TRAINING"
+      },
+      {
+        "controls": [
+          {
+            "id": "AU.L2-3.3.1",
+            "parts": [
+              {
+                "id": "AU.L2-3.3.1-stmt",
+                "name": "statement",
+                "prose": "Create and retain system audit logs and records to the extent needed to enable the monitoring, analysis, investigation, and reporting of unlawful or unauthorized system activity. \n• NIST SP 800-171 Rev 2 3.3.1"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "System Auditing"
+          },
+          {
+            "id": "AU.L2-3.3.2",
+            "parts": [
+              {
+                "id": "AU.L2-3.3.2-stmt",
+                "name": "statement",
+                "prose": "Ensure that the actions of individual system users can be uniquely traced to those users, so they can be held accountable for their actions.\n • NIST SP 800-171 Rev 2 3.3.2"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "User Accountability"
+          },
+          {
+            "id": "AU.L2-3.3.3",
+            "parts": [
+              {
+                "id": "AU.L2-3.3.3-stmt",
+                "name": "statement",
+                "prose": "Review and update logged events.\n• NIST SP 800-171 Rev 2 3.3.3"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Event Review"
+          },
+          {
+            "id": "AU.L2-3.3.4",
+            "parts": [
+              {
+                "id": "AU.L2-3.3.4-stmt",
+                "name": "statement",
+                "prose": "Alert in the event of an audit logging process failure. \n• NIST SP 800-171 Rev 2 3.3.4"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Audit Failure Alerting"
+          },
+          {
+            "id": "AU.L2-3.3.5",
+            "parts": [
+              {
+                "id": "AU.L2-3.3.5-stmt",
+                "name": "statement",
+                "prose": "Correlate audit record review, analysis, and reporting processes for investigation and response to indications of unlawful, unauthorized, suspicious, or unusual activity.\n• NIST SP 800-171 Rev 2 3.3.5"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Audit Correlation"
+          },
+          {
+            "id": "AU.L2-3.3.6",
+            "parts": [
+              {
+                "id": "AU.L2-3.3.6-stmt",
+                "name": "statement",
+                "prose": "Provide audit record reduction and report generation to support on-demand analysis and reporting.\n• NIST SP 800-171 Rev 2 3.3.6"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Reduction \u0026 Reporting"
+          },
+          {
+            "id": "AU.L2-3.3.7",
+            "parts": [
+              {
+                "id": "AU.L2-3.3.7-stmt",
+                "name": "statement",
+                "prose": "Provide a system capability that compares and synchronizes internal system clocks with an authoritative source to generate time stamps for audit records.\n• NIST SP 800-171 Rev 2 3.3.7"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Authoritative Time Source"
+          },
+          {
+            "id": "AU.L2-3.3.8",
+            "parts": [
+              {
+                "id": "AU.L2-3.3.8-stmt",
+                "name": "statement",
+                "prose": "Protect audit information and audit logging tools from unauthorized access, modification, and deletion.\n• NIST SP 800-171 Rev 2 3.3.8"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Audit Protection"
+          },
+          {
+            "id": "AU.L2-3.3.9",
+            "parts": [
+              {
+                "id": "AU.L2-3.3.9-stmt",
+                "name": "statement",
+                "prose": "Limit management of audit logging functionality to a subset of privileged users. \n• NIST SP 800-171 Rev 2 3.3.9"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Audit Management"
+          }
+        ],
+        "id": "AU",
+        "title": "AUDIT AND ACCOUNTABILITY"
+      },
+      {
+        "controls": [
+          {
+            "id": "CA.L2-3.12.1",
+            "parts": [
+              {
+                "id": "CA.L2-3.12.1-stmt",
+                "name": "statement",
+                "prose": "Periodically assess the security controls in organizational systems to determine if the controls are effective in their application. \n • NIST SP 800-171 Rev 2 3.12.1"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Security Control Assessment"
+          },
+          {
+            "id": "CA.L2-3.12.2",
+            "parts": [
+              {
+                "id": "CA.L2-3.12.2-stmt",
+                "name": "statement",
+                "prose": "Develop and implement plans of action designed to correct deficiencies and reduce or eliminate vulnerabilities in organizational systems.\n• NIST SP 800-171 Rev 2 3.12.2"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Plan of Action"
+          },
+          {
+            "id": "CA.L2-3.12.3",
+            "parts": [
+              {
+                "id": "CA.L2-3.12.3-stmt",
+                "name": "statement",
+                "prose": "Monitor security controls on an ongoing basis to ensure the continued effectiveness of the controls. \n• NIST SP 800-171 Rev 2 3.12.3"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Security Control Monitoring"
+          },
+          {
+            "id": "CA.L2-3.12.4",
+            "parts": [
+              {
+                "id": "CA.L2-3.12.4-stmt",
+                "name": "statement",
+                "prose": "Develop, document, and periodically update system security plans that describe system boundaries, system environments of operation, how security requirements are implemented, and the relationships with or connections to other systems. \n• NIST SP 800-171 Rev 2 3.12.4"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "System Security Plan"
+          }
+        ],
+        "id": "CA",
+        "title": "SECURITY ASSESSMENT"
+      },
+      {
+        "controls": [
+          {
+            "id": "CM.L2-3.4.1",
+            "parts": [
+              {
+                "id": "CM.L2-3.4.1-stmt",
+                "name": "statement",
+                "prose": "Establish and maintain baseline configurations and inventories of organizational systems (including hardware, software, firmware, and documentation) throughout the respective system development life cycles.\n• NIST SP 800-171 Rev 2 3.4.1"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "System Baselining"
+          },
+          {
+            "id": "CM.L2-3.4.2",
+            "parts": [
+              {
+                "id": "CM.L2-3.4.2-stmt",
+                "name": "statement",
+                "prose": "Establish and enforce security configuration settings for information technology products employed in organizational systems.\n• NIST SP 800-171 Rev 2 3.4.2"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Security Configuration Enforcement"
+          },
+          {
+            "id": "CM.L2-3.4.3",
+            "parts": [
+              {
+                "id": "CM.L2-3.4.3-stmt",
+                "name": "statement",
+                "prose": "Track, review, approve or disapprove, and log changes to organizational systems. \n• NIST SP 800-171 Rev 2 3.4.3"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "System Change Management"
+          },
+          {
+            "id": "CM.L2-3.4.4",
+            "parts": [
+              {
+                "id": "CM.L2-3.4.4-stmt",
+                "name": "statement",
+                "prose": "Analyze the security impact of changes prior to implementation. \n• NIST SP 800-171 Rev 2 3.4.4"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Security Impact Analysis"
+          },
+          {
+            "id": "CM.L2-3.4.5",
+            "parts": [
+              {
+                "id": "CM.L2-3.4.5-stmt",
+                "name": "statement",
+                "prose": "Define, document, approve, and enforce physical and logical access restrictions associated with changes to organizational systems.\n • NIST SP 800-171 Rev 2 3.4.5"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Access Restrictions for Change"
+          },
+          {
+            "id": "CM.L2-3.4.6",
+            "parts": [
+              {
+                "id": "CM.L2-3.4.6-stmt",
+                "name": "statement",
+                "prose": "Employ the principle of least functionality by configuring organizational systems to provide only essential capabilities. \n• NIST SP 800-171 Rev 2 3.4.6"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Least Functionality"
+          },
+          {
+            "id": "CM.L2-3.4.7",
+            "parts": [
+              {
+                "id": "CM.L2-3.4.7-stmt",
+                "name": "statement",
+                "prose": "Restrict, disable, or prevent the use of nonessential programs, functions, ports, protocols, and services. \n• NIST SP 800-171 Rev 2 3.4.7"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Nonessential Functionality"
+          },
+          {
+            "id": "CM.L2-3.4.8",
+            "parts": [
+              {
+                "id": "CM.L2-3.4.8-stmt",
+                "name": "statement",
+                "prose": "Apply deny-by-exception (blacklisting) policy to prevent the use of unauthorized software or deny-all, permit-by-exception (whitelisting) policy to allow the execution of authorized software. \n• NIST SP 800-171 Rev 2 3.4.8"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Application Execution Policy"
+          },
+          {
+            "id": "CM.L2-3.4.9",
+            "parts": [
+              {
+                "id": "CM.L2-3.4.9-stmt",
+                "name": "statement",
+                "prose": "Control and monitor user-installed software.\n• NIST SP 800-171 Rev 2 3.4.9"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "User-Installed Software"
+          }
+        ],
+        "id": "CM",
+        "title": "CONFIGURATION MANAGEMENT"
+      },
+      {
+        "controls": [
+          {
+            "id": "IA.L1-3.5.1",
+            "parts": [
+              {
+                "id": "IA.L1-3.5.1-stmt",
+                "name": "statement",
+                "prose": "Identify information system users, processes acting on behalf of users, or devices.\n• FAR Clause 52.204-21 b.1.v\n• NIST SP 800-171 Rev 2 3.5.1"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L1]"
+              }
+            ],
+            "title": "Identification"
+          },
+          {
+            "id": "IA.L1-3.5.2",
+            "parts": [
+              {
+                "id": "IA.L1-3.5.2-stmt",
+                "name": "statement",
+                "prose": "Authenticate (or verify) the identities of those users, processes, or devices, as a prerequisite to allowing access to organizational information systems.\n• FAR Clause 52.204-21 b.1.vi\n• NIST SP 800-171 Rev 2 3.5.2"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L1]"
+              }
+            ],
+            "title": "Authentication"
+          },
+          {
+            "id": "IA.L2-3.5.10",
+            "parts": [
+              {
+                "id": "IA.L2-3.5.10-stmt",
+                "name": "statement",
+                "prose": "Store and transmit only cryptographically-protected passwords. \n• NIST SP 800-171 Rev 2 3.5.10"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Cryptographically-Protected Passwords"
+          },
+          {
+            "id": "IA.L2-3.5.11",
+            "parts": [
+              {
+                "id": "IA.L2-3.5.11-stmt",
+                "name": "statement",
+                "prose": "Obscure feedback of authentication information. \n• NIST SP 800-171 Rev 2 3.5.11"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Obscure Feedback"
+          },
+          {
+            "id": "IA.L2-3.5.3",
+            "parts": [
+              {
+                "id": "IA.L2-3.5.3-stmt",
+                "name": "statement",
+                "prose": "Use multifactor authentication for local and network access to privileged accounts and for network access to non-privileged accounts. \n• NIST SP 800-171 Rev 2 3.5.3"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Multifactor Authentication"
+          },
+          {
+            "id": "IA.L2-3.5.4",
+            "parts": [
+              {
+                "id": "IA.L2-3.5.4-stmt",
+                "name": "statement",
+                "prose": "Employ replay-resistant authentication mechanisms for network access to privileged and non-privileged accounts.\n• NIST SP 800-171 Rev 2 3.5.4"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Replay-Resistant Authentication"
+          },
+          {
+            "id": "IA.L2-3.5.5",
+            "parts": [
+              {
+                "id": "IA.L2-3.5.5-stmt",
+                "name": "statement",
+                "prose": "Prevent reuse of identifiers for a defined period. \n• NIST SP 800-171 Rev 2 3.5.5"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Identifier Reuse"
+          },
+          {
+            "id": "IA.L2-3.5.6",
+            "parts": [
+              {
+                "id": "IA.L2-3.5.6-stmt",
+                "name": "statement",
+                "prose": "Disable identifiers after a defined period of inactivity. \n • NIST SP 800-171 Rev 2 3.5.6"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Identifier Handling"
+          },
+          {
+            "id": "IA.L2-3.5.7",
+            "parts": [
+              {
+                "id": "IA.L2-3.5.7-stmt",
+                "name": "statement",
+                "prose": "Enforce a minimum password complexity and change of characters when new passwords are created.\n• NIST SP 800-171 Rev 2 3.5.7"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Password Complexity"
+          },
+          {
+            "id": "IA.L2-3.5.8",
+            "parts": [
+              {
+                "id": "IA.L2-3.5.8-stmt",
+                "name": "statement",
+                "prose": "Prohibit password reuse for a specified number of generations.\n • NIST SP 800-171 Rev 2 3.5.8"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Password Reuse"
+          },
+          {
+            "id": "IA.L2-3.5.9",
+            "parts": [
+              {
+                "id": "IA.L2-3.5.9-stmt",
+                "name": "statement",
+                "prose": "Allow temporary password use for system logons with an immediate change to a permanent password. \n• NIST SP 800-171 Rev 2 3.5.9"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Temporary Passwords"
+          }
+        ],
+        "id": "IA",
+        "title": "IDENTIFICATION AND AUTHENTICATION"
+      },
+      {
+        "controls": [
+          {
+            "id": "IR.L2-3.6.1",
+            "parts": [
+              {
+                "id": "IR.L2-3.6.1-stmt",
+                "name": "statement",
+                "prose": "Establish an operational incident-handling capability for organizational systems that includes preparation, detection, analysis, containment, recovery, and user response activities.\n• NIST SP 800-171 Rev 2 3.6.1"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Incident Handling"
+          },
+          {
+            "id": "IR.L2-3.6.2",
+            "parts": [
+              {
+                "id": "IR.L2-3.6.2-stmt",
+                "name": "statement",
+                "prose": "Track, document, and report incidents to designated officials and/or authorities both internal and external to the organization.\n• NIST SP 800-171 Rev 2 3.6.2"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Incident Reporting"
+          },
+          {
+            "id": "IR.L2-3.6.3",
+            "parts": [
+              {
+                "id": "IR.L2-3.6.3-stmt",
+                "name": "statement",
+                "prose": "Test the organizational incident response capability.\n• NIST SP 800-171 Rev 2 3.6.3"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Incident Response Testing"
+          }
+        ],
+        "id": "IR",
+        "title": "INCIDENT RESPONSE"
+      },
+      {
+        "controls": [
+          {
+            "id": "MA.L2-3.7.1",
+            "parts": [
+              {
+                "id": "MA.L2-3.7.1-stmt",
+                "name": "statement",
+                "prose": "Perform maintenance on organizational systems.\n• NIST SP 800-171 Rev 2 3.7.1"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Perform Maintenance"
+          },
+          {
+            "id": "MA.L2-3.7.2",
+            "parts": [
+              {
+                "id": "MA.L2-3.7.2-stmt",
+                "name": "statement",
+                "prose": "Provide controls on the tools, techniques, mechanisms, and personnel used to conduct system maintenance.\n• NIST SP 800-171 Rev 2 3.7.2"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "System Maintenance Control"
+          },
+          {
+            "id": "MA.L2-3.7.3",
+            "parts": [
+              {
+                "id": "MA.L2-3.7.3-stmt",
+                "name": "statement",
+                "prose": "Ensure equipment removed for off-site maintenance is sanitized of any CUI. \n• NIST SP 800-171 Rev 2 3.7.3"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Equipment Sanitization"
+          },
+          {
+            "id": "MA.L2-3.7.4",
+            "parts": [
+              {
+                "id": "MA.L2-3.7.4-stmt",
+                "name": "statement",
+                "prose": "Check media containing diagnostic and test programs for malicious code before the media are used in organizational systems. \n• NIST SP 800-171 Rev 2 3.7.4"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Media Inspection"
+          },
+          {
+            "id": "MA.L2-3.7.5",
+            "parts": [
+              {
+                "id": "MA.L2-3.7.5-stmt",
+                "name": "statement",
+                "prose": "Require multifactor authentication to establish nonlocal maintenance sessions via external network connections and terminate such connections when nonlocal maintenance is complete.\n• NIST SP 800-171 Rev 2 3.7.5"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Nonlocal Maintenance"
+          },
+          {
+            "id": "MA.L2-3.7.6",
+            "parts": [
+              {
+                "id": "MA.L2-3.7.6-stmt",
+                "name": "statement",
+                "prose": "Supervise the maintenance activities of maintenance personnel without required access authorization. \n• NIST SP 800-171 Rev 2 3.7.6"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Maintenance Personnel"
+          }
+        ],
+        "id": "MA",
+        "title": "MAINTENANCE"
+      },
+      {
+        "controls": [
+          {
+            "id": "MP.L1-3.8.3",
+            "parts": [
+              {
+                "id": "MP.L1-3.8.3-stmt",
+                "name": "statement",
+                "prose": "Sanitize or destroy information system media containing Federal Contract Information before disposal or release for reuse.\n• FAR Clause 52.204-21 b.1.vii\n• NIST SP 800-171 Rev 2 3.8.3"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L1]"
+              }
+            ],
+            "title": "Media Disposal"
+          },
+          {
+            "id": "MP.L2-3.8.1",
+            "parts": [
+              {
+                "id": "MP.L2-3.8.1-stmt",
+                "name": "statement",
+                "prose": "Protect (i.e., physically control and securely store) system media containing CUI, both paper and digital. \n• NIST SP 800-171 Rev 2 3.8.1"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Media Protection"
+          },
+          {
+            "id": "MP.L2-3.8.2",
+            "parts": [
+              {
+                "id": "MP.L2-3.8.2-stmt",
+                "name": "statement",
+                "prose": "Limit access to CUI on system media to authorized users.\n• NIST SP 800-171 Rev 2 3.8.2"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Media Access"
+          },
+          {
+            "id": "MP.L2-3.8.4",
+            "parts": [
+              {
+                "id": "MP.L2-3.8.4-stmt",
+                "name": "statement",
+                "prose": "Mark media with necessary CUI markings and distribution limitations.\n • NIST SP 800-171 Rev 2 3.8.4"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Media Markings"
+          },
+          {
+            "id": "MP.L2-3.8.5",
+            "parts": [
+              {
+                "id": "MP.L2-3.8.5-stmt",
+                "name": "statement",
+                "prose": "Control access to media containing CUI and maintain accountability for media during transport outside of controlled areas. \n• NIST SP 800-171 Rev 2 3.8.5"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Media Accountability"
+          },
+          {
+            "id": "MP.L2-3.8.6",
+            "parts": [
+              {
+                "id": "MP.L2-3.8.6-stmt",
+                "name": "statement",
+                "prose": "Implement cryptographic mechanisms to protect the confidentiality of CUI stored on digital media during transport unless otherwise protected by alternative physical safeguards. \n• NIST SP 800-171 Rev 2 3.8.6"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Portable Storage Encryption"
+          },
+          {
+            "id": "MP.L2-3.8.7",
+            "parts": [
+              {
+                "id": "MP.L2-3.8.7-stmt",
+                "name": "statement",
+                "prose": "Control the use of removable media on system components.\n• NIST SP 800-171 Rev 2 3.8.7"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Removable Media"
+          },
+          {
+            "id": "MP.L2-3.8.8",
+            "parts": [
+              {
+                "id": "MP.L2-3.8.8-stmt",
+                "name": "statement",
+                "prose": "Prohibit the use of portable storage devices when such devices have no identifiable owner.\n• NIST SP 800-171 Rev 2 3.8.8"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Shared Media"
+          },
+          {
+            "id": "MP.L2-3.8.9",
+            "parts": [
+              {
+                "id": "MP.L2-3.8.9-stmt",
+                "name": "statement",
+                "prose": "Protect the confidentiality of backup CUI at storage locations. \n• NIST SP 800-171 Rev 2 3.8.9"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Protect Backups"
+          }
+        ],
+        "id": "MP",
+        "title": "MEDIA PROTECTION"
+      },
+      {
+        "controls": [
+          {
+            "id": "PE.L1-3.10.1",
+            "parts": [
+              {
+                "id": "PE.L1-3.10.1-stmt",
+                "name": "statement",
+                "prose": "Limit physical access to organizational information systems, equipment, and the respective operating environments to authorized individuals. \n• FAR Clause 52.204-21 b.1.viii\n• NIST SP 800-171 Rev 2 3.10.1"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L1]"
+              }
+            ],
+            "title": "Limit Physical Access"
+          },
+          {
+            "id": "PE.L1-3.10.3",
+            "parts": [
+              {
+                "id": "PE.L1-3.10.3-stmt",
+                "name": "statement",
+                "prose": "Escort visitors and monitor visitor activity. \n• FAR Clause 52.204-21 Partial b.1.ix \n• NIST SP 800-171 Rev 2 3.10.3"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L1]"
+              }
+            ],
+            "title": "Escort Visitors"
+          },
+          {
+            "id": "PE.L1-3.10.4",
+            "parts": [
+              {
+                "id": "PE.L1-3.10.4-stmt",
+                "name": "statement",
+                "prose": "Maintain audit logs of physical access.\n• FAR Clause 52.204-21 Partial b.1.ix \n• NIST SP 800-171 Rev 2 3.10.4"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L1]"
+              }
+            ],
+            "title": "Physical Access Logs"
+          },
+          {
+            "id": "PE.L1-3.10.5",
+            "parts": [
+              {
+                "id": "PE.L1-3.10.5-stmt",
+                "name": "statement",
+                "prose": "Control and manage physical access devices.\n• FAR Clause 52.204-21 Partial b.1.ix \n• NIST SP 800-171 Rev 2 3.10.5"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L1]"
+              }
+            ],
+            "title": "Manage Physical Access"
+          },
+          {
+            "id": "PE.L2-3.10.2",
+            "parts": [
+              {
+                "id": "PE.L2-3.10.2-stmt",
+                "name": "statement",
+                "prose": "Protect and monitor the physical facility and support infrastructure for organizational systems.\n• NIST SP 800-171 Rev 2 3.10.2"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Monitor Facility"
+          },
+          {
+            "id": "PE.L2-3.10.6",
+            "parts": [
+              {
+                "id": "PE.L2-3.10.6-stmt",
+                "name": "statement",
+                "prose": "Enforce safeguarding measures for CUI at alternate work sites.\n • NIST SP 800-171 Rev 2 3.10.6"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Alternative Work Sites"
+          }
+        ],
+        "id": "PE",
+        "title": "PHYSICAL PROTECTION"
+      },
+      {
+        "controls": [
+          {
+            "id": "PS.L2-3.9.1",
+            "parts": [
+              {
+                "id": "PS.L2-3.9.1-stmt",
+                "name": "statement",
+                "prose": "Screen individuals prior to authorizing access to organizational systems containing CUI.\n• NIST SP 800-171 Rev 2 3.9.1"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Screen Individuals"
+          },
+          {
+            "id": "PS.L2-3.9.2",
+            "parts": [
+              {
+                "id": "PS.L2-3.9.2-stmt",
+                "name": "statement",
+                "prose": "Ensure that organizational systems containing CUI are protected during and after personnel actions such as terminations and transfers.\n • NIST SP 800-171 Rev 2 3.9.2"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Personnel Actions"
+          }
+        ],
+        "id": "PS",
+        "title": "PERSONNEL SECURITY"
+      },
+      {
+        "controls": [
+          {
+            "id": "RA.L2-3.11.1",
+            "parts": [
+              {
+                "id": "RA.L2-3.11.1-stmt",
+                "name": "statement",
+                "prose": "Periodically assess the risk to organizational operations (including mission, functions, image, or reputation), organizational assets, and individuals, resulting from the operation of organizational systems and the associated processing, storage, or transmission of CUI.\n• NIST SP 800-171 Rev 2 3.11.1"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Risk Assessments"
+          },
+          {
+            "id": "RA.L2-3.11.2",
+            "parts": [
+              {
+                "id": "RA.L2-3.11.2-stmt",
+                "name": "statement",
+                "prose": "Scan for vulnerabilities in organizational systems and applications periodically and when new vulnerabilities affecting those systems and applications are identified. \n• NIST SP 800-171 Rev 2 3.11.2"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Vulnerability Scan"
+          },
+          {
+            "id": "RA.L2-3.11.3",
+            "parts": [
+              {
+                "id": "RA.L2-3.11.3-stmt",
+                "name": "statement",
+                "prose": "Remediate vulnerabilities in accordance with risk assessments.\n • NIST SP 800-171 Rev 2 3.11.3"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Vulnerability Remediation"
+          }
+        ],
+        "id": "RA",
+        "title": "RISK ASSESSMENT"
+      },
+      {
+        "controls": [
+          {
+            "id": "SC.L1-3.13.1",
+            "parts": [
+              {
+                "id": "SC.L1-3.13.1-stmt",
+                "name": "statement",
+                "prose": "Monitor, control, and protect organizational communications (i.e., information transmitted or received by organizational information systems) at the external boundaries and key internal boundaries of the information systems.\n• FAR Clause 52.204-21 b.1.x\n• NIST SP 800-171 Rev 2 3.13.1"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L1]"
+              }
+            ],
+            "title": "Boundary Protection"
+          },
+          {
+            "id": "SC.L1-3.13.5",
+            "parts": [
+              {
+                "id": "SC.L1-3.13.5-stmt",
+                "name": "statement",
+                "prose": "Implement subnetworks for publicly accessible system components that are physically or logically separated from internal networks.\n• FAR Clause 52.204-21 b.1.xi\n• NIST SP 800-171 Rev 2 3.13.5"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L1]"
+              }
+            ],
+            "title": "Public-Access System Separation"
+          },
+          {
+            "id": "SC.L2-3.13.10",
+            "parts": [
+              {
+                "id": "SC.L2-3.13.10-stmt",
+                "name": "statement",
+                "prose": "Establish and manage cryptographic keys for cryptography employed in organizational systems. \n• NIST SP 800-171 Rev 2 3.13.10"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Key Management"
+          },
+          {
+            "id": "SC.L2-3.13.11",
+            "parts": [
+              {
+                "id": "SC.L2-3.13.11-stmt",
+                "name": "statement",
+                "prose": "Employ FIPS-validated cryptography when used to protect the confidentiality of CUI. \n• NIST SP 800-171 Rev 2 3.13.11"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "CUI Encryption"
+          },
+          {
+            "id": "SC.L2-3.13.12",
+            "parts": [
+              {
+                "id": "SC.L2-3.13.12-stmt",
+                "name": "statement",
+                "prose": "Prohibit remote activation of collaborative computing devices and provide indication of devices in use to users present at the device. \n• NIST SP 800-171 Rev 2 3.13.12"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Collaborative Device Control"
+          },
+          {
+            "id": "SC.L2-3.13.13",
+            "parts": [
+              {
+                "id": "SC.L2-3.13.13-stmt",
+                "name": "statement",
+                "prose": "Control and monitor the use of mobile code. \n• NIST SP 800-171 Rev 2 3.13.13"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Mobile Code"
+          },
+          {
+            "id": "SC.L2-3.13.14",
+            "parts": [
+              {
+                "id": "SC.L2-3.13.14-stmt",
+                "name": "statement",
+                "prose": "Control and monitor the use of Voice over Internet Protocol (VoIP) technologies.\n• NIST SP 800-171 Rev 2 3.13.14"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Voice over Internet Protocol"
+          },
+          {
+            "id": "SC.L2-3.13.15",
+            "parts": [
+              {
+                "id": "SC.L2-3.13.15-stmt",
+                "name": "statement",
+                "prose": "Protect the authenticity of communications sessions.\n• NIST SP 800-171 Rev 2 3.13.15"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Communications Authenticity"
+          },
+          {
+            "id": "SC.L2-3.13.16",
+            "parts": [
+              {
+                "id": "SC.L2-3.13.16-stmt",
+                "name": "statement",
+                "prose": "Protect the confidentiality of CUI at rest.\n• NIST SP 800-171 Rev 2 3.13.16"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Data at Rest"
+          },
+          {
+            "id": "SC.L2-3.13.2",
+            "parts": [
+              {
+                "id": "SC.L2-3.13.2-stmt",
+                "name": "statement",
+                "prose": "Employ architectural designs, software development techniques, and systems engineering principles that promote effective information security within organizational systems.\n• NIST SP 800-171 Rev 2 3.13.2"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Security Engineering"
+          },
+          {
+            "id": "SC.L2-3.13.3",
+            "parts": [
+              {
+                "id": "SC.L2-3.13.3-stmt",
+                "name": "statement",
+                "prose": "Separate user functionality from system management functionality. \n• NIST SP 800-171 Rev 2 3.13.3"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Role Separation"
+          },
+          {
+            "id": "SC.L2-3.13.4",
+            "parts": [
+              {
+                "id": "SC.L2-3.13.4-stmt",
+                "name": "statement",
+                "prose": "Prevent unauthorized and unintended information transfer via shared system resources. \n• NIST SP 800-171 Rev 2 3.13.4"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Shared Resource Control"
+          },
+          {
+            "id": "SC.L2-3.13.6",
+            "parts": [
+              {
+                "id": "SC.L2-3.13.6-stmt",
+                "name": "statement",
+                "prose": "Deny network communications traffic by default and allow network communications traffic by exception (i.e., deny all, permit by exception).\n • NIST SP 800-171 Rev 2 3.13.6"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Network Communication by Exception"
+          },
+          {
+            "id": "SC.L2-3.13.7",
+            "parts": [
+              {
+                "id": "SC.L2-3.13.7-stmt",
+                "name": "statement",
+                "prose": "Prevent remote devices from simultaneously establishing non-remote connections with organizational systems and communicating via some other connection to resources in external networks (i.e., split tunneling). \n • NIST SP 800-171 Rev 2 3.13.7"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Split Tunneling"
+          },
+          {
+            "id": "SC.L2-3.13.8",
+            "parts": [
+              {
+                "id": "SC.L2-3.13.8-stmt",
+                "name": "statement",
+                "prose": "Implement cryptographic mechanisms to prevent unauthorized disclosure of CUI during transmission unless otherwise protected by alternative physical safeguards.\n• NIST SP 800-171 Rev 2 3.13.8"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Data in Transit"
+          },
+          {
+            "id": "SC.L2-3.13.9",
+            "parts": [
+              {
+                "id": "SC.L2-3.13.9-stmt",
+                "name": "statement",
+                "prose": "Terminate network connections associated with communications sessions at the end of the sessions or after a defined period of inactivity. \n• NIST SP 800-171 Rev 2 3.13.9"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Connections Termination"
+          }
+        ],
+        "id": "SC",
+        "title": "SYSTEM AND COMMUNICATIONS PROTECTION"
+      },
+      {
+        "controls": [
+          {
+            "id": "SI.L1-3.14.1",
+            "parts": [
+              {
+                "id": "SI.L1-3.14.1-stmt",
+                "name": "statement",
+                "prose": "Identify, report, and correct information and information system flaws in a timely manner.\n• FAR Clause 52.204-21 b.1.xii\n• NIST SP 800-171 Rev 2 3.14.1"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L1]"
+              }
+            ],
+            "title": "Flaw Remediation"
+          },
+          {
+            "id": "SI.L1-3.14.2",
+            "parts": [
+              {
+                "id": "SI.L1-3.14.2-stmt",
+                "name": "statement",
+                "prose": "Provide protection from malicious code at appropriate locations within organizational information systems.\n• FAR Clause 52.204-21 b.1.xiii\n • NIST SP 800-171 Rev 2 3.14.2"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L1]"
+              }
+            ],
+            "title": "Malicious Code Protection"
+          },
+          {
+            "id": "SI.L1-3.14.4",
+            "parts": [
+              {
+                "id": "SI.L1-3.14.4-stmt",
+                "name": "statement",
+                "prose": "Update malicious code protection mechanisms when new releases are available.\n• FAR Clause 52.204-21 b.1.xiv\n• NIST SP 800-171 Rev 2 3.14.4"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L1]"
+              }
+            ],
+            "title": "Update Malicious Code Protection"
+          },
+          {
+            "id": "SI.L1-3.14.5",
+            "parts": [
+              {
+                "id": "SI.L1-3.14.5-stmt",
+                "name": "statement",
+                "prose": "Perform periodic scans of the information system and real-time scans of files from external sources as files are downloaded, opened, or executed.\n• FAR Clause 52.204-21 b.1.xv\n• NIST SP 800-171 Rev 2 3.14.5"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L1]"
+              }
+            ],
+            "title": "System \u0026 File Scanning"
+          },
+          {
+            "id": "SI.L2-3.14.3",
+            "parts": [
+              {
+                "id": "SI.L2-3.14.3-stmt",
+                "name": "statement",
+                "prose": "Monitor system security alerts and advisories and take action in response.\n• NIST SP 800-171 Rev 2 3.14.3"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Security Alerts \u0026 Advisories"
+          },
+          {
+            "id": "SI.L2-3.14.6",
+            "parts": [
+              {
+                "id": "SI.L2-3.14.6-stmt",
+                "name": "statement",
+                "prose": "Monitor organizational systems, including inbound and outbound communications traffic, to detect attacks and indicators of potential attacks.\n • NIST SP 800-171 Rev 2 3.14.6"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Monitor Communications for Attacks"
+          },
+          {
+            "id": "SI.L2-3.14.7",
+            "parts": [
+              {
+                "id": "SI.L2-3.14.7-stmt",
+                "name": "statement",
+                "prose": "Identify unauthorized use of organizational systems. \n• NIST SP 800-171 Rev 2 3.14.7"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[L2]"
+              }
+            ],
+            "title": "Identify Unauthorized Use"
+          }
+        ],
+        "id": "SI",
+        "title": "SYSTEM AND INFORMATION INTEGRITY"
+      }
+    ],
+    "metadata": {
+      "last-modified": "2026-11-08T00:30:43Z",
+      "oscal-version": "1.2.3",
+      "title": "CMMC version 2.0",
+      "version": "6"
+    },
+    "uuid": "7112bca9-f865-5396-b658-e55c4837ff2f"
+  }
+}

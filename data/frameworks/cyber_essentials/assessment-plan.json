@@ -1,0 +1,42 @@
+{
+  "assessment-plan": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:13Z",
+      "oscal-version": "1.2.3",
+      "title": "Cyber Essentials: Requirements for IT infrastructure v3.1 Security Assessment Plan Template",
+      "version": "2"
+    },
+    "reviewed-controls": {
+      "control-selections": [
+        {
+          "description": "All controls in Cyber Essentials: Requirements for IT infrastructure v3.1",
+          "include-all": {}
+        }
+      ]
+    },
+    "tasks": [
+      {
+        "description": "Verify and examine implementation of 1 controls in the Scope family for Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "title": "Assess Family C (Scope)",
+        "type": "examination",
+        "uuid": "9d69c103-910e-500c-92d7-6b9cb6fcbf09"
+      },
+      {
+        "description": "Verify and examine implementation of 89 controls in the Requirements by technical control theme family for Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "title": "Assess Family D (Requirements by technical control theme)",
+        "type": "examination",
+        "uuid": "a7da433b-41ea-5f59-9938-052609bd2b12"
+      },
+      {
+        "description": "Verify and examine implementation of 10 controls in the Further guidance family for Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "title": "Assess Family E (Further guidance)",
+        "type": "examination",
+        "uuid": "a1a6bf87-80c9-5a91-84f8-fa974f33cb9a"
+      }
+    ],
+    "uuid": "4cef2692-db34-5b6f-a793-14f52a0db43a"
+  }
+}

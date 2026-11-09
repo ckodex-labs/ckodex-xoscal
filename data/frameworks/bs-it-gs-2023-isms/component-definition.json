@@ -1,0 +1,448 @@
+{
+  "component-definition": {
+    "components": [
+      {
+        "control-implementations": [
+          {
+            "description": "Security control implementations for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+            "implemented-requirements": [
+              {
+                "control-id": "isms.1.a1.1",
+                "description": "Component capability addressing control isms.1.a1.1 (Übernahme der Gesamtverantwortung für Informationssicherheit durch die Leitung — ISMS.1.A1.1).",
+                "uuid": "a85de0a5-5baa-57c2-9267-f04082162c7d"
+              },
+              {
+                "control-id": "isms.1.a1.2",
+                "description": "Component capability addressing control isms.1.a1.2 (Übernahme der Gesamtverantwortung für Informationssicherheit durch die Leitung — ISMS.1.A1.2).",
+                "uuid": "cd1b9156-2146-5a79-9384-f8e350949438"
+              },
+              {
+                "control-id": "isms.1.a1.3",
+                "description": "Component capability addressing control isms.1.a1.3 (Übernahme der Gesamtverantwortung für Informationssicherheit durch die Leitung — ISMS.1.A1.3).",
+                "uuid": "ce269e3d-1408-5b46-acec-09ac7fd17d67"
+              },
+              {
+                "control-id": "isms.1.a1.4",
+                "description": "Component capability addressing control isms.1.a1.4 (Übernahme der Gesamtverantwortung für Informationssicherheit durch die Leitung — ISMS.1.A1.4).",
+                "uuid": "0bdbfc72-91fc-53b8-8b0d-15cd74faff03"
+              },
+              {
+                "control-id": "isms.1.a1.5",
+                "description": "Component capability addressing control isms.1.a1.5 (Übernahme der Gesamtverantwortung für Informationssicherheit durch die Leitung — ISMS.1.A1.5).",
+                "uuid": "34802b55-d19c-5032-aa0b-cb1b6477dee9"
+              },
+              {
+                "control-id": "isms.1.a1.6",
+                "description": "Component capability addressing control isms.1.a1.6 (Übernahme der Gesamtverantwortung für Informationssicherheit durch die Leitung — ISMS.1.A1.6).",
+                "uuid": "9377c330-5120-5163-b3a1-870f04899acd"
+              },
+              {
+                "control-id": "isms.1.a1.7",
+                "description": "Component capability addressing control isms.1.a1.7 (Übernahme der Gesamtverantwortung für Informationssicherheit durch die Leitung — ISMS.1.A1.7).",
+                "uuid": "eac8c7ab-4006-5163-8dae-1091b658b620"
+              },
+              {
+                "control-id": "isms.1.a1.8",
+                "description": "Component capability addressing control isms.1.a1.8 (Übernahme der Gesamtverantwortung für Informationssicherheit durch die Leitung — ISMS.1.A1.8).",
+                "uuid": "cc2f2971-b697-589a-b909-bb5d875e1700"
+              },
+              {
+                "control-id": "isms.1.a10.1",
+                "description": "Component capability addressing control isms.1.a10.1 (Erstellung eines Sicherheitskonzepts — ISMS.1.A10.1).",
+                "uuid": "9c38c3fb-ceef-5220-9cbe-dca0e63a5f3d"
+              },
+              {
+                "control-id": "isms.1.a10.2",
+                "description": "Component capability addressing control isms.1.a10.2 (Erstellung eines Sicherheitskonzepts — ISMS.1.A10.2).",
+                "uuid": "a8169742-a7ae-57e0-b3f1-732d7b9fb717"
+              },
+              {
+                "control-id": "isms.1.a10.3",
+                "description": "Component capability addressing control isms.1.a10.3 (Erstellung eines Sicherheitskonzepts — ISMS.1.A10.3).",
+                "uuid": "e0a7a830-5de0-5c78-a05b-892ccf7560c6"
+              },
+              {
+                "control-id": "isms.1.a10.4",
+                "description": "Component capability addressing control isms.1.a10.4 (Erstellung eines Sicherheitskonzepts — ISMS.1.A10.4).",
+                "uuid": "5d4b181c-d9de-5e33-afc0-3cef7845fb5a"
+              },
+              {
+                "control-id": "isms.1.a10.5",
+                "description": "Component capability addressing control isms.1.a10.5 (Erstellung eines Sicherheitskonzepts — ISMS.1.A10.5).",
+                "uuid": "0c99a7ee-b3e0-5937-bd1b-2a4c6a1e9a09"
+              },
+              {
+                "control-id": "isms.1.a10.6",
+                "description": "Component capability addressing control isms.1.a10.6 (Erstellung eines Sicherheitskonzepts — ISMS.1.A10.6).",
+                "uuid": "5e815f77-c1ed-536f-a60d-2aae0e29c720"
+              },
+              {
+                "control-id": "isms.1.a11.1",
+                "description": "Component capability addressing control isms.1.a11.1 (Aufrechterhaltung der Informationssicherheit — ISMS.1.A11.1).",
+                "uuid": "ee9d28e7-1ccf-521b-8f16-9e6d5e12c963"
+              },
+              {
+                "control-id": "isms.1.a11.2",
+                "description": "Component capability addressing control isms.1.a11.2 (Aufrechterhaltung der Informationssicherheit — ISMS.1.A11.2).",
+                "uuid": "a93991ec-a031-5336-ad30-aa2c16a24d6f"
+              },
+              {
+                "control-id": "isms.1.a11.3",
+                "description": "Component capability addressing control isms.1.a11.3 (Aufrechterhaltung der Informationssicherheit — ISMS.1.A11.3).",
+                "uuid": "af44fa8f-11c1-5d4e-b5e1-7245aa805802"
+              },
+              {
+                "control-id": "isms.1.a11.4",
+                "description": "Component capability addressing control isms.1.a11.4 (Aufrechterhaltung der Informationssicherheit — ISMS.1.A11.4).",
+                "uuid": "9b5bcc27-481c-55ee-8a7b-2c8ae8e6eb21"
+              },
+              {
+                "control-id": "isms.1.a11.5",
+                "description": "Component capability addressing control isms.1.a11.5 (Aufrechterhaltung der Informationssicherheit — ISMS.1.A11.5).",
+                "uuid": "377bd566-4cb1-5146-a1a5-0b9114712838"
+              },
+              {
+                "control-id": "isms.1.a11.6",
+                "description": "Component capability addressing control isms.1.a11.6 (Aufrechterhaltung der Informationssicherheit — ISMS.1.A11.6).",
+                "uuid": "272d252e-2510-5080-9d61-03bb4438fa71"
+              },
+              {
+                "control-id": "isms.1.a11.7",
+                "description": "Component capability addressing control isms.1.a11.7 (Aufrechterhaltung der Informationssicherheit — ISMS.1.A11.7).",
+                "uuid": "dcc2d078-93a7-579c-ab30-66b6b0634f5c"
+              },
+              {
+                "control-id": "isms.1.a11.8",
+                "description": "Component capability addressing control isms.1.a11.8 (Aufrechterhaltung der Informationssicherheit — ISMS.1.A11.8).",
+                "uuid": "98266e92-373f-538e-9b82-65c52ec1102e"
+              },
+              {
+                "control-id": "isms.1.a12.1",
+                "description": "Component capability addressing control isms.1.a12.1 (Management-Berichte zur Informationssicherheit — ISMS.1.A12.1).",
+                "uuid": "9b5627d4-6b76-5631-b1c8-2dda23bffb66"
+              },
+              {
+                "control-id": "isms.1.a12.2",
+                "description": "Component capability addressing control isms.1.a12.2 (Management-Berichte zur Informationssicherheit — ISMS.1.A12.2).",
+                "uuid": "323d85c0-3fdf-5787-8fb1-4e1a19bbb471"
+              },
+              {
+                "control-id": "isms.1.a12.3",
+                "description": "Component capability addressing control isms.1.a12.3 (Management-Berichte zur Informationssicherheit — ISMS.1.A12.3).",
+                "uuid": "dfda77fc-5fb5-5f75-9aef-9fe5ec510ad7"
+              },
+              {
+                "control-id": "isms.1.a12.4",
+                "description": "Component capability addressing control isms.1.a12.4 (Management-Berichte zur Informationssicherheit — ISMS.1.A12.4).",
+                "uuid": "c5d55ca7-3711-50bf-a2e2-5cc7e07976cd"
+              },
+              {
+                "control-id": "isms.1.a12.5",
+                "description": "Component capability addressing control isms.1.a12.5 (Management-Berichte zur Informationssicherheit — ISMS.1.A12.5).",
+                "uuid": "69b816b3-7b7e-58b3-884d-4f5fbd88526c"
+              },
+              {
+                "control-id": "isms.1.a12.6",
+                "description": "Component capability addressing control isms.1.a12.6 (Management-Berichte zur Informationssicherheit — ISMS.1.A12.6).",
+                "uuid": "55938445-a400-51e4-adf0-164c5367086a"
+              },
+              {
+                "control-id": "isms.1.a12.7",
+                "description": "Component capability addressing control isms.1.a12.7 (Management-Berichte zur Informationssicherheit — ISMS.1.A12.7).",
+                "uuid": "a96f48a6-930c-57bf-afba-d045796c2668"
+              },
+              {
+                "control-id": "isms.1.a13.1",
+                "description": "Component capability addressing control isms.1.a13.1 (Dokumentation des Sicherheitsprozesses — ISMS.1.A13.1).",
+                "uuid": "ab7463df-3675-5fdb-a415-ace8f658dc87"
+              },
+              {
+                "control-id": "isms.1.a13.2",
+                "description": "Component capability addressing control isms.1.a13.2 (Dokumentation des Sicherheitsprozesses — ISMS.1.A13.2).",
+                "uuid": "f4d67f75-db28-598d-b5a1-4b5a1e1ab521"
+              },
+              {
+                "control-id": "isms.1.a13.3",
+                "description": "Component capability addressing control isms.1.a13.3 (Dokumentation des Sicherheitsprozesses — ISMS.1.A13.3).",
+                "uuid": "fe6cd637-4d6d-5787-8879-3233790bd725"
+              },
+              {
+                "control-id": "isms.1.a13.4",
+                "description": "Component capability addressing control isms.1.a13.4 (Dokumentation des Sicherheitsprozesses — ISMS.1.A13.4).",
+                "uuid": "cb8d2289-9d51-5288-923b-816c63186e36"
+              },
+              {
+                "control-id": "isms.1.a13.5",
+                "description": "Component capability addressing control isms.1.a13.5 (Dokumentation des Sicherheitsprozesses — ISMS.1.A13.5).",
+                "uuid": "7960b7c4-1ca6-5a58-8096-2d3f9bbee4ec"
+              },
+              {
+                "control-id": "isms.1.a13.6",
+                "description": "Component capability addressing control isms.1.a13.6 (Dokumentation des Sicherheitsprozesses — ISMS.1.A13.6).",
+                "uuid": "0a2f9f33-dfd1-54b5-b799-67ce757b1bf0"
+              },
+              {
+                "control-id": "isms.1.a15.1",
+                "description": "Component capability addressing control isms.1.a15.1 (Wirtschaftlicher Einsatz von Ressourcen für Informationssicherheit — ISMS.1.A15.1).",
+                "uuid": "d9086973-b9a8-5b64-a2e0-247f266771e2"
+              },
+              {
+                "control-id": "isms.1.a15.2",
+                "description": "Component capability addressing control isms.1.a15.2 (Wirtschaftlicher Einsatz von Ressourcen für Informationssicherheit — ISMS.1.A15.2).",
+                "uuid": "3f8b5286-1e10-5801-843c-fb26a686f046"
+              },
+              {
+                "control-id": "isms.1.a15.3",
+                "description": "Component capability addressing control isms.1.a15.3 (Wirtschaftlicher Einsatz von Ressourcen für Informationssicherheit — ISMS.1.A15.3).",
+                "uuid": "a9403cf8-3795-52cc-ab13-acc0664c08da"
+              },
+              {
+                "control-id": "isms.1.a15.4",
+                "description": "Component capability addressing control isms.1.a15.4 (Wirtschaftlicher Einsatz von Ressourcen für Informationssicherheit — ISMS.1.A15.4).",
+                "uuid": "91be6024-0681-534d-97b0-65e73ff2f18b"
+              },
+              {
+                "control-id": "isms.1.a16.1",
+                "description": "Component capability addressing control isms.1.a16.1 (Erstellung von zielgruppengerechten Sicherheitsrichtlinien — ISMS.1.A16.1).",
+                "uuid": "ce9fea8e-0908-5516-a768-e4f989307b90"
+              },
+              {
+                "control-id": "isms.1.a17.1",
+                "description": "Component capability addressing control isms.1.a17.1 (Abschließen von Versicherungen — ISMS.1.A17.1).",
+                "uuid": "7e57ac8f-8a91-55ff-abe6-b62c46dfff27"
+              },
+              {
+                "control-id": "isms.1.a17.2",
+                "description": "Component capability addressing control isms.1.a17.2 (Abschließen von Versicherungen — ISMS.1.A17.2).",
+                "uuid": "84fe6e7d-25d3-5ac5-ab3f-a4893af4f90a"
+              },
+              {
+                "control-id": "isms.1.a2.1",
+                "description": "Component capability addressing control isms.1.a2.1 (Festlegung der Sicherheitsziele und -strategie — ISMS.1.A2.1).",
+                "uuid": "c63d80d3-f8d1-589a-b0fe-a77225b33400"
+              },
+              {
+                "control-id": "isms.1.a2.2",
+                "description": "Component capability addressing control isms.1.a2.2 (Festlegung der Sicherheitsziele und -strategie — ISMS.1.A2.2).",
+                "uuid": "c59e781c-c5e9-5e73-92da-4972d4823dd9"
+              },
+              {
+                "control-id": "isms.1.a2.3",
+                "description": "Component capability addressing control isms.1.a2.3 (Festlegung der Sicherheitsziele und -strategie — ISMS.1.A2.3).",
+                "uuid": "bdfedeb3-b541-52c4-ac36-b3be8b4199db"
+              },
+              {
+                "control-id": "isms.1.a2.4",
+                "description": "Component capability addressing control isms.1.a2.4 (Festlegung der Sicherheitsziele und -strategie — ISMS.1.A2.4).",
+                "uuid": "318101dd-49e1-5240-b672-35ccbe7d9780"
+              },
+              {
+                "control-id": "isms.1.a2.5",
+                "description": "Component capability addressing control isms.1.a2.5 (Festlegung der Sicherheitsziele und -strategie — ISMS.1.A2.5).",
+                "uuid": "24639771-3146-5644-98e4-4efdeab94977"
+              },
+              {
+                "control-id": "isms.1.a3.1",
+                "description": "Component capability addressing control isms.1.a3.1 (Erstellung einer Leitlinie zur Informationssicherheit — ISMS.1.A3.1).",
+                "uuid": "554007e7-d29b-5230-a03f-6ecd8e50bc9a"
+              },
+              {
+                "control-id": "isms.1.a3.2",
+                "description": "Component capability addressing control isms.1.a3.2 (Erstellung einer Leitlinie zur Informationssicherheit — ISMS.1.A3.2).",
+                "uuid": "c40544ae-4d30-5a37-a49f-bab0550d23ec"
+              },
+              {
+                "control-id": "isms.1.a3.3",
+                "description": "Component capability addressing control isms.1.a3.3 (Erstellung einer Leitlinie zur Informationssicherheit — ISMS.1.A3.3).",
+                "uuid": "d2e2e2ee-09cc-5d85-97ae-754a7454de83"
+              },
+              {
+                "control-id": "isms.1.a3.4",
+                "description": "Component capability addressing control isms.1.a3.4 (Erstellung einer Leitlinie zur Informationssicherheit — ISMS.1.A3.4).",
+                "uuid": "bd8876cb-f9ce-5539-9b7f-bc68aecddc8b"
+              },
+              {
+                "control-id": "isms.1.a3.5",
+                "description": "Component capability addressing control isms.1.a3.5 (Erstellung einer Leitlinie zur Informationssicherheit — ISMS.1.A3.5).",
+                "uuid": "67b5b5a1-2bd0-5fd5-bd66-a74bb3cbe30f"
+              },
+              {
+                "control-id": "isms.1.a3.6",
+                "description": "Component capability addressing control isms.1.a3.6 (Erstellung einer Leitlinie zur Informationssicherheit — ISMS.1.A3.6).",
+                "uuid": "894cafcb-1b02-5795-819e-96cfe776b271"
+              },
+              {
+                "control-id": "isms.1.a4.1",
+                "description": "Component capability addressing control isms.1.a4.1 (Benennung eines oder einer Informationssicherheitsbeauftragten — ISMS.1.A4.1).",
+                "uuid": "7065e497-2dc1-5e8e-9bf5-24bfefa3dc06"
+              },
+              {
+                "control-id": "isms.1.a4.2",
+                "description": "Component capability addressing control isms.1.a4.2 (Benennung eines oder einer Informationssicherheitsbeauftragten — ISMS.1.A4.2).",
+                "uuid": "f30fbe24-fc34-5f08-826d-b5ecf890b09e"
+              },
+              {
+                "control-id": "isms.1.a4.3",
+                "description": "Component capability addressing control isms.1.a4.3 (Benennung eines oder einer Informationssicherheitsbeauftragten — ISMS.1.A4.3).",
+                "uuid": "8bc4b795-5902-5147-a4f2-2856172e78f5"
+              },
+              {
+                "control-id": "isms.1.a4.4",
+                "description": "Component capability addressing control isms.1.a4.4 (Benennung eines oder einer Informationssicherheitsbeauftragten — ISMS.1.A4.4).",
+                "uuid": "42fdd388-596b-5392-9643-2761534a5f45"
+              },
+              {
+                "control-id": "isms.1.a4.5",
+                "description": "Component capability addressing control isms.1.a4.5 (Benennung eines oder einer Informationssicherheitsbeauftragten — ISMS.1.A4.5).",
+                "uuid": "647f66ea-a028-5ae2-9ca7-740335a4e637"
+              },
+              {
+                "control-id": "isms.1.a5.1",
+                "description": "Component capability addressing control isms.1.a5.1 (Vertragsgestaltung bei Bestellung eines oder einer externen Informationssicherheitsbeauftragten — ISMS.1.A5.1).",
+                "uuid": "ee2167a2-5a33-5736-b23a-44f196f941f1"
+              },
+              {
+                "control-id": "isms.1.a5.2",
+                "description": "Component capability addressing control isms.1.a5.2 (Vertragsgestaltung bei Bestellung eines oder einer externen Informationssicherheitsbeauftragten — ISMS.1.A5.2).",
+                "uuid": "f48980a1-5d22-58e4-820a-f8252f7d6325"
+              },
+              {
+                "control-id": "isms.1.a5.3",
+                "description": "Component capability addressing control isms.1.a5.3 (Vertragsgestaltung bei Bestellung eines oder einer externen Informationssicherheitsbeauftragten — ISMS.1.A5.3).",
+                "uuid": "b8b17c55-dff2-5767-9d10-625625418b68"
+              },
+              {
+                "control-id": "isms.1.a5.4",
+                "description": "Component capability addressing control isms.1.a5.4 (Vertragsgestaltung bei Bestellung eines oder einer externen Informationssicherheitsbeauftragten — ISMS.1.A5.4).",
+                "uuid": "f35e20a2-1deb-5ed0-9d72-5c1687d435f7"
+              },
+              {
+                "control-id": "isms.1.a6.1",
+                "description": "Component capability addressing control isms.1.a6.1 (Aufbau einer geeigneten Organisationsstruktur für Informationssicherheit — ISMS.1.A6.1).",
+                "uuid": "d0cf135e-1c07-5e01-b198-46a84ccc6faa"
+              },
+              {
+                "control-id": "isms.1.a6.2",
+                "description": "Component capability addressing control isms.1.a6.2 (Aufbau einer geeigneten Organisationsstruktur für Informationssicherheit — ISMS.1.A6.2).",
+                "uuid": "0ecef01f-93c2-5ffa-8be4-820ccb2b9a93"
+              },
+              {
+                "control-id": "isms.1.a6.3",
+                "description": "Component capability addressing control isms.1.a6.3 (Aufbau einer geeigneten Organisationsstruktur für Informationssicherheit — ISMS.1.A6.3).",
+                "uuid": "2379f83b-acbb-5aee-a7d4-fc2db048ebcd"
+              },
+              {
+                "control-id": "isms.1.a6.4",
+                "description": "Component capability addressing control isms.1.a6.4 (Aufbau einer geeigneten Organisationsstruktur für Informationssicherheit — ISMS.1.A6.4).",
+                "uuid": "0f641d92-4262-547c-bd12-15d002b28cdb"
+              },
+              {
+                "control-id": "isms.1.a6.5",
+                "description": "Component capability addressing control isms.1.a6.5 (Aufbau einer geeigneten Organisationsstruktur für Informationssicherheit — ISMS.1.A6.5).",
+                "uuid": "d65ffcb4-d1e9-5707-8d02-b6041f7a4b94"
+              },
+              {
+                "control-id": "isms.1.a6.6",
+                "description": "Component capability addressing control isms.1.a6.6 (Aufbau einer geeigneten Organisationsstruktur für Informationssicherheit — ISMS.1.A6.6).",
+                "uuid": "2257d8bd-9d1a-543f-8dbe-e35c277587ab"
+              },
+              {
+                "control-id": "isms.1.a6.7",
+                "description": "Component capability addressing control isms.1.a6.7 (Aufbau einer geeigneten Organisationsstruktur für Informationssicherheit — ISMS.1.A6.7).",
+                "uuid": "d7cc46b5-90b9-533a-9ef0-fabb9a31ee0d"
+              },
+              {
+                "control-id": "isms.1.a6.8",
+                "description": "Component capability addressing control isms.1.a6.8 (Aufbau einer geeigneten Organisationsstruktur für Informationssicherheit — ISMS.1.A6.8).",
+                "uuid": "69b08523-bddc-5b7d-a9f9-14adbde66d52"
+              },
+              {
+                "control-id": "isms.1.a7.1",
+                "description": "Component capability addressing control isms.1.a7.1 (Festlegung von Sicherheitsmaßnahmen — ISMS.1.A7.1).",
+                "uuid": "41e7af1a-11b3-5924-9926-791cdc26e0a5"
+              },
+              {
+                "control-id": "isms.1.a7.2",
+                "description": "Component capability addressing control isms.1.a7.2 (Festlegung von Sicherheitsmaßnahmen — ISMS.1.A7.2).",
+                "uuid": "fe96fa3d-5df5-5dfd-a251-6f00d2a3cb90"
+              },
+              {
+                "control-id": "isms.1.a7.3",
+                "description": "Component capability addressing control isms.1.a7.3 (Festlegung von Sicherheitsmaßnahmen — ISMS.1.A7.3).",
+                "uuid": "aae7a0e1-7eb3-5de8-a97b-61b1b55b9e38"
+              },
+              {
+                "control-id": "isms.1.a8.1",
+                "description": "Component capability addressing control isms.1.a8.1 (Integration der Mitarbeitenden in den Sicherheitsprozess — ISMS.1.A8.1).",
+                "uuid": "de5fe002-4a72-5fc2-8562-9bf1b968e10d"
+              },
+              {
+                "control-id": "isms.1.a8.2",
+                "description": "Component capability addressing control isms.1.a8.2 (Integration der Mitarbeitenden in den Sicherheitsprozess — ISMS.1.A8.2).",
+                "uuid": "a0a93a73-49a8-5005-ab59-fb4db8c66781"
+              },
+              {
+                "control-id": "isms.1.a8.3",
+                "description": "Component capability addressing control isms.1.a8.3 (Integration der Mitarbeitenden in den Sicherheitsprozess — ISMS.1.A8.3).",
+                "uuid": "4ddad870-6fc0-59c9-9fb6-ef8c672a9506"
+              },
+              {
+                "control-id": "isms.1.a8.4",
+                "description": "Component capability addressing control isms.1.a8.4 (Integration der Mitarbeitenden in den Sicherheitsprozess — ISMS.1.A8.4).",
+                "uuid": "24351add-754d-58a4-9fbf-75a15726f46c"
+              },
+              {
+                "control-id": "isms.1.a8.5",
+                "description": "Component capability addressing control isms.1.a8.5 (Integration der Mitarbeitenden in den Sicherheitsprozess — ISMS.1.A8.5).",
+                "uuid": "2ec303b7-3f34-5c8a-be86-873bb5415811"
+              },
+              {
+                "control-id": "isms.1.a8.6",
+                "description": "Component capability addressing control isms.1.a8.6 (Integration der Mitarbeitenden in den Sicherheitsprozess — ISMS.1.A8.6).",
+                "uuid": "bf47d8f1-c726-5cc4-ab3a-841014884d33"
+              },
+              {
+                "control-id": "isms.1.a8.7",
+                "description": "Component capability addressing control isms.1.a8.7 (Integration der Mitarbeitenden in den Sicherheitsprozess — ISMS.1.A8.7).",
+                "uuid": "1e05f4fd-db76-5b82-858b-7b460d1a9750"
+              },
+              {
+                "control-id": "isms.1.a9.1",
+                "description": "Component capability addressing control isms.1.a9.1 (Integration der Informationssicherheit in organisationsweite Abläufe und Prozesse — ISMS.1.A9.1).",
+                "uuid": "7881fcbc-0cf7-50d5-baf3-51cb3bd15671"
+              },
+              {
+                "control-id": "isms.1.a9.2",
+                "description": "Component capability addressing control isms.1.a9.2 (Integration der Informationssicherheit in organisationsweite Abläufe und Prozesse — ISMS.1.A9.2).",
+                "uuid": "dffbfb82-720e-5853-8247-f6ce8171ca38"
+              },
+              {
+                "control-id": "isms.1.a9.3",
+                "description": "Component capability addressing control isms.1.a9.3 (Integration der Informationssicherheit in organisationsweite Abläufe und Prozesse — ISMS.1.A9.3).",
+                "uuid": "f04479e8-f07c-500a-b3d8-76144d4f7ba9"
+              },
+              {
+                "control-id": "isms.1.a9.4",
+                "description": "Component capability addressing control isms.1.a9.4 (Integration der Informationssicherheit in organisationsweite Abläufe und Prozesse — ISMS.1.A9.4).",
+                "uuid": "ec63287e-45b4-5836-abfc-cc548d09a644"
+              }
+            ],
+            "source": "./catalog.json",
+            "uuid": "cd71371a-eedc-5e6a-a789-611dba8b8a2f"
+          }
+        ],
+        "description": "Enterprise technical and operational capabilities implementing controls for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "title": "IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Platform Component",
+        "type": "software",
+        "uuid": "2d36e95e-50a0-5c50-80a5-d02557743e98"
+      }
+    ],
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:12Z",
+      "oscal-version": "1.2.3",
+      "title": "IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Component Definition Template",
+      "version": "1"
+    },
+    "uuid": "94080c98-40af-5b7f-9dbc-27ee1f77e431"
+  }
+}

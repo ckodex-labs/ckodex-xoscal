@@ -114,13 +114,32 @@ func (r *Registry) ListInfo() []Info {
 	return infos
 }
 
+func normalizeJurisdictionCode(j string) string {
+	switch strings.ToLower(strings.TrimSpace(j)) {
+	case "ca", "can", "canada":
+		return "ca"
+	case "us", "usa", "united-states", "united states":
+		return "usa"
+	case "uk", "gb", "gbr", "united-kingdom", "united kingdom":
+		return "uk"
+	case "fr", "fra", "france":
+		return "france"
+	case "de", "deu", "germany":
+		return "germany"
+	case "eu", "european-union", "european union":
+		return "eu"
+	default:
+		return strings.ToLower(strings.TrimSpace(j))
+	}
+}
+
 // FindByJurisdiction returns all frameworks registered under a given jurisdiction code.
 func (r *Registry) FindByJurisdiction(jurisdiction string) []Framework {
-	target := strings.ToLower(strings.TrimSpace(jurisdiction))
+	target := normalizeJurisdictionCode(jurisdiction)
 	all := r.List()
 	var matches []Framework
 	for _, f := range all {
-		if strings.ToLower(f.Jurisdiction()) == target {
+		if normalizeJurisdictionCode(f.Jurisdiction()) == target {
 			matches = append(matches, f)
 		}
 	}

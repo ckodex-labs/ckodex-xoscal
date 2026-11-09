@@ -1,0 +1,108 @@
+{
+  "assessment-plan": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:13Z",
+      "oscal-version": "1.2.3",
+      "title": "CMMC version 2.0 Security Assessment Plan Template",
+      "version": "6"
+    },
+    "reviewed-controls": {
+      "control-selections": [
+        {
+          "description": "All controls in CMMC version 2.0",
+          "include-all": {}
+        }
+      ]
+    },
+    "tasks": [
+      {
+        "description": "Verify and examine implementation of 22 controls in the ACCESS CONTROL family for CMMC version 2.0.",
+        "title": "Assess Family AC (ACCESS CONTROL)",
+        "type": "examination",
+        "uuid": "e35184d5-f79d-5502-a59a-65ecdb396f3a"
+      },
+      {
+        "description": "Verify and examine implementation of 3 controls in the AWARENESS AND TRAINING family for CMMC version 2.0.",
+        "title": "Assess Family AT (AWARENESS AND TRAINING)",
+        "type": "examination",
+        "uuid": "959eb867-5e89-527f-b5de-1df13251775d"
+      },
+      {
+        "description": "Verify and examine implementation of 9 controls in the AUDIT AND ACCOUNTABILITY family for CMMC version 2.0.",
+        "title": "Assess Family AU (AUDIT AND ACCOUNTABILITY)",
+        "type": "examination",
+        "uuid": "c2b68548-78a8-55fe-88c6-e8941ba25da1"
+      },
+      {
+        "description": "Verify and examine implementation of 4 controls in the SECURITY ASSESSMENT family for CMMC version 2.0.",
+        "title": "Assess Family CA (SECURITY ASSESSMENT)",
+        "type": "examination",
+        "uuid": "da1c2805-3254-58da-85f2-3cbc552c5416"
+      },
+      {
+        "description": "Verify and examine implementation of 9 controls in the CONFIGURATION MANAGEMENT family for CMMC version 2.0.",
+        "title": "Assess Family CM (CONFIGURATION MANAGEMENT)",
+        "type": "examination",
+        "uuid": "22ddc0fd-8fd4-5e94-b2e3-bab3746519b9"
+      },
+      {
+        "description": "Verify and examine implementation of 11 controls in the IDENTIFICATION AND AUTHENTICATION family for CMMC version 2.0.",
+        "title": "Assess Family IA (IDENTIFICATION AND AUTHENTICATION)",
+        "type": "examination",
+        "uuid": "c5cc2ae7-5ceb-589c-bbb4-67f57a83ed6f"
+      },
+      {
+        "description": "Verify and examine implementation of 3 controls in the INCIDENT RESPONSE family for CMMC version 2.0.",
+        "title": "Assess Family IR (INCIDENT RESPONSE)",
+        "type": "examination",
+        "uuid": "dcea7beb-69d1-5c55-9173-78c52dc03e57"
+      },
+      {
+        "description": "Verify and examine implementation of 6 controls in the MAINTENANCE family for CMMC version 2.0.",
+        "title": "Assess Family MA (MAINTENANCE)",
+        "type": "examination",
+        "uuid": "51211561-97a3-5707-a1e3-d672f3243197"
+      },
+      {
+        "description": "Verify and examine implementation of 9 controls in the MEDIA PROTECTION family for CMMC version 2.0.",
+        "title": "Assess Family MP (MEDIA PROTECTION)",
+        "type": "examination",
+        "uuid": "534af8e6-806f-5536-8cc1-2b7b10e9e437"
+      },
+      {
+        "description": "Verify and examine implementation of 6 controls in the PHYSICAL PROTECTION family for CMMC version 2.0.",
+        "title": "Assess Family PE (PHYSICAL PROTECTION)",
+        "type": "examination",
+        "uuid": "19090f08-dcca-5d6a-b847-b49d75d42f34"
+      },
+      {
+        "description": "Verify and examine implementation of 2 controls in the PERSONNEL SECURITY family for CMMC version 2.0.",
+        "title": "Assess Family PS (PERSONNEL SECURITY)",
+        "type": "examination",
+        "uuid": "8746a881-ab05-57ca-bd8c-14ab7d3edb98"
+      },
+      {
+        "description": "Verify and examine implementation of 3 controls in the RISK ASSESSMENT family for CMMC version 2.0.",
+        "title": "Assess Family RA (RISK ASSESSMENT)",
+        "type": "examination",
+        "uuid": "5b525556-1fef-5b22-a674-c82a2c1eb258"
+      },
+      {
+        "description": "Verify and examine implementation of 16 controls in the SYSTEM AND COMMUNICATIONS PROTECTION family for CMMC version 2.0.",
+        "title": "Assess Family SC (SYSTEM AND COMMUNICATIONS PROTECTION)",
+        "type": "examination",
+        "uuid": "95329b45-baaf-50dd-94f4-1b1e9a46e4d8"
+      },
+      {
+        "description": "Verify and examine implementation of 7 controls in the SYSTEM AND INFORMATION INTEGRITY family for CMMC version 2.0.",
+        "title": "Assess Family SI (SYSTEM AND INFORMATION INTEGRITY)",
+        "type": "examination",
+        "uuid": "be723d57-4b84-5671-9309-1008afcd47ea"
+      }
+    ],
+    "uuid": "78b18f21-84a4-5dee-aa10-03e063fde366"
+  }
+}

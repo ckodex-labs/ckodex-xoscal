@@ -1,0 +1,585 @@
+{
+  "assessment-results": {
+    "import-ap": {
+      "href": "./assessment-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:13Z",
+      "oscal-version": "1.2.3",
+      "title": "Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Assessment Results Template",
+      "version": "1"
+    },
+    "results": [
+      {
+        "description": "Assessment evaluation findings and observations for Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "findings": [
+          {
+            "description": "Control ncd.2.1.01.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "a99f7e05-e1c1-5868-93f0-447e62e589da"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "ncd.2.1.01.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for ncd.2.1.01.a",
+            "uuid": "ca5c345f-5827-5180-bc15-7b9e4eb54674"
+          },
+          {
+            "description": "Control ncd.2.1.02.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "edbf0aa0-e817-5865-ab1d-1f410424be82"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "ncd.2.1.02.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for ncd.2.1.02.a",
+            "uuid": "636171ff-bb9d-51e6-9040-e2b52dd5c5ed"
+          },
+          {
+            "description": "Control ncd.2.1.03.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "f956311b-ea38-5194-b6de-cafd29d80a7b"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "ncd.2.1.03.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for ncd.2.1.03.a",
+            "uuid": "6176e741-a918-5536-b7f9-3b5e70ab1309"
+          },
+          {
+            "description": "Control ncd.2.1.04.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "fd16f19d-0db0-5273-b0cc-1587ef547569"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "ncd.2.1.04.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for ncd.2.1.04.a",
+            "uuid": "a5eb19c3-d382-574a-8408-c9ddb33a9805"
+          },
+          {
+            "description": "Control ncd.2.2.01.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "a46ef39f-cf41-5e4c-a4b4-ba890cb1960f"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "ncd.2.2.01.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for ncd.2.2.01.a",
+            "uuid": "65b151c6-2781-5a84-876f-a3a52a41e8c7"
+          },
+          {
+            "description": "Control ncd.2.2.02.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "bd6cb4e6-a3d3-5031-bc84-595d6d18e841"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "ncd.2.2.02.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for ncd.2.2.02.a",
+            "uuid": "0ab2bca7-152e-5f75-a6ef-a4dd2a86a482"
+          },
+          {
+            "description": "Control ncd.2.2.03.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "d1903e57-8c91-59e1-b523-4c9f795589a1"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "ncd.2.2.03.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for ncd.2.2.03.a",
+            "uuid": "7dd21485-a8f4-5088-83ff-93bf435b8c77"
+          },
+          {
+            "description": "Control ncd.2.2.04.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "c0718cec-beba-57bc-ac9e-d2169c1859d8"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "ncd.2.2.04.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for ncd.2.2.04.a",
+            "uuid": "4568a4e0-d4ef-52d5-92f0-00b0e7257bfc"
+          },
+          {
+            "description": "Control ncd.2.2.05.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "6a58968d-3936-5880-a96f-c83845d8e17b"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "ncd.2.2.05.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for ncd.2.2.05.a",
+            "uuid": "e532be78-42f3-5eed-a124-02981f2dc687"
+          },
+          {
+            "description": "Control ncd.2.2.06.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "511cf9d5-a1d2-502f-84ff-30485300558d"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "ncd.2.2.06.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for ncd.2.2.06.a",
+            "uuid": "b97ad09f-868e-56d3-9236-500ae576dfeb"
+          },
+          {
+            "description": "Control ncd.2.2.07.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "3c216356-5036-58fd-b90d-0b8c7811b3c9"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "ncd.2.2.07.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for ncd.2.2.07.a",
+            "uuid": "b950f2d2-37e2-54e4-b935-5d554c388046"
+          },
+          {
+            "description": "Control ncd.2.3.01.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "bd10a62c-7440-5cfd-ae66-22d79ae3ccc2"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "ncd.2.3.01.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for ncd.2.3.01.a",
+            "uuid": "f361c982-5ce9-5b66-bddd-f5f86fcaa45f"
+          },
+          {
+            "description": "Control ncd.2.3.02.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "f5188bc9-e883-5caf-8b74-d92ee53bcef5"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "ncd.2.3.02.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for ncd.2.3.02.a",
+            "uuid": "e6425303-31d8-52be-bef8-acb9039bbcdf"
+          },
+          {
+            "description": "Control ncd.2.3.03.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "654cdd74-50a2-51b4-b316-50824ad3e4eb"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "ncd.2.3.03.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for ncd.2.3.03.a",
+            "uuid": "c521642c-b213-5e37-9f4d-e8de2cc1c793"
+          },
+          {
+            "description": "Control ncd.2.3.04.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "0b9c1a52-351f-58f8-8510-3cbbad30dcfc"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "ncd.2.3.04.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for ncd.2.3.04.a",
+            "uuid": "be61b70a-00ee-5beb-a422-4d32528bf1d8"
+          },
+          {
+            "description": "Control ncd.2.3.05.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "e68cac56-3012-52ff-9222-16f00885e74c"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "ncd.2.3.05.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for ncd.2.3.05.a",
+            "uuid": "05691a0c-a3de-5616-aa71-ee3039a1e709"
+          },
+          {
+            "description": "Control ncd.2.4.01.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "a71fe2a4-7975-5e1f-a2c3-20a74e5cf4c3"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "ncd.2.4.01.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for ncd.2.4.01.a",
+            "uuid": "f31e8082-2d15-5553-b506-71c42df22ccf"
+          },
+          {
+            "description": "Control ncd.2.4.02.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "51bc15b7-e64f-539a-9052-c5fd01e67093"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "ncd.2.4.02.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for ncd.2.4.02.a",
+            "uuid": "d7159224-4d8a-587d-9b06-be5d94b0e230"
+          },
+          {
+            "description": "Control ncd.2.5.01.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "582e321a-835d-53f6-8260-271d59c1e0ac"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "ncd.2.5.01.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for ncd.2.5.01.a",
+            "uuid": "d0f89cf4-79ad-5079-bf31-2bfe1485c2e5"
+          }
+        ],
+        "observations": [
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control ncd.2.1.01.a (Strategie für die Cloud-Nutzung — NCD.2.1.01.a) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "a99f7e05-e1c1-5868-93f0-447e62e589da"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control ncd.2.1.02.a (Sicherheitsrichtlinie für externe Cloud-Dienste — NCD.2.1.02.a) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "edbf0aa0-e817-5865-ab1d-1f410424be82"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control ncd.2.1.03.a (Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.a) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "f956311b-ea38-5194-b6de-cafd29d80a7b"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control ncd.2.1.04.a (Notfall- und Kontinuitätsmanagement — NCD.2.1.04.a) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "fd16f19d-0db0-5273-b0cc-1587ef547569"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control ncd.2.2.01.a (Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.a) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "a46ef39f-cf41-5e4c-a4b4-ba890cb1960f"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control ncd.2.2.02.a (Umgang mit Unterauftragnehmern und anderen externen Dritten vertraglich zusichern — NCD.2.2.02.a) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "bd6cb4e6-a3d3-5031-bc84-595d6d18e841"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control ncd.2.2.03.a (Gerichtsbarkeit — NCD.2.2.03.a) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "d1903e57-8c91-59e1-b523-4c9f795589a1"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control ncd.2.2.04.a (Lokation der Datenverarbeitung — NCD.2.2.04.a) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "c0718cec-beba-57bc-ac9e-d2169c1859d8"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control ncd.2.2.05.a (Meldepflicht sicherheitsrelevanter Vorfälle — NCD.2.2.05.a) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "6a58968d-3936-5880-a96f-c83845d8e17b"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control ncd.2.2.06.a (Beendigung des Vertragsverhältnisses — NCD.2.2.06.a) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "511cf9d5-a1d2-502f-84ff-30485300558d"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control ncd.2.2.07.a (Regelung der Datenrückgabe und Datenlöschung — NCD.2.2.07.a) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "3c216356-5036-58fd-b90d-0b8c7811b3c9"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control ncd.2.3.01.a (Einbindung in das ISMS — NCD.2.3.01.a) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "bd10a62c-7440-5cfd-ae66-22d79ae3ccc2"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control ncd.2.3.02.a (Auswertung von Sicherheitsnachweisen — NCD.2.3.02.a) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "f5188bc9-e883-5caf-8b74-d92ee53bcef5"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control ncd.2.3.03.a (Prüfung der Leistungsfähigkeit — NCD.2.3.03.a) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "654cdd74-50a2-51b4-b316-50824ad3e4eb"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control ncd.2.3.04.a (Informationspflichten — NCD.2.3.04.a) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "0b9c1a52-351f-58f8-8510-3cbbad30dcfc"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control ncd.2.3.05.a (Multi-Faktor-Authentisierung — NCD.2.3.05.a) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "e68cac56-3012-52ff-9222-16f00885e74c"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control ncd.2.4.01.a (Datenrückgabe bei Beendigung — NCD.2.4.01.a) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "a71fe2a4-7975-5e1f-a2c3-20a74e5cf4c3"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control ncd.2.4.02.a (Datenlöschung bei Beendigung — NCD.2.4.02.a) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "51bc15b7-e64f-539a-9052-c5fd01e67093"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control ncd.2.5.01.a (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.a) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "582e321a-835d-53f6-8260-271d59c1e0ac"
+          }
+        ],
+        "reviewed-controls": {
+          "control-selections": [
+            {
+              "description": "All controls evaluated for Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1)",
+              "include-all": {}
+            }
+          ]
+        },
+        "start": "2026-11-08T01:42:13Z",
+        "title": "Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Assessment Results",
+        "uuid": "d9a25cf8-b720-5b03-9e62-2852ad81af53"
+      }
+    ],
+    "uuid": "b87d2f9e-c584-55ec-babd-64d0905a7e77"
+  }
+}

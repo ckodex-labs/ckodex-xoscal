@@ -1,0 +1,144 @@
+{
+  "assessment-plan": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:12Z",
+      "oscal-version": "1.2.3",
+      "title": "IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - APP: Anwendungen Security Assessment Plan Template",
+      "version": "1"
+    },
+    "reviewed-controls": {
+      "control-selections": [
+        {
+          "description": "All controls in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - APP: Anwendungen",
+          "include-all": {}
+        }
+      ]
+    },
+    "tasks": [
+      {
+        "description": "Verify and examine implementation of 45 controls in the Office-Produkte family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - APP: Anwendungen.",
+        "title": "Assess Family APP.1.1 (Office-Produkte)",
+        "type": "examination",
+        "uuid": "9dda3ad5-33fd-52ec-8fe9-6ed23ff582ae"
+      },
+      {
+        "description": "Verify and examine implementation of 45 controls in the Webbrowser family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - APP: Anwendungen.",
+        "title": "Assess Family APP.1.2 (Webbrowser)",
+        "type": "examination",
+        "uuid": "f67b1c25-76c4-59a3-9df9-deb53cfaa391"
+      },
+      {
+        "description": "Verify and examine implementation of 21 controls in the Mobile Anwendungen (Apps) family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - APP: Anwendungen.",
+        "title": "Assess Family APP.1.4 (Mobile Anwendungen (Apps))",
+        "type": "examination",
+        "uuid": "796eec88-6545-54ab-9ddc-ba07fffac077"
+      },
+      {
+        "description": "Verify and examine implementation of 60 controls in the Allgemeiner Verzeichnisdienst family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - APP: Anwendungen.",
+        "title": "Assess Family APP.2.1 (Allgemeiner Verzeichnisdienst)",
+        "type": "examination",
+        "uuid": "641c7d4f-052e-5c33-a4f3-9be3a0d161ff"
+      },
+      {
+        "description": "Verify and examine implementation of 61 controls in the Active Directory Domain Services family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - APP: Anwendungen.",
+        "title": "Assess Family APP.2.2 (Active Directory Domain Services)",
+        "type": "examination",
+        "uuid": "e9dccea2-02b3-51d5-92f2-943eae5aea05"
+      },
+      {
+        "description": "Verify and examine implementation of 36 controls in the OpenLDAP family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - APP: Anwendungen.",
+        "title": "Assess Family APP.2.3 (OpenLDAP)",
+        "type": "examination",
+        "uuid": "7bedb181-ac9a-5b98-b0a6-7015a0d7e60b"
+      },
+      {
+        "description": "Verify and examine implementation of 56 controls in the Webanwendungen und Webservices family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - APP: Anwendungen.",
+        "title": "Assess Family APP.3.1 (Webanwendungen und Webservices)",
+        "type": "examination",
+        "uuid": "f5029e61-e0a9-5a95-84e6-5ec5edfeb45f"
+      },
+      {
+        "description": "Verify and examine implementation of 62 controls in the Webserver family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - APP: Anwendungen.",
+        "title": "Assess Family APP.3.2 (Webserver)",
+        "type": "examination",
+        "uuid": "8e9810d2-bf2c-5204-b4f4-0eb5c3dbe53e"
+      },
+      {
+        "description": "Verify and examine implementation of 45 controls in the Fileserver family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - APP: Anwendungen.",
+        "title": "Assess Family APP.3.3 (Fileserver)",
+        "type": "examination",
+        "uuid": "2cb328b0-1ccc-5eb4-879d-33dccd836c33"
+      },
+      {
+        "description": "Verify and examine implementation of 47 controls in the Samba family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - APP: Anwendungen.",
+        "title": "Assess Family APP.3.4 (Samba)",
+        "type": "examination",
+        "uuid": "8b9bb9f3-22e7-5e41-b343-618f878395ae"
+      },
+      {
+        "description": "Verify and examine implementation of 64 controls in the DNS-Server family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - APP: Anwendungen.",
+        "title": "Assess Family APP.3.6 (DNS-Server)",
+        "type": "examination",
+        "uuid": "a95bced7-6a7c-5ea5-b1a6-47e5b6c4bcb4"
+      },
+      {
+        "description": "Verify and examine implementation of 128 controls in the SAP-ERP-System family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - APP: Anwendungen.",
+        "title": "Assess Family APP.4.2 (SAP-ERP-System)",
+        "type": "examination",
+        "uuid": "9f3172d0-96ea-5502-af55-f8e290e75f55"
+      },
+      {
+        "description": "Verify and examine implementation of 77 controls in the Relationale Datenbanken family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - APP: Anwendungen.",
+        "title": "Assess Family APP.4.3 (Relationale Datenbanken)",
+        "type": "examination",
+        "uuid": "78492f93-5583-565a-9c8b-9f91e1be2d56"
+      },
+      {
+        "description": "Verify and examine implementation of 79 controls in the Kubernetes family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - APP: Anwendungen.",
+        "title": "Assess Family APP.4.4 (Kubernetes)",
+        "type": "examination",
+        "uuid": "25641ad3-e642-545f-8f9b-5d580a0b968c"
+      },
+      {
+        "description": "Verify and examine implementation of 48 controls in the SAP ABAP-Programmierung family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - APP: Anwendungen.",
+        "title": "Assess Family APP.4.6 (SAP ABAP-Programmierung)",
+        "type": "examination",
+        "uuid": "9f52886f-17d2-578e-b2a2-7701e8255b16"
+      },
+      {
+        "description": "Verify and examine implementation of 43 controls in the Microsoft Exchange und Outlook family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - APP: Anwendungen.",
+        "title": "Assess Family APP.5.2 (Microsoft Exchange und Outlook)",
+        "type": "examination",
+        "uuid": "5db6d805-d377-5063-bdc8-efc3a3fc2e14"
+      },
+      {
+        "description": "Verify and examine implementation of 76 controls in the Allgemeiner E-Mail-Client und -Server family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - APP: Anwendungen.",
+        "title": "Assess Family APP.5.3 (Allgemeiner E-Mail-Client und -Server)",
+        "type": "examination",
+        "uuid": "81584530-0e35-539e-9c70-6685a09613c5"
+      },
+      {
+        "description": "Verify and examine implementation of 103 controls in the Unified Communications und Collaboration (UCC) family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - APP: Anwendungen.",
+        "title": "Assess Family APP.5.4 (Unified Communications und Collaboration (UCC))",
+        "type": "examination",
+        "uuid": "5746b836-5786-5b2d-a4e7-152c4e41895e"
+      },
+      {
+        "description": "Verify and examine implementation of 82 controls in the Allgemeine Software family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - APP: Anwendungen.",
+        "title": "Assess Family APP.6 (Allgemeine Software)",
+        "type": "examination",
+        "uuid": "71173345-43e7-5c8b-acfe-0341b84a5cc8"
+      },
+      {
+        "description": "Verify and examine implementation of 44 controls in the Entwicklung von Individualsoftware family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - APP: Anwendungen.",
+        "title": "Assess Family APP.7 (Entwicklung von Individualsoftware)",
+        "type": "examination",
+        "uuid": "69dd7143-8533-5dd0-b0f1-8dc29878a44b"
+      }
+    ],
+    "uuid": "65d76e8f-da36-517f-9f2a-7511d7c53744"
+  }
+}

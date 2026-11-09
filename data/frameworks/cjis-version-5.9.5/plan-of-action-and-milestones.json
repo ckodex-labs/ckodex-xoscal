@@ -1,0 +1,21 @@
+{
+  "plan-of-action-and-milestones": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:13Z",
+      "oscal-version": "1.2.3",
+      "title": "Criminal Justice Information Services (CJIS) Security Policy 5.9.5 Plan of Action and Milestones Template",
+      "version": "1"
+    },
+    "poam-items": [
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for Criminal Justice Information Services (CJIS) Security Policy 5.9.5.",
+        "title": "Compliance Roadmap and Parameter Tailoring for Criminal Justice Information Services (CJIS) Security Policy 5.9.5",
+        "uuid": "a000b7d5-db95-5bb3-913a-97290ef9dac6"
+      }
+    ],
+    "uuid": "cd4293b2-a3f7-5c40-b09a-8f74873b662b"
+  }
+}

@@ -1,0 +1,993 @@
+{
+  "system-security-plan": {
+    "control-implementation": {
+      "description": "Control implementations for ANSSI - Guide d'hygiène informatique.",
+      "implemented-requirements": [
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _1 (Former les équipes opérationnelles à la sécurité des systèmes d’information) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "bbf647d5-b3c0-51f4-9930-f736abf1395e"
+            }
+          ],
+          "control-id": "_1",
+          "remarks": "Control _1 (Former les équipes opérationnelles à la sécurité des systèmes d’information) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "4c077e54-0cdf-5eea-8c92-5931c8da3de8"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _10 (Définir et vérifier des règles de choix et de dimensionnement des mots de passe) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "106b71f9-00c5-5f64-a426-38ef143b4cc2"
+            }
+          ],
+          "control-id": "_10",
+          "remarks": "Control _10 (Définir et vérifier des règles de choix et de dimensionnement des mots de passe) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "10077ef5-8e2c-5e77-9c11-548dd7f2fd8b"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _11 (Protéger les mots de passe stockés sur les systèmes) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "f6253fba-fb6c-523c-bb82-3e25ba4d60ea"
+            }
+          ],
+          "control-id": "_11",
+          "remarks": "Control _11 (Protéger les mots de passe stockés sur les systèmes) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "fc3e26e4-0604-5aad-9995-7df3e07a073a"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _12 (Changer les éléments d’authentification par défaut sur les équipements et services) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "a6fa0c19-7350-5b77-8b51-d53abb7eabb2"
+            }
+          ],
+          "control-id": "_12",
+          "remarks": "Control _12 (Changer les éléments d’authentification par défaut sur les équipements et services) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "ff16c619-6c8b-5fcc-a82c-1d46103e0e80"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _12.r (Changer les éléments d’authentification par défaut sur les équipements et services (renforcé)) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ca4fb794-2dcd-5770-8207-57c5a4114657"
+            }
+          ],
+          "control-id": "_12.r",
+          "remarks": "Control _12.r (Changer les éléments d’authentification par défaut sur les équipements et services (renforcé)) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "24513c57-29d5-582a-a48a-547c7dbcff90"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _13 (Privilégier lorsque c’est possible une authentification forte) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "aa72529e-1242-558a-b236-424a34823b1e"
+            }
+          ],
+          "control-id": "_13",
+          "remarks": "Control _13 (Privilégier lorsque c’est possible une authentification forte) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "c6e1d445-a54d-5ffe-a0a6-8d6e1c33f652"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _13.r (Privilégier lorsque c’est possible une authentification forte (renforcé)) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "c64ce9a3-768a-5337-ab1d-2915106ddc93"
+            }
+          ],
+          "control-id": "_13.r",
+          "remarks": "Control _13.r (Privilégier lorsque c’est possible une authentification forte (renforcé)) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "26db9af5-356b-54ad-b224-f5ce3a6bc9b3"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _14 (Mettre en place un niveau de sécurité minimal sur l’ensemble du parc informatique) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "5ae938c0-3604-5267-8917-3eb3484983e0"
+            }
+          ],
+          "control-id": "_14",
+          "remarks": "Control _14 (Mettre en place un niveau de sécurité minimal sur l’ensemble du parc informatique) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "99d5eaba-2f7f-507d-b1a1-757a1a32aef1"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _14.r (Mettre en place un niveau de sécurité minimal sur l’ensemble du parc informatique (renforcé)) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ade1029b-a4ec-54f3-abe0-7480f5f2bbec"
+            }
+          ],
+          "control-id": "_14.r",
+          "remarks": "Control _14.r (Mettre en place un niveau de sécurité minimal sur l’ensemble du parc informatique (renforcé)) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "5a10dcd3-f259-58cc-abbc-b54cd8e606f9"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _15 (Se protéger des menaces relatives à l’utilisation de supports amovibles) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "819d38a1-9b70-52c7-877c-c307270e0d03"
+            }
+          ],
+          "control-id": "_15",
+          "remarks": "Control _15 (Se protéger des menaces relatives à l’utilisation de supports amovibles) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "fd410d79-0703-5b93-9678-9c88d921a7ba"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _15.r (Se protéger des menaces relatives à l’utilisation de supports amovibles (renforcé)) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "51e8f2de-4ce5-58b7-9391-27a7b0c717a5"
+            }
+          ],
+          "control-id": "_15.r",
+          "remarks": "Control _15.r (Se protéger des menaces relatives à l’utilisation de supports amovibles (renforcé)) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "fd4baebc-d140-5ffb-8311-c51ac31e4fd0"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _16 (Utiliser un outil de gestion centralisée afin d’homogénéiser les politiques de sécurité) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "20fafcf6-91d0-51d1-a9a4-e549832488f5"
+            }
+          ],
+          "control-id": "_16",
+          "remarks": "Control _16 (Utiliser un outil de gestion centralisée afin d’homogénéiser les politiques de sécurité) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f666cdf2-6e13-54f2-af45-6f89e5b50779"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _17 (Activer et configurer le pare-feu local des postes de travail) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "c594ce5d-f954-537c-903e-c7e96f404266"
+            }
+          ],
+          "control-id": "_17",
+          "remarks": "Control _17 (Activer et configurer le pare-feu local des postes de travail) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "e7e403c9-bd60-5a80-8c60-29926bfa5604"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _17.r (Activer et configurer le pare-feu local des postes de travail (renforcé)) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "71b9c0b4-d96f-5ffe-a07a-793bf0cef4b6"
+            }
+          ],
+          "control-id": "_17.r",
+          "remarks": "Control _17.r (Activer et configurer le pare-feu local des postes de travail (renforcé)) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "ad204068-5299-532d-8a12-dad656200b1d"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _18 (Chiffrer les données sensibles transmises par voie Internet) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "1fe9ec42-638a-5530-b853-9a76bd8c1fe7"
+            }
+          ],
+          "control-id": "_18",
+          "remarks": "Control _18 (Chiffrer les données sensibles transmises par voie Internet) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "bc5e3998-8e8f-5e8c-9bf4-40b60597107e"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _19 (Segmenter le réseau et mettre en place un cloisonnement entre ces zones) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "1609bcf2-a2e5-55af-bc62-1a6817ccfb92"
+            }
+          ],
+          "control-id": "_19",
+          "remarks": "Control _19 (Segmenter le réseau et mettre en place un cloisonnement entre ces zones) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "c6983d75-d276-50e9-aed1-c784a94e6fea"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _2 (Sensibiliser les utilisateurs aux bonnes pratiques élémentaires de sécurité informatique) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "89943e06-1008-5bf4-a9e2-b5e7e2ff25cd"
+            }
+          ],
+          "control-id": "_2",
+          "remarks": "Control _2 (Sensibiliser les utilisateurs aux bonnes pratiques élémentaires de sécurité informatique) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "dd3c80cd-74e0-5409-a7c1-f9dde1615037"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _2.r (Sensibiliser les utilisateurs aux bonnes pratiques élémentaires de sécurité informatique (renforcé)) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ee98e3a5-9b6d-55cc-ae83-009069db974b"
+            }
+          ],
+          "control-id": "_2.r",
+          "remarks": "Control _2.r (Sensibiliser les utilisateurs aux bonnes pratiques élémentaires de sécurité informatique (renforcé)) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "583a4d0c-c36b-578e-9958-ce80531f0054"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _20 (S'assurer de la sécurité des réseaux d'accès Wi-Fi et de la séparation des usages) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "3738023c-c0f3-59ae-9beb-33217d96d00c"
+            }
+          ],
+          "control-id": "_20",
+          "remarks": "Control _20 (S'assurer de la sécurité des réseaux d'accès Wi-Fi et de la séparation des usages) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "14779131-da3d-5aa6-b65a-ca394320a28f"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _21 (Utiliser des protocoles réseaux sécurisés dès qu'ils existent) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "72a08145-d127-5630-bb45-2db6e778d6b4"
+            }
+          ],
+          "control-id": "_21",
+          "remarks": "Control _21 (Utiliser des protocoles réseaux sécurisés dès qu'ils existent) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "e477b08b-6cfd-5c0a-beb9-b22695fb3032"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _22 (Mettre en place une passerelle d'accès sécurisé à Internet) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "cf0519fb-361f-586a-a75d-744b5ef7eecc"
+            }
+          ],
+          "control-id": "_22",
+          "remarks": "Control _22 (Mettre en place une passerelle d'accès sécurisé à Internet) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "50fb7f8e-949f-542a-8ece-f649d64771e4"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _22.r (Mettre en place une passerelle d'accès sécurisé à Internet) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "e33603bb-0753-556a-921a-82ad84333b3a"
+            }
+          ],
+          "control-id": "_22.r",
+          "remarks": "Control _22.r (Mettre en place une passerelle d'accès sécurisé à Internet) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "7e9272fc-ecd5-5173-b923-719ce68a9567"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _23 (Cloisonner les services visibles depuis Internet du reste du système d'information) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ef4b2546-0ba0-5346-be25-49f06731abb3"
+            }
+          ],
+          "control-id": "_23",
+          "remarks": "Control _23 (Cloisonner les services visibles depuis Internet du reste du système d'information) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f21983b3-28c0-5048-9392-aed683022f03"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _24 (Protéger sa messagerie professionnelle) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "8ab749b1-78ec-5423-9ec7-2b2ecd6b6bbb"
+            }
+          ],
+          "control-id": "_24",
+          "remarks": "Control _24 (Protéger sa messagerie professionnelle) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "046ee2cf-1cdf-5d0b-a7ce-df8e5fec6240"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _24.r (Protéger sa messagerie professionnelle) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "256385db-af8e-5b27-9266-5bbe2feee9bd"
+            }
+          ],
+          "control-id": "_24.r",
+          "remarks": "Control _24.r (Protéger sa messagerie professionnelle) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "75e136fc-b8ad-5f0a-8c2c-25fe37971ef5"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _25 (Sécuriser les interconnexions réseau dédiées avec les partenaires) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "b41f564d-790e-5b8b-8712-65a294db2b5d"
+            }
+          ],
+          "control-id": "_25",
+          "remarks": "Control _25 (Sécuriser les interconnexions réseau dédiées avec les partenaires) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "5060dba9-fcc4-5a23-a48c-6cdf2f364ae4"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _25.r (Sécuriser les interconnexions réseau dédiées avec les partenaires) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "a95735a6-7fb3-5e3f-a8be-fc5666802a91"
+            }
+          ],
+          "control-id": "_25.r",
+          "remarks": "Control _25.r (Sécuriser les interconnexions réseau dédiées avec les partenaires) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "76472b89-4c5a-567f-ae3e-96d2552d3c89"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _26 (Contrôler et protéger l'accès aux salles serveurs et aux locaux techniques) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "b69a8aee-36cd-5305-b4e6-a2d5f8ce8b15"
+            }
+          ],
+          "control-id": "_26",
+          "remarks": "Control _26 (Contrôler et protéger l'accès aux salles serveurs et aux locaux techniques) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "fb85e025-95e8-535e-8701-c05134fe563b"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _27 (Interdire l’accès à Internet depuis les postes ou serveurs utilisés pour l’administration du système d’information) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "8c62114a-038c-530a-932c-77449e2a9124"
+            }
+          ],
+          "control-id": "_27",
+          "remarks": "Control _27 (Interdire l’accès à Internet depuis les postes ou serveurs utilisés pour l’administration du système d’information) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "7bfca4c7-599f-5672-8f24-2368ead0fa57"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _27.r (Interdire l’accès à Internet depuis les postes ou serveurs utilisés pour l’administration du système d’information) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "bebeee9b-e3ef-5393-b224-228f0d937610"
+            }
+          ],
+          "control-id": "_27.r",
+          "remarks": "Control _27.r (Interdire l’accès à Internet depuis les postes ou serveurs utilisés pour l’administration du système d’information) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "bf6bf9a6-cdbd-5fee-8441-33cff4fd57ec"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _28 (Utiliser un réseau dédié et cloisonné pour l’administration du système d’information) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "fb35939f-963d-5ac7-8f65-d43cf715eb90"
+            }
+          ],
+          "control-id": "_28",
+          "remarks": "Control _28 (Utiliser un réseau dédié et cloisonné pour l’administration du système d’information) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "92488d48-e1c7-5dba-9263-e76f941f7625"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _28.r (Utiliser un réseau dédié et cloisonné pour l’administration du système d’information) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "6998109c-c04c-51e7-9299-3fce15783f9d"
+            }
+          ],
+          "control-id": "_28.r",
+          "remarks": "Control _28.r (Utiliser un réseau dédié et cloisonné pour l’administration du système d’information) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "6fc2cd68-881e-5cdc-9c03-48435b236aea"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _29 (Limiter au strict besoin opérationnel les droits d’administration sur les postes de travail) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "8d15c108-4413-5b4c-b7ba-f0f36d32bf22"
+            }
+          ],
+          "control-id": "_29",
+          "remarks": "Control _29 (Limiter au strict besoin opérationnel les droits d’administration sur les postes de travail) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "62abfc04-068a-5a54-b0bd-d4dafdc5eef6"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _3 (Maîtriser les risques de l’infogérance) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "edd8a346-f530-5235-92da-a2a3c0c1b265"
+            }
+          ],
+          "control-id": "_3",
+          "remarks": "Control _3 (Maîtriser les risques de l’infogérance) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "c28f9cf5-4f4e-5ade-b7ad-a644fb2f697b"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _30 (Prendre des mesures de sécurisation physique des terminaux nomades) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "fe5f61de-5818-5b49-8e57-3322ed7b40fb"
+            }
+          ],
+          "control-id": "_30",
+          "remarks": "Control _30 (Prendre des mesures de sécurisation physique des terminaux nomades) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "db2771e5-98ae-5815-9eeb-61b93a2aaab3"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _30.r (Prendre des mesures de sécurisation physique des terminaux nomades) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "78bdc385-3374-5ebd-a749-3b48be08aa15"
+            }
+          ],
+          "control-id": "_30.r",
+          "remarks": "Control _30.r (Prendre des mesures de sécurisation physique des terminaux nomades) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "d30fac07-e33e-5ae7-b7e0-cadc6de37d6d"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _31 (Chiffrer les données sensibles, en particulier sur le matériel potentiellement perdable) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "228b43a3-dd0c-5e2a-b23d-b1bb779450ec"
+            }
+          ],
+          "control-id": "_31",
+          "remarks": "Control _31 (Chiffrer les données sensibles, en particulier sur le matériel potentiellement perdable) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "d9c425bb-f8cb-5d03-bdd1-a8f3470b21c5"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _32 (Sécuriser la connexion réseau des postes utilisés en situation de nomadisme) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "173bc719-fecd-5efc-9742-1afb736def4b"
+            }
+          ],
+          "control-id": "_32",
+          "remarks": "Control _32 (Sécuriser la connexion réseau des postes utilisés en situation de nomadisme) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "60ca606d-ee74-5aa1-aa40-55a00d1644b6"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _32.r (Sécuriser la connexion réseau des postes utilisés en situation de nomadisme) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "66d08dfc-fb14-5e2f-b271-dbcf97c2b52f"
+            }
+          ],
+          "control-id": "_32.r",
+          "remarks": "Control _32.r (Sécuriser la connexion réseau des postes utilisés en situation de nomadisme) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "37f21f10-2d19-5eca-9c28-affdab3b9039"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _33 (Adopter des politiques de sécurité dédiées aux terminaux mobiles) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "2db951a6-d23c-58bb-8735-fea26547d1fb"
+            }
+          ],
+          "control-id": "_33",
+          "remarks": "Control _33 (Adopter des politiques de sécurité dédiées aux terminaux mobiles) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "2966b3ad-4546-5032-8c0f-fd13c8e12fed"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _33.r (Adopter des politiques de sécurité dédiées aux terminaux mobiles) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "d717bbfe-5e84-5401-9512-7b1325028eca"
+            }
+          ],
+          "control-id": "_33.r",
+          "remarks": "Control _33.r (Adopter des politiques de sécurité dédiées aux terminaux mobiles) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "d573bcca-8cbe-562a-aad0-552b31896b7f"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _34 (Définir une politique de mise à jour des composants du système d’information) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ec8f6dc2-0000-5d2a-8326-3c3667bfa615"
+            }
+          ],
+          "control-id": "_34",
+          "remarks": "Control _34 (Définir une politique de mise à jour des composants du système d’information) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "ac44eaff-7f7e-58ec-9c71-f1c445b0ac18"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _35 (Anticiper la fin de la maintenance des logiciels et systèmes et limiter les adhérences logicielles) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "38053952-71e3-5e2a-8a86-ce30c9263feb"
+            }
+          ],
+          "control-id": "_35",
+          "remarks": "Control _35 (Anticiper la fin de la maintenance des logiciels et systèmes et limiter les adhérences logicielles) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "9041bdfc-a088-51ae-ba92-e03379580ca9"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _36 (Activer et configurer les journaux des composants les plus importants) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "71e60bcd-2983-5c22-bc7e-ed7b21d0c1c4"
+            }
+          ],
+          "control-id": "_36",
+          "remarks": "Control _36 (Activer et configurer les journaux des composants les plus importants) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "16d65bca-20ae-5fe8-806e-83a529c7489c"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _36.r (Activer et configurer les journaux des composants les plus importants (renforcé)) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "dbd68eec-d40d-51a7-8aaf-7e7e4a7bea16"
+            }
+          ],
+          "control-id": "_36.r",
+          "remarks": "Control _36.r (Activer et configurer les journaux des composants les plus importants (renforcé)) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "b4b19405-9b9f-5f51-b6a2-875f99edfb6d"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _37 (Définir et appliquer une politique de sauvegarde des composants critiques) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "fd882081-51f7-528a-b888-692f74750a6c"
+            }
+          ],
+          "control-id": "_37",
+          "remarks": "Control _37 (Définir et appliquer une politique de sauvegarde des composants critiques) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "bdeb95c8-cc0e-5994-9da2-c4c15f331164"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _37.r (Définir et appliquer une politique de sauvegarde des composants critiques (renforcé)) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "b4cda132-9294-5591-a914-a157ab3affe3"
+            }
+          ],
+          "control-id": "_37.r",
+          "remarks": "Control _37.r (Définir et appliquer une politique de sauvegarde des composants critiques (renforcé)) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "83d6fac6-f93b-54c5-8bc0-84c5c4d259c7"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _38.r (Procéder à des contrôles et audits de sécurité réguliers puis appliquer les actions correctives associées (renforcé)) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "5fc042cd-d398-5c04-b36e-4b7ad2e88ff5"
+            }
+          ],
+          "control-id": "_38.r",
+          "remarks": "Control _38.r (Procéder à des contrôles et audits de sécurité réguliers puis appliquer les actions correctives associées (renforcé)) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "1b3cebf3-5c3a-5128-bfec-d22f4a1da202"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _39 (Désigner un référent en sécurité des systèmes d’information et le faire connaître auprès du personnel) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "4dc2f8b4-1918-55eb-8025-1b716abe35f5"
+            }
+          ],
+          "control-id": "_39",
+          "remarks": "Control _39 (Désigner un référent en sécurité des systèmes d’information et le faire connaître auprès du personnel) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "0a722886-f10c-5848-adfe-51e4b8a8dd08"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _4 (Identifier les informations et serveurs les plus sensibles et maintenir un schéma du réseau) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "fd428a66-c01e-5c8b-aecb-20abb0f3cd08"
+            }
+          ],
+          "control-id": "_4",
+          "remarks": "Control _4 (Identifier les informations et serveurs les plus sensibles et maintenir un schéma du réseau) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "d95e24c2-caba-5ee7-89d0-1043a56cdcc4"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _40 (Définir une procédure de gestion des incidents de sécurité) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "c4307a5e-337a-5aaf-81e2-1b7a70aaeb70"
+            }
+          ],
+          "control-id": "_40",
+          "remarks": "Control _40 (Définir une procédure de gestion des incidents de sécurité) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f508876b-cc09-53ca-84ae-a062515d9372"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _41.r (Mener une analyse de risques formelle (renforcé)) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "84cc17d1-ad31-566b-879f-28468115578e"
+            }
+          ],
+          "control-id": "_41.r",
+          "remarks": "Control _41.r (Mener une analyse de risques formelle (renforcé)) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "e477f155-c421-5a75-a737-5ba507ada736"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _42.r (Privilégier l’usage de produits et de services qualifiés par l'ANSSI (renforcé)) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ecab2eb4-99f0-531d-b041-0f2b2fcd73ed"
+            }
+          ],
+          "control-id": "_42.r",
+          "remarks": "Control _42.r (Privilégier l’usage de produits et de services qualifiés par l'ANSSI (renforcé)) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "b7e03cea-fa2c-5618-ad4a-89db6c358253"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _5 (Disposer d’un inventaire exhaustif des comptes privilégiés et le maintenir à jour) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "2cc543a3-7472-53b5-9cee-b355f6e7e60d"
+            }
+          ],
+          "control-id": "_5",
+          "remarks": "Control _5 (Disposer d’un inventaire exhaustif des comptes privilégiés et le maintenir à jour) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "19ab1372-277d-55a4-ab61-41b15dcf0274"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _6 (Organiser les procédures d’arrivée, de départ et de changement de fonction des utilisateurs) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "f20244b1-1b07-52a3-a7ac-d8419eef8066"
+            }
+          ],
+          "control-id": "_6",
+          "remarks": "Control _6 (Organiser les procédures d’arrivée, de départ et de changement de fonction des utilisateurs) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "cd0e7e9f-9c25-5ae6-8e72-1e2dcc580f1e"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _6.r (Organiser les procédures d’arrivée, de départ et de changement de fonction des utilisateurs (renforcé)) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "1ebf1814-b271-5f8c-b683-dfca3535d3cb"
+            }
+          ],
+          "control-id": "_6.r",
+          "remarks": "Control _6.r (Organiser les procédures d’arrivée, de départ et de changement de fonction des utilisateurs (renforcé)) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "27c73f78-27a3-55b2-8127-2110e18783dc"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _7 (Autoriser la connexion au réseau de l’entité aux seuls équipements maîtrisés) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ef05e38a-36e0-5236-85af-17848c86ef6c"
+            }
+          ],
+          "control-id": "_7",
+          "remarks": "Control _7 (Autoriser la connexion au réseau de l’entité aux seuls équipements maîtrisés) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "5b2422db-6198-5999-a402-d935fbbd6442"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _7.r (Autoriser la connexion au réseau de l’entité aux seuls équipements maîtrisés (renforcé)) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ecdccca4-af0e-5406-b7c5-8538d5a45fe9"
+            }
+          ],
+          "control-id": "_7.r",
+          "remarks": "Control _7.r (Autoriser la connexion au réseau de l’entité aux seuls équipements maîtrisés (renforcé)) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f16e2ac3-65ba-5359-bb4e-6f60600601ef"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _8 (Identifier nommément chaque personne accédant au système et distinguer les rôles utilisateur/administrateur) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "6d7c33f2-bdf0-50b3-b687-3c74d440c21a"
+            }
+          ],
+          "control-id": "_8",
+          "remarks": "Control _8 (Identifier nommément chaque personne accédant au système et distinguer les rôles utilisateur/administrateur) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "19e138fb-5ce4-5941-bbdd-e28e9bbc08fd"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _8.r (Identifier nommément chaque personne accédant au système et distinguer les rôles utilisateur/administrateur (renforcé)) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ad556fc6-8c04-548c-b491-c4c4e1504041"
+            }
+          ],
+          "control-id": "_8.r",
+          "remarks": "Control _8.r (Identifier nommément chaque personne accédant au système et distinguer les rôles utilisateur/administrateur (renforcé)) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "e78c03c1-47ab-549e-ade5-74751a458d47"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29",
+              "description": "Control _9 (Attribuer les bons droits sur les ressources sensibles du système d’information) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ed8afbac-8530-51bc-ac5d-c02c1485eb0a"
+            }
+          ],
+          "control-id": "_9",
+          "remarks": "Control _9 (Attribuer les bons droits sur les ressources sensibles du système d’information) is satisfied by the ANSSI - Guide d'hygiène informatique Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "1b0d2e33-3188-5049-a6f2-c04e3c823b7e"
+        }
+      ]
+    },
+    "import-profile": {
+      "href": "./catalog.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:12Z",
+      "oscal-version": "1.2.3",
+      "roles": [
+        {
+          "id": "sec-admin",
+          "title": "Security Administrator"
+        }
+      ],
+      "title": "ANSSI - Guide d'hygiène informatique System Security Plan Template",
+      "version": "3"
+    },
+    "system-characteristics": {
+      "authorization-boundary": {
+        "description": "The authorization boundary encompasses all computing resources, cloud tenancies, and network zones supporting ANSSI - Guide d'hygiène informatique operations."
+      },
+      "description": "Reference system architecture implementing security controls for ANSSI - Guide d'hygiène informatique.",
+      "security-impact-level": {
+        "security-objective-availability": "moderate",
+        "security-objective-confidentiality": "moderate",
+        "security-objective-integrity": "high"
+      },
+      "security-sensitivity-level": "moderate",
+      "status": {
+        "state": "operational"
+      },
+      "system-ids": [
+        {
+          "id": "anssi-guide-hygiene-system"
+        }
+      ],
+      "system-information": {
+        "information-types": [
+          {
+            "description": "Operational and compliance data processed within the france jurisdiction boundary.",
+            "title": "Sovereign Program Data",
+            "uuid": "d04730c7-30ac-5f52-bf7b-46cc8d763ea2"
+          }
+        ]
+      },
+      "system-name": "ANSSI - Guide d'hygiène informatique Reference System",
+      "system-name-short": "anssi-guide-hygiene"
+    },
+    "system-implementation": {
+      "components": [
+        {
+          "description": "Central execution platform providing control implementations for ANSSI - Guide d'hygiène informatique.",
+          "status": {
+            "state": "operational"
+          },
+          "title": "ANSSI - Guide d'hygiène informatique Core System Component",
+          "type": "software",
+          "uuid": "8edf8540-3d7c-5fcc-adba-4ad17cf0be29"
+        }
+      ],
+      "users": [
+        {
+          "role-ids": [
+            "sec-admin"
+          ],
+          "title": "Security Administrator",
+          "uuid": "038cd807-68c4-5321-bb11-28ad56d4788d"
+        }
+      ]
+    },
+    "uuid": "dc13d399-c190-5e44-94ac-13f0a633f495"
+  }
+}

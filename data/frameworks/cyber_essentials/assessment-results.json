@@ -1,0 +1,121 @@
+{
+  "assessment-results": {
+    "import-ap": {
+      "href": "./assessment-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:13Z",
+      "oscal-version": "1.2.3",
+      "title": "Cyber Essentials: Requirements for IT infrastructure v3.1 Assessment Results Template",
+      "version": "2"
+    },
+    "results": [
+      {
+        "description": "Assessment evaluation findings and observations for Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "findings": [
+          {
+            "description": "Control node128 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "2993bce5-67ec-5952-9ab3-59c05510dbb7"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "node128",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for node128",
+            "uuid": "23813efa-6fea-5dc1-a12d-408d02d6c28b"
+          },
+          {
+            "description": "Control node276 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "5f66d320-62e6-5073-aa12-214b81996d11"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "node276",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for node276",
+            "uuid": "64cc64e8-611c-590a-ad18-d9c37ee44538"
+          },
+          {
+            "description": "Control node85 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "d3f0f77b-d7b7-50af-bd47-4081034af90b"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "node85",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for node85",
+            "uuid": "7f09dc14-45aa-5698-9a4a-640f02e8a1cf"
+          }
+        ],
+        "observations": [
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control node128 (Firewalls — node128) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "2993bce5-67ec-5952-9ab3-59c05510dbb7"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control node276 (Backing up your data — node276) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "5f66d320-62e6-5073-aa12-214b81996d11"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control node85 (Cloud services — node85) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "d3f0f77b-d7b7-50af-bd47-4081034af90b"
+          }
+        ],
+        "reviewed-controls": {
+          "control-selections": [
+            {
+              "description": "All controls evaluated for Cyber Essentials: Requirements for IT infrastructure v3.1",
+              "include-all": {}
+            }
+          ]
+        },
+        "start": "2026-11-08T01:42:13Z",
+        "title": "Cyber Essentials: Requirements for IT infrastructure v3.1 Assessment Results",
+        "uuid": "f9be7542-7116-577e-b04f-7a2557132470"
+      }
+    ],
+    "uuid": "08169f8f-0d07-5160-a7ac-988a2ac52b2e"
+  }
+}

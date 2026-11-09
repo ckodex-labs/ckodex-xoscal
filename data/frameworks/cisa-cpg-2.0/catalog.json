@@ -1,0 +1,617 @@
+{
+  "catalog": {
+    "back-matter": {
+      "resources": [
+        {
+          "description": "Source framework metadata for cisa-cpg-2.0 snapshot portal",
+          "props": [
+            {
+              "name": "type",
+              "value": "standard"
+            },
+            {
+              "name": "version",
+              "value": "portal"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "https://raw.githubusercontent.com/intuitem/ciso-assistant-community/main/backend/library/libraries/cisa-cpg-2.0.yaml"
+            }
+          ],
+          "title": "cisa-cpg-2.0 Framework Reference",
+          "uuid": "8d46256a-97bf-556f-89d1-0e0002c06423"
+        }
+      ]
+    },
+    "groups": [
+      {
+        "controls": [
+          {
+            "id": "_4.A",
+            "parts": [
+              {
+                "id": "_4.A-stmt",
+                "name": "statement",
+                "prose": "Enables early threat identification, strengthens system integrity, provides insights for faster remediation, and minimizes downtime."
+              },
+              {
+                "id": "_4.A-guidance",
+                "name": "guidance",
+                "prose": "Outcome: Enables early threat identification, strengthens system integrity, provides insights for faster remediation, and minimizes downtime.\n\nTTP/Risk Addressed: Malicious software can involve payloads, droppers, backdoors, etc. Adversaries use malware to control remote machines, evade defenses, and execute post-compromise actions.\n\nRecommended Actions:\n- Implement signature-based and non-signature-based mechanisms detecting/eradicating malicious code at endpoints\n- Ensure antivirus software is updated, active, and configured for auto-scanning emails and removable media\n- Use OT-compatible antivirus with special practices including compatibility checks and performance testing\n\nCost: Moderate | Impact: High | Complexity: Moderate"
+              }
+            ],
+            "title": "Establish Malicious Code Detection"
+          },
+          {
+            "id": "_4.B",
+            "parts": [
+              {
+                "id": "_4.B-stmt",
+                "name": "statement",
+                "prose": "Organizations can identify adverse security events."
+              },
+              {
+                "id": "_4.B-guidance",
+                "name": "guidance",
+                "prose": "Outcome: Organizations can identify adverse security events.\n\nTTP/Risk Addressed: Initial access, privilege escalation, and lateral movement.\n\nRecommended Actions:\n- Define clear adverse event criteria and processes; escalate suspected events per incident response plan\n- Automate event information analysis accelerating investigative timelines\n- Conduct analyst role-specific training on proper protocols for suspected cyber incidents\n- Account for OT-specific events and anomalies\n\nCost: Moderate | Impact: High | Complexity: Complex"
+              }
+            ],
+            "title": "Identify Adverse Events"
+          }
+        ],
+        "id": "DE",
+        "title": "DETECT"
+      },
+      {
+        "controls": [
+          {
+            "id": "_1.A",
+            "parts": [
+              {
+                "id": "_1.A-stmt",
+                "name": "statement",
+                "prose": "Roles, responsibilities, and authorities related to the organization's cybersecurity program are established, communicated, enforced, and aligned within the organization and external partners."
+              },
+              {
+                "id": "_1.A-guidance",
+                "name": "guidance",
+                "prose": "Outcome: Roles, responsibilities, and authorities related to the organization's cybersecurity program are established, communicated, enforced, and aligned within the organization and external partners.\n\nTTP/Risk Addressed: Lack of sufficient cybersecurity accountability, investment, or effectiveness.\n\nRecommended Actions:\n- Document all cybersecurity roles and responsibilities in organizational policy\n- Distribute cybersecurity responsibilities across the organization; third parties may assist\n- Implement legal and regulatory cybersecurity requirements, including privacy\n- Establish continuous IT/OT team collaboration for security and operational effectiveness\n\nCost: Low | Impact: High | Complexity: Moderate"
+              }
+            ],
+            "title": "Establish Cybersecurity Responsibilities"
+          },
+          {
+            "id": "_1.B",
+            "parts": [
+              {
+                "id": "_1.B-stmt",
+                "name": "statement",
+                "prose": "The organization's cybersecurity risk management strategy, expectations, and policies are established."
+              },
+              {
+                "id": "_1.B-guidance",
+                "name": "guidance",
+                "prose": "Outcome: The organization's cybersecurity risk management strategy, expectations, and policies are established.\n\nTTP/Risk Addressed: Insufficient cybersecurity policies and procedures/practices that can manage cybersecurity risk for the organization's technologies and processes.\n\nRecommended Actions:\n- Review cybersecurity policies annually; update when requirements, risks, threats, or technology changes\n- Communicate and enforce policies reflecting organizational strategy and priorities\n- Establish governance encompassing regulatory, legal, risk, environmental, and operational obligations\n- Develop OT-specific policies acknowledging IT program limitations and critical function priorities\n\nCost: Low | Impact: High | Complexity: Moderate"
+              }
+            ],
+            "title": "Manage Cybersecurity Oversight"
+          },
+          {
+            "id": "_1.C",
+            "parts": [
+              {
+                "id": "_1.C-stmt",
+                "name": "statement",
+                "prose": "Identify improvements by practicing cybersecurity and incident response plans to maintain and update the organization's cybersecurity program."
+              },
+              {
+                "id": "_1.C-guidance",
+                "name": "guidance",
+                "prose": "Outcome: Identify improvements by practicing cybersecurity and incident response plans to maintain and update the organization's cybersecurity program.\n\nTTP/Risk Addressed: Inability to quickly and effectively isolate, contain, eradicate, remediate, and communicate about cybersecurity incidents.\n\nRecommended Actions:\n- Develop, maintain, update, and regularly exercise IR plans for common and organizationally specific scenarios\n- Ensure realistic drills including all relevant stakeholders\n- Review and drill IR plans minimum annually\n- Account for OT-specific safety and containment considerations\n\nCost: Low | Impact: High | Complexity: Moderate"
+              }
+            ],
+            "title": "Manage Incident Response Plans"
+          },
+          {
+            "id": "_1.D",
+            "parts": [
+              {
+                "id": "_1.D-stmt",
+                "name": "statement",
+                "prose": "Organizations more rapidly learn about and respond to known incidents or breaches across vendors and service providers."
+              },
+              {
+                "id": "_1.D-guidance",
+                "name": "guidance",
+                "prose": "Outcome: Organizations more rapidly learn about and respond to known incidents or breaches across vendors and service providers.\n\nTTP/Risk Addressed: Insufficient cybersecurity supply chain risk management (C-SCRM) practices that cannot securely support the organization's technologies and processes.\n\nRecommended Actions:\n- Require vendors/service providers to notify customers of security incidents and vulnerabilities within risk-informed timeframes via SLAs and contracts\n- Document and track OT asset serial numbers, checksums, digital certificates/signatures to verify authenticity of hardware, software, and firmware\n\nCost: Moderate | Impact: Moderate | Complexity: Complex"
+              }
+            ],
+            "title": "Supply Chain Incident Reporting \u0026 Vulnerability Disclosure"
+          },
+          {
+            "id": "_1.E",
+            "parts": [
+              {
+                "id": "_1.E-stmt",
+                "name": "statement",
+                "prose": "The risks posed by a managed service provider (MSP) are identified, recorded, assessed, prioritized, monitored, and updated over the course of the relationship."
+              },
+              {
+                "id": "_1.E-guidance",
+                "name": "guidance",
+                "prose": "Outcome: The risks posed by a managed service provider (MSP) are identified, recorded, assessed, prioritized, monitored, and updated over the course of the relationship.\n\nTTP/Risk Addressed: Adversaries can exploit vulnerabilities by abusing trusted third-party relationships.\n\nRecommended Actions:\n- Develop understanding of MSP services and security products\n- Understand contractual agreements and proactively address security gaps outside contract scope\n- Ensure contracts detail how and when MSPs notify customers of incidents affecting their environment\n\nCost: Moderate | Impact: Moderate | Complexity: Complex"
+              }
+            ],
+            "title": "Manage Risks from Managed Service Providers"
+          }
+        ],
+        "id": "GV",
+        "title": "GOVERN"
+      },
+      {
+        "controls": [
+          {
+            "id": "_2.A",
+            "parts": [
+              {
+                "id": "_2.A-stmt",
+                "name": "statement",
+                "prose": "A maintained asset inventory to improve cybersecurity resilience by reducing downtime, aiding recovery, bolstering defenses, and improving preparedness."
+              },
+              {
+                "id": "_2.A-guidance",
+                "name": "guidance",
+                "prose": "Outcome: A maintained asset inventory to improve cybersecurity resilience by reducing downtime, aiding recovery, bolstering defenses, and improving preparedness.\n\nTTP/Risk Addressed: Adversaries might use computer accessories, networking hardware, or other devices as entry points to infiltrate systems or networks.\n\nRecommended Actions:\n- Maintain regularly updated inventory of all organizational assets including data, hardware, software, systems, facilities, and personnel\n- Update critical IT/OT assets more frequently\n\nCost: Low | Impact: High | Complexity: Moderate"
+              }
+            ],
+            "title": "Manage Organizational Assets"
+          },
+          {
+            "id": "_2.B",
+            "parts": [
+              {
+                "id": "_2.B-stmt",
+                "name": "statement",
+                "prose": "Reduced likelihood of threat actors exploiting known vulnerabilities to breach organizational networks."
+              },
+              {
+                "id": "_2.B-guidance",
+                "name": "guidance",
+                "prose": "Outcome: Reduced likelihood of threat actors exploiting known vulnerabilities to breach organizational networks.\n\nTTP/Risk Addressed: Adversaries frequently target unpatched and misconfigured systems, particularly those exposed to the internet. Adversaries often leverage software vulnerabilities, temporary malfunctions, or configuration errors to gain initial access to a network.\n\nRecommended Actions:\n- Implement vulnerability management program to patch and mitigate misconfigured software timely\n- Monitor risk response progress via POA\u0026M, risk registers, and risk detail reports\n- Document potential risks of proposed changes; provide rollback guidance\n- Assign responsibilities for processing cybersecurity threat, vulnerability, or incident disclosures\n- Incorporate compensating security controls for legacy systems where possible\n- For OT assets where patching is infeasible, apply compensating controls (segmentation, monitoring)\n\nCost: High | Impact: High | Complexity: Complex"
+              }
+            ],
+            "title": "Mitigate Known Vulnerabilities"
+          },
+          {
+            "id": "_2.C",
+            "parts": [
+              {
+                "id": "_2.C-stmt",
+                "name": "statement",
+                "prose": "Validate that implemented security controls are properly configured and working as intended."
+              },
+              {
+                "id": "_2.C-guidance",
+                "name": "guidance",
+                "prose": "Outcome: Validate that implemented security controls are properly configured and working as intended.\n\nTTP/Risk Addressed: Gaps in cyber defenses or overconfidence in existing protections.\n\nRecommended Actions:\n- Regularly engage third-party cybersecurity experts for penetration tests, bug bounties, incident simulations, and table-top exercises\n- Assess ability of adversaries to infiltrate and move laterally within networks targeting critical systems\n- Ensure findings from tests are addressed\n\nCost: High | Impact: High | Complexity: Complex"
+              }
+            ],
+            "title": "Obtain Independent Validation of Cybersecurity Controls"
+          },
+          {
+            "id": "_2.D",
+            "parts": [
+              {
+                "id": "_2.D-stmt",
+                "name": "statement",
+                "prose": "Organizations more rapidly learn about vulnerabilities or weaknesses."
+              },
+              {
+                "id": "_2.D-guidance",
+                "name": "guidance",
+                "prose": "Outcome: Organizations more rapidly learn about vulnerabilities or weaknesses.\n\nTTP/Risk Addressed: Unreported security vulnerabilities in software, networks, devices, and systems can be exploited by adversaries before they are mitigated.\n\nRecommended Actions:\n- Maintain public, easily discoverable method for notifying security teams of vulnerable, misconfigured, or exploitable assets via email or web form\n- Acknowledge valid submissions and respond timely considering completeness and complexity\n- Mitigate validated, exploitable weaknesses consistently with severity\n- Protect individuals identifying/reporting vulnerabilities in good faith under safe harbor provisions\n- Apply security.txt files conforming to RFC 9116 on all public-facing web domains\n\nCost: Low | Impact: Low | Complexity: Moderate"
+              }
+            ],
+            "title": "Maintain Vulnerability Disclosure/Reporting Process"
+          },
+          {
+            "id": "_2.E",
+            "parts": [
+              {
+                "id": "_2.E-stmt",
+                "name": "statement",
+                "prose": "More efficiently and effectively respond to incidents and maintain service continuity."
+              },
+              {
+                "id": "_2.E-guidance",
+                "name": "guidance",
+                "prose": "Outcome: More efficiently and effectively respond to incidents and maintain service continuity.\n\nTTP/Risk Addressed: Incomplete or inaccurate understanding of network topology inhibits effective incident response and recovery.\n\nRecommended Actions:\n- Maintain accurate documentation describing current network topology and relevant information across all IT and OT networks\n- Perform network reviews and track annually; update when topology changes\n\nCost: Low | Impact: High | Complexity: Moderate"
+              }
+            ],
+            "title": "Document Network Topology"
+          }
+        ],
+        "id": "ID",
+        "title": "IDENTIFY"
+      },
+      {
+        "controls": [
+          {
+            "id": "_3.A",
+            "parts": [
+              {
+                "id": "_3.A-stmt",
+                "name": "statement",
+                "prose": "Prevent threat actors from using default passwords to achieve initial access and move laterally in a network."
+              },
+              {
+                "id": "_3.A-guidance",
+                "name": "guidance",
+                "prose": "Outcome: Prevent threat actors from using default passwords to achieve initial access and move laterally in a network.\n\nTTP/Risk Addressed: Adversaries might acquire and exploit default account credentials to gain initial access, maintain persistence, escalate privileges, or evade defenses.\n\nRecommended Actions:\n- Require changing default manufacturer passwords for all hardware, software, and firmware before network connection\n- If infeasible (hard-coded passwords), document and implement compensating controls; monitor logs for network traffic and login attempts\n- Change default passwords on existing OT systems; establish policy for all new/future devices\n\nCost: Low | Impact: High | Complexity: Simple"
+              }
+            ],
+            "title": "Changing Default Passwords"
+          },
+          {
+            "id": "_3.B",
+            "parts": [
+              {
+                "id": "_3.B-stmt",
+                "name": "statement",
+                "prose": "Organizational passwords are harder for threat actors to guess or crack."
+              },
+              {
+                "id": "_3.B-guidance",
+                "name": "guidance",
+                "prose": "Outcome: Organizational passwords are harder for threat actors to guess or crack.\n\nTTP/Risk Addressed: Adversaries use brute force techniques to crack passwords when unknown or hashes are obtained. They systematically guess passwords using repetitive or iterative methods.\n\nRecommended Actions:\n- Enforce system policy establishing minimum password strength including 16+ character length for all password-protected IT and OT assets\n- Leverage passphrases and password managers for longer passwords\n- When minimum lengths are infeasible, apply compensating controls and record them; log all login attempts\n- Prioritize upgrade/replacement of assets unable to support sufficient strength passwords\n\nCost: Low | Impact: High | Complexity: Simple"
+              }
+            ],
+            "title": "Establish Minimum Password Strength"
+          },
+          {
+            "id": "_3.C",
+            "parts": [
+              {
+                "id": "_3.C-stmt",
+                "name": "statement",
+                "prose": "Adversaries are unable to reuse compromised credentials to move laterally across the organization, particularly between IT and OT networks."
+              },
+              {
+                "id": "_3.C-guidance",
+                "name": "guidance",
+                "prose": "Outcome: Adversaries are unable to reuse compromised credentials to move laterally across the organization, particularly between IT and OT networks.\n\nTTP/Risk Addressed: Adversaries can obtain and exploit account credentials to gain access, maintain persistence, escalate privileges, or evade defenses. Compromised credentials can bypass network access controls.\n\nRecommended Actions:\n- Create distinct, separate credentials for similar services and asset access across IT/OT networks\n- Users refrain from reusing passwords across accounts, applications, and services\n- System administrators and service/machine accounts have unique passwords\n- No universal non-person entity (NPE) account passwords\n- Utilize role-based accounts for IT/OT systems when possible\n\nCost: Low | Impact: High | Complexity: Simple"
+              }
+            ],
+            "title": "Create Unique Credentials"
+          },
+          {
+            "id": "_3.D",
+            "parts": [
+              {
+                "id": "_3.D-stmt",
+                "name": "statement",
+                "prose": "Prevent unauthorized access to organizational accounts or resources by former staff."
+              },
+              {
+                "id": "_3.D-guidance",
+                "name": "guidance",
+                "prose": "Outcome: Prevent unauthorized access to organizational accounts or resources by former staff.\n\nTTP/Risk Addressed: Adversaries can exploit inactive accounts of former staff to evade detection.\n\nRecommended Actions:\n- Establish defined, enforced administrative offboarding process for staff, contractors, vendors including return of physical tokens/badges and revocation of all system/facility access\n- Review user access and disable inactive accounts after specified period (e.g., 30 days), ideally via automated process\n\nCost: Low | Impact: High | Complexity: Moderate"
+              }
+            ],
+            "title": "Revoking Credentials for Departing Staff"
+          },
+          {
+            "id": "_3.E",
+            "parts": [
+              {
+                "id": "_3.E-stmt",
+                "name": "statement",
+                "prose": "Protect organizations from automated, credential-based attacks."
+              },
+              {
+                "id": "_3.E-guidance",
+                "name": "guidance",
+                "prose": "Outcome: Protect organizations from automated, credential-based attacks.\n\nTTP/Risk Addressed: Adversaries might acquire and exploit default account credentials to gain access, maintain persistence, escalate privileges, or evade defenses.\n\nRecommended Actions:\n- Capture and log all unsuccessful logins per organization's security policy\n- Notify security personnel after consecutive unsuccessful attempts and deviations from normal behavior\n- Log and store alerts in relevant security or ticketing system for retroactive analysis\n\nCost: Moderate | Impact: High | Complexity: Moderate"
+              }
+            ],
+            "title": "Monitor Unsuccessful (Automated) Login Attempts"
+          },
+          {
+            "id": "_3.F",
+            "parts": [
+              {
+                "id": "_3.F-stmt",
+                "name": "statement",
+                "prose": "Add a critical, additional layer of security to protect asset accounts."
+              },
+              {
+                "id": "_3.F-guidance",
+                "name": "guidance",
+                "prose": "Outcome: Add a critical, additional layer of security to protect asset accounts.\n\nTTP/Risk Addressed: Adversaries without prior knowledge of legitimate credentials might try commonly used passwords across various accounts. They might also systematically guess passwords using repetitive or iterative methods.\n\nRecommended Actions:\n- Require MFA using strongest available method for assets with remote access\n- MFA options ranked by strength: (1) Phishing-resistant MFA (FIDO/WebAuthn or PKI-based), (2) Mobile app-based soft tokens, (3) SMS/voice only when no other options available\n- All IT accounts leverage MFA; prioritize highest-risk accounts\n- OT: Enable MFA on all remotely accessible accounts/systems; if unavailable, remove remote access, add segmentation\n\nCost: Moderate | Impact: High | Complexity: Moderate"
+              }
+            ],
+            "title": "Implement Multi-factor Authentication"
+          },
+          {
+            "id": "_3.G",
+            "parts": [
+              {
+                "id": "_3.G-stmt",
+                "name": "statement",
+                "prose": "Make it harder for threat actors to gain access to administrator or privileged accounts, even if common user accounts are compromised."
+              },
+              {
+                "id": "_3.G-guidance",
+                "name": "guidance",
+                "prose": "Outcome: Make it harder for threat actors to gain access to administrator or privileged accounts, even if common user accounts are compromised.\n\nTTP/Risk Addressed: Adversaries might obtain and exploit credentials from existing accounts for initial access, persistence, privilege escalation, or defense evasion.\n\nRecommended Actions:\n- User accounts lack administrator privileges\n- Administrators maintain separate user accounts for non-admin activities\n- Re-evaluate privileges on recurring basis validating continued need\n- Maintain separation of duties distributing responsibilities across multiple individuals/roles\n\nCost: Low | Impact: High | Complexity: Simple"
+              }
+            ],
+            "title": "Administrators Maintain Separate User and Privileged Accounts"
+          },
+          {
+            "id": "_3.H",
+            "parts": [
+              {
+                "id": "_3.H-stmt",
+                "name": "statement",
+                "prose": "Minimizes unauthorized access to systems, data, and processes, reduces human error, and prevents malicious actions."
+              },
+              {
+                "id": "_3.H-guidance",
+                "name": "guidance",
+                "prose": "Outcome: Minimizes unauthorized access to systems, data, and processes, reduces human error, and prevents malicious actions.\n\nTTP/Risk Addressed: Unauthorized access to network resources and the potential for adversaries to move across systems undetected, compromising sensitive data and critical systems.\n\nRecommended Actions:\n- All user accounts, system roles, and processes operate with minimum privileges necessary\n- Perform quarterly reviews of access permissions and role assignments validating policy compliance\n\nCost: Low | Impact: High | Complexity: Simple"
+              }
+            ],
+            "title": "Implement the Principles of Least Privilege"
+          },
+          {
+            "id": "_3.I",
+            "parts": [
+              {
+                "id": "_3.I-stmt",
+                "name": "statement",
+                "prose": "Limiting the impact of a potential breach and preventing adversaries from accessing sensitive data, spaces, and/or critical infrastructure."
+              },
+              {
+                "id": "_3.I-guidance",
+                "name": "guidance",
+                "prose": "Outcome: Limiting the impact of a potential breach and preventing adversaries from accessing sensitive data, spaces, and/or critical infrastructure.\n\nTTP/Risk Addressed: If a network is compromised by an unauthorized user, a securely segregated network can contain malicious occurrences.\n\nRecommended Actions:\n- Place routers between networks creating boundaries, increasing broadcast domains, and filtering broadcast traffic\n- Use boundaries to contain security breaches by restricting traffic to separate segments and shutting down segments during intrusion\n- Physically segment OT enclaves (e.g., data diodes) when applicable\n\nCost: High | Impact: High | Complexity: Complex"
+              }
+            ],
+            "title": "Implement Logical/Physical Network Segmentation"
+          },
+          {
+            "id": "_3.J",
+            "parts": [
+              {
+                "id": "_3.J-stmt",
+                "name": "statement",
+                "prose": "Organizational users learn and perform more secure behaviors."
+              },
+              {
+                "id": "_3.J-guidance",
+                "name": "guidance",
+                "prose": "Outcome: Organizational users learn and perform more secure behaviors.\n\nTTP/Risk Addressed: Users vulnerable to spear phishing, social engineering, and other techniques that involve user interaction.\n\nRecommended Actions:\n- Provide initial cybersecurity training before new employees access computer systems\n- Provide at least annual training covering social engineering recognition, attack reporting, acceptable use, and basic cyber hygiene\n- Identify specialized roles requiring additional training\n- Provide role-based training to specialized roles including contractors, partners, suppliers\n- Provide OT personnel security awareness training\n\nCost: Low | Impact: High | Complexity: Moderate"
+              }
+            ],
+            "title": "Implement Cybersecurity Training"
+          },
+          {
+            "id": "_3.K",
+            "parts": [
+              {
+                "id": "_3.K-stmt",
+                "name": "statement",
+                "prose": "Encryption is deployed to maintain confidentiality and integrity of sensitive data across the organization's network."
+              },
+              {
+                "id": "_3.K-guidance",
+                "name": "guidance",
+                "prose": "Outcome: Encryption is deployed to maintain confidentiality and integrity of sensitive data across the organization's network.\n\nTTP/Risk Addressed: Adversaries can position themselves between networked devices to enable network sniffing and data manipulation, or steal operational data for personal gain or future operations.\n\nRecommended Actions:\n- Use encryption, digital signatures, and cryptographic hashes protecting network communication confidentiality and integrity\n- Identify critical data for protection in transit and at rest (PII, proprietary information, PLC programs, CAD/CAM files)\n- Prevent plaintext electronic storage of sensitive data and passwords\n- Store credentials securely via credential/password managers\n- Use encryption for OT external connections where latency permits\n\nCost: Moderate | Impact: High | Complexity: Complex"
+              }
+            ],
+            "title": "Utilize Strong Encryption"
+          },
+          {
+            "id": "_3.L",
+            "parts": [
+              {
+                "id": "_3.L-stmt",
+                "name": "statement",
+                "prose": "Reduce risk from common email-based threats, such as spoofing, phishing, and interception."
+              },
+              {
+                "id": "_3.L-guidance",
+                "name": "guidance",
+                "prose": "Outcome: Reduce risk from common email-based threats, such as spoofing, phishing, and interception.\n\nTTP/Risk Addressed: Adversaries might send victims emails with malicious attachments or links, aiming to run harmful code on their systems. They can also conduct phishing through third-party services.\n\nRecommended Actions:\n- Enable STARTTLS on all corporate email infrastructure\n- Enable Sender Policy Framework (SPF)\n- Enable DomainKeys Identified Mail (DKIM)\n- Enable DMARC and set to 'reject'\n\nCost: Low | Impact: High | Complexity: Moderate"
+              }
+            ],
+            "title": "Enable Email Security"
+          },
+          {
+            "id": "_3.M",
+            "parts": [
+              {
+                "id": "_3.M-stmt",
+                "name": "statement",
+                "prose": "Reduce the risk from embedded macros and similar executable code."
+              },
+              {
+                "id": "_3.M-guidance",
+                "name": "guidance",
+                "prose": "Outcome: Reduce the risk from embedded macros and similar executable code.\n\nTTP/Risk Addressed: Adversaries rely on users to open malicious files to execute code. Social engineering tactics could be used to convince users to open such files.\n\nRecommended Actions:\n- Enforce system-wide policy disabling macros or similar embedded code by default\n- Establish policy for authorized users requesting macro enablement on specific assets\n- Disable Autorun/AutoPlay by default\n\nCost: Low | Impact: Moderate | Complexity: Simple"
+              }
+            ],
+            "title": "Disable Autorun \u0026 Macros By Default"
+          },
+          {
+            "id": "_3.N",
+            "parts": [
+              {
+                "id": "_3.N-stmt",
+                "name": "statement",
+                "prose": "Policies and procedures exist to manage system changes and configurations."
+              },
+              {
+                "id": "_3.N-guidance",
+                "name": "guidance",
+                "prose": "Outcome: Policies and procedures exist to manage system changes and configurations.\n\nTTP/Risk Addressed: Delayed, insufficient, or incomplete ability to maintain or restore functionality of critical devices and service operations.\n\nRecommended Actions:\n- Implement policies and processes for secure change management\n- Enforce configuration restrictions preventing unauthorized changes\n- Test and document proposed changes in non-production environments; analyze security impacts\n- Implement OT limited functionality permitting only necessary functions, protocols, and services\n\nCost: Moderate | Impact: High | Complexity: Complex"
+              }
+            ],
+            "title": "Establish Change Management Processes"
+          },
+          {
+            "id": "_3.O",
+            "parts": [
+              {
+                "id": "_3.O-stmt",
+                "name": "statement",
+                "prose": "Organizations reduce data loss and service disruption risks while efficiently managing, responding to, and recovering from incidents."
+              },
+              {
+                "id": "_3.O-guidance",
+                "name": "guidance",
+                "prose": "Outcome: Organizations reduce data loss and service disruption risks while efficiently managing, responding to, and recovering from incidents.\n\nTTP/Risk Addressed: Adversaries can disrupt critical systems, delete data, and disable recovery services to prevent system recovery.\n\nRecommended Actions:\n- Develop list of all maintained backups including installation media, license keys, configuration information, and retention periods\n- Back up critical operations systems in near-real-time; frequently back up all operational systems\n- Securely store backups offsite and offline\n- Test backups and recovery minimum annually\n- Validate backup integrity before initiating restoration\n- Check restoration assets for indicators of compromise\n- OT: Include device configurations, roles, engineering drawings, and tools\n\nCost: High | Impact: High | Complexity: Moderate"
+              }
+            ],
+            "title": "Maintain System Backups \u0026 Restoration Ability"
+          },
+          {
+            "id": "_3.P",
+            "parts": [
+              {
+                "id": "_3.P-stmt",
+                "name": "statement",
+                "prose": "Increase visibility into deployed technology assets and reduce the likelihood of breach by users installing unapproved hardware, firmware, or software."
+              },
+              {
+                "id": "_3.P-guidance",
+                "name": "guidance",
+                "prose": "Outcome: Increase visibility into deployed technology assets and reduce the likelihood of breach by users installing unapproved hardware, firmware, or software.\n\nTTP/Risk Addressed: Adversaries can manipulate products or delivery mechanisms before they reach final users and attempt data or system compromise.\n\nRecommended Actions:\n- Implement administrative policy requiring review, testing, and approval before new hardware, firmware, or software installation\n- Maintain approved hardware, firmware, and software list including approved versions\n- Consider OT environment additional requirements for patches/updates ensuring no operational or safety impact\n\nCost: Moderate | Impact: High | Complexity: Moderate"
+              }
+            ],
+            "title": "Maintain Hardware \u0026 Software Approval Process"
+          },
+          {
+            "id": "_3.Q",
+            "parts": [
+              {
+                "id": "_3.Q-stmt",
+                "name": "statement",
+                "prose": "Enhance visibility to detect and respond to cyber incidents while ensuring security logs are protected from unauthorized access and tampering."
+              },
+              {
+                "id": "_3.Q-guidance",
+                "name": "guidance",
+                "prose": "Outcome: Enhance visibility to detect and respond to cyber incidents while ensuring security logs are protected from unauthorized access and tampering.\n\nTTP/Risk Addressed: Delayed, insufficient, or incomplete ability to detect and respond to potential cyber incidents.\n\nRecommended Actions:\n- Collect and store administrative/security-focused logs (OS, applications, IDS/IPS, firewalls, DLP, VPNs)\n- Store logs centrally (SIEM tool or database); only authorized, authenticated users access/modify\n- Store logs per risk-informed duration or regulatory guidelines\n- Notify security teams when critical log functions are disabled\n- For OT assets with non-standard logs, collect network traffic between those assets\n\nCost: Moderate | Impact: High | Complexity: Moderate"
+              }
+            ],
+            "title": "Maintain Log Collection \u0026 Storage"
+          },
+          {
+            "id": "_3.R",
+            "parts": [
+              {
+                "id": "_3.R-stmt",
+                "name": "statement",
+                "prose": "Prevent malicious actors from achieving initial access or data exfiltration via unauthorized portable media devices."
+              },
+              {
+                "id": "_3.R-guidance",
+                "name": "guidance",
+                "prose": "Outcome: Prevent malicious actors from achieving initial access or data exfiltration via unauthorized portable media devices.\n\nTTP/Risk Addressed: Adversaries might infiltrate systems, including disconnected or air-gapped networks, by copying malware to removable media.\n\nRecommended Actions:\n- Maintain policies ensuring unauthorized media and hardware don't connect to IT/OT assets\n- Establish procedures removing, disabling, or securing physical ports preventing unauthorized device connection\n\nCost: Moderate | Impact: High | Complexity: Complex"
+              }
+            ],
+            "title": "Prohibit Connection of Unauthorized Devices"
+          },
+          {
+            "id": "_3.S",
+            "parts": [
+              {
+                "id": "_3.S-stmt",
+                "name": "statement",
+                "prose": "Unauthorized users cannot gain an initial system foothold by exploiting known weaknesses in internet-facing assets."
+              },
+              {
+                "id": "_3.S-guidance",
+                "name": "guidance",
+                "prose": "Outcome: Unauthorized users cannot gain an initial system foothold by exploiting known weaknesses in internet-facing assets.\n\nTTP/Risk Addressed: Adversaries might exploit weaknesses in internet-facing hosts or systems targeting software bugs, temporary glitches, or misconfigurations.\n\nRecommended Actions:\n- Minimize internet-facing assets whenever possible\n- Prioritize keeping software current via timely patches/updates\n- Disable all unnecessary OS applications, software, and network protocols on internet-facing assets\n- Never expose network management interfaces to public internet\n- Logically segment enterprise and production networks per trust boundaries and platform types\n\nCost: Moderate | Impact: High | Complexity: Complex"
+              }
+            ],
+            "title": "Secure Internet Facing Devices"
+          }
+        ],
+        "id": "PR",
+        "title": "PROTECT"
+      },
+      {
+        "controls": [
+          {
+            "id": "_6.A",
+            "parts": [
+              {
+                "id": "_6.A-stmt",
+                "name": "statement",
+                "prose": "Organizations are capable of safely and effectively recovering from a cybersecurity incident."
+              },
+              {
+                "id": "_6.A-guidance",
+                "name": "guidance",
+                "prose": "Outcome: Organizations are capable of safely and effectively recovering from a cybersecurity incident.\n\nTTP/Risk Addressed: Disruption to the availability of an asset, service, or system.\n\nRecommended Actions:\n- Execute plans recovering/restoring service to critical assets impacted by incidents\n- Enable degraded operations (paper-based, radio communications) without critical assets or internet\n- Complete post-incident analysis identifying improvement areas\n- Incorporate lessons learned; enhance detection/response capabilities\n- Update policies, procedures, and training; ensure stakeholder awareness of changes\n\nCost: Moderate | Impact: High | Complexity: Complex"
+              }
+            ],
+            "title": "Incident Planning and Preparedness"
+          }
+        ],
+        "id": "RC",
+        "title": "RECOVER"
+      },
+      {
+        "controls": [
+          {
+            "id": "_5.A",
+            "parts": [
+              {
+                "id": "_5.A-stmt",
+                "name": "statement",
+                "prose": "Coordinate crisis communication methods between internal and external organization partners and critical suppliers."
+              },
+              {
+                "id": "_5.A-guidance",
+                "name": "guidance",
+                "prose": "Outcome: Coordinate crisis communication methods between internal and external organization partners and critical suppliers.\n\nTTP/Risk Addressed: Without established communication procedures, incidents can disrupt coordination among response teams, slowing incident resolution, increasing downtime, and amplifying overall damage.\n\nRecommended Actions:\n- Design communications plan identifying stakeholders and coordination mechanisms during incidents\n- Collaborate with stakeholders; securely share information per response plans\n- Regularly update senior leadership on major incident status\n- Notify human resources when malicious insider activity occurs\n- Establish and follow media communications procedures\n\nCost: Low | Impact: High | Complexity: Moderate"
+              }
+            ],
+            "title": "Establish Incident Communication Procedures"
+          },
+          {
+            "id": "_5.B",
+            "parts": [
+              {
+                "id": "_5.B-stmt",
+                "name": "statement",
+                "prose": "CISA and other organizations are better able to provide assistance or understand the broader scope of a cyber incident."
+              },
+              {
+                "id": "_5.B-guidance",
+                "name": "guidance",
+                "prose": "Outcome: CISA and other organizations are better able to provide assistance or understand the broader scope of a cyber incident.\n\nTTP/Risk Addressed: Without timely incident reporting, CISA and other groups are less able to assist affected organizations and lack critical insight into the broader threat landscape.\n\nRecommended Actions:\n- Maintain policy and procedures on reporting confirmed incidents to external entities (regulators, SRMAs, ISACs, ISAOs, CISA)\n- Report known incidents within regulatory timeframes or as soon as safely feasible\n\nCost: Moderate | Impact: High | Complexity: Moderate"
+              }
+            ],
+            "title": "Establish Incident Reporting Procedures"
+          }
+        ],
+        "id": "RS",
+        "title": "RESPOND"
+      }
+    ],
+    "metadata": {
+      "last-modified": "2026-11-08T00:30:45Z",
+      "oscal-version": "1.2.3",
+      "title": "CISA Cybersecurity Performance Goals v2.0",
+      "version": "1"
+    },
+    "uuid": "245c4916-0146-5c42-b1d3-6e8c59d7dba2"
+  }
+}

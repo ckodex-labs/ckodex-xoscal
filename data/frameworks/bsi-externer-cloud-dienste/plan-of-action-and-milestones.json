@@ -1,0 +1,21 @@
+{
+  "plan-of-action-and-milestones": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:13Z",
+      "oscal-version": "1.2.3",
+      "title": "Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Plan of Action and Milestones Template",
+      "version": "1"
+    },
+    "poam-items": [
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "title": "Compliance Roadmap and Parameter Tailoring for Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1)",
+        "uuid": "1a66751d-4442-534f-9027-147caa858744"
+      }
+    ],
+    "uuid": "17b26a00-6394-5f37-af87-60f7cc3a117a"
+  }
+}

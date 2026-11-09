@@ -4,6 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"strings"
 
 	commonv1 "github.com/mchorfa/xoscal/proto/oscal/common/v1"
 	componentv1 "github.com/mchorfa/xoscal/proto/oscal/component_definition/v1"
@@ -25,27 +26,35 @@ func (g *Generator) GenerateComponentDefinition(ctx context.Context, snapshotNam
 		if err := json.Unmarshal(e.Payload, &req); err != nil {
 			continue
 		}
-		if req.Framework != framework {
+		if !strings.EqualFold(req.Framework, framework) || !req.Assessable {
 			continue
+		}
+		title := singleLine(req.Title)
+		if title == "" {
+			title = singleLine(req.Citation)
+		}
+		desc := req.Text
+		if desc == "" {
+			desc = title
 		}
 		var controlImplementations []*componentv1.ControlImplementation
 		if req.Citation != "" {
 			controlImplementations = append(controlImplementations, &componentv1.ControlImplementation{
 				Uuid:        newUUID(uuidNamespace, fmt.Sprintf("ctrlimpl-%s", req.Citation)),
 				Source:      &commonv1.URIReference{Value: fmt.Sprintf("catalog-%s-%s", framework, snapshotName)},
-				Description: req.Text,
+				Description: desc,
 				ImplementedRequirements: []*componentv1.ImplementedRequirement{{
 					Uuid:        newUUID(uuidNamespace, fmt.Sprintf("implreq-%s", req.Citation)),
 					ControlId:   sanitizeToken(req.Citation),
-					Description: req.Text,
+					Description: desc,
 				}},
 			})
 		}
 		components = append(components, &componentv1.DefinedComponent{
 			Uuid:                   newUUID(uuidNamespace, fmt.Sprintf("comp-%s", req.Citation)),
 			Type:                   "software",
-			Title:                  &commonv1.MarkupLine{Value: req.Title},
-			Description:            &commonv1.MarkupMultiline{Value: req.Text},
+			Title:                  &commonv1.MarkupLine{Value: title},
+			Description:            &commonv1.MarkupMultiline{Value: desc},
 			ControlImplementations: controlImplementations,
 		})
 	}

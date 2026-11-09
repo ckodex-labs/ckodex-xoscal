@@ -1,0 +1,1381 @@
+{
+  "catalog": {
+    "back-matter": {
+      "resources": [
+        {
+          "description": "Source framework metadata for iso-iec-42001 snapshot portal",
+          "props": [
+            {
+              "name": "type",
+              "value": "standard"
+            },
+            {
+              "name": "version",
+              "value": "portal"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "https://raw.githubusercontent.com/intuitem/ciso-assistant-community/main/backend/library/libraries/iso-iec-42001.yaml"
+            }
+          ],
+          "title": "iso-iec-42001 Framework Reference",
+          "uuid": "819da9b7-03d6-50bc-961c-afbec32be66c"
+        }
+      ]
+    },
+    "groups": [
+      {
+        "controls": [
+          {
+            "id": "_10.1",
+            "parts": [
+              {
+                "id": "_10.1-stmt",
+                "name": "statement",
+                "prose": "Continually improve suitability, adequacy and effectiveness of AI management."
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[clauses]"
+              }
+            ],
+            "title": "Continual improvement"
+          },
+          {
+            "id": "_10.2",
+            "parts": [
+              {
+                "id": "_10.2-stmt",
+                "name": "statement",
+                "prose": "React to nonconformities and take corrective action."
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[clauses]"
+              }
+            ],
+            "title": "Nonconformity and corrective action"
+          }
+        ],
+        "id": "_10",
+        "title": "Improvement"
+      },
+      {
+        "controls": [
+          {
+            "id": "_4.1",
+            "parts": [
+              {
+                "id": "_4.1-stmt",
+                "name": "statement",
+                "prose": "Identify internal and external factors relevant to AI system development and use."
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[clauses]"
+              }
+            ],
+            "title": "Understanding the organization and its context"
+          },
+          {
+            "id": "_4.2",
+            "parts": [
+              {
+                "id": "_4.2-stmt",
+                "name": "statement",
+                "prose": "Determine stakeholder requirements and expectations for AI systems."
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[clauses]"
+              }
+            ],
+            "title": "Understanding the needs and expectations of interested parties"
+          },
+          {
+            "id": "_4.3",
+            "parts": [
+              {
+                "id": "_4.3-stmt",
+                "name": "statement",
+                "prose": "Define boundaries and applicability of the AI management system."
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[clauses]"
+              }
+            ],
+            "title": "Determining the scope of the AI management system"
+          },
+          {
+            "id": "_4.4",
+            "parts": [
+              {
+                "id": "_4.4-stmt",
+                "name": "statement",
+                "prose": "Establish, implement, maintain and improve the AI management system."
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[clauses]"
+              }
+            ],
+            "title": "AI management system"
+          }
+        ],
+        "id": "_4",
+        "title": "Context of the organization"
+      },
+      {
+        "controls": [
+          {
+            "id": "_5.1",
+            "parts": [
+              {
+                "id": "_5.1-stmt",
+                "name": "statement",
+                "prose": "Demonstrate commitment to AI governance through active leadership involvement."
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[clauses]"
+              }
+            ],
+            "title": "Leadership and commitment"
+          },
+          {
+            "id": "_5.2",
+            "parts": [
+              {
+                "id": "_5.2-stmt",
+                "name": "statement",
+                "prose": "Establish an AI policy appropriate to organizational purpose and objectives."
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[clauses]"
+              }
+            ],
+            "title": "AI policy"
+          },
+          {
+            "id": "_5.3",
+            "parts": [
+              {
+                "id": "_5.3-stmt",
+                "name": "statement",
+                "prose": "Assign and communicate AI-related roles, responsibilities and authorities."
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[clauses]"
+              }
+            ],
+            "title": "Roles, responsibilities and authorities"
+          }
+        ],
+        "id": "_5",
+        "title": "Leadership"
+      },
+      {
+        "controls": [
+          {
+            "id": "_6.1",
+            "parts": [
+              {
+                "id": "_6.1-stmt",
+                "name": "statement",
+                "prose": "Identify and address AI-related risks and opportunities."
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[clauses]"
+              }
+            ],
+            "title": "Actions to address risks and opportunities"
+          },
+          {
+            "id": "_6.2",
+            "parts": [
+              {
+                "id": "_6.2-stmt",
+                "name": "statement",
+                "prose": "Establish measurable AI objectives and plans to achieve them."
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[clauses]"
+              }
+            ],
+            "title": "AI objectives and planning to achieve them"
+          },
+          {
+            "id": "_6.3",
+            "parts": [
+              {
+                "id": "_6.3-stmt",
+                "name": "statement",
+                "prose": "Plan and manage changes to the AI management system."
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[clauses]"
+              }
+            ],
+            "title": "Planning of changes"
+          }
+        ],
+        "id": "_6",
+        "title": "Planning"
+      },
+      {
+        "groups": [
+          {
+            "controls": [
+              {
+                "id": "_7.1",
+                "parts": [
+                  {
+                    "id": "_7.1-stmt",
+                    "name": "statement",
+                    "prose": "Determine and provide resources needed for AI management."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[clauses]"
+                  }
+                ],
+                "title": "Resources"
+              },
+              {
+                "id": "_7.2",
+                "parts": [
+                  {
+                    "id": "_7.2-stmt",
+                    "name": "statement",
+                    "prose": "Ensure personnel have necessary competence for AI-related activities."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[clauses]"
+                  }
+                ],
+                "title": "Competence"
+              },
+              {
+                "id": "_7.3",
+                "parts": [
+                  {
+                    "id": "_7.3-stmt",
+                    "name": "statement",
+                    "prose": "Ensure awareness of AI policy, roles and system implications."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[clauses]"
+                  }
+                ],
+                "title": "Awareness"
+              },
+              {
+                "id": "_7.4",
+                "parts": [
+                  {
+                    "id": "_7.4-stmt",
+                    "name": "statement",
+                    "prose": "Determine internal and external communication requirements for AI."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[clauses]"
+                  }
+                ],
+                "title": "Communication"
+              }
+            ],
+            "id": "_7-controls",
+            "title": "Support"
+          },
+          {
+            "controls": [
+              {
+                "id": "_7.5.1",
+                "parts": [
+                  {
+                    "id": "_7.5.1-stmt",
+                    "name": "statement",
+                    "prose": "Include required documented information in the AI management system."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[clauses]"
+                  }
+                ],
+                "title": "General"
+              },
+              {
+                "id": "_7.5.2",
+                "parts": [
+                  {
+                    "id": "_7.5.2-stmt",
+                    "name": "statement",
+                    "prose": "Ensure proper identification, format and review of documentation."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[clauses]"
+                  }
+                ],
+                "title": "Creating and updating documented information"
+              },
+              {
+                "id": "_7.5.3",
+                "parts": [
+                  {
+                    "id": "_7.5.3-stmt",
+                    "name": "statement",
+                    "prose": "Control availability, distribution and protection of documentation."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[clauses]"
+                  }
+                ],
+                "title": "Control of documented information"
+              }
+            ],
+            "id": "_7.5",
+            "title": "Documented information"
+          }
+        ],
+        "id": "_7",
+        "title": "Support"
+      },
+      {
+        "controls": [
+          {
+            "id": "_8.1",
+            "parts": [
+              {
+                "id": "_8.1-stmt",
+                "name": "statement",
+                "prose": "Plan, implement and control processes for AI system operations."
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[clauses]"
+              }
+            ],
+            "title": "Operational planning and control"
+          },
+          {
+            "id": "_8.2",
+            "parts": [
+              {
+                "id": "_8.2-stmt",
+                "name": "statement",
+                "prose": "Conduct risk assessments for AI systems considering impacts and likelihood."
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[clauses]"
+              }
+            ],
+            "title": "AI risk assessment"
+          },
+          {
+            "id": "_8.3",
+            "parts": [
+              {
+                "id": "_8.3-stmt",
+                "name": "statement",
+                "prose": "Select and implement appropriate AI risk treatment options."
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[clauses]"
+              }
+            ],
+            "title": "AI risk treatment"
+          },
+          {
+            "id": "_8.4",
+            "parts": [
+              {
+                "id": "_8.4-stmt",
+                "name": "statement",
+                "prose": "Assess potential impacts of AI systems on individuals and society."
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[clauses]"
+              }
+            ],
+            "title": "AI system impact assessment"
+          }
+        ],
+        "id": "_8",
+        "title": "Operation"
+      },
+      {
+        "groups": [
+          {
+            "controls": [
+              {
+                "id": "_9.1",
+                "parts": [
+                  {
+                    "id": "_9.1-stmt",
+                    "name": "statement",
+                    "prose": "Monitor, measure, analyze and evaluate AI system performance."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[clauses]"
+                  }
+                ],
+                "title": "Monitoring, measurement, analysis and evaluation"
+              }
+            ],
+            "id": "_9-controls",
+            "title": "Performance evaluation"
+          },
+          {
+            "controls": [
+              {
+                "id": "_9.2.1",
+                "parts": [
+                  {
+                    "id": "_9.2.1-stmt",
+                    "name": "statement",
+                    "prose": "Conduct internal audits at planned intervals."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[clauses]"
+                  }
+                ],
+                "title": "General"
+              },
+              {
+                "id": "_9.2.2",
+                "parts": [
+                  {
+                    "id": "_9.2.2-stmt",
+                    "name": "statement",
+                    "prose": "Plan, establish and maintain an internal audit programme."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[clauses]"
+                  }
+                ],
+                "title": "Internal audit programme"
+              }
+            ],
+            "id": "_9.2",
+            "title": "Internal audit"
+          },
+          {
+            "controls": [
+              {
+                "id": "_9.3.1",
+                "parts": [
+                  {
+                    "id": "_9.3.1-stmt",
+                    "name": "statement",
+                    "prose": "Review the AI management system at planned intervals."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[clauses]"
+                  }
+                ],
+                "title": "General"
+              },
+              {
+                "id": "_9.3.2",
+                "parts": [
+                  {
+                    "id": "_9.3.2-stmt",
+                    "name": "statement",
+                    "prose": "Include specified inputs in management reviews."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[clauses]"
+                  }
+                ],
+                "title": "Management review inputs"
+              },
+              {
+                "id": "_9.3.3",
+                "parts": [
+                  {
+                    "id": "_9.3.3-stmt",
+                    "name": "statement",
+                    "prose": "Document decisions and actions from management reviews."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[clauses]"
+                  }
+                ],
+                "title": "Management review results"
+              }
+            ],
+            "id": "_9.3",
+            "title": "Management review"
+          }
+        ],
+        "id": "_9",
+        "title": "Performance evaluation"
+      },
+      {
+        "controls": [
+          {
+            "id": "A.10.2",
+            "parts": [
+              {
+                "id": "A.10.2-stmt",
+                "name": "statement",
+                "prose": "Allocate AI-related responsibilities between parties."
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[controls]"
+              }
+            ],
+            "title": "Allocating responsibilities"
+          },
+          {
+            "id": "A.10.3",
+            "parts": [
+              {
+                "id": "A.10.3-stmt",
+                "name": "statement",
+                "prose": "Manage suppliers involved in AI system activities."
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[controls]"
+              }
+            ],
+            "title": "Suppliers"
+          },
+          {
+            "id": "A.10.4",
+            "parts": [
+              {
+                "id": "A.10.4-stmt",
+                "name": "statement",
+                "prose": "Manage customer relationships for AI systems."
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[controls]"
+              }
+            ],
+            "title": "Customers"
+          }
+        ],
+        "id": "A.10",
+        "title": "Third-party and customer relationships"
+      },
+      {
+        "controls": [
+          {
+            "id": "A.2.2",
+            "parts": [
+              {
+                "id": "A.2.2-stmt",
+                "name": "statement",
+                "prose": "Define and communicate the organization's AI policy."
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[controls]"
+              }
+            ],
+            "title": "AI policy"
+          },
+          {
+            "id": "A.2.3",
+            "parts": [
+              {
+                "id": "A.2.3-stmt",
+                "name": "statement",
+                "prose": "Ensure AI policy aligns with other organizational policies."
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[controls]"
+              }
+            ],
+            "title": "Alignment with other organizational policies"
+          },
+          {
+            "id": "A.2.4",
+            "parts": [
+              {
+                "id": "A.2.4-stmt",
+                "name": "statement",
+                "prose": "Review AI policy at defined intervals or upon significant changes."
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[controls]"
+              }
+            ],
+            "title": "Review of the AI policy"
+          }
+        ],
+        "id": "A.2",
+        "title": "Policies related to AI"
+      },
+      {
+        "controls": [
+          {
+            "id": "A.3.2",
+            "parts": [
+              {
+                "id": "A.3.2-stmt",
+                "name": "statement",
+                "prose": "Define roles and responsibilities for AI system activities."
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[controls]"
+              }
+            ],
+            "title": "AI roles and responsibilities"
+          },
+          {
+            "id": "A.3.3",
+            "parts": [
+              {
+                "id": "A.3.3-stmt",
+                "name": "statement",
+                "prose": "Establish processes for reporting AI-related concerns."
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[controls]"
+              }
+            ],
+            "title": "Reporting of concerns"
+          }
+        ],
+        "id": "A.3",
+        "title": "Internal organization"
+      },
+      {
+        "controls": [
+          {
+            "id": "A.4.2",
+            "parts": [
+              {
+                "id": "A.4.2-stmt",
+                "name": "statement",
+                "prose": "Document resources required for AI system development and operation."
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[controls]"
+              }
+            ],
+            "title": "Resource documentation"
+          },
+          {
+            "id": "A.4.3",
+            "parts": [
+              {
+                "id": "A.4.3-stmt",
+                "name": "statement",
+                "prose": "Manage data resources used in AI systems."
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[controls]"
+              }
+            ],
+            "title": "Data resources"
+          },
+          {
+            "id": "A.4.4",
+            "parts": [
+              {
+                "id": "A.4.4-stmt",
+                "name": "statement",
+                "prose": "Manage tools used for AI system development and operation."
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[controls]"
+              }
+            ],
+            "title": "Tooling resources"
+          },
+          {
+            "id": "A.4.5",
+            "parts": [
+              {
+                "id": "A.4.5-stmt",
+                "name": "statement",
+                "prose": "Manage computing infrastructure for AI systems."
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[controls]"
+              }
+            ],
+            "title": "System and computing resources"
+          },
+          {
+            "id": "A.4.6",
+            "parts": [
+              {
+                "id": "A.4.6-stmt",
+                "name": "statement",
+                "prose": "Manage human resources involved in AI activities."
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[controls]"
+              }
+            ],
+            "title": "Human resources"
+          }
+        ],
+        "id": "A.4",
+        "title": "Resources for AI systems"
+      },
+      {
+        "controls": [
+          {
+            "id": "A.5.2",
+            "parts": [
+              {
+                "id": "A.5.2-stmt",
+                "name": "statement",
+                "prose": "Establish processes for assessing AI system impacts."
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[controls]"
+              }
+            ],
+            "title": "AI system impact assessment process"
+          },
+          {
+            "id": "A.5.3",
+            "parts": [
+              {
+                "id": "A.5.3-stmt",
+                "name": "statement",
+                "prose": "Document AI system impact assessments."
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[controls]"
+              }
+            ],
+            "title": "Documentation of AI system impact assessments"
+          },
+          {
+            "id": "A.5.4",
+            "parts": [
+              {
+                "id": "A.5.4-stmt",
+                "name": "statement",
+                "prose": "Assess impacts on individuals or groups affected by AI systems."
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[controls]"
+              }
+            ],
+            "title": "Assessing AI system impact on individuals or groups of individuals"
+          },
+          {
+            "id": "A.5.5",
+            "parts": [
+              {
+                "id": "A.5.5-stmt",
+                "name": "statement",
+                "prose": "Assess broader societal impacts of AI systems."
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[controls]"
+              }
+            ],
+            "title": "Assessing societal impacts of AI systems"
+          }
+        ],
+        "id": "A.5",
+        "title": "Assessing impacts of AI systems"
+      },
+      {
+        "groups": [
+          {
+            "controls": [
+              {
+                "id": "A.6.1.2",
+                "parts": [
+                  {
+                    "id": "A.6.1.2-stmt",
+                    "name": "statement",
+                    "prose": "Define objectives for responsible AI system development."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[controls]"
+                  }
+                ],
+                "title": "Objectives for responsible development of AI system"
+              },
+              {
+                "id": "A.6.1.3",
+                "parts": [
+                  {
+                    "id": "A.6.1.3-stmt",
+                    "name": "statement",
+                    "prose": "Establish processes for responsible AI design and development."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[controls]"
+                  }
+                ],
+                "title": "Processes for responsible AI system design and development"
+              }
+            ],
+            "id": "A.6.1",
+            "title": "Management guidance for AI system development"
+          },
+          {
+            "controls": [
+              {
+                "id": "A.6.2.2",
+                "parts": [
+                  {
+                    "id": "A.6.2.2-stmt",
+                    "name": "statement",
+                    "prose": "Define and document AI system requirements and specifications."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[controls]"
+                  }
+                ],
+                "title": "AI system requirements and specification"
+              },
+              {
+                "id": "A.6.2.3",
+                "parts": [
+                  {
+                    "id": "A.6.2.3-stmt",
+                    "name": "statement",
+                    "prose": "Document AI system design and development activities."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[controls]"
+                  }
+                ],
+                "title": "Documentation of AI system design and development"
+              },
+              {
+                "id": "A.6.2.4",
+                "parts": [
+                  {
+                    "id": "A.6.2.4-stmt",
+                    "name": "statement",
+                    "prose": "Verify and validate AI systems against requirements."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[controls]"
+                  }
+                ],
+                "title": "AI system verification and validation"
+              },
+              {
+                "id": "A.6.2.5",
+                "parts": [
+                  {
+                    "id": "A.6.2.5-stmt",
+                    "name": "statement",
+                    "prose": "Control deployment of AI systems into production."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[controls]"
+                  }
+                ],
+                "title": "AI system deployment"
+              },
+              {
+                "id": "A.6.2.6",
+                "parts": [
+                  {
+                    "id": "A.6.2.6-stmt",
+                    "name": "statement",
+                    "prose": "Monitor AI system operation and performance."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[controls]"
+                  }
+                ],
+                "title": "AI system operation and monitoring"
+              },
+              {
+                "id": "A.6.2.7",
+                "parts": [
+                  {
+                    "id": "A.6.2.7-stmt",
+                    "name": "statement",
+                    "prose": "Maintain technical documentation for AI systems."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[controls]"
+                  }
+                ],
+                "title": "AI system technical documentation"
+              },
+              {
+                "id": "A.6.2.8",
+                "parts": [
+                  {
+                    "id": "A.6.2.8-stmt",
+                    "name": "statement",
+                    "prose": "Record event logs for AI system activities."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[controls]"
+                  }
+                ],
+                "title": "AI system recording of event logs"
+              }
+            ],
+            "id": "A.6.2",
+            "title": "AI system life cycle"
+          }
+        ],
+        "id": "A.6",
+        "title": "AI system life cycle"
+      },
+      {
+        "controls": [
+          {
+            "id": "A.7.2",
+            "parts": [
+              {
+                "id": "A.7.2-stmt",
+                "name": "statement",
+                "prose": "Manage data used for AI system development and enhancement."
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[controls]"
+              }
+            ],
+            "title": "Data for development and enhancement of AI system"
+          },
+          {
+            "id": "A.7.3",
+            "parts": [
+              {
+                "id": "A.7.3-stmt",
+                "name": "statement",
+                "prose": "Control acquisition of data for AI systems."
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[controls]"
+              }
+            ],
+            "title": "Acquisition of data"
+          },
+          {
+            "id": "A.7.4",
+            "parts": [
+              {
+                "id": "A.7.4-stmt",
+                "name": "statement",
+                "prose": "Ensure data quality meets AI system requirements."
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[controls]"
+              }
+            ],
+            "title": "Quality of data for AI systems"
+          },
+          {
+            "id": "A.7.5",
+            "parts": [
+              {
+                "id": "A.7.5-stmt",
+                "name": "statement",
+                "prose": "Track and document data origin and lineage."
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[controls]"
+              }
+            ],
+            "title": "Data provenance"
+          },
+          {
+            "id": "A.7.6",
+            "parts": [
+              {
+                "id": "A.7.6-stmt",
+                "name": "statement",
+                "prose": "Control data preparation processes for AI systems."
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[controls]"
+              }
+            ],
+            "title": "Data preparation"
+          }
+        ],
+        "id": "A.7",
+        "title": "Data for AI systems"
+      },
+      {
+        "controls": [
+          {
+            "id": "A.8.2",
+            "parts": [
+              {
+                "id": "A.8.2-stmt",
+                "name": "statement",
+                "prose": "Provide system documentation and user information."
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[controls]"
+              }
+            ],
+            "title": "System documentation and information for users"
+          },
+          {
+            "id": "A.8.3",
+            "parts": [
+              {
+                "id": "A.8.3-stmt",
+                "name": "statement",
+                "prose": "Enable relevant parties to report negative effects."
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[controls]"
+              }
+            ],
+            "title": "External reporting"
+          },
+          {
+            "id": "A.8.4",
+            "parts": [
+              {
+                "id": "A.8.4-stmt",
+                "name": "statement",
+                "prose": "Communicate AI-related incidents to relevant parties."
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[controls]"
+              }
+            ],
+            "title": "Communication of incidents"
+          },
+          {
+            "id": "A.8.5",
+            "parts": [
+              {
+                "id": "A.8.5-stmt",
+                "name": "statement",
+                "prose": "Provide information to interested parties about AI systems."
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[controls]"
+              }
+            ],
+            "title": "Information for interested parties"
+          }
+        ],
+        "id": "A.8",
+        "title": "Information for interested parties of AI systems"
+      },
+      {
+        "controls": [
+          {
+            "id": "A.9.2",
+            "parts": [
+              {
+                "id": "A.9.2-stmt",
+                "name": "statement",
+                "prose": "Establish processes for responsible AI system use."
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[controls]"
+              }
+            ],
+            "title": "Processes for responsible use of AI systems"
+          },
+          {
+            "id": "A.9.3",
+            "parts": [
+              {
+                "id": "A.9.3-stmt",
+                "name": "statement",
+                "prose": "Define objectives for responsible use of AI systems."
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[controls]"
+              }
+            ],
+            "title": "Objectives for responsible use of AI system"
+          },
+          {
+            "id": "A.9.4",
+            "parts": [
+              {
+                "id": "A.9.4-stmt",
+                "name": "statement",
+                "prose": "Document and communicate intended use of AI systems."
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[controls]"
+              }
+            ],
+            "title": "Intended use of the AI system"
+          }
+        ],
+        "id": "A.9",
+        "title": "Use of AI systems"
+      }
+    ],
+    "metadata": {
+      "last-modified": "2026-11-08T00:31:04Z",
+      "oscal-version": "1.2.3",
+      "title": "ISO 42001-2023 — Artificial intelligence — Requirements and Controls outline",
+      "version": "2"
+    },
+    "uuid": "7067e5a5-1949-5d34-8049-f1762305c8d4"
+  }
+}

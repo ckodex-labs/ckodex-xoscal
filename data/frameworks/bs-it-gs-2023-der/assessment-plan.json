@@ -1,0 +1,66 @@
+{
+  "assessment-plan": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:12Z",
+      "oscal-version": "1.2.3",
+      "title": "IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - DER: Detektion und Reaktion Security Assessment Plan Template",
+      "version": "1"
+    },
+    "reviewed-controls": {
+      "control-selections": [
+        {
+          "description": "All controls in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - DER: Detektion und Reaktion",
+          "include-all": {}
+        }
+      ]
+    },
+    "tasks": [
+      {
+        "description": "Verify and examine implementation of 79 controls in the Detektion von sicherheitsrelevanten Ereignissen family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - DER: Detektion und Reaktion.",
+        "title": "Assess Family DER.1 (Detektion von sicherheitsrelevanten Ereignissen)",
+        "type": "examination",
+        "uuid": "af1d2373-f01d-59f6-aac1-5cb9948184ec"
+      },
+      {
+        "description": "Verify and examine implementation of 121 controls in the Behandlung von Sicherheitsvorfällen family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - DER: Detektion und Reaktion.",
+        "title": "Assess Family DER.2.1 (Behandlung von Sicherheitsvorfällen)",
+        "type": "examination",
+        "uuid": "50c19107-5a43-5121-90fb-0b71fd244f19"
+      },
+      {
+        "description": "Verify and examine implementation of 45 controls in the Vorsorge für die IT-Forensik family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - DER: Detektion und Reaktion.",
+        "title": "Assess Family DER.2.2 (Vorsorge für die IT-Forensik)",
+        "type": "examination",
+        "uuid": "4c3bf21c-e65d-580e-b1e4-a4be5034ed9a"
+      },
+      {
+        "description": "Verify and examine implementation of 47 controls in the Bereinigung weitreichender Sicherheitsvorfälle family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - DER: Detektion und Reaktion.",
+        "title": "Assess Family DER.2.3 (Bereinigung weitreichender Sicherheitsvorfälle)",
+        "type": "examination",
+        "uuid": "84a00051-40a1-523a-881d-b025f7606f48"
+      },
+      {
+        "description": "Verify and examine implementation of 101 controls in the Audits und Revisionen family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - DER: Detektion und Reaktion.",
+        "title": "Assess Family DER.3.1 (Audits und Revisionen)",
+        "type": "examination",
+        "uuid": "44f6e8db-5276-51eb-bbe0-3487e9d684c2"
+      },
+      {
+        "description": "Verify and examine implementation of 85 controls in the Revisionen auf Basis des Leitfadens IS-Revision family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - DER: Detektion und Reaktion.",
+        "title": "Assess Family DER.3.2 (Revisionen auf Basis des Leitfadens IS-Revision)",
+        "type": "examination",
+        "uuid": "1765dc33-7db0-57ea-aa15-984f1c73d5f8"
+      },
+      {
+        "description": "Verify and examine implementation of 68 controls in the Notfallmanagement family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - DER: Detektion und Reaktion.",
+        "title": "Assess Family DER.4 (Notfallmanagement)",
+        "type": "examination",
+        "uuid": "9120ea59-e666-51f0-80cb-1872226c8565"
+      }
+    ],
+    "uuid": "77c33aea-9972-5628-b61d-dff658040b69"
+  }
+}

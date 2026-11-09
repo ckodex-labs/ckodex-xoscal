@@ -1,0 +1,363 @@
+{
+  "component-definition": {
+    "components": [
+      {
+        "control-implementations": [
+          {
+            "description": "Security control implementations for ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+            "implemented-requirements": [
+              {
+                "control-id": "_10.1",
+                "description": "Component capability addressing control _10.1 (Continual improvement).",
+                "uuid": "f4e15ddc-2c7c-5fcb-af47-eb03af7f859e"
+              },
+              {
+                "control-id": "_10.2",
+                "description": "Component capability addressing control _10.2 (Nonconformity and corrective action).",
+                "uuid": "3a2296b2-45aa-5d46-83e5-034c2946c803"
+              },
+              {
+                "control-id": "_4.1",
+                "description": "Component capability addressing control _4.1 (Understanding the organization and its context).",
+                "uuid": "712e5637-a954-5375-b697-cc4629af76bc"
+              },
+              {
+                "control-id": "_4.2",
+                "description": "Component capability addressing control _4.2 (Understanding the needs and expectations of interested parties).",
+                "uuid": "457bddcd-aea5-514a-863e-de0efe187ea3"
+              },
+              {
+                "control-id": "_4.3",
+                "description": "Component capability addressing control _4.3 (Determining the scope of the AI management system).",
+                "uuid": "71a203b2-4f9a-53e2-8d2d-d83a93975248"
+              },
+              {
+                "control-id": "_4.4",
+                "description": "Component capability addressing control _4.4 (AI management system).",
+                "uuid": "005a7648-ceeb-5653-9739-d797187714f3"
+              },
+              {
+                "control-id": "_5.1",
+                "description": "Component capability addressing control _5.1 (Leadership and commitment).",
+                "uuid": "c8d86855-f804-507c-a2b5-c27c875ae2e7"
+              },
+              {
+                "control-id": "_5.2",
+                "description": "Component capability addressing control _5.2 (AI policy).",
+                "uuid": "84ff0c1d-76fd-5f6a-90bd-c0562e303616"
+              },
+              {
+                "control-id": "_5.3",
+                "description": "Component capability addressing control _5.3 (Roles, responsibilities and authorities).",
+                "uuid": "ae505c26-b662-5378-a032-ba424cc10ee7"
+              },
+              {
+                "control-id": "_6.1",
+                "description": "Component capability addressing control _6.1 (Actions to address risks and opportunities).",
+                "uuid": "f44d9689-ce58-5bba-996f-cb292424bc58"
+              },
+              {
+                "control-id": "_6.2",
+                "description": "Component capability addressing control _6.2 (AI objectives and planning to achieve them).",
+                "uuid": "5c0d303e-a83c-5563-a5d3-801bdb98af27"
+              },
+              {
+                "control-id": "_6.3",
+                "description": "Component capability addressing control _6.3 (Planning of changes).",
+                "uuid": "384dface-1c24-554c-85f3-d34f98518043"
+              },
+              {
+                "control-id": "_7.1",
+                "description": "Component capability addressing control _7.1 (Resources).",
+                "uuid": "bbb7f688-9a87-5e4f-9ef2-26ea12740c12"
+              },
+              {
+                "control-id": "_7.2",
+                "description": "Component capability addressing control _7.2 (Competence).",
+                "uuid": "e89054ea-660d-52fb-a550-aef0d1256b08"
+              },
+              {
+                "control-id": "_7.3",
+                "description": "Component capability addressing control _7.3 (Awareness).",
+                "uuid": "5a24f993-2767-5115-9616-fd59393bfa0d"
+              },
+              {
+                "control-id": "_7.4",
+                "description": "Component capability addressing control _7.4 (Communication).",
+                "uuid": "f2a36c62-7abe-5b69-a70d-b47bf23ed8c4"
+              },
+              {
+                "control-id": "_7.5.1",
+                "description": "Component capability addressing control _7.5.1 (General).",
+                "uuid": "ae065de6-5ee7-5af3-9cc3-e6971e52ed0a"
+              },
+              {
+                "control-id": "_7.5.2",
+                "description": "Component capability addressing control _7.5.2 (Creating and updating documented information).",
+                "uuid": "7bd3cd78-a459-5db5-a3f3-64156b30fb21"
+              },
+              {
+                "control-id": "_7.5.3",
+                "description": "Component capability addressing control _7.5.3 (Control of documented information).",
+                "uuid": "f3e8fef8-a3d7-5ea9-ae85-60b54d177669"
+              },
+              {
+                "control-id": "_8.1",
+                "description": "Component capability addressing control _8.1 (Operational planning and control).",
+                "uuid": "093eaa75-429b-5aa8-b9c6-288933659f33"
+              },
+              {
+                "control-id": "_8.2",
+                "description": "Component capability addressing control _8.2 (AI risk assessment).",
+                "uuid": "4f9e9c09-636e-5333-8254-e10df42f2bbd"
+              },
+              {
+                "control-id": "_8.3",
+                "description": "Component capability addressing control _8.3 (AI risk treatment).",
+                "uuid": "d346bf0b-2760-5940-9eca-c5de4846ec51"
+              },
+              {
+                "control-id": "_8.4",
+                "description": "Component capability addressing control _8.4 (AI system impact assessment).",
+                "uuid": "02fd87a1-c1b5-571f-ae4a-d5b9b188f0b4"
+              },
+              {
+                "control-id": "_9.1",
+                "description": "Component capability addressing control _9.1 (Monitoring, measurement, analysis and evaluation).",
+                "uuid": "a592abe9-1cdb-559d-a0fa-9398cd9ff17f"
+              },
+              {
+                "control-id": "_9.2.1",
+                "description": "Component capability addressing control _9.2.1 (General).",
+                "uuid": "d80e3636-4bbc-5453-9e68-3d6d19341b8b"
+              },
+              {
+                "control-id": "_9.2.2",
+                "description": "Component capability addressing control _9.2.2 (Internal audit programme).",
+                "uuid": "a2dd3c8c-ba6a-57ab-b921-8580cdc6c6bf"
+              },
+              {
+                "control-id": "_9.3.1",
+                "description": "Component capability addressing control _9.3.1 (General).",
+                "uuid": "3d32efa0-d3c2-56ba-b601-9ae01c7c142c"
+              },
+              {
+                "control-id": "_9.3.2",
+                "description": "Component capability addressing control _9.3.2 (Management review inputs).",
+                "uuid": "f6fb2336-b0c0-5e8f-bd9b-ad25f79af1e6"
+              },
+              {
+                "control-id": "_9.3.3",
+                "description": "Component capability addressing control _9.3.3 (Management review results).",
+                "uuid": "4c2c9a8e-92cd-5956-9a54-c4547cb266d1"
+              },
+              {
+                "control-id": "a.10.2",
+                "description": "Component capability addressing control a.10.2 (Allocating responsibilities).",
+                "uuid": "29b62021-b0cd-5cea-9e6e-e772fd8b954b"
+              },
+              {
+                "control-id": "a.10.3",
+                "description": "Component capability addressing control a.10.3 (Suppliers).",
+                "uuid": "afededa8-9868-5638-9d91-f2aa9b2127bf"
+              },
+              {
+                "control-id": "a.10.4",
+                "description": "Component capability addressing control a.10.4 (Customers).",
+                "uuid": "a5d6549b-e9ef-5f28-9802-61513dcdb1df"
+              },
+              {
+                "control-id": "a.2.2",
+                "description": "Component capability addressing control a.2.2 (AI policy).",
+                "uuid": "0568000e-61ad-55cf-8512-1a0397390b8f"
+              },
+              {
+                "control-id": "a.2.3",
+                "description": "Component capability addressing control a.2.3 (Alignment with other organizational policies).",
+                "uuid": "8f35bd2d-7188-5521-9273-6673c88ac0db"
+              },
+              {
+                "control-id": "a.2.4",
+                "description": "Component capability addressing control a.2.4 (Review of the AI policy).",
+                "uuid": "d3a59605-ba20-50e2-b31b-af07c6d76020"
+              },
+              {
+                "control-id": "a.3.2",
+                "description": "Component capability addressing control a.3.2 (AI roles and responsibilities).",
+                "uuid": "9ad5ca4a-bd2b-50c8-ab7b-8395ba251e60"
+              },
+              {
+                "control-id": "a.3.3",
+                "description": "Component capability addressing control a.3.3 (Reporting of concerns).",
+                "uuid": "64ba0fb9-4aa2-5d08-b463-0e7cf0bb75e8"
+              },
+              {
+                "control-id": "a.4.2",
+                "description": "Component capability addressing control a.4.2 (Resource documentation).",
+                "uuid": "670a34a9-e2ab-5ab4-9246-e0498773f914"
+              },
+              {
+                "control-id": "a.4.3",
+                "description": "Component capability addressing control a.4.3 (Data resources).",
+                "uuid": "921e9120-246e-59e2-b515-a5bd4fe7a54b"
+              },
+              {
+                "control-id": "a.4.4",
+                "description": "Component capability addressing control a.4.4 (Tooling resources).",
+                "uuid": "205595e7-b294-52bd-bc2b-6f3d23f5c695"
+              },
+              {
+                "control-id": "a.4.5",
+                "description": "Component capability addressing control a.4.5 (System and computing resources).",
+                "uuid": "6b83aac2-5699-524d-bcbd-ffde97df4338"
+              },
+              {
+                "control-id": "a.4.6",
+                "description": "Component capability addressing control a.4.6 (Human resources).",
+                "uuid": "14879f78-2028-5760-a879-6d3b1947a78f"
+              },
+              {
+                "control-id": "a.5.2",
+                "description": "Component capability addressing control a.5.2 (AI system impact assessment process).",
+                "uuid": "61f6a34f-7a4b-5eed-9824-2b20ba0e9e23"
+              },
+              {
+                "control-id": "a.5.3",
+                "description": "Component capability addressing control a.5.3 (Documentation of AI system impact assessments).",
+                "uuid": "b4f8ca79-72cc-53ac-b953-61c5f483c043"
+              },
+              {
+                "control-id": "a.5.4",
+                "description": "Component capability addressing control a.5.4 (Assessing AI system impact on individuals or groups of individuals).",
+                "uuid": "83d5b025-7d82-5489-8753-1b6128d1be9c"
+              },
+              {
+                "control-id": "a.5.5",
+                "description": "Component capability addressing control a.5.5 (Assessing societal impacts of AI systems).",
+                "uuid": "109564c0-e521-5324-b998-279e412eb5d4"
+              },
+              {
+                "control-id": "a.6.1.2",
+                "description": "Component capability addressing control a.6.1.2 (Objectives for responsible development of AI system).",
+                "uuid": "b163d424-9613-5cf2-a630-8315ea0f4380"
+              },
+              {
+                "control-id": "a.6.1.3",
+                "description": "Component capability addressing control a.6.1.3 (Processes for responsible AI system design and development).",
+                "uuid": "f203b49f-72a7-59ee-bdf2-8ac79b68d89a"
+              },
+              {
+                "control-id": "a.6.2.2",
+                "description": "Component capability addressing control a.6.2.2 (AI system requirements and specification).",
+                "uuid": "8de52326-5c68-5045-be80-f3dfaf0cfb64"
+              },
+              {
+                "control-id": "a.6.2.3",
+                "description": "Component capability addressing control a.6.2.3 (Documentation of AI system design and development).",
+                "uuid": "fbf68da5-f6e6-5119-81ee-e86bc1e27607"
+              },
+              {
+                "control-id": "a.6.2.4",
+                "description": "Component capability addressing control a.6.2.4 (AI system verification and validation).",
+                "uuid": "6de8cece-f5df-5c21-8214-1d42b4186b26"
+              },
+              {
+                "control-id": "a.6.2.5",
+                "description": "Component capability addressing control a.6.2.5 (AI system deployment).",
+                "uuid": "e70b4ab7-44a4-56e9-9198-04e9eb3624ac"
+              },
+              {
+                "control-id": "a.6.2.6",
+                "description": "Component capability addressing control a.6.2.6 (AI system operation and monitoring).",
+                "uuid": "e5bc3c2a-0260-5855-819a-891b23a4f65a"
+              },
+              {
+                "control-id": "a.6.2.7",
+                "description": "Component capability addressing control a.6.2.7 (AI system technical documentation).",
+                "uuid": "5ede40ba-2f1f-5533-be76-12bdc0e7041e"
+              },
+              {
+                "control-id": "a.6.2.8",
+                "description": "Component capability addressing control a.6.2.8 (AI system recording of event logs).",
+                "uuid": "adf532e8-48c5-5a32-8778-928aae8d1529"
+              },
+              {
+                "control-id": "a.7.2",
+                "description": "Component capability addressing control a.7.2 (Data for development and enhancement of AI system).",
+                "uuid": "12e9e1a4-51c1-5a20-84a2-b119879c0d33"
+              },
+              {
+                "control-id": "a.7.3",
+                "description": "Component capability addressing control a.7.3 (Acquisition of data).",
+                "uuid": "4263dce9-ef55-5c9b-b91f-a10a9dbbed37"
+              },
+              {
+                "control-id": "a.7.4",
+                "description": "Component capability addressing control a.7.4 (Quality of data for AI systems).",
+                "uuid": "5f9ade25-f190-53a1-84b1-ab1eb83179c8"
+              },
+              {
+                "control-id": "a.7.5",
+                "description": "Component capability addressing control a.7.5 (Data provenance).",
+                "uuid": "6db0d205-d5e7-5826-a1e4-d2df6f044211"
+              },
+              {
+                "control-id": "a.7.6",
+                "description": "Component capability addressing control a.7.6 (Data preparation).",
+                "uuid": "bf916d8c-fa51-5285-802a-3ffb29431b97"
+              },
+              {
+                "control-id": "a.8.2",
+                "description": "Component capability addressing control a.8.2 (System documentation and information for users).",
+                "uuid": "c4f08c52-3a9c-5795-9843-2b4af19acd9e"
+              },
+              {
+                "control-id": "a.8.3",
+                "description": "Component capability addressing control a.8.3 (External reporting).",
+                "uuid": "92709f6f-828d-54f8-9a57-5183951d4641"
+              },
+              {
+                "control-id": "a.8.4",
+                "description": "Component capability addressing control a.8.4 (Communication of incidents).",
+                "uuid": "0889eb02-9c11-5f7f-b15d-95d605424d7e"
+              },
+              {
+                "control-id": "a.8.5",
+                "description": "Component capability addressing control a.8.5 (Information for interested parties).",
+                "uuid": "57a5192d-034e-56f3-a450-c586ef60a8bc"
+              },
+              {
+                "control-id": "a.9.2",
+                "description": "Component capability addressing control a.9.2 (Processes for responsible use of AI systems).",
+                "uuid": "9b02a2ff-eb25-52bd-b8e6-3dbb204cd675"
+              },
+              {
+                "control-id": "a.9.3",
+                "description": "Component capability addressing control a.9.3 (Objectives for responsible use of AI system).",
+                "uuid": "aeb87aa2-c187-5e44-be3b-c986ae188a0c"
+              },
+              {
+                "control-id": "a.9.4",
+                "description": "Component capability addressing control a.9.4 (Intended use of the AI system).",
+                "uuid": "5806b57f-b827-5910-9026-a701cc0aae92"
+              }
+            ],
+            "source": "./catalog.json",
+            "uuid": "8bdafe1a-2fdc-5218-98d5-ff3e522921ac"
+          }
+        ],
+        "description": "Enterprise technical and operational capabilities implementing controls for ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "title": "ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Platform Component",
+        "type": "software",
+        "uuid": "712a2ab9-96ae-5bdf-8423-59c6e249e2f6"
+      }
+    ],
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:11Z",
+      "oscal-version": "1.2.3",
+      "title": "ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Component Definition Template",
+      "version": "2"
+    },
+    "uuid": "84f8f4f0-dbfe-5b68-92f7-240bc6a940ea"
+  }
+}

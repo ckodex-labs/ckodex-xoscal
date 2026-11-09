@@ -1,0 +1,54 @@
+{
+  "assessment-plan": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:12Z",
+      "oscal-version": "1.2.3",
+      "title": "Cadre de Conformité Cyber France (3CF) pour l'aviation civile - v2 Security Assessment Plan Template",
+      "version": "2"
+    },
+    "reviewed-controls": {
+      "control-selections": [
+        {
+          "description": "All controls in Cadre de Conformité Cyber France (3CF) pour l'aviation civile - v2",
+          "include-all": {}
+        }
+      ]
+    },
+    "tasks": [
+      {
+        "description": "Verify and examine implementation of 38 controls in the Gouvernance family for Cadre de Conformité Cyber France (3CF) pour l'aviation civile - v2.",
+        "title": "Assess Family _3 (Gouvernance)",
+        "type": "examination",
+        "uuid": "61fc329e-072e-55ec-afda-31f91eca8393"
+      },
+      {
+        "description": "Verify and examine implementation of 217 controls in the Gestion des risques de sécurité de l’information family for Cadre de Conformité Cyber France (3CF) pour l'aviation civile - v2.",
+        "title": "Assess Family _4 (Gestion des risques de sécurité de l’information)",
+        "type": "examination",
+        "uuid": "d68cf032-045d-59b8-92fe-0f031154f2dc"
+      },
+      {
+        "description": "Verify and examine implementation of 63 controls in the Personnels et compétences family for Cadre de Conformité Cyber France (3CF) pour l'aviation civile - v2.",
+        "title": "Assess Family _5 (Personnels et compétences)",
+        "type": "examination",
+        "uuid": "4c22807a-86d0-518c-93c6-a1b974e3fb28"
+      },
+      {
+        "description": "Verify and examine implementation of 108 controls in the Définition et fonctionnement du SMSI family for Cadre de Conformité Cyber France (3CF) pour l'aviation civile - v2.",
+        "title": "Assess Family _6 (Définition et fonctionnement du SMSI)",
+        "type": "examination",
+        "uuid": "a334b415-cd0f-5ca5-a270-6f248653f303"
+      },
+      {
+        "description": "Verify and examine implementation of 31 controls in the Documentation family for Cadre de Conformité Cyber France (3CF) pour l'aviation civile - v2.",
+        "title": "Assess Family _7 (Documentation)",
+        "type": "examination",
+        "uuid": "959e2558-c703-5530-8235-7f739c1652b4"
+      }
+    ],
+    "uuid": "91f5c3aa-ad43-58f8-84b1-84c27c1cd6c5"
+  }
+}

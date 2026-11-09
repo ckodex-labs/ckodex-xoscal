@@ -1,0 +1,21 @@
+{
+  "plan-of-action-and-milestones": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:13Z",
+      "oscal-version": "1.2.3",
+      "title": "CMMC version 2.0 Plan of Action and Milestones Template",
+      "version": "6"
+    },
+    "poam-items": [
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for CMMC version 2.0.",
+        "title": "Compliance Roadmap and Parameter Tailoring for CMMC version 2.0",
+        "uuid": "ecbf377b-6118-5d11-bfd3-1a774c3ca575"
+      }
+    ],
+    "uuid": "b4390dae-20e0-58a6-addb-a6a89d0e122a"
+  }
+}

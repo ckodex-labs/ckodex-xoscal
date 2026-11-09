@@ -1,0 +1,21 @@
+{
+  "plan-of-action-and-milestones": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:11Z",
+      "oscal-version": "1.2.3",
+      "title": "EU Artificial Intelligence Act (AI Act) Plan of Action and Milestones Template",
+      "version": "2"
+    },
+    "poam-items": [
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for EU Artificial Intelligence Act (AI Act).",
+        "title": "Compliance Roadmap and Parameter Tailoring for EU Artificial Intelligence Act (AI Act)",
+        "uuid": "616cb0ac-6aae-5428-916b-861ea6378ad5"
+      }
+    ],
+    "uuid": "9ac62498-704c-5f95-b2ef-b2f1343da4f6"
+  }
+}

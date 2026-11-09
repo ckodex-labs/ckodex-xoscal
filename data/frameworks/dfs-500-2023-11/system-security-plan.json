@@ -1,0 +1,2553 @@
+{
+  "system-security-plan": {
+    "control-implementation": {
+      "description": "Control implementations for NY DFS 500 with 2023-11 amendments.",
+      "implemented-requirements": [
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.10.a.1 (In addition to the requirements set forth in section 500.4(a) of this Part, each covered entity shall: — 500.10.a.1) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "f79eeb61-c415-5e44-a28c-6ca6011ad07e"
+            }
+          ],
+          "control-id": "_500.10.a.1",
+          "remarks": "Control _500.10.a.1 (In addition to the requirements set forth in section 500.4(a) of this Part, each covered entity shall: — 500.10.a.1) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "fff382c3-d861-5f89-ab13-e01adf89da27"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.10.a.2 (In addition to the requirements set forth in section 500.4(a) of this Part, each covered entity shall: — 500.10.a.2) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "15bc2999-863d-5ebf-95bb-f8bcb21babf9"
+            }
+          ],
+          "control-id": "_500.10.a.2",
+          "remarks": "Control _500.10.a.2 (In addition to the requirements set forth in section 500.4(a) of this Part, each covered entity shall: — 500.10.a.2) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "382f9bdc-4900-5dff-afec-0672cb4d1c3e"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.10.a.3 (In addition to the requirements set forth in section 500.4(a) of this Part, each covered entity shall: — 500.10.a.3) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "419d0a0f-7136-5c97-b6af-90de7fc2c1ad"
+            }
+          ],
+          "control-id": "_500.10.a.3",
+          "remarks": "Control _500.10.a.3 (In addition to the requirements set forth in section 500.4(a) of this Part, each covered entity shall: — 500.10.a.3) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "9fc603f8-207c-513c-9319-295d497c23ed"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.10.b (Cybersecurity personnel and intelligence — 500.10.b) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "0fd69e47-7ff2-516a-ae4a-ecfafba1a7fd"
+            }
+          ],
+          "control-id": "_500.10.b",
+          "remarks": "Control _500.10.b (Cybersecurity personnel and intelligence — 500.10.b) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "b1336335-bbf3-5f86-844d-bd0d5738095c"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.11.a (Third-party service provider security policy — 500.11.a) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "7f7e0df8-f4d2-5b7f-87de-efe330cc88b2"
+            }
+          ],
+          "control-id": "_500.11.a",
+          "remarks": "Control _500.11.a (Third-party service provider security policy — 500.11.a) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "4b71cf66-f541-5edf-9da8-55081763bffd"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.11.a.1 (Third-party service provider security policy — 500.11.a.1) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "faec4a96-7558-5cb3-a4c5-ad0ed3cff2ce"
+            }
+          ],
+          "control-id": "_500.11.a.1",
+          "remarks": "Control _500.11.a.1 (Third-party service provider security policy — 500.11.a.1) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "76f5b440-1bd9-5ca0-9d1d-441b87250309"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.11.a.2 (Third-party service provider security policy — 500.11.a.2) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "46066df8-6863-5845-ae9d-2159465fc9f1"
+            }
+          ],
+          "control-id": "_500.11.a.2",
+          "remarks": "Control _500.11.a.2 (Third-party service provider security policy — 500.11.a.2) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "7babff8b-b553-5187-8d41-ba676dcb81ee"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.11.a.3 (Third-party service provider security policy — 500.11.a.3) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "2c9362f6-6d30-5a6a-bfbf-6aca20b334ec"
+            }
+          ],
+          "control-id": "_500.11.a.3",
+          "remarks": "Control _500.11.a.3 (Third-party service provider security policy — 500.11.a.3) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "d7b26786-8ba8-5833-990e-c440c4d3f157"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.11.a.4 (Third-party service provider security policy — 500.11.a.4) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "8dd95364-6e52-5bdd-b1eb-266847d421f9"
+            }
+          ],
+          "control-id": "_500.11.a.4",
+          "remarks": "Control _500.11.a.4 (Third-party service provider security policy — 500.11.a.4) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "8c2b4e12-f21d-55b6-a84e-822ddcdd1038"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.11.b (Third-party service provider security policy — 500.11.b) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "a6b3b8aa-479c-5738-8b45-8fb25ae5d1a6"
+            }
+          ],
+          "control-id": "_500.11.b",
+          "remarks": "Control _500.11.b (Third-party service provider security policy — 500.11.b) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "4e2a8813-ea40-5a08-80ef-6e931d950ab1"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.11.b.1 (Third-party service provider security policy — 500.11.b.1) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "22b46a81-cb44-567f-a20d-5f90dd7a2d89"
+            }
+          ],
+          "control-id": "_500.11.b.1",
+          "remarks": "Control _500.11.b.1 (Third-party service provider security policy — 500.11.b.1) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "81a25ea8-77f0-56ee-97d9-e13488e267cd"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.11.b.2 (Third-party service provider security policy — 500.11.b.2) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "a994d660-1601-570f-8a14-62f4239d9088"
+            }
+          ],
+          "control-id": "_500.11.b.2",
+          "remarks": "Control _500.11.b.2 (Third-party service provider security policy — 500.11.b.2) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "4976ace7-adec-575f-ade3-fcf60c5df2a1"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.11.b.3 (Third-party service provider security policy — 500.11.b.3) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "e6bbffa3-dd22-5f29-8e4e-62d0a93c245b"
+            }
+          ],
+          "control-id": "_500.11.b.3",
+          "remarks": "Control _500.11.b.3 (Third-party service provider security policy — 500.11.b.3) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "3d222725-97f0-5d41-96b4-6c33c0cbd089"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.11.b.4 (Third-party service provider security policy — 500.11.b.4) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "17373bdf-5d47-50b5-86da-a76af6535a04"
+            }
+          ],
+          "control-id": "_500.11.b.4",
+          "remarks": "Control _500.11.b.4 (Third-party service provider security policy — 500.11.b.4) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "eaf4cda8-a738-5c59-b9f9-17ba94234cc8"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.12.a (Multi-factor authentication — 500.12.a) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "66e9d02f-b566-5ed7-b6af-22080be6127a"
+            }
+          ],
+          "control-id": "_500.12.a",
+          "remarks": "Control _500.12.a (Multi-factor authentication — 500.12.a) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "9e734f42-66bc-5ce3-ab12-ee6c398be585"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.12.a.1 (Multi-factor authentication — 500.12.a.1) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "47d75836-8c7b-50ed-9cc9-e0b8d7eab743"
+            }
+          ],
+          "control-id": "_500.12.a.1",
+          "remarks": "Control _500.12.a.1 (Multi-factor authentication — 500.12.a.1) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "c9934c05-c328-5c9b-8847-8beb50536405"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.12.a.2 (Multi-factor authentication — 500.12.a.2) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "b479964a-9d28-51a6-bcf4-e612b2273126"
+            }
+          ],
+          "control-id": "_500.12.a.2",
+          "remarks": "Control _500.12.a.2 (Multi-factor authentication — 500.12.a.2) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "73f6d0d7-7a2f-5874-8fa8-5b3f913b2312"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.12.a.3 (Multi-factor authentication — 500.12.a.3) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "4ece4a76-a4ed-53ef-9e26-cf7c0db8fc34"
+            }
+          ],
+          "control-id": "_500.12.a.3",
+          "remarks": "Control _500.12.a.3 (Multi-factor authentication — 500.12.a.3) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "51d54759-b082-5a90-942a-91c5e2c8927c"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.12.b (Multi-factor authentication — 500.12.b) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "70edc1c5-16b3-5b3e-b844-a331dbdf6725"
+            }
+          ],
+          "control-id": "_500.12.b",
+          "remarks": "Control _500.12.b (Multi-factor authentication — 500.12.b) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "e2255a6b-e688-5d40-9ccb-0c1b47de63f0"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.13.a (Asset management and data retention requirements — 500.13.a) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "48361e98-6f03-59ed-9432-c31d797abba5"
+            }
+          ],
+          "control-id": "_500.13.a",
+          "remarks": "Control _500.13.a (Asset management and data retention requirements — 500.13.a) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f15f2700-6474-522f-8cef-0bbdd5071e67"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.13.a.1 (Asset management and data retention requirements — 500.13.a.1) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "096dd9a1-52e0-5713-a286-55d3e4640b6e"
+            }
+          ],
+          "control-id": "_500.13.a.1",
+          "remarks": "Control _500.13.a.1 (Asset management and data retention requirements — 500.13.a.1) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "92b9618f-d17b-5d49-87c0-8c4d1ab15b7c"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.13.a.1.i (a method to track key information for each asset, including, as applicable, the following: — 500.13.a.1.i) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "319dd1cd-8361-5c5d-afa2-391576b40ded"
+            }
+          ],
+          "control-id": "_500.13.a.1.i",
+          "remarks": "Control _500.13.a.1.i (a method to track key information for each asset, including, as applicable, the following: — 500.13.a.1.i) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "1826f484-0a2b-5462-9766-c5e434e8b115"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.13.a.1.ii (a method to track key information for each asset, including, as applicable, the following: — 500.13.a.1.ii) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "0b03e5a9-c7fa-598a-872f-54b1ac1ce477"
+            }
+          ],
+          "control-id": "_500.13.a.1.ii",
+          "remarks": "Control _500.13.a.1.ii (a method to track key information for each asset, including, as applicable, the following: — 500.13.a.1.ii) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "4ce98ecf-b9d4-5c6c-9dfb-bd8ee375ec6b"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.13.a.1.iii (a method to track key information for each asset, including, as applicable, the following: — 500.13.a.1.iii) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "e85c1406-a6e0-515e-aa63-d0dec6080ce6"
+            }
+          ],
+          "control-id": "_500.13.a.1.iii",
+          "remarks": "Control _500.13.a.1.iii (a method to track key information for each asset, including, as applicable, the following: — 500.13.a.1.iii) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "ef1dbb36-0ede-5801-9ac6-2f9618d971fb"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.13.a.1.iv (a method to track key information for each asset, including, as applicable, the following: — 500.13.a.1.iv) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "7489a04f-fd52-50ee-b5e9-d9e26cbd9cf7"
+            }
+          ],
+          "control-id": "_500.13.a.1.iv",
+          "remarks": "Control _500.13.a.1.iv (a method to track key information for each asset, including, as applicable, the following: — 500.13.a.1.iv) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "1bd97add-4b43-5d1d-9f82-6d6e5106a4e5"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.13.a.1.v (a method to track key information for each asset, including, as applicable, the following: — 500.13.a.1.v) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "aa0e21a7-a183-53fc-a49a-919448665565"
+            }
+          ],
+          "control-id": "_500.13.a.1.v",
+          "remarks": "Control _500.13.a.1.v (a method to track key information for each asset, including, as applicable, the following: — 500.13.a.1.v) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "eff0c5e3-fd4d-5d97-bda6-8bc4f5991c86"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.13.a.2 (Asset management and data retention requirements — 500.13.a.2) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "e0ca537b-6209-53b1-a810-9487a560c319"
+            }
+          ],
+          "control-id": "_500.13.a.2",
+          "remarks": "Control _500.13.a.2 (Asset management and data retention requirements — 500.13.a.2) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "1ad8578f-1a2d-5453-a11d-988d0fb562df"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.13.b (Asset management and data retention requirements — 500.13.b) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "14c80442-6fe1-5945-8c34-67b334e525e4"
+            }
+          ],
+          "control-id": "_500.13.b",
+          "remarks": "Control _500.13.b (Asset management and data retention requirements — 500.13.b) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "24a24b8b-212b-51d4-a274-0ccdbb495fb4"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.14.a.1 (As part of its cybersecurity program, each covered entity shall: — 500.14.a.1) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "3e5a8748-d8c3-5c1d-8c72-aeec8440ef34"
+            }
+          ],
+          "control-id": "_500.14.a.1",
+          "remarks": "Control _500.14.a.1 (As part of its cybersecurity program, each covered entity shall: — 500.14.a.1) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "4d24a4ec-205b-524e-8825-448a93557c0a"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.14.a.2 (As part of its cybersecurity program, each covered entity shall: — 500.14.a.2) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "1a74435b-fa29-5af8-bb86-bbb7af72383f"
+            }
+          ],
+          "control-id": "_500.14.a.2",
+          "remarks": "Control _500.14.a.2 (As part of its cybersecurity program, each covered entity shall: — 500.14.a.2) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "1c6a72d9-1502-5e71-9bb5-a9deb7ca8e4e"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.14.a.3 (As part of its cybersecurity program, each covered entity shall: — 500.14.a.3) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "a143606c-172c-5c30-938f-7dfa3f7d6956"
+            }
+          ],
+          "control-id": "_500.14.a.3",
+          "remarks": "Control _500.14.a.3 (As part of its cybersecurity program, each covered entity shall: — 500.14.a.3) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "ff70cdde-26e3-5ffd-b763-85eebedfccc4"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.14.b (Monitoring and training — 500.14.b) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "dab09ba0-778a-5952-b791-e1e25406278f"
+            }
+          ],
+          "control-id": "_500.14.b",
+          "remarks": "Control _500.14.b (Monitoring and training — 500.14.b) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "50822f3a-1447-58aa-8a40-28efb6a971c6"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.14.b.1 (Monitoring and training — 500.14.b.1) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "610b0d63-f0c3-551f-bccd-e7763231ed53"
+            }
+          ],
+          "control-id": "_500.14.b.1",
+          "remarks": "Control _500.14.b.1 (Monitoring and training — 500.14.b.1) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "58b221fe-b882-5da6-982b-33386ba4ddaa"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.14.b.2 (Monitoring and training — 500.14.b.2) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "bd6a8f41-2eea-5109-a228-a6e445045c6f"
+            }
+          ],
+          "control-id": "_500.14.b.2",
+          "remarks": "Control _500.14.b.2 (Monitoring and training — 500.14.b.2) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "81c72b09-494c-5434-9aa9-42598f5fac1b"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.15.a (Encryption of nonpublic information — 500.15.a) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "003caab1-2eaf-5e96-843d-0f8dd1b3f849"
+            }
+          ],
+          "control-id": "_500.15.a",
+          "remarks": "Control _500.15.a (Encryption of nonpublic information — 500.15.a) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "9c189671-ec39-5067-b38a-21dd821c1153"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.15.b (Encryption of nonpublic information — 500.15.b) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "3cf0df56-727b-5183-b053-6dbb13e0df94"
+            }
+          ],
+          "control-id": "_500.15.b",
+          "remarks": "Control _500.15.b (Encryption of nonpublic information — 500.15.b) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "b73cdc32-016f-5d29-a772-5f10f4bf38ad"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.16.a (Incident response and business continuity management — 500.16.a) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "7103a339-4d9c-566d-87e0-e608c118883f"
+            }
+          ],
+          "control-id": "_500.16.a",
+          "remarks": "Control _500.16.a (Incident response and business continuity management — 500.16.a) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "ab3271e9-37dc-5a7a-9ab6-ca06d6cba7f0"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.16.a.1 (Incident response plan) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "684710d7-c1df-5683-93a9-f5fdf0cbfdde"
+            }
+          ],
+          "control-id": "_500.16.a.1",
+          "remarks": "Control _500.16.a.1 (Incident response plan) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "2a640ee5-2665-5855-9707-873b52b1fb69"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.16.a.1.i (Incident response plan — 500.16.a.1.i) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "5abe63b6-033b-58a1-be74-2693f34bf88d"
+            }
+          ],
+          "control-id": "_500.16.a.1.i",
+          "remarks": "Control _500.16.a.1.i (Incident response plan — 500.16.a.1.i) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "4d5b79b6-575b-5f94-b890-4117fc7efdd5"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.16.a.1.ii (Incident response plan — 500.16.a.1.ii) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "e08f7630-0ca7-5674-9e7c-082767dc0ac1"
+            }
+          ],
+          "control-id": "_500.16.a.1.ii",
+          "remarks": "Control _500.16.a.1.ii (Incident response plan — 500.16.a.1.ii) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "92df2392-96d8-54a5-82d4-b11ae73425f2"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.16.a.1.iii (Incident response plan — 500.16.a.1.iii) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "5cdceca1-5dc1-516d-a775-bacc301de651"
+            }
+          ],
+          "control-id": "_500.16.a.1.iii",
+          "remarks": "Control _500.16.a.1.iii (Incident response plan — 500.16.a.1.iii) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "32b98180-289b-5e2d-beda-73402b1daea5"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.16.a.1.iv (Incident response plan — 500.16.a.1.iv) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "98b1e047-1b91-5af9-a06a-eb7a034ef5bf"
+            }
+          ],
+          "control-id": "_500.16.a.1.iv",
+          "remarks": "Control _500.16.a.1.iv (Incident response plan — 500.16.a.1.iv) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "7e3dd680-b19f-54bb-bad7-0358d3703b73"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.16.a.1.ix (Incident response plan — 500.16.a.1.ix) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "e20863ba-f4c9-579c-9ccf-89249e3e4ef2"
+            }
+          ],
+          "control-id": "_500.16.a.1.ix",
+          "remarks": "Control _500.16.a.1.ix (Incident response plan — 500.16.a.1.ix) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "bd0bc34e-8a88-5261-bde4-9edcba489cb9"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.16.a.1.v (Incident response plan — 500.16.a.1.v) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "6224e3d1-ef01-59b2-b49f-74109345f12b"
+            }
+          ],
+          "control-id": "_500.16.a.1.v",
+          "remarks": "Control _500.16.a.1.v (Incident response plan — 500.16.a.1.v) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "76260057-0cc7-5a1b-8f1a-501268090d03"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.16.a.1.vi (Incident response plan — 500.16.a.1.vi) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "82b757f1-f51b-5116-83f1-1a70baa40e66"
+            }
+          ],
+          "control-id": "_500.16.a.1.vi",
+          "remarks": "Control _500.16.a.1.vi (Incident response plan — 500.16.a.1.vi) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "6ca64f82-b53c-5408-a8af-bf708d84d9ed"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.16.a.1.vii (Incident response plan — 500.16.a.1.vii) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "99df67aa-cd61-50b2-bc3f-1d64ea2cd3e5"
+            }
+          ],
+          "control-id": "_500.16.a.1.vii",
+          "remarks": "Control _500.16.a.1.vii (Incident response plan — 500.16.a.1.vii) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "b4ea70f2-ee41-5e43-bf0a-7183988bb4a3"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.16.a.1.viii (Incident response plan — 500.16.a.1.viii) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "2133542e-d04a-5e7f-8915-3f350d6b06a4"
+            }
+          ],
+          "control-id": "_500.16.a.1.viii",
+          "remarks": "Control _500.16.a.1.viii (Incident response plan — 500.16.a.1.viii) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "0300af11-e7e3-5899-8b2a-824bb88a0245"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.16.a.2 (Business continuity and disaster recovery (BCDR) plan) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "de304c3e-1e8f-5c8b-8892-a128d043aa86"
+            }
+          ],
+          "control-id": "_500.16.a.2",
+          "remarks": "Control _500.16.a.2 (Business continuity and disaster recovery (BCDR) plan) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "99e4d63d-174a-5fb1-9292-aeb4d6cde82b"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.16.a.2.i (Business continuity and disaster recovery (BCDR) plan — 500.16.a.2.i) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "dadd6d41-b47c-5567-84fa-51f8c70e45f5"
+            }
+          ],
+          "control-id": "_500.16.a.2.i",
+          "remarks": "Control _500.16.a.2.i (Business continuity and disaster recovery (BCDR) plan — 500.16.a.2.i) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "cf0b15ff-363b-5ab9-946f-064316ab1167"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.16.a.2.ii (Business continuity and disaster recovery (BCDR) plan — 500.16.a.2.ii) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "636c7d1e-cc8b-5a7a-8253-0a20a4ef50e8"
+            }
+          ],
+          "control-id": "_500.16.a.2.ii",
+          "remarks": "Control _500.16.a.2.ii (Business continuity and disaster recovery (BCDR) plan — 500.16.a.2.ii) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "4023049f-ee82-5c64-8989-bb4b4710937a"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.16.a.2.iii (Business continuity and disaster recovery (BCDR) plan — 500.16.a.2.iii) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "62b865ae-4966-58ad-9bcf-b70acf51e882"
+            }
+          ],
+          "control-id": "_500.16.a.2.iii",
+          "remarks": "Control _500.16.a.2.iii (Business continuity and disaster recovery (BCDR) plan — 500.16.a.2.iii) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "eeeb43a9-f059-56f0-9043-907e0342f0bf"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.16.a.2.iv (Business continuity and disaster recovery (BCDR) plan — 500.16.a.2.iv) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "8abbb8e0-7bec-5817-a03d-7648407bb082"
+            }
+          ],
+          "control-id": "_500.16.a.2.iv",
+          "remarks": "Control _500.16.a.2.iv (Business continuity and disaster recovery (BCDR) plan — 500.16.a.2.iv) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "835ed144-9c2b-59f7-8882-8e60d36c0434"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.16.a.2.v (Business continuity and disaster recovery (BCDR) plan — 500.16.a.2.v) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "fdb5028c-8266-580f-ac49-473aefbcbf6a"
+            }
+          ],
+          "control-id": "_500.16.a.2.v",
+          "remarks": "Control _500.16.a.2.v (Business continuity and disaster recovery (BCDR) plan — 500.16.a.2.v) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "4aabb9c8-a6fc-5b4c-9ce9-eb4bd6458d9e"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.16.a.2.vi (Business continuity and disaster recovery (BCDR) plan — 500.16.a.2.vi) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "d556cf20-35a2-51c7-bed9-ad3b241a8a22"
+            }
+          ],
+          "control-id": "_500.16.a.2.vi",
+          "remarks": "Control _500.16.a.2.vi (Business continuity and disaster recovery (BCDR) plan — 500.16.a.2.vi) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "7f3368b4-68f9-5d20-b2e8-43ef6286aa1c"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.16.b (Incident response and business continuity management — 500.16.b) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "db4d4e14-3548-5311-97bd-f978ef0bda5e"
+            }
+          ],
+          "control-id": "_500.16.b",
+          "remarks": "Control _500.16.b (Incident response and business continuity management — 500.16.b) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "321e50c0-78ea-5c1e-8291-2f875f19cd96"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.16.c (Incident response and business continuity management — 500.16.c) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "1eb35eb4-5c40-5190-b3d4-382f5c90f955"
+            }
+          ],
+          "control-id": "_500.16.c",
+          "remarks": "Control _500.16.c (Incident response and business continuity management — 500.16.c) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "d26578c4-a699-5420-bdf0-7d09d5c49fc8"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.16.d (Incident response and business continuity management — 500.16.d) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "1a907d36-606f-5e7a-bf69-9a6abb77a1f4"
+            }
+          ],
+          "control-id": "_500.16.d",
+          "remarks": "Control _500.16.d (Incident response and business continuity management — 500.16.d) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "dfc50018-2212-547f-95a8-66de414f961e"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.16.d.1 (Each covered entity shall periodically, but at a minimum annually, test its: — 500.16.d.1) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "41547da9-0c54-57a0-b3e0-2a931c6fb60a"
+            }
+          ],
+          "control-id": "_500.16.d.1",
+          "remarks": "Control _500.16.d.1 (Each covered entity shall periodically, but at a minimum annually, test its: — 500.16.d.1) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "663f3c49-37cf-53ee-99a0-1487877a10cc"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.16.d.2 (Each covered entity shall periodically, but at a minimum annually, test its: — 500.16.d.2) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "bea46b66-2dd0-5888-b02b-b58c6af15271"
+            }
+          ],
+          "control-id": "_500.16.d.2",
+          "remarks": "Control _500.16.d.2 (Each covered entity shall periodically, but at a minimum annually, test its: — 500.16.d.2) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "332b8860-2b6c-5193-adf4-e0aa99a4b30d"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.16.e (Incident response and business continuity management — 500.16.e) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "f6556db9-a4ee-5a8d-bbeb-55cf925b66d1"
+            }
+          ],
+          "control-id": "_500.16.e",
+          "remarks": "Control _500.16.e (Incident response and business continuity management — 500.16.e) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "06c70641-0c9c-5492-9ccb-f62898327b03"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.17.a.1 (Notice of cybersecurity incident — 500.17.a.1) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "1909c957-8661-5979-b622-92acdb6b5a21"
+            }
+          ],
+          "control-id": "_500.17.a.1",
+          "remarks": "Control _500.17.a.1 (Notice of cybersecurity incident — 500.17.a.1) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "442e457c-eaac-5397-aa46-58a6f5895b2f"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.17.a.2 (Notice of cybersecurity incident — 500.17.a.2) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "d106c60d-11cb-58ea-b4dc-d6b5efc20f38"
+            }
+          ],
+          "control-id": "_500.17.a.2",
+          "remarks": "Control _500.17.a.2 (Notice of cybersecurity incident — 500.17.a.2) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "cc732e4c-1cfc-5f5e-8f4e-a560b0ad5ef0"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.17.b.1 (Notice of compliance — 500.17.b.1) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "8bdaeec4-4c47-51e6-8d2b-468ee5dfc910"
+            }
+          ],
+          "control-id": "_500.17.b.1",
+          "remarks": "Control _500.17.b.1 (Notice of compliance — 500.17.b.1) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "0f0d8be3-7c86-5eb8-a3ab-5f14ff48acdf"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.17.b.1.i (Annually each covered entity shall submit to the superintendent electronically by April 15 either: — 500.17.b.1.i) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "dbe2b729-bd4c-5041-827c-9f573c2953ef"
+            }
+          ],
+          "control-id": "_500.17.b.1.i",
+          "remarks": "Control _500.17.b.1.i (Annually each covered entity shall submit to the superintendent electronically by April 15 either: — 500.17.b.1.i) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "45e0cf8e-303d-574f-9afd-3996debfb3d0"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.17.b.1.i.a (a written certification that: — 500.17.b.1.i.a) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "dd5c452a-7fdf-5d8c-ace1-ee9e4b5017d2"
+            }
+          ],
+          "control-id": "_500.17.b.1.i.a",
+          "remarks": "Control _500.17.b.1.i.a (a written certification that: — 500.17.b.1.i.a) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "041936c0-0782-5760-8471-2a100340b03a"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.17.b.1.i.b (a written certification that: — 500.17.b.1.i.b) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "c6443f0b-b244-57f7-a5ad-eea5177c904f"
+            }
+          ],
+          "control-id": "_500.17.b.1.i.b",
+          "remarks": "Control _500.17.b.1.i.b (a written certification that: — 500.17.b.1.i.b) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "682339a2-ef51-50a3-ad39-70cd97a5cc13"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.17.b.1.ii (Annually each covered entity shall submit to the superintendent electronically by April 15 either: — 500.17.b.1.ii) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "165d37fa-7ea6-5621-bef8-b0176be34ef1"
+            }
+          ],
+          "control-id": "_500.17.b.1.ii",
+          "remarks": "Control _500.17.b.1.ii (Annually each covered entity shall submit to the superintendent electronically by April 15 either: — 500.17.b.1.ii) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "cd225a6e-8deb-5b63-89c2-e9bce72e1fce"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.17.b.1.ii.a (a written acknowledgment that: — 500.17.b.1.ii.a) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "0a8bf32e-24e4-52f9-8003-4b42ce75040d"
+            }
+          ],
+          "control-id": "_500.17.b.1.ii.a",
+          "remarks": "Control _500.17.b.1.ii.a (a written acknowledgment that: — 500.17.b.1.ii.a) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "642c3c46-825c-5fc3-9847-fed951a18338"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.17.b.1.ii.b (a written acknowledgment that: — 500.17.b.1.ii.b) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "1e8a7cc3-09c6-5e8f-b2e7-6303c6603802"
+            }
+          ],
+          "control-id": "_500.17.b.1.ii.b",
+          "remarks": "Control _500.17.b.1.ii.b (a written acknowledgment that: — 500.17.b.1.ii.b) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "844771ce-416c-5fb0-ad57-3b61ab8f46cf"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.17.b.1.ii.c (a written acknowledgment that: — 500.17.b.1.ii.c) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "38edeeb6-417d-50b1-a26e-3a59b3f829d3"
+            }
+          ],
+          "control-id": "_500.17.b.1.ii.c",
+          "remarks": "Control _500.17.b.1.ii.c (a written acknowledgment that: — 500.17.b.1.ii.c) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "df3e9e77-7629-5e51-b879-47a6a0f0a707"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.17.b.2 (Notice of compliance — 500.17.b.2) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "a25906c7-9141-5294-b0d2-99a475ee4197"
+            }
+          ],
+          "control-id": "_500.17.b.2",
+          "remarks": "Control _500.17.b.2 (Notice of compliance — 500.17.b.2) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "e08b4e90-b275-5b14-88ef-bc290647cddd"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.17.b.3 (Notice of compliance — 500.17.b.3) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "638bf0f1-f13a-5a6d-8d46-8d18e3dd5ff8"
+            }
+          ],
+          "control-id": "_500.17.b.3",
+          "remarks": "Control _500.17.b.3 (Notice of compliance — 500.17.b.3) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "84945768-c1f0-5c26-a30d-cf15acd75b01"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.17.c (Notice and explanation of extortion payment) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "6f8a01ca-8421-5663-b10b-334f765df9ab"
+            }
+          ],
+          "control-id": "_500.17.c",
+          "remarks": "Control _500.17.c (Notice and explanation of extortion payment) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "44ccc8be-760d-50d7-a540-ded840ab2050"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.17.c.1 (Notice and explanation of extortion payment — 500.17.c.1) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "e8375af8-b101-557c-9233-37f5d9589889"
+            }
+          ],
+          "control-id": "_500.17.c.1",
+          "remarks": "Control _500.17.c.1 (Notice and explanation of extortion payment — 500.17.c.1) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "3cb677af-da42-58be-854d-14751ee623aa"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.17.c.2 (Notice and explanation of extortion payment — 500.17.c.2) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "656f13c1-09d5-59f6-b36b-3cd9381e0ae6"
+            }
+          ],
+          "control-id": "_500.17.c.2",
+          "remarks": "Control _500.17.c.2 (Notice and explanation of extortion payment — 500.17.c.2) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "bc2039d4-114f-5a53-b3d9-d8074a49ebc2"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.19.a (Limited exemption) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "650343ee-1928-516a-a956-3d5ff326377d"
+            }
+          ],
+          "control-id": "_500.19.a",
+          "remarks": "Control _500.19.a (Limited exemption) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "7bef3b61-38aa-5fd0-ba71-7a3cb1744dc8"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.19.b (Exemptions — 500.19.b) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "b591e184-0846-56ab-82e7-55ebc7ebb47f"
+            }
+          ],
+          "control-id": "_500.19.b",
+          "remarks": "Control _500.19.b (Exemptions — 500.19.b) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "bbac0d10-12c4-555d-a0a1-dcf821250ab8"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.19.c (Exemptions — 500.19.c) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "987aafb1-1a58-5895-86e6-22c0603f7efc"
+            }
+          ],
+          "control-id": "_500.19.c",
+          "remarks": "Control _500.19.c (Exemptions — 500.19.c) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "41a9d1f6-81ed-58ba-82ca-b7b743468c33"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.19.d (Exemptions — 500.19.d) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "48095d9a-6910-5c40-9d85-791996bbc0c6"
+            }
+          ],
+          "control-id": "_500.19.d",
+          "remarks": "Control _500.19.d (Exemptions — 500.19.d) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "e0e4b06d-ed73-5038-a4ee-34f9e282e346"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.19.e (Exemptions — 500.19.e) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "2af92ebf-5ebc-5a35-bd47-4c978a217bc6"
+            }
+          ],
+          "control-id": "_500.19.e",
+          "remarks": "Control _500.19.e (Exemptions — 500.19.e) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "1602bb3b-0029-503f-9279-f05200ac05ec"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.19.f (Exemptions — 500.19.f) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "e19e8501-8639-558d-b67f-b11d8035b7eb"
+            }
+          ],
+          "control-id": "_500.19.f",
+          "remarks": "Control _500.19.f (Exemptions — 500.19.f) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "d2ccc212-1e85-56e5-b105-452c86332406"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.19.g (Exemptions — 500.19.g) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "75104bee-74b7-514e-b814-5dc34b87419d"
+            }
+          ],
+          "control-id": "_500.19.g",
+          "remarks": "Control _500.19.g (Exemptions — 500.19.g) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "a641fa7f-79a9-566e-9d39-dbfedfd336ab"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.19.h (Exemptions — 500.19.h) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "4f91c93e-906f-5444-abb5-7a4aca0b210e"
+            }
+          ],
+          "control-id": "_500.19.h",
+          "remarks": "Control _500.19.h (Exemptions — 500.19.h) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "00b28796-583e-546c-b9a9-9218d084e32f"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.2.a (Cybersecurity program — 500.2.a) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "31df8106-943b-535d-98be-77b4d8c5efdf"
+            }
+          ],
+          "control-id": "_500.2.a",
+          "remarks": "Control _500.2.a (Cybersecurity program — 500.2.a) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f8d660cf-5a24-590c-a06c-f8d2af28b66a"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.2.b (Cybersecurity program — 500.2.b) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "b2187298-73ef-5114-811c-648c1da41dee"
+            }
+          ],
+          "control-id": "_500.2.b",
+          "remarks": "Control _500.2.b (Cybersecurity program — 500.2.b) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "00d832fa-43c7-51d5-b23d-15e7f36c6b9e"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.2.b.1 (Cybersecurity program — 500.2.b.1) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "e5e917fc-99fe-5be6-aa5a-31bd1b3bac45"
+            }
+          ],
+          "control-id": "_500.2.b.1",
+          "remarks": "Control _500.2.b.1 (Cybersecurity program — 500.2.b.1) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "c581c7c3-3ad7-5ee7-b55b-f9e9b8dfa70e"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.2.b.2 (Cybersecurity program — 500.2.b.2) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "3fcd39cf-8fa2-58c9-9f29-39e952aeb211"
+            }
+          ],
+          "control-id": "_500.2.b.2",
+          "remarks": "Control _500.2.b.2 (Cybersecurity program — 500.2.b.2) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "81fb2628-d5f3-51d1-a35e-b0ef49017f62"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.2.b.3 (Cybersecurity program — 500.2.b.3) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "c81c140f-b1cc-5e45-a0b3-41312f080cc0"
+            }
+          ],
+          "control-id": "_500.2.b.3",
+          "remarks": "Control _500.2.b.3 (Cybersecurity program — 500.2.b.3) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "25a7d653-01d8-51df-98dc-65b25ffe08ed"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.2.b.4 (Cybersecurity program — 500.2.b.4) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ea946cd6-e3fb-530d-9bac-977785d10330"
+            }
+          ],
+          "control-id": "_500.2.b.4",
+          "remarks": "Control _500.2.b.4 (Cybersecurity program — 500.2.b.4) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "7e14baa9-7bd5-55e0-b9f6-2997944ed60e"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.2.b.5 (Cybersecurity program — 500.2.b.5) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "848c1d71-518f-58ec-a2e9-276bbe330259"
+            }
+          ],
+          "control-id": "_500.2.b.5",
+          "remarks": "Control _500.2.b.5 (Cybersecurity program — 500.2.b.5) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "c61635a8-fb7e-5a95-b89e-a6666de79fd9"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.2.b.6 (Cybersecurity program — 500.2.b.6) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "f6ba2091-eed4-5682-b4e3-0f6ac46de5a8"
+            }
+          ],
+          "control-id": "_500.2.b.6",
+          "remarks": "Control _500.2.b.6 (Cybersecurity program — 500.2.b.6) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "d4adf0ba-4287-5d30-8c85-96083ea1b5ae"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.2.c (Cybersecurity program — 500.2.c) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "7909a3a8-8e22-5330-9ce9-08c0d28ae785"
+            }
+          ],
+          "control-id": "_500.2.c",
+          "remarks": "Control _500.2.c (Cybersecurity program — 500.2.c) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "55c6c74a-d643-5e50-9685-02220e43ec9f"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.2.d (Cybersecurity program — 500.2.d) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "67421b44-b7c3-5a35-86b9-1b2c6d629ca2"
+            }
+          ],
+          "control-id": "_500.2.d",
+          "remarks": "Control _500.2.d (Cybersecurity program — 500.2.d) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "9d3f8c88-4b5f-5513-aff6-b7b18a3bbeab"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.2.e (Cybersecurity program — 500.2.e) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "6a639739-eeb7-5416-81bb-7655b524c223"
+            }
+          ],
+          "control-id": "_500.2.e",
+          "remarks": "Control _500.2.e (Cybersecurity program — 500.2.e) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "6f1d79e3-90d2-5f3c-bd93-cd54337a5fe9"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.24.a (Exemptions from electronic filing and submission requirements — 500.24.a) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "39446391-6fdb-507a-a50b-8711a0ed78ca"
+            }
+          ],
+          "control-id": "_500.24.a",
+          "remarks": "Control _500.24.a (Exemptions from electronic filing and submission requirements — 500.24.a) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "1dbcdbd4-a9ce-5e63-aa80-b986c16362e5"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.24.b.1 (The request for an exemption shall: — 500.24.b.1) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "665b39a2-40c6-5ee5-8fc6-a5a8ac591212"
+            }
+          ],
+          "control-id": "_500.24.b.1",
+          "remarks": "Control _500.24.b.1 (The request for an exemption shall: — 500.24.b.1) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "6a7ac4c4-ba85-5c8f-a75d-7862ae17f01a"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.24.b.2 (The request for an exemption shall: — 500.24.b.2) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "8b1b9d92-d027-569d-887b-7393eaf5fb1c"
+            }
+          ],
+          "control-id": "_500.24.b.2",
+          "remarks": "Control _500.24.b.2 (The request for an exemption shall: — 500.24.b.2) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "24c1332c-2dc5-5845-ab53-f9eae7b70365"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.24.b.3 (The request for an exemption shall: — 500.24.b.3) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "a6cbf114-395b-5c50-861b-dad533040b21"
+            }
+          ],
+          "control-id": "_500.24.b.3",
+          "remarks": "Control _500.24.b.3 (The request for an exemption shall: — 500.24.b.3) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "68f7c9f2-c3fb-52f9-a99f-54f5c31b9564"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.24.b.4 (The request for an exemption shall: — 500.24.b.4) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "07c691cf-c7c2-50da-9cb7-6bc9b9c31c6e"
+            }
+          ],
+          "control-id": "_500.24.b.4",
+          "remarks": "Control _500.24.b.4 (The request for an exemption shall: — 500.24.b.4) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "e73e2bcc-4f25-5c15-bd32-d7d7189ae918"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.24.c (Exemptions from electronic filing and submission requirements — 500.24.c) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ef8c8e89-55ef-5eac-bd78-ef992862b6fa"
+            }
+          ],
+          "control-id": "_500.24.c",
+          "remarks": "Control _500.24.c (Exemptions from electronic filing and submission requirements — 500.24.c) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "e56b8153-2ec6-5526-b578-ec921a10098e"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.24.d (Exemptions from electronic filing and submission requirements — 500.24.d) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "a2355564-4451-5e46-9b4e-7353be30cde3"
+            }
+          ],
+          "control-id": "_500.24.d",
+          "remarks": "Control _500.24.d (Exemptions from electronic filing and submission requirements — 500.24.d) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "67a2017b-f679-5340-b630-fd46b22d580f"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.24.e (Exemptions from electronic filing and submission requirements — 500.24.e) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "42ada366-b808-5e9f-ab59-174578d773a9"
+            }
+          ],
+          "control-id": "_500.24.e",
+          "remarks": "Control _500.24.e (Exemptions from electronic filing and submission requirements — 500.24.e) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "3decaaf2-21a2-554a-9956-da226b2b7361"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.3.a (Procedures — 500.3.a) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ad8159fc-cc65-5cf3-a06e-002d1a503b08"
+            }
+          ],
+          "control-id": "_500.3.a",
+          "remarks": "Control _500.3.a (Procedures — 500.3.a) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "77128705-b8b9-57be-82f6-d4a846eff263"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.3.b (Procedures — 500.3.b) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "a183562a-ba91-5b23-8d08-559d98854be9"
+            }
+          ],
+          "control-id": "_500.3.b",
+          "remarks": "Control _500.3.b (Procedures — 500.3.b) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "ac3b8c49-1ab2-5982-8fbb-d3c6c2c8b13f"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.3.c (Procedures — 500.3.c) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "14465d7c-83d3-555e-81cc-8c2d5cb6b88e"
+            }
+          ],
+          "control-id": "_500.3.c",
+          "remarks": "Control _500.3.c (Procedures — 500.3.c) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "7e727bad-a79b-5031-9705-008023b46b6e"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.3.d (Procedures — 500.3.d) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "f9f22002-fb1b-53c6-9009-4b96a0e4ee05"
+            }
+          ],
+          "control-id": "_500.3.d",
+          "remarks": "Control _500.3.d (Procedures — 500.3.d) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "75339177-e8ab-515c-b1b9-10861a6ab0fb"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.3.e (Procedures — 500.3.e) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "48e0c47a-bc84-5a70-bd49-9dd20dbae980"
+            }
+          ],
+          "control-id": "_500.3.e",
+          "remarks": "Control _500.3.e (Procedures — 500.3.e) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "a1e2542a-9349-5e46-9adf-8b47522be8ac"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.3.f (Procedures — 500.3.f) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "c45567c3-ce8d-5328-ac3d-9d3eefcebe90"
+            }
+          ],
+          "control-id": "_500.3.f",
+          "remarks": "Control _500.3.f (Procedures — 500.3.f) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f0663e9d-1144-5735-93db-c6b461039605"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.3.g (Procedures — 500.3.g) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "208384c0-cdc2-52d7-8f1d-5b895ee12820"
+            }
+          ],
+          "control-id": "_500.3.g",
+          "remarks": "Control _500.3.g (Procedures — 500.3.g) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "382166ee-1d5c-5ec7-a1f3-81e8295f46e0"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.3.h (Procedures — 500.3.h) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "dce75b9b-98db-5f47-ae7e-65c295d14d45"
+            }
+          ],
+          "control-id": "_500.3.h",
+          "remarks": "Control _500.3.h (Procedures — 500.3.h) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "412afb42-bd58-5cde-abb7-bd3116cf86e1"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.3.i (Procedures — 500.3.i) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "38c56eff-c286-526b-bfc8-25608099625d"
+            }
+          ],
+          "control-id": "_500.3.i",
+          "remarks": "Control _500.3.i (Procedures — 500.3.i) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "b243479e-9b68-5777-b71e-1223c215184b"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.3.j (Procedures — 500.3.j) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "9a63ab56-b2a2-5a47-8446-0e709729092c"
+            }
+          ],
+          "control-id": "_500.3.j",
+          "remarks": "Control _500.3.j (Procedures — 500.3.j) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "290a8013-7151-5275-9d66-376386a5b46a"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.3.k (Procedures — 500.3.k) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "4dc305c5-a697-5e69-81b7-e841bb6dcabe"
+            }
+          ],
+          "control-id": "_500.3.k",
+          "remarks": "Control _500.3.k (Procedures — 500.3.k) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "276e09bd-4fc2-5911-8f96-44252940fa28"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.3.l (Procedures — 500.3.l) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "d2670eb4-ed1d-597c-8556-32182358b038"
+            }
+          ],
+          "control-id": "_500.3.l",
+          "remarks": "Control _500.3.l (Procedures — 500.3.l) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "e4f3fc37-0f8a-5ca9-97d2-8d2fca8bc0fb"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.3.m (Procedures — 500.3.m) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "9f54b5d3-c698-5102-8b73-872006b66eba"
+            }
+          ],
+          "control-id": "_500.3.m",
+          "remarks": "Control _500.3.m (Procedures — 500.3.m) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "03d3f6a9-ab81-57fb-8af3-9286c274462e"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.3.n (Procedures — 500.3.n) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "8925efc1-c775-50de-bb53-619e282feec7"
+            }
+          ],
+          "control-id": "_500.3.n",
+          "remarks": "Control _500.3.n (Procedures — 500.3.n) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "4f0434ae-13ef-5aed-9fec-be9f2b5eb974"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.3.o (Procedures — 500.3.o) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "5d1d5128-080b-59c8-928a-abfcdf174fe5"
+            }
+          ],
+          "control-id": "_500.3.o",
+          "remarks": "Control _500.3.o (Procedures — 500.3.o) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "6b8250bc-dded-5bd3-a0fe-e2b9e868bff2"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.4.a (Chief information security officer) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "a61bb0d7-ae57-5f55-aa88-0fbce19fe117"
+            }
+          ],
+          "control-id": "_500.4.a",
+          "remarks": "Control _500.4.a (Chief information security officer) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "7da2a273-f4c1-5419-962c-ade816079328"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.4.a.1 (Chief information security officer — 500.4.a.1) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "613d8dfe-8a08-5023-9f27-af0194c7efc8"
+            }
+          ],
+          "control-id": "_500.4.a.1",
+          "remarks": "Control _500.4.a.1 (Chief information security officer — 500.4.a.1) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "39308788-ce3b-5389-88f0-980c4780823e"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.4.a.2 (Chief information security officer — 500.4.a.2) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "a328e3c7-359d-562c-aed9-8442967e21b8"
+            }
+          ],
+          "control-id": "_500.4.a.2",
+          "remarks": "Control _500.4.a.2 (Chief information security officer — 500.4.a.2) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f61d4db1-c635-58aa-a919-38693cd610f8"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.4.a.3 (Chief information security officer — 500.4.a.3) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ed8e309b-170a-5aaf-9b66-d96f14da4d63"
+            }
+          ],
+          "control-id": "_500.4.a.3",
+          "remarks": "Control _500.4.a.3 (Chief information security officer — 500.4.a.3) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "50fc2a81-1e02-5fbf-a59d-646852bf28b1"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.4.b (Report) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "0ce96b64-26db-5762-98ef-cc560c31d290"
+            }
+          ],
+          "control-id": "_500.4.b",
+          "remarks": "Control _500.4.b (Report) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "ee43f18e-bca3-5114-b12e-386ce0d61578"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.4.b.1 (Report — 500.4.b.1) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "8ecc7f8c-857e-556f-b803-2b151c78f795"
+            }
+          ],
+          "control-id": "_500.4.b.1",
+          "remarks": "Control _500.4.b.1 (Report — 500.4.b.1) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "a8c5242c-d9ea-5afa-aba6-9ffb0c44aa96"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.4.b.2 (Report — 500.4.b.2) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "f126b48e-f577-50ef-a21a-3d0241a1a279"
+            }
+          ],
+          "control-id": "_500.4.b.2",
+          "remarks": "Control _500.4.b.2 (Report — 500.4.b.2) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "7a0ab875-a261-54bc-89df-aaff98ce6275"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.4.b.3 (Report — 500.4.b.3) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "806a8d90-2487-57f8-88a8-8f88b0b62562"
+            }
+          ],
+          "control-id": "_500.4.b.3",
+          "remarks": "Control _500.4.b.3 (Report — 500.4.b.3) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "56703c14-519b-5d62-9c29-eef0bffb8cd6"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.4.b.4 (Report — 500.4.b.4) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "dae789e9-b39a-5207-b5b7-0ef4d4ee03f5"
+            }
+          ],
+          "control-id": "_500.4.b.4",
+          "remarks": "Control _500.4.b.4 (Report — 500.4.b.4) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "76608931-6f02-5143-bc00-aaceb5eacd4b"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.4.b.5 (Report — 500.4.b.5) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "c87e657f-5b5d-561f-8979-95af79fd9b64"
+            }
+          ],
+          "control-id": "_500.4.b.5",
+          "remarks": "Control _500.4.b.5 (Report — 500.4.b.5) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "34daa0a5-884e-5745-b051-b5f940f86827"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.4.b.6 (Report — 500.4.b.6) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "0a872ecd-b382-5f47-9bb5-22841f882c9f"
+            }
+          ],
+          "control-id": "_500.4.b.6",
+          "remarks": "Control _500.4.b.6 (Report — 500.4.b.6) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "9ed7a65e-4fe1-501d-b508-409364056c75"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.4.c (Cybersecurity governance — 500.4.c) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "aad37071-2482-510e-9ba6-01fde35acfd6"
+            }
+          ],
+          "control-id": "_500.4.c",
+          "remarks": "Control _500.4.c (Cybersecurity governance — 500.4.c) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "e16b25a7-7078-5fe9-913f-99cfe4dbea83"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.4.d (Cybersecurity governance — 500.4.d) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "18d4e3e2-77e1-55c2-88e9-e5a233f1ea1c"
+            }
+          ],
+          "control-id": "_500.4.d",
+          "remarks": "Control _500.4.d (Cybersecurity governance — 500.4.d) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "624bf41a-5ccd-5007-948e-28d3cc741893"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.4.d.1 (Cybersecurity governance — 500.4.d.1) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "23ec1570-c77b-5d39-8aa9-1e63fbc04135"
+            }
+          ],
+          "control-id": "_500.4.d.1",
+          "remarks": "Control _500.4.d.1 (Cybersecurity governance — 500.4.d.1) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "59ab93ec-2c57-5e53-80d9-1da7ffedc6f9"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.4.d.2 (Cybersecurity governance — 500.4.d.2) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "b46a6d30-e4db-576a-b9b3-a25607215f4b"
+            }
+          ],
+          "control-id": "_500.4.d.2",
+          "remarks": "Control _500.4.d.2 (Cybersecurity governance — 500.4.d.2) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "73c4b786-1c0b-596f-8438-2cc9bae9c765"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.4.d.3 (Cybersecurity governance — 500.4.d.3) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "d34a7bdc-9faa-5ee7-ae72-cdcc1c725cc6"
+            }
+          ],
+          "control-id": "_500.4.d.3",
+          "remarks": "Control _500.4.d.3 (Cybersecurity governance — 500.4.d.3) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "2378e8a6-68c9-58eb-83c7-1e15c88b7929"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.4.d.4 (Cybersecurity governance — 500.4.d.4) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "2a4d9bd2-5d19-52bc-8f21-b6131ff3010d"
+            }
+          ],
+          "control-id": "_500.4.d.4",
+          "remarks": "Control _500.4.d.4 (Cybersecurity governance — 500.4.d.4) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "9904d5be-f9b8-5eb3-a121-398e18ac6ea9"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.5.a.1 (conduct, at a minimum: — 500.5.a.1) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "f2b98a48-a964-5b3e-94ca-98295e75428c"
+            }
+          ],
+          "control-id": "_500.5.a.1",
+          "remarks": "Control _500.5.a.1 (conduct, at a minimum: — 500.5.a.1) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "e7f1d11d-6c4c-587f-9120-234c7ca8558b"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.5.a.2 (conduct, at a minimum: — 500.5.a.2) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "1afe59e5-d7f1-5b78-a37e-6eef1837c169"
+            }
+          ],
+          "control-id": "_500.5.a.2",
+          "remarks": "Control _500.5.a.2 (conduct, at a minimum: — 500.5.a.2) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "e08fe030-cf5b-584b-a657-be3fa46ac47c"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.5.b (These policies and procedures shall be designed to ensure that covered entities: — 500.5.b) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "e928d4b2-a0a0-5b27-8436-a7ffc675c9bf"
+            }
+          ],
+          "control-id": "_500.5.b",
+          "remarks": "Control _500.5.b (These policies and procedures shall be designed to ensure that covered entities: — 500.5.b) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "b7a10b62-e63d-5050-a8aa-e841ce3973d2"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.5.c (These policies and procedures shall be designed to ensure that covered entities: — 500.5.c) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "df1d318e-d957-5182-af19-21ee5b19f2c9"
+            }
+          ],
+          "control-id": "_500.5.c",
+          "remarks": "Control _500.5.c (These policies and procedures shall be designed to ensure that covered entities: — 500.5.c) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "6eec3cfc-0e06-57e4-a08d-dda5b7450694"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.6.a (Audit trail — 500.6.a) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "61efeca6-1e18-5e7a-a703-ee27e1e4d50e"
+            }
+          ],
+          "control-id": "_500.6.a",
+          "remarks": "Control _500.6.a (Audit trail — 500.6.a) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "b5135d48-4a96-5ecd-906f-015d361a8fc2"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.6.a.1 (Each covered entity shall securely maintain systems that, to the extent applicable and based on its risk assessment: — 500.6.a.1) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "9418edef-d23f-5a5f-91ca-2962305736df"
+            }
+          ],
+          "control-id": "_500.6.a.1",
+          "remarks": "Control _500.6.a.1 (Each covered entity shall securely maintain systems that, to the extent applicable and based on its risk assessment: — 500.6.a.1) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "61dbd031-fe21-5c75-b263-7a12e836f3a7"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.6.a.2 (Each covered entity shall securely maintain systems that, to the extent applicable and based on its risk assessment: — 500.6.a.2) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "6f287ccc-0e31-5800-a78f-8cb6601338b7"
+            }
+          ],
+          "control-id": "_500.6.a.2",
+          "remarks": "Control _500.6.a.2 (Each covered entity shall securely maintain systems that, to the extent applicable and based on its risk assessment: — 500.6.a.2) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "ebad3235-ddaa-5e4b-9bcd-65e46fc6763a"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.6.b (Audit trail — 500.6.b) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "f7775e3a-936a-5fe3-9755-21e68ae6d6b7"
+            }
+          ],
+          "control-id": "_500.6.b",
+          "remarks": "Control _500.6.b (Audit trail — 500.6.b) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "fcd562dd-bfad-580f-90d2-c615aae83f3d"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.7.a (Access privileges and management — 500.7.a) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "1d10b3d0-4444-5696-ab7c-b0eedd83271c"
+            }
+          ],
+          "control-id": "_500.7.a",
+          "remarks": "Control _500.7.a (Access privileges and management — 500.7.a) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "eabe090f-edbe-5d88-bb54-28af08b4d30b"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.7.a.1 (As part of its cybersecurity program, based on the covered entity’s risk assessment each covered entity shall: — 500.7.a.1) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "dd5b80e4-8a51-5fa2-a8b4-d5ea76a9ea7b"
+            }
+          ],
+          "control-id": "_500.7.a.1",
+          "remarks": "Control _500.7.a.1 (As part of its cybersecurity program, based on the covered entity’s risk assessment each covered entity shall: — 500.7.a.1) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "1e191143-fb0c-5588-8b87-5f78fecfc0b4"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.7.a.2 (As part of its cybersecurity program, based on the covered entity’s risk assessment each covered entity shall: — 500.7.a.2) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "bfba193f-d6c7-5eed-b18a-b508b89fe060"
+            }
+          ],
+          "control-id": "_500.7.a.2",
+          "remarks": "Control _500.7.a.2 (As part of its cybersecurity program, based on the covered entity’s risk assessment each covered entity shall: — 500.7.a.2) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "c1ca4462-6b93-52b0-8f12-654a62cb7f28"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.7.a.3 (As part of its cybersecurity program, based on the covered entity’s risk assessment each covered entity shall: — 500.7.a.3) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "81d3920e-7526-50c7-a165-9cd81b9d6c54"
+            }
+          ],
+          "control-id": "_500.7.a.3",
+          "remarks": "Control _500.7.a.3 (As part of its cybersecurity program, based on the covered entity’s risk assessment each covered entity shall: — 500.7.a.3) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "46d63dd5-e81e-56b3-8bd8-3093876a3579"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.7.a.4 (As part of its cybersecurity program, based on the covered entity’s risk assessment each covered entity shall: — 500.7.a.4) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "e71398b2-14b7-5ef8-b368-4b01ede1ca7c"
+            }
+          ],
+          "control-id": "_500.7.a.4",
+          "remarks": "Control _500.7.a.4 (As part of its cybersecurity program, based on the covered entity’s risk assessment each covered entity shall: — 500.7.a.4) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "643acced-9c39-5b80-8033-d27a1cb6958f"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.7.a.5 (As part of its cybersecurity program, based on the covered entity’s risk assessment each covered entity shall: — 500.7.a.5) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "29c22ada-ae43-5d85-9873-a14ba8fe0a43"
+            }
+          ],
+          "control-id": "_500.7.a.5",
+          "remarks": "Control _500.7.a.5 (As part of its cybersecurity program, based on the covered entity’s risk assessment each covered entity shall: — 500.7.a.5) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "cc3b9a78-2924-5511-9527-0111d554d1f7"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.7.a.6 (As part of its cybersecurity program, based on the covered entity’s risk assessment each covered entity shall: — 500.7.a.6) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "3bc69fd7-0ff6-5aa1-8e74-8067952b9bf2"
+            }
+          ],
+          "control-id": "_500.7.a.6",
+          "remarks": "Control _500.7.a.6 (As part of its cybersecurity program, based on the covered entity’s risk assessment each covered entity shall: — 500.7.a.6) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "8b8e8749-e423-5aa5-bf2d-d5fdfd09f39f"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.7.b (Access privileges and management — 500.7.b) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "d9f414dd-5a2c-51bb-805b-c6d10f62f8c6"
+            }
+          ],
+          "control-id": "_500.7.b",
+          "remarks": "Control _500.7.b (Access privileges and management — 500.7.b) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "cd6fed99-2bba-539e-919d-860de42a22da"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.7.c (Access privileges and management — 500.7.c) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "4b1cfa95-68c7-56c0-bc3b-9cae5e18043b"
+            }
+          ],
+          "control-id": "_500.7.c",
+          "remarks": "Control _500.7.c (Access privileges and management — 500.7.c) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "aa16b56f-726d-5e87-ab49-cbb9766581cc"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.7.c.1 (Each class A company shall monitor privileged access activity and shall implement: — 500.7.c.1) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "e1f07315-7924-5043-b954-8cee0c5db6d3"
+            }
+          ],
+          "control-id": "_500.7.c.1",
+          "remarks": "Control _500.7.c.1 (Each class A company shall monitor privileged access activity and shall implement: — 500.7.c.1) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "5c25530b-c64d-586b-96d4-1994eb309f39"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.7.c.2 (Each class A company shall monitor privileged access activity and shall implement: — 500.7.c.2) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "1e6c9c26-377e-5385-957b-96131cc0b8ff"
+            }
+          ],
+          "control-id": "_500.7.c.2",
+          "remarks": "Control _500.7.c.2 (Each class A company shall monitor privileged access activity and shall implement: — 500.7.c.2) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "1e331796-8a4d-5806-b52b-09ac03cf9027"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.8.a (Application security — 500.8.a) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "efe41293-3c28-5897-a1fd-91fcf30de2a2"
+            }
+          ],
+          "control-id": "_500.8.a",
+          "remarks": "Control _500.8.a (Application security — 500.8.a) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "0a2041e1-3a97-5463-bce6-3964dfebea30"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.8.b (Application security — 500.8.b) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "4ce58497-7863-588f-8a63-46d82e7db311"
+            }
+          ],
+          "control-id": "_500.8.b",
+          "remarks": "Control _500.8.b (Application security — 500.8.b) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "ccf01340-73df-5e38-84a5-b4a396096480"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.9.a (Risk assessment — 500.9.a) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "7ca87743-146c-5a24-b355-35d1597d3ba1"
+            }
+          ],
+          "control-id": "_500.9.a",
+          "remarks": "Control _500.9.a (Risk assessment — 500.9.a) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "c02de823-35ca-52cc-9077-63d40815169a"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.9.b (Risk assessment — 500.9.b) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "9b1acbe8-9167-5658-b55f-7a95a4c74e9d"
+            }
+          ],
+          "control-id": "_500.9.b",
+          "remarks": "Control _500.9.b (Risk assessment — 500.9.b) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "7303367b-8b9c-5774-af4d-ee287e7bc2fe"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.9.b.1 (Risk assessment — 500.9.b.1) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "f3175056-cc8a-58ca-8e93-524da203f7dc"
+            }
+          ],
+          "control-id": "_500.9.b.1",
+          "remarks": "Control _500.9.b.1 (Risk assessment — 500.9.b.1) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "12c77efd-efb5-523f-b23f-0680bf8165d8"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.9.b.2 (Risk assessment — 500.9.b.2) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "e33bca6f-d988-5422-bb2e-16237c528af2"
+            }
+          ],
+          "control-id": "_500.9.b.2",
+          "remarks": "Control _500.9.b.2 (Risk assessment — 500.9.b.2) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "c8b7afe8-f4b9-561c-81bb-8f70c0aa9aa2"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control _500.9.b.3 (Risk assessment — 500.9.b.3) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "1ee84ae7-635e-5f80-a5a8-7ddee6c5fe52"
+            }
+          ],
+          "control-id": "_500.9.b.3",
+          "remarks": "Control _500.9.b.3 (Risk assessment — 500.9.b.3) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "3cfce9ec-3223-5b56-b291-ace3df4fc5c1"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control node196 (Confidentiality — node196) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ce57782e-75c0-598b-a764-0a75968e92d4"
+            }
+          ],
+          "control-id": "node196",
+          "remarks": "Control node196 (Confidentiality — node196) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "b1783d96-c619-58a5-b323-c4057f255019"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control node39 (Policies) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "4c470799-38a6-5cc4-afa6-b53c118de46b"
+            }
+          ],
+          "control-id": "node39",
+          "remarks": "Control node39 (Policies) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "80dfe54d-d29c-53ec-972c-b92c68f5b437"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control node40 (Procedures) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "e8d9c8fb-b3e2-56aa-9a6b-6c8af6996eaf"
+            }
+          ],
+          "control-id": "node40",
+          "remarks": "Control node40 (Procedures) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "e24c9763-aa2b-521d-8f3c-5b4b45976f56"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control node75 (Vulnerability management — node75) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "3a782820-bc2e-5a1e-b96d-3e4f13d97324"
+            }
+          ],
+          "control-id": "node75",
+          "remarks": "Control node75 (Vulnerability management — node75) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "08ef5c4f-33ed-5d16-a30c-b1f5afa135c3"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "82de018e-04e5-566e-b5fb-4e66386bc843",
+              "description": "Control node76 (Vulnerability management — node76) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "539d0841-d89c-5688-8d5b-7205142fcbe1"
+            }
+          ],
+          "control-id": "node76",
+          "remarks": "Control node76 (Vulnerability management — node76) is satisfied by the NY DFS 500 with 2023-11 amendments Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "ea38018e-8834-5371-a440-323b7e1a0693"
+        }
+      ]
+    },
+    "import-profile": {
+      "href": "./catalog.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:13Z",
+      "oscal-version": "1.2.3",
+      "roles": [
+        {
+          "id": "sec-admin",
+          "title": "Security Administrator"
+        }
+      ],
+      "title": "NY DFS 500 with 2023-11 amendments System Security Plan Template",
+      "version": "1"
+    },
+    "system-characteristics": {
+      "authorization-boundary": {
+        "description": "The authorization boundary encompasses all computing resources, cloud tenancies, and network zones supporting NY DFS 500 with 2023-11 amendments operations."
+      },
+      "description": "Reference system architecture implementing security controls for NY DFS 500 with 2023-11 amendments.",
+      "security-impact-level": {
+        "security-objective-availability": "moderate",
+        "security-objective-confidentiality": "moderate",
+        "security-objective-integrity": "high"
+      },
+      "security-sensitivity-level": "moderate",
+      "status": {
+        "state": "operational"
+      },
+      "system-ids": [
+        {
+          "id": "dfs-500-2023-11-system"
+        }
+      ],
+      "system-information": {
+        "information-types": [
+          {
+            "description": "Operational and compliance data processed within the usa jurisdiction boundary.",
+            "title": "Sovereign Program Data",
+            "uuid": "d7e8098e-7c15-5567-bd60-9773b16ceefc"
+          }
+        ]
+      },
+      "system-name": "NY DFS 500 with 2023-11 amendments Reference System",
+      "system-name-short": "dfs-500-2023-11"
+    },
+    "system-implementation": {
+      "components": [
+        {
+          "description": "Central execution platform providing control implementations for NY DFS 500 with 2023-11 amendments.",
+          "status": {
+            "state": "operational"
+          },
+          "title": "NY DFS 500 with 2023-11 amendments Core System Component",
+          "type": "software",
+          "uuid": "82de018e-04e5-566e-b5fb-4e66386bc843"
+        }
+      ],
+      "users": [
+        {
+          "role-ids": [
+            "sec-admin"
+          ],
+          "title": "Security Administrator",
+          "uuid": "870679a7-8830-510e-9297-47b11fd326ba"
+        }
+      ]
+    },
+    "uuid": "f667d842-10c3-5659-873d-3d759fbe3441"
+  }
+}

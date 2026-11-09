@@ -7,7 +7,7 @@
           "by-components": [
             {
               "component-uuid": "8c27e0e0-809b-5ccd-a82c-326484b8bf66",
-              "description": "Control bc-1-1 (Control BC.1.1) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "description": "Control bc-1-1 (Severity-Based Incident Response Planning (Planification de l'intervention selon la gravité de l'incident)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
               "implementation-status": {
                 "state": "implemented"
               },
@@ -15,14 +15,14 @@
             }
           ],
           "control-id": "bc-1-1",
-          "remarks": "Control bc-1-1 (Control BC.1.1) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "remarks": "Control bc-1-1 (Severity-Based Incident Response Planning (Planification de l'intervention selon la gravité de l'incident)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "79394c2a-d42f-5cc4-b413-01272171f534"
         },
         {
           "by-components": [
             {
               "component-uuid": "8c27e0e0-809b-5ccd-a82c-326484b8bf66",
-              "description": "Control bc-1-2 (Control BC.1.2) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "description": "Control bc-1-2 (Written Incident Response Responsibilities and Hard-Copy Availability (Plan écrit des responsabilités d'intervention et copie papier)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
               "implementation-status": {
                 "state": "implemented"
               },
@@ -30,14 +30,14 @@
             }
           ],
           "control-id": "bc-1-2",
-          "remarks": "Control bc-1-2 (Control BC.1.2) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "remarks": "Control bc-1-2 (Written Incident Response Responsibilities and Hard-Copy Availability (Plan écrit des responsabilités d'intervention et copie papier)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "8908fb58-8f15-5c36-be4f-c5c603a9c901"
         },
         {
           "by-components": [
             {
               "component-uuid": "8c27e0e0-809b-5ccd-a82c-326484b8bf66",
-              "description": "Control bc-1-3 (Control BC.1.3) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "description": "Control bc-1-3 (Cyber Security Insurance Coverage Evaluation (Évaluation de la couverture d'assurance cybersécurité)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
               "implementation-status": {
                 "state": "implemented"
               },
@@ -45,14 +45,14 @@
             }
           ],
           "control-id": "bc-1-3",
-          "remarks": "Control bc-1-3 (Control BC.1.3) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "remarks": "Control bc-1-3 (Cyber Security Insurance Coverage Evaluation (Évaluation de la couverture d'assurance cybersécurité)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "4ba8f152-297d-59d7-9623-be3449019f5d"
         },
         {
           "by-components": [
             {
               "component-uuid": "8c27e0e0-809b-5ccd-a82c-326484b8bf66",
-              "description": "Control bc-10-1 (Control BC.10.1) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "description": "Control bc-10-1 (Cloud Service Provider SOC 3 Trust Services Attestation (Attestation SOC 3 SSAE 18 des fournisseurs de services infonuagiques)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
               "implementation-status": {
                 "state": "implemented"
               },
@@ -60,14 +60,14 @@
             }
           ],
           "control-id": "bc-10-1",
-          "remarks": "Control bc-10-1 (Control BC.10.1) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "remarks": "Control bc-10-1 (Cloud Service Provider SOC 3 Trust Services Attestation (Attestation SOC 3 SSAE 18 des fournisseurs de services infonuagiques)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "5b18d0b1-42b9-56eb-b917-61f5f315e3bb"
         },
         {
           "by-components": [
             {
               "component-uuid": "8c27e0e0-809b-5ccd-a82c-326484b8bf66",
-              "description": "Control bc-10-2 (Control BC.10.2) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "description": "Control bc-10-2 (Outsourced IT Provider Sensitive Information Handling Evaluation (Évaluation du traitement des renseignements sensibles par les fournisseurs TI impartis)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
               "implementation-status": {
                 "state": "implemented"
               },
@@ -75,14 +75,14 @@
             }
           ],
           "control-id": "bc-10-2",
-          "remarks": "Control bc-10-2 (Control BC.10.2) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "remarks": "Control bc-10-2 (Outsourced IT Provider Sensitive Information Handling Evaluation (Évaluation du traitement des renseignements sensibles par les fournisseurs TI impartis)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "3996ab00-8af4-5c35-8d7e-5d59ceff90df"
         },
         {
           "by-components": [
             {
               "component-uuid": "8c27e0e0-809b-5ccd-a82c-326484b8bf66",
-              "description": "Control bc-10-3 (Control BC.10.3) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "description": "Control bc-10-3 (Data Residency and Legal Jurisdiction Assessment (Évaluation des juridictions légales d'hébergement des données)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
               "implementation-status": {
                 "state": "implemented"
               },
@@ -90,14 +90,14 @@
             }
           ],
           "control-id": "bc-10-3",
-          "remarks": "Control bc-10-3 (Control BC.10.3) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "remarks": "Control bc-10-3 (Data Residency and Legal Jurisdiction Assessment (Évaluation des juridictions légales d'hébergement des données)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "ac82dfb3-ca8e-5720-9b56-c029e78db17d"
         },
         {
           "by-components": [
             {
               "component-uuid": "8c27e0e0-809b-5ccd-a82c-326484b8bf66",
-              "description": "Control bc-10-4 (Control BC.10.4) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "description": "Control bc-10-4 (Encrypted Communication with Cloud Services (Communications chiffrées avec les services et applications infonuagiques)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
               "implementation-status": {
                 "state": "implemented"
               },
@@ -105,14 +105,14 @@
             }
           ],
           "control-id": "bc-10-4",
-          "remarks": "Control bc-10-4 (Control BC.10.4) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "remarks": "Control bc-10-4 (Encrypted Communication with Cloud Services (Communications chiffrées avec les services et applications infonuagiques)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "175b6bf7-d2cd-53dc-909b-782e93e96f68"
         },
         {
           "by-components": [
             {
               "component-uuid": "8c27e0e0-809b-5ccd-a82c-326484b8bf66",
-              "description": "Control bc-10-5 (Control BC.10.5) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "description": "Control bc-10-5 (Separate Cloud Administrative Accounts with Two-Factor Authentication (Comptes administrateurs infonuagiques distincts avec authentification à deux facteurs)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
               "implementation-status": {
                 "state": "implemented"
               },
@@ -120,14 +120,14 @@
             }
           ],
           "control-id": "bc-10-5",
-          "remarks": "Control bc-10-5 (Control BC.10.5) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "remarks": "Control bc-10-5 (Separate Cloud Administrative Accounts with Two-Factor Authentication (Comptes administrateurs infonuagiques distincts avec authentification à deux facteurs)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "63a2ed07-8640-54b0-8b39-24a02deaa5d5"
         },
         {
           "by-components": [
             {
               "component-uuid": "8c27e0e0-809b-5ccd-a82c-326484b8bf66",
-              "description": "Control bc-11-1 (Control BC.11.1) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "description": "Control bc-11-1 (OWASP Top 10 Web Vulnerability Mitigation (Atténuation des 10 principales vulnérabilités Web de l'OWASP)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
               "implementation-status": {
                 "state": "implemented"
               },
@@ -135,14 +135,14 @@
             }
           ],
           "control-id": "bc-11-1",
-          "remarks": "Control bc-11-1 (Control BC.11.1) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "remarks": "Control bc-11-1 (OWASP Top 10 Web Vulnerability Mitigation (Atténuation des 10 principales vulnérabilités Web de l'OWASP)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "13203448-7a22-5970-b9d4-2c124925f713"
         },
         {
           "by-components": [
             {
               "component-uuid": "8c27e0e0-809b-5ccd-a82c-326484b8bf66",
-              "description": "Control bc-11-2 (Control BC.11.2) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "description": "Control bc-11-2 (OWASP ASVS Verification Level Determination (Détermination du niveau de vérification de sécurité des applications ASVS)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
               "implementation-status": {
                 "state": "implemented"
               },
@@ -150,14 +150,14 @@
             }
           ],
           "control-id": "bc-11-2",
-          "remarks": "Control bc-11-2 (Control BC.11.2) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "remarks": "Control bc-11-2 (OWASP ASVS Verification Level Determination (Détermination du niveau de vérification de sécurité des applications ASVS)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "9e6b6997-adef-55c8-b47c-23f04c4f24ea"
         },
         {
           "by-components": [
             {
               "component-uuid": "8c27e0e0-809b-5ccd-a82c-326484b8bf66",
-              "description": "Control bc-12-1 (Control BC.12.1) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "description": "Control bc-12-1 (Least Privilege Account Provisioning and Admin Restriction (Attribution des privilèges minimaux et restriction des droits d'administrateur)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
               "implementation-status": {
                 "state": "implemented"
               },
@@ -165,14 +165,14 @@
             }
           ],
           "control-id": "bc-12-1",
-          "remarks": "Control bc-12-1 (Control BC.12.1) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "remarks": "Control bc-12-1 (Least Privilege Account Provisioning and Admin Restriction (Attribution des privilèges minimaux et restriction des droits d'administrateur)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "9edad481-5973-56a2-8086-06c5ed760ad5"
         },
         {
           "by-components": [
             {
               "component-uuid": "8c27e0e0-809b-5ccd-a82c-326484b8bf66",
-              "description": "Control bc-12-2 (Control BC.12.2) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "description": "Control bc-12-2 (Dedicated Administrative Account Usage (Utilisation dédiée des comptes d'administrateur)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
               "implementation-status": {
                 "state": "implemented"
               },
@@ -180,14 +180,14 @@
             }
           ],
           "control-id": "bc-12-2",
-          "remarks": "Control bc-12-2 (Control BC.12.2) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "remarks": "Control bc-12-2 (Dedicated Administrative Account Usage (Utilisation dédiée des comptes d'administrateur)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "de420f20-9826-5a4f-b343-ac137cd1eccb"
         },
         {
           "by-components": [
             {
               "component-uuid": "8c27e0e0-809b-5ccd-a82c-326484b8bf66",
-              "description": "Control bc-12-3 (Control BC.12.3) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "description": "Control bc-12-3 (Timely Account and Privilege Revocation (Révocation rapide des comptes et des privilèges inutilisés)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
               "implementation-status": {
                 "state": "implemented"
               },
@@ -195,14 +195,14 @@
             }
           ],
           "control-id": "bc-12-3",
-          "remarks": "Control bc-12-3 (Control BC.12.3) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "remarks": "Control bc-12-3 (Timely Account and Privilege Revocation (Révocation rapide des comptes et des privilèges inutilisés)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "86015622-7d87-599f-81b0-84cc5e7590e2"
         },
         {
           "by-components": [
             {
               "component-uuid": "8c27e0e0-809b-5ccd-a82c-326484b8bf66",
-              "description": "Control bc-12-4 (Control BC.12.4) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "description": "Control bc-12-4 (Centralized Authorization Control System Evaluation (Évaluation d'un système centralisé de contrôle des autorisations)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
               "implementation-status": {
                 "state": "implemented"
               },
@@ -210,14 +210,14 @@
             }
           ],
           "control-id": "bc-12-4",
-          "remarks": "Control bc-12-4 (Control BC.12.4) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "remarks": "Control bc-12-4 (Centralized Authorization Control System Evaluation (Évaluation d'un système centralisé de contrôle des autorisations)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "0dd5a0a8-f759-5233-98d9-1d82c969ba55"
         },
         {
           "by-components": [
             {
               "component-uuid": "8c27e0e0-809b-5ccd-a82c-326484b8bf66",
-              "description": "Control bc-13-1 (Control BC.13.1) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "description": "Control bc-13-1 (Organization-Owned Encrypted Portable Media Mandate (Utilisation obligatoire de supports amovibles chiffrés appartenant à l'organisation)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
               "implementation-status": {
                 "state": "implemented"
               },
@@ -225,14 +225,14 @@
             }
           ],
           "control-id": "bc-13-1",
-          "remarks": "Control bc-13-1 (Control BC.13.1) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "remarks": "Control bc-13-1 (Organization-Owned Encrypted Portable Media Mandate (Utilisation obligatoire de supports amovibles chiffrés appartenant à l'organisation)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "2d809601-d335-50f1-bd9f-73f8c6ebee9a"
         },
         {
           "by-components": [
             {
               "component-uuid": "8c27e0e0-809b-5ccd-a82c-326484b8bf66",
-              "description": "Control bc-13-2 (Control BC.13.2) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "description": "Control bc-13-2 (Portable Media Sanitization and Destruction Prior to Disposal (Nettoyage ou destruction des supports amovibles avant leur mise au rebut)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
               "implementation-status": {
                 "state": "implemented"
               },
@@ -240,14 +240,14 @@
             }
           ],
           "control-id": "bc-13-2",
-          "remarks": "Control bc-13-2 (Control BC.13.2) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "remarks": "Control bc-13-2 (Portable Media Sanitization and Destruction Prior to Disposal (Nettoyage ou destruction des supports amovibles avant leur mise au rebut)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "84b31b33-c72f-55a4-b1eb-369c6d069c15"
         },
         {
           "by-components": [
             {
               "component-uuid": "8c27e0e0-809b-5ccd-a82c-326484b8bf66",
-              "description": "Control bc-2-1 (Control BC.2.1) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "description": "Control bc-2-1 (Automatic Software and Hardware Patching (Application automatique des correctifs logiciels et matériels)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
               "implementation-status": {
                 "state": "implemented"
               },
@@ -255,14 +255,14 @@
             }
           ],
           "control-id": "bc-2-1",
-          "remarks": "Control bc-2-1 (Control BC.2.1) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "remarks": "Control bc-2-1 (Automatic Software and Hardware Patching (Application automatique des correctifs logiciels et matériels)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "de9c4559-ac25-5057-a43a-5f36237ff3df"
         },
         {
           "by-components": [
             {
               "component-uuid": "8c27e0e0-809b-5ccd-a82c-326484b8bf66",
-              "description": "Control bc-2-2 (Control BC.2.2) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "description": "Control bc-2-2 (Legacy Device Replacement Risk Assessment and Manual Update Process (Évaluation des risques liés aux appareils sans mise à jour automatique)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
               "implementation-status": {
                 "state": "implemented"
               },
@@ -270,14 +270,14 @@
             }
           ],
           "control-id": "bc-2-2",
-          "remarks": "Control bc-2-2 (Control BC.2.2) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "remarks": "Control bc-2-2 (Legacy Device Replacement Risk Assessment and Manual Update Process (Évaluation des risques liés aux appareils sans mise à jour automatique)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "fb25eea8-079c-5d7a-a5a1-13f5156440e7"
         },
         {
           "by-components": [
             {
               "component-uuid": "8c27e0e0-809b-5ccd-a82c-326484b8bf66",
-              "description": "Control bc-3-1 (Control BC.3.1) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "description": "Control bc-3-1 (Automatic Anti-Malware Updates and Scanning (Mises à jour et analyses automatiques des logiciels anti-malveillants)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
               "implementation-status": {
                 "state": "implemented"
               },
@@ -285,14 +285,14 @@
             }
           ],
           "control-id": "bc-3-1",
-          "remarks": "Control bc-3-1 (Control BC.3.1) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "remarks": "Control bc-3-1 (Automatic Anti-Malware Updates and Scanning (Mises à jour et analyses automatiques des logiciels anti-malveillants)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "07e58f3d-9be0-58b6-ba1c-6cc14a52c2bd"
         },
         {
           "by-components": [
             {
               "component-uuid": "8c27e0e0-809b-5ccd-a82c-326484b8bf66",
-              "description": "Control bc-3-2 (Control BC.3.2) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "description": "Control bc-3-2 (Host Software Firewalls Activation (Activation des pare-feu logiciels sur les appareils)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
               "implementation-status": {
                 "state": "implemented"
               },
@@ -300,14 +300,14 @@
             }
           ],
           "control-id": "bc-3-2",
-          "remarks": "Control bc-3-2 (Control BC.3.2) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "remarks": "Control bc-3-2 (Host Software Firewalls Activation (Activation des pare-feu logiciels sur les appareils)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "fcadd671-45ae-5f0b-9304-c405bb2c5347"
         },
         {
           "by-components": [
             {
               "component-uuid": "8c27e0e0-809b-5ccd-a82c-326484b8bf66",
-              "description": "Control bc-4-1 (Control BC.4.1) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "description": "Control bc-4-1 (Secure Device Configuration and Default Credential Removal (Configuration sécuritaire des appareils et retrait des mots de passe par défaut)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
               "implementation-status": {
                 "state": "implemented"
               },
@@ -315,14 +315,14 @@
             }
           ],
           "control-id": "bc-4-1",
-          "remarks": "Control bc-4-1 (Control BC.4.1) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "remarks": "Control bc-4-1 (Secure Device Configuration and Default Credential Removal (Configuration sécuritaire des appareils et retrait des mots de passe par défaut)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "e061e3ea-e512-549d-9b06-7393b4d58b67"
         },
         {
           "by-components": [
             {
               "component-uuid": "8c27e0e0-809b-5ccd-a82c-326484b8bf66",
-              "description": "Control bc-5-1 (Control BC.5.1) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "description": "Control bc-5-1 (Two-Factor Authentication Enforcement (Application de l'authentification à deux facteurs)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
               "implementation-status": {
                 "state": "implemented"
               },
@@ -330,14 +330,14 @@
             }
           ],
           "control-id": "bc-5-1",
-          "remarks": "Control bc-5-1 (Control BC.5.1) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "remarks": "Control bc-5-1 (Two-Factor Authentication Enforcement (Application de l'authentification à deux facteurs)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "116d8bcf-db23-5b5b-9b17-d5612e89ae1a"
         },
         {
           "by-components": [
             {
               "component-uuid": "8c27e0e0-809b-5ccd-a82c-326484b8bf66",
-              "description": "Control bc-5-2 (Control BC.5.2) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "description": "Control bc-5-2 (Compromise-Driven Password Rotation (Changement de mot de passe uniquement en cas de compromission)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
               "implementation-status": {
                 "state": "implemented"
               },
@@ -345,14 +345,14 @@
             }
           ],
           "control-id": "bc-5-2",
-          "remarks": "Control bc-5-2 (Control BC.5.2) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "remarks": "Control bc-5-2 (Compromise-Driven Password Rotation (Changement de mot de passe uniquement en cas de compromission)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "a71a2207-abaa-599e-82fd-71ca49d38e35"
         },
         {
           "by-components": [
             {
               "component-uuid": "8c27e0e0-809b-5ccd-a82c-326484b8bf66",
-              "description": "Control bc-5-3 (Control BC.5.3) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "description": "Control bc-5-3 (Password Length, Reuse, and Password Manager Policy (Politique sur la longueur, la réutilisation et les gestionnaires de mots de passe)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
               "implementation-status": {
                 "state": "implemented"
               },
@@ -360,14 +360,14 @@
             }
           ],
           "control-id": "bc-5-3",
-          "remarks": "Control bc-5-3 (Control BC.5.3) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "remarks": "Control bc-5-3 (Password Length, Reuse, and Password Manager Policy (Politique sur la longueur, la réutilisation et les gestionnaires de mots de passe)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "e956098d-e139-5da0-9490-102998b360af"
         },
         {
           "by-components": [
             {
               "component-uuid": "8c27e0e0-809b-5ccd-a82c-326484b8bf66",
-              "description": "Control bc-6-1 (Control BC.6.1) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "description": "Control bc-6-1 (Employee Cyber Security Awareness and Training Program (Programme de sensibilisation et de formation en cybersécurité)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
               "implementation-status": {
                 "state": "implemented"
               },
@@ -375,14 +375,14 @@
             }
           ],
           "control-id": "bc-6-1",
-          "remarks": "Control bc-6-1 (Control BC.6.1) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "remarks": "Control bc-6-1 (Employee Cyber Security Awareness and Training Program (Programme de sensibilisation et de formation en cybersécurité)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "a28d6515-b8c6-5ad1-8efd-23ce262163f3"
         },
         {
           "by-components": [
             {
               "component-uuid": "8c27e0e0-809b-5ccd-a82c-326484b8bf66",
-              "description": "Control bc-7-1 (Control BC.7.1) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "description": "Control bc-7-1 (Essential Business System Backup and Offsite Recovery Verification (Sauvegarde des systèmes essentiels et vérification de la restauration)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
               "implementation-status": {
                 "state": "implemented"
               },
@@ -390,14 +390,14 @@
             }
           ],
           "control-id": "bc-7-1",
-          "remarks": "Control bc-7-1 (Control BC.7.1) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "remarks": "Control bc-7-1 (Essential Business System Backup and Offsite Recovery Verification (Sauvegarde des systèmes essentiels et vérification de la restauration)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "9b3a43a5-fb54-503f-bb61-a43e8295c271"
         },
         {
           "by-components": [
             {
               "component-uuid": "8c27e0e0-809b-5ccd-a82c-326484b8bf66",
-              "description": "Control bc-7-2 (Control BC.7.2) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "description": "Control bc-7-2 (Encrypted Backup Storage and Access Restriction (Chiffrement des sauvegardes et restriction d'accès)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
               "implementation-status": {
                 "state": "implemented"
               },
@@ -405,14 +405,14 @@
             }
           ],
           "control-id": "bc-7-2",
-          "remarks": "Control bc-7-2 (Control BC.7.2) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "remarks": "Control bc-7-2 (Encrypted Backup Storage and Access Restriction (Chiffrement des sauvegardes et restriction d'accès)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "9248094b-a9f4-5cb1-a95a-6655bc9ab59a"
         },
         {
           "by-components": [
             {
               "component-uuid": "8c27e0e0-809b-5ccd-a82c-326484b8bf66",
-              "description": "Control bc-8-1 (Control BC.8.1) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "description": "Control bc-8-1 (Mobile Device Ownership Model and Risk Documentation (Modèle de propriété des appareils mobiles et documentation des risques)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
               "implementation-status": {
                 "state": "implemented"
               },
@@ -420,14 +420,14 @@
             }
           ],
           "control-id": "bc-8-1",
-          "remarks": "Control bc-8-1 (Control BC.8.1) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "remarks": "Control bc-8-1 (Mobile Device Ownership Model and Risk Documentation (Modèle de propriété des appareils mobiles et documentation des risques)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "99890519-d244-5eb8-924d-dd00f70273e5"
         },
         {
           "by-components": [
             {
               "component-uuid": "8c27e0e0-809b-5ccd-a82c-326484b8bf66",
-              "description": "Control bc-8-2 (Control BC.8.2) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "description": "Control bc-8-2 (Work and Personal Data Separation on Mobile Devices (Séparation des données professionnelles et personnelles sur les appareils mobiles)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
               "implementation-status": {
                 "state": "implemented"
               },
@@ -435,14 +435,14 @@
             }
           ],
           "control-id": "bc-8-2",
-          "remarks": "Control bc-8-2 (Control BC.8.2) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "remarks": "Control bc-8-2 (Work and Personal Data Separation on Mobile Devices (Séparation des données professionnelles et personnelles sur les appareils mobiles)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "a06e9c78-5e19-5a84-a4a2-441fea2f96d1"
         },
         {
           "by-components": [
             {
               "component-uuid": "8c27e0e0-809b-5ccd-a82c-326484b8bf66",
-              "description": "Control bc-8-3 (Control BC.8.3) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "description": "Control bc-8-3 (Trusted Mobile Application Sources (Sources fiables d'applications mobiles)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
               "implementation-status": {
                 "state": "implemented"
               },
@@ -450,14 +450,14 @@
             }
           ],
           "control-id": "bc-8-3",
-          "remarks": "Control bc-8-3 (Control BC.8.3) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "remarks": "Control bc-8-3 (Trusted Mobile Application Sources (Sources fiables d'applications mobiles)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "ef778154-5236-5af7-b001-68d49ce00219"
         },
         {
           "by-components": [
             {
               "component-uuid": "8c27e0e0-809b-5ccd-a82c-326484b8bf66",
-              "description": "Control bc-8-4 (Control BC.8.4) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "description": "Control bc-8-4 (Mobile Device Sensitive Information Encryption (Chiffrement des renseignements sensibles sur les appareils mobiles)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
               "implementation-status": {
                 "state": "implemented"
               },
@@ -465,14 +465,14 @@
             }
           ],
           "control-id": "bc-8-4",
-          "remarks": "Control bc-8-4 (Control BC.8.4) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "remarks": "Control bc-8-4 (Mobile Device Sensitive Information Encryption (Chiffrement des renseignements sensibles sur les appareils mobiles)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "66b3c2e2-fb14-5e0d-ac50-193ef76e02ab"
         },
         {
           "by-components": [
             {
               "component-uuid": "8c27e0e0-809b-5ccd-a82c-326484b8bf66",
-              "description": "Control bc-8-5 (Control BC.8.5) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "description": "Control bc-8-5 (Enterprise Mobility Management Evaluation (Évaluation d'une solution de gestion de la mobilité d'entreprise)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
               "implementation-status": {
                 "state": "implemented"
               },
@@ -480,14 +480,14 @@
             }
           ],
           "control-id": "bc-8-5",
-          "remarks": "Control bc-8-5 (Control BC.8.5) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "remarks": "Control bc-8-5 (Enterprise Mobility Management Evaluation (Évaluation d'une solution de gestion de la mobilité d'entreprise)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "45caa57f-3b56-5dfa-acca-eb6a586812a9"
         },
         {
           "by-components": [
             {
               "component-uuid": "8c27e0e0-809b-5ccd-a82c-326484b8bf66",
-              "description": "Control bc-8-6 (Control BC.8.6) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "description": "Control bc-8-6 (Wireless Connectivity Restrictions for Mobile Devices (Restrictions relatives aux connexions sans fil des appareils mobiles)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
               "implementation-status": {
                 "state": "implemented"
               },
@@ -495,14 +495,14 @@
             }
           ],
           "control-id": "bc-8-6",
-          "remarks": "Control bc-8-6 (Control BC.8.6) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "remarks": "Control bc-8-6 (Wireless Connectivity Restrictions for Mobile Devices (Restrictions relatives aux connexions sans fil des appareils mobiles)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "99ffd486-c3e0-5e3b-80e5-319c96164cc9"
         },
         {
           "by-components": [
             {
               "component-uuid": "8c27e0e0-809b-5ccd-a82c-326484b8bf66",
-              "description": "Control bc-8-7 (Control BC.8.7) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "description": "Control bc-8-7 (VPN Usage on Public Wi-Fi Networks (Utilisation d'un RPV sur les réseaux Wi-Fi publics)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
               "implementation-status": {
                 "state": "implemented"
               },
@@ -510,14 +510,14 @@
             }
           ],
           "control-id": "bc-8-7",
-          "remarks": "Control bc-8-7 (Control BC.8.7) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "remarks": "Control bc-8-7 (VPN Usage on Public Wi-Fi Networks (Utilisation d'un RPV sur les réseaux Wi-Fi publics)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "62d66d38-a56d-5fba-99f3-4f0ef520d938"
         },
         {
           "by-components": [
             {
               "component-uuid": "8c27e0e0-809b-5ccd-a82c-326484b8bf66",
-              "description": "Control bc-9-1 (Control BC.9.1) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "description": "Control bc-9-1 (Network Boundary Firewalls and DMZ Server Isolation (Pare-feu de périmètre réseau et isolation des serveurs accessibles par Internet)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
               "implementation-status": {
                 "state": "implemented"
               },
@@ -525,14 +525,14 @@
             }
           ],
           "control-id": "bc-9-1",
-          "remarks": "Control bc-9-1 (Control BC.9.1) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "remarks": "Control bc-9-1 (Network Boundary Firewalls and DMZ Server Isolation (Pare-feu de périmètre réseau et isolation des serveurs accessibles par Internet)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "f6b87dd3-b265-59ed-8379-93b87dfd2fa8"
         },
         {
           "by-components": [
             {
               "component-uuid": "8c27e0e0-809b-5ccd-a82c-326484b8bf66",
-              "description": "Control bc-9-2 (Control BC.9.2) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "description": "Control bc-9-2 (Outbound DNS Firewall Implementation (Mise en œuvre d'un pare-feu DNS sortant)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
               "implementation-status": {
                 "state": "implemented"
               },
@@ -540,14 +540,14 @@
             }
           ],
           "control-id": "bc-9-2",
-          "remarks": "Control bc-9-2 (Control BC.9.2) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "remarks": "Control bc-9-2 (Outbound DNS Firewall Implementation (Mise en œuvre d'un pare-feu DNS sortant)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "66dc5a35-063d-540a-92ed-c37a6efe2c56"
         },
         {
           "by-components": [
             {
               "component-uuid": "8c27e0e0-809b-5ccd-a82c-326484b8bf66",
-              "description": "Control bc-9-3 (Control BC.9.3) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "description": "Control bc-9-3 (Secure Remote Access with VPN and Two-Factor Authentication (Accès à distance sécurisé par RPV et authentification à deux facteurs)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
               "implementation-status": {
                 "state": "implemented"
               },
@@ -555,14 +555,14 @@
             }
           ],
           "control-id": "bc-9-3",
-          "remarks": "Control bc-9-3 (Control BC.9.3) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "remarks": "Control bc-9-3 (Secure Remote Access with VPN and Two-Factor Authentication (Accès à distance sécurisé par RPV et authentification à deux facteurs)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "665a2802-5d30-51d9-9f15-fb9f48236254"
         },
         {
           "by-components": [
             {
               "component-uuid": "8c27e0e0-809b-5ccd-a82c-326484b8bf66",
-              "description": "Control bc-9-4 (Control BC.9.4) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "description": "Control bc-9-4 (Secure Corporate Wi-Fi Authentication (Authentification Wi-Fi d'entreprise sécurisée WPA2-Enterprise)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
               "implementation-status": {
                 "state": "implemented"
               },
@@ -570,14 +570,14 @@
             }
           ],
           "control-id": "bc-9-4",
-          "remarks": "Control bc-9-4 (Control BC.9.4) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "remarks": "Control bc-9-4 (Secure Corporate Wi-Fi Authentication (Authentification Wi-Fi d'entreprise sécurisée WPA2-Enterprise)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "15ed5ad7-44b9-5f57-9d11-4e474172f63c"
         },
         {
           "by-components": [
             {
               "component-uuid": "8c27e0e0-809b-5ccd-a82c-326484b8bf66",
-              "description": "Control bc-9-5 (Control BC.9.5) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "description": "Control bc-9-5 (Public and Corporate Wi-Fi Network Segregation (Séparation des réseaux Wi-Fi publics et d'entreprise)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
               "implementation-status": {
                 "state": "implemented"
               },
@@ -585,14 +585,14 @@
             }
           ],
           "control-id": "bc-9-5",
-          "remarks": "Control bc-9-5 (Control BC.9.5) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "remarks": "Control bc-9-5 (Public and Corporate Wi-Fi Network Segregation (Séparation des réseaux Wi-Fi publics et d'entreprise)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "d6bec6c2-66df-5fcd-8f07-62b832007668"
         },
         {
           "by-components": [
             {
               "component-uuid": "8c27e0e0-809b-5ccd-a82c-326484b8bf66",
-              "description": "Control bc-9-6 (Control BC.9.6) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "description": "Control bc-9-6 (Point-of-Sale System Isolation and PCI DSS Alignment (Isolation des systèmes de point de vente et conformité PCI DSS)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
               "implementation-status": {
                 "state": "implemented"
               },
@@ -600,14 +600,14 @@
             }
           ],
           "control-id": "bc-9-6",
-          "remarks": "Control bc-9-6 (Control BC.9.6) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "remarks": "Control bc-9-6 (Point-of-Sale System Isolation and PCI DSS Alignment (Isolation des systèmes de point de vente et conformité PCI DSS)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "906b7647-1841-51cd-b41c-90d2cfa93509"
         },
         {
           "by-components": [
             {
               "component-uuid": "8c27e0e0-809b-5ccd-a82c-326484b8bf66",
-              "description": "Control bc-9-7 (Control BC.9.7) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "description": "Control bc-9-7 (DMARC Email Authentication Implementation (Mise en œuvre du protocole DMARC pour les services de courriel)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
               "implementation-status": {
                 "state": "implemented"
               },
@@ -615,14 +615,14 @@
             }
           ],
           "control-id": "bc-9-7",
-          "remarks": "Control bc-9-7 (Control BC.9.7) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "remarks": "Control bc-9-7 (DMARC Email Authentication Implementation (Mise en œuvre du protocole DMARC pour les services de courriel)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "2ba75f43-f130-59cb-9bbf-726461337d7e"
         },
         {
           "by-components": [
             {
               "component-uuid": "8c27e0e0-809b-5ccd-a82c-326484b8bf66",
-              "description": "Control bc-9-8 (Control BC.9.8) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "description": "Control bc-9-8 (Ingress and Egress Email Filtering (Filtrage des courriels aux points d'entrée et de sortie)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
               "implementation-status": {
                 "state": "implemented"
               },
@@ -630,14 +630,14 @@
             }
           ],
           "control-id": "bc-9-8",
-          "remarks": "Control bc-9-8 (Control BC.9.8) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "remarks": "Control bc-9-8 (Ingress and Egress Email Filtering (Filtrage des courriels aux points d'entrée et de sortie)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "3f72853a-bf4e-5c8b-98d8-acee844a3502"
         },
         {
           "by-components": [
             {
               "component-uuid": "8c27e0e0-809b-5ccd-a82c-326484b8bf66",
-              "description": "Control oc-1 (Control OC.1) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "description": "Control oc-1 (Organizational Size Scope (Portée relative à la taille de l'organisation)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
               "implementation-status": {
                 "state": "implemented"
               },
@@ -645,14 +645,14 @@
             }
           ],
           "control-id": "oc-1",
-          "remarks": "Control oc-1 (Control OC.1) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "remarks": "Control oc-1 (Organizational Size Scope (Portée relative à la taille de l'organisation)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "492526ed-fe53-57ec-8d4f-90ec9dbcdf31"
         },
         {
           "by-components": [
             {
               "component-uuid": "8c27e0e0-809b-5ccd-a82c-326484b8bf66",
-              "description": "Control oc-2 (Control OC.2) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "description": "Control oc-2 (In-Scope Information Systems and Risk Acceptance (Systèmes d'information visés et acceptation des risques)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
               "implementation-status": {
                 "state": "implemented"
               },
@@ -660,14 +660,14 @@
             }
           ],
           "control-id": "oc-2",
-          "remarks": "Control oc-2 (Control OC.2) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "remarks": "Control oc-2 (In-Scope Information Systems and Risk Acceptance (Systèmes d'information visés et acceptation des risques)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "01e9fbd2-fd84-5085-a41f-391be6f882b5"
         },
         {
           "by-components": [
             {
               "component-uuid": "8c27e0e0-809b-5ccd-a82c-326484b8bf66",
-              "description": "Control oc-3 (Control OC.3) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "description": "Control oc-3 (Confidentiality, Integrity, and Availability Injury Assessment (Évaluation des préjudices à la confidentialité, à l'intégrité et à la disponibilité)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
               "implementation-status": {
                 "state": "implemented"
               },
@@ -675,14 +675,14 @@
             }
           ],
           "control-id": "oc-3",
-          "remarks": "Control oc-3 (Control OC.3) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "remarks": "Control oc-3 (Confidentiality, Integrity, and Availability Injury Assessment (Évaluation des préjudices à la confidentialité, à l'intégrité et à la disponibilité)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "ae66bbf1-f2e3-529d-b447-8b64d4848013"
         },
         {
           "by-components": [
             {
               "component-uuid": "8c27e0e0-809b-5ccd-a82c-326484b8bf66",
-              "description": "Control oc-4 (Control OC.4) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "description": "Control oc-4 (Primary Cyber Threat Identification (Identification de la menace cybernétique principale)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
               "implementation-status": {
                 "state": "implemented"
               },
@@ -690,7 +690,7 @@
             }
           ],
           "control-id": "oc-4",
-          "remarks": "Control oc-4 (Control OC.4) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "remarks": "Control oc-4 (Primary Cyber Threat Identification (Identification de la menace cybernétique principale)) is satisfied by the CyberSecure Canada (CAN/DGSI 104) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "76fbc619-d3b4-5a55-b8ef-e6933de7804e"
         }
       ]
@@ -699,8 +699,14 @@
       "href": "./catalog.json"
     },
     "metadata": {
-      "last-modified": "2026-10-25T23:17:26Z",
+      "last-modified": "2026-11-08T01:42:11Z",
       "oscal-version": "1.2.3",
+      "roles": [
+        {
+          "id": "sec-admin",
+          "title": "Security Administrator"
+        }
+      ],
       "title": "CyberSecure Canada (CAN/DGSI 104) System Security Plan Template",
       "version": "CAN/DGSI 104"
     },
@@ -727,7 +733,8 @@
         "information-types": [
           {
             "description": "Operational and compliance data processed within the ca jurisdiction boundary.",
-            "title": "Sovereign Program Data"
+            "title": "Sovereign Program Data",
+            "uuid": "0cd23fd7-0262-5491-a4ea-3800edb44f99"
           }
         ]
       },

@@ -1,0 +1,237 @@
+{
+  "assessment-results": {
+    "import-ap": {
+      "href": "./assessment-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:12Z",
+      "oscal-version": "1.2.3",
+      "title": "IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - DER: Detektion und Reaktion Assessment Results Template",
+      "version": "1"
+    },
+    "results": [
+      {
+        "description": "Assessment evaluation findings and observations for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - DER: Detektion und Reaktion.",
+        "findings": [
+          {
+            "description": "Control der.1.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "153fe76c-7516-57d2-bc51-bddb7c1e8715"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "der.1.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for der.1.a1.1",
+            "uuid": "f351cb3a-8d54-57ee-911f-55c506543f10"
+          },
+          {
+            "description": "Control der.2.1.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "c8a8b5eb-68a2-5a5c-90b0-0f902b883db9"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "der.2.1.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for der.2.1.a1.1",
+            "uuid": "49dbe461-15bf-53bb-a522-9867d466908a"
+          },
+          {
+            "description": "Control der.2.2.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "bb4c2512-2120-5341-9b35-08640c7f4d74"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "der.2.2.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for der.2.2.a1.1",
+            "uuid": "4fda4c01-0d1b-55fa-b559-1c79c334bdb0"
+          },
+          {
+            "description": "Control der.2.3.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "c312f557-f53d-523f-8abb-32565f6562ea"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "der.2.3.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for der.2.3.a1.1",
+            "uuid": "3da991e7-ef5d-5144-9074-036e90b27a17"
+          },
+          {
+            "description": "Control der.3.1.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "538d7599-075a-5d5d-b081-55941fd15d98"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "der.3.1.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for der.3.1.a1.1",
+            "uuid": "aad8bfc5-e086-5e81-a0ab-2e58b228003e"
+          },
+          {
+            "description": "Control der.3.2.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "a6b204e3-9edb-50bc-891f-714da5c842bb"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "der.3.2.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for der.3.2.a1.1",
+            "uuid": "15f232ed-3c0d-5897-bd9e-281157383ad3"
+          },
+          {
+            "description": "Control der.4.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "7206c064-bd0c-5101-871f-9779b2a6e9df"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "der.4.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for der.4.a1.1",
+            "uuid": "799616a3-f694-5daa-91cc-04225cf7b2f7"
+          }
+        ],
+        "observations": [
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control der.1.a1.1 (Erstellung einer Sicherheitsrichtlinie für die Detektion von sicherheitsrelevanten Ereignissen — DER.1.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "153fe76c-7516-57d2-bc51-bddb7c1e8715"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control der.2.1.a1.1 (Definition eines Sicherheitsvorfalls — DER.2.1.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "c8a8b5eb-68a2-5a5c-90b0-0f902b883db9"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control der.2.2.a1.1 (Prüfung rechtlicher und regulatorischer Rahmenbedingungen zur Erfassung und Auswertbarkeit — DER.2.2.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "bb4c2512-2120-5341-9b35-08640c7f4d74"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control der.2.3.a1.1 (Einrichtung eines Leitungsgremiums — DER.2.3.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "c312f557-f53d-523f-8abb-32565f6562ea"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control der.3.1.a1.1 (Definition von Verantwortlichkeiten — DER.3.1.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "538d7599-075a-5d5d-b081-55941fd15d98"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control der.3.2.a1.1 (Benennung von Verantwortlichen für die IS-Revision — DER.3.2.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "a6b204e3-9edb-50bc-891f-714da5c842bb"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control der.4.a1.1 (Erstellung eines Notfallhandbuchs — DER.4.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "7206c064-bd0c-5101-871f-9779b2a6e9df"
+          }
+        ],
+        "reviewed-controls": {
+          "control-selections": [
+            {
+              "description": "All controls evaluated for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - DER: Detektion und Reaktion",
+              "include-all": {}
+            }
+          ]
+        },
+        "start": "2026-11-08T01:42:12Z",
+        "title": "IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - DER: Detektion und Reaktion Assessment Results",
+        "uuid": "2add61ff-e9fd-51f9-8365-8c72e12e335e"
+      }
+    ],
+    "uuid": "1be382dd-2275-5c99-bae0-f86c979d27b6"
+  }
+}

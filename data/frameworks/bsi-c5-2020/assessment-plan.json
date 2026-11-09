@@ -1,0 +1,126 @@
+{
+  "assessment-plan": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:13Z",
+      "oscal-version": "1.2.3",
+      "title": "BSI C5 Library Security Assessment Plan Template",
+      "version": "1"
+    },
+    "reviewed-controls": {
+      "control-selections": [
+        {
+          "description": "All controls in BSI C5 Library",
+          "include-all": {}
+        }
+      ]
+    },
+    "tasks": [
+      {
+        "description": "Verify and examine implementation of 3 controls in the Security Policies and Instructions (SP) family for BSI C5 Library.",
+        "title": "Assess Family NODE10 (Security Policies and Instructions (SP))",
+        "type": "examination",
+        "uuid": "1dfb7b16-c372-51f4-b1cd-1e841a18d1c8"
+      },
+      {
+        "description": "Verify and examine implementation of 5 controls in the Control and Monitoring of Service Providers and Suppliers (SSO) family for BSI C5 Library.",
+        "title": "Assess Family NODE100 (Control and Monitoring of Service Providers and Suppliers (SSO))",
+        "type": "examination",
+        "uuid": "96de952c-d714-57ff-bdc6-65d319da7d86"
+      },
+      {
+        "description": "Verify and examine implementation of 5 controls in the Security Incident Management (SIM) family for BSI C5 Library.",
+        "title": "Assess Family NODE106 (Security Incident Management (SIM))",
+        "type": "examination",
+        "uuid": "db4204b9-d468-501e-a53a-73d2b4a3c969"
+      },
+      {
+        "description": "Verify and examine implementation of 4 controls in the Business Continuity Management (BCM) family for BSI C5 Library.",
+        "title": "Assess Family NODE112 (Business Continuity Management (BCM))",
+        "type": "examination",
+        "uuid": "e69a2b44-fd12-5bcf-a818-8a7ada6d520d"
+      },
+      {
+        "description": "Verify and examine implementation of 4 controls in the Compliance (COM) family for BSI C5 Library.",
+        "title": "Assess Family NODE117 (Compliance (COM))",
+        "type": "examination",
+        "uuid": "b3d3c102-f422-5d4a-812e-a8fd431d66df"
+      },
+      {
+        "description": "Verify and examine implementation of 4 controls in the Dealing with investigation requests from government agencies (INQ) family for BSI C5 Library.",
+        "title": "Assess Family NODE122 (Dealing with investigation requests from government agencies (INQ))",
+        "type": "examination",
+        "uuid": "31171855-fb7d-5b1e-9208-b76f4bf123f1"
+      },
+      {
+        "description": "Verify and examine implementation of 12 controls in the Product Safety and Security (PSS) family for BSI C5 Library.",
+        "title": "Assess Family NODE127 (Product Safety and Security (PSS))",
+        "type": "examination",
+        "uuid": "e0b9fc38-59c5-5715-8b6c-93d941af4f9d"
+      },
+      {
+        "description": "Verify and examine implementation of 6 controls in the Personnel (HR) family for BSI C5 Library.",
+        "title": "Assess Family NODE14 (Personnel (HR))",
+        "type": "examination",
+        "uuid": "08eab29c-41fe-503c-9e67-5db89b3bf9b7"
+      },
+      {
+        "description": "Verify and examine implementation of 7 controls in the Organisation of Information Security (OIS) family for BSI C5 Library.",
+        "title": "Assess Family NODE2 (Organisation of Information Security (OIS))",
+        "type": "examination",
+        "uuid": "01bc9b28-abbe-5d91-884f-dba5011c8b9e"
+      },
+      {
+        "description": "Verify and examine implementation of 6 controls in the Asset Management (AM) family for BSI C5 Library.",
+        "title": "Assess Family NODE21 (Asset Management (AM))",
+        "type": "examination",
+        "uuid": "e8dd9d3c-cdc8-5ac3-821d-6a7e149d68e2"
+      },
+      {
+        "description": "Verify and examine implementation of 7 controls in the Physical Security (PS) family for BSI C5 Library.",
+        "title": "Assess Family NODE28 (Physical Security (PS))",
+        "type": "examination",
+        "uuid": "a29d9bab-1433-50fa-9c6b-755322b4bfe0"
+      },
+      {
+        "description": "Verify and examine implementation of 24 controls in the Operations (OPS) family for BSI C5 Library.",
+        "title": "Assess Family NODE36 (Operations (OPS))",
+        "type": "examination",
+        "uuid": "afae48a4-1de7-587f-978c-305841133b0c"
+      },
+      {
+        "description": "Verify and examine implementation of 9 controls in the Identity and Access Management (IDM) family for BSI C5 Library.",
+        "title": "Assess Family NODE61 (Identity and Access Management (IDM))",
+        "type": "examination",
+        "uuid": "81f04860-d430-5047-b4b7-5fe0e9a537a7"
+      },
+      {
+        "description": "Verify and examine implementation of 4 controls in the Cryptography and Key Management (CRY) family for BSI C5 Library.",
+        "title": "Assess Family NODE71 (Cryptography and Key Management (CRY))",
+        "type": "examination",
+        "uuid": "566ef02e-f10d-5c38-a4d0-dbd60ec61303"
+      },
+      {
+        "description": "Verify and examine implementation of 8 controls in the Communication Security (COS) family for BSI C5 Library.",
+        "title": "Assess Family NODE76 (Communication Security (COS))",
+        "type": "examination",
+        "uuid": "a43fc8b2-6163-537e-9819-5a3e5ef020b2"
+      },
+      {
+        "description": "Verify and examine implementation of 3 controls in the Portability and Interoperability (PI) family for BSI C5 Library.",
+        "title": "Assess Family NODE85 (Portability and Interoperability (PI))",
+        "type": "examination",
+        "uuid": "3ccaa70c-20b0-5d2b-8ff8-e50ca880f6ac"
+      },
+      {
+        "description": "Verify and examine implementation of 10 controls in the Procurement, Development and Modification of Information Systems (DEV) family for BSI C5 Library.",
+        "title": "Assess Family NODE89 (Procurement, Development and Modification of Information Systems (DEV))",
+        "type": "examination",
+        "uuid": "48c39acf-e5fa-52f7-8804-3b08ed1f5663"
+      }
+    ],
+    "uuid": "bef5bec4-232e-5cc3-9284-18df33cec58c"
+  }
+}

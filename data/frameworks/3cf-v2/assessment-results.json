@@ -1,0 +1,179 @@
+{
+  "assessment-results": {
+    "import-ap": {
+      "href": "./assessment-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:12Z",
+      "oscal-version": "1.2.3",
+      "title": "Cadre de Conformité Cyber France (3CF) pour l'aviation civile - v2 Assessment Results Template",
+      "version": "2"
+    },
+    "results": [
+      {
+        "description": "Assessment evaluation findings and observations for Cadre de Conformité Cyber France (3CF) pour l'aviation civile - v2.",
+        "findings": [
+          {
+            "description": "Control node100 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "96a6c586-9b79-5461-ae86-81a19af427b2"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "node100",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for node100",
+            "uuid": "b195e002-f344-514f-9254-bdf1345173b7"
+          },
+          {
+            "description": "Control node11 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "ceba58f5-3968-5887-885e-59b070af957b"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "node11",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for node11",
+            "uuid": "5f87b103-c409-5fa7-b335-92bbb150a253"
+          },
+          {
+            "description": "Control node338 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "b91f3445-509f-5a7c-8653-b5db160893c4"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "node338",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for node338",
+            "uuid": "ec852869-f85b-585f-a79e-f7a61cb141ad"
+          },
+          {
+            "description": "Control node419 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "eb1afab1-7cb4-5836-98e2-b0df85f2419e"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "node419",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for node419",
+            "uuid": "85344c4a-ab43-5517-a2e4-7aeb4ba7fe6a"
+          },
+          {
+            "description": "Control node568 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "a3459c68-6d67-5ad9-b609-7aea9c8569f8"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "node568",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for node568",
+            "uuid": "3c79912a-a80d-5a19-b685-edbbaa896c90"
+          }
+        ],
+        "observations": [
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control node100 (Identification des risques — node100) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "96a6c586-9b79-5461-ae86-81a19af427b2"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control node11 (Stratégie et objectifs de sécurité de l’information — node11) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "ceba58f5-3968-5887-885e-59b070af957b"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control node338 (Personnel de sûreté aérienne — node338) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "b91f3445-509f-5a7c-8653-b5db160893c4"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control node419 (Organisation du suivi de la gestion des risques — node419) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "eb1afab1-7cb4-5836-98e2-b0df85f2419e"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control node568 (L’organisme intègre ou fait référence aux éléments suivants dans : — node568) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "a3459c68-6d67-5ad9-b609-7aea9c8569f8"
+          }
+        ],
+        "reviewed-controls": {
+          "control-selections": [
+            {
+              "description": "All controls evaluated for Cadre de Conformité Cyber France (3CF) pour l'aviation civile - v2",
+              "include-all": {}
+            }
+          ]
+        },
+        "start": "2026-11-08T01:42:12Z",
+        "title": "Cadre de Conformité Cyber France (3CF) pour l'aviation civile - v2 Assessment Results",
+        "uuid": "5aad4f02-da51-5384-a919-01dc7ac114a0"
+      }
+    ],
+    "uuid": "3bef6f02-33e7-5e11-903b-fae74f0b851d"
+  }
+}

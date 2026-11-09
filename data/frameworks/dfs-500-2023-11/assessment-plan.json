@@ -1,0 +1,138 @@
+{
+  "assessment-plan": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:13Z",
+      "oscal-version": "1.2.3",
+      "title": "NY DFS 500 with 2023-11 amendments Security Assessment Plan Template",
+      "version": "1"
+    },
+    "reviewed-controls": {
+      "control-selections": [
+        {
+          "description": "All controls in NY DFS 500 with 2023-11 amendments",
+          "include-all": {}
+        }
+      ]
+    },
+    "tasks": [
+      {
+        "description": "Verify and examine implementation of 4 controls in the Cybersecurity personnel and intelligence family for NY DFS 500 with 2023-11 amendments.",
+        "title": "Assess Family _500.10 (Cybersecurity personnel and intelligence)",
+        "type": "examination",
+        "uuid": "044e8f4b-9bea-5015-80ee-25aa1a723794"
+      },
+      {
+        "description": "Verify and examine implementation of 10 controls in the Third-party service provider security policy family for NY DFS 500 with 2023-11 amendments.",
+        "title": "Assess Family _500.11 (Third-party service provider security policy)",
+        "type": "examination",
+        "uuid": "6c8fdba3-e21e-5d47-ac0d-f3aaea65e095"
+      },
+      {
+        "description": "Verify and examine implementation of 5 controls in the Multi-factor authentication family for NY DFS 500 with 2023-11 amendments.",
+        "title": "Assess Family _500.12 (Multi-factor authentication)",
+        "type": "examination",
+        "uuid": "9f2900e1-6521-5b35-97ad-a912084292cf"
+      },
+      {
+        "description": "Verify and examine implementation of 9 controls in the Asset management and data retention requirements family for NY DFS 500 with 2023-11 amendments.",
+        "title": "Assess Family _500.13 (Asset management and data retention requirements)",
+        "type": "examination",
+        "uuid": "d0232572-ccd1-5f0c-ad85-46faf104a2d0"
+      },
+      {
+        "description": "Verify and examine implementation of 6 controls in the Monitoring and training family for NY DFS 500 with 2023-11 amendments.",
+        "title": "Assess Family _500.14 (Monitoring and training)",
+        "type": "examination",
+        "uuid": "3600b26f-f5c7-5679-8ee7-6722c019cc75"
+      },
+      {
+        "description": "Verify and examine implementation of 2 controls in the Encryption of nonpublic information family for NY DFS 500 with 2023-11 amendments.",
+        "title": "Assess Family _500.15 (Encryption of nonpublic information)",
+        "type": "examination",
+        "uuid": "6cffa082-1910-5844-a689-1ca4b96d9ff7"
+      },
+      {
+        "description": "Verify and examine implementation of 24 controls in the Incident response and business continuity management family for NY DFS 500 with 2023-11 amendments.",
+        "title": "Assess Family _500.16 (Incident response and business continuity management)",
+        "type": "examination",
+        "uuid": "7c35c870-b331-5d5d-852e-3f94bab0bbc8"
+      },
+      {
+        "description": "Verify and examine implementation of 15 controls in the Notices to superintendent family for NY DFS 500 with 2023-11 amendments.",
+        "title": "Assess Family _500.17 (Notices to superintendent)",
+        "type": "examination",
+        "uuid": "b7e8ebbe-3cd8-549b-bef1-b62ffc89a130"
+      },
+      {
+        "description": "Verify and examine implementation of 1 controls in the Confidentiality family for NY DFS 500 with 2023-11 amendments.",
+        "title": "Assess Family _500.18 (Confidentiality)",
+        "type": "examination",
+        "uuid": "0351a897-1612-53af-94ab-69590209fb7d"
+      },
+      {
+        "description": "Verify and examine implementation of 8 controls in the Exemptions family for NY DFS 500 with 2023-11 amendments.",
+        "title": "Assess Family _500.19 (Exemptions)",
+        "type": "examination",
+        "uuid": "ce0155bb-e746-5d1a-b235-e9051424240d"
+      },
+      {
+        "description": "Verify and examine implementation of 11 controls in the Cybersecurity program family for NY DFS 500 with 2023-11 amendments.",
+        "title": "Assess Family _500.2 (Cybersecurity program)",
+        "type": "examination",
+        "uuid": "9505b046-62ac-5a09-a422-fed6e495a4e3"
+      },
+      {
+        "description": "Verify and examine implementation of 8 controls in the Exemptions from electronic filing and submission requirements family for NY DFS 500 with 2023-11 amendments.",
+        "title": "Assess Family _500.24 (Exemptions from electronic filing and submission requirements)",
+        "type": "examination",
+        "uuid": "409d9bf7-7877-5207-bb10-449c2f00f7af"
+      },
+      {
+        "description": "Verify and examine implementation of 17 controls in the Cybersecurity policy family for NY DFS 500 with 2023-11 amendments.",
+        "title": "Assess Family _500.3 (Cybersecurity policy)",
+        "type": "examination",
+        "uuid": "24e72683-050d-5f66-9cf7-99141c524c99"
+      },
+      {
+        "description": "Verify and examine implementation of 17 controls in the Cybersecurity governance family for NY DFS 500 with 2023-11 amendments.",
+        "title": "Assess Family _500.4 (Cybersecurity governance)",
+        "type": "examination",
+        "uuid": "629e35fd-e75d-54e8-8c8a-b86c9568bb31"
+      },
+      {
+        "description": "Verify and examine implementation of 6 controls in the Vulnerability management family for NY DFS 500 with 2023-11 amendments.",
+        "title": "Assess Family _500.5 (Vulnerability management)",
+        "type": "examination",
+        "uuid": "e38bbf7f-46ae-536d-9915-cb664471d8e7"
+      },
+      {
+        "description": "Verify and examine implementation of 4 controls in the Audit trail family for NY DFS 500 with 2023-11 amendments.",
+        "title": "Assess Family _500.6 (Audit trail)",
+        "type": "examination",
+        "uuid": "b2349b82-0f35-5904-8ed8-fdde26a006a8"
+      },
+      {
+        "description": "Verify and examine implementation of 11 controls in the Access privileges and management family for NY DFS 500 with 2023-11 amendments.",
+        "title": "Assess Family _500.7 (Access privileges and management)",
+        "type": "examination",
+        "uuid": "9714a0c8-365b-5d37-8f6d-f2c9ed1dcfce"
+      },
+      {
+        "description": "Verify and examine implementation of 2 controls in the Application security family for NY DFS 500 with 2023-11 amendments.",
+        "title": "Assess Family _500.8 (Application security)",
+        "type": "examination",
+        "uuid": "32851cf7-778d-504a-a800-65620fd02e22"
+      },
+      {
+        "description": "Verify and examine implementation of 5 controls in the Risk assessment family for NY DFS 500 with 2023-11 amendments.",
+        "title": "Assess Family _500.9 (Risk assessment)",
+        "type": "examination",
+        "uuid": "8ecf1491-32c8-5b93-ba78-c2a2dd7e12f2"
+      }
+    ],
+    "uuid": "21120f1f-6aae-588f-9f81-57ac5bd61635"
+  }
+}

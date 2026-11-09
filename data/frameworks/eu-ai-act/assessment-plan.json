@@ -1,0 +1,78 @@
+{
+  "assessment-plan": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:11Z",
+      "oscal-version": "1.2.3",
+      "title": "EU Artificial Intelligence Act (AI Act) Security Assessment Plan Template",
+      "version": "2"
+    },
+    "reviewed-controls": {
+      "control-selections": [
+        {
+          "description": "All controls in EU Artificial Intelligence Act (AI Act)",
+          "include-all": {}
+        }
+      ]
+    },
+    "tasks": [
+      {
+        "description": "Verify and examine implementation of 1 controls in the CHAPTER XIII family for EU Artificial Intelligence Act (AI Act).",
+        "title": "Assess Family NODE1106 (CHAPTER XIII)",
+        "type": "examination",
+        "uuid": "3d0ce3e3-316a-5286-a930-4c790fdb05fb"
+      },
+      {
+        "description": "Verify and examine implementation of 1 controls in the CHAPTER I family for EU Artificial Intelligence Act (AI Act).",
+        "title": "Assess Family NODE183 (CHAPTER I)",
+        "type": "examination",
+        "uuid": "1a35aca4-b860-58bd-9fe8-199aeccafc28"
+      },
+      {
+        "description": "Verify and examine implementation of 20 controls in the CHAPTER II family for EU Artificial Intelligence Act (AI Act).",
+        "title": "Assess Family NODE272 (CHAPTER II)",
+        "type": "examination",
+        "uuid": "1d53e6c4-2d24-5de0-a186-f78f5e2ccd01"
+      },
+      {
+        "description": "Verify and examine implementation of 237 controls in the CHAPTER III family for EU Artificial Intelligence Act (AI Act).",
+        "title": "Assess Family NODE300 (CHAPTER III)",
+        "type": "examination",
+        "uuid": "a5cecca1-d068-54f6-9968-9f34f5676312"
+      },
+      {
+        "description": "Verify and examine implementation of 6 controls in the CHAPTER IV family for EU Artificial Intelligence Act (AI Act).",
+        "title": "Assess Family NODE705 (CHAPTER IV)",
+        "type": "examination",
+        "uuid": "adfb2f4a-e98d-5f47-a101-c75504ef9761"
+      },
+      {
+        "description": "Verify and examine implementation of 33 controls in the CHAPTER V family for EU Artificial Intelligence Act (AI Act).",
+        "title": "Assess Family NODE715 (CHAPTER V)",
+        "type": "examination",
+        "uuid": "0d40ba91-d9d5-5b55-a405-dfaf0d5c9b37"
+      },
+      {
+        "description": "Verify and examine implementation of 20 controls in the CHAPTER VI family for EU Artificial Intelligence Act (AI Act).",
+        "title": "Assess Family NODE780 (CHAPTER VI)",
+        "type": "examination",
+        "uuid": "62098b85-7d8c-560e-a651-2dd6f46d742e"
+      },
+      {
+        "description": "Verify and examine implementation of 2 controls in the CHAPTER VIII family for EU Artificial Intelligence Act (AI Act).",
+        "title": "Assess Family NODE908 (CHAPTER VIII)",
+        "type": "examination",
+        "uuid": "93f5cb3f-3174-57e5-98ad-a2cca2522cc7"
+      },
+      {
+        "description": "Verify and examine implementation of 27 controls in the CHAPTER IX family for EU Artificial Intelligence Act (AI Act).",
+        "title": "Assess Family NODE916 (CHAPTER IX)",
+        "type": "examination",
+        "uuid": "636564af-7dd6-50ea-b227-f081216ca30d"
+      }
+    ],
+    "uuid": "cd8dbbb4-5be5-5f65-aef6-def9cc06277b"
+  }
+}

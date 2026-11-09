@@ -1,0 +1,90 @@
+{
+  "assessment-plan": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:12Z",
+      "oscal-version": "1.2.3",
+      "title": "IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - NET: Netze und Kommunikation Security Assessment Plan Template",
+      "version": "1"
+    },
+    "reviewed-controls": {
+      "control-selections": [
+        {
+          "description": "All controls in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - NET: Netze und Kommunikation",
+          "include-all": {}
+        }
+      ]
+    },
+    "tasks": [
+      {
+        "description": "Verify and examine implementation of 165 controls in the Netzarchitektur und -design family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - NET: Netze und Kommunikation.",
+        "title": "Assess Family NET.1.1 (Netzarchitektur und -design)",
+        "type": "examination",
+        "uuid": "8984e150-b879-5099-afa3-866c1660b02e"
+      },
+      {
+        "description": "Verify and examine implementation of 109 controls in the Netzmanagement family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - NET: Netze und Kommunikation.",
+        "title": "Assess Family NET.1.2 (Netzmanagement)",
+        "type": "examination",
+        "uuid": "bc1a8be0-8e2b-5b97-a30a-7b1cc573462b"
+      },
+      {
+        "description": "Verify and examine implementation of 53 controls in the WLAN-Betrieb family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - NET: Netze und Kommunikation.",
+        "title": "Assess Family NET.2.1 (WLAN-Betrieb)",
+        "type": "examination",
+        "uuid": "97e5b6a6-60ee-5990-9d1c-e9adfa7ecafb"
+      },
+      {
+        "description": "Verify and examine implementation of 32 controls in the WLAN-Nutzung family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - NET: Netze und Kommunikation.",
+        "title": "Assess Family NET.2.2 (WLAN-Nutzung)",
+        "type": "examination",
+        "uuid": "b6ad4f08-fadb-5001-8b71-0222f5ff6f0a"
+      },
+      {
+        "description": "Verify and examine implementation of 82 controls in the Router und Switches family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - NET: Netze und Kommunikation.",
+        "title": "Assess Family NET.3.1 (Router und Switches)",
+        "type": "examination",
+        "uuid": "b0ef4e6c-1553-5146-a01b-8c33094ddad6"
+      },
+      {
+        "description": "Verify and examine implementation of 108 controls in the Firewall family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - NET: Netze und Kommunikation.",
+        "title": "Assess Family NET.3.2 (Firewall)",
+        "type": "examination",
+        "uuid": "53bb3609-b0e2-50a5-929f-4f36ff899aa4"
+      },
+      {
+        "description": "Verify and examine implementation of 41 controls in the VPN family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - NET: Netze und Kommunikation.",
+        "title": "Assess Family NET.3.3 (VPN)",
+        "type": "examination",
+        "uuid": "f390abc0-863e-5790-b6cf-ad12e7e72d70"
+      },
+      {
+        "description": "Verify and examine implementation of 136 controls in the Network Access Control family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - NET: Netze und Kommunikation.",
+        "title": "Assess Family NET.3.4 (Network Access Control)",
+        "type": "examination",
+        "uuid": "5fe8c014-ca80-597d-89c2-ef533e3bafe7"
+      },
+      {
+        "description": "Verify and examine implementation of 51 controls in the TK-Anlagen family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - NET: Netze und Kommunikation.",
+        "title": "Assess Family NET.4.1 (TK-Anlagen)",
+        "type": "examination",
+        "uuid": "59e94ec3-138e-553e-8aba-61383fa34b53"
+      },
+      {
+        "description": "Verify and examine implementation of 49 controls in the VoIP family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - NET: Netze und Kommunikation.",
+        "title": "Assess Family NET.4.2 (VoIP)",
+        "type": "examination",
+        "uuid": "38f587d8-6a90-5607-b4b9-06306dbe6dcf"
+      },
+      {
+        "description": "Verify and examine implementation of 66 controls in the Faxgeräte und Faxserver family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - NET: Netze und Kommunikation.",
+        "title": "Assess Family NET.4.3 (Faxgeräte und Faxserver)",
+        "type": "examination",
+        "uuid": "5ed9cb99-4e2b-5127-a60e-dbb2cf9cfa6c"
+      }
+    ],
+    "uuid": "1b9beb0a-d8af-5442-8237-6eea32e1a1f6"
+  }
+}

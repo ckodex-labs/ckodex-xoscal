@@ -8,6 +8,7 @@ import (
 	"log"
 	"os"
 	"os/exec"
+	"strings"
 
 	mappingv1 "github.com/mchorfa/xoscal/proto/oscal/mapping/v1"
 	"github.com/mchorfa/xoscal/server/internal/dbutil"
@@ -41,6 +42,24 @@ func main() {
 
 	gen := oscal.NewGenerator(store)
 	ctx := context.Background()
+
+	entities, err := store.GetSnapshot(ctx, *snapshot)
+	if err != nil {
+		log.Fatalf("get snapshot %q: %v", *snapshot, err)
+	}
+	reqCount := 0
+	for _, e := range entities {
+		if e.Type != "reg:Requirement" {
+			continue
+		}
+		var req kg.Requirement
+		if err := json.Unmarshal(e.Payload, &req); err == nil && req.Assessable && strings.EqualFold(req.Framework, *framework) {
+			reqCount++
+		}
+	}
+	if reqCount == 0 {
+		log.Fatalf("snapshot %q contains 0 requirements for framework %q", *snapshot, *framework)
+	}
 
 	if err := os.MkdirAll(*outDir, 0750); err != nil {
 		log.Fatalf("mkdir: %v", err)
@@ -208,6 +227,7 @@ func writeOSCAL(path string, marshal func() ([]byte, error), validator *schemava
 	if err := os.WriteFile(path, b, 0600); err != nil {
 		log.Fatalf("write %s: %v", path, err)
 	}
+	_, _ = dbutil.WriteDigestSidecar(path)
 }
 
 // kindToCLIModel maps an ArtifactKind to the oscal-cli subcommand name.

@@ -1,0 +1,208 @@
+{
+  "assessment-results": {
+    "import-ap": {
+      "href": "./assessment-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:13Z",
+      "oscal-version": "1.2.3",
+      "title": "NIST CSF version 2.0 Assessment Results Template",
+      "version": "6"
+    },
+    "results": [
+      {
+        "description": "Assessment evaluation findings and observations for NIST CSF version 2.0.",
+        "findings": [
+          {
+            "description": "Control de.ae-02 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "4e8bd4c5-94df-5226-9286-1dedb27287d8"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "de.ae-02",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for de.ae-02",
+            "uuid": "9976e663-905f-5292-8417-4476b257e511"
+          },
+          {
+            "description": "Control gv.oc-01 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "b0c8364a-df70-569f-b82a-ace3f5b25442"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "gv.oc-01",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for gv.oc-01",
+            "uuid": "28c14fe1-adf2-5aaa-856e-d784c45cb1f2"
+          },
+          {
+            "description": "Control id.am-01 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "c6c8247c-218f-5764-b107-4388724f58c0"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "id.am-01",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for id.am-01",
+            "uuid": "100e33f6-d5ab-57ee-b40b-efedfd542521"
+          },
+          {
+            "description": "Control pr.aa-01 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "bf42add0-03d4-5c6e-8f19-46bcab711f85"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "pr.aa-01",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for pr.aa-01",
+            "uuid": "1097978e-246c-5091-aa88-db35443e9cd9"
+          },
+          {
+            "description": "Control rc.co-03 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "8597ab44-b78f-57e4-acd2-2c528a11a88e"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "rc.co-03",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for rc.co-03",
+            "uuid": "c2388ba2-b939-575a-8bd1-b552f5bb762a"
+          },
+          {
+            "description": "Control rs.an-03 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "c97f046f-8775-5f6f-b73d-a05ead30cd7a"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "rs.an-03",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for rs.an-03",
+            "uuid": "e8da1243-1525-565d-a3c8-085aea913b83"
+          }
+        ],
+        "observations": [
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control de.ae-02 (Adverse Event Analysis — DE.AE-02) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "4e8bd4c5-94df-5226-9286-1dedb27287d8"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control gv.oc-01 (Organizational Context — GV.OC-01) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "b0c8364a-df70-569f-b82a-ace3f5b25442"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control id.am-01 (Asset Management — ID.AM-01) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "c6c8247c-218f-5764-b107-4388724f58c0"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control pr.aa-01 (Identity Management, Authentication, and Access Control — PR.AA-01) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "bf42add0-03d4-5c6e-8f19-46bcab711f85"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control rc.co-03 (Incident Recovery Communication — RC.CO-03) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "8597ab44-b78f-57e4-acd2-2c528a11a88e"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control rs.an-03 (Incident Analysis — RS.AN-03) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "c97f046f-8775-5f6f-b73d-a05ead30cd7a"
+          }
+        ],
+        "reviewed-controls": {
+          "control-selections": [
+            {
+              "description": "All controls evaluated for NIST CSF version 2.0",
+              "include-all": {}
+            }
+          ]
+        },
+        "start": "2026-11-08T01:42:13Z",
+        "title": "NIST CSF version 2.0 Assessment Results",
+        "uuid": "34728e5b-fad2-5516-a47a-3b6d4c57effc"
+      }
+    ],
+    "uuid": "2e050b46-cf90-562e-80f3-6b359c5201b8"
+  }
+}

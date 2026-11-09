@@ -1,0 +1,208 @@
+{
+  "assessment-results": {
+    "import-ap": {
+      "href": "./assessment-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:13Z",
+      "oscal-version": "1.2.3",
+      "title": "CISA Cybersecurity Performance Goals v2.0 Assessment Results Template",
+      "version": "1"
+    },
+    "results": [
+      {
+        "description": "Assessment evaluation findings and observations for CISA Cybersecurity Performance Goals v2.0.",
+        "findings": [
+          {
+            "description": "Control _1.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "768a3cfc-7af2-5557-ba2a-fa38052dd1c7"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_1.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _1.a",
+            "uuid": "86dc9be3-a738-5d47-9919-cf92fdc720de"
+          },
+          {
+            "description": "Control _2.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "9be1db3d-a48d-5141-ad8b-0bce050d6a7a"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_2.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _2.a",
+            "uuid": "3aab0aaa-be41-53a9-a665-2a217760a067"
+          },
+          {
+            "description": "Control _3.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "4c6b5b07-1c41-5eb7-b829-769bbeadfc39"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_3.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _3.a",
+            "uuid": "40f77729-fe37-5a66-be59-90c84b900f10"
+          },
+          {
+            "description": "Control _4.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "995b84d7-1dc2-5efe-a63b-ca1a8401538c"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_4.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _4.a",
+            "uuid": "9b4c0a04-554b-5f38-84df-1cde8e8e67ad"
+          },
+          {
+            "description": "Control _5.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "275130bb-2586-5558-a7be-8144824e25ae"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_5.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _5.a",
+            "uuid": "0f9e51c2-9177-58de-8ecc-81a10261a471"
+          },
+          {
+            "description": "Control _6.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "3a37126a-ab20-538c-be93-b4c35f2523ab"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_6.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _6.a",
+            "uuid": "950ff7f0-cfe1-5913-a293-30c4eb76318b"
+          }
+        ],
+        "observations": [
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control _1.a (Establish Cybersecurity Responsibilities) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "768a3cfc-7af2-5557-ba2a-fa38052dd1c7"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control _2.a (Manage Organizational Assets) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "9be1db3d-a48d-5141-ad8b-0bce050d6a7a"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control _3.a (Changing Default Passwords) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "4c6b5b07-1c41-5eb7-b829-769bbeadfc39"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control _4.a (Establish Malicious Code Detection) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "995b84d7-1dc2-5efe-a63b-ca1a8401538c"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control _5.a (Establish Incident Communication Procedures) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "275130bb-2586-5558-a7be-8144824e25ae"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control _6.a (Incident Planning and Preparedness) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "3a37126a-ab20-538c-be93-b4c35f2523ab"
+          }
+        ],
+        "reviewed-controls": {
+          "control-selections": [
+            {
+              "description": "All controls evaluated for CISA Cybersecurity Performance Goals v2.0",
+              "include-all": {}
+            }
+          ]
+        },
+        "start": "2026-11-08T01:42:13Z",
+        "title": "CISA Cybersecurity Performance Goals v2.0 Assessment Results",
+        "uuid": "26dc037c-6e30-5694-b1df-2f71f8b16972"
+      }
+    ],
+    "uuid": "f09e7b62-acba-57f2-89ae-5ab51e001d2e"
+  }
+}

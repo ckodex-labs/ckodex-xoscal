@@ -771,6 +771,8 @@ func RunSeed(args []string) {
 	fs := flag.NewFlagSet("seed", flag.ExitOnError)
 	dsn := fs.String("dsn", "oscal.db", "SQLite database path or DSN")
 	dbAlias := fs.String("db", "", "Alias for -dsn")
+	fwName := fs.String("framework", "", "Optional specific framework ref_id or alias to seed")
+	snapshot := fs.String("snapshot", "baseline", "Snapshot name to create after seeding")
 	_ = fs.Parse(args)
 
 	effectiveDSN := *dsn
@@ -786,17 +788,66 @@ func RunSeed(args []string) {
 	}
 	defer store.Close()
 
-	ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)
+	ctx, cancel := context.WithTimeout(context.Background(), 60*time.Second)
 	defer cancel()
 
-	if err := frameworks.DefaultRegistry().SeedKG(ctx, store); err != nil {
-		fmt.Fprintf(os.Stderr, "error seeding baseline frameworks: %v\n", err)
-		os.Exit(1)
+	reg := frameworks.DefaultRegistry()
+	snapNames := []string{*snapshot, "baseline", "latest", "v1.0"}
+	if *fwName != "" {
+		fw, ok := reg.Get(*fwName)
+		if !ok {
+			fmt.Fprintf(os.Stderr, "error: unknown framework %s\n", *fwName)
+			os.Exit(1)
+		}
+		if err := frameworks.SeedFramework(ctx, store, fw); err != nil {
+			fmt.Fprintf(os.Stderr, "error seeding framework %s: %v\n", fw.ID(), err)
+			os.Exit(1)
+		}
+		snapNames = append(snapNames, fw.ID(), *fwName)
+	} else {
+		if err := reg.SeedKG(ctx, store); err != nil {
+			fmt.Fprintf(os.Stderr, "error seeding baseline frameworks: %v\n", err)
+			os.Exit(1)
+		}
+	}
+
+	seenSnap := make(map[string]bool)
+	for _, sn := range snapNames {
+		if sn == "" || seenSnap[sn] {
+			continue
+		}
+		seenSnap[sn] = true
+		if _, err := store.CreateSnapshot(ctx, sn); err != nil {
+			fmt.Fprintf(os.Stderr, "error creating snapshot %q: %v\n", sn, err)
+			os.Exit(1)
+		}
 	}
 
 	fws, _ := store.ListEntities(ctx, "reg:Framework", kg.EntityStatusActive)
 	reqs, _ := store.ListEntities(ctx, "reg:Requirement", kg.EntityStatusActive)
-	fmt.Printf("[OK] Successfully seeded %d framework(s) and %d requirement(s) into %s\n", len(fws), len(reqs), effectiveDSN)
+	fmt.Printf("[OK] Successfully seeded %d framework(s) and %d requirement(s) into %s (snapshot: %s)\n", len(fws), len(reqs), effectiveDSN, *snapshot)
+}
+
+// countSnapshotRequirements returns the number of active assessable Requirement entities in the snapshot matching frameworkID.
+func countSnapshotRequirements(ctx context.Context, store kg.Store, snapshotName, frameworkID string) (int, error) {
+	entities, err := store.GetSnapshot(ctx, snapshotName)
+	if err != nil {
+		return 0, err
+	}
+	count := 0
+	for _, e := range entities {
+		if e.Type != "reg:Requirement" {
+			continue
+		}
+		var req kg.Requirement
+		if err := json.Unmarshal(e.Payload, &req); err != nil {
+			continue
+		}
+		if req.Assessable && strings.EqualFold(req.Framework, frameworkID) {
+			count++
+		}
+	}
+	return count, nil
 }
 
 // RunGenerate generates OSCAL artifacts from the Knowledge Graph snapshot.
@@ -823,6 +874,37 @@ func RunGenerate(args []string) {
 	}
 	defer store.Close()
 
+	ctx, cancel := context.WithTimeout(context.Background(), 60*time.Second)
+	defer cancel()
+
+	effectiveFramework := *framework
+	if fw, ok := frameworks.DefaultRegistry().Get(*framework); ok {
+		effectiveFramework = fw.ID()
+	}
+
+	effectiveSnapshot := *snapshot
+	reqCount, err := countSnapshotRequirements(ctx, store, effectiveSnapshot, effectiveFramework)
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "error reading snapshot %q: %v\n", effectiveSnapshot, err)
+		os.Exit(1)
+	}
+	if reqCount == 0 && effectiveFramework != *framework {
+		if altCount, altErr := countSnapshotRequirements(ctx, store, effectiveSnapshot, *framework); altErr == nil && altCount > 0 {
+			effectiveFramework = *framework
+			reqCount = altCount
+		}
+	}
+	if reqCount == 0 && frameworks.DefaultRegistry().Has(*snapshot) {
+		if baseCount, baseErr := countSnapshotRequirements(ctx, store, "baseline", effectiveFramework); baseErr == nil && baseCount > 0 {
+			effectiveSnapshot = "baseline"
+			reqCount = baseCount
+		}
+	}
+	if reqCount == 0 {
+		fmt.Fprintf(os.Stderr, "error: snapshot %q contains 0 requirements for framework %q (run 'xoscal seed' or 'xoscal ingest' first)\n", *snapshot, *framework)
+		os.Exit(1)
+	}
+
 	if err := os.MkdirAll(*outDir, 0750); err != nil {
 		fmt.Fprintf(os.Stderr, "error creating output directory: %v\n", err)
 		os.Exit(1)
@@ -839,11 +921,9 @@ func RunGenerate(args []string) {
 	}
 
 	gen := oscal.NewGenerator(store)
-	ctx, cancel := context.WithTimeout(context.Background(), 60*time.Second)
-	defer cancel()
 
 	if *arOnly {
-		ar, err := gen.GenerateAssessmentResults(ctx, *snapshot, *framework)
+		ar, err := gen.GenerateAssessmentResults(ctx, effectiveSnapshot, effectiveFramework)
 		if err != nil {
 			fmt.Fprintf(os.Stderr, "error generating assessment results: %v\n", err)
 			os.Exit(1)
@@ -865,11 +945,12 @@ func RunGenerate(args []string) {
 			fmt.Fprintf(os.Stderr, "error writing %s: %v\n", path, err)
 			os.Exit(1)
 		}
+		_, _ = dbutil.WriteDigestSidecar(path)
 		fmt.Printf("[OK] Generated %s\n", path)
 		return
 	}
 
-	res, err := gen.GenerateAllArtifacts(ctx, *snapshot, *framework, nil)
+	res, err := gen.GenerateAllArtifacts(ctx, effectiveSnapshot, effectiveFramework, nil)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "error generating artifacts: %v\n", err)
 		os.Exit(1)
@@ -952,6 +1033,7 @@ func RunGenerate(args []string) {
 			fmt.Fprintf(os.Stderr, "error writing %s: %v\n", path, err)
 			os.Exit(1)
 		}
+		_, _ = dbutil.WriteDigestSidecar(path)
 		fmt.Printf("[OK] Generated %s\n", path)
 	}
 }
@@ -962,6 +1044,7 @@ func RunIngest(args []string) {
 	dsn := fs.String("dsn", "oscal.db", "SQLite DSN")
 	input := fs.String("input", "", "Input JSON file path (required)")
 	framework := fs.String("framework", "eu-ai-act", "Framework identifier")
+	snapshot := fs.String("snapshot", "baseline", "Snapshot name to create after ingestion")
 	_ = fs.Parse(args)
 
 	if *input == "" {
@@ -999,8 +1082,21 @@ func RunIngest(args []string) {
 		os.Exit(1)
 	}
 
-	fmt.Printf("[OK] Ingested %d requirements, %d entities, %d conflicts into %s\n",
-		len(res.Requirements), len(res.Entities), len(res.Conflicts), *dsn)
+	snapNames := []string{*snapshot, "baseline", "latest", "v1.0", *framework}
+	seenSnap := make(map[string]bool)
+	for _, sn := range snapNames {
+		if sn == "" || seenSnap[sn] {
+			continue
+		}
+		seenSnap[sn] = true
+		if _, err := store.CreateSnapshot(ctx, sn); err != nil {
+			fmt.Fprintf(os.Stderr, "error creating snapshot %q: %v\n", sn, err)
+			os.Exit(1)
+		}
+	}
+
+	fmt.Printf("[OK] Ingested %d requirements, %d entities, %d conflicts into %s (snapshot: %s)\n",
+		len(res.Requirements), len(res.Entities), len(res.Conflicts), *dsn, *snapshot)
 	for _, c := range res.Conflicts {
 		fmt.Printf("  Conflict: %s (%s)\n", c.Description, c.Type)
 	}
@@ -1364,7 +1460,7 @@ func KindFromName(name string) (schemavalidate.ArtifactKind, error) {
 type DoctorCheck struct {
 	Name        string `json:"name"`
 	Category    string `json:"category"`
-	Status      string `json:"status"` // PASS, ADVISORY, FAIL
+	Status      string `json:"status"`   // PASS, ADVISORY, FAIL
 	Evidence    string `json:"evidence"` // VERIFIED, OBSERVED, NOT_AVAILABLE
 	Detail      string `json:"detail"`
 	Remediation string `json:"remediation,omitempty"`
@@ -1502,10 +1598,14 @@ func RunDoctor(args []string, version string) {
 			Remediation: "To enable optional Tier 2 Metaschema constraint enforcement: https://github.com/usnistgov/oscal-cli/releases",
 		})
 	} else {
+		// #nosec G204 -- oscalCliPath is resolved via exec.LookPath("oscal-cli") with a fixed "--version" argument.
 		cmd := exec.Command(oscalCliPath, "--version")
 		out, verErr := cmd.Output()
 		verStr := strings.TrimSpace(string(out))
-		if verErr != nil {
+		if lines := strings.Split(verStr, "\n"); len(lines) > 0 && strings.TrimSpace(lines[0]) != "" {
+			verStr = strings.TrimSpace(lines[0])
+		}
+		if verErr != nil || verStr == "" {
 			verStr = oscalCliPath
 		}
 		report.Checks = append(report.Checks, DoctorCheck{

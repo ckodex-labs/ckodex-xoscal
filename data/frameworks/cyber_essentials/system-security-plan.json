@@ -1,0 +1,1578 @@
+{
+  "system-security-plan": {
+    "control-implementation": {
+      "description": "Control implementations for Cyber Essentials: Requirements for IT infrastructure v3.1.",
+      "implemented-requirements": [
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node128 (Firewalls — node128) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "b42023f2-447b-539a-bdee-68a596397774"
+            }
+          ],
+          "control-id": "node128",
+          "remarks": "Control node128 (Firewalls — node128) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "6fef96a8-0f1b-5a2c-9be3-8e98df899391"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node136 (Requirements — node136) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "5aba45a4-4dac-533d-af2d-0f5a8b9f76c0"
+            }
+          ],
+          "control-id": "node136",
+          "remarks": "Control node136 (Requirements — node136) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "5d47fddd-c50e-58f2-9f0f-cd3bfea41968"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node138 (Requirements — node138) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "2e49645e-d3b4-5cf6-8e08-52573eb7bfa2"
+            }
+          ],
+          "control-id": "node138",
+          "remarks": "Control node138 (Requirements — node138) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "89fd1f29-6c8b-5756-b0fa-331529164b64"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node139 (For all firewalls (or network devices with firewall functionality), your organisation must: — node139) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "5a5e4557-475b-5913-9773-79a9c3593510"
+            }
+          ],
+          "control-id": "node139",
+          "remarks": "Control node139 (For all firewalls (or network devices with firewall functionality), your organisation must: — node139) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "683c1cc9-c300-53a9-b737-526645554433"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node140 (For all firewalls (or network devices with firewall functionality), your organisation must: — node140) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "6e097eee-3c73-5f1e-baf9-66bce6bb1cec"
+            }
+          ],
+          "control-id": "node140",
+          "remarks": "Control node140 (For all firewalls (or network devices with firewall functionality), your organisation must: — node140) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "8a82fda9-9a29-5499-8978-0eb2e784e153"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node141 (For all firewalls (or network devices with firewall functionality), your organisation must: — node141) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "c18b8d95-0660-5685-9606-1651d8abcc2a"
+            }
+          ],
+          "control-id": "node141",
+          "remarks": "Control node141 (For all firewalls (or network devices with firewall functionality), your organisation must: — node141) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "2f3fd5e4-9e26-5e58-b5f1-4e8937aad876"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node142 (For all firewalls (or network devices with firewall functionality), your organisation must: — node142) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "b6d42d48-657a-5228-9d3f-4188908d9a1d"
+            }
+          ],
+          "control-id": "node142",
+          "remarks": "Control node142 (For all firewalls (or network devices with firewall functionality), your organisation must: — node142) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f9ead418-7acd-5420-8622-858f384a18a1"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node143 (For all firewalls (or network devices with firewall functionality), your organisation must: — node143) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "3ca7cc85-b45e-5097-a31b-5030a3c609e4"
+            }
+          ],
+          "control-id": "node143",
+          "remarks": "Control node143 (For all firewalls (or network devices with firewall functionality), your organisation must: — node143) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "7154d876-5605-5820-875f-1c302fa3fd44"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node144 (For all firewalls (or network devices with firewall functionality), your organisation must: — node144) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "69ad8344-a798-507c-b865-0d613f2c50ea"
+            }
+          ],
+          "control-id": "node144",
+          "remarks": "Control node144 (For all firewalls (or network devices with firewall functionality), your organisation must: — node144) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "75329167-5009-5561-962b-55e92f2f8026"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node145 (For all firewalls (or network devices with firewall functionality), your organisation must: — node145) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "9d1db336-1ab4-5075-a14e-b4c344a7ddf8"
+            }
+          ],
+          "control-id": "node145",
+          "remarks": "Control node145 (For all firewalls (or network devices with firewall functionality), your organisation must: — node145) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "e113cdab-a17a-5fa4-9995-d4b91cfe169d"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node146 (Requirements — node146) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "492e7a6e-eedc-5270-a009-b2280ef19618"
+            }
+          ],
+          "control-id": "node146",
+          "remarks": "Control node146 (Requirements — node146) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "ddc53b7a-cd6b-5b03-9576-34431d621bb2"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node162 (Computers and network devices — node162) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "cae4a9f1-4db8-5205-871c-0f4675703895"
+            }
+          ],
+          "control-id": "node162",
+          "remarks": "Control node162 (Computers and network devices — node162) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "9fcdf5ad-dd7a-5e69-9944-11df7b3b3988"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node163 (Your organisation must proactively manage your computers and network devices. You must regularly: — node163) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "bed672b8-c7dc-52b1-8f62-7d84ce6278b5"
+            }
+          ],
+          "control-id": "node163",
+          "remarks": "Control node163 (Your organisation must proactively manage your computers and network devices. You must regularly: — node163) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "d25b8988-d4c4-52d2-ad25-9f50653c27de"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node164 (Your organisation must proactively manage your computers and network devices. You must regularly: — node164) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "0f6b1a75-08ce-5d9c-a1b4-d03037475029"
+            }
+          ],
+          "control-id": "node164",
+          "remarks": "Control node164 (Your organisation must proactively manage your computers and network devices. You must regularly: — node164) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "fb981496-f716-57ee-b607-ce7383708bce"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node165 (Your organisation must proactively manage your computers and network devices. You must regularly: — node165) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "2b7cdb38-674d-5a44-acd2-834d1a591369"
+            }
+          ],
+          "control-id": "node165",
+          "remarks": "Control node165 (Your organisation must proactively manage your computers and network devices. You must regularly: — node165) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "d46cabd7-0c4d-52c5-9e1d-6dd8bc758448"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node166 (Your organisation must proactively manage your computers and network devices. You must regularly: — node166) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "5d3678f9-8152-5be2-ba86-adcff541693c"
+            }
+          ],
+          "control-id": "node166",
+          "remarks": "Control node166 (Your organisation must proactively manage your computers and network devices. You must regularly: — node166) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "034c7e1c-50c0-5d3e-8df6-f4cc16b8207c"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node167 (Your organisation must proactively manage your computers and network devices. You must regularly: — node167) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "256a9524-5c26-5d7a-885e-0b2e8dfd2517"
+            }
+          ],
+          "control-id": "node167",
+          "remarks": "Control node167 (Your organisation must proactively manage your computers and network devices. You must regularly: — node167) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "3aa82683-1224-563d-8f8b-b4331f0de279"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node168 (Your organisation must proactively manage your computers and network devices. You must regularly: — node168) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "2ce9b261-e9a3-5fad-bc05-5c494ffdb1ae"
+            }
+          ],
+          "control-id": "node168",
+          "remarks": "Control node168 (Your organisation must proactively manage your computers and network devices. You must regularly: — node168) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "c18df08d-fde5-5952-a702-ef4635a357d4"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node170 (Device unlocking credentials — node170) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "4ec88dbb-4a3d-5acf-bd59-5e31eeb2c765"
+            }
+          ],
+          "control-id": "node170",
+          "remarks": "Control node170 (Device unlocking credentials — node170) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "63ab4291-6745-5d8b-8fac-7a540e7e40cd"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node171 (Device unlocking credentials — node171) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "bd9a83a3-6e78-5d73-8f29-df84e65d9f8b"
+            }
+          ],
+          "control-id": "node171",
+          "remarks": "Control node171 (Device unlocking credentials — node171) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "62d25b91-3370-5c66-8b6a-4513e008ddc1"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node172 (Device unlocking credentials — node172) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "0894a0df-e5e6-50e1-ad18-f72583803909"
+            }
+          ],
+          "control-id": "node172",
+          "remarks": "Control node172 (Device unlocking credentials — node172) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "60a8f153-c51b-54df-9f1e-d7162593eab6"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node173 (Device unlocking credentials — node173) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "b3cc8a45-73e5-5342-a755-a317526d781c"
+            }
+          ],
+          "control-id": "node173",
+          "remarks": "Control node173 (Device unlocking credentials — node173) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "80b0fcc5-277d-5612-b65f-5fa926071af2"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node174 (Device unlocking credentials — node174) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "1a5d149f-7e8f-556c-bbe3-49d713953cd7"
+            }
+          ],
+          "control-id": "node174",
+          "remarks": "Control node174 (Device unlocking credentials — node174) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "8310d902-8cc6-5aee-8103-cb7fb642bd4f"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node175 (Device unlocking credentials — node175) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "2f0164a5-6d4d-59b0-8604-84918ac35461"
+            }
+          ],
+          "control-id": "node175",
+          "remarks": "Control node175 (Device unlocking credentials — node175) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f93840e0-cc56-569f-960d-fcd4c71f4ee9"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node185 (Requirements — node185) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ce36132b-5383-5c9c-a7cb-b4a98618603c"
+            }
+          ],
+          "control-id": "node185",
+          "remarks": "Control node185 (Requirements — node185) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "e355f65a-3eb5-5591-8e4c-0c4c1b7db291"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node186 (You must make sure that all software in scope is kept up to date. All software on in-scope devices must: — node186) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "3aa96e78-69a4-56d1-b49b-a7c1b9b9b888"
+            }
+          ],
+          "control-id": "node186",
+          "remarks": "Control node186 (You must make sure that all software in scope is kept up to date. All software on in-scope devices must: — node186) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "5cfff7bb-a0f9-56a4-a2f8-759505777e21"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node187 (You must make sure that all software in scope is kept up to date. All software on in-scope devices must: — node187) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "8aff0158-1197-5742-98a9-e5fc882f29c1"
+            }
+          ],
+          "control-id": "node187",
+          "remarks": "Control node187 (You must make sure that all software in scope is kept up to date. All software on in-scope devices must: — node187) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "2da84bd6-142a-559f-97a4-e68b24da8f5d"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node188 (You must make sure that all software in scope is kept up to date. All software on in-scope devices must: — node188) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "4d8876ca-42ce-5905-bb29-8499a0c30e3f"
+            }
+          ],
+          "control-id": "node188",
+          "remarks": "Control node188 (You must make sure that all software in scope is kept up to date. All software on in-scope devices must: — node188) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "59382464-f536-5dd7-be8c-8c30025d8b3c"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node189 (You must make sure that all software in scope is kept up to date. All software on in-scope devices must: — node189) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "97cedc6a-300b-545d-b0b2-5d3b5f9f7e4e"
+            }
+          ],
+          "control-id": "node189",
+          "remarks": "Control node189 (You must make sure that all software in scope is kept up to date. All software on in-scope devices must: — node189) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "ff7a7261-93a1-58a7-ad75-d6442dccbc28"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node190 (You must make sure that all software in scope is kept up to date. All software on in-scope devices must: — node190) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "4e819636-8f05-54b6-986e-1013dea99f99"
+            }
+          ],
+          "control-id": "node190",
+          "remarks": "Control node190 (You must make sure that all software in scope is kept up to date. All software on in-scope devices must: — node190) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f29fe7b8-41bc-5611-b329-7604b4566bc0"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node191 (You must make sure that all software in scope is kept up to date. All software on in-scope devices must: — node191) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ec0c192b-3949-5072-bc12-0c2f1e911f5b"
+            }
+          ],
+          "control-id": "node191",
+          "remarks": "Control node191 (You must make sure that all software in scope is kept up to date. All software on in-scope devices must: — node191) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "85041ede-460f-5d2c-9e6a-eedee6db3dec"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node192 (You must make sure that all software in scope is kept up to date. All software on in-scope devices must: — node192) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "f2243f3f-5cf0-5f1d-8c72-41a9a2d9a8ba"
+            }
+          ],
+          "control-id": "node192",
+          "remarks": "Control node192 (You must make sure that all software in scope is kept up to date. All software on in-scope devices must: — node192) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "7524e64b-0c09-5fd0-b20d-a43c924c9a42"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node204 (Introduction — node204) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "db2fa40d-00d0-5e94-83f9-519dac5a5b94"
+            }
+          ],
+          "control-id": "node204",
+          "remarks": "Control node204 (Introduction — node204) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "605b699c-1fe7-5c43-b62c-d203dfd9c325"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node205 (Introduction — node205) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "5e742d78-584a-5caf-b829-a7756cf49add"
+            }
+          ],
+          "control-id": "node205",
+          "remarks": "Control node205 (Introduction — node205) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "17decf0f-43f4-5917-8b6b-04e877d80ec8"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node206 (Introduction — node206) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "f263e763-07a3-58ff-9abf-1f7696f4a01b"
+            }
+          ],
+          "control-id": "node206",
+          "remarks": "Control node206 (Introduction — node206) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "d11ba804-7e06-5cd8-8289-7a7aff717f04"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node207 (Administrative accounts are especially highly privileged, for example. These accounts typically allow the user to: — node207) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "45461890-7ea2-57c4-a324-45aa263962d0"
+            }
+          ],
+          "control-id": "node207",
+          "remarks": "Control node207 (Administrative accounts are especially highly privileged, for example. These accounts typically allow the user to: — node207) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "89dd8b15-4ca1-566a-a170-a4dfdedb187d"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node208 (Administrative accounts are especially highly privileged, for example. These accounts typically allow the user to: — node208) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "eb844ebe-2b40-520e-812a-40dd00ae0415"
+            }
+          ],
+          "control-id": "node208",
+          "remarks": "Control node208 (Administrative accounts are especially highly privileged, for example. These accounts typically allow the user to: — node208) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "6ae233db-939a-574e-a61b-d20b6f957b40"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node209 (Administrative accounts are especially highly privileged, for example. These accounts typically allow the user to: — node209) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ebb5d8ef-c672-5fd5-9db9-9aeabc7b39ce"
+            }
+          ],
+          "control-id": "node209",
+          "remarks": "Control node209 (Administrative accounts are especially highly privileged, for example. These accounts typically allow the user to: — node209) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "16a2dbfc-e86e-506a-b7e6-2fba8e209522"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node210 (Introduction — node210) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "34578f1e-0d16-5a4d-94a3-099886a74058"
+            }
+          ],
+          "control-id": "node210",
+          "remarks": "Control node210 (Introduction — node210) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "54e56db7-044b-5a48-b11e-bc59bf1ce063"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node211 (Introduction — node211) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "b5c61a6f-0405-5e8e-b886-21987606e450"
+            }
+          ],
+          "control-id": "node211",
+          "remarks": "Control node211 (Introduction — node211) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "2b16cb4c-432d-5e65-98cf-1f612ee59cdc"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node214 (Requirements — node214) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "44e24d32-e7d5-52cb-80ca-89f46fa5503e"
+            }
+          ],
+          "control-id": "node214",
+          "remarks": "Control node214 (Requirements — node214) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "252c77c7-498e-55d7-9c23-e1b4179602ed"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node215 (Requirements — node215) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "014a3f9e-de6f-5add-9992-51df0eba21a3"
+            }
+          ],
+          "control-id": "node215",
+          "remarks": "Control node215 (Requirements — node215) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "6ebb9e0f-74a8-57b3-9e7a-d3f8daf722ea"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node216 (This means your organisation must: — node216) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "1065d1ee-43bf-5c1b-81af-b55c73aa9324"
+            }
+          ],
+          "control-id": "node216",
+          "remarks": "Control node216 (This means your organisation must: — node216) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "2b08e81e-db84-539e-b117-9fc40a17a4c3"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node217 (This means your organisation must: — node217) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "9b78b9c4-4961-5c9a-8f5c-ab469c225509"
+            }
+          ],
+          "control-id": "node217",
+          "remarks": "Control node217 (This means your organisation must: — node217) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f88fa6dd-44d8-5266-976b-087b7533484f"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node218 (This means your organisation must: — node218) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "4b8c3201-a20d-5a18-b106-eaec96e834bd"
+            }
+          ],
+          "control-id": "node218",
+          "remarks": "Control node218 (This means your organisation must: — node218) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "58eeef75-a203-5898-9024-fb40becaf466"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node219 (This means your organisation must: — node219) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "081482f8-cadd-55d4-b082-eec3c5ed90b1"
+            }
+          ],
+          "control-id": "node219",
+          "remarks": "Control node219 (This means your organisation must: — node219) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "e4effd0f-d4d2-5dbf-97c5-3b145f71a205"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node220 (This means your organisation must: — node220) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "1de49707-1290-5da8-bda5-f2d5b9e8d239"
+            }
+          ],
+          "control-id": "node220",
+          "remarks": "Control node220 (This means your organisation must: — node220) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "9869a3c2-c9a4-5240-a0d4-766f4ddf0c57"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node221 (This means your organisation must: — node221) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "32755f84-daf6-5643-a6d3-a09c07204279"
+            }
+          ],
+          "control-id": "node221",
+          "remarks": "Control node221 (This means your organisation must: — node221) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "b5625a50-e49a-5c56-9d17-1c7fe22df5ad"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node223 (Password-based authentication — node223) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "b03054c2-1c35-5d5f-bd6c-2ced2392683f"
+            }
+          ],
+          "control-id": "node223",
+          "remarks": "Control node223 (Password-based authentication — node223) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "91d9bef9-0a1b-5196-a73e-8be10b87a609"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node224 (Password-based authentication — node224) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "089edd27-0c48-5386-b871-a9837d569719"
+            }
+          ],
+          "control-id": "node224",
+          "remarks": "Control node224 (Password-based authentication — node224) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "5b031856-26f1-5ec1-8a8d-f85663fcf7de"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node225 (Where this is carried out using a password, you should put in place the following protective measures: — node225) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "c9fae646-d342-5d60-949a-8b4966e84f55"
+            }
+          ],
+          "control-id": "node225",
+          "remarks": "Control node225 (Where this is carried out using a password, you should put in place the following protective measures: — node225) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "1143fff4-61fe-57a7-8ce9-01f2584c9deb"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node226 (• Passwords are protected against brute-force password guessing by implementing at least one of: — node226) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "b813b93f-0d86-5b5a-9b8b-ac69970b3ddd"
+            }
+          ],
+          "control-id": "node226",
+          "remarks": "Control node226 (• Passwords are protected against brute-force password guessing by implementing at least one of: — node226) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "9cd884b2-0b23-5b50-a1aa-4d08be65e3f2"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node227 (• Passwords are protected against brute-force password guessing by implementing at least one of: — node227) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "5d0b695d-d155-5d33-b813-b95dbfa4ecd6"
+            }
+          ],
+          "control-id": "node227",
+          "remarks": "Control node227 (• Passwords are protected against brute-force password guessing by implementing at least one of: — node227) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "376d3bb1-6f5e-5398-b93e-e6863bb63378"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node228 (• Passwords are protected against brute-force password guessing by implementing at least one of: — node228) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ebd35998-017d-5b4b-a977-75d706b0ce73"
+            }
+          ],
+          "control-id": "node228",
+          "remarks": "Control node228 (• Passwords are protected against brute-force password guessing by implementing at least one of: — node228) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "010c65b6-93a4-5d66-95bb-7371bfdf0a2c"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node229 (Where this is carried out using a password, you should put in place the following protective measures: — node229) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "7cc0f2ac-ef60-5f9e-a381-58dd419a8e56"
+            }
+          ],
+          "control-id": "node229",
+          "remarks": "Control node229 (Where this is carried out using a password, you should put in place the following protective measures: — node229) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "364ac232-4f31-5402-9145-145d2894a09b"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node230 (• Use technical controls to manage the quality of passwords. This will include one of the following: — node230) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "919b88e0-fb67-5902-87be-74b535b01432"
+            }
+          ],
+          "control-id": "node230",
+          "remarks": "Control node230 (• Use technical controls to manage the quality of passwords. This will include one of the following: — node230) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "8773b546-a720-5c6b-a5bb-6e5ccf0bc8ac"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node231 (• Use technical controls to manage the quality of passwords. This will include one of the following: — node231) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "380e82d3-0089-519f-9c66-0c569f7f37c7"
+            }
+          ],
+          "control-id": "node231",
+          "remarks": "Control node231 (• Use technical controls to manage the quality of passwords. This will include one of the following: — node231) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "318ddd20-ec26-5a58-8fa6-566bc7514686"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node232 (• Use technical controls to manage the quality of passwords. This will include one of the following: — node232) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ba747c52-95fc-5d93-8b98-6ca01d331363"
+            }
+          ],
+          "control-id": "node232",
+          "remarks": "Control node232 (• Use technical controls to manage the quality of passwords. This will include one of the following: — node232) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "25d13d93-861c-5e7a-b95c-8b97df664de2"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node233 (Where this is carried out using a password, you should put in place the following protective measures: — node233) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "a2671f55-2d1f-5b02-a747-711593ff40d6"
+            }
+          ],
+          "control-id": "node233",
+          "remarks": "Control node233 (Where this is carried out using a password, you should put in place the following protective measures: — node233) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "9812c5a0-75b9-5112-b8e2-17759df4fe41"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node234 (• Support users to choose unique passwords for their work accounts by: — node234) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "95c3d00e-6fd0-5dbe-ba1c-d1ac96914a0f"
+            }
+          ],
+          "control-id": "node234",
+          "remarks": "Control node234 (• Support users to choose unique passwords for their work accounts by: — node234) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "38e20113-7f82-5793-9d45-0b0fd334e2af"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node235 (• Support users to choose unique passwords for their work accounts by: — node235) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "4e2a9c05-fc54-5484-af2f-e0aaac4df573"
+            }
+          ],
+          "control-id": "node235",
+          "remarks": "Control node235 (• Support users to choose unique passwords for their work accounts by: — node235) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "ba112afd-f613-5a07-811e-3f174ac32161"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node236 (• Support users to choose unique passwords for their work accounts by: — node236) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "067dd6b4-4d25-5716-a1f5-47d52e88e1ba"
+            }
+          ],
+          "control-id": "node236",
+          "remarks": "Control node236 (• Support users to choose unique passwords for their work accounts by: — node236) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f80c6e94-d263-5e3f-8bc7-5572f89a72e5"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node237 (• Support users to choose unique passwords for their work accounts by: — node237) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "96e77ab7-67e1-5d72-b0a9-25d09d1ff4b7"
+            }
+          ],
+          "control-id": "node237",
+          "remarks": "Control node237 (• Support users to choose unique passwords for their work accounts by: — node237) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "22da358e-7d86-5b51-9df2-538a4b2c7d6b"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node238 (• Support users to choose unique passwords for their work accounts by: — node238) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "cac8dde6-64cb-57ed-94ce-78b74835f743"
+            }
+          ],
+          "control-id": "node238",
+          "remarks": "Control node238 (• Support users to choose unique passwords for their work accounts by: — node238) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "cb079440-ec53-5d28-8983-80423a62ff53"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node239 (Password-based authentication — node239) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "20fd491c-3760-5ffe-89f7-5fa492ddd9a1"
+            }
+          ],
+          "control-id": "node239",
+          "remarks": "Control node239 (Password-based authentication — node239) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "bb16e74e-0cf5-5380-8a40-eb2aefff02ad"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node241 (Multi-factor authentication (MFA) — node241) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "9cb8ddb6-6a13-5fae-8afb-2fe8e075e135"
+            }
+          ],
+          "control-id": "node241",
+          "remarks": "Control node241 (Multi-factor authentication (MFA) — node241) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f70df96f-e9ab-5d99-a2bb-fe61ddad2f5b"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node242 (Multi-factor authentication (MFA) — node242) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "baf03f60-f8d6-5231-898d-30cc2ae99d5b"
+            }
+          ],
+          "control-id": "node242",
+          "remarks": "Control node242 (Multi-factor authentication (MFA) — node242) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "469e18fc-b067-5827-85bb-46fdf0d533e6"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node243 (Multi-factor authentication (MFA) — node243) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "bff3b092-f817-5caf-9725-ebf6df1130cc"
+            }
+          ],
+          "control-id": "node243",
+          "remarks": "Control node243 (Multi-factor authentication (MFA) — node243) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "81996657-62c3-52fb-ab9e-c60b9faef1a6"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node244 (There are four types of additional factor to consider: — node244) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "8adb3e60-6648-54ce-b938-ae82d31c841c"
+            }
+          ],
+          "control-id": "node244",
+          "remarks": "Control node244 (There are four types of additional factor to consider: — node244) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "d54eaccd-c690-5c36-9eed-d6eb2b07d4a5"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node245 (There are four types of additional factor to consider: — node245) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "d5160ec6-3a61-53c5-9810-4b574873f580"
+            }
+          ],
+          "control-id": "node245",
+          "remarks": "Control node245 (There are four types of additional factor to consider: — node245) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "7fa656ef-7587-59c8-bf65-bcda4cf011cd"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node246 (There are four types of additional factor to consider: — node246) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "40cd436b-aca5-5ff5-868b-fb956e015b6a"
+            }
+          ],
+          "control-id": "node246",
+          "remarks": "Control node246 (There are four types of additional factor to consider: — node246) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "625f13dc-8235-5f18-afb6-f29be5699328"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node247 (There are four types of additional factor to consider: — node247) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "4a35f95d-56a4-5577-8cc4-5ab20e0703bd"
+            }
+          ],
+          "control-id": "node247",
+          "remarks": "Control node247 (There are four types of additional factor to consider: — node247) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "ceb04837-4577-5533-a87f-edc1b09016e0"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node248 (Multi-factor authentication (MFA) — node248) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "442befd7-af01-5a34-ab89-81847dafb675"
+            }
+          ],
+          "control-id": "node248",
+          "remarks": "Control node248 (Multi-factor authentication (MFA) — node248) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f1bd9b1b-62da-5231-8dd0-068a71173ec1"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node249 (Information:) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "39512b4e-754c-57ef-9521-ecec7fa2f698"
+            }
+          ],
+          "control-id": "node249",
+          "remarks": "Control node249 (Information:) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "d5a2de25-a384-5c81-be21-51361b2f30ec"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node255 (Introduction — node255) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "195a3b10-53d5-5cb1-9a28-c7c07e5c2876"
+            }
+          ],
+          "control-id": "node255",
+          "remarks": "Control node255 (Introduction — node255) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "2fa6581e-0d63-5b64-b700-f2b9017083e4"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node256 (Introduction — node256) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "4066d843-dffc-5239-aaa8-5edc7be58e76"
+            }
+          ],
+          "control-id": "node256",
+          "remarks": "Control node256 (Introduction — node256) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "37762257-9b82-5b52-9551-d14c78a4b971"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node257 (Introduction — node257) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "4d5dbf9a-066b-5e18-b5c7-848884353c03"
+            }
+          ],
+          "control-id": "node257",
+          "remarks": "Control node257 (Introduction — node257) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "6729e76d-0af3-5270-a461-0a61a0b37128"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node258 (You can largely avoid the potential for harm by: — node258) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "87fe5bff-b0c6-5dea-ac55-d20f8a4c1a1d"
+            }
+          ],
+          "control-id": "node258",
+          "remarks": "Control node258 (You can largely avoid the potential for harm by: — node258) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "62593e80-72bc-5b50-a7e0-164c61b67c4e"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node259 (You can largely avoid the potential for harm by: — node259) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "a6889b30-df99-59a2-9333-4257b2123a99"
+            }
+          ],
+          "control-id": "node259",
+          "remarks": "Control node259 (You can largely avoid the potential for harm by: — node259) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "ca0aca02-58d3-56d5-9f0a-53a57bf8c912"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node262 (Requirements — node262) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "842600df-c8ce-5966-859a-2d1f40558527"
+            }
+          ],
+          "control-id": "node262",
+          "remarks": "Control node262 (Requirements — node262) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "c4ffc3fe-a4c2-5ee2-9794-983fdcd282a3"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node264 (Anti-malware software — node264) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "1b77fde3-5746-59ad-bdd2-0a98ee2362b2"
+            }
+          ],
+          "control-id": "node264",
+          "remarks": "Control node264 (Anti-malware software — node264) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "b29c6202-36d4-53d5-b72b-11d508d630ab"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node265 (If you use anti-malware software to protect your device it must be configured to: — node265) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "b241fdb7-00e7-5df8-b340-e90b284207db"
+            }
+          ],
+          "control-id": "node265",
+          "remarks": "Control node265 (If you use anti-malware software to protect your device it must be configured to: — node265) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "046da7be-861e-50a9-9e7d-3df912bc6f3e"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node266 (If you use anti-malware software to protect your device it must be configured to: — node266) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "fb87c2e1-2c27-523c-8a8d-b6d1f554ee8f"
+            }
+          ],
+          "control-id": "node266",
+          "remarks": "Control node266 (If you use anti-malware software to protect your device it must be configured to: — node266) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "61b91013-5479-5757-a552-7c885f8dacf6"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node267 (If you use anti-malware software to protect your device it must be configured to: — node267) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "e923bc2b-a756-53fb-a9b7-60d6ae06a35b"
+            }
+          ],
+          "control-id": "node267",
+          "remarks": "Control node267 (If you use anti-malware software to protect your device it must be configured to: — node267) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "3d9f974b-ec91-5a4d-8c6d-5137ce68f72b"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node268 (If you use anti-malware software to protect your device it must be configured to: — node268) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "9125d967-51a5-5481-87a7-5099ff82c517"
+            }
+          ],
+          "control-id": "node268",
+          "remarks": "Control node268 (If you use anti-malware software to protect your device it must be configured to: — node268) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "fb5dba84-20f7-5420-9828-ea2bf390fed8"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node269 (If you use anti-malware software to protect your device it must be configured to: — node269) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "647cb632-d624-5848-a8cd-0c643cb2ed9f"
+            }
+          ],
+          "control-id": "node269",
+          "remarks": "Control node269 (If you use anti-malware software to protect your device it must be configured to: — node269) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "34f259d7-8bce-5fb5-abbb-fb44a3d37585"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node271 (Application allow listing — node271) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "5d1de346-54ea-5d77-8e25-e677c060cf1c"
+            }
+          ],
+          "control-id": "node271",
+          "remarks": "Control node271 (Application allow listing — node271) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "6577b2d1-f6a4-5241-931d-ab9b8924cd2b"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node272 (Only approved applications, restricted by code signing, are allowed to execute on devices. You must: — node272) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "2e0ac1b9-f2e3-502f-b290-4b5a776e22d3"
+            }
+          ],
+          "control-id": "node272",
+          "remarks": "Control node272 (Only approved applications, restricted by code signing, are allowed to execute on devices. You must: — node272) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "a9ea72ae-dd02-5a52-b7ec-62ae3dc82963"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node273 (Only approved applications, restricted by code signing, are allowed to execute on devices. You must: — node273) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "c20a8065-e2d9-5df8-84a4-5b6aef28e085"
+            }
+          ],
+          "control-id": "node273",
+          "remarks": "Control node273 (Only approved applications, restricted by code signing, are allowed to execute on devices. You must: — node273) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "b9de3548-34eb-5862-b648-c83f3da1cb8f"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node276 (Backing up your data — node276) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "3c599ff8-46ac-569a-8923-e271240501bd"
+            }
+          ],
+          "control-id": "node276",
+          "remarks": "Control node276 (Backing up your data — node276) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "04b55356-3d2e-5fc2-a973-36cfd7e67d36"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node277 (Backing up your data — node277) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "066e7665-4458-51fd-a165-3df5eaec7863"
+            }
+          ],
+          "control-id": "node277",
+          "remarks": "Control node277 (Backing up your data — node277) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "6181df24-e62c-5e78-b6ae-5eedb7c2f2c7"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node278 (Backing up your data — node278) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "c3c38fa4-78f9-5af4-8ab0-12f1302a4dab"
+            }
+          ],
+          "control-id": "node278",
+          "remarks": "Control node278 (Backing up your data — node278) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "1663a0b8-6095-5cb7-8cdf-678befcd9ca7"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node279 (Backing up your data — node279) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "996c2c1b-9545-5e14-81fe-9349bcc83830"
+            }
+          ],
+          "control-id": "node279",
+          "remarks": "Control node279 (Backing up your data — node279) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f1b5a7f3-2fcc-56ac-9deb-105265fdc62e"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node280 (Backing up your data — node280) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "a4f55003-f168-5534-840e-3893a979961a"
+            }
+          ],
+          "control-id": "node280",
+          "remarks": "Control node280 (Backing up your data — node280) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "2a95930a-47dd-52ed-919f-c3f29b152224"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node282 (Zero trust and Cyber Essentials — node282) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "cc0b9abb-670a-59d6-acd7-2b952f701df5"
+            }
+          ],
+          "control-id": "node282",
+          "remarks": "Control node282 (Zero trust and Cyber Essentials — node282) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "7ca00839-498b-526b-a910-83c604679bc4"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node283 (Zero trust and Cyber Essentials — node283) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "cba9d146-fef6-5a64-bbc3-612f07511361"
+            }
+          ],
+          "control-id": "node283",
+          "remarks": "Control node283 (Zero trust and Cyber Essentials — node283) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "0f4302c6-1d0c-582f-b3ea-fc398bf71674"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node284 (Zero trust and Cyber Essentials — node284) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "e16e9442-261c-55d7-8024-3a5fd82b0ce5"
+            }
+          ],
+          "control-id": "node284",
+          "remarks": "Control node284 (Zero trust and Cyber Essentials — node284) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "8fa6a0a4-f3d2-5050-96c9-bcaa2625e248"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node285 (Zero trust and Cyber Essentials — node285) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "7ef483b2-2c8d-59a9-b7d3-25e3a553d6ee"
+            }
+          ],
+          "control-id": "node285",
+          "remarks": "Control node285 (Zero trust and Cyber Essentials — node285) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "afc8516f-87d6-5249-9b35-541bbc2d790c"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node286 (Zero trust and Cyber Essentials — node286) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ac8a58c1-88c4-5fb1-9ccb-b15885158be6"
+            }
+          ],
+          "control-id": "node286",
+          "remarks": "Control node286 (Zero trust and Cyber Essentials — node286) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "91d478e8-a9a8-53f7-9609-0d015e71eb03"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59",
+              "description": "Control node85 (Cloud services — node85) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "6e00b844-0886-5185-a9de-e23d19fbc789"
+            }
+          ],
+          "control-id": "node85",
+          "remarks": "Control node85 (Cloud services — node85) is satisfied by the Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "071045e9-229c-5ee3-836c-90384bfc6707"
+        }
+      ]
+    },
+    "import-profile": {
+      "href": "./catalog.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:13Z",
+      "oscal-version": "1.2.3",
+      "roles": [
+        {
+          "id": "sec-admin",
+          "title": "Security Administrator"
+        }
+      ],
+      "title": "Cyber Essentials: Requirements for IT infrastructure v3.1 System Security Plan Template",
+      "version": "2"
+    },
+    "system-characteristics": {
+      "authorization-boundary": {
+        "description": "The authorization boundary encompasses all computing resources, cloud tenancies, and network zones supporting Cyber Essentials: Requirements for IT infrastructure v3.1 operations."
+      },
+      "description": "Reference system architecture implementing security controls for Cyber Essentials: Requirements for IT infrastructure v3.1.",
+      "security-impact-level": {
+        "security-objective-availability": "moderate",
+        "security-objective-confidentiality": "moderate",
+        "security-objective-integrity": "high"
+      },
+      "security-sensitivity-level": "moderate",
+      "status": {
+        "state": "operational"
+      },
+      "system-ids": [
+        {
+          "id": "cyber_essentials-system"
+        }
+      ],
+      "system-information": {
+        "information-types": [
+          {
+            "description": "Operational and compliance data processed within the uk jurisdiction boundary.",
+            "title": "Sovereign Program Data",
+            "uuid": "82c16eba-96d3-5edf-89db-3560f9cd405b"
+          }
+        ]
+      },
+      "system-name": "Cyber Essentials: Requirements for IT infrastructure v3.1 Reference System",
+      "system-name-short": "cyber_essentials"
+    },
+    "system-implementation": {
+      "components": [
+        {
+          "description": "Central execution platform providing control implementations for Cyber Essentials: Requirements for IT infrastructure v3.1.",
+          "status": {
+            "state": "operational"
+          },
+          "title": "Cyber Essentials: Requirements for IT infrastructure v3.1 Core System Component",
+          "type": "software",
+          "uuid": "c8bc66fa-af14-500b-b567-24ab5e0d7f59"
+        }
+      ],
+      "users": [
+        {
+          "role-ids": [
+            "sec-admin"
+          ],
+          "title": "Security Administrator",
+          "uuid": "d1d9d419-e395-5d74-ad4a-dfaf5a5390e3"
+        }
+      ]
+    },
+    "uuid": "264ff7c8-c887-514e-a179-655cc1cab4b0"
+  }
+}

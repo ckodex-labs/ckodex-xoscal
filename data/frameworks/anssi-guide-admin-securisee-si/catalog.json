@@ -1,0 +1,1489 @@
+{
+  "catalog": {
+    "back-matter": {
+      "resources": [
+        {
+          "description": "Source framework metadata for anssi-guide-admin-securisee-si snapshot portal",
+          "props": [
+            {
+              "name": "type",
+              "value": "standard"
+            },
+            {
+              "name": "version",
+              "value": "portal"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "https://raw.githubusercontent.com/intuitem/ciso-assistant-community/main/backend/library/libraries/anssi-guide-admin-securisee-si.yaml"
+            }
+          ],
+          "title": "anssi-guide-admin-securisee-si Framework Reference",
+          "uuid": "15f4dc28-f69f-55ac-be4e-5bbcfdb81765"
+        }
+      ]
+    },
+    "groups": [
+      {
+        "controls": [
+          {
+            "id": "R48",
+            "parts": [
+              {
+                "id": "R48-stmt",
+                "name": "statement",
+                "prose": "Installer un filtre de confidentialité sur le poste d'administration nomade"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Installer un filtre de confidentialité sur le poste d'administration nomade"
+          },
+          {
+            "id": "R49",
+            "parts": [
+              {
+                "id": "R49-stmt",
+                "name": "statement",
+                "prose": "Utiliser un tunnel VPN IPsec pour la connexion du poste d'administration à distance"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Utiliser un tunnel VPN IPsec pour la connexion du poste d'administration à distance"
+          },
+          {
+            "id": "R50",
+            "parts": [
+              {
+                "id": "R50-stmt",
+                "name": "statement",
+                "prose": "Empêcher toute modification de la configuration VPN du poste d'administration"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Empêcher toute modification de la configuration VPN du poste d'administration"
+          },
+          {
+            "id": "R51",
+            "parts": [
+              {
+                "id": "R51-stmt",
+                "name": "statement",
+                "prose": "Dédier un concentrateur VPN IPsec physique pour l'administration à distance"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Dédier un concentrateur VPN IPsec physique pour l'administration à distance"
+          }
+        ],
+        "id": "_10",
+        "title": "Administration à distance et nomadisme"
+      },
+      {
+        "controls": [
+          {
+            "id": "R52",
+            "parts": [
+              {
+                "id": "R52-stmt",
+                "name": "statement",
+                "prose": "Déployer des systèmes d'échanges sécurisés"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Déployer des systèmes d'échanges sécurisés"
+          },
+          {
+            "id": "R53",
+            "parts": [
+              {
+                "id": "R53-stmt",
+                "name": "statement",
+                "prose": "Dédier le système d'échange interne au SI d'administration"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Dédier le système d'échange interne au SI d'administration"
+          },
+          {
+            "id": "R54",
+            "parts": [
+              {
+                "id": "R54-stmt",
+                "name": "statement",
+                "prose": "N'autoriser que des protocoles de transfert vers le système d'échange externe"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "N'autoriser que des protocoles de transfert vers le système d'échange externe"
+          },
+          {
+            "id": "R55",
+            "parts": [
+              {
+                "id": "R55-stmt",
+                "name": "statement",
+                "prose": "Limiter au strict besoin opérationnel l'accès au système d'échange externe"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Limiter au strict besoin opérationnel l'accès au système d'échange externe"
+          },
+          {
+            "id": "R56",
+            "parts": [
+              {
+                "id": "R56-stmt",
+                "name": "statement",
+                "prose": "Ne pas s'authentifier avec un compte d'administration sur le système d'échange externe"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Ne pas s'authentifier avec un compte d'administration sur le système d'échange externe"
+          },
+          {
+            "id": "R57",
+            "parts": [
+              {
+                "id": "R57-stmt",
+                "name": "statement",
+                "prose": "Ne pas stocker de données de manière permanente dans un système d'échange externe"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Ne pas stocker de données de manière permanente dans un système d'échange externe"
+          },
+          {
+            "id": "R58",
+            "parts": [
+              {
+                "id": "R58-stmt",
+                "name": "statement",
+                "prose": "Analyser le contenu des données échangées par le système d'échange externe"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Analyser le contenu des données échangées par le système d'échange externe"
+          }
+        ],
+        "id": "_11",
+        "title": "Systèmes d'échanges sécurisés"
+      },
+      {
+        "controls": [
+          {
+            "id": "R59",
+            "parts": [
+              {
+                "id": "R59-stmt",
+                "name": "statement",
+                "prose": "Recourir à une prestation d'infogérance qualifiée d'un PAMS"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Recourir à une prestation d'infogérance qualifiée d'un PAMS"
+          },
+          {
+            "id": "R60",
+            "parts": [
+              {
+                "id": "R60-stmt",
+                "name": "statement",
+                "prose": "Intégrer au contrat d'infogérance les exigences de sécurité d'accès à distance"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Intégrer au contrat d'infogérance les exigences de sécurité d'accès à distance"
+          },
+          {
+            "id": "R61",
+            "parts": [
+              {
+                "id": "R61-stmt",
+                "name": "statement",
+                "prose": "Imposer une sécurisation à l'état de l'art des postes de travail des administrateurs tiers"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Imposer une sécurisation à l'état de l'art des postes de travail des administrateurs tiers"
+          },
+          {
+            "id": "R62",
+            "parts": [
+              {
+                "id": "R62-stmt",
+                "name": "statement",
+                "prose": "Dédier une chaîne d'accès à distance pour les administrateurs tiers"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Dédier une chaîne d'accès à distance pour les administrateurs tiers"
+          },
+          {
+            "id": "R63",
+            "parts": [
+              {
+                "id": "R63-stmt",
+                "name": "statement",
+                "prose": "Utiliser un tunnel VPN IPSec pour la connexion du poste de travail des administrateurs tiers"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Utiliser un tunnel VPN IPSec pour la connexion du poste de travail des administrateurs tiers"
+          },
+          {
+            "id": "R63-",
+            "parts": [
+              {
+                "id": "R63--stmt",
+                "name": "statement",
+                "prose": "Utiliser un tunnel VPN TLS pour la connexion du poste de travail des administrateurs tiers"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nrm]"
+              }
+            ],
+            "title": "Utiliser un tunnel VPN TLS pour la connexion du poste de travail des administrateurs tiers"
+          },
+          {
+            "id": "R64",
+            "parts": [
+              {
+                "id": "R64-stmt",
+                "name": "statement",
+                "prose": "Dédier des comptes d'accès et des comptes d'administration aux administrateurs tiers"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Dédier des comptes d'accès et des comptes d'administration aux administrateurs tiers"
+          },
+          {
+            "id": "R65_",
+            "parts": [
+              {
+                "id": "R65_-stmt",
+                "name": "statement",
+                "prose": "Dédier un annuaire aux comptes d'accès des administrateurs tiers"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nrp]"
+              }
+            ],
+            "title": "Dédier un annuaire aux comptes d'accès des administrateurs tiers"
+          },
+          {
+            "id": "R66",
+            "parts": [
+              {
+                "id": "R66-stmt",
+                "name": "statement",
+                "prose": "Activer à la demande les comptes des administrateurs tiers"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Activer à la demande les comptes des administrateurs tiers"
+          },
+          {
+            "id": "R67",
+            "parts": [
+              {
+                "id": "R67-stmt",
+                "name": "statement",
+                "prose": "Renforcer l'authentification des administrateurs tiers"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Renforcer l'authentification des administrateurs tiers"
+          },
+          {
+            "id": "R68",
+            "parts": [
+              {
+                "id": "R68-stmt",
+                "name": "statement",
+                "prose": "Mettre en oeuvre un rebond éphémère en coupure de la terminaison VPN et du SI administré"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Mettre en oeuvre un rebond éphémère en coupure de la terminaison VPN et du SI administré"
+          },
+          {
+            "id": "R69",
+            "parts": [
+              {
+                "id": "R69-stmt",
+                "name": "statement",
+                "prose": "Mettre en oeuvre un contrôle d'accès strict et une traçabilité pour les administrateurs"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Mettre en oeuvre un contrôle d'accès strict et une traçabilité pour les administrateurs"
+          },
+          {
+            "id": "R70",
+            "parts": [
+              {
+                "id": "R70-stmt",
+                "name": "statement",
+                "prose": "Utiliser un boîtier matériel d'acquisition vidéo pour l'assistance à distance"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Utiliser un boîtier matériel d'acquisition vidéo pour l'assistance à distance"
+          },
+          {
+            "id": "R71",
+            "parts": [
+              {
+                "id": "R71-stmt",
+                "name": "statement",
+                "prose": "Mettre en oeuvre une solution logicielle dédiée pour l'assistance à distance"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Mettre en oeuvre une solution logicielle dédiée pour l'assistance à distance"
+          }
+        ],
+        "id": "_12",
+        "title": "Administration par des tiers et assistance à distance"
+      },
+      {
+        "controls": [
+          {
+            "id": "R1",
+            "parts": [
+              {
+                "id": "R1-stmt",
+                "name": "statement",
+                "prose": "Informer les administrateurs de leurs droits et devoirs"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Informer les administrateurs de leurs droits et devoirs"
+          },
+          {
+            "id": "R2",
+            "parts": [
+              {
+                "id": "R2-stmt",
+                "name": "statement",
+                "prose": "Former les administrateurs à l'état de l'art en matière de SSI"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Former les administrateurs à l'état de l'art en matière de SSI"
+          },
+          {
+            "id": "R3",
+            "parts": [
+              {
+                "id": "R3-stmt",
+                "name": "statement",
+                "prose": "Disposer d'une documentation des SI à jour"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Disposer d'une documentation des SI à jour"
+          }
+        ],
+        "id": "_2",
+        "title": "Les administrateurs, acteurs clés de la sécurité du système d'information"
+      },
+      {
+        "controls": [
+          {
+            "id": "R4",
+            "parts": [
+              {
+                "id": "R4-stmt",
+                "name": "statement",
+                "prose": "Mener une analyse de risque sur le SI d'administration et son écosystème"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Mener une analyse de risque sur le SI d'administration et son écosystème"
+          },
+          {
+            "id": "R5",
+            "parts": [
+              {
+                "id": "R5-stmt",
+                "name": "statement",
+                "prose": "Définir les zones de confiance du SI administré et déduire les zones d'administration"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Définir les zones de confiance du SI administré et déduire les zones d'administration"
+          },
+          {
+            "id": "R6",
+            "parts": [
+              {
+                "id": "R6-stmt",
+                "name": "statement",
+                "prose": "Privilégier l'utilisation de produits qualifiés par l'ANSSI"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Privilégier l'utilisation de produits qualifiés par l'ANSSI"
+          },
+          {
+            "id": "R7",
+            "parts": [
+              {
+                "id": "R7-stmt",
+                "name": "statement",
+                "prose": "Dédier des socles physiques en cas de virtualisation des infrastructures d'administration"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Dédier des socles physiques en cas de virtualisation des infrastructures d'administration"
+          }
+        ],
+        "id": "_3",
+        "title": "Généralités sur le système d'information d'administration"
+      },
+      {
+        "controls": [
+          {
+            "id": "R10",
+            "parts": [
+              {
+                "id": "R10-stmt",
+                "name": "statement",
+                "prose": "Bloquer tout accès à Internet depuis ou vers le poste d'administration"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Bloquer tout accès à Internet depuis ou vers le poste d'administration"
+          },
+          {
+            "id": "R11",
+            "parts": [
+              {
+                "id": "R11-stmt",
+                "name": "statement",
+                "prose": "Durcir le système d'exploitation du poste d'administration"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Durcir le système d'exploitation du poste d'administration"
+          },
+          {
+            "id": "R12",
+            "parts": [
+              {
+                "id": "R12-stmt",
+                "name": "statement",
+                "prose": "Restreindre les droits d'administration sur le poste d'administration"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Restreindre les droits d'administration sur le poste d'administration"
+          },
+          {
+            "id": "R13",
+            "parts": [
+              {
+                "id": "R13-stmt",
+                "name": "statement",
+                "prose": "Limiter les logiciels installés sur le poste d'administration"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Limiter les logiciels installés sur le poste d'administration"
+          },
+          {
+            "id": "R14",
+            "parts": [
+              {
+                "id": "R14-stmt",
+                "name": "statement",
+                "prose": "Chiffrer l'ensemble des périphériques de stockage utilisés pour l'administration"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Chiffrer l'ensemble des périphériques de stockage utilisés pour l'administration"
+          },
+          {
+            "id": "R8",
+            "parts": [
+              {
+                "id": "R8-stmt",
+                "name": "statement",
+                "prose": "Gérer et configurer le poste d'administration"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Gérer et configurer le poste d'administration"
+          },
+          {
+            "id": "R9",
+            "parts": [
+              {
+                "id": "R9-stmt",
+                "name": "statement",
+                "prose": "Utiliser un poste d'administration dédié"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Utiliser un poste d'administration dédié"
+          },
+          {
+            "id": "R9-",
+            "parts": [
+              {
+                "id": "R9--stmt",
+                "name": "statement",
+                "prose": "Utiliser un poste d'administration multi-niveaux"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nrm]"
+              }
+            ],
+            "title": "Utiliser un poste d'administration multi-niveaux"
+          },
+          {
+            "id": "R9--",
+            "parts": [
+              {
+                "id": "R9---stmt",
+                "name": "statement",
+                "prose": "Utiliser un poste d’administration avec accès distant au SI bureautique"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nrmm]"
+              }
+            ],
+            "title": "Utiliser un poste d’administration avec accès distant au SI bureautique"
+          }
+        ],
+        "id": "_4",
+        "title": "Poste d'administration"
+      },
+      {
+        "controls": [
+          {
+            "id": "R15",
+            "parts": [
+              {
+                "id": "R15-stmt",
+                "name": "statement",
+                "prose": "Connecter les ressources d'administration sur un réseau physique dédié"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Connecter les ressources d'administration sur un réseau physique dédié"
+          },
+          {
+            "id": "R15-",
+            "parts": [
+              {
+                "id": "R15--stmt",
+                "name": "statement",
+                "prose": "Connecter les ressources d'administration sur un réseau VPN IPsec dédié"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nrm]"
+              }
+            ],
+            "title": "Connecter les ressources d'administration sur un réseau VPN IPsec dédié"
+          },
+          {
+            "id": "R16",
+            "parts": [
+              {
+                "id": "R16-stmt",
+                "name": "statement",
+                "prose": "Appliquer un filtrage interne et périmétrique au SI d'administration"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Appliquer un filtrage interne et périmétrique au SI d'administration"
+          },
+          {
+            "id": "R17",
+            "parts": [
+              {
+                "id": "R17-stmt",
+                "name": "statement",
+                "prose": "Appliquer un filtrage local sur les ressources administrées"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Appliquer un filtrage local sur les ressources administrées"
+          },
+          {
+            "id": "R18",
+            "parts": [
+              {
+                "id": "R18-stmt",
+                "name": "statement",
+                "prose": "Dédier une interface réseau physique d'administration"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Dédier une interface réseau physique d'administration"
+          },
+          {
+            "id": "R18-",
+            "parts": [
+              {
+                "id": "R18--stmt",
+                "name": "statement",
+                "prose": "Dédier une interface réseau virtuelle d'administration"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nrm]"
+              }
+            ],
+            "title": "Dédier une interface réseau virtuelle d'administration"
+          },
+          {
+            "id": "R19",
+            "parts": [
+              {
+                "id": "R19-stmt",
+                "name": "statement",
+                "prose": "Appliquer un filtrage entre ressources d'administration et ressources administrées"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Appliquer un filtrage entre ressources d'administration et ressources administrées"
+          },
+          {
+            "id": "R20",
+            "parts": [
+              {
+                "id": "R20-stmt",
+                "name": "statement",
+                "prose": "Bloquer toute connexion entre ressources administrées à travers le réseau d'administration"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Bloquer toute connexion entre ressources administrées à travers le réseau d'administration"
+          },
+          {
+            "id": "R21",
+            "parts": [
+              {
+                "id": "R21-stmt",
+                "name": "statement",
+                "prose": "Protéger les flux d'administration transitant sur un réseau tiers"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Protéger les flux d'administration transitant sur un réseau tiers"
+          }
+        ],
+        "id": "_5",
+        "title": "Réseau d'administration"
+      },
+      {
+        "controls": [
+          {
+            "id": "R22",
+            "parts": [
+              {
+                "id": "R22-stmt",
+                "name": "statement",
+                "prose": "Déployer les outils d'administration sur des serveurs dédiés par zone d'administration"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Déployer les outils d'administration sur des serveurs dédiés par zone d'administration"
+          },
+          {
+            "id": "R23",
+            "parts": [
+              {
+                "id": "R23-stmt",
+                "name": "statement",
+                "prose": "Appliquer un filtrage entre les postes d'administration et les serveurs outils d'administration"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Appliquer un filtrage entre les postes d'administration et les serveurs outils d'administration"
+          },
+          {
+            "id": "R24",
+            "parts": [
+              {
+                "id": "R24-stmt",
+                "name": "statement",
+                "prose": "Utiliser des protocoles sécurisés pour les flux d'administration"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Utiliser des protocoles sécurisés pour les flux d'administration"
+          },
+          {
+            "id": "R24-",
+            "parts": [
+              {
+                "id": "R24--stmt",
+                "name": "statement",
+                "prose": "Protéger le cas échéant les flux d'administration dans un tunnel VPN IPsec"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nrm]"
+              }
+            ],
+            "title": "Protéger le cas échéant les flux d'administration dans un tunnel VPN IPsec"
+          },
+          {
+            "id": "R25",
+            "parts": [
+              {
+                "id": "R25-stmt",
+                "name": "statement",
+                "prose": "Étudier la mise en oeuvre d'une rupture protocolaire des flux d'administration"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Étudier la mise en oeuvre d'une rupture protocolaire des flux d'administration"
+          },
+          {
+            "id": "R26",
+            "parts": [
+              {
+                "id": "R26-stmt",
+                "name": "statement",
+                "prose": "Renoncer à la rupture protocolaire pour les besoins en confidentialité"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Renoncer à la rupture protocolaire pour les besoins en confidentialité"
+          }
+        ],
+        "id": "_6",
+        "title": "Outils d'administration"
+      },
+      {
+        "controls": [
+          {
+            "id": "R27",
+            "parts": [
+              {
+                "id": "R27-stmt",
+                "name": "statement",
+                "prose": "Utiliser des comptes d'administration dédiés"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Utiliser des comptes d'administration dédiés"
+          },
+          {
+            "id": "R28",
+            "parts": [
+              {
+                "id": "R28-stmt",
+                "name": "statement",
+                "prose": "Protéger l'accès aux annuaires des comptes d'administration"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Protéger l'accès aux annuaires des comptes d'administration"
+          },
+          {
+            "id": "R29",
+            "parts": [
+              {
+                "id": "R29-stmt",
+                "name": "statement",
+                "prose": "Réserver les comptes d'administration aux seules actions d'administration"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Réserver les comptes d'administration aux seules actions d'administration"
+          },
+          {
+            "id": "R30",
+            "parts": [
+              {
+                "id": "R30-stmt",
+                "name": "statement",
+                "prose": "Utiliser par défaut des comptes d'administration individuels"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Utiliser par défaut des comptes d'administration individuels"
+          },
+          {
+            "id": "R31",
+            "parts": [
+              {
+                "id": "R31-stmt",
+                "name": "statement",
+                "prose": "Journaliser les événements liés aux comptes d'administration"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Journaliser les événements liés aux comptes d'administration"
+          },
+          {
+            "id": "R32",
+            "parts": [
+              {
+                "id": "R32-stmt",
+                "name": "statement",
+                "prose": "Prévoir un processus de gestion des comptes d'administration"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Prévoir un processus de gestion des comptes d'administration"
+          },
+          {
+            "id": "R33",
+            "parts": [
+              {
+                "id": "R33-stmt",
+                "name": "statement",
+                "prose": "Se référer au RGS pour choisir les mécanismes d'authentification"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Se référer au RGS pour choisir les mécanismes d'authentification"
+          },
+          {
+            "id": "R34",
+            "parts": [
+              {
+                "id": "R34-stmt",
+                "name": "statement",
+                "prose": "Modifier les mots de passe par défaut des comptes natifs"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Modifier les mots de passe par défaut des comptes natifs"
+          },
+          {
+            "id": "R35",
+            "parts": [
+              {
+                "id": "R35-stmt",
+                "name": "statement",
+                "prose": "Stocker les mots de passe dans un coffre-fort de mots de passe"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Stocker les mots de passe dans un coffre-fort de mots de passe"
+          },
+          {
+            "id": "R36",
+            "parts": [
+              {
+                "id": "R36-stmt",
+                "name": "statement",
+                "prose": "Privilégier une authentification double facteur pour les actions d'administration"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Privilégier une authentification double facteur pour les actions d'administration"
+          },
+          {
+            "id": "R37",
+            "parts": [
+              {
+                "id": "R37-stmt",
+                "name": "statement",
+                "prose": "Utiliser des certificats électroniques de confiance pour l'authentification"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Utiliser des certificats électroniques de confiance pour l'authentification"
+          },
+          {
+            "id": "R38",
+            "parts": [
+              {
+                "id": "R38-stmt",
+                "name": "statement",
+                "prose": "Mettre en œuvre une gestion centralisée de l'authentification"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Mettre en œuvre une gestion centralisée de l'authentification"
+          },
+          {
+            "id": "R39",
+            "parts": [
+              {
+                "id": "R39-stmt",
+                "name": "statement",
+                "prose": "Respecter le principe du moindre privilège dans l'attribution des droits d'administration"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Respecter le principe du moindre privilège dans l'attribution des droits d'administration"
+          },
+          {
+            "id": "R40",
+            "parts": [
+              {
+                "id": "R40-stmt",
+                "name": "statement",
+                "prose": "Attribuer les droits d'administration à des groupes"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Attribuer les droits d'administration à des groupes"
+          },
+          {
+            "id": "R41",
+            "parts": [
+              {
+                "id": "R41-stmt",
+                "name": "statement",
+                "prose": "Déployer des politiques de sécurité"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Déployer des politiques de sécurité"
+          }
+        ],
+        "id": "_7",
+        "title": "Identification, authentification et droits d'administration"
+      },
+      {
+        "controls": [
+          {
+            "id": "R42",
+            "parts": [
+              {
+                "id": "R42-stmt",
+                "name": "statement",
+                "prose": "Réaliser scrupuleusement le MCS du SI d'administration"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Réaliser scrupuleusement le MCS du SI d'administration"
+          },
+          {
+            "id": "R43",
+            "parts": [
+              {
+                "id": "R43-stmt",
+                "name": "statement",
+                "prose": "Mettre en place des serveurs relais pour la récupération des mises à jour"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Mettre en place des serveurs relais pour la récupération des mises à jour"
+          },
+          {
+            "id": "R44",
+            "parts": [
+              {
+                "id": "R44-stmt",
+                "name": "statement",
+                "prose": "Valider les correctifs de sécurité avant leur généralisation"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Valider les correctifs de sécurité avant leur généralisation"
+          }
+        ],
+        "id": "_8",
+        "title": "Maintien en condition de sécurité"
+      },
+      {
+        "controls": [
+          {
+            "id": "R45",
+            "parts": [
+              {
+                "id": "R45-stmt",
+                "name": "statement",
+                "prose": "Définir une politique de sauvegarde du SI d'administration"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Définir une politique de sauvegarde du SI d'administration"
+          },
+          {
+            "id": "R46",
+            "parts": [
+              {
+                "id": "R46-stmt",
+                "name": "statement",
+                "prose": "Dédier une zone d'administration à la journalisation"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Dédier une zone d'administration à la journalisation"
+          },
+          {
+            "id": "R47",
+            "parts": [
+              {
+                "id": "R47-stmt",
+                "name": "statement",
+                "prose": "Centraliser la collecte des journaux d'événements"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[nr]"
+              }
+            ],
+            "title": "Centraliser la collecte des journaux d'événements"
+          }
+        ],
+        "id": "_9",
+        "title": "Sauvegarde, journalisation et supervision de la sécurité"
+      }
+    ],
+    "metadata": {
+      "last-modified": "2026-11-08T00:30:50Z",
+      "oscal-version": "1.2.3",
+      "title": "Recommandations relatives à l'administration sécurisée des systèmes d'information",
+      "version": "1"
+    },
+    "uuid": "9771e465-6f42-5c64-94f4-8befa0529647"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "plan-of-action-and-milestones": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:13Z",
+      "oscal-version": "1.2.3",
+      "title": "GSA FedRAMP Rev5 Plan of Action and Milestones Template",
+      "version": "1"
+    },
+    "poam-items": [
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for GSA FedRAMP Rev5.",
+        "title": "Compliance Roadmap and Parameter Tailoring for GSA FedRAMP Rev5",
+        "uuid": "788c62f9-fdb9-56ca-90c1-2d41477e2313"
+      }
+    ],
+    "uuid": "d063c2d5-286a-5c83-bfdd-4a9e1c07f5f9"
+  }
+}

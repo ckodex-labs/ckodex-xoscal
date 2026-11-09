@@ -1,0 +1,21 @@
+{
+  "plan-of-action-and-milestones": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:13Z",
+      "oscal-version": "1.2.3",
+      "title": "IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - SYS: IT-Systeme Plan of Action and Milestones Template",
+      "version": "1"
+    },
+    "poam-items": [
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - SYS: IT-Systeme.",
+        "title": "Compliance Roadmap and Parameter Tailoring for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - SYS: IT-Systeme",
+        "uuid": "6c3efb7a-034b-549a-975a-72ae86ec603f"
+      }
+    ],
+    "uuid": "e94cca80-d298-5b99-a78d-edf7bbf5cfe4"
+  }
+}

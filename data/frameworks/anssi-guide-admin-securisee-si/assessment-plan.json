@@ -1,0 +1,90 @@
+{
+  "assessment-plan": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:12Z",
+      "oscal-version": "1.2.3",
+      "title": "Recommandations relatives à l'administration sécurisée des systèmes d'information Security Assessment Plan Template",
+      "version": "1"
+    },
+    "reviewed-controls": {
+      "control-selections": [
+        {
+          "description": "All controls in Recommandations relatives à l'administration sécurisée des systèmes d'information",
+          "include-all": {}
+        }
+      ]
+    },
+    "tasks": [
+      {
+        "description": "Verify and examine implementation of 4 controls in the Administration à distance et nomadisme family for Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "title": "Assess Family _10 (Administration à distance et nomadisme)",
+        "type": "examination",
+        "uuid": "50a20491-00aa-57c3-8f18-66a8977fe98f"
+      },
+      {
+        "description": "Verify and examine implementation of 7 controls in the Systèmes d'échanges sécurisés family for Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "title": "Assess Family _11 (Systèmes d'échanges sécurisés)",
+        "type": "examination",
+        "uuid": "b652837d-3beb-5101-9583-80837e635898"
+      },
+      {
+        "description": "Verify and examine implementation of 14 controls in the Administration par des tiers et assistance à distance family for Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "title": "Assess Family _12 (Administration par des tiers et assistance à distance)",
+        "type": "examination",
+        "uuid": "c9929601-7a39-54db-be2f-9ad94cdc8002"
+      },
+      {
+        "description": "Verify and examine implementation of 3 controls in the Les administrateurs, acteurs clés de la sécurité du système d'information family for Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "title": "Assess Family _2 (Les administrateurs, acteurs clés de la sécurité du système d'information)",
+        "type": "examination",
+        "uuid": "68ac75fb-3791-5ce2-8d9a-14b7bca76cc2"
+      },
+      {
+        "description": "Verify and examine implementation of 4 controls in the Généralités sur le système d'information d'administration family for Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "title": "Assess Family _3 (Généralités sur le système d'information d'administration)",
+        "type": "examination",
+        "uuid": "37977cef-081f-5a57-9048-e28dee8e85e1"
+      },
+      {
+        "description": "Verify and examine implementation of 9 controls in the Poste d'administration family for Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "title": "Assess Family _4 (Poste d'administration)",
+        "type": "examination",
+        "uuid": "dc447ff1-1d96-54ee-9aa8-d881da60946b"
+      },
+      {
+        "description": "Verify and examine implementation of 9 controls in the Réseau d'administration family for Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "title": "Assess Family _5 (Réseau d'administration)",
+        "type": "examination",
+        "uuid": "d5655311-fec5-5f4a-9260-6e7757618227"
+      },
+      {
+        "description": "Verify and examine implementation of 6 controls in the Outils d'administration family for Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "title": "Assess Family _6 (Outils d'administration)",
+        "type": "examination",
+        "uuid": "faf6e1c2-b7bb-58c5-b842-a1c5d5a9f9ba"
+      },
+      {
+        "description": "Verify and examine implementation of 15 controls in the Identification, authentification et droits d'administration family for Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "title": "Assess Family _7 (Identification, authentification et droits d'administration)",
+        "type": "examination",
+        "uuid": "a22d6978-0abe-5bae-af65-f56bb2d00ba1"
+      },
+      {
+        "description": "Verify and examine implementation of 3 controls in the Maintien en condition de sécurité family for Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "title": "Assess Family _8 (Maintien en condition de sécurité)",
+        "type": "examination",
+        "uuid": "b81034e7-fdd5-5cb0-919a-7974796ff6c4"
+      },
+      {
+        "description": "Verify and examine implementation of 3 controls in the Sauvegarde, journalisation et supervision de la sécurité family for Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "title": "Assess Family _9 (Sauvegarde, journalisation et supervision de la sécurité)",
+        "type": "examination",
+        "uuid": "3c1bd6df-a2a2-52a5-97c6-a2572e7cb4e0"
+      }
+    ],
+    "uuid": "cacaf7ec-3d69-594d-9271-cff6a5d460c8"
+  }
+}

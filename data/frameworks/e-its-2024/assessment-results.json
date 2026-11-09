@@ -1,0 +1,324 @@
+{
+  "assessment-results": {
+    "import-ap": {
+      "href": "./assessment-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:13Z",
+      "oscal-version": "1.2.3",
+      "title": "E-ITS 2024 Assessment Results Template",
+      "version": "1"
+    },
+    "results": [
+      {
+        "description": "Assessment evaluation findings and observations for E-ITS 2024.",
+        "findings": [
+          {
+            "description": "Control app.1.1.m10 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "9f9da319-90d1-584e-a391-7031f4e7a281"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "app.1.1.m10",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for app.1.1.m10",
+            "uuid": "7a865a1a-c9a3-57d8-865d-1245cd20b413"
+          },
+          {
+            "description": "Control con.1.m1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "b994f852-ebaa-5a36-9d11-fa07474d84f6"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "con.1.m1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for con.1.m1",
+            "uuid": "489c94da-4960-5ba1-8fbd-8293624f6d21"
+          },
+          {
+            "description": "Control der.1.m1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "be6c9e54-3008-5979-8116-2b3e1a9bd2cb"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "der.1.m1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for der.1.m1",
+            "uuid": "996d8edf-1c6a-550d-8c35-796aec14655d"
+          },
+          {
+            "description": "Control ind.1.m1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "52c3181f-888f-5a14-af7d-39105a0baf87"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "ind.1.m1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for ind.1.m1",
+            "uuid": "df18f917-2152-5ada-bdaa-d715a961c43e"
+          },
+          {
+            "description": "Control inf.1.m1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "3ea3ae58-9e5f-52b2-92ff-7184bc773f54"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "inf.1.m1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for inf.1.m1",
+            "uuid": "99589cc8-c54c-58bd-8e75-91fc21ff5343"
+          },
+          {
+            "description": "Control isms.1.m1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "9ab59218-8e1d-5bd9-9ba7-a1ebb79d57a6"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "isms.1.m1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for isms.1.m1",
+            "uuid": "5e9d8809-46ef-5b20-b49f-fe2fc25313d8"
+          },
+          {
+            "description": "Control net.1.1.m1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "d7a0a5cb-033c-5901-b0cc-6ae9c16ccdff"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "net.1.1.m1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for net.1.1.m1",
+            "uuid": "0f4c3e0b-1721-595a-965d-7ca96c6dcc4b"
+          },
+          {
+            "description": "Control ops.1.1.1.m1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "5301cac1-a6dd-5cfa-a82a-a085a1dfc4f5"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "ops.1.1.1.m1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for ops.1.1.1.m1",
+            "uuid": "7c4eee90-fe6e-588a-9954-fd8eac9ad0b2"
+          },
+          {
+            "description": "Control orp.1.m1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "cbf828e6-06b0-5f98-9d19-757963a8305a"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "orp.1.m1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for orp.1.m1",
+            "uuid": "e9878bf7-e070-5567-8c02-52fa2880bf50"
+          },
+          {
+            "description": "Control sys.1.1.m1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "fc1604aa-dadd-5681-bf1c-ba84bfdb96da"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "sys.1.1.m1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for sys.1.1.m1",
+            "uuid": "94608752-d768-55cc-8ad8-e20e8dc417df"
+          }
+        ],
+        "observations": [
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control app.1.1.m10 (Kontoritarkvara kasutajapoolsete lisaarenduste reguleerimine) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "9f9da319-90d1-584e-a391-7031f4e7a281"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control con.1.m1 (Krüptomehhanismide kasutuselevõtu kavandamine) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "b994f852-ebaa-5a36-9d11-fa07474d84f6"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control der.1.m1 (Turvaintsidentide avastamise eeskiri) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "be6c9e54-3008-5979-8116-2b3e1a9bd2cb"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control ind.1.m1 (Integreerimine turbekorraldusse) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "52c3181f-888f-5a14-af7d-39105a0baf87"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control inf.1.m1 (Hoone turbe kavandamine) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "3ea3ae58-9e5f-52b2-92ff-7184bc773f54"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control isms.1.m1 (Infoturbe üldvastutuse võtmine juhtkonnatasemel) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "9ab59218-8e1d-5bd9-9ba7-a1ebb79d57a6"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control net.1.1.m1 (Võrgu turvapoliitika) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "d7a0a5cb-033c-5901-b0cc-6ae9c16ccdff"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control ops.1.1.1.m1 (IT-halduse ülesannete ja kohustuste määramine) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "5301cac1-a6dd-5cfa-a82a-a085a1dfc4f5"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control orp.1.m1 (Kohustuste ja eeskirjade kehtestamine) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "cbf828e6-06b0-5f98-9d19-757963a8305a"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control sys.1.1.m1 (Serverile juurdepääsu piiramine) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "fc1604aa-dadd-5681-bf1c-ba84bfdb96da"
+          }
+        ],
+        "reviewed-controls": {
+          "control-selections": [
+            {
+              "description": "All controls evaluated for E-ITS 2024",
+              "include-all": {}
+            }
+          ]
+        },
+        "start": "2026-11-08T01:42:13Z",
+        "title": "E-ITS 2024 Assessment Results",
+        "uuid": "80f7a99c-bcea-5d20-bc79-0acdc2dacae9"
+      }
+    ],
+    "uuid": "02071c09-25cd-5e7b-8d9a-efd8532e67f3"
+  }
+}

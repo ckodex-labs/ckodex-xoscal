@@ -1,0 +1,208 @@
+{
+  "assessment-results": {
+    "import-ap": {
+      "href": "./assessment-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:11Z",
+      "oscal-version": "1.2.3",
+      "title": "Digital Operational Resilience Act (DORA) Assessment Results Template",
+      "version": "7"
+    },
+    "results": [
+      {
+        "description": "Assessment evaluation findings and observations for Digital Operational Resilience Act (DORA).",
+        "findings": [
+          {
+            "description": "Control _10.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "abcf09c7-f022-538b-8b20-2268373d5249"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_10.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _10.1",
+            "uuid": "c86569c8-432e-5849-9153-92591af522c5"
+          },
+          {
+            "description": "Control _17.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "b9769b93-ae6c-5972-aa6f-03ad7c170ad4"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_17.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _17.1",
+            "uuid": "91062707-5ccf-5cf6-8926-edcc4f7d7694"
+          },
+          {
+            "description": "Control _24.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "d8a157af-444e-5f86-909d-e3f10df3fc9d"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_24.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _24.1",
+            "uuid": "a324cbe1-9418-5087-b05c-189d61ca3780"
+          },
+          {
+            "description": "Control _28.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "76af2e17-5399-50de-89b1-3f0b2206dd1f"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_28.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _28.1",
+            "uuid": "d8475347-b42f-51e6-80ba-5a53d6e74d98"
+          },
+          {
+            "description": "Control _45.1.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "56d2369e-bc17-56a8-8527-5be347b77cd9"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_45.1.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _45.1.a",
+            "uuid": "8a30a2c7-ecab-5956-bcf5-e58e422004eb"
+          },
+          {
+            "description": "Control _64.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "a1cac667-65b0-57b6-a1b5-07ad43a5d55f"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_64.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _64.1",
+            "uuid": "d434271e-6cf0-5b6c-bd2f-4c2c1698a675"
+          }
+        ],
+        "observations": [
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control _10.1 (Article 10 — 10.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "abcf09c7-f022-538b-8b20-2268373d5249"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control _17.1 (Article 17 — 17.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "b9769b93-ae6c-5972-aa6f-03ad7c170ad4"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control _24.1 (Article 24 — 24.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "d8a157af-444e-5f86-909d-e3f10df3fc9d"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control _28.1 (Article 28 — 28.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "76af2e17-5399-50de-89b1-3f0b2206dd1f"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control _45.1.a (Article 45 — 45.1.a) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "56d2369e-bc17-56a8-8527-5be347b77cd9"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control _64.1 (Article 64 — 64.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "a1cac667-65b0-57b6-a1b5-07ad43a5d55f"
+          }
+        ],
+        "reviewed-controls": {
+          "control-selections": [
+            {
+              "description": "All controls evaluated for Digital Operational Resilience Act (DORA)",
+              "include-all": {}
+            }
+          ]
+        },
+        "start": "2026-11-08T01:42:11Z",
+        "title": "Digital Operational Resilience Act (DORA) Assessment Results",
+        "uuid": "57c6e748-5980-5a01-afb6-7fba14bb9771"
+      }
+    ],
+    "uuid": "93703717-688d-5d12-a7b7-0c70df6a509a"
+  }
+}

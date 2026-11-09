@@ -1,0 +1,21 @@
+{
+  "plan-of-action-and-milestones": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:13Z",
+      "oscal-version": "1.2.3",
+      "title": "NIST CSF version 2.0 Plan of Action and Milestones Template",
+      "version": "6"
+    },
+    "poam-items": [
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for NIST CSF version 2.0.",
+        "title": "Compliance Roadmap and Parameter Tailoring for NIST CSF version 2.0",
+        "uuid": "0d0a6d9b-70a1-5915-833b-7727c39f9557"
+      }
+    ],
+    "uuid": "538ef78d-4ea1-51ba-8138-2d27fbfe4e15"
+  }
+}

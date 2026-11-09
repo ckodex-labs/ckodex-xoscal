@@ -1,0 +1,96 @@
+{
+  "assessment-plan": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:12Z",
+      "oscal-version": "1.2.3",
+      "title": "IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - INF: Infrastruktur Security Assessment Plan Template",
+      "version": "1"
+    },
+    "reviewed-controls": {
+      "control-selections": [
+        {
+          "description": "All controls in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - INF: Infrastruktur",
+          "include-all": {}
+        }
+      ]
+    },
+    "tasks": [
+      {
+        "description": "Verify and examine implementation of 107 controls in the Allgemeines Gebäude family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - INF: Infrastruktur.",
+        "title": "Assess Family INF.1 (Allgemeines Gebäude)",
+        "type": "examination",
+        "uuid": "ec5a7cb3-247e-55f4-92a1-d7996be20915"
+      },
+      {
+        "description": "Verify and examine implementation of 28 controls in the Besprechungs-, Veranstaltungs- und Schulungsräume family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - INF: Infrastruktur.",
+        "title": "Assess Family INF.10 (Besprechungs-, Veranstaltungs- und Schulungsräume)",
+        "type": "examination",
+        "uuid": "177b4021-6ddc-553b-bf8e-1a779f3950bc"
+      },
+      {
+        "description": "Verify and examine implementation of 82 controls in the Allgemeines Fahrzeug family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - INF: Infrastruktur.",
+        "title": "Assess Family INF.11 (Allgemeines Fahrzeug)",
+        "type": "examination",
+        "uuid": "bb684520-9da2-539c-b32a-c379506df2f8"
+      },
+      {
+        "description": "Verify and examine implementation of 86 controls in the Verkabelung family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - INF: Infrastruktur.",
+        "title": "Assess Family INF.12 (Verkabelung)",
+        "type": "examination",
+        "uuid": "25a3f98e-b2c5-5753-ab8e-bab29a30595a"
+      },
+      {
+        "description": "Verify and examine implementation of 146 controls in the Technisches Gebäudemanagement family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - INF: Infrastruktur.",
+        "title": "Assess Family INF.13 (Technisches Gebäudemanagement)",
+        "type": "examination",
+        "uuid": "7951abeb-c4e4-5a03-ac19-537fc2ba19e9"
+      },
+      {
+        "description": "Verify and examine implementation of 138 controls in the Gebäudeautomation family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - INF: Infrastruktur.",
+        "title": "Assess Family INF.14 (Gebäudeautomation)",
+        "type": "examination",
+        "uuid": "5f60d309-62b7-55a4-8435-fdcdf15bdda9"
+      },
+      {
+        "description": "Verify and examine implementation of 135 controls in the Rechenzentrum sowie Serverraum family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - INF: Infrastruktur.",
+        "title": "Assess Family INF.2 (Rechenzentrum sowie Serverraum)",
+        "type": "examination",
+        "uuid": "2922d063-99de-522f-9d91-22981da14bbc"
+      },
+      {
+        "description": "Verify and examine implementation of 74 controls in the Raum sowie Schrank für technische Infrastruktur family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - INF: Infrastruktur.",
+        "title": "Assess Family INF.5 (Raum sowie Schrank für technische Infrastruktur)",
+        "type": "examination",
+        "uuid": "92e1c4b9-64bb-58f6-92b7-07cc674b01e2"
+      },
+      {
+        "description": "Verify and examine implementation of 32 controls in the Datenträgerarchiv family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - INF: Infrastruktur.",
+        "title": "Assess Family INF.6 (Datenträgerarchiv)",
+        "type": "examination",
+        "uuid": "2350f443-1706-5312-b9b1-3bc396d47157"
+      },
+      {
+        "description": "Verify and examine implementation of 26 controls in the Büroarbeitsplatz family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - INF: Infrastruktur.",
+        "title": "Assess Family INF.7 (Büroarbeitsplatz)",
+        "type": "examination",
+        "uuid": "88df4940-5595-5cac-a5f3-7c6d7be2d192"
+      },
+      {
+        "description": "Verify and examine implementation of 19 controls in the Häuslicher Arbeitsplatz family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - INF: Infrastruktur.",
+        "title": "Assess Family INF.8 (Häuslicher Arbeitsplatz)",
+        "type": "examination",
+        "uuid": "087eae8e-7d9f-5a83-acc3-212fe7a21a72"
+      },
+      {
+        "description": "Verify and examine implementation of 54 controls in the Mobiler Arbeitsplatz family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - INF: Infrastruktur.",
+        "title": "Assess Family INF.9 (Mobiler Arbeitsplatz)",
+        "type": "examination",
+        "uuid": "456091cd-e4f6-59c6-aa09-8ca68d3e718c"
+      }
+    ],
+    "uuid": "0efd0b64-b37b-5d65-b621-7dba4ecd72fe"
+  }
+}

@@ -1,0 +1,527 @@
+{
+  "assessment-results": {
+    "import-ap": {
+      "href": "./assessment-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:13Z",
+      "oscal-version": "1.2.3",
+      "title": "BSI C5 Library Assessment Results Template",
+      "version": "1"
+    },
+    "results": [
+      {
+        "description": "Assessment evaluation findings and observations for BSI C5 Library.",
+        "findings": [
+          {
+            "description": "Control am-01 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "681bc709-b50c-52e1-9dec-8aa7b1b1c426"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "am-01",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for am-01",
+            "uuid": "7f79066b-9152-5ddd-85ef-47e19cf3fabd"
+          },
+          {
+            "description": "Control bcm-01 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "a0cfda6d-b873-5580-b81d-0a1b870b38e8"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "bcm-01",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for bcm-01",
+            "uuid": "a1b6a40d-7b10-5930-b289-b0e1923f76be"
+          },
+          {
+            "description": "Control com-01 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "ac19d27a-6ba9-5070-b0be-117c64745e65"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "com-01",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for com-01",
+            "uuid": "9f595fc1-11e7-5ac5-9a5b-0e08cb0f2871"
+          },
+          {
+            "description": "Control cos-01 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "42aa3ce7-76ab-5c06-a777-a7fce1d0856c"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "cos-01",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for cos-01",
+            "uuid": "312d4118-d373-5bc6-9016-d620af3c7472"
+          },
+          {
+            "description": "Control cry-01 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "2673a280-5a83-5e1d-882d-cc518d645d93"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "cry-01",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for cry-01",
+            "uuid": "09d3fa21-f036-5e04-8389-bfdf2518b0a4"
+          },
+          {
+            "description": "Control dev-01 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "710e9fbe-e39c-5319-bcf9-86e325a94755"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "dev-01",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for dev-01",
+            "uuid": "7c59c21c-cf6e-5f05-89be-1a4f2ea5da5d"
+          },
+          {
+            "description": "Control hr-01 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "711ef34a-1a45-5929-a5b4-2c188f35269d"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "hr-01",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for hr-01",
+            "uuid": "b19a2308-a17e-5904-8604-b1769420b754"
+          },
+          {
+            "description": "Control idm-01 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "b99b14f0-f158-5a8d-b53f-6d6a08cac6c8"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "idm-01",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for idm-01",
+            "uuid": "a963815f-2d6d-5aa4-bc21-3b3226c6bc2b"
+          },
+          {
+            "description": "Control inq-01 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "29080413-f95a-51d1-bb99-37f313480711"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "inq-01",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for inq-01",
+            "uuid": "5491a105-86e5-5c26-8fe2-1bdca8fabfa3"
+          },
+          {
+            "description": "Control ois-01 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "e194f8ff-646b-520e-8f9d-4626668394db"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "ois-01",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for ois-01",
+            "uuid": "6c258f57-74f4-51e6-b577-2b7870c5cf1d"
+          },
+          {
+            "description": "Control ops-01 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "1e5df954-c3e4-56f1-89ed-aa3784249016"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "ops-01",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for ops-01",
+            "uuid": "33f7504b-3ea5-56c3-a8f5-c842331a836d"
+          },
+          {
+            "description": "Control pi-01 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "f0962be1-03f3-5a7c-bb45-004cfdc80320"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "pi-01",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for pi-01",
+            "uuid": "ad6a709f-865d-59af-a55d-5f55addb0688"
+          },
+          {
+            "description": "Control ps-01 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "3aedbe8e-6cb8-5307-82e4-afa58e415af8"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "ps-01",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for ps-01",
+            "uuid": "f9d347a5-601c-528e-8820-a3366395c3f4"
+          },
+          {
+            "description": "Control pss-01 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "54681d6f-39ed-57dd-858c-8a69521205bb"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "pss-01",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for pss-01",
+            "uuid": "ababb24d-db72-5be7-9034-5d3f533347df"
+          },
+          {
+            "description": "Control sim-01 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "78f15593-4932-5eaf-af57-7299dfe6d6ba"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "sim-01",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for sim-01",
+            "uuid": "cb267e7a-677e-5d7b-8dcf-77caef7ab4be"
+          },
+          {
+            "description": "Control sp-01 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "c3824425-1582-545c-aafb-775bd3a2e9a7"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "sp-01",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for sp-01",
+            "uuid": "dfd25302-9351-5690-91b5-f3a32779295b"
+          },
+          {
+            "description": "Control sso-01 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "55cd5e63-7c6b-58a9-a27d-7dbc86752a4c"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "sso-01",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for sso-01",
+            "uuid": "960ec402-49e8-5efc-b6ce-aa649beeac2e"
+          }
+        ],
+        "observations": [
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control am-01 (Asset Inventory) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "681bc709-b50c-52e1-9dec-8aa7b1b1c426"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control bcm-01 (Top management responsibility) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "a0cfda6d-b873-5580-b81d-0a1b870b38e8"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control com-01 (Identification of applicable legal, regulatory, self-imposed or contractual requirements) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "ac19d27a-6ba9-5070-b0be-117c64745e65"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control cos-01 (Technical safeguards) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "42aa3ce7-76ab-5c06-a777-a7fce1d0856c"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control cry-01 (Policy for the use of encryption procedures and key management) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "2673a280-5a83-5e1d-882d-cc518d645d93"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control dev-01 (Policies for the development/procurement of information systems) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "710e9fbe-e39c-5319-bcf9-86e325a94755"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control hr-01 (Verification of qualification and trustworthiness) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "711ef34a-1a45-5929-a5b4-2c188f35269d"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control idm-01 (Policy for user accounts and access rights) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "b99b14f0-f158-5a8d-b53f-6d6a08cac6c8"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control inq-01 (Legal Assessment of Investigative Inquiries) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "29080413-f95a-51d1-bb99-37f313480711"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control ois-01 (Information Security Management System (ISMS)) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "e194f8ff-646b-520e-8f9d-4626668394db"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control ops-01 (Capacity Management - Planning) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "1e5df954-c3e4-56f1-89ed-aa3784249016"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control pi-01 (Documentation and safety of input and output interfaces) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "f0962be1-03f3-5a7c-bb45-004cfdc80320"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control ps-01 (Physical Security and Environmental Control Requirements) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "3aedbe8e-6cb8-5307-82e4-afa58e415af8"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control pss-01 (Guidelines and Recommendations for Cloud Customers) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "54681d6f-39ed-57dd-858c-8a69521205bb"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control sim-01 (Policy for security incident management) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "78f15593-4932-5eaf-af57-7299dfe6d6ba"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control sp-01 (Documentation, communication and provision of policies and instructions) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "c3824425-1582-545c-aafb-775bd3a2e9a7"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control sso-01 (Policies and instructions for controlling and monitoring third parties) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "55cd5e63-7c6b-58a9-a27d-7dbc86752a4c"
+          }
+        ],
+        "reviewed-controls": {
+          "control-selections": [
+            {
+              "description": "All controls evaluated for BSI C5 Library",
+              "include-all": {}
+            }
+          ]
+        },
+        "start": "2026-11-08T01:42:13Z",
+        "title": "BSI C5 Library Assessment Results",
+        "uuid": "dc344a2e-ec5b-5e9f-9537-b68f91e6382a"
+      }
+    ],
+    "uuid": "603150d7-023c-5ee9-ab53-7606e743e9f2"
+  }
+}

@@ -1,0 +1,2818 @@
+{
+  "component-definition": {
+    "components": [
+      {
+        "control-implementations": [
+          {
+            "description": "Security control implementations for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - CON: Konzeption und Vorgehensweisen.",
+            "implemented-requirements": [
+              {
+                "control-id": "con.1.a1.1",
+                "description": "Component capability addressing control con.1.a1.1 (Auswahl geeigneter kryptografischer Verfahren — CON.1.A1.1).",
+                "uuid": "22fc7ed9-55a3-50f5-8495-dcb4a336820a"
+              },
+              {
+                "control-id": "con.1.a1.2",
+                "description": "Component capability addressing control con.1.a1.2 (Auswahl geeigneter kryptografischer Verfahren — CON.1.A1.2).",
+                "uuid": "9034c2b0-f677-5af0-95de-5b949ac7d184"
+              },
+              {
+                "control-id": "con.1.a1.3",
+                "description": "Component capability addressing control con.1.a1.3 (Auswahl geeigneter kryptografischer Verfahren — CON.1.A1.3).",
+                "uuid": "22bb55b7-21f2-550f-a417-5031a642188a"
+              },
+              {
+                "control-id": "con.1.a1.4",
+                "description": "Component capability addressing control con.1.a1.4 (Auswahl geeigneter kryptografischer Verfahren — CON.1.A1.4).",
+                "uuid": "b4fd3c77-eb2a-594f-bfe2-28725c7a0c16"
+              },
+              {
+                "control-id": "con.1.a1.5",
+                "description": "Component capability addressing control con.1.a1.5 (Auswahl geeigneter kryptografischer Verfahren — CON.1.A1.5).",
+                "uuid": "240abdd5-e782-5f36-bddc-4e0969a207c6"
+              },
+              {
+                "control-id": "con.1.a10.1",
+                "description": "Component capability addressing control con.1.a10.1 (Erstellung eines Kryptokonzepts — CON.1.A10.1).",
+                "uuid": "7d0cae0c-f3cf-5727-954e-83c1f01c806c"
+              },
+              {
+                "control-id": "con.1.a10.10",
+                "description": "Component capability addressing control con.1.a10.10 (Erstellung eines Kryptokonzepts — CON.1.A10.10).",
+                "uuid": "2e73f6d0-8995-5ab1-8a8c-aa398dee3482"
+              },
+              {
+                "control-id": "con.1.a10.11",
+                "description": "Component capability addressing control con.1.a10.11 (Erstellung eines Kryptokonzepts — CON.1.A10.11).",
+                "uuid": "9cf66725-4378-5ba5-8ea3-6bcbc475c180"
+              },
+              {
+                "control-id": "con.1.a10.12",
+                "description": "Component capability addressing control con.1.a10.12 (Erstellung eines Kryptokonzepts — CON.1.A10.12).",
+                "uuid": "aa12c9d5-5fb9-5a59-bfb3-0af0e032bab3"
+              },
+              {
+                "control-id": "con.1.a10.2",
+                "description": "Component capability addressing control con.1.a10.2 (Erstellung eines Kryptokonzepts — CON.1.A10.2).",
+                "uuid": "a1b34e4c-bdd2-5c07-883e-bb666f3926f5"
+              },
+              {
+                "control-id": "con.1.a10.3",
+                "description": "Component capability addressing control con.1.a10.3 (Erstellung eines Kryptokonzepts — CON.1.A10.3).",
+                "uuid": "5d96aec4-c27a-54b4-b52d-1ae23a942046"
+              },
+              {
+                "control-id": "con.1.a10.4",
+                "description": "Component capability addressing control con.1.a10.4 (Erstellung eines Kryptokonzepts — CON.1.A10.4).",
+                "uuid": "d15e908f-5f55-5986-a35a-3794f2b54ca2"
+              },
+              {
+                "control-id": "con.1.a10.5",
+                "description": "Component capability addressing control con.1.a10.5 (Erstellung eines Kryptokonzepts — CON.1.A10.5).",
+                "uuid": "c2aa71a3-a8f1-52cd-9c77-e193ec7e1e1a"
+              },
+              {
+                "control-id": "con.1.a10.6",
+                "description": "Component capability addressing control con.1.a10.6 (Erstellung eines Kryptokonzepts — CON.1.A10.6).",
+                "uuid": "34c9d5fa-ea1b-59d9-8f14-86c978e0faf6"
+              },
+              {
+                "control-id": "con.1.a10.7",
+                "description": "Component capability addressing control con.1.a10.7 (Erstellung eines Kryptokonzepts — CON.1.A10.7).",
+                "uuid": "38504431-986b-5d7c-a042-26e36345eb83"
+              },
+              {
+                "control-id": "con.1.a10.8",
+                "description": "Component capability addressing control con.1.a10.8 (Erstellung eines Kryptokonzepts — CON.1.A10.8).",
+                "uuid": "3adaa5ff-4963-5291-8b5f-ddc7b740f020"
+              },
+              {
+                "control-id": "con.1.a10.9",
+                "description": "Component capability addressing control con.1.a10.9 (Erstellung eines Kryptokonzepts — CON.1.A10.9).",
+                "uuid": "7aaf2a6f-0190-5d9a-9796-d2fe5ecf9877"
+              },
+              {
+                "control-id": "con.1.a11.1",
+                "description": "Component capability addressing control con.1.a11.1 (Test von Hardware mit kryptografischen Funktionen — CON.1.A11.1).",
+                "uuid": "616f3478-b49b-52c6-bf78-cc2856c43758"
+              },
+              {
+                "control-id": "con.1.a11.2",
+                "description": "Component capability addressing control con.1.a11.2 (Test von Hardware mit kryptografischen Funktionen — CON.1.A11.2).",
+                "uuid": "6a09ba61-17f5-5622-a5ca-004bbe033b9e"
+              },
+              {
+                "control-id": "con.1.a11.3",
+                "description": "Component capability addressing control con.1.a11.3 (Test von Hardware mit kryptografischen Funktionen — CON.1.A11.3).",
+                "uuid": "f3ed760d-a49a-5ff4-9c22-3bc58cadf795"
+              },
+              {
+                "control-id": "con.1.a11.4",
+                "description": "Component capability addressing control con.1.a11.4 (Test von Hardware mit kryptografischen Funktionen — CON.1.A11.4).",
+                "uuid": "c3065069-3469-5a56-a8b6-9f81c2087d0d"
+              },
+              {
+                "control-id": "con.1.a15.1",
+                "description": "Component capability addressing control con.1.a15.1 (Reaktion auf praktische Schwächung eines Kryptoverfahrens — CON.1.A15.1).",
+                "uuid": "60169a53-9894-531f-a82e-715933d724e2"
+              },
+              {
+                "control-id": "con.1.a15.2",
+                "description": "Component capability addressing control con.1.a15.2 (Reaktion auf praktische Schwächung eines Kryptoverfahrens — CON.1.A15.2).",
+                "uuid": "275e7424-b828-5964-b51c-3b0d22c20c0f"
+              },
+              {
+                "control-id": "con.1.a15.3",
+                "description": "Component capability addressing control con.1.a15.3 (Reaktion auf praktische Schwächung eines Kryptoverfahrens — CON.1.A15.3).",
+                "uuid": "7835e22c-00bc-5f9c-a964-93353fb76af2"
+              },
+              {
+                "control-id": "con.1.a16.1",
+                "description": "Component capability addressing control con.1.a16.1 (Physische Absicherung von Hardware mit kryptografischen Funktionen — CON.1.A16.1).",
+                "uuid": "d08f22ef-e687-57be-9a87-d076ae244e15"
+              },
+              {
+                "control-id": "con.1.a17.1",
+                "description": "Component capability addressing control con.1.a17.1 (Abstrahlsicherheit — CON.1.A17.1).",
+                "uuid": "3f7a2e54-e91c-5da6-bd38-7a6ff2bf7340"
+              },
+              {
+                "control-id": "con.1.a17.2",
+                "description": "Component capability addressing control con.1.a17.2 (Abstrahlsicherheit — CON.1.A17.2).",
+                "uuid": "c255d037-a9b2-5917-bb71-7b585e6b07fb"
+              },
+              {
+                "control-id": "con.1.a17.3",
+                "description": "Component capability addressing control con.1.a17.3 (Abstrahlsicherheit — CON.1.A17.3).",
+                "uuid": "fa721ad4-163e-5171-9272-e5a61d96edd4"
+              },
+              {
+                "control-id": "con.1.a18.1",
+                "description": "Component capability addressing control con.1.a18.1 (Kryptografische Ersatzhardware — CON.1.A18.1).",
+                "uuid": "82b3e2b5-da58-5c82-900c-8ff1fdc797fa"
+              },
+              {
+                "control-id": "con.1.a18.2",
+                "description": "Component capability addressing control con.1.a18.2 (Kryptografische Ersatzhardware — CON.1.A18.2).",
+                "uuid": "c8262125-e23c-5102-ab01-f0b327e63e6c"
+              },
+              {
+                "control-id": "con.1.a19.1",
+                "description": "Component capability addressing control con.1.a19.1 (Erstellung eines Krypto-Katasters — CON.1.A19.1).",
+                "uuid": "a7a78334-0ccd-5d66-9578-60e7333bdd97"
+              },
+              {
+                "control-id": "con.1.a19.2",
+                "description": "Component capability addressing control con.1.a19.2 (Erstellung eines Krypto-Katasters — CON.1.A19.2).",
+                "uuid": "121adecf-246d-55d2-9d6c-f020f0f0f7c2"
+              },
+              {
+                "control-id": "con.1.a19.3",
+                "description": "Component capability addressing control con.1.a19.3 (Erstellung eines Krypto-Katasters — CON.1.A19.3).",
+                "uuid": "790d1ff0-de92-5c1b-9779-dde791b230d1"
+              },
+              {
+                "control-id": "con.1.a19.4",
+                "description": "Component capability addressing control con.1.a19.4 (Erstellung eines Krypto-Katasters — CON.1.A19.4).",
+                "uuid": "2f71f757-f78c-5484-aaf8-5a8725ea41f3"
+              },
+              {
+                "control-id": "con.1.a19.5",
+                "description": "Component capability addressing control con.1.a19.5 (Erstellung eines Krypto-Katasters — CON.1.A19.5).",
+                "uuid": "87f4b845-67eb-5161-b84a-6d0f561f4116"
+              },
+              {
+                "control-id": "con.1.a19.6",
+                "description": "Component capability addressing control con.1.a19.6 (Erstellung eines Krypto-Katasters — CON.1.A19.6).",
+                "uuid": "c8121696-acc2-5f53-b756-4ec3f09470c5"
+              },
+              {
+                "control-id": "con.1.a2.1",
+                "description": "Component capability addressing control con.1.a2.1 (Datensicherung beim Einsatz kryptografischer Verfahren — CON.1.A2.1).",
+                "uuid": "8fe8546d-011c-5841-af95-ed6e7a16c3cd"
+              },
+              {
+                "control-id": "con.1.a2.2",
+                "description": "Component capability addressing control con.1.a2.2 (Datensicherung beim Einsatz kryptografischer Verfahren — CON.1.A2.2).",
+                "uuid": "1858d29e-7b74-5062-9f66-10a915c3794e"
+              },
+              {
+                "control-id": "con.1.a2.3",
+                "description": "Component capability addressing control con.1.a2.3 (Datensicherung beim Einsatz kryptografischer Verfahren — CON.1.A2.3).",
+                "uuid": "40802c84-bc1f-5e57-8cc7-de29c779032c"
+              },
+              {
+                "control-id": "con.1.a2.4",
+                "description": "Component capability addressing control con.1.a2.4 (Datensicherung beim Einsatz kryptografischer Verfahren — CON.1.A2.4).",
+                "uuid": "5543db75-c427-56f9-be73-23a640ae4243"
+              },
+              {
+                "control-id": "con.1.a2.5",
+                "description": "Component capability addressing control con.1.a2.5 (Datensicherung beim Einsatz kryptografischer Verfahren — CON.1.A2.5).",
+                "uuid": "5cd29913-fa87-514a-9dbe-3ab4134b05ff"
+              },
+              {
+                "control-id": "con.1.a20.1",
+                "description": "Component capability addressing control con.1.a20.1 (Manipulationserkennung für Hard- oder Software mit kryptografischen Funktionen — CON.1.A20.1).",
+                "uuid": "208746f8-b5f3-5d40-8e41-e53c15424c1c"
+              },
+              {
+                "control-id": "con.1.a4.1",
+                "description": "Component capability addressing control con.1.a4.1 (Geeignetes Schlüsselmanagement — CON.1.A4.1).",
+                "uuid": "3b97f155-57b9-5fdc-bd10-b3c9b8b23137"
+              },
+              {
+                "control-id": "con.1.a4.10",
+                "description": "Component capability addressing control con.1.a4.10 (Geeignetes Schlüsselmanagement — CON.1.A4.10).",
+                "uuid": "14c2145c-d6e7-5a2d-aefe-0c790e3275ea"
+              },
+              {
+                "control-id": "con.1.a4.11",
+                "description": "Component capability addressing control con.1.a4.11 (Geeignetes Schlüsselmanagement — CON.1.A4.11).",
+                "uuid": "e593a091-2238-5fbb-9cde-741a231663a2"
+              },
+              {
+                "control-id": "con.1.a4.12",
+                "description": "Component capability addressing control con.1.a4.12 (Geeignetes Schlüsselmanagement — CON.1.A4.12).",
+                "uuid": "a84e55ce-ad8f-5d33-9341-9833de91ab4b"
+              },
+              {
+                "control-id": "con.1.a4.13",
+                "description": "Component capability addressing control con.1.a4.13 (Geeignetes Schlüsselmanagement — CON.1.A4.13).",
+                "uuid": "a0cbc690-ef17-56fe-bf7f-33b606ef4cd2"
+              },
+              {
+                "control-id": "con.1.a4.14",
+                "description": "Component capability addressing control con.1.a4.14 (Geeignetes Schlüsselmanagement — CON.1.A4.14).",
+                "uuid": "ce078f3f-8650-56c3-8793-fd7d3a985467"
+              },
+              {
+                "control-id": "con.1.a4.2",
+                "description": "Component capability addressing control con.1.a4.2 (Geeignetes Schlüsselmanagement — CON.1.A4.2).",
+                "uuid": "621b3539-40cd-5c18-989f-dbd155f1a646"
+              },
+              {
+                "control-id": "con.1.a4.3",
+                "description": "Component capability addressing control con.1.a4.3 (Geeignetes Schlüsselmanagement — CON.1.A4.3).",
+                "uuid": "4b0f3a37-59f5-554d-a0f5-2a39c6e8e252"
+              },
+              {
+                "control-id": "con.1.a4.4",
+                "description": "Component capability addressing control con.1.a4.4 (Geeignetes Schlüsselmanagement — CON.1.A4.4).",
+                "uuid": "0a28966d-acec-5788-8181-f16546b0d0bc"
+              },
+              {
+                "control-id": "con.1.a4.5",
+                "description": "Component capability addressing control con.1.a4.5 (Geeignetes Schlüsselmanagement — CON.1.A4.5).",
+                "uuid": "d8e2a7da-7e89-5f3b-9d3a-3697bacca9c8"
+              },
+              {
+                "control-id": "con.1.a4.6",
+                "description": "Component capability addressing control con.1.a4.6 (Geeignetes Schlüsselmanagement — CON.1.A4.6).",
+                "uuid": "c3ef4aa9-d815-5647-b1c5-e51f59d44c2c"
+              },
+              {
+                "control-id": "con.1.a4.7",
+                "description": "Component capability addressing control con.1.a4.7 (Geeignetes Schlüsselmanagement — CON.1.A4.7).",
+                "uuid": "3d56b82c-326c-52d4-b3b4-da4a2c313530"
+              },
+              {
+                "control-id": "con.1.a4.8",
+                "description": "Component capability addressing control con.1.a4.8 (Geeignetes Schlüsselmanagement — CON.1.A4.8).",
+                "uuid": "94fb97f2-5cec-5052-81aa-956fb3ad99fc"
+              },
+              {
+                "control-id": "con.1.a4.9",
+                "description": "Component capability addressing control con.1.a4.9 (Geeignetes Schlüsselmanagement — CON.1.A4.9).",
+                "uuid": "70cfbd7e-24fc-5b79-93cb-ecafcfca98e3"
+              },
+              {
+                "control-id": "con.1.a5.1",
+                "description": "Component capability addressing control con.1.a5.1 (Sicheres Löschen und Vernichten von kryptografischen Schlüsseln — CON.1.A5.1).",
+                "uuid": "6ac8ae05-ef6f-5184-bb0d-8b4c354879aa"
+              },
+              {
+                "control-id": "con.1.a5.2",
+                "description": "Component capability addressing control con.1.a5.2 (Sicheres Löschen und Vernichten von kryptografischen Schlüsseln — CON.1.A5.2).",
+                "uuid": "f785b2b0-5735-58ea-8768-03dba923461b"
+              },
+              {
+                "control-id": "con.1.a9.1",
+                "description": "Component capability addressing control con.1.a9.1 (Festlegung von Kriterien für die Auswahl von Hard- oder Software mit kryptografischen Funktionen — CON.1.A9.1).",
+                "uuid": "bf26e36c-d5dd-5691-8fc9-4c3e2adc11e9"
+              },
+              {
+                "control-id": "con.1.a9.10",
+                "description": "Component capability addressing control con.1.a9.10 (Festlegung von Kriterien für die Auswahl von Hard- oder Software mit kryptografischen Funktionen — CON.1.A9.10).",
+                "uuid": "d4bf42b7-60c5-5d47-b395-a54ddf4fbeb2"
+              },
+              {
+                "control-id": "con.1.a9.11",
+                "description": "Component capability addressing control con.1.a9.11 (Festlegung von Kriterien für die Auswahl von Hard- oder Software mit kryptografischen Funktionen — CON.1.A9.11).",
+                "uuid": "72b11a66-fc72-5e17-8130-13dab74ba233"
+              },
+              {
+                "control-id": "con.1.a9.12",
+                "description": "Component capability addressing control con.1.a9.12 (Festlegung von Kriterien für die Auswahl von Hard- oder Software mit kryptografischen Funktionen — CON.1.A9.12).",
+                "uuid": "e0d2672e-f8f4-5a35-be5c-f4a35a4c9de3"
+              },
+              {
+                "control-id": "con.1.a9.13",
+                "description": "Component capability addressing control con.1.a9.13 (Festlegung von Kriterien für die Auswahl von Hard- oder Software mit kryptografischen Funktionen — CON.1.A9.13).",
+                "uuid": "092b6b9c-8836-52fe-bbbe-15591984899b"
+              },
+              {
+                "control-id": "con.1.a9.2",
+                "description": "Component capability addressing control con.1.a9.2 (Festlegung von Kriterien für die Auswahl von Hard- oder Software mit kryptografischen Funktionen — CON.1.A9.2).",
+                "uuid": "1fbf2d0b-32da-5543-9e76-c364582a7bc9"
+              },
+              {
+                "control-id": "con.1.a9.3",
+                "description": "Component capability addressing control con.1.a9.3 (Festlegung von Kriterien für die Auswahl von Hard- oder Software mit kryptografischen Funktionen — CON.1.A9.3).",
+                "uuid": "d11f0833-29c4-5880-b8ef-f30828255fc3"
+              },
+              {
+                "control-id": "con.1.a9.4",
+                "description": "Component capability addressing control con.1.a9.4 (Festlegung von Kriterien für die Auswahl von Hard- oder Software mit kryptografischen Funktionen — CON.1.A9.4).",
+                "uuid": "6cfa17ca-95e3-54f2-8a65-03e6d350a592"
+              },
+              {
+                "control-id": "con.1.a9.5",
+                "description": "Component capability addressing control con.1.a9.5 (Festlegung von Kriterien für die Auswahl von Hard- oder Software mit kryptografischen Funktionen — CON.1.A9.5).",
+                "uuid": "4513d702-e0c5-599f-9874-fc080f5e66fb"
+              },
+              {
+                "control-id": "con.1.a9.6",
+                "description": "Component capability addressing control con.1.a9.6 (Festlegung von Kriterien für die Auswahl von Hard- oder Software mit kryptografischen Funktionen — CON.1.A9.6).",
+                "uuid": "4e230cab-a79d-5087-bc1b-efba7e9e64b2"
+              },
+              {
+                "control-id": "con.1.a9.7",
+                "description": "Component capability addressing control con.1.a9.7 (Festlegung von Kriterien für die Auswahl von Hard- oder Software mit kryptografischen Funktionen — CON.1.A9.7).",
+                "uuid": "7a1115ba-090f-5824-badd-b6da34c40860"
+              },
+              {
+                "control-id": "con.1.a9.8",
+                "description": "Component capability addressing control con.1.a9.8 (Festlegung von Kriterien für die Auswahl von Hard- oder Software mit kryptografischen Funktionen — CON.1.A9.8).",
+                "uuid": "8e88c7fb-b118-5ba8-9abe-2813cba1bd83"
+              },
+              {
+                "control-id": "con.1.a9.9",
+                "description": "Component capability addressing control con.1.a9.9 (Festlegung von Kriterien für die Auswahl von Hard- oder Software mit kryptografischen Funktionen — CON.1.A9.9).",
+                "uuid": "ffe2562f-3a78-575e-9fa5-75d7a6f9b77e"
+              },
+              {
+                "control-id": "con.10.a1.1",
+                "description": "Component capability addressing control con.10.a1.1 (Authentisierung bei Webanwendungen — CON.10.A1.1).",
+                "uuid": "910c097b-f649-51ba-82dd-cca10aa80998"
+              },
+              {
+                "control-id": "con.10.a1.2",
+                "description": "Component capability addressing control con.10.a1.2 (Authentisierung bei Webanwendungen — CON.10.A1.2).",
+                "uuid": "d1eb67d0-4b11-55e5-b537-45b97058c3cf"
+              },
+              {
+                "control-id": "con.10.a1.3",
+                "description": "Component capability addressing control con.10.a1.3 (Authentisierung bei Webanwendungen — CON.10.A1.3).",
+                "uuid": "a9d7a8b4-a7b5-55c3-b0ab-2118dc79f79c"
+              },
+              {
+                "control-id": "con.10.a1.4",
+                "description": "Component capability addressing control con.10.a1.4 (Authentisierung bei Webanwendungen — CON.10.A1.4).",
+                "uuid": "b02f3479-f65b-5ceb-90d9-3b2815d607ea"
+              },
+              {
+                "control-id": "con.10.a1.5",
+                "description": "Component capability addressing control con.10.a1.5 (Authentisierung bei Webanwendungen — CON.10.A1.5).",
+                "uuid": "ee79961f-f0af-5b6f-afbe-3f4117936743"
+              },
+              {
+                "control-id": "con.10.a1.6",
+                "description": "Component capability addressing control con.10.a1.6 (Authentisierung bei Webanwendungen — CON.10.A1.6).",
+                "uuid": "ee217099-c5d4-5670-b9c7-096a4f84d3c5"
+              },
+              {
+                "control-id": "con.10.a1.7",
+                "description": "Component capability addressing control con.10.a1.7 (Authentisierung bei Webanwendungen — CON.10.A1.7).",
+                "uuid": "07d64628-a3ec-5853-af6e-8d81b25ed8aa"
+              },
+              {
+                "control-id": "con.10.a1.8",
+                "description": "Component capability addressing control con.10.a1.8 (Authentisierung bei Webanwendungen — CON.10.A1.8).",
+                "uuid": "689cb68f-333e-521b-ba70-a6a7e627b70b"
+              },
+              {
+                "control-id": "con.10.a10.1",
+                "description": "Component capability addressing control con.10.a10.1 (Restriktive Herausgabe sicherheitsrelevanter Informationen — CON.10.A10.1).",
+                "uuid": "8b1aa782-a428-5581-bef0-cb34cee7bd06"
+              },
+              {
+                "control-id": "con.10.a11.1",
+                "description": "Component capability addressing control con.10.a11.1 (Softwarearchitektur einer Webanwendung — CON.10.A11.1).",
+                "uuid": "ab3c277e-9442-58fb-ae7b-564a0aa68362"
+              },
+              {
+                "control-id": "con.10.a11.2",
+                "description": "Component capability addressing control con.10.a11.2 (Softwarearchitektur einer Webanwendung — CON.10.A11.2).",
+                "uuid": "0fb613be-f4de-5db6-a81a-d822838dfc36"
+              },
+              {
+                "control-id": "con.10.a11.3",
+                "description": "Component capability addressing control con.10.a11.3 (Softwarearchitektur einer Webanwendung — CON.10.A11.3).",
+                "uuid": "76fd5dfe-02f7-5292-b315-2fe4b5f966fc"
+              },
+              {
+                "control-id": "con.10.a11.4",
+                "description": "Component capability addressing control con.10.a11.4 (Softwarearchitektur einer Webanwendung — CON.10.A11.4).",
+                "uuid": "9933b045-3f00-57c8-95e2-b17117d7448d"
+              },
+              {
+                "control-id": "con.10.a11.5",
+                "description": "Component capability addressing control con.10.a11.5 (Softwarearchitektur einer Webanwendung — CON.10.A11.5).",
+                "uuid": "288a7973-f330-50ef-8b17-2499c9a5f181"
+              },
+              {
+                "control-id": "con.10.a12.1",
+                "description": "Component capability addressing control con.10.a12.1 (Verifikation essenzieller Änderungen — CON.10.A12.1).",
+                "uuid": "4f35566a-17c7-51d5-aad3-47a4bad91664"
+              },
+              {
+                "control-id": "con.10.a12.2",
+                "description": "Component capability addressing control con.10.a12.2 (Verifikation essenzieller Änderungen — CON.10.A12.2).",
+                "uuid": "c9e53181-6bf4-5416-859b-f700f97e0f78"
+              },
+              {
+                "control-id": "con.10.a12.3",
+                "description": "Component capability addressing control con.10.a12.3 (Verifikation essenzieller Änderungen — CON.10.A12.3).",
+                "uuid": "a9889caa-db35-5bad-8fdf-106560332dc3"
+              },
+              {
+                "control-id": "con.10.a13.1",
+                "description": "Component capability addressing control con.10.a13.1 (Fehlerbehandlung — CON.10.A13.1).",
+                "uuid": "58bbf1bf-d3e3-5ff3-8667-7f796bd259a6"
+              },
+              {
+                "control-id": "con.10.a13.2",
+                "description": "Component capability addressing control con.10.a13.2 (Fehlerbehandlung — CON.10.A13.2).",
+                "uuid": "13d7d7b7-c9a7-5ac7-8382-bcbfc667e49d"
+              },
+              {
+                "control-id": "con.10.a13.3",
+                "description": "Component capability addressing control con.10.a13.3 (Fehlerbehandlung — CON.10.A13.3).",
+                "uuid": "2d352dab-c1e4-5b15-999b-65c3f30c1781"
+              },
+              {
+                "control-id": "con.10.a13.4",
+                "description": "Component capability addressing control con.10.a13.4 (Fehlerbehandlung — CON.10.A13.4).",
+                "uuid": "1cf3735e-498a-582d-9cf5-1e8df3f7568f"
+              },
+              {
+                "control-id": "con.10.a13.5",
+                "description": "Component capability addressing control con.10.a13.5 (Fehlerbehandlung — CON.10.A13.5).",
+                "uuid": "1046a3ea-f5a7-595d-880f-19ab0840dcd9"
+              },
+              {
+                "control-id": "con.10.a13.6",
+                "description": "Component capability addressing control con.10.a13.6 (Fehlerbehandlung — CON.10.A13.6).",
+                "uuid": "4f575417-de99-5dbc-a5c1-0c0480b3e6f9"
+              },
+              {
+                "control-id": "con.10.a14.1",
+                "description": "Component capability addressing control con.10.a14.1 (Sichere HTTP-Konfiguration bei Webanwendungen — CON.10.A14.1).",
+                "uuid": "5a96fa3d-b629-5b38-b153-d0e11f4137f5"
+              },
+              {
+                "control-id": "con.10.a14.2",
+                "description": "Component capability addressing control con.10.a14.2 (Sichere HTTP-Konfiguration bei Webanwendungen — CON.10.A14.2).",
+                "uuid": "801dc8e2-3ffd-5042-8623-3f7ee150d158"
+              },
+              {
+                "control-id": "con.10.a14.3",
+                "description": "Component capability addressing control con.10.a14.3 (Sichere HTTP-Konfiguration bei Webanwendungen — CON.10.A14.3).",
+                "uuid": "0ad58edf-e1bb-5982-b3bf-4d04ac364c87"
+              },
+              {
+                "control-id": "con.10.a14.4",
+                "description": "Component capability addressing control con.10.a14.4 (Sichere HTTP-Konfiguration bei Webanwendungen — CON.10.A14.4).",
+                "uuid": "09811aca-9b14-57b3-b03a-b93fd2fc90eb"
+              },
+              {
+                "control-id": "con.10.a14.5",
+                "description": "Component capability addressing control con.10.a14.5 (Sichere HTTP-Konfiguration bei Webanwendungen — CON.10.A14.5).",
+                "uuid": "851d266e-250a-51d8-933a-79c9356ba6ef"
+              },
+              {
+                "control-id": "con.10.a15.1",
+                "description": "Component capability addressing control con.10.a15.1 (Verhinderung von Cross-Site-Request-Forgery — CON.10.A15.1).",
+                "uuid": "e67e4a1d-93ff-5999-9b45-33b8b21f4275"
+              },
+              {
+                "control-id": "con.10.a15.2",
+                "description": "Component capability addressing control con.10.a15.2 (Verhinderung von Cross-Site-Request-Forgery — CON.10.A15.2).",
+                "uuid": "63f5d908-fbc8-50ae-9260-6b709b479d29"
+              },
+              {
+                "control-id": "con.10.a16.1",
+                "description": "Component capability addressing control con.10.a16.1 (Mehr-Faktor-Authentisierung — CON.10.A16.1).",
+                "uuid": "8c3d78dd-d7bf-5fd0-9f12-77c7884e8d3d"
+              },
+              {
+                "control-id": "con.10.a17.1",
+                "description": "Component capability addressing control con.10.a17.1 (Verhinderung der Blockade von Ressourcen — CON.10.A17.1).",
+                "uuid": "00a3f0c0-0a18-56ca-b98c-87d09153b072"
+              },
+              {
+                "control-id": "con.10.a17.2",
+                "description": "Component capability addressing control con.10.a17.2 (Verhinderung der Blockade von Ressourcen — CON.10.A17.2).",
+                "uuid": "31bc8622-9e66-516b-b04a-d9008e9d8e78"
+              },
+              {
+                "control-id": "con.10.a17.3",
+                "description": "Component capability addressing control con.10.a17.3 (Verhinderung der Blockade von Ressourcen — CON.10.A17.3).",
+                "uuid": "db42a7fd-e559-5638-ad7b-d2058a609ecf"
+              },
+              {
+                "control-id": "con.10.a18.1",
+                "description": "Component capability addressing control con.10.a18.1 (Kryptografische Absicherung vertraulicher Daten — CON.10.A18.1).",
+                "uuid": "dd7b87d7-484c-550f-9462-192e3bd30de7"
+              },
+              {
+                "control-id": "con.10.a2.1",
+                "description": "Component capability addressing control con.10.a2.1 (Zugriffskontrolle bei Webanwendungen — CON.10.A2.1).",
+                "uuid": "adeec032-60d0-5cc2-bf64-596fd18d243b"
+              },
+              {
+                "control-id": "con.10.a2.2",
+                "description": "Component capability addressing control con.10.a2.2 (Zugriffskontrolle bei Webanwendungen — CON.10.A2.2).",
+                "uuid": "48b4e41b-1d0a-5f35-b2c2-79d388e532e4"
+              },
+              {
+                "control-id": "con.10.a2.3",
+                "description": "Component capability addressing control con.10.a2.3 (Zugriffskontrolle bei Webanwendungen — CON.10.A2.3).",
+                "uuid": "10981cdf-8bf3-5c6c-b216-65e796ca5b88"
+              },
+              {
+                "control-id": "con.10.a2.4",
+                "description": "Component capability addressing control con.10.a2.4 (Zugriffskontrolle bei Webanwendungen — CON.10.A2.4).",
+                "uuid": "74e1f7f9-af60-58b8-90e9-ed238204db09"
+              },
+              {
+                "control-id": "con.10.a2.5",
+                "description": "Component capability addressing control con.10.a2.5 (Zugriffskontrolle bei Webanwendungen — CON.10.A2.5).",
+                "uuid": "854a2d1a-5f3e-57ab-a9b6-e500620c1639"
+              },
+              {
+                "control-id": "con.10.a3.1",
+                "description": "Component capability addressing control con.10.a3.1 (Sicheres Session-Management — CON.10.A3.1).",
+                "uuid": "c1c63bf9-61fa-53b8-befe-18b073875993"
+              },
+              {
+                "control-id": "con.10.a3.10",
+                "description": "Component capability addressing control con.10.a3.10 (Sicheres Session-Management — CON.10.A3.10).",
+                "uuid": "51ae44e0-e147-5916-8854-6cb51fee3d21"
+              },
+              {
+                "control-id": "con.10.a3.2",
+                "description": "Component capability addressing control con.10.a3.2 (Sicheres Session-Management — CON.10.A3.2).",
+                "uuid": "87451723-7b9c-5cce-908e-c0a1fc3913a1"
+              },
+              {
+                "control-id": "con.10.a3.3",
+                "description": "Component capability addressing control con.10.a3.3 (Sicheres Session-Management — CON.10.A3.3).",
+                "uuid": "1077254b-acf8-5d21-b458-172d1c01f782"
+              },
+              {
+                "control-id": "con.10.a3.4",
+                "description": "Component capability addressing control con.10.a3.4 (Sicheres Session-Management — CON.10.A3.4).",
+                "uuid": "9f120d89-de0f-57dd-b335-d40132cad927"
+              },
+              {
+                "control-id": "con.10.a3.5",
+                "description": "Component capability addressing control con.10.a3.5 (Sicheres Session-Management — CON.10.A3.5).",
+                "uuid": "e53383f9-8fd0-5fb8-8fea-c9a0c9e01155"
+              },
+              {
+                "control-id": "con.10.a3.6",
+                "description": "Component capability addressing control con.10.a3.6 (Sicheres Session-Management — CON.10.A3.6).",
+                "uuid": "f56788e0-196c-53ea-91f6-2dd7106a7a8d"
+              },
+              {
+                "control-id": "con.10.a3.7",
+                "description": "Component capability addressing control con.10.a3.7 (Sicheres Session-Management — CON.10.A3.7).",
+                "uuid": "ef08d75a-bbce-50fc-b8fd-fcfa5ac2b04a"
+              },
+              {
+                "control-id": "con.10.a3.8",
+                "description": "Component capability addressing control con.10.a3.8 (Sicheres Session-Management — CON.10.A3.8).",
+                "uuid": "dacd3dff-da44-502b-9081-311f9dadefcd"
+              },
+              {
+                "control-id": "con.10.a3.9",
+                "description": "Component capability addressing control con.10.a3.9 (Sicheres Session-Management — CON.10.A3.9).",
+                "uuid": "3582323d-5b9b-547d-966c-61acb6dc74ce"
+              },
+              {
+                "control-id": "con.10.a4.1",
+                "description": "Component capability addressing control con.10.a4.1 (Kontrolliertes Einbinden von Inhalten bei Webanwendungen — CON.10.A4.1).",
+                "uuid": "b5a769ea-dcfc-5018-ac2c-5afa8bc30f78"
+              },
+              {
+                "control-id": "con.10.a4.2",
+                "description": "Component capability addressing control con.10.a4.2 (Kontrolliertes Einbinden von Inhalten bei Webanwendungen — CON.10.A4.2).",
+                "uuid": "1f1fd73e-7738-5a6c-86d3-dd1823afa1ef"
+              },
+              {
+                "control-id": "con.10.a4.3",
+                "description": "Component capability addressing control con.10.a4.3 (Kontrolliertes Einbinden von Inhalten bei Webanwendungen — CON.10.A4.3).",
+                "uuid": "cc32326a-d89d-5fca-a0a4-532a6a9f7d1a"
+              },
+              {
+                "control-id": "con.10.a5.1",
+                "description": "Component capability addressing control con.10.a5.1 (Upload-Funktionen — CON.10.A5.1).",
+                "uuid": "72cbeb0e-5c99-587e-b991-952d1acf9e9a"
+              },
+              {
+                "control-id": "con.10.a5.2",
+                "description": "Component capability addressing control con.10.a5.2 (Upload-Funktionen — CON.10.A5.2).",
+                "uuid": "898e3692-5112-5f4c-b3a2-e28ac9f7fc0b"
+              },
+              {
+                "control-id": "con.10.a5.3",
+                "description": "Component capability addressing control con.10.a5.3 (Upload-Funktionen — CON.10.A5.3).",
+                "uuid": "2dcbfa37-ea64-5449-aa8f-c61d3cbbc1fd"
+              },
+              {
+                "control-id": "con.10.a6.1",
+                "description": "Component capability addressing control con.10.a6.1 (Schutz vor unerlaubter automatisierter Nutzung von Webanwendungen — CON.10.A6.1).",
+                "uuid": "5973d9a8-008c-55bb-bc75-4891300eb9a7"
+              },
+              {
+                "control-id": "con.10.a6.2",
+                "description": "Component capability addressing control con.10.a6.2 (Schutz vor unerlaubter automatisierter Nutzung von Webanwendungen — CON.10.A6.2).",
+                "uuid": "af3b2698-92c6-5f2f-bf30-f9ece70f1804"
+              },
+              {
+                "control-id": "con.10.a7.1",
+                "description": "Component capability addressing control con.10.a7.1 (Schutz vertraulicher Daten — CON.10.A7.1).",
+                "uuid": "43f8d9cb-ff84-527c-987a-71e288003764"
+              },
+              {
+                "control-id": "con.10.a7.2",
+                "description": "Component capability addressing control con.10.a7.2 (Schutz vertraulicher Daten — CON.10.A7.2).",
+                "uuid": "e64ac9b5-ef59-5774-baf7-b519e062c3c2"
+              },
+              {
+                "control-id": "con.10.a7.3",
+                "description": "Component capability addressing control con.10.a7.3 (Schutz vertraulicher Daten — CON.10.A7.3).",
+                "uuid": "753a4ee9-e260-5bbf-aa26-b3296330e0b0"
+              },
+              {
+                "control-id": "con.10.a7.4",
+                "description": "Component capability addressing control con.10.a7.4 (Schutz vertraulicher Daten — CON.10.A7.4).",
+                "uuid": "28015f6e-8dc7-5df9-b7cc-50b7856ca34a"
+              },
+              {
+                "control-id": "con.10.a7.5",
+                "description": "Component capability addressing control con.10.a7.5 (Schutz vertraulicher Daten — CON.10.A7.5).",
+                "uuid": "8ee686ee-f1e8-5a0d-bf1a-d96f625af76c"
+              },
+              {
+                "control-id": "con.10.a7.6",
+                "description": "Component capability addressing control con.10.a7.6 (Schutz vertraulicher Daten — CON.10.A7.6).",
+                "uuid": "25e51dca-d241-5355-b396-47c3f992d35f"
+              },
+              {
+                "control-id": "con.10.a8.1",
+                "description": "Component capability addressing control con.10.a8.1 (Umfassende Eingabevalidierung und Ausgabekodierung — CON.10.A8.1).",
+                "uuid": "d6cbd3f8-a3c2-5f6f-b0ae-e0ff23751c81"
+              },
+              {
+                "control-id": "con.10.a8.2",
+                "description": "Component capability addressing control con.10.a8.2 (Umfassende Eingabevalidierung und Ausgabekodierung — CON.10.A8.2).",
+                "uuid": "d8bfabbd-e2fc-5c4c-9664-e35e8306eac1"
+              },
+              {
+                "control-id": "con.10.a8.3",
+                "description": "Component capability addressing control con.10.a8.3 (Umfassende Eingabevalidierung und Ausgabekodierung — CON.10.A8.3).",
+                "uuid": "e8342e4f-32e6-505c-84f5-9d3cbeb8595a"
+              },
+              {
+                "control-id": "con.10.a8.4",
+                "description": "Component capability addressing control con.10.a8.4 (Umfassende Eingabevalidierung und Ausgabekodierung — CON.10.A8.4).",
+                "uuid": "cb6c9bd4-167e-593f-84bc-d7e301e47999"
+              },
+              {
+                "control-id": "con.10.a8.5",
+                "description": "Component capability addressing control con.10.a8.5 (Umfassende Eingabevalidierung und Ausgabekodierung — CON.10.A8.5).",
+                "uuid": "72da2fde-18e1-5f4c-9f44-f334ec1378e5"
+              },
+              {
+                "control-id": "con.10.a9.1",
+                "description": "Component capability addressing control con.10.a9.1 (Schutz vor SQL-Injection — CON.10.A9.1).",
+                "uuid": "62f06220-98cc-5aa7-ba72-4e7823c5349e"
+              },
+              {
+                "control-id": "con.10.a9.2",
+                "description": "Component capability addressing control con.10.a9.2 (Schutz vor SQL-Injection — CON.10.A9.2).",
+                "uuid": "ea3b4209-e2c5-5279-9659-6e9318839310"
+              },
+              {
+                "control-id": "con.11.1.a1.1",
+                "description": "Component capability addressing control con.11.1.a1.1 (Einhaltung der Grundsätze zur VS-Verarbeitung mit IT nach § 3, 4 und 6 und Nr. 1 Anlage V zur VSA — CON.11.1.A1.1).",
+                "uuid": "ff6df9e1-5c74-5546-9419-75721f499c37"
+              },
+              {
+                "control-id": "con.11.1.a1.10",
+                "description": "Component capability addressing control con.11.1.a1.10 (Einhaltung der Grundsätze zur VS-Verarbeitung mit IT nach § 3, 4 und 6 und Nr. 1 Anlage V zur VSA — CON.11.1.A1.10).",
+                "uuid": "b15a3d8b-8d38-5423-8905-b987b39e58de"
+              },
+              {
+                "control-id": "con.11.1.a1.11",
+                "description": "Component capability addressing control con.11.1.a1.11 (Einhaltung der Grundsätze zur VS-Verarbeitung mit IT nach § 3, 4 und 6 und Nr. 1 Anlage V zur VSA — CON.11.1.A1.11).",
+                "uuid": "542332ab-3a95-538e-aa33-2bca293e8631"
+              },
+              {
+                "control-id": "con.11.1.a1.12",
+                "description": "Component capability addressing control con.11.1.a1.12 (Einhaltung der Grundsätze zur VS-Verarbeitung mit IT nach § 3, 4 und 6 und Nr. 1 Anlage V zur VSA — CON.11.1.A1.12).",
+                "uuid": "622e3e22-2bf8-5444-9bfc-fcfc7b4b0ac1"
+              },
+              {
+                "control-id": "con.11.1.a1.2",
+                "description": "Component capability addressing control con.11.1.a1.2 (Einhaltung der Grundsätze zur VS-Verarbeitung mit IT nach § 3, 4 und 6 und Nr. 1 Anlage V zur VSA — CON.11.1.A1.2).",
+                "uuid": "ca39f88e-e74e-50c2-88bc-716ea1af9ff8"
+              },
+              {
+                "control-id": "con.11.1.a1.3",
+                "description": "Component capability addressing control con.11.1.a1.3 (Einhaltung der Grundsätze zur VS-Verarbeitung mit IT nach § 3, 4 und 6 und Nr. 1 Anlage V zur VSA — CON.11.1.A1.3).",
+                "uuid": "7e3ecccc-f33c-5003-8ef4-c4bf1224ffbe"
+              },
+              {
+                "control-id": "con.11.1.a1.4",
+                "description": "Component capability addressing control con.11.1.a1.4 (Einhaltung der Grundsätze zur VS-Verarbeitung mit IT nach § 3, 4 und 6 und Nr. 1 Anlage V zur VSA — CON.11.1.A1.4).",
+                "uuid": "72364c76-5810-56b6-b88b-40882e0ebce4"
+              },
+              {
+                "control-id": "con.11.1.a1.5",
+                "description": "Component capability addressing control con.11.1.a1.5 (Einhaltung der Grundsätze zur VS-Verarbeitung mit IT nach § 3, 4 und 6 und Nr. 1 Anlage V zur VSA — CON.11.1.A1.5).",
+                "uuid": "42103c45-a921-50c8-854f-4f73bf1f6654"
+              },
+              {
+                "control-id": "con.11.1.a1.6",
+                "description": "Component capability addressing control con.11.1.a1.6 (Einhaltung der Grundsätze zur VS-Verarbeitung mit IT nach § 3, 4 und 6 und Nr. 1 Anlage V zur VSA — CON.11.1.A1.6).",
+                "uuid": "76b3ee8d-56ba-5c2a-a44a-72e7f946d6c1"
+              },
+              {
+                "control-id": "con.11.1.a1.7",
+                "description": "Component capability addressing control con.11.1.a1.7 (Einhaltung der Grundsätze zur VS-Verarbeitung mit IT nach § 3, 4 und 6 und Nr. 1 Anlage V zur VSA — CON.11.1.A1.7).",
+                "uuid": "d63a7d2a-a92f-5101-b04b-c4371669cfaf"
+              },
+              {
+                "control-id": "con.11.1.a1.8",
+                "description": "Component capability addressing control con.11.1.a1.8 (Einhaltung der Grundsätze zur VS-Verarbeitung mit IT nach § 3, 4 und 6 und Nr. 1 Anlage V zur VSA — CON.11.1.A1.8).",
+                "uuid": "0d4ab56b-ab25-516f-841b-3dfee1f77224"
+              },
+              {
+                "control-id": "con.11.1.a1.9",
+                "description": "Component capability addressing control con.11.1.a1.9 (Einhaltung der Grundsätze zur VS-Verarbeitung mit IT nach § 3, 4 und 6 und Nr. 1 Anlage V zur VSA — CON.11.1.A1.9).",
+                "uuid": "53af360b-b663-5f6c-8b18-d9ad5a9b10af"
+              },
+              {
+                "control-id": "con.11.1.a10.1",
+                "description": "Component capability addressing control con.11.1.a10.1 (Elektronische Übertragung von VS nach §§ 24, 53, 55 und Nr. 6.2 Anlage V zur VSA — CON.11.1.A10.1).",
+                "uuid": "af51a26a-367b-593a-b177-c72687c4ae9a"
+              },
+              {
+                "control-id": "con.11.1.a10.10",
+                "description": "Component capability addressing control con.11.1.a10.10 (Elektronische Übertragung von VS nach §§ 24, 53, 55 und Nr. 6.2 Anlage V zur VSA — CON.11.1.A10.10).",
+                "uuid": "39a1f62f-fc07-5d03-826b-db5e51a2f4b7"
+              },
+              {
+                "control-id": "con.11.1.a10.11",
+                "description": "Component capability addressing control con.11.1.a10.11 (Elektronische Übertragung von VS nach §§ 24, 53, 55 und Nr. 6.2 Anlage V zur VSA — CON.11.1.A10.11).",
+                "uuid": "e842702c-afcd-5e98-9a27-63ef1f34808d"
+              },
+              {
+                "control-id": "con.11.1.a10.2",
+                "description": "Component capability addressing control con.11.1.a10.2 (Elektronische Übertragung von VS nach §§ 24, 53, 55 und Nr. 6.2 Anlage V zur VSA — CON.11.1.A10.2).",
+                "uuid": "2e254527-9667-54c0-8898-655e4164592e"
+              },
+              {
+                "control-id": "con.11.1.a10.3",
+                "description": "Component capability addressing control con.11.1.a10.3 (Elektronische Übertragung von VS nach §§ 24, 53, 55 und Nr. 6.2 Anlage V zur VSA — CON.11.1.A10.3).",
+                "uuid": "efc43325-0ebd-5334-a08d-be3dbe07ec8a"
+              },
+              {
+                "control-id": "con.11.1.a10.4",
+                "description": "Component capability addressing control con.11.1.a10.4 (Elektronische Übertragung von VS nach §§ 24, 53, 55 und Nr. 6.2 Anlage V zur VSA — CON.11.1.A10.4).",
+                "uuid": "ed2e2b3e-29d8-564e-842f-2b92e70cacd6"
+              },
+              {
+                "control-id": "con.11.1.a10.5",
+                "description": "Component capability addressing control con.11.1.a10.5 (Elektronische Übertragung von VS nach §§ 24, 53, 55 und Nr. 6.2 Anlage V zur VSA — CON.11.1.A10.5).",
+                "uuid": "8ea8298c-711a-508e-b0e2-412ac41d19bf"
+              },
+              {
+                "control-id": "con.11.1.a10.6",
+                "description": "Component capability addressing control con.11.1.a10.6 (Elektronische Übertragung von VS nach §§ 24, 53, 55 und Nr. 6.2 Anlage V zur VSA — CON.11.1.A10.6).",
+                "uuid": "667304a4-1928-5e9f-a652-d5122a865770"
+              },
+              {
+                "control-id": "con.11.1.a10.7",
+                "description": "Component capability addressing control con.11.1.a10.7 (Elektronische Übertragung von VS nach §§ 24, 53, 55 und Nr. 6.2 Anlage V zur VSA — CON.11.1.A10.7).",
+                "uuid": "c9775c85-f4f7-591d-befd-ef507ab53478"
+              },
+              {
+                "control-id": "con.11.1.a10.8",
+                "description": "Component capability addressing control con.11.1.a10.8 (Elektronische Übertragung von VS nach §§ 24, 53, 55 und Nr. 6.2 Anlage V zur VSA — CON.11.1.A10.8).",
+                "uuid": "b0a83560-06aa-55f9-b576-a99911f3b845"
+              },
+              {
+                "control-id": "con.11.1.a10.9",
+                "description": "Component capability addressing control con.11.1.a10.9 (Elektronische Übertragung von VS nach §§ 24, 53, 55 und Nr. 6.2 Anlage V zur VSA — CON.11.1.A10.9).",
+                "uuid": "3fedbce5-2946-5016-90f2-1a56fc24933c"
+              },
+              {
+                "control-id": "con.11.1.a11.1",
+                "description": "Component capability addressing control con.11.1.a11.1 (Mitnahme elektronischer VS nach § 28 VSA und Nr. 7 Anlage V zur VSA — CON.11.1.A11.1).",
+                "uuid": "3d56f9c1-491d-5440-a750-25f997c84c37"
+              },
+              {
+                "control-id": "con.11.1.a11.2",
+                "description": "Component capability addressing control con.11.1.a11.2 (Mitnahme elektronischer VS nach § 28 VSA und Nr. 7 Anlage V zur VSA — CON.11.1.A11.2).",
+                "uuid": "e269a6ab-249e-5090-939e-7fd97d53456a"
+              },
+              {
+                "control-id": "con.11.1.a11.3",
+                "description": "Component capability addressing control con.11.1.a11.3 (Mitnahme elektronischer VS nach § 28 VSA und Nr. 7 Anlage V zur VSA — CON.11.1.A11.3).",
+                "uuid": "34865a19-be24-5e59-b968-616e9a0aea3e"
+              },
+              {
+                "control-id": "con.11.1.a11.4",
+                "description": "Component capability addressing control con.11.1.a11.4 (Mitnahme elektronischer VS nach § 28 VSA und Nr. 7 Anlage V zur VSA — CON.11.1.A11.4).",
+                "uuid": "c551bdf0-290d-5363-9df9-d803a339aca2"
+              },
+              {
+                "control-id": "con.11.1.a11.5",
+                "description": "Component capability addressing control con.11.1.a11.5 (Mitnahme elektronischer VS nach § 28 VSA und Nr. 7 Anlage V zur VSA — CON.11.1.A11.5).",
+                "uuid": "cc30b4ca-88e7-5f66-950d-69b27eed901d"
+              },
+              {
+                "control-id": "con.11.1.a11.6",
+                "description": "Component capability addressing control con.11.1.a11.6 (Mitnahme elektronischer VS nach § 28 VSA und Nr. 7 Anlage V zur VSA — CON.11.1.A11.6).",
+                "uuid": "d4edc15c-3b59-5ceb-b340-9026e4691fa4"
+              },
+              {
+                "control-id": "con.11.1.a11.7",
+                "description": "Component capability addressing control con.11.1.a11.7 (Mitnahme elektronischer VS nach § 28 VSA und Nr. 7 Anlage V zur VSA — CON.11.1.A11.7).",
+                "uuid": "f6a6cef1-3ab1-5748-b90a-4968b300671f"
+              },
+              {
+                "control-id": "con.11.1.a12.1",
+                "description": "Component capability addressing control con.11.1.a12.1 (Archivierung elektronischer VS nach §§ 30, 31 VSA — CON.11.1.A12.1).",
+                "uuid": "77d60b65-b943-56e9-a4e3-cd8bfcbc1521"
+              },
+              {
+                "control-id": "con.11.1.a12.2",
+                "description": "Component capability addressing control con.11.1.a12.2 (Archivierung elektronischer VS nach §§ 30, 31 VSA — CON.11.1.A12.2).",
+                "uuid": "3af4ff10-36a5-5558-a08b-629b8ea2ca19"
+              },
+              {
+                "control-id": "con.11.1.a12.3",
+                "description": "Component capability addressing control con.11.1.a12.3 (Archivierung elektronischer VS nach §§ 30, 31 VSA — CON.11.1.A12.3).",
+                "uuid": "d6eb346c-27f7-51d9-a204-3e6779cf8be9"
+              },
+              {
+                "control-id": "con.11.1.a13.1",
+                "description": "Component capability addressing control con.11.1.a13.1 (Löschung elektronischer VS, Vernichtung von Datenträgern und IT-Produkten nach §§ 32, 56 und Nr. 8 Anlage V zur VSA — CON.11.1.A13.1).",
+                "uuid": "cb493105-f7ba-5208-b7c5-33c78419afef"
+              },
+              {
+                "control-id": "con.11.1.a13.2",
+                "description": "Component capability addressing control con.11.1.a13.2 (Löschung elektronischer VS, Vernichtung von Datenträgern und IT-Produkten nach §§ 32, 56 und Nr. 8 Anlage V zur VSA — CON.11.1.A13.2).",
+                "uuid": "349c4735-d838-5afd-8b92-0ce61682b2b7"
+              },
+              {
+                "control-id": "con.11.1.a13.3",
+                "description": "Component capability addressing control con.11.1.a13.3 (Löschung elektronischer VS, Vernichtung von Datenträgern und IT-Produkten nach §§ 32, 56 und Nr. 8 Anlage V zur VSA — CON.11.1.A13.3).",
+                "uuid": "d7c07097-35f1-5006-b5e9-84c69bdfeee8"
+              },
+              {
+                "control-id": "con.11.1.a13.4",
+                "description": "Component capability addressing control con.11.1.a13.4 (Löschung elektronischer VS, Vernichtung von Datenträgern und IT-Produkten nach §§ 32, 56 und Nr. 8 Anlage V zur VSA — CON.11.1.A13.4).",
+                "uuid": "0ccd1029-55e5-5113-b8d9-ceb86bf03aac"
+              },
+              {
+                "control-id": "con.11.1.a13.5",
+                "description": "Component capability addressing control con.11.1.a13.5 (Löschung elektronischer VS, Vernichtung von Datenträgern und IT-Produkten nach §§ 32, 56 und Nr. 8 Anlage V zur VSA — CON.11.1.A13.5).",
+                "uuid": "661e36a7-f6ba-5697-85e2-1f807f77bf2e"
+              },
+              {
+                "control-id": "con.11.1.a13.6",
+                "description": "Component capability addressing control con.11.1.a13.6 (Löschung elektronischer VS, Vernichtung von Datenträgern und IT-Produkten nach §§ 32, 56 und Nr. 8 Anlage V zur VSA — CON.11.1.A13.6).",
+                "uuid": "410b8bc2-289b-5dcf-8dda-12a476769cff"
+              },
+              {
+                "control-id": "con.11.1.a14.1",
+                "description": "Component capability addressing control con.11.1.a14.1 (Zugangs- und Zugriffsschutz nach § 3 VSA — CON.11.1.A14.1).",
+                "uuid": "5e99e375-c6fe-505e-bcc1-2bcf338bb523"
+              },
+              {
+                "control-id": "con.11.1.a14.2",
+                "description": "Component capability addressing control con.11.1.a14.2 (Zugangs- und Zugriffsschutz nach § 3 VSA — CON.11.1.A14.2).",
+                "uuid": "a848bb18-59a9-5b23-b556-083e2e5fe515"
+              },
+              {
+                "control-id": "con.11.1.a14.3",
+                "description": "Component capability addressing control con.11.1.a14.3 (Zugangs- und Zugriffsschutz nach § 3 VSA — CON.11.1.A14.3).",
+                "uuid": "1d0b4ce2-6116-5ac3-b2ad-972b7103a388"
+              },
+              {
+                "control-id": "con.11.1.a14.4",
+                "description": "Component capability addressing control con.11.1.a14.4 (Zugangs- und Zugriffsschutz nach § 3 VSA — CON.11.1.A14.4).",
+                "uuid": "9ea0c95c-e4b6-5014-9f22-f9fdd3362c30"
+              },
+              {
+                "control-id": "con.11.1.a14.5",
+                "description": "Component capability addressing control con.11.1.a14.5 (Zugangs- und Zugriffsschutz nach § 3 VSA — CON.11.1.A14.5).",
+                "uuid": "9a26429b-a981-5e3a-832c-3309da6fe8ac"
+              },
+              {
+                "control-id": "con.11.1.a14.6",
+                "description": "Component capability addressing control con.11.1.a14.6 (Zugangs- und Zugriffsschutz nach § 3 VSA — CON.11.1.A14.6).",
+                "uuid": "fd42aee1-4db5-5b32-bb08-434c4ffbffb1"
+              },
+              {
+                "control-id": "con.11.1.a14.7",
+                "description": "Component capability addressing control con.11.1.a14.7 (Zugangs- und Zugriffsschutz nach § 3 VSA — CON.11.1.A14.7).",
+                "uuid": "d8702c7c-0944-5471-9750-8efb29307036"
+              },
+              {
+                "control-id": "con.11.1.a15.1",
+                "description": "Component capability addressing control con.11.1.a15.1 (Handhabung von Datenträgern und IT-Produkten nach § 54 und Anlage V zur VSA — CON.11.1.A15.1).",
+                "uuid": "0d2b89d7-12a9-5fec-99c7-12c209d9341d"
+              },
+              {
+                "control-id": "con.11.1.a15.2",
+                "description": "Component capability addressing control con.11.1.a15.2 (Handhabung von Datenträgern und IT-Produkten nach § 54 und Anlage V zur VSA — CON.11.1.A15.2).",
+                "uuid": "20d345c2-99c5-50dd-868e-f26f803ab0c8"
+              },
+              {
+                "control-id": "con.11.1.a15.3",
+                "description": "Component capability addressing control con.11.1.a15.3 (Handhabung von Datenträgern und IT-Produkten nach § 54 und Anlage V zur VSA — CON.11.1.A15.3).",
+                "uuid": "2ba12b98-fdaf-55ba-ac43-1df498d6b61e"
+              },
+              {
+                "control-id": "con.11.1.a15.4",
+                "description": "Component capability addressing control con.11.1.a15.4 (Handhabung von Datenträgern und IT-Produkten nach § 54 und Anlage V zur VSA — CON.11.1.A15.4).",
+                "uuid": "c9b3fd38-1c45-57a5-a9f8-9c451fca4516"
+              },
+              {
+                "control-id": "con.11.1.a16.1",
+                "description": "Component capability addressing control con.11.1.a16.1 (Zusammenschaltung von VS-IT nach § 58 VSA — CON.11.1.A16.1).",
+                "uuid": "7eb39d8d-ee1f-5138-bd33-3e38ed10e2e0"
+              },
+              {
+                "control-id": "con.11.1.a16.2",
+                "description": "Component capability addressing control con.11.1.a16.2 (Zusammenschaltung von VS-IT nach § 58 VSA — CON.11.1.A16.2).",
+                "uuid": "38cf0c42-a3db-53d9-a054-9fe688fe350d"
+              },
+              {
+                "control-id": "con.11.1.a16.3",
+                "description": "Component capability addressing control con.11.1.a16.3 (Zusammenschaltung von VS-IT nach § 58 VSA — CON.11.1.A16.3).",
+                "uuid": "4277da53-e29f-565a-99ec-04e87403a88f"
+              },
+              {
+                "control-id": "con.11.1.a16.4",
+                "description": "Component capability addressing control con.11.1.a16.4 (Zusammenschaltung von VS-IT nach § 58 VSA — CON.11.1.A16.4).",
+                "uuid": "00beb63a-d5df-5af0-ac91-d0c6dc092ce9"
+              },
+              {
+                "control-id": "con.11.1.a16.5",
+                "description": "Component capability addressing control con.11.1.a16.5 (Zusammenschaltung von VS-IT nach § 58 VSA — CON.11.1.A16.5).",
+                "uuid": "ab4769d2-66db-587c-a774-b97829932f03"
+              },
+              {
+                "control-id": "con.11.1.a16.6",
+                "description": "Component capability addressing control con.11.1.a16.6 (Zusammenschaltung von VS-IT nach § 58 VSA — CON.11.1.A16.6).",
+                "uuid": "149a5487-6cbf-50be-9cfd-34a5ba718149"
+              },
+              {
+                "control-id": "con.11.1.a17.1",
+                "description": "Component capability addressing control con.11.1.a17.1 (Wartungs- und Instandsetzungsarbeiten von VS-IT nach § 3 Abs. 3 VSA — CON.11.1.A17.1).",
+                "uuid": "e8924bd3-773f-5010-a552-56dbef43d5ec"
+              },
+              {
+                "control-id": "con.11.1.a17.2",
+                "description": "Component capability addressing control con.11.1.a17.2 (Wartungs- und Instandsetzungsarbeiten von VS-IT nach § 3 Abs. 3 VSA — CON.11.1.A17.2).",
+                "uuid": "94186dcb-63a5-5eee-9364-b50b4e8cabab"
+              },
+              {
+                "control-id": "con.11.1.a17.3",
+                "description": "Component capability addressing control con.11.1.a17.3 (Wartungs- und Instandsetzungsarbeiten von VS-IT nach § 3 Abs. 3 VSA — CON.11.1.A17.3).",
+                "uuid": "77081882-851a-57ed-95b3-ef0165314e4d"
+              },
+              {
+                "control-id": "con.11.1.a17.4",
+                "description": "Component capability addressing control con.11.1.a17.4 (Wartungs- und Instandsetzungsarbeiten von VS-IT nach § 3 Abs. 3 VSA — CON.11.1.A17.4).",
+                "uuid": "1252de25-fb6b-5e7e-9704-03fba15adbf9"
+              },
+              {
+                "control-id": "con.11.1.a17.5",
+                "description": "Component capability addressing control con.11.1.a17.5 (Wartungs- und Instandsetzungsarbeiten von VS-IT nach § 3 Abs. 3 VSA — CON.11.1.A17.5).",
+                "uuid": "81e052bb-6fc9-5a47-994e-4870f2ae5494"
+              },
+              {
+                "control-id": "con.11.1.a18.1",
+                "description": "Component capability addressing control con.11.1.a18.1 (Fernwartung von VS-IT nach § 3 Abs. 3 VSA — CON.11.1.A18.1).",
+                "uuid": "9d571bfd-e331-5518-9c68-149384c356a8"
+              },
+              {
+                "control-id": "con.11.1.a18.2",
+                "description": "Component capability addressing control con.11.1.a18.2 (Fernwartung von VS-IT nach § 3 Abs. 3 VSA — CON.11.1.A18.2).",
+                "uuid": "c35006e9-e8a4-5291-b0d3-be3b749ce0a9"
+              },
+              {
+                "control-id": "con.11.1.a18.3",
+                "description": "Component capability addressing control con.11.1.a18.3 (Fernwartung von VS-IT nach § 3 Abs. 3 VSA — CON.11.1.A18.3).",
+                "uuid": "9c555487-5235-5d31-b50f-b069a02bd8f3"
+              },
+              {
+                "control-id": "con.11.1.a18.4",
+                "description": "Component capability addressing control con.11.1.a18.4 (Fernwartung von VS-IT nach § 3 Abs. 3 VSA — CON.11.1.A18.4).",
+                "uuid": "2b3b704b-0a4d-5e85-9325-6318d1c162db"
+              },
+              {
+                "control-id": "con.11.1.a18.5",
+                "description": "Component capability addressing control con.11.1.a18.5 (Fernwartung von VS-IT nach § 3 Abs. 3 VSA — CON.11.1.A18.5).",
+                "uuid": "414f023d-48d8-57b9-bb98-4d4972fc580c"
+              },
+              {
+                "control-id": "con.11.1.a18.6",
+                "description": "Component capability addressing control con.11.1.a18.6 (Fernwartung von VS-IT nach § 3 Abs. 3 VSA — CON.11.1.A18.6).",
+                "uuid": "5715133c-3698-5f36-9f1f-6c0f8da26c62"
+              },
+              {
+                "control-id": "con.11.1.a18.7",
+                "description": "Component capability addressing control con.11.1.a18.7 (Fernwartung von VS-IT nach § 3 Abs. 3 VSA — CON.11.1.A18.7).",
+                "uuid": "8000b071-a1e4-5eae-ae5b-d3cc90a13747"
+              },
+              {
+                "control-id": "con.11.1.a2.1",
+                "description": "Component capability addressing control con.11.1.a2.1 (Erstellung und Fortschreibung der VS-IT-Dokumentation nach § 12 und Nr. 2.2 Anlage II zur VSA — CON.11.1.A2.1).",
+                "uuid": "f37e93cd-b13c-5769-81ae-cbf07530f353"
+              },
+              {
+                "control-id": "con.11.1.a2.2",
+                "description": "Component capability addressing control con.11.1.a2.2 (Erstellung und Fortschreibung der VS-IT-Dokumentation nach § 12 und Nr. 2.2 Anlage II zur VSA — CON.11.1.A2.2).",
+                "uuid": "93d11f29-8a78-5077-84b7-3dabe84c7b47"
+              },
+              {
+                "control-id": "con.11.1.a2.3",
+                "description": "Component capability addressing control con.11.1.a2.3 (Erstellung und Fortschreibung der VS-IT-Dokumentation nach § 12 und Nr. 2.2 Anlage II zur VSA — CON.11.1.A2.3).",
+                "uuid": "8885bb10-6a19-5508-97a3-0af1328b65c6"
+              },
+              {
+                "control-id": "con.11.1.a2.4",
+                "description": "Component capability addressing control con.11.1.a2.4 (Erstellung und Fortschreibung der VS-IT-Dokumentation nach § 12 und Nr. 2.2 Anlage II zur VSA — CON.11.1.A2.4).",
+                "uuid": "e8a2d353-4e54-50c6-afdd-6d35e57cb5ed"
+              },
+              {
+                "control-id": "con.11.1.a3.1",
+                "description": "Component capability addressing control con.11.1.a3.1 (Einsatz von IT-Sicherheitsprodukten nach §§ 51, 52 VSA — CON.11.1.A3.1).",
+                "uuid": "887ae235-a45c-5965-8648-f3792e064894"
+              },
+              {
+                "control-id": "con.11.1.a3.10",
+                "description": "Component capability addressing control con.11.1.a3.10 (Einsatz von IT-Sicherheitsprodukten nach §§ 51, 52 VSA — CON.11.1.A3.10).",
+                "uuid": "5c10d1ca-87a3-584c-bc2d-2cc67fad9ae9"
+              },
+              {
+                "control-id": "con.11.1.a3.11",
+                "description": "Component capability addressing control con.11.1.a3.11 (Einsatz von IT-Sicherheitsprodukten nach §§ 51, 52 VSA — CON.11.1.A3.11).",
+                "uuid": "1772b580-b0f3-59aa-901b-5e579c2a87bd"
+              },
+              {
+                "control-id": "con.11.1.a3.12",
+                "description": "Component capability addressing control con.11.1.a3.12 (Einsatz von IT-Sicherheitsprodukten nach §§ 51, 52 VSA — CON.11.1.A3.12).",
+                "uuid": "8c39076f-62d7-5b77-8d82-0dd9ee054d66"
+              },
+              {
+                "control-id": "con.11.1.a3.13",
+                "description": "Component capability addressing control con.11.1.a3.13 (Einsatz von IT-Sicherheitsprodukten nach §§ 51, 52 VSA — CON.11.1.A3.13).",
+                "uuid": "7e57d62a-556a-5da4-b364-b706d2609664"
+              },
+              {
+                "control-id": "con.11.1.a3.14",
+                "description": "Component capability addressing control con.11.1.a3.14 (Einsatz von IT-Sicherheitsprodukten nach §§ 51, 52 VSA — CON.11.1.A3.14).",
+                "uuid": "40a745d3-950c-5f4d-82d8-9bea64a538a2"
+              },
+              {
+                "control-id": "con.11.1.a3.15",
+                "description": "Component capability addressing control con.11.1.a3.15 (Einsatz von IT-Sicherheitsprodukten nach §§ 51, 52 VSA — CON.11.1.A3.15).",
+                "uuid": "584d1a24-543b-5f41-8890-8a7e8067ca99"
+              },
+              {
+                "control-id": "con.11.1.a3.16",
+                "description": "Component capability addressing control con.11.1.a3.16 (Einsatz von IT-Sicherheitsprodukten nach §§ 51, 52 VSA — CON.11.1.A3.16).",
+                "uuid": "e22e9c52-5105-5449-9db4-4a58d3a91b77"
+              },
+              {
+                "control-id": "con.11.1.a3.17",
+                "description": "Component capability addressing control con.11.1.a3.17 (Einsatz von IT-Sicherheitsprodukten nach §§ 51, 52 VSA — CON.11.1.A3.17).",
+                "uuid": "83936da6-e776-5e60-9780-517f16a9ae1b"
+              },
+              {
+                "control-id": "con.11.1.a3.18",
+                "description": "Component capability addressing control con.11.1.a3.18 (Einsatz von IT-Sicherheitsprodukten nach §§ 51, 52 VSA — CON.11.1.A3.18).",
+                "uuid": "ce7cd78d-689b-5dc0-b2ca-e9328e668f71"
+              },
+              {
+                "control-id": "con.11.1.a3.2",
+                "description": "Component capability addressing control con.11.1.a3.2 (Einsatz von IT-Sicherheitsprodukten nach §§ 51, 52 VSA — CON.11.1.A3.2).",
+                "uuid": "8cd17813-6405-5d9e-afc2-243ad18cf93a"
+              },
+              {
+                "control-id": "con.11.1.a3.3",
+                "description": "Component capability addressing control con.11.1.a3.3 (Einsatz von IT-Sicherheitsprodukten nach §§ 51, 52 VSA — CON.11.1.A3.3).",
+                "uuid": "76e027dc-5bf0-59be-8498-ca0f49f7649c"
+              },
+              {
+                "control-id": "con.11.1.a3.4",
+                "description": "Component capability addressing control con.11.1.a3.4 (Einsatz von IT-Sicherheitsprodukten nach §§ 51, 52 VSA — CON.11.1.A3.4).",
+                "uuid": "a736aaac-2d36-53ac-81cf-89d6dd34e9e9"
+              },
+              {
+                "control-id": "con.11.1.a3.5",
+                "description": "Component capability addressing control con.11.1.a3.5 (Einsatz von IT-Sicherheitsprodukten nach §§ 51, 52 VSA — CON.11.1.A3.5).",
+                "uuid": "10c86ead-7614-52c0-87c0-02dd831bd8aa"
+              },
+              {
+                "control-id": "con.11.1.a3.6",
+                "description": "Component capability addressing control con.11.1.a3.6 (Einsatz von IT-Sicherheitsprodukten nach §§ 51, 52 VSA — CON.11.1.A3.6).",
+                "uuid": "4cd7ef15-7b38-5d8b-9f23-53399d55af82"
+              },
+              {
+                "control-id": "con.11.1.a3.7",
+                "description": "Component capability addressing control con.11.1.a3.7 (Einsatz von IT-Sicherheitsprodukten nach §§ 51, 52 VSA — CON.11.1.A3.7).",
+                "uuid": "25e9ca8e-c7b0-50bf-b68e-7e263b13984a"
+              },
+              {
+                "control-id": "con.11.1.a3.8",
+                "description": "Component capability addressing control con.11.1.a3.8 (Einsatz von IT-Sicherheitsprodukten nach §§ 51, 52 VSA — CON.11.1.A3.8).",
+                "uuid": "7d7f5212-740a-54b3-bd27-3c4a3c5c19e0"
+              },
+              {
+                "control-id": "con.11.1.a3.9",
+                "description": "Component capability addressing control con.11.1.a3.9 (Einsatz von IT-Sicherheitsprodukten nach §§ 51, 52 VSA — CON.11.1.A3.9).",
+                "uuid": "e89ff20e-72d4-5408-81d2-ac0ed5da504f"
+              },
+              {
+                "control-id": "con.11.1.a4.1",
+                "description": "Component capability addressing control con.11.1.a4.1 (Beschaffung von VS-IT nach § 49 VSA — CON.11.1.A4.1).",
+                "uuid": "80b7bcc0-0aa1-5a48-9ca6-c71790fd6128"
+              },
+              {
+                "control-id": "con.11.1.a4.10",
+                "description": "Component capability addressing control con.11.1.a4.10 (Beschaffung von VS-IT nach § 49 VSA — CON.11.1.A4.10).",
+                "uuid": "619739c3-d863-50a3-aaa3-a156cee85a7d"
+              },
+              {
+                "control-id": "con.11.1.a4.11",
+                "description": "Component capability addressing control con.11.1.a4.11 (Beschaffung von VS-IT nach § 49 VSA — CON.11.1.A4.11).",
+                "uuid": "3e6c21e8-c087-54b8-b932-49ae6d352960"
+              },
+              {
+                "control-id": "con.11.1.a4.12",
+                "description": "Component capability addressing control con.11.1.a4.12 (Beschaffung von VS-IT nach § 49 VSA — CON.11.1.A4.12).",
+                "uuid": "ce7c0ee7-993f-59e0-875f-70f9280665fd"
+              },
+              {
+                "control-id": "con.11.1.a4.13",
+                "description": "Component capability addressing control con.11.1.a4.13 (Beschaffung von VS-IT nach § 49 VSA — CON.11.1.A4.13).",
+                "uuid": "74dccd31-7975-5d68-9fca-8b6f32f3d42b"
+              },
+              {
+                "control-id": "con.11.1.a4.2",
+                "description": "Component capability addressing control con.11.1.a4.2 (Beschaffung von VS-IT nach § 49 VSA — CON.11.1.A4.2).",
+                "uuid": "4c241117-e440-50f1-a3c3-acb9f4e45e29"
+              },
+              {
+                "control-id": "con.11.1.a4.3",
+                "description": "Component capability addressing control con.11.1.a4.3 (Beschaffung von VS-IT nach § 49 VSA — CON.11.1.A4.3).",
+                "uuid": "3c2fada3-c55d-5fc1-8f57-53002ee897c9"
+              },
+              {
+                "control-id": "con.11.1.a4.4",
+                "description": "Component capability addressing control con.11.1.a4.4 (Beschaffung von VS-IT nach § 49 VSA — CON.11.1.A4.4).",
+                "uuid": "4611af7c-912b-58c8-8314-a8194f7ce319"
+              },
+              {
+                "control-id": "con.11.1.a4.5",
+                "description": "Component capability addressing control con.11.1.a4.5 (Beschaffung von VS-IT nach § 49 VSA — CON.11.1.A4.5).",
+                "uuid": "82404725-c684-5d74-8670-5f31b113de31"
+              },
+              {
+                "control-id": "con.11.1.a4.6",
+                "description": "Component capability addressing control con.11.1.a4.6 (Beschaffung von VS-IT nach § 49 VSA — CON.11.1.A4.6).",
+                "uuid": "95ada538-2dc7-5199-957d-e96d9cf2bd50"
+              },
+              {
+                "control-id": "con.11.1.a4.7",
+                "description": "Component capability addressing control con.11.1.a4.7 (Beschaffung von VS-IT nach § 49 VSA — CON.11.1.A4.7).",
+                "uuid": "927b9a32-73aa-58c4-9c1c-c85ce631b51d"
+              },
+              {
+                "control-id": "con.11.1.a4.8",
+                "description": "Component capability addressing control con.11.1.a4.8 (Beschaffung von VS-IT nach § 49 VSA — CON.11.1.A4.8).",
+                "uuid": "bb22aa2f-c09b-50b0-ab69-20a207a51175"
+              },
+              {
+                "control-id": "con.11.1.a4.9",
+                "description": "Component capability addressing control con.11.1.a4.9 (Beschaffung von VS-IT nach § 49 VSA — CON.11.1.A4.9).",
+                "uuid": "dfb9b46b-d4f1-5053-bfc7-61dba47b270f"
+              },
+              {
+                "control-id": "con.11.1.a5.1",
+                "description": "Component capability addressing control con.11.1.a5.1 (Verpflichtung bei Zugang zu VS nach § 4 VSA und Anlage V zur VSA — CON.11.1.A5.1).",
+                "uuid": "53bdf440-23c0-56e5-95a0-90f0a52a49cc"
+              },
+              {
+                "control-id": "con.11.1.a5.2",
+                "description": "Component capability addressing control con.11.1.a5.2 (Verpflichtung bei Zugang zu VS nach § 4 VSA und Anlage V zur VSA — CON.11.1.A5.2).",
+                "uuid": "8618b647-c87e-5311-b9e2-79327b5e0f06"
+              },
+              {
+                "control-id": "con.11.1.a5.3",
+                "description": "Component capability addressing control con.11.1.a5.3 (Verpflichtung bei Zugang zu VS nach § 4 VSA und Anlage V zur VSA — CON.11.1.A5.3).",
+                "uuid": "135e8576-1524-551b-8d28-60972d58bd2d"
+              },
+              {
+                "control-id": "con.11.1.a5.4",
+                "description": "Component capability addressing control con.11.1.a5.4 (Verpflichtung bei Zugang zu VS nach § 4 VSA und Anlage V zur VSA — CON.11.1.A5.4).",
+                "uuid": "f5ece89d-edb5-5973-91cb-a9d9c0844695"
+              },
+              {
+                "control-id": "con.11.1.a6.1",
+                "description": "Component capability addressing control con.11.1.a6.1 (Beaufsichtigung und Begleitung von Fremdpersonal für VS-IT nach §§ 3, 4 VSA — CON.11.1.A6.1).",
+                "uuid": "4701f3fd-faa0-5a8f-a413-5dba0723d347"
+              },
+              {
+                "control-id": "con.11.1.a6.2",
+                "description": "Component capability addressing control con.11.1.a6.2 (Beaufsichtigung und Begleitung von Fremdpersonal für VS-IT nach §§ 3, 4 VSA — CON.11.1.A6.2).",
+                "uuid": "7b3fb58a-707c-5a07-adb9-1eeaa9216c02"
+              },
+              {
+                "control-id": "con.11.1.a7.1",
+                "description": "Component capability addressing control con.11.1.a7.1 (Kennzeichnung von elektronischen VS und Datenträgern nach §§ 20, 54 und Anlage III, V und VIII zur VSA — CON.11.1.A7.1).",
+                "uuid": "abe65c00-1297-5ead-bf93-23acd7fffe5b"
+              },
+              {
+                "control-id": "con.11.1.a7.2",
+                "description": "Component capability addressing control con.11.1.a7.2 (Kennzeichnung von elektronischen VS und Datenträgern nach §§ 20, 54 und Anlage III, V und VIII zur VSA — CON.11.1.A7.2).",
+                "uuid": "5588aa08-43c2-5d04-a1bb-7ec81cb77530"
+              },
+              {
+                "control-id": "con.11.1.a7.3",
+                "description": "Component capability addressing control con.11.1.a7.3 (Kennzeichnung von elektronischen VS und Datenträgern nach §§ 20, 54 und Anlage III, V und VIII zur VSA — CON.11.1.A7.3).",
+                "uuid": "7c087287-95c8-528c-aa2b-3dbb8f1a03d9"
+              },
+              {
+                "control-id": "con.11.1.a7.4",
+                "description": "Component capability addressing control con.11.1.a7.4 (Kennzeichnung von elektronischen VS und Datenträgern nach §§ 20, 54 und Anlage III, V und VIII zur VSA — CON.11.1.A7.4).",
+                "uuid": "d0f3af20-f7cc-5a07-b4ee-c5bd90db6a59"
+              },
+              {
+                "control-id": "con.11.1.a7.5",
+                "description": "Component capability addressing control con.11.1.a7.5 (Kennzeichnung von elektronischen VS und Datenträgern nach §§ 20, 54 und Anlage III, V und VIII zur VSA — CON.11.1.A7.5).",
+                "uuid": "978300b2-6e3a-525e-a0b9-29c83c26143e"
+              },
+              {
+                "control-id": "con.11.1.a7.6",
+                "description": "Component capability addressing control con.11.1.a7.6 (Kennzeichnung von elektronischen VS und Datenträgern nach §§ 20, 54 und Anlage III, V und VIII zur VSA — CON.11.1.A7.6).",
+                "uuid": "f30bce7c-a54f-5454-a927-364c78bea410"
+              },
+              {
+                "control-id": "con.11.1.a7.7",
+                "description": "Component capability addressing control con.11.1.a7.7 (Kennzeichnung von elektronischen VS und Datenträgern nach §§ 20, 54 und Anlage III, V und VIII zur VSA — CON.11.1.A7.7).",
+                "uuid": "403b5b96-d924-5e3b-bb38-6fdee4908dfc"
+              },
+              {
+                "control-id": "con.11.1.a7.8",
+                "description": "Component capability addressing control con.11.1.a7.8 (Kennzeichnung von elektronischen VS und Datenträgern nach §§ 20, 54 und Anlage III, V und VIII zur VSA — CON.11.1.A7.8).",
+                "uuid": "6ff4628b-6d2b-58d8-a47a-c890e5a89397"
+              },
+              {
+                "control-id": "con.11.1.a7.9",
+                "description": "Component capability addressing control con.11.1.a7.9 (Kennzeichnung von elektronischen VS und Datenträgern nach §§ 20, 54 und Anlage III, V und VIII zur VSA — CON.11.1.A7.9).",
+                "uuid": "d57c20b2-0860-5060-bc2f-1666f366b41d"
+              },
+              {
+                "control-id": "con.11.1.a8.1",
+                "description": "Component capability addressing control con.11.1.a8.1 (Verwaltung und Nachweis von elektronischen VS nach § 21 VSA — CON.11.1.A8.1).",
+                "uuid": "7c31cf39-1a89-5839-8b82-6843f665007e"
+              },
+              {
+                "control-id": "con.11.1.a8.2",
+                "description": "Component capability addressing control con.11.1.a8.2 (Verwaltung und Nachweis von elektronischen VS nach § 21 VSA — CON.11.1.A8.2).",
+                "uuid": "0571b62d-43a6-5954-859c-a4248485a898"
+              },
+              {
+                "control-id": "con.11.1.a9.1",
+                "description": "Component capability addressing control con.11.1.a9.1 (Speicherung elektronischer VS nach § 23 und Nr. 5 Anlage V zur VSA — CON.11.1.A9.1).",
+                "uuid": "4035649a-2c79-54ea-8a9c-b94599c3b2cb"
+              },
+              {
+                "control-id": "con.2.a1.1",
+                "description": "Component capability addressing control con.2.a1.1 (Umsetzung Standard-Datenschutzmodell — CON.2.A1.1).",
+                "uuid": "2c7aaed5-c18b-5480-abc2-c492d921a5af"
+              },
+              {
+                "control-id": "con.2.a1.2",
+                "description": "Component capability addressing control con.2.a1.2 (Umsetzung Standard-Datenschutzmodell — CON.2.A1.2).",
+                "uuid": "358143ad-1559-5e70-93f9-90334f2ae0a9"
+              },
+              {
+                "control-id": "con.3.a1.1",
+                "description": "Component capability addressing control con.3.a1.1 (Erhebung der Einflussfaktoren für Datensicherungen — CON.3.A1.1).",
+                "uuid": "3e22a802-ac67-5b68-8872-eeaf5168aa61"
+              },
+              {
+                "control-id": "con.3.a1.10",
+                "description": "Component capability addressing control con.3.a1.10 (Erhebung der Einflussfaktoren für Datensicherungen — CON.3.A1.10).",
+                "uuid": "3dc138bb-3686-5fa7-900a-c77f70b20697"
+              },
+              {
+                "control-id": "con.3.a1.11",
+                "description": "Component capability addressing control con.3.a1.11 (Erhebung der Einflussfaktoren für Datensicherungen — CON.3.A1.11).",
+                "uuid": "15073876-5e09-54bf-b275-432724607f59"
+              },
+              {
+                "control-id": "con.3.a1.12",
+                "description": "Component capability addressing control con.3.a1.12 (Erhebung der Einflussfaktoren für Datensicherungen — CON.3.A1.12).",
+                "uuid": "3ee739db-33a6-573d-8070-4ba34fee08ad"
+              },
+              {
+                "control-id": "con.3.a1.13",
+                "description": "Component capability addressing control con.3.a1.13 (Erhebung der Einflussfaktoren für Datensicherungen — CON.3.A1.13).",
+                "uuid": "90fd71cb-1e5d-5262-b780-157ef4a9e928"
+              },
+              {
+                "control-id": "con.3.a1.14",
+                "description": "Component capability addressing control con.3.a1.14 (Erhebung der Einflussfaktoren für Datensicherungen — CON.3.A1.14).",
+                "uuid": "1809bf2a-ea78-5a67-bee9-e9b921bdeca4"
+              },
+              {
+                "control-id": "con.3.a1.15",
+                "description": "Component capability addressing control con.3.a1.15 (Erhebung der Einflussfaktoren für Datensicherungen — CON.3.A1.15).",
+                "uuid": "017999a9-7956-587b-b5a1-2bccb039e9a2"
+              },
+              {
+                "control-id": "con.3.a1.2",
+                "description": "Component capability addressing control con.3.a1.2 (Erhebung der Einflussfaktoren für Datensicherungen — CON.3.A1.2).",
+                "uuid": "655cb3b6-295d-518d-9101-c15992ed7b2c"
+              },
+              {
+                "control-id": "con.3.a1.3",
+                "description": "Component capability addressing control con.3.a1.3 (Erhebung der Einflussfaktoren für Datensicherungen — CON.3.A1.3).",
+                "uuid": "1a510048-8772-5a14-9c02-473607a09a9a"
+              },
+              {
+                "control-id": "con.3.a1.4",
+                "description": "Component capability addressing control con.3.a1.4 (Erhebung der Einflussfaktoren für Datensicherungen — CON.3.A1.4).",
+                "uuid": "0a80a7d2-fcb7-57ea-b099-768d63dd0b4e"
+              },
+              {
+                "control-id": "con.3.a1.5",
+                "description": "Component capability addressing control con.3.a1.5 (Erhebung der Einflussfaktoren für Datensicherungen — CON.3.A1.5).",
+                "uuid": "1b277366-fb86-5326-ba86-60bf7f9254db"
+              },
+              {
+                "control-id": "con.3.a1.6",
+                "description": "Component capability addressing control con.3.a1.6 (Erhebung der Einflussfaktoren für Datensicherungen — CON.3.A1.6).",
+                "uuid": "69b3edbf-75ce-5fe3-a34e-20224ff242f7"
+              },
+              {
+                "control-id": "con.3.a1.7",
+                "description": "Component capability addressing control con.3.a1.7 (Erhebung der Einflussfaktoren für Datensicherungen — CON.3.A1.7).",
+                "uuid": "6efe0aeb-709b-5064-ac17-746a671d7242"
+              },
+              {
+                "control-id": "con.3.a1.8",
+                "description": "Component capability addressing control con.3.a1.8 (Erhebung der Einflussfaktoren für Datensicherungen — CON.3.A1.8).",
+                "uuid": "70636824-d194-5e0c-b3f9-88718b083c0c"
+              },
+              {
+                "control-id": "con.3.a1.9",
+                "description": "Component capability addressing control con.3.a1.9 (Erhebung der Einflussfaktoren für Datensicherungen — CON.3.A1.9).",
+                "uuid": "e908f933-dee2-5d9e-a0ab-5faf4e79abc7"
+              },
+              {
+                "control-id": "con.3.a12.1",
+                "description": "Component capability addressing control con.3.a12.1 (Sichere Aufbewahrung der Speichermedien für die Datensicherungen — CON.3.A12.1).",
+                "uuid": "36d1c07b-fb78-5b95-bc25-4117fa28b4d3"
+              },
+              {
+                "control-id": "con.3.a12.2",
+                "description": "Component capability addressing control con.3.a12.2 (Sichere Aufbewahrung der Speichermedien für die Datensicherungen — CON.3.A12.2).",
+                "uuid": "5060792c-9fb9-53ef-8e98-3fb019df6a23"
+              },
+              {
+                "control-id": "con.3.a12.3",
+                "description": "Component capability addressing control con.3.a12.3 (Sichere Aufbewahrung der Speichermedien für die Datensicherungen — CON.3.A12.3).",
+                "uuid": "da53c4f7-7086-55a5-82ea-e15d3002459f"
+              },
+              {
+                "control-id": "con.3.a13.1",
+                "description": "Component capability addressing control con.3.a13.1 (Einsatz kryptografischer Verfahren bei der Datensicherung — CON.3.A13.1).",
+                "uuid": "0a2b1856-2cb8-56fe-b5ec-fff28ed444b1"
+              },
+              {
+                "control-id": "con.3.a13.2",
+                "description": "Component capability addressing control con.3.a13.2 (Einsatz kryptografischer Verfahren bei der Datensicherung — CON.3.A13.2).",
+                "uuid": "98ff31e2-d133-5a46-b781-ae67fa1f0817"
+              },
+              {
+                "control-id": "con.3.a13.3",
+                "description": "Component capability addressing control con.3.a13.3 (Einsatz kryptografischer Verfahren bei der Datensicherung — CON.3.A13.3).",
+                "uuid": "01401c59-2b64-5774-b382-d939f9524fc3"
+              },
+              {
+                "control-id": "con.3.a14.1",
+                "description": "Component capability addressing control con.3.a14.1 (Schutz von Datensicherungen — CON.3.A14.1).",
+                "uuid": "ec2758f8-70de-5eee-a8c3-5d0d8b1614b2"
+              },
+              {
+                "control-id": "con.3.a14.2",
+                "description": "Component capability addressing control con.3.a14.2 (Schutz von Datensicherungen — CON.3.A14.2).",
+                "uuid": "04c76482-03e2-55f7-b0a7-95c3ac0d034f"
+              },
+              {
+                "control-id": "con.3.a14.3",
+                "description": "Component capability addressing control con.3.a14.3 (Schutz von Datensicherungen — CON.3.A14.3).",
+                "uuid": "3476fa4b-b0f3-532d-9d5c-dee17a1e2c7b"
+              },
+              {
+                "control-id": "con.3.a14.4",
+                "description": "Component capability addressing control con.3.a14.4 (Schutz von Datensicherungen — CON.3.A14.4).",
+                "uuid": "6530ee61-0a48-5793-a11b-8ed301c45624"
+              },
+              {
+                "control-id": "con.3.a15.1",
+                "description": "Component capability addressing control con.3.a15.1 (Regelmäßiges Testen der Datensicherungen — CON.3.A15.1).",
+                "uuid": "b3ddc3f0-1fb8-50e7-980e-8cc73e44cd45"
+              },
+              {
+                "control-id": "con.3.a2.1",
+                "description": "Component capability addressing control con.3.a2.1 (Festlegung der Verfahrensweisen für die Datensicherung — CON.3.A2.1).",
+                "uuid": "42009121-462b-5541-a7f8-545d8fbf3e0f"
+              },
+              {
+                "control-id": "con.3.a2.2",
+                "description": "Component capability addressing control con.3.a2.2 (Festlegung der Verfahrensweisen für die Datensicherung — CON.3.A2.2).",
+                "uuid": "def2295c-9464-57cc-a567-c300a27687fe"
+              },
+              {
+                "control-id": "con.3.a2.3",
+                "description": "Component capability addressing control con.3.a2.3 (Festlegung der Verfahrensweisen für die Datensicherung — CON.3.A2.3).",
+                "uuid": "eb9843d4-8954-5c84-bced-eae7a8024335"
+              },
+              {
+                "control-id": "con.3.a2.4",
+                "description": "Component capability addressing control con.3.a2.4 (Festlegung der Verfahrensweisen für die Datensicherung — CON.3.A2.4).",
+                "uuid": "52364285-2cf3-5b54-a79c-f8c79d2c70d8"
+              },
+              {
+                "control-id": "con.3.a2.5",
+                "description": "Component capability addressing control con.3.a2.5 (Festlegung der Verfahrensweisen für die Datensicherung — CON.3.A2.5).",
+                "uuid": "c76f22e7-8a4c-57ac-9443-d36088cff7f8"
+              },
+              {
+                "control-id": "con.3.a2.6",
+                "description": "Component capability addressing control con.3.a2.6 (Festlegung der Verfahrensweisen für die Datensicherung — CON.3.A2.6).",
+                "uuid": "a5856c8d-2404-5a20-8032-e06af6fd40b4"
+              },
+              {
+                "control-id": "con.3.a2.7",
+                "description": "Component capability addressing control con.3.a2.7 (Festlegung der Verfahrensweisen für die Datensicherung — CON.3.A2.7).",
+                "uuid": "93d69bb3-870d-5f94-9559-4589862de854"
+              },
+              {
+                "control-id": "con.3.a4.1",
+                "description": "Component capability addressing control con.3.a4.1 (Erstellung von Datensicherungsplänen — CON.3.A4.1).",
+                "uuid": "048598fc-a04e-5f30-b953-3889f90ebac3"
+              },
+              {
+                "control-id": "con.3.a4.10",
+                "description": "Component capability addressing control con.3.a4.10 (Erstellung von Datensicherungsplänen — CON.3.A4.10).",
+                "uuid": "35078229-366f-5bf9-901b-d0fb57b20297"
+              },
+              {
+                "control-id": "con.3.a4.2",
+                "description": "Component capability addressing control con.3.a4.2 (Erstellung von Datensicherungsplänen — CON.3.A4.2).",
+                "uuid": "73dcf188-60b7-513d-8d72-d78aebaae3c2"
+              },
+              {
+                "control-id": "con.3.a4.3",
+                "description": "Component capability addressing control con.3.a4.3 (Erstellung von Datensicherungsplänen — CON.3.A4.3).",
+                "uuid": "fa3ffd75-4e8e-5877-96e1-d08fbff27e2b"
+              },
+              {
+                "control-id": "con.3.a4.4",
+                "description": "Component capability addressing control con.3.a4.4 (Erstellung von Datensicherungsplänen — CON.3.A4.4).",
+                "uuid": "11ef2eab-990e-576a-847e-71260056a1ec"
+              },
+              {
+                "control-id": "con.3.a4.5",
+                "description": "Component capability addressing control con.3.a4.5 (Erstellung von Datensicherungsplänen — CON.3.A4.5).",
+                "uuid": "f4a9af96-4df3-5616-b445-0f90154df7a2"
+              },
+              {
+                "control-id": "con.3.a4.6",
+                "description": "Component capability addressing control con.3.a4.6 (Erstellung von Datensicherungsplänen — CON.3.A4.6).",
+                "uuid": "36bc89c4-f259-5e2f-bf2a-f20fce17817a"
+              },
+              {
+                "control-id": "con.3.a4.7",
+                "description": "Component capability addressing control con.3.a4.7 (Erstellung von Datensicherungsplänen — CON.3.A4.7).",
+                "uuid": "8ec1f31a-3587-57c0-8b32-a1a4482b17ea"
+              },
+              {
+                "control-id": "con.3.a4.8",
+                "description": "Component capability addressing control con.3.a4.8 (Erstellung von Datensicherungsplänen — CON.3.A4.8).",
+                "uuid": "4f796a43-01a1-5265-93e6-00cf54f3b816"
+              },
+              {
+                "control-id": "con.3.a4.9",
+                "description": "Component capability addressing control con.3.a4.9 (Erstellung von Datensicherungsplänen — CON.3.A4.9).",
+                "uuid": "a3fc3828-5027-592d-8910-75e9c3c814a3"
+              },
+              {
+                "control-id": "con.3.a5.1",
+                "description": "Component capability addressing control con.3.a5.1 (Regelmäßige Datensicherung — CON.3.A5.1).",
+                "uuid": "978171a6-f056-5799-a720-cc17249c265b"
+              },
+              {
+                "control-id": "con.3.a5.2",
+                "description": "Component capability addressing control con.3.a5.2 (Regelmäßige Datensicherung — CON.3.A5.2).",
+                "uuid": "21d0e549-0d1b-52b6-89b8-d333c58c1fc8"
+              },
+              {
+                "control-id": "con.3.a5.3",
+                "description": "Component capability addressing control con.3.a5.3 (Regelmäßige Datensicherung — CON.3.A5.3).",
+                "uuid": "eb9f316a-cb18-58de-a707-a0f2da4396b5"
+              },
+              {
+                "control-id": "con.3.a6.1",
+                "description": "Component capability addressing control con.3.a6.1 (Entwicklung eines Datensicherungskonzepts — CON.3.A6.1).",
+                "uuid": "7ceb26d1-d313-53b0-bdc9-c7af4fcc734e"
+              },
+              {
+                "control-id": "con.3.a6.10",
+                "description": "Component capability addressing control con.3.a6.10 (Entwicklung eines Datensicherungskonzepts — CON.3.A6.10).",
+                "uuid": "220cb3fa-2cc6-53c6-b338-b421bbb879de"
+              },
+              {
+                "control-id": "con.3.a6.11",
+                "description": "Component capability addressing control con.3.a6.11 (Entwicklung eines Datensicherungskonzepts — CON.3.A6.11).",
+                "uuid": "04236567-ccb4-5a70-b8d6-b1bda121036f"
+              },
+              {
+                "control-id": "con.3.a6.12",
+                "description": "Component capability addressing control con.3.a6.12 (Entwicklung eines Datensicherungskonzepts — CON.3.A6.12).",
+                "uuid": "95f237db-95c4-5ccb-8a17-e06e04f33b02"
+              },
+              {
+                "control-id": "con.3.a6.13",
+                "description": "Component capability addressing control con.3.a6.13 (Entwicklung eines Datensicherungskonzepts — CON.3.A6.13).",
+                "uuid": "6cce481c-8598-5a5f-a400-f4aa660f67c1"
+              },
+              {
+                "control-id": "con.3.a6.2",
+                "description": "Component capability addressing control con.3.a6.2 (Entwicklung eines Datensicherungskonzepts — CON.3.A6.2).",
+                "uuid": "1c8757a4-e274-5b00-8ac5-fdc53ad43341"
+              },
+              {
+                "control-id": "con.3.a6.3",
+                "description": "Component capability addressing control con.3.a6.3 (Entwicklung eines Datensicherungskonzepts — CON.3.A6.3).",
+                "uuid": "e1deb48b-1ef3-55ee-b86b-d3bbb88d12ac"
+              },
+              {
+                "control-id": "con.3.a6.4",
+                "description": "Component capability addressing control con.3.a6.4 (Entwicklung eines Datensicherungskonzepts — CON.3.A6.4).",
+                "uuid": "a5a77ed4-19dd-5947-b91e-add6050e98f3"
+              },
+              {
+                "control-id": "con.3.a6.5",
+                "description": "Component capability addressing control con.3.a6.5 (Entwicklung eines Datensicherungskonzepts — CON.3.A6.5).",
+                "uuid": "3844d6e3-48d8-5cbe-bc7e-50aa5ca1da07"
+              },
+              {
+                "control-id": "con.3.a6.6",
+                "description": "Component capability addressing control con.3.a6.6 (Entwicklung eines Datensicherungskonzepts — CON.3.A6.6).",
+                "uuid": "ac704b1c-c9ce-52eb-97d5-5c62d02bb4e8"
+              },
+              {
+                "control-id": "con.3.a6.7",
+                "description": "Component capability addressing control con.3.a6.7 (Entwicklung eines Datensicherungskonzepts — CON.3.A6.7).",
+                "uuid": "fa100a0c-5974-5051-b3ae-2670ece2da6d"
+              },
+              {
+                "control-id": "con.3.a6.8",
+                "description": "Component capability addressing control con.3.a6.8 (Entwicklung eines Datensicherungskonzepts — CON.3.A6.8).",
+                "uuid": "157912ba-0a6b-57cb-900c-47bea519cb1f"
+              },
+              {
+                "control-id": "con.3.a6.9",
+                "description": "Component capability addressing control con.3.a6.9 (Entwicklung eines Datensicherungskonzepts — CON.3.A6.9).",
+                "uuid": "c56973d5-ccf0-52d3-af23-4c946591211d"
+              },
+              {
+                "control-id": "con.3.a7.1",
+                "description": "Component capability addressing control con.3.a7.1 (Beschaffung eines geeigneten Datensicherungssystems — CON.3.A7.1).",
+                "uuid": "ef644e08-cf8e-598d-977d-b37b4590f20b"
+              },
+              {
+                "control-id": "con.3.a7.2",
+                "description": "Component capability addressing control con.3.a7.2 (Beschaffung eines geeigneten Datensicherungssystems — CON.3.A7.2).",
+                "uuid": "f41910ce-ed46-517f-b177-b6ae1dace0b0"
+              },
+              {
+                "control-id": "con.3.a9.1",
+                "description": "Component capability addressing control con.3.a9.1 (Voraussetzungen für die Online-Datensicherung — CON.3.A9.1).",
+                "uuid": "ff066bcb-de34-5a53-975d-959c84841af2"
+              },
+              {
+                "control-id": "con.3.a9.2",
+                "description": "Component capability addressing control con.3.a9.2 (Voraussetzungen für die Online-Datensicherung — CON.3.A9.2).",
+                "uuid": "dd9eef47-df49-54ae-9b48-b5fe1802137a"
+              },
+              {
+                "control-id": "con.3.a9.3",
+                "description": "Component capability addressing control con.3.a9.3 (Voraussetzungen für die Online-Datensicherung — CON.3.A9.3).",
+                "uuid": "b4c0b719-bb41-5c6b-bfc3-c892930f17ac"
+              },
+              {
+                "control-id": "con.3.a9.4",
+                "description": "Component capability addressing control con.3.a9.4 (Voraussetzungen für die Online-Datensicherung — CON.3.A9.4).",
+                "uuid": "ea6d59c4-3cdd-5b4a-a50c-ec08912df6b6"
+              },
+              {
+                "control-id": "con.3.a9.5",
+                "description": "Component capability addressing control con.3.a9.5 (Voraussetzungen für die Online-Datensicherung — CON.3.A9.5).",
+                "uuid": "fcc79bef-e524-5747-91c5-54624af3625c"
+              },
+              {
+                "control-id": "con.3.a9.6",
+                "description": "Component capability addressing control con.3.a9.6 (Voraussetzungen für die Online-Datensicherung — CON.3.A9.6).",
+                "uuid": "0cc6a547-93d7-5bf5-99a2-d3fc4d418978"
+              },
+              {
+                "control-id": "con.3.a9.7",
+                "description": "Component capability addressing control con.3.a9.7 (Voraussetzungen für die Online-Datensicherung — CON.3.A9.7).",
+                "uuid": "1b25bc39-3c78-5bf4-a2dc-9950a0dd1d31"
+              },
+              {
+                "control-id": "con.3.a9.8",
+                "description": "Component capability addressing control con.3.a9.8 (Voraussetzungen für die Online-Datensicherung — CON.3.A9.8).",
+                "uuid": "57297c9d-0385-5b7f-bc12-94524fe7cc7f"
+              },
+              {
+                "control-id": "con.6.a1.1",
+                "description": "Component capability addressing control con.6.a1.1 (Regelung für die Löschung und Vernichtung von Informationen — CON.6.A1.1).",
+                "uuid": "59cdea27-c63c-5bfb-8899-f171fee1d201"
+              },
+              {
+                "control-id": "con.6.a1.2",
+                "description": "Component capability addressing control con.6.a1.2 (Regelung für die Löschung und Vernichtung von Informationen — CON.6.A1.2).",
+                "uuid": "af6044c6-afb7-5f05-847d-897496d6b392"
+              },
+              {
+                "control-id": "con.6.a1.3",
+                "description": "Component capability addressing control con.6.a1.3 (Regelung für die Löschung und Vernichtung von Informationen — CON.6.A1.3).",
+                "uuid": "37e70b04-266f-51b1-9cb4-655280a1e49c"
+              },
+              {
+                "control-id": "con.6.a1.4",
+                "description": "Component capability addressing control con.6.a1.4 (Regelung für die Löschung und Vernichtung von Informationen — CON.6.A1.4).",
+                "uuid": "f856c753-6178-54d9-bc67-627e916eb0d8"
+              },
+              {
+                "control-id": "con.6.a1.5",
+                "description": "Component capability addressing control con.6.a1.5 (Regelung für die Löschung und Vernichtung von Informationen — CON.6.A1.5).",
+                "uuid": "51cea070-875d-54c1-8fb1-efc719866146"
+              },
+              {
+                "control-id": "con.6.a1.6",
+                "description": "Component capability addressing control con.6.a1.6 (Regelung für die Löschung und Vernichtung von Informationen — CON.6.A1.6).",
+                "uuid": "1c4aaaee-b0c4-50a6-a373-876c723dd1e9"
+              },
+              {
+                "control-id": "con.6.a1.7",
+                "description": "Component capability addressing control con.6.a1.7 (Regelung für die Löschung und Vernichtung von Informationen — CON.6.A1.7).",
+                "uuid": "f73f4970-f7c8-582f-857c-d4dffe451d46"
+              },
+              {
+                "control-id": "con.6.a11.1",
+                "description": "Component capability addressing control con.6.a11.1 (Löschung und Vernichtung von Datenträgern durch externe Dienstleistende — CON.6.A11.1).",
+                "uuid": "eff4c99a-e510-56c0-83ad-cc34ba3dc400"
+              },
+              {
+                "control-id": "con.6.a11.2",
+                "description": "Component capability addressing control con.6.a11.2 (Löschung und Vernichtung von Datenträgern durch externe Dienstleistende — CON.6.A11.2).",
+                "uuid": "5b27c425-11aa-5045-b6f3-214332bee513"
+              },
+              {
+                "control-id": "con.6.a11.3",
+                "description": "Component capability addressing control con.6.a11.3 (Löschung und Vernichtung von Datenträgern durch externe Dienstleistende — CON.6.A11.3).",
+                "uuid": "5afc38d8-f4cb-54c4-92c2-db357f694df9"
+              },
+              {
+                "control-id": "con.6.a12.1",
+                "description": "Component capability addressing control con.6.a12.1 (Mindestanforderungen an Verfahren zur Löschung und Vernichtung — CON.6.A12.1).",
+                "uuid": "6fbfab7b-6a1b-5529-b580-b11b4092153a"
+              },
+              {
+                "control-id": "con.6.a12.10",
+                "description": "Component capability addressing control con.6.a12.10 (Mindestanforderungen an Verfahren zur Löschung und Vernichtung — CON.6.A12.10).",
+                "uuid": "0225a884-667f-5faa-89ce-0ad9c10cd2ab"
+              },
+              {
+                "control-id": "con.6.a12.11",
+                "description": "Component capability addressing control con.6.a12.11 (Mindestanforderungen an Verfahren zur Löschung und Vernichtung — CON.6.A12.11).",
+                "uuid": "d9e056aa-261a-569e-9edb-217f2c0a4296"
+              },
+              {
+                "control-id": "con.6.a12.12",
+                "description": "Component capability addressing control con.6.a12.12 (Mindestanforderungen an Verfahren zur Löschung und Vernichtung — CON.6.A12.12).",
+                "uuid": "117ac998-4cbc-5f38-9960-7d1e308015f6"
+              },
+              {
+                "control-id": "con.6.a12.13",
+                "description": "Component capability addressing control con.6.a12.13 (Mindestanforderungen an Verfahren zur Löschung und Vernichtung — CON.6.A12.13).",
+                "uuid": "510ca8f3-7197-5846-b6d8-7b9da86dc61d"
+              },
+              {
+                "control-id": "con.6.a12.2",
+                "description": "Component capability addressing control con.6.a12.2 (Mindestanforderungen an Verfahren zur Löschung und Vernichtung — CON.6.A12.2).",
+                "uuid": "737f1f92-bbe6-5786-9847-cffd255e18b1"
+              },
+              {
+                "control-id": "con.6.a12.3",
+                "description": "Component capability addressing control con.6.a12.3 (Mindestanforderungen an Verfahren zur Löschung und Vernichtung — CON.6.A12.3).",
+                "uuid": "198a14a8-07e6-55dd-aa0c-3636d65abe23"
+              },
+              {
+                "control-id": "con.6.a12.4",
+                "description": "Component capability addressing control con.6.a12.4 (Mindestanforderungen an Verfahren zur Löschung und Vernichtung — CON.6.A12.4).",
+                "uuid": "63c4f8bf-dca7-5772-adc2-c2784689e21d"
+              },
+              {
+                "control-id": "con.6.a12.5",
+                "description": "Component capability addressing control con.6.a12.5 (Mindestanforderungen an Verfahren zur Löschung und Vernichtung — CON.6.A12.5).",
+                "uuid": "a000817a-86d6-54a5-ab46-d062b5635f97"
+              },
+              {
+                "control-id": "con.6.a12.6",
+                "description": "Component capability addressing control con.6.a12.6 (Mindestanforderungen an Verfahren zur Löschung und Vernichtung — CON.6.A12.6).",
+                "uuid": "125823a5-873f-5440-8b84-d251212cddf9"
+              },
+              {
+                "control-id": "con.6.a12.7",
+                "description": "Component capability addressing control con.6.a12.7 (Mindestanforderungen an Verfahren zur Löschung und Vernichtung — CON.6.A12.7).",
+                "uuid": "42caefe2-970b-5e93-a338-0d40b57250ab"
+              },
+              {
+                "control-id": "con.6.a12.8",
+                "description": "Component capability addressing control con.6.a12.8 (Mindestanforderungen an Verfahren zur Löschung und Vernichtung — CON.6.A12.8).",
+                "uuid": "ab205001-a60e-5aec-8a00-0fa08cae56bf"
+              },
+              {
+                "control-id": "con.6.a12.9",
+                "description": "Component capability addressing control con.6.a12.9 (Mindestanforderungen an Verfahren zur Löschung und Vernichtung — CON.6.A12.9).",
+                "uuid": "943eae95-d68d-54f9-9ae1-d299a529ee55"
+              },
+              {
+                "control-id": "con.6.a13.1",
+                "description": "Component capability addressing control con.6.a13.1 (Vernichtung defekter digitaler Datenträger — CON.6.A13.1).",
+                "uuid": "38454120-3f12-5e02-abc0-89e10fd76b83"
+              },
+              {
+                "control-id": "con.6.a13.2",
+                "description": "Component capability addressing control con.6.a13.2 (Vernichtung defekter digitaler Datenträger — CON.6.A13.2).",
+                "uuid": "803dd429-9dd4-5b76-8bfc-3032e9e03fd5"
+              },
+              {
+                "control-id": "con.6.a13.3",
+                "description": "Component capability addressing control con.6.a13.3 (Vernichtung defekter digitaler Datenträger — CON.6.A13.3).",
+                "uuid": "e0b1c1b2-0e9a-5973-b0d3-23c0c6162964"
+              },
+              {
+                "control-id": "con.6.a14.1",
+                "description": "Component capability addressing control con.6.a14.1 (Vernichten von Datenträgern auf erhöhter Sicherheitsstufe — CON.6.A14.1).",
+                "uuid": "25e86101-7e95-5b95-a635-f99d1f0238f1"
+              },
+              {
+                "control-id": "con.6.a14.2",
+                "description": "Component capability addressing control con.6.a14.2 (Vernichten von Datenträgern auf erhöhter Sicherheitsstufe — CON.6.A14.2).",
+                "uuid": "7bbdd886-6c02-5167-a19e-07d8c5bec19b"
+              },
+              {
+                "control-id": "con.6.a2.1",
+                "description": "Component capability addressing control con.6.a2.1 (Ordnungsgemäßes Löschen und Vernichten von schützenswerten Betriebsmitteln und Informationen — CON.6.A2.1).",
+                "uuid": "3ddec535-52bb-5ffc-83d9-7717caddf24c"
+              },
+              {
+                "control-id": "con.6.a2.2",
+                "description": "Component capability addressing control con.6.a2.2 (Ordnungsgemäßes Löschen und Vernichten von schützenswerten Betriebsmitteln und Informationen — CON.6.A2.2).",
+                "uuid": "b674e549-3d99-5834-8e56-b9efa9ba1cb6"
+              },
+              {
+                "control-id": "con.6.a2.3",
+                "description": "Component capability addressing control con.6.a2.3 (Ordnungsgemäßes Löschen und Vernichten von schützenswerten Betriebsmitteln und Informationen — CON.6.A2.3).",
+                "uuid": "69d5272a-cca0-5c2c-b7db-ded06e159349"
+              },
+              {
+                "control-id": "con.6.a2.4",
+                "description": "Component capability addressing control con.6.a2.4 (Ordnungsgemäßes Löschen und Vernichten von schützenswerten Betriebsmitteln und Informationen — CON.6.A2.4).",
+                "uuid": "c830db9b-e939-5268-96b9-e6d5f2d54bd5"
+              },
+              {
+                "control-id": "con.6.a2.5",
+                "description": "Component capability addressing control con.6.a2.5 (Ordnungsgemäßes Löschen und Vernichten von schützenswerten Betriebsmitteln und Informationen — CON.6.A2.5).",
+                "uuid": "574b059e-e6ba-543c-9537-2ab94a5cf835"
+              },
+              {
+                "control-id": "con.6.a2.6",
+                "description": "Component capability addressing control con.6.a2.6 (Ordnungsgemäßes Löschen und Vernichten von schützenswerten Betriebsmitteln und Informationen — CON.6.A2.6).",
+                "uuid": "df4891cb-c9b2-5196-90dd-b61224baae94"
+              },
+              {
+                "control-id": "con.6.a2.7",
+                "description": "Component capability addressing control con.6.a2.7 (Ordnungsgemäßes Löschen und Vernichten von schützenswerten Betriebsmitteln und Informationen — CON.6.A2.7).",
+                "uuid": "ed6c1021-3068-5763-803a-77f4023ec755"
+              },
+              {
+                "control-id": "con.6.a4.1",
+                "description": "Component capability addressing control con.6.a4.1 (Auswahl geeigneter Verfahren zur Löschung oder Vernichtung von Datenträgern — CON.6.A4.1).",
+                "uuid": "93ed1f30-78b5-5bea-81f6-0cf2973f1af0"
+              },
+              {
+                "control-id": "con.6.a4.2",
+                "description": "Component capability addressing control con.6.a4.2 (Auswahl geeigneter Verfahren zur Löschung oder Vernichtung von Datenträgern — CON.6.A4.2).",
+                "uuid": "d6006a0c-843c-5a0e-b704-a6b562a2478a"
+              },
+              {
+                "control-id": "con.6.a4.3",
+                "description": "Component capability addressing control con.6.a4.3 (Auswahl geeigneter Verfahren zur Löschung oder Vernichtung von Datenträgern — CON.6.A4.3).",
+                "uuid": "9590278d-ff0d-5f5c-b972-27d83c14f0f7"
+              },
+              {
+                "control-id": "con.6.a4.4",
+                "description": "Component capability addressing control con.6.a4.4 (Auswahl geeigneter Verfahren zur Löschung oder Vernichtung von Datenträgern — CON.6.A4.4).",
+                "uuid": "6bffc85f-972d-5bc9-9eb3-f033450503fa"
+              },
+              {
+                "control-id": "con.6.a4.5",
+                "description": "Component capability addressing control con.6.a4.5 (Auswahl geeigneter Verfahren zur Löschung oder Vernichtung von Datenträgern — CON.6.A4.5).",
+                "uuid": "9d847763-d671-5ec6-80ae-6b5612c29d90"
+              },
+              {
+                "control-id": "con.6.a8.1",
+                "description": "Component capability addressing control con.6.a8.1 (Erstellung einer Richtlinie für die Löschung und Vernichtung von Informationen — CON.6.A8.1).",
+                "uuid": "b65d32d0-9a38-5e68-a21e-b835e869a711"
+              },
+              {
+                "control-id": "con.6.a8.2",
+                "description": "Component capability addressing control con.6.a8.2 (Erstellung einer Richtlinie für die Löschung und Vernichtung von Informationen — CON.6.A8.2).",
+                "uuid": "dcdc16b7-106b-5b11-a4d5-c584b655aad7"
+              },
+              {
+                "control-id": "con.6.a8.3",
+                "description": "Component capability addressing control con.6.a8.3 (Erstellung einer Richtlinie für die Löschung und Vernichtung von Informationen — CON.6.A8.3).",
+                "uuid": "d685e38c-561e-553d-94c7-8cd2ea19c953"
+              },
+              {
+                "control-id": "con.6.a8.4",
+                "description": "Component capability addressing control con.6.a8.4 (Erstellung einer Richtlinie für die Löschung und Vernichtung von Informationen — CON.6.A8.4).",
+                "uuid": "47307421-b5dd-5312-967b-567d1c882efd"
+              },
+              {
+                "control-id": "con.6.a8.5",
+                "description": "Component capability addressing control con.6.a8.5 (Erstellung einer Richtlinie für die Löschung und Vernichtung von Informationen — CON.6.A8.5).",
+                "uuid": "cf186968-728a-527c-84c9-0f6bde991cec"
+              },
+              {
+                "control-id": "con.7.a1.1",
+                "description": "Component capability addressing control con.7.a1.1 (Sicherheitsrichtlinie zur Informationssicherheit auf Auslandsreisen — CON.7.A1.1).",
+                "uuid": "9e7997ac-2972-5a10-8917-7e31db7ba8b8"
+              },
+              {
+                "control-id": "con.7.a1.2",
+                "description": "Component capability addressing control con.7.a1.2 (Sicherheitsrichtlinie zur Informationssicherheit auf Auslandsreisen — CON.7.A1.2).",
+                "uuid": "df469c8d-0cca-57f2-be08-a600da173aeb"
+              },
+              {
+                "control-id": "con.7.a1.3",
+                "description": "Component capability addressing control con.7.a1.3 (Sicherheitsrichtlinie zur Informationssicherheit auf Auslandsreisen — CON.7.A1.3).",
+                "uuid": "0ca25364-6246-57ed-b777-bce426a9d552"
+              },
+              {
+                "control-id": "con.7.a1.4",
+                "description": "Component capability addressing control con.7.a1.4 (Sicherheitsrichtlinie zur Informationssicherheit auf Auslandsreisen — CON.7.A1.4).",
+                "uuid": "0e3653da-1c05-57ea-a2e0-a4724c023e14"
+              },
+              {
+                "control-id": "con.7.a1.5",
+                "description": "Component capability addressing control con.7.a1.5 (Sicherheitsrichtlinie zur Informationssicherheit auf Auslandsreisen — CON.7.A1.5).",
+                "uuid": "4e74fb99-6596-5162-9938-77bf9758a6b8"
+              },
+              {
+                "control-id": "con.7.a10.1",
+                "description": "Component capability addressing control con.7.a10.1 (Verschlüsselung tragbarer IT-Systeme und Datenträger — CON.7.A10.1).",
+                "uuid": "f5ee69fc-3b98-5d83-826e-d810e3a4d2cc"
+              },
+              {
+                "control-id": "con.7.a10.2",
+                "description": "Component capability addressing control con.7.a10.2 (Verschlüsselung tragbarer IT-Systeme und Datenträger — CON.7.A10.2).",
+                "uuid": "7120ff59-7545-5ae0-a141-c0eb2d3f8fd4"
+              },
+              {
+                "control-id": "con.7.a10.3",
+                "description": "Component capability addressing control con.7.a10.3 (Verschlüsselung tragbarer IT-Systeme und Datenträger — CON.7.A10.3).",
+                "uuid": "3d4ac851-215d-5b22-a1db-1dc0185837c6"
+              },
+              {
+                "control-id": "con.7.a10.4",
+                "description": "Component capability addressing control con.7.a10.4 (Verschlüsselung tragbarer IT-Systeme und Datenträger — CON.7.A10.4).",
+                "uuid": "34ff8ddd-4bd0-573b-a3b0-ff4c08ccbf93"
+              },
+              {
+                "control-id": "con.7.a10.5",
+                "description": "Component capability addressing control con.7.a10.5 (Verschlüsselung tragbarer IT-Systeme und Datenträger — CON.7.A10.5).",
+                "uuid": "bd73913f-2c88-5f6b-b7a1-2b6db77c441a"
+              },
+              {
+                "control-id": "con.7.a11.1",
+                "description": "Component capability addressing control con.7.a11.1 (Einsatz von Diebstahl-Sicherungen — CON.7.A11.1).",
+                "uuid": "1fe55618-2104-57ac-8859-126cbd8fea4b"
+              },
+              {
+                "control-id": "con.7.a11.2",
+                "description": "Component capability addressing control con.7.a11.2 (Einsatz von Diebstahl-Sicherungen — CON.7.A11.2).",
+                "uuid": "56a49db8-aab7-5417-9a8f-d4f9851cdbc1"
+              },
+              {
+                "control-id": "con.7.a12.1",
+                "description": "Component capability addressing control con.7.a12.1 (Sicheres Vernichten von schutzbedürftigen Materialien und Dokumenten — CON.7.A12.1).",
+                "uuid": "aaa13ea7-53e5-5375-8f8c-fb4ceabfc5e2"
+              },
+              {
+                "control-id": "con.7.a12.2",
+                "description": "Component capability addressing control con.7.a12.2 (Sicheres Vernichten von schutzbedürftigen Materialien und Dokumenten — CON.7.A12.2).",
+                "uuid": "b0ff39ea-b974-527e-8572-05aafbc1587a"
+              },
+              {
+                "control-id": "con.7.a12.3",
+                "description": "Component capability addressing control con.7.a12.3 (Sicheres Vernichten von schutzbedürftigen Materialien und Dokumenten — CON.7.A12.3).",
+                "uuid": "13e68560-b71f-56c5-8b38-988224ca6763"
+              },
+              {
+                "control-id": "con.7.a12.4",
+                "description": "Component capability addressing control con.7.a12.4 (Sicheres Vernichten von schutzbedürftigen Materialien und Dokumenten — CON.7.A12.4).",
+                "uuid": "0f60bd8b-716d-5c78-aaf3-076cda6e7820"
+              },
+              {
+                "control-id": "con.7.a13.1",
+                "description": "Component capability addressing control con.7.a13.1 (Mitnahme notwendiger Daten und Datenträger — CON.7.A13.1).",
+                "uuid": "09e68b99-a271-5ce4-8940-dffa0a994fb7"
+              },
+              {
+                "control-id": "con.7.a13.2",
+                "description": "Component capability addressing control con.7.a13.2 (Mitnahme notwendiger Daten und Datenträger — CON.7.A13.2).",
+                "uuid": "6e8f4c19-ba1f-54e9-9ba3-daa5d18ca027"
+              },
+              {
+                "control-id": "con.7.a13.3",
+                "description": "Component capability addressing control con.7.a13.3 (Mitnahme notwendiger Daten und Datenträger — CON.7.A13.3).",
+                "uuid": "71943cd5-5529-5d3b-9ce7-e9c059f35d14"
+              },
+              {
+                "control-id": "con.7.a13.4",
+                "description": "Component capability addressing control con.7.a13.4 (Mitnahme notwendiger Daten und Datenträger — CON.7.A13.4).",
+                "uuid": "33fbd7d6-0c76-5220-b1f4-433986a00422"
+              },
+              {
+                "control-id": "con.7.a13.5",
+                "description": "Component capability addressing control con.7.a13.5 (Mitnahme notwendiger Daten und Datenträger — CON.7.A13.5).",
+                "uuid": "2ec83302-0e3c-5d4f-a4c9-a5d5d18750e0"
+              },
+              {
+                "control-id": "con.7.a13.6",
+                "description": "Component capability addressing control con.7.a13.6 (Mitnahme notwendiger Daten und Datenträger — CON.7.A13.6).",
+                "uuid": "a896e3cc-b05e-5cb6-a3a1-8259fe0a3911"
+              },
+              {
+                "control-id": "con.7.a14.1",
+                "description": "Component capability addressing control con.7.a14.1 (Kryptografisch abgesicherte E-Mail-Kommunikation — CON.7.A14.1).",
+                "uuid": "e887b7f0-2676-517c-91c4-7557df66ac48"
+              },
+              {
+                "control-id": "con.7.a14.2",
+                "description": "Component capability addressing control con.7.a14.2 (Kryptografisch abgesicherte E-Mail-Kommunikation — CON.7.A14.2).",
+                "uuid": "f847d4cd-821f-5f08-95d1-44714864a929"
+              },
+              {
+                "control-id": "con.7.a14.3",
+                "description": "Component capability addressing control con.7.a14.3 (Kryptografisch abgesicherte E-Mail-Kommunikation — CON.7.A14.3).",
+                "uuid": "03c60a76-a404-50ce-907e-76c3c0f023a5"
+              },
+              {
+                "control-id": "con.7.a14.4",
+                "description": "Component capability addressing control con.7.a14.4 (Kryptografisch abgesicherte E-Mail-Kommunikation — CON.7.A14.4).",
+                "uuid": "c0f18c0b-f41d-5ffc-b0a0-ac3c47286523"
+              },
+              {
+                "control-id": "con.7.a14.5",
+                "description": "Component capability addressing control con.7.a14.5 (Kryptografisch abgesicherte E-Mail-Kommunikation — CON.7.A14.5).",
+                "uuid": "93b7853a-debf-5d77-8ffb-1bcd2b90edb2"
+              },
+              {
+                "control-id": "con.7.a15.1",
+                "description": "Component capability addressing control con.7.a15.1 (Abstrahlsicherheit tragbarer IT-Systeme — CON.7.A15.1).",
+                "uuid": "94555816-72b0-5554-ad7b-9c473fc62959"
+              },
+              {
+                "control-id": "con.7.a15.2",
+                "description": "Component capability addressing control con.7.a15.2 (Abstrahlsicherheit tragbarer IT-Systeme — CON.7.A15.2).",
+                "uuid": "cf94fad9-afe0-595f-be5f-baa25c69cf58"
+              },
+              {
+                "control-id": "con.7.a16.1",
+                "description": "Component capability addressing control con.7.a16.1 (Integritätsschutz durch Check-Summen oder digitale Signaturen — CON.7.A16.1).",
+                "uuid": "0073a1bc-96cb-56e7-b28f-01890c2ba039"
+              },
+              {
+                "control-id": "con.7.a16.2",
+                "description": "Component capability addressing control con.7.a16.2 (Integritätsschutz durch Check-Summen oder digitale Signaturen — CON.7.A16.2).",
+                "uuid": "7bba2250-0389-5be8-a132-990afaa0d17c"
+              },
+              {
+                "control-id": "con.7.a17.1",
+                "description": "Component capability addressing control con.7.a17.1 (Verwendung vorkonfigurierter Reise-Hardware — CON.7.A17.1).",
+                "uuid": "597f2533-4d99-5e92-a3f1-535a5256c3a7"
+              },
+              {
+                "control-id": "con.7.a17.2",
+                "description": "Component capability addressing control con.7.a17.2 (Verwendung vorkonfigurierter Reise-Hardware — CON.7.A17.2).",
+                "uuid": "a7a30024-b39e-508b-b28b-74d4e5864fa5"
+              },
+              {
+                "control-id": "con.7.a18.1",
+                "description": "Component capability addressing control con.7.a18.1 (Eingeschränkte Berechtigungen auf Auslandsreisen — CON.7.A18.1).",
+                "uuid": "a80f66be-7885-5eae-ad3d-d893a62b0a63"
+              },
+              {
+                "control-id": "con.7.a18.2",
+                "description": "Component capability addressing control con.7.a18.2 (Eingeschränkte Berechtigungen auf Auslandsreisen — CON.7.A18.2).",
+                "uuid": "274c943f-2846-59d4-afb0-08c73704e6a2"
+              },
+              {
+                "control-id": "con.7.a2.1",
+                "description": "Component capability addressing control con.7.a2.1 (Sensibilisierung der Mitarbeitenden zur Informationssicherheit auf Auslandsreisen — CON.7.A2.1).",
+                "uuid": "05112a0d-72e0-521e-92ce-0bdaa4971b9f"
+              },
+              {
+                "control-id": "con.7.a2.2",
+                "description": "Component capability addressing control con.7.a2.2 (Sensibilisierung der Mitarbeitenden zur Informationssicherheit auf Auslandsreisen — CON.7.A2.2).",
+                "uuid": "20ab8d06-8629-5986-8772-a352c6826ff7"
+              },
+              {
+                "control-id": "con.7.a2.3",
+                "description": "Component capability addressing control con.7.a2.3 (Sensibilisierung der Mitarbeitenden zur Informationssicherheit auf Auslandsreisen — CON.7.A2.3).",
+                "uuid": "10245a69-aa5d-51a3-80cd-54dec712d85c"
+              },
+              {
+                "control-id": "con.7.a2.4",
+                "description": "Component capability addressing control con.7.a2.4 (Sensibilisierung der Mitarbeitenden zur Informationssicherheit auf Auslandsreisen — CON.7.A2.4).",
+                "uuid": "66548113-0453-5300-8e72-04a2405dfa15"
+              },
+              {
+                "control-id": "con.7.a2.5",
+                "description": "Component capability addressing control con.7.a2.5 (Sensibilisierung der Mitarbeitenden zur Informationssicherheit auf Auslandsreisen — CON.7.A2.5).",
+                "uuid": "47ff5c99-c3d8-55e2-a1d0-137f0ad56c83"
+              },
+              {
+                "control-id": "con.7.a2.6",
+                "description": "Component capability addressing control con.7.a2.6 (Sensibilisierung der Mitarbeitenden zur Informationssicherheit auf Auslandsreisen — CON.7.A2.6).",
+                "uuid": "bbb9cd51-9814-50a3-85a7-2d7adc9ed02d"
+              },
+              {
+                "control-id": "con.7.a3.1",
+                "description": "Component capability addressing control con.7.a3.1 (Identifikation länderspezifischer Regelungen, Reise- und Umgebungsbedingungen — CON.7.A3.1).",
+                "uuid": "f6506841-864b-5e5d-9633-2318e091276a"
+              },
+              {
+                "control-id": "con.7.a3.2",
+                "description": "Component capability addressing control con.7.a3.2 (Identifikation länderspezifischer Regelungen, Reise- und Umgebungsbedingungen — CON.7.A3.2).",
+                "uuid": "8cb7b116-26d6-58b7-beb5-e06a40b139e3"
+              },
+              {
+                "control-id": "con.7.a3.3",
+                "description": "Component capability addressing control con.7.a3.3 (Identifikation länderspezifischer Regelungen, Reise- und Umgebungsbedingungen — CON.7.A3.3).",
+                "uuid": "668201a6-12b4-593d-b671-b39accc9a5a0"
+              },
+              {
+                "control-id": "con.7.a3.4",
+                "description": "Component capability addressing control con.7.a3.4 (Identifikation länderspezifischer Regelungen, Reise- und Umgebungsbedingungen — CON.7.A3.4).",
+                "uuid": "57fd4f07-3cd9-5bf2-8a8e-0c71819c0b41"
+              },
+              {
+                "control-id": "con.7.a4.1",
+                "description": "Component capability addressing control con.7.a4.1 (Verwendung von Sichtschutz-Folien — CON.7.A4.1).",
+                "uuid": "7ac0d5bc-1ace-5cf3-aff6-3fbf65e17b74"
+              },
+              {
+                "control-id": "con.7.a4.2",
+                "description": "Component capability addressing control con.7.a4.2 (Verwendung von Sichtschutz-Folien — CON.7.A4.2).",
+                "uuid": "6caf9d4b-78e8-5492-9a40-c61bad4438f2"
+              },
+              {
+                "control-id": "con.7.a5.1",
+                "description": "Component capability addressing control con.7.a5.1 (Verwendung der Bildschirm-/Code-Sperre — CON.7.A5.1).",
+                "uuid": "2b3a9dcb-778f-5e3b-815a-cbe3817d0852"
+              },
+              {
+                "control-id": "con.7.a5.2",
+                "description": "Component capability addressing control con.7.a5.2 (Verwendung der Bildschirm-/Code-Sperre — CON.7.A5.2).",
+                "uuid": "5dc88523-6a47-51ca-8653-8fdf1830390b"
+              },
+              {
+                "control-id": "con.7.a5.3",
+                "description": "Component capability addressing control con.7.a5.3 (Verwendung der Bildschirm-/Code-Sperre — CON.7.A5.3).",
+                "uuid": "9c0027a2-0102-519f-b3fd-65926e1cb339"
+              },
+              {
+                "control-id": "con.7.a6.1",
+                "description": "Component capability addressing control con.7.a6.1 (Zeitnahe Verlustmeldung — CON.7.A6.1).",
+                "uuid": "447eb8f8-c91f-50d6-843d-0a17646bcd85"
+              },
+              {
+                "control-id": "con.7.a6.2",
+                "description": "Component capability addressing control con.7.a6.2 (Zeitnahe Verlustmeldung — CON.7.A6.2).",
+                "uuid": "6114db32-66ac-53b3-b83f-0852a357a3bb"
+              },
+              {
+                "control-id": "con.7.a6.3",
+                "description": "Component capability addressing control con.7.a6.3 (Zeitnahe Verlustmeldung — CON.7.A6.3).",
+                "uuid": "d31d849e-f032-54ac-9098-03127900909d"
+              },
+              {
+                "control-id": "con.7.a7.1",
+                "description": "Component capability addressing control con.7.a7.1 (Sicherer Remote-Zugriff auf das Netz der Institution — CON.7.A7.1).",
+                "uuid": "45163931-65a8-51bd-9931-670ee6474011"
+              },
+              {
+                "control-id": "con.7.a7.2",
+                "description": "Component capability addressing control con.7.a7.2 (Sicherer Remote-Zugriff auf das Netz der Institution — CON.7.A7.2).",
+                "uuid": "11f0cded-5b9a-58b2-9163-eb0a1277ed00"
+              },
+              {
+                "control-id": "con.7.a7.3",
+                "description": "Component capability addressing control con.7.a7.3 (Sicherer Remote-Zugriff auf das Netz der Institution — CON.7.A7.3).",
+                "uuid": "60333171-f9f5-5bc1-97fe-8f582046daf8"
+              },
+              {
+                "control-id": "con.7.a7.4",
+                "description": "Component capability addressing control con.7.a7.4 (Sicherer Remote-Zugriff auf das Netz der Institution — CON.7.A7.4).",
+                "uuid": "d9a0179c-75ce-5e75-afda-4537e98b0178"
+              },
+              {
+                "control-id": "con.7.a7.5",
+                "description": "Component capability addressing control con.7.a7.5 (Sicherer Remote-Zugriff auf das Netz der Institution — CON.7.A7.5).",
+                "uuid": "342b5028-6409-5bd7-a1e2-69c60cb8e9e0"
+              },
+              {
+                "control-id": "con.7.a7.6",
+                "description": "Component capability addressing control con.7.a7.6 (Sicherer Remote-Zugriff auf das Netz der Institution — CON.7.A7.6).",
+                "uuid": "ff3c9ac1-5a6d-5383-98ef-b20c9b3bd607"
+              },
+              {
+                "control-id": "con.7.a8.1",
+                "description": "Component capability addressing control con.7.a8.1 (Sichere Nutzung von öffentlichen WLANs — CON.7.A8.1).",
+                "uuid": "411f2e49-36ce-5d32-a70b-5b702f764d08"
+              },
+              {
+                "control-id": "con.7.a8.2",
+                "description": "Component capability addressing control con.7.a8.2 (Sichere Nutzung von öffentlichen WLANs — CON.7.A8.2).",
+                "uuid": "e443e84a-6ddb-5e63-8a6b-9dcdc16ce79d"
+              },
+              {
+                "control-id": "con.7.a8.3",
+                "description": "Component capability addressing control con.7.a8.3 (Sichere Nutzung von öffentlichen WLANs — CON.7.A8.3).",
+                "uuid": "178936d5-617f-5b62-a508-28ed1f8f8c91"
+              },
+              {
+                "control-id": "con.7.a9.1",
+                "description": "Component capability addressing control con.7.a9.1 (Sicherer Umgang mit mobilen Datenträgern — CON.7.A9.1).",
+                "uuid": "7e9a8ec7-e4ec-5828-9c9a-8cd2feb7ffac"
+              },
+              {
+                "control-id": "con.7.a9.2",
+                "description": "Component capability addressing control con.7.a9.2 (Sicherer Umgang mit mobilen Datenträgern — CON.7.A9.2).",
+                "uuid": "11a8a327-f49d-5863-ac28-d76a2740c4ab"
+              },
+              {
+                "control-id": "con.7.a9.3",
+                "description": "Component capability addressing control con.7.a9.3 (Sicherer Umgang mit mobilen Datenträgern — CON.7.A9.3).",
+                "uuid": "bdb4d502-7450-5e70-8cb7-8432129e16a7"
+              },
+              {
+                "control-id": "con.7.a9.4",
+                "description": "Component capability addressing control con.7.a9.4 (Sicherer Umgang mit mobilen Datenträgern — CON.7.A9.4).",
+                "uuid": "78d07f09-f0ef-5497-a1c6-a3520c9f8a8b"
+              },
+              {
+                "control-id": "con.8.a1.1",
+                "description": "Component capability addressing control con.8.a1.1 (Definition von Rollen und Zuständigkeiten — CON.8.A1.1).",
+                "uuid": "a3aa96cf-4dc9-52be-9573-eb3a73fb984a"
+              },
+              {
+                "control-id": "con.8.a1.2",
+                "description": "Component capability addressing control con.8.a1.2 (Definition von Rollen und Zuständigkeiten — CON.8.A1.2).",
+                "uuid": "de415898-b1ba-5bef-b298-ef46677858a9"
+              },
+              {
+                "control-id": "con.8.a1.3",
+                "description": "Component capability addressing control con.8.a1.3 (Definition von Rollen und Zuständigkeiten — CON.8.A1.3).",
+                "uuid": "ef4a1efb-c8a6-5bda-bb7d-50a40421bb55"
+              },
+              {
+                "control-id": "con.8.a1.4",
+                "description": "Component capability addressing control con.8.a1.4 (Definition von Rollen und Zuständigkeiten — CON.8.A1.4).",
+                "uuid": "967c8990-436b-570c-994e-130309d35ea3"
+              },
+              {
+                "control-id": "con.8.a1.5",
+                "description": "Component capability addressing control con.8.a1.5 (Definition von Rollen und Zuständigkeiten — CON.8.A1.5).",
+                "uuid": "acb25ba1-f1ff-500e-ae75-79983c34b9b0"
+              },
+              {
+                "control-id": "con.8.a1.6",
+                "description": "Component capability addressing control con.8.a1.6 (Definition von Rollen und Zuständigkeiten — CON.8.A1.6).",
+                "uuid": "e661c189-2210-5d0a-a4c4-675b22d88b43"
+              },
+              {
+                "control-id": "con.8.a1.7",
+                "description": "Component capability addressing control con.8.a1.7 (Definition von Rollen und Zuständigkeiten — CON.8.A1.7).",
+                "uuid": "2a6284a5-441e-501d-bd9c-f9714fb885b0"
+              },
+              {
+                "control-id": "con.8.a1.8",
+                "description": "Component capability addressing control con.8.a1.8 (Definition von Rollen und Zuständigkeiten — CON.8.A1.8).",
+                "uuid": "b3a1846d-b789-594c-a0dd-f05fce44162c"
+              },
+              {
+                "control-id": "con.8.a1.9",
+                "description": "Component capability addressing control con.8.a1.9 (Definition von Rollen und Zuständigkeiten — CON.8.A1.9).",
+                "uuid": "fdcb876c-c81c-5b08-85ec-f4f2052abf37"
+              },
+              {
+                "control-id": "con.8.a10.1",
+                "description": "Component capability addressing control con.8.a10.1 (Versionsverwaltung des Quellcodes — CON.8.A10.1).",
+                "uuid": "13265362-10a8-53e1-927a-a673bda94234"
+              },
+              {
+                "control-id": "con.8.a10.2",
+                "description": "Component capability addressing control con.8.a10.2 (Versionsverwaltung des Quellcodes — CON.8.A10.2).",
+                "uuid": "ca95ed4a-2ac7-5efe-9013-5ce601ecb8f5"
+              },
+              {
+                "control-id": "con.8.a10.3",
+                "description": "Component capability addressing control con.8.a10.3 (Versionsverwaltung des Quellcodes — CON.8.A10.3).",
+                "uuid": "3c2545f3-c39d-5e3a-bc86-4f2db77aaed2"
+              },
+              {
+                "control-id": "con.8.a10.4",
+                "description": "Component capability addressing control con.8.a10.4 (Versionsverwaltung des Quellcodes — CON.8.A10.4).",
+                "uuid": "7b326189-7d4a-5cbf-bb59-bc5680358528"
+              },
+              {
+                "control-id": "con.8.a10.5",
+                "description": "Component capability addressing control con.8.a10.5 (Versionsverwaltung des Quellcodes — CON.8.A10.5).",
+                "uuid": "124bd2b5-e4cc-5d5d-a1d3-d18b8f3c496b"
+              },
+              {
+                "control-id": "con.8.a11.1",
+                "description": "Component capability addressing control con.8.a11.1 (Erstellung einer Richtlinie für die Software-Entwicklung — CON.8.A11.1).",
+                "uuid": "9520478f-7d80-5a45-a3ed-18dfeec21766"
+              },
+              {
+                "control-id": "con.8.a11.2",
+                "description": "Component capability addressing control con.8.a11.2 (Erstellung einer Richtlinie für die Software-Entwicklung — CON.8.A11.2).",
+                "uuid": "24f83617-a454-5402-8541-94b9e7fb5bf9"
+              },
+              {
+                "control-id": "con.8.a11.3",
+                "description": "Component capability addressing control con.8.a11.3 (Erstellung einer Richtlinie für die Software-Entwicklung — CON.8.A11.3).",
+                "uuid": "40fcc37d-3084-5313-b5e0-c5050b8a1eb1"
+              },
+              {
+                "control-id": "con.8.a11.4",
+                "description": "Component capability addressing control con.8.a11.4 (Erstellung einer Richtlinie für die Software-Entwicklung — CON.8.A11.4).",
+                "uuid": "5feea679-16c4-5a56-a7b5-a44c1df6630e"
+              },
+              {
+                "control-id": "con.8.a12.1",
+                "description": "Component capability addressing control con.8.a12.1 (Ausführliche Dokumentation — CON.8.A12.1).",
+                "uuid": "8909fb0d-c832-556e-99b8-d5ed7e910c3b"
+              },
+              {
+                "control-id": "con.8.a12.2",
+                "description": "Component capability addressing control con.8.a12.2 (Ausführliche Dokumentation — CON.8.A12.2).",
+                "uuid": "4442c6a1-0fa0-5b2e-8da8-caf85f3f6756"
+              },
+              {
+                "control-id": "con.8.a12.3",
+                "description": "Component capability addressing control con.8.a12.3 (Ausführliche Dokumentation — CON.8.A12.3).",
+                "uuid": "1395a2d6-39ec-5ae6-a1be-45c1bf6c9d94"
+              },
+              {
+                "control-id": "con.8.a12.4",
+                "description": "Component capability addressing control con.8.a12.4 (Ausführliche Dokumentation — CON.8.A12.4).",
+                "uuid": "6d4d57ce-986b-501d-ad8b-95be27fd4efd"
+              },
+              {
+                "control-id": "con.8.a12.5",
+                "description": "Component capability addressing control con.8.a12.5 (Ausführliche Dokumentation — CON.8.A12.5).",
+                "uuid": "6084f942-06f9-56e0-b863-49f7732af60c"
+              },
+              {
+                "control-id": "con.8.a14.1",
+                "description": "Component capability addressing control con.8.a14.1 (Schulung des Entwicklungsteams zur Informationssicherheit — CON.8.A14.1).",
+                "uuid": "9591cccd-ec0f-50f1-956d-a8162576c236"
+              },
+              {
+                "control-id": "con.8.a14.10",
+                "description": "Component capability addressing control con.8.a14.10 (Schulung des Entwicklungsteams zur Informationssicherheit — CON.8.A14.10).",
+                "uuid": "0466cfb3-649e-53ce-a69f-431f60214928"
+              },
+              {
+                "control-id": "con.8.a14.2",
+                "description": "Component capability addressing control con.8.a14.2 (Schulung des Entwicklungsteams zur Informationssicherheit — CON.8.A14.2).",
+                "uuid": "cbfc2169-a5f8-50e9-ac06-b943aff2005f"
+              },
+              {
+                "control-id": "con.8.a14.3",
+                "description": "Component capability addressing control con.8.a14.3 (Schulung des Entwicklungsteams zur Informationssicherheit — CON.8.A14.3).",
+                "uuid": "4bad3674-f2d2-5e6f-b0b5-3fec12f6ee16"
+              },
+              {
+                "control-id": "con.8.a14.4",
+                "description": "Component capability addressing control con.8.a14.4 (Schulung des Entwicklungsteams zur Informationssicherheit — CON.8.A14.4).",
+                "uuid": "8de6c4fe-65da-583a-a32b-fa293608f4fb"
+              },
+              {
+                "control-id": "con.8.a14.5",
+                "description": "Component capability addressing control con.8.a14.5 (Schulung des Entwicklungsteams zur Informationssicherheit — CON.8.A14.5).",
+                "uuid": "6410315d-44ce-5470-bab0-0b009dcdeb7b"
+              },
+              {
+                "control-id": "con.8.a14.6",
+                "description": "Component capability addressing control con.8.a14.6 (Schulung des Entwicklungsteams zur Informationssicherheit — CON.8.A14.6).",
+                "uuid": "cb298dfc-f213-57d5-9827-a275cef28229"
+              },
+              {
+                "control-id": "con.8.a14.7",
+                "description": "Component capability addressing control con.8.a14.7 (Schulung des Entwicklungsteams zur Informationssicherheit — CON.8.A14.7).",
+                "uuid": "2f6dbef0-e72c-5dab-a2cc-18ab612c147d"
+              },
+              {
+                "control-id": "con.8.a14.8",
+                "description": "Component capability addressing control con.8.a14.8 (Schulung des Entwicklungsteams zur Informationssicherheit — CON.8.A14.8).",
+                "uuid": "5e1dcf30-6c7d-514f-bd00-76c69176a38b"
+              },
+              {
+                "control-id": "con.8.a14.9",
+                "description": "Component capability addressing control con.8.a14.9 (Schulung des Entwicklungsteams zur Informationssicherheit — CON.8.A14.9).",
+                "uuid": "e04c6bb1-e88b-55bc-af77-d5d4dd48b9ff"
+              },
+              {
+                "control-id": "con.8.a16.1",
+                "description": "Component capability addressing control con.8.a16.1 (Geeignete Steuerung der Software-Entwicklung — CON.8.A16.1).",
+                "uuid": "9eb7c10f-f648-561f-b657-02028312b756"
+              },
+              {
+                "control-id": "con.8.a16.2",
+                "description": "Component capability addressing control con.8.a16.2 (Geeignete Steuerung der Software-Entwicklung — CON.8.A16.2).",
+                "uuid": "b808b170-370d-5ba3-9bd6-bd63eb45492b"
+              },
+              {
+                "control-id": "con.8.a16.3",
+                "description": "Component capability addressing control con.8.a16.3 (Geeignete Steuerung der Software-Entwicklung — CON.8.A16.3).",
+                "uuid": "3930f666-d6cd-52ef-a0ab-f219fa5f2111"
+              },
+              {
+                "control-id": "con.8.a16.4",
+                "description": "Component capability addressing control con.8.a16.4 (Geeignete Steuerung der Software-Entwicklung — CON.8.A16.4).",
+                "uuid": "b9a32979-e73e-5874-82b0-5cb1822d1104"
+              },
+              {
+                "control-id": "con.8.a16.5",
+                "description": "Component capability addressing control con.8.a16.5 (Geeignete Steuerung der Software-Entwicklung — CON.8.A16.5).",
+                "uuid": "07dcc402-e070-5d94-9583-bf42561167bf"
+              },
+              {
+                "control-id": "con.8.a17.1",
+                "description": "Component capability addressing control con.8.a17.1 (Auswahl vertrauenswürdiger Entwicklungswerkzeuge — CON.8.A17.1).",
+                "uuid": "4fd4cf87-8267-5628-80b5-338cb10147a6"
+              },
+              {
+                "control-id": "con.8.a17.2",
+                "description": "Component capability addressing control con.8.a17.2 (Auswahl vertrauenswürdiger Entwicklungswerkzeuge — CON.8.A17.2).",
+                "uuid": "425cc613-742b-53cd-8fcf-65fa761b073d"
+              },
+              {
+                "control-id": "con.8.a18.1",
+                "description": "Component capability addressing control con.8.a18.1 (Regelmäßige Sicherheitsaudits für die Entwicklungsumgebung — CON.8.A18.1).",
+                "uuid": "8e0c6e64-f861-5d84-b600-b7ee58a37110"
+              },
+              {
+                "control-id": "con.8.a19.1",
+                "description": "Component capability addressing control con.8.a19.1 (Regelmäßige Integritätsprüfung der Entwicklungsumgebung — CON.8.A19.1).",
+                "uuid": "0b77f11e-05d3-5a03-a5bc-e0960d14c2bd"
+              },
+              {
+                "control-id": "con.8.a19.2",
+                "description": "Component capability addressing control con.8.a19.2 (Regelmäßige Integritätsprüfung der Entwicklungsumgebung — CON.8.A19.2).",
+                "uuid": "0b6605f5-018f-540c-a353-2b1a33278073"
+              },
+              {
+                "control-id": "con.8.a19.3",
+                "description": "Component capability addressing control con.8.a19.3 (Regelmäßige Integritätsprüfung der Entwicklungsumgebung — CON.8.A19.3).",
+                "uuid": "438ff967-11df-55f2-86e8-7da1a5ca3470"
+              },
+              {
+                "control-id": "con.8.a2.1",
+                "description": "Component capability addressing control con.8.a2.1 (Auswahl eines Vorgehensmodells — CON.8.A2.1).",
+                "uuid": "7f0298c4-e1cf-5b3d-859b-88814ed197b8"
+              },
+              {
+                "control-id": "con.8.a2.2",
+                "description": "Component capability addressing control con.8.a2.2 (Auswahl eines Vorgehensmodells — CON.8.A2.2).",
+                "uuid": "ae00aa4e-5722-51b1-8683-5b5e03f83c9e"
+              },
+              {
+                "control-id": "con.8.a2.3",
+                "description": "Component capability addressing control con.8.a2.3 (Auswahl eines Vorgehensmodells — CON.8.A2.3).",
+                "uuid": "5763b4f7-880f-5c45-8935-1856ac71fd92"
+              },
+              {
+                "control-id": "con.8.a2.4",
+                "description": "Component capability addressing control con.8.a2.4 (Auswahl eines Vorgehensmodells — CON.8.A2.4).",
+                "uuid": "7590c91a-fa75-527d-80d7-bee7cc0f17a0"
+              },
+              {
+                "control-id": "con.8.a2.5",
+                "description": "Component capability addressing control con.8.a2.5 (Auswahl eines Vorgehensmodells — CON.8.A2.5).",
+                "uuid": "5873fe62-1a0c-54cd-9ed9-221cd5806f82"
+              },
+              {
+                "control-id": "con.8.a20.1",
+                "description": "Component capability addressing control con.8.a20.1 (Überprüfung von externen Komponenten — CON.8.A20.1).",
+                "uuid": "8b5bd42b-0517-5163-a485-f8d54964c30f"
+              },
+              {
+                "control-id": "con.8.a20.2",
+                "description": "Component capability addressing control con.8.a20.2 (Überprüfung von externen Komponenten — CON.8.A20.2).",
+                "uuid": "a5c6c22a-54eb-5cdb-9e26-20eff16688dc"
+              },
+              {
+                "control-id": "con.8.a20.3",
+                "description": "Component capability addressing control con.8.a20.3 (Überprüfung von externen Komponenten — CON.8.A20.3).",
+                "uuid": "4cd5cbbc-8906-5034-99a6-4ec7253665e9"
+              },
+              {
+                "control-id": "con.8.a20.4",
+                "description": "Component capability addressing control con.8.a20.4 (Überprüfung von externen Komponenten — CON.8.A20.4).",
+                "uuid": "0c596f98-8f1d-5ed8-bd83-1cee4ee1fc07"
+              },
+              {
+                "control-id": "con.8.a21.1",
+                "description": "Component capability addressing control con.8.a21.1 (Bedrohungsmodellierung — CON.8.A21.1).",
+                "uuid": "9c00bd49-b3b7-5644-b765-eddeb624338b"
+              },
+              {
+                "control-id": "con.8.a21.2",
+                "description": "Component capability addressing control con.8.a21.2 (Bedrohungsmodellierung — CON.8.A21.2).",
+                "uuid": "e88a3737-f786-57d8-8bfa-695801a2f79b"
+              },
+              {
+                "control-id": "con.8.a21.3",
+                "description": "Component capability addressing control con.8.a21.3 (Bedrohungsmodellierung — CON.8.A21.3).",
+                "uuid": "7e0375e4-08b6-54c4-a8bf-f68f74c3d439"
+              },
+              {
+                "control-id": "con.8.a22.1",
+                "description": "Component capability addressing control con.8.a22.1 (Sicherer Software-Entwurf — CON.8.A22.1).",
+                "uuid": "4afe8c62-1f63-5748-aeec-5a88f6134642"
+              },
+              {
+                "control-id": "con.8.a22.2",
+                "description": "Component capability addressing control con.8.a22.2 (Sicherer Software-Entwurf — CON.8.A22.2).",
+                "uuid": "5a07e9b7-bad2-5bce-a008-bb8d553d795f"
+              },
+              {
+                "control-id": "con.8.a22.3",
+                "description": "Component capability addressing control con.8.a22.3 (Sicherer Software-Entwurf — CON.8.A22.3).",
+                "uuid": "5a400597-c1f4-5e00-a830-1064c46c6e1b"
+              },
+              {
+                "control-id": "con.8.a3.1",
+                "description": "Component capability addressing control con.8.a3.1 (Auswahl einer Entwicklungsumgebung — CON.8.A3.1).",
+                "uuid": "d506e834-66da-509b-9d90-052de71072b3"
+              },
+              {
+                "control-id": "con.8.a3.2",
+                "description": "Component capability addressing control con.8.a3.2 (Auswahl einer Entwicklungsumgebung — CON.8.A3.2).",
+                "uuid": "6722c142-15ff-5b5b-9c9d-cb1df502c308"
+              },
+              {
+                "control-id": "con.8.a5.1",
+                "description": "Component capability addressing control con.8.a5.1 (Sicheres Systemdesign — CON.8.A5.1).",
+                "uuid": "78d32cee-8850-5628-aa7e-94a608d59a22"
+              },
+              {
+                "control-id": "con.8.a5.10",
+                "description": "Component capability addressing control con.8.a5.10 (Sicheres Systemdesign — CON.8.A5.10).",
+                "uuid": "fb0c20b0-3539-50fd-9240-b31ba0eabaf5"
+              },
+              {
+                "control-id": "con.8.a5.11",
+                "description": "Component capability addressing control con.8.a5.11 (Sicheres Systemdesign — CON.8.A5.11).",
+                "uuid": "dbede9b5-b820-557f-94cf-58e4fc2ecec6"
+              },
+              {
+                "control-id": "con.8.a5.12",
+                "description": "Component capability addressing control con.8.a5.12 (Sicheres Systemdesign — CON.8.A5.12).",
+                "uuid": "c7875306-8f9a-520c-ac7c-fe288486e205"
+              },
+              {
+                "control-id": "con.8.a5.13",
+                "description": "Component capability addressing control con.8.a5.13 (Sicheres Systemdesign — CON.8.A5.13).",
+                "uuid": "1fe5f957-d1d3-5947-9cb0-a9bc347c67cf"
+              },
+              {
+                "control-id": "con.8.a5.2",
+                "description": "Component capability addressing control con.8.a5.2 (Sicheres Systemdesign — CON.8.A5.2).",
+                "uuid": "df9d02c3-723a-5be8-9e36-2e52da6e074a"
+              },
+              {
+                "control-id": "con.8.a5.3",
+                "description": "Component capability addressing control con.8.a5.3 (Sicheres Systemdesign — CON.8.A5.3).",
+                "uuid": "ac43fe28-2776-55ae-9a76-862019e66d4f"
+              },
+              {
+                "control-id": "con.8.a5.4",
+                "description": "Component capability addressing control con.8.a5.4 (Sicheres Systemdesign — CON.8.A5.4).",
+                "uuid": "c1f77b90-9858-5981-89f3-e2d1c8093080"
+              },
+              {
+                "control-id": "con.8.a5.5",
+                "description": "Component capability addressing control con.8.a5.5 (Sicheres Systemdesign — CON.8.A5.5).",
+                "uuid": "d202e0c8-8046-597a-9b7d-db47e0edf418"
+              },
+              {
+                "control-id": "con.8.a5.6",
+                "description": "Component capability addressing control con.8.a5.6 (Sicheres Systemdesign — CON.8.A5.6).",
+                "uuid": "8e5ebd36-c60d-57e3-ba52-0461485c6a79"
+              },
+              {
+                "control-id": "con.8.a5.7",
+                "description": "Component capability addressing control con.8.a5.7 (Sicheres Systemdesign — CON.8.A5.7).",
+                "uuid": "a2c4a1ea-6634-54cf-b650-ee5d578afdf9"
+              },
+              {
+                "control-id": "con.8.a5.8",
+                "description": "Component capability addressing control con.8.a5.8 (Sicheres Systemdesign — CON.8.A5.8).",
+                "uuid": "bb9643b9-284e-5f0c-ba61-83e3249b5619"
+              },
+              {
+                "control-id": "con.8.a5.9",
+                "description": "Component capability addressing control con.8.a5.9 (Sicheres Systemdesign — CON.8.A5.9).",
+                "uuid": "ecc7d868-7114-5f1f-9778-24e41fe24500"
+              },
+              {
+                "control-id": "con.8.a6.1",
+                "description": "Component capability addressing control con.8.a6.1 (Verwendung von externen Bibliotheken aus vertrauenswürdigen Quellen — CON.8.A6.1).",
+                "uuid": "6a5f7936-cee1-5cfa-87f1-c2fc22c26bcf"
+              },
+              {
+                "control-id": "con.8.a6.2",
+                "description": "Component capability addressing control con.8.a6.2 (Verwendung von externen Bibliotheken aus vertrauenswürdigen Quellen — CON.8.A6.2).",
+                "uuid": "262d1cfa-1c97-573d-a0ae-d2be443b4575"
+              },
+              {
+                "control-id": "con.8.a7.1",
+                "description": "Component capability addressing control con.8.a7.1 (Durchführung von entwicklungsbegleitenden Software-Tests — CON.8.A7.1).",
+                "uuid": "8ff07fb3-a782-5d03-8f9d-bfa45a6e1ecb"
+              },
+              {
+                "control-id": "con.8.a7.2",
+                "description": "Component capability addressing control con.8.a7.2 (Durchführung von entwicklungsbegleitenden Software-Tests — CON.8.A7.2).",
+                "uuid": "7ae68141-6299-5599-9e46-7996a285a21b"
+              },
+              {
+                "control-id": "con.8.a7.3",
+                "description": "Component capability addressing control con.8.a7.3 (Durchführung von entwicklungsbegleitenden Software-Tests — CON.8.A7.3).",
+                "uuid": "5b5786a6-0f5c-54ef-9c06-896e190579a2"
+              },
+              {
+                "control-id": "con.8.a7.4",
+                "description": "Component capability addressing control con.8.a7.4 (Durchführung von entwicklungsbegleitenden Software-Tests — CON.8.A7.4).",
+                "uuid": "694d74c5-7496-542c-b26a-aa9b4c0e59a7"
+              },
+              {
+                "control-id": "con.8.a7.5",
+                "description": "Component capability addressing control con.8.a7.5 (Durchführung von entwicklungsbegleitenden Software-Tests — CON.8.A7.5).",
+                "uuid": "a9042c84-fd18-5186-865e-ccf590b52769"
+              },
+              {
+                "control-id": "con.8.a7.6",
+                "description": "Component capability addressing control con.8.a7.6 (Durchführung von entwicklungsbegleitenden Software-Tests — CON.8.A7.6).",
+                "uuid": "aca3dd3a-4d0d-579e-9ead-1524cc1655b6"
+              },
+              {
+                "control-id": "con.8.a7.7",
+                "description": "Component capability addressing control con.8.a7.7 (Durchführung von entwicklungsbegleitenden Software-Tests — CON.8.A7.7).",
+                "uuid": "b0281088-da7d-5a81-be03-8885604b6f84"
+              },
+              {
+                "control-id": "con.8.a7.8",
+                "description": "Component capability addressing control con.8.a7.8 (Durchführung von entwicklungsbegleitenden Software-Tests — CON.8.A7.8).",
+                "uuid": "7e8fdb6c-13ea-528e-a859-c67be1e7b3b1"
+              },
+              {
+                "control-id": "con.8.a7.9",
+                "description": "Component capability addressing control con.8.a7.9 (Durchführung von entwicklungsbegleitenden Software-Tests — CON.8.A7.9).",
+                "uuid": "727e9fd9-ddbc-57d1-94bd-6bc8a2a8fe28"
+              },
+              {
+                "control-id": "con.8.a8.1",
+                "description": "Component capability addressing control con.8.a8.1 (Bereitstellung von Patches, Updates und Änderungen — CON.8.A8.1).",
+                "uuid": "60a03ca9-b1af-5c04-ac43-1e243521aef6"
+              },
+              {
+                "control-id": "con.8.a8.2",
+                "description": "Component capability addressing control con.8.a8.2 (Bereitstellung von Patches, Updates und Änderungen — CON.8.A8.2).",
+                "uuid": "76fdd6dc-7adf-51c7-b46c-64ec2a111afa"
+              },
+              {
+                "control-id": "con.8.a8.3",
+                "description": "Component capability addressing control con.8.a8.3 (Bereitstellung von Patches, Updates und Änderungen — CON.8.A8.3).",
+                "uuid": "fcc726e4-0a6b-594d-a0b3-e02e0205bdbd"
+              },
+              {
+                "control-id": "con.9.a1.1",
+                "description": "Component capability addressing control con.9.a1.1 (Festlegung zulässiger Empfangender — CON.9.A1.1).",
+                "uuid": "bf65c62d-d443-56ec-9ec6-d6c08f3298ca"
+              },
+              {
+                "control-id": "con.9.a1.2",
+                "description": "Component capability addressing control con.9.a1.2 (Festlegung zulässiger Empfangender — CON.9.A1.2).",
+                "uuid": "70ec2bd3-e715-5a56-a550-2088294f8a60"
+              },
+              {
+                "control-id": "con.9.a1.3",
+                "description": "Component capability addressing control con.9.a1.3 (Festlegung zulässiger Empfangender — CON.9.A1.3).",
+                "uuid": "00f746f7-814a-51e6-9d06-aed1e8ca8301"
+              },
+              {
+                "control-id": "con.9.a1.4",
+                "description": "Component capability addressing control con.9.a1.4 (Festlegung zulässiger Empfangender — CON.9.A1.4).",
+                "uuid": "1caa6a14-d572-53a1-9546-803147d2f28f"
+              },
+              {
+                "control-id": "con.9.a2.1",
+                "description": "Component capability addressing control con.9.a2.1 (Regelung des Informationsaustausches — CON.9.A2.1).",
+                "uuid": "913e20c5-1767-56fb-8f62-0fe7ed227c6f"
+              },
+              {
+                "control-id": "con.9.a2.2",
+                "description": "Component capability addressing control con.9.a2.2 (Regelung des Informationsaustausches — CON.9.A2.2).",
+                "uuid": "b1e473c4-5397-5ce0-92b0-3b3ca8d5a9bb"
+              },
+              {
+                "control-id": "con.9.a2.3",
+                "description": "Component capability addressing control con.9.a2.3 (Regelung des Informationsaustausches — CON.9.A2.3).",
+                "uuid": "0115328d-7134-5824-b166-4509a655c215"
+              },
+              {
+                "control-id": "con.9.a2.4",
+                "description": "Component capability addressing control con.9.a2.4 (Regelung des Informationsaustausches — CON.9.A2.4).",
+                "uuid": "4f5c2735-dbff-55f7-9bc7-8554f731dea0"
+              },
+              {
+                "control-id": "con.9.a3.1",
+                "description": "Component capability addressing control con.9.a3.1 (Unterweisung des Personals zum Informationsaustausch — CON.9.A3.1).",
+                "uuid": "84476157-6a04-5692-bba0-3b76e9df8107"
+              },
+              {
+                "control-id": "con.9.a3.2",
+                "description": "Component capability addressing control con.9.a3.2 (Unterweisung des Personals zum Informationsaustausch — CON.9.A3.2).",
+                "uuid": "1d45911b-65de-5704-aeab-488bb0f6fefd"
+              },
+              {
+                "control-id": "con.9.a4.1",
+                "description": "Component capability addressing control con.9.a4.1 (Vereinbarungen zum Informationsaustausch mit Externen — CON.9.A4.1).",
+                "uuid": "708ceeda-b837-5593-8f48-4e5eed1943ad"
+              },
+              {
+                "control-id": "con.9.a4.2",
+                "description": "Component capability addressing control con.9.a4.2 (Vereinbarungen zum Informationsaustausch mit Externen — CON.9.A4.2).",
+                "uuid": "45aad0c7-114a-513f-88e9-36a9c9964608"
+              },
+              {
+                "control-id": "con.9.a5.1",
+                "description": "Component capability addressing control con.9.a5.1 (Beseitigung von Restinformationen vor Weitergabe — CON.9.A5.1).",
+                "uuid": "01cb63f6-1b96-5db7-a7b6-18493e33b160"
+              },
+              {
+                "control-id": "con.9.a5.2",
+                "description": "Component capability addressing control con.9.a5.2 (Beseitigung von Restinformationen vor Weitergabe — CON.9.A5.2).",
+                "uuid": "13152d44-d816-510a-99e5-c3cabe3fb9f5"
+              },
+              {
+                "control-id": "con.9.a5.3",
+                "description": "Component capability addressing control con.9.a5.3 (Beseitigung von Restinformationen vor Weitergabe — CON.9.A5.3).",
+                "uuid": "2391c6d2-fa4b-5648-a73d-3501978b25b9"
+              },
+              {
+                "control-id": "con.9.a5.4",
+                "description": "Component capability addressing control con.9.a5.4 (Beseitigung von Restinformationen vor Weitergabe — CON.9.A5.4).",
+                "uuid": "37eae0df-0c63-537e-aefe-4c822d31da76"
+              },
+              {
+                "control-id": "con.9.a5.5",
+                "description": "Component capability addressing control con.9.a5.5 (Beseitigung von Restinformationen vor Weitergabe — CON.9.A5.5).",
+                "uuid": "82f400bf-2307-5a01-9ab9-c9a4e5b775d7"
+              },
+              {
+                "control-id": "con.9.a6.1",
+                "description": "Component capability addressing control con.9.a6.1 (Kompatibilitätsprüfung des Sende- und Empfangssystems — CON.9.A6.1).",
+                "uuid": "b74945e5-5b15-5c29-8a81-bb34c3c2c7b1"
+              },
+              {
+                "control-id": "con.9.a7.1",
+                "description": "Component capability addressing control con.9.a7.1 (Sicherungskopie der übermittelten Daten — CON.9.A7.1).",
+                "uuid": "cb275238-e676-535b-861c-ede7a093f5ef"
+              },
+              {
+                "control-id": "con.9.a8.1",
+                "description": "Component capability addressing control con.9.a8.1 (Verschlüsselung und digitale Signatur — CON.9.A8.1).",
+                "uuid": "24b89de5-0ae5-534d-be72-503dab12309f"
+              },
+              {
+                "control-id": "con.9.a8.2",
+                "description": "Component capability addressing control con.9.a8.2 (Verschlüsselung und digitale Signatur — CON.9.A8.2).",
+                "uuid": "04cd9979-f371-5691-becc-d8bf04142b29"
+              },
+              {
+                "control-id": "con.9.a9.1",
+                "description": "Component capability addressing control con.9.a9.1 (Vertraulichkeitsvereinbarungen — CON.9.A9.1).",
+                "uuid": "101e2f80-a9bd-59b8-b320-a1dfc1402430"
+              },
+              {
+                "control-id": "con.9.a9.2",
+                "description": "Component capability addressing control con.9.a9.2 (Vertraulichkeitsvereinbarungen — CON.9.A9.2).",
+                "uuid": "57298d63-756c-5873-81e6-69df8ed2368f"
+              },
+              {
+                "control-id": "con.9.a9.3",
+                "description": "Component capability addressing control con.9.a9.3 (Vertraulichkeitsvereinbarungen — CON.9.A9.3).",
+                "uuid": "f2dd276d-6f0f-50fb-8833-9cfd5bdfb224"
+              },
+              {
+                "control-id": "con.9.a9.4",
+                "description": "Component capability addressing control con.9.a9.4 (Vertraulichkeitsvereinbarungen — CON.9.A9.4).",
+                "uuid": "d39c12f5-745a-5b02-acea-604cf18c8935"
+              }
+            ],
+            "source": "./catalog.json",
+            "uuid": "4a90b732-6835-52f4-94d9-21e3db913735"
+          }
+        ],
+        "description": "Enterprise technical and operational capabilities implementing controls for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - CON: Konzeption und Vorgehensweisen.",
+        "title": "IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - CON: Konzeption und Vorgehensweisen Platform Component",
+        "type": "software",
+        "uuid": "8dd48651-6380-59aa-8f1c-efa3435d01a9"
+      }
+    ],
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:12Z",
+      "oscal-version": "1.2.3",
+      "title": "IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - CON: Konzeption und Vorgehensweisen Component Definition Template",
+      "version": "1"
+    },
+    "uuid": "67fc13d7-f058-5cf7-8718-bb1aef191c1f"
+  }
+}

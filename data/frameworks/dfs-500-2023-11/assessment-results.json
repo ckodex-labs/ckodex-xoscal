@@ -1,0 +1,585 @@
+{
+  "assessment-results": {
+    "import-ap": {
+      "href": "./assessment-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:13Z",
+      "oscal-version": "1.2.3",
+      "title": "NY DFS 500 with 2023-11 amendments Assessment Results Template",
+      "version": "1"
+    },
+    "results": [
+      {
+        "description": "Assessment evaluation findings and observations for NY DFS 500 with 2023-11 amendments.",
+        "findings": [
+          {
+            "description": "Control _500.10.a.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "a5b424f5-f6f0-5339-9c56-6decce655e16"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_500.10.a.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _500.10.a.1",
+            "uuid": "8e8c6114-4a33-5b8e-bc0d-d37a520ec4fa"
+          },
+          {
+            "description": "Control _500.11.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "5bd2d508-b20f-57cd-8dc8-4bb668f6f1ec"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_500.11.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _500.11.a",
+            "uuid": "822475ac-901f-51fb-897d-12e78d5672f7"
+          },
+          {
+            "description": "Control _500.12.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "1907f7f4-298e-5d8a-848c-2a3310184922"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_500.12.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _500.12.a",
+            "uuid": "86865050-eb0f-557a-a74c-8d90e7c833e2"
+          },
+          {
+            "description": "Control _500.13.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "5fe406c6-bf9d-588d-952d-ada5a64d4ced"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_500.13.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _500.13.a",
+            "uuid": "1a800291-e83c-5a73-92c9-57df992826d6"
+          },
+          {
+            "description": "Control _500.14.a.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "7037d4cd-9e6e-5257-ae93-24be7df8c7ea"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_500.14.a.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _500.14.a.1",
+            "uuid": "957c1386-f681-57f5-8ee1-cc5e232d4d8c"
+          },
+          {
+            "description": "Control _500.15.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "35d25f59-bac6-5586-9138-67f64ca61127"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_500.15.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _500.15.a",
+            "uuid": "d3f35bad-0f5e-562e-8efa-6cbcd7131f6f"
+          },
+          {
+            "description": "Control _500.16.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "7e778425-d136-5f20-96d0-de1e46683a90"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_500.16.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _500.16.a",
+            "uuid": "b01a5f08-6eb7-5f06-8d61-f3dc178dad8f"
+          },
+          {
+            "description": "Control _500.17.a.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "ceb6bb64-48d0-5efa-b369-9151948990db"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_500.17.a.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _500.17.a.1",
+            "uuid": "75f7ee52-256d-575f-9cb5-5b72f43d4ae1"
+          },
+          {
+            "description": "Control _500.19.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "a41a102e-cc9b-550c-b2e7-b42c5722b45a"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_500.19.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _500.19.a",
+            "uuid": "145d6943-09fd-5e39-9ef3-db78707e615e"
+          },
+          {
+            "description": "Control _500.2.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "41ab8d7b-f807-5a6f-b302-895dff3c7cce"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_500.2.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _500.2.a",
+            "uuid": "2360700b-b1b7-58ad-81c0-fecefa1edab4"
+          },
+          {
+            "description": "Control _500.24.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "0a2c848d-b1a0-5d64-af39-1c99fc8f8160"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_500.24.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _500.24.a",
+            "uuid": "7304db44-9617-5b97-97db-cae3fd925e8b"
+          },
+          {
+            "description": "Control _500.3.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "f7fff4f4-6eae-5b25-a384-eb8f546db4c3"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_500.3.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _500.3.a",
+            "uuid": "04b92500-8e4e-5136-96ff-386938e6a632"
+          },
+          {
+            "description": "Control _500.4.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "1885e453-3856-59f1-85d1-de27fc027815"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_500.4.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _500.4.a",
+            "uuid": "3ead16df-3d41-5d58-9bd2-20a89536be3a"
+          },
+          {
+            "description": "Control _500.5.a.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "35eea009-f564-5a36-bae4-167cab1253c2"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_500.5.a.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _500.5.a.1",
+            "uuid": "8b8855f5-fb43-5942-a31d-af5df16438fa"
+          },
+          {
+            "description": "Control _500.6.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "314d1c8e-dd17-5fc7-a617-099a8dd610ee"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_500.6.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _500.6.a",
+            "uuid": "92510563-5093-52c6-840a-bbe6a14c12e0"
+          },
+          {
+            "description": "Control _500.7.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "938a9ed6-866b-51ae-92dc-c989a713f428"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_500.7.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _500.7.a",
+            "uuid": "7435c630-56bb-59f2-acfa-b642654b1dcf"
+          },
+          {
+            "description": "Control _500.8.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "2a16286b-e942-5b14-bb70-e5417cba8523"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_500.8.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _500.8.a",
+            "uuid": "66f37ff0-1803-52b6-8376-5e542379ebce"
+          },
+          {
+            "description": "Control _500.9.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "dbf8f83b-6a92-5208-8805-83e50b9afcb4"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_500.9.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _500.9.a",
+            "uuid": "4c4c965d-8a3b-57a3-98d3-0a10073c0f3a"
+          },
+          {
+            "description": "Control node196 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "63def1bb-0baf-5d61-95c8-39d97ec632e7"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "node196",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for node196",
+            "uuid": "d4c6ec91-2238-5cf5-b01e-630bc4ccf266"
+          }
+        ],
+        "observations": [
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control _500.10.a.1 (In addition to the requirements set forth in section 500.4(a) of this Part, each covered entity shall: — 500.10.a.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "a5b424f5-f6f0-5339-9c56-6decce655e16"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control _500.11.a (Third-party service provider security policy — 500.11.a) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "5bd2d508-b20f-57cd-8dc8-4bb668f6f1ec"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control _500.12.a (Multi-factor authentication — 500.12.a) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "1907f7f4-298e-5d8a-848c-2a3310184922"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control _500.13.a (Asset management and data retention requirements — 500.13.a) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "5fe406c6-bf9d-588d-952d-ada5a64d4ced"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control _500.14.a.1 (As part of its cybersecurity program, each covered entity shall: — 500.14.a.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "7037d4cd-9e6e-5257-ae93-24be7df8c7ea"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control _500.15.a (Encryption of nonpublic information — 500.15.a) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "35d25f59-bac6-5586-9138-67f64ca61127"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control _500.16.a (Incident response and business continuity management — 500.16.a) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "7e778425-d136-5f20-96d0-de1e46683a90"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control _500.17.a.1 (Notice of cybersecurity incident — 500.17.a.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "ceb6bb64-48d0-5efa-b369-9151948990db"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control _500.19.a (Limited exemption) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "a41a102e-cc9b-550c-b2e7-b42c5722b45a"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control _500.2.a (Cybersecurity program — 500.2.a) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "41ab8d7b-f807-5a6f-b302-895dff3c7cce"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control _500.24.a (Exemptions from electronic filing and submission requirements — 500.24.a) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "0a2c848d-b1a0-5d64-af39-1c99fc8f8160"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control _500.3.a (Procedures — 500.3.a) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "f7fff4f4-6eae-5b25-a384-eb8f546db4c3"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control _500.4.a (Chief information security officer) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "1885e453-3856-59f1-85d1-de27fc027815"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control _500.5.a.1 (conduct, at a minimum: — 500.5.a.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "35eea009-f564-5a36-bae4-167cab1253c2"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control _500.6.a (Audit trail — 500.6.a) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "314d1c8e-dd17-5fc7-a617-099a8dd610ee"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control _500.7.a (Access privileges and management — 500.7.a) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "938a9ed6-866b-51ae-92dc-c989a713f428"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control _500.8.a (Application security — 500.8.a) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "2a16286b-e942-5b14-bb70-e5417cba8523"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control _500.9.a (Risk assessment — 500.9.a) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "dbf8f83b-6a92-5208-8805-83e50b9afcb4"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control node196 (Confidentiality — node196) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "63def1bb-0baf-5d61-95c8-39d97ec632e7"
+          }
+        ],
+        "reviewed-controls": {
+          "control-selections": [
+            {
+              "description": "All controls evaluated for NY DFS 500 with 2023-11 amendments",
+              "include-all": {}
+            }
+          ]
+        },
+        "start": "2026-11-08T01:42:13Z",
+        "title": "NY DFS 500 with 2023-11 amendments Assessment Results",
+        "uuid": "b50fd210-2664-53c1-b6df-f4fd2b4967e3"
+      }
+    ],
+    "uuid": "c5bf95c8-4045-599f-a51a-becaddf8708a"
+  }
+}

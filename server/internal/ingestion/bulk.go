@@ -56,7 +56,11 @@ func (b *BulkIngestor) Run(ctx context.Context, filter string) (*BulkResult, err
 	if err != nil {
 		return nil, fmt.Errorf("fetch frameworks: %w", err)
 	}
+	return b.IngestFiles(ctx, files)
+}
 
+// IngestFiles executes bulk ingestion for an explicit list of already-fetched framework files.
+func (b *BulkIngestor) IngestFiles(ctx context.Context, files []fetcher.FrameworkFile) (*BulkResult, error) {
 	var result BulkResult
 	for _, file := range files {
 		fr, err := b.ingestOne(ctx, file)

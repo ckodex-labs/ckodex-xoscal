@@ -1,0 +1,4513 @@
+{
+  "catalog": {
+    "back-matter": {
+      "resources": [
+        {
+          "description": "Source framework metadata for bs-it-gs-2023-orp snapshot portal",
+          "props": [
+            {
+              "name": "type",
+              "value": "standard"
+            },
+            {
+              "name": "version",
+              "value": "portal"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "https://raw.githubusercontent.com/intuitem/ciso-assistant-community/main/backend/library/libraries/bs-it-gs-2023-orp.yaml"
+            }
+          ],
+          "title": "bs-it-gs-2023-orp Framework Reference",
+          "uuid": "77885078-7a18-554f-9115-08bade8d1e66"
+        }
+      ]
+    },
+    "groups": [
+      {
+        "groups": [
+          {
+            "controls": [
+              {
+                "id": "ORP.1.A1.1",
+                "parts": [
+                  {
+                    "id": "ORP.1.A1.1-stmt",
+                    "name": "statement",
+                    "prose": "Innerhalb einer Institution MÜSSEN alle relevanten Aufgaben und Funktionen klar definiert und voneinander abgegrenzt sein."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Festlegung von Verantwortlichkeiten und Regelungen — ORP.1.A1.1"
+              },
+              {
+                "id": "ORP.1.A1.2",
+                "parts": [
+                  {
+                    "id": "ORP.1.A1.2-stmt",
+                    "name": "statement",
+                    "prose": "Es MÜSSEN verbindliche Regelungen für die Informationssicherheit für die verschiedenen betrieblichen Aspekte übergreifend festgelegt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Festlegung von Verantwortlichkeiten und Regelungen — ORP.1.A1.2"
+              },
+              {
+                "id": "ORP.1.A1.3",
+                "parts": [
+                  {
+                    "id": "ORP.1.A1.3-stmt",
+                    "name": "statement",
+                    "prose": "Die Organisationsstrukturen sowie verbindliche Regelungen MÜSSEN anlassbezogen überarbeitet werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Festlegung von Verantwortlichkeiten und Regelungen — ORP.1.A1.3"
+              },
+              {
+                "id": "ORP.1.A1.4",
+                "parts": [
+                  {
+                    "id": "ORP.1.A1.4-stmt",
+                    "name": "statement",
+                    "prose": "Die Änderungen MÜSSEN allen Mitarbeitenden bekannt gegeben werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Festlegung von Verantwortlichkeiten und Regelungen — ORP.1.A1.4"
+              }
+            ],
+            "id": "ORP.1.A1",
+            "title": "Festlegung von Verantwortlichkeiten und Regelungen"
+          },
+          {
+            "controls": [
+              {
+                "id": "ORP.1.A13.1",
+                "parts": [
+                  {
+                    "id": "ORP.1.A13.1-stmt",
+                    "name": "statement",
+                    "prose": "Vor einem Umzug SOLLTEN frühzeitig Sicherheitsrichtlinien erarbeitet bzw. aktualisiert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Sicherheit bei Umzügen — ORP.1.A13.1"
+              },
+              {
+                "id": "ORP.1.A13.2",
+                "parts": [
+                  {
+                    "id": "ORP.1.A13.2-stmt",
+                    "name": "statement",
+                    "prose": "Alle Mitarbeitenden SOLLTEN über die vor, während und nach dem Umzug relevanten Sicherheitsmaßnahmen informiert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Sicherheit bei Umzügen — ORP.1.A13.2"
+              },
+              {
+                "id": "ORP.1.A13.3",
+                "parts": [
+                  {
+                    "id": "ORP.1.A13.3-stmt",
+                    "name": "statement",
+                    "prose": "Nach dem Umzug SOLLTE überprüft werden, ob das transportierte Umzugsgut vollständig und unbeschädigt bzw. unverändert angekommen ist."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Sicherheit bei Umzügen — ORP.1.A13.3"
+              }
+            ],
+            "id": "ORP.1.A13",
+            "title": "Sicherheit bei Umzügen"
+          },
+          {
+            "controls": [
+              {
+                "id": "ORP.1.A15.1",
+                "parts": [
+                  {
+                    "id": "ORP.1.A15.1-stmt",
+                    "name": "statement",
+                    "prose": "In jeder Institution MUSS es Ansprechpersonen für Sicherheitsfragen geben, die sowohl scheinbar einfache wie auch komplexe oder technische Fragen beantworten können."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Ansprechperson zu Informationssicherheitsfragen — ORP.1.A15.1"
+              },
+              {
+                "id": "ORP.1.A15.2",
+                "parts": [
+                  {
+                    "id": "ORP.1.A15.2-stmt",
+                    "name": "statement",
+                    "prose": "Die Ansprechpersonen MÜSSEN allen Mitarbeitenden der Institution bekannt sein."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Ansprechperson zu Informationssicherheitsfragen — ORP.1.A15.2"
+              },
+              {
+                "id": "ORP.1.A15.3",
+                "parts": [
+                  {
+                    "id": "ORP.1.A15.3-stmt",
+                    "name": "statement",
+                    "prose": "Diesbezügliche Informationen MÜSSEN in der Institution für alle verfügbar und leicht zugänglich sein."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Ansprechperson zu Informationssicherheitsfragen — ORP.1.A15.3"
+              }
+            ],
+            "id": "ORP.1.A15",
+            "title": "Ansprechperson zu Informationssicherheitsfragen"
+          },
+          {
+            "controls": [
+              {
+                "id": "ORP.1.A16.1",
+                "parts": [
+                  {
+                    "id": "ORP.1.A16.1-stmt",
+                    "name": "statement",
+                    "prose": "Es SOLLTE eine Richtlinie erstellt werden, in der für alle Mitarbeitenden transparent beschrieben wird, welche Rahmenbedingungen bei der IT-Nutzung eingehalten werden müssen und welche Sicherheitsmaßnahmen zu ergreifen sind."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Richtlinie zur sicheren IT-Nutzung — ORP.1.A16.1"
+              },
+              {
+                "id": "ORP.1.A16.10",
+                "parts": [
+                  {
+                    "id": "ORP.1.A16.10-stmt",
+                    "name": "statement",
+                    "prose": "Benutzende SOLLTEN die Richtlinie regelmäßig oder nach größeren Änderungen erneut bestätigen."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Richtlinie zur sicheren IT-Nutzung — ORP.1.A16.10"
+              },
+              {
+                "id": "ORP.1.A16.11",
+                "parts": [
+                  {
+                    "id": "ORP.1.A16.11-stmt",
+                    "name": "statement",
+                    "prose": "Die Richtlinie sollte zum Nachlesen für alle Mitarbeitenden frei zugänglich abgelegt werden, beispielsweise im Intranet."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Richtlinie zur sicheren IT-Nutzung — ORP.1.A16.11"
+              },
+              {
+                "id": "ORP.1.A16.2",
+                "parts": [
+                  {
+                    "id": "ORP.1.A16.2-stmt",
+                    "name": "statement",
+                    "prose": "Die Richtlinie SOLLTE folgende Punkte abdecken:"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Richtlinie zur sicheren IT-Nutzung — ORP.1.A16.2"
+              },
+              {
+                "id": "ORP.1.A16.3",
+                "parts": [
+                  {
+                    "id": "ORP.1.A16.3-stmt",
+                    "name": "statement",
+                    "prose": "• Sicherheitsziele der Institution,"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Richtlinie zur sicheren IT-Nutzung — ORP.1.A16.3"
+              },
+              {
+                "id": "ORP.1.A16.4",
+                "parts": [
+                  {
+                    "id": "ORP.1.A16.4-stmt",
+                    "name": "statement",
+                    "prose": "• wichtige Begriffe,"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Richtlinie zur sicheren IT-Nutzung — ORP.1.A16.4"
+              },
+              {
+                "id": "ORP.1.A16.5",
+                "parts": [
+                  {
+                    "id": "ORP.1.A16.5-stmt",
+                    "name": "statement",
+                    "prose": "• Aufgaben und Rollen mit Bezug zur Informationssicherheit,"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Richtlinie zur sicheren IT-Nutzung — ORP.1.A16.5"
+              },
+              {
+                "id": "ORP.1.A16.6",
+                "parts": [
+                  {
+                    "id": "ORP.1.A16.6-stmt",
+                    "name": "statement",
+                    "prose": "• Ansprechperson zu Fragen der Informationssicherheit sowie"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Richtlinie zur sicheren IT-Nutzung — ORP.1.A16.6"
+              },
+              {
+                "id": "ORP.1.A16.7",
+                "parts": [
+                  {
+                    "id": "ORP.1.A16.7-stmt",
+                    "name": "statement",
+                    "prose": "• von den Mitarbeitenden umzusetzende und einzuhaltende Sicherheitsmaßnahmen."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Richtlinie zur sicheren IT-Nutzung — ORP.1.A16.7"
+              },
+              {
+                "id": "ORP.1.A16.8",
+                "parts": [
+                  {
+                    "id": "ORP.1.A16.8-stmt",
+                    "name": "statement",
+                    "prose": "Die Richtlinie SOLLTE allen Benutzenden zur Kenntnis gegeben werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Richtlinie zur sicheren IT-Nutzung — ORP.1.A16.8"
+              },
+              {
+                "id": "ORP.1.A16.9",
+                "parts": [
+                  {
+                    "id": "ORP.1.A16.9-stmt",
+                    "name": "statement",
+                    "prose": "Jeder neue Benutzende SOLLTE die Kenntnisnahme und Beachtung der Richtlinie schriftlich bestätigen, bevor er die Informationstechnik nutzen darf."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Richtlinie zur sicheren IT-Nutzung — ORP.1.A16.9"
+              }
+            ],
+            "id": "ORP.1.A16",
+            "title": "Richtlinie zur sicheren IT-Nutzung"
+          },
+          {
+            "controls": [
+              {
+                "id": "ORP.1.A17.1",
+                "parts": [
+                  {
+                    "id": "ORP.1.A17.1-stmt",
+                    "name": "statement",
+                    "prose": "Mobiltelefone SOLLTEN NICHT zu vertraulichen Besprechungen und Gesprächen mitgeführt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[E]"
+                  }
+                ],
+                "title": "Mitführverbot von Mobiltelefonen — ORP.1.A17.1"
+              },
+              {
+                "id": "ORP.1.A17.2",
+                "parts": [
+                  {
+                    "id": "ORP.1.A17.2-stmt",
+                    "name": "statement",
+                    "prose": "Falls erforderlich, SOLLTE dies durch Mobilfunk-Detektoren überprüft werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[E]"
+                  }
+                ],
+                "title": "Mitführverbot von Mobiltelefonen — ORP.1.A17.2"
+              }
+            ],
+            "id": "ORP.1.A17",
+            "title": "Mitführverbot von Mobiltelefonen"
+          },
+          {
+            "controls": [
+              {
+                "id": "ORP.1.A2.1",
+                "parts": [
+                  {
+                    "id": "ORP.1.A2.1-stmt",
+                    "name": "statement",
+                    "prose": "Für alle Geschäftsprozesse, Anwendungen, IT-Systeme, Räume und Gebäude sowie Kommunikationsverbindungen MUSS festgelegt werden, wer für diese und deren Sicherheit zuständig ist."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Zuweisung der Zuständigkeiten — ORP.1.A2.1"
+              },
+              {
+                "id": "ORP.1.A2.2",
+                "parts": [
+                  {
+                    "id": "ORP.1.A2.2-stmt",
+                    "name": "statement",
+                    "prose": "Alle Mitarbeitenden MÜSSEN darüber informiert sein, insbesondere wofür sie zuständig sind und welche damit verbundenen Aufgaben sie wahrnehmen."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Zuweisung der Zuständigkeiten — ORP.1.A2.2"
+              }
+            ],
+            "id": "ORP.1.A2",
+            "title": "Zuweisung der Zuständigkeiten"
+          },
+          {
+            "controls": [
+              {
+                "id": "ORP.1.A3.1",
+                "parts": [
+                  {
+                    "id": "ORP.1.A3.1-stmt",
+                    "name": "statement",
+                    "prose": "Institutionsfremde Personen MÜSSEN von Mitarbeitenden zu den Räumen begleitet werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Beaufsichtigung oder Begleitung von Fremdpersonen — ORP.1.A3.1"
+              },
+              {
+                "id": "ORP.1.A3.2",
+                "parts": [
+                  {
+                    "id": "ORP.1.A3.2-stmt",
+                    "name": "statement",
+                    "prose": "Die Mitarbeitenden der Institution MÜSSEN institutionsfremde Personen in sensiblen Bereichen beaufsichtigen."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Beaufsichtigung oder Begleitung von Fremdpersonen — ORP.1.A3.2"
+              },
+              {
+                "id": "ORP.1.A3.3",
+                "parts": [
+                  {
+                    "id": "ORP.1.A3.3-stmt",
+                    "name": "statement",
+                    "prose": "Die Mitarbeitenden SOLLTEN dazu angehalten werden, institutionsfremde Personen in den Räumen der Institution nicht unbeaufsichtigt zu lassen."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Beaufsichtigung oder Begleitung von Fremdpersonen — ORP.1.A3.3"
+              }
+            ],
+            "id": "ORP.1.A3",
+            "title": "Beaufsichtigung oder Begleitung von Fremdpersonen"
+          },
+          {
+            "controls": [
+              {
+                "id": "ORP.1.A4.1",
+                "parts": [
+                  {
+                    "id": "ORP.1.A4.1-stmt",
+                    "name": "statement",
+                    "prose": "Die Aufgaben und die hierfür erforderlichen Rollen und Funktionen MÜSSEN so strukturiert sein, dass unvereinbare Aufgaben wie operative und kontrollierende Funktionen auf verschiedene Personen verteilt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Funktionstrennung zwischen unvereinbaren Aufgaben — ORP.1.A4.1"
+              },
+              {
+                "id": "ORP.1.A4.2",
+                "parts": [
+                  {
+                    "id": "ORP.1.A4.2-stmt",
+                    "name": "statement",
+                    "prose": "Für unvereinbare Funktionen MUSS eine Funktionstrennung festgelegt und dokumentiert sein."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Funktionstrennung zwischen unvereinbaren Aufgaben — ORP.1.A4.2"
+              },
+              {
+                "id": "ORP.1.A4.3",
+                "parts": [
+                  {
+                    "id": "ORP.1.A4.3-stmt",
+                    "name": "statement",
+                    "prose": "Auch Vertreter MÜSSEN der Funktionstrennung unterliegen."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Funktionstrennung zwischen unvereinbaren Aufgaben — ORP.1.A4.3"
+              }
+            ],
+            "id": "ORP.1.A4",
+            "title": "Funktionstrennung zwischen unvereinbaren Aufgaben"
+          },
+          {
+            "controls": [
+              {
+                "id": "ORP.1.A8.1",
+                "parts": [
+                  {
+                    "id": "ORP.1.A8.1-stmt",
+                    "name": "statement",
+                    "prose": "Alle Geräte und Betriebsmittel, die Einfluss auf die Informationssicherheit haben und die zur Aufgabenerfüllung und zur Einhaltung der Sicherheitsanforderungen erforderlich sind, SOLLTEN in ausreichender Menge vorhanden sein."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Betriebsmittel- und Geräteverwaltung — ORP.1.A8.1"
+              },
+              {
+                "id": "ORP.1.A8.2",
+                "parts": [
+                  {
+                    "id": "ORP.1.A8.2-stmt",
+                    "name": "statement",
+                    "prose": "Es SOLLTE geeignete Prüf- und Genehmigungsverfahren vor Einsatz der Geräte und Betriebsmittel geben."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Betriebsmittel- und Geräteverwaltung — ORP.1.A8.2"
+              },
+              {
+                "id": "ORP.1.A8.3",
+                "parts": [
+                  {
+                    "id": "ORP.1.A8.3-stmt",
+                    "name": "statement",
+                    "prose": "Geräte und Betriebsmittel SOLLTEN in geeigneten Bestandsverzeichnissen aufgelistet werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Betriebsmittel- und Geräteverwaltung — ORP.1.A8.3"
+              },
+              {
+                "id": "ORP.1.A8.4",
+                "parts": [
+                  {
+                    "id": "ORP.1.A8.4-stmt",
+                    "name": "statement",
+                    "prose": "Um den Missbrauch von Daten zu verhindern, SOLLTE die zuverlässige Löschung oder Vernichtung von Geräten und Betriebsmitteln geregelt sein (siehe hierzu CON.6 Löschen und Vernichten)."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Betriebsmittel- und Geräteverwaltung — ORP.1.A8.4"
+              }
+            ],
+            "id": "ORP.1.A8",
+            "title": "Betriebsmittel- und Geräteverwaltung"
+          }
+        ],
+        "id": "ORP.1",
+        "title": "Organisation"
+      },
+      {
+        "groups": [
+          {
+            "controls": [
+              {
+                "id": "ORP.2.A1.1",
+                "parts": [
+                  {
+                    "id": "ORP.2.A1.1-stmt",
+                    "name": "statement",
+                    "prose": "Die Personalabteilung sowie die Vorgesetzten MÜSSEN dafür sorgen, dass Mitarbeitende zu Beginn ihrer Beschäftigung in ihre neuen Aufgaben eingearbeitet werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Geregelte Einarbeitung neuer Mitarbeitender — ORP.2.A1.1"
+              },
+              {
+                "id": "ORP.2.A1.2",
+                "parts": [
+                  {
+                    "id": "ORP.2.A1.2-stmt",
+                    "name": "statement",
+                    "prose": "Die Mitarbeitenden MÜSSEN über bestehende Regelungen, Handlungsanweisungen und Verfahrensweisen informiert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Geregelte Einarbeitung neuer Mitarbeitender — ORP.2.A1.2"
+              },
+              {
+                "id": "ORP.2.A1.3",
+                "parts": [
+                  {
+                    "id": "ORP.2.A1.3-stmt",
+                    "name": "statement",
+                    "prose": "Eine Checkliste und ein direkter Ansprechpartner oder Ansprechpartnerin („Pate oder Patin“) kann hierbei hilfreich sein und SOLLTE etabliert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Geregelte Einarbeitung neuer Mitarbeitender — ORP.2.A1.3"
+              }
+            ],
+            "id": "ORP.2.A1",
+            "title": "Geregelte Einarbeitung neuer Mitarbeitender"
+          },
+          {
+            "controls": [
+              {
+                "id": "ORP.2.A13.1",
+                "parts": [
+                  {
+                    "id": "ORP.2.A13.1-stmt",
+                    "name": "statement",
+                    "prose": "Im Hochsicherheitsbereich SOLLTE eine zusätzliche Sicherheitsüberprüfung zusätzlich zur grundlegenden Überprüfung der Vertrauenswürdigkeit von Mitarbeitenden durchgeführt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[E]"
+                  }
+                ],
+                "title": "Sicherheitsüberprüfung — ORP.2.A13.1"
+              },
+              {
+                "id": "ORP.2.A13.2",
+                "parts": [
+                  {
+                    "id": "ORP.2.A13.2-stmt",
+                    "name": "statement",
+                    "prose": "Arbeiten Mitarbeitende mit nach dem Geheimschutz klassifizierten Verschlusssachen, SOLLTEN sich die entsprechenden Mitarbeitenden einer Sicherheitsüberprüfung nach dem Sicherheitsüberprüfungsgesetz (SÜG) unterziehen."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[E]"
+                  }
+                ],
+                "title": "Sicherheitsüberprüfung — ORP.2.A13.2"
+              },
+              {
+                "id": "ORP.2.A13.3",
+                "parts": [
+                  {
+                    "id": "ORP.2.A13.3-stmt",
+                    "name": "statement",
+                    "prose": "Diesbezüglich SOLLTE der oder die Informationssicherheitsbeauftragte den Geheimschutzbeauftragten oder die Geheimschutzbeauftragte bzw. Sicherheitsbevollmächtigten oder Sicherheitsbevollmächtigte der Institution einbeziehen."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[E]"
+                  }
+                ],
+                "title": "Sicherheitsüberprüfung — ORP.2.A13.3"
+              }
+            ],
+            "id": "ORP.2.A13",
+            "title": "Sicherheitsüberprüfung"
+          },
+          {
+            "controls": [
+              {
+                "id": "ORP.2.A14.1",
+                "parts": [
+                  {
+                    "id": "ORP.2.A14.1-stmt",
+                    "name": "statement",
+                    "prose": "Alle Mitarbeitenden MÜSSEN dazu verpflichtet werden, geltende Gesetze, Vorschriften und interne Regelungen einzuhalten."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Aufgaben und Zuständigkeiten von Mitarbeitenden — ORP.2.A14.1"
+              },
+              {
+                "id": "ORP.2.A14.2",
+                "parts": [
+                  {
+                    "id": "ORP.2.A14.2-stmt",
+                    "name": "statement",
+                    "prose": "Den Mitarbeitenden MUSS der rechtliche Rahmen ihre Tätigkeit bekannt sein."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Aufgaben und Zuständigkeiten von Mitarbeitenden — ORP.2.A14.2"
+              },
+              {
+                "id": "ORP.2.A14.3",
+                "parts": [
+                  {
+                    "id": "ORP.2.A14.3-stmt",
+                    "name": "statement",
+                    "prose": "Die Aufgaben und Zuständigkeiten von Mitarbeitenden MÜSSEN in geeigneter Weise dokumentiert sein."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Aufgaben und Zuständigkeiten von Mitarbeitenden — ORP.2.A14.3"
+              },
+              {
+                "id": "ORP.2.A14.4",
+                "parts": [
+                  {
+                    "id": "ORP.2.A14.4-stmt",
+                    "name": "statement",
+                    "prose": "Außerdem MÜSSEN alle Mitarbeitenden darauf hingewiesen werden, dass alle während der Arbeit erhaltenen Informationen ausschließlich zum internen Gebrauch bestimmt sind."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Aufgaben und Zuständigkeiten von Mitarbeitenden — ORP.2.A14.4"
+              },
+              {
+                "id": "ORP.2.A14.5",
+                "parts": [
+                  {
+                    "id": "ORP.2.A14.5-stmt",
+                    "name": "statement",
+                    "prose": "Den Mitarbeitenden MUSS bewusst gemacht werden, die Informationssicherheit der Institution auch außerhalb der Arbeitszeit und außerhalb des Betriebsgeländes zu schützen."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Aufgaben und Zuständigkeiten von Mitarbeitenden — ORP.2.A14.5"
+              }
+            ],
+            "id": "ORP.2.A14",
+            "title": "Aufgaben und Zuständigkeiten von Mitarbeitenden"
+          },
+          {
+            "controls": [
+              {
+                "id": "ORP.2.A15.1",
+                "parts": [
+                  {
+                    "id": "ORP.2.A15.1-stmt",
+                    "name": "statement",
+                    "prose": "Mitarbeitende MÜSSEN regelmäßig geschult bzw. weitergebildet werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Qualifikation des Personals — ORP.2.A15.1"
+              },
+              {
+                "id": "ORP.2.A15.2",
+                "parts": [
+                  {
+                    "id": "ORP.2.A15.2-stmt",
+                    "name": "statement",
+                    "prose": "In allen Bereichen MUSS sichergestellt werden, dass kein Mitarbeitende mit veralteten Wissensstand arbeitet."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Qualifikation des Personals — ORP.2.A15.2"
+              },
+              {
+                "id": "ORP.2.A15.3",
+                "parts": [
+                  {
+                    "id": "ORP.2.A15.3-stmt",
+                    "name": "statement",
+                    "prose": "Weiterhin SOLLTE den Mitarbeitenden während ihrer Beschäftigung die Möglichkeit gegeben werden, sich im Rahmen ihres Tätigkeitsfeldes weiterzubilden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Qualifikation des Personals — ORP.2.A15.3"
+              },
+              {
+                "id": "ORP.2.A15.4",
+                "parts": [
+                  {
+                    "id": "ORP.2.A15.4-stmt",
+                    "name": "statement",
+                    "prose": "Werden Stellen besetzt, MÜSSEN die erforderlichen Qualifikationen und Fähigkeiten genau formuliert sein."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Qualifikation des Personals — ORP.2.A15.4"
+              },
+              {
+                "id": "ORP.2.A15.5",
+                "parts": [
+                  {
+                    "id": "ORP.2.A15.5-stmt",
+                    "name": "statement",
+                    "prose": "Anschließend SOLLTE geprüft werden, ob diese bei den Bewerbenden für die Stelle tatsächlich vorhanden sind."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Qualifikation des Personals — ORP.2.A15.5"
+              },
+              {
+                "id": "ORP.2.A15.6",
+                "parts": [
+                  {
+                    "id": "ORP.2.A15.6-stmt",
+                    "name": "statement",
+                    "prose": "Es MUSS sichergestellt sein, dass Stellen nur von Mitarbeitenden besetzt werden, für die sie qualifiziert sind."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Qualifikation des Personals — ORP.2.A15.6"
+              }
+            ],
+            "id": "ORP.2.A15",
+            "title": "Qualifikation des Personals"
+          },
+          {
+            "controls": [
+              {
+                "id": "ORP.2.A2.1",
+                "parts": [
+                  {
+                    "id": "ORP.2.A2.1-stmt",
+                    "name": "statement",
+                    "prose": "Verlassen Mitarbeitende die Institution, MUSS der oder die Nachfolgende rechtzeitig eingewiesen werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Geregelte Verfahrensweise beim Weggang von Mitarbeitenden — ORP.2.A2.1"
+              },
+              {
+                "id": "ORP.2.A2.10",
+                "parts": [
+                  {
+                    "id": "ORP.2.A2.10-stmt",
+                    "name": "statement",
+                    "prose": "Damit alle verbundenen Aufgaben, die beim Ausscheiden des oder der Mitarbeitenden anfallen, erledigt werden, SOLLTE hier ebenfalls eine Checkliste angelegt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Geregelte Verfahrensweise beim Weggang von Mitarbeitenden — ORP.2.A2.10"
+              },
+              {
+                "id": "ORP.2.A2.11",
+                "parts": [
+                  {
+                    "id": "ORP.2.A2.11-stmt",
+                    "name": "statement",
+                    "prose": "Zudem SOLLTE es einen festen Ansprechpartner oder Ansprechpartnerin der Personalabteilung geben, der den Weggang von Mitarbeitenden begleitet."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Geregelte Verfahrensweise beim Weggang von Mitarbeitenden — ORP.2.A2.11"
+              },
+              {
+                "id": "ORP.2.A2.2",
+                "parts": [
+                  {
+                    "id": "ORP.2.A2.2-stmt",
+                    "name": "statement",
+                    "prose": "Dies SOLLTE idealerweise durch den oder die ausscheidenden Mitarbeitenden erfolgen."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Geregelte Verfahrensweise beim Weggang von Mitarbeitenden — ORP.2.A2.2"
+              },
+              {
+                "id": "ORP.2.A2.3",
+                "parts": [
+                  {
+                    "id": "ORP.2.A2.3-stmt",
+                    "name": "statement",
+                    "prose": "Ist eine direkte Übergabe nicht möglich, MUSS von den ausscheidenden Mitarbeitenden eine ausführliche Dokumentation angefertigt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Geregelte Verfahrensweise beim Weggang von Mitarbeitenden — ORP.2.A2.3"
+              },
+              {
+                "id": "ORP.2.A2.4",
+                "parts": [
+                  {
+                    "id": "ORP.2.A2.4-stmt",
+                    "name": "statement",
+                    "prose": "Außerdem MÜSSEN von ausscheidenden Mitarbeitenden alle im Rahmen ihrer Tätigkeit erhaltenen Unterlagen, Schlüssel und Geräte sowie Ausweise und Zutrittsberechtigungen eingezogen werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Geregelte Verfahrensweise beim Weggang von Mitarbeitenden — ORP.2.A2.4"
+              },
+              {
+                "id": "ORP.2.A2.5",
+                "parts": [
+                  {
+                    "id": "ORP.2.A2.5-stmt",
+                    "name": "statement",
+                    "prose": "Vor der Verabschiedung MUSS noch einmal auf Verschwiegenheitsverpflichtungen hingewiesen werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Geregelte Verfahrensweise beim Weggang von Mitarbeitenden — ORP.2.A2.5"
+              },
+              {
+                "id": "ORP.2.A2.6",
+                "parts": [
+                  {
+                    "id": "ORP.2.A2.6-stmt",
+                    "name": "statement",
+                    "prose": "Es SOLLTE besonders darauf geachtet werden, dass keine Interessenkonflikte auftreten."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Geregelte Verfahrensweise beim Weggang von Mitarbeitenden — ORP.2.A2.6"
+              },
+              {
+                "id": "ORP.2.A2.7",
+                "parts": [
+                  {
+                    "id": "ORP.2.A2.7-stmt",
+                    "name": "statement",
+                    "prose": "Um nach einem Stellenwechsel Interessenkonflikte zu vermeiden, SOLLTEN Konkurrenzverbote und Karenzzeiten vereinbart werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Geregelte Verfahrensweise beim Weggang von Mitarbeitenden — ORP.2.A2.7"
+              },
+              {
+                "id": "ORP.2.A2.8",
+                "parts": [
+                  {
+                    "id": "ORP.2.A2.8-stmt",
+                    "name": "statement",
+                    "prose": "Weiterhin MÜSSEN Notfall- und andere Ablaufpläne aktualisiert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Geregelte Verfahrensweise beim Weggang von Mitarbeitenden — ORP.2.A2.8"
+              },
+              {
+                "id": "ORP.2.A2.9",
+                "parts": [
+                  {
+                    "id": "ORP.2.A2.9-stmt",
+                    "name": "statement",
+                    "prose": "Alle betroffenen Stellen innerhalb der Institution, wie z. B. das Sicherheitspersonal oder die IT-Abteilung, MÜSSEN über das Ausscheiden des oder der Mitarbeitenden informiert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Geregelte Verfahrensweise beim Weggang von Mitarbeitenden — ORP.2.A2.9"
+              }
+            ],
+            "id": "ORP.2.A2",
+            "title": "Geregelte Verfahrensweise beim Weggang von Mitarbeitenden"
+          },
+          {
+            "controls": [
+              {
+                "id": "ORP.2.A3.1",
+                "parts": [
+                  {
+                    "id": "ORP.2.A3.1-stmt",
+                    "name": "statement",
+                    "prose": "Die Vorgesetzten MÜSSEN dafür sorgen, dass im laufenden Betrieb Vertretungsregelungen umgesetzt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Festlegung von Vertretungsregelungen — ORP.2.A3.1"
+              },
+              {
+                "id": "ORP.2.A3.2",
+                "parts": [
+                  {
+                    "id": "ORP.2.A3.2-stmt",
+                    "name": "statement",
+                    "prose": "Dafür MUSS sichergestellt werden, dass es für alle wesentlichen Geschäftsprozesse und Aufgaben praktikable Vertretungsregelungen gibt."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Festlegung von Vertretungsregelungen — ORP.2.A3.2"
+              },
+              {
+                "id": "ORP.2.A3.3",
+                "parts": [
+                  {
+                    "id": "ORP.2.A3.3-stmt",
+                    "name": "statement",
+                    "prose": "Bei diesen Regelungen MUSS der Aufgabenumfang der Vertretung im Vorfeld klar definiert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Festlegung von Vertretungsregelungen — ORP.2.A3.3"
+              },
+              {
+                "id": "ORP.2.A3.4",
+                "parts": [
+                  {
+                    "id": "ORP.2.A3.4-stmt",
+                    "name": "statement",
+                    "prose": "Es MUSS sichergestellt werden, dass die Vertretung über das dafür nötige Wissen verfügt."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Festlegung von Vertretungsregelungen — ORP.2.A3.4"
+              },
+              {
+                "id": "ORP.2.A3.5",
+                "parts": [
+                  {
+                    "id": "ORP.2.A3.5-stmt",
+                    "name": "statement",
+                    "prose": "Ist dies nicht der Fall, MUSS überprüft werden, wie der Vertretenden zu schulen ist oder ob es ausreicht, den aktuellen Verfahrens- oder Projektstand ausreichend zu dokumentieren."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Festlegung von Vertretungsregelungen — ORP.2.A3.5"
+              },
+              {
+                "id": "ORP.2.A3.6",
+                "parts": [
+                  {
+                    "id": "ORP.2.A3.6-stmt",
+                    "name": "statement",
+                    "prose": "Ist es im Ausnahmefall nicht möglich, für einzelne Mitarbeitende einen kompetenten Vertretenden zu benennen oder zu schulen, MUSS frühzeitig entschieden werden, ob externes Personal dafür hinzugezogen werden kann."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Festlegung von Vertretungsregelungen — ORP.2.A3.6"
+              }
+            ],
+            "id": "ORP.2.A3",
+            "title": "Festlegung von Vertretungsregelungen"
+          },
+          {
+            "controls": [
+              {
+                "id": "ORP.2.A4.1",
+                "parts": [
+                  {
+                    "id": "ORP.2.A4.1-stmt",
+                    "name": "statement",
+                    "prose": "Wird externes Personal beschäftigt, MUSS dieses wie alle eigenen Mitarbeitenden dazu verpflichtet werden, geltende Gesetze, Vorschriften und interne Regelungen einzuhalten."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Festlegung von Regelungen für den Einsatz von Fremdpersonal — ORP.2.A4.1"
+              },
+              {
+                "id": "ORP.2.A4.2",
+                "parts": [
+                  {
+                    "id": "ORP.2.A4.2-stmt",
+                    "name": "statement",
+                    "prose": "Fremdpersonal, das kurzfristig oder einmalig eingesetzt wird, MUSS in sicherheitsrelevanten Bereichen beaufsichtigt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Festlegung von Regelungen für den Einsatz von Fremdpersonal — ORP.2.A4.2"
+              },
+              {
+                "id": "ORP.2.A4.3",
+                "parts": [
+                  {
+                    "id": "ORP.2.A4.3-stmt",
+                    "name": "statement",
+                    "prose": "Bei längerfristig beschäftigtem Fremdpersonal MUSS dieses wie die eigenen Mitarbeitenden in seine Aufgaben eingewiesen werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Festlegung von Regelungen für den Einsatz von Fremdpersonal — ORP.2.A4.3"
+              },
+              {
+                "id": "ORP.2.A4.4",
+                "parts": [
+                  {
+                    "id": "ORP.2.A4.4-stmt",
+                    "name": "statement",
+                    "prose": "Auch für diese Mitarbeitende MUSS eine Vertretungsregelung eingeführt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Festlegung von Regelungen für den Einsatz von Fremdpersonal — ORP.2.A4.4"
+              },
+              {
+                "id": "ORP.2.A4.5",
+                "parts": [
+                  {
+                    "id": "ORP.2.A4.5-stmt",
+                    "name": "statement",
+                    "prose": "Verlässt das Fremdpersonal die Institution, MÜSSEN Arbeitsergebnisse wie bei eigenem Personal geregelt übergeben und eventuell ausgehändigte Zugangsberechtigungen zurückgegeben werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Festlegung von Regelungen für den Einsatz von Fremdpersonal — ORP.2.A4.5"
+              }
+            ],
+            "id": "ORP.2.A4",
+            "title": "Festlegung von Regelungen für den Einsatz von Fremdpersonal"
+          },
+          {
+            "controls": [
+              {
+                "id": "ORP.2.A5.1",
+                "parts": [
+                  {
+                    "id": "ORP.2.A5.1-stmt",
+                    "name": "statement",
+                    "prose": "Bevor externe Personen Zugang und Zugriff zu vertraulichen Informationen erhalten, MÜSSEN mit ihnen Vertraulichkeitsvereinbarungen in schriftlicher Form geschlossen werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Vertraulichkeitsvereinbarungen für den Einsatz von Fremdpersonal — ORP.2.A5.1"
+              },
+              {
+                "id": "ORP.2.A5.2",
+                "parts": [
+                  {
+                    "id": "ORP.2.A5.2-stmt",
+                    "name": "statement",
+                    "prose": "In diesen Vertraulichkeitsvereinbarungen MÜSSEN alle wichtigen Aspekte zum Schutz von institutionsinternen Informationen berücksichtigt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Vertraulichkeitsvereinbarungen für den Einsatz von Fremdpersonal — ORP.2.A5.2"
+              }
+            ],
+            "id": "ORP.2.A5",
+            "title": "Vertraulichkeitsvereinbarungen für den Einsatz von Fremdpersonal"
+          },
+          {
+            "controls": [
+              {
+                "id": "ORP.2.A7.1",
+                "parts": [
+                  {
+                    "id": "ORP.2.A7.1-stmt",
+                    "name": "statement",
+                    "prose": "Neue Mitarbeitende SOLLTEN auf ihre Vertrauenswürdigkeit hin überprüft werden, bevor sie eingestellt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Überprüfung der Vertrauenswürdigkeit von Mitarbeitenden — ORP.2.A7.1"
+              },
+              {
+                "id": "ORP.2.A7.2",
+                "parts": [
+                  {
+                    "id": "ORP.2.A7.2-stmt",
+                    "name": "statement",
+                    "prose": "Soweit möglich, SOLLTEN alle an der Personalauswahl Beteiligten kontrollieren, ob die Angaben der Bewerbenden, die relevant für die Einschätzung ihrer Vertrauenswürdigkeit sind, glaubhaft sind."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Überprüfung der Vertrauenswürdigkeit von Mitarbeitenden — ORP.2.A7.2"
+              },
+              {
+                "id": "ORP.2.A7.3",
+                "parts": [
+                  {
+                    "id": "ORP.2.A7.3-stmt",
+                    "name": "statement",
+                    "prose": "Insbesondere SOLLTE sorgfältig geprüft werden, ob der vorgelegte Lebenslauf korrekt, plausibel und vollständig ist."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Überprüfung der Vertrauenswürdigkeit von Mitarbeitenden — ORP.2.A7.3"
+              },
+              {
+                "id": "ORP.2.A7.4",
+                "parts": [
+                  {
+                    "id": "ORP.2.A7.4-stmt",
+                    "name": "statement",
+                    "prose": "Dabei SOLLTEN auffällig erscheinende Angaben überprüft werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Überprüfung der Vertrauenswürdigkeit von Mitarbeitenden — ORP.2.A7.4"
+              }
+            ],
+            "id": "ORP.2.A7",
+            "title": "Überprüfung der Vertrauenswürdigkeit von Mitarbeitenden"
+          }
+        ],
+        "id": "ORP.2",
+        "title": "Personal"
+      },
+      {
+        "groups": [
+          {
+            "controls": [
+              {
+                "id": "ORP.3.A1.1",
+                "parts": [
+                  {
+                    "id": "ORP.3.A1.1-stmt",
+                    "name": "statement",
+                    "prose": "Die Institutionsleitung MUSS ausreichend für Sicherheitsfragen sensibilisiert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Sensibilisierung der Institutionsleitung für Informationssicherheit — ORP.3.A1.1"
+              },
+              {
+                "id": "ORP.3.A1.2",
+                "parts": [
+                  {
+                    "id": "ORP.3.A1.2-stmt",
+                    "name": "statement",
+                    "prose": "Die Sicherheitskampagnen und Schulungsmaßnahmen MÜSSEN von der Institutionsleitung unterstützt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Sensibilisierung der Institutionsleitung für Informationssicherheit — ORP.3.A1.2"
+              },
+              {
+                "id": "ORP.3.A1.3",
+                "parts": [
+                  {
+                    "id": "ORP.3.A1.3-stmt",
+                    "name": "statement",
+                    "prose": "Vor dem Beginn eines Sensibilisierungs- und Schulungsprogramms zur Informationssicherheit MUSS die Unterstützung der Institutionsleitung eingeholt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Sensibilisierung der Institutionsleitung für Informationssicherheit — ORP.3.A1.3"
+              },
+              {
+                "id": "ORP.3.A1.4",
+                "parts": [
+                  {
+                    "id": "ORP.3.A1.4-stmt",
+                    "name": "statement",
+                    "prose": "Alle Vorgesetzten MÜSSEN die Informationssicherheit unterstützen, indem sie mit gutem Beispiel vorangehen."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Sensibilisierung der Institutionsleitung für Informationssicherheit — ORP.3.A1.4"
+              },
+              {
+                "id": "ORP.3.A1.5",
+                "parts": [
+                  {
+                    "id": "ORP.3.A1.5-stmt",
+                    "name": "statement",
+                    "prose": "Führungskräfte MÜSSEN die Sicherheitsvorgaben umsetzen."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Sensibilisierung der Institutionsleitung für Informationssicherheit — ORP.3.A1.5"
+              },
+              {
+                "id": "ORP.3.A1.6",
+                "parts": [
+                  {
+                    "id": "ORP.3.A1.6-stmt",
+                    "name": "statement",
+                    "prose": "Hierüber hinaus MÜSSEN sie ihre Mitarbeitenden auf deren Einhaltung hinweisen."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Sensibilisierung der Institutionsleitung für Informationssicherheit — ORP.3.A1.6"
+              }
+            ],
+            "id": "ORP.3.A1",
+            "title": "Sensibilisierung der Institutionsleitung für Informationssicherheit"
+          },
+          {
+            "controls": [
+              {
+                "id": "ORP.3.A3.1",
+                "parts": [
+                  {
+                    "id": "ORP.3.A3.1-stmt",
+                    "name": "statement",
+                    "prose": "Alle Mitarbeitenden und externen Benutzenden MÜSSEN in den sicheren Umgang mit IT-, ICS- und IoT-Komponenten eingewiesen und sensibilisiert werden, soweit dies für ihre Arbeitszusammenhänge relevant ist."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Einweisung des Personals in den sicheren Umgang mit IT — ORP.3.A3.1"
+              },
+              {
+                "id": "ORP.3.A3.2",
+                "parts": [
+                  {
+                    "id": "ORP.3.A3.2-stmt",
+                    "name": "statement",
+                    "prose": "Dafür MÜSSEN verbindliche, verständliche und aktuelle Richtlinien zur Nutzung der jeweiligen Komponenten zur Verfügung stehen."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Einweisung des Personals in den sicheren Umgang mit IT — ORP.3.A3.2"
+              },
+              {
+                "id": "ORP.3.A3.3",
+                "parts": [
+                  {
+                    "id": "ORP.3.A3.3-stmt",
+                    "name": "statement",
+                    "prose": "Werden IT-, ICS- oder IoT-Systeme oder -Dienste in einer Weise benutzt, die den Interessen der Institution widersprechen, MUSS dies kommuniziert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Einweisung des Personals in den sicheren Umgang mit IT — ORP.3.A3.3"
+              }
+            ],
+            "id": "ORP.3.A3",
+            "title": "Einweisung des Personals in den sicheren Umgang mit IT"
+          },
+          {
+            "controls": [
+              {
+                "id": "ORP.3.A4.1",
+                "parts": [
+                  {
+                    "id": "ORP.3.A4.1-stmt",
+                    "name": "statement",
+                    "prose": "Sensibilisierungs- und Schulungsprogramme zur Informationssicherheit SOLLTEN sich an den jeweiligen Zielgruppen orientieren."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Konzeption und Planung eines Sensibilisierungs- und Schulungsprogramms zur Informationssicherheit — ORP.3.A4.1"
+              },
+              {
+                "id": "ORP.3.A4.2",
+                "parts": [
+                  {
+                    "id": "ORP.3.A4.2-stmt",
+                    "name": "statement",
+                    "prose": "Dazu SOLLTE eine Zielgruppenanalyse durchgeführt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Konzeption und Planung eines Sensibilisierungs- und Schulungsprogramms zur Informationssicherheit — ORP.3.A4.2"
+              },
+              {
+                "id": "ORP.3.A4.3",
+                "parts": [
+                  {
+                    "id": "ORP.3.A4.3-stmt",
+                    "name": "statement",
+                    "prose": "Hierbei SOLLTEN Schulungsmaßnahmen auf die speziellen Anforderungen und unterschiedlichen Hintergründe fokussiert werden können."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Konzeption und Planung eines Sensibilisierungs- und Schulungsprogramms zur Informationssicherheit — ORP.3.A4.3"
+              },
+              {
+                "id": "ORP.3.A4.4",
+                "parts": [
+                  {
+                    "id": "ORP.3.A4.4-stmt",
+                    "name": "statement",
+                    "prose": "Es SOLLTE ein zielgruppenorientiertes Sensibilisierungs- und Schulungsprogramm zur Informationssicherheit erstellt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Konzeption und Planung eines Sensibilisierungs- und Schulungsprogramms zur Informationssicherheit — ORP.3.A4.4"
+              },
+              {
+                "id": "ORP.3.A4.5",
+                "parts": [
+                  {
+                    "id": "ORP.3.A4.5-stmt",
+                    "name": "statement",
+                    "prose": "Dieses Schulungsprogramm SOLLTE den Mitarbeitenden alle Informationen und Fähigkeiten vermitteln, die erforderlich sind, um in der Institution geltende Sicherheitsregelungen und -maßnahmen umsetzen zu können."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Konzeption und Planung eines Sensibilisierungs- und Schulungsprogramms zur Informationssicherheit — ORP.3.A4.5"
+              },
+              {
+                "id": "ORP.3.A4.6",
+                "parts": [
+                  {
+                    "id": "ORP.3.A4.6-stmt",
+                    "name": "statement",
+                    "prose": "Es SOLLTE regelmäßig überprüft und aktualisiert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Konzeption und Planung eines Sensibilisierungs- und Schulungsprogramms zur Informationssicherheit — ORP.3.A4.6"
+              }
+            ],
+            "id": "ORP.3.A4",
+            "title": "Konzeption und Planung eines Sensibilisierungs- und Schulungsprogramms zur Informationssicherheit"
+          },
+          {
+            "controls": [
+              {
+                "id": "ORP.3.A6.1",
+                "parts": [
+                  {
+                    "id": "ORP.3.A6.1-stmt",
+                    "name": "statement",
+                    "prose": "Alle Mitarbeitenden SOLLTEN entsprechend ihren Aufgaben und Verantwortlichkeiten zu Informationssicherheitsthemen geschult werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Durchführung von Sensibilisierungen und Schulungen zur Informationssicherheit — ORP.3.A6.1"
+              }
+            ],
+            "id": "ORP.3.A6",
+            "title": "Durchführung von Sensibilisierungen und Schulungen zur Informationssicherheit"
+          },
+          {
+            "controls": [
+              {
+                "id": "ORP.3.A7.1",
+                "parts": [
+                  {
+                    "id": "ORP.3.A7.1-stmt",
+                    "name": "statement",
+                    "prose": "Informationssicherheitsbeauftragte SOLLTEN mit dem IT-Grundschutz vertraut sein."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Schulung zur Vorgehensweise nach IT-Grundschutz — ORP.3.A7.1"
+              },
+              {
+                "id": "ORP.3.A7.2",
+                "parts": [
+                  {
+                    "id": "ORP.3.A7.2-stmt",
+                    "name": "statement",
+                    "prose": "Wurde ein Schulungsbedarf identifiziert, SOLLTE eine geeignete IT-Grundschutz-Schulung geplant werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Schulung zur Vorgehensweise nach IT-Grundschutz — ORP.3.A7.2"
+              },
+              {
+                "id": "ORP.3.A7.3",
+                "parts": [
+                  {
+                    "id": "ORP.3.A7.3-stmt",
+                    "name": "statement",
+                    "prose": "Für die Planung einer Schulung SOLLTE der Online-Kurs des BSI zum IT-Grundschutz berücksichtigt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Schulung zur Vorgehensweise nach IT-Grundschutz — ORP.3.A7.3"
+              },
+              {
+                "id": "ORP.3.A7.4",
+                "parts": [
+                  {
+                    "id": "ORP.3.A7.4-stmt",
+                    "name": "statement",
+                    "prose": "Innerhalb der Schulung SOLLTE die Vorgehensweise anhand praxisnaher Beispiele geübt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Schulung zur Vorgehensweise nach IT-Grundschutz — ORP.3.A7.4"
+              },
+              {
+                "id": "ORP.3.A7.5",
+                "parts": [
+                  {
+                    "id": "ORP.3.A7.5-stmt",
+                    "name": "statement",
+                    "prose": "Es SOLLTE geprüft werden, ob der oder die Informationssicherheitsbeauftragte sich zu einem BSI IT-Grundschutz-Praktiker qualifizieren lassen sollten."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Schulung zur Vorgehensweise nach IT-Grundschutz — ORP.3.A7.5"
+              }
+            ],
+            "id": "ORP.3.A7",
+            "title": "Schulung zur Vorgehensweise nach IT-Grundschutz"
+          },
+          {
+            "controls": [
+              {
+                "id": "ORP.3.A8.1",
+                "parts": [
+                  {
+                    "id": "ORP.3.A8.1-stmt",
+                    "name": "statement",
+                    "prose": "Die Lernerfolge im Bereich Informationssicherheit SOLLTEN zielgruppenbezogen gemessen und ausgewertet werden, um festzustellen, inwieweit die in den Sensibilisierungs- und Schulungsprogrammen zur Informationssicherheit beschriebenen Ziele erreicht sind."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Messung und Auswertung des Lernerfolgs — ORP.3.A8.1"
+              },
+              {
+                "id": "ORP.3.A8.2",
+                "parts": [
+                  {
+                    "id": "ORP.3.A8.2-stmt",
+                    "name": "statement",
+                    "prose": "Die Messungen SOLLTEN sowohl quantitative als auch qualitative Aspekte der Sensibilisierungs- und Schulungsprogramme zur Informationssicherheit berücksichtigen."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Messung und Auswertung des Lernerfolgs — ORP.3.A8.2"
+              },
+              {
+                "id": "ORP.3.A8.3",
+                "parts": [
+                  {
+                    "id": "ORP.3.A8.3-stmt",
+                    "name": "statement",
+                    "prose": "Die Ergebnisse SOLLTEN bei der Verbesserung des Sensibilisierungs- und Schulungsangebots zur Informationssicherheit in geeigneter Weise einfließen."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Messung und Auswertung des Lernerfolgs — ORP.3.A8.3"
+              },
+              {
+                "id": "ORP.3.A8.4",
+                "parts": [
+                  {
+                    "id": "ORP.3.A8.4-stmt",
+                    "name": "statement",
+                    "prose": "Der oder die Informationssicherheitsbeauftragte SOLLTE sich regelmäßig mit der Personalabteilung und den anderen für die Sicherheit relevanten Ansprechpartnern (Datenschutz, Gesundheits- und Arbeitsschutz, Brandschutz etc.) über die Effizienz der Aus- und Weiterbildung austauschen."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Messung und Auswertung des Lernerfolgs — ORP.3.A8.4"
+              }
+            ],
+            "id": "ORP.3.A8",
+            "title": "Messung und Auswertung des Lernerfolgs"
+          },
+          {
+            "controls": [
+              {
+                "id": "ORP.3.A9.1",
+                "parts": [
+                  {
+                    "id": "ORP.3.A9.1-stmt",
+                    "name": "statement",
+                    "prose": "Besonders exponierte Personen SOLLTEN vertiefende Schulungen in Hinblick auf mögliche Gefährdungen sowie geeignete Verhaltensweisen und Vorsichtsmaßnahmen erhalten."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[E]"
+                  }
+                ],
+                "title": "Spezielle Schulung von exponierten Personen und Institutionen — ORP.3.A9.1"
+              }
+            ],
+            "id": "ORP.3.A9",
+            "title": "Spezielle Schulung von exponierten Personen und Institutionen"
+          }
+        ],
+        "id": "ORP.3",
+        "title": "Sensibilisierung und Schulung zur Informationssicherheit"
+      },
+      {
+        "groups": [
+          {
+            "controls": [
+              {
+                "id": "ORP.4.A1.1",
+                "parts": [
+                  {
+                    "id": "ORP.4.A1.1-stmt",
+                    "name": "statement",
+                    "prose": "Es MUSS geregelt werden, wie Benutzendenkennungen und -gruppen einzurichten und zu löschen sind."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Regelung für die Einrichtung und Löschung von Benutzenden und Benutzendengruppen — ORP.4.A1.1"
+              },
+              {
+                "id": "ORP.4.A1.2",
+                "parts": [
+                  {
+                    "id": "ORP.4.A1.2-stmt",
+                    "name": "statement",
+                    "prose": "Jede Benutzendenkennung MUSS eindeutig einer Person zugeordnet werden können."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Regelung für die Einrichtung und Löschung von Benutzenden und Benutzendengruppen — ORP.4.A1.2"
+              },
+              {
+                "id": "ORP.4.A1.3",
+                "parts": [
+                  {
+                    "id": "ORP.4.A1.3-stmt",
+                    "name": "statement",
+                    "prose": "Benutzendenkennungen, die längere Zeit inaktiv sind, SOLLTEN deaktiviert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Regelung für die Einrichtung und Löschung von Benutzenden und Benutzendengruppen — ORP.4.A1.3"
+              },
+              {
+                "id": "ORP.4.A1.4",
+                "parts": [
+                  {
+                    "id": "ORP.4.A1.4-stmt",
+                    "name": "statement",
+                    "prose": "Alle Benutzenden und Benutzendengruppen DÜRFEN NUR über separate administrative Rollen eingerichtet und gelöscht werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Regelung für die Einrichtung und Löschung von Benutzenden und Benutzendengruppen — ORP.4.A1.4"
+              },
+              {
+                "id": "ORP.4.A1.5",
+                "parts": [
+                  {
+                    "id": "ORP.4.A1.5-stmt",
+                    "name": "statement",
+                    "prose": "Nicht benötigte Benutzendenkennungen, wie z. B. standardmäßig eingerichtete Gastkonten oder Standard-Administrierendenkennungen, MÜSSEN geeignet deaktiviert oder gelöscht werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Regelung für die Einrichtung und Löschung von Benutzenden und Benutzendengruppen — ORP.4.A1.5"
+              }
+            ],
+            "id": "ORP.4.A1",
+            "title": "Regelung für die Einrichtung und Löschung von Benutzenden und Benutzendengruppen"
+          },
+          {
+            "controls": [
+              {
+                "id": "ORP.4.A10.1",
+                "parts": [
+                  {
+                    "id": "ORP.4.A10.1-stmt",
+                    "name": "statement",
+                    "prose": "Benutzendenkennungen mit weitreichenden Berechtigungen SOLLTEN mit einer Mehr-Faktor-Authentisierung, z. B. mit kryptografischen Zertifikaten, Chipkarten oder Token, geschützt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Schutz von Benutzendenkennungen mit weitreichenden Berechtigungen — ORP.4.A10.1"
+              }
+            ],
+            "id": "ORP.4.A10",
+            "title": "Schutz von Benutzendenkennungen mit weitreichenden Berechtigungen"
+          },
+          {
+            "controls": [
+              {
+                "id": "ORP.4.A11.1",
+                "parts": [
+                  {
+                    "id": "ORP.4.A11.1-stmt",
+                    "name": "statement",
+                    "prose": "Für das Zurücksetzen von Passwörtern SOLLTE ein angemessenes sicheres Verfahren definiert und umgesetzt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Zurücksetzen von Passwörtern — ORP.4.A11.1"
+              },
+              {
+                "id": "ORP.4.A11.2",
+                "parts": [
+                  {
+                    "id": "ORP.4.A11.2-stmt",
+                    "name": "statement",
+                    "prose": "Die Mitarbeitenden des IT-Betriebs, die Passwörter zurücksetzen können, SOLLTEN entsprechend geschult werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Zurücksetzen von Passwörtern — ORP.4.A11.2"
+              },
+              {
+                "id": "ORP.4.A11.3",
+                "parts": [
+                  {
+                    "id": "ORP.4.A11.3-stmt",
+                    "name": "statement",
+                    "prose": "Bei höherem Schutzbedarf des Passwortes SOLLTE eine Strategie definiert werden, falls Mitarbeitende des IT-Betriebs aufgrund fehlender sicherer Möglichkeiten der Übermittlung des Passwortes die Verantwortung nicht übernehmen können."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Zurücksetzen von Passwörtern — ORP.4.A11.3"
+              }
+            ],
+            "id": "ORP.4.A11",
+            "title": "Zurücksetzen von Passwörtern"
+          },
+          {
+            "controls": [
+              {
+                "id": "ORP.4.A12.1",
+                "parts": [
+                  {
+                    "id": "ORP.4.A12.1-stmt",
+                    "name": "statement",
+                    "prose": "Es SOLLTE ein Authentisierungskonzept erstellt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Entwicklung eines Authentisierungskonzeptes für IT-Systeme und Anwendungen — ORP.4.A12.1"
+              },
+              {
+                "id": "ORP.4.A12.2",
+                "parts": [
+                  {
+                    "id": "ORP.4.A12.2-stmt",
+                    "name": "statement",
+                    "prose": "Darin SOLLTE für jedes IT-System und jede Anwendung definiert werden, welche Funktions- und Sicherheitsanforderungen an die Authentisierung gestellt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Entwicklung eines Authentisierungskonzeptes für IT-Systeme und Anwendungen — ORP.4.A12.2"
+              },
+              {
+                "id": "ORP.4.A12.3",
+                "parts": [
+                  {
+                    "id": "ORP.4.A12.3-stmt",
+                    "name": "statement",
+                    "prose": "Authentisierungsinformationen MÜSSEN kryptografisch sicher gespeichert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Entwicklung eines Authentisierungskonzeptes für IT-Systeme und Anwendungen — ORP.4.A12.3"
+              },
+              {
+                "id": "ORP.4.A12.4",
+                "parts": [
+                  {
+                    "id": "ORP.4.A12.4-stmt",
+                    "name": "statement",
+                    "prose": "Authentisierungsinformationen DÜRFEN NICHT unverschlüsselt über unsichere Netze übertragen werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Entwicklung eines Authentisierungskonzeptes für IT-Systeme und Anwendungen — ORP.4.A12.4"
+              }
+            ],
+            "id": "ORP.4.A12",
+            "title": "Entwicklung eines Authentisierungskonzeptes für IT-Systeme und Anwendungen"
+          },
+          {
+            "controls": [
+              {
+                "id": "ORP.4.A13.1",
+                "parts": [
+                  {
+                    "id": "ORP.4.A13.1-stmt",
+                    "name": "statement",
+                    "prose": "Es SOLLTEN dem Schutzbedarf angemessene Identifikations- und Authentisierungsmechanismen verwendet werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Geeignete Auswahl von Authentisierungsmechanismen — ORP.4.A13.1"
+              },
+              {
+                "id": "ORP.4.A13.2",
+                "parts": [
+                  {
+                    "id": "ORP.4.A13.2-stmt",
+                    "name": "statement",
+                    "prose": "Authentisierungsdaten SOLLTEN durch das IT-System bzw. die IT-Anwendungen bei der Verarbeitung jederzeit gegen Ausspähung, Veränderung und Zerstörung geschützt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Geeignete Auswahl von Authentisierungsmechanismen — ORP.4.A13.2"
+              },
+              {
+                "id": "ORP.4.A13.3",
+                "parts": [
+                  {
+                    "id": "ORP.4.A13.3-stmt",
+                    "name": "statement",
+                    "prose": "Das IT-System bzw. die IT-Anwendung SOLLTE nach jedem erfolglosen Authentisierungsversuch weitere Anmeldeversuche zunehmend verzögern (Time Delay)."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Geeignete Auswahl von Authentisierungsmechanismen — ORP.4.A13.3"
+              },
+              {
+                "id": "ORP.4.A13.4",
+                "parts": [
+                  {
+                    "id": "ORP.4.A13.4-stmt",
+                    "name": "statement",
+                    "prose": "Die Gesamtdauer eines Anmeldeversuchs SOLLTE begrenzt werden können."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Geeignete Auswahl von Authentisierungsmechanismen — ORP.4.A13.4"
+              },
+              {
+                "id": "ORP.4.A13.5",
+                "parts": [
+                  {
+                    "id": "ORP.4.A13.5-stmt",
+                    "name": "statement",
+                    "prose": "Nach Überschreitung der vorgegebenen Anzahl erfolgloser Authentisierungsversuche SOLLTE das IT-System bzw. die IT-Anwendung die Benutzendenkennung sperren."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Geeignete Auswahl von Authentisierungsmechanismen — ORP.4.A13.5"
+              }
+            ],
+            "id": "ORP.4.A13",
+            "title": "Geeignete Auswahl von Authentisierungsmechanismen"
+          },
+          {
+            "controls": [
+              {
+                "id": "ORP.4.A14.1",
+                "parts": [
+                  {
+                    "id": "ORP.4.A14.1-stmt",
+                    "name": "statement",
+                    "prose": "In angemessenen Zeitabständen SOLLTE überprüft werden, ob die Benutzenden von IT-Systemen bzw. Anwendungen sich regelmäßig nach Aufgabenerfüllung abmelden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Kontrolle der Wirksamkeit der Benutzendentrennung am IT-System bzw. an der Anwendung — ORP.4.A14.1"
+              },
+              {
+                "id": "ORP.4.A14.2",
+                "parts": [
+                  {
+                    "id": "ORP.4.A14.2-stmt",
+                    "name": "statement",
+                    "prose": "Ebenso SOLLTE kontrolliert werden, dass nicht mehrere Benutzende unter der gleichen Kennung arbeiten."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Kontrolle der Wirksamkeit der Benutzendentrennung am IT-System bzw. an der Anwendung — ORP.4.A14.2"
+              }
+            ],
+            "id": "ORP.4.A14",
+            "title": "Kontrolle der Wirksamkeit der Benutzendentrennung am IT-System bzw. an der Anwendung"
+          },
+          {
+            "controls": [
+              {
+                "id": "ORP.4.A15.1",
+                "parts": [
+                  {
+                    "id": "ORP.4.A15.1-stmt",
+                    "name": "statement",
+                    "prose": "Für das Identitäts- und Berechtigungsmanagement SOLLTEN folgenden Prozesse definiert und umgesetzt werden:"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Vorgehensweise und Konzeption der Prozesse beim Identitäts- und Berechtigungsmanagement — ORP.4.A15.1"
+              },
+              {
+                "id": "ORP.4.A15.2",
+                "parts": [
+                  {
+                    "id": "ORP.4.A15.2-stmt",
+                    "name": "statement",
+                    "prose": "• Richtlinien verwalten,"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Vorgehensweise und Konzeption der Prozesse beim Identitäts- und Berechtigungsmanagement — ORP.4.A15.2"
+              },
+              {
+                "id": "ORP.4.A15.3",
+                "parts": [
+                  {
+                    "id": "ORP.4.A15.3-stmt",
+                    "name": "statement",
+                    "prose": "• Identitätsprofile verwalten,"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Vorgehensweise und Konzeption der Prozesse beim Identitäts- und Berechtigungsmanagement — ORP.4.A15.3"
+              },
+              {
+                "id": "ORP.4.A15.4",
+                "parts": [
+                  {
+                    "id": "ORP.4.A15.4-stmt",
+                    "name": "statement",
+                    "prose": "• Benutzendenkennungen verwalten,"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Vorgehensweise und Konzeption der Prozesse beim Identitäts- und Berechtigungsmanagement — ORP.4.A15.4"
+              },
+              {
+                "id": "ORP.4.A15.5",
+                "parts": [
+                  {
+                    "id": "ORP.4.A15.5-stmt",
+                    "name": "statement",
+                    "prose": "• Berechtigungsprofile verwalten sowie"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Vorgehensweise und Konzeption der Prozesse beim Identitäts- und Berechtigungsmanagement — ORP.4.A15.5"
+              },
+              {
+                "id": "ORP.4.A15.6",
+                "parts": [
+                  {
+                    "id": "ORP.4.A15.6-stmt",
+                    "name": "statement",
+                    "prose": "• Rollen verwalten."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Vorgehensweise und Konzeption der Prozesse beim Identitäts- und Berechtigungsmanagement — ORP.4.A15.6"
+              }
+            ],
+            "id": "ORP.4.A15",
+            "title": "Vorgehensweise und Konzeption der Prozesse beim Identitäts- und Berechtigungsmanagement"
+          },
+          {
+            "controls": [
+              {
+                "id": "ORP.4.A16.1",
+                "parts": [
+                  {
+                    "id": "ORP.4.A16.1-stmt",
+                    "name": "statement",
+                    "prose": "Es SOLLTE eine Richtlinie für die Zugriffs- und Zugangskontrolle von IT-Systemen, IT-Komponenten und Datennetzen erstellt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Richtlinien für die Zugriffs- und Zugangskontrolle — ORP.4.A16.1"
+              },
+              {
+                "id": "ORP.4.A16.2",
+                "parts": [
+                  {
+                    "id": "ORP.4.A16.2-stmt",
+                    "name": "statement",
+                    "prose": "Es SOLLTEN Standard-Rechteprofile benutzt werden, die den Funktionen und Aufgaben der Mitarbeitenden entsprechen."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Richtlinien für die Zugriffs- und Zugangskontrolle — ORP.4.A16.2"
+              },
+              {
+                "id": "ORP.4.A16.3",
+                "parts": [
+                  {
+                    "id": "ORP.4.A16.3-stmt",
+                    "name": "statement",
+                    "prose": "Für jedes IT-System und jede IT-Anwendung SOLLTE eine schriftliche Zugriffsregelung existieren."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Richtlinien für die Zugriffs- und Zugangskontrolle — ORP.4.A16.3"
+              }
+            ],
+            "id": "ORP.4.A16",
+            "title": "Richtlinien für die Zugriffs- und Zugangskontrolle"
+          },
+          {
+            "controls": [
+              {
+                "id": "ORP.4.A17.1",
+                "parts": [
+                  {
+                    "id": "ORP.4.A17.1-stmt",
+                    "name": "statement",
+                    "prose": "Beim Einsatz eines Identitäts- und Berechtigungsmanagement-Systems SOLLTE dieses für die Institution und deren jeweilige Geschäftsprozesse, Organisationsstrukturen und Abläufe sowie deren Schutzbedarf geeignet sein."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Geeignete Auswahl von Identitäts- und Berechtigungsmanagement-Systemen — ORP.4.A17.1"
+              },
+              {
+                "id": "ORP.4.A17.2",
+                "parts": [
+                  {
+                    "id": "ORP.4.A17.2-stmt",
+                    "name": "statement",
+                    "prose": "Das Identitäts- und Berechtigungsmanagement-System SOLLTE die in der Institution vorhandenen Vorgaben zum Umgang mit Identitäten und Berechtigungen abbilden können."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Geeignete Auswahl von Identitäts- und Berechtigungsmanagement-Systemen — ORP.4.A17.2"
+              },
+              {
+                "id": "ORP.4.A17.3",
+                "parts": [
+                  {
+                    "id": "ORP.4.A17.3-stmt",
+                    "name": "statement",
+                    "prose": "Das ausgewählte Identitäts- und Berechtigungsmanagement-System SOLLTE den Grundsatz der Funktionstrennung unterstützen."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Geeignete Auswahl von Identitäts- und Berechtigungsmanagement-Systemen — ORP.4.A17.3"
+              },
+              {
+                "id": "ORP.4.A17.4",
+                "parts": [
+                  {
+                    "id": "ORP.4.A17.4-stmt",
+                    "name": "statement",
+                    "prose": "Das Identitäts- und Berechtigungsmanagement-System SOLLTE angemessen vor Angriffen geschützt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Geeignete Auswahl von Identitäts- und Berechtigungsmanagement-Systemen — ORP.4.A17.4"
+              }
+            ],
+            "id": "ORP.4.A17",
+            "title": "Geeignete Auswahl von Identitäts- und Berechtigungsmanagement-Systemen"
+          },
+          {
+            "controls": [
+              {
+                "id": "ORP.4.A18.1",
+                "parts": [
+                  {
+                    "id": "ORP.4.A18.1-stmt",
+                    "name": "statement",
+                    "prose": "Um ein zentrales Identitäts- und Berechtigungsmanagement aufzubauen, SOLLTE ein zentraler netzbasierter Authentisierungsdienst eingesetzt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Einsatz eines zentralen Authentisierungsdienstes — ORP.4.A18.1"
+              },
+              {
+                "id": "ORP.4.A18.2",
+                "parts": [
+                  {
+                    "id": "ORP.4.A18.2-stmt",
+                    "name": "statement",
+                    "prose": "Der Einsatz eines zentralen netzbasierten Authentisierungsdienstes SOLLTE sorgfältig geplant werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Einsatz eines zentralen Authentisierungsdienstes — ORP.4.A18.2"
+              },
+              {
+                "id": "ORP.4.A18.3",
+                "parts": [
+                  {
+                    "id": "ORP.4.A18.3-stmt",
+                    "name": "statement",
+                    "prose": "Dazu SOLLTEN die Sicherheitsanforderungen dokumentiert werden, die für die Auswahl eines solchen Dienstes relevant sind."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Einsatz eines zentralen Authentisierungsdienstes — ORP.4.A18.3"
+              }
+            ],
+            "id": "ORP.4.A18",
+            "title": "Einsatz eines zentralen Authentisierungsdienstes"
+          },
+          {
+            "controls": [
+              {
+                "id": "ORP.4.A19.1",
+                "parts": [
+                  {
+                    "id": "ORP.4.A19.1-stmt",
+                    "name": "statement",
+                    "prose": "Alle Mitarbeitende SOLLTEN in den korrekten Umgang mit dem Authentisierungsverfahren eingewiesen werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Einweisung aller Mitarbeitenden in den Umgang mit Authentisierungsverfahren und -mechanismen — ORP.4.A19.1"
+              },
+              {
+                "id": "ORP.4.A19.2",
+                "parts": [
+                  {
+                    "id": "ORP.4.A19.2-stmt",
+                    "name": "statement",
+                    "prose": "Es SOLLTE verständliche Richtlinien für den Umgang mit Authentisierungsverfahren geben."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Einweisung aller Mitarbeitenden in den Umgang mit Authentisierungsverfahren und -mechanismen — ORP.4.A19.2"
+              },
+              {
+                "id": "ORP.4.A19.3",
+                "parts": [
+                  {
+                    "id": "ORP.4.A19.3-stmt",
+                    "name": "statement",
+                    "prose": "Die Mitarbeitenden SOLLTEN über relevante Regelungen informiert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Einweisung aller Mitarbeitenden in den Umgang mit Authentisierungsverfahren und -mechanismen — ORP.4.A19.3"
+              }
+            ],
+            "id": "ORP.4.A19",
+            "title": "Einweisung aller Mitarbeitenden in den Umgang mit Authentisierungsverfahren und -mechanismen"
+          },
+          {
+            "controls": [
+              {
+                "id": "ORP.4.A2.1",
+                "parts": [
+                  {
+                    "id": "ORP.4.A2.1-stmt",
+                    "name": "statement",
+                    "prose": "Benutzendenkennungen und Berechtigungen DÜRFEN NUR aufgrund des tatsächlichen Bedarfs und der Notwendigkeit zur Aufgabenerfüllung vergeben werden (Prinzip der geringsten Berechtigungen, englisch Least Privileges und Erforderlichkeitsprinzip, englisch Need-to-know)."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Einrichtung, Änderung und Entzug von Berechtigungen — ORP.4.A2.1"
+              },
+              {
+                "id": "ORP.4.A2.2",
+                "parts": [
+                  {
+                    "id": "ORP.4.A2.2-stmt",
+                    "name": "statement",
+                    "prose": "Bei personellen Veränderungen MÜSSEN die nicht mehr benötigten Benutzendenkennungen und Berechtigungen entfernt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Einrichtung, Änderung und Entzug von Berechtigungen — ORP.4.A2.2"
+              },
+              {
+                "id": "ORP.4.A2.3",
+                "parts": [
+                  {
+                    "id": "ORP.4.A2.3-stmt",
+                    "name": "statement",
+                    "prose": "Beantragen Mitarbeitende Berechtigungen, die über den Standard hinausgehen, DÜRFEN diese NUR nach zusätzlicher Begründung und Prüfung vergeben werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Einrichtung, Änderung und Entzug von Berechtigungen — ORP.4.A2.3"
+              },
+              {
+                "id": "ORP.4.A2.4",
+                "parts": [
+                  {
+                    "id": "ORP.4.A2.4-stmt",
+                    "name": "statement",
+                    "prose": "Zugriffsberechtigungen auf Systemverzeichnisse und -dateien SOLLTEN restriktiv eingeschränkt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Einrichtung, Änderung und Entzug von Berechtigungen — ORP.4.A2.4"
+              },
+              {
+                "id": "ORP.4.A2.5",
+                "parts": [
+                  {
+                    "id": "ORP.4.A2.5-stmt",
+                    "name": "statement",
+                    "prose": "Alle Berechtigungen MÜSSEN über separate administrative Rollen eingerichtet werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Einrichtung, Änderung und Entzug von Berechtigungen — ORP.4.A2.5"
+              }
+            ],
+            "id": "ORP.4.A2",
+            "title": "Einrichtung, Änderung und Entzug von Berechtigungen"
+          },
+          {
+            "controls": [
+              {
+                "id": "ORP.4.A20.1",
+                "parts": [
+                  {
+                    "id": "ORP.4.A20.1-stmt",
+                    "name": "statement",
+                    "prose": "Es SOLLTE geprüft werden, inwieweit ein ausgefallenes Identitäts- und Berechtigungsmanagement-System sicherheitskritisch für die Geschäftsprozesse ist."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[E]"
+                  }
+                ],
+                "title": "Notfallvorsorge für das Identitäts- und Berechtigungsmanagement-System — ORP.4.A20.1"
+              },
+              {
+                "id": "ORP.4.A20.2",
+                "parts": [
+                  {
+                    "id": "ORP.4.A20.2-stmt",
+                    "name": "statement",
+                    "prose": "Es SOLLTEN Vorkehrungen getroffen werden, um bei einem ausgefallenen Identitäts- und Berechtigungsmanagement-System weiterhin arbeitsfähig zu sein."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[E]"
+                  }
+                ],
+                "title": "Notfallvorsorge für das Identitäts- und Berechtigungsmanagement-System — ORP.4.A20.2"
+              },
+              {
+                "id": "ORP.4.A20.3",
+                "parts": [
+                  {
+                    "id": "ORP.4.A20.3-stmt",
+                    "name": "statement",
+                    "prose": "Insbesondere SOLLTE das im Notfallkonzept vorgesehene Berechtigungskonzept weiterhin anwendbar sein, wenn das Identitäts- und Berechtigungsmanagement-System ausgefallen ist."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[E]"
+                  }
+                ],
+                "title": "Notfallvorsorge für das Identitäts- und Berechtigungsmanagement-System — ORP.4.A20.3"
+              }
+            ],
+            "id": "ORP.4.A20",
+            "title": "Notfallvorsorge für das Identitäts- und Berechtigungsmanagement-System"
+          },
+          {
+            "controls": [
+              {
+                "id": "ORP.4.A21.1",
+                "parts": [
+                  {
+                    "id": "ORP.4.A21.1-stmt",
+                    "name": "statement",
+                    "prose": "Es SOLLTE eine sichere Mehr-Faktor-Authentisierung, z. B. mit kryptografischen Zertifikaten, Chipkarten oder Token, zur Authentisierung verwendet werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[E]"
+                  }
+                ],
+                "title": "Mehr-Faktor-Authentisierung — ORP.4.A21.1"
+              }
+            ],
+            "id": "ORP.4.A21",
+            "title": "Mehr-Faktor-Authentisierung"
+          },
+          {
+            "controls": [
+              {
+                "id": "ORP.4.A22.1",
+                "parts": [
+                  {
+                    "id": "ORP.4.A22.1-stmt",
+                    "name": "statement",
+                    "prose": "In Abhängigkeit von Einsatzzweck und Schutzbedarf MÜSSEN sichere Passwörter geeigneter Qualität gewählt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Regelung zur Passwortqualität — ORP.4.A22.1"
+              },
+              {
+                "id": "ORP.4.A22.2",
+                "parts": [
+                  {
+                    "id": "ORP.4.A22.2-stmt",
+                    "name": "statement",
+                    "prose": "Das Passwort MUSS so komplex sein, dass es nicht leicht zu erraten ist."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Regelung zur Passwortqualität — ORP.4.A22.2"
+              },
+              {
+                "id": "ORP.4.A22.3",
+                "parts": [
+                  {
+                    "id": "ORP.4.A22.3-stmt",
+                    "name": "statement",
+                    "prose": "Das Passwort DARF NICHT zu kompliziert sein, damit Benutzende in der Lage sind, das Passwort mit vertretbarem Aufwand regelmäßig zu verwenden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Regelung zur Passwortqualität — ORP.4.A22.3"
+              }
+            ],
+            "id": "ORP.4.A22",
+            "title": "Regelung zur Passwortqualität"
+          },
+          {
+            "controls": [
+              {
+                "id": "ORP.4.A23.1",
+                "parts": [
+                  {
+                    "id": "ORP.4.A23.1-stmt",
+                    "name": "statement",
+                    "prose": "IT-Systeme oder Anwendungen SOLLTEN NUR mit einem validen Grund zum Wechsel des Passworts auffordern."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Regelung für passwortverarbeitende Anwendungen und IT-Systeme — ORP.4.A23.1"
+              },
+              {
+                "id": "ORP.4.A23.10",
+                "parts": [
+                  {
+                    "id": "ORP.4.A23.10-stmt",
+                    "name": "statement",
+                    "prose": "Bei Kennungen für technische Konten, Dienstkonten, Schnittstellen oder Vergleichbares SOLLTE ein Passwortwechsel sorgfältig geplant und gegebenenfalls mit den Anwendungsverantwortlichen abgestimmt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Regelung für passwortverarbeitende Anwendungen und IT-Systeme — ORP.4.A23.10"
+              },
+              {
+                "id": "ORP.4.A23.11",
+                "parts": [
+                  {
+                    "id": "ORP.4.A23.11-stmt",
+                    "name": "statement",
+                    "prose": "Bei der Authentisierung in vernetzten Systemen DÜRFEN Passwörter NICHT unverschlüsselt über unsichere Netze übertragen werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Regelung für passwortverarbeitende Anwendungen und IT-Systeme — ORP.4.A23.11"
+              },
+              {
+                "id": "ORP.4.A23.12",
+                "parts": [
+                  {
+                    "id": "ORP.4.A23.12-stmt",
+                    "name": "statement",
+                    "prose": "Wenn Passwörter in einem Intranet übertragen werden, SOLLTEN sie verschlüsselt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Regelung für passwortverarbeitende Anwendungen und IT-Systeme — ORP.4.A23.12"
+              },
+              {
+                "id": "ORP.4.A23.13",
+                "parts": [
+                  {
+                    "id": "ORP.4.A23.13-stmt",
+                    "name": "statement",
+                    "prose": "Bei erfolglosen Anmeldeversuchen SOLLTEN die passwortverarbeitenden Anwendungen oder die IT-Systeme keinen Hinweis darauf geben, ob Passwort oder Kennung falsch sind."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Regelung für passwortverarbeitende Anwendungen und IT-Systeme — ORP.4.A23.13"
+              },
+              {
+                "id": "ORP.4.A23.2",
+                "parts": [
+                  {
+                    "id": "ORP.4.A23.2-stmt",
+                    "name": "statement",
+                    "prose": "Reine zeitgesteuerte Wechsel SOLLTEN vermieden werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Regelung für passwortverarbeitende Anwendungen und IT-Systeme — ORP.4.A23.2"
+              },
+              {
+                "id": "ORP.4.A23.3",
+                "parts": [
+                  {
+                    "id": "ORP.4.A23.3-stmt",
+                    "name": "statement",
+                    "prose": "Es MÜSSEN Maßnahmen ergriffen werden, um die Kompromittierung von Passwörtern zu erkennen."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Regelung für passwortverarbeitende Anwendungen und IT-Systeme — ORP.4.A23.3"
+              },
+              {
+                "id": "ORP.4.A23.4",
+                "parts": [
+                  {
+                    "id": "ORP.4.A23.4-stmt",
+                    "name": "statement",
+                    "prose": "Ist dies nicht möglich, so SOLLTE geprüft werden, ob die Nachteile eines zeitgesteuerten Passwortwechsels in Kauf genommen werden können und Passwörter in gewissen Abständen gewechselt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Regelung für passwortverarbeitende Anwendungen und IT-Systeme — ORP.4.A23.4"
+              },
+              {
+                "id": "ORP.4.A23.5",
+                "parts": [
+                  {
+                    "id": "ORP.4.A23.5-stmt",
+                    "name": "statement",
+                    "prose": "Standardpasswörter MÜSSEN durch ausreichend starke Passwörter ersetzt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Regelung für passwortverarbeitende Anwendungen und IT-Systeme — ORP.4.A23.5"
+              },
+              {
+                "id": "ORP.4.A23.6",
+                "parts": [
+                  {
+                    "id": "ORP.4.A23.6-stmt",
+                    "name": "statement",
+                    "prose": "Vordefinierte Kennungen MÜSSEN geändert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Regelung für passwortverarbeitende Anwendungen und IT-Systeme — ORP.4.A23.6"
+              },
+              {
+                "id": "ORP.4.A23.7",
+                "parts": [
+                  {
+                    "id": "ORP.4.A23.7-stmt",
+                    "name": "statement",
+                    "prose": "Es SOLLTE sichergestellt werden, dass die mögliche Passwortlänge auch im vollen Umfang von verarbeitenden IT-Systemen geprüft wird."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Regelung für passwortverarbeitende Anwendungen und IT-Systeme — ORP.4.A23.7"
+              },
+              {
+                "id": "ORP.4.A23.8",
+                "parts": [
+                  {
+                    "id": "ORP.4.A23.8-stmt",
+                    "name": "statement",
+                    "prose": "Nach einem Passwortwechsel DÜRFEN alte Passwörter NICHT mehr genutzt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Regelung für passwortverarbeitende Anwendungen und IT-Systeme — ORP.4.A23.8"
+              },
+              {
+                "id": "ORP.4.A23.9",
+                "parts": [
+                  {
+                    "id": "ORP.4.A23.9-stmt",
+                    "name": "statement",
+                    "prose": "Passwörter MÜSSEN so sicher wie möglich gespeichert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Regelung für passwortverarbeitende Anwendungen und IT-Systeme — ORP.4.A23.9"
+              }
+            ],
+            "id": "ORP.4.A23",
+            "title": "Regelung für passwortverarbeitende Anwendungen und IT-Systeme"
+          },
+          {
+            "controls": [
+              {
+                "id": "ORP.4.A24.1",
+                "parts": [
+                  {
+                    "id": "ORP.4.A24.1-stmt",
+                    "name": "statement",
+                    "prose": "Administrative Tätigkeiten SOLLTEN nur durch zwei Personen durchgeführt werden können."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[E]"
+                  }
+                ],
+                "title": "Vier-Augen-Prinzip für administrative Tätigkeiten — ORP.4.A24.1"
+              },
+              {
+                "id": "ORP.4.A24.2",
+                "parts": [
+                  {
+                    "id": "ORP.4.A24.2-stmt",
+                    "name": "statement",
+                    "prose": "Dazu SOLLTEN bei Mehr-Faktor-Authentisierung die Faktoren auf die zwei Personen verteilt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[E]"
+                  }
+                ],
+                "title": "Vier-Augen-Prinzip für administrative Tätigkeiten — ORP.4.A24.2"
+              },
+              {
+                "id": "ORP.4.A24.3",
+                "parts": [
+                  {
+                    "id": "ORP.4.A24.3-stmt",
+                    "name": "statement",
+                    "prose": "Bei der Nutzung von Passwörtern SOLLTEN diese in zwei Teile zerlegt werden und jede der zwei Personen enthält einen Teil."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[E]"
+                  }
+                ],
+                "title": "Vier-Augen-Prinzip für administrative Tätigkeiten — ORP.4.A24.3"
+              }
+            ],
+            "id": "ORP.4.A24",
+            "title": "Vier-Augen-Prinzip für administrative Tätigkeiten"
+          },
+          {
+            "controls": [
+              {
+                "id": "ORP.4.A3.1",
+                "parts": [
+                  {
+                    "id": "ORP.4.A3.1-stmt",
+                    "name": "statement",
+                    "prose": "Es MUSS dokumentiert werden, welche Benutzendenkennungen, angelegte Benutzendengruppen und Rechteprofile zugelassen und angelegt wurden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Dokumentation der Benutzendenkennungen und Rechteprofile — ORP.4.A3.1"
+              },
+              {
+                "id": "ORP.4.A3.2",
+                "parts": [
+                  {
+                    "id": "ORP.4.A3.2-stmt",
+                    "name": "statement",
+                    "prose": "Die Dokumentation der zugelassenen Benutzendenkennungen, angelegten Benutzendengruppen und Rechteprofile MUSS regelmäßig daraufhin überprüft werden, ob sie den tatsächlichen Stand der Rechtevergabe widerspiegelt."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Dokumentation der Benutzendenkennungen und Rechteprofile — ORP.4.A3.2"
+              },
+              {
+                "id": "ORP.4.A3.3",
+                "parts": [
+                  {
+                    "id": "ORP.4.A3.3-stmt",
+                    "name": "statement",
+                    "prose": "Dabei MUSS auch geprüft werden, ob die Rechtevergabe noch den Sicherheitsanforderungen und den aktuellen Aufgaben der Benutzenden entspricht."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Dokumentation der Benutzendenkennungen und Rechteprofile — ORP.4.A3.3"
+              },
+              {
+                "id": "ORP.4.A3.4",
+                "parts": [
+                  {
+                    "id": "ORP.4.A3.4-stmt",
+                    "name": "statement",
+                    "prose": "Die Dokumentation MUSS vor unberechtigtem Zugriff geschützt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Dokumentation der Benutzendenkennungen und Rechteprofile — ORP.4.A3.4"
+              },
+              {
+                "id": "ORP.4.A3.5",
+                "parts": [
+                  {
+                    "id": "ORP.4.A3.5-stmt",
+                    "name": "statement",
+                    "prose": "Sofern sie in elektronischer Form erfolgt, SOLLTE sie in das Datensicherungsverfahren einbezogen werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Dokumentation der Benutzendenkennungen und Rechteprofile — ORP.4.A3.5"
+              }
+            ],
+            "id": "ORP.4.A3",
+            "title": "Dokumentation der Benutzendenkennungen und Rechteprofile"
+          },
+          {
+            "controls": [
+              {
+                "id": "ORP.4.A4.1",
+                "parts": [
+                  {
+                    "id": "ORP.4.A4.1-stmt",
+                    "name": "statement",
+                    "prose": "Die von der Institution definierten unvereinbaren Aufgaben und Funktionen (siehe Baustein ORP.1 Organisation) MÜSSEN durch das Identitäts- und Berechtigungsmanagement getrennt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Aufgabenverteilung und Funktionstrennung — ORP.4.A4.1"
+              }
+            ],
+            "id": "ORP.4.A4",
+            "title": "Aufgabenverteilung und Funktionstrennung"
+          },
+          {
+            "controls": [
+              {
+                "id": "ORP.4.A5.1",
+                "parts": [
+                  {
+                    "id": "ORP.4.A5.1-stmt",
+                    "name": "statement",
+                    "prose": "Es MUSS festgelegt werden, welche Zutrittsberechtigungen an welche Personen im Rahmen ihrer Funktion vergeben bzw. ihnen entzogen werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Vergabe von Zutrittsberechtigungen — ORP.4.A5.1"
+              },
+              {
+                "id": "ORP.4.A5.2",
+                "parts": [
+                  {
+                    "id": "ORP.4.A5.2-stmt",
+                    "name": "statement",
+                    "prose": "Die Ausgabe bzw. der Entzug von verwendeten Zutrittsmittel wie Chipkarten MUSS dokumentiert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Vergabe von Zutrittsberechtigungen — ORP.4.A5.2"
+              },
+              {
+                "id": "ORP.4.A5.3",
+                "parts": [
+                  {
+                    "id": "ORP.4.A5.3-stmt",
+                    "name": "statement",
+                    "prose": "Wenn Zutrittsmittel kompromittiert wurden, MÜSSEN sie ausgewechselt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Vergabe von Zutrittsberechtigungen — ORP.4.A5.3"
+              },
+              {
+                "id": "ORP.4.A5.4",
+                "parts": [
+                  {
+                    "id": "ORP.4.A5.4-stmt",
+                    "name": "statement",
+                    "prose": "Die Zutrittsberechtigten SOLLTEN für den korrekten Umgang mit den Zutrittsmitteln geschult werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Vergabe von Zutrittsberechtigungen — ORP.4.A5.4"
+              },
+              {
+                "id": "ORP.4.A5.5",
+                "parts": [
+                  {
+                    "id": "ORP.4.A5.5-stmt",
+                    "name": "statement",
+                    "prose": "Bei längeren Abwesenheiten SOLLTEN berechtigte Personen vorübergehend gesperrt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Vergabe von Zutrittsberechtigungen — ORP.4.A5.5"
+              }
+            ],
+            "id": "ORP.4.A5",
+            "title": "Vergabe von Zutrittsberechtigungen"
+          },
+          {
+            "controls": [
+              {
+                "id": "ORP.4.A6.1",
+                "parts": [
+                  {
+                    "id": "ORP.4.A6.1-stmt",
+                    "name": "statement",
+                    "prose": "Es MUSS festgelegt werden, welche Zugangsberechtigungen an welche Personen im Rahmen ihrer Funktion vergeben bzw. ihnen entzogen werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Vergabe von Zugangsberechtigungen — ORP.4.A6.1"
+              },
+              {
+                "id": "ORP.4.A6.2",
+                "parts": [
+                  {
+                    "id": "ORP.4.A6.2-stmt",
+                    "name": "statement",
+                    "prose": "Werden Zugangsmittel wie Chipkarten verwendet, so MUSS die Ausgabe bzw. der Entzug dokumentiert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Vergabe von Zugangsberechtigungen — ORP.4.A6.2"
+              },
+              {
+                "id": "ORP.4.A6.3",
+                "parts": [
+                  {
+                    "id": "ORP.4.A6.3-stmt",
+                    "name": "statement",
+                    "prose": "Wenn Zugangsmittel kompromittiert wurden, MÜSSEN sie ausgewechselt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Vergabe von Zugangsberechtigungen — ORP.4.A6.3"
+              },
+              {
+                "id": "ORP.4.A6.4",
+                "parts": [
+                  {
+                    "id": "ORP.4.A6.4-stmt",
+                    "name": "statement",
+                    "prose": "Die Zugangsberechtigten SOLLTEN für den korrekten Umgang mit den Zugangsmitteln geschult werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Vergabe von Zugangsberechtigungen — ORP.4.A6.4"
+              },
+              {
+                "id": "ORP.4.A6.5",
+                "parts": [
+                  {
+                    "id": "ORP.4.A6.5-stmt",
+                    "name": "statement",
+                    "prose": "Bei längeren Abwesenheiten SOLLTEN berechtigte Personen vorübergehend gesperrt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Vergabe von Zugangsberechtigungen — ORP.4.A6.5"
+              }
+            ],
+            "id": "ORP.4.A6",
+            "title": "Vergabe von Zugangsberechtigungen"
+          },
+          {
+            "controls": [
+              {
+                "id": "ORP.4.A7.1",
+                "parts": [
+                  {
+                    "id": "ORP.4.A7.1-stmt",
+                    "name": "statement",
+                    "prose": "Es MUSS festgelegt werden, welche Zugriffsrechte an welche Personen im Rahmen ihrer Funktion vergeben bzw. ihnen entzogen werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Vergabe von Zugriffsrechten — ORP.4.A7.1"
+              },
+              {
+                "id": "ORP.4.A7.2",
+                "parts": [
+                  {
+                    "id": "ORP.4.A7.2-stmt",
+                    "name": "statement",
+                    "prose": "Werden im Rahmen der Zugriffskontrolle Chipkarten oder Token verwendet, so MUSS die Ausgabe bzw. der Entzug dokumentiert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Vergabe von Zugriffsrechten — ORP.4.A7.2"
+              },
+              {
+                "id": "ORP.4.A7.3",
+                "parts": [
+                  {
+                    "id": "ORP.4.A7.3-stmt",
+                    "name": "statement",
+                    "prose": "Die Anwendenden SOLLTEN für den korrekten Umgang mit Chipkarten oder Token geschult werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Vergabe von Zugriffsrechten — ORP.4.A7.3"
+              },
+              {
+                "id": "ORP.4.A7.4",
+                "parts": [
+                  {
+                    "id": "ORP.4.A7.4-stmt",
+                    "name": "statement",
+                    "prose": "Bei längeren Abwesenheiten SOLLTEN berechtigte Personen vorübergehend gesperrt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Vergabe von Zugriffsrechten — ORP.4.A7.4"
+              }
+            ],
+            "id": "ORP.4.A7",
+            "title": "Vergabe von Zugriffsrechten"
+          },
+          {
+            "controls": [
+              {
+                "id": "ORP.4.A8.1",
+                "parts": [
+                  {
+                    "id": "ORP.4.A8.1-stmt",
+                    "name": "statement",
+                    "prose": "Die Institution MUSS den Passwortgebrauch verbindlich regeln (siehe auch ORP.4.A22 Regelung zur Passwortqualität und ORP.4.A23 Regelung für passwortverarbeitende Anwendungen und IT-Systeme)."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Regelung des Passwortgebrauchs — ORP.4.A8.1"
+              },
+              {
+                "id": "ORP.4.A8.10",
+                "parts": [
+                  {
+                    "id": "ORP.4.A8.10-stmt",
+                    "name": "statement",
+                    "prose": "Ein Passwort DARF NUR für eine Hinterlegung für einen Notfall schriftlich fixiert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Regelung des Passwortgebrauchs — ORP.4.A8.10"
+              },
+              {
+                "id": "ORP.4.A8.11",
+                "parts": [
+                  {
+                    "id": "ORP.4.A8.11-stmt",
+                    "name": "statement",
+                    "prose": "Es MUSS dann sicher aufbewahrt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Regelung des Passwortgebrauchs — ORP.4.A8.11"
+              },
+              {
+                "id": "ORP.4.A8.12",
+                "parts": [
+                  {
+                    "id": "ORP.4.A8.12-stmt",
+                    "name": "statement",
+                    "prose": "Die Nutzung eines Passwort-Managers SOLLTE geprüft werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Regelung des Passwortgebrauchs — ORP.4.A8.12"
+              },
+              {
+                "id": "ORP.4.A8.13",
+                "parts": [
+                  {
+                    "id": "ORP.4.A8.13-stmt",
+                    "name": "statement",
+                    "prose": "Bei Passwort-Managern mit Funktionen oder Plug-ins, mit denen Passwörter über Onlinedienste Dritter synchronisiert oder anderweitig an Dritte übertragen werden, MÜSSEN diese Funktionen und Plug-ins deaktiviert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Regelung des Passwortgebrauchs — ORP.4.A8.13"
+              },
+              {
+                "id": "ORP.4.A8.14",
+                "parts": [
+                  {
+                    "id": "ORP.4.A8.14-stmt",
+                    "name": "statement",
+                    "prose": "Ein Passwort MUSS gewechselt werden, wenn es unautorisierten Personen bekannt geworden ist oder der Verdacht dazu besteht."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Regelung des Passwortgebrauchs — ORP.4.A8.14"
+              },
+              {
+                "id": "ORP.4.A8.2",
+                "parts": [
+                  {
+                    "id": "ORP.4.A8.2-stmt",
+                    "name": "statement",
+                    "prose": "Dabei MUSS geprüft werden, ob Passwörter als alleiniges Authentisierungsverfahren eingesetzt werden sollen, oder ob andere Authentisierungsmerkmale bzw. -verfahren zusätzlich zu oder anstelle von Passwörtern verwendet werden können."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Regelung des Passwortgebrauchs — ORP.4.A8.2"
+              },
+              {
+                "id": "ORP.4.A8.3",
+                "parts": [
+                  {
+                    "id": "ORP.4.A8.3-stmt",
+                    "name": "statement",
+                    "prose": "Passwörter DÜRFEN NICHT mehrfach verwendet werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Regelung des Passwortgebrauchs — ORP.4.A8.3"
+              },
+              {
+                "id": "ORP.4.A8.4",
+                "parts": [
+                  {
+                    "id": "ORP.4.A8.4-stmt",
+                    "name": "statement",
+                    "prose": "Für jedes IT-System bzw. jede Anwendung MUSS ein eigenständiges Passwort verwendet werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Regelung des Passwortgebrauchs — ORP.4.A8.4"
+              },
+              {
+                "id": "ORP.4.A8.5",
+                "parts": [
+                  {
+                    "id": "ORP.4.A8.5-stmt",
+                    "name": "statement",
+                    "prose": "Passwörter, die leicht zu erraten sind oder in gängigen Passwortlisten geführt werden, DÜRFEN NICHT verwendet werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Regelung des Passwortgebrauchs — ORP.4.A8.5"
+              },
+              {
+                "id": "ORP.4.A8.6",
+                "parts": [
+                  {
+                    "id": "ORP.4.A8.6-stmt",
+                    "name": "statement",
+                    "prose": "Passwörter MÜSSEN geheim gehalten werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Regelung des Passwortgebrauchs — ORP.4.A8.6"
+              },
+              {
+                "id": "ORP.4.A8.7",
+                "parts": [
+                  {
+                    "id": "ORP.4.A8.7-stmt",
+                    "name": "statement",
+                    "prose": "Sie DÜRFEN NUR den Benutzenden persönlich bekannt sein."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Regelung des Passwortgebrauchs — ORP.4.A8.7"
+              },
+              {
+                "id": "ORP.4.A8.8",
+                "parts": [
+                  {
+                    "id": "ORP.4.A8.8-stmt",
+                    "name": "statement",
+                    "prose": "Passwörter DÜRFEN NUR unbeobachtet eingegeben werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Regelung des Passwortgebrauchs — ORP.4.A8.8"
+              },
+              {
+                "id": "ORP.4.A8.9",
+                "parts": [
+                  {
+                    "id": "ORP.4.A8.9-stmt",
+                    "name": "statement",
+                    "prose": "Passwörter DÜRFEN NICHT auf programmierbaren Funktionstasten von Tastaturen oder Mäusen gespeichert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Regelung des Passwortgebrauchs — ORP.4.A8.9"
+              }
+            ],
+            "id": "ORP.4.A8",
+            "title": "Regelung des Passwortgebrauchs"
+          },
+          {
+            "controls": [
+              {
+                "id": "ORP.4.A9.1",
+                "parts": [
+                  {
+                    "id": "ORP.4.A9.1-stmt",
+                    "name": "statement",
+                    "prose": "Der Zugriff auf alle IT-Systeme und Dienste MUSS durch eine angemessene Identifikation und Authentisierung der zugreifenden Benutzenden, Dienste oder IT-Systeme abgesichert sein."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Identifikation und Authentisierung — ORP.4.A9.1"
+              },
+              {
+                "id": "ORP.4.A9.2",
+                "parts": [
+                  {
+                    "id": "ORP.4.A9.2-stmt",
+                    "name": "statement",
+                    "prose": "Vorkonfigurierte Authentisierungsmittel MÜSSEN vor dem produktiven Einsatz geändert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Identifikation und Authentisierung — ORP.4.A9.2"
+              }
+            ],
+            "id": "ORP.4.A9",
+            "title": "Identifikation und Authentisierung"
+          }
+        ],
+        "id": "ORP.4",
+        "title": "Identitäts- und Berechtigungsmanagement"
+      },
+      {
+        "groups": [
+          {
+            "controls": [
+              {
+                "id": "ORP.5.A1.1",
+                "parts": [
+                  {
+                    "id": "ORP.5.A1.1-stmt",
+                    "name": "statement",
+                    "prose": "Alle gesetzlichen, vertraglichen und sonstigen Vorgaben mit Auswirkungen auf das Informationssicherheitsmanagement MÜSSEN identifiziert und dokumentiert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Identifikation der Rahmenbedingungen — ORP.5.A1.1"
+              },
+              {
+                "id": "ORP.5.A1.2",
+                "parts": [
+                  {
+                    "id": "ORP.5.A1.2-stmt",
+                    "name": "statement",
+                    "prose": "Die für die einzelnen Bereiche der Institution relevanten gesetzlichen, vertraglichen und sonstigen Vorgaben SOLLTEN in einer strukturierten Übersicht herausgearbeitet werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Identifikation der Rahmenbedingungen — ORP.5.A1.2"
+              },
+              {
+                "id": "ORP.5.A1.3",
+                "parts": [
+                  {
+                    "id": "ORP.5.A1.3-stmt",
+                    "name": "statement",
+                    "prose": "Die Dokumentation MUSS auf dem aktuellen Stand gehalten werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Identifikation der Rahmenbedingungen — ORP.5.A1.3"
+              }
+            ],
+            "id": "ORP.5.A1",
+            "title": "Identifikation der Rahmenbedingungen"
+          },
+          {
+            "controls": [
+              {
+                "id": "ORP.5.A2.1",
+                "parts": [
+                  {
+                    "id": "ORP.5.A2.1-stmt",
+                    "name": "statement",
+                    "prose": "Die als sicherheitsrelevant identifizierten Anforderungen MÜSSEN bei der Planung und Konzeption von Geschäftsprozessen, Anwendungen und IT-Systemen oder bei der Beschaffung neuer Komponenten einfließen."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Beachtung der Rahmenbedingungen — ORP.5.A2.1"
+              },
+              {
+                "id": "ORP.5.A2.2",
+                "parts": [
+                  {
+                    "id": "ORP.5.A2.2-stmt",
+                    "name": "statement",
+                    "prose": "Führungskräfte, die eine rechtliche Verantwortung für die Institution tragen, MÜSSEN für die Einhaltung der gesetzlichen, vertraglichen und sonstigen Vorgaben sorgen."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Beachtung der Rahmenbedingungen — ORP.5.A2.2"
+              },
+              {
+                "id": "ORP.5.A2.3",
+                "parts": [
+                  {
+                    "id": "ORP.5.A2.3-stmt",
+                    "name": "statement",
+                    "prose": "Die Verantwortlichkeiten und Zuständigkeiten für die Einhaltung dieser Vorgaben MÜSSEN festgelegt sein."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Beachtung der Rahmenbedingungen — ORP.5.A2.3"
+              },
+              {
+                "id": "ORP.5.A2.4",
+                "parts": [
+                  {
+                    "id": "ORP.5.A2.4-stmt",
+                    "name": "statement",
+                    "prose": "Es MÜSSEN geeignete Maßnahmen identifiziert und umgesetzt werden, um Verstöße gegen relevante Anforderungen zu vermeiden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Beachtung der Rahmenbedingungen — ORP.5.A2.4"
+              },
+              {
+                "id": "ORP.5.A2.5",
+                "parts": [
+                  {
+                    "id": "ORP.5.A2.5-stmt",
+                    "name": "statement",
+                    "prose": "Wenn solche Verstöße erkannt werden, MÜSSEN sachgerechte Korrekturmaßnahmen ergriffen werden, um die Abweichungen zu beheben."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Beachtung der Rahmenbedingungen — ORP.5.A2.5"
+              }
+            ],
+            "id": "ORP.5.A2",
+            "title": "Beachtung der Rahmenbedingungen"
+          },
+          {
+            "controls": [
+              {
+                "id": "ORP.5.A4.1",
+                "parts": [
+                  {
+                    "id": "ORP.5.A4.1-stmt",
+                    "name": "statement",
+                    "prose": "In der Institution SOLLTE ein Prozess aufgebaut werden, um alle relevanten gesetzlichen, vertraglichen und sonstigen Vorgaben mit Auswirkungen auf das Informationssicherheitsmanagement zu identifizieren."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Konzeption und Organisation des Compliance Managements — ORP.5.A4.1"
+              },
+              {
+                "id": "ORP.5.A4.2",
+                "parts": [
+                  {
+                    "id": "ORP.5.A4.2-stmt",
+                    "name": "statement",
+                    "prose": "Es SOLLTEN geeignete Prozesse und Organisationsstrukturen aufgebaut werden, um basierend auf der Identifikation und Beachtung der rechtlichen Rahmenbedingungen, den Überblick über die verschiedenen rechtlichen Anforderungen an die einzelnen Bereiche der Institution zu gewährleisten."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Konzeption und Organisation des Compliance Managements — ORP.5.A4.2"
+              },
+              {
+                "id": "ORP.5.A4.3",
+                "parts": [
+                  {
+                    "id": "ORP.5.A4.3-stmt",
+                    "name": "statement",
+                    "prose": "Dafür SOLLTEN Zuständige für das Compliance Management festgelegt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Konzeption und Organisation des Compliance Managements — ORP.5.A4.3"
+              },
+              {
+                "id": "ORP.5.A4.4",
+                "parts": [
+                  {
+                    "id": "ORP.5.A4.4-stmt",
+                    "name": "statement",
+                    "prose": "Compliance-Beauftragte und Informationssicherheitsbeauftragte SOLLTEN sich regelmäßig austauschen."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Konzeption und Organisation des Compliance Managements — ORP.5.A4.4"
+              },
+              {
+                "id": "ORP.5.A4.5",
+                "parts": [
+                  {
+                    "id": "ORP.5.A4.5-stmt",
+                    "name": "statement",
+                    "prose": "Sie SOLLTEN gemeinsam Sicherheitsanforderungen ins Compliance Management integrieren, sicherheitsrelevante Anforderungen in Sicherheitsmaßnahmen überführen und deren Umsetzung kontrollieren."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Konzeption und Organisation des Compliance Managements — ORP.5.A4.5"
+              }
+            ],
+            "id": "ORP.5.A4",
+            "title": "Konzeption und Organisation des Compliance Managements"
+          },
+          {
+            "controls": [
+              {
+                "id": "ORP.5.A5.1",
+                "parts": [
+                  {
+                    "id": "ORP.5.A5.1-stmt",
+                    "name": "statement",
+                    "prose": "Ist es in Einzelfällen erforderlich, von getroffenen Regelungen abzuweichen, SOLLTE die Ausnahme begründet und durch eine autorisierte Stelle nach einer Risikoabschätzung genehmigt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Ausnahmegenehmigungen — ORP.5.A5.1"
+              },
+              {
+                "id": "ORP.5.A5.2",
+                "parts": [
+                  {
+                    "id": "ORP.5.A5.2-stmt",
+                    "name": "statement",
+                    "prose": "Es SOLLTE ein Genehmigungsverfahren für Ausnahmegenehmigungen geben."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Ausnahmegenehmigungen — ORP.5.A5.2"
+              },
+              {
+                "id": "ORP.5.A5.3",
+                "parts": [
+                  {
+                    "id": "ORP.5.A5.3-stmt",
+                    "name": "statement",
+                    "prose": "Es SOLLTE eine Übersicht über alle erteilten Ausnahmegenehmigungen erstellt und gepflegt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Ausnahmegenehmigungen — ORP.5.A5.3"
+              },
+              {
+                "id": "ORP.5.A5.4",
+                "parts": [
+                  {
+                    "id": "ORP.5.A5.4-stmt",
+                    "name": "statement",
+                    "prose": "Ein entsprechendes Verfahren für die Dokumentation und ein Überprüfungsprozess SOLLTE etabliert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Ausnahmegenehmigungen — ORP.5.A5.4"
+              },
+              {
+                "id": "ORP.5.A5.5",
+                "parts": [
+                  {
+                    "id": "ORP.5.A5.5-stmt",
+                    "name": "statement",
+                    "prose": "Alle Ausnahmegenehmigungen SOLLTEN befristet sein."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Ausnahmegenehmigungen — ORP.5.A5.5"
+              }
+            ],
+            "id": "ORP.5.A5",
+            "title": "Ausnahmegenehmigungen"
+          },
+          {
+            "controls": [
+              {
+                "id": "ORP.5.A8.1",
+                "parts": [
+                  {
+                    "id": "ORP.5.A8.1-stmt",
+                    "name": "statement",
+                    "prose": "Es SOLLTE ein Verfahren etabliert sein, wie das Compliance Management und die sich daraus ergebenden Anforderungen und Maßnahmen regelmäßig auf ihre Effizienz und Effektivität überprüft werden (siehe auch DER.3.1 Audits und Revisionen)."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Regelmäßige Überprüfungen des Compliance Managements — ORP.5.A8.1"
+              },
+              {
+                "id": "ORP.5.A8.2",
+                "parts": [
+                  {
+                    "id": "ORP.5.A8.2-stmt",
+                    "name": "statement",
+                    "prose": "Es SOLLTE regelmäßig geprüft werden, ob die Organisationsstruktur und die Prozesse des Compliance Managements angemessen sind."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Regelmäßige Überprüfungen des Compliance Managements — ORP.5.A8.2"
+              }
+            ],
+            "id": "ORP.5.A8",
+            "title": "Regelmäßige Überprüfungen des Compliance Managements"
+          }
+        ],
+        "id": "ORP.5",
+        "title": "Compliance Management (Anforderungsmanagement)"
+      }
+    ],
+    "metadata": {
+      "last-modified": "2026-11-08T00:30:54Z",
+      "oscal-version": "1.2.3",
+      "title": "IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal",
+      "version": "1"
+    },
+    "uuid": "b70a702a-a03e-5f37-9b53-f63a745ad8c6"
+  }
+}

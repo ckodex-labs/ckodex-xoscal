@@ -1,0 +1,382 @@
+{
+  "assessment-results": {
+    "import-ap": {
+      "href": "./assessment-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:12Z",
+      "oscal-version": "1.2.3",
+      "title": "IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - INF: Infrastruktur Assessment Results Template",
+      "version": "1"
+    },
+    "results": [
+      {
+        "description": "Assessment evaluation findings and observations for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - INF: Infrastruktur.",
+        "findings": [
+          {
+            "description": "Control inf.1.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "91e164ea-90e6-5af7-8203-25fd2d2bf945"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "inf.1.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for inf.1.a1.1",
+            "uuid": "a7ed8550-d228-574d-a10b-3b994456cd2b"
+          },
+          {
+            "description": "Control inf.10.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "d718f3d9-34c4-59fc-9b0c-ab1f9606e508"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "inf.10.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for inf.10.a1.1",
+            "uuid": "2e7c6be9-3d74-537d-abb1-d3dd581dac72"
+          },
+          {
+            "description": "Control inf.11.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "6c50c4d2-5d7c-5035-b1c2-d28e6f858aef"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "inf.11.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for inf.11.a1.1",
+            "uuid": "d83a2bc0-877d-597a-8415-1169f332d632"
+          },
+          {
+            "description": "Control inf.12.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "a9102fc6-0c54-5bc6-b75b-a838273b8aa9"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "inf.12.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for inf.12.a1.1",
+            "uuid": "0506c423-a5ea-56c8-b707-d7fd59381bcc"
+          },
+          {
+            "description": "Control inf.13.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "4d23c889-42ab-5894-ade9-9f69ae5e3c42"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "inf.13.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for inf.13.a1.1",
+            "uuid": "e221d900-a845-55f0-b675-9630538d02d9"
+          },
+          {
+            "description": "Control inf.14.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "797cd176-a18d-5108-ab31-2937ecec8f0d"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "inf.14.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for inf.14.a1.1",
+            "uuid": "e097ef4f-4346-52aa-a04c-00feca62cdd9"
+          },
+          {
+            "description": "Control inf.2.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "2ae4a17b-1a0a-59d4-9473-5fda257bf40a"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "inf.2.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for inf.2.a1.1",
+            "uuid": "439eaf60-4cda-5810-b1d8-abc3fc7eea3c"
+          },
+          {
+            "description": "Control inf.5.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "4e42f13f-6689-52b5-ade9-186f529dfbd6"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "inf.5.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for inf.5.a1.1",
+            "uuid": "f668e47b-5254-55b5-9baa-561bd39e7a64"
+          },
+          {
+            "description": "Control inf.6.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "62b2017e-58eb-5f07-972c-69de94056f37"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "inf.6.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for inf.6.a1.1",
+            "uuid": "8c74763e-2c6a-5eca-b693-f74d78ad82cc"
+          },
+          {
+            "description": "Control inf.7.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "d177d901-95b7-518a-a3f9-0ea260385675"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "inf.7.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for inf.7.a1.1",
+            "uuid": "48ecf356-6468-5a43-857b-9e6b0eea535d"
+          },
+          {
+            "description": "Control inf.8.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "d930554a-49bc-5e6e-984f-ff2c69cbe1e2"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "inf.8.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for inf.8.a1.1",
+            "uuid": "8c81e86a-f363-55d2-b21a-6de53be9c79a"
+          },
+          {
+            "description": "Control inf.9.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "1f17403b-41e0-54e3-9f06-25444afc57f8"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "inf.9.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for inf.9.a1.1",
+            "uuid": "a9649642-8efe-51d0-b399-1f755504d203"
+          }
+        ],
+        "observations": [
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control inf.1.a1.1 (Planung der Gebäudeabsicherung — INF.1.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "91e164ea-90e6-5af7-8203-25fd2d2bf945"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control inf.10.a1.1 (Sichere Nutzung von Besprechungs-, Veranstaltungs- und Schulungsräumen — INF.10.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "d718f3d9-34c4-59fc-9b0c-ab1f9606e508"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control inf.11.a1.1 (Planung und Beschaffung — INF.11.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "6c50c4d2-5d7c-5035-b1c2-d28e6f858aef"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control inf.12.a1.1 (Auswahl geeigneter Kabeltypen — INF.12.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "a9102fc6-0c54-5bc6-b75b-a838273b8aa9"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control inf.13.a1.1 (Beurteilung des Ist-Zustands bei der Übernahme bestehender Gebäude — INF.13.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "4d23c889-42ab-5894-ade9-9f69ae5e3c42"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control inf.14.a1.1 (Planung der Gebäudeautomation — INF.14.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "797cd176-a18d-5108-ab31-2937ecec8f0d"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control inf.2.a1.1 (Festlegung von Anforderungen — INF.2.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "2ae4a17b-1a0a-59d4-9473-5fda257bf40a"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control inf.5.a1.1 (Planung der Raumabsicherung — INF.5.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "4e42f13f-6689-52b5-ade9-186f529dfbd6"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control inf.6.a1.1 (Handfeuerlöscher — INF.6.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "62b2017e-58eb-5f07-972c-69de94056f37"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control inf.7.a1.1 (Geeignete Auswahl und Nutzung eines Büroraumes — INF.7.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "d177d901-95b7-518a-a3f9-0ea260385675"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control inf.8.a1.1 (Sichern von dienstlichen Unterlagen am häuslichen Arbeitsplatz — INF.8.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "d930554a-49bc-5e6e-984f-ff2c69cbe1e2"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control inf.9.a1.1 (Geeignete Auswahl und Nutzung eines mobilen Arbeitsplatzes — INF.9.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "1f17403b-41e0-54e3-9f06-25444afc57f8"
+          }
+        ],
+        "reviewed-controls": {
+          "control-selections": [
+            {
+              "description": "All controls evaluated for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - INF: Infrastruktur",
+              "include-all": {}
+            }
+          ]
+        },
+        "start": "2026-11-08T01:42:12Z",
+        "title": "IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - INF: Infrastruktur Assessment Results",
+        "uuid": "9d953013-959f-51ba-9bf1-a6e33419e349"
+      }
+    ],
+    "uuid": "0394015a-c76b-5870-935a-3f0d186ce834"
+  }
+}

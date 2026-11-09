@@ -1,6 +1,7 @@
 package frameworks
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
 	"sort"
@@ -8,6 +9,9 @@ import (
 	"time"
 
 	"github.com/google/uuid"
+	"github.com/mchorfa/xoscal/server/internal/dbutil"
+	"github.com/mchorfa/xoscal/server/internal/kg"
+	"github.com/mchorfa/xoscal/server/internal/oscal"
 )
 
 var projectUUIDNamespace = uuid.MustParse("6ba7b810-9dad-11d1-80b4-00c04fd430c8")
@@ -214,7 +218,7 @@ func ProjectSystemSecurityPlan(f Framework, ctrls []ControlInfo) ([]byte, error)
 			}
 			sort.Strings(paramKeys)
 			for _, pk := range paramKeys {
-				val := c.Parameters[pk]
+				val := norm(c.Parameters[pk])
 				if val == "" {
 					val = "organization-defined-default"
 				}
@@ -237,6 +241,12 @@ func ProjectSystemSecurityPlan(f Framework, ctrls []ControlInfo) ([]byte, error)
 				"last-modified": now,
 				"version":       f.Version(),
 				"oscal-version": "1.2.3",
+				"roles": []map[string]interface{}{
+					{
+						"id":    "sec-admin",
+						"title": "Security Administrator",
+					},
+				},
 			},
 			"import-profile": map[string]interface{}{
 				"href": importHref,
@@ -251,6 +261,7 @@ func ProjectSystemSecurityPlan(f Framework, ctrls []ControlInfo) ([]byte, error)
 				"system-information": map[string]interface{}{
 					"information-types": []map[string]interface{}{
 						{
+							"uuid":        makeProjectUUID(f.ID(), "info-type", "sovereign-program-data"),
 							"title":       "Sovereign Program Data",
 							"description": fmt.Sprintf("Operational and compliance data processed within the %s jurisdiction boundary.", f.Jurisdiction()),
 						},
@@ -472,4 +483,100 @@ func ProjectPOAM(f Framework, ctrls []ControlInfo) ([]byte, error) {
 	}
 
 	return json.MarshalIndent(poamDoc, "", "  ")
+}
+
+// GenerateAllLayersFromKG seeds the framework into an in-memory SQLite Knowledge Graph
+// and synthesizes all 7 OSCAL 1.2.3 layers via the unified protobuf oscal.Generator pipeline.
+func GenerateAllLayersFromKG(ctx context.Context, f Framework) (*ProjectedLayers, error) {
+	store, err := kg.NewSQLiteStore(":memory:", dbutil.PoolConfig{})
+	if err != nil {
+		return nil, fmt.Errorf("create in-memory kg store: %w", err)
+	}
+	defer store.Close()
+
+	if err := SeedFramework(ctx, store, f); err != nil {
+		return nil, fmt.Errorf("seed framework %s: %w", f.ID(), err)
+	}
+	snapName := f.Version()
+	if snapName == "" {
+		snapName = "v1"
+	}
+	if _, err := store.CreateSnapshot(ctx, snapName); err != nil {
+		return nil, fmt.Errorf("create snapshot for %s: %w", f.ID(), err)
+	}
+
+	gen := oscal.NewGenerator(store)
+
+	cat, err := gen.GenerateCatalog(ctx, snapName, f.ID())
+	if err != nil {
+		return nil, fmt.Errorf("generate catalog for %s: %w", f.ID(), err)
+	}
+	catBytes, err := oscal.ExportCatalogJSON(cat)
+	if err != nil {
+		return nil, fmt.Errorf("export catalog for %s: %w", f.ID(), err)
+	}
+
+	prof, err := gen.GenerateProfile(ctx, snapName, f.ID(), nil)
+	if err != nil {
+		return nil, fmt.Errorf("generate profile for %s: %w", f.ID(), err)
+	}
+	profBytes, err := oscal.ExportProfileJSON(prof)
+	if err != nil {
+		return nil, fmt.Errorf("export profile for %s: %w", f.ID(), err)
+	}
+
+	cd, err := gen.GenerateComponentDefinition(ctx, snapName, f.ID())
+	if err != nil {
+		return nil, fmt.Errorf("generate component-definition for %s: %w", f.ID(), err)
+	}
+	cdBytes, err := oscal.ExportComponentDefinitionJSON(cd)
+	if err != nil {
+		return nil, fmt.Errorf("export component-definition for %s: %w", f.ID(), err)
+	}
+
+	ssp, err := gen.GenerateSSP(ctx, snapName, f.ID())
+	if err != nil {
+		return nil, fmt.Errorf("generate ssp for %s: %w", f.ID(), err)
+	}
+	sspBytes, err := oscal.ExportSSPJSON(ssp)
+	if err != nil {
+		return nil, fmt.Errorf("export ssp for %s: %w", f.ID(), err)
+	}
+
+	ap, err := gen.GenerateAssessmentPlan(ctx, snapName, f.ID())
+	if err != nil {
+		return nil, fmt.Errorf("generate assessment-plan for %s: %w", f.ID(), err)
+	}
+	apBytes, err := oscal.ExportAssessmentPlanJSON(ap)
+	if err != nil {
+		return nil, fmt.Errorf("export assessment-plan for %s: %w", f.ID(), err)
+	}
+
+	ar, err := gen.GenerateAssessmentResults(ctx, snapName, f.ID())
+	if err != nil {
+		return nil, fmt.Errorf("generate assessment-results for %s: %w", f.ID(), err)
+	}
+	arBytes, err := oscal.ExportAssessmentResultsJSON(ar)
+	if err != nil {
+		return nil, fmt.Errorf("export assessment-results for %s: %w", f.ID(), err)
+	}
+
+	poam, err := gen.GeneratePOAM(ctx, snapName, f.ID())
+	if err != nil {
+		return nil, fmt.Errorf("generate poam for %s: %w", f.ID(), err)
+	}
+	poamBytes, err := oscal.ExportPOAMJSON(poam)
+	if err != nil {
+		return nil, fmt.Errorf("export poam for %s: %w", f.ID(), err)
+	}
+
+	return &ProjectedLayers{
+		Catalog:             catBytes,
+		Profile:             profBytes,
+		ComponentDefinition: cdBytes,
+		SystemSecurityPlan:  sspBytes,
+		AssessmentPlan:      apBytes,
+		AssessmentResults:   arBytes,
+		POAM:                poamBytes,
+	}, nil
 }

@@ -73,6 +73,7 @@ archives:
       {{- else }}{{ .Arch }}{{ end }}
     files:
       - README.md
+      - data/frameworks/**
 
 snapshot:
   version_template: "{{ .Env.XOSCAL_SNAPSHOT_VERSION }}"

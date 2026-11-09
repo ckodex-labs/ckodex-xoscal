@@ -67,7 +67,14 @@ func (f *GitHubFetcher) Fetch(ctx context.Context, filter string) ([]FrameworkFi
 	tree, _, err := f.client.Git.GetTree(ctx, f.owner, f.repo, "main", true)
 	if err != nil {
 		// Fallback: try listing directory contents via Repository Content API.
-		return f.fetchViaContentsAPI(ctx, patterns)
+		files, contentsErr := f.fetchViaContentsAPI(ctx, patterns)
+		if contentsErr == nil {
+			return files, nil
+		}
+		if cached, cacheErr := f.fetchFromLocalCache(patterns); cacheErr == nil && len(cached) > 0 {
+			return cached, nil
+		}
+		return nil, contentsErr
 	}
 
 	var files []FrameworkFile
@@ -82,8 +89,9 @@ func (f *GitHubFetcher) Fetch(ctx context.Context, filter string) ([]FrameworkFi
 		if !strings.HasSuffix(path, ".yaml") {
 			continue
 		}
-		refID := strings.TrimSuffix(filepath.Base(path), ".yaml")
-		if !matchFilter(refID, patterns) {
+		base := filepath.Base(path)
+		refID := strings.TrimSuffix(base, ".yaml")
+		if !matchFilter(refID, patterns) && !matchFilter(base, patterns) {
 			continue
 		}
 		content, err := f.download(ctx, path, entry.GetSHA())
@@ -92,7 +100,52 @@ func (f *GitHubFetcher) Fetch(ctx context.Context, filter string) ([]FrameworkFi
 		}
 		files = append(files, FrameworkFile{
 			RefID:    refID,
-			Filename: filepath.Base(path),
+			Filename: base,
+			Content:  content,
+		})
+	}
+	return files, nil
+}
+
+func (f *GitHubFetcher) fetchFromLocalCache(patterns []string) ([]FrameworkFile, error) {
+	entries, err := os.ReadDir(f.cacheDir)
+	if err != nil {
+		return nil, err
+	}
+	prefix := strings.ReplaceAll(strings.TrimSuffix(f.path, "/"), "/", "_") + "_"
+	seen := make(map[string]bool)
+	var files []FrameworkFile
+	for _, entry := range entries {
+		if entry.IsDir() || !strings.HasSuffix(entry.Name(), ".yaml") {
+			continue
+		}
+		name := entry.Name()
+		trimmed := strings.TrimPrefix(name, prefix)
+		// Cache filenames have format <repoPath>_<refID>.yaml_<sha7>.yaml or <refID>_<sha7>.yaml
+		idx := strings.LastIndex(trimmed, "_")
+		if idx <= 0 {
+			continue
+		}
+		base := trimmed[:idx]
+		refID := strings.TrimSuffix(base, ".yaml")
+		if !strings.HasSuffix(base, ".yaml") {
+			base = refID + ".yaml"
+		}
+		if seen[refID] {
+			continue
+		}
+		if !matchFilter(refID, patterns) && !matchFilter(base, patterns) {
+			continue
+		}
+		// #nosec G304 -- entry.Name() is a directory entry inside f.cacheDir.
+		content, err := os.ReadFile(filepath.Join(f.cacheDir, name))
+		if err != nil || len(content) == 0 {
+			continue
+		}
+		seen[refID] = true
+		files = append(files, FrameworkFile{
+			RefID:    refID,
+			Filename: base,
 			Content:  content,
 		})
 	}
@@ -113,17 +166,18 @@ func (f *GitHubFetcher) fetchViaContentsAPI(ctx context.Context, patterns []stri
 		if !strings.HasSuffix(item.GetName(), ".yaml") {
 			continue
 		}
-		refID := strings.TrimSuffix(item.GetName(), ".yaml")
-		if !matchFilter(refID, patterns) {
+		base := item.GetName()
+		refID := strings.TrimSuffix(base, ".yaml")
+		if !matchFilter(refID, patterns) && !matchFilter(base, patterns) {
 			continue
 		}
-		content, err := f.download(ctx, filepath.Join(f.path, item.GetName()), item.GetSHA())
+		content, err := f.download(ctx, filepath.Join(f.path, base), item.GetSHA())
 		if err != nil {
-			return nil, fmt.Errorf("download %s: %w", item.GetName(), err)
+			return nil, fmt.Errorf("download %s: %w", base, err)
 		}
 		files = append(files, FrameworkFile{
 			RefID:    refID,
-			Filename: item.GetName(),
+			Filename: base,
 			Content:  content,
 		})
 	}

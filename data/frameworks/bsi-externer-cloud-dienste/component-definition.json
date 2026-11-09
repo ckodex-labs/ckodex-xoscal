@@ -1,0 +1,468 @@
+{
+  "component-definition": {
+    "components": [
+      {
+        "control-implementations": [
+          {
+            "description": "Security control implementations for Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+            "implemented-requirements": [
+              {
+                "control-id": "ncd.2.1.01.a",
+                "description": "Component capability addressing control ncd.2.1.01.a (Strategie für die Cloud-Nutzung — NCD.2.1.01.a).",
+                "uuid": "5e49627a-2347-579b-a3e0-9af1fa839c7e"
+              },
+              {
+                "control-id": "ncd.2.1.01.b",
+                "description": "Component capability addressing control ncd.2.1.01.b (Strategie für die Cloud-Nutzung — NCD.2.1.01.b).",
+                "uuid": "3aacad3b-457a-5768-aae2-6f949a90681c"
+              },
+              {
+                "control-id": "ncd.2.1.01.c",
+                "description": "Component capability addressing control ncd.2.1.01.c (Strategie für die Cloud-Nutzung — NCD.2.1.01.c).",
+                "uuid": "d7b6fb17-03bb-5523-94c0-f2af0bb56827"
+              },
+              {
+                "control-id": "ncd.2.1.01.d",
+                "description": "Component capability addressing control ncd.2.1.01.d (Strategie für die Cloud-Nutzung — NCD.2.1.01.d).",
+                "uuid": "ddeff256-582e-57bb-8143-589d3b640074"
+              },
+              {
+                "control-id": "ncd.2.1.02.a",
+                "description": "Component capability addressing control ncd.2.1.02.a (Sicherheitsrichtlinie für externe Cloud-Dienste — NCD.2.1.02.a).",
+                "uuid": "63bdbeda-dfc5-5b4a-be4b-928a899159e6"
+              },
+              {
+                "control-id": "ncd.2.1.02.b",
+                "description": "Component capability addressing control ncd.2.1.02.b (Sicherheitsrichtlinie für externe Cloud-Dienste — NCD.2.1.02.b).",
+                "uuid": "71d54202-a1e1-5528-aa31-e12cec480afd"
+              },
+              {
+                "control-id": "ncd.2.1.02.c",
+                "description": "Component capability addressing control ncd.2.1.02.c (Sicherheitsrichtlinie für externe Cloud-Dienste — NCD.2.1.02.c).",
+                "uuid": "bf78281f-9a9a-58d2-8e7b-1d4a08620a1b"
+              },
+              {
+                "control-id": "ncd.2.1.03.a",
+                "description": "Component capability addressing control ncd.2.1.03.a (Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.a).",
+                "uuid": "cc20b35d-a8ab-57af-aa21-402e059155f3"
+              },
+              {
+                "control-id": "ncd.2.1.03.b",
+                "description": "Component capability addressing control ncd.2.1.03.b (Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.b).",
+                "uuid": "9dee729f-8efb-59b4-9692-5d8ed95dcaf1"
+              },
+              {
+                "control-id": "ncd.2.1.03.c",
+                "description": "Component capability addressing control ncd.2.1.03.c (Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.c).",
+                "uuid": "89809877-8be5-56d1-98c6-169c9b28a3bd"
+              },
+              {
+                "control-id": "ncd.2.1.03.d",
+                "description": "Component capability addressing control ncd.2.1.03.d (Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.d).",
+                "uuid": "58b4e38c-3041-5e1e-b191-fcb2066c7715"
+              },
+              {
+                "control-id": "ncd.2.1.03.e",
+                "description": "Component capability addressing control ncd.2.1.03.e (Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.e).",
+                "uuid": "96077839-27f7-5f80-afc6-cbed6ed68f98"
+              },
+              {
+                "control-id": "ncd.2.1.03.f",
+                "description": "Component capability addressing control ncd.2.1.03.f (Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.f).",
+                "uuid": "827bbc7c-3bfd-5ca3-92e0-83ede1367848"
+              },
+              {
+                "control-id": "ncd.2.1.03.g",
+                "description": "Component capability addressing control ncd.2.1.03.g (Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.g).",
+                "uuid": "bd049077-d603-57cd-828d-56517ec6b974"
+              },
+              {
+                "control-id": "ncd.2.1.03.h",
+                "description": "Component capability addressing control ncd.2.1.03.h (Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.h).",
+                "uuid": "fdde7e97-1736-5e78-839e-f59e2d06ec71"
+              },
+              {
+                "control-id": "ncd.2.1.03.h.i",
+                "description": "Component capability addressing control ncd.2.1.03.h.i (Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.h.i).",
+                "uuid": "4b82260d-7629-5180-8268-3e2e4d7f06ed"
+              },
+              {
+                "control-id": "ncd.2.1.03.h.ii",
+                "description": "Component capability addressing control ncd.2.1.03.h.ii (Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.h.ii).",
+                "uuid": "5c12cda1-2f8f-5ede-9e45-163da3ba48f9"
+              },
+              {
+                "control-id": "ncd.2.1.03.i",
+                "description": "Component capability addressing control ncd.2.1.03.i (Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.i).",
+                "uuid": "803876a4-bfb3-593c-b7fe-aafb560c41e0"
+              },
+              {
+                "control-id": "ncd.2.1.04.a",
+                "description": "Component capability addressing control ncd.2.1.04.a (Notfall- und Kontinuitätsmanagement — NCD.2.1.04.a).",
+                "uuid": "785faac1-b599-5877-bcb7-6a99922a1954"
+              },
+              {
+                "control-id": "ncd.2.1.04.b",
+                "description": "Component capability addressing control ncd.2.1.04.b (Notfall- und Kontinuitätsmanagement — NCD.2.1.04.b).",
+                "uuid": "be78cdc1-c84c-543e-9969-e69441c25374"
+              },
+              {
+                "control-id": "ncd.2.1.04.c",
+                "description": "Component capability addressing control ncd.2.1.04.c (Notfall- und Kontinuitätsmanagement — NCD.2.1.04.c).",
+                "uuid": "b1ea7594-9f51-5446-bad7-1b8023fe026b"
+              },
+              {
+                "control-id": "ncd.2.2.01.a",
+                "description": "Component capability addressing control ncd.2.2.01.a (Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.a).",
+                "uuid": "1fd98776-b413-5e2f-8350-c2f50819e3b3"
+              },
+              {
+                "control-id": "ncd.2.2.01.b",
+                "description": "Component capability addressing control ncd.2.2.01.b (Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.b).",
+                "uuid": "1003cb79-5111-5e8c-bcf9-6ec524d7f206"
+              },
+              {
+                "control-id": "ncd.2.2.01.c",
+                "description": "Component capability addressing control ncd.2.2.01.c (Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.c).",
+                "uuid": "c78397fb-fe76-50cd-976e-bbe0a9857022"
+              },
+              {
+                "control-id": "ncd.2.2.01.d",
+                "description": "Component capability addressing control ncd.2.2.01.d (Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.d).",
+                "uuid": "127e6ae1-56c4-5f4d-9178-17b918166a9e"
+              },
+              {
+                "control-id": "ncd.2.2.01.e",
+                "description": "Component capability addressing control ncd.2.2.01.e (Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.e).",
+                "uuid": "add177be-af09-55db-a90f-ddef737761b1"
+              },
+              {
+                "control-id": "ncd.2.2.01.f",
+                "description": "Component capability addressing control ncd.2.2.01.f (Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.f).",
+                "uuid": "efb94798-70a8-5c1d-a440-581fad3425e4"
+              },
+              {
+                "control-id": "ncd.2.2.01.g",
+                "description": "Component capability addressing control ncd.2.2.01.g (Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.g).",
+                "uuid": "4b24ce56-f574-55d3-b54e-ddba1a01df95"
+              },
+              {
+                "control-id": "ncd.2.2.01.h",
+                "description": "Component capability addressing control ncd.2.2.01.h (Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.h).",
+                "uuid": "d8467504-8d04-56fc-9a72-5c1f8ddc789c"
+              },
+              {
+                "control-id": "ncd.2.2.01.i",
+                "description": "Component capability addressing control ncd.2.2.01.i (Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.i).",
+                "uuid": "ed39276e-a57e-5583-82ae-df8f079a8aef"
+              },
+              {
+                "control-id": "ncd.2.2.01.i.i",
+                "description": "Component capability addressing control ncd.2.2.01.i.i (Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.i.i).",
+                "uuid": "bd5903ea-feac-5723-9761-e80a20e01bee"
+              },
+              {
+                "control-id": "ncd.2.2.01.i.ii",
+                "description": "Component capability addressing control ncd.2.2.01.i.ii (Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.i.ii).",
+                "uuid": "583b948e-1d7c-58fc-8844-0b4b8bdc9339"
+              },
+              {
+                "control-id": "ncd.2.2.01.j",
+                "description": "Component capability addressing control ncd.2.2.01.j (Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.j).",
+                "uuid": "37b447fd-e26e-50fa-b389-2c0c098cff1e"
+              },
+              {
+                "control-id": "ncd.2.2.01.j.i",
+                "description": "Component capability addressing control ncd.2.2.01.j.i (Die Einrichtung SOLLTE sich eigene Prüfrechte vertraglich zusichern lassen. — NCD.2.2.01.j.i).",
+                "uuid": "ab031b25-d6a5-572c-9cd8-dfbc342612bb"
+              },
+              {
+                "control-id": "ncd.2.2.01.j.ii",
+                "description": "Component capability addressing control ncd.2.2.01.j.ii (Die Einrichtung SOLLTE sich eigene Prüfrechte vertraglich zusichern lassen. — NCD.2.2.01.j.ii).",
+                "uuid": "fc1419ea-b20d-512c-8779-01307e57c2ba"
+              },
+              {
+                "control-id": "ncd.2.2.01.j.iii",
+                "description": "Component capability addressing control ncd.2.2.01.j.iii (Die Einrichtung SOLLTE sich eigene Prüfrechte vertraglich zusichern lassen. — NCD.2.2.01.j.iii).",
+                "uuid": "e964dd31-0d6e-52b0-b8e8-fd9073eb4036"
+              },
+              {
+                "control-id": "ncd.2.2.01.j.iv",
+                "description": "Component capability addressing control ncd.2.2.01.j.iv (Die Einrichtung SOLLTE sich eigene Prüfrechte vertraglich zusichern lassen. — NCD.2.2.01.j.iv).",
+                "uuid": "be70963d-d63d-5264-8654-88dae972c6a9"
+              },
+              {
+                "control-id": "ncd.2.2.02.a",
+                "description": "Component capability addressing control ncd.2.2.02.a (Umgang mit Unterauftragnehmern und anderen externen Dritten vertraglich zusichern — NCD.2.2.02.a).",
+                "uuid": "ecb00685-9e82-5d8d-ba2b-0e022882234f"
+              },
+              {
+                "control-id": "ncd.2.2.02.b",
+                "description": "Component capability addressing control ncd.2.2.02.b (Umgang mit Unterauftragnehmern und anderen externen Dritten vertraglich zusichern — NCD.2.2.02.b).",
+                "uuid": "37e0fcf0-daf4-5dab-aee6-9a0ff48ccd89"
+              },
+              {
+                "control-id": "ncd.2.2.02.b.i",
+                "description": "Component capability addressing control ncd.2.2.02.b.i (Umgang mit Unterauftragnehmern und anderen externen Dritten vertraglich zusichern — NCD.2.2.02.b.i).",
+                "uuid": "f72548e1-b18a-5b6d-aff7-9d4fe6dea0a8"
+              },
+              {
+                "control-id": "ncd.2.2.02.b.ii",
+                "description": "Component capability addressing control ncd.2.2.02.b.ii (Umgang mit Unterauftragnehmern und anderen externen Dritten vertraglich zusichern — NCD.2.2.02.b.ii).",
+                "uuid": "8b16aff8-1184-5534-bcf3-09b34664019f"
+              },
+              {
+                "control-id": "ncd.2.2.02.c",
+                "description": "Component capability addressing control ncd.2.2.02.c (Umgang mit Unterauftragnehmern und anderen externen Dritten vertraglich zusichern — NCD.2.2.02.c).",
+                "uuid": "3ceb6d29-1436-5e3e-b7c7-104eda0d7fb2"
+              },
+              {
+                "control-id": "ncd.2.2.02.d",
+                "description": "Component capability addressing control ncd.2.2.02.d (Umgang mit Unterauftragnehmern und anderen externen Dritten vertraglich zusichern — NCD.2.2.02.d).",
+                "uuid": "8a63d50f-deee-5c3a-b32b-fb8fb28a0def"
+              },
+              {
+                "control-id": "ncd.2.2.03.a",
+                "description": "Component capability addressing control ncd.2.2.03.a (Gerichtsbarkeit — NCD.2.2.03.a).",
+                "uuid": "0d995263-00aa-5a31-ba77-a2ad419ddd0d"
+              },
+              {
+                "control-id": "ncd.2.2.03.b",
+                "description": "Component capability addressing control ncd.2.2.03.b (Gerichtsbarkeit — NCD.2.2.03.b).",
+                "uuid": "7b4c6b74-57e2-5eae-bde2-7d9e78454c55"
+              },
+              {
+                "control-id": "ncd.2.2.03.c",
+                "description": "Component capability addressing control ncd.2.2.03.c (Gerichtsbarkeit — NCD.2.2.03.c).",
+                "uuid": "6d6de29d-b470-5555-995e-824ec133c61f"
+              },
+              {
+                "control-id": "ncd.2.2.04.a",
+                "description": "Component capability addressing control ncd.2.2.04.a (Lokation der Datenverarbeitung — NCD.2.2.04.a).",
+                "uuid": "e5f4225b-361e-53e2-b58e-eeba6a907994"
+              },
+              {
+                "control-id": "ncd.2.2.04.b",
+                "description": "Component capability addressing control ncd.2.2.04.b (Lokation der Datenverarbeitung — NCD.2.2.04.b).",
+                "uuid": "49113661-0e37-5609-aad9-80326ff5a1cd"
+              },
+              {
+                "control-id": "ncd.2.2.05.a",
+                "description": "Component capability addressing control ncd.2.2.05.a (Meldepflicht sicherheitsrelevanter Vorfälle — NCD.2.2.05.a).",
+                "uuid": "dcc7f4b4-a5fa-534d-b95f-479e8c49f770"
+              },
+              {
+                "control-id": "ncd.2.2.05.a.i",
+                "description": "Component capability addressing control ncd.2.2.05.a.i (Meldepflicht sicherheitsrelevanter Vorfälle — NCD.2.2.05.a.i).",
+                "uuid": "1f3494fb-7497-5465-9460-cee1e3eb9994"
+              },
+              {
+                "control-id": "ncd.2.2.05.a.ii",
+                "description": "Component capability addressing control ncd.2.2.05.a.ii (Meldepflicht sicherheitsrelevanter Vorfälle — NCD.2.2.05.a.ii).",
+                "uuid": "f80e22e6-3bf9-5a1c-81cc-c74d7c768e6a"
+              },
+              {
+                "control-id": "ncd.2.2.06.a",
+                "description": "Component capability addressing control ncd.2.2.06.a (Beendigung des Vertragsverhältnisses — NCD.2.2.06.a).",
+                "uuid": "0ef0f8d9-2b0d-5a6e-b789-d24641b2e80e"
+              },
+              {
+                "control-id": "ncd.2.2.06.b",
+                "description": "Component capability addressing control ncd.2.2.06.b (Beendigung des Vertragsverhältnisses — NCD.2.2.06.b).",
+                "uuid": "413a59d1-ea0e-5c3b-b729-13825883fc93"
+              },
+              {
+                "control-id": "ncd.2.2.07.a",
+                "description": "Component capability addressing control ncd.2.2.07.a (Regelung der Datenrückgabe und Datenlöschung — NCD.2.2.07.a).",
+                "uuid": "3371ace1-8769-5af3-8b9f-12e80666eed6"
+              },
+              {
+                "control-id": "ncd.2.2.07.b",
+                "description": "Component capability addressing control ncd.2.2.07.b (Regelung der Datenrückgabe und Datenlöschung — NCD.2.2.07.b).",
+                "uuid": "1921fb8d-c8ef-5912-8abe-c8368f4da215"
+              },
+              {
+                "control-id": "ncd.2.3.01.a",
+                "description": "Component capability addressing control ncd.2.3.01.a (Einbindung in das ISMS — NCD.2.3.01.a).",
+                "uuid": "011c1425-504e-580e-8bc5-a786ed20a1a6"
+              },
+              {
+                "control-id": "ncd.2.3.01.b",
+                "description": "Component capability addressing control ncd.2.3.01.b (Einbindung in das ISMS — NCD.2.3.01.b).",
+                "uuid": "81348255-6ac0-5a24-860e-d76ee9f9b811"
+              },
+              {
+                "control-id": "ncd.2.3.02.a",
+                "description": "Component capability addressing control ncd.2.3.02.a (Auswertung von Sicherheitsnachweisen — NCD.2.3.02.a).",
+                "uuid": "26c4a3ad-464d-5110-935a-48549b504fe4"
+              },
+              {
+                "control-id": "ncd.2.3.02.a.i",
+                "description": "Component capability addressing control ncd.2.3.02.a.i (Die Einrichtung MUSS die Nachweise und sonstige Berichte des Cloud-Diensteanbieters auswerten. — NCD.2.3.02.a.i).",
+                "uuid": "c4c5318c-6f80-5bc6-8837-b3ddd45bc1d9"
+              },
+              {
+                "control-id": "ncd.2.3.02.a.ii",
+                "description": "Component capability addressing control ncd.2.3.02.a.ii (Die Einrichtung MUSS die Nachweise und sonstige Berichte des Cloud-Diensteanbieters auswerten. — NCD.2.3.02.a.ii).",
+                "uuid": "2bc98d78-757e-5567-bd4f-bcb586a84b5a"
+              },
+              {
+                "control-id": "ncd.2.3.02.b",
+                "description": "Component capability addressing control ncd.2.3.02.b (Auswertung von Sicherheitsnachweisen — NCD.2.3.02.b).",
+                "uuid": "4fc5952c-ecab-5b2b-ac2c-4d721e3e922f"
+              },
+              {
+                "control-id": "ncd.2.3.03.a",
+                "description": "Component capability addressing control ncd.2.3.03.a (Prüfung der Leistungsfähigkeit — NCD.2.3.03.a).",
+                "uuid": "561e5ce9-8031-5287-929c-5323f9206ae7"
+              },
+              {
+                "control-id": "ncd.2.3.03.b",
+                "description": "Component capability addressing control ncd.2.3.03.b (Prüfung der Leistungsfähigkeit — NCD.2.3.03.b).",
+                "uuid": "aaf58361-4d70-5cc3-8cb5-be60557e5c5c"
+              },
+              {
+                "control-id": "ncd.2.3.03.c",
+                "description": "Component capability addressing control ncd.2.3.03.c (Prüfung der Leistungsfähigkeit — NCD.2.3.03.c).",
+                "uuid": "786c1d3e-d6e2-5fbb-a8b0-b550199f63fd"
+              },
+              {
+                "control-id": "ncd.2.3.04.a",
+                "description": "Component capability addressing control ncd.2.3.04.a (Informationspflichten — NCD.2.3.04.a).",
+                "uuid": "31fddf11-c926-50d5-bbc8-4734ee384e5a"
+              },
+              {
+                "control-id": "ncd.2.3.04.b",
+                "description": "Component capability addressing control ncd.2.3.04.b (Informationspflichten — NCD.2.3.04.b).",
+                "uuid": "e3cfeb48-1f89-51fb-904e-b386645e0158"
+              },
+              {
+                "control-id": "ncd.2.3.05.a",
+                "description": "Component capability addressing control ncd.2.3.05.a (Multi-Faktor-Authentisierung — NCD.2.3.05.a).",
+                "uuid": "b78850a4-c8d0-5d3c-aa87-a348e95a993a"
+              },
+              {
+                "control-id": "ncd.2.3.05.b",
+                "description": "Component capability addressing control ncd.2.3.05.b (Multi-Faktor-Authentisierung — NCD.2.3.05.b).",
+                "uuid": "fd5cfdf2-c20a-5292-8e50-429ea6988880"
+              },
+              {
+                "control-id": "ncd.2.4.01.a",
+                "description": "Component capability addressing control ncd.2.4.01.a (Datenrückgabe bei Beendigung — NCD.2.4.01.a).",
+                "uuid": "d34bd0db-eaed-5075-8afe-3663dbdd8a87"
+              },
+              {
+                "control-id": "ncd.2.4.01.b",
+                "description": "Component capability addressing control ncd.2.4.01.b (Datenrückgabe bei Beendigung — NCD.2.4.01.b).",
+                "uuid": "fd991679-97d5-5223-a400-bd235f8575fb"
+              },
+              {
+                "control-id": "ncd.2.4.02.a",
+                "description": "Component capability addressing control ncd.2.4.02.a (Datenlöschung bei Beendigung — NCD.2.4.02.a).",
+                "uuid": "35b3857a-46a7-567f-bb6a-5482682d8b5b"
+              },
+              {
+                "control-id": "ncd.2.4.02.b",
+                "description": "Component capability addressing control ncd.2.4.02.b (Datenlöschung bei Beendigung — NCD.2.4.02.b).",
+                "uuid": "257fe464-e58e-517e-bb2a-4bd1e42225a8"
+              },
+              {
+                "control-id": "ncd.2.4.02.c",
+                "description": "Component capability addressing control ncd.2.4.02.c (Datenlöschung bei Beendigung — NCD.2.4.02.c).",
+                "uuid": "c158a66a-3153-5bcd-9164-d8c701b24fd6"
+              },
+              {
+                "control-id": "ncd.2.5.01.a",
+                "description": "Component capability addressing control ncd.2.5.01.a (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.a).",
+                "uuid": "5e0caaec-04b9-5801-8b20-218a1f5ee84b"
+              },
+              {
+                "control-id": "ncd.2.5.01.b",
+                "description": "Component capability addressing control ncd.2.5.01.b (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.b).",
+                "uuid": "203c5587-c83b-5db8-943a-cd9864fca1ef"
+              },
+              {
+                "control-id": "ncd.2.5.01.c",
+                "description": "Component capability addressing control ncd.2.5.01.c (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.c).",
+                "uuid": "070c5052-62ee-556a-897c-6b699b2a6332"
+              },
+              {
+                "control-id": "ncd.2.5.01.c.i",
+                "description": "Component capability addressing control ncd.2.5.01.c.i (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.c.i).",
+                "uuid": "58b8752d-87d9-56bb-b7f4-9117d0151f35"
+              },
+              {
+                "control-id": "ncd.2.5.01.c.ii",
+                "description": "Component capability addressing control ncd.2.5.01.c.ii (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.c.ii).",
+                "uuid": "bc76deaa-fcf0-5fde-aa05-97d291221f5d"
+              },
+              {
+                "control-id": "ncd.2.5.01.d",
+                "description": "Component capability addressing control ncd.2.5.01.d (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.d).",
+                "uuid": "c9a8754b-3c61-5519-89e3-9d52befbffa3"
+              },
+              {
+                "control-id": "ncd.2.5.01.d.i",
+                "description": "Component capability addressing control ncd.2.5.01.d.i (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.d.i).",
+                "uuid": "ef85b744-2251-5208-93c7-213c94a459d8"
+              },
+              {
+                "control-id": "ncd.2.5.01.d.ii",
+                "description": "Component capability addressing control ncd.2.5.01.d.ii (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.d.ii).",
+                "uuid": "1b765bf2-e955-5041-8bf5-4d5aef0e28de"
+              },
+              {
+                "control-id": "ncd.2.5.01.e",
+                "description": "Component capability addressing control ncd.2.5.01.e (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.e).",
+                "uuid": "e62d69a9-6ab2-5fec-b0d4-6ec4e1155a35"
+              },
+              {
+                "control-id": "ncd.2.5.01.e.i",
+                "description": "Component capability addressing control ncd.2.5.01.e.i (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.e.i).",
+                "uuid": "f296842e-ad29-5a3a-a813-741d932a84ae"
+              },
+              {
+                "control-id": "ncd.2.5.01.e.ii",
+                "description": "Component capability addressing control ncd.2.5.01.e.ii (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.e.ii).",
+                "uuid": "26c60a14-10eb-5ea1-a09a-05ae0a0e7ec3"
+              },
+              {
+                "control-id": "ncd.2.5.01.f",
+                "description": "Component capability addressing control ncd.2.5.01.f (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.f).",
+                "uuid": "16878c0d-9522-52dd-bd41-2373ebae6162"
+              },
+              {
+                "control-id": "ncd.2.5.01.g",
+                "description": "Component capability addressing control ncd.2.5.01.g (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.g).",
+                "uuid": "318ec777-f571-53ff-82b1-fec7ea48de6e"
+              },
+              {
+                "control-id": "ncd.2.5.01.g.i",
+                "description": "Component capability addressing control ncd.2.5.01.g.i (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.g.i).",
+                "uuid": "1106f7a3-400b-5fa6-b729-38a3f1ad502f"
+              },
+              {
+                "control-id": "ncd.2.5.01.g.ii",
+                "description": "Component capability addressing control ncd.2.5.01.g.ii (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.g.ii).",
+                "uuid": "3989352d-2922-52db-a459-c05fdd5aabf2"
+              }
+            ],
+            "source": "./catalog.json",
+            "uuid": "8182bf8c-63cc-5100-86b9-ba516862eda7"
+          }
+        ],
+        "description": "Enterprise technical and operational capabilities implementing controls for Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "title": "Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Platform Component",
+        "type": "software",
+        "uuid": "4a012dca-5cc0-5270-81fd-28a4e1ce9543"
+      }
+    ],
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:13Z",
+      "oscal-version": "1.2.3",
+      "title": "Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Component Definition Template",
+      "version": "1"
+    },
+    "uuid": "4e7ee64f-9fcc-5499-81ca-b048d848744a"
+  }
+}

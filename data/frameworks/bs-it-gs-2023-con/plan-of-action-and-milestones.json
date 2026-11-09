@@ -1,0 +1,21 @@
+{
+  "plan-of-action-and-milestones": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:12Z",
+      "oscal-version": "1.2.3",
+      "title": "IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - CON: Konzeption und Vorgehensweisen Plan of Action and Milestones Template",
+      "version": "1"
+    },
+    "poam-items": [
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - CON: Konzeption und Vorgehensweisen.",
+        "title": "Compliance Roadmap and Parameter Tailoring for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - CON: Konzeption und Vorgehensweisen",
+        "uuid": "d3e3d571-7ac1-5ee0-8b2e-b88b2687b2e8"
+      }
+    ],
+    "uuid": "867fe4e5-28b9-50d7-b12a-6d1acdd3f7e3"
+  }
+}

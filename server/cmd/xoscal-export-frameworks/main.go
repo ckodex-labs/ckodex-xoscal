@@ -58,21 +58,49 @@ func run(manifestPath, outDir, dsn string) error {
 	defer store.Close()
 
 	ctx := context.Background()
-	gh := fetcher.NewGitHubFetcher(owner, repo, path)
-	rec := reconciler.NewReconciler(store)
-	bulk := ingestion.NewBulkIngestor(gh, rec, store)
+	reg := frameworks.DefaultRegistry()
 
-	if _, err := bulk.Run(ctx, strings.Join(m.RefIDs(), ",")); err != nil {
-		return fmt.Errorf("bulk ingest: %w", err)
+	var fetchFilters []string
+	filenameToManifest := make(map[string]portal.Framework)
+	yamlRefIDs := make(map[string]bool)
+	for _, fw := range m.Frameworks {
+		if !strings.HasSuffix(fw.Filename, ".yaml") && reg.Has(fw.RefID) {
+			continue
+		}
+		yamlRefIDs[fw.RefID] = true
+		fetchFilters = append(fetchFilters, fw.RefID)
+		if fw.Filename != "" && strings.HasSuffix(fw.Filename, ".yaml") {
+			fetchFilters = append(fetchFilters, fw.Filename, strings.TrimSuffix(fw.Filename, ".yaml"))
+			filenameToManifest[fw.Filename] = fw
+		}
+	}
+
+	if len(fetchFilters) > 0 {
+		gh := fetcher.NewGitHubFetcher(owner, repo, path)
+		rec := reconciler.NewReconciler(store)
+		bulk := ingestion.NewBulkIngestor(gh, rec, store)
+
+		files, err := gh.Fetch(ctx, strings.Join(fetchFilters, ","))
+		if err != nil {
+			return fmt.Errorf("fetch frameworks: %w", err)
+		}
+		for i := range files {
+			if mf, ok := filenameToManifest[files[i].Filename]; ok {
+				files[i].RefID = mf.RefID
+				files[i].Jurisdiction = mf.Jurisdiction
+			}
+		}
+		if _, err := bulk.IngestFiles(ctx, files); err != nil {
+			return fmt.Errorf("bulk ingest: %w", err)
+		}
 	}
 	if _, err := store.CreateSnapshot(ctx, "portal"); err != nil {
 		return fmt.Errorf("snapshot: %w", err)
 	}
 
 	gen := oscal.NewGenerator(store)
-	reg := frameworks.DefaultRegistry()
 	for _, refID := range m.RefIDs() {
-		if reg.Has(refID) {
+		if !yamlRefIDs[refID] && reg.Has(refID) {
 			if err := reg.ExportAuthoritative(outDir, refID); err != nil {
 				return fmt.Errorf("export %s: %w", refID, err)
 			}

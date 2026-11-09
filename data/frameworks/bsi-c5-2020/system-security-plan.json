@@ -1,0 +1,1893 @@
+{
+  "system-security-plan": {
+    "control-implementation": {
+      "description": "Control implementations for BSI C5 Library.",
+      "implemented-requirements": [
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control am-01 (Asset Inventory) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "3c8e2010-24fe-50e4-bb95-8da30ef73518"
+            }
+          ],
+          "control-id": "am-01",
+          "remarks": "Control am-01 (Asset Inventory) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "0e60f44b-c737-5fcb-977b-1fa3255f700e"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control am-02 (Acceptable Use and Safe Handling of Assets Policy) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "eb62c652-7e70-5086-8f93-1b4100bd6725"
+            }
+          ],
+          "control-id": "am-02",
+          "remarks": "Control am-02 (Acceptable Use and Safe Handling of Assets Policy) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "06683873-6e2d-5360-9bca-e95a469a846e"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control am-03 (Commissioning of Hardware) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "3f89befc-17b5-5f5b-aa00-b10334ba26de"
+            }
+          ],
+          "control-id": "am-03",
+          "remarks": "Control am-03 (Commissioning of Hardware) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "be7a5479-b1fa-59c2-a411-2c8343078ea5"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control am-04 (Decommissioning of Hardware) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "d86d7698-22ea-5873-9892-2a5fd69ea134"
+            }
+          ],
+          "control-id": "am-04",
+          "remarks": "Control am-04 (Decommissioning of Hardware) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "55bce027-1e00-57f4-95d2-be853edde690"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control am-05 (Commitment to Permissible Use, Safe Handling and Return of Assets) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "74e2acf6-9987-5022-8b53-9bc9b5e60118"
+            }
+          ],
+          "control-id": "am-05",
+          "remarks": "Control am-05 (Commitment to Permissible Use, Safe Handling and Return of Assets) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "0b19d539-826c-5c30-b0fb-27d5c81488f1"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control am-06 (Asset Classification and Labelling) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "973f1094-d553-5f67-9f43-b59db4165986"
+            }
+          ],
+          "control-id": "am-06",
+          "remarks": "Control am-06 (Asset Classification and Labelling) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "6dee18e4-c859-52df-8667-15e1b4a91fd4"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control bcm-01 (Top management responsibility) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ab10e92c-2ca3-5d78-9e0a-375a29bdeb73"
+            }
+          ],
+          "control-id": "bcm-01",
+          "remarks": "Control bcm-01 (Top management responsibility) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "347afb85-d1e7-583e-bc0f-ee41d16ccbfb"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control bcm-02 (Business impact analysis policies and instructions) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "0acf4f7b-404e-5613-81d4-dd849a35f9a8"
+            }
+          ],
+          "control-id": "bcm-02",
+          "remarks": "Control bcm-02 (Business impact analysis policies and instructions) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "992dcb8d-cabc-55f6-af53-66cb5d738625"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control bcm-03 (Planning business continuity) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "744035e2-1ce4-5e4c-8a14-0552c6a67c3c"
+            }
+          ],
+          "control-id": "bcm-03",
+          "remarks": "Control bcm-03 (Planning business continuity) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "39ddd0fc-0b8c-5c63-b3dc-3b52615d00b1"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control bcm-04 (Verification, updating and testing of the business continuity) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "94bf4355-bddf-5eef-ab51-2343c896d4bd"
+            }
+          ],
+          "control-id": "bcm-04",
+          "remarks": "Control bcm-04 (Verification, updating and testing of the business continuity) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "2b813093-1e9c-5ea7-91f5-b14e8e86cbea"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control com-01 (Identification of applicable legal, regulatory, self-imposed or contractual requirements) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "091794c5-8b53-59c8-8e0a-279e463b243e"
+            }
+          ],
+          "control-id": "com-01",
+          "remarks": "Control com-01 (Identification of applicable legal, regulatory, self-imposed or contractual requirements) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "1b512448-372a-59b4-a117-e57442dff3a4"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control com-02 (Policy for planning and conducting audits) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "429cdc67-320b-5100-ba83-bbaa9cc2bd1f"
+            }
+          ],
+          "control-id": "com-02",
+          "remarks": "Control com-02 (Policy for planning and conducting audits) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f0bac4fa-1f14-5b98-9ce4-3c652df313b0"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control com-03 (Internal audits of the information security management system) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "9a34ae85-a1e3-537f-a963-9c562b8f7c35"
+            }
+          ],
+          "control-id": "com-03",
+          "remarks": "Control com-03 (Internal audits of the information security management system) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "346b0ad4-8619-5df3-80d1-2fb2b09cb1ba"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control com-04 (Information on information security performance and management assessment of the ISMS) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "b49db191-e543-5e50-95c9-d75b199d57e3"
+            }
+          ],
+          "control-id": "com-04",
+          "remarks": "Control com-04 (Information on information security performance and management assessment of the ISMS) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "e5897c58-c570-5a36-885c-bc31f3dd3174"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control cos-01 (Technical safeguards) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "85898ae3-7f50-572d-88ad-1f0f094330c0"
+            }
+          ],
+          "control-id": "cos-01",
+          "remarks": "Control cos-01 (Technical safeguards) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "0a2e333f-a511-5f23-ae63-5361f22b4120"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control cos-02 (Security requirements for connections in the Cloud Service Provider's network) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "e3535221-c14d-56de-ac4d-0770c1feaddb"
+            }
+          ],
+          "control-id": "cos-02",
+          "remarks": "Control cos-02 (Security requirements for connections in the Cloud Service Provider's network) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "936bfc79-6e00-56d3-8352-35ab61780354"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control cos-03 (Monitoring of connections in the Cloud Service Provider's network) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "462a4b97-31d8-515f-abb3-0eb362a039b2"
+            }
+          ],
+          "control-id": "cos-03",
+          "remarks": "Control cos-03 (Monitoring of connections in the Cloud Service Provider's network) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "dfcb6273-7b04-5089-9f18-96ffaaa4b11d"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control cos-04 (Cross-network access) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "153cd9e5-4c93-5053-844c-e8265e47da95"
+            }
+          ],
+          "control-id": "cos-04",
+          "remarks": "Control cos-04 (Cross-network access) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "dea3df44-97ca-55c9-93e5-e9ca6231bad5"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control cos-05 (Networks for administration) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "f21d1526-c878-5d79-998c-77d8a4f5d60b"
+            }
+          ],
+          "control-id": "cos-05",
+          "remarks": "Control cos-05 (Networks for administration) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "d36ff3b0-cfd5-5739-ad74-4ba34b5f92ea"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control cos-06 (Segregation of data traffic in jointly used network environments) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "33cd2517-c4c6-570b-b2d2-8a0290a0e39d"
+            }
+          ],
+          "control-id": "cos-06",
+          "remarks": "Control cos-06 (Segregation of data traffic in jointly used network environments) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "18721b5f-5f33-5ae3-94a7-c8ff98e87ea8"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control cos-07 (Documentation of the network topology) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "60fe2e88-d5e4-5cd9-bf81-093f3500b0e8"
+            }
+          ],
+          "control-id": "cos-07",
+          "remarks": "Control cos-07 (Documentation of the network topology) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "518aef64-1319-5f04-b895-33feaef75242"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control cos-08 (Policies for data transmission) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ca09fe57-69c2-5ad6-aa7e-0a915c1cb6cc"
+            }
+          ],
+          "control-id": "cos-08",
+          "remarks": "Control cos-08 (Policies for data transmission) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "5e16fee2-55cd-5ee6-9960-d512d0e18c4f"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control cry-01 (Policy for the use of encryption procedures and key management) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "00c89e31-eb56-5ea0-af6c-7e2f2a98f4e0"
+            }
+          ],
+          "control-id": "cry-01",
+          "remarks": "Control cry-01 (Policy for the use of encryption procedures and key management) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "6e869e4a-9c22-5168-8685-5c083530ea82"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control cry-02 (Encryption of data for transmission (transport encryption)) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "efe4b6d0-1ddc-5d87-ab62-a28ec24c7375"
+            }
+          ],
+          "control-id": "cry-02",
+          "remarks": "Control cry-02 (Encryption of data for transmission (transport encryption)) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "a72487cd-7a0e-59da-ba59-f2e7793f2eb0"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control cry-03 (Encryption of sensitive data for storage) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "6e8c0ba8-c31e-5f60-9e2c-95f7be607ba6"
+            }
+          ],
+          "control-id": "cry-03",
+          "remarks": "Control cry-03 (Encryption of sensitive data for storage) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "0e22a9ff-90c3-51e6-99b9-0c404fad5c2d"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control cry-04 (Secure key management) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "65d99d97-cd8c-5afa-8d66-5183afd0c8f4"
+            }
+          ],
+          "control-id": "cry-04",
+          "remarks": "Control cry-04 (Secure key management) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "cfc5d532-4b19-5598-aeed-0e40c4ceb4c4"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control dev-01 (Policies for the development/procurement of information systems) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ab4456eb-5ae9-5720-a190-065297d5c2b3"
+            }
+          ],
+          "control-id": "dev-01",
+          "remarks": "Control dev-01 (Policies for the development/procurement of information systems) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "79c73c1c-7bbd-535a-9f81-78c0e6d70117"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control dev-02 (Outsourcing of the development) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "3a1e2fa4-2c99-5d9a-bed4-64987d048b73"
+            }
+          ],
+          "control-id": "dev-02",
+          "remarks": "Control dev-02 (Outsourcing of the development) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "0d7d0fa1-6619-5fa6-8b22-c1579fc4ed09"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control dev-03 (Policies for changes to information systems) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "3a559701-badb-558b-86d7-6d22f4f5c057"
+            }
+          ],
+          "control-id": "dev-03",
+          "remarks": "Control dev-03 (Policies for changes to information systems) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "de531d81-c731-5649-8d54-6727e7afe0ce"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control dev-04 (Safety training and awareness programme regarding continuous software delivery and associated systems, components or tools.) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "6de4f84a-09a5-5724-9a8d-8cea6ef215f5"
+            }
+          ],
+          "control-id": "dev-04",
+          "remarks": "Control dev-04 (Safety training and awareness programme regarding continuous software delivery and associated systems, components or tools.) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "892666d0-a152-5664-80d5-dbfb330a9478"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control dev-05 (Risk assessment, categorisation and prioritisation of changes) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "c5a0d1e2-adc8-5a08-a707-c597954503ad"
+            }
+          ],
+          "control-id": "dev-05",
+          "remarks": "Control dev-05 (Risk assessment, categorisation and prioritisation of changes) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "2911ec8a-8235-5b5e-bb04-263810e23bc1"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control dev-06 (Testing changes) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "eec40e15-7631-5713-b627-8d50be3e38dc"
+            }
+          ],
+          "control-id": "dev-06",
+          "remarks": "Control dev-06 (Testing changes) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "be5df893-9db5-5f01-95cc-c77a34d2de11"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control dev-07 (Logging of changes) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "eb8e824d-b563-5fa7-b476-1988e9a2c6aa"
+            }
+          ],
+          "control-id": "dev-07",
+          "remarks": "Control dev-07 (Logging of changes) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "b02df431-2bdb-52d1-9a0c-5599028aa88b"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control dev-08 (Version Control) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "387fbe5c-66bd-59f8-873d-d919146cab1f"
+            }
+          ],
+          "control-id": "dev-08",
+          "remarks": "Control dev-08 (Version Control) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "e50575d3-4907-56e2-bdef-ebe1607a0487"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control dev-09 (Approvals for provision in the production environment) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "f2807154-6d2c-581a-a2aa-5732ad74c6a3"
+            }
+          ],
+          "control-id": "dev-09",
+          "remarks": "Control dev-09 (Approvals for provision in the production environment) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "0ed281f7-7eea-5874-8604-a506415012ff"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control dev-10 (Separation of environments) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "e190702a-3a2c-50a4-a236-7c20ae59ae96"
+            }
+          ],
+          "control-id": "dev-10",
+          "remarks": "Control dev-10 (Separation of environments) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "64642934-bea8-5cfd-8e46-3cb073e9c6e6"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control hr-01 (Verification of qualification and trustworthiness) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "c35a707a-b870-5979-8768-2b503e961fe7"
+            }
+          ],
+          "control-id": "hr-01",
+          "remarks": "Control hr-01 (Verification of qualification and trustworthiness) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "39e96b37-35ff-5046-ad24-7f77ef89eadc"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control hr-02 (Employment terms and conditions) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "d4b167f8-7af3-5e80-a5d4-7d38f5480d5a"
+            }
+          ],
+          "control-id": "hr-02",
+          "remarks": "Control hr-02 (Employment terms and conditions) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "bb9e899f-a504-52d2-abd7-0cd65a31b9a0"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control hr-03 (Security training and awareness programme) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "7d5b5234-d846-5b51-8a9f-4c27c73beb6c"
+            }
+          ],
+          "control-id": "hr-03",
+          "remarks": "Control hr-03 (Security training and awareness programme) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "b7c5e45d-139e-5a6e-9976-6cf611826fbb"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control hr-04 (Disciplinary measures) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "0051a75a-9f3f-5df4-998a-10909c59ba73"
+            }
+          ],
+          "control-id": "hr-04",
+          "remarks": "Control hr-04 (Disciplinary measures) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "71c11234-bf28-5366-bfb9-e9417a6c3288"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control hr-05 (Responsibilities in the event of termination or change of employment) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "93c9c80e-3d18-5b60-b290-ab388f09d944"
+            }
+          ],
+          "control-id": "hr-05",
+          "remarks": "Control hr-05 (Responsibilities in the event of termination or change of employment) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "2abb2ed6-3428-5f28-b664-25bc8ff161d9"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control hr-06 (Confidentiality agreements) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "666af2ec-bd59-5820-a7bd-b224800be11e"
+            }
+          ],
+          "control-id": "hr-06",
+          "remarks": "Control hr-06 (Confidentiality agreements) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "cfa9958e-453e-5340-a3f6-b44f560ec890"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control idm-01 (Policy for user accounts and access rights) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "b14d41bf-e079-58a8-b98c-5665291b7fe7"
+            }
+          ],
+          "control-id": "idm-01",
+          "remarks": "Control idm-01 (Policy for user accounts and access rights) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "fbdac13f-2b6b-50e5-be34-dd320ca7ec0d"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control idm-02 (Granting and change of user accounts and access rights) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "56820f58-b222-57bc-8e09-3b1af30fe0e5"
+            }
+          ],
+          "control-id": "idm-02",
+          "remarks": "Control idm-02 (Granting and change of user accounts and access rights) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "95005876-66f6-58b4-a089-983abff7c600"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control idm-03 (Locking and withdrawal of user accounts in the event of inactivity or multiple failed logins) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "406c987a-e03c-524f-8fb0-a418a3baec3b"
+            }
+          ],
+          "control-id": "idm-03",
+          "remarks": "Control idm-03 (Locking and withdrawal of user accounts in the event of inactivity or multiple failed logins) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "32d896c1-df52-59d3-9a92-9b1e3cf61e6c"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control idm-04 (Withdraw or adjust access rights as the task area changes) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "2fc7cbf1-1a60-5308-80cb-9b89758d7e1d"
+            }
+          ],
+          "control-id": "idm-04",
+          "remarks": "Control idm-04 (Withdraw or adjust access rights as the task area changes) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "26218d1c-4c2e-555e-8bdb-608c5dda70d1"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control idm-05 (Regular review of access rights) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "feedde85-0101-54bb-b9b4-b1553e80daac"
+            }
+          ],
+          "control-id": "idm-05",
+          "remarks": "Control idm-05 (Regular review of access rights) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "cee36b53-499a-55ed-9eda-c5ca746755ce"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control idm-06 (Privileged access rights) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "eeecb431-b2a9-5f6b-8865-fefcdfb76ea5"
+            }
+          ],
+          "control-id": "idm-06",
+          "remarks": "Control idm-06 (Privileged access rights) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "eb399aec-4d76-5257-8dc7-b7d7ab5f2aec"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control idm-07 (Access to cloud customer data) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "95213b19-ab42-58be-8ccf-921d07b3d5b1"
+            }
+          ],
+          "control-id": "idm-07",
+          "remarks": "Control idm-07 (Access to cloud customer data) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "3b40dea4-cb01-54c6-996a-a8fa39e7effb"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control idm-08 (Confidentiality of authentication information) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "78e2017c-c58f-5514-85ca-899596a578a6"
+            }
+          ],
+          "control-id": "idm-08",
+          "remarks": "Control idm-08 (Confidentiality of authentication information) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "ae67154e-bab5-5a44-8c58-a3401b91fc1a"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control idm-09 (Authentication mechanisms) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "e5b35503-93f6-518a-a9cd-ddda1b47f08a"
+            }
+          ],
+          "control-id": "idm-09",
+          "remarks": "Control idm-09 (Authentication mechanisms) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "5cae3773-c98f-5b95-9ab4-005105b34308"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control inq-01 (Legal Assessment of Investigative Inquiries) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "7ea83f4c-130a-5cdf-9077-537efc27fd07"
+            }
+          ],
+          "control-id": "inq-01",
+          "remarks": "Control inq-01 (Legal Assessment of Investigative Inquiries) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "334c47a4-644a-5e61-9e82-3562618a54fa"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control inq-02 (Informing Cloud Customers about Investigation Requests) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "80fa5bbe-a561-5769-ac46-4a26f0b72a85"
+            }
+          ],
+          "control-id": "inq-02",
+          "remarks": "Control inq-02 (Informing Cloud Customers about Investigation Requests) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "2fca9f8f-a708-5271-ad0e-b1df5c4e5a8c"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control inq-03 (Conditions for Access to or Disclosure of Data in Investigation Requests) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ab62bb10-5f2c-5a91-968b-94022a666142"
+            }
+          ],
+          "control-id": "inq-03",
+          "remarks": "Control inq-03 (Conditions for Access to or Disclosure of Data in Investigation Requests) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "a9e579e4-665d-5575-8037-0cc66cd35939"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control inq-04 (Limiting Access to or Disclosure of Data in Investigation Requests) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "687508b5-f24d-5d7a-8006-d3dfecb5fed8"
+            }
+          ],
+          "control-id": "inq-04",
+          "remarks": "Control inq-04 (Limiting Access to or Disclosure of Data in Investigation Requests) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "698843aa-c520-51b6-8730-907311fbb70f"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control ois-01 (Information Security Management System (ISMS)) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "a1318ec5-04eb-5bb8-8c71-65585262e011"
+            }
+          ],
+          "control-id": "ois-01",
+          "remarks": "Control ois-01 (Information Security Management System (ISMS)) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "03ba0239-a130-5e5e-b074-48a45fe11d94"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control ois-02 (Information Security Policy) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "424fabcf-09b5-5165-8d5e-c9169689dcc7"
+            }
+          ],
+          "control-id": "ois-02",
+          "remarks": "Control ois-02 (Information Security Policy) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "28d0d15b-db34-5b07-87fa-52d99c88698e"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control ois-03 (Interfaces and Dependencies) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "20feebc0-4b98-535f-9d57-3bdb7ef11a18"
+            }
+          ],
+          "control-id": "ois-03",
+          "remarks": "Control ois-03 (Interfaces and Dependencies) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "8fe1d1ec-5302-530c-96ec-74fbe281588b"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control ois-04 (Segregation of Duties) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "2339c1d2-20b4-5fdb-9d7c-77d7fadac6be"
+            }
+          ],
+          "control-id": "ois-04",
+          "remarks": "Control ois-04 (Segregation of Duties) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "224190b7-9277-50a5-9714-bca2ac6715b6"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control ois-05 (Contact with Relevant Government Agencies and Interest Groups) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "f647703f-0ea8-5487-b8a4-4bf1d8384061"
+            }
+          ],
+          "control-id": "ois-05",
+          "remarks": "Control ois-05 (Contact with Relevant Government Agencies and Interest Groups) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "5210ea3e-120f-5a9c-a096-192639789a48"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control ois-06 (Risk Management Policy) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "34b11e0e-e338-5bdf-ae6b-58e6d45496df"
+            }
+          ],
+          "control-id": "ois-06",
+          "remarks": "Control ois-06 (Risk Management Policy) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "d7b9340a-9c00-5503-a92d-04960ccacc58"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control ois-07 (Application of the Risk Management Policy) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "9da1f4b3-9221-5bf4-b7a9-4934fb107311"
+            }
+          ],
+          "control-id": "ois-07",
+          "remarks": "Control ois-07 (Application of the Risk Management Policy) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "0311dfce-f1a6-5885-abb0-f032ab549bc0"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control ops-01 (Capacity Management - Planning) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "a3af25c2-750c-5c6a-acbb-d2cd7507267a"
+            }
+          ],
+          "control-id": "ops-01",
+          "remarks": "Control ops-01 (Capacity Management - Planning) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "cf7f78e4-c8e7-5f4e-b176-78c71716c0d2"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control ops-02 (Capacity Management - Monitoring) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ca32d8f0-a1a4-5f2f-b98f-737f2368d6ff"
+            }
+          ],
+          "control-id": "ops-02",
+          "remarks": "Control ops-02 (Capacity Management - Monitoring) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "826477a4-96c6-55e5-93eb-2cf9df3e96d2"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control ops-03 (Capacity Management - Controlling of Resources) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "e230733a-a562-552c-b3bb-66c8d70aa46b"
+            }
+          ],
+          "control-id": "ops-03",
+          "remarks": "Control ops-03 (Capacity Management - Controlling of Resources) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "44026a88-c6ac-5e25-aae0-4b8faec8bf13"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control ops-04 (Protection Against Malware - Concept) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "f3b584a3-1dcf-53f4-aa86-68fadade12f4"
+            }
+          ],
+          "control-id": "ops-04",
+          "remarks": "Control ops-04 (Protection Against Malware - Concept) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "9e7bbe9d-66f9-5934-82df-40901fd7fb3c"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control ops-05 (Protection Against Malware - Implementation) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "e83f0a26-53ad-59c8-aabc-8c7a32a3ee69"
+            }
+          ],
+          "control-id": "ops-05",
+          "remarks": "Control ops-05 (Protection Against Malware - Implementation) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "6d0e28d2-56d6-55cd-bcc7-ffb21bb92984"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control ops-06 (Data Protection and Recovery - Concept) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "423f65f9-394f-5df6-be0d-e238a7dc735d"
+            }
+          ],
+          "control-id": "ops-06",
+          "remarks": "Control ops-06 (Data Protection and Recovery - Concept) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "6fecebfe-d6ee-58cc-97b7-9b6181b25a9f"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control ops-07 (Data Backup and Recovery - Monitoring) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "33e6a20b-2c56-5dec-a2f1-341ca7894529"
+            }
+          ],
+          "control-id": "ops-07",
+          "remarks": "Control ops-07 (Data Backup and Recovery - Monitoring) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "e56bd7ac-b17d-519b-97af-90281f6cbd50"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control ops-08 (Data Backup and Recovery - Regular Testing) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ab5299f8-e5af-5848-9d2f-501410aadd2a"
+            }
+          ],
+          "control-id": "ops-08",
+          "remarks": "Control ops-08 (Data Backup and Recovery - Regular Testing) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "807b9672-f6e7-558b-902b-d3f3c7a9310d"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control ops-09 (Data Backup and Recovery - Storage) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "b1d24799-a649-528b-82db-17c259b0875d"
+            }
+          ],
+          "control-id": "ops-09",
+          "remarks": "Control ops-09 (Data Backup and Recovery - Storage) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "d8a15d6d-7e51-5ba8-9a33-a10a47b24b73"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control ops-10 (Logging and Monitoring - Concept) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "79feed47-e3c5-5d0c-b3d8-37098d88525b"
+            }
+          ],
+          "control-id": "ops-10",
+          "remarks": "Control ops-10 (Logging and Monitoring - Concept) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f1fe8a10-9232-539a-aec8-e3752c4f3dfc"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control ops-11 (Logging and Monitoring - Metadata Management Concept) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "19508f92-39c1-5f13-823f-868d60996155"
+            }
+          ],
+          "control-id": "ops-11",
+          "remarks": "Control ops-11 (Logging and Monitoring - Metadata Management Concept) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "db4e71a0-b339-5c57-9c2a-c9940d848fb7"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control ops-12 (Logging and Monitoring - Access, Storage and Deletion) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "5c0a35cf-73e0-5733-bb69-e5c0f3b6c1ce"
+            }
+          ],
+          "control-id": "ops-12",
+          "remarks": "Control ops-12 (Logging and Monitoring - Access, Storage and Deletion) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "ce4a154b-dd51-5dfb-9c19-29b88e66d681"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control ops-13 (Logging and Monitoring - Identification of Events) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "e0ec1ae1-8e13-526b-8531-ad6a208fb209"
+            }
+          ],
+          "control-id": "ops-13",
+          "remarks": "Control ops-13 (Logging and Monitoring - Identification of Events) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f9c975d5-4919-555b-8a8d-3e25b286b69f"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control ops-14 (Logging and Monitoring - Storage of the Logging Data) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "9eeb1ea4-92c0-5310-8835-5ccff067da8e"
+            }
+          ],
+          "control-id": "ops-14",
+          "remarks": "Control ops-14 (Logging and Monitoring - Storage of the Logging Data) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "8973509d-d98c-5536-a121-231e00d2bf7e"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control ops-15 (Logging and Monitoring - Accountability) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ce51d61a-dd85-5b43-94e3-a9d392ee4c16"
+            }
+          ],
+          "control-id": "ops-15",
+          "remarks": "Control ops-15 (Logging and Monitoring - Accountability) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "6aee54f7-c437-5dcd-aa43-d43d46c9fc75"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control ops-16 (Logging and Monitoring - Configuration) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "f0eb27ec-b5db-5a8b-b435-1f9d7476d9a3"
+            }
+          ],
+          "control-id": "ops-16",
+          "remarks": "Control ops-16 (Logging and Monitoring - Configuration) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "a89911a8-143c-5331-86fd-6c596ae3a4d7"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control ops-17 (Logging and Monitoring - Availability of the Monitoring Software) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "8c73062d-1fe6-5513-a9d0-63a0b368ba95"
+            }
+          ],
+          "control-id": "ops-17",
+          "remarks": "Control ops-17 (Logging and Monitoring - Availability of the Monitoring Software) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "e8108689-fc9f-5826-95e4-a2ca1a4cde12"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control ops-18 (Managing Vulnerabilities, Malfunctions and Errors - Concept) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "fb0a4ed9-dadb-5ba8-b802-4b2d6e3f0d6d"
+            }
+          ],
+          "control-id": "ops-18",
+          "remarks": "Control ops-18 (Managing Vulnerabilities, Malfunctions and Errors - Concept) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "d6c59b22-014e-5b73-ac8f-c82f510156b7"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control ops-19 (Managing Vulnerabilities, Malfunctions and Errors - Penetration Tests) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "f73a459f-5930-5195-8570-ae9172b13442"
+            }
+          ],
+          "control-id": "ops-19",
+          "remarks": "Control ops-19 (Managing Vulnerabilities, Malfunctions and Errors - Penetration Tests) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "716977b2-d4f4-53df-b471-86b9c8ec7f11"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control ops-20 (Managing Vulnerabilities, Malfunctions and Errors - Measurements, Analyses and Assessments of Procedures) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "86c8fd13-6995-53ab-b746-2bc81e0d4989"
+            }
+          ],
+          "control-id": "ops-20",
+          "remarks": "Control ops-20 (Managing Vulnerabilities, Malfunctions and Errors - Measurements, Analyses and Assessments of Procedures) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "5aa8ffb1-244f-5225-9ad0-11431a7396d0"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control ops-21 (Involvement of Cloud customers in the event of incidents) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "944900ba-f348-5703-bbba-c8b577d78e89"
+            }
+          ],
+          "control-id": "ops-21",
+          "remarks": "Control ops-21 (Involvement of Cloud customers in the event of incidents) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "e3a8fa3b-67cb-5fdb-88e6-5e50435827e3"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control ops-22 (Testing and Documentation of known Vulnerabilities) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "d03293b1-540d-5dc6-bf2e-9b161edde876"
+            }
+          ],
+          "control-id": "ops-22",
+          "remarks": "Control ops-22 (Testing and Documentation of known Vulnerabilities) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "11a4a0de-b785-5a1b-9421-fe0dd3d4fc25"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control ops-23 (Managing Vulnerabilities, Malfunctions and Errors - System Hardening) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "7c420b96-fbb5-5414-89f4-4609354a6b74"
+            }
+          ],
+          "control-id": "ops-23",
+          "remarks": "Control ops-23 (Managing Vulnerabilities, Malfunctions and Errors - System Hardening) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "3cab656a-45fb-55ae-8c53-248d77490081"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control ops-24 (Separation of Datasets in the Cloud Infrastructure) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "d64e1d2b-3556-5b44-9f9c-571b2ad68a79"
+            }
+          ],
+          "control-id": "ops-24",
+          "remarks": "Control ops-24 (Separation of Datasets in the Cloud Infrastructure) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "c7ffcf46-baae-5c06-b6c4-65ace01126f3"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control pi-01 (Documentation and safety of input and output interfaces) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "5d6fa67b-4cc8-5e4e-baed-45bcb9825d5d"
+            }
+          ],
+          "control-id": "pi-01",
+          "remarks": "Control pi-01 (Documentation and safety of input and output interfaces) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "eecc09e6-38f8-5e17-a65f-298c8797599d"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control pi-02 (Contractual agreements for the provision of data) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "82b2d4aa-eb54-595b-8c1d-9fc49a1f5ce8"
+            }
+          ],
+          "control-id": "pi-02",
+          "remarks": "Control pi-02 (Contractual agreements for the provision of data) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "e5fe4508-2cb9-5039-9f6a-2c2d871b1350"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control pi-03 (Secure deletion of data) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ca3f767e-2a83-5d84-9170-04884067cdd8"
+            }
+          ],
+          "control-id": "pi-03",
+          "remarks": "Control pi-03 (Secure deletion of data) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "b7064816-0c55-527b-9839-77f7243b2a43"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control ps-01 (Physical Security and Environmental Control Requirements) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "87a88a03-a941-5b53-82ed-bbdeedcd432f"
+            }
+          ],
+          "control-id": "ps-01",
+          "remarks": "Control ps-01 (Physical Security and Environmental Control Requirements) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "c55d3f19-e6c1-5d77-843d-ab5741f013e5"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control ps-02 (Redundancy model) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "f179affa-a615-5cf8-8504-4a8ea1c5f080"
+            }
+          ],
+          "control-id": "ps-02",
+          "remarks": "Control ps-02 (Redundancy model) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "1f999565-31e4-5ec4-92a1-b61cfc375ebe"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control ps-03 (Perimeter Protection) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "69a2ba44-8703-556b-85b3-51ef21049ee8"
+            }
+          ],
+          "control-id": "ps-03",
+          "remarks": "Control ps-03 (Perimeter Protection) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "8043b867-0df2-5ba2-941d-02434d38fde0"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control ps-04 (Physical site access control) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ddd9a17d-d73a-5911-8950-27565072240b"
+            }
+          ],
+          "control-id": "ps-04",
+          "remarks": "Control ps-04 (Physical site access control) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "2f754871-25dd-5a3d-af78-95c7ae55c350"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control ps-05 (Protection from fire and smoke) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "9b996e75-6170-57fd-ac62-8fe922343cb1"
+            }
+          ],
+          "control-id": "ps-05",
+          "remarks": "Control ps-05 (Protection from fire and smoke) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "95f327a8-fa9b-5be6-80b8-5b0fe6ebb7b9"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control ps-06 (Protection against interruptions caused by power failures and other such risks) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "cec3efb1-6df9-506b-8902-6451d8dacc23"
+            }
+          ],
+          "control-id": "ps-06",
+          "remarks": "Control ps-06 (Protection against interruptions caused by power failures and other such risks) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "4ad5cfca-0b26-5a6f-9edb-277647b46f6c"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control ps-07 (Surveillance of operational and environmental parameters) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "64d44794-37ea-5aa8-a9b8-6d4aee2176a1"
+            }
+          ],
+          "control-id": "ps-07",
+          "remarks": "Control ps-07 (Surveillance of operational and environmental parameters) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "8db50995-fdd7-51e2-8678-cc3df655ceb1"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control pss-01 (Guidelines and Recommendations for Cloud Customers) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "76424dea-3743-540b-b69e-5fa87611e1b2"
+            }
+          ],
+          "control-id": "pss-01",
+          "remarks": "Control pss-01 (Guidelines and Recommendations for Cloud Customers) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "c6723fd3-9452-566f-9fec-9dc2114c1cb5"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control pss-02 (Identification of Vulnerabilities of the Cloud Service) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "5722d33c-e53a-5163-a82e-992b29943ee2"
+            }
+          ],
+          "control-id": "pss-02",
+          "remarks": "Control pss-02 (Identification of Vulnerabilities of the Cloud Service) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f1f72bf9-9e26-5753-8a79-3045ced49a25"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control pss-03 (Online Register of Known Vulnerabilities) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "86cb9730-a534-527d-a373-54373907c915"
+            }
+          ],
+          "control-id": "pss-03",
+          "remarks": "Control pss-03 (Online Register of Known Vulnerabilities) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "ba7394aa-d063-5f91-bcd8-1c8a341d48e9"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control pss-04 (Error handling and Logging Mechanisms) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "58ad1443-b9dd-57b8-a5ba-480f9f768441"
+            }
+          ],
+          "control-id": "pss-04",
+          "remarks": "Control pss-04 (Error handling and Logging Mechanisms) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "8b54aa10-580d-58c8-8d76-5e8f0039799c"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control pss-05 (Authentication Mechanisms) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "b965c65f-684e-5863-98ee-ddfe6e5798c4"
+            }
+          ],
+          "control-id": "pss-05",
+          "remarks": "Control pss-05 (Authentication Mechanisms) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "620fa87c-b543-5c00-a4ce-0ddae2e81b25"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control pss-06 (Session Management) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "e7d9f30e-b599-5df5-af45-31f271660208"
+            }
+          ],
+          "control-id": "pss-06",
+          "remarks": "Control pss-06 (Session Management) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "876602cd-82b9-5538-a434-5ff1f680631f"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control pss-07 (Confidentiality of Authentication Information) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "42a4b285-c060-5d1b-a11a-013f0abb7f81"
+            }
+          ],
+          "control-id": "pss-07",
+          "remarks": "Control pss-07 (Confidentiality of Authentication Information) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "0657b934-4d9d-5014-a018-8412e025a76d"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control pss-08 (Roles and Rights Concept) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "85b2730e-f36a-5f25-b43b-20ef718e4314"
+            }
+          ],
+          "control-id": "pss-08",
+          "remarks": "Control pss-08 (Roles and Rights Concept) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "a5499e9f-5829-5cf3-b35e-2d67d5caf5ef"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control pss-09 (Authorisation Mechanisms) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "cc598bfa-35bf-5afe-80f2-c285d816b0d9"
+            }
+          ],
+          "control-id": "pss-09",
+          "remarks": "Control pss-09 (Authorisation Mechanisms) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "ea1c18ad-d70b-55b2-829b-f50870d14fd5"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control pss-10 (Software Defined Networking) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "d933a9d0-6144-5bdf-ac03-03b93f9ace13"
+            }
+          ],
+          "control-id": "pss-10",
+          "remarks": "Control pss-10 (Software Defined Networking) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "0cf53de0-9ffe-56c0-afe6-69aadc274a8c"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control pss-11 (Images for Virtual Machines and Containers) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "7c0aaae9-ab1f-5afa-83d5-59b7185654e2"
+            }
+          ],
+          "control-id": "pss-11",
+          "remarks": "Control pss-11 (Images for Virtual Machines and Containers) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "2db0fbe1-d338-5d28-a277-0e61001d2b1c"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control pss-12 (Locations of Data Processing and Storage) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "5c4d962a-6a38-5387-b706-16150b83cf40"
+            }
+          ],
+          "control-id": "pss-12",
+          "remarks": "Control pss-12 (Locations of Data Processing and Storage) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "bfb7f885-ca8d-5848-a2d2-f6ae34458606"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control sim-01 (Policy for security incident management) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "50e74330-9144-5f86-b4e8-b69813370bff"
+            }
+          ],
+          "control-id": "sim-01",
+          "remarks": "Control sim-01 (Policy for security incident management) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "43ac5c31-38bc-5fab-ad31-8ac2155ccea0"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control sim-02 (Processing of security incidents) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "3c18e232-9156-5891-beb8-470b36e46034"
+            }
+          ],
+          "control-id": "sim-02",
+          "remarks": "Control sim-02 (Processing of security incidents) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "62332a92-3ed2-523f-b891-70f4399efefc"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control sim-03 (Documentation and reporting of security incidents) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "2c73b47a-71d8-5ed5-a631-37e9eddf5f60"
+            }
+          ],
+          "control-id": "sim-03",
+          "remarks": "Control sim-03 (Documentation and reporting of security incidents) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "93caa93f-422d-5dbd-ae9b-7808114f06dd"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control sim-04 (Duty of the users to report security incidents to a central body) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "cae405b1-6f2a-5694-ad5f-c9118f8cd81d"
+            }
+          ],
+          "control-id": "sim-04",
+          "remarks": "Control sim-04 (Duty of the users to report security incidents to a central body) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f17cf15d-1389-5837-8244-599347d74e32"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control sim-05 (Evaluation and learning process) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "848fb8d1-cfee-5b84-bdce-d7bdf256f559"
+            }
+          ],
+          "control-id": "sim-05",
+          "remarks": "Control sim-05 (Evaluation and learning process) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "5aaf1278-900b-5d7c-88e4-6930e84a5034"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control sp-01 (Documentation, communication and provision of policies and instructions) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "cc66d195-97e2-58df-94bc-106083c3db50"
+            }
+          ],
+          "control-id": "sp-01",
+          "remarks": "Control sp-01 (Documentation, communication and provision of policies and instructions) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "0fd8e7d7-4ab4-58ed-b269-59a2e4b7656e"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control sp-02 (Review and Approval of Policies and Instructions) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "66dc8092-5d85-58bf-80c3-3f1363784c4a"
+            }
+          ],
+          "control-id": "sp-02",
+          "remarks": "Control sp-02 (Review and Approval of Policies and Instructions) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "3f5ee439-6602-5776-b7d3-e64472357c9b"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control sp-03 (Exceptions from Existing Policies and Instructions) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "30f43261-f857-5795-beb5-668763617520"
+            }
+          ],
+          "control-id": "sp-03",
+          "remarks": "Control sp-03 (Exceptions from Existing Policies and Instructions) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "4cdb9ac3-9183-55fe-a536-8696fab34fbc"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control sso-01 (Policies and instructions for controlling and monitoring third parties) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "fb77cdf2-fb60-586b-8399-eb2c8fe50b5d"
+            }
+          ],
+          "control-id": "sso-01",
+          "remarks": "Control sso-01 (Policies and instructions for controlling and monitoring third parties) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "0f07e553-3de3-5a3c-aa25-1c84b3e29c9b"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control sso-02 (Risk assessment of service providers and suppliers) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "bde6bd65-2ce0-5b35-9ab4-d37a107721c1"
+            }
+          ],
+          "control-id": "sso-02",
+          "remarks": "Control sso-02 (Risk assessment of service providers and suppliers) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "2b647ae8-da17-5960-a6ea-baa79c5c5248"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control sso-03 (Directory of service providers and suppliers) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "c3a261fe-117c-5dc3-8f3b-0ff964feb60c"
+            }
+          ],
+          "control-id": "sso-03",
+          "remarks": "Control sso-03 (Directory of service providers and suppliers) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "9e5cdf2c-c7e6-524c-b257-7a861da49124"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control sso-04 (Monitoring of compliance with requirements) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "24480ebc-7088-54bf-b355-092e665f97d9"
+            }
+          ],
+          "control-id": "sso-04",
+          "remarks": "Control sso-04 (Monitoring of compliance with requirements) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "514d8888-33da-58fa-b9a7-0190e672c4b2"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "35504834-94ae-5e01-8c90-19797a1694ce",
+              "description": "Control sso-05 (Exit strategy for the receipt of benefits) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "5558dd12-0815-5d67-9d87-45314ac8573e"
+            }
+          ],
+          "control-id": "sso-05",
+          "remarks": "Control sso-05 (Exit strategy for the receipt of benefits) is satisfied by the BSI C5 Library Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "9c79bd04-fe04-52dc-85ad-c4cca52c3cad"
+        }
+      ]
+    },
+    "import-profile": {
+      "href": "./catalog.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:13Z",
+      "oscal-version": "1.2.3",
+      "roles": [
+        {
+          "id": "sec-admin",
+          "title": "Security Administrator"
+        }
+      ],
+      "title": "BSI C5 Library System Security Plan Template",
+      "version": "1"
+    },
+    "system-characteristics": {
+      "authorization-boundary": {
+        "description": "The authorization boundary encompasses all computing resources, cloud tenancies, and network zones supporting BSI C5 Library operations."
+      },
+      "description": "Reference system architecture implementing security controls for BSI C5 Library.",
+      "security-impact-level": {
+        "security-objective-availability": "moderate",
+        "security-objective-confidentiality": "moderate",
+        "security-objective-integrity": "high"
+      },
+      "security-sensitivity-level": "moderate",
+      "status": {
+        "state": "operational"
+      },
+      "system-ids": [
+        {
+          "id": "bsi-c5-2020-system"
+        }
+      ],
+      "system-information": {
+        "information-types": [
+          {
+            "description": "Operational and compliance data processed within the germany jurisdiction boundary.",
+            "title": "Sovereign Program Data",
+            "uuid": "c73f7312-d00e-5349-b192-edb2b567fee8"
+          }
+        ]
+      },
+      "system-name": "BSI C5 Library Reference System",
+      "system-name-short": "bsi-c5-2020"
+    },
+    "system-implementation": {
+      "components": [
+        {
+          "description": "Central execution platform providing control implementations for BSI C5 Library.",
+          "status": {
+            "state": "operational"
+          },
+          "title": "BSI C5 Library Core System Component",
+          "type": "software",
+          "uuid": "35504834-94ae-5e01-8c90-19797a1694ce"
+        }
+      ],
+      "users": [
+        {
+          "role-ids": [
+            "sec-admin"
+          ],
+          "title": "Security Administrator",
+          "uuid": "034cf749-de62-5a3e-8213-5768c400647e"
+        }
+      ]
+    },
+    "uuid": "881f1dce-0eea-5d80-bd28-aa58f5f7b45b"
+  }
+}

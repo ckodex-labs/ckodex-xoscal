@@ -1,0 +1,121 @@
+{
+  "assessment-results": {
+    "import-ap": {
+      "href": "./assessment-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:13Z",
+      "oscal-version": "1.2.3",
+      "title": "Criminal Justice Information Services (CJIS) Security Policy 5.9.5 Assessment Results Template",
+      "version": "1"
+    },
+    "results": [
+      {
+        "description": "Assessment evaluation findings and observations for Criminal Justice Information Services (CJIS) Security Policy 5.9.5.",
+        "findings": [
+          {
+            "description": "Control _3.2.10-1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "3a444a32-4e0b-5b8f-a8cf-ec05b0da363a"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_3.2.10-1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _3.2.10-1",
+            "uuid": "8568fed3-a112-5843-91e3-d5ff087fe8f4"
+          },
+          {
+            "description": "Control _4.2.2-1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "3989d00a-8076-5eda-813c-4a221ee4cd46"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_4.2.2-1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _4.2.2-1",
+            "uuid": "780aaed3-6640-509d-9200-0b9ae5ab26c3"
+          },
+          {
+            "description": "Control _5.1.1.3-1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "31f7b1b1-125f-546c-9189-905359e9754a"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_5.1.1.3-1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _5.1.1.3-1",
+            "uuid": "8a2932d1-62fa-50e0-b0cf-e8e27137f325"
+          }
+        ],
+        "observations": [
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control _3.2.10-1 (FBI CJIS Division Information Security Officer (FBI CJIS ISO) — 3.2.10-1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "3a444a32-4e0b-5b8f-a8cf-ec05b0da363a"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control _4.2.2-1 (Proper Access, Use, and Dissemination of NCIC Restricted Files Information — 4.2.2-1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "3989d00a-8076-5eda-813c-4a221ee4cd46"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control _5.1.1.3-1 (Criminal Justice Agency User Agreements — 5.1.1.3-1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "31f7b1b1-125f-546c-9189-905359e9754a"
+          }
+        ],
+        "reviewed-controls": {
+          "control-selections": [
+            {
+              "description": "All controls evaluated for Criminal Justice Information Services (CJIS) Security Policy 5.9.5",
+              "include-all": {}
+            }
+          ]
+        },
+        "start": "2026-11-08T01:42:13Z",
+        "title": "Criminal Justice Information Services (CJIS) Security Policy 5.9.5 Assessment Results",
+        "uuid": "02927c86-81f0-5fc9-8e27-a0feb6e99798"
+      }
+    ],
+    "uuid": "73781f20-7d4d-5981-807b-1b0b08b3c06b"
+  }
+}

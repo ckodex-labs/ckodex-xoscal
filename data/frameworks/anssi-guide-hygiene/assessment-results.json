@@ -1,0 +1,324 @@
+{
+  "assessment-results": {
+    "import-ap": {
+      "href": "./assessment-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:12Z",
+      "oscal-version": "1.2.3",
+      "title": "ANSSI - Guide d'hygiène informatique Assessment Results Template",
+      "version": "3"
+    },
+    "results": [
+      {
+        "description": "Assessment evaluation findings and observations for ANSSI - Guide d'hygiène informatique.",
+        "findings": [
+          {
+            "description": "Control _1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "ac705b50-2f0a-5a69-8f1b-2d115c1bf168"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _1",
+            "uuid": "e4a796b8-89e3-534c-9896-006b63db789d"
+          },
+          {
+            "description": "Control _10 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "023b88f6-bd88-524a-b090-6690560df06e"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_10",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _10",
+            "uuid": "f33db07a-8b69-5a49-84df-1a571a01d3e2"
+          },
+          {
+            "description": "Control _14 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "08e93d71-bade-5f41-adfc-49b02f7c0683"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_14",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _14",
+            "uuid": "5021d77c-ca26-56d6-8607-0c8989579c77"
+          },
+          {
+            "description": "Control _19 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "26374511-58dc-55a6-b275-01b93a6ae2c5"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_19",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _19",
+            "uuid": "51d68ec1-d5f5-5996-9799-5cf32cd18ffd"
+          },
+          {
+            "description": "Control _27 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "5ced12d2-4fbc-5ea4-9870-1beea5961b83"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_27",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _27",
+            "uuid": "5d29b140-b80d-53b3-a73e-76541d662e01"
+          },
+          {
+            "description": "Control _30 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "08d83252-9c1e-5d15-8bf3-60a3ae2fbde6"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_30",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _30",
+            "uuid": "c300184d-3ff4-5362-af3e-264372859ac3"
+          },
+          {
+            "description": "Control _34 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "b5e7abc5-5889-5a07-9b2c-1cfa5353e7a3"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_34",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _34",
+            "uuid": "6aecfd0c-5e97-58a7-8d33-824c4b7f64f0"
+          },
+          {
+            "description": "Control _36 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "30a0b4d1-0e8e-5016-8786-f795ae97e388"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_36",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _36",
+            "uuid": "a98b519b-2ee6-5b3e-91fe-161e72ab0cb7"
+          },
+          {
+            "description": "Control _4 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "a7e16fec-9b1b-5e84-8b2e-51f8413bf479"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_4",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _4",
+            "uuid": "a844ab2b-8414-58db-a25f-76535b93180b"
+          },
+          {
+            "description": "Control _41.r has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "7b1d9fdf-f247-500c-a588-854d2d6edbbb"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_41.r",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _41.r",
+            "uuid": "a2d43221-df79-592c-a9df-e75b7d5c4926"
+          }
+        ],
+        "observations": [
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control _1 (Former les équipes opérationnelles à la sécurité des systèmes d’information) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "ac705b50-2f0a-5a69-8f1b-2d115c1bf168"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control _10 (Définir et vérifier des règles de choix et de dimensionnement des mots de passe) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "023b88f6-bd88-524a-b090-6690560df06e"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control _14 (Mettre en place un niveau de sécurité minimal sur l’ensemble du parc informatique) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "08e93d71-bade-5f41-adfc-49b02f7c0683"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control _19 (Segmenter le réseau et mettre en place un cloisonnement entre ces zones) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "26374511-58dc-55a6-b275-01b93a6ae2c5"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control _27 (Interdire l’accès à Internet depuis les postes ou serveurs utilisés pour l’administration du système d’information) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "5ced12d2-4fbc-5ea4-9870-1beea5961b83"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control _30 (Prendre des mesures de sécurisation physique des terminaux nomades) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "08d83252-9c1e-5d15-8bf3-60a3ae2fbde6"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control _34 (Définir une politique de mise à jour des composants du système d’information) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "b5e7abc5-5889-5a07-9b2c-1cfa5353e7a3"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control _36 (Activer et configurer les journaux des composants les plus importants) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "30a0b4d1-0e8e-5016-8786-f795ae97e388"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control _4 (Identifier les informations et serveurs les plus sensibles et maintenir un schéma du réseau) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "a7e16fec-9b1b-5e84-8b2e-51f8413bf479"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control _41.r (Mener une analyse de risques formelle (renforcé)) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "7b1d9fdf-f247-500c-a588-854d2d6edbbb"
+          }
+        ],
+        "reviewed-controls": {
+          "control-selections": [
+            {
+              "description": "All controls evaluated for ANSSI - Guide d'hygiène informatique",
+              "include-all": {}
+            }
+          ]
+        },
+        "start": "2026-11-08T01:42:12Z",
+        "title": "ANSSI - Guide d'hygiène informatique Assessment Results",
+        "uuid": "030e4b72-88f5-56b0-9f19-468f89dab92a"
+      }
+    ],
+    "uuid": "e5381e17-e950-5930-9b3c-46bedb72afd3"
+  }
+}

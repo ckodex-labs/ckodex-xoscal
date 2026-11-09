@@ -40,7 +40,7 @@ func NewSQLiteStore(dsn string, pool dbutil.PoolConfig) (Store, error) {
 	if err := dbutil.Configure(db, dsn, pool); err != nil {
 		return nil, closeDatabase(err, db)
 	}
-	if _, err := db.Exec("PRAGMA foreign_keys = ON"); err != nil {
+	if _, err := db.Exec("PRAGMA journal_mode = WAL; PRAGMA synchronous = NORMAL; PRAGMA foreign_keys = ON;"); err != nil {
 		return nil, closeDatabase(fmt.Errorf("enable foreign keys: %w", err), db)
 	}
 	s := &SQLiteStore{db: db}
@@ -186,7 +186,7 @@ func (s *SQLiteStore) Snapshot(ctx context.Context, t time.Time) ([]*Entity, err
 	rows, err := s.db.QueryContext(ctx,
 		`SELECT urn, entity_type, version, status, valid_from, valid_to, payload FROM kg_entities
 		 WHERE status = ? AND valid_from <= ? AND (valid_to IS NULL OR valid_to > ?)
-		 ORDER BY urn, version`,
+		 ORDER BY rowid`,
 		string(EntityStatusActive), t, t,
 	)
 	if err != nil {
@@ -196,25 +196,91 @@ func (s *SQLiteStore) Snapshot(ctx context.Context, t time.Time) ([]*Entity, err
 	return scanEntities(rows)
 }
 
-func (s *SQLiteStore) CreateSnapshot(ctx context.Context, name string) (*Snapshot, error) {
-	now := time.Now().UTC()
-	entities, err := s.Snapshot(ctx, now)
+// BulkUpsertEntities inserts or updates a batch of entities inside a single transaction.
+func (s *SQLiteStore) BulkUpsertEntities(ctx context.Context, entities []*Entity) error {
+	if len(entities) == 0 {
+		return nil
+	}
+	tx, err := s.db.BeginTx(ctx, nil)
 	if err != nil {
-		return nil, fmt.Errorf("snapshot: %w", err)
+		return fmt.Errorf("begin tx: %w", err)
 	}
-	if _, err := s.db.ExecContext(ctx, `INSERT INTO kg_snapshots(name, created_at) VALUES (?, ?)`, name, now); err != nil {
-		return nil, fmt.Errorf("insert snapshot: %w", err)
-	}
-	for _, e := range entities {
-		_, err := s.db.ExecContext(ctx,
-			`INSERT INTO kg_snapshot_entities(snapshot_name, entity_urn, version) VALUES (?, ?, ?)`,
-			name, e.URN, e.Version,
-		)
+	defer func() { _ = tx.Rollback() }()
+
+	now := time.Now().UTC()
+	for _, entity := range entities {
+		if entity == nil {
+			continue
+		}
+		if entity.Status == "" {
+			entity.Status = EntityStatusActive
+		}
+		if entity.ValidFrom.IsZero() {
+			entity.ValidFrom = now
+		}
+		payload, err := json.Marshal(entity.Payload)
 		if err != nil {
-			return nil, fmt.Errorf("insert snapshot entity: %w", err)
+			return fmt.Errorf("marshal payload %s: %w", entity.URN, err)
+		}
+		var maxVersion int
+		_ = tx.QueryRowContext(ctx,
+			`SELECT COALESCE(MAX(version), 0) FROM kg_entities WHERE urn = ?`, entity.URN,
+		).Scan(&maxVersion)
+		if maxVersion > 0 {
+			if _, err := tx.ExecContext(ctx,
+				`UPDATE kg_entities SET status = ?, valid_to = ? WHERE urn = ? AND status = ?`,
+				string(EntityStatusSuperseded), now, entity.URN, string(EntityStatusActive),
+			); err != nil {
+				return fmt.Errorf("expire old version %s: %w", entity.URN, err)
+			}
+		}
+		entity.Version = maxVersion + 1
+		if _, err := tx.ExecContext(ctx,
+			`INSERT INTO kg_entities(urn, entity_type, version, status, valid_from, valid_to, payload) VALUES (?, ?, ?, ?, ?, ?, ?)`,
+			entity.URN, entity.Type, entity.Version, string(entity.Status), entity.ValidFrom, entity.ValidTo, payload,
+		); err != nil {
+			return fmt.Errorf("insert entity %s: %w", entity.URN, err)
 		}
 	}
-	return &Snapshot{Name: name, CreatedAt: now, EntityCount: len(entities)}, nil
+
+	if err := tx.Commit(); err != nil {
+		return fmt.Errorf("commit tx: %w", err)
+	}
+	return nil
+}
+
+func (s *SQLiteStore) CreateSnapshot(ctx context.Context, name string) (*Snapshot, error) {
+	now := time.Now().UTC()
+	tx, err := s.db.BeginTx(ctx, nil)
+	if err != nil {
+		return nil, fmt.Errorf("begin snapshot tx: %w", err)
+	}
+	defer func() { _ = tx.Rollback() }()
+
+	if _, err := tx.ExecContext(ctx, `DELETE FROM kg_snapshot_entities WHERE snapshot_name = ?`, name); err != nil {
+		return nil, fmt.Errorf("clear existing snapshot entities: %w", err)
+	}
+	if _, err := tx.ExecContext(ctx, `DELETE FROM kg_snapshots WHERE name = ?`, name); err != nil {
+		return nil, fmt.Errorf("clear existing snapshot: %w", err)
+	}
+	if _, err := tx.ExecContext(ctx, `INSERT INTO kg_snapshots(name, created_at) VALUES (?, ?)`, name, now); err != nil {
+		return nil, fmt.Errorf("insert snapshot: %w", err)
+	}
+	res, err := tx.ExecContext(ctx,
+		`INSERT INTO kg_snapshot_entities(snapshot_name, entity_urn, version)
+		 SELECT ?, urn, version FROM kg_entities
+		 WHERE status = ? AND valid_from <= ? AND (valid_to IS NULL OR valid_to > ?)
+		 ORDER BY rowid`,
+		name, string(EntityStatusActive), now, now,
+	)
+	if err != nil {
+		return nil, fmt.Errorf("insert snapshot entities: %w", err)
+	}
+	affected, _ := res.RowsAffected()
+	if err := tx.Commit(); err != nil {
+		return nil, fmt.Errorf("commit snapshot tx: %w", err)
+	}
+	return &Snapshot{Name: name, CreatedAt: now, EntityCount: int(affected)}, nil
 }
 
 func (s *SQLiteStore) GetSnapshot(ctx context.Context, name string) ([]*Entity, error) {
@@ -222,7 +288,8 @@ func (s *SQLiteStore) GetSnapshot(ctx context.Context, name string) ([]*Entity, 
 		`SELECT e.urn, e.entity_type, e.version, e.status, e.valid_from, e.valid_to, e.payload
 		 FROM kg_snapshot_entities se
 		 JOIN kg_entities e ON se.entity_urn = e.urn AND se.version = e.version
-		 WHERE se.snapshot_name = ?`, name)
+		 WHERE se.snapshot_name = ?
+		 ORDER BY se.rowid`, name)
 	if err != nil {
 		return nil, fmt.Errorf("get snapshot: %w", err)
 	}

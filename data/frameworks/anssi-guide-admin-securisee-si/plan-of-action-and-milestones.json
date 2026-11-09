@@ -1,0 +1,21 @@
+{
+  "plan-of-action-and-milestones": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:12Z",
+      "oscal-version": "1.2.3",
+      "title": "Recommandations relatives à l'administration sécurisée des systèmes d'information Plan of Action and Milestones Template",
+      "version": "1"
+    },
+    "poam-items": [
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "title": "Compliance Roadmap and Parameter Tailoring for Recommandations relatives à l'administration sécurisée des systèmes d'information",
+        "uuid": "b2c257fc-3e1b-5580-88de-c8565d6114de"
+      }
+    ],
+    "uuid": "688dad41-bf6b-5d33-a433-65d4e6cb0cb9"
+  }
+}

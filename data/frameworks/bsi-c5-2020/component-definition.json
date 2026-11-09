@@ -1,0 +1,633 @@
+{
+  "component-definition": {
+    "components": [
+      {
+        "control-implementations": [
+          {
+            "description": "Security control implementations for BSI C5 Library.",
+            "implemented-requirements": [
+              {
+                "control-id": "am-01",
+                "description": "Component capability addressing control am-01 (Asset Inventory).",
+                "uuid": "942b8449-cdd5-5185-81ce-c22740f788bd"
+              },
+              {
+                "control-id": "am-02",
+                "description": "Component capability addressing control am-02 (Acceptable Use and Safe Handling of Assets Policy).",
+                "uuid": "a3b3d87e-6dd8-51c0-a9b5-8ed0338b0649"
+              },
+              {
+                "control-id": "am-03",
+                "description": "Component capability addressing control am-03 (Commissioning of Hardware).",
+                "uuid": "5a1a8dcb-2c67-5147-84e0-4221feabf347"
+              },
+              {
+                "control-id": "am-04",
+                "description": "Component capability addressing control am-04 (Decommissioning of Hardware).",
+                "uuid": "96df296e-b9f8-5a49-8ebb-6dce506dd1ff"
+              },
+              {
+                "control-id": "am-05",
+                "description": "Component capability addressing control am-05 (Commitment to Permissible Use, Safe Handling and Return of Assets).",
+                "uuid": "df5972f6-a59d-5b61-9dc0-5fd27876fde5"
+              },
+              {
+                "control-id": "am-06",
+                "description": "Component capability addressing control am-06 (Asset Classification and Labelling).",
+                "uuid": "016217f0-9d66-5253-8c22-68abdb88e4b5"
+              },
+              {
+                "control-id": "bcm-01",
+                "description": "Component capability addressing control bcm-01 (Top management responsibility).",
+                "uuid": "e964b072-bc9a-5897-a3a2-f8e60d732a00"
+              },
+              {
+                "control-id": "bcm-02",
+                "description": "Component capability addressing control bcm-02 (Business impact analysis policies and instructions).",
+                "uuid": "064d194c-69f9-523f-b584-73db776e0a94"
+              },
+              {
+                "control-id": "bcm-03",
+                "description": "Component capability addressing control bcm-03 (Planning business continuity).",
+                "uuid": "162e6ae1-8d56-52f5-a600-be1c75cdf6b4"
+              },
+              {
+                "control-id": "bcm-04",
+                "description": "Component capability addressing control bcm-04 (Verification, updating and testing of the business continuity).",
+                "uuid": "84f3a29d-6b83-53de-a574-96a00fe12131"
+              },
+              {
+                "control-id": "com-01",
+                "description": "Component capability addressing control com-01 (Identification of applicable legal, regulatory, self-imposed or contractual requirements).",
+                "uuid": "e507cc19-d1ec-5af5-96ab-bf74208d8159"
+              },
+              {
+                "control-id": "com-02",
+                "description": "Component capability addressing control com-02 (Policy for planning and conducting audits).",
+                "uuid": "0fa0efbc-c892-58a6-8434-9f7a33c84aed"
+              },
+              {
+                "control-id": "com-03",
+                "description": "Component capability addressing control com-03 (Internal audits of the information security management system).",
+                "uuid": "8595832b-8c37-523a-9413-e44b867d90c0"
+              },
+              {
+                "control-id": "com-04",
+                "description": "Component capability addressing control com-04 (Information on information security performance and management assessment of the ISMS).",
+                "uuid": "d3ed1003-c66e-5acd-8fc6-1c11bd17e347"
+              },
+              {
+                "control-id": "cos-01",
+                "description": "Component capability addressing control cos-01 (Technical safeguards).",
+                "uuid": "a173bd95-49d7-5ebe-a08e-4ed439ad2f76"
+              },
+              {
+                "control-id": "cos-02",
+                "description": "Component capability addressing control cos-02 (Security requirements for connections in the Cloud Service Provider's network).",
+                "uuid": "65c23d8b-07f1-5afe-af63-b798cd2d7b9d"
+              },
+              {
+                "control-id": "cos-03",
+                "description": "Component capability addressing control cos-03 (Monitoring of connections in the Cloud Service Provider's network).",
+                "uuid": "44adbac1-1a59-5ae5-a7d7-ae29dfc633cf"
+              },
+              {
+                "control-id": "cos-04",
+                "description": "Component capability addressing control cos-04 (Cross-network access).",
+                "uuid": "30c5744c-f196-5e30-ba65-bf8fc81e1292"
+              },
+              {
+                "control-id": "cos-05",
+                "description": "Component capability addressing control cos-05 (Networks for administration).",
+                "uuid": "ac2d4b39-ce5f-5aaa-8aad-9a394ee7cf41"
+              },
+              {
+                "control-id": "cos-06",
+                "description": "Component capability addressing control cos-06 (Segregation of data traffic in jointly used network environments).",
+                "uuid": "f9b7fef9-c660-5d90-be61-56c87ad0fa8c"
+              },
+              {
+                "control-id": "cos-07",
+                "description": "Component capability addressing control cos-07 (Documentation of the network topology).",
+                "uuid": "d1443de3-82d0-5b1f-82a9-168ef4935299"
+              },
+              {
+                "control-id": "cos-08",
+                "description": "Component capability addressing control cos-08 (Policies for data transmission).",
+                "uuid": "e870d5c9-a1e2-5162-a458-a2fda7b683e5"
+              },
+              {
+                "control-id": "cry-01",
+                "description": "Component capability addressing control cry-01 (Policy for the use of encryption procedures and key management).",
+                "uuid": "1a2aaa9e-2237-5769-8a47-0976cb623d22"
+              },
+              {
+                "control-id": "cry-02",
+                "description": "Component capability addressing control cry-02 (Encryption of data for transmission (transport encryption)).",
+                "uuid": "52246bff-d4ed-52e9-aaef-d5652523c597"
+              },
+              {
+                "control-id": "cry-03",
+                "description": "Component capability addressing control cry-03 (Encryption of sensitive data for storage).",
+                "uuid": "7a9739fc-40a0-5f46-b8b8-66eee820b4dc"
+              },
+              {
+                "control-id": "cry-04",
+                "description": "Component capability addressing control cry-04 (Secure key management).",
+                "uuid": "6a0f744b-3ef9-593b-bda1-422b497cc61f"
+              },
+              {
+                "control-id": "dev-01",
+                "description": "Component capability addressing control dev-01 (Policies for the development/procurement of information systems).",
+                "uuid": "ec9c7c13-17fe-5f01-9408-ffdc175457af"
+              },
+              {
+                "control-id": "dev-02",
+                "description": "Component capability addressing control dev-02 (Outsourcing of the development).",
+                "uuid": "b4c6cc87-2143-5548-9fea-1713cf1a4cf6"
+              },
+              {
+                "control-id": "dev-03",
+                "description": "Component capability addressing control dev-03 (Policies for changes to information systems).",
+                "uuid": "292a8a8b-48ef-59a7-b2cb-b25c90966032"
+              },
+              {
+                "control-id": "dev-04",
+                "description": "Component capability addressing control dev-04 (Safety training and awareness programme regarding continuous software delivery and associated systems, components or tools.).",
+                "uuid": "778e6fc5-062c-5170-a486-b58b153704a4"
+              },
+              {
+                "control-id": "dev-05",
+                "description": "Component capability addressing control dev-05 (Risk assessment, categorisation and prioritisation of changes).",
+                "uuid": "ff75ec3c-3164-5b6b-8201-ef0d36f7bac2"
+              },
+              {
+                "control-id": "dev-06",
+                "description": "Component capability addressing control dev-06 (Testing changes).",
+                "uuid": "13b1bf56-3cc1-590c-bd72-e083deae302a"
+              },
+              {
+                "control-id": "dev-07",
+                "description": "Component capability addressing control dev-07 (Logging of changes).",
+                "uuid": "6b5f7724-1050-55dc-9ad9-3f4675dc67ae"
+              },
+              {
+                "control-id": "dev-08",
+                "description": "Component capability addressing control dev-08 (Version Control).",
+                "uuid": "98eba716-9838-5ac9-a6fc-4152115de2a6"
+              },
+              {
+                "control-id": "dev-09",
+                "description": "Component capability addressing control dev-09 (Approvals for provision in the production environment).",
+                "uuid": "68b655eb-045b-5055-8132-fc37761d4fd2"
+              },
+              {
+                "control-id": "dev-10",
+                "description": "Component capability addressing control dev-10 (Separation of environments).",
+                "uuid": "585de5df-b4a3-542a-bd62-f3af922e5f62"
+              },
+              {
+                "control-id": "hr-01",
+                "description": "Component capability addressing control hr-01 (Verification of qualification and trustworthiness).",
+                "uuid": "276ec75d-ce8e-5853-ae3d-7500387d4b5b"
+              },
+              {
+                "control-id": "hr-02",
+                "description": "Component capability addressing control hr-02 (Employment terms and conditions).",
+                "uuid": "43198c66-d8d4-59ee-8e5a-878f5ac689ec"
+              },
+              {
+                "control-id": "hr-03",
+                "description": "Component capability addressing control hr-03 (Security training and awareness programme).",
+                "uuid": "a2b8eec6-cd3e-5a5f-9d7d-629ef0dc51f3"
+              },
+              {
+                "control-id": "hr-04",
+                "description": "Component capability addressing control hr-04 (Disciplinary measures).",
+                "uuid": "f0ee65c3-82be-5120-b20e-9ed2ffaaf0fe"
+              },
+              {
+                "control-id": "hr-05",
+                "description": "Component capability addressing control hr-05 (Responsibilities in the event of termination or change of employment).",
+                "uuid": "349d34b9-ea1a-527b-8f06-b5dab1b50dd8"
+              },
+              {
+                "control-id": "hr-06",
+                "description": "Component capability addressing control hr-06 (Confidentiality agreements).",
+                "uuid": "27d2740a-d73b-5341-81de-370fa38a38a0"
+              },
+              {
+                "control-id": "idm-01",
+                "description": "Component capability addressing control idm-01 (Policy for user accounts and access rights).",
+                "uuid": "84ce5b8d-33e9-57dc-909d-076e5f265b50"
+              },
+              {
+                "control-id": "idm-02",
+                "description": "Component capability addressing control idm-02 (Granting and change of user accounts and access rights).",
+                "uuid": "86e6be7f-39f1-586e-9d54-52eecc7aa94b"
+              },
+              {
+                "control-id": "idm-03",
+                "description": "Component capability addressing control idm-03 (Locking and withdrawal of user accounts in the event of inactivity or multiple failed logins).",
+                "uuid": "d559a087-592c-5f3b-8aa6-39f503567e9a"
+              },
+              {
+                "control-id": "idm-04",
+                "description": "Component capability addressing control idm-04 (Withdraw or adjust access rights as the task area changes).",
+                "uuid": "511d48f9-5270-591d-ab90-3bed05e12964"
+              },
+              {
+                "control-id": "idm-05",
+                "description": "Component capability addressing control idm-05 (Regular review of access rights).",
+                "uuid": "f1155b6e-e271-53db-b10f-cfb472334d5e"
+              },
+              {
+                "control-id": "idm-06",
+                "description": "Component capability addressing control idm-06 (Privileged access rights).",
+                "uuid": "9ced4bff-d054-55c5-ba44-6ab32d5ce3b4"
+              },
+              {
+                "control-id": "idm-07",
+                "description": "Component capability addressing control idm-07 (Access to cloud customer data).",
+                "uuid": "64c77cb0-e7ba-58ae-9728-cb480530d485"
+              },
+              {
+                "control-id": "idm-08",
+                "description": "Component capability addressing control idm-08 (Confidentiality of authentication information).",
+                "uuid": "bd3795f0-a14a-5e0e-b955-cb64f7731228"
+              },
+              {
+                "control-id": "idm-09",
+                "description": "Component capability addressing control idm-09 (Authentication mechanisms).",
+                "uuid": "4ab59019-0d61-5749-96ac-ba3560941881"
+              },
+              {
+                "control-id": "inq-01",
+                "description": "Component capability addressing control inq-01 (Legal Assessment of Investigative Inquiries).",
+                "uuid": "d58068ed-aaa0-5f70-b019-33eb197addb6"
+              },
+              {
+                "control-id": "inq-02",
+                "description": "Component capability addressing control inq-02 (Informing Cloud Customers about Investigation Requests).",
+                "uuid": "9648bd76-96e2-5452-ab4d-337b46732e91"
+              },
+              {
+                "control-id": "inq-03",
+                "description": "Component capability addressing control inq-03 (Conditions for Access to or Disclosure of Data in Investigation Requests).",
+                "uuid": "901393b0-5505-5017-af5c-814ed7ff2347"
+              },
+              {
+                "control-id": "inq-04",
+                "description": "Component capability addressing control inq-04 (Limiting Access to or Disclosure of Data in Investigation Requests).",
+                "uuid": "620b89da-0c0b-5b35-8aee-2a6ae0a7e78c"
+              },
+              {
+                "control-id": "ois-01",
+                "description": "Component capability addressing control ois-01 (Information Security Management System (ISMS)).",
+                "uuid": "7390a8f0-35f0-550c-ae78-5556833f5fc1"
+              },
+              {
+                "control-id": "ois-02",
+                "description": "Component capability addressing control ois-02 (Information Security Policy).",
+                "uuid": "e759aea5-2072-5892-8418-0d32d1329846"
+              },
+              {
+                "control-id": "ois-03",
+                "description": "Component capability addressing control ois-03 (Interfaces and Dependencies).",
+                "uuid": "e21939b4-e13b-5fdb-b5b9-f5e3216263b5"
+              },
+              {
+                "control-id": "ois-04",
+                "description": "Component capability addressing control ois-04 (Segregation of Duties).",
+                "uuid": "3abd1f1b-0b7a-5100-a82f-bb1d7d86b805"
+              },
+              {
+                "control-id": "ois-05",
+                "description": "Component capability addressing control ois-05 (Contact with Relevant Government Agencies and Interest Groups).",
+                "uuid": "630e119f-511a-5a51-bf5c-c55b44809ccc"
+              },
+              {
+                "control-id": "ois-06",
+                "description": "Component capability addressing control ois-06 (Risk Management Policy).",
+                "uuid": "ddb5a64f-ed66-5447-a4ab-f102654b7db2"
+              },
+              {
+                "control-id": "ois-07",
+                "description": "Component capability addressing control ois-07 (Application of the Risk Management Policy).",
+                "uuid": "7aa9c4a0-1caf-5b43-8284-4e0226397bb5"
+              },
+              {
+                "control-id": "ops-01",
+                "description": "Component capability addressing control ops-01 (Capacity Management - Planning).",
+                "uuid": "037ea40b-2f65-5928-8ca2-6112a3654b98"
+              },
+              {
+                "control-id": "ops-02",
+                "description": "Component capability addressing control ops-02 (Capacity Management - Monitoring).",
+                "uuid": "44e3331d-e5d1-5144-a113-fe12c7ceb0c9"
+              },
+              {
+                "control-id": "ops-03",
+                "description": "Component capability addressing control ops-03 (Capacity Management - Controlling of Resources).",
+                "uuid": "cc7ccaa2-246e-56b3-9598-ce94539044f3"
+              },
+              {
+                "control-id": "ops-04",
+                "description": "Component capability addressing control ops-04 (Protection Against Malware - Concept).",
+                "uuid": "39ca7eff-49cd-5d18-a024-d9677a1d12d5"
+              },
+              {
+                "control-id": "ops-05",
+                "description": "Component capability addressing control ops-05 (Protection Against Malware - Implementation).",
+                "uuid": "0f9a0c9f-2d23-5df8-b574-5c331a02abcc"
+              },
+              {
+                "control-id": "ops-06",
+                "description": "Component capability addressing control ops-06 (Data Protection and Recovery - Concept).",
+                "uuid": "f8378d96-3e72-550b-a094-62116ef4708b"
+              },
+              {
+                "control-id": "ops-07",
+                "description": "Component capability addressing control ops-07 (Data Backup and Recovery - Monitoring).",
+                "uuid": "0ad09981-a4c8-5503-b912-292c8b5eefa1"
+              },
+              {
+                "control-id": "ops-08",
+                "description": "Component capability addressing control ops-08 (Data Backup and Recovery - Regular Testing).",
+                "uuid": "6ba662a6-f14f-5a03-ad02-df1db8b8bef7"
+              },
+              {
+                "control-id": "ops-09",
+                "description": "Component capability addressing control ops-09 (Data Backup and Recovery - Storage).",
+                "uuid": "d0bdea95-dc73-58ec-95e3-6d1aba9ad52f"
+              },
+              {
+                "control-id": "ops-10",
+                "description": "Component capability addressing control ops-10 (Logging and Monitoring - Concept).",
+                "uuid": "4fabfb31-4f3f-5f38-af6e-22b9dd281072"
+              },
+              {
+                "control-id": "ops-11",
+                "description": "Component capability addressing control ops-11 (Logging and Monitoring - Metadata Management Concept).",
+                "uuid": "0235845a-f0aa-5c20-aa8a-68a629095cc5"
+              },
+              {
+                "control-id": "ops-12",
+                "description": "Component capability addressing control ops-12 (Logging and Monitoring - Access, Storage and Deletion).",
+                "uuid": "480995fc-1c0f-5f08-a3fe-77662a51b211"
+              },
+              {
+                "control-id": "ops-13",
+                "description": "Component capability addressing control ops-13 (Logging and Monitoring - Identification of Events).",
+                "uuid": "1b3825d5-f866-56b7-b015-6d4bd12f63c2"
+              },
+              {
+                "control-id": "ops-14",
+                "description": "Component capability addressing control ops-14 (Logging and Monitoring - Storage of the Logging Data).",
+                "uuid": "26ac74b8-262c-5c20-a36c-256bb953aaf6"
+              },
+              {
+                "control-id": "ops-15",
+                "description": "Component capability addressing control ops-15 (Logging and Monitoring - Accountability).",
+                "uuid": "af3f9f23-6e49-5c4d-a55f-bd77e11a9437"
+              },
+              {
+                "control-id": "ops-16",
+                "description": "Component capability addressing control ops-16 (Logging and Monitoring - Configuration).",
+                "uuid": "0a836f7b-0628-58c0-b685-571c2af31a04"
+              },
+              {
+                "control-id": "ops-17",
+                "description": "Component capability addressing control ops-17 (Logging and Monitoring - Availability of the Monitoring Software).",
+                "uuid": "76840ddb-f219-5cca-8a10-b0ce88210f00"
+              },
+              {
+                "control-id": "ops-18",
+                "description": "Component capability addressing control ops-18 (Managing Vulnerabilities, Malfunctions and Errors - Concept).",
+                "uuid": "1e47aa1e-5296-52ce-833e-ab9cf59b5a78"
+              },
+              {
+                "control-id": "ops-19",
+                "description": "Component capability addressing control ops-19 (Managing Vulnerabilities, Malfunctions and Errors - Penetration Tests).",
+                "uuid": "7636c37c-88e9-5a11-ad7a-c9a31b01b9c1"
+              },
+              {
+                "control-id": "ops-20",
+                "description": "Component capability addressing control ops-20 (Managing Vulnerabilities, Malfunctions and Errors - Measurements, Analyses and Assessments of Procedures).",
+                "uuid": "8b56d034-5602-570c-a329-a00d87d59a31"
+              },
+              {
+                "control-id": "ops-21",
+                "description": "Component capability addressing control ops-21 (Involvement of Cloud customers in the event of incidents).",
+                "uuid": "ffa20c4b-c91a-5114-8b47-88ff605aba78"
+              },
+              {
+                "control-id": "ops-22",
+                "description": "Component capability addressing control ops-22 (Testing and Documentation of known Vulnerabilities).",
+                "uuid": "2e42d69a-0d5f-54df-8ac4-b6bc66095660"
+              },
+              {
+                "control-id": "ops-23",
+                "description": "Component capability addressing control ops-23 (Managing Vulnerabilities, Malfunctions and Errors - System Hardening).",
+                "uuid": "cbe386bc-65cf-53a0-9fd1-e591af67d7fb"
+              },
+              {
+                "control-id": "ops-24",
+                "description": "Component capability addressing control ops-24 (Separation of Datasets in the Cloud Infrastructure).",
+                "uuid": "78fbe3a3-373b-52c9-88ac-0eec23895134"
+              },
+              {
+                "control-id": "pi-01",
+                "description": "Component capability addressing control pi-01 (Documentation and safety of input and output interfaces).",
+                "uuid": "f7700914-393e-5bed-8d56-2bc56bb1b8f6"
+              },
+              {
+                "control-id": "pi-02",
+                "description": "Component capability addressing control pi-02 (Contractual agreements for the provision of data).",
+                "uuid": "74b43788-03ee-5926-8da3-78726a860d4c"
+              },
+              {
+                "control-id": "pi-03",
+                "description": "Component capability addressing control pi-03 (Secure deletion of data).",
+                "uuid": "81aaa68b-3b28-533d-b318-40f87494024e"
+              },
+              {
+                "control-id": "ps-01",
+                "description": "Component capability addressing control ps-01 (Physical Security and Environmental Control Requirements).",
+                "uuid": "5aa4e0da-24c8-55c9-9d29-1f03c16793d7"
+              },
+              {
+                "control-id": "ps-02",
+                "description": "Component capability addressing control ps-02 (Redundancy model).",
+                "uuid": "20017134-b757-514e-9773-d561952d9531"
+              },
+              {
+                "control-id": "ps-03",
+                "description": "Component capability addressing control ps-03 (Perimeter Protection).",
+                "uuid": "d85c52fd-f418-58fb-b15a-eb583f831f52"
+              },
+              {
+                "control-id": "ps-04",
+                "description": "Component capability addressing control ps-04 (Physical site access control).",
+                "uuid": "4959ac03-0f94-592c-a7fc-dbd49440d7ed"
+              },
+              {
+                "control-id": "ps-05",
+                "description": "Component capability addressing control ps-05 (Protection from fire and smoke).",
+                "uuid": "45c78fe4-63fe-55d6-b6d7-477ce5cc5f14"
+              },
+              {
+                "control-id": "ps-06",
+                "description": "Component capability addressing control ps-06 (Protection against interruptions caused by power failures and other such risks).",
+                "uuid": "deedcd62-b7c7-580f-ad12-9216a86365f3"
+              },
+              {
+                "control-id": "ps-07",
+                "description": "Component capability addressing control ps-07 (Surveillance of operational and environmental parameters).",
+                "uuid": "b593906a-add9-5ebb-81d3-6a73f87f0c05"
+              },
+              {
+                "control-id": "pss-01",
+                "description": "Component capability addressing control pss-01 (Guidelines and Recommendations for Cloud Customers).",
+                "uuid": "f5cd5911-5c34-57ab-9eca-2ba550f7d5ab"
+              },
+              {
+                "control-id": "pss-02",
+                "description": "Component capability addressing control pss-02 (Identification of Vulnerabilities of the Cloud Service).",
+                "uuid": "4aa58c4c-1ccb-51c8-8093-0e7c44ad52be"
+              },
+              {
+                "control-id": "pss-03",
+                "description": "Component capability addressing control pss-03 (Online Register of Known Vulnerabilities).",
+                "uuid": "6b577514-a6f0-51f8-88ff-e900cddc5646"
+              },
+              {
+                "control-id": "pss-04",
+                "description": "Component capability addressing control pss-04 (Error handling and Logging Mechanisms).",
+                "uuid": "86bd1ec8-202d-53f9-9ec7-3ed63e94b892"
+              },
+              {
+                "control-id": "pss-05",
+                "description": "Component capability addressing control pss-05 (Authentication Mechanisms).",
+                "uuid": "4344b190-7457-5a49-8be0-1ca67288022a"
+              },
+              {
+                "control-id": "pss-06",
+                "description": "Component capability addressing control pss-06 (Session Management).",
+                "uuid": "4ffda9c8-9104-50a7-a1d5-b4d41caaba1f"
+              },
+              {
+                "control-id": "pss-07",
+                "description": "Component capability addressing control pss-07 (Confidentiality of Authentication Information).",
+                "uuid": "56c1a060-3cdf-5601-95ee-66987dbcba4d"
+              },
+              {
+                "control-id": "pss-08",
+                "description": "Component capability addressing control pss-08 (Roles and Rights Concept).",
+                "uuid": "b35995f4-eabd-5320-a378-6e0abbf4e381"
+              },
+              {
+                "control-id": "pss-09",
+                "description": "Component capability addressing control pss-09 (Authorisation Mechanisms).",
+                "uuid": "1e86d2fc-a169-5ae7-87b2-4e7ef8bb918e"
+              },
+              {
+                "control-id": "pss-10",
+                "description": "Component capability addressing control pss-10 (Software Defined Networking).",
+                "uuid": "3434a86d-9a7d-5ff1-9a74-0580e819c90c"
+              },
+              {
+                "control-id": "pss-11",
+                "description": "Component capability addressing control pss-11 (Images for Virtual Machines and Containers).",
+                "uuid": "e6daf41e-6856-5d0b-b9fa-b5cb28f4b68a"
+              },
+              {
+                "control-id": "pss-12",
+                "description": "Component capability addressing control pss-12 (Locations of Data Processing and Storage).",
+                "uuid": "81714f90-f90b-5d51-a4aa-1d3d18ce46f7"
+              },
+              {
+                "control-id": "sim-01",
+                "description": "Component capability addressing control sim-01 (Policy for security incident management).",
+                "uuid": "a2535d2b-2b60-506d-a71c-b478b192225a"
+              },
+              {
+                "control-id": "sim-02",
+                "description": "Component capability addressing control sim-02 (Processing of security incidents).",
+                "uuid": "3b6e9103-c867-5e7f-9da7-5745ad40da0b"
+              },
+              {
+                "control-id": "sim-03",
+                "description": "Component capability addressing control sim-03 (Documentation and reporting of security incidents).",
+                "uuid": "b04a1e91-2ec7-5bae-9828-638cfed0fe2e"
+              },
+              {
+                "control-id": "sim-04",
+                "description": "Component capability addressing control sim-04 (Duty of the users to report security incidents to a central body).",
+                "uuid": "90764073-3513-5c38-8e2b-a6a0fcd9c9ed"
+              },
+              {
+                "control-id": "sim-05",
+                "description": "Component capability addressing control sim-05 (Evaluation and learning process).",
+                "uuid": "a764cb08-0568-534a-8802-900b0bf39e95"
+              },
+              {
+                "control-id": "sp-01",
+                "description": "Component capability addressing control sp-01 (Documentation, communication and provision of policies and instructions).",
+                "uuid": "0d465e62-cfb4-5386-97f6-d3061375c08a"
+              },
+              {
+                "control-id": "sp-02",
+                "description": "Component capability addressing control sp-02 (Review and Approval of Policies and Instructions).",
+                "uuid": "9dd1e2ed-26a4-58b4-9b06-9abfcf0e71b1"
+              },
+              {
+                "control-id": "sp-03",
+                "description": "Component capability addressing control sp-03 (Exceptions from Existing Policies and Instructions).",
+                "uuid": "e6b7589a-1fec-5bd0-9380-13b2fe014839"
+              },
+              {
+                "control-id": "sso-01",
+                "description": "Component capability addressing control sso-01 (Policies and instructions for controlling and monitoring third parties).",
+                "uuid": "818830fa-346f-510b-aa98-20ce1e7664e2"
+              },
+              {
+                "control-id": "sso-02",
+                "description": "Component capability addressing control sso-02 (Risk assessment of service providers and suppliers).",
+                "uuid": "a2b771b0-b14e-5058-abfb-23556b8b4b25"
+              },
+              {
+                "control-id": "sso-03",
+                "description": "Component capability addressing control sso-03 (Directory of service providers and suppliers).",
+                "uuid": "ce9cdb1b-e38e-5d1d-9227-fae3bbb32313"
+              },
+              {
+                "control-id": "sso-04",
+                "description": "Component capability addressing control sso-04 (Monitoring of compliance with requirements).",
+                "uuid": "0275373a-5a69-589b-a9a8-33fd4302d069"
+              },
+              {
+                "control-id": "sso-05",
+                "description": "Component capability addressing control sso-05 (Exit strategy for the receipt of benefits).",
+                "uuid": "055ad09d-3d51-5fac-8a16-cd4f2a9f701c"
+              }
+            ],
+            "source": "./catalog.json",
+            "uuid": "8e6b9e7c-d774-5a23-9bc9-745c6dfe99f3"
+          }
+        ],
+        "description": "Enterprise technical and operational capabilities implementing controls for BSI C5 Library.",
+        "title": "BSI C5 Library Platform Component",
+        "type": "software",
+        "uuid": "7b8c29a4-0417-58b0-b88f-ea3a8257b4d9"
+      }
+    ],
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:13Z",
+      "oscal-version": "1.2.3",
+      "title": "BSI C5 Library Component Definition Template",
+      "version": "1"
+    },
+    "uuid": "0f077b52-2cc2-5385-b4d5-9cb1b91e40ba"
+  }
+}

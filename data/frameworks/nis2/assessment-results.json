@@ -1,0 +1,411 @@
+{
+  "assessment-results": {
+    "import-ap": {
+      "href": "./assessment-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:11Z",
+      "oscal-version": "1.2.3",
+      "title": "NIS2 - Annex to the Commission Implementing Regulation 2024/2690 with Technical Implementation Guidance by ENISA Assessment Results Template",
+      "version": "13"
+    },
+    "results": [
+      {
+        "description": "Assessment evaluation findings and observations for NIS2 - Annex to the Commission Implementing Regulation 2024/2690 with Technical Implementation Guidance by ENISA.",
+        "findings": [
+          {
+            "description": "Control _1.1.1.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "e0153b41-a2f9-56a9-8da7-8c44abc69101"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_1.1.1.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _1.1.1.a",
+            "uuid": "e08e339e-55a9-5e09-8bd8-9020ddb1aad5"
+          },
+          {
+            "description": "Control _10.1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "4c5469cd-8713-59b8-a012-f4b4f148a1c7"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_10.1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _10.1.1",
+            "uuid": "28096671-e3ae-5990-9eaf-0c412562740e"
+          },
+          {
+            "description": "Control _11.1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "8063341a-10a3-559f-aa45-87ca72794d16"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_11.1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _11.1.1",
+            "uuid": "5b3428b3-a56a-5a28-a398-2960eaccddec"
+          },
+          {
+            "description": "Control _12.1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "b6f13e3c-631f-5a44-8d21-e689a2f07f4c"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_12.1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _12.1.1",
+            "uuid": "ecac155e-cf88-564c-b840-8c31dfd18b43"
+          },
+          {
+            "description": "Control _13.1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "2cdc4b11-2eac-5073-adec-b85bb9822681"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_13.1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _13.1.1",
+            "uuid": "2644eec8-323a-599d-92f1-cc26e51b3406"
+          },
+          {
+            "description": "Control _2.1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "a9bb721a-b0f0-5e2d-b810-386688e9bab7"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_2.1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _2.1.1",
+            "uuid": "b00b569a-db48-5bbc-b806-9f7ffd0d7f27"
+          },
+          {
+            "description": "Control _3.1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "6dc0e811-678a-52f7-9cc7-4ec053503ed2"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_3.1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _3.1.1",
+            "uuid": "c6af8517-293b-5306-9c94-b282d3e047e8"
+          },
+          {
+            "description": "Control _4.1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "3f414567-acf8-5772-b737-060abd343283"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_4.1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _4.1.1",
+            "uuid": "d2434835-4956-5eb2-859c-f5d628e920d5"
+          },
+          {
+            "description": "Control _5.1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "6a52a2f4-c94f-5b9d-b471-eee8cec4171d"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_5.1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _5.1.1",
+            "uuid": "2abce7f5-2175-521a-8e36-212c1c5d29a4"
+          },
+          {
+            "description": "Control _6.1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "a3658977-a028-5771-9767-ac57117c0286"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_6.1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _6.1.1",
+            "uuid": "814f59a7-b077-5229-8a47-57bf83ef0a9d"
+          },
+          {
+            "description": "Control _7.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "efecf83f-c96c-53c3-b733-bb9459ed1ade"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_7.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _7.1",
+            "uuid": "56adba24-06cb-5c10-b558-4d798ea60e69"
+          },
+          {
+            "description": "Control _8.1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "039ac4de-7f72-5270-807f-c9f3a43d62cd"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_8.1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _8.1.1",
+            "uuid": "dc777727-92ab-515b-8dfe-fc0476245c52"
+          },
+          {
+            "description": "Control _9.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "c15c61bc-f977-56d1-b1d1-2e2872a6c8a1"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_9.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _9.1",
+            "uuid": "e9b3866e-a90e-5246-b28c-732d1f4c3b6e"
+          }
+        ],
+        "observations": [
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control _1.1.1.a (Policy on the security of network and information systems — 1.1.1.a) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "e0153b41-a2f9-56a9-8da7-8c44abc69101"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control _10.1.1 (Human resources security — 10.1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "4c5469cd-8713-59b8-a012-f4b4f148a1c7"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control _11.1.1 (Access control policy — 11.1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "8063341a-10a3-559f-aa45-87ca72794d16"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control _12.1.1 (Asset classification — 12.1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "b6f13e3c-631f-5a44-8d21-e689a2f07f4c"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control _13.1.1 (Supporting utilities — 13.1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "2cdc4b11-2eac-5073-adec-b85bb9822681"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control _2.1.1 (Risk management framework — 2.1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "a9bb721a-b0f0-5e2d-b810-386688e9bab7"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control _3.1.1 (Incident handling policy — 3.1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "6dc0e811-678a-52f7-9cc7-4ec053503ed2"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control _4.1.1 (Business continuity and disaster recovery plan — 4.1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "3f414567-acf8-5772-b737-060abd343283"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control _5.1.1 (Supply chain security policy — 5.1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "6a52a2f4-c94f-5b9d-b471-eee8cec4171d"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control _6.1.1 (Security in acquisition of ICT services or ICT products — 6.1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "a3658977-a028-5771-9767-ac57117c0286"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control _7.1 (POLICIES AND PROCEDURES TO ASSESS THE EFFECTIVENESS OF CYBERSECURITY RISK-MANAGEMENT MEASURES (ARTICLE 21(2), POINT (F), OF DIRECTIVE (EU) 2022/2555) — 7.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "efecf83f-c96c-53c3-b733-bb9459ed1ade"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control _8.1.1 (Awareness raising and basic cyber hygiene practices — 8.1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "039ac4de-7f72-5270-807f-c9f3a43d62cd"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control _9.1 (CRYPTOGRAPHY (ARTICLE 21(2), POINT (H), OF DIRECTIVE (EU) 2022/2555) — 9.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "c15c61bc-f977-56d1-b1d1-2e2872a6c8a1"
+          }
+        ],
+        "reviewed-controls": {
+          "control-selections": [
+            {
+              "description": "All controls evaluated for NIS2 - Annex to the Commission Implementing Regulation 2024/2690 with Technical Implementation Guidance by ENISA",
+              "include-all": {}
+            }
+          ]
+        },
+        "start": "2026-11-08T01:42:11Z",
+        "title": "NIS2 - Annex to the Commission Implementing Regulation 2024/2690 with Technical Implementation Guidance by ENISA Assessment Results",
+        "uuid": "518dc7cf-9dd1-5911-af1a-3afd54babb1b"
+      }
+    ],
+    "uuid": "6fba83fd-94bd-5723-8233-6715a13db563"
+  }
+}

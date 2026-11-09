@@ -1,0 +1,5041 @@
+{
+  "catalog": {
+    "back-matter": {
+      "resources": [
+        {
+          "description": "Source framework metadata for cisa-vendor-scrm snapshot portal",
+          "props": [
+            {
+              "name": "type",
+              "value": "standard"
+            },
+            {
+              "name": "version",
+              "value": "portal"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "https://raw.githubusercontent.com/intuitem/ciso-assistant-community/main/backend/library/libraries/cisa-vendor-scrm.yaml"
+            }
+          ],
+          "title": "cisa-vendor-scrm Framework Reference",
+          "uuid": "8cb21e4e-7f56-5586-a03d-7d340928df3f"
+        }
+      ]
+    },
+    "controls": [
+      {
+        "controls": [
+          {
+            "id": "_1.1",
+            "parts": [
+              {
+                "id": "_1.1-stmt",
+                "name": "statement",
+                "prose": "Have you previously provided supply chain risk management information to this organization?\nIf ‘Yes,’ please provide an updated revision covering material changes."
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[IG1]"
+              }
+            ],
+            "title": "Qualifying Questions — 1.1"
+          },
+          {
+            "controls": [
+              {
+                "id": "_1.2.1",
+                "parts": [
+                  {
+                    "id": "_1.2.1-stmt",
+                    "name": "statement",
+                    "prose": "Please provide proof of the scope of controls implemented and how controls were validated."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG1]"
+                  }
+                ],
+                "title": "Qualifying Questions — 1.2.1"
+              },
+              {
+                "id": "_1.2.2",
+                "parts": [
+                  {
+                    "id": "_1.2.2-stmt",
+                    "name": "statement",
+                    "prose": "Provide any additional supporting documentation of relevant and current third-party assessments or certification for supply chain risk management, such as ANSI/ASIS SCRM 1.2014, ISO 28000:2007, ISO 31000, ISO 20243, etc."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG1]"
+                  }
+                ],
+                "title": "Qualifying Questions — 1.2.2"
+              }
+            ],
+            "id": "_1.2",
+            "parts": [
+              {
+                "id": "_1.2-stmt",
+                "name": "statement",
+                "prose": "Do you have controls fully aligned to NIST SP 800-161, Supply Chain Risk Management Practices for Federal Information Systems and Organization?"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[IG1]"
+              }
+            ],
+            "title": "Qualifying Questions — 1.2"
+          }
+        ],
+        "id": "_1",
+        "parts": [
+          {
+            "id": "_1-stmt",
+            "name": "statement",
+            "prose": "If you can provide affirmative responses to the questions below AND supporting, non-expired documentation, you may skip ALL remaining questions."
+          }
+        ],
+        "props": [
+          {
+            "name": "implementation-groups",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "[IG1]"
+          }
+        ],
+        "title": "Qualifying Questions"
+      }
+    ],
+    "groups": [
+      {
+        "groups": [
+          {
+            "controls": [
+              {
+                "controls": [
+                  {
+                    "id": "_2.1.1",
+                    "parts": [
+                      {
+                        "id": "_2.1.1-stmt",
+                        "name": "statement",
+                        "prose": "How do you notify us of changes?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG2]"
+                      }
+                    ],
+                    "title": "General — 2.1.1"
+                  },
+                  {
+                    "id": "_2.1.2",
+                    "parts": [
+                      {
+                        "id": "_2.1.2-stmt",
+                        "name": "statement",
+                        "prose": "What is your customer notification policy?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG2]"
+                      }
+                    ],
+                    "title": "General — 2.1.2"
+                  }
+                ],
+                "id": "_2.1",
+                "parts": [
+                  {
+                    "id": "_2.1-stmt",
+                    "name": "statement",
+                    "prose": "Do you have policies to ensure timely notification of updated risk management information previously provided to us?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG2]"
+                  }
+                ],
+                "title": "General — 2.1"
+              }
+            ],
+            "id": "node10",
+            "title": "General"
+          },
+          {
+            "controls": [
+              {
+                "controls": [
+                  {
+                    "id": "_2.2.1",
+                    "parts": [
+                      {
+                        "id": "_2.2.1-stmt",
+                        "name": "statement",
+                        "prose": "Please provide the document which describes your QMS, including any standards or frameworks to which it is aligned."
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG2]"
+                      }
+                    ],
+                    "title": "Information Communications Technology (ICT) Supply Chain Management — 2.2.1"
+                  }
+                ],
+                "id": "_2.2",
+                "parts": [
+                  {
+                    "id": "_2.2-stmt",
+                    "name": "statement",
+                    "prose": "Do you have a documented Quality Management System (QMS) for your ICT supply chain operation based on an industry standard or framework?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG2]"
+                  }
+                ],
+                "title": "Information Communications Technology (ICT) Supply Chain Management — 2.2"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "_2.3.1",
+                    "parts": [
+                      {
+                        "id": "_2.3.1-stmt",
+                        "name": "statement",
+                        "prose": "What is your strategy?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG2]"
+                      }
+                    ],
+                    "title": "Information Communications Technology (ICT) Supply Chain Management — 2.3.1"
+                  },
+                  {
+                    "id": "_2.3.2",
+                    "parts": [
+                      {
+                        "id": "_2.3.2-stmt",
+                        "name": "statement",
+                        "prose": "How have you implemented it?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG2]"
+                      }
+                    ],
+                    "title": "Information Communications Technology (ICT) Supply Chain Management — 2.3.2"
+                  }
+                ],
+                "id": "_2.3",
+                "parts": [
+                  {
+                    "id": "_2.3-stmt",
+                    "name": "statement",
+                    "prose": "Do you have an organization-wide strategy for managing end-to-end supply chain risks (from development, acquisition, life cycle support, and disposal of systems, system components, and to system services)?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG2]"
+                  }
+                ],
+                "title": "Information Communications Technology (ICT) Supply Chain Management — 2.3"
+              }
+            ],
+            "id": "node14",
+            "title": "Information Communications Technology (ICT) Supply Chain Management"
+          },
+          {
+            "controls": [
+              {
+                "id": "_2.4",
+                "parts": [
+                  {
+                    "id": "_2.4-stmt",
+                    "name": "statement",
+                    "prose": "Do you have a policy or process to ensure that none of your suppliers or third-party components are on any banned list?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG2]"
+                  }
+                ],
+                "title": "Authentication and Provenance — 2.4"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "_2.5.1",
+                    "parts": [
+                      {
+                        "id": "_2.5.1-stmt",
+                        "name": "statement",
+                        "prose": "If you provide a BOM that does not include all logic-bearing hardware, firmware, and software, what does your BOM include?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG2]"
+                      }
+                    ],
+                    "title": "Authentication and Provenance — 2.5.1"
+                  },
+                  {
+                    "id": "_2.5.2",
+                    "parts": [
+                      {
+                        "id": "_2.5.2-stmt",
+                        "name": "statement",
+                        "prose": "Upon request, are you able to provide your BOM including all logic-bearing hardware, firmware, and software?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG2]"
+                      }
+                    ],
+                    "title": "Authentication and Provenance — 2.5.2"
+                  },
+                  {
+                    "id": "_2.5.3",
+                    "parts": [
+                      {
+                        "id": "_2.5.3-stmt",
+                        "name": "statement",
+                        "prose": "How do you track changes in your products, services, and components and how do you reflect those changes in the applicable BOM(s)?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG2]"
+                      }
+                    ],
+                    "title": "Authentication and Provenance — 2.5.3"
+                  }
+                ],
+                "id": "_2.5",
+                "parts": [
+                  {
+                    "id": "_2.5-stmt",
+                    "name": "statement",
+                    "prose": "Do you provide a bill of materials (BOM) for your products, services, and components which includes all logic-bearing (e.g., readable/writable/programmable) hardware, firmware, and software?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG2]"
+                  }
+                ],
+                "title": "Authentication and Provenance — 2.5"
+              },
+              {
+                "id": "_2.6",
+                "parts": [
+                  {
+                    "id": "_2.6-stmt",
+                    "name": "statement",
+                    "prose": "For hardware components included in the product offering, do you only buy from original equipment manufacturers or licensed resellers?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG2]"
+                  }
+                ],
+                "title": "Authentication and Provenance — 2.6"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "_2.7.1",
+                    "parts": [
+                      {
+                        "id": "_2.7.1-stmt",
+                        "name": "statement",
+                        "prose": "How do you keep track of your chain of custody?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG2]"
+                      }
+                    ],
+                    "title": "Authentication and Provenance — 2.7.1"
+                  },
+                  {
+                    "id": "_2.7.2",
+                    "parts": [
+                      {
+                        "id": "_2.7.2-stmt",
+                        "name": "statement",
+                        "prose": "How do you track and trace components within your product?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG2]"
+                      }
+                    ],
+                    "title": "Authentication and Provenance — 2.7.2"
+                  }
+                ],
+                "id": "_2.7",
+                "parts": [
+                  {
+                    "id": "_2.7-stmt",
+                    "name": "statement",
+                    "prose": "Do you have a process for tracking and tracing your product while in development and manufacturing?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG2]"
+                  }
+                ],
+                "title": "Authentication and Provenance — 2.7"
+              }
+            ],
+            "id": "node20",
+            "title": "Authentication and Provenance"
+          },
+          {
+            "controls": [
+              {
+                "controls": [
+                  {
+                    "id": "_2.10.1",
+                    "parts": [
+                      {
+                        "id": "_2.10.1-stmt",
+                        "name": "statement",
+                        "prose": "Please describe your policy."
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG2]"
+                      }
+                    ],
+                    "title": "Supplier Governance — 2.10.1"
+                  }
+                ],
+                "id": "_2.10",
+                "parts": [
+                  {
+                    "id": "_2.10-stmt",
+                    "name": "statement",
+                    "prose": "Do you have policies for your suppliers to notify you when there are changes to their subcontractors or their offerings (components, products, services, or support activities)?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG2]"
+                  }
+                ],
+                "title": "Supplier Governance — 2.10"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "_2.8.1",
+                    "parts": [
+                      {
+                        "id": "_2.8.1-stmt",
+                        "name": "statement",
+                        "prose": "What are your SCRM requirements?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG2]"
+                      }
+                    ],
+                    "title": "Supplier Governance — 2.8.1"
+                  },
+                  {
+                    "id": "_2.8.2",
+                    "parts": [
+                      {
+                        "id": "_2.8.2-stmt",
+                        "name": "statement",
+                        "prose": "How do you verify that your suppliers are meeting contractual terms and conditions, which may include requirements to be passed down to sub-suppliers?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG2]"
+                      }
+                    ],
+                    "title": "Supplier Governance — 2.8.2"
+                  },
+                  {
+                    "id": "_2.8.3",
+                    "parts": [
+                      {
+                        "id": "_2.8.3-stmt",
+                        "name": "statement",
+                        "prose": "If violations of contractual SCRM requirements or SCRM-related incidents occur, do you ensure and monitor any remediation activities?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG2]"
+                      }
+                    ],
+                    "title": "Supplier Governance — 2.8.3"
+                  }
+                ],
+                "id": "_2.8",
+                "parts": [
+                  {
+                    "id": "_2.8-stmt",
+                    "name": "statement",
+                    "prose": "Do you have written Supply Chain Risk Management (SCRM) requirements in your contracts with your suppliers?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG2]"
+                  }
+                ],
+                "title": "Supplier Governance — 2.8"
+              },
+              {
+                "id": "_2.9",
+                "parts": [
+                  {
+                    "id": "_2.9-stmt",
+                    "name": "statement",
+                    "prose": "Do you revise your written SCRM requirements regularly to include needed provisions?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG2]"
+                  }
+                ],
+                "title": "Supplier Governance — 2.9"
+              }
+            ],
+            "id": "node30",
+            "title": "Supplier Governance"
+          }
+        ],
+        "id": "_2",
+        "title": "Supply Chain Management and Supplier Governance"
+      },
+      {
+        "groups": [
+          {
+            "controls": [
+              {
+                "controls": [
+                  {
+                    "id": "_3.1.1",
+                    "parts": [
+                      {
+                        "id": "_3.1.1-stmt",
+                        "name": "statement",
+                        "prose": "List the custom software, hardware, system, or solution offering(s) provided by your organization."
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG3]"
+                      }
+                    ],
+                    "title": "Secure Design and Engineering — 3.1.1"
+                  }
+                ],
+                "id": "_3.1",
+                "parts": [
+                  {
+                    "id": "_3.1-stmt",
+                    "name": "statement",
+                    "prose": "Does your organization develop (or integrate) custom hardware or software offerings?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG3]"
+                  }
+                ],
+                "title": "Secure Design and Engineering — 3.1"
+              }
+            ],
+            "id": "_3-controls",
+            "title": "Secure Design and Engineering"
+          },
+          {
+            "controls": [
+              {
+                "controls": [
+                  {
+                    "id": "_3.2.1",
+                    "parts": [
+                      {
+                        "id": "_3.2.1-stmt",
+                        "name": "statement",
+                        "prose": "If so, how are roles, responsibilities, and practices validated?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG3]"
+                      }
+                    ],
+                    "title": "Product Offering Lifecycle Management and Organization — 3.2.1"
+                  }
+                ],
+                "id": "_3.2",
+                "parts": [
+                  {
+                    "id": "_3.2-stmt",
+                    "name": "statement",
+                    "prose": "Do you implement formal organizational roles and governance responsible for the implementation and oversight of Secure Engineering across the development or manufacturing process for product offerings?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG3]"
+                  }
+                ],
+                "title": "Product Offering Lifecycle Management and Organization — 3.2"
+              },
+              {
+                "id": "_3.3",
+                "parts": [
+                  {
+                    "id": "_3.3-stmt",
+                    "name": "statement",
+                    "prose": "What security control framework (industry or customized) is used to define product offering security capabilities?\nPlease describe or 'N/A'"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG3]"
+                  }
+                ],
+                "title": "Product Offering Lifecycle Management and Organization — 3.3"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "_3.4.1",
+                    "parts": [
+                      {
+                        "id": "_3.4.1-stmt",
+                        "name": "statement",
+                        "prose": "How are security requirements validated as part of the product offering development or manufacturing process?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG3]"
+                      }
+                    ],
+                    "title": "Product Offering Lifecycle Management and Organization — 3.4.1"
+                  }
+                ],
+                "id": "_3.4",
+                "parts": [
+                  {
+                    "id": "_3.4-stmt",
+                    "name": "statement",
+                    "prose": "Does your organization document and communicate security control requirements for your hardware, software, or solution offering?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG3]"
+                  }
+                ],
+                "title": "Product Offering Lifecycle Management and Organization — 3.4"
+              },
+              {
+                "id": "_3.5",
+                "parts": [
+                  {
+                    "id": "_3.5-stmt",
+                    "name": "statement",
+                    "prose": "How does your organization implement development andmanufacturing automation to enforce lifecycle processes and practices?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG3]"
+                  }
+                ],
+                "title": "Product Offering Lifecycle Management and Organization — 3.5"
+              }
+            ],
+            "id": "node42",
+            "title": "Product Offering Lifecycle Management and Organization"
+          },
+          {
+            "controls": [
+              {
+                "controls": [
+                  {
+                    "id": "_3.6.1",
+                    "parts": [
+                      {
+                        "id": "_3.6.1-stmt",
+                        "name": "statement",
+                        "prose": "How does your organization prevent unauthorized changes to code, both inadvertent and intentional, which could circumvent or negate the intended security characteristics of the software?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG3]"
+                      }
+                    ],
+                    "title": "Protect IP and Product (Supplier) Offering Assets — 3.6.1"
+                  }
+                ],
+                "id": "_3.6",
+                "parts": [
+                  {
+                    "id": "_3.6-stmt",
+                    "name": "statement",
+                    "prose": "Does your organization protect all forms of code from unauthorized access and tampering, including patch updates?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG3]"
+                  }
+                ],
+                "title": "Protect IP and Product (Supplier) Offering Assets — 3.6"
+              },
+              {
+                "id": "_3.7",
+                "parts": [
+                  {
+                    "id": "_3.7-stmt",
+                    "name": "statement",
+                    "prose": "Does your organization provide a mechanism for verifying software release integrity, including patch updates for your software product offering?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG3]"
+                  }
+                ],
+                "title": "Protect IP and Product (Supplier) Offering Assets — 3.7"
+              },
+              {
+                "id": "_3.8",
+                "parts": [
+                  {
+                    "id": "_3.8-stmt",
+                    "name": "statement",
+                    "prose": "How does your organization prevent malicious and/or counterfeit IP components within your product offering or solution?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG3]"
+                  }
+                ],
+                "title": "Protect IP and Product (Supplier) Offering Assets — 3.8"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "_3.9.1",
+                    "parts": [
+                      {
+                        "id": "_3.9.1-stmt",
+                        "name": "statement",
+                        "prose": "How does your organization archive assets associated with the product offering development or manufacturing process?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG3]"
+                      }
+                    ],
+                    "title": "Protect IP and Product (Supplier) Offering Assets — 3.9.1"
+                  }
+                ],
+                "id": "_3.9",
+                "parts": [
+                  {
+                    "id": "_3.9-stmt",
+                    "name": "statement",
+                    "prose": "Does your organization manage the integrity of IP for its product offering?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG3]"
+                  }
+                ],
+                "title": "Protect IP and Product (Supplier) Offering Assets — 3.9"
+              }
+            ],
+            "id": "node49",
+            "title": "Protect IP and Product (Supplier) Offering Assets"
+          },
+          {
+            "controls": [
+              {
+                "controls": [
+                  {
+                    "id": "_3.10.1",
+                    "parts": [
+                      {
+                        "id": "_3.10.1-stmt",
+                        "name": "statement",
+                        "prose": "How does your organization conduct threat modeling to determine required product offering security requirements?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG3]"
+                      }
+                    ],
+                    "title": "Secure Coding and Manufacturing Practices — 3.10.1"
+                  },
+                  {
+                    "id": "_3.10.2",
+                    "parts": [
+                      {
+                        "id": "_3.10.2-stmt",
+                        "name": "statement",
+                        "prose": "How does your organization determine how identified risks are mitigated in product offering design?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG3]"
+                      }
+                    ],
+                    "title": "Secure Coding and Manufacturing Practices — 3.10.2"
+                  },
+                  {
+                    "id": "_3.10.3",
+                    "parts": [
+                      {
+                        "id": "_3.10.3-stmt",
+                        "name": "statement",
+                        "prose": "How does your organization justify risk-based decisions to relax or waive security requirements or controls?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG3]"
+                      }
+                    ],
+                    "title": "Secure Coding and Manufacturing Practices — 3.10.3"
+                  },
+                  {
+                    "id": "_3.10.4",
+                    "parts": [
+                      {
+                        "id": "_3.10.4-stmt",
+                        "name": "statement",
+                        "prose": "How does your organization validate that the offering will meet the security requirements and satisfactorily address the identified threat assessment?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG3]"
+                      }
+                    ],
+                    "title": "Secure Coding and Manufacturing Practices — 3.10.4"
+                  }
+                ],
+                "id": "_3.10",
+                "parts": [
+                  {
+                    "id": "_3.10-stmt",
+                    "name": "statement",
+                    "prose": "Does your organization define, follow, and validate secure coding and manufacturing practices to mitigate security risks?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG3]"
+                  }
+                ],
+                "title": "Secure Coding and Manufacturing Practices — 3.10"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "_3.11.1",
+                    "parts": [
+                      {
+                        "id": "_3.11.1-stmt",
+                        "name": "statement",
+                        "prose": "How does your organization reduce the risk associated with using acquired software modules and services, which are potential sources of additional vulnerabilities?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG3]"
+                      }
+                    ],
+                    "title": "Secure Coding and Manufacturing Practices — 3.11.1"
+                  }
+                ],
+                "id": "_3.11",
+                "parts": [
+                  {
+                    "id": "_3.11-stmt",
+                    "name": "statement",
+                    "prose": "Does your organization verify that third-party software provides required security requirements/controls?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG3]"
+                  }
+                ],
+                "title": "Secure Coding and Manufacturing Practices — 3.11"
+              },
+              {
+                "id": "_3.12",
+                "parts": [
+                  {
+                    "id": "_3.12-stmt",
+                    "name": "statement",
+                    "prose": "Does your organization reuse existing, well-secured software and hardware components, when feasible, instead of duplicating functionality?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG3]"
+                  }
+                ],
+                "title": "Secure Coding and Manufacturing Practices — 3.12"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "_3.13.1",
+                    "parts": [
+                      {
+                        "id": "_3.13.1-stmt",
+                        "name": "statement",
+                        "prose": "How does your organization decrease the number of security vulnerabilities in the software and reduce costs by eliminating vulnerabilities before testing occurs?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG3]"
+                      }
+                    ],
+                    "title": "Secure Coding and Manufacturing Practices — 3.13.1"
+                  }
+                ],
+                "id": "_3.13",
+                "parts": [
+                  {
+                    "id": "_3.13-stmt",
+                    "name": "statement",
+                    "prose": "Does your organization configure the compilation and build processes to improve executable security?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG3]"
+                  }
+                ],
+                "title": "Secure Coding and Manufacturing Practices — 3.13"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "_3.14.1",
+                    "parts": [
+                      {
+                        "id": "_3.14.1-stmt",
+                        "name": "statement",
+                        "prose": "Does your organization automate the identification of security vulnerabilities and weaknesses?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG3]"
+                      }
+                    ],
+                    "title": "Secure Coding and Manufacturing Practices — 3.14.1"
+                  },
+                  {
+                    "id": "_3.14.2",
+                    "parts": [
+                      {
+                        "id": "_3.14.2-stmt",
+                        "name": "statement",
+                        "prose": "Does your organization test executable code or components to identify vulnerabilities and verify compliance with security requirements?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG3]"
+                      }
+                    ],
+                    "title": "Secure Coding and Manufacturing Practices — 3.14.2"
+                  }
+                ],
+                "id": "_3.14",
+                "parts": [
+                  {
+                    "id": "_3.14-stmt",
+                    "name": "statement",
+                    "prose": "Does your organization implement formal vulnerability and weakness analysis practices?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG3]"
+                  }
+                ],
+                "title": "Secure Coding and Manufacturing Practices — 3.14"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "_3.15.1",
+                    "parts": [
+                      {
+                        "id": "_3.15.1-stmt",
+                        "name": "statement",
+                        "prose": "Does your organization test offerings using hardened runtime environments?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG3]"
+                      }
+                    ],
+                    "title": "Secure Coding and Manufacturing Practices — 3.15.1"
+                  }
+                ],
+                "id": "_3.15",
+                "parts": [
+                  {
+                    "id": "_3.15-stmt",
+                    "name": "statement",
+                    "prose": "Does your organization configure offerings to implement secure settings by default?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG3]"
+                  }
+                ],
+                "title": "Secure Coding and Manufacturing Practices — 3.15"
+              }
+            ],
+            "id": "node56",
+            "title": "Secure Coding and Manufacturing Practices"
+          },
+          {
+            "controls": [
+              {
+                "controls": [
+                  {
+                    "id": "_3.16.1",
+                    "parts": [
+                      {
+                        "id": "_3.16.1-stmt",
+                        "name": "statement",
+                        "prose": "How does your organization assess, prioritize, and remediate reported vulnerabilities?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG3]"
+                      }
+                    ],
+                    "title": "Respond to Vulnerabilities (RV) — 3.16.1"
+                  },
+                  {
+                    "id": "_3.16.2",
+                    "parts": [
+                      {
+                        "id": "_3.16.2-stmt",
+                        "name": "statement",
+                        "prose": "How does your organization ensure that vulnerabilities are remediated in a timely period, reducing the window of opportunity for attackers?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG3]"
+                      }
+                    ],
+                    "title": "Respond to Vulnerabilities (RV) — 3.16.2"
+                  }
+                ],
+                "id": "_3.16",
+                "parts": [
+                  {
+                    "id": "_3.16-stmt",
+                    "name": "statement",
+                    "prose": "Does your organization maintain and manage a Product Security Incident Reporting and Response program (PSRT)?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG3]"
+                  }
+                ],
+                "title": "Respond to Vulnerabilities (RV) — 3.16"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "_3.17.1",
+                    "parts": [
+                      {
+                        "id": "_3.17.1-stmt",
+                        "name": "statement",
+                        "prose": "Are vulnerability root causes used as input to update secure development process, tools, and training to lower future vulnerabilities?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG3]"
+                      }
+                    ],
+                    "title": "Respond to Vulnerabilities (RV) — 3.17.1"
+                  }
+                ],
+                "id": "_3.17",
+                "parts": [
+                  {
+                    "id": "_3.17-stmt",
+                    "name": "statement",
+                    "prose": "Does your organization analyze vulnerabilities to identify root cause?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG3]"
+                  }
+                ],
+                "title": "Respond to Vulnerabilities (RV) — 3.17"
+              }
+            ],
+            "id": "node72",
+            "title": "Respond to Vulnerabilities (RV)"
+          }
+        ],
+        "id": "_3",
+        "title": "Secure Design and Engineering"
+      },
+      {
+        "groups": [
+          {
+            "controls": [
+              {
+                "id": "_4.1",
+                "parts": [
+                  {
+                    "id": "_4.1-stmt",
+                    "name": "statement",
+                    "prose": "Do you hold a valid information security/cybersecurity third-party attestation or certification? (e.g., ISO 27001, SOC 2 Type 2, CMMC Level 3-5, Cybersecurity Maturity Assessment, etc.)\n[If yes, please state the program and date that you were certified, and provide a copy of the certification. You may skip the remaining questions of this section and proceed to the following section. If no, continue.]"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG4]"
+                  }
+                ],
+                "title": "Information Security — 4.1"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "_4.2.1",
+                    "parts": [
+                      {
+                        "id": "_4.2.1-stmt",
+                        "name": "statement",
+                        "prose": "If so, please state which one(s)?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG4]"
+                      }
+                    ],
+                    "title": "Information Security — 4.2.1"
+                  }
+                ],
+                "id": "_4.2",
+                "parts": [
+                  {
+                    "id": "_4.2-stmt",
+                    "name": "statement",
+                    "prose": "Do you follow operational standards or frameworks for managing Information Security/Cyber security? (e.g., NIST CSF 1.1, NIST 800-37, Rev. 2, NIST SP 800-161, ISO IEC 27001, ISO 20243, ISO 27036, SAE AS649)"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG4]"
+                  }
+                ],
+                "title": "Information Security — 4.2"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "_4.3.1",
+                    "parts": [
+                      {
+                        "id": "_4.3.1-stmt",
+                        "name": "statement",
+                        "prose": "If ‘Yes’, please provide."
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG4]"
+                      }
+                    ],
+                    "title": "Information Security — 4.3.1"
+                  },
+                  {
+                    "controls": [
+                      {
+                        "id": "_4.3.2.1",
+                        "parts": [
+                          {
+                            "id": "_4.3.2.1-stmt",
+                            "name": "statement",
+                            "prose": "Do you receive notification of and have a response plan in place for privacy violations of the suppliers in your supply chain?"
+                          }
+                        ],
+                        "props": [
+                          {
+                            "name": "implementation-groups",
+                            "ns": "https://ckodex.io/ns/xoscal/props",
+                            "value": "[IG4]"
+                          }
+                        ],
+                        "title": "Information Security — 4.3.2.1"
+                      }
+                    ],
+                    "id": "_4.3.2",
+                    "parts": [
+                      {
+                        "id": "_4.3.2-stmt",
+                        "name": "statement",
+                        "prose": "What mechanisms are in place to ensure your policies are enforced within your supply chain?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG4]"
+                      }
+                    ],
+                    "title": "Information Security — 4.3.2"
+                  }
+                ],
+                "id": "_4.3",
+                "parts": [
+                  {
+                    "id": "_4.3-stmt",
+                    "name": "statement",
+                    "prose": "Do you have company-wide, publicly available information security policies in place covering privacy policies?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG4]"
+                  }
+                ],
+                "title": "Information Security — 4.3"
+              }
+            ],
+            "id": "_4-controls",
+            "title": "Information Security"
+          },
+          {
+            "controls": [
+              {
+                "controls": [
+                  {
+                    "controls": [
+                      {
+                        "id": "_4.11.1.1",
+                        "parts": [
+                          {
+                            "id": "_4.11.1.1-stmt",
+                            "name": "statement",
+                            "prose": "How do you manage the identification of threats within your supply chain, including suppliers and sub-contractors?"
+                          }
+                        ],
+                        "props": [
+                          {
+                            "name": "implementation-groups",
+                            "ns": "https://ckodex.io/ns/xoscal/props",
+                            "value": "[IG4]"
+                          }
+                        ],
+                        "title": "Identify — 4.11.1.1"
+                      },
+                      {
+                        "id": "_4.11.1.2",
+                        "parts": [
+                          {
+                            "id": "_4.11.1.2-stmt",
+                            "name": "statement",
+                            "prose": "What processes are in place to act upon external credible cyber security threat information received?"
+                          }
+                        ],
+                        "props": [
+                          {
+                            "name": "implementation-groups",
+                            "ns": "https://ckodex.io/ns/xoscal/props",
+                            "value": "[IG4]"
+                          }
+                        ],
+                        "title": "Identify — 4.11.1.2"
+                      }
+                    ],
+                    "id": "_4.11.1",
+                    "parts": [
+                      {
+                        "id": "_4.11.1-stmt",
+                        "name": "statement",
+                        "prose": "What processes do you have in place to promptly detect cyber threats?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG4]"
+                      }
+                    ],
+                    "title": "Identify — 4.11.1"
+                  }
+                ],
+                "id": "_4.11",
+                "parts": [
+                  {
+                    "id": "_4.11-stmt",
+                    "name": "statement",
+                    "prose": "Do you have documented policies or procedures for identification and detection of cyber threats?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG4]"
+                  }
+                ],
+                "title": "Identify — 4.11"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "_4.12.1",
+                    "parts": [
+                      {
+                        "id": "_4.12.1-stmt",
+                        "name": "statement",
+                        "prose": "How do you ensure that physical security incidents and suspicious events are escalated to cybersecurity operations staff?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG4]"
+                      }
+                    ],
+                    "title": "Identify — 4.12.1"
+                  },
+                  {
+                    "id": "_4.12.2",
+                    "parts": [
+                      {
+                        "id": "_4.12.2-stmt",
+                        "name": "statement",
+                        "prose": "Are cybersecurity vulnerabilities for industrial control systems, including physical access controls and video monitoring systems, tracked?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG4]"
+                      }
+                    ],
+                    "title": "Identify — 4.12.2"
+                  },
+                  {
+                    "id": "_4.12.3",
+                    "parts": [
+                      {
+                        "id": "_4.12.3-stmt",
+                        "name": "statement",
+                        "prose": "What standards or frameworks are followed for management of IT and OT system interactions?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG4]"
+                      }
+                    ],
+                    "title": "Identify — 4.12.3"
+                  }
+                ],
+                "id": "_4.12",
+                "parts": [
+                  {
+                    "id": "_4.12-stmt",
+                    "name": "statement",
+                    "prose": "Do you address the interaction of cybersecurity operational elements (e.g., SOC, CSIRT, etc.) with the physical security operational elements protecting the organization’s physical assets?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG4]"
+                  }
+                ],
+                "title": "Identify — 4.12"
+              },
+              {
+                "controls": [
+                  {
+                    "controls": [
+                      {
+                        "id": "_4.13.1.1",
+                        "parts": [
+                          {
+                            "id": "_4.13.1.1-stmt",
+                            "name": "statement",
+                            "prose": "How do you convey requirements for data retention, destruction, and encryption to your suppliers?"
+                          }
+                        ],
+                        "props": [
+                          {
+                            "name": "implementation-groups",
+                            "ns": "https://ckodex.io/ns/xoscal/props",
+                            "value": "[IG4]"
+                          }
+                        ],
+                        "title": "Identify — 4.13.1.1"
+                      }
+                    ],
+                    "id": "_4.13.1",
+                    "parts": [
+                      {
+                        "id": "_4.13.1-stmt",
+                        "name": "statement",
+                        "prose": "What is your process to verify that information is classified according to legal, regulatory, or internal sensitivity requirements?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG4]"
+                      }
+                    ],
+                    "title": "Identify — 4.13.1"
+                  }
+                ],
+                "id": "_4.13",
+                "parts": [
+                  {
+                    "id": "_4.13-stmt",
+                    "name": "statement",
+                    "prose": "Do you have a policy or procedure for the handling of information thatis consistent with its classification?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG4]"
+                  }
+                ],
+                "title": "Identify — 4.13"
+              },
+              {
+                "controls": [
+                  {
+                    "controls": [
+                      {
+                        "id": "_4.14.1.1",
+                        "parts": [
+                          {
+                            "id": "_4.14.1.1-stmt",
+                            "name": "statement",
+                            "prose": "How do you identify vulnerabilities in your supply chain (suppliers/sub-contractors) before they pose a risk to your organization?"
+                          }
+                        ],
+                        "props": [
+                          {
+                            "name": "implementation-groups",
+                            "ns": "https://ckodex.io/ns/xoscal/props",
+                            "value": "[IG4]"
+                          }
+                        ],
+                        "title": "Identify — 4.14.1.1"
+                      },
+                      {
+                        "id": "_4.14.1.2",
+                        "parts": [
+                          {
+                            "id": "_4.14.1.2-stmt",
+                            "name": "statement",
+                            "prose": "How do you assess and prioritize the mitigation of vulnerabilities discovered on your internal networks and systems? (e.g., asset criticality, exploitability, severity, etc.)"
+                          }
+                        ],
+                        "props": [
+                          {
+                            "name": "implementation-groups",
+                            "ns": "https://ckodex.io/ns/xoscal/props",
+                            "value": "[IG4]"
+                          }
+                        ],
+                        "title": "Identify — 4.14.1.2"
+                      }
+                    ],
+                    "id": "_4.14.1",
+                    "parts": [
+                      {
+                        "id": "_4.14.1-stmt",
+                        "name": "statement",
+                        "prose": "What industry standards or frameworks are followed for vulnerability management?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG4]"
+                      }
+                    ],
+                    "title": "Identify — 4.14.1"
+                  }
+                ],
+                "id": "_4.14",
+                "parts": [
+                  {
+                    "id": "_4.14-stmt",
+                    "name": "statement",
+                    "prose": "Do you have documented policies or procedures for internal identification and management of vulnerabilities within your networks and enterprise systems?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG4]"
+                  }
+                ],
+                "title": "Identify — 4.14"
+              }
+            ],
+            "id": "node105",
+            "title": "Identify"
+          },
+          {
+            "controls": [
+              {
+                "controls": [
+                  {
+                    "id": "_4.15.1",
+                    "parts": [
+                      {
+                        "id": "_4.15.1-stmt",
+                        "name": "statement",
+                        "prose": "If Yes, please list any standards or frameworks used."
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG4]"
+                      }
+                    ],
+                    "title": "Protect — 4.15.1"
+                  },
+                  {
+                    "controls": [
+                      {
+                        "id": "_4.15.2.1",
+                        "parts": [
+                          {
+                            "id": "_4.15.2.1-stmt",
+                            "name": "statement",
+                            "prose": "How do you ensure remote access is managed for end-user devices or employees and suppliers, including deactivation of accounts? (e.g. Multi-factor authorization, encryption, protection from malware, etc.)"
+                          }
+                        ],
+                        "props": [
+                          {
+                            "name": "implementation-groups",
+                            "ns": "https://ckodex.io/ns/xoscal/props",
+                            "value": "[IG4]"
+                          }
+                        ],
+                        "title": "Protect — 4.15.2.1"
+                      },
+                      {
+                        "id": "_4.15.2.2",
+                        "parts": [
+                          {
+                            "id": "_4.15.2.2-stmt",
+                            "name": "statement",
+                            "prose": "How do you identify and correct end-user systems that fall out of compliance?"
+                          }
+                        ],
+                        "props": [
+                          {
+                            "name": "implementation-groups",
+                            "ns": "https://ckodex.io/ns/xoscal/props",
+                            "value": "[IG4]"
+                          }
+                        ],
+                        "title": "Protect — 4.15.2.2"
+                      }
+                    ],
+                    "id": "_4.15.2",
+                    "parts": [
+                      {
+                        "id": "_4.15.2-stmt",
+                        "name": "statement",
+                        "prose": "What are your practices for items such as federation, privileged users, and role-based access control for end-user devices?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG4]"
+                      }
+                    ],
+                    "title": "Protect — 4.15.2"
+                  }
+                ],
+                "id": "_4.15",
+                "parts": [
+                  {
+                    "id": "_4.15-stmt",
+                    "name": "statement",
+                    "prose": "Do you have network access control policies and procedures in place for your information systems that are aligned with industry standards or control frameworks?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG4]"
+                  }
+                ],
+                "title": "Protect — 4.15"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "_4.16.1",
+                    "parts": [
+                      {
+                        "id": "_4.16.1-stmt",
+                        "name": "statement",
+                        "prose": "What is the frequency for verifying personnel training compliance?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG4]"
+                      }
+                    ],
+                    "title": "Protect — 4.16.1"
+                  },
+                  {
+                    "controls": [
+                      {
+                        "id": "_4.16.2.1",
+                        "parts": [
+                          {
+                            "id": "_4.16.2.1-stmt",
+                            "name": "statement",
+                            "prose": "How is training compliance tracked for third parties with network access?"
+                          }
+                        ],
+                        "props": [
+                          {
+                            "name": "implementation-groups",
+                            "ns": "https://ckodex.io/ns/xoscal/props",
+                            "value": "[IG4]"
+                          }
+                        ],
+                        "title": "Protect — 4.16.2.1"
+                      }
+                    ],
+                    "id": "_4.16.2",
+                    "parts": [
+                      {
+                        "id": "_4.16.2-stmt",
+                        "name": "statement",
+                        "prose": "What cybersecurity training is required for your third-party stakeholders (e.g., suppliers, customers, partners, etc.) who have network access?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG4]"
+                      }
+                    ],
+                    "title": "Protect — 4.16.2"
+                  }
+                ],
+                "id": "_4.16",
+                "parts": [
+                  {
+                    "id": "_4.16-stmt",
+                    "name": "statement",
+                    "prose": "Is cybersecurity training required for personnel who have administrative rights to your enterprise computing resources?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG4]"
+                  }
+                ],
+                "title": "Protect — 4.16"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "_4.17.1",
+                    "parts": [
+                      {
+                        "id": "_4.17.1-stmt",
+                        "name": "statement",
+                        "prose": "What standard cybersecurity standards or frameworks are the contractual supplier terms for information protection aligned to, if any?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG4]"
+                      }
+                    ],
+                    "title": "Protect — 4.17.1"
+                  }
+                ],
+                "id": "_4.17",
+                "parts": [
+                  {
+                    "id": "_4.17-stmt",
+                    "name": "statement",
+                    "prose": "Do you include contractual obligations to protect information and information systems handled by your suppliers?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG4]"
+                  }
+                ],
+                "title": "Protect — 4.17"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "_4.18.1",
+                    "parts": [
+                      {
+                        "id": "_4.18.1-stmt",
+                        "name": "statement",
+                        "prose": "What industry standards or controls frameworks are followed for encryption and key management?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG4]"
+                      }
+                    ],
+                    "title": "Protect — 4.18.1"
+                  },
+                  {
+                    "controls": [
+                      {
+                        "id": "_4.18.2.1",
+                        "parts": [
+                          {
+                            "id": "_4.18.2.1-stmt",
+                            "name": "statement",
+                            "prose": "What is your process for protecting data at rest and in transit?"
+                          }
+                        ],
+                        "props": [
+                          {
+                            "name": "implementation-groups",
+                            "ns": "https://ckodex.io/ns/xoscal/props",
+                            "value": "[IG4]"
+                          }
+                        ],
+                        "title": "Protect — 4.18.2.1"
+                      }
+                    ],
+                    "id": "_4.18.2",
+                    "parts": [
+                      {
+                        "id": "_4.18.2-stmt",
+                        "name": "statement",
+                        "prose": "What processes or procedures exist to comprehensively manage the use of encryption keys?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG4]"
+                      }
+                    ],
+                    "title": "Protect — 4.18.2"
+                  }
+                ],
+                "id": "_4.18",
+                "parts": [
+                  {
+                    "id": "_4.18-stmt",
+                    "name": "statement",
+                    "prose": "Do you have an organizational policy on the use of encryption that conforms with industry standards or control frameworks?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG4]"
+                  }
+                ],
+                "title": "Protect — 4.18"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "_4.19.1",
+                    "parts": [
+                      {
+                        "id": "_4.19.1-stmt",
+                        "name": "statement",
+                        "prose": "What protections exist to provide network segregation where appropriate (e.g., intrusion detection systems)?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG4]"
+                      }
+                    ],
+                    "title": "Protect — 4.19.1"
+                  },
+                  {
+                    "id": "_4.19.2",
+                    "parts": [
+                      {
+                        "id": "_4.19.2-stmt",
+                        "name": "statement",
+                        "prose": "What controls exist to continuously monitor changes to your network architecture (e.g., NIST 800-53 or related controls)?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG4]"
+                      }
+                    ],
+                    "title": "Protect — 4.19.2"
+                  },
+                  {
+                    "id": "_4.19.3",
+                    "parts": [
+                      {
+                        "id": "_4.19.3-stmt",
+                        "name": "statement",
+                        "prose": "How do you manage prioritization and mitigation of threats discovered on your networks?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG4]"
+                      }
+                    ],
+                    "title": "Protect — 4.19.3"
+                  },
+                  {
+                    "id": "_4.19.4",
+                    "parts": [
+                      {
+                        "id": "_4.19.4-stmt",
+                        "name": "statement",
+                        "prose": "How do you track changes to software versions on your servers?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG4]"
+                      }
+                    ],
+                    "title": "Protect — 4.19.4"
+                  }
+                ],
+                "id": "_4.19",
+                "parts": [
+                  {
+                    "id": "_4.19-stmt",
+                    "name": "statement",
+                    "prose": "Does your organization have hardening standards in place for network devices (e.g., wireless access points, firewalls, etc.)?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG4]"
+                  }
+                ],
+                "title": "Protect — 4.19"
+              },
+              {
+                "controls": [
+                  {
+                    "controls": [
+                      {
+                        "id": "_4.20.1.1",
+                        "parts": [
+                          {
+                            "id": "_4.20.1.1-stmt",
+                            "name": "statement",
+                            "prose": "How to do you convey cloud security requirements to your suppliers/sub-contractors"
+                          }
+                        ],
+                        "props": [
+                          {
+                            "name": "implementation-groups",
+                            "ns": "https://ckodex.io/ns/xoscal/props",
+                            "value": "[IG4]"
+                          }
+                        ],
+                        "title": "Protect — 4.20.1.1"
+                      }
+                    ],
+                    "id": "_4.20.1",
+                    "parts": [
+                      {
+                        "id": "_4.20.1-stmt",
+                        "name": "statement",
+                        "prose": "What protections are in place between your network and cloud service providers?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG4]"
+                      }
+                    ],
+                    "title": "Protect — 4.20.1"
+                  }
+                ],
+                "id": "_4.20",
+                "parts": [
+                  {
+                    "id": "_4.20-stmt",
+                    "name": "statement",
+                    "prose": "Do you follow an industry standard or framework for your internal or third- party cloud deployments, if applicable?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG4]"
+                  }
+                ],
+                "title": "Protect — 4.20"
+              }
+            ],
+            "id": "node121",
+            "title": "Protect"
+          },
+          {
+            "controls": [
+              {
+                "controls": [
+                  {
+                    "id": "_4.21.1",
+                    "parts": [
+                      {
+                        "id": "_4.21.1-stmt",
+                        "name": "statement",
+                        "prose": "Are cybersecurity events centrally logged, tracked, and continuously monitored?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG4]"
+                      }
+                    ],
+                    "title": "Detect — 4.21.1"
+                  },
+                  {
+                    "id": "_4.21.2",
+                    "parts": [
+                      {
+                        "id": "_4.21.2-stmt",
+                        "name": "statement",
+                        "prose": "Are incident detection practices continuously improved?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG4]"
+                      }
+                    ],
+                    "title": "Detect — 4.21.2"
+                  }
+                ],
+                "id": "_4.21",
+                "parts": [
+                  {
+                    "id": "_4.21-stmt",
+                    "name": "statement",
+                    "prose": "Do you have defined and documented incident detection practices that outline which actions should be taken in the case of an information security or cybersecurity event?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG4]"
+                  }
+                ],
+                "title": "Detect — 4.21"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "_4.22.1",
+                    "parts": [
+                      {
+                        "id": "_4.22.1-stmt",
+                        "name": "statement",
+                        "prose": "What procedures or policies exist, if any, for detecting vulnerabilities in externally obtained software (such as penetration testing of enterprise and non-enterprise software)?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG4]"
+                      }
+                    ],
+                    "title": "Detect — 4.22.1"
+                  },
+                  {
+                    "id": "_4.22.2",
+                    "parts": [
+                      {
+                        "id": "_4.22.2-stmt",
+                        "name": "statement",
+                        "prose": "What are your procedures to scan for vulnerabilities in supplier-provided software running on your network?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG4]"
+                      }
+                    ],
+                    "title": "Detect — 4.22.2"
+                  }
+                ],
+                "id": "_4.22",
+                "parts": [
+                  {
+                    "id": "_4.22-stmt",
+                    "name": "statement",
+                    "prose": "Do you require vulnerability scanning of software running within your enterprise prior to acceptance?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG4]"
+                  }
+                ],
+                "title": "Detect — 4.22"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "_4.23.1",
+                    "parts": [
+                      {
+                        "id": "_4.23.1-stmt",
+                        "name": "statement",
+                        "prose": "What is the responsibility of the product end-user (customer) for updating software versions?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG4]"
+                      }
+                    ],
+                    "title": "Detect — 4.23.1"
+                  }
+                ],
+                "id": "_4.23",
+                "parts": [
+                  {
+                    "id": "_4.23-stmt",
+                    "name": "statement",
+                    "prose": "Do you manage updates, version tracking of new releases, and patches (including patching history) for your software and software services offerings?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG4]"
+                  }
+                ],
+                "title": "Detect — 4.23"
+              },
+              {
+                "controls": [
+                  {
+                    "controls": [
+                      {
+                        "id": "_4.24.1.1",
+                        "parts": [
+                          {
+                            "id": "_4.24.1.1-stmt",
+                            "name": "statement",
+                            "prose": "How do you ensure anti-malware is present on developer platforms? As applicable to your offering?"
+                          }
+                        ],
+                        "props": [
+                          {
+                            "name": "implementation-groups",
+                            "ns": "https://ckodex.io/ns/xoscal/props",
+                            "value": "[IG4]"
+                          }
+                        ],
+                        "title": "Detect — 4.24.1.1"
+                      }
+                    ],
+                    "id": "_4.24.1",
+                    "parts": [
+                      {
+                        "id": "_4.24.1-stmt",
+                        "name": "statement",
+                        "prose": "What systems are out of scope for anti-malware software compliance, if any?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG4]"
+                      }
+                    ],
+                    "title": "Detect — 4.24.1"
+                  }
+                ],
+                "id": "_4.24",
+                "parts": [
+                  {
+                    "id": "_4.24-stmt",
+                    "name": "statement",
+                    "prose": "Do you deploy anti-malware software?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG4]"
+                  }
+                ],
+                "title": "Detect — 4.24"
+              }
+            ],
+            "id": "node145",
+            "title": "Detect"
+          },
+          {
+            "controls": [
+              {
+                "controls": [
+                  {
+                    "id": "_4.25.1",
+                    "parts": [
+                      {
+                        "id": "_4.25.1-stmt",
+                        "name": "statement",
+                        "prose": "What is your process for reviewing and exercising your resiliency plan?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG4]"
+                      }
+                    ],
+                    "title": "Respond \u0026 Recover — 4.25.1"
+                  },
+                  {
+                    "id": "_4.25.2",
+                    "parts": [
+                      {
+                        "id": "_4.25.2-stmt",
+                        "name": "statement",
+                        "prose": "What is your process to ensure customers and external entities (such as government agencies) are notified of an incident when their product or service is impacted?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG4]"
+                      }
+                    ],
+                    "title": "Respond \u0026 Recover — 4.25.2"
+                  }
+                ],
+                "id": "_4.25",
+                "parts": [
+                  {
+                    "id": "_4.25-stmt",
+                    "name": "statement",
+                    "prose": "Do you have a documented incident response process and a dedicated incident response team (CSIRT - Computer Security Incident Response Team)?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG4]"
+                  }
+                ],
+                "title": "Respond \u0026 Recover — 4.25"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "_4.26.1",
+                    "parts": [
+                      {
+                        "id": "_4.26.1-stmt",
+                        "name": "statement",
+                        "prose": "What is the frequency for testing of back-up media?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG4]"
+                      }
+                    ],
+                    "title": "Respond \u0026 Recover — 4.26.1"
+                  }
+                ],
+                "id": "_4.26",
+                "parts": [
+                  {
+                    "id": "_4.26-stmt",
+                    "name": "statement",
+                    "prose": "Do you have processes or procedures to recover full functionality, including integrity verification, following a major cybersecurity incident?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG4]"
+                  }
+                ],
+                "title": "Respond \u0026 Recover — 4.26"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "_4.27.1",
+                    "parts": [
+                      {
+                        "id": "_4.27.1-stmt",
+                        "name": "statement",
+                        "prose": "Does coverage include financial harm to your customers resulting from a cybersecurity breach which has impacted your company?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG4]"
+                      }
+                    ],
+                    "title": "Respond \u0026 Recover — 4.27.1"
+                  }
+                ],
+                "id": "_4.27",
+                "parts": [
+                  {
+                    "id": "_4.27-stmt",
+                    "name": "statement",
+                    "prose": "Do you insure for financial harm from a major cybersecurity incident (e.g., self-insure, third-party, parent company, etc.)?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG4]"
+                  }
+                ],
+                "title": "Respond \u0026 Recover — 4.27"
+              }
+            ],
+            "id": "node157",
+            "title": "Respond \u0026 Recover"
+          },
+          {
+            "controls": [
+              {
+                "controls": [
+                  {
+                    "controls": [
+                      {
+                        "id": "_4.10.1.1",
+                        "parts": [
+                          {
+                            "id": "_4.10.1.1-stmt",
+                            "name": "statement",
+                            "prose": "How do you ensure that regular reviews and updates of the asset integrity policies and practices are performed?"
+                          }
+                        ],
+                        "props": [
+                          {
+                            "name": "implementation-groups",
+                            "ns": "https://ckodex.io/ns/xoscal/props",
+                            "value": "[IG4]"
+                          }
+                        ],
+                        "title": "Asset Management — 4.10.1.1"
+                      }
+                    ],
+                    "id": "_4.10.1",
+                    "parts": [
+                      {
+                        "id": "_4.10.1-stmt",
+                        "name": "statement",
+                        "prose": "What recognized standards or frameworks are followed to ensure asset integrity?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG4]"
+                      }
+                    ],
+                    "title": "Asset Management — 4.10.1"
+                  }
+                ],
+                "id": "_4.10",
+                "parts": [
+                  {
+                    "id": "_4.10-stmt",
+                    "name": "statement",
+                    "prose": "Do you have documented hardware and software policies and practices in place to ensure asset integrity?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG4]"
+                  }
+                ],
+                "title": "Asset Management — 4.10"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "_4.4.1",
+                    "parts": [
+                      {
+                        "id": "_4.4.1-stmt",
+                        "name": "statement",
+                        "prose": "What recognized standards or frameworks do you follow to ensure integrity of back-up assets? (e.g., NIST 800-53, NIST 800- 171 DFARS, ISA/IEC 62443 or ISO 27001/2)"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG4]"
+                      }
+                    ],
+                    "title": "Asset Management — 4.4.1"
+                  }
+                ],
+                "id": "_4.4",
+                "parts": [
+                  {
+                    "id": "_4.4-stmt",
+                    "name": "statement",
+                    "prose": "Do you inventory and audit back-up and/or replacement hardware and software assets to ensure their accountability and integrity?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG4]"
+                  }
+                ],
+                "title": "Asset Management — 4.4"
+              },
+              {
+                "id": "_4.5",
+                "parts": [
+                  {
+                    "id": "_4.5-stmt",
+                    "name": "statement",
+                    "prose": "Do you have a defined governance scope for asset management, including line of business technology, facilities, devices, and all other data- generating hardware (like Internet of Things devices)?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG4]"
+                  }
+                ],
+                "title": "Asset Management — 4.5"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "_4.6.1",
+                    "parts": [
+                      {
+                        "id": "_4.6.1-stmt",
+                        "name": "statement",
+                        "prose": "What, if any, types of assets are out of scope for your tracking procedures?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG4]"
+                      }
+                    ],
+                    "title": "Asset Management — 4.6.1"
+                  }
+                ],
+                "id": "_4.6",
+                "parts": [
+                  {
+                    "id": "_4.6-stmt",
+                    "name": "statement",
+                    "prose": "Do you have processes or procedures in place to ensure that devices and software installed by users external to your IT department (e.g., line of business personnel) are being discovered, properly secured, and managed?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG4]"
+                  }
+                ],
+                "title": "Asset Management — 4.6"
+              },
+              {
+                "controls": [
+                  {
+                    "controls": [
+                      {
+                        "id": "_4.7.1.1",
+                        "parts": [
+                          {
+                            "id": "_4.7.1.1-stmt",
+                            "name": "statement",
+                            "prose": "How do you manage other IT hardware and software assets which are not network connected, regardless of network presence?"
+                          }
+                        ],
+                        "props": [
+                          {
+                            "name": "implementation-groups",
+                            "ns": "https://ckodex.io/ns/xoscal/props",
+                            "value": "[IG4]"
+                          }
+                        ],
+                        "title": "Asset Management — 4.7.1.1"
+                      }
+                    ],
+                    "id": "_4.7.1",
+                    "parts": [
+                      {
+                        "id": "_4.7.1-stmt",
+                        "name": "statement",
+                        "prose": "What are your methods to manage IT assets on the network?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG4]"
+                      }
+                    ],
+                    "title": "Asset Management — 4.7.1"
+                  },
+                  {
+                    "id": "_4.7.2",
+                    "parts": [
+                      {
+                        "id": "_4.7.2-stmt",
+                        "name": "statement",
+                        "prose": "What are your methods of verifying acceptable use of assets, including verified asset return, for your network-connected assets?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG4]"
+                      }
+                    ],
+                    "title": "Asset Management — 4.7.2"
+                  }
+                ],
+                "id": "_4.7",
+                "parts": [
+                  {
+                    "id": "_4.7-stmt",
+                    "name": "statement",
+                    "prose": "Do you have an asset management program approved by management for your IT assets that is regularly maintained?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG4]"
+                  }
+                ],
+                "title": "Asset Management — 4.7"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "_4.8.1",
+                    "parts": [
+                      {
+                        "id": "_4.8.1-stmt",
+                        "name": "statement",
+                        "prose": "What are your processes to manage obsolescence of network-connected assets?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG4]"
+                      }
+                    ],
+                    "title": "Asset Management — 4.8.1"
+                  },
+                  {
+                    "id": "_4.8.2",
+                    "parts": [
+                      {
+                        "id": "_4.8.2-stmt",
+                        "name": "statement",
+                        "prose": "What are your policies or procedures to ensure your enterprise software platforms and applications, and hardware assets, are classified according to their criticality?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG4]"
+                      }
+                    ],
+                    "title": "Asset Management — 4.8.2"
+                  },
+                  {
+                    "id": "_4.8.3",
+                    "parts": [
+                      {
+                        "id": "_4.8.3-stmt",
+                        "name": "statement",
+                        "prose": "What are your policies or procedures to ensure appropriate controls are in place for internal or third-party cloud services?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG4]"
+                      }
+                    ],
+                    "title": "Asset Management — 4.8.3"
+                  }
+                ],
+                "id": "_4.8",
+                "parts": [
+                  {
+                    "id": "_4.8-stmt",
+                    "name": "statement",
+                    "prose": "Do you have documented policies or procedures to manage enterprise network-connectable assets throughout their lifecycle?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG4]"
+                  }
+                ],
+                "title": "Asset Management — 4.8"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "_4.9.1",
+                    "parts": [
+                      {
+                        "id": "_4.9.1-stmt",
+                        "name": "statement",
+                        "prose": "How do you ensure that you are not providing assets on a banned list to customers?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG4]"
+                      }
+                    ],
+                    "title": "Asset Management — 4.9.1"
+                  }
+                ],
+                "id": "_4.9",
+                "parts": [
+                  {
+                    "id": "_4.9-stmt",
+                    "name": "statement",
+                    "prose": "Do you ensure that you are not sourcing assets on a banned listto customers (e.g., ITAR, NDAA Section 889)?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG4]"
+                  }
+                ],
+                "title": "Asset Management — 4.9"
+              }
+            ],
+            "id": "node86",
+            "title": "Asset Management"
+          }
+        ],
+        "id": "_4",
+        "title": "Information Security"
+      },
+      {
+        "groups": [
+          {
+            "controls": [
+              {
+                "controls": [
+                  {
+                    "id": "_5.1.1",
+                    "parts": [
+                      {
+                        "id": "_5.1.1-stmt",
+                        "name": "statement",
+                        "prose": "If the entity is not covered by a NISP FCL but currently has some other US Government or industry attestation, such as TAPA FSR of meeting a physical security code or standard, please identify the standard, the issuing agency, and the most recent date of certification."
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG5]"
+                      }
+                    ],
+                    "title": "Physical Security — 5.1.1"
+                  },
+                  {
+                    "id": "_5.1.2",
+                    "parts": [
+                      {
+                        "id": "_5.1.2-stmt",
+                        "name": "statement",
+                        "prose": "Is the entity covered by a limited FCL (in agreement with a foreign government)?\nDescribe."
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG5]"
+                      }
+                    ],
+                    "title": "Physical Security — 5.1.2"
+                  }
+                ],
+                "id": "_5.1",
+                "parts": [
+                  {
+                    "id": "_5.1-stmt",
+                    "name": "statement",
+                    "prose": "Is the entity (organization, operational unit, facility, etc.) currently covered by an unrestricted/unlimited National Industrial Security Program (NISP) Facility Clearance (FCL) or a related U.S. government program such as C- TPAT that certifies the entity as meeting appropriate physical security standards?\n[If ‘Yes,’ please state the program that certified you and date of last certification. You may skip the remaining questions of this section and proceed to the next section. If not, continue with this section.]"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG5]"
+                  }
+                ],
+                "title": "Physical Security — 5.1"
+              },
+              {
+                "controls": [
+                  {
+                    "controls": [
+                      {
+                        "id": "_5.2.1.1",
+                        "parts": [
+                          {
+                            "id": "_5.2.1.1-stmt",
+                            "name": "statement",
+                            "prose": "How often do you review and update to those policies and procedures and what is the most recent review?"
+                          }
+                        ],
+                        "props": [
+                          {
+                            "name": "implementation-groups",
+                            "ns": "https://ckodex.io/ns/xoscal/props",
+                            "value": "[IG5]"
+                          }
+                        ],
+                        "title": "Physical Security — 5.2.1.1"
+                      },
+                      {
+                        "id": "_5.2.1.2",
+                        "parts": [
+                          {
+                            "id": "_5.2.1.2-stmt",
+                            "name": "statement",
+                            "prose": "If needed, can you provide these documents for our review?"
+                          }
+                        ],
+                        "props": [
+                          {
+                            "name": "implementation-groups",
+                            "ns": "https://ckodex.io/ns/xoscal/props",
+                            "value": "[IG5]"
+                          }
+                        ],
+                        "title": "Physical Security — 5.2.1.2"
+                      }
+                    ],
+                    "id": "_5.2.1",
+                    "parts": [
+                      {
+                        "id": "_5.2.1-stmt",
+                        "name": "statement",
+                        "prose": "To what standards/controls do you adhere? (e.g., NIST publication, ISO, UL, etc.)"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG5]"
+                      }
+                    ],
+                    "title": "Physical Security — 5.2.1"
+                  }
+                ],
+                "id": "_5.2",
+                "parts": [
+                  {
+                    "id": "_5.2-stmt",
+                    "name": "statement",
+                    "prose": "Do you have documented security policies and procedures that address the control of physical access to cyber assets (network devices, data facilities, patch panels, industrial control systems, programmable logic, etc.)?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG5]"
+                  }
+                ],
+                "title": "Physical Security — 5.2"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "_5.3.1",
+                    "parts": [
+                      {
+                        "id": "_5.3.1-stmt",
+                        "name": "statement",
+                        "prose": "What training do all staff receive to address potential physical security threats and how to respond to emergencies (e.g., fire, weather, etc.)?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG5]"
+                      }
+                    ],
+                    "title": "Physical Security — 5.3.1"
+                  },
+                  {
+                    "controls": [
+                      {
+                        "id": "_5.3.2.1",
+                        "parts": [
+                          {
+                            "id": "_5.3.2.1-stmt",
+                            "name": "statement",
+                            "prose": "How does this training address potential threats to the facility and how the physical access controls are integrated with system network interfaces?"
+                          }
+                        ],
+                        "props": [
+                          {
+                            "name": "implementation-groups",
+                            "ns": "https://ckodex.io/ns/xoscal/props",
+                            "value": "[IG5]"
+                          }
+                        ],
+                        "title": "Physical Security — 5.3.2.1"
+                      }
+                    ],
+                    "id": "_5.3.2",
+                    "parts": [
+                      {
+                        "id": "_5.3.2-stmt",
+                        "name": "statement",
+                        "prose": "What training do cybersecurity staff, physical security staff, and contractors with at least limited access to sensitive areas of a facility receive?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG5]"
+                      }
+                    ],
+                    "title": "Physical Security — 5.3.2"
+                  },
+                  {
+                    "controls": [
+                      {
+                        "id": "_5.3.3.1",
+                        "parts": [
+                          {
+                            "id": "_5.3.3.1-stmt",
+                            "name": "statement",
+                            "prose": "How is this training documented?"
+                          }
+                        ],
+                        "props": [
+                          {
+                            "name": "implementation-groups",
+                            "ns": "https://ckodex.io/ns/xoscal/props",
+                            "value": "[IG5]"
+                          }
+                        ],
+                        "title": "Physical Security — 5.3.3.1"
+                      }
+                    ],
+                    "id": "_5.3.3",
+                    "parts": [
+                      {
+                        "id": "_5.3.3-stmt",
+                        "name": "statement",
+                        "prose": "What standards do you follow, or did you implement (e.g., NIST publication, ISO, UL, etc.)?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG5]"
+                      }
+                    ],
+                    "title": "Physical Security — 5.3.3"
+                  }
+                ],
+                "id": "_5.3",
+                "parts": [
+                  {
+                    "id": "_5.3-stmt",
+                    "name": "statement",
+                    "prose": "Do you have documented policies addressing staff training which includes procedures to limit physical access to cyber assets to only those with demonstrated need?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG5]"
+                  }
+                ],
+                "title": "Physical Security — 5.3"
+              },
+              {
+                "controls": [
+                  {
+                    "controls": [
+                      {
+                        "id": "_5.4.1.1",
+                        "parts": [
+                          {
+                            "id": "_5.4.1.1-stmt",
+                            "name": "statement",
+                            "prose": "How do you ensure that your staff understands and complies with procedures (e.g., training, exercises, and actual cases of incident response)?"
+                          }
+                        ],
+                        "props": [
+                          {
+                            "name": "implementation-groups",
+                            "ns": "https://ckodex.io/ns/xoscal/props",
+                            "value": "[IG5]"
+                          }
+                        ],
+                        "title": "Physical Security — 5.4.1.1"
+                      }
+                    ],
+                    "id": "_5.4.1",
+                    "parts": [
+                      {
+                        "id": "_5.4.1-stmt",
+                        "name": "statement",
+                        "prose": "What processes do you have in place to document the actions taken during and after an actual or suspected physical security incidents (e.g., security log, formal report to management, police report, etc.)?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG5]"
+                      }
+                    ],
+                    "title": "Physical Security — 5.4.1"
+                  }
+                ],
+                "id": "_5.4",
+                "parts": [
+                  {
+                    "id": "_5.4-stmt",
+                    "name": "statement",
+                    "prose": "Do you have a documented Security Incident Response process covering physical security incidents? (e.g., potential intruder access, missing equipment, etc.)"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG5]"
+                  }
+                ],
+                "title": "Physical Security — 5.4"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "_5.5.1",
+                    "parts": [
+                      {
+                        "id": "_5.5.1-stmt",
+                        "name": "statement",
+                        "prose": "What physical / facilities security policies and practices are subject to audit?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG5]"
+                      }
+                    ],
+                    "title": "Physical Security — 5.5.1"
+                  },
+                  {
+                    "controls": [
+                      {
+                        "id": "_5.5.2.1",
+                        "parts": [
+                          {
+                            "id": "_5.5.2.1-stmt",
+                            "name": "statement",
+                            "prose": "How is compliance with these standards validated?"
+                          }
+                        ],
+                        "props": [
+                          {
+                            "name": "implementation-groups",
+                            "ns": "https://ckodex.io/ns/xoscal/props",
+                            "value": "[IG5]"
+                          }
+                        ],
+                        "title": "Physical Security — 5.5.2.1"
+                      }
+                    ],
+                    "id": "_5.5.2",
+                    "parts": [
+                      {
+                        "id": "_5.5.2-stmt",
+                        "name": "statement",
+                        "prose": "For contractors who have access to a critical facility, sensitive assets, or major physical plant systems, what standards are they required to attest to? (e.g., NIST publication, ISO, UL, etc.)"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG5]"
+                      }
+                    ],
+                    "title": "Physical Security — 5.5.2"
+                  }
+                ],
+                "id": "_5.5",
+                "parts": [
+                  {
+                    "id": "_5.5-stmt",
+                    "name": "statement",
+                    "prose": "For facilities that use an independent contractor for physical security, are physical facilities security policy and procedures incorporated into service level agreements, contracts, policies, regulatory practices?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG5]"
+                  }
+                ],
+                "title": "Physical Security — 5.5"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "_5.6.1",
+                    "parts": [
+                      {
+                        "id": "_5.6.1-stmt",
+                        "name": "statement",
+                        "prose": "What type of action or response would be taken for unauthorized physical access to sensitive cyber assets?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG5]"
+                      }
+                    ],
+                    "title": "Physical Security — 5.6.1"
+                  }
+                ],
+                "id": "_5.6",
+                "parts": [
+                  {
+                    "id": "_5.6-stmt",
+                    "name": "statement",
+                    "prose": "Are there enforcement mechanisms (e.g., sanctions, response procedures, technology) for unauthorized physical access to mission/business critical information, functions, services and assets?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG5]"
+                  }
+                ],
+                "title": "Physical Security — 5.6"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "_5.7.1",
+                    "parts": [
+                      {
+                        "id": "_5.7.1-stmt",
+                        "name": "statement",
+                        "prose": "What is the date of the last review and update to your enforcement strategy?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG5]"
+                      }
+                    ],
+                    "title": "Physical Security — 5.7.1"
+                  }
+                ],
+                "id": "_5.7",
+                "parts": [
+                  {
+                    "id": "_5.7-stmt",
+                    "name": "statement",
+                    "prose": "Do you have evidence that physical security mechanisms are effective and adequate to protect assets? Evidence could include third-party assessment, self-assessment, records of actions taken to enforce rules, etc."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG5]"
+                  }
+                ],
+                "title": "Physical Security — 5.7"
+              }
+            ],
+            "id": "_5-controls",
+            "title": "Physical Security"
+          },
+          {
+            "controls": [
+              {
+                "controls": [
+                  {
+                    "id": "_5.10.1",
+                    "parts": [
+                      {
+                        "id": "_5.10.1-stmt",
+                        "name": "statement",
+                        "prose": "What requirements, if any, are in place to ensure the use of Original Equipment Manufacturer (OEM) or Authorized Distributors for all key components?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG5]"
+                      }
+                    ],
+                    "title": "Physical Security In-transit — 5.10.1"
+                  },
+                  {
+                    "controls": [
+                      {
+                        "id": "_5.10.2.1",
+                        "parts": [
+                          {
+                            "id": "_5.10.2.1-stmt",
+                            "name": "statement",
+                            "prose": "How do you pass on counterfeit prevention requirements to your third-party suppliers?"
+                          }
+                        ],
+                        "props": [
+                          {
+                            "name": "implementation-groups",
+                            "ns": "https://ckodex.io/ns/xoscal/props",
+                            "value": "[IG5]"
+                          }
+                        ],
+                        "title": "Physical Security In-transit — 5.10.2.1"
+                      }
+                    ],
+                    "id": "_5.10.2",
+                    "parts": [
+                      {
+                        "id": "_5.10.2-stmt",
+                        "name": "statement",
+                        "prose": "What are your processes for the detection and disposition of counterfeit electronic components?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG5]"
+                      }
+                    ],
+                    "title": "Physical Security In-transit — 5.10.2"
+                  }
+                ],
+                "id": "_5.10",
+                "parts": [
+                  {
+                    "id": "_5.10-stmt",
+                    "name": "statement",
+                    "prose": "Do you have processes in place to prevent counterfeit parts from entering your supply chain?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG5]"
+                  }
+                ],
+                "title": "Physical Security In-transit — 5.10"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "_5.8.1",
+                    "parts": [
+                      {
+                        "id": "_5.8.1-stmt",
+                        "name": "statement",
+                        "prose": "What industry standards or frameworks are followed?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG5]"
+                      }
+                    ],
+                    "title": "Physical Security In-transit — 5.8.1"
+                  }
+                ],
+                "id": "_5.8",
+                "parts": [
+                  {
+                    "id": "_5.8-stmt",
+                    "name": "statement",
+                    "prose": "Do you utilize a controlled bill of materials (BOM) or similar capability to protect assets that are being received, in process, or in-transit?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG5]"
+                  }
+                ],
+                "title": "Physical Security In-transit — 5.8"
+              },
+              {
+                "controls": [
+                  {
+                    "controls": [
+                      {
+                        "id": "_5.9.1.1",
+                        "parts": [
+                          {
+                            "id": "_5.9.1.1-stmt",
+                            "name": "statement",
+                            "prose": "How are these requirements audited to ensure that they are effective?"
+                          }
+                        ],
+                        "props": [
+                          {
+                            "name": "implementation-groups",
+                            "ns": "https://ckodex.io/ns/xoscal/props",
+                            "value": "[IG5]"
+                          }
+                        ],
+                        "title": "Physical Security In-transit — 5.9.1.1"
+                      }
+                    ],
+                    "id": "_5.9.1",
+                    "parts": [
+                      {
+                        "id": "_5.9.1-stmt",
+                        "name": "statement",
+                        "prose": "What industry standards or frameworks are being followed to ensure packaging is tamper-evident?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG5]"
+                      }
+                    ],
+                    "title": "Physical Security In-transit — 5.9.1"
+                  }
+                ],
+                "id": "_5.9",
+                "parts": [
+                  {
+                    "id": "_5.9-stmt",
+                    "name": "statement",
+                    "prose": "Do you have requirements that all items being shipped have tamper-evident packaging?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG5]"
+                  }
+                ],
+                "title": "Physical Security In-transit — 5.9"
+              }
+            ],
+            "id": "node190",
+            "title": "Physical Security In-transit"
+          }
+        ],
+        "id": "_5",
+        "title": "Physical Security"
+      },
+      {
+        "groups": [
+          {
+            "controls": [
+              {
+                "controls": [
+                  {
+                    "id": "_6.1.1",
+                    "parts": [
+                      {
+                        "id": "_6.1.1-stmt",
+                        "name": "statement",
+                        "prose": "Is employee access managed by role?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG6]"
+                      }
+                    ],
+                    "title": "Personnel Security — 6.1.1"
+                  },
+                  {
+                    "id": "_6.1.2",
+                    "parts": [
+                      {
+                        "id": "_6.1.2-stmt",
+                        "name": "statement",
+                        "prose": "Is access to business-critical systems, manufacturing facilities, and assets formally managed and maintained? Please describe."
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG6]"
+                      }
+                    ],
+                    "title": "Personnel Security — 6.1.2"
+                  },
+                  {
+                    "id": "_6.1.3",
+                    "parts": [
+                      {
+                        "id": "_6.1.3-stmt",
+                        "name": "statement",
+                        "prose": "Are physical security practices formally governed, documented, maintained, and enforced?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG6]"
+                      }
+                    ],
+                    "title": "Personnel Security — 6.1.3"
+                  }
+                ],
+                "id": "_6.1",
+                "parts": [
+                  {
+                    "id": "_6.1-stmt",
+                    "name": "statement",
+                    "prose": "Does a formal personnel security program exist?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG6]"
+                  }
+                ],
+                "title": "Personnel Security — 6.1"
+              }
+            ],
+            "id": "_6-controls",
+            "title": "Personnel Security"
+          },
+          {
+            "controls": [
+              {
+                "controls": [
+                  {
+                    "id": "_6.2.1",
+                    "parts": [
+                      {
+                        "id": "_6.2.1-stmt",
+                        "name": "statement",
+                        "prose": "Does the process include security awareness training?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG6]"
+                      }
+                    ],
+                    "title": "Onboarding — 6.2.1"
+                  },
+                  {
+                    "id": "_6.2.2",
+                    "parts": [
+                      {
+                        "id": "_6.2.2-stmt",
+                        "name": "statement",
+                        "prose": "What is the process to determine the level of access to company identifications (IDs), tokens, documents, applications, etc.?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG6]"
+                      }
+                    ],
+                    "title": "Onboarding — 6.2.2"
+                  },
+                  {
+                    "id": "_6.2.3",
+                    "parts": [
+                      {
+                        "id": "_6.2.3-stmt",
+                        "name": "statement",
+                        "prose": "What is the process to distribute company assets?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG6]"
+                      }
+                    ],
+                    "title": "Onboarding — 6.2.3"
+                  },
+                  {
+                    "controls": [
+                      {
+                        "id": "_6.2.4.1",
+                        "parts": [
+                          {
+                            "id": "_6.2.4.1-stmt",
+                            "name": "statement",
+                            "prose": "If ‘Yes’, please provide a copy."
+                          }
+                        ],
+                        "props": [
+                          {
+                            "name": "implementation-groups",
+                            "ns": "https://ckodex.io/ns/xoscal/props",
+                            "value": "[IG6]"
+                          }
+                        ],
+                        "title": "Onboarding — 6.2.4.1"
+                      }
+                    ],
+                    "id": "_6.2.4",
+                    "parts": [
+                      {
+                        "id": "_6.2.4-stmt",
+                        "name": "statement",
+                        "prose": "Is the onboarding process documented?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG6]"
+                      }
+                    ],
+                    "title": "Onboarding — 6.2.4"
+                  }
+                ],
+                "id": "_6.2",
+                "parts": [
+                  {
+                    "id": "_6.2-stmt",
+                    "name": "statement",
+                    "prose": "Do you have a process for onboarding personnel?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG6]"
+                  }
+                ],
+                "title": "Onboarding — 6.2"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "_6.3.1",
+                    "parts": [
+                      {
+                        "id": "_6.3.1-stmt",
+                        "name": "statement",
+                        "prose": "If not permitted by the country, please note that and provide the part of your supply chain for which it is applicable."
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG6]"
+                      }
+                    ],
+                    "title": "Onboarding — 6.3.1"
+                  },
+                  {
+                    "id": "_6.3.2",
+                    "parts": [
+                      {
+                        "id": "_6.3.2-stmt",
+                        "name": "statement",
+                        "prose": "How do you conduct the background checks and document, validate, and update their responses?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG6]"
+                      }
+                    ],
+                    "title": "Onboarding — 6.3.2"
+                  }
+                ],
+                "id": "_6.3",
+                "parts": [
+                  {
+                    "id": "_6.3-stmt",
+                    "name": "statement",
+                    "prose": "Do you have policies for conducting background checks of your employees as permitted by the country in which you operate?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG6]"
+                  }
+                ],
+                "title": "Onboarding — 6.3"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "_6.4.1",
+                    "parts": [
+                      {
+                        "id": "_6.4.1-stmt",
+                        "name": "statement",
+                        "prose": "If not permitted by the country, please note that and provide the part of your supply chain for which it is applicable."
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG6]"
+                      }
+                    ],
+                    "title": "Onboarding — 6.4.1"
+                  },
+                  {
+                    "id": "_6.4.2",
+                    "parts": [
+                      {
+                        "id": "_6.4.2-stmt",
+                        "name": "statement",
+                        "prose": "How do you conduct the background checks and document, validate, and update their responses?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG6]"
+                      }
+                    ],
+                    "title": "Onboarding — 6.4.2"
+                  }
+                ],
+                "id": "_6.4",
+                "parts": [
+                  {
+                    "id": "_6.4-stmt",
+                    "name": "statement",
+                    "prose": "Do you have policies for conducting background checks for your suppliers, as permitted by the country in which you operate?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG6]"
+                  }
+                ],
+                "title": "Onboarding — 6.4"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "_6.5.1",
+                    "parts": [
+                      {
+                        "id": "_6.5.1-stmt",
+                        "name": "statement",
+                        "prose": "If not permitted by the country, please note that and provide the part of your supply chain for which it is applicable."
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG6]"
+                      }
+                    ],
+                    "title": "Onboarding — 6.5.1"
+                  },
+                  {
+                    "id": "_6.5.2",
+                    "parts": [
+                      {
+                        "id": "_6.5.2-stmt",
+                        "name": "statement",
+                        "prose": "How do you conduct the background checks and document, validate, and update their responses?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG6]"
+                      }
+                    ],
+                    "title": "Onboarding — 6.5.2"
+                  }
+                ],
+                "id": "_6.5",
+                "parts": [
+                  {
+                    "id": "_6.5-stmt",
+                    "name": "statement",
+                    "prose": "Do you have policies for conducting background checks for any subcontractors, as permitted by the country in which you operate?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG6]"
+                  }
+                ],
+                "title": "Onboarding — 6.5"
+              }
+            ],
+            "id": "node205",
+            "title": "Onboarding"
+          },
+          {
+            "controls": [
+              {
+                "controls": [
+                  {
+                    "id": "_6.6.1",
+                    "parts": [
+                      {
+                        "id": "_6.6.1-stmt",
+                        "name": "statement",
+                        "prose": "Does the process include a process to transfer knowledge to other personnel?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG6]"
+                      }
+                    ],
+                    "title": "Offboarding — 6.6.1"
+                  },
+                  {
+                    "id": "_6.6.2",
+                    "parts": [
+                      {
+                        "id": "_6.6.2-stmt",
+                        "name": "statement",
+                        "prose": "What is the process to remove access to all company documents, applications, assets, etc.?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG6]"
+                      }
+                    ],
+                    "title": "Offboarding — 6.6.2"
+                  },
+                  {
+                    "id": "_6.6.3",
+                    "parts": [
+                      {
+                        "id": "_6.6.3-stmt",
+                        "name": "statement",
+                        "prose": "What is the process to recover all company assets?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG6]"
+                      }
+                    ],
+                    "title": "Offboarding — 6.6.3"
+                  },
+                  {
+                    "id": "_6.6.4",
+                    "parts": [
+                      {
+                        "id": "_6.6.4-stmt",
+                        "name": "statement",
+                        "prose": "Is that process documented?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG6]"
+                      }
+                    ],
+                    "title": "Offboarding — 6.6.4"
+                  }
+                ],
+                "id": "_6.6",
+                "parts": [
+                  {
+                    "id": "_6.6-stmt",
+                    "name": "statement",
+                    "prose": "Do you have a process for offboarding personnel?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG6]"
+                  }
+                ],
+                "title": "Offboarding — 6.6"
+              }
+            ],
+            "id": "node221",
+            "title": "Offboarding"
+          },
+          {
+            "controls": [
+              {
+                "id": "_6.10",
+                "parts": [
+                  {
+                    "id": "_6.10-stmt",
+                    "name": "statement",
+                    "prose": "Are all personnel trained in security best practices? This includes, but is not limited to, insider threats, access control, and data protection."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG6]"
+                  }
+                ],
+                "title": "Awareness and Training (Security-Specific) — 6.10"
+              },
+              {
+                "id": "_6.11",
+                "parts": [
+                  {
+                    "id": "_6.11-stmt",
+                    "name": "statement",
+                    "prose": "Is there additional security training provided to users with elevated privileges?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG6]"
+                  }
+                ],
+                "title": "Awareness and Training (Security-Specific) — 6.11"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "_6.12.1",
+                    "parts": [
+                      {
+                        "id": "_6.12.1-stmt",
+                        "name": "statement",
+                        "prose": "If ‘Yes’, does it align with your security practices?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG6]"
+                      }
+                    ],
+                    "title": "Awareness and Training (Security-Specific) — 6.12.1"
+                  }
+                ],
+                "id": "_6.12",
+                "parts": [
+                  {
+                    "id": "_6.12-stmt",
+                    "name": "statement",
+                    "prose": "Are you aware of security training practices performed by your sub-suppliers to their personnel?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG6]"
+                  }
+                ],
+                "title": "Awareness and Training (Security-Specific) — 6.12"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "_6.13.1",
+                    "parts": [
+                      {
+                        "id": "_6.13.1-stmt",
+                        "name": "statement",
+                        "prose": "Is the Code of Conduct always available and visible to your employees, suppliers, and subcontractors?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG6]"
+                      }
+                    ],
+                    "title": "Awareness and Training (Security-Specific) — 6.13.1"
+                  },
+                  {
+                    "id": "_6.13.2",
+                    "parts": [
+                      {
+                        "id": "_6.13.2-stmt",
+                        "name": "statement",
+                        "prose": "How [regularly or often] is this Code of Conduct updated? Please describe the frequency."
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG6]"
+                      }
+                    ],
+                    "title": "Awareness and Training (Security-Specific) — 6.13.2"
+                  },
+                  {
+                    "id": "_6.13.3",
+                    "parts": [
+                      {
+                        "id": "_6.13.3-stmt",
+                        "name": "statement",
+                        "prose": "Do you have personnel designated to address questions or violations to the Code of Conduct?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG6]"
+                      }
+                    ],
+                    "title": "Awareness and Training (Security-Specific) — 6.13.3"
+                  },
+                  {
+                    "id": "_6.13.4",
+                    "parts": [
+                      {
+                        "id": "_6.13.4-stmt",
+                        "name": "statement",
+                        "prose": "Are these employees, suppliers, and subcontractors trained on the Code of Conduct, including privacy and confidentiality requirements, as required by your industry?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG6]"
+                      }
+                    ],
+                    "title": "Awareness and Training (Security-Specific) — 6.13.4"
+                  }
+                ],
+                "id": "_6.13",
+                "parts": [
+                  {
+                    "id": "_6.13-stmt",
+                    "name": "statement",
+                    "prose": "Do you have a Code of Conduct for your employees, suppliers and subcontractors?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG6]"
+                  }
+                ],
+                "title": "Awareness and Training (Security-Specific) — 6.13"
+              },
+              {
+                "id": "_6.7",
+                "parts": [
+                  {
+                    "id": "_6.7-stmt",
+                    "name": "statement",
+                    "prose": "Are personnel security practices formally documented and accessible to all employees?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG6]"
+                  }
+                ],
+                "title": "Awareness and Training (Security-Specific) — 6.7"
+              },
+              {
+                "id": "_6.8",
+                "parts": [
+                  {
+                    "id": "_6.8-stmt",
+                    "name": "statement",
+                    "prose": "Are Personnel Security practices routinely enforced, audited, and updated?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG6]"
+                  }
+                ],
+                "title": "Awareness and Training (Security-Specific) — 6.8"
+              },
+              {
+                "id": "_6.9",
+                "parts": [
+                  {
+                    "id": "_6.9-stmt",
+                    "name": "statement",
+                    "prose": "Are personnel required to complete formal SCRM training annually?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG6]"
+                  }
+                ],
+                "title": "Awareness and Training (Security-Specific) — 6.9"
+              }
+            ],
+            "id": "node227",
+            "title": "Awareness and Training (Security-Specific)"
+          }
+        ],
+        "id": "_6",
+        "title": "Personnel Security"
+      },
+      {
+        "controls": [
+          {
+            "id": "_7.1",
+            "parts": [
+              {
+                "id": "_7.1-stmt",
+                "name": "statement",
+                "prose": "Do your processes for product integrity conform to any of the following standards (e.g., ISO 27036, SAE AS6171, etc.)?"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[IG7]"
+              }
+            ],
+            "title": "Supply Chain Integrity — 7.1"
+          },
+          {
+            "controls": [
+              {
+                "id": "_7.10.1",
+                "parts": [
+                  {
+                    "id": "_7.10.1-stmt",
+                    "name": "statement",
+                    "prose": "What programs are in place to ensure continuous performance monitoring and improvement of key suppliers?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG7]"
+                  }
+                ],
+                "title": "Supply Chain Integrity — 7.10.1"
+              }
+            ],
+            "id": "_7.10",
+            "parts": [
+              {
+                "id": "_7.10-stmt",
+                "name": "statement",
+                "prose": "Do you have a process for improving integrity of HW/SW products or services?"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[IG7]"
+              }
+            ],
+            "title": "Supply Chain Integrity — 7.10"
+          },
+          {
+            "controls": [
+              {
+                "id": "_7.11.1",
+                "parts": [
+                  {
+                    "id": "_7.11.1-stmt",
+                    "name": "statement",
+                    "prose": "What is your process?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG7]"
+                  }
+                ],
+                "title": "Supply Chain Integrity — 7.11.1"
+              }
+            ],
+            "id": "_7.11",
+            "parts": [
+              {
+                "id": "_7.11-stmt",
+                "name": "statement",
+                "prose": "Do you have processes in place for addressing reuse and/or recycle of HW products?"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[IG7]"
+              }
+            ],
+            "title": "Supply Chain Integrity — 7.11"
+          },
+          {
+            "controls": [
+              {
+                "id": "_7.2.1",
+                "parts": [
+                  {
+                    "id": "_7.2.1-stmt",
+                    "name": "statement",
+                    "prose": "How do you manage the conformance of your third parties to your procedures?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG7]"
+                  }
+                ],
+                "title": "Supply Chain Integrity — 7.2.1"
+              }
+            ],
+            "id": "_7.2",
+            "parts": [
+              {
+                "id": "_7.2-stmt",
+                "name": "statement",
+                "prose": "Do you control the integrity of your hardware/software (HW/SW) development practices by using Secure Development Lifecycle practices?"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[IG7]"
+              }
+            ],
+            "title": "Supply Chain Integrity — 7.2"
+          },
+          {
+            "controls": [
+              {
+                "controls": [
+                  {
+                    "id": "_7.3.1.1",
+                    "parts": [
+                      {
+                        "id": "_7.3.1.1-stmt",
+                        "name": "statement",
+                        "prose": "How do you manage HW/SW products or service that are not in compliance with those procedures?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG7]"
+                      }
+                    ],
+                    "title": "Supply Chain Integrity — 7.3.1.1"
+                  },
+                  {
+                    "id": "_7.3.1.2",
+                    "parts": [
+                      {
+                        "id": "_7.3.1.2-stmt",
+                        "name": "statement",
+                        "prose": "How are subcontractors held accountable to performance specifications?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG7]"
+                      }
+                    ],
+                    "title": "Supply Chain Integrity — 7.3.1.2"
+                  }
+                ],
+                "id": "_7.3.1",
+                "parts": [
+                  {
+                    "id": "_7.3.1-stmt",
+                    "name": "statement",
+                    "prose": "What is your process to ensure conformance to those procedures?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG7]"
+                  }
+                ],
+                "title": "Supply Chain Integrity — 7.3.1"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "_7.3.2.1",
+                    "parts": [
+                      {
+                        "id": "_7.3.2.1-stmt",
+                        "name": "statement",
+                        "prose": "How do you audit your validation processes?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG7]"
+                      }
+                    ],
+                    "title": "Supply Chain Integrity — 7.3.2.1"
+                  }
+                ],
+                "id": "_7.3.2",
+                "parts": [
+                  {
+                    "id": "_7.3.2-stmt",
+                    "name": "statement",
+                    "prose": "What, if any, automated controls are in place for your validation processes?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG7]"
+                  }
+                ],
+                "title": "Supply Chain Integrity — 7.3.2"
+              }
+            ],
+            "id": "_7.3",
+            "parts": [
+              {
+                "id": "_7.3-stmt",
+                "name": "statement",
+                "prose": "Do you have documented performance and validation procedures for your HW/SW products or services?"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[IG7]"
+              }
+            ],
+            "title": "Supply Chain Integrity — 7.3"
+          },
+          {
+            "controls": [
+              {
+                "controls": [
+                  {
+                    "id": "_7.4.1.1",
+                    "parts": [
+                      {
+                        "id": "_7.4.1.1-stmt",
+                        "name": "statement",
+                        "prose": "How do you monitor and track anomalous product or service behavior?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG7]"
+                      }
+                    ],
+                    "title": "Supply Chain Integrity — 7.4.1.1"
+                  }
+                ],
+                "id": "_7.4.1",
+                "parts": [
+                  {
+                    "id": "_7.4.1-stmt",
+                    "name": "statement",
+                    "prose": "What means do you provide to allow customers to report anomalies?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG7]"
+                  }
+                ],
+                "title": "Supply Chain Integrity — 7.4.1"
+              }
+            ],
+            "id": "_7.4",
+            "parts": [
+              {
+                "id": "_7.4-stmt",
+                "name": "statement",
+                "prose": "Do you have processes in place to independently detect anomalous behavior and defects in HW/SW products or services?"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[IG7]"
+              }
+            ],
+            "title": "Supply Chain Integrity — 7.4"
+          },
+          {
+            "controls": [
+              {
+                "id": "_7.5.1",
+                "parts": [
+                  {
+                    "id": "_7.5.1-stmt",
+                    "name": "statement",
+                    "prose": "What are your processes for managing third-party products and component defects throughout their lifecycle?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG7]"
+                  }
+                ],
+                "title": "Supply Chain Integrity — 7.5.1"
+              }
+            ],
+            "id": "_7.5",
+            "parts": [
+              {
+                "id": "_7.5-stmt",
+                "name": "statement",
+                "prose": "Do you monitor third-party HW/SW products or services for defects?"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[IG7]"
+              }
+            ],
+            "title": "Supply Chain Integrity — 7.5"
+          },
+          {
+            "controls": [
+              {
+                "controls": [
+                  {
+                    "id": "_7.6.1.1",
+                    "parts": [
+                      {
+                        "id": "_7.6.1.1-stmt",
+                        "name": "statement",
+                        "prose": "How do you manage the shared responsibility for cloud service integrity requirements with your suppliers?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG7]"
+                      }
+                    ],
+                    "title": "Supply Chain Integrity — 7.6.1.1"
+                  }
+                ],
+                "id": "_7.6.1",
+                "parts": [
+                  {
+                    "id": "_7.6.1-stmt",
+                    "name": "statement",
+                    "prose": "What policies and procedures are in place to protect the integrity of the data provided through cloud services?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG7]"
+                  }
+                ],
+                "title": "Supply Chain Integrity — 7.6.1"
+              }
+            ],
+            "id": "_7.6",
+            "parts": [
+              {
+                "id": "_7.6-stmt",
+                "name": "statement",
+                "prose": "Does the functional integrity of your product or services rely on cloud services (commercial or hybrid)?"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[IG7]"
+              }
+            ],
+            "title": "Supply Chain Integrity — 7.6"
+          },
+          {
+            "controls": [
+              {
+                "controls": [
+                  {
+                    "id": "_7.7.1.1",
+                    "parts": [
+                      {
+                        "id": "_7.7.1.1-stmt",
+                        "name": "statement",
+                        "prose": "Do you pass down training requirements to your sub-suppliers, as applicable?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG7]"
+                      }
+                    ],
+                    "title": "Supply Chain Integrity — 7.7.1.1"
+                  }
+                ],
+                "id": "_7.7.1",
+                "parts": [
+                  {
+                    "id": "_7.7.1-stmt",
+                    "name": "statement",
+                    "prose": "What mechanisms are in place for direct employees and contracted workers to ensure applicable training has been completed?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG7]"
+                  }
+                ],
+                "title": "Supply Chain Integrity — 7.7.1"
+              }
+            ],
+            "id": "_7.7",
+            "parts": [
+              {
+                "id": "_7.7-stmt",
+                "name": "statement",
+                "prose": "Do you have required training on quality and product integrity processes for employees, suppliers, and subcontractors?"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[IG7]"
+              }
+            ],
+            "title": "Supply Chain Integrity — 7.7"
+          },
+          {
+            "controls": [
+              {
+                "controls": [
+                  {
+                    "id": "_7.8.1.1",
+                    "parts": [
+                      {
+                        "id": "_7.8.1.1-stmt",
+                        "name": "statement",
+                        "prose": "How do your policies or procedures ensure appropriate management/leadership input on supplier selection decisions?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG7]"
+                      }
+                    ],
+                    "title": "Supply Chain Integrity — 7.8.1.1"
+                  }
+                ],
+                "id": "_7.8.1",
+                "parts": [
+                  {
+                    "id": "_7.8.1-stmt",
+                    "name": "statement",
+                    "prose": "What processes or procedures, if any, are in place to ensure that prospective suppliers have met your product integrity requirements?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG7]"
+                  }
+                ],
+                "title": "Supply Chain Integrity — 7.8.1"
+              }
+            ],
+            "id": "_7.8",
+            "parts": [
+              {
+                "id": "_7.8-stmt",
+                "name": "statement",
+                "prose": "Do you have processes to evaluate prospective third-party suppliers’ product integrity during initial selection?"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[IG7]"
+              }
+            ],
+            "title": "Supply Chain Integrity — 7.8"
+          },
+          {
+            "controls": [
+              {
+                "id": "_7.9.1",
+                "parts": [
+                  {
+                    "id": "_7.9.1-stmt",
+                    "name": "statement",
+                    "prose": "What provisions for auditing are included within supplier contracts?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG7]"
+                  }
+                ],
+                "title": "Supply Chain Integrity — 7.9.1"
+              },
+              {
+                "id": "_7.9.2",
+                "parts": [
+                  {
+                    "id": "_7.9.2-stmt",
+                    "name": "statement",
+                    "prose": "How do you pass down HW/SW products or services integrity requirements to third-party suppliers?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG7]"
+                  }
+                ],
+                "title": "Supply Chain Integrity — 7.9.2"
+              }
+            ],
+            "id": "_7.9",
+            "parts": [
+              {
+                "id": "_7.9-stmt",
+                "name": "statement",
+                "prose": "Do you have regularly scheduled audits to ensure compliance with HW/SW products or services integrity requirements?"
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[IG7]"
+              }
+            ],
+            "title": "Supply Chain Integrity — 7.9"
+          }
+        ],
+        "id": "_7",
+        "title": "Supply Chain Integrity"
+      },
+      {
+        "groups": [
+          {
+            "controls": [
+              {
+                "controls": [
+                  {
+                    "id": "_8.1.1",
+                    "parts": [
+                      {
+                        "id": "_8.1.1-stmt",
+                        "name": "statement",
+                        "prose": "What standards or industry frameworks do you use to help inform those practices?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG8]"
+                      }
+                    ],
+                    "title": "General — 8.1.1"
+                  }
+                ],
+                "id": "_8.1",
+                "parts": [
+                  {
+                    "id": "_8.1-stmt",
+                    "name": "statement",
+                    "prose": "Does your organization have a formal process for ensuring supply chain resilience as part of your product offering SCRM practices?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG8]"
+                  }
+                ],
+                "title": "General — 8.1"
+              },
+              {
+                "id": "_8.2",
+                "parts": [
+                  {
+                    "id": "_8.2-stmt",
+                    "name": "statement",
+                    "prose": "Do you consider non-technical supply chain resilience threats such as weather, geo-political instability, epidemic outbreak, volcanic, earthquakes, etc.?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG8]"
+                  }
+                ],
+                "title": "General — 8.2"
+              }
+            ],
+            "id": "node272",
+            "title": "General"
+          },
+          {
+            "controls": [
+              {
+                "controls": [
+                  {
+                    "id": "_8.3.1",
+                    "parts": [
+                      {
+                        "id": "_8.3.1-stmt",
+                        "name": "statement",
+                        "prose": "If illness causes high absenteeism, are personnel cross-trained and able to perform multiple duties?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG8]"
+                      }
+                    ],
+                    "title": "Supply Chain Disruption Risk Management (Business Continuity) — 8.3.1"
+                  }
+                ],
+                "id": "_8.3",
+                "parts": [
+                  {
+                    "id": "_8.3-stmt",
+                    "name": "statement",
+                    "prose": "Do you maintain a formal business continuity plan necessary to maintain operations through disruptions and significant loss of staff?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG8]"
+                  }
+                ],
+                "title": "Supply Chain Disruption Risk Management (Business Continuity) — 8.3"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "_8.4.1",
+                    "parts": [
+                      {
+                        "id": "_8.4.1-stmt",
+                        "name": "statement",
+                        "prose": "Do you require and audit key suppliers for their ability to be prepared for unexpected supply chain disruptions?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG8]"
+                      }
+                    ],
+                    "title": "Supply Chain Disruption Risk Management (Business Continuity) — 8.4.1"
+                  }
+                ],
+                "id": "_8.4",
+                "parts": [
+                  {
+                    "id": "_8.4-stmt",
+                    "name": "statement",
+                    "prose": "Do you maintain a formally trained and dedicated crisis management team, including on-call staff, assigned to address catastrophic or systemic risks to your supply chain or manufacturing processes?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG8]"
+                  }
+                ],
+                "title": "Supply Chain Disruption Risk Management (Business Continuity) — 8.4"
+              },
+              {
+                "controls": [
+                  {
+                    "controls": [
+                      {
+                        "id": "_8.5.1.1",
+                        "parts": [
+                          {
+                            "id": "_8.5.1.1-stmt",
+                            "name": "statement",
+                            "prose": "Is that documented in Service-level agreement (SLA) or Terms and Conditions?"
+                          }
+                        ],
+                        "props": [
+                          {
+                            "name": "implementation-groups",
+                            "ns": "https://ckodex.io/ns/xoscal/props",
+                            "value": "[IG8]"
+                          }
+                        ],
+                        "title": "Supply Chain Disruption Risk Management (Business Continuity) — 8.5.1.1"
+                      },
+                      {
+                        "id": "_8.5.1.2",
+                        "parts": [
+                          {
+                            "id": "_8.5.1.2-stmt",
+                            "name": "statement",
+                            "prose": "What infrastructure support is needed to support a shift to an at-home workforce?"
+                          }
+                        ],
+                        "props": [
+                          {
+                            "name": "implementation-groups",
+                            "ns": "https://ckodex.io/ns/xoscal/props",
+                            "value": "[IG8]"
+                          }
+                        ],
+                        "title": "Supply Chain Disruption Risk Management (Business Continuity) — 8.5.1.2"
+                      }
+                    ],
+                    "id": "_8.5.1",
+                    "parts": [
+                      {
+                        "id": "_8.5.1-stmt",
+                        "name": "statement",
+                        "prose": "Do your service deliverables outline which services can be done remotely and which cannot?"
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[IG8]"
+                      }
+                    ],
+                    "title": "Supply Chain Disruption Risk Management (Business Continuity) — 8.5.1"
+                  }
+                ],
+                "id": "_8.5",
+                "parts": [
+                  {
+                    "id": "_8.5-stmt",
+                    "name": "statement",
+                    "prose": "Can personnel work remotely?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG8]"
+                  }
+                ],
+                "title": "Supply Chain Disruption Risk Management (Business Continuity) — 8.5"
+              }
+            ],
+            "id": "node276",
+            "title": "Supply Chain Disruption Risk Management (Business Continuity)"
+          },
+          {
+            "controls": [
+              {
+                "id": "_8.6",
+                "parts": [
+                  {
+                    "id": "_8.6-stmt",
+                    "name": "statement",
+                    "prose": "Does your company consider supplier diversity to avoid single sources and to reduce the occurrence of suppliers being susceptible to the same threats to resilience?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG8]"
+                  }
+                ],
+                "title": "Diversity of Supply Base — 8.6"
+              },
+              {
+                "id": "_8.7",
+                "parts": [
+                  {
+                    "id": "_8.7-stmt",
+                    "name": "statement",
+                    "prose": "Does your company consider alternate offering delivery channels to mitigate extended supplier outages to include cloud, network, telecommunication, transportation, and packaging?"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[IG8]"
+                  }
+                ],
+                "title": "Diversity of Supply Base — 8.7"
+              }
+            ],
+            "id": "node285",
+            "title": "Diversity of Supply Base"
+          }
+        ],
+        "id": "_8",
+        "title": "Supply Chain Resilience"
+      }
+    ],
+    "metadata": {
+      "last-modified": "2026-11-08T00:30:46Z",
+      "oscal-version": "1.2.3",
+      "title": "VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE",
+      "version": "2"
+    },
+    "uuid": "3fccfa7c-43a5-5152-827e-7dc283fcf61e"
+  }
+}

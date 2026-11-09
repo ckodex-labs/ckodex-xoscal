@@ -34,7 +34,10 @@ import (
 	"os"
 	"os/exec"
 	"path/filepath"
+	"runtime"
+	"sort"
 	"strings"
+	"sync"
 
 	"github.com/mchorfa/xoscal/server/internal/schemavalidate"
 )
@@ -73,6 +76,14 @@ func main() {
 	kindFlag := flag.String("kind", "", "artifact kind (catalog, profile, ssp, component-definition, assessment-plan, assessment-results, poam)")
 	oscalCLIPath := flag.String("oscal-cli", "", "path to the oscal-cli binary (default: search PATH)")
 	skipSchema := flag.Bool("skip-schema", false, "skip the embedded JSON Schema pre-check")
+	defaultWorkers := runtime.GOMAXPROCS(0)
+	if defaultWorkers > 8 {
+		defaultWorkers = 8
+	}
+	if defaultWorkers < 1 {
+		defaultWorkers = 1
+	}
+	workers := flag.Int("workers", defaultWorkers, "bounded worker concurrency for directory validation")
 	flag.Parse()
 
 	if (*filePath == "") == (*dirPath == "") {
@@ -117,20 +128,72 @@ func main() {
 			fmt.Fprintf(os.Stderr, "error: no .json files found in %s\n", *dirPath)
 			os.Exit(1)
 		}
+		sort.Strings(files)
 	}
 
+	results := validateFilesParallel(files, *kindFlag, cliPath, schemaValidator, *workers)
 	exitCode := 0
-	for _, f := range files {
-		if err := validateFile(f, *kindFlag, cliPath, schemaValidator); err != nil {
-			fmt.Fprintf(os.Stderr, "FAIL: %s: %v\n", f, err)
+	for _, r := range results {
+		if r.Err != nil {
+			fmt.Fprintf(os.Stderr, "FAIL: %s: %v\n", r.File, r.Err)
 			if exitCode == 0 {
 				exitCode = 3
 			}
 		} else {
-			fmt.Printf("PASS: %s — schema + Metaschema constraints valid\n", f)
+			fmt.Printf("PASS: %s — schema + Metaschema constraints valid\n", r.File)
 		}
 	}
 	os.Exit(exitCode)
+}
+
+type fileValidationResult struct {
+	File string
+	Err  error
+}
+
+// validateFilesParallel validates files using a bounded worker pool (CKODEX Rule 30)
+// while preserving deterministic result ordering matching the input slice.
+func validateFilesParallel(files []string, kindFlag, cliPath string, sv *schemavalidate.Validator, workers int) []fileValidationResult {
+	if workers < 1 {
+		workers = 1
+	}
+	if workers > len(files) && len(files) > 0 {
+		workers = len(files)
+	}
+
+	results := make([]fileValidationResult, len(files))
+	if len(files) <= 1 || workers == 1 {
+		for i, f := range files {
+			results[i] = fileValidationResult{
+				File: f,
+				Err:  validateFile(f, kindFlag, cliPath, sv),
+			}
+		}
+		return results
+	}
+
+	jobs := make(chan int, len(files))
+	for i := range files {
+		jobs <- i
+	}
+	close(jobs)
+
+	var wg sync.WaitGroup
+	for w := 0; w < workers; w++ {
+		wg.Add(1)
+		go func() {
+			defer wg.Done()
+			for idx := range jobs {
+				f := files[idx]
+				results[idx] = fileValidationResult{
+					File: f,
+					Err:  validateFile(f, kindFlag, cliPath, sv),
+				}
+			}
+		}()
+	}
+	wg.Wait()
+	return results
 }
 
 // validateFile runs the schema pre-check (if enabled) then oscal-cli validate.

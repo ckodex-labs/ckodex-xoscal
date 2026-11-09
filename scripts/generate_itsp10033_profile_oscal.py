@@ -49,6 +49,7 @@ def main():
         param_settings = []
         alters = []
 
+        rows = []
         for page_idx in range(15, len(pdf.pages)):
             p = pdf.pages[page_idx]
             tables = p.extract_tables()
@@ -56,53 +57,65 @@ def main():
                 for r in t:
                     if len(r) >= 6:
                         cleaned = [c.replace("\n", " ").strip() if c else "" for c in r]
+                        while len(cleaned) < 8:
+                            cleaned.append("")
                         if cleaned[0] == "Family" or (cleaned[1] == "ID" and cleaned[2] == "Name"):
                             continue
-                        fam = cleaned[0] if cleaned[0] else curr_fam
-                        if fam:
-                            curr_fam = fam
-                        cid_raw = cleaned[1]
-                        if not cid_raw:
+                        if cleaned[4] in ("Control/", "Activity") and cleaned[5] in ("Suggested for this", "profile"):
                             continue
-                        
-                        cid = normalize_id(curr_fam, cid_raw)
-                        name = cleaned[2] if len(cleaned) > 2 else ""
-                        desc = cleaned[3] if len(cleaned) > 3 else ""
-                        sel = cleaned[5] if len(cleaned) > 5 else ""
-                        vals = cleaned[6] if len(cleaned) > 6 else ""
-                        notes = cleaned[7] if len(cleaned) > 7 else ""
+                        if not any(cleaned):
+                            continue
+                        if cleaned[1]:
+                            if cleaned[0]:
+                                curr_fam = cleaned[0]
+                            cid = normalize_id(curr_fam, cleaned[1])
+                            rows.append({"cid": cid, "cols": cleaned})
+                        elif rows:
+                            prev = rows[-1]["cols"]
+                            for idx in range(2, 8):
+                                if cleaned[idx]:
+                                    prev[idx] = (prev[idx] + " " + cleaned[idx]).strip() if prev[idx] else cleaned[idx]
 
-                        if sel.lower() == "selected":
-                            selected_ids.append(cid)
-                        elif "not selected" in sel.lower():
-                            not_selected_ids.append(cid)
-                        elif "withdrawn" in desc.lower() or "withdrawn" in name.lower() or sel == "NA":
-                            withdrawn_ids.append(cid)
+        for row in rows:
+            cid = row["cid"]
+            cleaned = row["cols"]
+            name = cleaned[2]
+            desc = cleaned[3]
+            sel = cleaned[5]
+            vals = cleaned[6]
+            notes = cleaned[7]
 
-                        if vals and vals != "NA":
-                            param_id = f"{cid}_prm_1"
-                            param_settings.append({
-                                "param-id": param_id,
-                                "values": [vals]
-                            })
+            if sel.lower() == "selected":
+                selected_ids.append(cid)
+            elif "not selected" in sel.lower():
+                not_selected_ids.append(cid)
+            elif "withdrawn" in desc.lower() or "withdrawn" in name.lower() or sel == "NA":
+                withdrawn_ids.append(cid)
 
-                        if notes and notes != "NA":
-                            alter_entry = {
-                                "control-id": cid,
-                                "adds": [
-                                    {
-                                        "position": "after",
-                                        "parts": [
-                                            {
-                                                "id": f"{cid}_profile-guidance",
-                                                "name": "guidance",
-                                                "prose": notes
-                                            }
-                                        ]
-                                    }
-                                ]
-                            }
-                            alters.append(alter_entry)
+            if vals and vals != "NA":
+                param_id = f"{cid}_prm_1"
+                param_settings.append({
+                    "param-id": param_id,
+                    "values": [vals]
+                })
+
+            if notes and notes != "NA":
+                alter_entry = {
+                    "control-id": cid,
+                    "adds": [
+                        {
+                            "position": "after",
+                            "parts": [
+                                {
+                                    "id": f"{cid}_profile-guidance",
+                                    "name": "guidance",
+                                    "prose": notes
+                                }
+                            ]
+                        }
+                    ]
+                }
+                alters.append(alter_entry)
 
     print(f"Extracted {len(selected_ids)} selected controls.")
     print(f"Extracted {len(param_settings)} parameter settings.")

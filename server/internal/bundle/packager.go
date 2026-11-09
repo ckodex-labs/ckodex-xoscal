@@ -108,7 +108,8 @@ func buildBundle(tw *tar.Writer, artifactPaths []string, root *os.Root, excluded
 		return err
 	}
 	for _, artPath := range artifactPaths {
-		data, err := os.ReadFile(artPath)
+		// #nosec G304 -- artPath is an explicit artifact path supplied by the invoking CLI operator.
+		data, err := os.ReadFile(filepath.Clean(artPath))
 		if err != nil {
 			return fmt.Errorf("read artifact %s: %w", artPath, err)
 		}

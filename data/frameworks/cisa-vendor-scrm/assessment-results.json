@@ -1,0 +1,266 @@
+{
+  "assessment-results": {
+    "import-ap": {
+      "href": "./assessment-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:13Z",
+      "oscal-version": "1.2.3",
+      "title": "VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE Assessment Results Template",
+      "version": "2"
+    },
+    "results": [
+      {
+        "description": "Assessment evaluation findings and observations for VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "findings": [
+          {
+            "description": "Control _1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "7b4e0c3c-9c57-54af-8d25-abb46bc6046a"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _1",
+            "uuid": "f2da70b2-6a3d-5068-9add-77cbbd14fcb2"
+          },
+          {
+            "description": "Control _2.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "15690f44-9f8a-5dce-b1a9-ecbf7ecbc9b8"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_2.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _2.1",
+            "uuid": "a28933b2-b39c-5ecf-b4a7-de9aaf858e02"
+          },
+          {
+            "description": "Control _3.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "069c4ca3-4cfd-511e-8098-2bdb4899545d"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_3.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _3.1",
+            "uuid": "b0411d59-390d-5bde-993c-48d26973ae62"
+          },
+          {
+            "description": "Control _4.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "41a3f8fe-3422-5e8c-af0f-500ca35ce3c7"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_4.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _4.1",
+            "uuid": "4c1dcc94-0a04-5808-934a-0ef6e893c82c"
+          },
+          {
+            "description": "Control _5.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "a648fb40-c8aa-5b14-add4-771f87519bf8"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_5.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _5.1",
+            "uuid": "14d8c5aa-3980-5986-9bdf-afb7eaa5b2a3"
+          },
+          {
+            "description": "Control _6.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "753bd778-9814-52ae-a35a-7c574a70725c"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_6.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _6.1",
+            "uuid": "09102062-9db8-536b-8a91-6b45f4396c76"
+          },
+          {
+            "description": "Control _7.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "34fb622d-a824-51c0-84cf-ed6048177318"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_7.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _7.1",
+            "uuid": "8e4987b6-5837-5286-978d-d93c57db628d"
+          },
+          {
+            "description": "Control _8.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "a7a11957-d040-52f0-9244-5f58afe38d5a"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_8.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _8.1",
+            "uuid": "90c64984-9585-5d49-b0fd-227cf41d6435"
+          }
+        ],
+        "observations": [
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control _1 (Qualifying Questions) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "7b4e0c3c-9c57-54af-8d25-abb46bc6046a"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control _2.1 (General — 2.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "15690f44-9f8a-5dce-b1a9-ecbf7ecbc9b8"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control _3.1 (Secure Design and Engineering — 3.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "069c4ca3-4cfd-511e-8098-2bdb4899545d"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control _4.1 (Information Security — 4.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "41a3f8fe-3422-5e8c-af0f-500ca35ce3c7"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control _5.1 (Physical Security — 5.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "a648fb40-c8aa-5b14-add4-771f87519bf8"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control _6.1 (Personnel Security — 6.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "753bd778-9814-52ae-a35a-7c574a70725c"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control _7.1 (Supply Chain Integrity — 7.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "34fb622d-a824-51c0-84cf-ed6048177318"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control _8.1 (General — 8.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "a7a11957-d040-52f0-9244-5f58afe38d5a"
+          }
+        ],
+        "reviewed-controls": {
+          "control-selections": [
+            {
+              "description": "All controls evaluated for VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE",
+              "include-all": {}
+            }
+          ]
+        },
+        "start": "2026-11-08T01:42:13Z",
+        "title": "VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE Assessment Results",
+        "uuid": "a8246692-ab24-501c-96d7-692ff0a1f21a"
+      }
+    ],
+    "uuid": "5602ead2-9344-58ab-9d37-a017b645e786"
+  }
+}

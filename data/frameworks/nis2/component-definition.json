@@ -1,0 +1,1783 @@
+{
+  "component-definition": {
+    "components": [
+      {
+        "control-implementations": [
+          {
+            "description": "Security control implementations for NIS2 - Annex to the Commission Implementing Regulation 2024/2690 with Technical Implementation Guidance by ENISA.",
+            "implemented-requirements": [
+              {
+                "control-id": "_1.1.1.a",
+                "description": "Component capability addressing control _1.1.1.a (Policy on the security of network and information systems — 1.1.1.a).",
+                "uuid": "753198de-bf67-5655-9472-53bd28ea1a67"
+              },
+              {
+                "control-id": "_1.1.1.b",
+                "description": "Component capability addressing control _1.1.1.b (Policy on the security of network and information systems — 1.1.1.b).",
+                "uuid": "4c545a22-0e2c-5797-a918-f88484d14a6b"
+              },
+              {
+                "control-id": "_1.1.1.c",
+                "description": "Component capability addressing control _1.1.1.c (Policy on the security of network and information systems — 1.1.1.c).",
+                "uuid": "77407a24-c866-5753-9431-9126ef54d116"
+              },
+              {
+                "control-id": "_1.1.1.d",
+                "description": "Component capability addressing control _1.1.1.d (Policy on the security of network and information systems — 1.1.1.d).",
+                "uuid": "e1c620ae-b4ee-5139-b04c-c2ae41b27ef5"
+              },
+              {
+                "control-id": "_1.1.1.e",
+                "description": "Component capability addressing control _1.1.1.e (Policy on the security of network and information systems — 1.1.1.e).",
+                "uuid": "7bda214a-bfef-58de-a298-b37fbac81fac"
+              },
+              {
+                "control-id": "_1.1.1.f",
+                "description": "Component capability addressing control _1.1.1.f (Policy on the security of network and information systems — 1.1.1.f).",
+                "uuid": "43985ee2-3c43-5730-9c3c-5d2fa228546e"
+              },
+              {
+                "control-id": "_1.1.1.g",
+                "description": "Component capability addressing control _1.1.1.g (Policy on the security of network and information systems — 1.1.1.g).",
+                "uuid": "8f06e26b-9937-53ab-bdaf-3411c61963df"
+              },
+              {
+                "control-id": "_1.1.1.h",
+                "description": "Component capability addressing control _1.1.1.h (Policy on the security of network and information systems — 1.1.1.h).",
+                "uuid": "dc77a5fa-c59b-559f-818b-1925262703fc"
+              },
+              {
+                "control-id": "_1.1.1.i",
+                "description": "Component capability addressing control _1.1.1.i (Policy on the security of network and information systems — 1.1.1.i).",
+                "uuid": "29b29491-d9d3-5f8a-b92d-4ff274ad84b0"
+              },
+              {
+                "control-id": "_1.1.1.j",
+                "description": "Component capability addressing control _1.1.1.j (Policy on the security of network and information systems — 1.1.1.j).",
+                "uuid": "121a7d8c-c300-578a-9fe6-be315beb06a6"
+              },
+              {
+                "control-id": "_1.1.1.k",
+                "description": "Component capability addressing control _1.1.1.k (Policy on the security of network and information systems — 1.1.1.k).",
+                "uuid": "50e4a889-fd8b-5b21-812a-4b5709d80337"
+              },
+              {
+                "control-id": "_1.1.2",
+                "description": "Component capability addressing control _1.1.2 (Policy on the security of network and information systems — 1.1.2).",
+                "uuid": "5349f9e5-60d3-5e07-addd-a107dba5f180"
+              },
+              {
+                "control-id": "_1.2.1",
+                "description": "Component capability addressing control _1.2.1 (Roles, responsibilities and authorities — 1.2.1).",
+                "uuid": "bfbc304d-6ad6-509f-8178-70a1785cbecd"
+              },
+              {
+                "control-id": "_1.2.2",
+                "description": "Component capability addressing control _1.2.2 (Roles, responsibilities and authorities — 1.2.2).",
+                "uuid": "578f4820-f7fd-5800-a775-6efe382e9051"
+              },
+              {
+                "control-id": "_1.2.3",
+                "description": "Component capability addressing control _1.2.3 (Roles, responsibilities and authorities — 1.2.3).",
+                "uuid": "7cbd2ed4-be22-58af-b5c7-3997a80810b8"
+              },
+              {
+                "control-id": "_1.2.4",
+                "description": "Component capability addressing control _1.2.4 (Roles, responsibilities and authorities — 1.2.4).",
+                "uuid": "11b58921-5f94-5633-b7ed-2867a20733b0"
+              },
+              {
+                "control-id": "_1.2.5",
+                "description": "Component capability addressing control _1.2.5 (Roles, responsibilities and authorities — 1.2.5).",
+                "uuid": "6778f332-82ea-5243-8333-6ea48f5d4442"
+              },
+              {
+                "control-id": "_1.2.6",
+                "description": "Component capability addressing control _1.2.6 (Roles, responsibilities and authorities — 1.2.6).",
+                "uuid": "203f12f8-2704-5037-94ba-bfc26683b5ee"
+              },
+              {
+                "control-id": "_10.1.1",
+                "description": "Component capability addressing control _10.1.1 (Human resources security — 10.1.1).",
+                "uuid": "3ba26e06-7e14-59c4-8017-cc0efde04414"
+              },
+              {
+                "control-id": "_10.1.2.a",
+                "description": "Component capability addressing control _10.1.2.a (The requirement referred to in point 10.1.1. shall include the following: — 10.1.2.a).",
+                "uuid": "eb9231b4-1c8a-5773-943c-dbe14d5507ea"
+              },
+              {
+                "control-id": "_10.1.2.b",
+                "description": "Component capability addressing control _10.1.2.b (The requirement referred to in point 10.1.1. shall include the following: — 10.1.2.b).",
+                "uuid": "623e6196-bb06-5a32-b8fe-ebf8d92b46d9"
+              },
+              {
+                "control-id": "_10.1.2.c",
+                "description": "Component capability addressing control _10.1.2.c (The requirement referred to in point 10.1.1. shall include the following: — 10.1.2.c).",
+                "uuid": "81ae4350-2ea6-546c-b074-1623ab928669"
+              },
+              {
+                "control-id": "_10.1.2.d",
+                "description": "Component capability addressing control _10.1.2.d (The requirement referred to in point 10.1.1. shall include the following: — 10.1.2.d).",
+                "uuid": "5e30972e-8a05-5bea-9e95-bbd9f6bf432c"
+              },
+              {
+                "control-id": "_10.1.3",
+                "description": "Component capability addressing control _10.1.3 (Human resources security — 10.1.3).",
+                "uuid": "bf2cfba0-fa51-5b9f-a4f9-3d79a27aa8c2"
+              },
+              {
+                "control-id": "_10.2.1",
+                "description": "Component capability addressing control _10.2.1 (Vulnerability handling and disclosure — 10.2.1).",
+                "uuid": "4a4c7076-f4b4-5bed-b4d0-0dee4587947e"
+              },
+              {
+                "control-id": "_10.2.2.a",
+                "description": "Component capability addressing control _10.2.2.a (For the purpose of point 10.2.1., the relevant entities shall: — 10.2.2.a).",
+                "uuid": "b6c15776-e01d-51ab-8ff3-8ff157dfc873"
+              },
+              {
+                "control-id": "_10.2.2.b",
+                "description": "Component capability addressing control _10.2.2.b (For the purpose of point 10.2.1., the relevant entities shall: — 10.2.2.b).",
+                "uuid": "80d6cf06-e11a-5fa9-a118-fade76bb347a"
+              },
+              {
+                "control-id": "_10.2.3",
+                "description": "Component capability addressing control _10.2.3 (Vulnerability handling and disclosure — 10.2.3).",
+                "uuid": "e017c879-19db-56c1-a398-363f5b86d4a9"
+              },
+              {
+                "control-id": "_10.3.1",
+                "description": "Component capability addressing control _10.3.1 (Termination or change of employment procedures — 10.3.1).",
+                "uuid": "e877e29d-b6f3-5c6c-afa2-326c19c73786"
+              },
+              {
+                "control-id": "_10.3.2",
+                "description": "Component capability addressing control _10.3.2 (Termination or change of employment procedures — 10.3.2).",
+                "uuid": "5783476e-9113-5978-8422-8ed7486c2032"
+              },
+              {
+                "control-id": "_10.4.1",
+                "description": "Component capability addressing control _10.4.1 (Disciplinary process — 10.4.1).",
+                "uuid": "acd2edfa-ecfb-5fbb-8e19-d747e5b3ab45"
+              },
+              {
+                "control-id": "_10.4.2",
+                "description": "Component capability addressing control _10.4.2 (Disciplinary process — 10.4.2).",
+                "uuid": "61e5cda2-f044-54ec-a726-46e38180c799"
+              },
+              {
+                "control-id": "_11.1.1",
+                "description": "Component capability addressing control _11.1.1 (Access control policy — 11.1.1).",
+                "uuid": "57856860-14bf-555d-8eed-e25af2c42455"
+              },
+              {
+                "control-id": "_11.1.2.a",
+                "description": "Component capability addressing control _11.1.2.a (The policies referred to in point 11.1.1. shall: — 11.1.2.a).",
+                "uuid": "76290a85-abc9-5e6d-91a5-3d6d5c14ab6e"
+              },
+              {
+                "control-id": "_11.1.2.b",
+                "description": "Component capability addressing control _11.1.2.b (The policies referred to in point 11.1.1. shall: — 11.1.2.b).",
+                "uuid": "2f393a32-6c16-50a5-9f82-1c8cab9d9b41"
+              },
+              {
+                "control-id": "_11.1.2.c",
+                "description": "Component capability addressing control _11.1.2.c (The policies referred to in point 11.1.1. shall: — 11.1.2.c).",
+                "uuid": "d25b54ee-aa5d-512d-8798-3fa2a376e43c"
+              },
+              {
+                "control-id": "_11.1.3",
+                "description": "Component capability addressing control _11.1.3 (Access control policy — 11.1.3).",
+                "uuid": "bdd302cc-59b9-5f4a-8429-5476287143ef"
+              },
+              {
+                "control-id": "_11.2.1",
+                "description": "Component capability addressing control _11.2.1 (Management of access rights — 11.2.1).",
+                "uuid": "27d402e8-5c54-54b2-81cd-9b76bc4faa95"
+              },
+              {
+                "control-id": "_11.2.2.a",
+                "description": "Component capability addressing control _11.2.2.a (The relevant entities shall: — 11.2.2.a).",
+                "uuid": "a1e02356-2b1a-5eb5-83a3-2bb528202b45"
+              },
+              {
+                "control-id": "_11.2.2.b",
+                "description": "Component capability addressing control _11.2.2.b (The relevant entities shall: — 11.2.2.b).",
+                "uuid": "493af5d3-9ad6-5e39-aa27-2dc64240f38c"
+              },
+              {
+                "control-id": "_11.2.2.c",
+                "description": "Component capability addressing control _11.2.2.c (The relevant entities shall: — 11.2.2.c).",
+                "uuid": "e38f0c16-30a8-5cde-bad6-a79d521ae20a"
+              },
+              {
+                "control-id": "_11.2.2.d",
+                "description": "Component capability addressing control _11.2.2.d (The relevant entities shall: — 11.2.2.d).",
+                "uuid": "e22ecccf-48ce-5e5e-aa94-af8165dbb858"
+              },
+              {
+                "control-id": "_11.2.2.e",
+                "description": "Component capability addressing control _11.2.2.e (The relevant entities shall: — 11.2.2.e).",
+                "uuid": "50987cee-0576-5ae4-a685-dac07ebdcbd3"
+              },
+              {
+                "control-id": "_11.2.2.f",
+                "description": "Component capability addressing control _11.2.2.f (The relevant entities shall: — 11.2.2.f).",
+                "uuid": "b952869c-a691-5441-b603-0b85a2489744"
+              },
+              {
+                "control-id": "_11.2.3",
+                "description": "Component capability addressing control _11.2.3 (Management of access rights — 11.2.3).",
+                "uuid": "15922d67-0e7f-5fa4-8bfd-e10e67452ff8"
+              },
+              {
+                "control-id": "_11.3.1",
+                "description": "Component capability addressing control _11.3.1 (Privileged accounts and system administration accounts — 11.3.1).",
+                "uuid": "a7e03a1e-2b72-59f0-9d83-e783b0928e39"
+              },
+              {
+                "control-id": "_11.3.2.a",
+                "description": "Component capability addressing control _11.3.2.a (The policies referred to in point 11.3.1. shall: — 11.3.2.a).",
+                "uuid": "7c5f58ce-6737-593a-baca-5098aa21d131"
+              },
+              {
+                "control-id": "_11.3.2.b",
+                "description": "Component capability addressing control _11.3.2.b (The policies referred to in point 11.3.1. shall: — 11.3.2.b).",
+                "uuid": "69661dbc-2335-56a0-9b5a-8139b146e395"
+              },
+              {
+                "control-id": "_11.3.2.c",
+                "description": "Component capability addressing control _11.3.2.c (The policies referred to in point 11.3.1. shall: — 11.3.2.c).",
+                "uuid": "3928eb36-287e-5390-ac78-a6e7442d94db"
+              },
+              {
+                "control-id": "_11.3.2.d",
+                "description": "Component capability addressing control _11.3.2.d (The policies referred to in point 11.3.1. shall: — 11.3.2.d).",
+                "uuid": "95517a2e-b02a-5945-9b1f-4383ec3b03e0"
+              },
+              {
+                "control-id": "_11.3.3",
+                "description": "Component capability addressing control _11.3.3 (Privileged accounts and system administration accounts — 11.3.3).",
+                "uuid": "d4beb3d6-f73f-5dda-a3e2-c70dfae20784"
+              },
+              {
+                "control-id": "_11.4.1",
+                "description": "Component capability addressing control _11.4.1 (Administration systems — 11.4.1).",
+                "uuid": "f7d0648d-4336-5478-b233-5cfa6edec8c8"
+              },
+              {
+                "control-id": "_11.4.2.a",
+                "description": "Component capability addressing control _11.4.2.a (For that purpose, the relevant entities shall: — 11.4.2.a).",
+                "uuid": "445c62ab-8f66-5b07-8825-97d7f2d7ce7c"
+              },
+              {
+                "control-id": "_11.4.2.b",
+                "description": "Component capability addressing control _11.4.2.b (For that purpose, the relevant entities shall: — 11.4.2.b).",
+                "uuid": "6cf30d6b-5ccc-5121-9d88-2e2facb6de86"
+              },
+              {
+                "control-id": "_11.4.2.c",
+                "description": "Component capability addressing control _11.4.2.c (For that purpose, the relevant entities shall: — 11.4.2.c).",
+                "uuid": "c8bbd5d8-12a7-5f07-bb9d-1e0a0ee58809"
+              },
+              {
+                "control-id": "_11.5.1",
+                "description": "Component capability addressing control _11.5.1 (Identification — 11.5.1).",
+                "uuid": "e2a68f09-e672-5350-80e9-7757ab9bbd31"
+              },
+              {
+                "control-id": "_11.5.2.a",
+                "description": "Component capability addressing control _11.5.2.a (For that purpose, the relevant entities shall: — 11.5.2.a).",
+                "uuid": "6c7b213e-94c6-577a-9cc6-ca12ef63496c"
+              },
+              {
+                "control-id": "_11.5.2.b",
+                "description": "Component capability addressing control _11.5.2.b (For that purpose, the relevant entities shall: — 11.5.2.b).",
+                "uuid": "92021193-00dc-5b40-9d67-52ca24e3e769"
+              },
+              {
+                "control-id": "_11.5.2.c",
+                "description": "Component capability addressing control _11.5.2.c (For that purpose, the relevant entities shall: — 11.5.2.c).",
+                "uuid": "a09f9d19-7267-5833-8ca6-8a2336be895f"
+              },
+              {
+                "control-id": "_11.5.2.d",
+                "description": "Component capability addressing control _11.5.2.d (For that purpose, the relevant entities shall: — 11.5.2.d).",
+                "uuid": "7c7d67bd-0e0e-5e27-ba4e-90ce8d9676b9"
+              },
+              {
+                "control-id": "_11.5.3",
+                "description": "Component capability addressing control _11.5.3 (Identification — 11.5.3).",
+                "uuid": "1b71b073-7b88-53f7-b159-4110e0896df0"
+              },
+              {
+                "control-id": "_11.5.4",
+                "description": "Component capability addressing control _11.5.4 (Identification — 11.5.4).",
+                "uuid": "f4bd6b17-61df-5a1f-931f-db599829856c"
+              },
+              {
+                "control-id": "_11.6.1",
+                "description": "Component capability addressing control _11.6.1 (Authentication — 11.6.1).",
+                "uuid": "093e4b26-e8a1-5da2-8abd-45d4a0c888d7"
+              },
+              {
+                "control-id": "_11.6.2.a",
+                "description": "Component capability addressing control _11.6.2.a (For that purpose, the relevant entities shall: — 11.6.2.a).",
+                "uuid": "1c5a8054-e8d7-587d-9d32-78b84cf86a37"
+              },
+              {
+                "control-id": "_11.6.2.b",
+                "description": "Component capability addressing control _11.6.2.b (For that purpose, the relevant entities shall: — 11.6.2.b).",
+                "uuid": "12213eba-462f-5c99-82e9-582be93baf35"
+              },
+              {
+                "control-id": "_11.6.2.c",
+                "description": "Component capability addressing control _11.6.2.c (For that purpose, the relevant entities shall: — 11.6.2.c).",
+                "uuid": "455342d6-429d-5dd2-a754-8aad2d3ccb46"
+              },
+              {
+                "control-id": "_11.6.2.d",
+                "description": "Component capability addressing control _11.6.2.d (For that purpose, the relevant entities shall: — 11.6.2.d).",
+                "uuid": "4c9238dc-6e14-55e7-a033-8723713e9da4"
+              },
+              {
+                "control-id": "_11.6.2.e",
+                "description": "Component capability addressing control _11.6.2.e (For that purpose, the relevant entities shall: — 11.6.2.e).",
+                "uuid": "fe0dc053-5ada-5739-8778-6e9bcaccedc8"
+              },
+              {
+                "control-id": "_11.6.2.f",
+                "description": "Component capability addressing control _11.6.2.f (For that purpose, the relevant entities shall: — 11.6.2.f).",
+                "uuid": "0d9f0f0c-7e0e-5fec-b233-2737d9c5b2a1"
+              },
+              {
+                "control-id": "_11.6.3",
+                "description": "Component capability addressing control _11.6.3 (Authentication — 11.6.3).",
+                "uuid": "bacd7a34-be77-5d04-9a31-25cf76931567"
+              },
+              {
+                "control-id": "_11.6.4",
+                "description": "Component capability addressing control _11.6.4 (Authentication — 11.6.4).",
+                "uuid": "8d573050-7d91-5b47-8660-2825e42df993"
+              },
+              {
+                "control-id": "_11.7.1",
+                "description": "Component capability addressing control _11.7.1 (Multi-factor authentication — 11.7.1).",
+                "uuid": "9de7c528-bf93-5b13-a507-f162a04d24ee"
+              },
+              {
+                "control-id": "_11.7.2",
+                "description": "Component capability addressing control _11.7.2 (Multi-factor authentication — 11.7.2).",
+                "uuid": "bc8a8273-00cb-5a07-8e52-3b5f30bd6d03"
+              },
+              {
+                "control-id": "_12.1.1",
+                "description": "Component capability addressing control _12.1.1 (Asset classification — 12.1.1).",
+                "uuid": "b57fa3f5-a717-5f74-b0d2-2399cc9e0529"
+              },
+              {
+                "control-id": "_12.1.2.a",
+                "description": "Component capability addressing control _12.1.2.a (For the purpose of point 12.1.1., the relevant entities shall: — 12.1.2.a).",
+                "uuid": "9bdba488-db2e-5d87-8afd-fc4d84dd1f0f"
+              },
+              {
+                "control-id": "_12.1.2.b",
+                "description": "Component capability addressing control _12.1.2.b (For the purpose of point 12.1.1., the relevant entities shall: — 12.1.2.b).",
+                "uuid": "c5b2b548-764a-510e-a6ad-dfbece3c7563"
+              },
+              {
+                "control-id": "_12.1.2.c",
+                "description": "Component capability addressing control _12.1.2.c (For the purpose of point 12.1.1., the relevant entities shall: — 12.1.2.c).",
+                "uuid": "8ad7b5e0-7ec2-5b39-993f-047cb2f90355"
+              },
+              {
+                "control-id": "_12.1.3",
+                "description": "Component capability addressing control _12.1.3 (Asset classification — 12.1.3).",
+                "uuid": "6c242d3a-829e-5ca5-b00f-d768a34132ce"
+              },
+              {
+                "control-id": "_12.2.1",
+                "description": "Component capability addressing control _12.2.1 (Handling of assets — 12.2.1).",
+                "uuid": "d310cc0a-664e-5a7b-b08c-8514e462c1db"
+              },
+              {
+                "control-id": "_12.2.2.a",
+                "description": "Component capability addressing control _12.2.2.a (The policy shall: — 12.2.2.a).",
+                "uuid": "c31eeaa9-b3cd-5142-87b5-cf7c94f1f18b"
+              },
+              {
+                "control-id": "_12.2.2.b",
+                "description": "Component capability addressing control _12.2.2.b (The policy shall: — 12.2.2.b).",
+                "uuid": "c4b53010-1542-5613-a58e-55674d1a7258"
+              },
+              {
+                "control-id": "_12.2.2.c",
+                "description": "Component capability addressing control _12.2.2.c (The policy shall: — 12.2.2.c).",
+                "uuid": "0ea8819b-da63-52d4-9125-4d1ae4509e4c"
+              },
+              {
+                "control-id": "_12.2.3",
+                "description": "Component capability addressing control _12.2.3 (Handling of assets — 12.2.3).",
+                "uuid": "bbe40832-d3d7-560b-8523-3ed0de735876"
+              },
+              {
+                "control-id": "_12.3.1",
+                "description": "Component capability addressing control _12.3.1 (Removable media policy — 12.3.1).",
+                "uuid": "b5ba6b96-1c2a-5e83-8789-b144a017e92d"
+              },
+              {
+                "control-id": "_12.3.2.a",
+                "description": "Component capability addressing control _12.3.2.a (The policy shall: — 12.3.2.a).",
+                "uuid": "7e7b7702-5970-5f86-8c79-3b2d4d9d1122"
+              },
+              {
+                "control-id": "_12.3.2.b",
+                "description": "Component capability addressing control _12.3.2.b (The policy shall: — 12.3.2.b).",
+                "uuid": "3f49ba84-a788-52eb-b9f3-eaac0b003a89"
+              },
+              {
+                "control-id": "_12.3.2.c",
+                "description": "Component capability addressing control _12.3.2.c (The policy shall: — 12.3.2.c).",
+                "uuid": "edeb405f-0ff2-50d4-adaf-456d5aeba5ce"
+              },
+              {
+                "control-id": "_12.3.2.d",
+                "description": "Component capability addressing control _12.3.2.d (The policy shall: — 12.3.2.d).",
+                "uuid": "bdd89354-2d4d-5409-9457-b5a36537cdc4"
+              },
+              {
+                "control-id": "_12.3.3",
+                "description": "Component capability addressing control _12.3.3 (Removable media policy — 12.3.3).",
+                "uuid": "b138f50f-a695-5181-9405-bb1bbcb3a77a"
+              },
+              {
+                "control-id": "_12.4.1",
+                "description": "Component capability addressing control _12.4.1 (Asset inventory — 12.4.1).",
+                "uuid": "a836ddd8-d6af-5372-878f-dadb34a9dccd"
+              },
+              {
+                "control-id": "_12.4.2",
+                "description": "Component capability addressing control _12.4.2 (Asset inventory — 12.4.2).",
+                "uuid": "edcf3722-7fed-561a-94fc-e70f88bd5521"
+              },
+              {
+                "control-id": "_12.4.2.a",
+                "description": "Component capability addressing control _12.4.2.a (Asset inventory — 12.4.2.a).",
+                "uuid": "a410731d-d8ad-52a4-9e26-dd376251f3bb"
+              },
+              {
+                "control-id": "_12.4.2.b",
+                "description": "Component capability addressing control _12.4.2.b (Asset inventory — 12.4.2.b).",
+                "uuid": "711b4bbf-8865-53eb-a720-2d31faa221d9"
+              },
+              {
+                "control-id": "_12.4.3",
+                "description": "Component capability addressing control _12.4.3 (Asset inventory — 12.4.3).",
+                "uuid": "fe6efd9b-f707-5f75-acb6-70b54def6aae"
+              },
+              {
+                "control-id": "_12.5.1",
+                "description": "Component capability addressing control _12.5.1 (Deposit, return or deletion of assets upon termination of employment — 12.5.1).",
+                "uuid": "54050a52-812a-598d-a81a-d4c6d612c628"
+              },
+              {
+                "control-id": "_13.1.1",
+                "description": "Component capability addressing control _13.1.1 (Supporting utilities — 13.1.1).",
+                "uuid": "53f4fc8f-6ba9-5bcb-9cb2-12717a3b9489"
+              },
+              {
+                "control-id": "_13.1.2.a",
+                "description": "Component capability addressing control _13.1.2.a (For that purpose, the relevant entities shall, where appropriate: — 13.1.2.a).",
+                "uuid": "905c73c7-5bd4-527e-9148-1e821ee2d6d6"
+              },
+              {
+                "control-id": "_13.1.2.b",
+                "description": "Component capability addressing control _13.1.2.b (For that purpose, the relevant entities shall, where appropriate: — 13.1.2.b).",
+                "uuid": "8fb8dd55-f0ec-5587-b014-35c982f60706"
+              },
+              {
+                "control-id": "_13.1.2.c",
+                "description": "Component capability addressing control _13.1.2.c (For that purpose, the relevant entities shall, where appropriate: — 13.1.2.c).",
+                "uuid": "fa85cc12-dd3f-5a6c-a17f-b89eca6953e3"
+              },
+              {
+                "control-id": "_13.1.2.d",
+                "description": "Component capability addressing control _13.1.2.d (For that purpose, the relevant entities shall, where appropriate: — 13.1.2.d).",
+                "uuid": "66354725-4884-5976-ad27-7fec92fffb86"
+              },
+              {
+                "control-id": "_13.1.2.f",
+                "description": "Component capability addressing control _13.1.2.f (For that purpose, the relevant entities shall, where appropriate: — 13.1.2.f).",
+                "uuid": "652a50a5-df3b-5398-a820-60d0386387dd"
+              },
+              {
+                "control-id": "_13.1.3",
+                "description": "Component capability addressing control _13.1.3 (Supporting utilities — 13.1.3).",
+                "uuid": "7d086814-41f8-5107-9350-a37c570877c8"
+              },
+              {
+                "control-id": "_13.2.1",
+                "description": "Component capability addressing control _13.2.1 (Protection against physical and environmental threats — 13.2.1).",
+                "uuid": "eeebc7b9-914d-54df-847e-0044906105a2"
+              },
+              {
+                "control-id": "_13.2.2.a",
+                "description": "Component capability addressing control _13.2.2.a (For that purpose, the relevant entities shall, where appropriate: — 13.2.2.a).",
+                "uuid": "e225ee67-cab1-5259-b4c7-e53b812babe0"
+              },
+              {
+                "control-id": "_13.2.2.b",
+                "description": "Component capability addressing control _13.2.2.b (For that purpose, the relevant entities shall, where appropriate: — 13.2.2.b).",
+                "uuid": "e039bac7-8b7b-52ed-a8d7-70d1565861cf"
+              },
+              {
+                "control-id": "_13.2.2.c",
+                "description": "Component capability addressing control _13.2.2.c (For that purpose, the relevant entities shall, where appropriate: — 13.2.2.c).",
+                "uuid": "9b9d3ae7-5284-576f-96fb-c889089a6189"
+              },
+              {
+                "control-id": "_13.2.3",
+                "description": "Component capability addressing control _13.2.3 (Protection against physical and environmental threats — 13.2.3).",
+                "uuid": "bdd0ee33-69cf-5809-a1e7-647fdf462980"
+              },
+              {
+                "control-id": "_13.3.1",
+                "description": "Component capability addressing control _13.3.1 (Perimeter and physical access control — 13.3.1).",
+                "uuid": "179f2ea5-d32b-55d1-994a-287b5e1a7e75"
+              },
+              {
+                "control-id": "_13.3.2.a",
+                "description": "Component capability addressing control _13.3.2.a (For that purpose, the relevant entities shall: — 13.3.2.a).",
+                "uuid": "dc472bce-62dc-536b-9604-326af3d9a3ae"
+              },
+              {
+                "control-id": "_13.3.2.b",
+                "description": "Component capability addressing control _13.3.2.b (For that purpose, the relevant entities shall: — 13.3.2.b).",
+                "uuid": "1ff9b62f-a382-51d1-b95c-a3cad2790a74"
+              },
+              {
+                "control-id": "_13.3.2.c",
+                "description": "Component capability addressing control _13.3.2.c (For that purpose, the relevant entities shall: — 13.3.2.c).",
+                "uuid": "3836f053-10ca-536e-a97e-4dcf8b87c147"
+              },
+              {
+                "control-id": "_13.3.2.d",
+                "description": "Component capability addressing control _13.3.2.d (For that purpose, the relevant entities shall: — 13.3.2.d).",
+                "uuid": "155d7434-3a84-55a2-add3-110a26e2e3e6"
+              },
+              {
+                "control-id": "_13.3.3",
+                "description": "Component capability addressing control _13.3.3 (Perimeter and physical access control — 13.3.3).",
+                "uuid": "2ebb3cc6-9fcb-54cd-a0b6-d222ca06e8f0"
+              },
+              {
+                "control-id": "_2.1.1",
+                "description": "Component capability addressing control _2.1.1 (Risk management framework — 2.1.1).",
+                "uuid": "287e8c0c-f22a-5391-9c74-8c37f4fbb350"
+              },
+              {
+                "control-id": "_2.1.2",
+                "description": "Component capability addressing control _2.1.2 (Risk management framework — 2.1.2).",
+                "uuid": "ae1bf1d9-5a5b-560f-af0b-0542f9440cc5"
+              },
+              {
+                "control-id": "_2.1.2.a",
+                "description": "Component capability addressing control _2.1.2.a (Risk management framework — 2.1.2.a).",
+                "uuid": "9e0bfca4-cb91-5dfc-a2d1-63d47a34c172"
+              },
+              {
+                "control-id": "_2.1.2.b",
+                "description": "Component capability addressing control _2.1.2.b (Risk management framework — 2.1.2.b).",
+                "uuid": "6cc05634-868d-5fb0-8b11-69f3dc7576b9"
+              },
+              {
+                "control-id": "_2.1.2.c",
+                "description": "Component capability addressing control _2.1.2.c (Risk management framework — 2.1.2.c).",
+                "uuid": "66bd248c-6d15-52c8-a763-bcd920c809c3"
+              },
+              {
+                "control-id": "_2.1.2.d",
+                "description": "Component capability addressing control _2.1.2.d (Risk management framework — 2.1.2.d).",
+                "uuid": "8471e10e-cee8-52bc-9ac7-7472d0538d3e"
+              },
+              {
+                "control-id": "_2.1.2.e",
+                "description": "Component capability addressing control _2.1.2.e (Risk management framework — 2.1.2.e).",
+                "uuid": "20b895d1-d3e2-5b31-914c-f1a4f215994b"
+              },
+              {
+                "control-id": "_2.1.2.f",
+                "description": "Component capability addressing control _2.1.2.f (Risk management framework — 2.1.2.f).",
+                "uuid": "0833c832-5915-51b7-9d78-54f7d8c5a48c"
+              },
+              {
+                "control-id": "_2.1.2.g",
+                "description": "Component capability addressing control _2.1.2.g (Risk management framework — 2.1.2.g).",
+                "uuid": "87f67106-552b-576f-a62d-27ef5dbf1649"
+              },
+              {
+                "control-id": "_2.1.2.h",
+                "description": "Component capability addressing control _2.1.2.h (Risk management framework — 2.1.2.h).",
+                "uuid": "3c510997-1e83-595f-9184-7238872b70de"
+              },
+              {
+                "control-id": "_2.1.2.i",
+                "description": "Component capability addressing control _2.1.2.i (Risk management framework — 2.1.2.i).",
+                "uuid": "adb8aa8f-9464-51c0-b75a-efee960f0172"
+              },
+              {
+                "control-id": "_2.1.2.j",
+                "description": "Component capability addressing control _2.1.2.j (Risk management framework — 2.1.2.j).",
+                "uuid": "c95b8573-1489-5adc-ad84-90289e198be0"
+              },
+              {
+                "control-id": "_2.1.3",
+                "description": "Component capability addressing control _2.1.3 (Risk management framework — 2.1.3).",
+                "uuid": "9544e5a2-fb3d-5e1c-9ff4-ee699a781fd2"
+              },
+              {
+                "control-id": "_2.1.4",
+                "description": "Component capability addressing control _2.1.4 (Risk management framework — 2.1.4).",
+                "uuid": "eb5dd34c-d6ba-54cf-b204-4f536500f790"
+              },
+              {
+                "control-id": "_2.2.1",
+                "description": "Component capability addressing control _2.2.1 (Compliance monitoring — 2.2.1).",
+                "uuid": "3c7f7668-8fb8-525a-ab36-5e0bb19ea06d"
+              },
+              {
+                "control-id": "_2.2.2",
+                "description": "Component capability addressing control _2.2.2 (Compliance monitoring — 2.2.2).",
+                "uuid": "5d39c4fc-0b15-52ed-b943-9fa9c392fcb7"
+              },
+              {
+                "control-id": "_2.2.3",
+                "description": "Component capability addressing control _2.2.3 (Compliance monitoring — 2.2.3).",
+                "uuid": "51f7aa86-9816-5350-b259-2d85b94cd4d8"
+              },
+              {
+                "control-id": "_2.3.1",
+                "description": "Component capability addressing control _2.3.1 (Independent review of information and network security — 2.3.1).",
+                "uuid": "8791cfc4-9b96-5d18-95df-64d447e2e107"
+              },
+              {
+                "control-id": "_2.3.2",
+                "description": "Component capability addressing control _2.3.2 (Independent review of information and network security — 2.3.2).",
+                "uuid": "20c82d50-ff63-52c6-adb4-2ea91196b24d"
+              },
+              {
+                "control-id": "_2.3.3",
+                "description": "Component capability addressing control _2.3.3 (Independent review of information and network security — 2.3.3).",
+                "uuid": "c2c191c8-221d-5141-930a-f0769a4ae301"
+              },
+              {
+                "control-id": "_2.3.4",
+                "description": "Component capability addressing control _2.3.4 (Independent review of information and network security — 2.3.4).",
+                "uuid": "a1ab6a88-f1a5-5926-a35b-7ad56538ae85"
+              },
+              {
+                "control-id": "_3.1.1",
+                "description": "Component capability addressing control _3.1.1 (Incident handling policy — 3.1.1).",
+                "uuid": "3b0594d7-f79a-5743-96a8-d3f486ceeaa6"
+              },
+              {
+                "control-id": "_3.1.2",
+                "description": "Component capability addressing control _3.1.2 (Incident handling policy — 3.1.2).",
+                "uuid": "2617fc0a-4b51-5efa-9dd2-4ffd2c224d9a"
+              },
+              {
+                "control-id": "_3.1.2.a",
+                "description": "Component capability addressing control _3.1.2.a (Incident handling policy — 3.1.2.a).",
+                "uuid": "f5535124-f1d8-5181-b7bd-2202ca13bd4f"
+              },
+              {
+                "control-id": "_3.1.2.b",
+                "description": "Component capability addressing control _3.1.2.b (Incident handling policy — 3.1.2.b).",
+                "uuid": "70e271ae-ff08-5755-a163-1269a0570931"
+              },
+              {
+                "control-id": "_3.1.2.c",
+                "description": "Component capability addressing control _3.1.2.c (Incident handling policy — 3.1.2.c).",
+                "uuid": "79fa3833-cfd7-5295-942a-f4a2b616feb4"
+              },
+              {
+                "control-id": "_3.1.2.d",
+                "description": "Component capability addressing control _3.1.2.d (Incident handling policy — 3.1.2.d).",
+                "uuid": "f77304da-4853-501c-8f40-81cfe8e7aaff"
+              },
+              {
+                "control-id": "_3.1.3",
+                "description": "Component capability addressing control _3.1.3 (Incident handling policy — 3.1.3).",
+                "uuid": "ed4c875c-7d50-5697-a8b7-498f0c51aa39"
+              },
+              {
+                "control-id": "_3.2.1",
+                "description": "Component capability addressing control _3.2.1 (Monitoring and logging — 3.2.1).",
+                "uuid": "096b6bf4-1b8a-5bc4-91a8-43a4aaa53ece"
+              },
+              {
+                "control-id": "_3.2.2",
+                "description": "Component capability addressing control _3.2.2 (Monitoring and logging — 3.2.2).",
+                "uuid": "5432e49c-16ae-56c5-80d9-fb55ad7dbd8f"
+              },
+              {
+                "control-id": "_3.2.3",
+                "description": "Component capability addressing control _3.2.3 (Monitoring and logging — 3.2.3).",
+                "uuid": "df25031a-fb46-54b7-a76c-53db75306fb4"
+              },
+              {
+                "control-id": "_3.2.3.a",
+                "description": "Component capability addressing control _3.2.3.a (Monitoring and logging — 3.2.3.a).",
+                "uuid": "20e6e971-72f7-5f06-8d89-852cd50cf2ef"
+              },
+              {
+                "control-id": "_3.2.3.b",
+                "description": "Component capability addressing control _3.2.3.b (Monitoring and logging — 3.2.3.b).",
+                "uuid": "6cd4a19e-af24-50af-aa15-2799e29a94e7"
+              },
+              {
+                "control-id": "_3.2.3.c",
+                "description": "Component capability addressing control _3.2.3.c (Monitoring and logging — 3.2.3.c).",
+                "uuid": "3b74ac71-7a55-5127-95b4-deda9dfa024c"
+              },
+              {
+                "control-id": "_3.2.3.d",
+                "description": "Component capability addressing control _3.2.3.d (Monitoring and logging — 3.2.3.d).",
+                "uuid": "1f6d70c5-bb23-5d37-87c6-dc6b95448f6f"
+              },
+              {
+                "control-id": "_3.2.3.e",
+                "description": "Component capability addressing control _3.2.3.e (Monitoring and logging — 3.2.3.e).",
+                "uuid": "fbf405a2-b33b-5594-b70e-12e7cf367668"
+              },
+              {
+                "control-id": "_3.2.3.f",
+                "description": "Component capability addressing control _3.2.3.f (Monitoring and logging — 3.2.3.f).",
+                "uuid": "1d6110cb-6f2e-5d75-b26a-210dd4d58994"
+              },
+              {
+                "control-id": "_3.2.3.g",
+                "description": "Component capability addressing control _3.2.3.g (Monitoring and logging — 3.2.3.g).",
+                "uuid": "0c06eafb-f081-5274-a8d7-881f9d65b03c"
+              },
+              {
+                "control-id": "_3.2.3.h",
+                "description": "Component capability addressing control _3.2.3.h (Monitoring and logging — 3.2.3.h).",
+                "uuid": "b2dd02f4-332b-5446-9ce6-a50b8f557fd9"
+              },
+              {
+                "control-id": "_3.2.3.i",
+                "description": "Component capability addressing control _3.2.3.i (Monitoring and logging — 3.2.3.i).",
+                "uuid": "c1c98b91-b129-5ead-9203-09c3b1b0b2d0"
+              },
+              {
+                "control-id": "_3.2.3.j",
+                "description": "Component capability addressing control _3.2.3.j (Monitoring and logging — 3.2.3.j).",
+                "uuid": "059123ef-343e-5ca7-b084-d7c8929b8f14"
+              },
+              {
+                "control-id": "_3.2.3.k",
+                "description": "Component capability addressing control _3.2.3.k (Monitoring and logging — 3.2.3.k).",
+                "uuid": "342b8008-1bbc-5559-9361-fded0eff30d1"
+              },
+              {
+                "control-id": "_3.2.3.l",
+                "description": "Component capability addressing control _3.2.3.l (Monitoring and logging — 3.2.3.l).",
+                "uuid": "9ef319af-7550-5def-940f-57560335c107"
+              },
+              {
+                "control-id": "_3.2.4",
+                "description": "Component capability addressing control _3.2.4 (Monitoring and logging — 3.2.4).",
+                "uuid": "93713b96-a924-5dea-8317-a562c1f1615b"
+              },
+              {
+                "control-id": "_3.2.5",
+                "description": "Component capability addressing control _3.2.5 (Monitoring and logging — 3.2.5).",
+                "uuid": "1507f403-68eb-5191-998f-aab45a3e8ac9"
+              },
+              {
+                "control-id": "_3.2.6",
+                "description": "Component capability addressing control _3.2.6 (Monitoring and logging — 3.2.6).",
+                "uuid": "197639e8-56b0-53dd-ac44-f15cc2f458a6"
+              },
+              {
+                "control-id": "_3.2.7",
+                "description": "Component capability addressing control _3.2.7 (Monitoring and logging — 3.2.7).",
+                "uuid": "55449707-2d07-5004-815e-f11e27cbb7f0"
+              },
+              {
+                "control-id": "_3.3.1",
+                "description": "Component capability addressing control _3.3.1 (Event reporting — 3.3.1).",
+                "uuid": "31db3425-122d-536d-8cbe-9ca08dd4849e"
+              },
+              {
+                "control-id": "_3.3.2",
+                "description": "Component capability addressing control _3.3.2 (Event reporting — 3.3.2).",
+                "uuid": "a75e4db6-fcc4-59a6-be77-574838658fea"
+              },
+              {
+                "control-id": "_3.4.1",
+                "description": "Component capability addressing control _3.4.1 (Event assessment and classification — 3.4.1).",
+                "uuid": "e00b080a-3c7d-5959-beb6-a94c1605c330"
+              },
+              {
+                "control-id": "_3.4.2.a",
+                "description": "Component capability addressing control _3.4.2.a (For the purpose of point 3.4.1, the relevant entities shall act in the following manner: — 3.4.2.a).",
+                "uuid": "51e801ee-77a8-5154-a48c-b4db2ab30e3f"
+              },
+              {
+                "control-id": "_3.4.2.b",
+                "description": "Component capability addressing control _3.4.2.b (For the purpose of point 3.4.1, the relevant entities shall act in the following manner: — 3.4.2.b).",
+                "uuid": "a2fa4b03-a935-555b-b819-67846d1211a0"
+              },
+              {
+                "control-id": "_3.4.2.c",
+                "description": "Component capability addressing control _3.4.2.c (For the purpose of point 3.4.1, the relevant entities shall act in the following manner: — 3.4.2.c).",
+                "uuid": "427670c8-432b-5cbf-a93c-a69797a8ab2c"
+              },
+              {
+                "control-id": "_3.4.2.d",
+                "description": "Component capability addressing control _3.4.2.d (For the purpose of point 3.4.1, the relevant entities shall act in the following manner: — 3.4.2.d).",
+                "uuid": "4a82d3e8-88cd-5695-8b46-f4d4da8d603d"
+              },
+              {
+                "control-id": "_3.4.2.e",
+                "description": "Component capability addressing control _3.4.2.e (For the purpose of point 3.4.1, the relevant entities shall act in the following manner: — 3.4.2.e).",
+                "uuid": "8dea491f-7e7b-5622-9768-8daf42a8cfcc"
+              },
+              {
+                "control-id": "_3.5.1",
+                "description": "Component capability addressing control _3.5.1 (Incident response — 3.5.1).",
+                "uuid": "9e0132ff-878b-53c6-b7e0-0c4418ae8ad2"
+              },
+              {
+                "control-id": "_3.5.2.a",
+                "description": "Component capability addressing control _3.5.2.a (The incident response procedures shall include the following stages: — 3.5.2.a).",
+                "uuid": "bfe7f25e-9ac7-5446-923b-9ee15408a482"
+              },
+              {
+                "control-id": "_3.5.2.b",
+                "description": "Component capability addressing control _3.5.2.b (The incident response procedures shall include the following stages: — 3.5.2.b).",
+                "uuid": "e735fedd-025c-5fe1-83b6-a287c5b6b22f"
+              },
+              {
+                "control-id": "_3.5.2.c",
+                "description": "Component capability addressing control _3.5.2.c (The incident response procedures shall include the following stages: — 3.5.2.c).",
+                "uuid": "dbb9aca5-e91a-5efe-b7d4-a2491e60ce3b"
+              },
+              {
+                "control-id": "_3.5.3",
+                "description": "Component capability addressing control _3.5.3 (Incident response — 3.5.3).",
+                "uuid": "24668f55-541a-51ee-8e6d-ca2472ff2f01"
+              },
+              {
+                "control-id": "_3.5.3.a",
+                "description": "Component capability addressing control _3.5.3.a (The relevant entities shall establish communication plans and procedures: — 3.5.3.a).",
+                "uuid": "8862e12d-b803-57d0-bf62-c99186e8946c"
+              },
+              {
+                "control-id": "_3.5.3.b",
+                "description": "Component capability addressing control _3.5.3.b (The relevant entities shall establish communication plans and procedures: — 3.5.3.b).",
+                "uuid": "3fd7ad55-6286-5ca6-90c5-12fbb1a7a502"
+              },
+              {
+                "control-id": "_3.5.4",
+                "description": "Component capability addressing control _3.5.4 (Incident response — 3.5.4).",
+                "uuid": "b53a1333-3422-5df2-896a-d919131ca6cd"
+              },
+              {
+                "control-id": "_3.5.5",
+                "description": "Component capability addressing control _3.5.5 (Incident response — 3.5.5).",
+                "uuid": "e18e8c21-94c4-5421-b9a5-d1bdf1bfe251"
+              },
+              {
+                "control-id": "_3.6.1",
+                "description": "Component capability addressing control _3.6.1 (Post-incident reviews — 3.6.1).",
+                "uuid": "06438fc6-d99a-5e71-a87f-cdfd42af7a41"
+              },
+              {
+                "control-id": "_3.6.2",
+                "description": "Component capability addressing control _3.6.2 (Post-incident reviews — 3.6.2).",
+                "uuid": "80e9f785-0daa-5849-bde6-4a76605f3455"
+              },
+              {
+                "control-id": "_4.1.1",
+                "description": "Component capability addressing control _4.1.1 (Business continuity and disaster recovery plan — 4.1.1).",
+                "uuid": "b12fbef4-9626-5a64-b94b-0c6d123d68d1"
+              },
+              {
+                "control-id": "_4.1.2",
+                "description": "Component capability addressing control _4.1.2 (Business continuity and disaster recovery plan — 4.1.2).",
+                "uuid": "a8f3e89b-a785-5b2e-9bd1-c0ab595e5a5d"
+              },
+              {
+                "control-id": "_4.1.2.a",
+                "description": "Component capability addressing control _4.1.2.a (Business continuity and disaster recovery plan — 4.1.2.a).",
+                "uuid": "e8f8af22-2324-53fd-8a52-695ed5ada2ba"
+              },
+              {
+                "control-id": "_4.1.2.b",
+                "description": "Component capability addressing control _4.1.2.b (Business continuity and disaster recovery plan — 4.1.2.b).",
+                "uuid": "cfbae51e-058a-53ce-83b4-80f5e45cc609"
+              },
+              {
+                "control-id": "_4.1.2.c",
+                "description": "Component capability addressing control _4.1.2.c (Business continuity and disaster recovery plan — 4.1.2.c).",
+                "uuid": "447a9607-652b-5831-b184-41b5e761c8fe"
+              },
+              {
+                "control-id": "_4.1.2.d",
+                "description": "Component capability addressing control _4.1.2.d (Business continuity and disaster recovery plan — 4.1.2.d).",
+                "uuid": "45c6a660-d6c7-5e7e-8af7-e0e1224a101c"
+              },
+              {
+                "control-id": "_4.1.2.e",
+                "description": "Component capability addressing control _4.1.2.e (Business continuity and disaster recovery plan — 4.1.2.e).",
+                "uuid": "4933c404-89ce-5a4a-a71e-74aafc33da08"
+              },
+              {
+                "control-id": "_4.1.2.f",
+                "description": "Component capability addressing control _4.1.2.f (Business continuity and disaster recovery plan — 4.1.2.f).",
+                "uuid": "25dc5aff-b398-5121-b9e0-17023529f004"
+              },
+              {
+                "control-id": "_4.1.2.g",
+                "description": "Component capability addressing control _4.1.2.g (Business continuity and disaster recovery plan — 4.1.2.g).",
+                "uuid": "db93b7f1-b4c3-5121-80a7-355c9aedbd09"
+              },
+              {
+                "control-id": "_4.1.2.h",
+                "description": "Component capability addressing control _4.1.2.h (Business continuity and disaster recovery plan — 4.1.2.h).",
+                "uuid": "aa6dc801-ac44-5d9e-bba2-447287f87f6e"
+              },
+              {
+                "control-id": "_4.1.3",
+                "description": "Component capability addressing control _4.1.3 (Business continuity and disaster recovery plan — 4.1.3).",
+                "uuid": "d5c7fdbb-6df0-55b0-943c-c8d977b1e2bd"
+              },
+              {
+                "control-id": "_4.1.4",
+                "description": "Component capability addressing control _4.1.4 (Business continuity and disaster recovery plan — 4.1.4).",
+                "uuid": "e1313b9a-eb87-526c-b1ff-281787f94d51"
+              },
+              {
+                "control-id": "_4.2.1",
+                "description": "Component capability addressing control _4.2.1 (Backup and redundancy management — 4.2.1).",
+                "uuid": "178caf8b-78f6-5b2a-9281-d2fb8007db8f"
+              },
+              {
+                "control-id": "_4.2.2",
+                "description": "Component capability addressing control _4.2.2 (Backup and redundancy management — 4.2.2).",
+                "uuid": "fbb08798-1eb6-5472-996e-ff0de0476a83"
+              },
+              {
+                "control-id": "_4.2.2.a",
+                "description": "Component capability addressing control _4.2.2.a (Backup and redundancy management — 4.2.2.a).",
+                "uuid": "d9746957-6257-539f-8475-05b5f7341a59"
+              },
+              {
+                "control-id": "_4.2.2.b",
+                "description": "Component capability addressing control _4.2.2.b (Backup and redundancy management — 4.2.2.b).",
+                "uuid": "1409ed77-9d54-5485-82b2-d03ab977b9b5"
+              },
+              {
+                "control-id": "_4.2.2.c",
+                "description": "Component capability addressing control _4.2.2.c (Backup and redundancy management — 4.2.2.c).",
+                "uuid": "6be02106-8225-5578-99d8-f88e21c28755"
+              },
+              {
+                "control-id": "_4.2.2.d",
+                "description": "Component capability addressing control _4.2.2.d (Backup and redundancy management — 4.2.2.d).",
+                "uuid": "0e6ba5df-c506-55bf-bf37-0df27d2c5bc2"
+              },
+              {
+                "control-id": "_4.2.2.e",
+                "description": "Component capability addressing control _4.2.2.e (Backup and redundancy management — 4.2.2.e).",
+                "uuid": "25084d0a-09ef-5a69-b8e0-524726352a53"
+              },
+              {
+                "control-id": "_4.2.2.f",
+                "description": "Component capability addressing control _4.2.2.f (Backup and redundancy management — 4.2.2.f).",
+                "uuid": "3cacea00-fad9-576d-bf89-a23d4bf23c33"
+              },
+              {
+                "control-id": "_4.2.3",
+                "description": "Component capability addressing control _4.2.3 (Backup and redundancy management — 4.2.3).",
+                "uuid": "e8bb328c-98e1-5806-8ed2-f1ab413d960f"
+              },
+              {
+                "control-id": "_4.2.4",
+                "description": "Component capability addressing control _4.2.4 (Backup and redundancy management — 4.2.4).",
+                "uuid": "4be13f52-740e-589c-945c-ed8427d9b332"
+              },
+              {
+                "control-id": "_4.2.4.a",
+                "description": "Component capability addressing control _4.2.4.a (Backup and redundancy management — 4.2.4.a).",
+                "uuid": "2b422477-7c20-566b-8439-efdf0068e940"
+              },
+              {
+                "control-id": "_4.2.4.b",
+                "description": "Component capability addressing control _4.2.4.b (Backup and redundancy management — 4.2.4.b).",
+                "uuid": "79c059e4-08eb-5484-acfd-d77ffccf15cd"
+              },
+              {
+                "control-id": "_4.2.4.c",
+                "description": "Component capability addressing control _4.2.4.c (Backup and redundancy management — 4.2.4.c).",
+                "uuid": "e44fb2c8-0d2f-54ec-a5ba-bb2f557d3473"
+              },
+              {
+                "control-id": "_4.2.4.d",
+                "description": "Component capability addressing control _4.2.4.d (Backup and redundancy management — 4.2.4.d).",
+                "uuid": "0e497d2d-a4d0-503d-861d-9af91026817c"
+              },
+              {
+                "control-id": "_4.2.5",
+                "description": "Component capability addressing control _4.2.5 (Backup and redundancy management — 4.2.5).",
+                "uuid": "383625b7-2fab-5d2f-9219-5cf85ceb1cdf"
+              },
+              {
+                "control-id": "_4.2.6",
+                "description": "Component capability addressing control _4.2.6 (Backup and redundancy management — 4.2.6).",
+                "uuid": "a87a1783-047c-55e4-bbaf-5b85f54340d9"
+              },
+              {
+                "control-id": "_4.3.1",
+                "description": "Component capability addressing control _4.3.1 (Crisis management — 4.3.1).",
+                "uuid": "9baa0abe-6269-5c99-bae1-13946693ed97"
+              },
+              {
+                "control-id": "_4.3.2",
+                "description": "Component capability addressing control _4.3.2 (Crisis management — 4.3.2).",
+                "uuid": "1188b05d-e0ff-5e7c-aaa6-fd8fbc9aa2f0"
+              },
+              {
+                "control-id": "_4.3.2.1",
+                "description": "Component capability addressing control _4.3.2.1 (The relevant entities shall ensure that the crisis management process addresses at least the following elements: — 4.3.2.1).",
+                "uuid": "03d60794-d597-59c3-bba1-ffb40f004283"
+              },
+              {
+                "control-id": "_4.3.2.a",
+                "description": "Component capability addressing control _4.3.2.a (The relevant entities shall ensure that the crisis management process addresses at least the following elements: — 4.3.2.a).",
+                "uuid": "fa1b8dc6-af47-5043-9154-d19091f59718"
+              },
+              {
+                "control-id": "_4.3.2.b",
+                "description": "Component capability addressing control _4.3.2.b (The relevant entities shall ensure that the crisis management process addresses at least the following elements: — 4.3.2.b).",
+                "uuid": "8034c99b-b0ce-57a1-b348-f2f5c5579e14"
+              },
+              {
+                "control-id": "_4.3.2.c",
+                "description": "Component capability addressing control _4.3.2.c (The relevant entities shall ensure that the crisis management process addresses at least the following elements: — 4.3.2.c).",
+                "uuid": "4c7f41eb-721e-521e-9bab-a897e833e0cb"
+              },
+              {
+                "control-id": "_4.3.3",
+                "description": "Component capability addressing control _4.3.3 (Crisis management — 4.3.3).",
+                "uuid": "61c5c057-bd8b-57ca-a541-3d7e65f855ca"
+              },
+              {
+                "control-id": "_4.3.4",
+                "description": "Component capability addressing control _4.3.4 (Crisis management — 4.3.4).",
+                "uuid": "56f71479-eecf-55be-b1d0-36b62036ed62"
+              },
+              {
+                "control-id": "_5.1.1",
+                "description": "Component capability addressing control _5.1.1 (Supply chain security policy — 5.1.1).",
+                "uuid": "881e3154-9991-5f81-a663-8773ef546f6c"
+              },
+              {
+                "control-id": "_5.1.2",
+                "description": "Component capability addressing control _5.1.2 (Supply chain security policy — 5.1.2).",
+                "uuid": "8066f653-669c-57a9-b255-bc77325b63d8"
+              },
+              {
+                "control-id": "_5.1.2.a",
+                "description": "Component capability addressing control _5.1.2.a (Supply chain security policy — 5.1.2.a).",
+                "uuid": "0a01d315-bc1d-5e24-9cee-bc27c94d3de2"
+              },
+              {
+                "control-id": "_5.1.2.b",
+                "description": "Component capability addressing control _5.1.2.b (Supply chain security policy — 5.1.2.b).",
+                "uuid": "9eba1324-e65a-5166-b2aa-74ad5f13b246"
+              },
+              {
+                "control-id": "_5.1.2.c",
+                "description": "Component capability addressing control _5.1.2.c (Supply chain security policy — 5.1.2.c).",
+                "uuid": "7cd6ecfd-61e5-5b48-827e-421bf2eeee99"
+              },
+              {
+                "control-id": "_5.1.2.d",
+                "description": "Component capability addressing control _5.1.2.d (Supply chain security policy — 5.1.2.d).",
+                "uuid": "a58e47d0-d292-5c1e-ba40-395a83c17aa9"
+              },
+              {
+                "control-id": "_5.1.3",
+                "description": "Component capability addressing control _5.1.3 (Supply chain security policy — 5.1.3).",
+                "uuid": "c56cd810-72db-5aad-b68d-75b535b984c0"
+              },
+              {
+                "control-id": "_5.1.4",
+                "description": "Component capability addressing control _5.1.4 (Supply chain security policy — 5.1.4).",
+                "uuid": "f77916e9-7c5c-5bbf-b191-cb9c0fe9f88c"
+              },
+              {
+                "control-id": "_5.1.4.a",
+                "description": "Component capability addressing control _5.1.4.a (Supply chain security policy — 5.1.4.a).",
+                "uuid": "ee606f59-42ae-5ea6-9e61-c972a43c5745"
+              },
+              {
+                "control-id": "_5.1.4.b",
+                "description": "Component capability addressing control _5.1.4.b (Supply chain security policy — 5.1.4.b).",
+                "uuid": "f556aec5-01e7-5060-b262-bfd0dff9d318"
+              },
+              {
+                "control-id": "_5.1.4.c",
+                "description": "Component capability addressing control _5.1.4.c (Supply chain security policy — 5.1.4.c).",
+                "uuid": "6d28021c-a428-5bce-9944-c294d1ef8605"
+              },
+              {
+                "control-id": "_5.1.4.d",
+                "description": "Component capability addressing control _5.1.4.d (Supply chain security policy — 5.1.4.d).",
+                "uuid": "7ba9f8ea-8bf7-54a2-94da-f7e4a641b94f"
+              },
+              {
+                "control-id": "_5.1.4.e",
+                "description": "Component capability addressing control _5.1.4.e (Supply chain security policy — 5.1.4.e).",
+                "uuid": "7c6f2d55-4ec4-505a-b16c-d3df9e7e844b"
+              },
+              {
+                "control-id": "_5.1.4.f",
+                "description": "Component capability addressing control _5.1.4.f (Supply chain security policy — 5.1.4.f).",
+                "uuid": "100a72b0-ceca-5703-a4f4-818f2f7e8ba9"
+              },
+              {
+                "control-id": "_5.1.4.g",
+                "description": "Component capability addressing control _5.1.4.g (Supply chain security policy — 5.1.4.g).",
+                "uuid": "b7f3ff3c-1a9d-50d3-aad2-67ee49a73178"
+              },
+              {
+                "control-id": "_5.1.4.h",
+                "description": "Component capability addressing control _5.1.4.h (Supply chain security policy — 5.1.4.h).",
+                "uuid": "db92b180-aded-500c-a31c-0f199f338933"
+              },
+              {
+                "control-id": "_5.1.5",
+                "description": "Component capability addressing control _5.1.5 (Supply chain security policy — 5.1.5).",
+                "uuid": "a0b25715-1e10-5537-ad31-feb26cb09cca"
+              },
+              {
+                "control-id": "_5.1.6",
+                "description": "Component capability addressing control _5.1.6 (Supply chain security policy — 5.1.6).",
+                "uuid": "f3e02f79-76d6-502d-8d4f-67036feb8147"
+              },
+              {
+                "control-id": "_5.1.7.a",
+                "description": "Component capability addressing control _5.1.7.a (For the purpose of point 5.1.6., the relevant entities shall: — 5.1.7.a).",
+                "uuid": "5abcc6ef-3b95-5199-8f17-57307956378a"
+              },
+              {
+                "control-id": "_5.1.7.b",
+                "description": "Component capability addressing control _5.1.7.b (For the purpose of point 5.1.6., the relevant entities shall: — 5.1.7.b).",
+                "uuid": "19bd8c83-d55f-57e6-a851-ac915cb4dd12"
+              },
+              {
+                "control-id": "_5.1.7.c",
+                "description": "Component capability addressing control _5.1.7.c (For the purpose of point 5.1.6., the relevant entities shall: — 5.1.7.c).",
+                "uuid": "ab851ce4-7ec7-529d-b50b-55491f6c6eb1"
+              },
+              {
+                "control-id": "_5.1.7.d",
+                "description": "Component capability addressing control _5.1.7.d (For the purpose of point 5.1.6., the relevant entities shall: — 5.1.7.d).",
+                "uuid": "d2bed3df-98a5-5a6b-842d-dbae7f840b15"
+              },
+              {
+                "control-id": "_5.2.1",
+                "description": "Component capability addressing control _5.2.1 (Directory of suppliers and service providers — 5.2.1).",
+                "uuid": "a0d6050b-263a-59ec-924d-0ba1d12a55a3"
+              },
+              {
+                "control-id": "_5.2.a",
+                "description": "Component capability addressing control _5.2.a (Directory of suppliers and service providers — 5.2.a).",
+                "uuid": "e9743651-8162-5b01-98d5-ed422d53397a"
+              },
+              {
+                "control-id": "_5.2.b",
+                "description": "Component capability addressing control _5.2.b (Directory of suppliers and service providers — 5.2.b).",
+                "uuid": "f572d7a2-c1c1-5c62-a962-0316ce35195d"
+              },
+              {
+                "control-id": "_6.1.1",
+                "description": "Component capability addressing control _6.1.1 (Security in acquisition of ICT services or ICT products — 6.1.1).",
+                "uuid": "5dad9544-c996-5aca-a651-6e5392bfb35d"
+              },
+              {
+                "control-id": "_6.1.2.a",
+                "description": "Component capability addressing control _6.1.2.a (For the purpose of point 6.1.1., the processes referred to in point 6.1.1. shall include: — 6.1.2.a).",
+                "uuid": "4536158b-8082-5217-a73a-a2aa2da243ca"
+              },
+              {
+                "control-id": "_6.1.2.b",
+                "description": "Component capability addressing control _6.1.2.b (For the purpose of point 6.1.1., the processes referred to in point 6.1.1. shall include: — 6.1.2.b).",
+                "uuid": "6cb39222-4466-5b60-91af-57c5e8d7cf17"
+              },
+              {
+                "control-id": "_6.1.2.c",
+                "description": "Component capability addressing control _6.1.2.c (For the purpose of point 6.1.1., the processes referred to in point 6.1.1. shall include: — 6.1.2.c).",
+                "uuid": "9d5fe8b0-4e6c-5293-978b-be14c53d53e7"
+              },
+              {
+                "control-id": "_6.1.2.d",
+                "description": "Component capability addressing control _6.1.2.d (For the purpose of point 6.1.1., the processes referred to in point 6.1.1. shall include: — 6.1.2.d).",
+                "uuid": "4edb50ea-4a7d-508d-8f2d-36bfedca430e"
+              },
+              {
+                "control-id": "_6.1.2.e",
+                "description": "Component capability addressing control _6.1.2.e (For the purpose of point 6.1.1., the processes referred to in point 6.1.1. shall include: — 6.1.2.e).",
+                "uuid": "fed3d99c-8bd9-524a-a60e-c3fbd731ba75"
+              },
+              {
+                "control-id": "_6.1.2.f",
+                "description": "Component capability addressing control _6.1.2.f (For the purpose of point 6.1.1., the processes referred to in point 6.1.1. shall include: — 6.1.2.f).",
+                "uuid": "22851182-6552-5b77-9227-0738ea75623a"
+              },
+              {
+                "control-id": "_6.1.3",
+                "description": "Component capability addressing control _6.1.3 (Security in acquisition of ICT services or ICT products — 6.1.3).",
+                "uuid": "00b4a065-dcb5-58b1-8544-bc6a17b3ad92"
+              },
+              {
+                "control-id": "_6.10.1",
+                "description": "Component capability addressing control _6.10.1 (Vulnerability handling and disclosure — 6.10.1).",
+                "uuid": "b57b6c20-c753-5db2-9e3c-3511c4f1023d"
+              },
+              {
+                "control-id": "_6.10.2.a",
+                "description": "Component capability addressing control _6.10.2.a (For the purpose of point 6.10.1., the relevant entities shall: — 6.10.2.a).",
+                "uuid": "af14c7f9-7274-56ac-a3c1-b0489e4fbae7"
+              },
+              {
+                "control-id": "_6.10.2.b",
+                "description": "Component capability addressing control _6.10.2.b (For the purpose of point 6.10.1., the relevant entities shall: — 6.10.2.b).",
+                "uuid": "db50e9a2-1511-57ef-9afa-462fdbd8e336"
+              },
+              {
+                "control-id": "_6.10.2.c",
+                "description": "Component capability addressing control _6.10.2.c (For the purpose of point 6.10.1., the relevant entities shall: — 6.10.2.c).",
+                "uuid": "2aa8ca49-305b-59d5-bb59-b1815c50f9fb"
+              },
+              {
+                "control-id": "_6.10.2.d",
+                "description": "Component capability addressing control _6.10.2.d (For the purpose of point 6.10.1., the relevant entities shall: — 6.10.2.d).",
+                "uuid": "54d485e5-be45-54ef-85a9-b65ed417d43a"
+              },
+              {
+                "control-id": "_6.10.2.e",
+                "description": "Component capability addressing control _6.10.2.e (For the purpose of point 6.10.1., the relevant entities shall: — 6.10.2.e).",
+                "uuid": "c14ba492-f8ec-5d3c-8b6e-8d4df2c06b42"
+              },
+              {
+                "control-id": "_6.10.3",
+                "description": "Component capability addressing control _6.10.3 (Vulnerability handling and disclosure — 6.10.3).",
+                "uuid": "76415be6-b137-5af9-b019-d4818bd11f4a"
+              },
+              {
+                "control-id": "_6.10.4",
+                "description": "Component capability addressing control _6.10.4 (Vulnerability handling and disclosure — 6.10.4).",
+                "uuid": "37497e85-44f1-5a06-ad8d-b8c236db2dcc"
+              },
+              {
+                "control-id": "_6.2.1",
+                "description": "Component capability addressing control _6.2.1 (Secure development life cycle — 6.2.1).",
+                "uuid": "eca2a307-9afb-5136-b753-f274145426ed"
+              },
+              {
+                "control-id": "_6.2.2.a",
+                "description": "Component capability addressing control _6.2.2.a (For the purpose of point 6.2.1., the relevant entities shall: — 6.2.2.a).",
+                "uuid": "16e32465-a736-5b11-b798-2c0aeb32cb09"
+              },
+              {
+                "control-id": "_6.2.2.b",
+                "description": "Component capability addressing control _6.2.2.b (For the purpose of point 6.2.1., the relevant entities shall: — 6.2.2.b).",
+                "uuid": "2f6dff39-dcb5-5a69-b025-2557b96eea8f"
+              },
+              {
+                "control-id": "_6.2.2.c",
+                "description": "Component capability addressing control _6.2.2.c (For the purpose of point 6.2.1., the relevant entities shall: — 6.2.2.c).",
+                "uuid": "5addc7c1-8dd4-53a8-9d3c-330d3e6640e3"
+              },
+              {
+                "control-id": "_6.2.2.d",
+                "description": "Component capability addressing control _6.2.2.d (For the purpose of point 6.2.1., the relevant entities shall: — 6.2.2.d).",
+                "uuid": "86ac9f1f-0266-5e3c-b1d5-218fc56ea4f9"
+              },
+              {
+                "control-id": "_6.2.2.e",
+                "description": "Component capability addressing control _6.2.2.e (For the purpose of point 6.2.1., the relevant entities shall: — 6.2.2.e).",
+                "uuid": "e5e3a215-e097-5628-8b9e-93194d6fdbb4"
+              },
+              {
+                "control-id": "_6.2.2.f",
+                "description": "Component capability addressing control _6.2.2.f (For the purpose of point 6.2.1., the relevant entities shall: — 6.2.2.f).",
+                "uuid": "1ef8ed83-bf57-59cc-a94b-8bd4ad16476c"
+              },
+              {
+                "control-id": "_6.2.3",
+                "description": "Component capability addressing control _6.2.3 (Secure development life cycle — 6.2.3).",
+                "uuid": "3383c6b2-3430-5db7-a9d5-c6e62065e168"
+              },
+              {
+                "control-id": "_6.2.4",
+                "description": "Component capability addressing control _6.2.4 (Secure development life cycle — 6.2.4).",
+                "uuid": "33b3047f-fed9-527b-afc9-1f17b91ef9da"
+              },
+              {
+                "control-id": "_6.3.1",
+                "description": "Component capability addressing control _6.3.1 (Configuration management — 6.3.1).",
+                "uuid": "73f59927-b4b0-5f77-98c2-6adca1b78741"
+              },
+              {
+                "control-id": "_6.3.2.a",
+                "description": "Component capability addressing control _6.3.2.a (For the purpose of point 6.3.1., the relevant entities shall: — 6.3.2.a).",
+                "uuid": "938e9367-161e-59ec-a341-309ee3b63790"
+              },
+              {
+                "control-id": "_6.3.2.b",
+                "description": "Component capability addressing control _6.3.2.b (For the purpose of point 6.3.1., the relevant entities shall: — 6.3.2.b).",
+                "uuid": "a2f534fa-f01e-5588-994f-8bcc5f5f61fe"
+              },
+              {
+                "control-id": "_6.3.3",
+                "description": "Component capability addressing control _6.3.3 (Configuration management — 6.3.3).",
+                "uuid": "98876494-9737-5000-8332-05ccdfe76ed0"
+              },
+              {
+                "control-id": "_6.4.1",
+                "description": "Component capability addressing control _6.4.1 (Change management, repairs and maintenance — 6.4.1).",
+                "uuid": "414c5147-feda-578e-83e5-36771aa3a63e"
+              },
+              {
+                "control-id": "_6.4.2",
+                "description": "Component capability addressing control _6.4.2 (Change management, repairs and maintenance — 6.4.2).",
+                "uuid": "ed8cfffd-86f0-54ae-8623-ff358e77ac6f"
+              },
+              {
+                "control-id": "_6.4.3",
+                "description": "Component capability addressing control _6.4.3 (Change management, repairs and maintenance — 6.4.3).",
+                "uuid": "3f5d2b73-7012-565f-86f1-2fa4710b4690"
+              },
+              {
+                "control-id": "_6.4.4",
+                "description": "Component capability addressing control _6.4.4 (Change management, repairs and maintenance — 6.4.4).",
+                "uuid": "e9effc3d-c52c-5ac2-9980-24b3519ed2d3"
+              },
+              {
+                "control-id": "_6.5.1",
+                "description": "Component capability addressing control _6.5.1 (Security testing — 6.5.1).",
+                "uuid": "49ad9a8b-2c43-56d1-992e-90b7dc97c758"
+              },
+              {
+                "control-id": "_6.5.2.a",
+                "description": "Component capability addressing control _6.5.2.a (The relevant entities shall: — 6.5.2.a).",
+                "uuid": "a638bfd6-b315-560f-885e-3032778dbb16"
+              },
+              {
+                "control-id": "_6.5.2.b",
+                "description": "Component capability addressing control _6.5.2.b (The relevant entities shall: — 6.5.2.b).",
+                "uuid": "152c2dee-4e83-5bdb-83bc-953d217b17a6"
+              },
+              {
+                "control-id": "_6.5.2.c",
+                "description": "Component capability addressing control _6.5.2.c (The relevant entities shall: — 6.5.2.c).",
+                "uuid": "bef074a2-32fc-5f70-975b-91e0440cde0e"
+              },
+              {
+                "control-id": "_6.5.2.d",
+                "description": "Component capability addressing control _6.5.2.d (The relevant entities shall: — 6.5.2.d).",
+                "uuid": "2b673eb2-ecea-5435-ad36-a233dc5d39e9"
+              },
+              {
+                "control-id": "_6.5.3",
+                "description": "Component capability addressing control _6.5.3 (Security testing — 6.5.3).",
+                "uuid": "260023b7-c45a-5f83-850b-3e38fc7604f0"
+              },
+              {
+                "control-id": "_6.6.1",
+                "description": "Component capability addressing control _6.6.1 (Security patch management — 6.6.1).",
+                "uuid": "0988d797-7ade-5e91-a388-b22bcba3a14f"
+              },
+              {
+                "control-id": "_6.6.1.a",
+                "description": "Component capability addressing control _6.6.1.a (Security patch management — 6.6.1.a).",
+                "uuid": "0006e661-f88d-551e-b694-138cf15bbd0a"
+              },
+              {
+                "control-id": "_6.6.1.b",
+                "description": "Component capability addressing control _6.6.1.b (Security patch management — 6.6.1.b).",
+                "uuid": "0533da9a-db8f-5873-b71d-2eee0e35c199"
+              },
+              {
+                "control-id": "_6.6.1.c",
+                "description": "Component capability addressing control _6.6.1.c (Security patch management — 6.6.1.c).",
+                "uuid": "debb7623-073e-51b3-9b62-a4bfc8872db9"
+              },
+              {
+                "control-id": "_6.6.1.d",
+                "description": "Component capability addressing control _6.6.1.d (Security patch management — 6.6.1.d).",
+                "uuid": "c419f823-a116-5127-bcd6-1b6062e46b5f"
+              },
+              {
+                "control-id": "_6.6.2",
+                "description": "Component capability addressing control _6.6.2 (Security patch management — 6.6.2).",
+                "uuid": "18b84b96-36ce-53e1-bc7f-c33983917ba6"
+              },
+              {
+                "control-id": "_6.7.1",
+                "description": "Component capability addressing control _6.7.1 (Network security — 6.7.1).",
+                "uuid": "a44c185b-62f5-5360-817d-7b513c4cedf8"
+              },
+              {
+                "control-id": "_6.7.2.a",
+                "description": "Component capability addressing control _6.7.2.a (For the purpose of point 6.7.1., the relevant entities shall: — 6.7.2.a).",
+                "uuid": "bc919d9b-2bed-53ec-9839-5619b9fd79d1"
+              },
+              {
+                "control-id": "_6.7.2.b",
+                "description": "Component capability addressing control _6.7.2.b (For the purpose of point 6.7.1., the relevant entities shall: — 6.7.2.b).",
+                "uuid": "feeba0e4-d4cb-5d92-98c2-d36f15c63cb7"
+              },
+              {
+                "control-id": "_6.7.2.c",
+                "description": "Component capability addressing control _6.7.2.c (For the purpose of point 6.7.1., the relevant entities shall: — 6.7.2.c).",
+                "uuid": "7dbefb1e-15e1-5531-8a82-d3b8d186c20c"
+              },
+              {
+                "control-id": "_6.7.2.d",
+                "description": "Component capability addressing control _6.7.2.d (For the purpose of point 6.7.1., the relevant entities shall: — 6.7.2.d).",
+                "uuid": "ff2b3ec9-b31d-51f6-aeca-ac4e8b9ba53b"
+              },
+              {
+                "control-id": "_6.7.2.e",
+                "description": "Component capability addressing control _6.7.2.e (For the purpose of point 6.7.1., the relevant entities shall: — 6.7.2.e).",
+                "uuid": "3718e7ba-ddcf-5234-b4a6-a7115383d10d"
+              },
+              {
+                "control-id": "_6.7.2.f",
+                "description": "Component capability addressing control _6.7.2.f (For the purpose of point 6.7.1., the relevant entities shall: — 6.7.2.f).",
+                "uuid": "66dd85c3-bd2e-5e73-a46c-c43f0cb5cd29"
+              },
+              {
+                "control-id": "_6.7.2.g",
+                "description": "Component capability addressing control _6.7.2.g (For the purpose of point 6.7.1., the relevant entities shall: — 6.7.2.g).",
+                "uuid": "7b170120-9022-5a2d-beba-71cfe6f3c2c4"
+              },
+              {
+                "control-id": "_6.7.2.h",
+                "description": "Component capability addressing control _6.7.2.h (For the purpose of point 6.7.1., the relevant entities shall: — 6.7.2.h).",
+                "uuid": "65378879-71e3-59ee-8369-ce4d4106f2b0"
+              },
+              {
+                "control-id": "_6.7.2.i",
+                "description": "Component capability addressing control _6.7.2.i (For the purpose of point 6.7.1., the relevant entities shall: — 6.7.2.i).",
+                "uuid": "2e8f852d-5bdf-5885-923a-9d50ee61f5a8"
+              },
+              {
+                "control-id": "_6.7.2.j",
+                "description": "Component capability addressing control _6.7.2.j (For the purpose of point 6.7.1., the relevant entities shall: — 6.7.2.j).",
+                "uuid": "b4a78b36-b5ef-5523-99d2-529d32926d39"
+              },
+              {
+                "control-id": "_6.7.2.k",
+                "description": "Component capability addressing control _6.7.2.k (For the purpose of point 6.7.1., the relevant entities shall: — 6.7.2.k).",
+                "uuid": "4cec47b0-90f3-53e1-a1a5-fbd17dbbc00d"
+              },
+              {
+                "control-id": "_6.7.2.l",
+                "description": "Component capability addressing control _6.7.2.l (For the purpose of point 6.7.1., the relevant entities shall: — 6.7.2.l).",
+                "uuid": "8140ceb4-d423-5970-b54c-be98ca0e7098"
+              },
+              {
+                "control-id": "_6.7.3",
+                "description": "Component capability addressing control _6.7.3 (Network security — 6.7.3).",
+                "uuid": "aebe9f0c-1344-5252-86fd-7435efb451cd"
+              },
+              {
+                "control-id": "_6.8.1",
+                "description": "Component capability addressing control _6.8.1 (Network segmentation — 6.8.1).",
+                "uuid": "03bcde11-1153-5121-a007-5ce466eddead"
+              },
+              {
+                "control-id": "_6.8.2.a",
+                "description": "Component capability addressing control _6.8.2.a (For that purpose, the relevant entities shall: — 6.8.2.a).",
+                "uuid": "0a3fe963-0d97-5532-a66c-ec57b15e2815"
+              },
+              {
+                "control-id": "_6.8.2.b",
+                "description": "Component capability addressing control _6.8.2.b (For that purpose, the relevant entities shall: — 6.8.2.b).",
+                "uuid": "19c273cf-2ac1-533a-8e7a-b34d8d9ca102"
+              },
+              {
+                "control-id": "_6.8.2.c",
+                "description": "Component capability addressing control _6.8.2.c (For that purpose, the relevant entities shall: — 6.8.2.c).",
+                "uuid": "1d8dcc84-b260-5834-8cf6-41e9f598479d"
+              },
+              {
+                "control-id": "_6.8.2.d",
+                "description": "Component capability addressing control _6.8.2.d (For that purpose, the relevant entities shall: — 6.8.2.d).",
+                "uuid": "61ee4fd4-dd9f-5648-901b-75b3d70d9c68"
+              },
+              {
+                "control-id": "_6.8.2.e",
+                "description": "Component capability addressing control _6.8.2.e (For that purpose, the relevant entities shall: — 6.8.2.e).",
+                "uuid": "963fb42d-2c17-5b18-ab54-94a048a24b37"
+              },
+              {
+                "control-id": "_6.8.2.f",
+                "description": "Component capability addressing control _6.8.2.f (For that purpose, the relevant entities shall: — 6.8.2.f).",
+                "uuid": "6e327bb1-88a4-5d7d-b54b-3341177d3e6c"
+              },
+              {
+                "control-id": "_6.8.2.g",
+                "description": "Component capability addressing control _6.8.2.g (For that purpose, the relevant entities shall: — 6.8.2.g).",
+                "uuid": "0c7ed369-681d-57b8-93ad-26bf9b80a4d1"
+              },
+              {
+                "control-id": "_6.8.2.h",
+                "description": "Component capability addressing control _6.8.2.h (For that purpose, the relevant entities shall: — 6.8.2.h).",
+                "uuid": "67a7aebe-11f7-5916-9652-06f7e9650eb9"
+              },
+              {
+                "control-id": "_6.8.3",
+                "description": "Component capability addressing control _6.8.3 (Network segmentation — 6.8.3).",
+                "uuid": "9b94658d-2742-52d8-8fd9-d88408bf1bce"
+              },
+              {
+                "control-id": "_6.9.1",
+                "description": "Component capability addressing control _6.9.1 (Protection against malicious and unauthorised software — 6.9.1).",
+                "uuid": "b9398ff7-b6ed-51f9-b93a-3c1dc9a5ce58"
+              },
+              {
+                "control-id": "_6.9.2",
+                "description": "Component capability addressing control _6.9.2 (Protection against malicious and unauthorised software — 6.9.2).",
+                "uuid": "4f274db2-2e19-5d62-9ca9-f93e65dbc5cb"
+              },
+              {
+                "control-id": "_7.1",
+                "description": "Component capability addressing control _7.1 (POLICIES AND PROCEDURES TO ASSESS THE EFFECTIVENESS OF CYBERSECURITY RISK-MANAGEMENT MEASURES (ARTICLE 21(2), POINT (F), OF DIRECTIVE (EU) 2022/2555) — 7.1).",
+                "uuid": "191724a4-8bc4-5b31-85ed-9d00a77e9d39"
+              },
+              {
+                "control-id": "_7.2",
+                "description": "Component capability addressing control _7.2 (POLICIES AND PROCEDURES TO ASSESS THE EFFECTIVENESS OF CYBERSECURITY RISK-MANAGEMENT MEASURES (ARTICLE 21(2), POINT (F), OF DIRECTIVE (EU) 2022/2555) — 7.2).",
+                "uuid": "d32c20aa-ee65-5f77-b946-f23e101f7c49"
+              },
+              {
+                "control-id": "_7.2.a",
+                "description": "Component capability addressing control _7.2.a (POLICIES AND PROCEDURES TO ASSESS THE EFFECTIVENESS OF CYBERSECURITY RISK-MANAGEMENT MEASURES (ARTICLE 21(2), POINT (F), OF DIRECTIVE (EU) 2022/2555) — 7.2.a).",
+                "uuid": "ea1756d1-7205-57a8-afad-ec9e00b68434"
+              },
+              {
+                "control-id": "_7.2.b",
+                "description": "Component capability addressing control _7.2.b (POLICIES AND PROCEDURES TO ASSESS THE EFFECTIVENESS OF CYBERSECURITY RISK-MANAGEMENT MEASURES (ARTICLE 21(2), POINT (F), OF DIRECTIVE (EU) 2022/2555) — 7.2.b).",
+                "uuid": "0581a16f-c3cc-5412-b448-47193d3264ce"
+              },
+              {
+                "control-id": "_7.2.c",
+                "description": "Component capability addressing control _7.2.c (POLICIES AND PROCEDURES TO ASSESS THE EFFECTIVENESS OF CYBERSECURITY RISK-MANAGEMENT MEASURES (ARTICLE 21(2), POINT (F), OF DIRECTIVE (EU) 2022/2555) — 7.2.c).",
+                "uuid": "fe88fe2e-b0cd-5a6c-85d7-f0e35a0f2835"
+              },
+              {
+                "control-id": "_7.2.d",
+                "description": "Component capability addressing control _7.2.d (POLICIES AND PROCEDURES TO ASSESS THE EFFECTIVENESS OF CYBERSECURITY RISK-MANAGEMENT MEASURES (ARTICLE 21(2), POINT (F), OF DIRECTIVE (EU) 2022/2555) — 7.2.d).",
+                "uuid": "2dbe4f2c-45d6-5c66-9dcd-5fd76ed6bd90"
+              },
+              {
+                "control-id": "_7.2.e",
+                "description": "Component capability addressing control _7.2.e (POLICIES AND PROCEDURES TO ASSESS THE EFFECTIVENESS OF CYBERSECURITY RISK-MANAGEMENT MEASURES (ARTICLE 21(2), POINT (F), OF DIRECTIVE (EU) 2022/2555) — 7.2.e).",
+                "uuid": "da0d7f77-d013-598c-a365-5370922a4ab1"
+              },
+              {
+                "control-id": "_7.2.f",
+                "description": "Component capability addressing control _7.2.f (POLICIES AND PROCEDURES TO ASSESS THE EFFECTIVENESS OF CYBERSECURITY RISK-MANAGEMENT MEASURES (ARTICLE 21(2), POINT (F), OF DIRECTIVE (EU) 2022/2555) — 7.2.f).",
+                "uuid": "a65c3e86-3ddf-5905-9b6b-f7a5185cd1e9"
+              },
+              {
+                "control-id": "_7.3",
+                "description": "Component capability addressing control _7.3 (POLICIES AND PROCEDURES TO ASSESS THE EFFECTIVENESS OF CYBERSECURITY RISK-MANAGEMENT MEASURES (ARTICLE 21(2), POINT (F), OF DIRECTIVE (EU) 2022/2555) — 7.3).",
+                "uuid": "66f8568f-ca83-5eaf-87af-c5ad72ef3bb7"
+              },
+              {
+                "control-id": "_8.1.1",
+                "description": "Component capability addressing control _8.1.1 (Awareness raising and basic cyber hygiene practices — 8.1.1).",
+                "uuid": "665c4c72-b58f-584f-8080-2f9da2b2986c"
+              },
+              {
+                "control-id": "_8.1.2",
+                "description": "Component capability addressing control _8.1.2 (Awareness raising and basic cyber hygiene practices — 8.1.2).",
+                "uuid": "e40b0cf6-0f37-55b7-9658-8ae242b6aa95"
+              },
+              {
+                "control-id": "_8.1.2.a",
+                "description": "Component capability addressing control _8.1.2.a (Awareness raising and basic cyber hygiene practices — 8.1.2.a).",
+                "uuid": "df0a8e87-4e22-5630-920a-36e925e08b93"
+              },
+              {
+                "control-id": "_8.1.2.b",
+                "description": "Component capability addressing control _8.1.2.b (Awareness raising and basic cyber hygiene practices — 8.1.2.b).",
+                "uuid": "0c8e5cc1-e044-536d-ae28-08b85d692868"
+              },
+              {
+                "control-id": "_8.1.2.c",
+                "description": "Component capability addressing control _8.1.2.c (Awareness raising and basic cyber hygiene practices — 8.1.2.c).",
+                "uuid": "5bc0322c-7e3e-5f86-9dad-6f213f990b27"
+              },
+              {
+                "control-id": "_8.1.3",
+                "description": "Component capability addressing control _8.1.3 (Awareness raising and basic cyber hygiene practices — 8.1.3).",
+                "uuid": "7e81cf1f-486f-5f9e-8c62-6d6767f0bc5e"
+              },
+              {
+                "control-id": "_8.2.1",
+                "description": "Component capability addressing control _8.2.1 (Security training — 8.2.1).",
+                "uuid": "f6a4f7cd-22d8-55f4-a5b6-c87e66d93aad"
+              },
+              {
+                "control-id": "_8.2.2",
+                "description": "Component capability addressing control _8.2.2 (Security training — 8.2.2).",
+                "uuid": "b7679734-cf31-5403-8d9e-31cad42c47d7"
+              },
+              {
+                "control-id": "_8.2.3",
+                "description": "Component capability addressing control _8.2.3 (Security training — 8.2.3).",
+                "uuid": "0096af50-a6dc-58e6-aded-765b87745cd0"
+              },
+              {
+                "control-id": "_8.2.3.a",
+                "description": "Component capability addressing control _8.2.3.a (Security training — 8.2.3.a).",
+                "uuid": "5a8485e0-6bc0-510b-97ac-e5a6f38543b1"
+              },
+              {
+                "control-id": "_8.2.3.b",
+                "description": "Component capability addressing control _8.2.3.b (Security training — 8.2.3.b).",
+                "uuid": "c259e3e5-3f12-5b6d-8f62-c7cca0964d31"
+              },
+              {
+                "control-id": "_8.2.3.c",
+                "description": "Component capability addressing control _8.2.3.c (Security training — 8.2.3.c).",
+                "uuid": "bc62cb9d-b941-525e-b579-8c388b37b2ad"
+              },
+              {
+                "control-id": "_8.2.4",
+                "description": "Component capability addressing control _8.2.4 (Security training — 8.2.4).",
+                "uuid": "6d97d34a-5fd1-53fa-908c-bc8d849b7191"
+              },
+              {
+                "control-id": "_8.2.5",
+                "description": "Component capability addressing control _8.2.5 (Security training — 8.2.5).",
+                "uuid": "113beab3-4001-5274-a01b-08604be62b2a"
+              },
+              {
+                "control-id": "_9.1",
+                "description": "Component capability addressing control _9.1 (CRYPTOGRAPHY (ARTICLE 21(2), POINT (H), OF DIRECTIVE (EU) 2022/2555) — 9.1).",
+                "uuid": "316fd59c-8bd1-5f3c-b9ff-3cff1fab4f7b"
+              },
+              {
+                "control-id": "_9.2.a",
+                "description": "Component capability addressing control _9.2.a (The policy and procedures referred to in point 9.1 shall establish: — 9.2.a).",
+                "uuid": "01f6d2fa-7990-5948-9d7b-774b66669d91"
+              },
+              {
+                "control-id": "_9.2.b",
+                "description": "Component capability addressing control _9.2.b (The policy and procedures referred to in point 9.1 shall establish: — 9.2.b).",
+                "uuid": "cfd878c6-22e2-5b8c-a130-daa75184f114"
+              },
+              {
+                "control-id": "_9.2.c",
+                "description": "Component capability addressing control _9.2.c (The policy and procedures referred to in point 9.1 shall establish: — 9.2.c).",
+                "uuid": "1d55dfc9-6c03-5cf1-a3f1-4650f229481f"
+              },
+              {
+                "control-id": "_9.2.c.i",
+                "description": "Component capability addressing control _9.2.c.i (the relevant entities’ approach to key management, including, where appropriate, methods for the following: — 9.2.c.i).",
+                "uuid": "16e84deb-5335-585e-9186-c19c65197c25"
+              },
+              {
+                "control-id": "_9.2.c.ii",
+                "description": "Component capability addressing control _9.2.c.ii (the relevant entities’ approach to key management, including, where appropriate, methods for the following: — 9.2.c.ii).",
+                "uuid": "d704058d-a645-5f02-9dfe-5f72d4b7292f"
+              },
+              {
+                "control-id": "_9.2.c.iii",
+                "description": "Component capability addressing control _9.2.c.iii (the relevant entities’ approach to key management, including, where appropriate, methods for the following: — 9.2.c.iii).",
+                "uuid": "a71a6982-c918-5497-8622-81545162b79e"
+              },
+              {
+                "control-id": "_9.2.c.iv",
+                "description": "Component capability addressing control _9.2.c.iv (the relevant entities’ approach to key management, including, where appropriate, methods for the following: — 9.2.c.iv).",
+                "uuid": "b9e4cdf8-7d21-5fa4-89fa-d62ea4775c42"
+              },
+              {
+                "control-id": "_9.2.c.ix",
+                "description": "Component capability addressing control _9.2.c.ix (the relevant entities’ approach to key management, including, where appropriate, methods for the following: — 9.2.c.ix).",
+                "uuid": "511dc502-6b00-5b12-ac27-fb785aeb8f92"
+              },
+              {
+                "control-id": "_9.2.c.v",
+                "description": "Component capability addressing control _9.2.c.v (the relevant entities’ approach to key management, including, where appropriate, methods for the following: — 9.2.c.v).",
+                "uuid": "3c7c28ab-a665-59e5-9d77-9ec2c2fccc20"
+              },
+              {
+                "control-id": "_9.2.c.vi",
+                "description": "Component capability addressing control _9.2.c.vi (the relevant entities’ approach to key management, including, where appropriate, methods for the following: — 9.2.c.vi).",
+                "uuid": "2a66b1f7-3469-56d8-b394-09d5385dc82e"
+              },
+              {
+                "control-id": "_9.2.c.vii",
+                "description": "Component capability addressing control _9.2.c.vii (the relevant entities’ approach to key management, including, where appropriate, methods for the following: — 9.2.c.vii).",
+                "uuid": "7e90f7b2-8399-5ef6-a9fa-5e3ae1385726"
+              },
+              {
+                "control-id": "_9.2.c.viii",
+                "description": "Component capability addressing control _9.2.c.viii (the relevant entities’ approach to key management, including, where appropriate, methods for the following: — 9.2.c.viii).",
+                "uuid": "61e4a5a2-ec94-577e-b033-ea188883f264"
+              },
+              {
+                "control-id": "_9.2.c.x",
+                "description": "Component capability addressing control _9.2.c.x (the relevant entities’ approach to key management, including, where appropriate, methods for the following: — 9.2.c.x).",
+                "uuid": "b74a280d-d272-5723-9654-33911b61ba89"
+              },
+              {
+                "control-id": "_9.2.c.xi",
+                "description": "Component capability addressing control _9.2.c.xi (the relevant entities’ approach to key management, including, where appropriate, methods for the following: — 9.2.c.xi).",
+                "uuid": "879501ab-63e9-55e7-8754-5e36b7f4a1a2"
+              },
+              {
+                "control-id": "_9.2.c.xii",
+                "description": "Component capability addressing control _9.2.c.xii (the relevant entities’ approach to key management, including, where appropriate, methods for the following: — 9.2.c.xii).",
+                "uuid": "db459826-b24b-5fac-8411-924fa150b3fb"
+              },
+              {
+                "control-id": "_9.3",
+                "description": "Component capability addressing control _9.3 (CRYPTOGRAPHY (ARTICLE 21(2), POINT (H), OF DIRECTIVE (EU) 2022/2555) — 9.3).",
+                "uuid": "ed5de721-7901-5a55-804f-8578f8c4ac5e"
+              }
+            ],
+            "source": "./catalog.json",
+            "uuid": "af9c93e2-7b92-599d-b798-96e56731c414"
+          }
+        ],
+        "description": "Enterprise technical and operational capabilities implementing controls for NIS2 - Annex to the Commission Implementing Regulation 2024/2690 with Technical Implementation Guidance by ENISA.",
+        "title": "NIS2 - Annex to the Commission Implementing Regulation 2024/2690 with Technical Implementation Guidance by ENISA Platform Component",
+        "type": "software",
+        "uuid": "4e8dbf59-6f8e-5efc-8a70-3742b433e73c"
+      }
+    ],
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:11Z",
+      "oscal-version": "1.2.3",
+      "title": "NIS2 - Annex to the Commission Implementing Regulation 2024/2690 with Technical Implementation Guidance by ENISA Component Definition Template",
+      "version": "13"
+    },
+    "uuid": "36ab40fd-1e87-5fa2-8a2a-afa16562c5d2"
+  }
+}

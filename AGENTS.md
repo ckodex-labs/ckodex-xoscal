@@ -101,23 +101,32 @@ The `server/internal/frameworks` package provides a jurisdiction-agnostic framew
 - `frameworks.Registry`: Thread-safe registry supporting canonical registration, alias resolution, and jurisdiction filtering (`FindByJurisdiction`).
 - `frameworks.ProjectAllLayers`: Projects all 7 OSCAL 1.2.3 layers (Catalog, Profile, Component Definition, System Security Plan, Assessment Plan, Assessment Results, POA&M) with deterministic RFC 4122 v5 UUID cross-layer linkages and full control/parameter implementation mappings.
 - `frameworks.Export`: Exports all 7 schema-validated OSCAL JSON layers with cryptographic SHA-256 sidecars.
-- `frameworks.VerifyArtifactParity`: Verbatim parity verification engine comparing framework models against OSCAL artifacts across all 7 model types.
+- `frameworks.VerifyArtifactParity`: Verbatim parity verification engine (`xoscal verify-parity`) comparing framework models against OSCAL artifacts across all 7 model types with hard anti-invariant checks (placeholder titles, empty statements, unextracted ODPs, missing sovereign tags).
 - `frameworks.SeedKnowledgeGraph`: Ingests framework requirements into SQLite Knowledge Graph store.
+- `frameworks/manifest_provider.go`: Registers all 31 non-Canadian sovereign & international frameworks from `data/frameworks/manifest.yaml` (USA: 7, UK: 1, France: 6, Germany: 13, EU: 4; 14,058 controls total) alongside the 5 Canadian frameworks (2,179 controls total), for 36 registered frameworks and 16,237 controls across 252 7-layer OSCAL 1.2.3 artifacts.
+
+### Verbatim Parity & Framework Export CLI
+
+```sh
+go run -buildvcs=false ./server/cmd/xoscal-export-frameworks -manifest data/frameworks/manifest.yaml -out data/frameworks
+go run -buildvcs=false ./server/cmd/xoscal frameworks export -out data/frameworks
+go run -buildvcs=false ./server/cmd/xoscal verify-parity -dir data/frameworks -strict
+```
 
 ### Canadian Sovereign Frameworks Provider
 
 `server/internal/canadianframeworks` registers the 5 Canadian national standards:
-1. `cccs-itsp-10-033`: CCCS ITSP.10.033 (Effective March 31, 2026, superseding ITSG-33 Annex 3A).
-2. `cccs-itsg-33`: CCCS ITSG-33 Annex 3A Security Control Catalogue.
-3. `cybersecure-canada`: ISED CyberSecure Canada baseline controls.
-4. `cccs-itsp-10-171`: CCCS ITSP.10.171 Security Requirements for Non-Federal Systems.
-5. `cccs-medium-cloud-pbmm`: TBS/CCCS Protected B, Medium Confidentiality, Medium Availability Cloud Profile.
+1. `cccs-itsp-10-033`: CCCS ITSP.10.033 (Effective March 31, 2026, superseding ITSG-33 Annex 3A; 1,248 controls + 384-control Medium Impact profile).
+2. `cccs-itsg-33`: CCCS ITSG-33 Annex 3A Security Control Catalogue (234 active base controls across 18 families).
+3. `cybersecure-canada`: ISED CyberSecure Canada / CAN/DGSI 104 baseline controls (46 controls across 14 families).
+4. `cccs-itsp-10-171`: CCCS ITSP.10.171 Security Requirements for Non-Federal Systems (267 assessable controls across 17 families).
+5. `cccs-medium-cloud-pbmm`: TBS/CCCS Protected B, Medium Integrity, Medium Availability Cloud Profile (384 selected controls and enhancements).
 
 ### ITSP.10.033 Generation Pipeline
 
 The generation pipeline (`scripts/generate_itsp10033_oscal.py`) parses the official Canadian Centre for Cyber Security PDF (`itsp.10.033-2026-eng.pdf`) and executes the 7 Subagent Strategies:
 - Extracts all 20 families, 330 base controls, and 918 enhancements (1,248 total controls).
-- Resolves 1,272 Organization-Defined Parameters (ODP) using iterative balanced-bracket substitution with `{{ insert: param, ... }}` interpolation.
+- Resolves 1,273 Organization-Defined Parameters (ODP) using iterative balanced-bracket substitution (plus unclosed EOL ODP recovery) with `{{ insert: param, ... }}` interpolation.
 - Decomposes control and enhancement statements into structured AST items (`A.`, `B.`, `1.`, `a.`, and Canadian `AA.`, `BB.`).
-- Extracts `guidance` (Discussion) and Canadian-specific `gc-guidance` (`GC discussion`) parts tagged `jurisdiction: "ca"` and `sovereign-guidance: "true"`.
-- Validates the resulting 3.39 MB catalog against the embedded NIST OSCAL 1.2.3 JSON schema (`xoscal-validate-schema`) with 0 errors.
+- Extracts `guidance` (Discussion) and Canadian-specific `gc-guidance` (`GC discussion`) parts bounded strictly before `Enhancements:` and `References:`, tagged `jurisdiction: "ca"` and `sovereign-guidance: "true"`.
+- Validates the resulting 3.44 MB catalog against the embedded NIST OSCAL 1.2.3 JSON schema (`xoscal-validate-schema`) with 0 errors.

@@ -19,6 +19,8 @@ func (g *Generator) GeneratePOAM(ctx context.Context, snapshotName string, frame
 
 	var risks []*poamv1.Risk
 	var poamItems []*poamv1.PoamItem
+	var roles []*commonv1.Role
+	roleSeen := make(map[string]bool)
 	for _, e := range entities {
 		if e.Type != "reg:Requirement" {
 			continue
@@ -27,18 +29,26 @@ func (g *Generator) GeneratePOAM(ctx context.Context, snapshotName string, frame
 		if err := json.Unmarshal(e.Payload, &req); err != nil {
 			continue
 		}
-		if req.Framework != framework {
+		if !strings.EqualFold(req.Framework, framework) || !req.Assessable {
 			continue
+		}
+		title := singleLine(req.Title)
+		if title == "" {
+			title = singleLine(req.Citation)
+		}
+		desc := req.Text
+		if desc == "" {
+			desc = fmt.Sprintf("Action item for control %s (%s)", req.Citation, title)
 		}
 		risk := &poamv1.Risk{
 			Uuid:        newUUID(uuidNamespace, fmt.Sprintf("risk-%s", req.Citation)),
-			Title:       &commonv1.MarkupLine{Value: fmt.Sprintf("Risk: %s", req.Title)},
-			Description: &commonv1.MarkupMultiline{Value: req.Text},
+			Title:       &commonv1.MarkupLine{Value: fmt.Sprintf("Risk: %s", title)},
+			Description: &commonv1.MarkupMultiline{Value: desc},
 			Status:      &poamv1.RiskStatus{State: "open"},
 		}
-		// Build the POAM item (OSCAL poam-item: title, description, refs).
+		// Build the POAM item with a distinct deterministic UUID.
 		poamItem := &poamv1.PoamItem{
-			Uuid:        risk.Uuid,
+			Uuid:        newUUID(uuidNamespace, fmt.Sprintf("poam-item-%s", req.Citation)),
 			Title:       risk.Title,
 			Description: risk.Description,
 		}
@@ -46,18 +56,28 @@ func (g *Generator) GeneratePOAM(ctx context.Context, snapshotName string, frame
 		if strings.ToLower(req.RiskLevel) == "high" {
 			resp := &poamv1.Response{
 				Uuid:        newUUID(uuidNamespace, fmt.Sprintf("remediate-%s", req.Citation)),
-				Title:       &commonv1.MarkupLine{Value: fmt.Sprintf("Remediate %s", req.Title)},
-				Description: &commonv1.MarkupMultiline{Value: req.Text},
+				Title:       &commonv1.MarkupLine{Value: fmt.Sprintf("Remediate %s", title)},
+				Description: &commonv1.MarkupMultiline{Value: desc},
 				Status:      &poamv1.ResponseStatus{State: "open"},
 			}
 			if req.Role != "" {
-				resp.ResponsibleRoles = append(resp.ResponsibleRoles, &poamv1.ResponsibleRole{
-					RoleId: &commonv1.Token{Value: req.Role},
-				})
+				roleTok := sanitizeToken(req.Role)
+				if roleTok != "" {
+					if !roleSeen[roleTok] {
+						roleSeen[roleTok] = true
+						roles = append(roles, &commonv1.Role{
+							Id:    &commonv1.Token{Value: roleTok},
+							Title: singleLine(req.Role),
+						})
+					}
+					resp.ResponsibleRoles = append(resp.ResponsibleRoles, &poamv1.ResponsibleRole{
+						RoleId: &commonv1.Token{Value: roleTok},
+					})
+				}
 			}
 			resp.RelatedTasks = append(resp.RelatedTasks, &poamv1.RelatedTask{
 				TaskUuid: newUUID(uuidNamespace, fmt.Sprintf("task-%s", req.Citation)),
-				Title:    &commonv1.MarkupLine{Value: fmt.Sprintf("Implement controls for %s", req.Title)},
+				Title:    &commonv1.MarkupLine{Value: fmt.Sprintf("Implement controls for %s", title)},
 			})
 			risk.Remediations = append(risk.Remediations, resp)
 		}
@@ -70,6 +90,7 @@ func (g *Generator) GeneratePOAM(ctx context.Context, snapshotName string, frame
 		Metadata: &commonv1.Metadata{
 			Title:   fmt.Sprintf("%s Plan of Action and Milestones", framework),
 			Version: snapshotName,
+			Roles:   roles,
 		},
 		ImportSsp: &poamv1.ImportSsp{
 			Href: &commonv1.URIReference{Value: fmt.Sprintf("ssp-%s-%s", framework, snapshotName)},

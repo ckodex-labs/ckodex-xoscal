@@ -3,6 +3,7 @@ package ingestion
 import (
 	"encoding/json"
 	"fmt"
+	"strings"
 
 	"github.com/mchorfa/xoscal/server/internal/kg"
 )
@@ -19,6 +20,13 @@ func NewNormalizer(framework string) *Normalizer {
 func (n *Normalizer) Normalize(reqs []Requirement) ([]*kg.Entity, error) {
 	var entities []*kg.Entity
 	for _, req := range reqs {
+		var kgParams []kg.ParamDef
+		for _, p := range req.Params {
+			kgParams = append(kgParams, kg.ParamDef{
+				ID:    p.ID,
+				Label: p.Label,
+			})
+		}
 		payload := kg.Requirement{
 			URN:                  n.toURN(req),
 			Type:                 "reg:Requirement",
@@ -29,10 +37,12 @@ func (n *Normalizer) Normalize(reqs []Requirement) ([]*kg.Entity, error) {
 			Lifecycle:            req.Lifecycle,
 			Text:                 req.Text,
 			Title:                req.Title,
+			Guidance:             req.Guidance,
+			Params:               kgParams,
 			Section:              req.Section,
 			Subsection:           req.Subsection,
 			Depth:                req.Depth,
-			ParentURN:            req.ParentURN,
+			ParentURN:            n.toParentURN(req.ParentURN),
 			Assessable:           req.Assessable,
 			ImplementationGroups: req.ImplementationGroups,
 			NodeRefID:            req.NodeRefID,
@@ -52,11 +62,26 @@ func (n *Normalizer) Normalize(reqs []Requirement) ([]*kg.Entity, error) {
 }
 
 func (n *Normalizer) toURN(req Requirement) string {
-	if req.NodeRefID != "" {
-		return fmt.Sprintf("urn:%s:req:%s", n.Framework, req.NodeRefID)
-	}
 	if req.ID != "" {
 		return fmt.Sprintf("urn:%s:req:%s", n.Framework, req.ID)
 	}
+	if req.NodeRefID != "" {
+		return fmt.Sprintf("urn:%s:req:%s", n.Framework, req.NodeRefID)
+	}
 	return fmt.Sprintf("urn:%s:req:%s:%s", n.Framework, req.Section, req.Subsection)
+}
+
+func (n *Normalizer) toParentURN(parentURN string) string {
+	if parentURN == "" {
+		return ""
+	}
+	prefix := fmt.Sprintf("urn:%s:req:", n.Framework)
+	if strings.HasPrefix(parentURN, prefix) {
+		return parentURN
+	}
+	norm := normalizeURN(parentURN)
+	if norm == "" {
+		return ""
+	}
+	return prefix + norm
 }

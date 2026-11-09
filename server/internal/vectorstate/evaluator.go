@@ -15,7 +15,8 @@ import (
 // EvaluateArtifact inspects an OSCAL JSON artifact, validates its schema,
 // checks evidence integrity, and computes its Vector State.
 func EvaluateArtifact(artifactPath, evidenceDir string) (result *VectorState, resultErr error) {
-	data, err := os.ReadFile(artifactPath)
+	// #nosec G304 -- artifactPath is an explicit artifact path supplied by the invoking CLI operator.
+	data, err := os.ReadFile(filepath.Clean(artifactPath))
 	if err != nil {
 		return nil, fmt.Errorf("read artifact: %w", err)
 	}

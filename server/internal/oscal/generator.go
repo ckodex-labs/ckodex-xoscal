@@ -42,6 +42,9 @@ func sanitizeToken(s string) string {
 			}
 			b.WriteRune(r)
 		case r == '.' || r == '-' || r == '_':
+			if i == 0 && (r == '.' || r == '-') {
+				b.WriteByte('_')
+			}
 			b.WriteRune(r)
 		default:
 			// Replace spaces, parentheses, plus signs, etc. with underscore.
@@ -49,11 +52,10 @@ func sanitizeToken(s string) string {
 		}
 	}
 	result := b.String()
-	// Ensure it doesn't start with a digit (already handled above, but
-	// double-check in case the first char was replaced).
+	// Ensure it doesn't start with a digit, dot, or hyphen.
 	if len(result) > 0 {
 		first := result[0]
-		if first >= '0' && first <= '9' {
+		if (first >= '0' && first <= '9') || first == '.' || first == '-' {
 			result = "_" + result
 		}
 	}

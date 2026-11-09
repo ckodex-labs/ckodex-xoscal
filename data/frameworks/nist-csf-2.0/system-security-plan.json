@@ -1,0 +1,1668 @@
+{
+  "system-security-plan": {
+    "control-implementation": {
+      "description": "Control implementations for NIST CSF version 2.0.",
+      "implemented-requirements": [
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control de.ae-02 (Adverse Event Analysis — DE.AE-02) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "cbeba297-f6ce-5144-90df-68e8888ba398"
+            }
+          ],
+          "control-id": "de.ae-02",
+          "remarks": "Control de.ae-02 (Adverse Event Analysis — DE.AE-02) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "a9d7e089-6c2e-5dc7-ae2f-64eea0c5eed6"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control de.ae-03 (Adverse Event Analysis — DE.AE-03) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "a3a626a1-f0ed-52bd-9720-70d7e1aa80bc"
+            }
+          ],
+          "control-id": "de.ae-03",
+          "remarks": "Control de.ae-03 (Adverse Event Analysis — DE.AE-03) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "a254797c-2fb7-56e7-b789-9a791321bff2"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control de.ae-04 (Adverse Event Analysis — DE.AE-04) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "7f2eda13-4d8f-5684-8ef1-051c42a08ac0"
+            }
+          ],
+          "control-id": "de.ae-04",
+          "remarks": "Control de.ae-04 (Adverse Event Analysis — DE.AE-04) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "7171de29-d099-51eb-881d-14bae27cfe55"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control de.ae-06 (Adverse Event Analysis — DE.AE-06) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "08381027-2bd9-58ea-b209-c571d2ccf2e1"
+            }
+          ],
+          "control-id": "de.ae-06",
+          "remarks": "Control de.ae-06 (Adverse Event Analysis — DE.AE-06) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "144e6f75-2e61-5541-9724-f9604ccb211f"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control de.ae-07 (Adverse Event Analysis — DE.AE-07) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "b6d317e3-f57a-5d64-b865-b994091994dc"
+            }
+          ],
+          "control-id": "de.ae-07",
+          "remarks": "Control de.ae-07 (Adverse Event Analysis — DE.AE-07) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "579be2b9-3dd5-5783-9a9f-a3cd24ea416c"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control de.ae-08 (Adverse Event Analysis — DE.AE-08) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "49d840d5-2b86-5d0d-92a1-39a8242300d8"
+            }
+          ],
+          "control-id": "de.ae-08",
+          "remarks": "Control de.ae-08 (Adverse Event Analysis — DE.AE-08) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "c965964f-98e8-53ba-b6b2-47ccce6cd7db"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control de.cm-01 (Continuous Monitoring — DE.CM-01) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "07cb393c-52a1-5d3e-ab24-bbcd53e4b648"
+            }
+          ],
+          "control-id": "de.cm-01",
+          "remarks": "Control de.cm-01 (Continuous Monitoring — DE.CM-01) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "4d547d8b-59ba-5237-9cfc-67c423fe77d2"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control de.cm-02 (Continuous Monitoring — DE.CM-02) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "180a8815-4d25-5a50-9353-62a771ce209d"
+            }
+          ],
+          "control-id": "de.cm-02",
+          "remarks": "Control de.cm-02 (Continuous Monitoring — DE.CM-02) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "199f07ce-03b9-5ffb-825b-f36afc8ad5bd"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control de.cm-03 (Continuous Monitoring — DE.CM-03) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "da755189-70d5-5887-b204-83d71019aec2"
+            }
+          ],
+          "control-id": "de.cm-03",
+          "remarks": "Control de.cm-03 (Continuous Monitoring — DE.CM-03) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "7ed6accb-cf3f-5073-b7c5-2d66d41edf44"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control de.cm-06 (Continuous Monitoring — DE.CM-06) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "30d95e5a-91f6-5fdc-9a56-1f0efbbc2cf4"
+            }
+          ],
+          "control-id": "de.cm-06",
+          "remarks": "Control de.cm-06 (Continuous Monitoring — DE.CM-06) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "4dde42a9-5d5a-50dc-977e-4ee57fe36be4"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control de.cm-09 (Continuous Monitoring — DE.CM-09) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "04d1a1cd-6d8f-534f-af89-43a7af303237"
+            }
+          ],
+          "control-id": "de.cm-09",
+          "remarks": "Control de.cm-09 (Continuous Monitoring — DE.CM-09) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "41509388-a248-5920-9bcb-e04c72bc671d"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control gv.oc-01 (Organizational Context — GV.OC-01) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "5bc81349-d420-5563-b0e5-e0aea2feaea0"
+            }
+          ],
+          "control-id": "gv.oc-01",
+          "remarks": "Control gv.oc-01 (Organizational Context — GV.OC-01) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f5f33ba9-96b2-5c9a-b7c6-bf119268dfee"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control gv.oc-02 (Organizational Context — GV.OC-02) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "2ec2705c-f014-527c-9d49-bddfee1c3689"
+            }
+          ],
+          "control-id": "gv.oc-02",
+          "remarks": "Control gv.oc-02 (Organizational Context — GV.OC-02) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "a48ccfd4-fef6-5afb-8eb8-371e581b66e9"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control gv.oc-03 (Organizational Context — GV.OC-03) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "5229854d-c0aa-54af-a4bb-4ef1f4c4b81f"
+            }
+          ],
+          "control-id": "gv.oc-03",
+          "remarks": "Control gv.oc-03 (Organizational Context — GV.OC-03) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "fdbbe543-0526-56bc-9ed7-73f6ba8a5fdb"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control gv.oc-04 (Organizational Context — GV.OC-04) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "d57e046c-ee18-5e97-b7af-5133a331c133"
+            }
+          ],
+          "control-id": "gv.oc-04",
+          "remarks": "Control gv.oc-04 (Organizational Context — GV.OC-04) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "c0330c7e-80ce-57be-a127-e509be0edcc2"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control gv.oc-05 (Organizational Context — GV.OC-05) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "725748dc-a37e-5645-9db4-9d8a63a20265"
+            }
+          ],
+          "control-id": "gv.oc-05",
+          "remarks": "Control gv.oc-05 (Organizational Context — GV.OC-05) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "86babc03-c806-5548-b5b0-bc13463f1424"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control gv.ov-01 (Oversight — GV.OV-01) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "772c6cf5-7aa6-50da-af3e-12f80850bce4"
+            }
+          ],
+          "control-id": "gv.ov-01",
+          "remarks": "Control gv.ov-01 (Oversight — GV.OV-01) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "77551b17-39ec-5fb5-b405-3ad11f093adc"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control gv.ov-02 (Oversight — GV.OV-02) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "9143f004-1db6-5a81-b973-d5da9de0c4aa"
+            }
+          ],
+          "control-id": "gv.ov-02",
+          "remarks": "Control gv.ov-02 (Oversight — GV.OV-02) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "91f87ab3-269b-5632-a607-7dd13b271e7d"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control gv.ov-03 (Oversight — GV.OV-03) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "6f23f146-dc35-592a-8d2e-5091071a255b"
+            }
+          ],
+          "control-id": "gv.ov-03",
+          "remarks": "Control gv.ov-03 (Oversight — GV.OV-03) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f2139e37-c913-57ae-9838-23aa868250c1"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control gv.po-01 (Policy — GV.PO-01) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "f4db0eac-7ff3-5b39-b231-36e96095d985"
+            }
+          ],
+          "control-id": "gv.po-01",
+          "remarks": "Control gv.po-01 (Policy — GV.PO-01) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "08aec1c5-8fa5-5932-9475-b146b61f8655"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control gv.po-02 (Policy — GV.PO-02) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "cbb3cf37-738b-5bb9-9519-e6043264b2a8"
+            }
+          ],
+          "control-id": "gv.po-02",
+          "remarks": "Control gv.po-02 (Policy — GV.PO-02) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "df8b09d7-5afa-5652-b4bd-0c6b9a9eb447"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control gv.rm-01 (Risk Management Strategy — GV.RM-01) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "276dad3e-e70d-54f0-af18-e92e1df9c21c"
+            }
+          ],
+          "control-id": "gv.rm-01",
+          "remarks": "Control gv.rm-01 (Risk Management Strategy — GV.RM-01) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "ecefd77b-b425-5b96-9f23-e48408722ec8"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control gv.rm-02 (Risk Management Strategy — GV.RM-02) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "e5f19bc8-5431-5165-9f75-7f36bd255391"
+            }
+          ],
+          "control-id": "gv.rm-02",
+          "remarks": "Control gv.rm-02 (Risk Management Strategy — GV.RM-02) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "a7d3babf-07b4-573a-8686-55a0073471c2"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control gv.rm-03 (Risk Management Strategy — GV.RM-03) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "d977f72b-7857-5b27-8b2b-a834f0e72d6a"
+            }
+          ],
+          "control-id": "gv.rm-03",
+          "remarks": "Control gv.rm-03 (Risk Management Strategy — GV.RM-03) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "36426f2b-8acc-5a14-9142-0636b8146829"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control gv.rm-04 (Risk Management Strategy — GV.RM-04) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "feda051d-a7c7-5229-9164-e9c93d0c9c3f"
+            }
+          ],
+          "control-id": "gv.rm-04",
+          "remarks": "Control gv.rm-04 (Risk Management Strategy — GV.RM-04) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "71b45408-812b-5b44-a2b8-81facfa525bb"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control gv.rm-05 (Risk Management Strategy — GV.RM-05) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "c8584e03-e494-5a02-83fa-4236f43ac41a"
+            }
+          ],
+          "control-id": "gv.rm-05",
+          "remarks": "Control gv.rm-05 (Risk Management Strategy — GV.RM-05) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "c532aacd-f419-5a6d-bc4c-c054d92d8995"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control gv.rm-06 (Risk Management Strategy — GV.RM-06) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "aeb3cb89-7149-5e89-b51b-4eff213a7453"
+            }
+          ],
+          "control-id": "gv.rm-06",
+          "remarks": "Control gv.rm-06 (Risk Management Strategy — GV.RM-06) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "74bb8f5b-9e63-597e-9cf8-2707b7f5dc83"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control gv.rm-07 (Risk Management Strategy — GV.RM-07) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "da0de841-d6cb-5b9c-a145-bd40c107181f"
+            }
+          ],
+          "control-id": "gv.rm-07",
+          "remarks": "Control gv.rm-07 (Risk Management Strategy — GV.RM-07) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "b0670fa8-588b-5741-bd38-da275856a862"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control gv.rr-01 (Roles, Responsibilities, and Authorities — GV.RR-01) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "92727854-f86f-5aea-bb06-200bf90a7107"
+            }
+          ],
+          "control-id": "gv.rr-01",
+          "remarks": "Control gv.rr-01 (Roles, Responsibilities, and Authorities — GV.RR-01) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "5e776b02-684a-55dc-9c1c-497e1807838d"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control gv.rr-02 (Roles, Responsibilities, and Authorities — GV.RR-02) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "421b9deb-84fd-5fe1-834c-75cbbc5416e6"
+            }
+          ],
+          "control-id": "gv.rr-02",
+          "remarks": "Control gv.rr-02 (Roles, Responsibilities, and Authorities — GV.RR-02) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "a2bfa41d-3f9c-5cd7-a815-917ba522d3ad"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control gv.rr-03 (Roles, Responsibilities, and Authorities — GV.RR-03) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "4615d32c-1162-51c9-939d-f487d6aef7b4"
+            }
+          ],
+          "control-id": "gv.rr-03",
+          "remarks": "Control gv.rr-03 (Roles, Responsibilities, and Authorities — GV.RR-03) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "31c51989-d5eb-5acc-9825-14eaa61a5faf"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control gv.rr-04 (Roles, Responsibilities, and Authorities — GV.RR-04) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "7d8b918e-13b8-55f8-91d5-2fcc5b347f1c"
+            }
+          ],
+          "control-id": "gv.rr-04",
+          "remarks": "Control gv.rr-04 (Roles, Responsibilities, and Authorities — GV.RR-04) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "bdf411ee-5781-5ed9-86d6-3bb476a71ed0"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control gv.sc-01 (Cybersecurity Supply Chain Risk Management — GV.SC-01) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "39af7af4-fc1e-53f8-9695-bdb5045163e4"
+            }
+          ],
+          "control-id": "gv.sc-01",
+          "remarks": "Control gv.sc-01 (Cybersecurity Supply Chain Risk Management — GV.SC-01) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "6e82a8ad-8cd5-5e33-9ff4-8621a2bd9a06"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control gv.sc-02 (Cybersecurity Supply Chain Risk Management — GV.SC-02) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "b1cd069f-ce00-574e-95cd-59aa3e210910"
+            }
+          ],
+          "control-id": "gv.sc-02",
+          "remarks": "Control gv.sc-02 (Cybersecurity Supply Chain Risk Management — GV.SC-02) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "a016cc35-9104-5f78-a41b-f3c86c727b01"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control gv.sc-03 (Cybersecurity Supply Chain Risk Management — GV.SC-03) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "e03cf174-7564-5cd0-8fa7-3ebe73e174c8"
+            }
+          ],
+          "control-id": "gv.sc-03",
+          "remarks": "Control gv.sc-03 (Cybersecurity Supply Chain Risk Management — GV.SC-03) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "9e16e9d1-24f9-5e4d-b732-072c7825de48"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control gv.sc-04 (Cybersecurity Supply Chain Risk Management — GV.SC-04) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "e17a5bce-070b-5ddd-95c7-2fb880ab1e57"
+            }
+          ],
+          "control-id": "gv.sc-04",
+          "remarks": "Control gv.sc-04 (Cybersecurity Supply Chain Risk Management — GV.SC-04) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "fbab1b10-83e8-50af-82ee-612a2e1778c8"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control gv.sc-05 (Cybersecurity Supply Chain Risk Management — GV.SC-05) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ec3b383a-6b0a-5b1e-a782-1258c6e1ff74"
+            }
+          ],
+          "control-id": "gv.sc-05",
+          "remarks": "Control gv.sc-05 (Cybersecurity Supply Chain Risk Management — GV.SC-05) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "7cb17592-aad7-5900-8da6-871bd0a61b2d"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control gv.sc-06 (Cybersecurity Supply Chain Risk Management — GV.SC-06) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "25ae49c3-2d79-5506-b0dc-ac0ef2043b03"
+            }
+          ],
+          "control-id": "gv.sc-06",
+          "remarks": "Control gv.sc-06 (Cybersecurity Supply Chain Risk Management — GV.SC-06) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "eec38009-3544-54fc-a063-4091e8c358da"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control gv.sc-07 (Cybersecurity Supply Chain Risk Management — GV.SC-07) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "6127f15a-af4a-5e9d-b649-f437de92477f"
+            }
+          ],
+          "control-id": "gv.sc-07",
+          "remarks": "Control gv.sc-07 (Cybersecurity Supply Chain Risk Management — GV.SC-07) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "d1bd6701-c852-5a3f-ae58-3303a3b675d3"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control gv.sc-08 (Cybersecurity Supply Chain Risk Management — GV.SC-08) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "91d95b93-005f-5e13-8162-c79ea3c9b76a"
+            }
+          ],
+          "control-id": "gv.sc-08",
+          "remarks": "Control gv.sc-08 (Cybersecurity Supply Chain Risk Management — GV.SC-08) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "d087dc34-f8e3-5b84-b839-de7401f12ede"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control gv.sc-09 (Cybersecurity Supply Chain Risk Management — GV.SC-09) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "53c5c5cc-98ac-52f3-ba17-d59f8e2b3b2f"
+            }
+          ],
+          "control-id": "gv.sc-09",
+          "remarks": "Control gv.sc-09 (Cybersecurity Supply Chain Risk Management — GV.SC-09) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "83b799db-26a7-5b57-9696-0498c1777bc7"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control gv.sc-10 (Cybersecurity Supply Chain Risk Management — GV.SC-10) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ea110773-4445-58f6-9309-5c244b0fe358"
+            }
+          ],
+          "control-id": "gv.sc-10",
+          "remarks": "Control gv.sc-10 (Cybersecurity Supply Chain Risk Management — GV.SC-10) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "601f9bc6-062f-537d-9ceb-cb3913212d77"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control id.am-01 (Asset Management — ID.AM-01) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "a8d010c4-4179-50f1-a5ab-21f32acc5a9c"
+            }
+          ],
+          "control-id": "id.am-01",
+          "remarks": "Control id.am-01 (Asset Management — ID.AM-01) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "2bd99fce-ce76-5ba3-950b-3ccd47e2627e"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control id.am-02 (Asset Management — ID.AM-02) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "b791da37-1ff4-5e96-955f-1c962ec75685"
+            }
+          ],
+          "control-id": "id.am-02",
+          "remarks": "Control id.am-02 (Asset Management — ID.AM-02) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "50ef8b21-b0eb-5b52-a7e9-a8d2fc86af0f"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control id.am-03 (Asset Management — ID.AM-03) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "014ea0b3-ea29-50f6-93c7-05079096363b"
+            }
+          ],
+          "control-id": "id.am-03",
+          "remarks": "Control id.am-03 (Asset Management — ID.AM-03) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "82ea806a-772b-5711-a8b5-dc17a8b9e706"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control id.am-04 (Asset Management — ID.AM-04) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "cdb02913-13e1-5ff9-a7cf-2a5e8380b82d"
+            }
+          ],
+          "control-id": "id.am-04",
+          "remarks": "Control id.am-04 (Asset Management — ID.AM-04) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "43987541-5530-5fce-bb02-c18724d94f76"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control id.am-05 (Asset Management — ID.AM-05) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "e5ee1af2-1db9-59ea-bebf-bd20906f828d"
+            }
+          ],
+          "control-id": "id.am-05",
+          "remarks": "Control id.am-05 (Asset Management — ID.AM-05) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "7bba9e10-c5d9-59d9-a3a8-ee4f04ab0d8a"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control id.am-07 (Asset Management — ID.AM-07) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "724f7674-64c1-5785-80fd-27ca4b4e38e9"
+            }
+          ],
+          "control-id": "id.am-07",
+          "remarks": "Control id.am-07 (Asset Management — ID.AM-07) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "b2fe2023-50e4-52a3-9388-dc9af3db2374"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control id.am-08 (Asset Management — ID.AM-08) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "3e56f0ce-e5ff-5279-b366-62fdc4b02534"
+            }
+          ],
+          "control-id": "id.am-08",
+          "remarks": "Control id.am-08 (Asset Management — ID.AM-08) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f7a2d3e3-c6ed-5365-9811-fed784273c22"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control id.im-01 (Improvement — ID.IM-01) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "b911e66f-1fc7-5c24-b453-b573f77c6a42"
+            }
+          ],
+          "control-id": "id.im-01",
+          "remarks": "Control id.im-01 (Improvement — ID.IM-01) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "95743b3f-6a46-5850-90ee-93478c07d36e"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control id.im-02 (Improvement — ID.IM-02) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "88fe6034-9b17-5295-95e8-bf1f59569a92"
+            }
+          ],
+          "control-id": "id.im-02",
+          "remarks": "Control id.im-02 (Improvement — ID.IM-02) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "8d90583e-b8d1-5b1a-8c9b-49d58830ea81"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control id.im-03 (Improvement — ID.IM-03) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "496e7515-ea1c-5180-8c2f-8bea8bf4704c"
+            }
+          ],
+          "control-id": "id.im-03",
+          "remarks": "Control id.im-03 (Improvement — ID.IM-03) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "184a8472-82fd-5249-86f1-b12b76324cc8"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control id.im-04 (Improvement — ID.IM-04) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "16dd8764-2611-5114-ad00-aabd3c715db7"
+            }
+          ],
+          "control-id": "id.im-04",
+          "remarks": "Control id.im-04 (Improvement — ID.IM-04) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f59940c7-26a9-50bc-876f-27e2ad8737e3"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control id.ra-01 (Risk Assessment — ID.RA-01) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ec8dec2d-41f7-5a58-b3f3-613be3ef271c"
+            }
+          ],
+          "control-id": "id.ra-01",
+          "remarks": "Control id.ra-01 (Risk Assessment — ID.RA-01) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "c6c2fdb1-0154-5f0a-bed3-c5cc2099d20c"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control id.ra-02 (Risk Assessment — ID.RA-02) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "024651fb-1c95-5193-bacc-b2deb2981f84"
+            }
+          ],
+          "control-id": "id.ra-02",
+          "remarks": "Control id.ra-02 (Risk Assessment — ID.RA-02) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "85f52148-0869-5a84-9ba0-a6cb7f85ee08"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control id.ra-03 (Risk Assessment — ID.RA-03) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "4e21a5b7-bb44-5431-abaa-a7a07fdff015"
+            }
+          ],
+          "control-id": "id.ra-03",
+          "remarks": "Control id.ra-03 (Risk Assessment — ID.RA-03) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "966e85d3-62c2-515d-abb7-58ecc6f565c7"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control id.ra-04 (Risk Assessment — ID.RA-04) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "623c3896-bd01-5b49-acdc-0362276a1d81"
+            }
+          ],
+          "control-id": "id.ra-04",
+          "remarks": "Control id.ra-04 (Risk Assessment — ID.RA-04) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "56451fa0-6a4a-5278-8474-812147dc74f5"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control id.ra-05 (Risk Assessment — ID.RA-05) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "f611e4c6-17e2-5d37-966e-54b918e66504"
+            }
+          ],
+          "control-id": "id.ra-05",
+          "remarks": "Control id.ra-05 (Risk Assessment — ID.RA-05) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "d0d2542f-9556-518a-84c8-c444f0ee1496"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control id.ra-06 (Risk Assessment — ID.RA-06) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "f116b04a-2612-5f4a-ae83-c1f92f2a0169"
+            }
+          ],
+          "control-id": "id.ra-06",
+          "remarks": "Control id.ra-06 (Risk Assessment — ID.RA-06) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "665ce372-ae8b-533e-b60e-694152460f42"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control id.ra-07 (Risk Assessment — ID.RA-07) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "5e7445d1-e2ad-5528-b137-e52eb6e2f5bb"
+            }
+          ],
+          "control-id": "id.ra-07",
+          "remarks": "Control id.ra-07 (Risk Assessment — ID.RA-07) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "b4a97895-1b78-532f-8c9c-c2e0a655da72"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control id.ra-08 (Risk Assessment — ID.RA-08) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "8ddcc48e-fb57-57bc-918b-23b7d2185bae"
+            }
+          ],
+          "control-id": "id.ra-08",
+          "remarks": "Control id.ra-08 (Risk Assessment — ID.RA-08) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f5e9074d-0831-592b-bad0-c5f149608407"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control id.ra-09 (Risk Assessment — ID.RA-09) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "d4717991-f23e-5298-acb9-013dfa632803"
+            }
+          ],
+          "control-id": "id.ra-09",
+          "remarks": "Control id.ra-09 (Risk Assessment — ID.RA-09) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "08a91569-ad01-59f4-b713-4c5941605efb"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control id.ra-10 (Risk Assessment — ID.RA-10) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "3ec8599f-6e76-528e-b07c-1e2b9f4a93fd"
+            }
+          ],
+          "control-id": "id.ra-10",
+          "remarks": "Control id.ra-10 (Risk Assessment — ID.RA-10) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f8f46f61-06d6-52c5-ad40-184a5d87978b"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control pr.aa-01 (Identity Management, Authentication, and Access Control — PR.AA-01) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "01bf85b8-36ab-5e5a-897b-f10fc980a7c3"
+            }
+          ],
+          "control-id": "pr.aa-01",
+          "remarks": "Control pr.aa-01 (Identity Management, Authentication, and Access Control — PR.AA-01) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "d2554858-0d56-58af-8bc3-0babbd841e3d"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control pr.aa-02 (Identity Management, Authentication, and Access Control — PR.AA-02) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "d02f5505-264c-5b8c-b6be-68f175781e7d"
+            }
+          ],
+          "control-id": "pr.aa-02",
+          "remarks": "Control pr.aa-02 (Identity Management, Authentication, and Access Control — PR.AA-02) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "3253591e-88ba-5029-9204-c4cfc330f48d"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control pr.aa-03 (Identity Management, Authentication, and Access Control — PR.AA-03) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "82d43bce-e0a9-5842-9b41-3e0c63342fff"
+            }
+          ],
+          "control-id": "pr.aa-03",
+          "remarks": "Control pr.aa-03 (Identity Management, Authentication, and Access Control — PR.AA-03) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "3acd0132-d83d-5fbf-b940-ee740aecfd33"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control pr.aa-04 (Identity Management, Authentication, and Access Control — PR.AA-04) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "5342f9c1-7509-5c65-963a-2a61e4f16aea"
+            }
+          ],
+          "control-id": "pr.aa-04",
+          "remarks": "Control pr.aa-04 (Identity Management, Authentication, and Access Control — PR.AA-04) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "49871d3d-92b6-5e1e-a27c-073b4d66dc8c"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control pr.aa-05 (Identity Management, Authentication, and Access Control — PR.AA-05) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "1e3fd008-2ff5-57f3-955e-c8561e27529c"
+            }
+          ],
+          "control-id": "pr.aa-05",
+          "remarks": "Control pr.aa-05 (Identity Management, Authentication, and Access Control — PR.AA-05) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "3e77b47a-c7fa-50db-b726-e00d27aa5058"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control pr.aa-06 (Identity Management, Authentication, and Access Control — PR.AA-06) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "d2eed96b-028f-5c8a-a6ae-ca0fb6f5cb1d"
+            }
+          ],
+          "control-id": "pr.aa-06",
+          "remarks": "Control pr.aa-06 (Identity Management, Authentication, and Access Control — PR.AA-06) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f2b6d776-1940-5fb1-9876-5bab4478a0e0"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control pr.at-01 (Awareness and Training — PR.AT-01) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "a7795cb0-a99d-5821-ae9c-6b757b0727a7"
+            }
+          ],
+          "control-id": "pr.at-01",
+          "remarks": "Control pr.at-01 (Awareness and Training — PR.AT-01) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "37400130-1e34-5f15-a7f2-eafe7db63eb0"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control pr.at-02 (Awareness and Training — PR.AT-02) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "783e4165-a5dd-5836-9eab-45960a7f2cfa"
+            }
+          ],
+          "control-id": "pr.at-02",
+          "remarks": "Control pr.at-02 (Awareness and Training — PR.AT-02) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "bf4776aa-99b8-59b5-8fab-413b9b30cb10"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control pr.ds-01 (Data Security — PR.DS-01) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ce604d20-6317-5f42-baad-1a5ecf70d4c7"
+            }
+          ],
+          "control-id": "pr.ds-01",
+          "remarks": "Control pr.ds-01 (Data Security — PR.DS-01) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "335b7dd7-31db-5624-b2fc-4bc310bbe9a0"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control pr.ds-02 (Data Security — PR.DS-02) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "04b81450-0208-5da6-9778-99f17df6e020"
+            }
+          ],
+          "control-id": "pr.ds-02",
+          "remarks": "Control pr.ds-02 (Data Security — PR.DS-02) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "b703c3a7-52b4-5d07-8ee1-35cc629dd669"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control pr.ds-10 (Data Security — PR.DS-10) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "8313ae8e-7f0c-59ca-a3e7-e19180664dfc"
+            }
+          ],
+          "control-id": "pr.ds-10",
+          "remarks": "Control pr.ds-10 (Data Security — PR.DS-10) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "00af1a69-2ebe-55b2-8503-648b4961d20d"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control pr.ds-11 (Data Security — PR.DS-11) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "1b8001d9-2cd7-56b2-baca-9687b50a0be6"
+            }
+          ],
+          "control-id": "pr.ds-11",
+          "remarks": "Control pr.ds-11 (Data Security — PR.DS-11) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "362cc146-4ba4-57af-811c-dfa783b96018"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control pr.ir-01 (Technology Infrastructure Resilience — PR.IR-01) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "550aef73-454c-5c87-a864-7e070fc38e9c"
+            }
+          ],
+          "control-id": "pr.ir-01",
+          "remarks": "Control pr.ir-01 (Technology Infrastructure Resilience — PR.IR-01) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "0416d79f-0c84-5be7-ac65-3c9ce0be8dd5"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control pr.ir-02 (Technology Infrastructure Resilience — PR.IR-02) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "3a07fe32-6570-5818-994a-5c0698f679c9"
+            }
+          ],
+          "control-id": "pr.ir-02",
+          "remarks": "Control pr.ir-02 (Technology Infrastructure Resilience — PR.IR-02) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "72c7b370-2a2c-5e64-9512-00ef60b6b9e7"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control pr.ir-03 (Technology Infrastructure Resilience — PR.IR-03) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "44342caa-93a8-5ea2-8486-7570e35aadae"
+            }
+          ],
+          "control-id": "pr.ir-03",
+          "remarks": "Control pr.ir-03 (Technology Infrastructure Resilience — PR.IR-03) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "4abe01df-1696-5517-9fe6-3c684bd4de05"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control pr.ir-04 (Technology Infrastructure Resilience — PR.IR-04) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "30219ee5-19d9-556d-ae46-dcc9bca6767b"
+            }
+          ],
+          "control-id": "pr.ir-04",
+          "remarks": "Control pr.ir-04 (Technology Infrastructure Resilience — PR.IR-04) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "12b2c9e8-eb25-5a27-aab0-8b9cb08ed6e0"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control pr.ps-01 (Platform Security — PR.PS-01) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "18d98420-a762-5ca9-905b-e218e7d6ddcc"
+            }
+          ],
+          "control-id": "pr.ps-01",
+          "remarks": "Control pr.ps-01 (Platform Security — PR.PS-01) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "bec6a084-52c2-5f10-8e83-4d28d6ba8bcb"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control pr.ps-02 (Platform Security — PR.PS-02) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "b0385549-c4ef-5cdb-9e0c-b824aac4a9cf"
+            }
+          ],
+          "control-id": "pr.ps-02",
+          "remarks": "Control pr.ps-02 (Platform Security — PR.PS-02) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "fab3c785-cf7e-573d-8ad0-814c2bba70ee"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control pr.ps-03 (Platform Security — PR.PS-03) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "22f23c59-7b69-5ad8-8c0e-2fee2fb0f5f2"
+            }
+          ],
+          "control-id": "pr.ps-03",
+          "remarks": "Control pr.ps-03 (Platform Security — PR.PS-03) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "e9e28a34-f60a-5078-a042-ada83a5146b1"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control pr.ps-04 (Platform Security — PR.PS-04) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "e4473f96-1998-5e0b-b994-3bd1cf8e388f"
+            }
+          ],
+          "control-id": "pr.ps-04",
+          "remarks": "Control pr.ps-04 (Platform Security — PR.PS-04) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "d181d808-c49b-54af-995b-6c58233b320d"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control pr.ps-05 (Platform Security — PR.PS-05) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "d7e81aa0-f849-54d1-9b5a-8ca7865cd465"
+            }
+          ],
+          "control-id": "pr.ps-05",
+          "remarks": "Control pr.ps-05 (Platform Security — PR.PS-05) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "a068d128-46fe-552b-b0b4-288ec8429a43"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control pr.ps-06 (Platform Security — PR.PS-06) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "0b3acf9c-fdb8-51c0-85bf-ae6c78a52b6d"
+            }
+          ],
+          "control-id": "pr.ps-06",
+          "remarks": "Control pr.ps-06 (Platform Security — PR.PS-06) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "8126623c-a14c-5d9c-91bd-4341904a6fcf"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control rc.co-03 (Incident Recovery Communication — RC.CO-03) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "0a4de779-d9b4-51ed-8708-f8a9dc9f905b"
+            }
+          ],
+          "control-id": "rc.co-03",
+          "remarks": "Control rc.co-03 (Incident Recovery Communication — RC.CO-03) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "d1f3d9a4-f8cc-5334-bf56-947855736370"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control rc.co-04 (Incident Recovery Communication — RC.CO-04) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "c2625a5d-b576-57d6-8117-1857e5855c9e"
+            }
+          ],
+          "control-id": "rc.co-04",
+          "remarks": "Control rc.co-04 (Incident Recovery Communication — RC.CO-04) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "dcff5cd4-45d8-5839-8eea-5029890b479c"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control rc.rp-01 (Incident Recovery Plan Execution — RC.RP-01) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "219bf9be-bddd-5777-816e-190b99bb033c"
+            }
+          ],
+          "control-id": "rc.rp-01",
+          "remarks": "Control rc.rp-01 (Incident Recovery Plan Execution — RC.RP-01) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "5b8fe45e-6b6f-51cd-8962-9827bd123ce8"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control rc.rp-02 (Incident Recovery Plan Execution — RC.RP-02) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "28d43557-8ad5-515d-ad6e-18c316010cd5"
+            }
+          ],
+          "control-id": "rc.rp-02",
+          "remarks": "Control rc.rp-02 (Incident Recovery Plan Execution — RC.RP-02) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "c8c72bb3-770a-51d8-afc5-368620bc8f0d"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control rc.rp-03 (Incident Recovery Plan Execution — RC.RP-03) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "1248f1bc-c33e-5497-a5f3-ec9fabbe86bb"
+            }
+          ],
+          "control-id": "rc.rp-03",
+          "remarks": "Control rc.rp-03 (Incident Recovery Plan Execution — RC.RP-03) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "cfa83905-27b8-5d32-b322-dbad33150456"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control rc.rp-04 (Incident Recovery Plan Execution — RC.RP-04) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "8615d351-e109-5e02-bf1b-e198cae1ce14"
+            }
+          ],
+          "control-id": "rc.rp-04",
+          "remarks": "Control rc.rp-04 (Incident Recovery Plan Execution — RC.RP-04) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "6b586fe4-67ba-5191-aa12-986696230d2a"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control rc.rp-05 (Incident Recovery Plan Execution — RC.RP-05) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "20d1af2e-4ea9-5e2d-993f-943bf0addc8f"
+            }
+          ],
+          "control-id": "rc.rp-05",
+          "remarks": "Control rc.rp-05 (Incident Recovery Plan Execution — RC.RP-05) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "d6aac097-f2e8-5055-89b5-b88b2d315cf7"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control rc.rp-06 (Incident Recovery Plan Execution — RC.RP-06) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ee9f9ae1-61a4-5b7a-bb9b-bcd333f187f6"
+            }
+          ],
+          "control-id": "rc.rp-06",
+          "remarks": "Control rc.rp-06 (Incident Recovery Plan Execution — RC.RP-06) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "028bd5b3-ea04-5f48-bb02-01c576d5b1cd"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control rs.an-03 (Incident Analysis — RS.AN-03) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "14a3f5cd-7619-58d8-b399-0d3444c93819"
+            }
+          ],
+          "control-id": "rs.an-03",
+          "remarks": "Control rs.an-03 (Incident Analysis — RS.AN-03) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "a391cb07-b72e-5a4d-8b98-38d10243327e"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control rs.an-06 (Incident Analysis — RS.AN-06) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "8327f6cf-873a-5fe0-ad3f-8a83f8180aa8"
+            }
+          ],
+          "control-id": "rs.an-06",
+          "remarks": "Control rs.an-06 (Incident Analysis — RS.AN-06) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "2f1f346d-eac8-504c-a010-bb6d49f4f9fb"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control rs.an-07 (Incident Analysis — RS.AN-07) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "8af31c53-40aa-5514-8f0b-bfc06f33e2f8"
+            }
+          ],
+          "control-id": "rs.an-07",
+          "remarks": "Control rs.an-07 (Incident Analysis — RS.AN-07) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "5411528c-36d8-503f-b2e2-91f685889ff2"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control rs.an-08 (Incident Analysis — RS.AN-08) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "2ff89692-8067-5450-b4e4-1b579438e7fe"
+            }
+          ],
+          "control-id": "rs.an-08",
+          "remarks": "Control rs.an-08 (Incident Analysis — RS.AN-08) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "c4b7ad63-2ace-5ad6-bd56-2d8a74ec5e96"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control rs.co-02 (Incident Response Reporting and Communication — RS.CO-02) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "2e2b0056-4677-5f16-9828-f874b0b4d145"
+            }
+          ],
+          "control-id": "rs.co-02",
+          "remarks": "Control rs.co-02 (Incident Response Reporting and Communication — RS.CO-02) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f04cbd12-05c1-5ff5-bbc4-06684c47383f"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control rs.co-03 (Incident Response Reporting and Communication — RS.CO-03) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "b49960df-e248-5558-8238-2ef91b613b10"
+            }
+          ],
+          "control-id": "rs.co-03",
+          "remarks": "Control rs.co-03 (Incident Response Reporting and Communication — RS.CO-03) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "834644d2-2717-5b75-b5d9-98f9599b0336"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control rs.ma-01 (Incident Management — RS.MA-01) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "d2c699af-8783-5615-b1d8-89274cef5e4a"
+            }
+          ],
+          "control-id": "rs.ma-01",
+          "remarks": "Control rs.ma-01 (Incident Management — RS.MA-01) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "7a9d86d6-3efb-5a64-bf4b-ceb06bf0121d"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control rs.ma-02 (Incident Management — RS.MA-02) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "2319d3cd-226f-5821-b271-a5d7f4de86ac"
+            }
+          ],
+          "control-id": "rs.ma-02",
+          "remarks": "Control rs.ma-02 (Incident Management — RS.MA-02) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "e413dcec-7d85-5c98-8bf7-73b321758dca"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control rs.ma-03 (Incident Management — RS.MA-03) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "3703f9ec-1824-519d-883d-e723ce337734"
+            }
+          ],
+          "control-id": "rs.ma-03",
+          "remarks": "Control rs.ma-03 (Incident Management — RS.MA-03) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "eabefa06-7eb1-5ea9-82cb-e26349454433"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control rs.ma-04 (Incident Management — RS.MA-04) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "01a1d7f3-3bdc-5565-80cb-e5d8c78f073f"
+            }
+          ],
+          "control-id": "rs.ma-04",
+          "remarks": "Control rs.ma-04 (Incident Management — RS.MA-04) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "886aa0e3-7452-5611-9f8a-f95f3022d39a"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control rs.ma-05 (Incident Management — RS.MA-05) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "4c7cd9f2-e673-54f2-b4bb-910f6f0775ae"
+            }
+          ],
+          "control-id": "rs.ma-05",
+          "remarks": "Control rs.ma-05 (Incident Management — RS.MA-05) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "3736edb0-c8ae-5919-9009-a4da713b333c"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control rs.mi-01 (Incident Mitigation — RS.MI-01) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "8b4301a9-2edb-5ba4-9021-eb5c38db0095"
+            }
+          ],
+          "control-id": "rs.mi-01",
+          "remarks": "Control rs.mi-01 (Incident Mitigation — RS.MI-01) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "116b51a6-e368-5eac-8e43-741ac31693ba"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb",
+              "description": "Control rs.mi-02 (Incident Mitigation — RS.MI-02) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "fdc2b1ff-efef-5c30-b781-71df2453ec75"
+            }
+          ],
+          "control-id": "rs.mi-02",
+          "remarks": "Control rs.mi-02 (Incident Mitigation — RS.MI-02) is satisfied by the NIST CSF version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "341d291d-715f-5962-8334-cec607e9e294"
+        }
+      ]
+    },
+    "import-profile": {
+      "href": "./catalog.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:13Z",
+      "oscal-version": "1.2.3",
+      "roles": [
+        {
+          "id": "sec-admin",
+          "title": "Security Administrator"
+        }
+      ],
+      "title": "NIST CSF version 2.0 System Security Plan Template",
+      "version": "6"
+    },
+    "system-characteristics": {
+      "authorization-boundary": {
+        "description": "The authorization boundary encompasses all computing resources, cloud tenancies, and network zones supporting NIST CSF version 2.0 operations."
+      },
+      "description": "Reference system architecture implementing security controls for NIST CSF version 2.0.",
+      "security-impact-level": {
+        "security-objective-availability": "moderate",
+        "security-objective-confidentiality": "moderate",
+        "security-objective-integrity": "high"
+      },
+      "security-sensitivity-level": "moderate",
+      "status": {
+        "state": "operational"
+      },
+      "system-ids": [
+        {
+          "id": "nist-csf-2.0-system"
+        }
+      ],
+      "system-information": {
+        "information-types": [
+          {
+            "description": "Operational and compliance data processed within the usa jurisdiction boundary.",
+            "title": "Sovereign Program Data",
+            "uuid": "9384f52a-2680-57d3-8cfd-0065d6db1afd"
+          }
+        ]
+      },
+      "system-name": "NIST CSF version 2.0 Reference System",
+      "system-name-short": "nist-csf-2.0"
+    },
+    "system-implementation": {
+      "components": [
+        {
+          "description": "Central execution platform providing control implementations for NIST CSF version 2.0.",
+          "status": {
+            "state": "operational"
+          },
+          "title": "NIST CSF version 2.0 Core System Component",
+          "type": "software",
+          "uuid": "7d958f99-62b5-588b-8562-5e2d412dd3cb"
+        }
+      ],
+      "users": [
+        {
+          "role-ids": [
+            "sec-admin"
+          ],
+          "title": "Security Administrator",
+          "uuid": "f0d89c4d-b27a-531c-aee1-70571e1332c4"
+        }
+      ]
+    },
+    "uuid": "8bd36bde-54c0-5d20-aa3d-8591741a8801"
+  }
+}

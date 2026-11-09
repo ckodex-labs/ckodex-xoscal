@@ -1,0 +1,333 @@
+{
+  "component-definition": {
+    "components": [
+      {
+        "control-implementations": [
+          {
+            "description": "Security control implementations for ANSSI - Guide d'hygiène informatique.",
+            "implemented-requirements": [
+              {
+                "control-id": "_1",
+                "description": "Component capability addressing control _1 (Former les équipes opérationnelles à la sécurité des systèmes d’information).",
+                "uuid": "6d9284db-ba22-56be-8963-1ef2a23efa03"
+              },
+              {
+                "control-id": "_10",
+                "description": "Component capability addressing control _10 (Définir et vérifier des règles de choix et de dimensionnement des mots de passe).",
+                "uuid": "bc37f2c9-0ccd-5927-b6c2-5d6065d60815"
+              },
+              {
+                "control-id": "_11",
+                "description": "Component capability addressing control _11 (Protéger les mots de passe stockés sur les systèmes).",
+                "uuid": "e48e0d1a-76a9-56d3-83e9-1e43e54aa632"
+              },
+              {
+                "control-id": "_12",
+                "description": "Component capability addressing control _12 (Changer les éléments d’authentification par défaut sur les équipements et services).",
+                "uuid": "000d6ff7-edde-5713-8ec3-e3f828c44b50"
+              },
+              {
+                "control-id": "_12.r",
+                "description": "Component capability addressing control _12.r (Changer les éléments d’authentification par défaut sur les équipements et services (renforcé)).",
+                "uuid": "fc96b606-6f35-5c4d-a4dc-7b06852f1be0"
+              },
+              {
+                "control-id": "_13",
+                "description": "Component capability addressing control _13 (Privilégier lorsque c’est possible une authentification forte).",
+                "uuid": "e1455f12-6116-514f-97b5-463090697ccf"
+              },
+              {
+                "control-id": "_13.r",
+                "description": "Component capability addressing control _13.r (Privilégier lorsque c’est possible une authentification forte (renforcé)).",
+                "uuid": "67ebe3a7-af65-579e-843b-2a3d61ac6db5"
+              },
+              {
+                "control-id": "_14",
+                "description": "Component capability addressing control _14 (Mettre en place un niveau de sécurité minimal sur l’ensemble du parc informatique).",
+                "uuid": "3613bb73-2609-50bf-84e1-a0b20ed8992c"
+              },
+              {
+                "control-id": "_14.r",
+                "description": "Component capability addressing control _14.r (Mettre en place un niveau de sécurité minimal sur l’ensemble du parc informatique (renforcé)).",
+                "uuid": "6dcdd66d-bf24-5898-8fd0-b6c47228766c"
+              },
+              {
+                "control-id": "_15",
+                "description": "Component capability addressing control _15 (Se protéger des menaces relatives à l’utilisation de supports amovibles).",
+                "uuid": "0ad1fdb9-721c-5768-8d9c-f8c97e617af0"
+              },
+              {
+                "control-id": "_15.r",
+                "description": "Component capability addressing control _15.r (Se protéger des menaces relatives à l’utilisation de supports amovibles (renforcé)).",
+                "uuid": "8aa38f16-0877-5a1b-92e2-bdfc5c969614"
+              },
+              {
+                "control-id": "_16",
+                "description": "Component capability addressing control _16 (Utiliser un outil de gestion centralisée afin d’homogénéiser les politiques de sécurité).",
+                "uuid": "b8acdc7e-f1ef-53d9-a829-2bee857b8c3b"
+              },
+              {
+                "control-id": "_17",
+                "description": "Component capability addressing control _17 (Activer et configurer le pare-feu local des postes de travail).",
+                "uuid": "2ac8f387-b04a-59f7-8841-9d1c6b60afb4"
+              },
+              {
+                "control-id": "_17.r",
+                "description": "Component capability addressing control _17.r (Activer et configurer le pare-feu local des postes de travail (renforcé)).",
+                "uuid": "1bd9d62d-3e42-5922-bb4a-81d06b61ef64"
+              },
+              {
+                "control-id": "_18",
+                "description": "Component capability addressing control _18 (Chiffrer les données sensibles transmises par voie Internet).",
+                "uuid": "6419d0c3-c0be-584a-8f4c-3830065d56b8"
+              },
+              {
+                "control-id": "_19",
+                "description": "Component capability addressing control _19 (Segmenter le réseau et mettre en place un cloisonnement entre ces zones).",
+                "uuid": "858e297d-0435-5eea-9af2-49e94b88fbef"
+              },
+              {
+                "control-id": "_2",
+                "description": "Component capability addressing control _2 (Sensibiliser les utilisateurs aux bonnes pratiques élémentaires de sécurité informatique).",
+                "uuid": "45761799-8e9d-5a01-9712-236dff53270e"
+              },
+              {
+                "control-id": "_2.r",
+                "description": "Component capability addressing control _2.r (Sensibiliser les utilisateurs aux bonnes pratiques élémentaires de sécurité informatique (renforcé)).",
+                "uuid": "519e8a23-9e09-5304-a0a9-4e74284a18dc"
+              },
+              {
+                "control-id": "_20",
+                "description": "Component capability addressing control _20 (S'assurer de la sécurité des réseaux d'accès Wi-Fi et de la séparation des usages).",
+                "uuid": "14b99fb6-6cfc-5271-bf4e-44423941498e"
+              },
+              {
+                "control-id": "_21",
+                "description": "Component capability addressing control _21 (Utiliser des protocoles réseaux sécurisés dès qu'ils existent).",
+                "uuid": "92b16575-4e8f-5e15-b067-a0c2d800e1bd"
+              },
+              {
+                "control-id": "_22",
+                "description": "Component capability addressing control _22 (Mettre en place une passerelle d'accès sécurisé à Internet).",
+                "uuid": "c421d2f6-296b-5a1d-aca0-4a5f5fae59a7"
+              },
+              {
+                "control-id": "_22.r",
+                "description": "Component capability addressing control _22.r (Mettre en place une passerelle d'accès sécurisé à Internet).",
+                "uuid": "23e6e4bf-fcf0-5829-8782-904cdcaf5c8d"
+              },
+              {
+                "control-id": "_23",
+                "description": "Component capability addressing control _23 (Cloisonner les services visibles depuis Internet du reste du système d'information).",
+                "uuid": "b342cc3c-93e7-5aa6-ba40-d49497574f75"
+              },
+              {
+                "control-id": "_24",
+                "description": "Component capability addressing control _24 (Protéger sa messagerie professionnelle).",
+                "uuid": "bfdeb0ca-d6fc-56ba-b880-24f2a9687f36"
+              },
+              {
+                "control-id": "_24.r",
+                "description": "Component capability addressing control _24.r (Protéger sa messagerie professionnelle).",
+                "uuid": "2ed60264-a682-5a13-983d-e2e8f9574664"
+              },
+              {
+                "control-id": "_25",
+                "description": "Component capability addressing control _25 (Sécuriser les interconnexions réseau dédiées avec les partenaires).",
+                "uuid": "9e68c5ee-3587-5ac9-b748-13856d5925b9"
+              },
+              {
+                "control-id": "_25.r",
+                "description": "Component capability addressing control _25.r (Sécuriser les interconnexions réseau dédiées avec les partenaires).",
+                "uuid": "d5b0ee4f-2b10-5a03-8a2c-5941c9f4ce14"
+              },
+              {
+                "control-id": "_26",
+                "description": "Component capability addressing control _26 (Contrôler et protéger l'accès aux salles serveurs et aux locaux techniques).",
+                "uuid": "c420a26f-2567-52c4-884a-278a33672b4b"
+              },
+              {
+                "control-id": "_27",
+                "description": "Component capability addressing control _27 (Interdire l’accès à Internet depuis les postes ou serveurs utilisés pour l’administration du système d’information).",
+                "uuid": "3c3b223f-5241-5a15-b959-6ecb3506ffa4"
+              },
+              {
+                "control-id": "_27.r",
+                "description": "Component capability addressing control _27.r (Interdire l’accès à Internet depuis les postes ou serveurs utilisés pour l’administration du système d’information).",
+                "uuid": "157e28c8-dd5a-55ca-893c-ba963f63b859"
+              },
+              {
+                "control-id": "_28",
+                "description": "Component capability addressing control _28 (Utiliser un réseau dédié et cloisonné pour l’administration du système d’information).",
+                "uuid": "cc7d6b13-e51f-5fc4-afa5-1061d9c840b3"
+              },
+              {
+                "control-id": "_28.r",
+                "description": "Component capability addressing control _28.r (Utiliser un réseau dédié et cloisonné pour l’administration du système d’information).",
+                "uuid": "afabd4f4-33be-5ce5-8f30-ac2daf5a07c2"
+              },
+              {
+                "control-id": "_29",
+                "description": "Component capability addressing control _29 (Limiter au strict besoin opérationnel les droits d’administration sur les postes de travail).",
+                "uuid": "d16b131f-3358-505b-9270-788b0e1f04e4"
+              },
+              {
+                "control-id": "_3",
+                "description": "Component capability addressing control _3 (Maîtriser les risques de l’infogérance).",
+                "uuid": "d851c3c7-1c07-5286-8d3c-27642b3f0aba"
+              },
+              {
+                "control-id": "_30",
+                "description": "Component capability addressing control _30 (Prendre des mesures de sécurisation physique des terminaux nomades).",
+                "uuid": "a5c093e1-bb78-5c29-9459-4f598f7f4c13"
+              },
+              {
+                "control-id": "_30.r",
+                "description": "Component capability addressing control _30.r (Prendre des mesures de sécurisation physique des terminaux nomades).",
+                "uuid": "6b8a8c05-0f01-536e-b25f-d5a2ae571998"
+              },
+              {
+                "control-id": "_31",
+                "description": "Component capability addressing control _31 (Chiffrer les données sensibles, en particulier sur le matériel potentiellement perdable).",
+                "uuid": "c2703ebe-aa7f-59b9-a500-a693c8431a4d"
+              },
+              {
+                "control-id": "_32",
+                "description": "Component capability addressing control _32 (Sécuriser la connexion réseau des postes utilisés en situation de nomadisme).",
+                "uuid": "e4ac2b9b-0e5e-51f3-8be9-2bbe0e8be9a8"
+              },
+              {
+                "control-id": "_32.r",
+                "description": "Component capability addressing control _32.r (Sécuriser la connexion réseau des postes utilisés en situation de nomadisme).",
+                "uuid": "9db4c571-56f7-510f-82c5-c3a77566a909"
+              },
+              {
+                "control-id": "_33",
+                "description": "Component capability addressing control _33 (Adopter des politiques de sécurité dédiées aux terminaux mobiles).",
+                "uuid": "5f1dac87-4bae-5bfc-aaa2-380ed499c1dc"
+              },
+              {
+                "control-id": "_33.r",
+                "description": "Component capability addressing control _33.r (Adopter des politiques de sécurité dédiées aux terminaux mobiles).",
+                "uuid": "b3dacbb6-0c8d-540b-89ff-b7eb7b2fdf86"
+              },
+              {
+                "control-id": "_34",
+                "description": "Component capability addressing control _34 (Définir une politique de mise à jour des composants du système d’information).",
+                "uuid": "b7b3ee9e-3f02-5ddd-ad86-503f09d3e0f5"
+              },
+              {
+                "control-id": "_35",
+                "description": "Component capability addressing control _35 (Anticiper la fin de la maintenance des logiciels et systèmes et limiter les adhérences logicielles).",
+                "uuid": "923961f4-15a8-5ffc-b3c1-f6a305e9c7c3"
+              },
+              {
+                "control-id": "_36",
+                "description": "Component capability addressing control _36 (Activer et configurer les journaux des composants les plus importants).",
+                "uuid": "6641dbd7-2152-5b1b-aa1e-5721e00fd9d0"
+              },
+              {
+                "control-id": "_36.r",
+                "description": "Component capability addressing control _36.r (Activer et configurer les journaux des composants les plus importants (renforcé)).",
+                "uuid": "e8fe258e-4505-5477-99fe-1b240c945994"
+              },
+              {
+                "control-id": "_37",
+                "description": "Component capability addressing control _37 (Définir et appliquer une politique de sauvegarde des composants critiques).",
+                "uuid": "b7025205-803c-56a9-a61e-1b1087c69c7c"
+              },
+              {
+                "control-id": "_37.r",
+                "description": "Component capability addressing control _37.r (Définir et appliquer une politique de sauvegarde des composants critiques (renforcé)).",
+                "uuid": "fc5d7a3b-aa80-5b4d-8427-9fc5e4a6ee13"
+              },
+              {
+                "control-id": "_38.r",
+                "description": "Component capability addressing control _38.r (Procéder à des contrôles et audits de sécurité réguliers puis appliquer les actions correctives associées (renforcé)).",
+                "uuid": "5d790d6a-33af-540a-94fe-e0a2874f5681"
+              },
+              {
+                "control-id": "_39",
+                "description": "Component capability addressing control _39 (Désigner un référent en sécurité des systèmes d’information et le faire connaître auprès du personnel).",
+                "uuid": "7dd6602c-7c5b-508d-8035-e290d4539061"
+              },
+              {
+                "control-id": "_4",
+                "description": "Component capability addressing control _4 (Identifier les informations et serveurs les plus sensibles et maintenir un schéma du réseau).",
+                "uuid": "6ec66d1b-4412-5736-99cb-ffac4e715221"
+              },
+              {
+                "control-id": "_40",
+                "description": "Component capability addressing control _40 (Définir une procédure de gestion des incidents de sécurité).",
+                "uuid": "9e4c2c5a-35e6-52c9-a34b-17e86fe3a591"
+              },
+              {
+                "control-id": "_41.r",
+                "description": "Component capability addressing control _41.r (Mener une analyse de risques formelle (renforcé)).",
+                "uuid": "b6c576ca-d26b-5f15-854a-47f9bfdf4d3f"
+              },
+              {
+                "control-id": "_42.r",
+                "description": "Component capability addressing control _42.r (Privilégier l’usage de produits et de services qualifiés par l'ANSSI (renforcé)).",
+                "uuid": "6f735012-fe34-5561-a896-19d97bbe3799"
+              },
+              {
+                "control-id": "_5",
+                "description": "Component capability addressing control _5 (Disposer d’un inventaire exhaustif des comptes privilégiés et le maintenir à jour).",
+                "uuid": "7b6422df-6852-5d3f-9cf7-49555444cdea"
+              },
+              {
+                "control-id": "_6",
+                "description": "Component capability addressing control _6 (Organiser les procédures d’arrivée, de départ et de changement de fonction des utilisateurs).",
+                "uuid": "d82a1496-d656-5402-8606-4170f93de968"
+              },
+              {
+                "control-id": "_6.r",
+                "description": "Component capability addressing control _6.r (Organiser les procédures d’arrivée, de départ et de changement de fonction des utilisateurs (renforcé)).",
+                "uuid": "e5471f51-170a-5494-a53e-61be20939094"
+              },
+              {
+                "control-id": "_7",
+                "description": "Component capability addressing control _7 (Autoriser la connexion au réseau de l’entité aux seuls équipements maîtrisés).",
+                "uuid": "ce657a50-9c6b-5157-85e8-89bec72927bb"
+              },
+              {
+                "control-id": "_7.r",
+                "description": "Component capability addressing control _7.r (Autoriser la connexion au réseau de l’entité aux seuls équipements maîtrisés (renforcé)).",
+                "uuid": "9a969abd-e32f-56a1-87b8-fa60f6ddfc41"
+              },
+              {
+                "control-id": "_8",
+                "description": "Component capability addressing control _8 (Identifier nommément chaque personne accédant au système et distinguer les rôles utilisateur/administrateur).",
+                "uuid": "b76d8232-0cd5-59d3-a635-3d3adb828727"
+              },
+              {
+                "control-id": "_8.r",
+                "description": "Component capability addressing control _8.r (Identifier nommément chaque personne accédant au système et distinguer les rôles utilisateur/administrateur (renforcé)).",
+                "uuid": "9c1b0272-7f08-561e-a128-12a1d80048e4"
+              },
+              {
+                "control-id": "_9",
+                "description": "Component capability addressing control _9 (Attribuer les bons droits sur les ressources sensibles du système d’information).",
+                "uuid": "f8e9af34-fb0b-56d0-bb47-9ec55cbbf6bf"
+              }
+            ],
+            "source": "./catalog.json",
+            "uuid": "a1b6dd94-d35b-55ba-8ff2-c0706cda894e"
+          }
+        ],
+        "description": "Enterprise technical and operational capabilities implementing controls for ANSSI - Guide d'hygiène informatique.",
+        "title": "ANSSI - Guide d'hygiène informatique Platform Component",
+        "type": "software",
+        "uuid": "c69a1637-540f-5374-a915-9bfbdba4f735"
+      }
+    ],
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:12Z",
+      "oscal-version": "1.2.3",
+      "title": "ANSSI - Guide d'hygiène informatique Component Definition Template",
+      "version": "3"
+    },
+    "uuid": "4e20b5dc-840e-5eef-96e5-0f93e85362c6"
+  }
+}

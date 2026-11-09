@@ -1,0 +1,54 @@
+{
+  "assessment-plan": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:13Z",
+      "oscal-version": "1.2.3",
+      "title": "IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal Security Assessment Plan Template",
+      "version": "1"
+    },
+    "reviewed-controls": {
+      "control-selections": [
+        {
+          "description": "All controls in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal",
+          "include-all": {}
+        }
+      ]
+    },
+    "tasks": [
+      {
+        "description": "Verify and examine implementation of 35 controls in the Organisation family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "title": "Assess Family ORP.1 (Organisation)",
+        "type": "examination",
+        "uuid": "ab89b1e8-13a3-5980-b4ce-05f54af6fbf3"
+      },
+      {
+        "description": "Verify and examine implementation of 45 controls in the Personal family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "title": "Assess Family ORP.2 (Personal)",
+        "type": "examination",
+        "uuid": "ccf1bf73-fc13-587b-9eb1-74f008dd3b37"
+      },
+      {
+        "description": "Verify and examine implementation of 26 controls in the Sensibilisierung und Schulung zur Informationssicherheit family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "title": "Assess Family ORP.3 (Sensibilisierung und Schulung zur Informationssicherheit)",
+        "type": "examination",
+        "uuid": "5eafc553-c143-504e-8b36-0ad2178a965a"
+      },
+      {
+        "description": "Verify and examine implementation of 103 controls in the Identitäts- und Berechtigungsmanagement family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "title": "Assess Family ORP.4 (Identitäts- und Berechtigungsmanagement)",
+        "type": "examination",
+        "uuid": "b787810d-8633-5bc0-b8c5-c205c5da174f"
+      },
+      {
+        "description": "Verify and examine implementation of 20 controls in the Compliance Management (Anforderungsmanagement) family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "title": "Assess Family ORP.5 (Compliance Management (Anforderungsmanagement))",
+        "type": "examination",
+        "uuid": "11366266-deb8-5611-ac92-11a8892b8338"
+      }
+    ],
+    "uuid": "09be6ee1-11d0-5e09-b96b-a7e83a8d04ca"
+  }
+}

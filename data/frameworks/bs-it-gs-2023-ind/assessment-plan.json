@@ -1,0 +1,66 @@
+{
+  "assessment-plan": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:12Z",
+      "oscal-version": "1.2.3",
+      "title": "IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT Security Assessment Plan Template",
+      "version": "1"
+    },
+    "reviewed-controls": {
+      "control-selections": [
+        {
+          "description": "All controls in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT",
+          "include-all": {}
+        }
+      ]
+    },
+    "tasks": [
+      {
+        "description": "Verify and examine implementation of 89 controls in the Prozessleit- und Automatisierungstechnik family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "title": "Assess Family IND.1 (Prozessleit- und Automatisierungstechnik)",
+        "type": "examination",
+        "uuid": "df5d0bfb-0052-5edd-ae10-381c00f6dd2f"
+      },
+      {
+        "description": "Verify and examine implementation of 33 controls in the Allgemeine ICS-Komponente family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "title": "Assess Family IND.2.1 (Allgemeine ICS-Komponente)",
+        "type": "examination",
+        "uuid": "f1c7cfe5-c9ed-5a0d-ac73-db079567fb31"
+      },
+      {
+        "description": "Verify and examine implementation of 3 controls in the Speicherprogrammierbare Steuerung (SPS) family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "title": "Assess Family IND.2.2 (Speicherprogrammierbare Steuerung (SPS))",
+        "type": "examination",
+        "uuid": "44e7aadc-1c04-5bc2-b4df-f44ec981c0ac"
+      },
+      {
+        "description": "Verify and examine implementation of 8 controls in the Sensoren und Aktoren family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "title": "Assess Family IND.2.3 (Sensoren und Aktoren)",
+        "type": "examination",
+        "uuid": "dca59376-7f5e-562c-b8f4-eb58a11706dd"
+      },
+      {
+        "description": "Verify and examine implementation of 8 controls in the Maschine family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "title": "Assess Family IND.2.4 (Maschine)",
+        "type": "examination",
+        "uuid": "d84ccfd7-c7b1-5e49-84a6-0c45a0f1729d"
+      },
+      {
+        "description": "Verify and examine implementation of 22 controls in the Safety Instrumented Systems family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "title": "Assess Family IND.2.7 (Safety Instrumented Systems)",
+        "type": "examination",
+        "uuid": "3b32c51c-1021-5070-b2d4-41e6a602d074"
+      },
+      {
+        "description": "Verify and examine implementation of 64 controls in the Fernwartung im industriellen Umfeld family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "title": "Assess Family IND.3.2 (Fernwartung im industriellen Umfeld)",
+        "type": "examination",
+        "uuid": "3c3004af-d735-5c80-86b3-a74280cd8665"
+      }
+    ],
+    "uuid": "9bfbbaa9-6d0b-5d76-a524-01aa07d311a9"
+  }
+}

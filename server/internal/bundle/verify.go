@@ -19,6 +19,7 @@ const maxVerifiedBundleBytes int64 = 256 << 20
 // VerifyBundle checks artifact and evidence bytes, sizes, and SHA-256 sidecars
 // against manifest digests, and rejects ambiguous duplicate archive members.
 func VerifyBundle(bundleTarGzPath string) (result *BundleManifest, resultErr error) {
+	// #nosec G304 -- bundleTarGzPath is the explicit archive path supplied by the invoking CLI operator.
 	f, err := os.Open(bundleTarGzPath)
 	if err != nil {
 		return nil, fmt.Errorf("open bundle: %w", err)

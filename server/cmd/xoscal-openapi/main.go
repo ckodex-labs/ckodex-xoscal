@@ -339,6 +339,7 @@ func buildSpec(input string) ([]byte, error) {
 	// Explicit files prevent schema-only documents or filesystem order from selecting the API.
 	for _, file := range serviceFiles {
 		name := strings.TrimSuffix(filepath.Base(file.Path()), ".proto") + ".openapi.yaml"
+		// #nosec G304 -- name is derived from compiled protobuf descriptor basenames under the operator-selected input directory.
 		data, err := os.ReadFile(filepath.Join(input, name))
 		if err != nil {
 			return nil, fmt.Errorf("required service document %s: %w", name, err)

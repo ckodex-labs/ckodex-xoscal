@@ -1,0 +1,21 @@
+{
+  "plan-of-action-and-milestones": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:11Z",
+      "oscal-version": "1.2.3",
+      "title": "NIS2 - Annex to the Commission Implementing Regulation 2024/2690 with Technical Implementation Guidance by ENISA Plan of Action and Milestones Template",
+      "version": "13"
+    },
+    "poam-items": [
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for NIS2 - Annex to the Commission Implementing Regulation 2024/2690 with Technical Implementation Guidance by ENISA.",
+        "title": "Compliance Roadmap and Parameter Tailoring for NIS2 - Annex to the Commission Implementing Regulation 2024/2690 with Technical Implementation Guidance by ENISA",
+        "uuid": "3a5dacc5-88ea-5907-b39d-ebd7bb9a543e"
+      }
+    ],
+    "uuid": "008e4489-cd7d-58a8-96d5-7c6396474b1a"
+  }
+}

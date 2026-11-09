@@ -1,0 +1,295 @@
+{
+  "assessment-results": {
+    "import-ap": {
+      "href": "./assessment-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:12Z",
+      "oscal-version": "1.2.3",
+      "title": "IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - CON: Konzeption und Vorgehensweisen Assessment Results Template",
+      "version": "1"
+    },
+    "results": [
+      {
+        "description": "Assessment evaluation findings and observations for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - CON: Konzeption und Vorgehensweisen.",
+        "findings": [
+          {
+            "description": "Control con.1.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "f6015ebc-8cec-5670-8f4d-72ef028278cb"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "con.1.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for con.1.a1.1",
+            "uuid": "a15fafc3-6210-52b6-9dc8-8c32a7dbf840"
+          },
+          {
+            "description": "Control con.10.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "bfbb49fa-b140-5488-91fd-d74b1d63df3a"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "con.10.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for con.10.a1.1",
+            "uuid": "01c3c2af-088f-52bf-b47f-483ad21d24f3"
+          },
+          {
+            "description": "Control con.11.1.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "99342cd4-6c8e-5cdd-b052-de414d8757f3"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "con.11.1.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for con.11.1.a1.1",
+            "uuid": "6756530a-c563-5d8e-9ada-0551c9ad2930"
+          },
+          {
+            "description": "Control con.2.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "d1c50475-3a77-5693-af36-e3c85236c26a"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "con.2.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for con.2.a1.1",
+            "uuid": "4e8a7cdb-9019-5831-8d30-a9ab83103110"
+          },
+          {
+            "description": "Control con.3.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "12b87e5c-cbba-58b2-a64a-6384be69e924"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "con.3.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for con.3.a1.1",
+            "uuid": "c45fbd9b-df9e-51b6-9b94-bd3425867858"
+          },
+          {
+            "description": "Control con.6.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "4e6bb15d-c06f-59f0-a512-cc75c1dfa3c8"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "con.6.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for con.6.a1.1",
+            "uuid": "4649013e-f93c-51ff-a7ae-e43e8eb711e5"
+          },
+          {
+            "description": "Control con.7.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "c3006209-7e0c-5a04-8713-53556582f80f"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "con.7.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for con.7.a1.1",
+            "uuid": "a52c44c6-44d4-5793-86a0-0f71ea359909"
+          },
+          {
+            "description": "Control con.8.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "b1787e46-b090-524f-8322-70c0f5bdfe94"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "con.8.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for con.8.a1.1",
+            "uuid": "98a29097-8a67-53c8-abf1-a40997e6d9e8"
+          },
+          {
+            "description": "Control con.9.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "0a4764e4-8ba9-5d9e-ac56-f1870570d73b"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "con.9.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for con.9.a1.1",
+            "uuid": "fec43b1d-a359-5423-9b72-66f3f27a8485"
+          }
+        ],
+        "observations": [
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control con.1.a1.1 (Auswahl geeigneter kryptografischer Verfahren — CON.1.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "f6015ebc-8cec-5670-8f4d-72ef028278cb"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control con.10.a1.1 (Authentisierung bei Webanwendungen — CON.10.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "bfbb49fa-b140-5488-91fd-d74b1d63df3a"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control con.11.1.a1.1 (Einhaltung der Grundsätze zur VS-Verarbeitung mit IT nach § 3, 4 und 6 und Nr. 1 Anlage V zur VSA — CON.11.1.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "99342cd4-6c8e-5cdd-b052-de414d8757f3"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control con.2.a1.1 (Umsetzung Standard-Datenschutzmodell — CON.2.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "d1c50475-3a77-5693-af36-e3c85236c26a"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control con.3.a1.1 (Erhebung der Einflussfaktoren für Datensicherungen — CON.3.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "12b87e5c-cbba-58b2-a64a-6384be69e924"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control con.6.a1.1 (Regelung für die Löschung und Vernichtung von Informationen — CON.6.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "4e6bb15d-c06f-59f0-a512-cc75c1dfa3c8"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control con.7.a1.1 (Sicherheitsrichtlinie zur Informationssicherheit auf Auslandsreisen — CON.7.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "c3006209-7e0c-5a04-8713-53556582f80f"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control con.8.a1.1 (Definition von Rollen und Zuständigkeiten — CON.8.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "b1787e46-b090-524f-8322-70c0f5bdfe94"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control con.9.a1.1 (Festlegung zulässiger Empfangender — CON.9.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "0a4764e4-8ba9-5d9e-ac56-f1870570d73b"
+          }
+        ],
+        "reviewed-controls": {
+          "control-selections": [
+            {
+              "description": "All controls evaluated for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - CON: Konzeption und Vorgehensweisen",
+              "include-all": {}
+            }
+          ]
+        },
+        "start": "2026-11-08T01:42:12Z",
+        "title": "IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - CON: Konzeption und Vorgehensweisen Assessment Results",
+        "uuid": "5385c05a-df65-53a0-b3d8-134dd45ea02e"
+      }
+    ],
+    "uuid": "9e4eacb3-985a-5806-93b7-cc766dfe7e55"
+  }
+}

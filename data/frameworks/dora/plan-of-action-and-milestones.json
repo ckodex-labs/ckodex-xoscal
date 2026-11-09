@@ -1,0 +1,21 @@
+{
+  "plan-of-action-and-milestones": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:11Z",
+      "oscal-version": "1.2.3",
+      "title": "Digital Operational Resilience Act (DORA) Plan of Action and Milestones Template",
+      "version": "7"
+    },
+    "poam-items": [
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for Digital Operational Resilience Act (DORA).",
+        "title": "Compliance Roadmap and Parameter Tailoring for Digital Operational Resilience Act (DORA)",
+        "uuid": "8b07ff75-a321-5d85-a714-434edf5170c7"
+      }
+    ],
+    "uuid": "4609e5cf-76bb-5efc-bf27-990bf47aa450"
+  }
+}

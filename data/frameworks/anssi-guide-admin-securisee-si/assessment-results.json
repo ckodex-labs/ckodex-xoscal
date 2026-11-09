@@ -1,0 +1,353 @@
+{
+  "assessment-results": {
+    "import-ap": {
+      "href": "./assessment-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:12Z",
+      "oscal-version": "1.2.3",
+      "title": "Recommandations relatives à l'administration sécurisée des systèmes d'information Assessment Results Template",
+      "version": "1"
+    },
+    "results": [
+      {
+        "description": "Assessment evaluation findings and observations for Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "findings": [
+          {
+            "description": "Control r1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "61dfbae9-1a0e-5d7c-949d-dce1c26f0546"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "r1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for r1",
+            "uuid": "e9c2c8fa-98f1-5ede-8fe2-1422635b2fd5"
+          },
+          {
+            "description": "Control r10 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "eebe58b1-6cad-5274-8adf-a0dbee03bf44"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "r10",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for r10",
+            "uuid": "7809094b-a5c4-5cc9-989c-bf116840dbe3"
+          },
+          {
+            "description": "Control r15 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "7dc994a7-d930-54dd-990e-d3f04c83062a"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "r15",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for r15",
+            "uuid": "418f0441-ab6d-5f96-90ca-468874a3efbd"
+          },
+          {
+            "description": "Control r22 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "86d69675-211e-535f-986f-758255fbcf98"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "r22",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for r22",
+            "uuid": "f6668d11-4875-589d-b002-c6d72639d3cf"
+          },
+          {
+            "description": "Control r27 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "25e933d7-0355-5729-8848-d4093694ca9f"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "r27",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for r27",
+            "uuid": "201f2ad7-ca33-502c-aebc-ea7fe26c7b9a"
+          },
+          {
+            "description": "Control r4 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "a1c4adbc-a0ef-598b-9453-9d5758679d24"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "r4",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for r4",
+            "uuid": "9dcc7d7a-976a-5b9f-85da-ff824f885775"
+          },
+          {
+            "description": "Control r42 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "4ad9e328-1ad8-57e4-8273-0441e3251a1a"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "r42",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for r42",
+            "uuid": "9f5bdcec-ad58-5d10-972a-70968d8fba5c"
+          },
+          {
+            "description": "Control r45 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "90e75a02-bf58-5480-8433-2c324baf2194"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "r45",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for r45",
+            "uuid": "40a7f03a-e4b8-5a94-82e4-c32398743bee"
+          },
+          {
+            "description": "Control r48 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "6dc4b495-d4b3-5321-b66a-867be0841c9f"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "r48",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for r48",
+            "uuid": "6685a468-c017-57af-981c-a2ce1e875c56"
+          },
+          {
+            "description": "Control r52 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "3abf3ae2-8c10-5f80-af95-785a13200920"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "r52",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for r52",
+            "uuid": "c075682b-eccc-58d6-a514-a5c65a3b5724"
+          },
+          {
+            "description": "Control r59 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "ae366e6f-1127-5709-9e54-70c50e38ad11"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "r59",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for r59",
+            "uuid": "d459431d-4969-53b2-9e18-37d828f06c2a"
+          }
+        ],
+        "observations": [
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control r1 (Informer les administrateurs de leurs droits et devoirs) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "61dfbae9-1a0e-5d7c-949d-dce1c26f0546"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control r10 (Bloquer tout accès à Internet depuis ou vers le poste d'administration) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "eebe58b1-6cad-5274-8adf-a0dbee03bf44"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control r15 (Connecter les ressources d'administration sur un réseau physique dédié) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "7dc994a7-d930-54dd-990e-d3f04c83062a"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control r22 (Déployer les outils d'administration sur des serveurs dédiés par zone d'administration) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "86d69675-211e-535f-986f-758255fbcf98"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control r27 (Utiliser des comptes d'administration dédiés) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "25e933d7-0355-5729-8848-d4093694ca9f"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control r4 (Mener une analyse de risque sur le SI d'administration et son écosystème) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "a1c4adbc-a0ef-598b-9453-9d5758679d24"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control r42 (Réaliser scrupuleusement le MCS du SI d'administration) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "4ad9e328-1ad8-57e4-8273-0441e3251a1a"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control r45 (Définir une politique de sauvegarde du SI d'administration) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "90e75a02-bf58-5480-8433-2c324baf2194"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control r48 (Installer un filtre de confidentialité sur le poste d'administration nomade) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "6dc4b495-d4b3-5321-b66a-867be0841c9f"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control r52 (Déployer des systèmes d'échanges sécurisés) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "3abf3ae2-8c10-5f80-af95-785a13200920"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control r59 (Recourir à une prestation d'infogérance qualifiée d'un PAMS) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "ae366e6f-1127-5709-9e54-70c50e38ad11"
+          }
+        ],
+        "reviewed-controls": {
+          "control-selections": [
+            {
+              "description": "All controls evaluated for Recommandations relatives à l'administration sécurisée des systèmes d'information",
+              "include-all": {}
+            }
+          ]
+        },
+        "start": "2026-11-08T01:42:12Z",
+        "title": "Recommandations relatives à l'administration sécurisée des systèmes d'information Assessment Results",
+        "uuid": "dab10255-c07c-55b7-9c67-1e6c70d8b57b"
+      }
+    ],
+    "uuid": "3e4f4857-5edb-5442-a142-6f44322e24fc"
+  }
+}

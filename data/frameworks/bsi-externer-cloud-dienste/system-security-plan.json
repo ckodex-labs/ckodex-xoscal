@@ -1,0 +1,1398 @@
+{
+  "system-security-plan": {
+    "control-implementation": {
+      "description": "Control implementations for Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+      "implemented-requirements": [
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.1.01.a (Strategie für die Cloud-Nutzung — NCD.2.1.01.a) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "c9d5b6bd-f6d1-5a51-8f5e-ea727bf830a7"
+            }
+          ],
+          "control-id": "ncd.2.1.01.a",
+          "remarks": "Control ncd.2.1.01.a (Strategie für die Cloud-Nutzung — NCD.2.1.01.a) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "0d0308c3-ca6f-5d87-bf29-0b69dbf93de8"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.1.01.b (Strategie für die Cloud-Nutzung — NCD.2.1.01.b) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "4b5c70ee-77ce-5cf6-9311-f1a0bf43a943"
+            }
+          ],
+          "control-id": "ncd.2.1.01.b",
+          "remarks": "Control ncd.2.1.01.b (Strategie für die Cloud-Nutzung — NCD.2.1.01.b) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "17da9dbd-278c-5221-982b-2f02dbc40069"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.1.01.c (Strategie für die Cloud-Nutzung — NCD.2.1.01.c) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "a9f80db4-76e7-50cc-9f4e-bccc8d3d4b25"
+            }
+          ],
+          "control-id": "ncd.2.1.01.c",
+          "remarks": "Control ncd.2.1.01.c (Strategie für die Cloud-Nutzung — NCD.2.1.01.c) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "5c45b298-623e-5100-9566-f1f7de8a294e"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.1.01.d (Strategie für die Cloud-Nutzung — NCD.2.1.01.d) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "6821ca5a-994a-57cb-a180-e0095dc33d6f"
+            }
+          ],
+          "control-id": "ncd.2.1.01.d",
+          "remarks": "Control ncd.2.1.01.d (Strategie für die Cloud-Nutzung — NCD.2.1.01.d) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "bc6b705e-17e8-5040-88b1-8ba7ea74cb6e"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.1.02.a (Sicherheitsrichtlinie für externe Cloud-Dienste — NCD.2.1.02.a) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "b8ad1be5-7cee-5359-9296-df18a25ee6f0"
+            }
+          ],
+          "control-id": "ncd.2.1.02.a",
+          "remarks": "Control ncd.2.1.02.a (Sicherheitsrichtlinie für externe Cloud-Dienste — NCD.2.1.02.a) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f2c5bb40-de5d-516a-b58b-c9a851ecaa8d"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.1.02.b (Sicherheitsrichtlinie für externe Cloud-Dienste — NCD.2.1.02.b) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "7b72bf5c-9c14-58e7-a3e2-131ea63deca7"
+            }
+          ],
+          "control-id": "ncd.2.1.02.b",
+          "remarks": "Control ncd.2.1.02.b (Sicherheitsrichtlinie für externe Cloud-Dienste — NCD.2.1.02.b) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "4449dbab-1ff9-569b-94f0-44bd3c0272a6"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.1.02.c (Sicherheitsrichtlinie für externe Cloud-Dienste — NCD.2.1.02.c) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "5a595162-c33e-5b14-8c8e-92697c072b26"
+            }
+          ],
+          "control-id": "ncd.2.1.02.c",
+          "remarks": "Control ncd.2.1.02.c (Sicherheitsrichtlinie für externe Cloud-Dienste — NCD.2.1.02.c) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f019adf4-1ae9-54b9-8a85-c84842b6e243"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.1.03.a (Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.a) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "621395b4-c159-518c-8f40-991276049c24"
+            }
+          ],
+          "control-id": "ncd.2.1.03.a",
+          "remarks": "Control ncd.2.1.03.a (Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.a) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "e2864fd1-b0ca-5cc8-af39-8733473239b9"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.1.03.b (Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.b) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ce602816-64ee-5bac-bb68-4af9aafa82c4"
+            }
+          ],
+          "control-id": "ncd.2.1.03.b",
+          "remarks": "Control ncd.2.1.03.b (Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.b) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "dd732841-5a83-51df-80c9-eb10093f7277"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.1.03.c (Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.c) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "f1f7be15-72ea-50e7-b4b8-000050ff918a"
+            }
+          ],
+          "control-id": "ncd.2.1.03.c",
+          "remarks": "Control ncd.2.1.03.c (Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.c) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "5dc631ad-f08e-520a-8513-0d35dc868703"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.1.03.d (Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.d) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "b55c0809-b9b2-5c49-ab26-d8b4ddcb856b"
+            }
+          ],
+          "control-id": "ncd.2.1.03.d",
+          "remarks": "Control ncd.2.1.03.d (Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.d) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "8abd7400-284c-5750-86f9-533218ec6a92"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.1.03.e (Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.e) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "177366c4-d4b2-5faa-b675-c3cf36ea5c9b"
+            }
+          ],
+          "control-id": "ncd.2.1.03.e",
+          "remarks": "Control ncd.2.1.03.e (Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.e) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "0bc4bb68-dfe4-5a0a-bfc7-ae4f98f02872"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.1.03.f (Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.f) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "2866f54b-6367-59f0-a81f-7eff5d528e58"
+            }
+          ],
+          "control-id": "ncd.2.1.03.f",
+          "remarks": "Control ncd.2.1.03.f (Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.f) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "d9132ed2-35a2-552e-9f24-a804e225f75d"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.1.03.g (Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.g) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "6436f96f-4632-55e6-be51-18946a53f8d5"
+            }
+          ],
+          "control-id": "ncd.2.1.03.g",
+          "remarks": "Control ncd.2.1.03.g (Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.g) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "d9bb256d-4bab-5b73-9e32-bcbf2e896d12"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.1.03.h (Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.h) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "6432cf8b-f252-5be7-a3df-4d7cd85d8b28"
+            }
+          ],
+          "control-id": "ncd.2.1.03.h",
+          "remarks": "Control ncd.2.1.03.h (Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.h) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "a92d1219-1332-51fb-87aa-c72b17074de9"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.1.03.h.i (Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.h.i) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "72ab9af4-095a-5f1f-9a73-0b4771220136"
+            }
+          ],
+          "control-id": "ncd.2.1.03.h.i",
+          "remarks": "Control ncd.2.1.03.h.i (Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.h.i) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "5d222816-b3b0-5500-967c-49aa44820b25"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.1.03.h.ii (Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.h.ii) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ad36f6fc-272b-5550-a3f2-2c349bb76a92"
+            }
+          ],
+          "control-id": "ncd.2.1.03.h.ii",
+          "remarks": "Control ncd.2.1.03.h.ii (Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.h.ii) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "e588e7f1-6bba-5884-afc0-be14e0c2d04f"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.1.03.i (Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.i) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "4b8b5c2d-e883-5b8f-85fc-53c6ba4657ac"
+            }
+          ],
+          "control-id": "ncd.2.1.03.i",
+          "remarks": "Control ncd.2.1.03.i (Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.i) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "715a1cf1-d6b7-5e8f-850d-167d23a703a5"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.1.04.a (Notfall- und Kontinuitätsmanagement — NCD.2.1.04.a) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "66db87da-750a-5ac9-845e-0d8d4081bbff"
+            }
+          ],
+          "control-id": "ncd.2.1.04.a",
+          "remarks": "Control ncd.2.1.04.a (Notfall- und Kontinuitätsmanagement — NCD.2.1.04.a) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "9766148b-ac1e-5082-b938-78c7629df3fa"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.1.04.b (Notfall- und Kontinuitätsmanagement — NCD.2.1.04.b) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "2075b596-57e2-5c15-a57c-1eb1a0cacdc6"
+            }
+          ],
+          "control-id": "ncd.2.1.04.b",
+          "remarks": "Control ncd.2.1.04.b (Notfall- und Kontinuitätsmanagement — NCD.2.1.04.b) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "67dc34cd-c78b-5b67-9d2e-cbab5bc92116"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.1.04.c (Notfall- und Kontinuitätsmanagement — NCD.2.1.04.c) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "a9f692a0-1000-52bd-a885-f76dd3fbf3bc"
+            }
+          ],
+          "control-id": "ncd.2.1.04.c",
+          "remarks": "Control ncd.2.1.04.c (Notfall- und Kontinuitätsmanagement — NCD.2.1.04.c) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "cd682689-6190-5808-9a38-c8d3975de3f7"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.2.01.a (Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.a) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "387f7697-0ccd-5db8-8018-8887c760702d"
+            }
+          ],
+          "control-id": "ncd.2.2.01.a",
+          "remarks": "Control ncd.2.2.01.a (Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.a) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "5f53a36e-b93d-5dd1-8e15-dfbafbf1c4f4"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.2.01.b (Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.b) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "72e78956-6ab8-5683-bfc7-7d46347e0776"
+            }
+          ],
+          "control-id": "ncd.2.2.01.b",
+          "remarks": "Control ncd.2.2.01.b (Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.b) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "5d70c4bf-fb0f-54cb-93e2-77634d8edd32"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.2.01.c (Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.c) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "dcaf565b-7f78-517a-81e7-c0561901b063"
+            }
+          ],
+          "control-id": "ncd.2.2.01.c",
+          "remarks": "Control ncd.2.2.01.c (Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.c) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "aad2d840-5d67-5d03-8c0a-b07e03a55e0f"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.2.01.d (Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.d) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "81b42151-eb9e-5eaf-ac3b-9bba586497ef"
+            }
+          ],
+          "control-id": "ncd.2.2.01.d",
+          "remarks": "Control ncd.2.2.01.d (Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.d) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "05c2778f-de58-595b-9bce-8c4cc51830f7"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.2.01.e (Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.e) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ce553fd0-2a30-5396-a486-2c6563f2cea4"
+            }
+          ],
+          "control-id": "ncd.2.2.01.e",
+          "remarks": "Control ncd.2.2.01.e (Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.e) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f77f54e9-f653-50f9-8455-e3a4872c1e8a"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.2.01.f (Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.f) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "02dcebd6-5b7a-51a6-a158-870367096dff"
+            }
+          ],
+          "control-id": "ncd.2.2.01.f",
+          "remarks": "Control ncd.2.2.01.f (Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.f) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f95a96de-f2c5-5dbc-ae33-c87e46867de4"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.2.01.g (Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.g) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "56bec733-a619-5843-8541-c1214c3cf326"
+            }
+          ],
+          "control-id": "ncd.2.2.01.g",
+          "remarks": "Control ncd.2.2.01.g (Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.g) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "40dfe3ef-7f0a-58af-934b-6d41d73372bc"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.2.01.h (Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.h) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "1e591b78-7530-5723-b2e9-2c4c5f90b2a5"
+            }
+          ],
+          "control-id": "ncd.2.2.01.h",
+          "remarks": "Control ncd.2.2.01.h (Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.h) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "d1591887-9c06-5780-91c3-860c063538b4"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.2.01.i (Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.i) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "50f3f545-9322-5546-8312-26d9b4c11ab9"
+            }
+          ],
+          "control-id": "ncd.2.2.01.i",
+          "remarks": "Control ncd.2.2.01.i (Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.i) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "86d3b4f4-2031-511d-9fca-3efa27868ed5"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.2.01.i.i (Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.i.i) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "cff72cee-7e42-541f-a466-735dd78a9217"
+            }
+          ],
+          "control-id": "ncd.2.2.01.i.i",
+          "remarks": "Control ncd.2.2.01.i.i (Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.i.i) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "78b5f165-5d73-5d39-b23a-3eb68e70b9bf"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.2.01.i.ii (Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.i.ii) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "536ba405-54b1-58a1-a923-383b3a23a1f1"
+            }
+          ],
+          "control-id": "ncd.2.2.01.i.ii",
+          "remarks": "Control ncd.2.2.01.i.ii (Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.i.ii) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "3862ec1e-8e22-5502-890a-0eed173b12e7"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.2.01.j (Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.j) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "00ece18f-bb17-5dd5-9317-3cd50212f309"
+            }
+          ],
+          "control-id": "ncd.2.2.01.j",
+          "remarks": "Control ncd.2.2.01.j (Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.j) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "04e7e22d-d4f3-57c6-81db-e7d42812847c"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.2.01.j.i (Die Einrichtung SOLLTE sich eigene Prüfrechte vertraglich zusichern lassen. — NCD.2.2.01.j.i) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "9c50f255-8a32-5401-91d3-67d617214e86"
+            }
+          ],
+          "control-id": "ncd.2.2.01.j.i",
+          "remarks": "Control ncd.2.2.01.j.i (Die Einrichtung SOLLTE sich eigene Prüfrechte vertraglich zusichern lassen. — NCD.2.2.01.j.i) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "da3ad20a-c243-59bf-885a-9b72f27303c0"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.2.01.j.ii (Die Einrichtung SOLLTE sich eigene Prüfrechte vertraglich zusichern lassen. — NCD.2.2.01.j.ii) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "f186b90c-27a9-5e27-8933-0b1472e40bc1"
+            }
+          ],
+          "control-id": "ncd.2.2.01.j.ii",
+          "remarks": "Control ncd.2.2.01.j.ii (Die Einrichtung SOLLTE sich eigene Prüfrechte vertraglich zusichern lassen. — NCD.2.2.01.j.ii) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "b16d39cb-0e93-5164-97d5-50bf43e8bc44"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.2.01.j.iii (Die Einrichtung SOLLTE sich eigene Prüfrechte vertraglich zusichern lassen. — NCD.2.2.01.j.iii) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "3cad5721-b24c-5192-8168-ba641c59067c"
+            }
+          ],
+          "control-id": "ncd.2.2.01.j.iii",
+          "remarks": "Control ncd.2.2.01.j.iii (Die Einrichtung SOLLTE sich eigene Prüfrechte vertraglich zusichern lassen. — NCD.2.2.01.j.iii) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "6b23c57f-4f50-532f-bb1f-83fba23e167c"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.2.01.j.iv (Die Einrichtung SOLLTE sich eigene Prüfrechte vertraglich zusichern lassen. — NCD.2.2.01.j.iv) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "dee2cf27-c733-5e0b-a2f8-3e252d53e4e3"
+            }
+          ],
+          "control-id": "ncd.2.2.01.j.iv",
+          "remarks": "Control ncd.2.2.01.j.iv (Die Einrichtung SOLLTE sich eigene Prüfrechte vertraglich zusichern lassen. — NCD.2.2.01.j.iv) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "3a031967-c7e7-5c90-a5ba-d0625fa51661"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.2.02.a (Umgang mit Unterauftragnehmern und anderen externen Dritten vertraglich zusichern — NCD.2.2.02.a) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "1ac82653-3f3a-5492-8923-3836eb4960bd"
+            }
+          ],
+          "control-id": "ncd.2.2.02.a",
+          "remarks": "Control ncd.2.2.02.a (Umgang mit Unterauftragnehmern und anderen externen Dritten vertraglich zusichern — NCD.2.2.02.a) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "654456a7-5ac4-56d8-8394-c4dd015e0bc9"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.2.02.b (Umgang mit Unterauftragnehmern und anderen externen Dritten vertraglich zusichern — NCD.2.2.02.b) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "67fb9e5c-76c5-51c0-92af-123da549dec5"
+            }
+          ],
+          "control-id": "ncd.2.2.02.b",
+          "remarks": "Control ncd.2.2.02.b (Umgang mit Unterauftragnehmern und anderen externen Dritten vertraglich zusichern — NCD.2.2.02.b) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "37ad159d-b3bb-59be-9493-53c8a7d13607"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.2.02.b.i (Umgang mit Unterauftragnehmern und anderen externen Dritten vertraglich zusichern — NCD.2.2.02.b.i) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "353ddec9-9579-535b-ad48-2229cd12bfc1"
+            }
+          ],
+          "control-id": "ncd.2.2.02.b.i",
+          "remarks": "Control ncd.2.2.02.b.i (Umgang mit Unterauftragnehmern und anderen externen Dritten vertraglich zusichern — NCD.2.2.02.b.i) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "c8856029-063b-527e-8975-e52f0f476166"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.2.02.b.ii (Umgang mit Unterauftragnehmern und anderen externen Dritten vertraglich zusichern — NCD.2.2.02.b.ii) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "a15b29ba-0916-59a1-99d9-3623b74bacaf"
+            }
+          ],
+          "control-id": "ncd.2.2.02.b.ii",
+          "remarks": "Control ncd.2.2.02.b.ii (Umgang mit Unterauftragnehmern und anderen externen Dritten vertraglich zusichern — NCD.2.2.02.b.ii) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "20c1bca0-2260-58a4-8381-90f110e2bfca"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.2.02.c (Umgang mit Unterauftragnehmern und anderen externen Dritten vertraglich zusichern — NCD.2.2.02.c) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "88e4a82f-8438-5d13-b200-d965b9794fab"
+            }
+          ],
+          "control-id": "ncd.2.2.02.c",
+          "remarks": "Control ncd.2.2.02.c (Umgang mit Unterauftragnehmern und anderen externen Dritten vertraglich zusichern — NCD.2.2.02.c) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "53452ae9-c968-509b-99cb-3c074b28b411"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.2.02.d (Umgang mit Unterauftragnehmern und anderen externen Dritten vertraglich zusichern — NCD.2.2.02.d) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "560a56eb-e050-5cf7-9b36-7b14088191d8"
+            }
+          ],
+          "control-id": "ncd.2.2.02.d",
+          "remarks": "Control ncd.2.2.02.d (Umgang mit Unterauftragnehmern und anderen externen Dritten vertraglich zusichern — NCD.2.2.02.d) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "5a89e4b3-f19e-57ef-8ca0-266e5322155f"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.2.03.a (Gerichtsbarkeit — NCD.2.2.03.a) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "f8335784-058f-5f3a-b068-7783997fb7d0"
+            }
+          ],
+          "control-id": "ncd.2.2.03.a",
+          "remarks": "Control ncd.2.2.03.a (Gerichtsbarkeit — NCD.2.2.03.a) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "ee2e4c9b-5a2c-5df8-b49c-02a9dacd4ac1"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.2.03.b (Gerichtsbarkeit — NCD.2.2.03.b) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "655d384a-ef23-58ad-a8a6-82c911998575"
+            }
+          ],
+          "control-id": "ncd.2.2.03.b",
+          "remarks": "Control ncd.2.2.03.b (Gerichtsbarkeit — NCD.2.2.03.b) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "e13045da-eda6-52a3-8b5b-140dbc785663"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.2.03.c (Gerichtsbarkeit — NCD.2.2.03.c) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "31aca4ab-9224-586e-8595-fa97924f9448"
+            }
+          ],
+          "control-id": "ncd.2.2.03.c",
+          "remarks": "Control ncd.2.2.03.c (Gerichtsbarkeit — NCD.2.2.03.c) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "12e5397c-b60d-5516-b27f-a932dafdf91b"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.2.04.a (Lokation der Datenverarbeitung — NCD.2.2.04.a) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "0bd6c0ba-7ee0-5ff3-ae14-1234fd337fcf"
+            }
+          ],
+          "control-id": "ncd.2.2.04.a",
+          "remarks": "Control ncd.2.2.04.a (Lokation der Datenverarbeitung — NCD.2.2.04.a) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "c6e9c0be-435a-5c73-8d02-efb79b8bd08a"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.2.04.b (Lokation der Datenverarbeitung — NCD.2.2.04.b) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "49b48386-cfb4-58bf-be28-4630b99b0a71"
+            }
+          ],
+          "control-id": "ncd.2.2.04.b",
+          "remarks": "Control ncd.2.2.04.b (Lokation der Datenverarbeitung — NCD.2.2.04.b) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f4563ebb-2d02-54f8-a48c-362b4d09c342"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.2.05.a (Meldepflicht sicherheitsrelevanter Vorfälle — NCD.2.2.05.a) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "86380d51-f09f-53c4-be31-3edffb724c5b"
+            }
+          ],
+          "control-id": "ncd.2.2.05.a",
+          "remarks": "Control ncd.2.2.05.a (Meldepflicht sicherheitsrelevanter Vorfälle — NCD.2.2.05.a) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "02e171f4-ac12-5e2b-aa07-fa81e5f9e8bb"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.2.05.a.i (Meldepflicht sicherheitsrelevanter Vorfälle — NCD.2.2.05.a.i) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "74ef5b7d-eca6-5fea-9602-c1be3fe4304e"
+            }
+          ],
+          "control-id": "ncd.2.2.05.a.i",
+          "remarks": "Control ncd.2.2.05.a.i (Meldepflicht sicherheitsrelevanter Vorfälle — NCD.2.2.05.a.i) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "951ceeab-0311-5c5c-bb28-86e13c3c3575"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.2.05.a.ii (Meldepflicht sicherheitsrelevanter Vorfälle — NCD.2.2.05.a.ii) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "bbadac1f-a912-5137-a2d2-b0c538fd41ee"
+            }
+          ],
+          "control-id": "ncd.2.2.05.a.ii",
+          "remarks": "Control ncd.2.2.05.a.ii (Meldepflicht sicherheitsrelevanter Vorfälle — NCD.2.2.05.a.ii) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "ed6d8cee-5795-5826-a8d3-bca68bad0a19"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.2.06.a (Beendigung des Vertragsverhältnisses — NCD.2.2.06.a) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "12bbc485-0a3f-59a1-84ef-c2c05fcfb8a3"
+            }
+          ],
+          "control-id": "ncd.2.2.06.a",
+          "remarks": "Control ncd.2.2.06.a (Beendigung des Vertragsverhältnisses — NCD.2.2.06.a) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "411abee0-4f53-51b3-8c36-d8aea6b6c1f6"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.2.06.b (Beendigung des Vertragsverhältnisses — NCD.2.2.06.b) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "fd0a159f-687d-54bc-a9cf-f61f152f4bb5"
+            }
+          ],
+          "control-id": "ncd.2.2.06.b",
+          "remarks": "Control ncd.2.2.06.b (Beendigung des Vertragsverhältnisses — NCD.2.2.06.b) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "5df561f5-8c60-5be4-ba33-4300375ff9d6"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.2.07.a (Regelung der Datenrückgabe und Datenlöschung — NCD.2.2.07.a) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ce7650fd-2113-58fa-b398-3f467cd86017"
+            }
+          ],
+          "control-id": "ncd.2.2.07.a",
+          "remarks": "Control ncd.2.2.07.a (Regelung der Datenrückgabe und Datenlöschung — NCD.2.2.07.a) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "5eada9c2-0d5f-5455-9653-ed63d9d4e976"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.2.07.b (Regelung der Datenrückgabe und Datenlöschung — NCD.2.2.07.b) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "670c9eaa-c9d1-5a67-a754-32e1079cb300"
+            }
+          ],
+          "control-id": "ncd.2.2.07.b",
+          "remarks": "Control ncd.2.2.07.b (Regelung der Datenrückgabe und Datenlöschung — NCD.2.2.07.b) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "964f6a34-f2ca-5c65-9d12-095d4ec6a69d"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.3.01.a (Einbindung in das ISMS — NCD.2.3.01.a) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "a86b8197-0fe1-5dfd-8013-2834188ed7b6"
+            }
+          ],
+          "control-id": "ncd.2.3.01.a",
+          "remarks": "Control ncd.2.3.01.a (Einbindung in das ISMS — NCD.2.3.01.a) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "4637a0cd-0b04-58ee-af67-0d6966549451"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.3.01.b (Einbindung in das ISMS — NCD.2.3.01.b) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "68fba51b-239f-54f2-be70-57915f62ec97"
+            }
+          ],
+          "control-id": "ncd.2.3.01.b",
+          "remarks": "Control ncd.2.3.01.b (Einbindung in das ISMS — NCD.2.3.01.b) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "34957d2f-7f65-582d-bbee-d57e10b9b9c2"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.3.02.a (Auswertung von Sicherheitsnachweisen — NCD.2.3.02.a) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "6db2a4fd-2da6-5411-947a-1bc1fa54bcfc"
+            }
+          ],
+          "control-id": "ncd.2.3.02.a",
+          "remarks": "Control ncd.2.3.02.a (Auswertung von Sicherheitsnachweisen — NCD.2.3.02.a) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "e21582c9-f553-5b38-ab9f-83c04f298283"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.3.02.a.i (Die Einrichtung MUSS die Nachweise und sonstige Berichte des Cloud-Diensteanbieters auswerten. — NCD.2.3.02.a.i) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "d08f3698-bffb-5c7a-ae62-ff86e21d826a"
+            }
+          ],
+          "control-id": "ncd.2.3.02.a.i",
+          "remarks": "Control ncd.2.3.02.a.i (Die Einrichtung MUSS die Nachweise und sonstige Berichte des Cloud-Diensteanbieters auswerten. — NCD.2.3.02.a.i) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "d14ffac2-f1f6-529c-a3c7-5ceab42b68c3"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.3.02.a.ii (Die Einrichtung MUSS die Nachweise und sonstige Berichte des Cloud-Diensteanbieters auswerten. — NCD.2.3.02.a.ii) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "3d49d612-7d87-58e9-82b0-0394abf25ec3"
+            }
+          ],
+          "control-id": "ncd.2.3.02.a.ii",
+          "remarks": "Control ncd.2.3.02.a.ii (Die Einrichtung MUSS die Nachweise und sonstige Berichte des Cloud-Diensteanbieters auswerten. — NCD.2.3.02.a.ii) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "243c956e-dcc7-5212-830a-939f8da4358d"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.3.02.b (Auswertung von Sicherheitsnachweisen — NCD.2.3.02.b) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "261f323a-46fd-5b8e-962f-af145b8968c9"
+            }
+          ],
+          "control-id": "ncd.2.3.02.b",
+          "remarks": "Control ncd.2.3.02.b (Auswertung von Sicherheitsnachweisen — NCD.2.3.02.b) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "8e087bb1-e4ac-535b-9b7e-e3ac05efdc87"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.3.03.a (Prüfung der Leistungsfähigkeit — NCD.2.3.03.a) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "33d481af-ac81-5afa-a873-b704fd673d56"
+            }
+          ],
+          "control-id": "ncd.2.3.03.a",
+          "remarks": "Control ncd.2.3.03.a (Prüfung der Leistungsfähigkeit — NCD.2.3.03.a) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "b99ad6f3-defe-51d6-bb21-d9ca35fa10b0"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.3.03.b (Prüfung der Leistungsfähigkeit — NCD.2.3.03.b) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "a9087bb3-c28d-5156-893e-22318c7a8596"
+            }
+          ],
+          "control-id": "ncd.2.3.03.b",
+          "remarks": "Control ncd.2.3.03.b (Prüfung der Leistungsfähigkeit — NCD.2.3.03.b) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "875edf33-ea4b-5b7d-9342-32a71e5d436d"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.3.03.c (Prüfung der Leistungsfähigkeit — NCD.2.3.03.c) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ff5b03b2-4f0e-51b3-8b17-f469c3da4c5c"
+            }
+          ],
+          "control-id": "ncd.2.3.03.c",
+          "remarks": "Control ncd.2.3.03.c (Prüfung der Leistungsfähigkeit — NCD.2.3.03.c) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "bff6b830-7c27-5fc7-8818-1b863aa53783"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.3.04.a (Informationspflichten — NCD.2.3.04.a) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "786df595-3fae-519a-b0e2-3a127f6ef1f9"
+            }
+          ],
+          "control-id": "ncd.2.3.04.a",
+          "remarks": "Control ncd.2.3.04.a (Informationspflichten — NCD.2.3.04.a) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "1c23e3d9-07cf-5ec5-a70c-530bbd13f33f"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.3.04.b (Informationspflichten — NCD.2.3.04.b) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "fd053b4d-95ae-5f9e-a45a-9af2381994ec"
+            }
+          ],
+          "control-id": "ncd.2.3.04.b",
+          "remarks": "Control ncd.2.3.04.b (Informationspflichten — NCD.2.3.04.b) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "5483636f-20d5-53bf-b74c-ee21cdff2c23"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.3.05.a (Multi-Faktor-Authentisierung — NCD.2.3.05.a) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "163ebfc7-024a-55d0-927f-de8fde453b06"
+            }
+          ],
+          "control-id": "ncd.2.3.05.a",
+          "remarks": "Control ncd.2.3.05.a (Multi-Faktor-Authentisierung — NCD.2.3.05.a) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f2af0f33-ba02-56ee-b95c-3d6f4d63a524"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.3.05.b (Multi-Faktor-Authentisierung — NCD.2.3.05.b) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "a5004a1a-b472-52a3-a0d6-99c55dada871"
+            }
+          ],
+          "control-id": "ncd.2.3.05.b",
+          "remarks": "Control ncd.2.3.05.b (Multi-Faktor-Authentisierung — NCD.2.3.05.b) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "5d62f18a-6fc3-5cac-99ab-ec9304947c4f"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.4.01.a (Datenrückgabe bei Beendigung — NCD.2.4.01.a) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "83da8a26-711a-5428-8b2a-35c350fd7007"
+            }
+          ],
+          "control-id": "ncd.2.4.01.a",
+          "remarks": "Control ncd.2.4.01.a (Datenrückgabe bei Beendigung — NCD.2.4.01.a) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "94f5ae01-0e98-51be-96b5-79175cf66e13"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.4.01.b (Datenrückgabe bei Beendigung — NCD.2.4.01.b) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "2e05880c-a680-5a4e-995b-3f248695a3ad"
+            }
+          ],
+          "control-id": "ncd.2.4.01.b",
+          "remarks": "Control ncd.2.4.01.b (Datenrückgabe bei Beendigung — NCD.2.4.01.b) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "c73bdce7-1a56-563f-afd6-49348127ed1f"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.4.02.a (Datenlöschung bei Beendigung — NCD.2.4.02.a) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "a5667578-60ed-593e-b984-5a1315075c85"
+            }
+          ],
+          "control-id": "ncd.2.4.02.a",
+          "remarks": "Control ncd.2.4.02.a (Datenlöschung bei Beendigung — NCD.2.4.02.a) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "755ea51e-d82b-5cfe-ab4e-9910ecd2fca5"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.4.02.b (Datenlöschung bei Beendigung — NCD.2.4.02.b) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "b5baf0bc-67df-5901-a0fd-01d193c59d00"
+            }
+          ],
+          "control-id": "ncd.2.4.02.b",
+          "remarks": "Control ncd.2.4.02.b (Datenlöschung bei Beendigung — NCD.2.4.02.b) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "e17a76cb-42cb-55ee-a972-75c0350d8a6d"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.4.02.c (Datenlöschung bei Beendigung — NCD.2.4.02.c) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "53d3e5ac-50dd-5fb5-99bb-21b700ac3201"
+            }
+          ],
+          "control-id": "ncd.2.4.02.c",
+          "remarks": "Control ncd.2.4.02.c (Datenlöschung bei Beendigung — NCD.2.4.02.c) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "76b6e7f6-3ee7-5e1a-9790-21860f2790b4"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.5.01.a (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.a) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "a782e4ec-745f-540f-8f25-185519ad344d"
+            }
+          ],
+          "control-id": "ncd.2.5.01.a",
+          "remarks": "Control ncd.2.5.01.a (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.a) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "bccbd40e-75f6-5ae3-a106-15c77026d229"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.5.01.b (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.b) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "85a96d40-b8c5-5759-a458-8cbb57b872f1"
+            }
+          ],
+          "control-id": "ncd.2.5.01.b",
+          "remarks": "Control ncd.2.5.01.b (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.b) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "247b0370-2986-57db-a426-7e0ed2657e8b"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.5.01.c (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.c) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "810db203-181e-5998-8341-082ae38ce45c"
+            }
+          ],
+          "control-id": "ncd.2.5.01.c",
+          "remarks": "Control ncd.2.5.01.c (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.c) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "e4f47beb-c776-5299-ad22-7b59e9106028"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.5.01.c.i (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.c.i) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "b1e4b119-53df-543e-9140-85aa6a4bec0d"
+            }
+          ],
+          "control-id": "ncd.2.5.01.c.i",
+          "remarks": "Control ncd.2.5.01.c.i (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.c.i) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "4fcc677f-83ea-56c8-ade7-754ce7f07e01"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.5.01.c.ii (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.c.ii) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "e7bd276a-b6ea-509c-987b-2b507ff8d375"
+            }
+          ],
+          "control-id": "ncd.2.5.01.c.ii",
+          "remarks": "Control ncd.2.5.01.c.ii (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.c.ii) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "60b0c480-6d07-5b60-835c-c4db8b1d1da2"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.5.01.d (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.d) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "e2477ea1-5c9d-52ee-a47a-d3cfbe3209c7"
+            }
+          ],
+          "control-id": "ncd.2.5.01.d",
+          "remarks": "Control ncd.2.5.01.d (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.d) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "3476e50f-7202-5581-853d-02676183f7ed"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.5.01.d.i (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.d.i) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "379a51f9-f2a5-50bf-8ce0-6406ff32cc4c"
+            }
+          ],
+          "control-id": "ncd.2.5.01.d.i",
+          "remarks": "Control ncd.2.5.01.d.i (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.d.i) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "fd425544-3874-55c2-82ba-67c2c93af9f0"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.5.01.d.ii (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.d.ii) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "d291ac0d-6a38-53ec-b705-db3af05443ed"
+            }
+          ],
+          "control-id": "ncd.2.5.01.d.ii",
+          "remarks": "Control ncd.2.5.01.d.ii (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.d.ii) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "e9d0055e-8998-5152-8f58-38adb85b4cee"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.5.01.e (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.e) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "e7ef20e4-4d01-5f56-b609-f12bdbc175d9"
+            }
+          ],
+          "control-id": "ncd.2.5.01.e",
+          "remarks": "Control ncd.2.5.01.e (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.e) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "df2a54c2-0413-52b3-881b-1a2ed8f16a95"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.5.01.e.i (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.e.i) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "65492871-f504-544d-94e6-77907a8f65ea"
+            }
+          ],
+          "control-id": "ncd.2.5.01.e.i",
+          "remarks": "Control ncd.2.5.01.e.i (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.e.i) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "cd9b7c35-5ab1-55dd-b6e5-6b3c6cd751c0"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.5.01.e.ii (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.e.ii) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "f2c00574-8055-5cca-929b-9dd407c4de20"
+            }
+          ],
+          "control-id": "ncd.2.5.01.e.ii",
+          "remarks": "Control ncd.2.5.01.e.ii (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.e.ii) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "1e8fb312-f373-5247-b0bb-472acc3cacb0"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.5.01.f (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.f) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "9ea5bce7-8478-50da-baa3-c40d6498d324"
+            }
+          ],
+          "control-id": "ncd.2.5.01.f",
+          "remarks": "Control ncd.2.5.01.f (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.f) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "944853eb-5b2a-5c5e-8040-84f38773aacb"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.5.01.g (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.g) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ed35c513-bf93-5576-bde3-3abdd86400e3"
+            }
+          ],
+          "control-id": "ncd.2.5.01.g",
+          "remarks": "Control ncd.2.5.01.g (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.g) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "095ae517-42dc-5a92-8531-0eeff7bc8deb"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.5.01.g.i (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.g.i) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "7b1e10c0-fb01-525c-92a8-38809317567b"
+            }
+          ],
+          "control-id": "ncd.2.5.01.g.i",
+          "remarks": "Control ncd.2.5.01.g.i (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.g.i) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "e8456122-c944-5ed8-b70f-5b7c81b41aae"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546",
+              "description": "Control ncd.2.5.01.g.ii (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.g.ii) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "162feb35-2b36-5d70-9fa0-f4ec4916cc23"
+            }
+          ],
+          "control-id": "ncd.2.5.01.g.ii",
+          "remarks": "Control ncd.2.5.01.g.ii (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.g.ii) is satisfied by the Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f6cf1889-ecff-577d-8987-ffe6d3cede76"
+        }
+      ]
+    },
+    "import-profile": {
+      "href": "./catalog.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:13Z",
+      "oscal-version": "1.2.3",
+      "roles": [
+        {
+          "id": "sec-admin",
+          "title": "Security Administrator"
+        }
+      ],
+      "title": "Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) System Security Plan Template",
+      "version": "1"
+    },
+    "system-characteristics": {
+      "authorization-boundary": {
+        "description": "The authorization boundary encompasses all computing resources, cloud tenancies, and network zones supporting Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) operations."
+      },
+      "description": "Reference system architecture implementing security controls for Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+      "security-impact-level": {
+        "security-objective-availability": "moderate",
+        "security-objective-confidentiality": "moderate",
+        "security-objective-integrity": "high"
+      },
+      "security-sensitivity-level": "moderate",
+      "status": {
+        "state": "operational"
+      },
+      "system-ids": [
+        {
+          "id": "bsi-externer-cloud-dienste-system"
+        }
+      ],
+      "system-information": {
+        "information-types": [
+          {
+            "description": "Operational and compliance data processed within the germany jurisdiction boundary.",
+            "title": "Sovereign Program Data",
+            "uuid": "68ec45de-cb08-5ba4-8546-8eafd4914c62"
+          }
+        ]
+      },
+      "system-name": "Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Reference System",
+      "system-name-short": "bsi-externer-cloud-dienste"
+    },
+    "system-implementation": {
+      "components": [
+        {
+          "description": "Central execution platform providing control implementations for Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+          "status": {
+            "state": "operational"
+          },
+          "title": "Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Core System Component",
+          "type": "software",
+          "uuid": "acbdb5d5-5f98-5cac-b13c-61bed7c16546"
+        }
+      ],
+      "users": [
+        {
+          "role-ids": [
+            "sec-admin"
+          ],
+          "title": "Security Administrator",
+          "uuid": "5936fd39-8761-588b-abcc-95496abe42f7"
+        }
+      ]
+    },
+    "uuid": "ca8318fe-0348-5d11-bb67-40f712a8d1f7"
+  }
+}

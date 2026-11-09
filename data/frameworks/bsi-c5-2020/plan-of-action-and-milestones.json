@@ -1,0 +1,21 @@
+{
+  "plan-of-action-and-milestones": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:13Z",
+      "oscal-version": "1.2.3",
+      "title": "BSI C5 Library Plan of Action and Milestones Template",
+      "version": "1"
+    },
+    "poam-items": [
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for BSI C5 Library.",
+        "title": "Compliance Roadmap and Parameter Tailoring for BSI C5 Library",
+        "uuid": "09c04a6b-06d4-57d2-9b33-7566037e7ee4"
+      }
+    ],
+    "uuid": "6cc23af6-6cee-5ae8-b2d2-3604827b6941"
+  }
+}

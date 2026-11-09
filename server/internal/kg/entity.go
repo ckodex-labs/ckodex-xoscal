@@ -25,25 +25,62 @@ type Entity struct {
 	Payload   json.RawMessage `json:"payload"`
 }
 
+// ParamDef represents an Organization-Defined Parameter (ODP) extracted from a requirement.
+type ParamDef struct {
+	ID      string   `json:"id"`
+	Label   string   `json:"label"`
+	Values  []string `json:"values,omitempty"`
+	Choices []string `json:"choices,omitempty"`
+	HowMany string   `json:"how_many,omitempty"`
+	Class   string   `json:"class,omitempty"`
+}
+
+// PropDef represents an OSCAL property preserved on a requirement or part.
+type PropDef struct {
+	Name  string `json:"name"`
+	Value string `json:"value"`
+	Ns    string `json:"ns,omitempty"`
+	Class string `json:"class,omitempty"`
+	ID    string `json:"id,omitempty"`
+}
+
+// PartDef represents a structured OSCAL part (statement AST, guidance, gc-guidance, item, etc.).
+type PartDef struct {
+	ID    string    `json:"id,omitempty"`
+	Name  string    `json:"name"`
+	Ns    string    `json:"ns,omitempty"`
+	Class string    `json:"class,omitempty"`
+	Title string    `json:"title,omitempty"`
+	Prose string    `json:"prose,omitempty"`
+	Props []PropDef `json:"props,omitempty"`
+	Parts []PartDef `json:"parts,omitempty"`
+}
+
 // Requirement represents a regulatory requirement.
 type Requirement struct {
-	URN                  string   `json:"@id"`
-	Type                 string   `json:"@type"`
-	Framework            string   `json:"framework"`
-	Citation             string   `json:"citation"`
-	Role                 string   `json:"role"`
-	RiskLevel            string   `json:"risk_level"`
-	Lifecycle            string   `json:"lifecycle"`
-	Text                 string   `json:"text"`
-	Title                string   `json:"title"`
-	Section              string   `json:"section"`
-	Subsection           string   `json:"subsection"`
-	Depth                int      `json:"depth"`
-	ParentURN            string   `json:"parent_urn,omitempty"`
-	Assessable           bool     `json:"assessable"`
-	ImplementationGroups []string `json:"implementation_groups,omitempty"`
-	NodeRefID            string   `json:"ref_id,omitempty"`
-	NodeName             string   `json:"node_name,omitempty"`
+	URN                  string     `json:"@id"`
+	Type                 string     `json:"@type"`
+	Framework            string     `json:"framework"`
+	Citation             string     `json:"citation"`
+	Role                 string     `json:"role"`
+	RiskLevel            string     `json:"risk_level"`
+	Lifecycle            string     `json:"lifecycle"`
+	Text                 string     `json:"text"`
+	Title                string     `json:"title"`
+	Guidance             string     `json:"guidance,omitempty"`
+	CanadianGuidance     string     `json:"canadian_guidance,omitempty"`
+	Class                string     `json:"class,omitempty"`
+	Params               []ParamDef `json:"params,omitempty"`
+	Props                []PropDef  `json:"props,omitempty"`
+	Parts                []PartDef  `json:"parts,omitempty"`
+	Section              string     `json:"section"`
+	Subsection           string     `json:"subsection"`
+	Depth                int        `json:"depth"`
+	ParentURN            string     `json:"parent_urn,omitempty"`
+	Assessable           bool       `json:"assessable"`
+	ImplementationGroups []string   `json:"implementation_groups,omitempty"`
+	NodeRefID            string     `json:"ref_id,omitempty"`
+	NodeName             string     `json:"node_name,omitempty"`
 }
 
 // Control represents a security/control definition.

@@ -12,7 +12,18 @@
                 "prose": "Organizations using the baseline controls should have less than 499 employees."
               }
             ],
-            "title": "Control OC.1"
+            "props": [
+              {
+                "name": "label",
+                "value": "OC.1"
+              },
+              {
+                "name": "jurisdiction",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "ca"
+              }
+            ],
+            "title": "Organizational Size Scope (Portée relative à la taille de l'organisation)"
           },
           {
             "id": "oc-2",
@@ -23,7 +34,18 @@
                 "prose": "Organizations should list which parts of their information systems and assets are in scope for their implementation of the baseline controls and should provide the rationale for excluding information systems and assets and recognize the acceptance of risk in doing so."
               }
             ],
-            "title": "Control OC.2"
+            "props": [
+              {
+                "name": "label",
+                "value": "OC.2"
+              },
+              {
+                "name": "jurisdiction",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "ca"
+              }
+            ],
+            "title": "In-Scope Information Systems and Risk Acceptance (Systèmes d'information visés et acceptation des risques)"
           },
           {
             "id": "oc-3",
@@ -34,7 +56,18 @@
                 "prose": "Organizations should assess the potential injury to the confidentiality, integrity, and availability to their information systems and assets."
               }
             ],
-            "title": "Control OC.3"
+            "props": [
+              {
+                "name": "label",
+                "value": "OC.3"
+              },
+              {
+                "name": "jurisdiction",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "ca"
+              }
+            ],
+            "title": "Confidentiality, Integrity, and Availability Injury Assessment (Évaluation des préjudices à la confidentialité, à l'intégrité et à la disponibilité)"
           },
           {
             "id": "oc-4",
@@ -45,11 +78,22 @@
                 "prose": "Organizations should self-identify their primary cyber threat."
               }
             ],
-            "title": "Control OC.4"
+            "props": [
+              {
+                "name": "label",
+                "value": "OC.4"
+              },
+              {
+                "name": "jurisdiction",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "ca"
+              }
+            ],
+            "title": "Primary Cyber Threat Identification (Identification de la menace cybernétique principale)"
           }
         ],
         "id": "oc",
-        "title": "Organizational Controls (Controles organisationnels)"
+        "title": "Organizational Controls (Contrôles organisationnels)"
       },
       {
         "controls": [
@@ -62,7 +106,18 @@
                 "prose": "Organizations should have a basic plan for how to respond to incidents of varying severity. If an organization is unable to manage some types of incidents on its own, the organization should have a plan for what it will do."
               }
             ],
-            "title": "Control BC.1.1"
+            "props": [
+              {
+                "name": "label",
+                "value": "BC.1.1"
+              },
+              {
+                "name": "jurisdiction",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "ca"
+              }
+            ],
+            "title": "Severity-Based Incident Response Planning (Planification de l'intervention selon la gravité de l'incident)"
           },
           {
             "id": "bc-1-2",
@@ -73,7 +128,18 @@
                 "prose": "Organizations should have a written incident response plan that details who is responsible for handling incidents, including any relevant contact information for communicating to external parties, stakeholders, and regulators. Organizations should have an up-to-date hard copy version of this plan available for situations where soft copies are not available."
               }
             ],
-            "title": "Control BC.1.2"
+            "props": [
+              {
+                "name": "label",
+                "value": "BC.1.2"
+              },
+              {
+                "name": "jurisdiction",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "ca"
+              }
+            ],
+            "title": "Written Incident Response Responsibilities and Hard-Copy Availability (Plan écrit des responsabilités d'intervention et copie papier)"
           },
           {
             "id": "bc-1-3",
@@ -84,11 +150,22 @@
                 "prose": "Organizations should consider purchasing a cyber security insurance policy that includes coverage for incident response and recovery activities OR provide a rationale for not purchasing one."
               }
             ],
-            "title": "Control BC.1.3"
+            "props": [
+              {
+                "name": "label",
+                "value": "BC.1.3"
+              },
+              {
+                "name": "jurisdiction",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "ca"
+              }
+            ],
+            "title": "Cyber Security Insurance Coverage Evaluation (Évaluation de la couverture d'assurance cybersécurité)"
           }
         ],
         "id": "bc-1",
-        "title": "Develop an Incident Response Plan (Elaborer un plan d intervention en cas d incident)"
+        "title": "Develop an Incident Response Plan (Élaborer un plan d'intervention en cas d'incident)"
       },
       {
         "controls": [
@@ -101,7 +178,18 @@
                 "prose": "Organizations should enable automatic patching for all software and hardware OR establish full vulnerability and patch management solutions."
               }
             ],
-            "title": "Control BC.2.1"
+            "props": [
+              {
+                "name": "label",
+                "value": "BC.2.1"
+              },
+              {
+                "name": "jurisdiction",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "ca"
+              }
+            ],
+            "title": "Automatic Software and Hardware Patching (Application automatique des correctifs logiciels et matériels)"
           },
           {
             "id": "bc-2-2",
@@ -112,7 +200,18 @@
                 "prose": "Organizations should conduct risk assessment activities as to whether to replace any software and hardware that are not capable of automatic updates. If the organization chooses to keep such devices, they should have a business process to ensure regular manual updates."
               }
             ],
-            "title": "Control BC.2.2"
+            "props": [
+              {
+                "name": "label",
+                "value": "BC.2.2"
+              },
+              {
+                "name": "jurisdiction",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "ca"
+              }
+            ],
+            "title": "Legacy Device Replacement Risk Assessment and Manual Update Process (Évaluation des risques liés aux appareils sans mise à jour automatique)"
           }
         ],
         "id": "bc-2",
@@ -129,7 +228,18 @@
                 "prose": "Organizations should enable anti-malware solutions that update and scan automatically."
               }
             ],
-            "title": "Control BC.3.1"
+            "props": [
+              {
+                "name": "label",
+                "value": "BC.3.1"
+              },
+              {
+                "name": "jurisdiction",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "ca"
+              }
+            ],
+            "title": "Automatic Anti-Malware Updates and Scanning (Mises à jour et analyses automatiques des logiciels anti-malveillants)"
           },
           {
             "id": "bc-3-2",
@@ -140,11 +250,22 @@
                 "prose": "Organizations should activate any software firewalls included on the devices that are within organizational networks OR document the alternative measures in place instead of these firewalls."
               }
             ],
-            "title": "Control BC.3.2"
+            "props": [
+              {
+                "name": "label",
+                "value": "BC.3.2"
+              },
+              {
+                "name": "jurisdiction",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "ca"
+              }
+            ],
+            "title": "Host Software Firewalls Activation (Activation des pare-feu logiciels sur les appareils)"
           }
         ],
         "id": "bc-3",
-        "title": "Enable Security Software (Activer les logiciels de securite)"
+        "title": "Enable Security Software (Activer les logiciels de sécurité)"
       },
       {
         "controls": [
@@ -157,11 +278,22 @@
                 "prose": "Organizations should implement secure configurations for all their devices, changing all default passwords, turning off unnecessary features, and enabling all relevant security features."
               }
             ],
-            "title": "Control BC.4.1"
+            "props": [
+              {
+                "name": "label",
+                "value": "BC.4.1"
+              },
+              {
+                "name": "jurisdiction",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "ca"
+              }
+            ],
+            "title": "Secure Device Configuration and Default Credential Removal (Configuration sécuritaire des appareils et retrait des mots de passe par défaut)"
           }
         ],
         "id": "bc-4",
-        "title": "Securely Configure Devices (Configurer les appareils de facon securitaire)"
+        "title": "Securely Configure Devices (Configurer les appareils de façon sécuritaire)"
       },
       {
         "controls": [
@@ -174,7 +306,18 @@
                 "prose": "Organizations should implement two-factor authentication wherever possible, and document all instances where they make the business decision not to do so. Organizations should require two-factor authentication for important accounts such as financial accounts, system administrators, cloud administration, privileged users, and senior executives."
               }
             ],
-            "title": "Control BC.5.1"
+            "props": [
+              {
+                "name": "label",
+                "value": "BC.5.1"
+              },
+              {
+                "name": "jurisdiction",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "ca"
+              }
+            ],
+            "title": "Two-Factor Authentication Enforcement (Application de l'authentification à deux facteurs)"
           },
           {
             "id": "bc-5-2",
@@ -185,7 +328,18 @@
                 "prose": "Organizations should only enforce password changes on suspicion or evidence of compromise."
               }
             ],
-            "title": "Control BC.5.2"
+            "props": [
+              {
+                "name": "label",
+                "value": "BC.5.2"
+              },
+              {
+                "name": "jurisdiction",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "ca"
+              }
+            ],
+            "title": "Compromise-Driven Password Rotation (Changement de mot de passe uniquement en cas de compromission)"
           },
           {
             "id": "bc-5-3",
@@ -196,7 +350,18 @@
                 "prose": "Organizations should have clear policies on password length and reuse, the use of password managers and if, when, and how users can physically write down and securely store a password."
               }
             ],
-            "title": "Control BC.5.3"
+            "props": [
+              {
+                "name": "label",
+                "value": "BC.5.3"
+              },
+              {
+                "name": "jurisdiction",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "ca"
+              }
+            ],
+            "title": "Password Length, Reuse, and Password Manager Policy (Politique sur la longueur, la réutilisation et les gestionnaires de mots de passe)"
           }
         ],
         "id": "bc-5",
@@ -213,11 +378,22 @@
                 "prose": "Organizations should invest in cyber security awareness and training for their employees."
               }
             ],
-            "title": "Control BC.6.1"
+            "props": [
+              {
+                "name": "label",
+                "value": "BC.6.1"
+              },
+              {
+                "name": "jurisdiction",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "ca"
+              }
+            ],
+            "title": "Employee Cyber Security Awareness and Training Program (Programme de sensibilisation et de formation en cybersécurité)"
           }
         ],
         "id": "bc-6",
-        "title": "Employee Awareness Training (Sensibilisation et formation des employes)"
+        "title": "Employee Awareness Training (Sensibilisation et formation des employés)"
       },
       {
         "controls": [
@@ -230,7 +406,18 @@
                 "prose": "Organizations should back up systems that contain essential business information, and ensure that recovery mechanisms effectively and efficiently restore these systems from back-ups. Organizations should consider storing back-ups offline at a secure offsite location OR provide the rationale for not doing so."
               }
             ],
-            "title": "Control BC.7.1"
+            "props": [
+              {
+                "name": "label",
+                "value": "BC.7.1"
+              },
+              {
+                "name": "jurisdiction",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "ca"
+              }
+            ],
+            "title": "Essential Business System Backup and Offsite Recovery Verification (Sauvegarde des systèmes essentiels et vérification de la restauration)"
           },
           {
             "id": "bc-7-2",
@@ -241,11 +428,22 @@
                 "prose": "Organizations should securely store back-ups in an encrypted state, and restrict access to them to those who must access them for the testing or use of restoration activities. Long term backups (e.g. weekly backups) must be stored offline, but frequent backups (e.g. daily backups) may be stored online."
               }
             ],
-            "title": "Control BC.7.2"
+            "props": [
+              {
+                "name": "label",
+                "value": "BC.7.2"
+              },
+              {
+                "name": "jurisdiction",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "ca"
+              }
+            ],
+            "title": "Encrypted Backup Storage and Access Restriction (Chiffrement des sauvegardes et restriction d'accès)"
           }
         ],
         "id": "bc-7",
-        "title": "Backup and Encrypt Data (Sauvegarder et chiffrer les donnees)"
+        "title": "Backup and Encrypt Data (Sauvegarder et chiffrer les données)"
       },
       {
         "controls": [
@@ -258,7 +456,18 @@
                 "prose": "Organizations should decide on an ownership model for mobile devices and document the rationale and associated risks."
               }
             ],
-            "title": "Control BC.8.1"
+            "props": [
+              {
+                "name": "label",
+                "value": "BC.8.1"
+              },
+              {
+                "name": "jurisdiction",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "ca"
+              }
+            ],
+            "title": "Mobile Device Ownership Model and Risk Documentation (Modèle de propriété des appareils mobiles et documentation des risques)"
           },
           {
             "id": "bc-8-2",
@@ -269,7 +478,18 @@
                 "prose": "Organizations should enforce separation between work and personal data on mobile devices with access to corporate IT resources, and document the details of this separation."
               }
             ],
-            "title": "Control BC.8.2"
+            "props": [
+              {
+                "name": "label",
+                "value": "BC.8.2"
+              },
+              {
+                "name": "jurisdiction",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "ca"
+              }
+            ],
+            "title": "Work and Personal Data Separation on Mobile Devices (Séparation des données professionnelles et personnelles sur les appareils mobiles)"
           },
           {
             "id": "bc-8-3",
@@ -280,7 +500,18 @@
                 "prose": "Organizations should ensure that employees only download mobile device apps from the organization’s list of trusted sources."
               }
             ],
-            "title": "Control BC.8.3"
+            "props": [
+              {
+                "name": "label",
+                "value": "BC.8.3"
+              },
+              {
+                "name": "jurisdiction",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "ca"
+              }
+            ],
+            "title": "Trusted Mobile Application Sources (Sources fiables d'applications mobiles)"
           },
           {
             "id": "bc-8-4",
@@ -291,7 +522,18 @@
                 "prose": "Organizations should require that all mobile devices store all sensitive information in a secure, encrypted state."
               }
             ],
-            "title": "Control BC.8.4"
+            "props": [
+              {
+                "name": "label",
+                "value": "BC.8.4"
+              },
+              {
+                "name": "jurisdiction",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "ca"
+              }
+            ],
+            "title": "Mobile Device Sensitive Information Encryption (Chiffrement des renseignements sensibles sur les appareils mobiles)"
           },
           {
             "id": "bc-8-5",
@@ -302,7 +544,18 @@
                 "prose": "Organizations should consider implementing an enterprise mobility management solution for all mobile devices OR document the risks assumed to the audit, management, and security functionality of mobile devices by not implementing such a solution."
               }
             ],
-            "title": "Control BC.8.5"
+            "props": [
+              {
+                "name": "label",
+                "value": "BC.8.5"
+              },
+              {
+                "name": "jurisdiction",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "ca"
+              }
+            ],
+            "title": "Enterprise Mobility Management Evaluation (Évaluation d'une solution de gestion de la mobilité d'entreprise)"
           },
           {
             "id": "bc-8-6",
@@ -313,7 +566,18 @@
                 "prose": "Organizations should enforce or educate users to (1) disable automatic connections to open networks, (2) avoid connecting to unknown Wi-Fi networks, (3) limit the use of Bluetooth and NFC for the exchange of sensitive information, and (4) use corporate Wi-Fi or cellular data network connectivity rather than public Wi-Fi."
               }
             ],
-            "title": "Control BC.8.6"
+            "props": [
+              {
+                "name": "label",
+                "value": "BC.8.6"
+              },
+              {
+                "name": "jurisdiction",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "ca"
+              }
+            ],
+            "title": "Wireless Connectivity Restrictions for Mobile Devices (Restrictions relatives aux connexions sans fil des appareils mobiles)"
           },
           {
             "id": "bc-8-7",
@@ -324,11 +588,22 @@
                 "prose": "Organizations should consider using a VPN if they require connectivity to public Wi-Fi networks OR provide the rationale for not using a VPN."
               }
             ],
-            "title": "Control BC.8.7"
+            "props": [
+              {
+                "name": "label",
+                "value": "BC.8.7"
+              },
+              {
+                "name": "jurisdiction",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "ca"
+              }
+            ],
+            "title": "VPN Usage on Public Wi-Fi Networks (Utilisation d'un RPV sur les réseaux Wi-Fi publics)"
           }
         ],
         "id": "bc-8",
-        "title": "Secure Mobility (Mobilite securisee)"
+        "title": "Secure Mobility (Mobilité sécurisée)"
       },
       {
         "controls": [
@@ -341,7 +616,18 @@
                 "prose": "Organizations should have dedicated firewalls at the boundaries between its corporate network and the Internet. The organization should isolate Internet-facing servers from the rest of their corporate network."
               }
             ],
-            "title": "Control BC.9.1"
+            "props": [
+              {
+                "name": "label",
+                "value": "BC.9.1"
+              },
+              {
+                "name": "jurisdiction",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "ca"
+              }
+            ],
+            "title": "Network Boundary Firewalls and DMZ Server Isolation (Pare-feu de périmètre réseau et isolation des serveurs accessibles par Internet)"
           },
           {
             "id": "bc-9-2",
@@ -352,7 +638,18 @@
                 "prose": "Organizations should implement a DNS firewall for outbound DNS requests to the Internet."
               }
             ],
-            "title": "Control BC.9.2"
+            "props": [
+              {
+                "name": "label",
+                "value": "BC.9.2"
+              },
+              {
+                "name": "jurisdiction",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "ca"
+              }
+            ],
+            "title": "Outbound DNS Firewall Implementation (Mise en œuvre d'un pare-feu DNS sortant)"
           },
           {
             "id": "bc-9-3",
@@ -363,7 +660,18 @@
                 "prose": "Organizations should require secure connectivity to all corporate IT resources, and require VPN connectivity with two-factor authentication for all remote access into corporate networks."
               }
             ],
-            "title": "Control BC.9.3"
+            "props": [
+              {
+                "name": "label",
+                "value": "BC.9.3"
+              },
+              {
+                "name": "jurisdiction",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "ca"
+              }
+            ],
+            "title": "Secure Remote Access with VPN and Two-Factor Authentication (Accès à distance sécurisé par RPV et authentification à deux facteurs)"
           },
           {
             "id": "bc-9-4",
@@ -374,7 +682,18 @@
                 "prose": "Organizations should only use secure Wi-Fi, preferably WPA2-Enterprise."
               }
             ],
-            "title": "Control BC.9.4"
+            "props": [
+              {
+                "name": "label",
+                "value": "BC.9.4"
+              },
+              {
+                "name": "jurisdiction",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "ca"
+              }
+            ],
+            "title": "Secure Corporate Wi-Fi Authentication (Authentification Wi-Fi d'entreprise sécurisée WPA2-Enterprise)"
           },
           {
             "id": "bc-9-5",
@@ -385,7 +704,18 @@
                 "prose": "Organizations should never connect public Wi-Fi networks to their corporate networks."
               }
             ],
-            "title": "Control BC.9.5"
+            "props": [
+              {
+                "name": "label",
+                "value": "BC.9.5"
+              },
+              {
+                "name": "jurisdiction",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "ca"
+              }
+            ],
+            "title": "Public and Corporate Wi-Fi Network Segregation (Séparation des réseaux Wi-Fi publics et d'entreprise)"
           },
           {
             "id": "bc-9-6",
@@ -396,7 +726,18 @@
                 "prose": "Organizations should isolate point-of-sale systems from the Internet and other areas of the corporate network with a firewall. Organizations should consider following the Payment Card Industry Data Security Standard (PCI DSS)."
               }
             ],
-            "title": "Control BC.9.6"
+            "props": [
+              {
+                "name": "label",
+                "value": "BC.9.6"
+              },
+              {
+                "name": "jurisdiction",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "ca"
+              }
+            ],
+            "title": "Point-of-Sale System Isolation and PCI DSS Alignment (Isolation des systèmes de point de vente et conformité PCI DSS)"
           },
           {
             "id": "bc-9-7",
@@ -407,7 +748,18 @@
                 "prose": "Organizations should ensure the implementation of DMARC on all of the organization’s email services."
               }
             ],
-            "title": "Control BC.9.7"
+            "props": [
+              {
+                "name": "label",
+                "value": "BC.9.7"
+              },
+              {
+                "name": "jurisdiction",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "ca"
+              }
+            ],
+            "title": "DMARC Email Authentication Implementation (Mise en œuvre du protocole DMARC pour les services de courriel)"
           },
           {
             "id": "bc-9-8",
@@ -418,11 +770,22 @@
                 "prose": "Organizations should implement email filtering at points of ingress and egress."
               }
             ],
-            "title": "Control BC.9.8"
+            "props": [
+              {
+                "name": "label",
+                "value": "BC.9.8"
+              },
+              {
+                "name": "jurisdiction",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "ca"
+              }
+            ],
+            "title": "Ingress and Egress Email Filtering (Filtrage des courriels aux points d'entrée et de sortie)"
           }
         ],
         "id": "bc-9",
-        "title": "Establish Basic Perimeter Defences (Etablir des defenses de perimetre de base)"
+        "title": "Establish Basic Perimeter Defences (Établir des défenses de périmètre de base)"
       },
       {
         "controls": [
@@ -435,7 +798,18 @@
                 "prose": "Organizations should require that all their cloud service providers share an AICPA SSAE 18 SOC 3 report that states that they achieved Trust Service Principles compliance."
               }
             ],
-            "title": "Control BC.10.1"
+            "props": [
+              {
+                "name": "label",
+                "value": "BC.10.1"
+              },
+              {
+                "name": "jurisdiction",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "ca"
+              }
+            ],
+            "title": "Cloud Service Provider SOC 3 Trust Services Attestation (Attestation SOC 3 SSAE 18 des fournisseurs de services infonuagiques)"
           },
           {
             "id": "bc-10-2",
@@ -446,7 +820,18 @@
                 "prose": "Organizations should evaluate their comfort level with how their outsourced IT providers handle and access their sensitive information."
               }
             ],
-            "title": "Control BC.10.2"
+            "props": [
+              {
+                "name": "label",
+                "value": "BC.10.2"
+              },
+              {
+                "name": "jurisdiction",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "ca"
+              }
+            ],
+            "title": "Outsourced IT Provider Sensitive Information Handling Evaluation (Évaluation du traitement des renseignements sensibles par les fournisseurs TI impartis)"
           },
           {
             "id": "bc-10-3",
@@ -457,7 +842,18 @@
                 "prose": "Organizations should evaluate their comfort level with the legal jurisdictions where their outsourced providers store or use their sensitive information."
               }
             ],
-            "title": "Control BC.10.3"
+            "props": [
+              {
+                "name": "label",
+                "value": "BC.10.3"
+              },
+              {
+                "name": "jurisdiction",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "ca"
+              }
+            ],
+            "title": "Data Residency and Legal Jurisdiction Assessment (Évaluation des juridictions légales d'hébergement des données)"
           },
           {
             "id": "bc-10-4",
@@ -468,7 +864,18 @@
                 "prose": "Organizations should ensure that their IT infrastructure and users communicate securely with all cloud services and applications."
               }
             ],
-            "title": "Control BC.10.4"
+            "props": [
+              {
+                "name": "label",
+                "value": "BC.10.4"
+              },
+              {
+                "name": "jurisdiction",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "ca"
+              }
+            ],
+            "title": "Encrypted Communication with Cloud Services (Communications chiffrées avec les services et applications infonuagiques)"
           },
           {
             "id": "bc-10-5",
@@ -479,11 +886,22 @@
                 "prose": "Organizations should ensure that administrative accounts for cloud services use two-factor authentication and differ from internal administrator accounts."
               }
             ],
-            "title": "Control BC.10.5"
+            "props": [
+              {
+                "name": "label",
+                "value": "BC.10.5"
+              },
+              {
+                "name": "jurisdiction",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "ca"
+              }
+            ],
+            "title": "Separate Cloud Administrative Accounts with Two-Factor Authentication (Comptes administrateurs infonuagiques distincts avec authentification à deux facteurs)"
           }
         ],
         "id": "bc-10",
-        "title": "Secure Cloud and Outsourced IT Services (Securiser les services infonuagiques et TI impartis)"
+        "title": "Secure Cloud and Outsourced IT Services (Sécuriser les services infonuagiques et TI impartis)"
       },
       {
         "controls": [
@@ -496,7 +914,18 @@
                 "prose": "Organizations should ensure that their websites address the OWASP top 10 vulnerabilities."
               }
             ],
-            "title": "Control BC.11.1"
+            "props": [
+              {
+                "name": "label",
+                "value": "BC.11.1"
+              },
+              {
+                "name": "jurisdiction",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "ca"
+              }
+            ],
+            "title": "OWASP Top 10 Web Vulnerability Mitigation (Atténuation des 10 principales vulnérabilités Web de l'OWASP)"
           },
           {
             "id": "bc-11-2",
@@ -507,11 +936,22 @@
                 "prose": "Organizations should ensure that they understand the ASVS level they need to meet for each of their websites."
               }
             ],
-            "title": "Control BC.11.2"
+            "props": [
+              {
+                "name": "label",
+                "value": "BC.11.2"
+              },
+              {
+                "name": "jurisdiction",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "ca"
+              }
+            ],
+            "title": "OWASP ASVS Verification Level Determination (Détermination du niveau de vérification de sécurité des applications ASVS)"
           }
         ],
         "id": "bc-11",
-        "title": "Secure Websites (Securiser les sites Web)"
+        "title": "Secure Websites (Sécuriser les sites Web)"
       },
       {
         "controls": [
@@ -524,7 +964,18 @@
                 "prose": "Organizations should provision accounts with the minimum functionality necessary for tasks and in particular should restrict administrator privileges to an as-required basis."
               }
             ],
-            "title": "Control BC.12.1"
+            "props": [
+              {
+                "name": "label",
+                "value": "BC.12.1"
+              },
+              {
+                "name": "jurisdiction",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "ca"
+              }
+            ],
+            "title": "Least Privilege Account Provisioning and Admin Restriction (Attribution des privilèges minimaux et restriction des droits d'administrateur)"
           },
           {
             "id": "bc-12-2",
@@ -535,7 +986,18 @@
                 "prose": "Organizations should only permit administrator accounts to perform administrative activities (and not user-level activities such as accessing email or browsing the web)."
               }
             ],
-            "title": "Control BC.12.2"
+            "props": [
+              {
+                "name": "label",
+                "value": "BC.12.2"
+              },
+              {
+                "name": "jurisdiction",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "ca"
+              }
+            ],
+            "title": "Dedicated Administrative Account Usage (Utilisation dédiée des comptes d'administrateur)"
           },
           {
             "id": "bc-12-3",
@@ -546,7 +1008,18 @@
                 "prose": "Organizations should remove accounts and/or functionality when employees no longer require these for their tasks."
               }
             ],
-            "title": "Control BC.12.3"
+            "props": [
+              {
+                "name": "label",
+                "value": "BC.12.3"
+              },
+              {
+                "name": "jurisdiction",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "ca"
+              }
+            ],
+            "title": "Timely Account and Privilege Revocation (Révocation rapide des comptes et des privilèges inutilisés)"
           },
           {
             "id": "bc-12-4",
@@ -557,11 +1030,22 @@
                 "prose": "Organizations should consider implementing a centralized authorization control system OR provide a rationale for not implementing a centralized authorization control system."
               }
             ],
-            "title": "Control BC.12.4"
+            "props": [
+              {
+                "name": "label",
+                "value": "BC.12.4"
+              },
+              {
+                "name": "jurisdiction",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "ca"
+              }
+            ],
+            "title": "Centralized Authorization Control System Evaluation (Évaluation d'un système centralisé de contrôle des autorisations)"
           }
         ],
         "id": "bc-12",
-        "title": "Implement Access Control and Authorization (Mettre en oeuvre le controle d acces)"
+        "title": "Implement Access Control and Authorization (Mettre en œuvre le contrôle d'accès)"
       },
       {
         "controls": [
@@ -574,7 +1058,18 @@
                 "prose": "Organizations should mandate the sole use of organization-owned secure portable media, have strong asset controls for these devices, and require the use of encryption on all of these devices."
               }
             ],
-            "title": "Control BC.13.1"
+            "props": [
+              {
+                "name": "label",
+                "value": "BC.13.1"
+              },
+              {
+                "name": "jurisdiction",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "ca"
+              }
+            ],
+            "title": "Organization-Owned Encrypted Portable Media Mandate (Utilisation obligatoire de supports amovibles chiffrés appartenant à l'organisation)"
           },
           {
             "id": "bc-13-2",
@@ -585,16 +1080,39 @@
                 "prose": "Organizations should have processes for the sanitization or destruction of portable media prior to disposal."
               }
             ],
-            "title": "Control BC.13.2"
+            "props": [
+              {
+                "name": "label",
+                "value": "BC.13.2"
+              },
+              {
+                "name": "jurisdiction",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "ca"
+              }
+            ],
+            "title": "Portable Media Sanitization and Destruction Prior to Disposal (Nettoyage ou destruction des supports amovibles avant leur mise au rebut)"
           }
         ],
         "id": "bc-13",
-        "title": "Secure Portable Media (Securiser les supports amovibles)"
+        "title": "Secure Portable Media (Sécuriser les supports amovibles)"
       }
     ],
     "metadata": {
-      "last-modified": "2026-10-25T23:17:26Z",
+      "last-modified": "2026-11-08T01:42:11Z",
       "oscal-version": "1.2.3",
+      "props": [
+        {
+          "name": "jurisdiction",
+          "ns": "https://ckodex.io/ns/xoscal/props",
+          "value": "ca"
+        },
+        {
+          "name": "standard-id",
+          "ns": "https://ckodex.io/ns/xoscal/props",
+          "value": "CAN/DGSI-104"
+        }
+      ],
       "remarks": "National cyber security standard CAN/DGSI 104 and CCCS Baseline Cyber Security Controls for Small and Medium Organizations administered by the Standards Council of Canada (SCC) and the Canadian Centre for Cyber Security.",
       "title": "CyberSecure Canada - Baseline Cyber Security Controls for Small and Medium Organizations",
       "version": "CAN/DGSI 104 / CCCS Baseline v1.2"

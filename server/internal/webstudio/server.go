@@ -524,13 +524,19 @@ func writeJSON(w http.ResponseWriter, status int, data interface{}) {
 
 // OpenBrowser attempts to open the specified URL in the system's default browser.
 func OpenBrowser(url string) error {
+	if !strings.HasPrefix(url, "http://127.0.0.1:") && !strings.HasPrefix(url, "http://localhost:") {
+		return fmt.Errorf("refusing to open non-local browser URL: %s", url)
+	}
 	var cmd *exec.Cmd
 	switch runtime.GOOS {
 	case "darwin":
+		// #nosec G204 -- url is verified above to be a local loopback HTTP listener URL.
 		cmd = exec.Command("open", url)
 	case "linux":
+		// #nosec G204 -- url is verified above to be a local loopback HTTP listener URL.
 		cmd = exec.Command("xdg-open", url)
 	case "windows":
+		// #nosec G204 -- url is verified above to be a local loopback HTTP listener URL.
 		cmd = exec.Command("rundll32", "url.dll,FileProtocolHandler", url)
 	default:
 		return fmt.Errorf("unsupported platform")

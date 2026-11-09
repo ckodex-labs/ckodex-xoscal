@@ -293,3 +293,38 @@ func TestResolveOSCALCLINotFound(t *testing.T) {
 		t.Fatal("expected error for nonexistent oscal-cli path, got nil")
 	}
 }
+
+// TestValidateFilesParallelDeterministicOrdering verifies that bounded parallel
+// validation returns results in deterministic input order across multiple workers.
+func TestValidateFilesParallelDeterministicOrdering(t *testing.T) {
+	dir := t.TempDir()
+	cli := filepath.Join(dir, "fake-oscal-cli")
+	script := "#!/bin/sh\nif echo \"$3\" | grep -q 'fail'; then exit 2; fi\nexit 0\n"
+	if err := os.WriteFile(cli, []byte(script), 0o700); err != nil {
+		t.Fatalf("write fake CLI: %v", err)
+	}
+
+	var files []string
+	names := []string{"a_pass.json", "b_fail.json", "c_pass.json", "d_fail.json", "e_pass.json"}
+	for _, n := range names {
+		p := filepath.Join(dir, n)
+		if err := os.WriteFile(p, []byte(`{"catalog":{}}`), 0o600); err != nil {
+			t.Fatalf("write %s: %v", n, err)
+		}
+		files = append(files, p)
+	}
+
+	results := validateFilesParallel(files, "catalog", cli, nil, 4)
+	if len(results) != len(files) {
+		t.Fatalf("len(results) = %d, want %d", len(results), len(files))
+	}
+	for i, r := range results {
+		if r.File != files[i] {
+			t.Errorf("results[%d].File = %q, want %q", i, r.File, files[i])
+		}
+		wantErr := strings.Contains(files[i], "fail")
+		if (r.Err != nil) != wantErr {
+			t.Errorf("results[%d].Err = %v, wantErr %v", i, r.Err, wantErr)
+		}
+	}
+}

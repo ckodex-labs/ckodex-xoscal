@@ -1,0 +1,179 @@
+{
+  "assessment-results": {
+    "import-ap": {
+      "href": "./assessment-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:12Z",
+      "oscal-version": "1.2.3",
+      "title": "Référentiel Général de Sécurité 2.0 - Annexe B2 Assessment Results Template",
+      "version": "1"
+    },
+    "results": [
+      {
+        "description": "Assessment evaluation findings and observations for Référentiel Général de Sécurité 2.0 - Annexe B2.",
+        "findings": [
+          {
+            "description": "Control _2.1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "5a1c572f-c728-5fe9-b610-694d0fa525d8"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_2.1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _2.1.1",
+            "uuid": "05d80c39-a0b1-5a61-9bd7-1ee89e56ad65"
+          },
+          {
+            "description": "Control _2.3.1.1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "57cc94c1-f474-5dd3-ad30-3b31448d8495"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_2.3.1.1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _2.3.1.1.1",
+            "uuid": "1f6d0e6a-270e-5508-8180-37f8a3d3fb0f"
+          },
+          {
+            "description": "Control _2.4.1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "7eae3a6a-bb37-5e24-a5ce-84ebf1cb51cb"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_2.4.1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _2.4.1.1",
+            "uuid": "1a5bbf3b-709f-5018-998b-9f1fbfa8b771"
+          },
+          {
+            "description": "Control _2.5.1.1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "3930ab32-c7c4-5602-adce-8347c2325cbc"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_2.5.1.1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _2.5.1.1.1",
+            "uuid": "09d6d755-22b7-56b3-9016-7160f2543d76"
+          },
+          {
+            "description": "Control _2.6.1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "cf06808a-243a-542a-bb7b-4a02e96e40ed"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_2.6.1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _2.6.1.1",
+            "uuid": "57e4f2d9-79e4-5afe-9f79-72c502c2b023"
+          }
+        ],
+        "observations": [
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control _2.1.1 (RègleImpact-1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "5a1c572f-c728-5fe9-b610-694d0fa525d8"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control _2.3.1.1.1 (RègleAléaLocal-1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "57cc94c1-f474-5dd3-ad30-3b31448d8495"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control _2.4.1.1 (RègleUsage-1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "7eae3a6a-bb37-5e24-a5ce-84ebf1cb51cb"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control _2.5.1.1.1 (RègleAcheminemementCléCentral-1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "3930ab32-c7c4-5602-adce-8347c2325cbc"
+          },
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control _2.6.1.1 (RecomDiffusion-1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "cf06808a-243a-542a-bb7b-4a02e96e40ed"
+          }
+        ],
+        "reviewed-controls": {
+          "control-selections": [
+            {
+              "description": "All controls evaluated for Référentiel Général de Sécurité 2.0 - Annexe B2",
+              "include-all": {}
+            }
+          ]
+        },
+        "start": "2026-11-08T01:42:12Z",
+        "title": "Référentiel Général de Sécurité 2.0 - Annexe B2 Assessment Results",
+        "uuid": "8db50214-3978-5fa5-8358-572797cb955f"
+      }
+    ],
+    "uuid": "48b1f53e-5887-59df-9004-488b3d707f10"
+  }
+}

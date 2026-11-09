@@ -1,0 +1,498 @@
+{
+  "assessment-results": {
+    "import-ap": {
+      "href": "./assessment-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:11Z",
+      "oscal-version": "1.2.3",
+      "title": "ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Assessment Results Template",
+      "version": "2"
+    },
+    "results": [
+      {
+        "description": "Assessment evaluation findings and observations for ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "findings": [
+          {
+            "description": "Control _10.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "3739f571-6b63-53dc-9a5b-ef2b70719058"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_10.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _10.1",
+            "uuid": "e78fe71e-9381-530d-b8fd-69c37eb93a4e"
+          },
+          {
+            "description": "Control _4.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "d38fd386-dd7e-5593-9d9d-ae5f8721e985"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_4.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _4.1",
+            "uuid": "6c2b78cf-a06c-5a75-861b-dc4ca1d82588"
+          },
+          {
+            "description": "Control _5.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "e79de969-eea6-5a57-8319-d54e8137b3bd"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_5.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _5.1",
+            "uuid": "c5def622-c693-5ed2-998f-fb54f57784d6"
+          },
+          {
+            "description": "Control _6.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "46f975bb-3682-51bf-ae9f-d40f4936aa3f"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_6.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _6.1",
+            "uuid": "b037e238-ed67-50ab-bae2-759d762efb9d"
+          },
+          {
+            "description": "Control _7.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "73a6c4d1-c0a4-5e6a-84db-655e3ee9f9ad"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_7.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _7.1",
+            "uuid": "85c2643c-ebce-5f67-9bf0-89a2bd99ef1c"
+          },
+          {
+            "description": "Control _8.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "54809fd9-4957-5134-88d0-654f988579bb"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_8.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _8.1",
+            "uuid": "e2a0d980-8c7f-5518-8490-26e67bcc2a78"
+          },
+          {
+            "description": "Control _9.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "98eb0da7-e135-5323-9806-78cebc5d7f37"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_9.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _9.1",
+            "uuid": "2f8ce99e-ccde-5f28-90a8-5e89ecfb77bb"
+          },
+          {
+            "description": "Control a.10.2 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "51b7bf67-dba1-5e25-aaf6-c409147716f5"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "a.10.2",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for a.10.2",
+            "uuid": "1720d112-2410-5a24-9c73-2655729f75a8"
+          },
+          {
+            "description": "Control a.2.2 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "b9d7e7e3-8df9-5c20-a860-42423a8b2d6a"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "a.2.2",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for a.2.2",
+            "uuid": "d9b2555c-f4d7-52a5-b1cc-bb6b0211b2f1"
+          },
+          {
+            "description": "Control a.3.2 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "aa7bd535-3136-54e3-a169-20ee6a1b68a3"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "a.3.2",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for a.3.2",
+            "uuid": "aa4e32a6-3db7-51cc-b7f6-d4bb0d4b54ba"
+          },
+          {
+            "description": "Control a.4.2 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "cc92d100-f634-507b-9aee-c1a6a840e6f6"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "a.4.2",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for a.4.2",
+            "uuid": "0321452d-53de-5456-aa1a-eeee4d3e04d1"
+          },
+          {
+            "description": "Control a.5.2 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "fd244ee9-f4e3-51ad-bb46-6a0f7d76e467"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "a.5.2",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for a.5.2",
+            "uuid": "0a4d0aa1-df2b-541e-b911-a688daead70c"
+          },
+          {
+            "description": "Control a.6.1.2 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "862d758c-1454-509f-9955-0c6cea7ceb39"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "a.6.1.2",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for a.6.1.2",
+            "uuid": "92253049-118b-5656-bddd-801f77e188ef"
+          },
+          {
+            "description": "Control a.7.2 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "419895a6-be92-5dfc-977a-291f03a92523"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "a.7.2",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for a.7.2",
+            "uuid": "12fc9ebf-8470-5cb9-b88d-54f799c9f672"
+          },
+          {
+            "description": "Control a.8.2 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "adc4f76c-21b6-56f1-98d2-466ed534170a"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "a.8.2",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for a.8.2",
+            "uuid": "9c3d0647-44b2-5f1b-b7f7-ded6b02151fe"
+          },
+          {
+            "description": "Control a.9.2 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "14e43497-d93b-5c66-8112-c29a7605e0ab"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "a.9.2",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for a.9.2",
+            "uuid": "16d17b08-b829-5002-8859-c741ff9f1aa2"
+          }
+        ],
+        "observations": [
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control _10.1 (Continual improvement) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "3739f571-6b63-53dc-9a5b-ef2b70719058"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control _4.1 (Understanding the organization and its context) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "d38fd386-dd7e-5593-9d9d-ae5f8721e985"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control _5.1 (Leadership and commitment) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "e79de969-eea6-5a57-8319-d54e8137b3bd"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control _6.1 (Actions to address risks and opportunities) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "46f975bb-3682-51bf-ae9f-d40f4936aa3f"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control _7.1 (Resources) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "73a6c4d1-c0a4-5e6a-84db-655e3ee9f9ad"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control _8.1 (Operational planning and control) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "54809fd9-4957-5134-88d0-654f988579bb"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control _9.1 (Monitoring, measurement, analysis and evaluation) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "98eb0da7-e135-5323-9806-78cebc5d7f37"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control a.10.2 (Allocating responsibilities) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "51b7bf67-dba1-5e25-aaf6-c409147716f5"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control a.2.2 (AI policy) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "b9d7e7e3-8df9-5c20-a860-42423a8b2d6a"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control a.3.2 (AI roles and responsibilities) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "aa7bd535-3136-54e3-a169-20ee6a1b68a3"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control a.4.2 (Resource documentation) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "cc92d100-f634-507b-9aee-c1a6a840e6f6"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control a.5.2 (AI system impact assessment process) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "fd244ee9-f4e3-51ad-bb46-6a0f7d76e467"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control a.6.1.2 (Objectives for responsible development of AI system) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "862d758c-1454-509f-9955-0c6cea7ceb39"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control a.7.2 (Data for development and enhancement of AI system) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "419895a6-be92-5dfc-977a-291f03a92523"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control a.8.2 (System documentation and information for users) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "adc4f76c-21b6-56f1-98d2-466ed534170a"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control a.9.2 (Processes for responsible use of AI systems) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "14e43497-d93b-5c66-8112-c29a7605e0ab"
+          }
+        ],
+        "reviewed-controls": {
+          "control-selections": [
+            {
+              "description": "All controls evaluated for ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline",
+              "include-all": {}
+            }
+          ]
+        },
+        "start": "2026-11-08T01:42:11Z",
+        "title": "ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Assessment Results",
+        "uuid": "7148c205-0bd2-5466-a931-a898406095fc"
+      }
+    ],
+    "uuid": "58800253-7991-59b7-919a-89ebd7d4fbca"
+  }
+}

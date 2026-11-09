@@ -1,0 +1,78 @@
+{
+  "assessment-plan": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:12Z",
+      "oscal-version": "1.2.3",
+      "title": "IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - CON: Konzeption und Vorgehensweisen Security Assessment Plan Template",
+      "version": "1"
+    },
+    "reviewed-controls": {
+      "control-selections": [
+        {
+          "description": "All controls in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - CON: Konzeption und Vorgehensweisen",
+          "include-all": {}
+        }
+      ]
+    },
+    "tasks": [
+      {
+        "description": "Verify and examine implementation of 71 controls in the Kryptokonzept family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - CON: Konzeption und Vorgehensweisen.",
+        "title": "Assess Family CON.1 (Kryptokonzept)",
+        "type": "examination",
+        "uuid": "a8e53fe2-935a-5ccd-931e-b6361f6e0ba7"
+      },
+      {
+        "description": "Verify and examine implementation of 71 controls in the Entwicklung von Webanwendungen family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - CON: Konzeption und Vorgehensweisen.",
+        "title": "Assess Family CON.10 (Entwicklung von Webanwendungen)",
+        "type": "examination",
+        "uuid": "b4559bab-bd63-5d78-bc0d-2a0a6a6f0d47"
+      },
+      {
+        "description": "Verify and examine implementation of 121 controls in the Geheimschutz VS-NUR FÜR DEN DIENSTGEBRAUCH (VS-NfD) family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - CON: Konzeption und Vorgehensweisen.",
+        "title": "Assess Family CON.11.1 (Geheimschutz VS-NUR FÜR DEN DIENSTGEBRAUCH (VS-NfD))",
+        "type": "examination",
+        "uuid": "e8427320-f7ea-518b-bae1-331b7020cb73"
+      },
+      {
+        "description": "Verify and examine implementation of 2 controls in the Datenschutz family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - CON: Konzeption und Vorgehensweisen.",
+        "title": "Assess Family CON.2 (Datenschutz)",
+        "type": "examination",
+        "uuid": "60543709-b57d-515b-994b-f02f2654978d"
+      },
+      {
+        "description": "Verify and examine implementation of 69 controls in the Datensicherungskonzept family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - CON: Konzeption und Vorgehensweisen.",
+        "title": "Assess Family CON.3 (Datensicherungskonzept)",
+        "type": "examination",
+        "uuid": "694cedf6-a4c4-5ca3-9474-121d0b6243d5"
+      },
+      {
+        "description": "Verify and examine implementation of 45 controls in the Löschen und Vernichten family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - CON: Konzeption und Vorgehensweisen.",
+        "title": "Assess Family CON.6 (Löschen und Vernichten)",
+        "type": "examination",
+        "uuid": "b97445f5-45be-5249-99b6-48605a827669"
+      },
+      {
+        "description": "Verify and examine implementation of 66 controls in the Informationssicherheit auf Auslandsreisen family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - CON: Konzeption und Vorgehensweisen.",
+        "title": "Assess Family CON.7 (Informationssicherheit auf Auslandsreisen)",
+        "type": "examination",
+        "uuid": "77ec8fe2-5820-58b8-b560-c08d2c19b45e"
+      },
+      {
+        "description": "Verify and examine implementation of 88 controls in the Software-Entwicklung family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - CON: Konzeption und Vorgehensweisen.",
+        "title": "Assess Family CON.8 (Software-Entwicklung)",
+        "type": "examination",
+        "uuid": "b6407542-ec88-59af-a883-021857feef7d"
+      },
+      {
+        "description": "Verify and examine implementation of 25 controls in the Informationsaustausch family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - CON: Konzeption und Vorgehensweisen.",
+        "title": "Assess Family CON.9 (Informationsaustausch)",
+        "type": "examination",
+        "uuid": "32f3944e-4592-5802-b156-0536808b5607"
+      }
+    ],
+    "uuid": "96b47e69-d374-57b7-bcb6-3b60c183b607"
+  }
+}

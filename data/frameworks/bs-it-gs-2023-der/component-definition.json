@@ -1,0 +1,2758 @@
+{
+  "component-definition": {
+    "components": [
+      {
+        "control-implementations": [
+          {
+            "description": "Security control implementations for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - DER: Detektion und Reaktion.",
+            "implemented-requirements": [
+              {
+                "control-id": "der.1.a1.1",
+                "description": "Component capability addressing control der.1.a1.1 (Erstellung einer Sicherheitsrichtlinie für die Detektion von sicherheitsrelevanten Ereignissen — DER.1.A1.1).",
+                "uuid": "0cf371bb-2d5b-5e2b-a84b-8a37bd2663a2"
+              },
+              {
+                "control-id": "der.1.a1.2",
+                "description": "Component capability addressing control der.1.a1.2 (Erstellung einer Sicherheitsrichtlinie für die Detektion von sicherheitsrelevanten Ereignissen — DER.1.A1.2).",
+                "uuid": "a0dccf35-d8e1-59ae-aa21-75963df95c57"
+              },
+              {
+                "control-id": "der.1.a1.3",
+                "description": "Component capability addressing control der.1.a1.3 (Erstellung einer Sicherheitsrichtlinie für die Detektion von sicherheitsrelevanten Ereignissen — DER.1.A1.3).",
+                "uuid": "eda5062e-2be7-5728-95c2-d7cf672501ae"
+              },
+              {
+                "control-id": "der.1.a1.4",
+                "description": "Component capability addressing control der.1.a1.4 (Erstellung einer Sicherheitsrichtlinie für die Detektion von sicherheitsrelevanten Ereignissen — DER.1.A1.4).",
+                "uuid": "9755913c-55ba-542f-9e09-245d57501c80"
+              },
+              {
+                "control-id": "der.1.a1.5",
+                "description": "Component capability addressing control der.1.a1.5 (Erstellung einer Sicherheitsrichtlinie für die Detektion von sicherheitsrelevanten Ereignissen — DER.1.A1.5).",
+                "uuid": "93a7541a-5777-5fdf-8f84-9ce0f74ce8cd"
+              },
+              {
+                "control-id": "der.1.a1.6",
+                "description": "Component capability addressing control der.1.a1.6 (Erstellung einer Sicherheitsrichtlinie für die Detektion von sicherheitsrelevanten Ereignissen — DER.1.A1.6).",
+                "uuid": "1d49a201-327c-5b00-8571-d92daa7dd185"
+              },
+              {
+                "control-id": "der.1.a10.1",
+                "description": "Component capability addressing control der.1.a10.1 (Einsatz von TLS-/SSL-Proxies — DER.1.A10.1).",
+                "uuid": "a839badd-4319-59c3-b139-44d05379c533"
+              },
+              {
+                "control-id": "der.1.a10.2",
+                "description": "Component capability addressing control der.1.a10.2 (Einsatz von TLS-/SSL-Proxies — DER.1.A10.2).",
+                "uuid": "cbd16dbf-bc6c-51d9-ad4d-b233de80f322"
+              },
+              {
+                "control-id": "der.1.a10.3",
+                "description": "Component capability addressing control der.1.a10.3 (Einsatz von TLS-/SSL-Proxies — DER.1.A10.3).",
+                "uuid": "ea83baac-c354-530a-b329-5d0a5d0302f5"
+              },
+              {
+                "control-id": "der.1.a10.4",
+                "description": "Component capability addressing control der.1.a10.4 (Einsatz von TLS-/SSL-Proxies — DER.1.A10.4).",
+                "uuid": "4badec3f-502b-5fc2-b971-9d799227b3b9"
+              },
+              {
+                "control-id": "der.1.a11.1",
+                "description": "Component capability addressing control der.1.a11.1 (Nutzung einer zentralen Protokollierungsinfrastruktur für die Auswertung sicherheitsrelevanter Ereignisse — DER.1.A11.1).",
+                "uuid": "8f23372d-4f8b-5246-b4af-103cd49daf19"
+              },
+              {
+                "control-id": "der.1.a11.2",
+                "description": "Component capability addressing control der.1.a11.2 (Nutzung einer zentralen Protokollierungsinfrastruktur für die Auswertung sicherheitsrelevanter Ereignisse — DER.1.A11.2).",
+                "uuid": "a18f494a-8b74-5413-86ff-7c1e43a2ebbb"
+              },
+              {
+                "control-id": "der.1.a11.3",
+                "description": "Component capability addressing control der.1.a11.3 (Nutzung einer zentralen Protokollierungsinfrastruktur für die Auswertung sicherheitsrelevanter Ereignisse — DER.1.A11.3).",
+                "uuid": "68f6ebd3-eeed-5d89-8372-8b23c14a87af"
+              },
+              {
+                "control-id": "der.1.a11.4",
+                "description": "Component capability addressing control der.1.a11.4 (Nutzung einer zentralen Protokollierungsinfrastruktur für die Auswertung sicherheitsrelevanter Ereignisse — DER.1.A11.4).",
+                "uuid": "d2a3ceca-2a27-5bd7-8530-f4c9f820db9c"
+              },
+              {
+                "control-id": "der.1.a12.1",
+                "description": "Component capability addressing control der.1.a12.1 (Auswertung von Informationen aus externen Quellen — DER.1.A12.1).",
+                "uuid": "9817ad05-5002-562b-877c-aafd56136c4b"
+              },
+              {
+                "control-id": "der.1.a12.2",
+                "description": "Component capability addressing control der.1.a12.2 (Auswertung von Informationen aus externen Quellen — DER.1.A12.2).",
+                "uuid": "ee268315-ba7c-57fd-a7cb-f9f1db4ae16c"
+              },
+              {
+                "control-id": "der.1.a12.3",
+                "description": "Component capability addressing control der.1.a12.3 (Auswertung von Informationen aus externen Quellen — DER.1.A12.3).",
+                "uuid": "c90021d0-d19e-54a7-aac6-41e9b57a4b30"
+              },
+              {
+                "control-id": "der.1.a12.4",
+                "description": "Component capability addressing control der.1.a12.4 (Auswertung von Informationen aus externen Quellen — DER.1.A12.4).",
+                "uuid": "ffa8039c-40ff-58f3-b76b-4f62b979f80e"
+              },
+              {
+                "control-id": "der.1.a12.5",
+                "description": "Component capability addressing control der.1.a12.5 (Auswertung von Informationen aus externen Quellen — DER.1.A12.5).",
+                "uuid": "1af04086-a719-59e5-9ff7-0ca7ac365b6b"
+              },
+              {
+                "control-id": "der.1.a13.1",
+                "description": "Component capability addressing control der.1.a13.1 (Regelmäßige Audits der Detektionssysteme — DER.1.A13.1).",
+                "uuid": "5748e8c3-6546-56e9-9d6b-067a9e099fae"
+              },
+              {
+                "control-id": "der.1.a13.2",
+                "description": "Component capability addressing control der.1.a13.2 (Regelmäßige Audits der Detektionssysteme — DER.1.A13.2).",
+                "uuid": "3516d6bb-8d5f-55df-9591-8ebbf5a9ed12"
+              },
+              {
+                "control-id": "der.1.a13.3",
+                "description": "Component capability addressing control der.1.a13.3 (Regelmäßige Audits der Detektionssysteme — DER.1.A13.3).",
+                "uuid": "6198fb25-35dc-55c9-ac1a-fd17a62b7c14"
+              },
+              {
+                "control-id": "der.1.a13.4",
+                "description": "Component capability addressing control der.1.a13.4 (Regelmäßige Audits der Detektionssysteme — DER.1.A13.4).",
+                "uuid": "65e4941b-d828-5a65-8d64-a1a2722d097d"
+              },
+              {
+                "control-id": "der.1.a14.1",
+                "description": "Component capability addressing control der.1.a14.1 (Auswertung der Protokollierungsdaten durch spezialisiertes Personal — DER.1.A14.1).",
+                "uuid": "2eff0137-e116-5a35-bc9f-fd7dbe4ff055"
+              },
+              {
+                "control-id": "der.1.a14.2",
+                "description": "Component capability addressing control der.1.a14.2 (Auswertung der Protokollierungsdaten durch spezialisiertes Personal — DER.1.A14.2).",
+                "uuid": "7efe3db1-9812-5b43-b1ba-d8280f17efb8"
+              },
+              {
+                "control-id": "der.1.a14.3",
+                "description": "Component capability addressing control der.1.a14.3 (Auswertung der Protokollierungsdaten durch spezialisiertes Personal — DER.1.A14.3).",
+                "uuid": "cd2212d1-2635-5b78-8475-b52a0b863f83"
+              },
+              {
+                "control-id": "der.1.a14.4",
+                "description": "Component capability addressing control der.1.a14.4 (Auswertung der Protokollierungsdaten durch spezialisiertes Personal — DER.1.A14.4).",
+                "uuid": "2e603b46-50f0-5d63-8c8a-f044b0860c0a"
+              },
+              {
+                "control-id": "der.1.a15.1",
+                "description": "Component capability addressing control der.1.a15.1 (Zentrale Detektion und Echtzeitüberprüfung von Ereignismeldungen — DER.1.A15.1).",
+                "uuid": "f0de286b-17e6-505a-82a6-cca4a0ae623c"
+              },
+              {
+                "control-id": "der.1.a15.10",
+                "description": "Component capability addressing control der.1.a15.10 (Zentrale Detektion und Echtzeitüberprüfung von Ereignismeldungen — DER.1.A15.10).",
+                "uuid": "2f4cb413-df75-536a-8954-1c1ce12f6c5f"
+              },
+              {
+                "control-id": "der.1.a15.11",
+                "description": "Component capability addressing control der.1.a15.11 (Zentrale Detektion und Echtzeitüberprüfung von Ereignismeldungen — DER.1.A15.11).",
+                "uuid": "d9409242-524e-5064-9f12-f62070e5ff47"
+              },
+              {
+                "control-id": "der.1.a15.2",
+                "description": "Component capability addressing control der.1.a15.2 (Zentrale Detektion und Echtzeitüberprüfung von Ereignismeldungen — DER.1.A15.2).",
+                "uuid": "ffec671c-6a6f-53d7-bd19-2e1999df11df"
+              },
+              {
+                "control-id": "der.1.a15.3",
+                "description": "Component capability addressing control der.1.a15.3 (Zentrale Detektion und Echtzeitüberprüfung von Ereignismeldungen — DER.1.A15.3).",
+                "uuid": "d387c2e1-f156-55dd-93d8-81fd409bb39a"
+              },
+              {
+                "control-id": "der.1.a15.4",
+                "description": "Component capability addressing control der.1.a15.4 (Zentrale Detektion und Echtzeitüberprüfung von Ereignismeldungen — DER.1.A15.4).",
+                "uuid": "d236e8a6-e19d-5fc4-a99f-b6fab2f09058"
+              },
+              {
+                "control-id": "der.1.a15.5",
+                "description": "Component capability addressing control der.1.a15.5 (Zentrale Detektion und Echtzeitüberprüfung von Ereignismeldungen — DER.1.A15.5).",
+                "uuid": "831e51b6-0a09-5353-9d13-4d450d4eb832"
+              },
+              {
+                "control-id": "der.1.a15.6",
+                "description": "Component capability addressing control der.1.a15.6 (Zentrale Detektion und Echtzeitüberprüfung von Ereignismeldungen — DER.1.A15.6).",
+                "uuid": "a9337dd1-8c74-5e88-bead-a7414d87d472"
+              },
+              {
+                "control-id": "der.1.a15.7",
+                "description": "Component capability addressing control der.1.a15.7 (Zentrale Detektion und Echtzeitüberprüfung von Ereignismeldungen — DER.1.A15.7).",
+                "uuid": "2b96c551-dacc-50d3-b47c-ba8b5328a0bc"
+              },
+              {
+                "control-id": "der.1.a15.8",
+                "description": "Component capability addressing control der.1.a15.8 (Zentrale Detektion und Echtzeitüberprüfung von Ereignismeldungen — DER.1.A15.8).",
+                "uuid": "23fe2f9f-40f2-5fa4-9dbb-cc67c1a364b2"
+              },
+              {
+                "control-id": "der.1.a15.9",
+                "description": "Component capability addressing control der.1.a15.9 (Zentrale Detektion und Echtzeitüberprüfung von Ereignismeldungen — DER.1.A15.9).",
+                "uuid": "33058515-a4e7-5194-be95-e71607295b39"
+              },
+              {
+                "control-id": "der.1.a16.1",
+                "description": "Component capability addressing control der.1.a16.1 (Einsatz von Detektionssystemen nach Schutzbedarfsanforderungen — DER.1.A16.1).",
+                "uuid": "28bca3ef-f331-5a20-b00a-1360b2836191"
+              },
+              {
+                "control-id": "der.1.a16.2",
+                "description": "Component capability addressing control der.1.a16.2 (Einsatz von Detektionssystemen nach Schutzbedarfsanforderungen — DER.1.A16.2).",
+                "uuid": "9c5cc2d8-2c0a-518e-8871-a9d996f78ea4"
+              },
+              {
+                "control-id": "der.1.a17.1",
+                "description": "Component capability addressing control der.1.a17.1 (Automatische Reaktion auf sicherheitsrelevante Ereignisse — DER.1.A17.1).",
+                "uuid": "3444a1c2-32a5-5aef-8af6-f8aa6b4d5092"
+              },
+              {
+                "control-id": "der.1.a17.2",
+                "description": "Component capability addressing control der.1.a17.2 (Automatische Reaktion auf sicherheitsrelevante Ereignisse — DER.1.A17.2).",
+                "uuid": "f961aa18-3da7-5e19-80c4-07ff085772f5"
+              },
+              {
+                "control-id": "der.1.a17.3",
+                "description": "Component capability addressing control der.1.a17.3 (Automatische Reaktion auf sicherheitsrelevante Ereignisse — DER.1.A17.3).",
+                "uuid": "31e2fc05-a889-53e0-ab8c-479270b5c20c"
+              },
+              {
+                "control-id": "der.1.a18.1",
+                "description": "Component capability addressing control der.1.a18.1 (Durchführung regelmäßiger Integritätskontrollen — DER.1.A18.1).",
+                "uuid": "be884873-5951-52f8-ab20-3208557b71d9"
+              },
+              {
+                "control-id": "der.1.a18.2",
+                "description": "Component capability addressing control der.1.a18.2 (Durchführung regelmäßiger Integritätskontrollen — DER.1.A18.2).",
+                "uuid": "01f1a372-575b-53ce-b56a-93eb4faecc44"
+              },
+              {
+                "control-id": "der.1.a18.3",
+                "description": "Component capability addressing control der.1.a18.3 (Durchführung regelmäßiger Integritätskontrollen — DER.1.A18.3).",
+                "uuid": "53a58958-ac5f-52db-ae0d-6f1fb273174b"
+              },
+              {
+                "control-id": "der.1.a18.4",
+                "description": "Component capability addressing control der.1.a18.4 (Durchführung regelmäßiger Integritätskontrollen — DER.1.A18.4).",
+                "uuid": "df8bc682-6831-5c03-a123-29817a519a87"
+              },
+              {
+                "control-id": "der.1.a2.1",
+                "description": "Component capability addressing control der.1.a2.1 (Einhaltung rechtlicher Bedingungen bei der Auswertung von Protokollierungsdaten — DER.1.A2.1).",
+                "uuid": "c6d0c5a5-1c3a-5a49-8325-129af70d02ea"
+              },
+              {
+                "control-id": "der.1.a2.2",
+                "description": "Component capability addressing control der.1.a2.2 (Einhaltung rechtlicher Bedingungen bei der Auswertung von Protokollierungsdaten — DER.1.A2.2).",
+                "uuid": "a20d3065-9776-5fb6-acdd-e7b77e23e336"
+              },
+              {
+                "control-id": "der.1.a2.3",
+                "description": "Component capability addressing control der.1.a2.3 (Einhaltung rechtlicher Bedingungen bei der Auswertung von Protokollierungsdaten — DER.1.A2.3).",
+                "uuid": "e71a63ba-0993-501d-98b6-62763e16c8c7"
+              },
+              {
+                "control-id": "der.1.a3.1",
+                "description": "Component capability addressing control der.1.a3.1 (Festlegung von Meldewegen für sicherheitsrelevante Ereignisse — DER.1.A3.1).",
+                "uuid": "c7745443-7776-5819-b4fd-39cc0a885257"
+              },
+              {
+                "control-id": "der.1.a3.2",
+                "description": "Component capability addressing control der.1.a3.2 (Festlegung von Meldewegen für sicherheitsrelevante Ereignisse — DER.1.A3.2).",
+                "uuid": "553fb649-b104-565b-8ed1-d9988272a00a"
+              },
+              {
+                "control-id": "der.1.a3.3",
+                "description": "Component capability addressing control der.1.a3.3 (Festlegung von Meldewegen für sicherheitsrelevante Ereignisse — DER.1.A3.3).",
+                "uuid": "4a688732-12e1-5c4c-8c07-b207b2d9ce59"
+              },
+              {
+                "control-id": "der.1.a3.4",
+                "description": "Component capability addressing control der.1.a3.4 (Festlegung von Meldewegen für sicherheitsrelevante Ereignisse — DER.1.A3.4).",
+                "uuid": "ca735c65-ae0d-5ff2-9fbc-be9ce284b7e8"
+              },
+              {
+                "control-id": "der.1.a3.5",
+                "description": "Component capability addressing control der.1.a3.5 (Festlegung von Meldewegen für sicherheitsrelevante Ereignisse — DER.1.A3.5).",
+                "uuid": "e12ebbc6-c53e-5694-80d2-0d31237385f6"
+              },
+              {
+                "control-id": "der.1.a3.6",
+                "description": "Component capability addressing control der.1.a3.6 (Festlegung von Meldewegen für sicherheitsrelevante Ereignisse — DER.1.A3.6).",
+                "uuid": "14b0b6d6-ff1e-53b3-863f-cbd9ad96efee"
+              },
+              {
+                "control-id": "der.1.a3.7",
+                "description": "Component capability addressing control der.1.a3.7 (Festlegung von Meldewegen für sicherheitsrelevante Ereignisse — DER.1.A3.7).",
+                "uuid": "f60dfff5-b932-567c-9b75-47a4fd6490db"
+              },
+              {
+                "control-id": "der.1.a4.1",
+                "description": "Component capability addressing control der.1.a4.1 (Sensibilisierung der Mitarbeitenden — DER.1.A4.1).",
+                "uuid": "792c729d-7031-50c3-a3d6-ad4f8af2350e"
+              },
+              {
+                "control-id": "der.1.a4.2",
+                "description": "Component capability addressing control der.1.a4.2 (Sensibilisierung der Mitarbeitenden — DER.1.A4.2).",
+                "uuid": "b205d1e0-0e5b-585d-9930-2af52ee3ac69"
+              },
+              {
+                "control-id": "der.1.a4.3",
+                "description": "Component capability addressing control der.1.a4.3 (Sensibilisierung der Mitarbeitenden — DER.1.A4.3).",
+                "uuid": "e090972b-bd81-5186-bc58-023016c2286d"
+              },
+              {
+                "control-id": "der.1.a5.1",
+                "description": "Component capability addressing control der.1.a5.1 (Einsatz von mitgelieferten Systemfunktionen zur Detektion — DER.1.A5.1).",
+                "uuid": "d846c5d1-1eae-5672-b0fa-d2384cc5e062"
+              },
+              {
+                "control-id": "der.1.a5.2",
+                "description": "Component capability addressing control der.1.a5.2 (Einsatz von mitgelieferten Systemfunktionen zur Detektion — DER.1.A5.2).",
+                "uuid": "467109d5-9660-58d8-b6eb-b87f4690db15"
+              },
+              {
+                "control-id": "der.1.a5.3",
+                "description": "Component capability addressing control der.1.a5.3 (Einsatz von mitgelieferten Systemfunktionen zur Detektion — DER.1.A5.3).",
+                "uuid": "705fbf83-f612-5893-b02c-75587e2f75e9"
+              },
+              {
+                "control-id": "der.1.a5.4",
+                "description": "Component capability addressing control der.1.a5.4 (Einsatz von mitgelieferten Systemfunktionen zur Detektion — DER.1.A5.4).",
+                "uuid": "ab98854c-97af-56dc-97f1-e2e023e8f1d7"
+              },
+              {
+                "control-id": "der.1.a5.5",
+                "description": "Component capability addressing control der.1.a5.5 (Einsatz von mitgelieferten Systemfunktionen zur Detektion — DER.1.A5.5).",
+                "uuid": "523edb26-8301-5ce7-a4f7-373d8610a218"
+              },
+              {
+                "control-id": "der.1.a5.6",
+                "description": "Component capability addressing control der.1.a5.6 (Einsatz von mitgelieferten Systemfunktionen zur Detektion — DER.1.A5.6).",
+                "uuid": "e217b581-4f87-573c-9048-a8a06ae29311"
+              },
+              {
+                "control-id": "der.1.a5.7",
+                "description": "Component capability addressing control der.1.a5.7 (Einsatz von mitgelieferten Systemfunktionen zur Detektion — DER.1.A5.7).",
+                "uuid": "a53e99eb-ad37-52f6-bc1d-d4ebb9c385eb"
+              },
+              {
+                "control-id": "der.1.a5.8",
+                "description": "Component capability addressing control der.1.a5.8 (Einsatz von mitgelieferten Systemfunktionen zur Detektion — DER.1.A5.8).",
+                "uuid": "be9c6f0d-3442-5413-bc79-53139e6fb447"
+              },
+              {
+                "control-id": "der.1.a6.1",
+                "description": "Component capability addressing control der.1.a6.1 (Kontinuierliche Überwachung und Auswertung von Protokollierungsdaten — DER.1.A6.1).",
+                "uuid": "f65496d4-979f-57cb-89b0-55828ccc825b"
+              },
+              {
+                "control-id": "der.1.a6.2",
+                "description": "Component capability addressing control der.1.a6.2 (Kontinuierliche Überwachung und Auswertung von Protokollierungsdaten — DER.1.A6.2).",
+                "uuid": "182a6b32-16a0-5f09-bfd1-2ebefe1dc340"
+              },
+              {
+                "control-id": "der.1.a6.3",
+                "description": "Component capability addressing control der.1.a6.3 (Kontinuierliche Überwachung und Auswertung von Protokollierungsdaten — DER.1.A6.3).",
+                "uuid": "8e8b3438-4db0-5c75-94e6-74cfa0c1b8ed"
+              },
+              {
+                "control-id": "der.1.a6.4",
+                "description": "Component capability addressing control der.1.a6.4 (Kontinuierliche Überwachung und Auswertung von Protokollierungsdaten — DER.1.A6.4).",
+                "uuid": "ffbfd400-dabe-552c-9c64-4950c5a05d97"
+              },
+              {
+                "control-id": "der.1.a7.1",
+                "description": "Component capability addressing control der.1.a7.1 (Schulung von Zuständigen — DER.1.A7.1).",
+                "uuid": "879dfe8b-e94b-501c-8ecf-0778d5e3acca"
+              },
+              {
+                "control-id": "der.1.a7.2",
+                "description": "Component capability addressing control der.1.a7.2 (Schulung von Zuständigen — DER.1.A7.2).",
+                "uuid": "b13cd197-d5b0-5063-aa1f-7c3db3fbb55f"
+              },
+              {
+                "control-id": "der.1.a7.3",
+                "description": "Component capability addressing control der.1.a7.3 (Schulung von Zuständigen — DER.1.A7.3).",
+                "uuid": "befb37df-6906-5014-9779-72432fa7fa88"
+              },
+              {
+                "control-id": "der.1.a9.1",
+                "description": "Component capability addressing control der.1.a9.1 (Einsatz zusätzlicher Detektionssysteme — DER.1.A9.1).",
+                "uuid": "ed04b3aa-6026-5a0c-a92d-85137b63406c"
+              },
+              {
+                "control-id": "der.1.a9.2",
+                "description": "Component capability addressing control der.1.a9.2 (Einsatz zusätzlicher Detektionssysteme — DER.1.A9.2).",
+                "uuid": "e88e7bc4-b3c2-520e-a978-7705559f936a"
+              },
+              {
+                "control-id": "der.1.a9.3",
+                "description": "Component capability addressing control der.1.a9.3 (Einsatz zusätzlicher Detektionssysteme — DER.1.A9.3).",
+                "uuid": "c6e6d41b-6c62-531f-94d5-099e51615592"
+              },
+              {
+                "control-id": "der.1.a9.4",
+                "description": "Component capability addressing control der.1.a9.4 (Einsatz zusätzlicher Detektionssysteme — DER.1.A9.4).",
+                "uuid": "2c387321-1d9f-5da8-b5a2-1146e5a3f74c"
+              },
+              {
+                "control-id": "der.2.1.a1.1",
+                "description": "Component capability addressing control der.2.1.a1.1 (Definition eines Sicherheitsvorfalls — DER.2.1.A1.1).",
+                "uuid": "b9e17d39-d237-513e-8cdd-270064654870"
+              },
+              {
+                "control-id": "der.2.1.a1.2",
+                "description": "Component capability addressing control der.2.1.a1.2 (Definition eines Sicherheitsvorfalls — DER.2.1.A1.2).",
+                "uuid": "69357c56-9bf1-5a34-beab-551e122790b3"
+              },
+              {
+                "control-id": "der.2.1.a1.3",
+                "description": "Component capability addressing control der.2.1.a1.3 (Definition eines Sicherheitsvorfalls — DER.2.1.A1.3).",
+                "uuid": "28b58f3b-480e-5f87-8ff8-bcf4c0a7e1d3"
+              },
+              {
+                "control-id": "der.2.1.a1.4",
+                "description": "Component capability addressing control der.2.1.a1.4 (Definition eines Sicherheitsvorfalls — DER.2.1.A1.4).",
+                "uuid": "a499019d-6e8b-554b-84fe-b24f8215cabe"
+              },
+              {
+                "control-id": "der.2.1.a10.1",
+                "description": "Component capability addressing control der.2.1.a10.1 (Eindämmen der Auswirkung von Sicherheitsvorfällen — DER.2.1.A10.1).",
+                "uuid": "50ff75fe-1ea6-5fd6-8a0d-a8a01787f316"
+              },
+              {
+                "control-id": "der.2.1.a10.2",
+                "description": "Component capability addressing control der.2.1.a10.2 (Eindämmen der Auswirkung von Sicherheitsvorfällen — DER.2.1.A10.2).",
+                "uuid": "ca16ad9b-a560-528d-ae00-025f3e8befe8"
+              },
+              {
+                "control-id": "der.2.1.a10.3",
+                "description": "Component capability addressing control der.2.1.a10.3 (Eindämmen der Auswirkung von Sicherheitsvorfällen — DER.2.1.A10.3).",
+                "uuid": "0042ee55-f660-564e-b200-a9549527f857"
+              },
+              {
+                "control-id": "der.2.1.a11.1",
+                "description": "Component capability addressing control der.2.1.a11.1 (Einstufung von Sicherheitsvorfällen — DER.2.1.A11.1).",
+                "uuid": "01ac691e-439e-5957-8ca8-9dbb19480370"
+              },
+              {
+                "control-id": "der.2.1.a11.2",
+                "description": "Component capability addressing control der.2.1.a11.2 (Einstufung von Sicherheitsvorfällen — DER.2.1.A11.2).",
+                "uuid": "dc87f11c-5e74-5e18-99fa-44d8ff5994b8"
+              },
+              {
+                "control-id": "der.2.1.a12.1",
+                "description": "Component capability addressing control der.2.1.a12.1 (Festlegung der Schnittstellen der Sicherheitsvorfallbehandlung zur Störungs- und Fehlerbehebung — DER.2.1.A12.1).",
+                "uuid": "d60b628d-6d22-5835-81e7-51830e4250f4"
+              },
+              {
+                "control-id": "der.2.1.a12.2",
+                "description": "Component capability addressing control der.2.1.a12.2 (Festlegung der Schnittstellen der Sicherheitsvorfallbehandlung zur Störungs- und Fehlerbehebung — DER.2.1.A12.2).",
+                "uuid": "96043e1e-c676-595b-94fe-2b96e772b399"
+              },
+              {
+                "control-id": "der.2.1.a12.3",
+                "description": "Component capability addressing control der.2.1.a12.3 (Festlegung der Schnittstellen der Sicherheitsvorfallbehandlung zur Störungs- und Fehlerbehebung — DER.2.1.A12.3).",
+                "uuid": "91e5bc9a-d3cd-56ec-bbbd-d87fd27e1a64"
+              },
+              {
+                "control-id": "der.2.1.a12.4",
+                "description": "Component capability addressing control der.2.1.a12.4 (Festlegung der Schnittstellen der Sicherheitsvorfallbehandlung zur Störungs- und Fehlerbehebung — DER.2.1.A12.4).",
+                "uuid": "d081ae01-c052-5a56-b4bf-06c4d767c73b"
+              },
+              {
+                "control-id": "der.2.1.a13.1",
+                "description": "Component capability addressing control der.2.1.a13.1 (Einbindung in das Sicherheits- und Notfallmanagement — DER.2.1.A13.1).",
+                "uuid": "2ede07c8-798b-5ab1-a912-88f62b7f2ea4"
+              },
+              {
+                "control-id": "der.2.1.a13.2",
+                "description": "Component capability addressing control der.2.1.a13.2 (Einbindung in das Sicherheits- und Notfallmanagement — DER.2.1.A13.2).",
+                "uuid": "18b653d7-dd55-598a-b5b1-9de5b0cb6329"
+              },
+              {
+                "control-id": "der.2.1.a14.1",
+                "description": "Component capability addressing control der.2.1.a14.1 (Eskalationsstrategie für Sicherheitsvorfälle — DER.2.1.A14.1).",
+                "uuid": "5d937137-cc5f-5c3a-aa74-0c4683890835"
+              },
+              {
+                "control-id": "der.2.1.a14.10",
+                "description": "Component capability addressing control der.2.1.a14.10 (Eskalationsstrategie für Sicherheitsvorfälle — DER.2.1.A14.10).",
+                "uuid": "70f5c8f5-8f55-5ed5-93e9-116e7ca016c4"
+              },
+              {
+                "control-id": "der.2.1.a14.2",
+                "description": "Component capability addressing control der.2.1.a14.2 (Eskalationsstrategie für Sicherheitsvorfälle — DER.2.1.A14.2).",
+                "uuid": "027f3070-d3bc-5728-a09f-bcefb2405f0a"
+              },
+              {
+                "control-id": "der.2.1.a14.3",
+                "description": "Component capability addressing control der.2.1.a14.3 (Eskalationsstrategie für Sicherheitsvorfälle — DER.2.1.A14.3).",
+                "uuid": "3d189568-8c79-5927-9f84-3a9358c16f76"
+              },
+              {
+                "control-id": "der.2.1.a14.4",
+                "description": "Component capability addressing control der.2.1.a14.4 (Eskalationsstrategie für Sicherheitsvorfälle — DER.2.1.A14.4).",
+                "uuid": "744e9fc3-1a23-5225-88d1-d58e529ab049"
+              },
+              {
+                "control-id": "der.2.1.a14.5",
+                "description": "Component capability addressing control der.2.1.a14.5 (Eskalationsstrategie für Sicherheitsvorfälle — DER.2.1.A14.5).",
+                "uuid": "6f3e3a42-fd8a-5810-9849-4a77ed000270"
+              },
+              {
+                "control-id": "der.2.1.a14.6",
+                "description": "Component capability addressing control der.2.1.a14.6 (Eskalationsstrategie für Sicherheitsvorfälle — DER.2.1.A14.6).",
+                "uuid": "2c5711b8-6bb6-5cd9-a2eb-41124def8961"
+              },
+              {
+                "control-id": "der.2.1.a14.7",
+                "description": "Component capability addressing control der.2.1.a14.7 (Eskalationsstrategie für Sicherheitsvorfälle — DER.2.1.A14.7).",
+                "uuid": "fec140c9-4b56-5d06-a25e-5369f3185887"
+              },
+              {
+                "control-id": "der.2.1.a14.8",
+                "description": "Component capability addressing control der.2.1.a14.8 (Eskalationsstrategie für Sicherheitsvorfälle — DER.2.1.A14.8).",
+                "uuid": "7258a4d5-056d-5a09-bfc5-8f4e76f0bf6a"
+              },
+              {
+                "control-id": "der.2.1.a14.9",
+                "description": "Component capability addressing control der.2.1.a14.9 (Eskalationsstrategie für Sicherheitsvorfälle — DER.2.1.A14.9).",
+                "uuid": "e0ceedad-11dc-59df-baf6-0c980bc65bc4"
+              },
+              {
+                "control-id": "der.2.1.a15.1",
+                "description": "Component capability addressing control der.2.1.a15.1 (Schulung der Mitarbeitenden des Service Desks — DER.2.1.A15.1).",
+                "uuid": "e1358ce0-770e-54a7-b0de-67fc7fb79f12"
+              },
+              {
+                "control-id": "der.2.1.a15.2",
+                "description": "Component capability addressing control der.2.1.a15.2 (Schulung der Mitarbeitenden des Service Desks — DER.2.1.A15.2).",
+                "uuid": "608c60d1-f9cc-5055-8cc5-357bd4868413"
+              },
+              {
+                "control-id": "der.2.1.a15.3",
+                "description": "Component capability addressing control der.2.1.a15.3 (Schulung der Mitarbeitenden des Service Desks — DER.2.1.A15.3).",
+                "uuid": "5486f3de-254f-5093-9473-3c94937dfa58"
+              },
+              {
+                "control-id": "der.2.1.a16.1",
+                "description": "Component capability addressing control der.2.1.a16.1 (Dokumentation der Behebung von Sicherheitsvorfällen — DER.2.1.A16.1).",
+                "uuid": "60b49caa-4533-5f9d-8849-0155746e1e7c"
+              },
+              {
+                "control-id": "der.2.1.a16.2",
+                "description": "Component capability addressing control der.2.1.a16.2 (Dokumentation der Behebung von Sicherheitsvorfällen — DER.2.1.A16.2).",
+                "uuid": "2ab210f0-4d31-5443-9cfa-75f663caedc8"
+              },
+              {
+                "control-id": "der.2.1.a16.3",
+                "description": "Component capability addressing control der.2.1.a16.3 (Dokumentation der Behebung von Sicherheitsvorfällen — DER.2.1.A16.3).",
+                "uuid": "13f4c494-6aa0-573a-b44d-f2ed052f8601"
+              },
+              {
+                "control-id": "der.2.1.a16.4",
+                "description": "Component capability addressing control der.2.1.a16.4 (Dokumentation der Behebung von Sicherheitsvorfällen — DER.2.1.A16.4).",
+                "uuid": "9ace8f40-3509-5929-978c-a04c11d7a0db"
+              },
+              {
+                "control-id": "der.2.1.a16.5",
+                "description": "Component capability addressing control der.2.1.a16.5 (Dokumentation der Behebung von Sicherheitsvorfällen — DER.2.1.A16.5).",
+                "uuid": "7fe65d0c-90a3-5d32-aaf0-2316d146f4b9"
+              },
+              {
+                "control-id": "der.2.1.a17.1",
+                "description": "Component capability addressing control der.2.1.a17.1 (Nachbereitung von Sicherheitsvorfällen — DER.2.1.A17.1).",
+                "uuid": "245da408-d3a1-5af4-bbab-1a1e9f437765"
+              },
+              {
+                "control-id": "der.2.1.a17.2",
+                "description": "Component capability addressing control der.2.1.a17.2 (Nachbereitung von Sicherheitsvorfällen — DER.2.1.A17.2).",
+                "uuid": "cc8c8a33-ded0-5081-a46c-ae50f95130ff"
+              },
+              {
+                "control-id": "der.2.1.a17.3",
+                "description": "Component capability addressing control der.2.1.a17.3 (Nachbereitung von Sicherheitsvorfällen — DER.2.1.A17.3).",
+                "uuid": "a8b036a3-3563-598d-8360-e519ba3a3d30"
+              },
+              {
+                "control-id": "der.2.1.a17.4",
+                "description": "Component capability addressing control der.2.1.a17.4 (Nachbereitung von Sicherheitsvorfällen — DER.2.1.A17.4).",
+                "uuid": "c03e94cd-5df1-5a0a-8f1d-8ecaedfbaf7d"
+              },
+              {
+                "control-id": "der.2.1.a17.5",
+                "description": "Component capability addressing control der.2.1.a17.5 (Nachbereitung von Sicherheitsvorfällen — DER.2.1.A17.5).",
+                "uuid": "a2931a90-cda7-5f28-87d4-7bdab6307900"
+              },
+              {
+                "control-id": "der.2.1.a17.6",
+                "description": "Component capability addressing control der.2.1.a17.6 (Nachbereitung von Sicherheitsvorfällen — DER.2.1.A17.6).",
+                "uuid": "ee1c6f7e-4d75-5f67-9181-024405cac6f3"
+              },
+              {
+                "control-id": "der.2.1.a17.7",
+                "description": "Component capability addressing control der.2.1.a17.7 (Nachbereitung von Sicherheitsvorfällen — DER.2.1.A17.7).",
+                "uuid": "b93b1cad-8258-556d-aea8-2fa69249e259"
+              },
+              {
+                "control-id": "der.2.1.a17.8",
+                "description": "Component capability addressing control der.2.1.a17.8 (Nachbereitung von Sicherheitsvorfällen — DER.2.1.A17.8).",
+                "uuid": "31ad59d9-3429-5883-8652-2b21cec00ed2"
+              },
+              {
+                "control-id": "der.2.1.a18.1",
+                "description": "Component capability addressing control der.2.1.a18.1 (Weiterentwicklung der Prozesse durch Erkenntnisse aus Sicherheitsvorfällen und Branchenentwicklungen — DER.2.1.A18.1).",
+                "uuid": "944166ba-a27e-57fa-9f85-289cd159a254"
+              },
+              {
+                "control-id": "der.2.1.a18.2",
+                "description": "Component capability addressing control der.2.1.a18.2 (Weiterentwicklung der Prozesse durch Erkenntnisse aus Sicherheitsvorfällen und Branchenentwicklungen — DER.2.1.A18.2).",
+                "uuid": "ae2df029-2b17-5c56-af87-634d7055286f"
+              },
+              {
+                "control-id": "der.2.1.a18.3",
+                "description": "Component capability addressing control der.2.1.a18.3 (Weiterentwicklung der Prozesse durch Erkenntnisse aus Sicherheitsvorfällen und Branchenentwicklungen — DER.2.1.A18.3).",
+                "uuid": "5a70cad9-5f28-5daa-9120-83926d4eccc8"
+              },
+              {
+                "control-id": "der.2.1.a18.4",
+                "description": "Component capability addressing control der.2.1.a18.4 (Weiterentwicklung der Prozesse durch Erkenntnisse aus Sicherheitsvorfällen und Branchenentwicklungen — DER.2.1.A18.4).",
+                "uuid": "efebc26c-9b7e-51ce-8252-d0cfc6807e60"
+              },
+              {
+                "control-id": "der.2.1.a19.1",
+                "description": "Component capability addressing control der.2.1.a19.1 (Festlegung von Prioritäten für die Behandlung von Sicherheitsvorfällen — DER.2.1.A19.1).",
+                "uuid": "5b47fa83-116d-5695-a8af-8f177ad6f9aa"
+              },
+              {
+                "control-id": "der.2.1.a19.2",
+                "description": "Component capability addressing control der.2.1.a19.2 (Festlegung von Prioritäten für die Behandlung von Sicherheitsvorfällen — DER.2.1.A19.2).",
+                "uuid": "6c747c50-91a3-5888-bdfe-542ba718569e"
+              },
+              {
+                "control-id": "der.2.1.a19.3",
+                "description": "Component capability addressing control der.2.1.a19.3 (Festlegung von Prioritäten für die Behandlung von Sicherheitsvorfällen — DER.2.1.A19.3).",
+                "uuid": "ecd66b45-1f14-5bcd-91b9-2522bf5b0d4c"
+              },
+              {
+                "control-id": "der.2.1.a19.4",
+                "description": "Component capability addressing control der.2.1.a19.4 (Festlegung von Prioritäten für die Behandlung von Sicherheitsvorfällen — DER.2.1.A19.4).",
+                "uuid": "1edcaf53-e59a-5ad4-9c1d-9807e92c9b8f"
+              },
+              {
+                "control-id": "der.2.1.a19.5",
+                "description": "Component capability addressing control der.2.1.a19.5 (Festlegung von Prioritäten für die Behandlung von Sicherheitsvorfällen — DER.2.1.A19.5).",
+                "uuid": "98ab229d-3632-5f91-8b0f-6f865b0f31f6"
+              },
+              {
+                "control-id": "der.2.1.a2.1",
+                "description": "Component capability addressing control der.2.1.a2.1 (Erstellung einer Richtlinie zur Behandlung von Sicherheitsvorfällen — DER.2.1.A2.1).",
+                "uuid": "2d2fc4fa-c0bf-5530-b936-e49de19ea085"
+              },
+              {
+                "control-id": "der.2.1.a2.2",
+                "description": "Component capability addressing control der.2.1.a2.2 (Erstellung einer Richtlinie zur Behandlung von Sicherheitsvorfällen — DER.2.1.A2.2).",
+                "uuid": "0280f9b8-9b39-589a-b8cc-2a61d39283ca"
+              },
+              {
+                "control-id": "der.2.1.a2.3",
+                "description": "Component capability addressing control der.2.1.a2.3 (Erstellung einer Richtlinie zur Behandlung von Sicherheitsvorfällen — DER.2.1.A2.3).",
+                "uuid": "d1c7c013-4742-5353-80b5-1c6410d7c9fd"
+              },
+              {
+                "control-id": "der.2.1.a2.4",
+                "description": "Component capability addressing control der.2.1.a2.4 (Erstellung einer Richtlinie zur Behandlung von Sicherheitsvorfällen — DER.2.1.A2.4).",
+                "uuid": "d2362c89-c807-57e1-821d-955b011856e0"
+              },
+              {
+                "control-id": "der.2.1.a2.5",
+                "description": "Component capability addressing control der.2.1.a2.5 (Erstellung einer Richtlinie zur Behandlung von Sicherheitsvorfällen — DER.2.1.A2.5).",
+                "uuid": "e4adaec2-110b-5d06-8fe4-864688a5de37"
+              },
+              {
+                "control-id": "der.2.1.a2.6",
+                "description": "Component capability addressing control der.2.1.a2.6 (Erstellung einer Richtlinie zur Behandlung von Sicherheitsvorfällen — DER.2.1.A2.6).",
+                "uuid": "f310786d-a32d-5265-8476-c15e05c625bf"
+              },
+              {
+                "control-id": "der.2.1.a2.7",
+                "description": "Component capability addressing control der.2.1.a2.7 (Erstellung einer Richtlinie zur Behandlung von Sicherheitsvorfällen — DER.2.1.A2.7).",
+                "uuid": "d652dd8b-0761-57b3-834d-9ad50950c687"
+              },
+              {
+                "control-id": "der.2.1.a2.8",
+                "description": "Component capability addressing control der.2.1.a2.8 (Erstellung einer Richtlinie zur Behandlung von Sicherheitsvorfällen — DER.2.1.A2.8).",
+                "uuid": "546c8163-1186-51da-80ea-5a4871d45860"
+              },
+              {
+                "control-id": "der.2.1.a20.1",
+                "description": "Component capability addressing control der.2.1.a20.1 (Einrichtung einer dedizierten Meldestelle für Sicherheitsvorfälle — DER.2.1.A20.1).",
+                "uuid": "93668e22-d19f-5645-9cf7-e7b62b75ae87"
+              },
+              {
+                "control-id": "der.2.1.a20.2",
+                "description": "Component capability addressing control der.2.1.a20.2 (Einrichtung einer dedizierten Meldestelle für Sicherheitsvorfälle — DER.2.1.A20.2).",
+                "uuid": "916c009c-4df2-5b43-86bb-d6a751f58b34"
+              },
+              {
+                "control-id": "der.2.1.a20.3",
+                "description": "Component capability addressing control der.2.1.a20.3 (Einrichtung einer dedizierten Meldestelle für Sicherheitsvorfälle — DER.2.1.A20.3).",
+                "uuid": "5c607bc7-c96d-5592-b87d-5bf3b051b9ac"
+              },
+              {
+                "control-id": "der.2.1.a20.4",
+                "description": "Component capability addressing control der.2.1.a20.4 (Einrichtung einer dedizierten Meldestelle für Sicherheitsvorfälle — DER.2.1.A20.4).",
+                "uuid": "6037955f-ab6c-50f6-bbae-f36dc3d2972a"
+              },
+              {
+                "control-id": "der.2.1.a20.5",
+                "description": "Component capability addressing control der.2.1.a20.5 (Einrichtung einer dedizierten Meldestelle für Sicherheitsvorfälle — DER.2.1.A20.5).",
+                "uuid": "4cb61725-5ff5-5e3a-88c0-6ff0d4895471"
+              },
+              {
+                "control-id": "der.2.1.a21.1",
+                "description": "Component capability addressing control der.2.1.a21.1 (Einrichtung eines Teams von Fachleuten für die Behandlung von Sicherheitsvorfällen — DER.2.1.A21.1).",
+                "uuid": "6e457503-4409-531a-a36d-88b6a8e5f04e"
+              },
+              {
+                "control-id": "der.2.1.a21.10",
+                "description": "Component capability addressing control der.2.1.a21.10 (Einrichtung eines Teams von Fachleuten für die Behandlung von Sicherheitsvorfällen — DER.2.1.A21.10).",
+                "uuid": "17970968-cbf5-5b14-a61f-2b61fe372bbc"
+              },
+              {
+                "control-id": "der.2.1.a21.2",
+                "description": "Component capability addressing control der.2.1.a21.2 (Einrichtung eines Teams von Fachleuten für die Behandlung von Sicherheitsvorfällen — DER.2.1.A21.2).",
+                "uuid": "f37e1eb5-e167-53d3-9951-ea48df358d16"
+              },
+              {
+                "control-id": "der.2.1.a21.3",
+                "description": "Component capability addressing control der.2.1.a21.3 (Einrichtung eines Teams von Fachleuten für die Behandlung von Sicherheitsvorfällen — DER.2.1.A21.3).",
+                "uuid": "d189c7df-98ed-509c-97e1-87b60645f7c0"
+              },
+              {
+                "control-id": "der.2.1.a21.4",
+                "description": "Component capability addressing control der.2.1.a21.4 (Einrichtung eines Teams von Fachleuten für die Behandlung von Sicherheitsvorfällen — DER.2.1.A21.4).",
+                "uuid": "1fa2f244-40ea-5155-a8d0-74870b29b777"
+              },
+              {
+                "control-id": "der.2.1.a21.5",
+                "description": "Component capability addressing control der.2.1.a21.5 (Einrichtung eines Teams von Fachleuten für die Behandlung von Sicherheitsvorfällen — DER.2.1.A21.5).",
+                "uuid": "77c489e0-38a5-50c1-8fe9-d39aca27d5fe"
+              },
+              {
+                "control-id": "der.2.1.a21.6",
+                "description": "Component capability addressing control der.2.1.a21.6 (Einrichtung eines Teams von Fachleuten für die Behandlung von Sicherheitsvorfällen — DER.2.1.A21.6).",
+                "uuid": "5365a8eb-af3f-598b-8b33-be837a6948e8"
+              },
+              {
+                "control-id": "der.2.1.a21.7",
+                "description": "Component capability addressing control der.2.1.a21.7 (Einrichtung eines Teams von Fachleuten für die Behandlung von Sicherheitsvorfällen — DER.2.1.A21.7).",
+                "uuid": "ff21f677-b82a-5599-b6dc-0b8dd62bb33e"
+              },
+              {
+                "control-id": "der.2.1.a21.8",
+                "description": "Component capability addressing control der.2.1.a21.8 (Einrichtung eines Teams von Fachleuten für die Behandlung von Sicherheitsvorfällen — DER.2.1.A21.8).",
+                "uuid": "2a7f0bb5-8fa0-5310-acde-6f78a210a089"
+              },
+              {
+                "control-id": "der.2.1.a21.9",
+                "description": "Component capability addressing control der.2.1.a21.9 (Einrichtung eines Teams von Fachleuten für die Behandlung von Sicherheitsvorfällen — DER.2.1.A21.9).",
+                "uuid": "53c04833-75d7-59f2-8cbf-ba5aad658818"
+              },
+              {
+                "control-id": "der.2.1.a22.1",
+                "description": "Component capability addressing control der.2.1.a22.1 (Überprüfung der Effizienz des Managementsystems zur Behandlung von Sicherheitsvorfällen — DER.2.1.A22.1).",
+                "uuid": "be288442-b821-57e6-83ae-149bee370bc7"
+              },
+              {
+                "control-id": "der.2.1.a22.2",
+                "description": "Component capability addressing control der.2.1.a22.2 (Überprüfung der Effizienz des Managementsystems zur Behandlung von Sicherheitsvorfällen — DER.2.1.A22.2).",
+                "uuid": "6007e33e-bcc8-5a46-95d1-d829b402e9f0"
+              },
+              {
+                "control-id": "der.2.1.a22.3",
+                "description": "Component capability addressing control der.2.1.a22.3 (Überprüfung der Effizienz des Managementsystems zur Behandlung von Sicherheitsvorfällen — DER.2.1.A22.3).",
+                "uuid": "c8c1a9ad-4aba-5a73-9d46-6ac32ac0f855"
+              },
+              {
+                "control-id": "der.2.1.a22.4",
+                "description": "Component capability addressing control der.2.1.a22.4 (Überprüfung der Effizienz des Managementsystems zur Behandlung von Sicherheitsvorfällen — DER.2.1.A22.4).",
+                "uuid": "1bc0ea6f-a918-52ba-919c-7997a8160122"
+              },
+              {
+                "control-id": "der.2.1.a22.5",
+                "description": "Component capability addressing control der.2.1.a22.5 (Überprüfung der Effizienz des Managementsystems zur Behandlung von Sicherheitsvorfällen — DER.2.1.A22.5).",
+                "uuid": "8491052d-35e9-5fbb-bb4e-32d50ee6e830"
+              },
+              {
+                "control-id": "der.2.1.a3.1",
+                "description": "Component capability addressing control der.2.1.a3.1 (Festlegung von Verantwortlichkeiten und Ansprechpersonen bei Sicherheitsvorfällen — DER.2.1.A3.1).",
+                "uuid": "b6c1f0e1-8a72-5dc7-b807-21752f54bb2e"
+              },
+              {
+                "control-id": "der.2.1.a3.2",
+                "description": "Component capability addressing control der.2.1.a3.2 (Festlegung von Verantwortlichkeiten und Ansprechpersonen bei Sicherheitsvorfällen — DER.2.1.A3.2).",
+                "uuid": "503e7019-83c5-578a-bf6a-a57a9f392e68"
+              },
+              {
+                "control-id": "der.2.1.a3.3",
+                "description": "Component capability addressing control der.2.1.a3.3 (Festlegung von Verantwortlichkeiten und Ansprechpersonen bei Sicherheitsvorfällen — DER.2.1.A3.3).",
+                "uuid": "ee8e08b6-5a8f-50b5-97a1-7e2ab826fe49"
+              },
+              {
+                "control-id": "der.2.1.a3.4",
+                "description": "Component capability addressing control der.2.1.a3.4 (Festlegung von Verantwortlichkeiten und Ansprechpersonen bei Sicherheitsvorfällen — DER.2.1.A3.4).",
+                "uuid": "5e265cdf-fcc0-5f23-b87a-2914a9b220e7"
+              },
+              {
+                "control-id": "der.2.1.a3.5",
+                "description": "Component capability addressing control der.2.1.a3.5 (Festlegung von Verantwortlichkeiten und Ansprechpersonen bei Sicherheitsvorfällen — DER.2.1.A3.5).",
+                "uuid": "63fc5009-a1f2-583c-bb10-b95293ccb59c"
+              },
+              {
+                "control-id": "der.2.1.a3.6",
+                "description": "Component capability addressing control der.2.1.a3.6 (Festlegung von Verantwortlichkeiten und Ansprechpersonen bei Sicherheitsvorfällen — DER.2.1.A3.6).",
+                "uuid": "d72ee781-5b7b-58f6-bf18-e234d495c0a2"
+              },
+              {
+                "control-id": "der.2.1.a4.1",
+                "description": "Component capability addressing control der.2.1.a4.1 (Benachrichtigung betroffener Stellen bei Sicherheitsvorfällen — DER.2.1.A4.1).",
+                "uuid": "8b97c317-d532-54d7-b598-cfc39b6ffc93"
+              },
+              {
+                "control-id": "der.2.1.a4.2",
+                "description": "Component capability addressing control der.2.1.a4.2 (Benachrichtigung betroffener Stellen bei Sicherheitsvorfällen — DER.2.1.A4.2).",
+                "uuid": "d9ea6d14-6358-52cc-ab61-8e55cc7b63eb"
+              },
+              {
+                "control-id": "der.2.1.a4.3",
+                "description": "Component capability addressing control der.2.1.a4.3 (Benachrichtigung betroffener Stellen bei Sicherheitsvorfällen — DER.2.1.A4.3).",
+                "uuid": "a4602fec-e02e-5b0f-9004-b1c030535fe0"
+              },
+              {
+                "control-id": "der.2.1.a4.4",
+                "description": "Component capability addressing control der.2.1.a4.4 (Benachrichtigung betroffener Stellen bei Sicherheitsvorfällen — DER.2.1.A4.4).",
+                "uuid": "0045f7b1-fd63-5b04-99bf-935e2d0488e1"
+              },
+              {
+                "control-id": "der.2.1.a5.1",
+                "description": "Component capability addressing control der.2.1.a5.1 (Behebung von Sicherheitsvorfällen — DER.2.1.A5.1).",
+                "uuid": "5d69cc2d-f73f-571a-9932-51f419a309de"
+              },
+              {
+                "control-id": "der.2.1.a5.2",
+                "description": "Component capability addressing control der.2.1.a5.2 (Behebung von Sicherheitsvorfällen — DER.2.1.A5.2).",
+                "uuid": "ffcea67a-e00a-5277-820d-5535f6a645f1"
+              },
+              {
+                "control-id": "der.2.1.a5.3",
+                "description": "Component capability addressing control der.2.1.a5.3 (Behebung von Sicherheitsvorfällen — DER.2.1.A5.3).",
+                "uuid": "7819ebb8-5812-5059-871e-31994402511f"
+              },
+              {
+                "control-id": "der.2.1.a5.4",
+                "description": "Component capability addressing control der.2.1.a5.4 (Behebung von Sicherheitsvorfällen — DER.2.1.A5.4).",
+                "uuid": "e27c1eb8-5fe4-5227-9ee7-23ddf10828a9"
+              },
+              {
+                "control-id": "der.2.1.a5.5",
+                "description": "Component capability addressing control der.2.1.a5.5 (Behebung von Sicherheitsvorfällen — DER.2.1.A5.5).",
+                "uuid": "bf3c7eae-8aba-5054-bcfa-595aad306fb5"
+              },
+              {
+                "control-id": "der.2.1.a5.6",
+                "description": "Component capability addressing control der.2.1.a5.6 (Behebung von Sicherheitsvorfällen — DER.2.1.A5.6).",
+                "uuid": "9dd481a6-352b-5e08-8e61-a1f3765a52bc"
+              },
+              {
+                "control-id": "der.2.1.a6.1",
+                "description": "Component capability addressing control der.2.1.a6.1 (Wiederherstellung der Betriebsumgebung nach Sicherheitsvorfällen — DER.2.1.A6.1).",
+                "uuid": "c9f7b5e6-3b98-5923-a26d-1966bcdf48a7"
+              },
+              {
+                "control-id": "der.2.1.a6.10",
+                "description": "Component capability addressing control der.2.1.a6.10 (Wiederherstellung der Betriebsumgebung nach Sicherheitsvorfällen — DER.2.1.A6.10).",
+                "uuid": "e71cda20-0c6e-5ea8-b081-e60811d1c68d"
+              },
+              {
+                "control-id": "der.2.1.a6.2",
+                "description": "Component capability addressing control der.2.1.a6.2 (Wiederherstellung der Betriebsumgebung nach Sicherheitsvorfällen — DER.2.1.A6.2).",
+                "uuid": "c7f18086-3fe0-519e-9d32-1686cf0c6a64"
+              },
+              {
+                "control-id": "der.2.1.a6.3",
+                "description": "Component capability addressing control der.2.1.a6.3 (Wiederherstellung der Betriebsumgebung nach Sicherheitsvorfällen — DER.2.1.A6.3).",
+                "uuid": "b3a1d0fc-1bab-5b51-a2b0-c08a767bd2af"
+              },
+              {
+                "control-id": "der.2.1.a6.4",
+                "description": "Component capability addressing control der.2.1.a6.4 (Wiederherstellung der Betriebsumgebung nach Sicherheitsvorfällen — DER.2.1.A6.4).",
+                "uuid": "9f6d346d-b11e-5831-a4e1-228664f9ff8e"
+              },
+              {
+                "control-id": "der.2.1.a6.5",
+                "description": "Component capability addressing control der.2.1.a6.5 (Wiederherstellung der Betriebsumgebung nach Sicherheitsvorfällen — DER.2.1.A6.5).",
+                "uuid": "1748b777-a6b1-580d-a176-b6a6ce4a187f"
+              },
+              {
+                "control-id": "der.2.1.a6.6",
+                "description": "Component capability addressing control der.2.1.a6.6 (Wiederherstellung der Betriebsumgebung nach Sicherheitsvorfällen — DER.2.1.A6.6).",
+                "uuid": "42c0c544-1c12-5279-abda-141bdc5fd39a"
+              },
+              {
+                "control-id": "der.2.1.a6.7",
+                "description": "Component capability addressing control der.2.1.a6.7 (Wiederherstellung der Betriebsumgebung nach Sicherheitsvorfällen — DER.2.1.A6.7).",
+                "uuid": "b62ff59b-9e04-5d92-9f13-e0fe81212b5a"
+              },
+              {
+                "control-id": "der.2.1.a6.8",
+                "description": "Component capability addressing control der.2.1.a6.8 (Wiederherstellung der Betriebsumgebung nach Sicherheitsvorfällen — DER.2.1.A6.8).",
+                "uuid": "9272498e-d0a8-54d3-9f2f-66d265b49889"
+              },
+              {
+                "control-id": "der.2.1.a6.9",
+                "description": "Component capability addressing control der.2.1.a6.9 (Wiederherstellung der Betriebsumgebung nach Sicherheitsvorfällen — DER.2.1.A6.9).",
+                "uuid": "26e62d06-2ae0-5681-b2ed-c9ce6b41f35e"
+              },
+              {
+                "control-id": "der.2.1.a7.1",
+                "description": "Component capability addressing control der.2.1.a7.1 (Etablierung einer Vorgehensweise zur Behandlung von Sicherheitsvorfällen — DER.2.1.A7.1).",
+                "uuid": "c50e92ab-0773-5051-b750-11d82307bdaa"
+              },
+              {
+                "control-id": "der.2.1.a7.2",
+                "description": "Component capability addressing control der.2.1.a7.2 (Etablierung einer Vorgehensweise zur Behandlung von Sicherheitsvorfällen — DER.2.1.A7.2).",
+                "uuid": "0e5e02b6-db3a-5a4a-a7b5-c936945d1f23"
+              },
+              {
+                "control-id": "der.2.1.a7.3",
+                "description": "Component capability addressing control der.2.1.a7.3 (Etablierung einer Vorgehensweise zur Behandlung von Sicherheitsvorfällen — DER.2.1.A7.3).",
+                "uuid": "04fa8092-fb6b-5720-99ee-0c2c952912fb"
+              },
+              {
+                "control-id": "der.2.1.a7.4",
+                "description": "Component capability addressing control der.2.1.a7.4 (Etablierung einer Vorgehensweise zur Behandlung von Sicherheitsvorfällen — DER.2.1.A7.4).",
+                "uuid": "31b3c7ee-84c1-5ef8-9758-c8b51c1c573b"
+              },
+              {
+                "control-id": "der.2.1.a7.5",
+                "description": "Component capability addressing control der.2.1.a7.5 (Etablierung einer Vorgehensweise zur Behandlung von Sicherheitsvorfällen — DER.2.1.A7.5).",
+                "uuid": "8a68582f-00c5-5de7-9849-944e97e579b1"
+              },
+              {
+                "control-id": "der.2.1.a8.1",
+                "description": "Component capability addressing control der.2.1.a8.1 (Aufbau von Organisationsstrukturen zur Behandlung von Sicherheitsvorfällen — DER.2.1.A8.1).",
+                "uuid": "9e7ef3a6-1237-5ae1-a65b-906b1b54eb5a"
+              },
+              {
+                "control-id": "der.2.1.a8.2",
+                "description": "Component capability addressing control der.2.1.a8.2 (Aufbau von Organisationsstrukturen zur Behandlung von Sicherheitsvorfällen — DER.2.1.A8.2).",
+                "uuid": "e081734f-327c-5227-9c7a-4667235cbcf7"
+              },
+              {
+                "control-id": "der.2.1.a8.3",
+                "description": "Component capability addressing control der.2.1.a8.3 (Aufbau von Organisationsstrukturen zur Behandlung von Sicherheitsvorfällen — DER.2.1.A8.3).",
+                "uuid": "3cfa1f1a-eeee-5418-829e-5dcf53d4ec45"
+              },
+              {
+                "control-id": "der.2.1.a8.4",
+                "description": "Component capability addressing control der.2.1.a8.4 (Aufbau von Organisationsstrukturen zur Behandlung von Sicherheitsvorfällen — DER.2.1.A8.4).",
+                "uuid": "9387aff9-92d7-584e-af4d-7125573e0254"
+              },
+              {
+                "control-id": "der.2.1.a8.5",
+                "description": "Component capability addressing control der.2.1.a8.5 (Aufbau von Organisationsstrukturen zur Behandlung von Sicherheitsvorfällen — DER.2.1.A8.5).",
+                "uuid": "3a5aef64-bda8-538d-9f89-6b5ed019b3ce"
+              },
+              {
+                "control-id": "der.2.1.a9.1",
+                "description": "Component capability addressing control der.2.1.a9.1 (Festlegung von Meldewegen für Sicherheitsvorfälle — DER.2.1.A9.1).",
+                "uuid": "2a0b6b81-1272-5c73-ab8f-4bca07547a72"
+              },
+              {
+                "control-id": "der.2.1.a9.2",
+                "description": "Component capability addressing control der.2.1.a9.2 (Festlegung von Meldewegen für Sicherheitsvorfälle — DER.2.1.A9.2).",
+                "uuid": "5dd6395c-0ad4-553e-b047-c0368baeb668"
+              },
+              {
+                "control-id": "der.2.1.a9.3",
+                "description": "Component capability addressing control der.2.1.a9.3 (Festlegung von Meldewegen für Sicherheitsvorfälle — DER.2.1.A9.3).",
+                "uuid": "b570f057-ff10-5996-9e60-73d3da5ab96f"
+              },
+              {
+                "control-id": "der.2.1.a9.4",
+                "description": "Component capability addressing control der.2.1.a9.4 (Festlegung von Meldewegen für Sicherheitsvorfälle — DER.2.1.A9.4).",
+                "uuid": "ba7c0816-a213-5a7f-a638-63dffd7fce7f"
+              },
+              {
+                "control-id": "der.2.1.a9.5",
+                "description": "Component capability addressing control der.2.1.a9.5 (Festlegung von Meldewegen für Sicherheitsvorfälle — DER.2.1.A9.5).",
+                "uuid": "170dc94b-afc8-55a7-a558-cedc9ad6390d"
+              },
+              {
+                "control-id": "der.2.1.a9.6",
+                "description": "Component capability addressing control der.2.1.a9.6 (Festlegung von Meldewegen für Sicherheitsvorfälle — DER.2.1.A9.6).",
+                "uuid": "bc39b365-993d-5dc6-9fb7-b35778888c06"
+              },
+              {
+                "control-id": "der.2.1.a9.7",
+                "description": "Component capability addressing control der.2.1.a9.7 (Festlegung von Meldewegen für Sicherheitsvorfälle — DER.2.1.A9.7).",
+                "uuid": "a8e52b28-4634-5000-aeb0-52803dd28501"
+              },
+              {
+                "control-id": "der.2.2.a1.1",
+                "description": "Component capability addressing control der.2.2.a1.1 (Prüfung rechtlicher und regulatorischer Rahmenbedingungen zur Erfassung und Auswertbarkeit — DER.2.2.A1.1).",
+                "uuid": "71ab16b7-d451-5180-aa6a-9defc1ba3f4e"
+              },
+              {
+                "control-id": "der.2.2.a1.2",
+                "description": "Component capability addressing control der.2.2.a1.2 (Prüfung rechtlicher und regulatorischer Rahmenbedingungen zur Erfassung und Auswertbarkeit — DER.2.2.A1.2).",
+                "uuid": "370037b4-097f-5140-bc73-139ba6aea20a"
+              },
+              {
+                "control-id": "der.2.2.a1.3",
+                "description": "Component capability addressing control der.2.2.a1.3 (Prüfung rechtlicher und regulatorischer Rahmenbedingungen zur Erfassung und Auswertbarkeit — DER.2.2.A1.3).",
+                "uuid": "d804f6b3-c7b8-5fa9-9bf4-1f39d879cbd9"
+              },
+              {
+                "control-id": "der.2.2.a10.1",
+                "description": "Component capability addressing control der.2.2.a10.1 (IT-forensische Sicherung von Beweismitteln — DER.2.2.A10.1).",
+                "uuid": "567c87a4-fed9-544d-bf12-ae7b10ed8f02"
+              },
+              {
+                "control-id": "der.2.2.a10.2",
+                "description": "Component capability addressing control der.2.2.a10.2 (IT-forensische Sicherung von Beweismitteln — DER.2.2.A10.2).",
+                "uuid": "dd13436c-4f70-5961-8fed-ce7b64d4d07b"
+              },
+              {
+                "control-id": "der.2.2.a10.3",
+                "description": "Component capability addressing control der.2.2.a10.3 (IT-forensische Sicherung von Beweismitteln — DER.2.2.A10.3).",
+                "uuid": "b52a30e2-15bb-5e75-901c-d5e8d2b56ab3"
+              },
+              {
+                "control-id": "der.2.2.a10.4",
+                "description": "Component capability addressing control der.2.2.a10.4 (IT-forensische Sicherung von Beweismitteln — DER.2.2.A10.4).",
+                "uuid": "ac417265-d124-5950-b898-54e83bd0d6d5"
+              },
+              {
+                "control-id": "der.2.2.a10.5",
+                "description": "Component capability addressing control der.2.2.a10.5 (IT-forensische Sicherung von Beweismitteln — DER.2.2.A10.5).",
+                "uuid": "508c6b16-9497-5252-aa7e-c207a70e3ac3"
+              },
+              {
+                "control-id": "der.2.2.a10.6",
+                "description": "Component capability addressing control der.2.2.a10.6 (IT-forensische Sicherung von Beweismitteln — DER.2.2.A10.6).",
+                "uuid": "a5d5b41b-75db-5338-aeb0-9eb1a5869bee"
+              },
+              {
+                "control-id": "der.2.2.a10.7",
+                "description": "Component capability addressing control der.2.2.a10.7 (IT-forensische Sicherung von Beweismitteln — DER.2.2.A10.7).",
+                "uuid": "06655bc6-aa80-5e25-9270-0daae9753cbe"
+              },
+              {
+                "control-id": "der.2.2.a10.8",
+                "description": "Component capability addressing control der.2.2.a10.8 (IT-forensische Sicherung von Beweismitteln — DER.2.2.A10.8).",
+                "uuid": "9dbd1b3e-efbc-5aa6-88eb-22f9076957e7"
+              },
+              {
+                "control-id": "der.2.2.a11.1",
+                "description": "Component capability addressing control der.2.2.a11.1 (Dokumentation der Beweissicherung — DER.2.2.A11.1).",
+                "uuid": "28e48add-61a6-5cbe-8400-18f8bf8155af"
+              },
+              {
+                "control-id": "der.2.2.a11.2",
+                "description": "Component capability addressing control der.2.2.a11.2 (Dokumentation der Beweissicherung — DER.2.2.A11.2).",
+                "uuid": "b32fa0a9-f8c7-5bac-91d2-f95b91e8917f"
+              },
+              {
+                "control-id": "der.2.2.a11.3",
+                "description": "Component capability addressing control der.2.2.a11.3 (Dokumentation der Beweissicherung — DER.2.2.A11.3).",
+                "uuid": "fb56b8a2-70b4-57b6-8125-aed5fb852c4d"
+              },
+              {
+                "control-id": "der.2.2.a12.1",
+                "description": "Component capability addressing control der.2.2.a12.1 (Sichere Verwahrung von Originaldatenträgern und Beweismitteln — DER.2.2.A12.1).",
+                "uuid": "5bdcac9a-28bb-5fb4-a49c-d19d36963445"
+              },
+              {
+                "control-id": "der.2.2.a12.2",
+                "description": "Component capability addressing control der.2.2.a12.2 (Sichere Verwahrung von Originaldatenträgern und Beweismitteln — DER.2.2.A12.2).",
+                "uuid": "40b5e83a-d943-5358-90b2-627618b99109"
+              },
+              {
+                "control-id": "der.2.2.a12.3",
+                "description": "Component capability addressing control der.2.2.a12.3 (Sichere Verwahrung von Originaldatenträgern und Beweismitteln — DER.2.2.A12.3).",
+                "uuid": "09c4b0b9-5c80-5078-8307-fcf81260bcdd"
+              },
+              {
+                "control-id": "der.2.2.a12.4",
+                "description": "Component capability addressing control der.2.2.a12.4 (Sichere Verwahrung von Originaldatenträgern und Beweismitteln — DER.2.2.A12.4).",
+                "uuid": "de173454-e44c-5c81-bd38-3f44382e7666"
+              },
+              {
+                "control-id": "der.2.2.a13.1",
+                "description": "Component capability addressing control der.2.2.a13.1 (Rahmenverträge mit externen Dienstleistenden — DER.2.2.A13.1).",
+                "uuid": "b29373b5-9bed-542e-8e90-954c03c2b454"
+              },
+              {
+                "control-id": "der.2.2.a14.1",
+                "description": "Component capability addressing control der.2.2.a14.1 (Festlegung von Standardverfahren für die Beweissicherung — DER.2.2.A14.1).",
+                "uuid": "2bd54550-3603-5ae6-bcfd-9b0e0961ad1e"
+              },
+              {
+                "control-id": "der.2.2.a14.2",
+                "description": "Component capability addressing control der.2.2.a14.2 (Festlegung von Standardverfahren für die Beweissicherung — DER.2.2.A14.2).",
+                "uuid": "e31b9b58-814b-5aeb-b4a3-63ba8d16b797"
+              },
+              {
+                "control-id": "der.2.2.a14.3",
+                "description": "Component capability addressing control der.2.2.a14.3 (Festlegung von Standardverfahren für die Beweissicherung — DER.2.2.A14.3).",
+                "uuid": "6d784a64-f672-556e-b470-37b9d8b2de41"
+              },
+              {
+                "control-id": "der.2.2.a15.1",
+                "description": "Component capability addressing control der.2.2.a15.1 (Durchführung von Übungen zur Beweissicherung — DER.2.2.A15.1).",
+                "uuid": "58d98bc3-bcae-5cf8-b44b-ca3d926f5cc5"
+              },
+              {
+                "control-id": "der.2.2.a2.1",
+                "description": "Component capability addressing control der.2.2.a2.1 (Erstellung eines Leitfadens für Erstmaßnahmen bei einem IT-Sicherheitsvorfall — DER.2.2.A2.1).",
+                "uuid": "f7c1a2fc-2074-5a5f-95de-da42a8787ce7"
+              },
+              {
+                "control-id": "der.2.2.a2.2",
+                "description": "Component capability addressing control der.2.2.a2.2 (Erstellung eines Leitfadens für Erstmaßnahmen bei einem IT-Sicherheitsvorfall — DER.2.2.A2.2).",
+                "uuid": "ceb2f58b-9ddc-5eef-864c-1901ba1a1505"
+              },
+              {
+                "control-id": "der.2.2.a3.1",
+                "description": "Component capability addressing control der.2.2.a3.1 (Vorauswahl von Forensik-Dienstleistenden — DER.2.2.A3.1).",
+                "uuid": "2a3524db-bc15-581b-a52b-63fb5caea2c6"
+              },
+              {
+                "control-id": "der.2.2.a3.2",
+                "description": "Component capability addressing control der.2.2.a3.2 (Vorauswahl von Forensik-Dienstleistenden — DER.2.2.A3.2).",
+                "uuid": "226ded93-96bc-5ad0-8681-7c92403c5b4e"
+              },
+              {
+                "control-id": "der.2.2.a4.1",
+                "description": "Component capability addressing control der.2.2.a4.1 (Festlegung von Schnittstellen zum Krisen- und Notfallmanagement — DER.2.2.A4.1).",
+                "uuid": "f6410eeb-adce-5d26-b7df-aff652c5797d"
+              },
+              {
+                "control-id": "der.2.2.a4.2",
+                "description": "Component capability addressing control der.2.2.a4.2 (Festlegung von Schnittstellen zum Krisen- und Notfallmanagement — DER.2.2.A4.2).",
+                "uuid": "d4602bc8-881e-573e-b6c4-f91bfdb427ba"
+              },
+              {
+                "control-id": "der.2.2.a4.3",
+                "description": "Component capability addressing control der.2.2.a4.3 (Festlegung von Schnittstellen zum Krisen- und Notfallmanagement — DER.2.2.A4.3).",
+                "uuid": "b9074bd3-e30d-518e-a6c3-b4e03b971014"
+              },
+              {
+                "control-id": "der.2.2.a5.1",
+                "description": "Component capability addressing control der.2.2.a5.1 (Erstellung eines Leitfadens für Beweissicherungsmaßnahmen bei IT-Sicherheitsvorfällen — DER.2.2.A5.1).",
+                "uuid": "deebd82b-e033-554a-a3f4-5d63e3cc6e0e"
+              },
+              {
+                "control-id": "der.2.2.a5.2",
+                "description": "Component capability addressing control der.2.2.a5.2 (Erstellung eines Leitfadens für Beweissicherungsmaßnahmen bei IT-Sicherheitsvorfällen — DER.2.2.A5.2).",
+                "uuid": "cbb18832-9f6f-5c40-80a5-ecbd6cc66c63"
+              },
+              {
+                "control-id": "der.2.2.a6.1",
+                "description": "Component capability addressing control der.2.2.a6.1 (Schulung des Personals für die Umsetzung der forensischen Sicherung — DER.2.2.A6.1).",
+                "uuid": "a9fcc59f-961a-5290-9c97-8287dd28f521"
+              },
+              {
+                "control-id": "der.2.2.a6.2",
+                "description": "Component capability addressing control der.2.2.a6.2 (Schulung des Personals für die Umsetzung der forensischen Sicherung — DER.2.2.A6.2).",
+                "uuid": "db35a6e1-8485-52e4-a597-8382d3ac1ca7"
+              },
+              {
+                "control-id": "der.2.2.a7.1",
+                "description": "Component capability addressing control der.2.2.a7.1 (Auswahl von Werkzeugen zur Forensik — DER.2.2.A7.1).",
+                "uuid": "3b7d5d8a-3b36-5b80-af63-c53e54780ea8"
+              },
+              {
+                "control-id": "der.2.2.a7.2",
+                "description": "Component capability addressing control der.2.2.a7.2 (Auswahl von Werkzeugen zur Forensik — DER.2.2.A7.2).",
+                "uuid": "28422637-163c-5f75-bdae-ef3dd9871ef5"
+              },
+              {
+                "control-id": "der.2.2.a7.3",
+                "description": "Component capability addressing control der.2.2.a7.3 (Auswahl von Werkzeugen zur Forensik — DER.2.2.A7.3).",
+                "uuid": "fce1abf8-dc7b-5746-905c-6882d6af165a"
+              },
+              {
+                "control-id": "der.2.2.a8.1",
+                "description": "Component capability addressing control der.2.2.a8.1 (Auswahl und Reihenfolge der zu sichernden Beweismittel — DER.2.2.A8.1).",
+                "uuid": "e6bba316-df2c-5e36-8ded-33635c0ffd36"
+              },
+              {
+                "control-id": "der.2.2.a8.2",
+                "description": "Component capability addressing control der.2.2.a8.2 (Auswahl und Reihenfolge der zu sichernden Beweismittel — DER.2.2.A8.2).",
+                "uuid": "72b205db-c817-5954-9290-d2919570fae3"
+              },
+              {
+                "control-id": "der.2.2.a8.3",
+                "description": "Component capability addressing control der.2.2.a8.3 (Auswahl und Reihenfolge der zu sichernden Beweismittel — DER.2.2.A8.3).",
+                "uuid": "5f50e9a9-668b-5175-af64-ec951507e47d"
+              },
+              {
+                "control-id": "der.2.2.a8.4",
+                "description": "Component capability addressing control der.2.2.a8.4 (Auswahl und Reihenfolge der zu sichernden Beweismittel — DER.2.2.A8.4).",
+                "uuid": "31a77b45-0979-52fe-bce6-bd762817fd93"
+              },
+              {
+                "control-id": "der.2.2.a8.5",
+                "description": "Component capability addressing control der.2.2.a8.5 (Auswahl und Reihenfolge der zu sichernden Beweismittel — DER.2.2.A8.5).",
+                "uuid": "cac70735-4fb5-5449-b315-72f9c21e58fb"
+              },
+              {
+                "control-id": "der.2.2.a8.6",
+                "description": "Component capability addressing control der.2.2.a8.6 (Auswahl und Reihenfolge der zu sichernden Beweismittel — DER.2.2.A8.6).",
+                "uuid": "c87c4f14-cc29-5507-9890-c27c396510c8"
+              },
+              {
+                "control-id": "der.2.2.a8.7",
+                "description": "Component capability addressing control der.2.2.a8.7 (Auswahl und Reihenfolge der zu sichernden Beweismittel — DER.2.2.A8.7).",
+                "uuid": "5f36ac1c-2784-5316-9a2f-aaeb69fb1dac"
+              },
+              {
+                "control-id": "der.2.2.a9.1",
+                "description": "Component capability addressing control der.2.2.a9.1 (Vorauswahl forensisch relevanter Daten — DER.2.2.A9.1).",
+                "uuid": "87a9835e-e73e-5750-9ab6-2519c02b503a"
+              },
+              {
+                "control-id": "der.2.3.a1.1",
+                "description": "Component capability addressing control der.2.3.a1.1 (Einrichtung eines Leitungsgremiums — DER.2.3.A1.1).",
+                "uuid": "805f48d4-cd44-5b14-94d1-5a2f0bf3d830"
+              },
+              {
+                "control-id": "der.2.3.a1.2",
+                "description": "Component capability addressing control der.2.3.a1.2 (Einrichtung eines Leitungsgremiums — DER.2.3.A1.2).",
+                "uuid": "b428d6f9-ffce-5ef4-9cd8-c9cabe868af1"
+              },
+              {
+                "control-id": "der.2.3.a1.3",
+                "description": "Component capability addressing control der.2.3.a1.3 (Einrichtung eines Leitungsgremiums — DER.2.3.A1.3).",
+                "uuid": "5ba7f26a-e42a-59da-8d88-2c9b10140364"
+              },
+              {
+                "control-id": "der.2.3.a1.4",
+                "description": "Component capability addressing control der.2.3.a1.4 (Einrichtung eines Leitungsgremiums — DER.2.3.A1.4).",
+                "uuid": "33877d94-b69b-56ec-84db-a1d05dea948e"
+              },
+              {
+                "control-id": "der.2.3.a1.5",
+                "description": "Component capability addressing control der.2.3.a1.5 (Einrichtung eines Leitungsgremiums — DER.2.3.A1.5).",
+                "uuid": "eacabb55-eb2f-547e-adbc-01bbde02164c"
+              },
+              {
+                "control-id": "der.2.3.a1.6",
+                "description": "Component capability addressing control der.2.3.a1.6 (Einrichtung eines Leitungsgremiums — DER.2.3.A1.6).",
+                "uuid": "3ed6c70f-c9dd-57aa-a515-1e5daeb847c2"
+              },
+              {
+                "control-id": "der.2.3.a1.7",
+                "description": "Component capability addressing control der.2.3.a1.7 (Einrichtung eines Leitungsgremiums — DER.2.3.A1.7).",
+                "uuid": "78465213-505b-51ee-b205-977a93c622ae"
+              },
+              {
+                "control-id": "der.2.3.a10.1",
+                "description": "Component capability addressing control der.2.3.a10.1 (Umbauten zur Erschwerung eines erneuten Angriffs durch dieselben Angreifenden — DER.2.3.A10.1).",
+                "uuid": "232f54c9-c45d-55e8-9e3d-229b1672913d"
+              },
+              {
+                "control-id": "der.2.3.a10.2",
+                "description": "Component capability addressing control der.2.3.a10.2 (Umbauten zur Erschwerung eines erneuten Angriffs durch dieselben Angreifenden — DER.2.3.A10.2).",
+                "uuid": "2698dfe0-fc63-520a-89b9-656b3a365555"
+              },
+              {
+                "control-id": "der.2.3.a2.1",
+                "description": "Component capability addressing control der.2.3.a2.1 (Entscheidung für eine Bereinigungsstrategie — DER.2.3.A2.1).",
+                "uuid": "4e94a6dd-ab25-5b78-9678-24122338f182"
+              },
+              {
+                "control-id": "der.2.3.a2.2",
+                "description": "Component capability addressing control der.2.3.a2.2 (Entscheidung für eine Bereinigungsstrategie — DER.2.3.A2.2).",
+                "uuid": "10370150-eadc-5719-bbe2-2869adfc7e0e"
+              },
+              {
+                "control-id": "der.2.3.a2.3",
+                "description": "Component capability addressing control der.2.3.a2.3 (Entscheidung für eine Bereinigungsstrategie — DER.2.3.A2.3).",
+                "uuid": "282dd58d-06e3-5d5e-bd4e-52cc35f217ab"
+              },
+              {
+                "control-id": "der.2.3.a2.4",
+                "description": "Component capability addressing control der.2.3.a2.4 (Entscheidung für eine Bereinigungsstrategie — DER.2.3.A2.4).",
+                "uuid": "04f0f983-95a6-50a4-9603-efec390099db"
+              },
+              {
+                "control-id": "der.2.3.a2.5",
+                "description": "Component capability addressing control der.2.3.a2.5 (Entscheidung für eine Bereinigungsstrategie — DER.2.3.A2.5).",
+                "uuid": "a982b571-7643-58b5-a64c-579241ac7722"
+              },
+              {
+                "control-id": "der.2.3.a2.6",
+                "description": "Component capability addressing control der.2.3.a2.6 (Entscheidung für eine Bereinigungsstrategie — DER.2.3.A2.6).",
+                "uuid": "79d6005c-b3d9-500a-a871-0156853224d8"
+              },
+              {
+                "control-id": "der.2.3.a2.7",
+                "description": "Component capability addressing control der.2.3.a2.7 (Entscheidung für eine Bereinigungsstrategie — DER.2.3.A2.7).",
+                "uuid": "85e4bdd8-4afe-53b4-bf20-3ff8117285f8"
+              },
+              {
+                "control-id": "der.2.3.a2.8",
+                "description": "Component capability addressing control der.2.3.a2.8 (Entscheidung für eine Bereinigungsstrategie — DER.2.3.A2.8).",
+                "uuid": "09719080-7136-5225-bd88-4dd2dd22b2e2"
+              },
+              {
+                "control-id": "der.2.3.a2.9",
+                "description": "Component capability addressing control der.2.3.a2.9 (Entscheidung für eine Bereinigungsstrategie — DER.2.3.A2.9).",
+                "uuid": "e3bb1207-0cf0-580c-9e02-dccd4ad4677a"
+              },
+              {
+                "control-id": "der.2.3.a3.1",
+                "description": "Component capability addressing control der.2.3.a3.1 (Isolierung der betroffenen Netzabschnitte — DER.2.3.A3.1).",
+                "uuid": "53f7c913-da2b-5b48-91fe-75c71f7a8d99"
+              },
+              {
+                "control-id": "der.2.3.a3.2",
+                "description": "Component capability addressing control der.2.3.a3.2 (Isolierung der betroffenen Netzabschnitte — DER.2.3.A3.2).",
+                "uuid": "e087a69b-c2a8-51b8-8c45-892688273ef5"
+              },
+              {
+                "control-id": "der.2.3.a3.3",
+                "description": "Component capability addressing control der.2.3.a3.3 (Isolierung der betroffenen Netzabschnitte — DER.2.3.A3.3).",
+                "uuid": "a6e704b9-1d25-5810-9c09-31bfdb605276"
+              },
+              {
+                "control-id": "der.2.3.a3.4",
+                "description": "Component capability addressing control der.2.3.a3.4 (Isolierung der betroffenen Netzabschnitte — DER.2.3.A3.4).",
+                "uuid": "b8066344-ae0d-51ce-b96d-29436a6693e5"
+              },
+              {
+                "control-id": "der.2.3.a3.5",
+                "description": "Component capability addressing control der.2.3.a3.5 (Isolierung der betroffenen Netzabschnitte — DER.2.3.A3.5).",
+                "uuid": "fd19cda4-11aa-59fe-a52f-5ec9f5002187"
+              },
+              {
+                "control-id": "der.2.3.a3.6",
+                "description": "Component capability addressing control der.2.3.a3.6 (Isolierung der betroffenen Netzabschnitte — DER.2.3.A3.6).",
+                "uuid": "b7f5e4ef-82a0-50af-acd9-6f582a1fc454"
+              },
+              {
+                "control-id": "der.2.3.a3.7",
+                "description": "Component capability addressing control der.2.3.a3.7 (Isolierung der betroffenen Netzabschnitte — DER.2.3.A3.7).",
+                "uuid": "afe91980-3578-52fd-aedc-be69282015d9"
+              },
+              {
+                "control-id": "der.2.3.a4.1",
+                "description": "Component capability addressing control der.2.3.a4.1 (Sperrung und Änderung von Zugangsdaten und kryptografischen Schlüsseln — DER.2.3.A4.1).",
+                "uuid": "4d1ea9f2-9acd-51e4-8bc7-8b8ec98b41c4"
+              },
+              {
+                "control-id": "der.2.3.a4.2",
+                "description": "Component capability addressing control der.2.3.a4.2 (Sperrung und Änderung von Zugangsdaten und kryptografischen Schlüsseln — DER.2.3.A4.2).",
+                "uuid": "45324766-afbb-5b03-a5de-11102bbd6848"
+              },
+              {
+                "control-id": "der.2.3.a4.3",
+                "description": "Component capability addressing control der.2.3.a4.3 (Sperrung und Änderung von Zugangsdaten und kryptografischen Schlüsseln — DER.2.3.A4.3).",
+                "uuid": "c5e8daf4-8502-5dc0-ba6b-85ac9941660a"
+              },
+              {
+                "control-id": "der.2.3.a4.4",
+                "description": "Component capability addressing control der.2.3.a4.4 (Sperrung und Änderung von Zugangsdaten und kryptografischen Schlüsseln — DER.2.3.A4.4).",
+                "uuid": "1e5912bb-d7a0-5700-9120-6df151e733ba"
+              },
+              {
+                "control-id": "der.2.3.a4.5",
+                "description": "Component capability addressing control der.2.3.a4.5 (Sperrung und Änderung von Zugangsdaten und kryptografischen Schlüsseln — DER.2.3.A4.5).",
+                "uuid": "3957f14d-c95f-5053-af31-f5b25b6aedb4"
+              },
+              {
+                "control-id": "der.2.3.a4.6",
+                "description": "Component capability addressing control der.2.3.a4.6 (Sperrung und Änderung von Zugangsdaten und kryptografischen Schlüsseln — DER.2.3.A4.6).",
+                "uuid": "76f133ad-87a8-5613-a230-a8af001ea089"
+              },
+              {
+                "control-id": "der.2.3.a5.1",
+                "description": "Component capability addressing control der.2.3.a5.1 (Schließen des initialen Einbruchswegs — DER.2.3.A5.1).",
+                "uuid": "71daa760-e8b8-5057-83b5-65f602206b11"
+              },
+              {
+                "control-id": "der.2.3.a5.2",
+                "description": "Component capability addressing control der.2.3.a5.2 (Schließen des initialen Einbruchswegs — DER.2.3.A5.2).",
+                "uuid": "9af70fb3-c347-52df-956b-13f6f4c64658"
+              },
+              {
+                "control-id": "der.2.3.a6.1",
+                "description": "Component capability addressing control der.2.3.a6.1 (Rückführung in den Produktivbetrieb — DER.2.3.A6.1).",
+                "uuid": "b9441a66-264a-551a-8ad2-55bbda17ed35"
+              },
+              {
+                "control-id": "der.2.3.a6.2",
+                "description": "Component capability addressing control der.2.3.a6.2 (Rückführung in den Produktivbetrieb — DER.2.3.A6.2).",
+                "uuid": "403bbdc2-adfd-501b-8dd2-7d11b7e33a85"
+              },
+              {
+                "control-id": "der.2.3.a6.3",
+                "description": "Component capability addressing control der.2.3.a6.3 (Rückführung in den Produktivbetrieb — DER.2.3.A6.3).",
+                "uuid": "5be87e16-a272-5929-9d20-adf5afd1e7eb"
+              },
+              {
+                "control-id": "der.2.3.a6.4",
+                "description": "Component capability addressing control der.2.3.a6.4 (Rückführung in den Produktivbetrieb — DER.2.3.A6.4).",
+                "uuid": "b499a260-c4c6-581b-8171-650580efdf0f"
+              },
+              {
+                "control-id": "der.2.3.a7.1",
+                "description": "Component capability addressing control der.2.3.a7.1 (Gezielte Systemhärtung — DER.2.3.A7.1).",
+                "uuid": "c0efcd8b-466b-5130-809a-a3abb1182dc9"
+              },
+              {
+                "control-id": "der.2.3.a7.2",
+                "description": "Component capability addressing control der.2.3.a7.2 (Gezielte Systemhärtung — DER.2.3.A7.2).",
+                "uuid": "0ffbe11b-32e2-559c-9767-775ebf77068b"
+              },
+              {
+                "control-id": "der.2.3.a7.3",
+                "description": "Component capability addressing control der.2.3.a7.3 (Gezielte Systemhärtung — DER.2.3.A7.3).",
+                "uuid": "a133ca25-2ccb-5c17-a1df-40c0ab629acf"
+              },
+              {
+                "control-id": "der.2.3.a7.4",
+                "description": "Component capability addressing control der.2.3.a7.4 (Gezielte Systemhärtung — DER.2.3.A7.4).",
+                "uuid": "2c36d05f-3bfc-5e45-a6f2-d617df38dec0"
+              },
+              {
+                "control-id": "der.2.3.a7.5",
+                "description": "Component capability addressing control der.2.3.a7.5 (Gezielte Systemhärtung — DER.2.3.A7.5).",
+                "uuid": "78920ee7-ee30-5dc4-a4e7-efb8264c0bbc"
+              },
+              {
+                "control-id": "der.2.3.a7.6",
+                "description": "Component capability addressing control der.2.3.a7.6 (Gezielte Systemhärtung — DER.2.3.A7.6).",
+                "uuid": "8a671e83-9beb-5112-8d8b-f6651190466d"
+              },
+              {
+                "control-id": "der.2.3.a8.1",
+                "description": "Component capability addressing control der.2.3.a8.1 (Etablierung sicherer, unabhängiger Kommunikationskanäle — DER.2.3.A8.1).",
+                "uuid": "95fd08fa-bbfe-5e5b-b41a-d6cddf8d38bc"
+              },
+              {
+                "control-id": "der.2.3.a8.2",
+                "description": "Component capability addressing control der.2.3.a8.2 (Etablierung sicherer, unabhängiger Kommunikationskanäle — DER.2.3.A8.2).",
+                "uuid": "28fc5f01-03fe-5288-ad7f-edbffc0a5817"
+              },
+              {
+                "control-id": "der.2.3.a9.1",
+                "description": "Component capability addressing control der.2.3.a9.1 (Hardwaretausch betroffener IT-Systeme — DER.2.3.A9.1).",
+                "uuid": "7e9db771-7bbb-5808-be67-421b210d9668"
+              },
+              {
+                "control-id": "der.2.3.a9.2",
+                "description": "Component capability addressing control der.2.3.a9.2 (Hardwaretausch betroffener IT-Systeme — DER.2.3.A9.2).",
+                "uuid": "3b5b5de7-c7db-5d57-ba5d-d875b56f3c31"
+              },
+              {
+                "control-id": "der.3.1.a1.1",
+                "description": "Component capability addressing control der.3.1.a1.1 (Definition von Verantwortlichkeiten — DER.3.1.A1.1).",
+                "uuid": "64ae52fa-7916-583c-8f6c-8b3e02627b04"
+              },
+              {
+                "control-id": "der.3.1.a1.2",
+                "description": "Component capability addressing control der.3.1.a1.2 (Definition von Verantwortlichkeiten — DER.3.1.A1.2).",
+                "uuid": "b8b8302e-b51a-57a1-a475-3a79ca8a8f5a"
+              },
+              {
+                "control-id": "der.3.1.a1.3",
+                "description": "Component capability addressing control der.3.1.a1.3 (Definition von Verantwortlichkeiten — DER.3.1.A1.3).",
+                "uuid": "ab01eea6-1d70-56ad-9d93-286c8ebe6f8f"
+              },
+              {
+                "control-id": "der.3.1.a10.1",
+                "description": "Component capability addressing control der.3.1.a10.1 (Erstellung eines Audit- oder Revisionsplans — DER.3.1.A10.1).",
+                "uuid": "ea64a2ee-1c64-5d8e-ad8d-f2d0d3c609e8"
+              },
+              {
+                "control-id": "der.3.1.a10.2",
+                "description": "Component capability addressing control der.3.1.a10.2 (Erstellung eines Audit- oder Revisionsplans — DER.3.1.A10.2).",
+                "uuid": "45acb91a-ba00-53be-8ecb-faca34036760"
+              },
+              {
+                "control-id": "der.3.1.a10.3",
+                "description": "Component capability addressing control der.3.1.a10.3 (Erstellung eines Audit- oder Revisionsplans — DER.3.1.A10.3).",
+                "uuid": "1e4341f0-a68a-5a3a-a18d-9980bc250f84"
+              },
+              {
+                "control-id": "der.3.1.a10.4",
+                "description": "Component capability addressing control der.3.1.a10.4 (Erstellung eines Audit- oder Revisionsplans — DER.3.1.A10.4).",
+                "uuid": "c02d6bd7-9d45-58ec-a6a9-b63f3f8505ba"
+              },
+              {
+                "control-id": "der.3.1.a10.5",
+                "description": "Component capability addressing control der.3.1.a10.5 (Erstellung eines Audit- oder Revisionsplans — DER.3.1.A10.5).",
+                "uuid": "ad701481-0d3c-54f9-8812-abda1ebdf3f1"
+              },
+              {
+                "control-id": "der.3.1.a11.1",
+                "description": "Component capability addressing control der.3.1.a11.1 (Kommunikation und Verhalten während der Prüfungen — DER.3.1.A11.1).",
+                "uuid": "eedb07f3-e552-57da-b7eb-07c2a79d24d0"
+              },
+              {
+                "control-id": "der.3.1.a11.2",
+                "description": "Component capability addressing control der.3.1.a11.2 (Kommunikation und Verhalten während der Prüfungen — DER.3.1.A11.2).",
+                "uuid": "0baea1df-960a-5b82-87be-422530d777ab"
+              },
+              {
+                "control-id": "der.3.1.a11.3",
+                "description": "Component capability addressing control der.3.1.a11.3 (Kommunikation und Verhalten während der Prüfungen — DER.3.1.A11.3).",
+                "uuid": "601a808c-a514-50ee-968c-f178d3a805b3"
+              },
+              {
+                "control-id": "der.3.1.a11.4",
+                "description": "Component capability addressing control der.3.1.a11.4 (Kommunikation und Verhalten während der Prüfungen — DER.3.1.A11.4).",
+                "uuid": "9224e887-ca8e-5c7d-abb5-538f81c6eb06"
+              },
+              {
+                "control-id": "der.3.1.a12.1",
+                "description": "Component capability addressing control der.3.1.a12.1 (Durchführung eines Auftaktgesprächs — DER.3.1.A12.1).",
+                "uuid": "7f470cb5-ebbc-5612-8db0-4543c031f0c0"
+              },
+              {
+                "control-id": "der.3.1.a12.2",
+                "description": "Component capability addressing control der.3.1.a12.2 (Durchführung eines Auftaktgesprächs — DER.3.1.A12.2).",
+                "uuid": "4d227f0c-b546-5fee-8af6-23647dff512e"
+              },
+              {
+                "control-id": "der.3.1.a12.3",
+                "description": "Component capability addressing control der.3.1.a12.3 (Durchführung eines Auftaktgesprächs — DER.3.1.A12.3).",
+                "uuid": "1ffe1429-4e3e-533b-a485-de0c2871a597"
+              },
+              {
+                "control-id": "der.3.1.a13.1",
+                "description": "Component capability addressing control der.3.1.a13.1 (Sichtung und Prüfung der Dokumente — DER.3.1.A13.1).",
+                "uuid": "a09aba42-18d6-57bd-a652-4c3e94e03e49"
+              },
+              {
+                "control-id": "der.3.1.a13.2",
+                "description": "Component capability addressing control der.3.1.a13.2 (Sichtung und Prüfung der Dokumente — DER.3.1.A13.2).",
+                "uuid": "69dd884b-00c6-5216-a1f1-448079be4721"
+              },
+              {
+                "control-id": "der.3.1.a13.3",
+                "description": "Component capability addressing control der.3.1.a13.3 (Sichtung und Prüfung der Dokumente — DER.3.1.A13.3).",
+                "uuid": "a787f122-ef4c-5df6-90cb-962e743dc51f"
+              },
+              {
+                "control-id": "der.3.1.a13.4",
+                "description": "Component capability addressing control der.3.1.a13.4 (Sichtung und Prüfung der Dokumente — DER.3.1.A13.4).",
+                "uuid": "0772ff4a-c3f0-53af-ae67-3ae08b98d2f7"
+              },
+              {
+                "control-id": "der.3.1.a14.1",
+                "description": "Component capability addressing control der.3.1.a14.1 (Auswahl von Stichproben — DER.3.1.A14.1).",
+                "uuid": "ec29dedb-7497-5677-ab1d-46110bc56776"
+              },
+              {
+                "control-id": "der.3.1.a14.2",
+                "description": "Component capability addressing control der.3.1.a14.2 (Auswahl von Stichproben — DER.3.1.A14.2).",
+                "uuid": "25a62e9a-510a-55ee-b455-a693188cea0d"
+              },
+              {
+                "control-id": "der.3.1.a14.3",
+                "description": "Component capability addressing control der.3.1.a14.3 (Auswahl von Stichproben — DER.3.1.A14.3).",
+                "uuid": "5e34bdd0-68b7-5a79-87bb-0d5fc59e5e59"
+              },
+              {
+                "control-id": "der.3.1.a14.4",
+                "description": "Component capability addressing control der.3.1.a14.4 (Auswahl von Stichproben — DER.3.1.A14.4).",
+                "uuid": "d2393728-d251-5432-9250-bf609ad2c2f4"
+              },
+              {
+                "control-id": "der.3.1.a15.1",
+                "description": "Component capability addressing control der.3.1.a15.1 (Auswahl von geeigneten Prüfmethoden — DER.3.1.A15.1).",
+                "uuid": "ff7b12f3-e6f9-570a-ab32-2dbdb35aee7e"
+              },
+              {
+                "control-id": "der.3.1.a15.2",
+                "description": "Component capability addressing control der.3.1.a15.2 (Auswahl von geeigneten Prüfmethoden — DER.3.1.A15.2).",
+                "uuid": "e3067eed-6c2f-5fb8-a136-07cd424c1039"
+              },
+              {
+                "control-id": "der.3.1.a16.1",
+                "description": "Component capability addressing control der.3.1.a16.1 (Ablaufplan der Vor-Ort-Prüfung — DER.3.1.A16.1).",
+                "uuid": "5eba68df-830a-5309-ac89-6c9512d9e9c5"
+              },
+              {
+                "control-id": "der.3.1.a16.2",
+                "description": "Component capability addressing control der.3.1.a16.2 (Ablaufplan der Vor-Ort-Prüfung — DER.3.1.A16.2).",
+                "uuid": "915228d9-2da7-5be9-8747-0427ee21d8fb"
+              },
+              {
+                "control-id": "der.3.1.a17.1",
+                "description": "Component capability addressing control der.3.1.a17.1 (Durchführung der Vor-Ort-Prüfung — DER.3.1.A17.1).",
+                "uuid": "f5e656ad-f5b6-5529-8d45-446b323c336f"
+              },
+              {
+                "control-id": "der.3.1.a17.2",
+                "description": "Component capability addressing control der.3.1.a17.2 (Durchführung der Vor-Ort-Prüfung — DER.3.1.A17.2).",
+                "uuid": "290af0ac-5a34-521c-8069-d1ed2118ce67"
+              },
+              {
+                "control-id": "der.3.1.a17.3",
+                "description": "Component capability addressing control der.3.1.a17.3 (Durchführung der Vor-Ort-Prüfung — DER.3.1.A17.3).",
+                "uuid": "6092a293-e7e6-575f-899c-22a9fb9db87e"
+              },
+              {
+                "control-id": "der.3.1.a17.4",
+                "description": "Component capability addressing control der.3.1.a17.4 (Durchführung der Vor-Ort-Prüfung — DER.3.1.A17.4).",
+                "uuid": "da45ba63-f1d1-5961-854b-f5da038ea4bd"
+              },
+              {
+                "control-id": "der.3.1.a17.5",
+                "description": "Component capability addressing control der.3.1.a17.5 (Durchführung der Vor-Ort-Prüfung — DER.3.1.A17.5).",
+                "uuid": "016db8be-9225-5ab8-b3ec-aa8e3d6270d5"
+              },
+              {
+                "control-id": "der.3.1.a17.6",
+                "description": "Component capability addressing control der.3.1.a17.6 (Durchführung der Vor-Ort-Prüfung — DER.3.1.A17.6).",
+                "uuid": "a4232030-4448-5e50-bb58-79106c35d9fd"
+              },
+              {
+                "control-id": "der.3.1.a18.1",
+                "description": "Component capability addressing control der.3.1.a18.1 (Durchführung von Interviews — DER.3.1.A18.1).",
+                "uuid": "9a3feb5e-9d8c-5f07-8350-31a5b37fd2f3"
+              },
+              {
+                "control-id": "der.3.1.a18.2",
+                "description": "Component capability addressing control der.3.1.a18.2 (Durchführung von Interviews — DER.3.1.A18.2).",
+                "uuid": "a09c01ff-8333-5d8d-9be7-c76e3020a4eb"
+              },
+              {
+                "control-id": "der.3.1.a18.3",
+                "description": "Component capability addressing control der.3.1.a18.3 (Durchführung von Interviews — DER.3.1.A18.3).",
+                "uuid": "ce8b6d76-aac6-5079-a17f-174200b02d70"
+              },
+              {
+                "control-id": "der.3.1.a19.1",
+                "description": "Component capability addressing control der.3.1.a19.1 (Überprüfung des Risikobehandlungsplans — DER.3.1.A19.1).",
+                "uuid": "345e48fa-8fc8-576a-a36b-2dd420a32075"
+              },
+              {
+                "control-id": "der.3.1.a19.2",
+                "description": "Component capability addressing control der.3.1.a19.2 (Überprüfung des Risikobehandlungsplans — DER.3.1.A19.2).",
+                "uuid": "38456a5c-9165-55e2-9292-70cd2bf43458"
+              },
+              {
+                "control-id": "der.3.1.a19.3",
+                "description": "Component capability addressing control der.3.1.a19.3 (Überprüfung des Risikobehandlungsplans — DER.3.1.A19.3).",
+                "uuid": "710b54f6-542b-50bd-841f-10ad7344f006"
+              },
+              {
+                "control-id": "der.3.1.a19.4",
+                "description": "Component capability addressing control der.3.1.a19.4 (Überprüfung des Risikobehandlungsplans — DER.3.1.A19.4).",
+                "uuid": "b4a08e2b-6ecc-5953-9705-31c56a33a327"
+              },
+              {
+                "control-id": "der.3.1.a2.1",
+                "description": "Component capability addressing control der.3.1.a2.1 (Vorbereitung eines Audits oder einer Revision — DER.3.1.A2.1).",
+                "uuid": "143bfed8-d9b6-5668-93cb-264adac95eea"
+              },
+              {
+                "control-id": "der.3.1.a2.2",
+                "description": "Component capability addressing control der.3.1.a2.2 (Vorbereitung eines Audits oder einer Revision — DER.3.1.A2.2).",
+                "uuid": "76e50c06-67cc-5a22-8d60-68d65af311a4"
+              },
+              {
+                "control-id": "der.3.1.a2.3",
+                "description": "Component capability addressing control der.3.1.a2.3 (Vorbereitung eines Audits oder einer Revision — DER.3.1.A2.3).",
+                "uuid": "2d86b152-fc7d-528e-90db-2bccade4047c"
+              },
+              {
+                "control-id": "der.3.1.a20.1",
+                "description": "Component capability addressing control der.3.1.a20.1 (Durchführung einer Abschlussbesprechung — DER.3.1.A20.1).",
+                "uuid": "e5a2e895-0679-5b0e-9a8b-22f1ea36d1fd"
+              },
+              {
+                "control-id": "der.3.1.a20.2",
+                "description": "Component capability addressing control der.3.1.a20.2 (Durchführung einer Abschlussbesprechung — DER.3.1.A20.2).",
+                "uuid": "b623933e-e224-5771-9cb7-3a7d3d378abd"
+              },
+              {
+                "control-id": "der.3.1.a20.3",
+                "description": "Component capability addressing control der.3.1.a20.3 (Durchführung einer Abschlussbesprechung — DER.3.1.A20.3).",
+                "uuid": "4f01c821-6b8b-535f-bf37-0e1183ed09db"
+              },
+              {
+                "control-id": "der.3.1.a21.1",
+                "description": "Component capability addressing control der.3.1.a21.1 (Auswertung der Prüfungen — DER.3.1.A21.1).",
+                "uuid": "4f2ced91-6ba4-55e2-a072-6aba631593fb"
+              },
+              {
+                "control-id": "der.3.1.a21.2",
+                "description": "Component capability addressing control der.3.1.a21.2 (Auswertung der Prüfungen — DER.3.1.A21.2).",
+                "uuid": "e5e125a1-e160-55b0-ae9e-0ca840b7a86a"
+              },
+              {
+                "control-id": "der.3.1.a21.3",
+                "description": "Component capability addressing control der.3.1.a21.3 (Auswertung der Prüfungen — DER.3.1.A21.3).",
+                "uuid": "ce7ebab1-e52e-57e2-a946-2fb537b466e2"
+              },
+              {
+                "control-id": "der.3.1.a21.4",
+                "description": "Component capability addressing control der.3.1.a21.4 (Auswertung der Prüfungen — DER.3.1.A21.4).",
+                "uuid": "155ea0e9-ba8f-5043-b1bf-776800bbc8ed"
+              },
+              {
+                "control-id": "der.3.1.a22.1",
+                "description": "Component capability addressing control der.3.1.a22.1 (Erstellung eines Auditberichts — DER.3.1.A22.1).",
+                "uuid": "861493d7-55cd-5d5d-94b3-fd31ada22f1f"
+              },
+              {
+                "control-id": "der.3.1.a22.2",
+                "description": "Component capability addressing control der.3.1.a22.2 (Erstellung eines Auditberichts — DER.3.1.A22.2).",
+                "uuid": "2a1862af-5c6f-524e-80d1-8d7b9bc43603"
+              },
+              {
+                "control-id": "der.3.1.a23.1",
+                "description": "Component capability addressing control der.3.1.a23.1 (Dokumentation der Revisionsergebnisse — DER.3.1.A23.1).",
+                "uuid": "02cf7376-51e3-5bdf-9c31-382b5993d924"
+              },
+              {
+                "control-id": "der.3.1.a24.1",
+                "description": "Component capability addressing control der.3.1.a24.1 (Abschluss des Audits oder der Revision — DER.3.1.A24.1).",
+                "uuid": "09b85014-be7c-5e08-be02-a3e5f166dfff"
+              },
+              {
+                "control-id": "der.3.1.a24.2",
+                "description": "Component capability addressing control der.3.1.a24.2 (Abschluss des Audits oder der Revision — DER.3.1.A24.2).",
+                "uuid": "76acdf74-4d9e-5375-9a84-f797b8b47b18"
+              },
+              {
+                "control-id": "der.3.1.a24.3",
+                "description": "Component capability addressing control der.3.1.a24.3 (Abschluss des Audits oder der Revision — DER.3.1.A24.3).",
+                "uuid": "caefd21f-f84b-5a5e-b948-56478fb27e98"
+              },
+              {
+                "control-id": "der.3.1.a24.4",
+                "description": "Component capability addressing control der.3.1.a24.4 (Abschluss des Audits oder der Revision — DER.3.1.A24.4).",
+                "uuid": "185d8672-d05b-5693-b434-015b898ccd7c"
+              },
+              {
+                "control-id": "der.3.1.a24.5",
+                "description": "Component capability addressing control der.3.1.a24.5 (Abschluss des Audits oder der Revision — DER.3.1.A24.5).",
+                "uuid": "8b2871fb-c816-542e-a1ab-348644e2c925"
+              },
+              {
+                "control-id": "der.3.1.a24.6",
+                "description": "Component capability addressing control der.3.1.a24.6 (Abschluss des Audits oder der Revision — DER.3.1.A24.6).",
+                "uuid": "eeb2d4a7-2b41-56cd-82a4-5ef83ab099fa"
+              },
+              {
+                "control-id": "der.3.1.a25.1",
+                "description": "Component capability addressing control der.3.1.a25.1 (Nachbereitung eines Audits — DER.3.1.A25.1).",
+                "uuid": "1611a423-d222-5851-85d7-6e701c56d087"
+              },
+              {
+                "control-id": "der.3.1.a25.2",
+                "description": "Component capability addressing control der.3.1.a25.2 (Nachbereitung eines Audits — DER.3.1.A25.2).",
+                "uuid": "f902194d-0830-5baf-be12-7b3786640b7f"
+              },
+              {
+                "control-id": "der.3.1.a25.3",
+                "description": "Component capability addressing control der.3.1.a25.3 (Nachbereitung eines Audits — DER.3.1.A25.3).",
+                "uuid": "5da1fae4-fcb5-5ff4-b462-b3129868ad8d"
+              },
+              {
+                "control-id": "der.3.1.a25.4",
+                "description": "Component capability addressing control der.3.1.a25.4 (Nachbereitung eines Audits — DER.3.1.A25.4).",
+                "uuid": "f3bf2221-1144-5ceb-ab91-791698b4f27e"
+              },
+              {
+                "control-id": "der.3.1.a25.5",
+                "description": "Component capability addressing control der.3.1.a25.5 (Nachbereitung eines Audits — DER.3.1.A25.5).",
+                "uuid": "c08eafd4-964a-5c50-a0ec-ebe6b4be2c72"
+              },
+              {
+                "control-id": "der.3.1.a26.1",
+                "description": "Component capability addressing control der.3.1.a26.1 (Überwachen und Anpassen des Auditprogramms — DER.3.1.A26.1).",
+                "uuid": "1a4b4faa-91a0-5ec4-8533-3a94581027d0"
+              },
+              {
+                "control-id": "der.3.1.a26.2",
+                "description": "Component capability addressing control der.3.1.a26.2 (Überwachen und Anpassen des Auditprogramms — DER.3.1.A26.2).",
+                "uuid": "77cfd6cd-982d-5b33-b8c9-c3255b85993e"
+              },
+              {
+                "control-id": "der.3.1.a26.3",
+                "description": "Component capability addressing control der.3.1.a26.3 (Überwachen und Anpassen des Auditprogramms — DER.3.1.A26.3).",
+                "uuid": "5955fa03-8f61-5f3d-98c1-aad7da30b2bc"
+              },
+              {
+                "control-id": "der.3.1.a27.1",
+                "description": "Component capability addressing control der.3.1.a27.1 (Aufbewahrung und Archivierung von Unterlagen zu Audits und Revisionen — DER.3.1.A27.1).",
+                "uuid": "e7d0cff7-a372-5233-89ec-24c9d3196fd1"
+              },
+              {
+                "control-id": "der.3.1.a27.2",
+                "description": "Component capability addressing control der.3.1.a27.2 (Aufbewahrung und Archivierung von Unterlagen zu Audits und Revisionen — DER.3.1.A27.2).",
+                "uuid": "bfc1d045-a81b-5229-9124-572094114c72"
+              },
+              {
+                "control-id": "der.3.1.a27.3",
+                "description": "Component capability addressing control der.3.1.a27.3 (Aufbewahrung und Archivierung von Unterlagen zu Audits und Revisionen — DER.3.1.A27.3).",
+                "uuid": "14fa523d-b64f-580a-9102-54d02109a07f"
+              },
+              {
+                "control-id": "der.3.1.a3.1",
+                "description": "Component capability addressing control der.3.1.a3.1 (Durchführung eines Audits — DER.3.1.A3.1).",
+                "uuid": "645ad07c-72a8-5b47-ba9e-38f114d87e0e"
+              },
+              {
+                "control-id": "der.3.1.a3.2",
+                "description": "Component capability addressing control der.3.1.a3.2 (Durchführung eines Audits — DER.3.1.A3.2).",
+                "uuid": "59296c24-85f2-5c83-8d10-8079f4b982cf"
+              },
+              {
+                "control-id": "der.3.1.a3.3",
+                "description": "Component capability addressing control der.3.1.a3.3 (Durchführung eines Audits — DER.3.1.A3.3).",
+                "uuid": "b034abbf-9dbc-5dbc-b46d-385bc48a308b"
+              },
+              {
+                "control-id": "der.3.1.a3.4",
+                "description": "Component capability addressing control der.3.1.a3.4 (Durchführung eines Audits — DER.3.1.A3.4).",
+                "uuid": "2322d86d-294c-5061-a3c0-92d2c55faf40"
+              },
+              {
+                "control-id": "der.3.1.a3.5",
+                "description": "Component capability addressing control der.3.1.a3.5 (Durchführung eines Audits — DER.3.1.A3.5).",
+                "uuid": "0d3f9f66-d5a9-535b-8119-c8a84c8a7b2a"
+              },
+              {
+                "control-id": "der.3.1.a3.6",
+                "description": "Component capability addressing control der.3.1.a3.6 (Durchführung eines Audits — DER.3.1.A3.6).",
+                "uuid": "8a73bd18-cf15-5a39-9de7-ddcaab1daac2"
+              },
+              {
+                "control-id": "der.3.1.a4.1",
+                "description": "Component capability addressing control der.3.1.a4.1 (Durchführung einer Revision — DER.3.1.A4.1).",
+                "uuid": "85a07c08-a473-5d2b-ad19-381579733884"
+              },
+              {
+                "control-id": "der.3.1.a4.2",
+                "description": "Component capability addressing control der.3.1.a4.2 (Durchführung einer Revision — DER.3.1.A4.2).",
+                "uuid": "6a5a6d55-2684-5077-bcc4-a2757ca564a9"
+              },
+              {
+                "control-id": "der.3.1.a4.3",
+                "description": "Component capability addressing control der.3.1.a4.3 (Durchführung einer Revision — DER.3.1.A4.3).",
+                "uuid": "bc98f4e9-0547-5295-8f0c-b74953617576"
+              },
+              {
+                "control-id": "der.3.1.a5.1",
+                "description": "Component capability addressing control der.3.1.a5.1 (Integration in den Informationssicherheitsprozess — DER.3.1.A5.1).",
+                "uuid": "ef2811d2-08b7-561a-a01b-a1599398dfb2"
+              },
+              {
+                "control-id": "der.3.1.a5.2",
+                "description": "Component capability addressing control der.3.1.a5.2 (Integration in den Informationssicherheitsprozess — DER.3.1.A5.2).",
+                "uuid": "5ee3bc37-c12b-5525-b24b-581d79f9db19"
+              },
+              {
+                "control-id": "der.3.1.a5.3",
+                "description": "Component capability addressing control der.3.1.a5.3 (Integration in den Informationssicherheitsprozess — DER.3.1.A5.3).",
+                "uuid": "1b7dde59-1d3f-5e0b-a486-b7db6b805608"
+              },
+              {
+                "control-id": "der.3.1.a5.4",
+                "description": "Component capability addressing control der.3.1.a5.4 (Integration in den Informationssicherheitsprozess — DER.3.1.A5.4).",
+                "uuid": "7dd7e876-0b67-574b-94ad-6f05b13018c6"
+              },
+              {
+                "control-id": "der.3.1.a5.5",
+                "description": "Component capability addressing control der.3.1.a5.5 (Integration in den Informationssicherheitsprozess — DER.3.1.A5.5).",
+                "uuid": "abca5388-08d9-5146-95f6-dc54dd7afc9a"
+              },
+              {
+                "control-id": "der.3.1.a5.6",
+                "description": "Component capability addressing control der.3.1.a5.6 (Integration in den Informationssicherheitsprozess — DER.3.1.A5.6).",
+                "uuid": "8f6b89a3-ba6f-5c4e-973d-51255d05f954"
+              },
+              {
+                "control-id": "der.3.1.a6.1",
+                "description": "Component capability addressing control der.3.1.a6.1 (Definition der Prüfungsgrundlage und eines einheitlichen Bewertungsschemas — DER.3.1.A6.1).",
+                "uuid": "8a47610b-f0c2-57f4-aeed-175599f3e75d"
+              },
+              {
+                "control-id": "der.3.1.a6.2",
+                "description": "Component capability addressing control der.3.1.a6.2 (Definition der Prüfungsgrundlage und eines einheitlichen Bewertungsschemas — DER.3.1.A6.2).",
+                "uuid": "b27bf200-c322-5dcf-876c-8e18e58d19bc"
+              },
+              {
+                "control-id": "der.3.1.a7.1",
+                "description": "Component capability addressing control der.3.1.a7.1 (Erstellung eines Auditprogramms — DER.3.1.A7.1).",
+                "uuid": "9a58453e-8798-5026-b94d-522418dbe087"
+              },
+              {
+                "control-id": "der.3.1.a7.2",
+                "description": "Component capability addressing control der.3.1.a7.2 (Erstellung eines Auditprogramms — DER.3.1.A7.2).",
+                "uuid": "9b4cbe97-e40f-5fdc-bb6f-26cec94e0abf"
+              },
+              {
+                "control-id": "der.3.1.a7.3",
+                "description": "Component capability addressing control der.3.1.a7.3 (Erstellung eines Auditprogramms — DER.3.1.A7.3).",
+                "uuid": "9d4e6c92-dc61-5a04-b711-2cc143e74708"
+              },
+              {
+                "control-id": "der.3.1.a7.4",
+                "description": "Component capability addressing control der.3.1.a7.4 (Erstellung eines Auditprogramms — DER.3.1.A7.4).",
+                "uuid": "6590f7bb-37c8-5be8-ab5c-5e16000e612f"
+              },
+              {
+                "control-id": "der.3.1.a8.1",
+                "description": "Component capability addressing control der.3.1.a8.1 (Erstellung einer Revisionsliste — DER.3.1.A8.1).",
+                "uuid": "6c89ea39-011a-5063-ad83-a6965e031ff7"
+              },
+              {
+                "control-id": "der.3.1.a9.1",
+                "description": "Component capability addressing control der.3.1.a9.1 (Auswahl eines geeigneten Audit- oder Revionsteams — DER.3.1.A9.1).",
+                "uuid": "228e630a-81d8-50ff-a17b-67dd213daf84"
+              },
+              {
+                "control-id": "der.3.1.a9.2",
+                "description": "Component capability addressing control der.3.1.a9.2 (Auswahl eines geeigneten Audit- oder Revionsteams — DER.3.1.A9.2).",
+                "uuid": "2dfda062-9b60-5863-8969-35ebd64c0550"
+              },
+              {
+                "control-id": "der.3.1.a9.3",
+                "description": "Component capability addressing control der.3.1.a9.3 (Auswahl eines geeigneten Audit- oder Revionsteams — DER.3.1.A9.3).",
+                "uuid": "4f01f8a0-d46f-588a-8d47-2e608e2bf9b1"
+              },
+              {
+                "control-id": "der.3.1.a9.4",
+                "description": "Component capability addressing control der.3.1.a9.4 (Auswahl eines geeigneten Audit- oder Revionsteams — DER.3.1.A9.4).",
+                "uuid": "4a62d506-36b3-5a06-8fab-a2415078b69d"
+              },
+              {
+                "control-id": "der.3.1.a9.5",
+                "description": "Component capability addressing control der.3.1.a9.5 (Auswahl eines geeigneten Audit- oder Revionsteams — DER.3.1.A9.5).",
+                "uuid": "b7e94062-4767-5b03-8f4d-d0cd3d00181a"
+              },
+              {
+                "control-id": "der.3.1.a9.6",
+                "description": "Component capability addressing control der.3.1.a9.6 (Auswahl eines geeigneten Audit- oder Revionsteams — DER.3.1.A9.6).",
+                "uuid": "1e1638cf-f0e7-5800-b3e9-a0bb611f7d77"
+              },
+              {
+                "control-id": "der.3.1.a9.7",
+                "description": "Component capability addressing control der.3.1.a9.7 (Auswahl eines geeigneten Audit- oder Revionsteams — DER.3.1.A9.7).",
+                "uuid": "8d8d8919-1137-5834-8ea0-5f2a123e05ff"
+              },
+              {
+                "control-id": "der.3.1.a9.8",
+                "description": "Component capability addressing control der.3.1.a9.8 (Auswahl eines geeigneten Audit- oder Revionsteams — DER.3.1.A9.8).",
+                "uuid": "d4ec4925-5add-5881-a52e-68017786599c"
+              },
+              {
+                "control-id": "der.3.1.a9.9",
+                "description": "Component capability addressing control der.3.1.a9.9 (Auswahl eines geeigneten Audit- oder Revionsteams — DER.3.1.A9.9).",
+                "uuid": "950d5f40-01bd-5779-ae9b-6ee112909201"
+              },
+              {
+                "control-id": "der.3.2.a1.1",
+                "description": "Component capability addressing control der.3.2.a1.1 (Benennung von Verantwortlichen für die IS-Revision — DER.3.2.A1.1).",
+                "uuid": "17b23baf-3897-5c3f-8b95-7b7900ffdd05"
+              },
+              {
+                "control-id": "der.3.2.a1.2",
+                "description": "Component capability addressing control der.3.2.a1.2 (Benennung von Verantwortlichen für die IS-Revision — DER.3.2.A1.2).",
+                "uuid": "97af85f4-82c2-50c7-b151-6e66f92b5e92"
+              },
+              {
+                "control-id": "der.3.2.a10.1",
+                "description": "Component capability addressing control der.3.2.a10.1 (Kommunikationsabsprache — DER.3.2.A10.1).",
+                "uuid": "52d1880d-7812-51f9-9d9a-0110a78a4149"
+              },
+              {
+                "control-id": "der.3.2.a10.2",
+                "description": "Component capability addressing control der.3.2.a10.2 (Kommunikationsabsprache — DER.3.2.A10.2).",
+                "uuid": "e280fe72-0068-5827-8120-40c00e48a661"
+              },
+              {
+                "control-id": "der.3.2.a11.1",
+                "description": "Component capability addressing control der.3.2.a11.1 (Durchführung eines Auftaktgesprächs für eine IS-Querschnittsrevision — DER.3.2.A11.1).",
+                "uuid": "37d1c557-7732-57b3-8def-d74998f4372b"
+              },
+              {
+                "control-id": "der.3.2.a11.2",
+                "description": "Component capability addressing control der.3.2.a11.2 (Durchführung eines Auftaktgesprächs für eine IS-Querschnittsrevision — DER.3.2.A11.2).",
+                "uuid": "a11d5355-b40e-5654-bce9-3533b8cb7fe4"
+              },
+              {
+                "control-id": "der.3.2.a11.3",
+                "description": "Component capability addressing control der.3.2.a11.3 (Durchführung eines Auftaktgesprächs für eine IS-Querschnittsrevision — DER.3.2.A11.3).",
+                "uuid": "a5f59946-9d71-5ff4-8042-4b739e48a05a"
+              },
+              {
+                "control-id": "der.3.2.a11.4",
+                "description": "Component capability addressing control der.3.2.a11.4 (Durchführung eines Auftaktgesprächs für eine IS-Querschnittsrevision — DER.3.2.A11.4).",
+                "uuid": "744e69c8-312e-553b-8240-4a35a92f2c3b"
+              },
+              {
+                "control-id": "der.3.2.a11.5",
+                "description": "Component capability addressing control der.3.2.a11.5 (Durchführung eines Auftaktgesprächs für eine IS-Querschnittsrevision — DER.3.2.A11.5).",
+                "uuid": "5eb9a745-3d52-52a5-95ca-2c4a72f9f751"
+              },
+              {
+                "control-id": "der.3.2.a12.1",
+                "description": "Component capability addressing control der.3.2.a12.1 (Erstellung eines Prüfplans — DER.3.2.A12.1).",
+                "uuid": "ad81199d-f9f7-5bb1-93f4-c3785de7593e"
+              },
+              {
+                "control-id": "der.3.2.a12.2",
+                "description": "Component capability addressing control der.3.2.a12.2 (Erstellung eines Prüfplans — DER.3.2.A12.2).",
+                "uuid": "b469944b-676a-563b-8f69-c4103252f34a"
+              },
+              {
+                "control-id": "der.3.2.a12.3",
+                "description": "Component capability addressing control der.3.2.a12.3 (Erstellung eines Prüfplans — DER.3.2.A12.3).",
+                "uuid": "886234fc-e68a-59e3-8424-248282b9a70b"
+              },
+              {
+                "control-id": "der.3.2.a12.4",
+                "description": "Component capability addressing control der.3.2.a12.4 (Erstellung eines Prüfplans — DER.3.2.A12.4).",
+                "uuid": "9a1278e1-0d13-5321-91aa-27ae013fb914"
+              },
+              {
+                "control-id": "der.3.2.a13.1",
+                "description": "Component capability addressing control der.3.2.a13.1 (Sichtung und Prüfung der Dokumente — DER.3.2.A13.1).",
+                "uuid": "0738becb-8f1a-56be-9b25-d20c2f064d91"
+              },
+              {
+                "control-id": "der.3.2.a13.2",
+                "description": "Component capability addressing control der.3.2.a13.2 (Sichtung und Prüfung der Dokumente — DER.3.2.A13.2).",
+                "uuid": "e248fb31-12da-563b-a3c5-ba1b94843391"
+              },
+              {
+                "control-id": "der.3.2.a13.3",
+                "description": "Component capability addressing control der.3.2.a13.3 (Sichtung und Prüfung der Dokumente — DER.3.2.A13.3).",
+                "uuid": "c1128a9d-23c6-574d-999f-8348e8f61d89"
+              },
+              {
+                "control-id": "der.3.2.a13.4",
+                "description": "Component capability addressing control der.3.2.a13.4 (Sichtung und Prüfung der Dokumente — DER.3.2.A13.4).",
+                "uuid": "b2cba629-0246-52f4-9fc5-f8b82ae76b3f"
+              },
+              {
+                "control-id": "der.3.2.a13.5",
+                "description": "Component capability addressing control der.3.2.a13.5 (Sichtung und Prüfung der Dokumente — DER.3.2.A13.5).",
+                "uuid": "cc3e7ed0-e2b0-51ab-a4f6-34fd8605e248"
+              },
+              {
+                "control-id": "der.3.2.a13.6",
+                "description": "Component capability addressing control der.3.2.a13.6 (Sichtung und Prüfung der Dokumente — DER.3.2.A13.6).",
+                "uuid": "0ac8bd0a-cdbe-5ba1-b143-c017c3cab4d6"
+              },
+              {
+                "control-id": "der.3.2.a14.1",
+                "description": "Component capability addressing control der.3.2.a14.1 (Auswahl der Zielobjekte und der zu prüfenden Anforderungen — DER.3.2.A14.1).",
+                "uuid": "386ac9e7-6b0a-58cd-9fa8-36efff89f77b"
+              },
+              {
+                "control-id": "der.3.2.a14.2",
+                "description": "Component capability addressing control der.3.2.a14.2 (Auswahl der Zielobjekte und der zu prüfenden Anforderungen — DER.3.2.A14.2).",
+                "uuid": "d833e2a7-5971-5b77-9507-367eb4ec2ceb"
+              },
+              {
+                "control-id": "der.3.2.a14.3",
+                "description": "Component capability addressing control der.3.2.a14.3 (Auswahl der Zielobjekte und der zu prüfenden Anforderungen — DER.3.2.A14.3).",
+                "uuid": "19eea2a8-0b10-56fb-aeed-390d77cfeb11"
+              },
+              {
+                "control-id": "der.3.2.a14.4",
+                "description": "Component capability addressing control der.3.2.a14.4 (Auswahl der Zielobjekte und der zu prüfenden Anforderungen — DER.3.2.A14.4).",
+                "uuid": "17eee174-bd5d-5511-872a-a808cefac05f"
+              },
+              {
+                "control-id": "der.3.2.a14.5",
+                "description": "Component capability addressing control der.3.2.a14.5 (Auswahl der Zielobjekte und der zu prüfenden Anforderungen — DER.3.2.A14.5).",
+                "uuid": "e830ba7d-c066-5500-bd44-05ce579c1bba"
+              },
+              {
+                "control-id": "der.3.2.a14.6",
+                "description": "Component capability addressing control der.3.2.a14.6 (Auswahl der Zielobjekte und der zu prüfenden Anforderungen — DER.3.2.A14.6).",
+                "uuid": "12503ee2-711b-5be3-831f-9c43820eb0cc"
+              },
+              {
+                "control-id": "der.3.2.a14.7",
+                "description": "Component capability addressing control der.3.2.a14.7 (Auswahl der Zielobjekte und der zu prüfenden Anforderungen — DER.3.2.A14.7).",
+                "uuid": "2c25dae5-f8c8-59ff-9d39-160c137be6e2"
+              },
+              {
+                "control-id": "der.3.2.a15.1",
+                "description": "Component capability addressing control der.3.2.a15.1 (Auswahl von geeigneten Prüfmethoden — DER.3.2.A15.1).",
+                "uuid": "330c294c-1db0-5430-a9b9-e957c1bc0fe9"
+              },
+              {
+                "control-id": "der.3.2.a15.2",
+                "description": "Component capability addressing control der.3.2.a15.2 (Auswahl von geeigneten Prüfmethoden — DER.3.2.A15.2).",
+                "uuid": "cc87b947-4593-561c-a2cd-a389fa9d7f1b"
+              },
+              {
+                "control-id": "der.3.2.a16.1",
+                "description": "Component capability addressing control der.3.2.a16.1 (Erstellung eines Ablaufplans für die Vor-Ort-Prüfung — DER.3.2.A16.1).",
+                "uuid": "c3d4c0e6-ed93-5c40-b722-d42b930140ff"
+              },
+              {
+                "control-id": "der.3.2.a16.2",
+                "description": "Component capability addressing control der.3.2.a16.2 (Erstellung eines Ablaufplans für die Vor-Ort-Prüfung — DER.3.2.A16.2).",
+                "uuid": "9e11cc57-e822-5df0-8cb7-cc3ebce3d2bb"
+              },
+              {
+                "control-id": "der.3.2.a17.1",
+                "description": "Component capability addressing control der.3.2.a17.1 (Durchführung der Vor-Ort-Prüfung — DER.3.2.A17.1).",
+                "uuid": "1c22a7fb-e61d-5496-a642-1815c057d0e1"
+              },
+              {
+                "control-id": "der.3.2.a17.10",
+                "description": "Component capability addressing control der.3.2.a17.10 (Durchführung der Vor-Ort-Prüfung — DER.3.2.A17.10).",
+                "uuid": "805cabd4-62a5-5a82-b646-078c9b7cd521"
+              },
+              {
+                "control-id": "der.3.2.a17.2",
+                "description": "Component capability addressing control der.3.2.a17.2 (Durchführung der Vor-Ort-Prüfung — DER.3.2.A17.2).",
+                "uuid": "4f38b3dd-10da-5ad7-8db4-41d923bd3018"
+              },
+              {
+                "control-id": "der.3.2.a17.3",
+                "description": "Component capability addressing control der.3.2.a17.3 (Durchführung der Vor-Ort-Prüfung — DER.3.2.A17.3).",
+                "uuid": "6051d2f8-4853-54a0-a921-a93d688befcd"
+              },
+              {
+                "control-id": "der.3.2.a17.4",
+                "description": "Component capability addressing control der.3.2.a17.4 (Durchführung der Vor-Ort-Prüfung — DER.3.2.A17.4).",
+                "uuid": "8b5be730-8cb5-537e-a6d5-2b59bd9d0cac"
+              },
+              {
+                "control-id": "der.3.2.a17.5",
+                "description": "Component capability addressing control der.3.2.a17.5 (Durchführung der Vor-Ort-Prüfung — DER.3.2.A17.5).",
+                "uuid": "89a27cc8-62b2-54fa-9050-e3f781925f4c"
+              },
+              {
+                "control-id": "der.3.2.a17.6",
+                "description": "Component capability addressing control der.3.2.a17.6 (Durchführung der Vor-Ort-Prüfung — DER.3.2.A17.6).",
+                "uuid": "142e7712-79fe-58c6-836a-351b43bd126c"
+              },
+              {
+                "control-id": "der.3.2.a17.7",
+                "description": "Component capability addressing control der.3.2.a17.7 (Durchführung der Vor-Ort-Prüfung — DER.3.2.A17.7).",
+                "uuid": "b385a6f8-7c86-5f29-9db6-761b2ca83156"
+              },
+              {
+                "control-id": "der.3.2.a17.8",
+                "description": "Component capability addressing control der.3.2.a17.8 (Durchführung der Vor-Ort-Prüfung — DER.3.2.A17.8).",
+                "uuid": "93153ca0-9d15-5b06-9414-73b350c38e4a"
+              },
+              {
+                "control-id": "der.3.2.a17.9",
+                "description": "Component capability addressing control der.3.2.a17.9 (Durchführung der Vor-Ort-Prüfung — DER.3.2.A17.9).",
+                "uuid": "a1458d5f-224c-51ef-b36f-15efc8740cb1"
+              },
+              {
+                "control-id": "der.3.2.a18.1",
+                "description": "Component capability addressing control der.3.2.a18.1 (Durchführung von Interviews — DER.3.2.A18.1).",
+                "uuid": "f0e73313-469c-5b43-800a-45db2e2b9f86"
+              },
+              {
+                "control-id": "der.3.2.a18.2",
+                "description": "Component capability addressing control der.3.2.a18.2 (Durchführung von Interviews — DER.3.2.A18.2).",
+                "uuid": "66808c1d-30c1-5f25-95d9-0c8ec3ea7f8d"
+              },
+              {
+                "control-id": "der.3.2.a18.3",
+                "description": "Component capability addressing control der.3.2.a18.3 (Durchführung von Interviews — DER.3.2.A18.3).",
+                "uuid": "aac526d2-5df3-5593-8343-d898accbd58e"
+              },
+              {
+                "control-id": "der.3.2.a19.1",
+                "description": "Component capability addressing control der.3.2.a19.1 (Überprüfung der gewählten Risikobehandlungsoptionen — DER.3.2.A19.1).",
+                "uuid": "603fb5f1-fcf6-524e-a05e-351f1840a5e7"
+              },
+              {
+                "control-id": "der.3.2.a19.2",
+                "description": "Component capability addressing control der.3.2.a19.2 (Überprüfung der gewählten Risikobehandlungsoptionen — DER.3.2.A19.2).",
+                "uuid": "5c9dff33-500c-500b-806a-4a67e6495743"
+              },
+              {
+                "control-id": "der.3.2.a2.1",
+                "description": "Component capability addressing control der.3.2.a2.1 (Erstellung eines IS-Revisionshandbuches — DER.3.2.A2.1).",
+                "uuid": "9cc1c5ed-a49d-5190-b314-45c5451a3532"
+              },
+              {
+                "control-id": "der.3.2.a2.2",
+                "description": "Component capability addressing control der.3.2.a2.2 (Erstellung eines IS-Revisionshandbuches — DER.3.2.A2.2).",
+                "uuid": "2df667b2-ea17-584a-bc01-0a561081dd36"
+              },
+              {
+                "control-id": "der.3.2.a2.3",
+                "description": "Component capability addressing control der.3.2.a2.3 (Erstellung eines IS-Revisionshandbuches — DER.3.2.A2.3).",
+                "uuid": "a6546b97-ef0d-54e8-a570-680b140ba7f3"
+              },
+              {
+                "control-id": "der.3.2.a20.1",
+                "description": "Component capability addressing control der.3.2.a20.1 (Nachbereitung der Vor-Ort-Prüfung — DER.3.2.A20.1).",
+                "uuid": "7b861a57-add1-5f1d-a1fb-ed6bd13b7526"
+              },
+              {
+                "control-id": "der.3.2.a20.2",
+                "description": "Component capability addressing control der.3.2.a20.2 (Nachbereitung der Vor-Ort-Prüfung — DER.3.2.A20.2).",
+                "uuid": "4e9890a4-e48f-5865-a070-329387f56a4f"
+              },
+              {
+                "control-id": "der.3.2.a21.1",
+                "description": "Component capability addressing control der.3.2.a21.1 (Erstellung eines IS-Revisionsberichts — DER.3.2.A21.1).",
+                "uuid": "a4748c98-938f-56cf-8de4-0db9a03693ca"
+              },
+              {
+                "control-id": "der.3.2.a21.2",
+                "description": "Component capability addressing control der.3.2.a21.2 (Erstellung eines IS-Revisionsberichts — DER.3.2.A21.2).",
+                "uuid": "d08b958f-f076-5277-92ec-5d005b91f116"
+              },
+              {
+                "control-id": "der.3.2.a21.3",
+                "description": "Component capability addressing control der.3.2.a21.3 (Erstellung eines IS-Revisionsberichts — DER.3.2.A21.3).",
+                "uuid": "fd082cd1-39de-591a-9aed-887634a6e386"
+              },
+              {
+                "control-id": "der.3.2.a21.4",
+                "description": "Component capability addressing control der.3.2.a21.4 (Erstellung eines IS-Revisionsberichts — DER.3.2.A21.4).",
+                "uuid": "5d5b9a4c-0d47-5737-aa30-c9309b5e823c"
+              },
+              {
+                "control-id": "der.3.2.a21.5",
+                "description": "Component capability addressing control der.3.2.a21.5 (Erstellung eines IS-Revisionsberichts — DER.3.2.A21.5).",
+                "uuid": "4dac8b1e-e84d-5438-af5a-02ba7acdb3a7"
+              },
+              {
+                "control-id": "der.3.2.a21.6",
+                "description": "Component capability addressing control der.3.2.a21.6 (Erstellung eines IS-Revisionsberichts — DER.3.2.A21.6).",
+                "uuid": "3e488fe9-9ab6-5042-a0ca-45ed09b959b0"
+              },
+              {
+                "control-id": "der.3.2.a21.7",
+                "description": "Component capability addressing control der.3.2.a21.7 (Erstellung eines IS-Revisionsberichts — DER.3.2.A21.7).",
+                "uuid": "5cf94904-3c38-586c-9d94-ae20b428b487"
+              },
+              {
+                "control-id": "der.3.2.a22.1",
+                "description": "Component capability addressing control der.3.2.a22.1 (Nachbereitung einer IS-Revision — DER.3.2.A22.1).",
+                "uuid": "50793e96-a5bc-5168-8257-35c2b1566eb9"
+              },
+              {
+                "control-id": "der.3.2.a22.2",
+                "description": "Component capability addressing control der.3.2.a22.2 (Nachbereitung einer IS-Revision — DER.3.2.A22.2).",
+                "uuid": "f6e2fc07-4396-563e-8b08-2cbb1fdf6529"
+              },
+              {
+                "control-id": "der.3.2.a22.3",
+                "description": "Component capability addressing control der.3.2.a22.3 (Nachbereitung einer IS-Revision — DER.3.2.A22.3).",
+                "uuid": "afb5a30d-f1bb-531f-8aa2-0654b7a03743"
+              },
+              {
+                "control-id": "der.3.2.a22.4",
+                "description": "Component capability addressing control der.3.2.a22.4 (Nachbereitung einer IS-Revision — DER.3.2.A22.4).",
+                "uuid": "6cd6c6e0-8bc4-50cf-b4cd-c0aba077bf30"
+              },
+              {
+                "control-id": "der.3.2.a22.5",
+                "description": "Component capability addressing control der.3.2.a22.5 (Nachbereitung einer IS-Revision — DER.3.2.A22.5).",
+                "uuid": "3d9c64db-b7e7-51fa-a204-6517fe83c8de"
+              },
+              {
+                "control-id": "der.3.2.a3.1",
+                "description": "Component capability addressing control der.3.2.a3.1 (Definition der Prüfungsgrundlage — DER.3.2.A3.1).",
+                "uuid": "8fddb77a-f708-5f3e-946e-4541ae23c015"
+              },
+              {
+                "control-id": "der.3.2.a3.2",
+                "description": "Component capability addressing control der.3.2.a3.2 (Definition der Prüfungsgrundlage — DER.3.2.A3.2).",
+                "uuid": "431aaca9-116f-5a82-aa6b-bf59ae8e0e1e"
+              },
+              {
+                "control-id": "der.3.2.a3.3",
+                "description": "Component capability addressing control der.3.2.a3.3 (Definition der Prüfungsgrundlage — DER.3.2.A3.3).",
+                "uuid": "d373a19f-51b9-5200-a846-c28c443d1d9a"
+              },
+              {
+                "control-id": "der.3.2.a4.1",
+                "description": "Component capability addressing control der.3.2.a4.1 (Erstellung einer Planung für die IS-Revision — DER.3.2.A4.1).",
+                "uuid": "debdf186-d128-5c95-8489-f6bbea4df76c"
+              },
+              {
+                "control-id": "der.3.2.a4.2",
+                "description": "Component capability addressing control der.3.2.a4.2 (Erstellung einer Planung für die IS-Revision — DER.3.2.A4.2).",
+                "uuid": "95aadc30-c769-5517-aa93-a892fc4e5934"
+              },
+              {
+                "control-id": "der.3.2.a4.3",
+                "description": "Component capability addressing control der.3.2.a4.3 (Erstellung einer Planung für die IS-Revision — DER.3.2.A4.3).",
+                "uuid": "c05485c0-ef36-596a-9cff-49ddc58c8e42"
+              },
+              {
+                "control-id": "der.3.2.a4.4",
+                "description": "Component capability addressing control der.3.2.a4.4 (Erstellung einer Planung für die IS-Revision — DER.3.2.A4.4).",
+                "uuid": "82c24b89-8084-5655-9c61-11b024ba8fab"
+              },
+              {
+                "control-id": "der.3.2.a5.1",
+                "description": "Component capability addressing control der.3.2.a5.1 (Auswahl eines geeigneten IS-Revisionsteams — DER.3.2.A5.1).",
+                "uuid": "6518b62f-fc32-5198-820a-4224fd2bda30"
+              },
+              {
+                "control-id": "der.3.2.a5.2",
+                "description": "Component capability addressing control der.3.2.a5.2 (Auswahl eines geeigneten IS-Revisionsteams — DER.3.2.A5.2).",
+                "uuid": "385d5253-1def-5fe6-9b5c-55595064694e"
+              },
+              {
+                "control-id": "der.3.2.a5.3",
+                "description": "Component capability addressing control der.3.2.a5.3 (Auswahl eines geeigneten IS-Revisionsteams — DER.3.2.A5.3).",
+                "uuid": "a0486083-563f-512d-bb6a-8885569fe316"
+              },
+              {
+                "control-id": "der.3.2.a5.4",
+                "description": "Component capability addressing control der.3.2.a5.4 (Auswahl eines geeigneten IS-Revisionsteams — DER.3.2.A5.4).",
+                "uuid": "f08df4cc-7bd0-5320-96fd-000203b2c0e2"
+              },
+              {
+                "control-id": "der.3.2.a6.1",
+                "description": "Component capability addressing control der.3.2.a6.1 (Vorbereitung einer IS-Revision — DER.3.2.A6.1).",
+                "uuid": "1b3b776a-2d79-5790-8b9e-691ff90f6f9f"
+              },
+              {
+                "control-id": "der.3.2.a6.2",
+                "description": "Component capability addressing control der.3.2.a6.2 (Vorbereitung einer IS-Revision — DER.3.2.A6.2).",
+                "uuid": "5aa008ba-586e-54b5-87ad-8a6e29d980e2"
+              },
+              {
+                "control-id": "der.3.2.a6.3",
+                "description": "Component capability addressing control der.3.2.a6.3 (Vorbereitung einer IS-Revision — DER.3.2.A6.3).",
+                "uuid": "0b9c3968-6f96-5d60-b797-7c5be33f0d76"
+              },
+              {
+                "control-id": "der.3.2.a7.1",
+                "description": "Component capability addressing control der.3.2.a7.1 (Durchführung einer IS-Revision — DER.3.2.A7.1).",
+                "uuid": "34be455b-9e41-57bd-a55b-75b916b6d128"
+              },
+              {
+                "control-id": "der.3.2.a7.2",
+                "description": "Component capability addressing control der.3.2.a7.2 (Durchführung einer IS-Revision — DER.3.2.A7.2).",
+                "uuid": "92e62c52-0986-5bef-85ea-91734d55dccd"
+              },
+              {
+                "control-id": "der.3.2.a7.3",
+                "description": "Component capability addressing control der.3.2.a7.3 (Durchführung einer IS-Revision — DER.3.2.A7.3).",
+                "uuid": "e2fb5277-c11d-578b-81c5-48cb78866539"
+              },
+              {
+                "control-id": "der.3.2.a7.4",
+                "description": "Component capability addressing control der.3.2.a7.4 (Durchführung einer IS-Revision — DER.3.2.A7.4).",
+                "uuid": "9f09fef7-d1a8-5630-a100-d39375776c1c"
+              },
+              {
+                "control-id": "der.3.2.a8.1",
+                "description": "Component capability addressing control der.3.2.a8.1 (Aufbewahrung von IS-Revisionsberichten — DER.3.2.A8.1).",
+                "uuid": "a193e619-71ee-5d82-8051-1591aafbf60b"
+              },
+              {
+                "control-id": "der.3.2.a8.2",
+                "description": "Component capability addressing control der.3.2.a8.2 (Aufbewahrung von IS-Revisionsberichten — DER.3.2.A8.2).",
+                "uuid": "8fb823bf-b8f7-5ebe-b48b-ab13c6569d1b"
+              },
+              {
+                "control-id": "der.3.2.a9.1",
+                "description": "Component capability addressing control der.3.2.a9.1 (Integration in den Informationssicherheitsprozess — DER.3.2.A9.1).",
+                "uuid": "df726898-aa06-5489-b9af-aee2dce22233"
+              },
+              {
+                "control-id": "der.3.2.a9.2",
+                "description": "Component capability addressing control der.3.2.a9.2 (Integration in den Informationssicherheitsprozess — DER.3.2.A9.2).",
+                "uuid": "9d63ae70-e4d5-5e22-9df4-38ba938ca0de"
+              },
+              {
+                "control-id": "der.3.2.a9.3",
+                "description": "Component capability addressing control der.3.2.a9.3 (Integration in den Informationssicherheitsprozess — DER.3.2.A9.3).",
+                "uuid": "d4f88594-7074-532a-a044-4510d5cc1b4f"
+              },
+              {
+                "control-id": "der.4.a1.1",
+                "description": "Component capability addressing control der.4.a1.1 (Erstellung eines Notfallhandbuchs — DER.4.A1.1).",
+                "uuid": "ba58b2c1-840c-5c78-a277-1fbbdcdc67a8"
+              },
+              {
+                "control-id": "der.4.a1.10",
+                "description": "Component capability addressing control der.4.a1.10 (Erstellung eines Notfallhandbuchs — DER.4.A1.10).",
+                "uuid": "9de8dfce-5a31-5540-bbd3-ebbb71f16ab5"
+              },
+              {
+                "control-id": "der.4.a1.11",
+                "description": "Component capability addressing control der.4.a1.11 (Erstellung eines Notfallhandbuchs — DER.4.A1.11).",
+                "uuid": "d860923d-ad31-52b6-a2df-42386f8f6440"
+              },
+              {
+                "control-id": "der.4.a1.12",
+                "description": "Component capability addressing control der.4.a1.12 (Erstellung eines Notfallhandbuchs — DER.4.A1.12).",
+                "uuid": "d1046318-4e7e-54f4-86eb-61ead0ba8459"
+              },
+              {
+                "control-id": "der.4.a1.13",
+                "description": "Component capability addressing control der.4.a1.13 (Erstellung eines Notfallhandbuchs — DER.4.A1.13).",
+                "uuid": "fb481cc3-f44a-5655-8b93-8a1cd389432e"
+              },
+              {
+                "control-id": "der.4.a1.2",
+                "description": "Component capability addressing control der.4.a1.2 (Erstellung eines Notfallhandbuchs — DER.4.A1.2).",
+                "uuid": "d670e90b-2704-57bc-9135-471c52a3f3e8"
+              },
+              {
+                "control-id": "der.4.a1.3",
+                "description": "Component capability addressing control der.4.a1.3 (Erstellung eines Notfallhandbuchs — DER.4.A1.3).",
+                "uuid": "775a55f0-94bd-5ca2-a78e-ce24010c6b28"
+              },
+              {
+                "control-id": "der.4.a1.4",
+                "description": "Component capability addressing control der.4.a1.4 (Erstellung eines Notfallhandbuchs — DER.4.A1.4).",
+                "uuid": "8b1c25e4-80ee-50ac-b02b-7f5d22f7bb90"
+              },
+              {
+                "control-id": "der.4.a1.5",
+                "description": "Component capability addressing control der.4.a1.5 (Erstellung eines Notfallhandbuchs — DER.4.A1.5).",
+                "uuid": "8606fc8a-fe4f-568e-82ff-b6fc282e3c57"
+              },
+              {
+                "control-id": "der.4.a1.6",
+                "description": "Component capability addressing control der.4.a1.6 (Erstellung eines Notfallhandbuchs — DER.4.A1.6).",
+                "uuid": "d69af479-468f-50fe-9368-ce49e4c9bb8d"
+              },
+              {
+                "control-id": "der.4.a1.7",
+                "description": "Component capability addressing control der.4.a1.7 (Erstellung eines Notfallhandbuchs — DER.4.A1.7).",
+                "uuid": "8ac0ec1a-a4dd-50e2-a78d-4f89d82a45c6"
+              },
+              {
+                "control-id": "der.4.a1.8",
+                "description": "Component capability addressing control der.4.a1.8 (Erstellung eines Notfallhandbuchs — DER.4.A1.8).",
+                "uuid": "bcab3db1-694c-5e12-a3a2-db101931e2f2"
+              },
+              {
+                "control-id": "der.4.a1.9",
+                "description": "Component capability addressing control der.4.a1.9 (Erstellung eines Notfallhandbuchs — DER.4.A1.9).",
+                "uuid": "5b093170-dd8f-5db6-9c69-be0c88d074af"
+              },
+              {
+                "control-id": "der.4.a10.1",
+                "description": "Component capability addressing control der.4.a10.1 (Tests und Notfallübungen — DER.4.A10.1).",
+                "uuid": "27071057-0ba0-5fb5-bdee-632e3d7ada18"
+              },
+              {
+                "control-id": "der.4.a10.2",
+                "description": "Component capability addressing control der.4.a10.2 (Tests und Notfallübungen — DER.4.A10.2).",
+                "uuid": "0d85ecfa-cde3-5c46-8198-3d3211415afe"
+              },
+              {
+                "control-id": "der.4.a10.3",
+                "description": "Component capability addressing control der.4.a10.3 (Tests und Notfallübungen — DER.4.A10.3).",
+                "uuid": "b2ec44a8-6c60-56e4-8f97-a374c1f14840"
+              },
+              {
+                "control-id": "der.4.a12.1",
+                "description": "Component capability addressing control der.4.a12.1 (Dokumentation im Notfallmanagement-Prozess — DER.4.A12.1).",
+                "uuid": "beedbc1d-737d-5faa-be72-617e76168760"
+              },
+              {
+                "control-id": "der.4.a12.2",
+                "description": "Component capability addressing control der.4.a12.2 (Dokumentation im Notfallmanagement-Prozess — DER.4.A12.2).",
+                "uuid": "699bff99-176e-57c9-9582-bf7f47d685b4"
+              },
+              {
+                "control-id": "der.4.a12.3",
+                "description": "Component capability addressing control der.4.a12.3 (Dokumentation im Notfallmanagement-Prozess — DER.4.A12.3).",
+                "uuid": "aac2bacc-9210-5b7a-949d-eb865c1f6882"
+              },
+              {
+                "control-id": "der.4.a13.1",
+                "description": "Component capability addressing control der.4.a13.1 (Überprüfung und Steuerung des Notfallmanagement-Systems — DER.4.A13.1).",
+                "uuid": "5a26e283-f85e-5903-9a76-bdf81a8fbd2a"
+              },
+              {
+                "control-id": "der.4.a13.2",
+                "description": "Component capability addressing control der.4.a13.2 (Überprüfung und Steuerung des Notfallmanagement-Systems — DER.4.A13.2).",
+                "uuid": "d80b3515-7fff-5f1e-9209-b9c8f69e3706"
+              },
+              {
+                "control-id": "der.4.a14.1",
+                "description": "Component capability addressing control der.4.a14.1 (Regelmäßige Überprüfung und Verbesserung der Notfallmaßnahmen — DER.4.A14.1).",
+                "uuid": "b672d84a-5a70-522d-9ff6-a2981be47b00"
+              },
+              {
+                "control-id": "der.4.a14.10",
+                "description": "Component capability addressing control der.4.a14.10 (Regelmäßige Überprüfung und Verbesserung der Notfallmaßnahmen — DER.4.A14.10).",
+                "uuid": "bfcd689a-b37b-55e5-98f2-49d686db10ee"
+              },
+              {
+                "control-id": "der.4.a14.11",
+                "description": "Component capability addressing control der.4.a14.11 (Regelmäßige Überprüfung und Verbesserung der Notfallmaßnahmen — DER.4.A14.11).",
+                "uuid": "7589e985-a4bf-5895-a3b9-6246cf37e693"
+              },
+              {
+                "control-id": "der.4.a14.2",
+                "description": "Component capability addressing control der.4.a14.2 (Regelmäßige Überprüfung und Verbesserung der Notfallmaßnahmen — DER.4.A14.2).",
+                "uuid": "db856f35-94b8-55d3-b819-149b02bd8291"
+              },
+              {
+                "control-id": "der.4.a14.3",
+                "description": "Component capability addressing control der.4.a14.3 (Regelmäßige Überprüfung und Verbesserung der Notfallmaßnahmen — DER.4.A14.3).",
+                "uuid": "624bbffd-d6cd-56f1-acc8-6959226d8d9a"
+              },
+              {
+                "control-id": "der.4.a14.4",
+                "description": "Component capability addressing control der.4.a14.4 (Regelmäßige Überprüfung und Verbesserung der Notfallmaßnahmen — DER.4.A14.4).",
+                "uuid": "61bc4a87-494d-5975-a712-34b06ab9aa91"
+              },
+              {
+                "control-id": "der.4.a14.5",
+                "description": "Component capability addressing control der.4.a14.5 (Regelmäßige Überprüfung und Verbesserung der Notfallmaßnahmen — DER.4.A14.5).",
+                "uuid": "25341122-ba72-5ddd-b3e6-a0687d7c3af3"
+              },
+              {
+                "control-id": "der.4.a14.6",
+                "description": "Component capability addressing control der.4.a14.6 (Regelmäßige Überprüfung und Verbesserung der Notfallmaßnahmen — DER.4.A14.6).",
+                "uuid": "cf8f9d67-0b24-5979-b2d5-ca0acb655143"
+              },
+              {
+                "control-id": "der.4.a14.7",
+                "description": "Component capability addressing control der.4.a14.7 (Regelmäßige Überprüfung und Verbesserung der Notfallmaßnahmen — DER.4.A14.7).",
+                "uuid": "248c3669-bcde-5871-930a-848fed48e433"
+              },
+              {
+                "control-id": "der.4.a14.8",
+                "description": "Component capability addressing control der.4.a14.8 (Regelmäßige Überprüfung und Verbesserung der Notfallmaßnahmen — DER.4.A14.8).",
+                "uuid": "61e0ef8b-e16b-5c44-ae5a-812e6a8ded8b"
+              },
+              {
+                "control-id": "der.4.a14.9",
+                "description": "Component capability addressing control der.4.a14.9 (Regelmäßige Überprüfung und Verbesserung der Notfallmaßnahmen — DER.4.A14.9).",
+                "uuid": "15c161e4-14d0-532f-8278-b8a2b9326ab0"
+              },
+              {
+                "control-id": "der.4.a15.1",
+                "description": "Component capability addressing control der.4.a15.1 (Bewertung der Leistungsfähigkeit des Notfallmanagementsystems — DER.4.A15.1).",
+                "uuid": "ee48be9f-790f-5f53-9514-d034eee9e29b"
+              },
+              {
+                "control-id": "der.4.a15.2",
+                "description": "Component capability addressing control der.4.a15.2 (Bewertung der Leistungsfähigkeit des Notfallmanagementsystems — DER.4.A15.2).",
+                "uuid": "ad1075a1-de0b-57a1-b3aa-3df8554e8026"
+              },
+              {
+                "control-id": "der.4.a15.3",
+                "description": "Component capability addressing control der.4.a15.3 (Bewertung der Leistungsfähigkeit des Notfallmanagementsystems — DER.4.A15.3).",
+                "uuid": "b17cd46c-1f04-53af-b327-5b7f50f06fd9"
+              },
+              {
+                "control-id": "der.4.a15.4",
+                "description": "Component capability addressing control der.4.a15.4 (Bewertung der Leistungsfähigkeit des Notfallmanagementsystems — DER.4.A15.4).",
+                "uuid": "5158833a-efb2-5832-8552-64a2b0b9cdd8"
+              },
+              {
+                "control-id": "der.4.a15.5",
+                "description": "Component capability addressing control der.4.a15.5 (Bewertung der Leistungsfähigkeit des Notfallmanagementsystems — DER.4.A15.5).",
+                "uuid": "f90933fe-3692-5916-b694-7d76ef2e6248"
+              },
+              {
+                "control-id": "der.4.a15.6",
+                "description": "Component capability addressing control der.4.a15.6 (Bewertung der Leistungsfähigkeit des Notfallmanagementsystems — DER.4.A15.6).",
+                "uuid": "4e025e34-d79a-5089-9588-4f806e305d6b"
+              },
+              {
+                "control-id": "der.4.a15.7",
+                "description": "Component capability addressing control der.4.a15.7 (Bewertung der Leistungsfähigkeit des Notfallmanagementsystems — DER.4.A15.7).",
+                "uuid": "b7e6c334-1b87-5e9e-b00e-60eb78db5f2b"
+              },
+              {
+                "control-id": "der.4.a16.1",
+                "description": "Component capability addressing control der.4.a16.1 (Notfallvorsorge- und Notfallreaktionsplanung für ausgelagerte Komponenten — DER.4.A16.1).",
+                "uuid": "f6305122-a8fc-5d70-bd1d-7cdbe9ccdc38"
+              },
+              {
+                "control-id": "der.4.a16.2",
+                "description": "Component capability addressing control der.4.a16.2 (Notfallvorsorge- und Notfallreaktionsplanung für ausgelagerte Komponenten — DER.4.A16.2).",
+                "uuid": "282d0ff8-b928-5afa-829c-ddd6a4d7c669"
+              },
+              {
+                "control-id": "der.4.a16.3",
+                "description": "Component capability addressing control der.4.a16.3 (Notfallvorsorge- und Notfallreaktionsplanung für ausgelagerte Komponenten — DER.4.A16.3).",
+                "uuid": "cdd0d4af-fd11-5541-8b79-1d44a04ad374"
+              },
+              {
+                "control-id": "der.4.a16.4",
+                "description": "Component capability addressing control der.4.a16.4 (Notfallvorsorge- und Notfallreaktionsplanung für ausgelagerte Komponenten — DER.4.A16.4).",
+                "uuid": "a1beabbd-7cb8-57b6-9cbc-0eb51d0c8a3b"
+              },
+              {
+                "control-id": "der.4.a2.1",
+                "description": "Component capability addressing control der.4.a2.1 (Integration von Notfallmanagement und Informationssicherheitsmanagement — DER.4.A2.1).",
+                "uuid": "e70759a5-a559-543c-8e68-34f9c654ac42"
+              },
+              {
+                "control-id": "der.4.a3.1",
+                "description": "Component capability addressing control der.4.a3.1 (Festlegung des Geltungsbereichs und der Notfallmanagementstrategie — DER.4.A3.1).",
+                "uuid": "bc767f8e-4a20-5e30-b54e-a9e713981e24"
+              },
+              {
+                "control-id": "der.4.a3.2",
+                "description": "Component capability addressing control der.4.a3.2 (Festlegung des Geltungsbereichs und der Notfallmanagementstrategie — DER.4.A3.2).",
+                "uuid": "0df4e1e4-37c4-5d16-9cfb-a40706b28c2b"
+              },
+              {
+                "control-id": "der.4.a4.1",
+                "description": "Component capability addressing control der.4.a4.1 (Leitlinie zum Notfallmanagement und Übernahme der Gesamtverantwortung durch die Institutionsleitung — DER.4.A4.1).",
+                "uuid": "6aa8dc61-b3de-501e-aaa5-eae535881595"
+              },
+              {
+                "control-id": "der.4.a4.2",
+                "description": "Component capability addressing control der.4.a4.2 (Leitlinie zum Notfallmanagement und Übernahme der Gesamtverantwortung durch die Institutionsleitung — DER.4.A4.2).",
+                "uuid": "a2f37ef2-b36d-5e0c-b2ba-d86d7bdbfdff"
+              },
+              {
+                "control-id": "der.4.a4.3",
+                "description": "Component capability addressing control der.4.a4.3 (Leitlinie zum Notfallmanagement und Übernahme der Gesamtverantwortung durch die Institutionsleitung — DER.4.A4.3).",
+                "uuid": "8a5e118f-608b-520f-bdaf-7ced2816cd1d"
+              },
+              {
+                "control-id": "der.4.a4.4",
+                "description": "Component capability addressing control der.4.a4.4 (Leitlinie zum Notfallmanagement und Übernahme der Gesamtverantwortung durch die Institutionsleitung — DER.4.A4.4).",
+                "uuid": "264b3d50-f789-5e3f-b68d-07d8ab7c8bd9"
+              },
+              {
+                "control-id": "der.4.a5.1",
+                "description": "Component capability addressing control der.4.a5.1 (Aufbau einer geeigneten Organisationsstruktur für das Notfallmanagement — DER.4.A5.1).",
+                "uuid": "e84c8d68-65f8-5a4a-8023-20f9b8cad1ed"
+              },
+              {
+                "control-id": "der.4.a5.2",
+                "description": "Component capability addressing control der.4.a5.2 (Aufbau einer geeigneten Organisationsstruktur für das Notfallmanagement — DER.4.A5.2).",
+                "uuid": "4c5962de-2058-5bcd-921d-d22c42d4c6d0"
+              },
+              {
+                "control-id": "der.4.a5.3",
+                "description": "Component capability addressing control der.4.a5.3 (Aufbau einer geeigneten Organisationsstruktur für das Notfallmanagement — DER.4.A5.3).",
+                "uuid": "3318008b-1efc-5760-8213-4888d049910e"
+              },
+              {
+                "control-id": "der.4.a5.4",
+                "description": "Component capability addressing control der.4.a5.4 (Aufbau einer geeigneten Organisationsstruktur für das Notfallmanagement — DER.4.A5.4).",
+                "uuid": "8e4c7d93-cfba-5d81-b639-2a3d4f8ed8f4"
+              },
+              {
+                "control-id": "der.4.a6.1",
+                "description": "Component capability addressing control der.4.a6.1 (Bereitstellung angemessener Ressourcen für das Notfallmanagement — DER.4.A6.1).",
+                "uuid": "b3164e2e-4f89-5754-a74d-7a2d1172f811"
+              },
+              {
+                "control-id": "der.4.a6.2",
+                "description": "Component capability addressing control der.4.a6.2 (Bereitstellung angemessener Ressourcen für das Notfallmanagement — DER.4.A6.2).",
+                "uuid": "cc8aaac4-4ac4-5cd9-81f1-4535f9f928ef"
+              },
+              {
+                "control-id": "der.4.a7.1",
+                "description": "Component capability addressing control der.4.a7.1 (Erstellung eines Notfallkonzepts — DER.4.A7.1).",
+                "uuid": "0ca7d693-7367-5778-a303-76bddd56a695"
+              },
+              {
+                "control-id": "der.4.a7.2",
+                "description": "Component capability addressing control der.4.a7.2 (Erstellung eines Notfallkonzepts — DER.4.A7.2).",
+                "uuid": "fe79756c-bb8e-5011-a915-36772285f33d"
+              },
+              {
+                "control-id": "der.4.a7.3",
+                "description": "Component capability addressing control der.4.a7.3 (Erstellung eines Notfallkonzepts — DER.4.A7.3).",
+                "uuid": "7d00090a-eb5b-5bc2-b5ff-51441370ebec"
+              },
+              {
+                "control-id": "der.4.a7.4",
+                "description": "Component capability addressing control der.4.a7.4 (Erstellung eines Notfallkonzepts — DER.4.A7.4).",
+                "uuid": "cea670bc-d978-57b9-8dbb-1ebe41c05fea"
+              },
+              {
+                "control-id": "der.4.a7.5",
+                "description": "Component capability addressing control der.4.a7.5 (Erstellung eines Notfallkonzepts — DER.4.A7.5).",
+                "uuid": "84b2c135-48cb-557a-920b-313c3471c998"
+              },
+              {
+                "control-id": "der.4.a7.6",
+                "description": "Component capability addressing control der.4.a7.6 (Erstellung eines Notfallkonzepts — DER.4.A7.6).",
+                "uuid": "a6a1d451-f832-5dad-8056-221f9f3f2ded"
+              },
+              {
+                "control-id": "der.4.a7.7",
+                "description": "Component capability addressing control der.4.a7.7 (Erstellung eines Notfallkonzepts — DER.4.A7.7).",
+                "uuid": "1f0b9f88-63dd-558d-b592-c35b2a847405"
+              },
+              {
+                "control-id": "der.4.a8.1",
+                "description": "Component capability addressing control der.4.a8.1 (Integration der Mitarbeitenden in den Notfallmanagement-Prozess — DER.4.A8.1).",
+                "uuid": "09ba98a1-f364-5c0a-8009-45643e0ae61d"
+              },
+              {
+                "control-id": "der.4.a8.2",
+                "description": "Component capability addressing control der.4.a8.2 (Integration der Mitarbeitenden in den Notfallmanagement-Prozess — DER.4.A8.2).",
+                "uuid": "20aecc8c-175c-530e-bc34-b0751b56e1cf"
+              },
+              {
+                "control-id": "der.4.a8.3",
+                "description": "Component capability addressing control der.4.a8.3 (Integration der Mitarbeitenden in den Notfallmanagement-Prozess — DER.4.A8.3).",
+                "uuid": "8d495bb6-a162-5683-bc01-e20844287a35"
+              },
+              {
+                "control-id": "der.4.a9.1",
+                "description": "Component capability addressing control der.4.a9.1 (Integration von Notfallmanagement in organisationsweite Abläufe und Prozesse — DER.4.A9.1).",
+                "uuid": "835417fc-bca6-596b-bfe0-edda95ab8dab"
+              },
+              {
+                "control-id": "der.4.a9.2",
+                "description": "Component capability addressing control der.4.a9.2 (Integration von Notfallmanagement in organisationsweite Abläufe und Prozesse — DER.4.A9.2).",
+                "uuid": "5ccd3e30-75af-5d17-9bf9-45366097972c"
+              }
+            ],
+            "source": "./catalog.json",
+            "uuid": "82eddc01-5083-547b-8e76-339ca9adde84"
+          }
+        ],
+        "description": "Enterprise technical and operational capabilities implementing controls for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - DER: Detektion und Reaktion.",
+        "title": "IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - DER: Detektion und Reaktion Platform Component",
+        "type": "software",
+        "uuid": "b291add4-fd94-5479-a5a1-ac6fae00cec4"
+      }
+    ],
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:12Z",
+      "oscal-version": "1.2.3",
+      "title": "IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - DER: Detektion und Reaktion Component Definition Template",
+      "version": "1"
+    },
+    "uuid": "b996d26d-a826-54bd-a330-10a12d329903"
+  }
+}

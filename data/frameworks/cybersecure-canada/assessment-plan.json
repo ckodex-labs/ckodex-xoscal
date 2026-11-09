@@ -4,7 +4,7 @@
       "href": "./system-security-plan.json"
     },
     "metadata": {
-      "last-modified": "2026-10-25T23:17:26Z",
+      "last-modified": "2026-11-08T01:42:11Z",
       "oscal-version": "1.2.3",
       "title": "CyberSecure Canada (CAN/DGSI 104) Security Assessment Plan Template",
       "version": "CAN/DGSI 104"
@@ -19,32 +19,32 @@
     },
     "tasks": [
       {
-        "description": "Verify and examine implementation of 3 controls in the Develop an Incident Response Plan (Elaborer un plan d intervention en cas d incident) family for CyberSecure Canada (CAN/DGSI 104).",
-        "title": "Assess Family BC-1 (Develop an Incident Response Plan (Elaborer un plan d intervention en cas d incident))",
+        "description": "Verify and examine implementation of 3 controls in the Develop an Incident Response Plan (Élaborer un plan d'intervention en cas d'incident) family for CyberSecure Canada (CAN/DGSI 104).",
+        "title": "Assess Family BC-1 (Develop an Incident Response Plan (Élaborer un plan d'intervention en cas d'incident))",
         "type": "examination",
         "uuid": "354b1a97-241d-5482-8784-1afbf62c8552"
       },
       {
-        "description": "Verify and examine implementation of 5 controls in the Secure Cloud and Outsourced IT Services (Securiser les services infonuagiques et TI impartis) family for CyberSecure Canada (CAN/DGSI 104).",
-        "title": "Assess Family BC-10 (Secure Cloud and Outsourced IT Services (Securiser les services infonuagiques et TI impartis))",
+        "description": "Verify and examine implementation of 5 controls in the Secure Cloud and Outsourced IT Services (Sécuriser les services infonuagiques et TI impartis) family for CyberSecure Canada (CAN/DGSI 104).",
+        "title": "Assess Family BC-10 (Secure Cloud and Outsourced IT Services (Sécuriser les services infonuagiques et TI impartis))",
         "type": "examination",
         "uuid": "0e74d6ff-587a-5393-8915-31baaf50ad23"
       },
       {
-        "description": "Verify and examine implementation of 2 controls in the Secure Websites (Securiser les sites Web) family for CyberSecure Canada (CAN/DGSI 104).",
-        "title": "Assess Family BC-11 (Secure Websites (Securiser les sites Web))",
+        "description": "Verify and examine implementation of 2 controls in the Secure Websites (Sécuriser les sites Web) family for CyberSecure Canada (CAN/DGSI 104).",
+        "title": "Assess Family BC-11 (Secure Websites (Sécuriser les sites Web))",
         "type": "examination",
         "uuid": "5d7f2008-ea6e-569f-a265-9affc4a5c236"
       },
       {
-        "description": "Verify and examine implementation of 4 controls in the Implement Access Control and Authorization (Mettre en oeuvre le controle d acces) family for CyberSecure Canada (CAN/DGSI 104).",
-        "title": "Assess Family BC-12 (Implement Access Control and Authorization (Mettre en oeuvre le controle d acces))",
+        "description": "Verify and examine implementation of 4 controls in the Implement Access Control and Authorization (Mettre en œuvre le contrôle d'accès) family for CyberSecure Canada (CAN/DGSI 104).",
+        "title": "Assess Family BC-12 (Implement Access Control and Authorization (Mettre en œuvre le contrôle d'accès))",
         "type": "examination",
         "uuid": "99dc331a-80f8-5282-92a1-cd237f9f3fe0"
       },
       {
-        "description": "Verify and examine implementation of 2 controls in the Secure Portable Media (Securiser les supports amovibles) family for CyberSecure Canada (CAN/DGSI 104).",
-        "title": "Assess Family BC-13 (Secure Portable Media (Securiser les supports amovibles))",
+        "description": "Verify and examine implementation of 2 controls in the Secure Portable Media (Sécuriser les supports amovibles) family for CyberSecure Canada (CAN/DGSI 104).",
+        "title": "Assess Family BC-13 (Secure Portable Media (Sécuriser les supports amovibles))",
         "type": "examination",
         "uuid": "979edc59-0111-5712-afbb-335e743618f9"
       },
@@ -55,14 +55,14 @@
         "uuid": "e719172b-1a2e-5af1-99d2-5ca7e20bb488"
       },
       {
-        "description": "Verify and examine implementation of 2 controls in the Enable Security Software (Activer les logiciels de securite) family for CyberSecure Canada (CAN/DGSI 104).",
-        "title": "Assess Family BC-3 (Enable Security Software (Activer les logiciels de securite))",
+        "description": "Verify and examine implementation of 2 controls in the Enable Security Software (Activer les logiciels de sécurité) family for CyberSecure Canada (CAN/DGSI 104).",
+        "title": "Assess Family BC-3 (Enable Security Software (Activer les logiciels de sécurité))",
         "type": "examination",
         "uuid": "174dfc45-db27-592c-9ba5-73d21fb67888"
       },
       {
-        "description": "Verify and examine implementation of 1 controls in the Securely Configure Devices (Configurer les appareils de facon securitaire) family for CyberSecure Canada (CAN/DGSI 104).",
-        "title": "Assess Family BC-4 (Securely Configure Devices (Configurer les appareils de facon securitaire))",
+        "description": "Verify and examine implementation of 1 controls in the Securely Configure Devices (Configurer les appareils de façon sécuritaire) family for CyberSecure Canada (CAN/DGSI 104).",
+        "title": "Assess Family BC-4 (Securely Configure Devices (Configurer les appareils de façon sécuritaire))",
         "type": "examination",
         "uuid": "f0468eeb-0db4-5745-bcde-0c494502dc89"
       },
@@ -73,32 +73,32 @@
         "uuid": "786ee3d0-772a-55ce-9d67-c33c424f32ba"
       },
       {
-        "description": "Verify and examine implementation of 1 controls in the Employee Awareness Training (Sensibilisation et formation des employes) family for CyberSecure Canada (CAN/DGSI 104).",
-        "title": "Assess Family BC-6 (Employee Awareness Training (Sensibilisation et formation des employes))",
+        "description": "Verify and examine implementation of 1 controls in the Employee Awareness Training (Sensibilisation et formation des employés) family for CyberSecure Canada (CAN/DGSI 104).",
+        "title": "Assess Family BC-6 (Employee Awareness Training (Sensibilisation et formation des employés))",
         "type": "examination",
         "uuid": "94d8d4b8-5460-52a8-9076-0c23f08065fa"
       },
       {
-        "description": "Verify and examine implementation of 2 controls in the Backup and Encrypt Data (Sauvegarder et chiffrer les donnees) family for CyberSecure Canada (CAN/DGSI 104).",
-        "title": "Assess Family BC-7 (Backup and Encrypt Data (Sauvegarder et chiffrer les donnees))",
+        "description": "Verify and examine implementation of 2 controls in the Backup and Encrypt Data (Sauvegarder et chiffrer les données) family for CyberSecure Canada (CAN/DGSI 104).",
+        "title": "Assess Family BC-7 (Backup and Encrypt Data (Sauvegarder et chiffrer les données))",
         "type": "examination",
         "uuid": "57564a67-c4d6-5307-a818-9a7f73c57aac"
       },
       {
-        "description": "Verify and examine implementation of 7 controls in the Secure Mobility (Mobilite securisee) family for CyberSecure Canada (CAN/DGSI 104).",
-        "title": "Assess Family BC-8 (Secure Mobility (Mobilite securisee))",
+        "description": "Verify and examine implementation of 7 controls in the Secure Mobility (Mobilité sécurisée) family for CyberSecure Canada (CAN/DGSI 104).",
+        "title": "Assess Family BC-8 (Secure Mobility (Mobilité sécurisée))",
         "type": "examination",
         "uuid": "391f1ae7-68c3-50ef-9853-77e7df31417a"
       },
       {
-        "description": "Verify and examine implementation of 8 controls in the Establish Basic Perimeter Defences (Etablir des defenses de perimetre de base) family for CyberSecure Canada (CAN/DGSI 104).",
-        "title": "Assess Family BC-9 (Establish Basic Perimeter Defences (Etablir des defenses de perimetre de base))",
+        "description": "Verify and examine implementation of 8 controls in the Establish Basic Perimeter Defences (Établir des défenses de périmètre de base) family for CyberSecure Canada (CAN/DGSI 104).",
+        "title": "Assess Family BC-9 (Establish Basic Perimeter Defences (Établir des défenses de périmètre de base))",
         "type": "examination",
         "uuid": "101c761c-4a9b-5f69-89ef-4abc681c20fd"
       },
       {
-        "description": "Verify and examine implementation of 4 controls in the Organizational Controls (Controles organisationnels) family for CyberSecure Canada (CAN/DGSI 104).",
-        "title": "Assess Family OC (Organizational Controls (Controles organisationnels))",
+        "description": "Verify and examine implementation of 4 controls in the Organizational Controls (Contrôles organisationnels) family for CyberSecure Canada (CAN/DGSI 104).",
+        "title": "Assess Family OC (Organizational Controls (Contrôles organisationnels))",
         "type": "examination",
         "uuid": "80319854-86cf-536b-b81b-04c639299ed6"
       }

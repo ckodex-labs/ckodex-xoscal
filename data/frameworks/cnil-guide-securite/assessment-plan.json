@@ -1,0 +1,174 @@
+{
+  "assessment-plan": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:12Z",
+      "oscal-version": "1.2.3",
+      "title": "CNIL : guide de sécurité des données Security Assessment Plan Template",
+      "version": "1"
+    },
+    "reviewed-controls": {
+      "control-selections": [
+        {
+          "description": "All controls in CNIL : guide de sécurité des données",
+          "include-all": {}
+        }
+      ]
+    },
+    "tasks": [
+      {
+        "description": "Verify and examine implementation of 2 controls in the Piloter la sécurité des données family for CNIL : guide de sécurité des données.",
+        "title": "Assess Family _1 (Piloter la sécurité des données)",
+        "type": "examination",
+        "uuid": "57e28c07-c37e-5966-bc39-8aefb9775ecb"
+      },
+      {
+        "description": "Verify and examine implementation of 3 controls in the Sécuriser les sites web family for CNIL : guide de sécurité des données.",
+        "title": "Assess Family _10 (Sécuriser les sites web)",
+        "type": "examination",
+        "uuid": "798d4818-4154-5269-9691-868d53b79f22"
+      },
+      {
+        "description": "Verify and examine implementation of 4 controls in the Encadrer les développements informatiques family for CNIL : guide de sécurité des données.",
+        "title": "Assess Family _11 (Encadrer les développements informatiques)",
+        "type": "examination",
+        "uuid": "35e437f0-ae80-58b7-a0f7-8bbc1d5c821e"
+      },
+      {
+        "description": "Verify and examine implementation of 2 controls in the Protéger les locaux family for CNIL : guide de sécurité des données.",
+        "title": "Assess Family _12 (Protéger les locaux)",
+        "type": "examination",
+        "uuid": "15545d6a-ea1c-5391-8777-398b13118759"
+      },
+      {
+        "description": "Verify and examine implementation of 3 controls in the Sécuriser les échanges avec l’extérieur family for CNIL : guide de sécurité des données.",
+        "title": "Assess Family _13 (Sécuriser les échanges avec l’extérieur)",
+        "type": "examination",
+        "uuid": "82467553-7af4-5672-8c25-dcfda7cf8fb8"
+      },
+      {
+        "description": "Verify and examine implementation of 3 controls in the Gérer la sous-traitance family for CNIL : guide de sécurité des données.",
+        "title": "Assess Family _14 (Gérer la sous-traitance)",
+        "type": "examination",
+        "uuid": "8e3dfc9c-d502-56b4-b5a6-e3ee7e2f4459"
+      },
+      {
+        "description": "Verify and examine implementation of 3 controls in the Encadrer la maintenance et la fin de vie des matériels et des logiciels family for CNIL : guide de sécurité des données.",
+        "title": "Assess Family _15 (Encadrer la maintenance et la fin de vie des matériels et des logiciels)",
+        "type": "examination",
+        "uuid": "ef392bbc-c6c3-531f-8132-2099706267b1"
+      },
+      {
+        "description": "Verify and examine implementation of 4 controls in the Tracer les opérations family for CNIL : guide de sécurité des données.",
+        "title": "Assess Family _16 (Tracer les opérations)",
+        "type": "examination",
+        "uuid": "e91e9f52-251a-58d0-ad2d-f2d509196fa1"
+      },
+      {
+        "description": "Verify and examine implementation of 3 controls in the Sauvegarder family for CNIL : guide de sécurité des données.",
+        "title": "Assess Family _17 (Sauvegarder)",
+        "type": "examination",
+        "uuid": "7ce77ffc-eda6-5758-8f67-1c24b86b33a6"
+      },
+      {
+        "description": "Verify and examine implementation of 2 controls in the Prévoir la continuité et la reprise d’activité family for CNIL : guide de sécurité des données.",
+        "title": "Assess Family _18 (Prévoir la continuité et la reprise d’activité)",
+        "type": "examination",
+        "uuid": "756d0762-45ab-5b60-ada5-ad6b8696aeae"
+      },
+      {
+        "description": "Verify and examine implementation of 2 controls in the Gérer les incidents et les violations family for CNIL : guide de sécurité des données.",
+        "title": "Assess Family _19 (Gérer les incidents et les violations)",
+        "type": "examination",
+        "uuid": "7ef2e47c-45e3-54f3-9235-86aebb6d02f3"
+      },
+      {
+        "description": "Verify and examine implementation of 2 controls in the Définir un cadre pour les utilisateurs family for CNIL : guide de sécurité des données.",
+        "title": "Assess Family _2 (Définir un cadre pour les utilisateurs)",
+        "type": "examination",
+        "uuid": "149bfcf2-83d4-50a2-9e76-f8c1ee7bef8b"
+      },
+      {
+        "description": "Verify and examine implementation of 3 controls in the Analyse de risques family for CNIL : guide de sécurité des données.",
+        "title": "Assess Family _20 (Analyse de risques)",
+        "type": "examination",
+        "uuid": "ca81acfa-fbeb-5714-8449-e3ba88523955"
+      },
+      {
+        "description": "Verify and examine implementation of 2 controls in the Chiffrement, hachage, signature family for CNIL : guide de sécurité des données.",
+        "title": "Assess Family _21 (Chiffrement, hachage, signature)",
+        "type": "examination",
+        "uuid": "d515686f-9ac8-570d-9459-05ad733390ee"
+      },
+      {
+        "description": "Verify and examine implementation of 4 controls in the Cloud : Informatique en nuage family for CNIL : guide de sécurité des données.",
+        "title": "Assess Family _22 (Cloud : Informatique en nuage)",
+        "type": "examination",
+        "uuid": "17a7b1ab-da57-56f2-ad56-b1172be13223"
+      },
+      {
+        "description": "Verify and examine implementation of 3 controls in the Applications mobiles : Conception et développement family for CNIL : guide de sécurité des données.",
+        "title": "Assess Family _23 (Applications mobiles : Conception et développement)",
+        "type": "examination",
+        "uuid": "456771f1-c53b-5040-ba8c-0811b07a0a08"
+      },
+      {
+        "description": "Verify and examine implementation of 3 controls in the Intelligence artificielle : Conception et apprentissage family for CNIL : guide de sécurité des données.",
+        "title": "Assess Family _24 (Intelligence artificielle : Conception et apprentissage)",
+        "type": "examination",
+        "uuid": "cda057f9-18c7-52f6-9567-002209fc38d9"
+      },
+      {
+        "description": "Verify and examine implementation of 2 controls in the API : Interfaces de programmation applicative family for CNIL : guide de sécurité des données.",
+        "title": "Assess Family _25 (API : Interfaces de programmation applicative)",
+        "type": "examination",
+        "uuid": "2c1a1061-4568-5833-b564-5d0bcd47a437"
+      },
+      {
+        "description": "Verify and examine implementation of 2 controls in the Impliquer et former les utilisateurs family for CNIL : guide de sécurité des données.",
+        "title": "Assess Family _3 (Impliquer et former les utilisateurs)",
+        "type": "examination",
+        "uuid": "f2280a34-bb21-5a7a-a940-ff8a9173e7bf"
+      },
+      {
+        "description": "Verify and examine implementation of 3 controls in the Authentifier les utilisateurs family for CNIL : guide de sécurité des données.",
+        "title": "Assess Family _4 (Authentifier les utilisateurs)",
+        "type": "examination",
+        "uuid": "916e046c-1806-5e27-a557-5ee001ac9650"
+      },
+      {
+        "description": "Verify and examine implementation of 3 controls in the Gérer les habilitations family for CNIL : guide de sécurité des données.",
+        "title": "Assess Family _5 (Gérer les habilitations)",
+        "type": "examination",
+        "uuid": "6acd397d-a20e-59c5-bb58-0a46775d0515"
+      },
+      {
+        "description": "Verify and examine implementation of 4 controls in the Sécuriser les postes de travail family for CNIL : guide de sécurité des données.",
+        "title": "Assess Family _6 (Sécuriser les postes de travail)",
+        "type": "examination",
+        "uuid": "71d7a596-5e6b-5daf-a5b7-26b50fc1e8e7"
+      },
+      {
+        "description": "Verify and examine implementation of 3 controls in the Sécuriser l’informatique mobile family for CNIL : guide de sécurité des données.",
+        "title": "Assess Family _7 (Sécuriser l’informatique mobile)",
+        "type": "examination",
+        "uuid": "cb7bcc8a-ee23-5657-95f8-6b95197ead97"
+      },
+      {
+        "description": "Verify and examine implementation of 4 controls in the Protéger le réseau informatique family for CNIL : guide de sécurité des données.",
+        "title": "Assess Family _8 (Protéger le réseau informatique)",
+        "type": "examination",
+        "uuid": "4b34e518-53ea-5faa-8ba7-d8ec967849c4"
+      },
+      {
+        "description": "Verify and examine implementation of 3 controls in the Sécuriser les serveurs family for CNIL : guide de sécurité des données.",
+        "title": "Assess Family _9 (Sécuriser les serveurs)",
+        "type": "examination",
+        "uuid": "bdf7447a-2ffa-5de3-8adc-f4697e348291"
+      }
+    ],
+    "uuid": "0aa119f2-f3ee-53a9-bd1b-95a0f65464bb"
+  }
+}

@@ -1,0 +1,1163 @@
+{
+  "component-definition": {
+    "components": [
+      {
+        "control-implementations": [
+          {
+            "description": "Security control implementations for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+            "implemented-requirements": [
+              {
+                "control-id": "ind.1.a1.1",
+                "description": "Component capability addressing control ind.1.a1.1 (Einbindung in die Sicherheitsorganisation — IND.1.A1.1).",
+                "uuid": "c7b60add-8118-56d1-87aa-ad986714c8bf"
+              },
+              {
+                "control-id": "ind.1.a1.2",
+                "description": "Component capability addressing control ind.1.a1.2 (Einbindung in die Sicherheitsorganisation — IND.1.A1.2).",
+                "uuid": "353ebbb2-f0bb-5823-bd3d-5f9181289a8c"
+              },
+              {
+                "control-id": "ind.1.a1.3",
+                "description": "Component capability addressing control ind.1.a1.3 (Einbindung in die Sicherheitsorganisation — IND.1.A1.3).",
+                "uuid": "73e4bbb2-ba34-509f-862f-26f91f5a1648"
+              },
+              {
+                "control-id": "ind.1.a10.1",
+                "description": "Component capability addressing control ind.1.a10.1 (Monitoring, Protokollierung und Detektion — IND.1.A10.1).",
+                "uuid": "6bbfd5c0-3cdc-5ad3-947b-9d2e2cd3238a"
+              },
+              {
+                "control-id": "ind.1.a10.2",
+                "description": "Component capability addressing control ind.1.a10.2 (Monitoring, Protokollierung und Detektion — IND.1.A10.2).",
+                "uuid": "29f56f98-6e91-5926-a323-8f08a775ac2d"
+              },
+              {
+                "control-id": "ind.1.a10.3",
+                "description": "Component capability addressing control ind.1.a10.3 (Monitoring, Protokollierung und Detektion — IND.1.A10.3).",
+                "uuid": "8ea87bf9-dcb9-5dae-be6f-f024e29653bb"
+              },
+              {
+                "control-id": "ind.1.a10.4",
+                "description": "Component capability addressing control ind.1.a10.4 (Monitoring, Protokollierung und Detektion — IND.1.A10.4).",
+                "uuid": "8a82f68c-8aea-595b-aae6-a82703c7af8d"
+              },
+              {
+                "control-id": "ind.1.a10.5",
+                "description": "Component capability addressing control ind.1.a10.5 (Monitoring, Protokollierung und Detektion — IND.1.A10.5).",
+                "uuid": "59177a92-8a09-58db-8ba9-4be740585d89"
+              },
+              {
+                "control-id": "ind.1.a10.6",
+                "description": "Component capability addressing control ind.1.a10.6 (Monitoring, Protokollierung und Detektion — IND.1.A10.6).",
+                "uuid": "836eb9d7-43ef-5d53-bedd-2826e0d3bcc5"
+              },
+              {
+                "control-id": "ind.1.a11.1",
+                "description": "Component capability addressing control ind.1.a11.1 (Sichere Beschaffung und Systementwicklung — IND.1.A11.1).",
+                "uuid": "951f43e0-4785-5f0e-8371-1744a8df2a28"
+              },
+              {
+                "control-id": "ind.1.a11.2",
+                "description": "Component capability addressing control ind.1.a11.2 (Sichere Beschaffung und Systementwicklung — IND.1.A11.2).",
+                "uuid": "23408911-acaa-5c6c-8f6b-03db9e696c67"
+              },
+              {
+                "control-id": "ind.1.a11.3",
+                "description": "Component capability addressing control ind.1.a11.3 (Sichere Beschaffung und Systementwicklung — IND.1.A11.3).",
+                "uuid": "24d68402-9046-5a79-b2cc-802a138ed3b3"
+              },
+              {
+                "control-id": "ind.1.a11.4",
+                "description": "Component capability addressing control ind.1.a11.4 (Sichere Beschaffung und Systementwicklung — IND.1.A11.4).",
+                "uuid": "1a90a1a3-b86a-5a9f-9f19-1c5876b62e79"
+              },
+              {
+                "control-id": "ind.1.a11.5",
+                "description": "Component capability addressing control ind.1.a11.5 (Sichere Beschaffung und Systementwicklung — IND.1.A11.5).",
+                "uuid": "34ada341-d457-5223-a0ab-7d37ccfd1304"
+              },
+              {
+                "control-id": "ind.1.a11.6",
+                "description": "Component capability addressing control ind.1.a11.6 (Sichere Beschaffung und Systementwicklung — IND.1.A11.6).",
+                "uuid": "63585903-ce4c-529c-9255-3a3a9ba63e62"
+              },
+              {
+                "control-id": "ind.1.a11.7",
+                "description": "Component capability addressing control ind.1.a11.7 (Sichere Beschaffung und Systementwicklung — IND.1.A11.7).",
+                "uuid": "71f43d8d-4cc9-59e6-a026-3dba00aaf3e6"
+              },
+              {
+                "control-id": "ind.1.a11.8",
+                "description": "Component capability addressing control ind.1.a11.8 (Sichere Beschaffung und Systementwicklung — IND.1.A11.8).",
+                "uuid": "d0e51b37-a310-5783-9fac-94a904da9b5a"
+              },
+              {
+                "control-id": "ind.1.a11.9",
+                "description": "Component capability addressing control ind.1.a11.9 (Sichere Beschaffung und Systementwicklung — IND.1.A11.9).",
+                "uuid": "eced2a66-99ac-51c4-a1fb-de71539ad55e"
+              },
+              {
+                "control-id": "ind.1.a12.1",
+                "description": "Component capability addressing control ind.1.a12.1 (Etablieren eines Schwachstellen-Managements — IND.1.A12.1).",
+                "uuid": "992d97c1-19d0-5d62-b787-947d8c15e095"
+              },
+              {
+                "control-id": "ind.1.a12.2",
+                "description": "Component capability addressing control ind.1.a12.2 (Etablieren eines Schwachstellen-Managements — IND.1.A12.2).",
+                "uuid": "12296c3d-7f1f-5946-b67f-d562253e86b1"
+              },
+              {
+                "control-id": "ind.1.a12.3",
+                "description": "Component capability addressing control ind.1.a12.3 (Etablieren eines Schwachstellen-Managements — IND.1.A12.3).",
+                "uuid": "dc56dba7-aa60-5ce3-b2df-5921dbcfe04e"
+              },
+              {
+                "control-id": "ind.1.a12.4",
+                "description": "Component capability addressing control ind.1.a12.4 (Etablieren eines Schwachstellen-Managements — IND.1.A12.4).",
+                "uuid": "ee068ba8-d2b1-5167-9ab9-286b4dad82e2"
+              },
+              {
+                "control-id": "ind.1.a12.5",
+                "description": "Component capability addressing control ind.1.a12.5 (Etablieren eines Schwachstellen-Managements — IND.1.A12.5).",
+                "uuid": "7e986b31-5368-5776-bc0d-33584450a09b"
+              },
+              {
+                "control-id": "ind.1.a13.1",
+                "description": "Component capability addressing control ind.1.a13.1 (Notfallplanung für OT — IND.1.A13.1).",
+                "uuid": "c2bff877-468e-56a1-969b-b73e27be747f"
+              },
+              {
+                "control-id": "ind.1.a13.2",
+                "description": "Component capability addressing control ind.1.a13.2 (Notfallplanung für OT — IND.1.A13.2).",
+                "uuid": "cd19e2db-2934-5b4b-86e9-54648ee7c6c7"
+              },
+              {
+                "control-id": "ind.1.a14.1",
+                "description": "Component capability addressing control ind.1.a14.1 (Starke Authentisierung an OT-Komponenten — IND.1.A14.1).",
+                "uuid": "640466ce-cc68-5f9b-bc23-59f301d17584"
+              },
+              {
+                "control-id": "ind.1.a14.2",
+                "description": "Component capability addressing control ind.1.a14.2 (Starke Authentisierung an OT-Komponenten — IND.1.A14.2).",
+                "uuid": "548058e6-d41e-5013-aef7-c2b10b351196"
+              },
+              {
+                "control-id": "ind.1.a14.3",
+                "description": "Component capability addressing control ind.1.a14.3 (Starke Authentisierung an OT-Komponenten — IND.1.A14.3).",
+                "uuid": "c8324778-7325-5c6e-b49d-cbaa89984c04"
+              },
+              {
+                "control-id": "ind.1.a14.4",
+                "description": "Component capability addressing control ind.1.a14.4 (Starke Authentisierung an OT-Komponenten — IND.1.A14.4).",
+                "uuid": "c96b2d73-8b50-5d43-bc7b-dc49e0852864"
+              },
+              {
+                "control-id": "ind.1.a15.1",
+                "description": "Component capability addressing control ind.1.a15.1 (Überwachung von weitreichenden Berechtigungen — IND.1.A15.1).",
+                "uuid": "af7b3ecf-150d-55b4-a66c-5cdf532e70d4"
+              },
+              {
+                "control-id": "ind.1.a15.2",
+                "description": "Component capability addressing control ind.1.a15.2 (Überwachung von weitreichenden Berechtigungen — IND.1.A15.2).",
+                "uuid": "ee2e597b-13cc-5201-b9cf-0ec15ead2752"
+              },
+              {
+                "control-id": "ind.1.a15.3",
+                "description": "Component capability addressing control ind.1.a15.3 (Überwachung von weitreichenden Berechtigungen — IND.1.A15.3).",
+                "uuid": "8e482954-f8c7-54a6-bee5-0c6cceeb87be"
+              },
+              {
+                "control-id": "ind.1.a15.4",
+                "description": "Component capability addressing control ind.1.a15.4 (Überwachung von weitreichenden Berechtigungen — IND.1.A15.4).",
+                "uuid": "9f68f75b-474e-52ef-9d80-80a4e79f1f92"
+              },
+              {
+                "control-id": "ind.1.a16.1",
+                "description": "Component capability addressing control ind.1.a16.1 (Stärkere Abschottung der Zonen — IND.1.A16.1).",
+                "uuid": "8d251354-8673-5b4d-ae83-9cf88374e0e5"
+              },
+              {
+                "control-id": "ind.1.a16.2",
+                "description": "Component capability addressing control ind.1.a16.2 (Stärkere Abschottung der Zonen — IND.1.A16.2).",
+                "uuid": "1c2c3b88-7702-5337-bcc0-a8d0ba52281d"
+              },
+              {
+                "control-id": "ind.1.a16.3",
+                "description": "Component capability addressing control ind.1.a16.3 (Stärkere Abschottung der Zonen — IND.1.A16.3).",
+                "uuid": "e591e14c-eb6a-5a9a-8d4b-c98e794b8362"
+              },
+              {
+                "control-id": "ind.1.a17.1",
+                "description": "Component capability addressing control ind.1.a17.1 (Regelmäßige Sicherheitsüberprüfung — IND.1.A17.1).",
+                "uuid": "8dae2c27-cd34-51b6-a79f-a4d985c140f9"
+              },
+              {
+                "control-id": "ind.1.a17.2",
+                "description": "Component capability addressing control ind.1.a17.2 (Regelmäßige Sicherheitsüberprüfung — IND.1.A17.2).",
+                "uuid": "a03ee81f-bb73-51fb-94cf-da7637d2b2cc"
+              },
+              {
+                "control-id": "ind.1.a17.3",
+                "description": "Component capability addressing control ind.1.a17.3 (Regelmäßige Sicherheitsüberprüfung — IND.1.A17.3).",
+                "uuid": "64088793-387b-5d95-9415-2c1afa8742ce"
+              },
+              {
+                "control-id": "ind.1.a17.4",
+                "description": "Component capability addressing control ind.1.a17.4 (Regelmäßige Sicherheitsüberprüfung — IND.1.A17.4).",
+                "uuid": "f0975019-89f5-58d5-9788-956a042e8b61"
+              },
+              {
+                "control-id": "ind.1.a18.1",
+                "description": "Component capability addressing control ind.1.a18.1 (Protokollierung — IND.1.A18.1).",
+                "uuid": "af013c82-96c9-596f-96e6-d53a3f70ff6a"
+              },
+              {
+                "control-id": "ind.1.a18.2",
+                "description": "Component capability addressing control ind.1.a18.2 (Protokollierung — IND.1.A18.2).",
+                "uuid": "a5512b01-1291-520d-bd0b-fb5ac0f2edd7"
+              },
+              {
+                "control-id": "ind.1.a19.1",
+                "description": "Component capability addressing control ind.1.a19.1 (Erstellung von Datensicherungen — IND.1.A19.1).",
+                "uuid": "d73c9a47-1097-52bb-8e49-a8c0d72d05b7"
+              },
+              {
+                "control-id": "ind.1.a19.2",
+                "description": "Component capability addressing control ind.1.a19.2 (Erstellung von Datensicherungen — IND.1.A19.2).",
+                "uuid": "a26caef6-ce28-5d4a-a9f5-43b00f4890ad"
+              },
+              {
+                "control-id": "ind.1.a20.1",
+                "description": "Component capability addressing control ind.1.a20.1 (Systemdokumentation — IND.1.A20.1).",
+                "uuid": "b89eb2c8-2b59-5927-9bc7-ea45c1fa4e62"
+              },
+              {
+                "control-id": "ind.1.a20.2",
+                "description": "Component capability addressing control ind.1.a20.2 (Systemdokumentation — IND.1.A20.2).",
+                "uuid": "2c87b27f-d4e9-5ed6-94ff-dc6d9727f2fb"
+              },
+              {
+                "control-id": "ind.1.a20.3",
+                "description": "Component capability addressing control ind.1.a20.3 (Systemdokumentation — IND.1.A20.3).",
+                "uuid": "4293d6a9-744f-54b3-9846-57a3fa15f74c"
+              },
+              {
+                "control-id": "ind.1.a21.1",
+                "description": "Component capability addressing control ind.1.a21.1 (Dokumentation der Kommunikationsbeziehungen — IND.1.A21.1).",
+                "uuid": "e02aa054-9533-5424-b79f-af1a3ee73bca"
+              },
+              {
+                "control-id": "ind.1.a21.2",
+                "description": "Component capability addressing control ind.1.a21.2 (Dokumentation der Kommunikationsbeziehungen — IND.1.A21.2).",
+                "uuid": "d980ed61-8c38-554e-917e-9985a0520e04"
+              },
+              {
+                "control-id": "ind.1.a22.1",
+                "description": "Component capability addressing control ind.1.a22.1 (Zentrale Systemprotokollierung und -überwachung — IND.1.A22.1).",
+                "uuid": "571d8057-3893-5a23-9a5b-10ab4e173054"
+              },
+              {
+                "control-id": "ind.1.a22.2",
+                "description": "Component capability addressing control ind.1.a22.2 (Zentrale Systemprotokollierung und -überwachung — IND.1.A22.2).",
+                "uuid": "f389cba3-88b8-58d1-9f64-1c12a26d15f4"
+              },
+              {
+                "control-id": "ind.1.a23.1",
+                "description": "Component capability addressing control ind.1.a23.1 (Aussonderung von ICS-Komponenten — IND.1.A23.1).",
+                "uuid": "560c6a56-ef57-5c42-9bed-717c74d8d387"
+              },
+              {
+                "control-id": "ind.1.a23.2",
+                "description": "Component capability addressing control ind.1.a23.2 (Aussonderung von ICS-Komponenten — IND.1.A23.2).",
+                "uuid": "6193255f-d251-5324-af2f-27fdb41d501a"
+              },
+              {
+                "control-id": "ind.1.a24.1",
+                "description": "Component capability addressing control ind.1.a24.1 (Kommunikation im Störfall — IND.1.A24.1).",
+                "uuid": "6f13fbc8-273d-5ee1-9bc4-23faa701feca"
+              },
+              {
+                "control-id": "ind.1.a3.1",
+                "description": "Component capability addressing control ind.1.a3.1 (Schutz vor Schadprogrammen — IND.1.A3.1).",
+                "uuid": "11d4dfc9-6b89-56fe-89a7-e3de4b74140f"
+              },
+              {
+                "control-id": "ind.1.a3.2",
+                "description": "Component capability addressing control ind.1.a3.2 (Schutz vor Schadprogrammen — IND.1.A3.2).",
+                "uuid": "7ff3f82a-9d26-55c9-978c-05eb6bb98bbf"
+              },
+              {
+                "control-id": "ind.1.a3.3",
+                "description": "Component capability addressing control ind.1.a3.3 (Schutz vor Schadprogrammen — IND.1.A3.3).",
+                "uuid": "060b713c-633f-5af1-a2db-37f86a2de6c6"
+              },
+              {
+                "control-id": "ind.1.a4.1",
+                "description": "Component capability addressing control ind.1.a4.1 (Dokumentation der OT-Infrastruktur — IND.1.A4.1).",
+                "uuid": "e1786298-dd9c-5af7-8ae1-e45125894532"
+              },
+              {
+                "control-id": "ind.1.a4.2",
+                "description": "Component capability addressing control ind.1.a4.2 (Dokumentation der OT-Infrastruktur — IND.1.A4.2).",
+                "uuid": "5f4a8653-f5e3-5c7c-b210-2ac9b1b52e0e"
+              },
+              {
+                "control-id": "ind.1.a4.3",
+                "description": "Component capability addressing control ind.1.a4.3 (Dokumentation der OT-Infrastruktur — IND.1.A4.3).",
+                "uuid": "51eeb816-6866-5211-9527-d53085c56137"
+              },
+              {
+                "control-id": "ind.1.a4.4",
+                "description": "Component capability addressing control ind.1.a4.4 (Dokumentation der OT-Infrastruktur — IND.1.A4.4).",
+                "uuid": "84794e66-f938-57aa-ba1d-b7edbab40481"
+              },
+              {
+                "control-id": "ind.1.a4.5",
+                "description": "Component capability addressing control ind.1.a4.5 (Dokumentation der OT-Infrastruktur — IND.1.A4.5).",
+                "uuid": "1683c68c-0a7a-5666-b0f6-3a99187b18cf"
+              },
+              {
+                "control-id": "ind.1.a4.6",
+                "description": "Component capability addressing control ind.1.a4.6 (Dokumentation der OT-Infrastruktur — IND.1.A4.6).",
+                "uuid": "5452f44e-5258-56f7-ab6a-38fac02d2c05"
+              },
+              {
+                "control-id": "ind.1.a4.7",
+                "description": "Component capability addressing control ind.1.a4.7 (Dokumentation der OT-Infrastruktur — IND.1.A4.7).",
+                "uuid": "65f54f3d-864a-5d89-8f28-a832111f9e85"
+              },
+              {
+                "control-id": "ind.1.a4.8",
+                "description": "Component capability addressing control ind.1.a4.8 (Dokumentation der OT-Infrastruktur — IND.1.A4.8).",
+                "uuid": "187a0bf6-6578-597d-9a7f-20f887e2fcad"
+              },
+              {
+                "control-id": "ind.1.a5.1",
+                "description": "Component capability addressing control ind.1.a5.1 (Entwicklung eines geeigneten Zonenkonzepts — IND.1.A5.1).",
+                "uuid": "c4a439a1-be06-5f0f-8cc1-7fe71b5d7947"
+              },
+              {
+                "control-id": "ind.1.a5.2",
+                "description": "Component capability addressing control ind.1.a5.2 (Entwicklung eines geeigneten Zonenkonzepts — IND.1.A5.2).",
+                "uuid": "2261d5a2-d87a-52e7-bbc9-7501424aaadf"
+              },
+              {
+                "control-id": "ind.1.a5.3",
+                "description": "Component capability addressing control ind.1.a5.3 (Entwicklung eines geeigneten Zonenkonzepts — IND.1.A5.3).",
+                "uuid": "cff711ac-757d-5741-bb9d-8b99554f2741"
+              },
+              {
+                "control-id": "ind.1.a5.4",
+                "description": "Component capability addressing control ind.1.a5.4 (Entwicklung eines geeigneten Zonenkonzepts — IND.1.A5.4).",
+                "uuid": "61c9a215-c95a-5e7a-a6a4-3be3f71a16f2"
+              },
+              {
+                "control-id": "ind.1.a5.5",
+                "description": "Component capability addressing control ind.1.a5.5 (Entwicklung eines geeigneten Zonenkonzepts — IND.1.A5.5).",
+                "uuid": "10dce7f8-873d-58d4-aa8a-2b451c1f6c5f"
+              },
+              {
+                "control-id": "ind.1.a5.6",
+                "description": "Component capability addressing control ind.1.a5.6 (Entwicklung eines geeigneten Zonenkonzepts — IND.1.A5.6).",
+                "uuid": "1e575e43-b9b8-55b3-aba0-e7310fb0eeff"
+              },
+              {
+                "control-id": "ind.1.a6.1",
+                "description": "Component capability addressing control ind.1.a6.1 (Änderungsmanagement im OT-Betrieb — IND.1.A6.1).",
+                "uuid": "23d3fa11-96c5-51a3-a688-ec4b0ab831cc"
+              },
+              {
+                "control-id": "ind.1.a7.1",
+                "description": "Component capability addressing control ind.1.a7.1 (Etablieren einer übergreifenden Berechtigungsverwaltung zwischen der OT und in der Office-IT — IND.1.A7.1).",
+                "uuid": "46c8abcd-1a93-52fd-92de-9191bf54e91b"
+              },
+              {
+                "control-id": "ind.1.a7.2",
+                "description": "Component capability addressing control ind.1.a7.2 (Etablieren einer übergreifenden Berechtigungsverwaltung zwischen der OT und in der Office-IT — IND.1.A7.2).",
+                "uuid": "23a1038e-611d-5112-91fd-1cf2a01b160d"
+              },
+              {
+                "control-id": "ind.1.a7.3",
+                "description": "Component capability addressing control ind.1.a7.3 (Etablieren einer übergreifenden Berechtigungsverwaltung zwischen der OT und in der Office-IT — IND.1.A7.3).",
+                "uuid": "1d99eb42-9113-57a5-ae91-3b5c24f19135"
+              },
+              {
+                "control-id": "ind.1.a7.4",
+                "description": "Component capability addressing control ind.1.a7.4 (Etablieren einer übergreifenden Berechtigungsverwaltung zwischen der OT und in der Office-IT — IND.1.A7.4).",
+                "uuid": "34a74b78-d899-5aa5-aaf3-bda5b857f7b1"
+              },
+              {
+                "control-id": "ind.1.a7.5",
+                "description": "Component capability addressing control ind.1.a7.5 (Etablieren einer übergreifenden Berechtigungsverwaltung zwischen der OT und in der Office-IT — IND.1.A7.5).",
+                "uuid": "0c79f5e5-b78d-5135-af90-0e21d433c98e"
+              },
+              {
+                "control-id": "ind.1.a7.6",
+                "description": "Component capability addressing control ind.1.a7.6 (Etablieren einer übergreifenden Berechtigungsverwaltung zwischen der OT und in der Office-IT — IND.1.A7.6).",
+                "uuid": "b8b8dae4-cce9-55c0-a4ee-107b23dc109d"
+              },
+              {
+                "control-id": "ind.1.a7.7",
+                "description": "Component capability addressing control ind.1.a7.7 (Etablieren einer übergreifenden Berechtigungsverwaltung zwischen der OT und in der Office-IT — IND.1.A7.7).",
+                "uuid": "bd67adf0-6195-5baa-ac28-dc4266684e37"
+              },
+              {
+                "control-id": "ind.1.a8.1",
+                "description": "Component capability addressing control ind.1.a8.1 (Sichere Administration — IND.1.A8.1).",
+                "uuid": "59116145-8d92-5e2e-8efe-d2e456a1c2f0"
+              },
+              {
+                "control-id": "ind.1.a8.2",
+                "description": "Component capability addressing control ind.1.a8.2 (Sichere Administration — IND.1.A8.2).",
+                "uuid": "fbb2c490-b56f-55f6-8af9-8faa8ad620a0"
+              },
+              {
+                "control-id": "ind.1.a8.3",
+                "description": "Component capability addressing control ind.1.a8.3 (Sichere Administration — IND.1.A8.3).",
+                "uuid": "131d5770-4357-5058-a419-2afc93255de4"
+              },
+              {
+                "control-id": "ind.1.a8.4",
+                "description": "Component capability addressing control ind.1.a8.4 (Sichere Administration — IND.1.A8.4).",
+                "uuid": "4396838b-fb0c-5868-b297-fc76f0ecd4d2"
+              },
+              {
+                "control-id": "ind.1.a9.1",
+                "description": "Component capability addressing control ind.1.a9.1 (Restriktiver Einsatz von Wechseldatenträgern und mobilen Endgeräten in ICS-Umgebungen — IND.1.A9.1).",
+                "uuid": "ec1c755c-5a77-534b-ac4f-3638ae4abf8e"
+              },
+              {
+                "control-id": "ind.1.a9.2",
+                "description": "Component capability addressing control ind.1.a9.2 (Restriktiver Einsatz von Wechseldatenträgern und mobilen Endgeräten in ICS-Umgebungen — IND.1.A9.2).",
+                "uuid": "bf0da8e6-2a79-573a-a60e-5bcb800dcd5d"
+              },
+              {
+                "control-id": "ind.1.a9.3",
+                "description": "Component capability addressing control ind.1.a9.3 (Restriktiver Einsatz von Wechseldatenträgern und mobilen Endgeräten in ICS-Umgebungen — IND.1.A9.3).",
+                "uuid": "824bb3dd-4771-5d37-bd3d-4c51c73b9ad2"
+              },
+              {
+                "control-id": "ind.1.a9.4",
+                "description": "Component capability addressing control ind.1.a9.4 (Restriktiver Einsatz von Wechseldatenträgern und mobilen Endgeräten in ICS-Umgebungen — IND.1.A9.4).",
+                "uuid": "9060b0ec-6bb3-5ea4-a699-38f417d2b4ed"
+              },
+              {
+                "control-id": "ind.1.a9.5",
+                "description": "Component capability addressing control ind.1.a9.5 (Restriktiver Einsatz von Wechseldatenträgern und mobilen Endgeräten in ICS-Umgebungen — IND.1.A9.5).",
+                "uuid": "8160c28f-8915-5fc4-85e2-d03548832a74"
+              },
+              {
+                "control-id": "ind.1.a9.6",
+                "description": "Component capability addressing control ind.1.a9.6 (Restriktiver Einsatz von Wechseldatenträgern und mobilen Endgeräten in ICS-Umgebungen — IND.1.A9.6).",
+                "uuid": "86a92af9-4d0f-5c9e-9825-a6ca181f308b"
+              },
+              {
+                "control-id": "ind.2.1.a1.1",
+                "description": "Component capability addressing control ind.2.1.a1.1 (Einschränkung des Zugriffs auf Konfigurations- und Wartungsschnittstellen — IND.2.1.A1.1).",
+                "uuid": "72958e42-4475-569b-b549-0ac47bc4be0b"
+              },
+              {
+                "control-id": "ind.2.1.a1.2",
+                "description": "Component capability addressing control ind.2.1.a1.2 (Einschränkung des Zugriffs auf Konfigurations- und Wartungsschnittstellen — IND.2.1.A1.2).",
+                "uuid": "be97ce75-8a49-5e3a-b9d0-2f6779f419db"
+              },
+              {
+                "control-id": "ind.2.1.a1.3",
+                "description": "Component capability addressing control ind.2.1.a1.3 (Einschränkung des Zugriffs auf Konfigurations- und Wartungsschnittstellen — IND.2.1.A1.3).",
+                "uuid": "9ab162ef-6fb5-5a1c-b66f-2044b2f3a74b"
+              },
+              {
+                "control-id": "ind.2.1.a1.4",
+                "description": "Component capability addressing control ind.2.1.a1.4 (Einschränkung des Zugriffs auf Konfigurations- und Wartungsschnittstellen — IND.2.1.A1.4).",
+                "uuid": "7173b9fe-6359-5be4-85e7-e9994c211b1e"
+              },
+              {
+                "control-id": "ind.2.1.a1.5",
+                "description": "Component capability addressing control ind.2.1.a1.5 (Einschränkung des Zugriffs auf Konfigurations- und Wartungsschnittstellen — IND.2.1.A1.5).",
+                "uuid": "5fe2be11-776e-53d0-98b1-ddcaccd146df"
+              },
+              {
+                "control-id": "ind.2.1.a11.1",
+                "description": "Component capability addressing control ind.2.1.a11.1 (Wartung der ICS-Komponenten — IND.2.1.A11.1).",
+                "uuid": "05452548-96fe-50ec-9452-4ab7ef4119cd"
+              },
+              {
+                "control-id": "ind.2.1.a11.2",
+                "description": "Component capability addressing control ind.2.1.a11.2 (Wartung der ICS-Komponenten — IND.2.1.A11.2).",
+                "uuid": "f104e0a7-4088-54c4-b2d2-02c64cbe6898"
+              },
+              {
+                "control-id": "ind.2.1.a11.3",
+                "description": "Component capability addressing control ind.2.1.a11.3 (Wartung der ICS-Komponenten — IND.2.1.A11.3).",
+                "uuid": "2badeb8e-e34f-5648-9ecb-219ab063814e"
+              },
+              {
+                "control-id": "ind.2.1.a11.4",
+                "description": "Component capability addressing control ind.2.1.a11.4 (Wartung der ICS-Komponenten — IND.2.1.A11.4).",
+                "uuid": "51810e70-5426-587f-9743-2138a5558182"
+              },
+              {
+                "control-id": "ind.2.1.a13.1",
+                "description": "Component capability addressing control ind.2.1.a13.1 (Geeignete Inbetriebnahme von ICS-Komponenten — IND.2.1.A13.1).",
+                "uuid": "c01011e7-9cfd-5bdf-8a46-f78aae8dc5e6"
+              },
+              {
+                "control-id": "ind.2.1.a13.2",
+                "description": "Component capability addressing control ind.2.1.a13.2 (Geeignete Inbetriebnahme von ICS-Komponenten — IND.2.1.A13.2).",
+                "uuid": "5b2d5133-dba4-5378-8336-d47592ee3847"
+              },
+              {
+                "control-id": "ind.2.1.a16.1",
+                "description": "Component capability addressing control ind.2.1.a16.1 (Schutz externer Schnittstellen — IND.2.1.A16.1).",
+                "uuid": "8522cdee-54fc-52bb-b75b-2a394fb3c87b"
+              },
+              {
+                "control-id": "ind.2.1.a17.1",
+                "description": "Component capability addressing control ind.2.1.a17.1 (Nutzung sicherer Protokolle für die Übertragung von Mess- und Steuerdaten — IND.2.1.A17.1).",
+                "uuid": "c03ece66-133a-55bb-850b-db17d120d10a"
+              },
+              {
+                "control-id": "ind.2.1.a17.2",
+                "description": "Component capability addressing control ind.2.1.a17.2 (Nutzung sicherer Protokolle für die Übertragung von Mess- und Steuerdaten — IND.2.1.A17.2).",
+                "uuid": "7f2f53a1-2779-5949-9878-c0f568bad294"
+              },
+              {
+                "control-id": "ind.2.1.a17.3",
+                "description": "Component capability addressing control ind.2.1.a17.3 (Nutzung sicherer Protokolle für die Übertragung von Mess- und Steuerdaten — IND.2.1.A17.3).",
+                "uuid": "2222e21f-bef5-52ee-8f21-48ccd90406f9"
+              },
+              {
+                "control-id": "ind.2.1.a18.1",
+                "description": "Component capability addressing control ind.2.1.a18.1 (Kommunikation im Störfall — IND.2.1.A18.1).",
+                "uuid": "707fdde4-89dd-54c7-937d-bf8f36ca276e"
+              },
+              {
+                "control-id": "ind.2.1.a19.1",
+                "description": "Component capability addressing control ind.2.1.a19.1 (Security-Tests — IND.2.1.A19.1).",
+                "uuid": "d73f1951-bbe1-52e7-8fba-55961e591188"
+              },
+              {
+                "control-id": "ind.2.1.a19.2",
+                "description": "Component capability addressing control ind.2.1.a19.2 (Security-Tests — IND.2.1.A19.2).",
+                "uuid": "42dc844e-0ade-5c71-9f99-3d78e7ded1e6"
+              },
+              {
+                "control-id": "ind.2.1.a19.3",
+                "description": "Component capability addressing control ind.2.1.a19.3 (Security-Tests — IND.2.1.A19.3).",
+                "uuid": "3bb116b0-8828-5d99-856a-672c44c12aaf"
+              },
+              {
+                "control-id": "ind.2.1.a19.4",
+                "description": "Component capability addressing control ind.2.1.a19.4 (Security-Tests — IND.2.1.A19.4).",
+                "uuid": "f90e5d74-3db3-517b-a9ef-04fada83ba55"
+              },
+              {
+                "control-id": "ind.2.1.a19.5",
+                "description": "Component capability addressing control ind.2.1.a19.5 (Security-Tests — IND.2.1.A19.5).",
+                "uuid": "102ff7c1-3d6f-52aa-88b3-0435c20df364"
+              },
+              {
+                "control-id": "ind.2.1.a2.1",
+                "description": "Component capability addressing control ind.2.1.a2.1 (Nutzung sicherer Übertragungs-Protokolle für die Konfiguration und Wartung — IND.2.1.A2.1).",
+                "uuid": "899cf91f-f957-5333-b5cc-8e667391b495"
+              },
+              {
+                "control-id": "ind.2.1.a2.2",
+                "description": "Component capability addressing control ind.2.1.a2.2 (Nutzung sicherer Übertragungs-Protokolle für die Konfiguration und Wartung — IND.2.1.A2.2).",
+                "uuid": "a5c55bc5-879a-50b0-b2c7-379c812d221e"
+              },
+              {
+                "control-id": "ind.2.1.a20.1",
+                "description": "Component capability addressing control ind.2.1.a20.1 (Vertrauenswürdiger Code — IND.2.1.A20.1).",
+                "uuid": "45ee002f-6f28-5157-9260-fda1afaf7b26"
+              },
+              {
+                "control-id": "ind.2.1.a20.2",
+                "description": "Component capability addressing control ind.2.1.a20.2 (Vertrauenswürdiger Code — IND.2.1.A20.2).",
+                "uuid": "8e13ddc7-117b-57c6-b716-3c312ebc5658"
+              },
+              {
+                "control-id": "ind.2.1.a4.1",
+                "description": "Component capability addressing control ind.2.1.a4.1 (Deaktivierung oder Deinstallation nicht genutzter Dienste, Funktionen und Schnittstellen — IND.2.1.A4.1).",
+                "uuid": "5d840794-4972-5564-bddd-f4db2808eed5"
+              },
+              {
+                "control-id": "ind.2.1.a6.1",
+                "description": "Component capability addressing control ind.2.1.a6.1 (Netzsegmentierung — IND.2.1.A6.1).",
+                "uuid": "cac4c459-20e7-511d-aae7-537e242077d0"
+              },
+              {
+                "control-id": "ind.2.1.a6.2",
+                "description": "Component capability addressing control ind.2.1.a6.2 (Netzsegmentierung — IND.2.1.A6.2).",
+                "uuid": "a37b2fc4-faf7-537d-8d57-ad959e06d317"
+              },
+              {
+                "control-id": "ind.2.1.a6.3",
+                "description": "Component capability addressing control ind.2.1.a6.3 (Netzsegmentierung — IND.2.1.A6.3).",
+                "uuid": "85b86286-33c8-5f84-800a-3cb6e3071600"
+              },
+              {
+                "control-id": "ind.2.1.a7.1",
+                "description": "Component capability addressing control ind.2.1.a7.1 (Erstellung von Datensicherungen — IND.2.1.A7.1).",
+                "uuid": "85c0fc2d-1e79-5040-8373-4ca8b527e17c"
+              },
+              {
+                "control-id": "ind.2.1.a8.1",
+                "description": "Component capability addressing control ind.2.1.a8.1 (Schutz vor Schadsoftware — IND.2.1.A8.1).",
+                "uuid": "d4640e0f-046c-5a17-8af6-b0494f7bd1c7"
+              },
+              {
+                "control-id": "ind.2.1.a8.2",
+                "description": "Component capability addressing control ind.2.1.a8.2 (Schutz vor Schadsoftware — IND.2.1.A8.2).",
+                "uuid": "39d3fdef-6048-56ef-8b06-f8f2a83f0740"
+              },
+              {
+                "control-id": "ind.2.1.a8.3",
+                "description": "Component capability addressing control ind.2.1.a8.3 (Schutz vor Schadsoftware — IND.2.1.A8.3).",
+                "uuid": "c5741423-6852-5b37-bc59-8f7c2856dd3a"
+              },
+              {
+                "control-id": "ind.2.2.a1.1",
+                "description": "Component capability addressing control ind.2.2.a1.1 (Erweiterte Systemdokumentation für Speicherprogrammierbare Steuerungen — IND.2.2.A1.1).",
+                "uuid": "4e666b50-c214-5469-9201-277d6cde47b5"
+              },
+              {
+                "control-id": "ind.2.2.a1.2",
+                "description": "Component capability addressing control ind.2.2.a1.2 (Erweiterte Systemdokumentation für Speicherprogrammierbare Steuerungen — IND.2.2.A1.2).",
+                "uuid": "a4c89389-d221-5ea1-aed5-29a0fad7a05d"
+              },
+              {
+                "control-id": "ind.2.2.a3.1",
+                "description": "Component capability addressing control ind.2.2.a3.1 (Zeitsynchronisation — IND.2.2.A3.1).",
+                "uuid": "ed273892-7991-5345-add9-400afb575091"
+              },
+              {
+                "control-id": "ind.2.3.a1.1",
+                "description": "Component capability addressing control ind.2.3.a1.1 (Installation von Sensoren — IND.2.3.A1.1).",
+                "uuid": "074ab76d-1a9c-50c2-a9e1-e278fc573f0a"
+              },
+              {
+                "control-id": "ind.2.3.a1.2",
+                "description": "Component capability addressing control ind.2.3.a1.2 (Installation von Sensoren — IND.2.3.A1.2).",
+                "uuid": "63cfe1aa-0983-5cff-937e-1dd6a1b2e40d"
+              },
+              {
+                "control-id": "ind.2.3.a1.3",
+                "description": "Component capability addressing control ind.2.3.a1.3 (Installation von Sensoren — IND.2.3.A1.3).",
+                "uuid": "9e6845f4-c243-516e-b711-1a169eb19192"
+              },
+              {
+                "control-id": "ind.2.3.a2.1",
+                "description": "Component capability addressing control ind.2.3.a2.1 (Kalibrierung von Sensoren — IND.2.3.A2.1).",
+                "uuid": "46e76920-e6b0-54a3-b8f8-531eac292756"
+              },
+              {
+                "control-id": "ind.2.3.a2.2",
+                "description": "Component capability addressing control ind.2.3.a2.2 (Kalibrierung von Sensoren — IND.2.3.A2.2).",
+                "uuid": "4aff3baa-2c75-5594-81d5-31db87e04f18"
+              },
+              {
+                "control-id": "ind.2.3.a2.3",
+                "description": "Component capability addressing control ind.2.3.a2.3 (Kalibrierung von Sensoren — IND.2.3.A2.3).",
+                "uuid": "ff11f781-681c-5925-8d46-c49c87ce91f1"
+              },
+              {
+                "control-id": "ind.2.3.a3.1",
+                "description": "Component capability addressing control ind.2.3.a3.1 (Drahtlose Kommunikation — IND.2.3.A3.1).",
+                "uuid": "2db862ab-9ab4-5116-a383-79d606423fd3"
+              },
+              {
+                "control-id": "ind.2.3.a3.2",
+                "description": "Component capability addressing control ind.2.3.a3.2 (Drahtlose Kommunikation — IND.2.3.A3.2).",
+                "uuid": "149bc5e3-f4b9-52c8-8c14-22de8bc79d94"
+              },
+              {
+                "control-id": "ind.2.4.a1.1",
+                "description": "Component capability addressing control ind.2.4.a1.1 (Fernwartung durch Maschinen- und Anlagenbauende — IND.2.4.A1.1).",
+                "uuid": "2b130724-86c7-576e-8cb7-7ab7c441f000"
+              },
+              {
+                "control-id": "ind.2.4.a1.2",
+                "description": "Component capability addressing control ind.2.4.a1.2 (Fernwartung durch Maschinen- und Anlagenbauende — IND.2.4.A1.2).",
+                "uuid": "ca4030fa-2b90-5404-ac3a-d72533535081"
+              },
+              {
+                "control-id": "ind.2.4.a1.3",
+                "description": "Component capability addressing control ind.2.4.a1.3 (Fernwartung durch Maschinen- und Anlagenbauende — IND.2.4.A1.3).",
+                "uuid": "fef95a7b-64fb-5ed2-a049-78cf86e2904a"
+              },
+              {
+                "control-id": "ind.2.4.a1.4",
+                "description": "Component capability addressing control ind.2.4.a1.4 (Fernwartung durch Maschinen- und Anlagenbauende — IND.2.4.A1.4).",
+                "uuid": "c4d81a19-1209-5ff1-bdd8-89fd8b7da4e3"
+              },
+              {
+                "control-id": "ind.2.4.a1.5",
+                "description": "Component capability addressing control ind.2.4.a1.5 (Fernwartung durch Maschinen- und Anlagenbauende — IND.2.4.A1.5).",
+                "uuid": "bfd1e0ea-1aa2-5a6c-87ad-74ee761cffb7"
+              },
+              {
+                "control-id": "ind.2.4.a1.6",
+                "description": "Component capability addressing control ind.2.4.a1.6 (Fernwartung durch Maschinen- und Anlagenbauende — IND.2.4.A1.6).",
+                "uuid": "3a24516d-ab69-5d54-9f99-03c5a870d479"
+              },
+              {
+                "control-id": "ind.2.4.a2.1",
+                "description": "Component capability addressing control ind.2.4.a2.1 (Betrieb nach Ende der Gewährleistung — IND.2.4.A2.1).",
+                "uuid": "620db5aa-47e4-5317-85ca-5a9a56b88eea"
+              },
+              {
+                "control-id": "ind.2.4.a2.2",
+                "description": "Component capability addressing control ind.2.4.a2.2 (Betrieb nach Ende der Gewährleistung — IND.2.4.A2.2).",
+                "uuid": "b45d10a3-ed1c-51f8-ac28-bd5084bcf7d1"
+              },
+              {
+                "control-id": "ind.2.7.a1.1",
+                "description": "Component capability addressing control ind.2.7.a1.1 (Erfassung und Dokumentation — IND.2.7.A1.1).",
+                "uuid": "8e0e450f-6970-5cf1-b7c1-ca669c3d69fc"
+              },
+              {
+                "control-id": "ind.2.7.a10.1",
+                "description": "Component capability addressing control ind.2.7.a10.1 (Anzeige und Alarmierung von simulierten oder gebrückten Variablen — IND.2.7.A10.1).",
+                "uuid": "15de179a-be44-5534-9c9e-6a736c0c7198"
+              },
+              {
+                "control-id": "ind.2.7.a10.2",
+                "description": "Component capability addressing control ind.2.7.a10.2 (Anzeige und Alarmierung von simulierten oder gebrückten Variablen — IND.2.7.A10.2).",
+                "uuid": "fb5a210b-c80a-5687-96e3-79333531b3ec"
+              },
+              {
+                "control-id": "ind.2.7.a10.3",
+                "description": "Component capability addressing control ind.2.7.a10.3 (Anzeige und Alarmierung von simulierten oder gebrückten Variablen — IND.2.7.A10.3).",
+                "uuid": "447a9337-f2ea-56ce-9c9d-b66e7e0d9c08"
+              },
+              {
+                "control-id": "ind.2.7.a10.4",
+                "description": "Component capability addressing control ind.2.7.a10.4 (Anzeige und Alarmierung von simulierten oder gebrückten Variablen — IND.2.7.A10.4).",
+                "uuid": "38be8f2d-8bb1-5354-bc8c-0cdf9405a2e0"
+              },
+              {
+                "control-id": "ind.2.7.a11.1",
+                "description": "Component capability addressing control ind.2.7.a11.1 (Umgang mit integrierten Systemen — IND.2.7.A11.1).",
+                "uuid": "6ee055bc-4388-53d8-a388-71e5d05f1fbb"
+              },
+              {
+                "control-id": "ind.2.7.a12.1",
+                "description": "Component capability addressing control ind.2.7.a12.1 (Sicherstellen der Integrität und Authentizität von Anwendungsprogrammen und Konfigurationsdaten — IND.2.7.A12.1).",
+                "uuid": "9e6fb52f-9b3d-52ac-9c5d-b029680bc9c2"
+              },
+              {
+                "control-id": "ind.2.7.a12.2",
+                "description": "Component capability addressing control ind.2.7.a12.2 (Sicherstellen der Integrität und Authentizität von Anwendungsprogrammen und Konfigurationsdaten — IND.2.7.A12.2).",
+                "uuid": "a3488bd1-f184-5f60-9c48-792e0d2da6d7"
+              },
+              {
+                "control-id": "ind.2.7.a12.3",
+                "description": "Component capability addressing control ind.2.7.a12.3 (Sicherstellen der Integrität und Authentizität von Anwendungsprogrammen und Konfigurationsdaten — IND.2.7.A12.3).",
+                "uuid": "6cb1c25d-abc6-5953-9025-4cf1e364bc1b"
+              },
+              {
+                "control-id": "ind.2.7.a2.1",
+                "description": "Component capability addressing control ind.2.7.a2.1 (Zweckgebundene Nutzung der Hard- und Softwarekomponenten — IND.2.7.A2.1).",
+                "uuid": "6edc3c0e-6dce-5ac9-a46b-3df288063070"
+              },
+              {
+                "control-id": "ind.2.7.a3.1",
+                "description": "Component capability addressing control ind.2.7.a3.1 (Änderung des Anwendungsprogramms auf dem Logiksystem — IND.2.7.A3.1).",
+                "uuid": "f6dd2f22-f269-50b5-a2a3-8d5dc9711acf"
+              },
+              {
+                "control-id": "ind.2.7.a3.2",
+                "description": "Component capability addressing control ind.2.7.a3.2 (Änderung des Anwendungsprogramms auf dem Logiksystem — IND.2.7.A3.2).",
+                "uuid": "3a9d5ab4-6139-55cb-9227-a87a0f12f0d1"
+              },
+              {
+                "control-id": "ind.2.7.a3.3",
+                "description": "Component capability addressing control ind.2.7.a3.3 (Änderung des Anwendungsprogramms auf dem Logiksystem — IND.2.7.A3.3).",
+                "uuid": "1ead9569-a600-559b-8b2a-fc9b63d942e5"
+              },
+              {
+                "control-id": "ind.2.7.a4.1",
+                "description": "Component capability addressing control ind.2.7.a4.1 (Verankerung von Informationssicherheit im Functional Safety Management — IND.2.7.A4.1).",
+                "uuid": "1e90fbe3-3846-5998-b11f-afbce2d84027"
+              },
+              {
+                "control-id": "ind.2.7.a4.2",
+                "description": "Component capability addressing control ind.2.7.a4.2 (Verankerung von Informationssicherheit im Functional Safety Management — IND.2.7.A4.2).",
+                "uuid": "3c0e9e1c-6a60-597a-9a74-560e0aea975c"
+              },
+              {
+                "control-id": "ind.2.7.a5.1",
+                "description": "Component capability addressing control ind.2.7.a5.1 (Notfallmanagement von SIS — IND.2.7.A5.1).",
+                "uuid": "0a74fdd4-7e6c-5a79-ab64-727591f0bce5"
+              },
+              {
+                "control-id": "ind.2.7.a5.2",
+                "description": "Component capability addressing control ind.2.7.a5.2 (Notfallmanagement von SIS — IND.2.7.A5.2).",
+                "uuid": "1b0f72e6-09bd-5a87-a3cd-429ab4d5f519"
+              },
+              {
+                "control-id": "ind.2.7.a6.1",
+                "description": "Component capability addressing control ind.2.7.a6.1 (Sichere Planung und Spezifikation des SIS — IND.2.7.A6.1).",
+                "uuid": "20993cc8-e7f6-591e-aff2-9077ee0a6164"
+              },
+              {
+                "control-id": "ind.2.7.a7.1",
+                "description": "Component capability addressing control ind.2.7.a7.1 (Trennung und Unabhängigkeit des SIS von der Umgebung — IND.2.7.A7.1).",
+                "uuid": "427f7877-2708-58cb-8f0c-c746018b24b1"
+              },
+              {
+                "control-id": "ind.2.7.a7.2",
+                "description": "Component capability addressing control ind.2.7.a7.2 (Trennung und Unabhängigkeit des SIS von der Umgebung — IND.2.7.A7.2).",
+                "uuid": "3f548fd1-d05d-59f1-bcfe-13cf6678bf48"
+              },
+              {
+                "control-id": "ind.2.7.a8.1",
+                "description": "Component capability addressing control ind.2.7.a8.1 (Sichere Übertragung von Engineering Daten auf SIS — IND.2.7.A8.1).",
+                "uuid": "0c4f1c75-6e01-5675-8a13-b3192a506d41"
+              },
+              {
+                "control-id": "ind.2.7.a9.1",
+                "description": "Component capability addressing control ind.2.7.a9.1 (Absicherung der Daten- und Signalverbindungen — IND.2.7.A9.1).",
+                "uuid": "c7aff113-ab45-5e58-b070-afdfe552185a"
+              },
+              {
+                "control-id": "ind.3.2.a1.1",
+                "description": "Component capability addressing control ind.3.2.a1.1 (Planung des Einsatzes der Fernwartung in der OT — IND.3.2.A1.1).",
+                "uuid": "dc088aa7-3bb1-5a05-802c-f8a8107e587d"
+              },
+              {
+                "control-id": "ind.3.2.a1.10",
+                "description": "Component capability addressing control ind.3.2.a1.10 (Planung des Einsatzes der Fernwartung in der OT — IND.3.2.A1.10).",
+                "uuid": "2880831b-e372-5aff-af73-f67549bcb3da"
+              },
+              {
+                "control-id": "ind.3.2.a1.11",
+                "description": "Component capability addressing control ind.3.2.a1.11 (Planung des Einsatzes der Fernwartung in der OT — IND.3.2.A1.11).",
+                "uuid": "cc4fbb38-ea33-5051-b901-22dfd7ef9d20"
+              },
+              {
+                "control-id": "ind.3.2.a1.12",
+                "description": "Component capability addressing control ind.3.2.a1.12 (Planung des Einsatzes der Fernwartung in der OT — IND.3.2.A1.12).",
+                "uuid": "118e5bc5-0081-5a5a-86ae-518fc6a97b07"
+              },
+              {
+                "control-id": "ind.3.2.a1.13",
+                "description": "Component capability addressing control ind.3.2.a1.13 (Planung des Einsatzes der Fernwartung in der OT — IND.3.2.A1.13).",
+                "uuid": "ba27452c-d75a-54cb-85b8-69b2e816878a"
+              },
+              {
+                "control-id": "ind.3.2.a1.14",
+                "description": "Component capability addressing control ind.3.2.a1.14 (Planung des Einsatzes der Fernwartung in der OT — IND.3.2.A1.14).",
+                "uuid": "de8f00e6-56d2-52c7-9538-4ef7b7357058"
+              },
+              {
+                "control-id": "ind.3.2.a1.2",
+                "description": "Component capability addressing control ind.3.2.a1.2 (Planung des Einsatzes der Fernwartung in der OT — IND.3.2.A1.2).",
+                "uuid": "826bf976-02f8-57b5-95d0-28e5f472817d"
+              },
+              {
+                "control-id": "ind.3.2.a1.3",
+                "description": "Component capability addressing control ind.3.2.a1.3 (Planung des Einsatzes der Fernwartung in der OT — IND.3.2.A1.3).",
+                "uuid": "1ebe7e50-6979-55c2-93f3-6fd594d0e351"
+              },
+              {
+                "control-id": "ind.3.2.a1.4",
+                "description": "Component capability addressing control ind.3.2.a1.4 (Planung des Einsatzes der Fernwartung in der OT — IND.3.2.A1.4).",
+                "uuid": "98dbb5be-1dc8-564a-9a2b-8e55d6ddce8c"
+              },
+              {
+                "control-id": "ind.3.2.a1.5",
+                "description": "Component capability addressing control ind.3.2.a1.5 (Planung des Einsatzes der Fernwartung in der OT — IND.3.2.A1.5).",
+                "uuid": "7fdfc13e-1f66-5eab-b5cd-5eab0ebc8f0a"
+              },
+              {
+                "control-id": "ind.3.2.a1.6",
+                "description": "Component capability addressing control ind.3.2.a1.6 (Planung des Einsatzes der Fernwartung in der OT — IND.3.2.A1.6).",
+                "uuid": "c8c3295d-e118-5192-930e-2d592e1382be"
+              },
+              {
+                "control-id": "ind.3.2.a1.7",
+                "description": "Component capability addressing control ind.3.2.a1.7 (Planung des Einsatzes der Fernwartung in der OT — IND.3.2.A1.7).",
+                "uuid": "752c3adc-6f21-56b0-b984-ef03f2cde108"
+              },
+              {
+                "control-id": "ind.3.2.a1.8",
+                "description": "Component capability addressing control ind.3.2.a1.8 (Planung des Einsatzes der Fernwartung in der OT — IND.3.2.A1.8).",
+                "uuid": "9ab9007c-7fe0-58e2-8819-25dc70c7ac7b"
+              },
+              {
+                "control-id": "ind.3.2.a1.9",
+                "description": "Component capability addressing control ind.3.2.a1.9 (Planung des Einsatzes der Fernwartung in der OT — IND.3.2.A1.9).",
+                "uuid": "866d0526-3474-5563-94de-3e5d5b3b7963"
+              },
+              {
+                "control-id": "ind.3.2.a10.1",
+                "description": "Component capability addressing control ind.3.2.a10.1 (Beobachtung und Kontrolle von OT-Fernwartungssitzungen — IND.3.2.A10.1).",
+                "uuid": "162579e2-c19c-5f9a-bb62-3dc0bd07875b"
+              },
+              {
+                "control-id": "ind.3.2.a10.2",
+                "description": "Component capability addressing control ind.3.2.a10.2 (Beobachtung und Kontrolle von OT-Fernwartungssitzungen — IND.3.2.A10.2).",
+                "uuid": "107341a9-4ffd-509d-8fdc-fde54cad63a0"
+              },
+              {
+                "control-id": "ind.3.2.a10.3",
+                "description": "Component capability addressing control ind.3.2.a10.3 (Beobachtung und Kontrolle von OT-Fernwartungssitzungen — IND.3.2.A10.3).",
+                "uuid": "16ea5635-c38f-5148-af25-a789a7533d03"
+              },
+              {
+                "control-id": "ind.3.2.a10.4",
+                "description": "Component capability addressing control ind.3.2.a10.4 (Beobachtung und Kontrolle von OT-Fernwartungssitzungen — IND.3.2.A10.4).",
+                "uuid": "47fa654d-357f-57bf-b8fd-e9d37bf24ea4"
+              },
+              {
+                "control-id": "ind.3.2.a11.1",
+                "description": "Component capability addressing control ind.3.2.a11.1 (Zentrale Verwaltung aller Konten für die OT-Fernwartung — IND.3.2.A11.1).",
+                "uuid": "1b72399d-fa68-52ad-ace6-81051fac27f6"
+              },
+              {
+                "control-id": "ind.3.2.a12.1",
+                "description": "Component capability addressing control ind.3.2.a12.1 (Dedizierte Fernwartungslösung in der OT — IND.3.2.A12.1).",
+                "uuid": "7ee32b09-45d6-5472-8f24-e6e99cd92c73"
+              },
+              {
+                "control-id": "ind.3.2.a12.2",
+                "description": "Component capability addressing control ind.3.2.a12.2 (Dedizierte Fernwartungslösung in der OT — IND.3.2.A12.2).",
+                "uuid": "24501084-e1ee-5fcd-a052-72bd5c6ed55d"
+              },
+              {
+                "control-id": "ind.3.2.a12.3",
+                "description": "Component capability addressing control ind.3.2.a12.3 (Dedizierte Fernwartungslösung in der OT — IND.3.2.A12.3).",
+                "uuid": "720ce9a0-29df-576c-9d9b-45ebc67d35c9"
+              },
+              {
+                "control-id": "ind.3.2.a13.1",
+                "description": "Component capability addressing control ind.3.2.a13.1 (Protokollierung der Inhalte von Fernwartungszugriffen in der OT — IND.3.2.A13.1).",
+                "uuid": "8f394b35-e4b8-5d96-8d7d-7d81c41a7f4e"
+              },
+              {
+                "control-id": "ind.3.2.a13.2",
+                "description": "Component capability addressing control ind.3.2.a13.2 (Protokollierung der Inhalte von Fernwartungszugriffen in der OT — IND.3.2.A13.2).",
+                "uuid": "548d75b0-ac0c-5009-879a-a5c2b33596c4"
+              },
+              {
+                "control-id": "ind.3.2.a14.1",
+                "description": "Component capability addressing control ind.3.2.a14.1 (Technische Kontrolle von Fernwartungssitzungen — IND.3.2.A14.1).",
+                "uuid": "690ea6ac-fe1a-562d-b173-ccd405de036e"
+              },
+              {
+                "control-id": "ind.3.2.a14.2",
+                "description": "Component capability addressing control ind.3.2.a14.2 (Technische Kontrolle von Fernwartungssitzungen — IND.3.2.A14.2).",
+                "uuid": "725aea83-d571-5ea6-969e-1f95a9c206fd"
+              },
+              {
+                "control-id": "ind.3.2.a14.3",
+                "description": "Component capability addressing control ind.3.2.a14.3 (Technische Kontrolle von Fernwartungssitzungen — IND.3.2.A14.3).",
+                "uuid": "40f1e9e9-ddce-52e9-ab21-f6118f1c3925"
+              },
+              {
+                "control-id": "ind.3.2.a14.4",
+                "description": "Component capability addressing control ind.3.2.a14.4 (Technische Kontrolle von Fernwartungssitzungen — IND.3.2.A14.4).",
+                "uuid": "0974c162-16ab-57b0-9783-153b2889fd7b"
+              },
+              {
+                "control-id": "ind.3.2.a2.1",
+                "description": "Component capability addressing control ind.3.2.a2.1 (Konsistente Dokumentation der Fernwartung durch OT sowie Büro- und Gebäude-IT — IND.3.2.A2.1).",
+                "uuid": "d4d6f766-b6b8-5447-a703-0c33c4348a61"
+              },
+              {
+                "control-id": "ind.3.2.a2.2",
+                "description": "Component capability addressing control ind.3.2.a2.2 (Konsistente Dokumentation der Fernwartung durch OT sowie Büro- und Gebäude-IT — IND.3.2.A2.2).",
+                "uuid": "89a77584-b98e-5476-8925-2359c739a0ec"
+              },
+              {
+                "control-id": "ind.3.2.a3.1",
+                "description": "Component capability addressing control ind.3.2.a3.1 (Regelmäßige Prüfungen sowie Ausnahmegenehmigungen bestehender OT-Fernwartungszugänge — IND.3.2.A3.1).",
+                "uuid": "1c4766f7-5dbb-5b69-a7a2-665a6b6551f0"
+              },
+              {
+                "control-id": "ind.3.2.a3.2",
+                "description": "Component capability addressing control ind.3.2.a3.2 (Regelmäßige Prüfungen sowie Ausnahmegenehmigungen bestehender OT-Fernwartungszugänge — IND.3.2.A3.2).",
+                "uuid": "078d271c-e170-5bda-ba0b-c272c1cd302c"
+              },
+              {
+                "control-id": "ind.3.2.a4.1",
+                "description": "Component capability addressing control ind.3.2.a4.1 (Verbindliche Regelung der OT-Fernwartung durch Dritte — IND.3.2.A4.1).",
+                "uuid": "0240d57e-08d3-54e3-977f-d78609e109e9"
+              },
+              {
+                "control-id": "ind.3.2.a4.2",
+                "description": "Component capability addressing control ind.3.2.a4.2 (Verbindliche Regelung der OT-Fernwartung durch Dritte — IND.3.2.A4.2).",
+                "uuid": "ebf0781b-c187-5d18-9b73-ef9f81bec92f"
+              },
+              {
+                "control-id": "ind.3.2.a4.3",
+                "description": "Component capability addressing control ind.3.2.a4.3 (Verbindliche Regelung der OT-Fernwartung durch Dritte — IND.3.2.A4.3).",
+                "uuid": "77541c5a-cabc-5068-8eee-b1b9cee960ef"
+              },
+              {
+                "control-id": "ind.3.2.a4.4",
+                "description": "Component capability addressing control ind.3.2.a4.4 (Verbindliche Regelung der OT-Fernwartung durch Dritte — IND.3.2.A4.4).",
+                "uuid": "92b2d565-1a65-5996-ad98-6c7332fa90eb"
+              },
+              {
+                "control-id": "ind.3.2.a4.5",
+                "description": "Component capability addressing control ind.3.2.a4.5 (Verbindliche Regelung der OT-Fernwartung durch Dritte — IND.3.2.A4.5).",
+                "uuid": "bd6f5865-4442-5642-ac78-d3069fd31cea"
+              },
+              {
+                "control-id": "ind.3.2.a4.6",
+                "description": "Component capability addressing control ind.3.2.a4.6 (Verbindliche Regelung der OT-Fernwartung durch Dritte — IND.3.2.A4.6).",
+                "uuid": "71d131c8-5e0f-550e-8fd9-1520a5ceceb9"
+              },
+              {
+                "control-id": "ind.3.2.a4.7",
+                "description": "Component capability addressing control ind.3.2.a4.7 (Verbindliche Regelung der OT-Fernwartung durch Dritte — IND.3.2.A4.7).",
+                "uuid": "75eff3c9-f598-5b0f-bb1a-e4cb92569149"
+              },
+              {
+                "control-id": "ind.3.2.a5.1",
+                "description": "Component capability addressing control ind.3.2.a5.1 (Interne Abstimmung für die OT-Fernwartung mit der Büro- und Gebäude-IT — IND.3.2.A5.1).",
+                "uuid": "d9035138-bac7-54a4-add2-317221f79ed8"
+              },
+              {
+                "control-id": "ind.3.2.a5.2",
+                "description": "Component capability addressing control ind.3.2.a5.2 (Interne Abstimmung für die OT-Fernwartung mit der Büro- und Gebäude-IT — IND.3.2.A5.2).",
+                "uuid": "96f50b88-4fc5-5789-a251-ccee04a57272"
+              },
+              {
+                "control-id": "ind.3.2.a5.3",
+                "description": "Component capability addressing control ind.3.2.a5.3 (Interne Abstimmung für die OT-Fernwartung mit der Büro- und Gebäude-IT — IND.3.2.A5.3).",
+                "uuid": "1b0ec88a-39fb-5f9e-b6c7-e8120f3ad9c4"
+              },
+              {
+                "control-id": "ind.3.2.a5.4",
+                "description": "Component capability addressing control ind.3.2.a5.4 (Interne Abstimmung für die OT-Fernwartung mit der Büro- und Gebäude-IT — IND.3.2.A5.4).",
+                "uuid": "b7bd004d-a4ef-5bed-be1b-e8e00d32c83d"
+              },
+              {
+                "control-id": "ind.3.2.a5.5",
+                "description": "Component capability addressing control ind.3.2.a5.5 (Interne Abstimmung für die OT-Fernwartung mit der Büro- und Gebäude-IT — IND.3.2.A5.5).",
+                "uuid": "b73902d7-66f0-5a12-86ab-dfb37ec65a9f"
+              },
+              {
+                "control-id": "ind.3.2.a5.6",
+                "description": "Component capability addressing control ind.3.2.a5.6 (Interne Abstimmung für die OT-Fernwartung mit der Büro- und Gebäude-IT — IND.3.2.A5.6).",
+                "uuid": "fa6a9eff-fa42-54af-aafb-4c9aa43bd97f"
+              },
+              {
+                "control-id": "ind.3.2.a6.1",
+                "description": "Component capability addressing control ind.3.2.a6.1 (Absicherung jedes Fernwartungszugriffs auf die OT — IND.3.2.A6.1).",
+                "uuid": "697c9a54-f5f1-52d0-96b0-378f7066c8ab"
+              },
+              {
+                "control-id": "ind.3.2.a6.2",
+                "description": "Component capability addressing control ind.3.2.a6.2 (Absicherung jedes Fernwartungszugriffs auf die OT — IND.3.2.A6.2).",
+                "uuid": "87f370d6-e368-51f0-8fcc-69cd9413f129"
+              },
+              {
+                "control-id": "ind.3.2.a6.3",
+                "description": "Component capability addressing control ind.3.2.a6.3 (Absicherung jedes Fernwartungszugriffs auf die OT — IND.3.2.A6.3).",
+                "uuid": "a20445e7-fff0-5996-8e11-e135095c09b9"
+              },
+              {
+                "control-id": "ind.3.2.a6.4",
+                "description": "Component capability addressing control ind.3.2.a6.4 (Absicherung jedes Fernwartungszugriffs auf die OT — IND.3.2.A6.4).",
+                "uuid": "4e75e935-de35-554c-b2da-7d10a7b90e9f"
+              },
+              {
+                "control-id": "ind.3.2.a6.5",
+                "description": "Component capability addressing control ind.3.2.a6.5 (Absicherung jedes Fernwartungszugriffs auf die OT — IND.3.2.A6.5).",
+                "uuid": "725f2a4b-a280-5828-a77a-cab899df968c"
+              },
+              {
+                "control-id": "ind.3.2.a7.1",
+                "description": "Component capability addressing control ind.3.2.a7.1 (Technische Entkopplung von Zugriffen — IND.3.2.A7.1).",
+                "uuid": "aa0b69ad-f575-57c6-8d08-7b5811645b20"
+              },
+              {
+                "control-id": "ind.3.2.a7.2",
+                "description": "Component capability addressing control ind.3.2.a7.2 (Technische Entkopplung von Zugriffen — IND.3.2.A7.2).",
+                "uuid": "2a7e4c78-b0bd-582d-b676-672810c66a8a"
+              },
+              {
+                "control-id": "ind.3.2.a7.3",
+                "description": "Component capability addressing control ind.3.2.a7.3 (Technische Entkopplung von Zugriffen — IND.3.2.A7.3).",
+                "uuid": "94bc09fc-acb7-5835-b271-3866cfb8294d"
+              },
+              {
+                "control-id": "ind.3.2.a7.4",
+                "description": "Component capability addressing control ind.3.2.a7.4 (Technische Entkopplung von Zugriffen — IND.3.2.A7.4).",
+                "uuid": "aac41fab-7492-5688-b378-1d819aa1d702"
+              },
+              {
+                "control-id": "ind.3.2.a7.5",
+                "description": "Component capability addressing control ind.3.2.a7.5 (Technische Entkopplung von Zugriffen — IND.3.2.A7.5).",
+                "uuid": "8a148af6-f2a9-50a2-b2b4-6e46bd9edd40"
+              },
+              {
+                "control-id": "ind.3.2.a8.1",
+                "description": "Component capability addressing control ind.3.2.a8.1 (Explizite Freigabe jeder OT-Fernwartungssitzung — IND.3.2.A8.1).",
+                "uuid": "cf3f96bb-fed8-5e46-84c3-3f48139353fe"
+              },
+              {
+                "control-id": "ind.3.2.a8.2",
+                "description": "Component capability addressing control ind.3.2.a8.2 (Explizite Freigabe jeder OT-Fernwartungssitzung — IND.3.2.A8.2).",
+                "uuid": "be8dfd78-4b08-5f0b-b19a-62c9908771b7"
+              },
+              {
+                "control-id": "ind.3.2.a8.3",
+                "description": "Component capability addressing control ind.3.2.a8.3 (Explizite Freigabe jeder OT-Fernwartungssitzung — IND.3.2.A8.3).",
+                "uuid": "2a035423-5b51-5d90-bfc3-a788cc91ed3c"
+              },
+              {
+                "control-id": "ind.3.2.a8.4",
+                "description": "Component capability addressing control ind.3.2.a8.4 (Explizite Freigabe jeder OT-Fernwartungssitzung — IND.3.2.A8.4).",
+                "uuid": "216128f9-b2f2-5023-be1f-de518c3c0de8"
+              },
+              {
+                "control-id": "ind.3.2.a8.5",
+                "description": "Component capability addressing control ind.3.2.a8.5 (Explizite Freigabe jeder OT-Fernwartungssitzung — IND.3.2.A8.5).",
+                "uuid": "0d97231d-8a49-51e3-8f96-593784687e44"
+              },
+              {
+                "control-id": "ind.3.2.a9.1",
+                "description": "Component capability addressing control ind.3.2.a9.1 (Sicherer Austausch von Dateien begleitend zur OT-Fernwartung — IND.3.2.A9.1).",
+                "uuid": "34bc6ed7-9982-5acd-b7c0-9616b49a5ab6"
+              },
+              {
+                "control-id": "ind.3.2.a9.2",
+                "description": "Component capability addressing control ind.3.2.a9.2 (Sicherer Austausch von Dateien begleitend zur OT-Fernwartung — IND.3.2.A9.2).",
+                "uuid": "c1cab1e3-af63-5e05-89a4-cb740995148b"
+              },
+              {
+                "control-id": "ind.3.2.a9.3",
+                "description": "Component capability addressing control ind.3.2.a9.3 (Sicherer Austausch von Dateien begleitend zur OT-Fernwartung — IND.3.2.A9.3).",
+                "uuid": "8e68312b-b089-5bf2-93e0-2334a6465758"
+              },
+              {
+                "control-id": "ind.3.2.a9.4",
+                "description": "Component capability addressing control ind.3.2.a9.4 (Sicherer Austausch von Dateien begleitend zur OT-Fernwartung — IND.3.2.A9.4).",
+                "uuid": "9fce0fe8-5166-518f-924f-1d2ca87922cf"
+              }
+            ],
+            "source": "./catalog.json",
+            "uuid": "47eb4bc2-1cc8-5611-87d4-535c60e18042"
+          }
+        ],
+        "description": "Enterprise technical and operational capabilities implementing controls for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "title": "IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT Platform Component",
+        "type": "software",
+        "uuid": "3243cc2a-c6c0-55c1-af04-4947d77568f9"
+      }
+    ],
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:12Z",
+      "oscal-version": "1.2.3",
+      "title": "IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT Component Definition Template",
+      "version": "1"
+    },
+    "uuid": "74002d2c-b12a-5430-8426-89be8e359ad4"
+  }
+}

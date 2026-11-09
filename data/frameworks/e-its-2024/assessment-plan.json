@@ -1,0 +1,84 @@
+{
+  "assessment-plan": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:13Z",
+      "oscal-version": "1.2.3",
+      "title": "E-ITS 2024 Security Assessment Plan Template",
+      "version": "1"
+    },
+    "reviewed-controls": {
+      "control-selections": [
+        {
+          "description": "All controls in E-ITS 2024",
+          "include-all": {}
+        }
+      ]
+    },
+    "tasks": [
+      {
+        "description": "Verify and examine implementation of 291 controls in the Rakendused family for E-ITS 2024.",
+        "title": "Assess Family APP (Rakendused)",
+        "type": "examination",
+        "uuid": "5470303e-3541-5e28-858f-2e692c1ee55d"
+      },
+      {
+        "description": "Verify and examine implementation of 126 controls in the Kontseptsioonid ja metoodikad family for E-ITS 2024.",
+        "title": "Assess Family CON (Kontseptsioonid ja metoodikad)",
+        "type": "examination",
+        "uuid": "f2868839-fe9f-5140-b49c-f2bbc6e7d6e0"
+      },
+      {
+        "description": "Verify and examine implementation of 111 controls in the Avastamine ja reageerimine family for E-ITS 2024.",
+        "title": "Assess Family DER (Avastamine ja reageerimine)",
+        "type": "examination",
+        "uuid": "d8ff03c7-36bc-5edb-8a01-e1d54d1856d3"
+      },
+      {
+        "description": "Verify and examine implementation of 69 controls in the Tööstuse IT family for E-ITS 2024.",
+        "title": "Assess Family IND (Tööstuse IT)",
+        "type": "examination",
+        "uuid": "d4801513-9de2-546e-a3dd-dfcc1db2f5ac"
+      },
+      {
+        "description": "Verify and examine implementation of 214 controls in the Taristu family for E-ITS 2024.",
+        "title": "Assess Family INF (Taristu)",
+        "type": "examination",
+        "uuid": "fc643b56-95f7-5a75-9aa4-ea2ead9baa39"
+      },
+      {
+        "description": "Verify and examine implementation of 16 controls in the Turbehaldus family for E-ITS 2024.",
+        "title": "Assess Family ISMS (Turbehaldus)",
+        "type": "examination",
+        "uuid": "de3f6231-43a1-5a03-8e44-76d6de7e605f"
+      },
+      {
+        "description": "Verify and examine implementation of 213 controls in the Võrgud ja side family for E-ITS 2024.",
+        "title": "Assess Family NET (Võrgud ja side)",
+        "type": "examination",
+        "uuid": "190650d5-3364-58c9-9851-7dc802179d6d"
+      },
+      {
+        "description": "Verify and examine implementation of 248 controls in the Käidutööd family for E-ITS 2024.",
+        "title": "Assess Family OPS (Käidutööd)",
+        "type": "examination",
+        "uuid": "3629b2a7-0df1-5f53-8b17-189ce15a8a39"
+      },
+      {
+        "description": "Verify and examine implementation of 55 controls in the Organisatsioon ja personal family for E-ITS 2024.",
+        "title": "Assess Family ORP (Organisatsioon ja personal)",
+        "type": "examination",
+        "uuid": "833b8d96-0dcd-5e39-8024-a9a8553f0aec"
+      },
+      {
+        "description": "Verify and examine implementation of 459 controls in the IT-süsteemid family for E-ITS 2024.",
+        "title": "Assess Family SYS (IT-süsteemid)",
+        "type": "examination",
+        "uuid": "84a5ecf1-915a-5c18-833c-3f64d6843ab4"
+      }
+    ],
+    "uuid": "e0e1c374-2508-5df6-8009-19d3e85d424b"
+  }
+}

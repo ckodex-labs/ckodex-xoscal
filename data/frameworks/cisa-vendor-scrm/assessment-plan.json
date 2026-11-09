@@ -1,0 +1,72 @@
+{
+  "assessment-plan": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:13Z",
+      "oscal-version": "1.2.3",
+      "title": "VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE Security Assessment Plan Template",
+      "version": "2"
+    },
+    "reviewed-controls": {
+      "control-selections": [
+        {
+          "description": "All controls in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE",
+          "include-all": {}
+        }
+      ]
+    },
+    "tasks": [
+      {
+        "description": "Verify and examine implementation of 5 controls in the General Controls family for VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "title": "Assess Family GENERAL (General Controls)",
+        "type": "examination",
+        "uuid": "7103fff0-bc39-5208-ac8e-34521a28f6d1"
+      },
+      {
+        "description": "Verify and examine implementation of 24 controls in the Supply Chain Management and Supplier Governance family for VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "title": "Assess Family _2 (Supply Chain Management and Supplier Governance)",
+        "type": "examination",
+        "uuid": "207a4406-2fb5-568a-b182-dcb24e7bb21f"
+      },
+      {
+        "description": "Verify and examine implementation of 34 controls in the Secure Design and Engineering family for VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "title": "Assess Family _3 (Secure Design and Engineering)",
+        "type": "examination",
+        "uuid": "888df740-727a-5f58-bba1-14b74b2abd73"
+      },
+      {
+        "description": "Verify and examine implementation of 81 controls in the Information Security family for VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "title": "Assess Family _4 (Information Security)",
+        "type": "examination",
+        "uuid": "14d4cb88-fc0c-5d59-b94a-d3b837af4bdd"
+      },
+      {
+        "description": "Verify and examine implementation of 33 controls in the Physical Security family for VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "title": "Assess Family _5 (Physical Security)",
+        "type": "examination",
+        "uuid": "5b04e97b-841d-5d08-81a6-e192f63e9709"
+      },
+      {
+        "description": "Verify and examine implementation of 36 controls in the Personnel Security family for VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "title": "Assess Family _6 (Personnel Security)",
+        "type": "examination",
+        "uuid": "54a6dede-88e3-55ba-8754-2a7a94e96782"
+      },
+      {
+        "description": "Verify and examine implementation of 30 controls in the Supply Chain Integrity family for VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "title": "Assess Family _7 (Supply Chain Integrity)",
+        "type": "examination",
+        "uuid": "5fe0879c-0ce2-59c8-8aa2-e1afc64e9faa"
+      },
+      {
+        "description": "Verify and examine implementation of 13 controls in the Supply Chain Resilience family for VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "title": "Assess Family _8 (Supply Chain Resilience)",
+        "type": "examination",
+        "uuid": "bcbd153e-7414-5f0c-b5e1-3c3659470efe"
+      }
+    ],
+    "uuid": "310446b7-0bab-58dc-833c-27b2184d0813"
+  }
+}

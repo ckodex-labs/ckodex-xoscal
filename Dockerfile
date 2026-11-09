@@ -48,9 +48,11 @@ FROM gcr.io/distroless/static-debian13:nonroot@sha256:e2e927ec666bae08560abb3c55
 FROM gcr.io/distroless/base-debian13:nonroot@sha256:a0d70d6a97cd697d9362bc2aae4a6560dd65817e365d0043b07325a97975dc91 AS runtime-true
 FROM runtime-${LANCEDB} AS runtime
 WORKDIR /data
+ENV XOSCAL_DATA_DIR=/data/frameworks
 COPY --from=builder /bin/xoscal-server /xoscal-server
 COPY --from=builder /bin/xoscal-backup /xoscal-backup
 COPY --from=builder /bin/xoscal-ctl /xoscal-ctl
+COPY --from=builder /app/data/frameworks /data/frameworks
 # Mount actual application YAML at /etc/xoscal/config.yaml, plus its referenced
 # TLS/auth files. k8s/server/configmap.yaml is a Kubernetes wrapper, not that file.
 EXPOSE 50051 9090

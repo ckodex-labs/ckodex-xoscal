@@ -1,0 +1,21 @@
+{
+  "plan-of-action-and-milestones": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:12Z",
+      "oscal-version": "1.2.3",
+      "title": "ANSSI - Guide d'hygiène informatique - version détaillée Plan of Action and Milestones Template",
+      "version": "4"
+    },
+    "poam-items": [
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "title": "Compliance Roadmap and Parameter Tailoring for ANSSI - Guide d'hygiène informatique - version détaillée",
+        "uuid": "7ea4f678-22c9-533a-871b-80e80da7f4a0"
+      }
+    ],
+    "uuid": "9e19a3f4-c9e7-50a0-8716-396dceac44e5"
+  }
+}

@@ -1,0 +1,1173 @@
+{
+  "component-definition": {
+    "components": [
+      {
+        "control-implementations": [
+          {
+            "description": "Security control implementations for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+            "implemented-requirements": [
+              {
+                "control-id": "orp.1.a1.1",
+                "description": "Component capability addressing control orp.1.a1.1 (Festlegung von Verantwortlichkeiten und Regelungen — ORP.1.A1.1).",
+                "uuid": "18243958-b414-5bef-bc43-aeea6745b65b"
+              },
+              {
+                "control-id": "orp.1.a1.2",
+                "description": "Component capability addressing control orp.1.a1.2 (Festlegung von Verantwortlichkeiten und Regelungen — ORP.1.A1.2).",
+                "uuid": "b270e817-b08c-5791-a8ae-4d0820f9c8f6"
+              },
+              {
+                "control-id": "orp.1.a1.3",
+                "description": "Component capability addressing control orp.1.a1.3 (Festlegung von Verantwortlichkeiten und Regelungen — ORP.1.A1.3).",
+                "uuid": "32407d77-c469-5db6-9169-bfc7fd8e248e"
+              },
+              {
+                "control-id": "orp.1.a1.4",
+                "description": "Component capability addressing control orp.1.a1.4 (Festlegung von Verantwortlichkeiten und Regelungen — ORP.1.A1.4).",
+                "uuid": "abba1e1a-346d-50f4-bcb3-ce23aae778e6"
+              },
+              {
+                "control-id": "orp.1.a13.1",
+                "description": "Component capability addressing control orp.1.a13.1 (Sicherheit bei Umzügen — ORP.1.A13.1).",
+                "uuid": "dfb231f7-3ee8-50d6-94ad-9fb101750228"
+              },
+              {
+                "control-id": "orp.1.a13.2",
+                "description": "Component capability addressing control orp.1.a13.2 (Sicherheit bei Umzügen — ORP.1.A13.2).",
+                "uuid": "e2f0e124-4f64-5c7c-b034-e34c87a57dd1"
+              },
+              {
+                "control-id": "orp.1.a13.3",
+                "description": "Component capability addressing control orp.1.a13.3 (Sicherheit bei Umzügen — ORP.1.A13.3).",
+                "uuid": "e5a89f9a-ecc5-54cf-b2ad-292826bb07cb"
+              },
+              {
+                "control-id": "orp.1.a15.1",
+                "description": "Component capability addressing control orp.1.a15.1 (Ansprechperson zu Informationssicherheitsfragen — ORP.1.A15.1).",
+                "uuid": "571c3651-ed8f-5aef-b792-07d654823f7c"
+              },
+              {
+                "control-id": "orp.1.a15.2",
+                "description": "Component capability addressing control orp.1.a15.2 (Ansprechperson zu Informationssicherheitsfragen — ORP.1.A15.2).",
+                "uuid": "a3ba072d-9e03-5216-ab6a-50efa16c8cd9"
+              },
+              {
+                "control-id": "orp.1.a15.3",
+                "description": "Component capability addressing control orp.1.a15.3 (Ansprechperson zu Informationssicherheitsfragen — ORP.1.A15.3).",
+                "uuid": "50f8faaf-12ff-56e5-afe7-e3042e73caaa"
+              },
+              {
+                "control-id": "orp.1.a16.1",
+                "description": "Component capability addressing control orp.1.a16.1 (Richtlinie zur sicheren IT-Nutzung — ORP.1.A16.1).",
+                "uuid": "c04ccbd9-61d9-5493-b03f-26cca2542a88"
+              },
+              {
+                "control-id": "orp.1.a16.10",
+                "description": "Component capability addressing control orp.1.a16.10 (Richtlinie zur sicheren IT-Nutzung — ORP.1.A16.10).",
+                "uuid": "06d9637e-56c6-54a6-866b-b83fe3646a5b"
+              },
+              {
+                "control-id": "orp.1.a16.11",
+                "description": "Component capability addressing control orp.1.a16.11 (Richtlinie zur sicheren IT-Nutzung — ORP.1.A16.11).",
+                "uuid": "fb5d2a0f-f1b2-5038-8d80-67cd20e51dc4"
+              },
+              {
+                "control-id": "orp.1.a16.2",
+                "description": "Component capability addressing control orp.1.a16.2 (Richtlinie zur sicheren IT-Nutzung — ORP.1.A16.2).",
+                "uuid": "566c1247-4b0c-5ff6-9778-bc7e8b256e24"
+              },
+              {
+                "control-id": "orp.1.a16.3",
+                "description": "Component capability addressing control orp.1.a16.3 (Richtlinie zur sicheren IT-Nutzung — ORP.1.A16.3).",
+                "uuid": "5ec959da-f6d3-523b-a56a-6d043d5b27e6"
+              },
+              {
+                "control-id": "orp.1.a16.4",
+                "description": "Component capability addressing control orp.1.a16.4 (Richtlinie zur sicheren IT-Nutzung — ORP.1.A16.4).",
+                "uuid": "f774f6f5-2e56-5780-8059-b96f2c0e624b"
+              },
+              {
+                "control-id": "orp.1.a16.5",
+                "description": "Component capability addressing control orp.1.a16.5 (Richtlinie zur sicheren IT-Nutzung — ORP.1.A16.5).",
+                "uuid": "078e3b84-6967-592b-945d-1b8d0e2d650e"
+              },
+              {
+                "control-id": "orp.1.a16.6",
+                "description": "Component capability addressing control orp.1.a16.6 (Richtlinie zur sicheren IT-Nutzung — ORP.1.A16.6).",
+                "uuid": "ff756b4b-d3a8-56c9-a539-e6e994a7a922"
+              },
+              {
+                "control-id": "orp.1.a16.7",
+                "description": "Component capability addressing control orp.1.a16.7 (Richtlinie zur sicheren IT-Nutzung — ORP.1.A16.7).",
+                "uuid": "e202e7d2-6148-52be-9227-36823126896f"
+              },
+              {
+                "control-id": "orp.1.a16.8",
+                "description": "Component capability addressing control orp.1.a16.8 (Richtlinie zur sicheren IT-Nutzung — ORP.1.A16.8).",
+                "uuid": "e42fda1d-bbb3-529a-abda-60870a7a287a"
+              },
+              {
+                "control-id": "orp.1.a16.9",
+                "description": "Component capability addressing control orp.1.a16.9 (Richtlinie zur sicheren IT-Nutzung — ORP.1.A16.9).",
+                "uuid": "f183a3d5-8400-5511-ad07-883bc11bf95f"
+              },
+              {
+                "control-id": "orp.1.a17.1",
+                "description": "Component capability addressing control orp.1.a17.1 (Mitführverbot von Mobiltelefonen — ORP.1.A17.1).",
+                "uuid": "aeca9e02-2c09-5001-9f17-7f25d06960f3"
+              },
+              {
+                "control-id": "orp.1.a17.2",
+                "description": "Component capability addressing control orp.1.a17.2 (Mitführverbot von Mobiltelefonen — ORP.1.A17.2).",
+                "uuid": "f8192fd1-8099-5fd3-91ff-2412890954e1"
+              },
+              {
+                "control-id": "orp.1.a2.1",
+                "description": "Component capability addressing control orp.1.a2.1 (Zuweisung der Zuständigkeiten — ORP.1.A2.1).",
+                "uuid": "62c0c8d2-69af-56ed-b83d-c336fc343308"
+              },
+              {
+                "control-id": "orp.1.a2.2",
+                "description": "Component capability addressing control orp.1.a2.2 (Zuweisung der Zuständigkeiten — ORP.1.A2.2).",
+                "uuid": "026ad139-76a4-5650-b240-b1ef9db0381b"
+              },
+              {
+                "control-id": "orp.1.a3.1",
+                "description": "Component capability addressing control orp.1.a3.1 (Beaufsichtigung oder Begleitung von Fremdpersonen — ORP.1.A3.1).",
+                "uuid": "a765e739-8085-5c27-8cef-45f0772a4029"
+              },
+              {
+                "control-id": "orp.1.a3.2",
+                "description": "Component capability addressing control orp.1.a3.2 (Beaufsichtigung oder Begleitung von Fremdpersonen — ORP.1.A3.2).",
+                "uuid": "ee91c421-6359-515b-bf22-103477dfe96f"
+              },
+              {
+                "control-id": "orp.1.a3.3",
+                "description": "Component capability addressing control orp.1.a3.3 (Beaufsichtigung oder Begleitung von Fremdpersonen — ORP.1.A3.3).",
+                "uuid": "c6fa63cc-7bf6-56cc-8446-b81e672a696a"
+              },
+              {
+                "control-id": "orp.1.a4.1",
+                "description": "Component capability addressing control orp.1.a4.1 (Funktionstrennung zwischen unvereinbaren Aufgaben — ORP.1.A4.1).",
+                "uuid": "bcdbbaf8-3a54-5bae-b849-9208cc185eb6"
+              },
+              {
+                "control-id": "orp.1.a4.2",
+                "description": "Component capability addressing control orp.1.a4.2 (Funktionstrennung zwischen unvereinbaren Aufgaben — ORP.1.A4.2).",
+                "uuid": "e2c26a0f-b866-59fc-80d2-e8fc9ebbf48f"
+              },
+              {
+                "control-id": "orp.1.a4.3",
+                "description": "Component capability addressing control orp.1.a4.3 (Funktionstrennung zwischen unvereinbaren Aufgaben — ORP.1.A4.3).",
+                "uuid": "1d1b1316-7fe9-5022-b4fa-b01c6713ef46"
+              },
+              {
+                "control-id": "orp.1.a8.1",
+                "description": "Component capability addressing control orp.1.a8.1 (Betriebsmittel- und Geräteverwaltung — ORP.1.A8.1).",
+                "uuid": "a1c1b4e9-daa8-5550-a988-f2e7838fe5bb"
+              },
+              {
+                "control-id": "orp.1.a8.2",
+                "description": "Component capability addressing control orp.1.a8.2 (Betriebsmittel- und Geräteverwaltung — ORP.1.A8.2).",
+                "uuid": "0f4a47e7-e56b-550e-bff3-436ca4f5e2fb"
+              },
+              {
+                "control-id": "orp.1.a8.3",
+                "description": "Component capability addressing control orp.1.a8.3 (Betriebsmittel- und Geräteverwaltung — ORP.1.A8.3).",
+                "uuid": "8f5a7e0a-be88-5e86-be62-87316a123ee9"
+              },
+              {
+                "control-id": "orp.1.a8.4",
+                "description": "Component capability addressing control orp.1.a8.4 (Betriebsmittel- und Geräteverwaltung — ORP.1.A8.4).",
+                "uuid": "e599a5f9-5a85-5de8-aac3-076fcdf21f65"
+              },
+              {
+                "control-id": "orp.2.a1.1",
+                "description": "Component capability addressing control orp.2.a1.1 (Geregelte Einarbeitung neuer Mitarbeitender — ORP.2.A1.1).",
+                "uuid": "fc55c13e-afca-51f6-a494-b441509b8544"
+              },
+              {
+                "control-id": "orp.2.a1.2",
+                "description": "Component capability addressing control orp.2.a1.2 (Geregelte Einarbeitung neuer Mitarbeitender — ORP.2.A1.2).",
+                "uuid": "9de71d81-b472-5649-8a72-7fced92e59ad"
+              },
+              {
+                "control-id": "orp.2.a1.3",
+                "description": "Component capability addressing control orp.2.a1.3 (Geregelte Einarbeitung neuer Mitarbeitender — ORP.2.A1.3).",
+                "uuid": "9d5beca3-a517-5d93-b028-75913097eeb0"
+              },
+              {
+                "control-id": "orp.2.a13.1",
+                "description": "Component capability addressing control orp.2.a13.1 (Sicherheitsüberprüfung — ORP.2.A13.1).",
+                "uuid": "4326d679-9464-59d7-8757-aa2c2800bba0"
+              },
+              {
+                "control-id": "orp.2.a13.2",
+                "description": "Component capability addressing control orp.2.a13.2 (Sicherheitsüberprüfung — ORP.2.A13.2).",
+                "uuid": "3987a4e8-a728-520b-8077-9909263040de"
+              },
+              {
+                "control-id": "orp.2.a13.3",
+                "description": "Component capability addressing control orp.2.a13.3 (Sicherheitsüberprüfung — ORP.2.A13.3).",
+                "uuid": "c3b682c1-1962-577d-b9f1-30cd8360e642"
+              },
+              {
+                "control-id": "orp.2.a14.1",
+                "description": "Component capability addressing control orp.2.a14.1 (Aufgaben und Zuständigkeiten von Mitarbeitenden — ORP.2.A14.1).",
+                "uuid": "3816782b-1be4-5af4-af47-58e451856fc0"
+              },
+              {
+                "control-id": "orp.2.a14.2",
+                "description": "Component capability addressing control orp.2.a14.2 (Aufgaben und Zuständigkeiten von Mitarbeitenden — ORP.2.A14.2).",
+                "uuid": "a0cb2df3-6518-5a8e-8c62-5c3273c6be8c"
+              },
+              {
+                "control-id": "orp.2.a14.3",
+                "description": "Component capability addressing control orp.2.a14.3 (Aufgaben und Zuständigkeiten von Mitarbeitenden — ORP.2.A14.3).",
+                "uuid": "b6d20efb-7016-5092-83e2-5c5d39c545a0"
+              },
+              {
+                "control-id": "orp.2.a14.4",
+                "description": "Component capability addressing control orp.2.a14.4 (Aufgaben und Zuständigkeiten von Mitarbeitenden — ORP.2.A14.4).",
+                "uuid": "2906e2cd-07e9-5fed-afe3-f16834d8bb2e"
+              },
+              {
+                "control-id": "orp.2.a14.5",
+                "description": "Component capability addressing control orp.2.a14.5 (Aufgaben und Zuständigkeiten von Mitarbeitenden — ORP.2.A14.5).",
+                "uuid": "c9dc3661-29d3-51b6-a113-a910e62bea1c"
+              },
+              {
+                "control-id": "orp.2.a15.1",
+                "description": "Component capability addressing control orp.2.a15.1 (Qualifikation des Personals — ORP.2.A15.1).",
+                "uuid": "79d2deb2-f9f8-57ba-ba1c-0c9cdd11df59"
+              },
+              {
+                "control-id": "orp.2.a15.2",
+                "description": "Component capability addressing control orp.2.a15.2 (Qualifikation des Personals — ORP.2.A15.2).",
+                "uuid": "e4213c3b-7a4d-5ebf-acf8-a9090e2f48ef"
+              },
+              {
+                "control-id": "orp.2.a15.3",
+                "description": "Component capability addressing control orp.2.a15.3 (Qualifikation des Personals — ORP.2.A15.3).",
+                "uuid": "aabe3d2a-5a87-50b8-9d9c-fad56904af05"
+              },
+              {
+                "control-id": "orp.2.a15.4",
+                "description": "Component capability addressing control orp.2.a15.4 (Qualifikation des Personals — ORP.2.A15.4).",
+                "uuid": "49cdf8c5-ce11-5c94-a668-1925180adfb1"
+              },
+              {
+                "control-id": "orp.2.a15.5",
+                "description": "Component capability addressing control orp.2.a15.5 (Qualifikation des Personals — ORP.2.A15.5).",
+                "uuid": "4dc24414-07f6-5d88-821c-42e3272a0a05"
+              },
+              {
+                "control-id": "orp.2.a15.6",
+                "description": "Component capability addressing control orp.2.a15.6 (Qualifikation des Personals — ORP.2.A15.6).",
+                "uuid": "abaf7586-dc6a-5b82-9519-17785c37f7e3"
+              },
+              {
+                "control-id": "orp.2.a2.1",
+                "description": "Component capability addressing control orp.2.a2.1 (Geregelte Verfahrensweise beim Weggang von Mitarbeitenden — ORP.2.A2.1).",
+                "uuid": "b75ed6ff-15f7-5e74-bf52-4f0dec24fc14"
+              },
+              {
+                "control-id": "orp.2.a2.10",
+                "description": "Component capability addressing control orp.2.a2.10 (Geregelte Verfahrensweise beim Weggang von Mitarbeitenden — ORP.2.A2.10).",
+                "uuid": "92e84fa4-5f8d-5e62-a540-91c9a65f84a1"
+              },
+              {
+                "control-id": "orp.2.a2.11",
+                "description": "Component capability addressing control orp.2.a2.11 (Geregelte Verfahrensweise beim Weggang von Mitarbeitenden — ORP.2.A2.11).",
+                "uuid": "21658454-c32e-5902-ade6-a10477b05a7b"
+              },
+              {
+                "control-id": "orp.2.a2.2",
+                "description": "Component capability addressing control orp.2.a2.2 (Geregelte Verfahrensweise beim Weggang von Mitarbeitenden — ORP.2.A2.2).",
+                "uuid": "fdfb67ca-dfac-5c04-bfd9-979d8c824a0b"
+              },
+              {
+                "control-id": "orp.2.a2.3",
+                "description": "Component capability addressing control orp.2.a2.3 (Geregelte Verfahrensweise beim Weggang von Mitarbeitenden — ORP.2.A2.3).",
+                "uuid": "5ce921dd-9db1-5a27-993a-fd880f6f8807"
+              },
+              {
+                "control-id": "orp.2.a2.4",
+                "description": "Component capability addressing control orp.2.a2.4 (Geregelte Verfahrensweise beim Weggang von Mitarbeitenden — ORP.2.A2.4).",
+                "uuid": "f65d0220-e920-5abb-8262-66899acaf168"
+              },
+              {
+                "control-id": "orp.2.a2.5",
+                "description": "Component capability addressing control orp.2.a2.5 (Geregelte Verfahrensweise beim Weggang von Mitarbeitenden — ORP.2.A2.5).",
+                "uuid": "e4d104f1-f4d1-5488-b2a7-687375e7ec37"
+              },
+              {
+                "control-id": "orp.2.a2.6",
+                "description": "Component capability addressing control orp.2.a2.6 (Geregelte Verfahrensweise beim Weggang von Mitarbeitenden — ORP.2.A2.6).",
+                "uuid": "010cc93c-02f5-5194-aa5b-fda6eee4a75a"
+              },
+              {
+                "control-id": "orp.2.a2.7",
+                "description": "Component capability addressing control orp.2.a2.7 (Geregelte Verfahrensweise beim Weggang von Mitarbeitenden — ORP.2.A2.7).",
+                "uuid": "aebdeb06-00bc-5985-abe2-6d60f2c7efe9"
+              },
+              {
+                "control-id": "orp.2.a2.8",
+                "description": "Component capability addressing control orp.2.a2.8 (Geregelte Verfahrensweise beim Weggang von Mitarbeitenden — ORP.2.A2.8).",
+                "uuid": "c41dff94-15d7-5240-9df7-c096b1dfb820"
+              },
+              {
+                "control-id": "orp.2.a2.9",
+                "description": "Component capability addressing control orp.2.a2.9 (Geregelte Verfahrensweise beim Weggang von Mitarbeitenden — ORP.2.A2.9).",
+                "uuid": "efef3f7b-8c8c-5fe0-b46b-2e41a4b6f331"
+              },
+              {
+                "control-id": "orp.2.a3.1",
+                "description": "Component capability addressing control orp.2.a3.1 (Festlegung von Vertretungsregelungen — ORP.2.A3.1).",
+                "uuid": "f2829808-b74f-5d3b-aa2f-223abdc7b2e6"
+              },
+              {
+                "control-id": "orp.2.a3.2",
+                "description": "Component capability addressing control orp.2.a3.2 (Festlegung von Vertretungsregelungen — ORP.2.A3.2).",
+                "uuid": "aa7f1280-46e5-52ee-94c4-2ad15078d80d"
+              },
+              {
+                "control-id": "orp.2.a3.3",
+                "description": "Component capability addressing control orp.2.a3.3 (Festlegung von Vertretungsregelungen — ORP.2.A3.3).",
+                "uuid": "a057a136-a701-5d65-a1c1-db43ac2714bd"
+              },
+              {
+                "control-id": "orp.2.a3.4",
+                "description": "Component capability addressing control orp.2.a3.4 (Festlegung von Vertretungsregelungen — ORP.2.A3.4).",
+                "uuid": "9bdc1215-d9ca-5a90-a9c5-0b1c80023597"
+              },
+              {
+                "control-id": "orp.2.a3.5",
+                "description": "Component capability addressing control orp.2.a3.5 (Festlegung von Vertretungsregelungen — ORP.2.A3.5).",
+                "uuid": "64e36577-e78e-5d86-b9f7-279f34213c4c"
+              },
+              {
+                "control-id": "orp.2.a3.6",
+                "description": "Component capability addressing control orp.2.a3.6 (Festlegung von Vertretungsregelungen — ORP.2.A3.6).",
+                "uuid": "d6073b36-6193-58a2-8257-c42b2f9437da"
+              },
+              {
+                "control-id": "orp.2.a4.1",
+                "description": "Component capability addressing control orp.2.a4.1 (Festlegung von Regelungen für den Einsatz von Fremdpersonal — ORP.2.A4.1).",
+                "uuid": "95a40831-8e46-594e-8969-d9c1c1b287bb"
+              },
+              {
+                "control-id": "orp.2.a4.2",
+                "description": "Component capability addressing control orp.2.a4.2 (Festlegung von Regelungen für den Einsatz von Fremdpersonal — ORP.2.A4.2).",
+                "uuid": "d51a44ec-b36c-50d9-a85c-f70c4992517c"
+              },
+              {
+                "control-id": "orp.2.a4.3",
+                "description": "Component capability addressing control orp.2.a4.3 (Festlegung von Regelungen für den Einsatz von Fremdpersonal — ORP.2.A4.3).",
+                "uuid": "45b45f0c-8bc8-55ee-99dc-ea500ee45dca"
+              },
+              {
+                "control-id": "orp.2.a4.4",
+                "description": "Component capability addressing control orp.2.a4.4 (Festlegung von Regelungen für den Einsatz von Fremdpersonal — ORP.2.A4.4).",
+                "uuid": "cd83bce0-9f30-574f-8ae9-64768e9054a4"
+              },
+              {
+                "control-id": "orp.2.a4.5",
+                "description": "Component capability addressing control orp.2.a4.5 (Festlegung von Regelungen für den Einsatz von Fremdpersonal — ORP.2.A4.5).",
+                "uuid": "4ce0eeab-061f-5a56-882c-a6d1d1e18063"
+              },
+              {
+                "control-id": "orp.2.a5.1",
+                "description": "Component capability addressing control orp.2.a5.1 (Vertraulichkeitsvereinbarungen für den Einsatz von Fremdpersonal — ORP.2.A5.1).",
+                "uuid": "b193bce4-a8a9-59b4-beb8-efa605350069"
+              },
+              {
+                "control-id": "orp.2.a5.2",
+                "description": "Component capability addressing control orp.2.a5.2 (Vertraulichkeitsvereinbarungen für den Einsatz von Fremdpersonal — ORP.2.A5.2).",
+                "uuid": "c072028a-8867-5a91-990a-4bd403832573"
+              },
+              {
+                "control-id": "orp.2.a7.1",
+                "description": "Component capability addressing control orp.2.a7.1 (Überprüfung der Vertrauenswürdigkeit von Mitarbeitenden — ORP.2.A7.1).",
+                "uuid": "901b8b2a-3fab-5a86-abeb-9b4fcf80ab8c"
+              },
+              {
+                "control-id": "orp.2.a7.2",
+                "description": "Component capability addressing control orp.2.a7.2 (Überprüfung der Vertrauenswürdigkeit von Mitarbeitenden — ORP.2.A7.2).",
+                "uuid": "f1b4b148-6fc5-5a82-bcf8-96072f5f96fc"
+              },
+              {
+                "control-id": "orp.2.a7.3",
+                "description": "Component capability addressing control orp.2.a7.3 (Überprüfung der Vertrauenswürdigkeit von Mitarbeitenden — ORP.2.A7.3).",
+                "uuid": "f02af74c-9612-5315-b549-41fcbf0605b8"
+              },
+              {
+                "control-id": "orp.2.a7.4",
+                "description": "Component capability addressing control orp.2.a7.4 (Überprüfung der Vertrauenswürdigkeit von Mitarbeitenden — ORP.2.A7.4).",
+                "uuid": "ab5455d7-4cf6-55f5-b1e6-ea1f322504a7"
+              },
+              {
+                "control-id": "orp.3.a1.1",
+                "description": "Component capability addressing control orp.3.a1.1 (Sensibilisierung der Institutionsleitung für Informationssicherheit — ORP.3.A1.1).",
+                "uuid": "c160b858-159a-5c00-aae7-5a74bab882d3"
+              },
+              {
+                "control-id": "orp.3.a1.2",
+                "description": "Component capability addressing control orp.3.a1.2 (Sensibilisierung der Institutionsleitung für Informationssicherheit — ORP.3.A1.2).",
+                "uuid": "d066e31c-2936-588f-a8b1-c3ea7fe6c8ae"
+              },
+              {
+                "control-id": "orp.3.a1.3",
+                "description": "Component capability addressing control orp.3.a1.3 (Sensibilisierung der Institutionsleitung für Informationssicherheit — ORP.3.A1.3).",
+                "uuid": "16c6e154-7071-52c6-8f90-cb726868437d"
+              },
+              {
+                "control-id": "orp.3.a1.4",
+                "description": "Component capability addressing control orp.3.a1.4 (Sensibilisierung der Institutionsleitung für Informationssicherheit — ORP.3.A1.4).",
+                "uuid": "fb74c124-3ed8-5879-b248-643e8fc9a4ab"
+              },
+              {
+                "control-id": "orp.3.a1.5",
+                "description": "Component capability addressing control orp.3.a1.5 (Sensibilisierung der Institutionsleitung für Informationssicherheit — ORP.3.A1.5).",
+                "uuid": "6e4859b4-0c77-5628-93dc-f848dee6bfa2"
+              },
+              {
+                "control-id": "orp.3.a1.6",
+                "description": "Component capability addressing control orp.3.a1.6 (Sensibilisierung der Institutionsleitung für Informationssicherheit — ORP.3.A1.6).",
+                "uuid": "ebd3ed7b-6587-5196-97f4-8f35892f57d8"
+              },
+              {
+                "control-id": "orp.3.a3.1",
+                "description": "Component capability addressing control orp.3.a3.1 (Einweisung des Personals in den sicheren Umgang mit IT — ORP.3.A3.1).",
+                "uuid": "043adc89-7ec8-5baf-a1ba-6b93407b94cc"
+              },
+              {
+                "control-id": "orp.3.a3.2",
+                "description": "Component capability addressing control orp.3.a3.2 (Einweisung des Personals in den sicheren Umgang mit IT — ORP.3.A3.2).",
+                "uuid": "9cfce4a1-3402-52a1-a216-609402219f5f"
+              },
+              {
+                "control-id": "orp.3.a3.3",
+                "description": "Component capability addressing control orp.3.a3.3 (Einweisung des Personals in den sicheren Umgang mit IT — ORP.3.A3.3).",
+                "uuid": "c5d8d78f-df8a-59cb-a6b6-095e1b952f5d"
+              },
+              {
+                "control-id": "orp.3.a4.1",
+                "description": "Component capability addressing control orp.3.a4.1 (Konzeption und Planung eines Sensibilisierungs- und Schulungsprogramms zur Informationssicherheit — ORP.3.A4.1).",
+                "uuid": "278e8f88-d09e-5192-8924-efcc3b1a46ac"
+              },
+              {
+                "control-id": "orp.3.a4.2",
+                "description": "Component capability addressing control orp.3.a4.2 (Konzeption und Planung eines Sensibilisierungs- und Schulungsprogramms zur Informationssicherheit — ORP.3.A4.2).",
+                "uuid": "702ef834-c060-58d5-a1fd-cb76be47fdf3"
+              },
+              {
+                "control-id": "orp.3.a4.3",
+                "description": "Component capability addressing control orp.3.a4.3 (Konzeption und Planung eines Sensibilisierungs- und Schulungsprogramms zur Informationssicherheit — ORP.3.A4.3).",
+                "uuid": "4619807a-2948-5cf3-9fb5-c6179ef85f4a"
+              },
+              {
+                "control-id": "orp.3.a4.4",
+                "description": "Component capability addressing control orp.3.a4.4 (Konzeption und Planung eines Sensibilisierungs- und Schulungsprogramms zur Informationssicherheit — ORP.3.A4.4).",
+                "uuid": "815640b2-0306-50b6-8be4-802933d8b15f"
+              },
+              {
+                "control-id": "orp.3.a4.5",
+                "description": "Component capability addressing control orp.3.a4.5 (Konzeption und Planung eines Sensibilisierungs- und Schulungsprogramms zur Informationssicherheit — ORP.3.A4.5).",
+                "uuid": "ee4bcb73-a6b3-536d-a16c-0cae17c55bb3"
+              },
+              {
+                "control-id": "orp.3.a4.6",
+                "description": "Component capability addressing control orp.3.a4.6 (Konzeption und Planung eines Sensibilisierungs- und Schulungsprogramms zur Informationssicherheit — ORP.3.A4.6).",
+                "uuid": "e3367b13-219b-5e20-a0b5-f0fc2bf36f1d"
+              },
+              {
+                "control-id": "orp.3.a6.1",
+                "description": "Component capability addressing control orp.3.a6.1 (Durchführung von Sensibilisierungen und Schulungen zur Informationssicherheit — ORP.3.A6.1).",
+                "uuid": "642aecc9-c07f-5e37-be44-e739ec7e0373"
+              },
+              {
+                "control-id": "orp.3.a7.1",
+                "description": "Component capability addressing control orp.3.a7.1 (Schulung zur Vorgehensweise nach IT-Grundschutz — ORP.3.A7.1).",
+                "uuid": "8f85c282-02db-595e-bef4-8ef68e03c5a8"
+              },
+              {
+                "control-id": "orp.3.a7.2",
+                "description": "Component capability addressing control orp.3.a7.2 (Schulung zur Vorgehensweise nach IT-Grundschutz — ORP.3.A7.2).",
+                "uuid": "3a5a1639-7109-5dbc-bf8b-c776db45ed5c"
+              },
+              {
+                "control-id": "orp.3.a7.3",
+                "description": "Component capability addressing control orp.3.a7.3 (Schulung zur Vorgehensweise nach IT-Grundschutz — ORP.3.A7.3).",
+                "uuid": "a930e77e-8f15-5ebf-bd29-13def3139354"
+              },
+              {
+                "control-id": "orp.3.a7.4",
+                "description": "Component capability addressing control orp.3.a7.4 (Schulung zur Vorgehensweise nach IT-Grundschutz — ORP.3.A7.4).",
+                "uuid": "4f76cc7c-a86c-58c3-9e08-39f243036670"
+              },
+              {
+                "control-id": "orp.3.a7.5",
+                "description": "Component capability addressing control orp.3.a7.5 (Schulung zur Vorgehensweise nach IT-Grundschutz — ORP.3.A7.5).",
+                "uuid": "c823c46e-7d9c-5238-91cc-56226743ab8a"
+              },
+              {
+                "control-id": "orp.3.a8.1",
+                "description": "Component capability addressing control orp.3.a8.1 (Messung und Auswertung des Lernerfolgs — ORP.3.A8.1).",
+                "uuid": "0275849d-7dcb-5858-b685-f27cc1a8bd5a"
+              },
+              {
+                "control-id": "orp.3.a8.2",
+                "description": "Component capability addressing control orp.3.a8.2 (Messung und Auswertung des Lernerfolgs — ORP.3.A8.2).",
+                "uuid": "73926245-6e88-598a-9eb6-8cc12b1e4b75"
+              },
+              {
+                "control-id": "orp.3.a8.3",
+                "description": "Component capability addressing control orp.3.a8.3 (Messung und Auswertung des Lernerfolgs — ORP.3.A8.3).",
+                "uuid": "12165ad8-e83d-50b2-b304-f6e4ee274f7d"
+              },
+              {
+                "control-id": "orp.3.a8.4",
+                "description": "Component capability addressing control orp.3.a8.4 (Messung und Auswertung des Lernerfolgs — ORP.3.A8.4).",
+                "uuid": "06c4d2b9-b30b-5bad-813d-ed3af229f07e"
+              },
+              {
+                "control-id": "orp.3.a9.1",
+                "description": "Component capability addressing control orp.3.a9.1 (Spezielle Schulung von exponierten Personen und Institutionen — ORP.3.A9.1).",
+                "uuid": "5a9dd9a9-c51a-5aa8-a8f8-8537d00c1cbe"
+              },
+              {
+                "control-id": "orp.4.a1.1",
+                "description": "Component capability addressing control orp.4.a1.1 (Regelung für die Einrichtung und Löschung von Benutzenden und Benutzendengruppen — ORP.4.A1.1).",
+                "uuid": "ce5de7b6-5a0a-57c3-b409-b3756af6c508"
+              },
+              {
+                "control-id": "orp.4.a1.2",
+                "description": "Component capability addressing control orp.4.a1.2 (Regelung für die Einrichtung und Löschung von Benutzenden und Benutzendengruppen — ORP.4.A1.2).",
+                "uuid": "0dffc82f-3c54-5323-b479-4fa959d1f7ad"
+              },
+              {
+                "control-id": "orp.4.a1.3",
+                "description": "Component capability addressing control orp.4.a1.3 (Regelung für die Einrichtung und Löschung von Benutzenden und Benutzendengruppen — ORP.4.A1.3).",
+                "uuid": "4c8384a9-2bf3-520d-9350-1bd5785756bf"
+              },
+              {
+                "control-id": "orp.4.a1.4",
+                "description": "Component capability addressing control orp.4.a1.4 (Regelung für die Einrichtung und Löschung von Benutzenden und Benutzendengruppen — ORP.4.A1.4).",
+                "uuid": "e29a180c-e7bf-5a11-b9c8-750f0ffd15d7"
+              },
+              {
+                "control-id": "orp.4.a1.5",
+                "description": "Component capability addressing control orp.4.a1.5 (Regelung für die Einrichtung und Löschung von Benutzenden und Benutzendengruppen — ORP.4.A1.5).",
+                "uuid": "31807860-64c6-5615-a0ae-13cc5fa447ca"
+              },
+              {
+                "control-id": "orp.4.a10.1",
+                "description": "Component capability addressing control orp.4.a10.1 (Schutz von Benutzendenkennungen mit weitreichenden Berechtigungen — ORP.4.A10.1).",
+                "uuid": "7440879b-adaa-5ce0-94db-7c9ef5debf69"
+              },
+              {
+                "control-id": "orp.4.a11.1",
+                "description": "Component capability addressing control orp.4.a11.1 (Zurücksetzen von Passwörtern — ORP.4.A11.1).",
+                "uuid": "dbccfb4d-6ac3-56bd-a138-e0c17d70ec78"
+              },
+              {
+                "control-id": "orp.4.a11.2",
+                "description": "Component capability addressing control orp.4.a11.2 (Zurücksetzen von Passwörtern — ORP.4.A11.2).",
+                "uuid": "8e3c6516-2952-5fdc-920e-122bdd545d66"
+              },
+              {
+                "control-id": "orp.4.a11.3",
+                "description": "Component capability addressing control orp.4.a11.3 (Zurücksetzen von Passwörtern — ORP.4.A11.3).",
+                "uuid": "78281a04-dfc9-5c01-9242-7dccc56b1d75"
+              },
+              {
+                "control-id": "orp.4.a12.1",
+                "description": "Component capability addressing control orp.4.a12.1 (Entwicklung eines Authentisierungskonzeptes für IT-Systeme und Anwendungen — ORP.4.A12.1).",
+                "uuid": "7532e083-6dd0-5f0e-b574-fcc0e3e7f7d2"
+              },
+              {
+                "control-id": "orp.4.a12.2",
+                "description": "Component capability addressing control orp.4.a12.2 (Entwicklung eines Authentisierungskonzeptes für IT-Systeme und Anwendungen — ORP.4.A12.2).",
+                "uuid": "c8860ac6-68b9-56f1-9a82-1fa3e68ff821"
+              },
+              {
+                "control-id": "orp.4.a12.3",
+                "description": "Component capability addressing control orp.4.a12.3 (Entwicklung eines Authentisierungskonzeptes für IT-Systeme und Anwendungen — ORP.4.A12.3).",
+                "uuid": "a48ebd7d-8fbd-5322-8bdc-ee4600ea7e70"
+              },
+              {
+                "control-id": "orp.4.a12.4",
+                "description": "Component capability addressing control orp.4.a12.4 (Entwicklung eines Authentisierungskonzeptes für IT-Systeme und Anwendungen — ORP.4.A12.4).",
+                "uuid": "6e1c5f08-8e65-5743-8fbb-218b8ac7cd1a"
+              },
+              {
+                "control-id": "orp.4.a13.1",
+                "description": "Component capability addressing control orp.4.a13.1 (Geeignete Auswahl von Authentisierungsmechanismen — ORP.4.A13.1).",
+                "uuid": "0fbe4bf8-97e7-55fa-b19e-e271f081caff"
+              },
+              {
+                "control-id": "orp.4.a13.2",
+                "description": "Component capability addressing control orp.4.a13.2 (Geeignete Auswahl von Authentisierungsmechanismen — ORP.4.A13.2).",
+                "uuid": "b316d98b-1d37-57f6-b659-2bb955a6b116"
+              },
+              {
+                "control-id": "orp.4.a13.3",
+                "description": "Component capability addressing control orp.4.a13.3 (Geeignete Auswahl von Authentisierungsmechanismen — ORP.4.A13.3).",
+                "uuid": "706bf28d-af19-5916-ad49-fd7df118dcd8"
+              },
+              {
+                "control-id": "orp.4.a13.4",
+                "description": "Component capability addressing control orp.4.a13.4 (Geeignete Auswahl von Authentisierungsmechanismen — ORP.4.A13.4).",
+                "uuid": "4b82a136-1ebd-5134-8bc9-002b99633618"
+              },
+              {
+                "control-id": "orp.4.a13.5",
+                "description": "Component capability addressing control orp.4.a13.5 (Geeignete Auswahl von Authentisierungsmechanismen — ORP.4.A13.5).",
+                "uuid": "a7be88ae-d25a-5d13-9270-16f22c960ca6"
+              },
+              {
+                "control-id": "orp.4.a14.1",
+                "description": "Component capability addressing control orp.4.a14.1 (Kontrolle der Wirksamkeit der Benutzendentrennung am IT-System bzw. an der Anwendung — ORP.4.A14.1).",
+                "uuid": "c69ebfc9-b308-5c25-9bd3-7d60f9c03312"
+              },
+              {
+                "control-id": "orp.4.a14.2",
+                "description": "Component capability addressing control orp.4.a14.2 (Kontrolle der Wirksamkeit der Benutzendentrennung am IT-System bzw. an der Anwendung — ORP.4.A14.2).",
+                "uuid": "12a2172c-948e-5dc9-a571-a6129595d1ea"
+              },
+              {
+                "control-id": "orp.4.a15.1",
+                "description": "Component capability addressing control orp.4.a15.1 (Vorgehensweise und Konzeption der Prozesse beim Identitäts- und Berechtigungsmanagement — ORP.4.A15.1).",
+                "uuid": "fdb2feb0-a09e-519c-994e-09faae6a8fbf"
+              },
+              {
+                "control-id": "orp.4.a15.2",
+                "description": "Component capability addressing control orp.4.a15.2 (Vorgehensweise und Konzeption der Prozesse beim Identitäts- und Berechtigungsmanagement — ORP.4.A15.2).",
+                "uuid": "026255ab-5b8b-5bd3-b2dd-8daf8ca8b64a"
+              },
+              {
+                "control-id": "orp.4.a15.3",
+                "description": "Component capability addressing control orp.4.a15.3 (Vorgehensweise und Konzeption der Prozesse beim Identitäts- und Berechtigungsmanagement — ORP.4.A15.3).",
+                "uuid": "0be8f758-857a-5387-9510-de908ee7b317"
+              },
+              {
+                "control-id": "orp.4.a15.4",
+                "description": "Component capability addressing control orp.4.a15.4 (Vorgehensweise und Konzeption der Prozesse beim Identitäts- und Berechtigungsmanagement — ORP.4.A15.4).",
+                "uuid": "7c0ebb82-be4c-5514-bbc0-2b9f43f493a3"
+              },
+              {
+                "control-id": "orp.4.a15.5",
+                "description": "Component capability addressing control orp.4.a15.5 (Vorgehensweise und Konzeption der Prozesse beim Identitäts- und Berechtigungsmanagement — ORP.4.A15.5).",
+                "uuid": "5746f5b4-9443-5fd6-9ad9-a410b309748f"
+              },
+              {
+                "control-id": "orp.4.a15.6",
+                "description": "Component capability addressing control orp.4.a15.6 (Vorgehensweise und Konzeption der Prozesse beim Identitäts- und Berechtigungsmanagement — ORP.4.A15.6).",
+                "uuid": "af9a7548-37a7-51a6-b9fa-123e8100f7de"
+              },
+              {
+                "control-id": "orp.4.a16.1",
+                "description": "Component capability addressing control orp.4.a16.1 (Richtlinien für die Zugriffs- und Zugangskontrolle — ORP.4.A16.1).",
+                "uuid": "e8532c55-5c30-5a34-805c-7d13aa83709c"
+              },
+              {
+                "control-id": "orp.4.a16.2",
+                "description": "Component capability addressing control orp.4.a16.2 (Richtlinien für die Zugriffs- und Zugangskontrolle — ORP.4.A16.2).",
+                "uuid": "2dde9d34-86a1-51e7-af37-68eb07023cfc"
+              },
+              {
+                "control-id": "orp.4.a16.3",
+                "description": "Component capability addressing control orp.4.a16.3 (Richtlinien für die Zugriffs- und Zugangskontrolle — ORP.4.A16.3).",
+                "uuid": "e5ac16fd-29cf-5944-85df-b251898fa3c0"
+              },
+              {
+                "control-id": "orp.4.a17.1",
+                "description": "Component capability addressing control orp.4.a17.1 (Geeignete Auswahl von Identitäts- und Berechtigungsmanagement-Systemen — ORP.4.A17.1).",
+                "uuid": "20242b2a-702a-55c3-9994-6998a273964f"
+              },
+              {
+                "control-id": "orp.4.a17.2",
+                "description": "Component capability addressing control orp.4.a17.2 (Geeignete Auswahl von Identitäts- und Berechtigungsmanagement-Systemen — ORP.4.A17.2).",
+                "uuid": "7c46d990-cbd2-50cc-8bc6-478e013e4351"
+              },
+              {
+                "control-id": "orp.4.a17.3",
+                "description": "Component capability addressing control orp.4.a17.3 (Geeignete Auswahl von Identitäts- und Berechtigungsmanagement-Systemen — ORP.4.A17.3).",
+                "uuid": "e731cf2e-3736-5861-b665-3431375da553"
+              },
+              {
+                "control-id": "orp.4.a17.4",
+                "description": "Component capability addressing control orp.4.a17.4 (Geeignete Auswahl von Identitäts- und Berechtigungsmanagement-Systemen — ORP.4.A17.4).",
+                "uuid": "30c83d9e-12a2-5947-803d-3c57729d06c6"
+              },
+              {
+                "control-id": "orp.4.a18.1",
+                "description": "Component capability addressing control orp.4.a18.1 (Einsatz eines zentralen Authentisierungsdienstes — ORP.4.A18.1).",
+                "uuid": "800dcb88-207d-5d8a-ac0a-a5fab06f13a0"
+              },
+              {
+                "control-id": "orp.4.a18.2",
+                "description": "Component capability addressing control orp.4.a18.2 (Einsatz eines zentralen Authentisierungsdienstes — ORP.4.A18.2).",
+                "uuid": "02bb3ac6-097f-589e-86b8-516fc7bc405f"
+              },
+              {
+                "control-id": "orp.4.a18.3",
+                "description": "Component capability addressing control orp.4.a18.3 (Einsatz eines zentralen Authentisierungsdienstes — ORP.4.A18.3).",
+                "uuid": "549dd620-8d9c-5e25-8944-d7bd75163e9e"
+              },
+              {
+                "control-id": "orp.4.a19.1",
+                "description": "Component capability addressing control orp.4.a19.1 (Einweisung aller Mitarbeitenden in den Umgang mit Authentisierungsverfahren und -mechanismen — ORP.4.A19.1).",
+                "uuid": "fe7ab950-7045-5a17-8a6f-bf463f46653b"
+              },
+              {
+                "control-id": "orp.4.a19.2",
+                "description": "Component capability addressing control orp.4.a19.2 (Einweisung aller Mitarbeitenden in den Umgang mit Authentisierungsverfahren und -mechanismen — ORP.4.A19.2).",
+                "uuid": "f73c8e04-1f9c-5571-a56b-0d518404131d"
+              },
+              {
+                "control-id": "orp.4.a19.3",
+                "description": "Component capability addressing control orp.4.a19.3 (Einweisung aller Mitarbeitenden in den Umgang mit Authentisierungsverfahren und -mechanismen — ORP.4.A19.3).",
+                "uuid": "2f5eb7b9-2ad7-5e8e-a91a-5bca8cac5e14"
+              },
+              {
+                "control-id": "orp.4.a2.1",
+                "description": "Component capability addressing control orp.4.a2.1 (Einrichtung, Änderung und Entzug von Berechtigungen — ORP.4.A2.1).",
+                "uuid": "65c14394-d1da-5a31-96fd-fde15b0719ae"
+              },
+              {
+                "control-id": "orp.4.a2.2",
+                "description": "Component capability addressing control orp.4.a2.2 (Einrichtung, Änderung und Entzug von Berechtigungen — ORP.4.A2.2).",
+                "uuid": "edd9e957-8f7b-5827-9363-872efa0ec6ba"
+              },
+              {
+                "control-id": "orp.4.a2.3",
+                "description": "Component capability addressing control orp.4.a2.3 (Einrichtung, Änderung und Entzug von Berechtigungen — ORP.4.A2.3).",
+                "uuid": "b20d6cc2-e5e7-5951-b761-e551ec6538f5"
+              },
+              {
+                "control-id": "orp.4.a2.4",
+                "description": "Component capability addressing control orp.4.a2.4 (Einrichtung, Änderung und Entzug von Berechtigungen — ORP.4.A2.4).",
+                "uuid": "96f35842-8561-54fc-bc17-9aebc5253a90"
+              },
+              {
+                "control-id": "orp.4.a2.5",
+                "description": "Component capability addressing control orp.4.a2.5 (Einrichtung, Änderung und Entzug von Berechtigungen — ORP.4.A2.5).",
+                "uuid": "314b845d-3636-566d-9352-71d07e8ab10a"
+              },
+              {
+                "control-id": "orp.4.a20.1",
+                "description": "Component capability addressing control orp.4.a20.1 (Notfallvorsorge für das Identitäts- und Berechtigungsmanagement-System — ORP.4.A20.1).",
+                "uuid": "d95f5c40-ad34-5f91-b1c2-f3b1e56e0bfb"
+              },
+              {
+                "control-id": "orp.4.a20.2",
+                "description": "Component capability addressing control orp.4.a20.2 (Notfallvorsorge für das Identitäts- und Berechtigungsmanagement-System — ORP.4.A20.2).",
+                "uuid": "bc55d9f8-29e4-5bbd-abe3-e158ca1132ed"
+              },
+              {
+                "control-id": "orp.4.a20.3",
+                "description": "Component capability addressing control orp.4.a20.3 (Notfallvorsorge für das Identitäts- und Berechtigungsmanagement-System — ORP.4.A20.3).",
+                "uuid": "59bfca32-9ce8-596b-86bc-6e94152daee3"
+              },
+              {
+                "control-id": "orp.4.a21.1",
+                "description": "Component capability addressing control orp.4.a21.1 (Mehr-Faktor-Authentisierung — ORP.4.A21.1).",
+                "uuid": "fbfc5d71-91cb-58a3-92eb-e982b66c2219"
+              },
+              {
+                "control-id": "orp.4.a22.1",
+                "description": "Component capability addressing control orp.4.a22.1 (Regelung zur Passwortqualität — ORP.4.A22.1).",
+                "uuid": "73aabd2f-dd33-5669-81d5-112c937960e2"
+              },
+              {
+                "control-id": "orp.4.a22.2",
+                "description": "Component capability addressing control orp.4.a22.2 (Regelung zur Passwortqualität — ORP.4.A22.2).",
+                "uuid": "f5e44859-b5f6-51e7-bccb-b99b312914e8"
+              },
+              {
+                "control-id": "orp.4.a22.3",
+                "description": "Component capability addressing control orp.4.a22.3 (Regelung zur Passwortqualität — ORP.4.A22.3).",
+                "uuid": "7e113176-3e3b-516c-8f7a-4542074e3d2c"
+              },
+              {
+                "control-id": "orp.4.a23.1",
+                "description": "Component capability addressing control orp.4.a23.1 (Regelung für passwortverarbeitende Anwendungen und IT-Systeme — ORP.4.A23.1).",
+                "uuid": "54cf0f0f-4060-5301-8475-7f09d1187084"
+              },
+              {
+                "control-id": "orp.4.a23.10",
+                "description": "Component capability addressing control orp.4.a23.10 (Regelung für passwortverarbeitende Anwendungen und IT-Systeme — ORP.4.A23.10).",
+                "uuid": "20eebc09-3a82-5785-aa98-271f82bac31a"
+              },
+              {
+                "control-id": "orp.4.a23.11",
+                "description": "Component capability addressing control orp.4.a23.11 (Regelung für passwortverarbeitende Anwendungen und IT-Systeme — ORP.4.A23.11).",
+                "uuid": "4e0a786d-d2ea-5a60-9f5c-0cb9b84c035a"
+              },
+              {
+                "control-id": "orp.4.a23.12",
+                "description": "Component capability addressing control orp.4.a23.12 (Regelung für passwortverarbeitende Anwendungen und IT-Systeme — ORP.4.A23.12).",
+                "uuid": "70547f14-1a3b-5df7-a85c-6877c8fee3de"
+              },
+              {
+                "control-id": "orp.4.a23.13",
+                "description": "Component capability addressing control orp.4.a23.13 (Regelung für passwortverarbeitende Anwendungen und IT-Systeme — ORP.4.A23.13).",
+                "uuid": "6cd8219f-2b46-5ae6-8ca9-197eaf484cfe"
+              },
+              {
+                "control-id": "orp.4.a23.2",
+                "description": "Component capability addressing control orp.4.a23.2 (Regelung für passwortverarbeitende Anwendungen und IT-Systeme — ORP.4.A23.2).",
+                "uuid": "96878e14-6464-50b1-becb-94fd930c15d5"
+              },
+              {
+                "control-id": "orp.4.a23.3",
+                "description": "Component capability addressing control orp.4.a23.3 (Regelung für passwortverarbeitende Anwendungen und IT-Systeme — ORP.4.A23.3).",
+                "uuid": "be72b9fd-659b-56bf-9c50-69e965c93866"
+              },
+              {
+                "control-id": "orp.4.a23.4",
+                "description": "Component capability addressing control orp.4.a23.4 (Regelung für passwortverarbeitende Anwendungen und IT-Systeme — ORP.4.A23.4).",
+                "uuid": "7316a9fe-d5d9-5f95-bef1-99deb69c9e61"
+              },
+              {
+                "control-id": "orp.4.a23.5",
+                "description": "Component capability addressing control orp.4.a23.5 (Regelung für passwortverarbeitende Anwendungen und IT-Systeme — ORP.4.A23.5).",
+                "uuid": "9fa3909e-6f57-51c0-a36a-3dd24a837fb5"
+              },
+              {
+                "control-id": "orp.4.a23.6",
+                "description": "Component capability addressing control orp.4.a23.6 (Regelung für passwortverarbeitende Anwendungen und IT-Systeme — ORP.4.A23.6).",
+                "uuid": "8515d508-26ac-58de-8869-1e0024547a05"
+              },
+              {
+                "control-id": "orp.4.a23.7",
+                "description": "Component capability addressing control orp.4.a23.7 (Regelung für passwortverarbeitende Anwendungen und IT-Systeme — ORP.4.A23.7).",
+                "uuid": "0b3d2de9-f7e4-5733-b124-4d0975b47cc6"
+              },
+              {
+                "control-id": "orp.4.a23.8",
+                "description": "Component capability addressing control orp.4.a23.8 (Regelung für passwortverarbeitende Anwendungen und IT-Systeme — ORP.4.A23.8).",
+                "uuid": "ca6025d6-e0d3-591f-9fb4-105e61c64732"
+              },
+              {
+                "control-id": "orp.4.a23.9",
+                "description": "Component capability addressing control orp.4.a23.9 (Regelung für passwortverarbeitende Anwendungen und IT-Systeme — ORP.4.A23.9).",
+                "uuid": "1fefb481-f240-5660-8dc7-b206a1b169c8"
+              },
+              {
+                "control-id": "orp.4.a24.1",
+                "description": "Component capability addressing control orp.4.a24.1 (Vier-Augen-Prinzip für administrative Tätigkeiten — ORP.4.A24.1).",
+                "uuid": "c8699a7c-59aa-5d3e-abf1-619219c4cc59"
+              },
+              {
+                "control-id": "orp.4.a24.2",
+                "description": "Component capability addressing control orp.4.a24.2 (Vier-Augen-Prinzip für administrative Tätigkeiten — ORP.4.A24.2).",
+                "uuid": "4c251f2e-22a6-5dc5-b9d3-7252ff299560"
+              },
+              {
+                "control-id": "orp.4.a24.3",
+                "description": "Component capability addressing control orp.4.a24.3 (Vier-Augen-Prinzip für administrative Tätigkeiten — ORP.4.A24.3).",
+                "uuid": "71d4c7b9-2441-507e-8e0e-9b77d7ba3317"
+              },
+              {
+                "control-id": "orp.4.a3.1",
+                "description": "Component capability addressing control orp.4.a3.1 (Dokumentation der Benutzendenkennungen und Rechteprofile — ORP.4.A3.1).",
+                "uuid": "013f8e4c-c728-5538-a24a-e9ebce68b8de"
+              },
+              {
+                "control-id": "orp.4.a3.2",
+                "description": "Component capability addressing control orp.4.a3.2 (Dokumentation der Benutzendenkennungen und Rechteprofile — ORP.4.A3.2).",
+                "uuid": "0f77eb28-bbbe-5fae-9970-1a256b4af288"
+              },
+              {
+                "control-id": "orp.4.a3.3",
+                "description": "Component capability addressing control orp.4.a3.3 (Dokumentation der Benutzendenkennungen und Rechteprofile — ORP.4.A3.3).",
+                "uuid": "37221707-909b-5033-a520-3fea72c8eecf"
+              },
+              {
+                "control-id": "orp.4.a3.4",
+                "description": "Component capability addressing control orp.4.a3.4 (Dokumentation der Benutzendenkennungen und Rechteprofile — ORP.4.A3.4).",
+                "uuid": "574b7020-47a7-5def-880d-c3054476aba4"
+              },
+              {
+                "control-id": "orp.4.a3.5",
+                "description": "Component capability addressing control orp.4.a3.5 (Dokumentation der Benutzendenkennungen und Rechteprofile — ORP.4.A3.5).",
+                "uuid": "9b9a6763-ae34-51d2-a53a-d0526f4263ac"
+              },
+              {
+                "control-id": "orp.4.a4.1",
+                "description": "Component capability addressing control orp.4.a4.1 (Aufgabenverteilung und Funktionstrennung — ORP.4.A4.1).",
+                "uuid": "af7083f2-1b8b-59d9-9811-57c82e430011"
+              },
+              {
+                "control-id": "orp.4.a5.1",
+                "description": "Component capability addressing control orp.4.a5.1 (Vergabe von Zutrittsberechtigungen — ORP.4.A5.1).",
+                "uuid": "bb668f8d-86a2-5d8d-a6c4-d6d544077fce"
+              },
+              {
+                "control-id": "orp.4.a5.2",
+                "description": "Component capability addressing control orp.4.a5.2 (Vergabe von Zutrittsberechtigungen — ORP.4.A5.2).",
+                "uuid": "952949e0-38bb-5f9b-8100-e0964041b62d"
+              },
+              {
+                "control-id": "orp.4.a5.3",
+                "description": "Component capability addressing control orp.4.a5.3 (Vergabe von Zutrittsberechtigungen — ORP.4.A5.3).",
+                "uuid": "6d0e4e39-8aed-5846-b773-b4b996b1e735"
+              },
+              {
+                "control-id": "orp.4.a5.4",
+                "description": "Component capability addressing control orp.4.a5.4 (Vergabe von Zutrittsberechtigungen — ORP.4.A5.4).",
+                "uuid": "0f2d41b0-9058-5822-a4ae-d83ea06dc4fd"
+              },
+              {
+                "control-id": "orp.4.a5.5",
+                "description": "Component capability addressing control orp.4.a5.5 (Vergabe von Zutrittsberechtigungen — ORP.4.A5.5).",
+                "uuid": "ac50a2a4-a240-5479-8bfc-c0e8aa6c8068"
+              },
+              {
+                "control-id": "orp.4.a6.1",
+                "description": "Component capability addressing control orp.4.a6.1 (Vergabe von Zugangsberechtigungen — ORP.4.A6.1).",
+                "uuid": "ce54647c-3407-530c-8fa6-76600625af24"
+              },
+              {
+                "control-id": "orp.4.a6.2",
+                "description": "Component capability addressing control orp.4.a6.2 (Vergabe von Zugangsberechtigungen — ORP.4.A6.2).",
+                "uuid": "4a264566-429a-5bbd-97c3-218798cf89fe"
+              },
+              {
+                "control-id": "orp.4.a6.3",
+                "description": "Component capability addressing control orp.4.a6.3 (Vergabe von Zugangsberechtigungen — ORP.4.A6.3).",
+                "uuid": "1921a9d1-1d82-50ed-ab42-6adcd33b9a57"
+              },
+              {
+                "control-id": "orp.4.a6.4",
+                "description": "Component capability addressing control orp.4.a6.4 (Vergabe von Zugangsberechtigungen — ORP.4.A6.4).",
+                "uuid": "0c37ccfd-eaa2-5f46-b159-46e1fff1ef28"
+              },
+              {
+                "control-id": "orp.4.a6.5",
+                "description": "Component capability addressing control orp.4.a6.5 (Vergabe von Zugangsberechtigungen — ORP.4.A6.5).",
+                "uuid": "5f01c3e9-bf2f-5f22-a756-8a410764d8c1"
+              },
+              {
+                "control-id": "orp.4.a7.1",
+                "description": "Component capability addressing control orp.4.a7.1 (Vergabe von Zugriffsrechten — ORP.4.A7.1).",
+                "uuid": "fa402ae5-8bba-5bc7-90fa-e307bd647680"
+              },
+              {
+                "control-id": "orp.4.a7.2",
+                "description": "Component capability addressing control orp.4.a7.2 (Vergabe von Zugriffsrechten — ORP.4.A7.2).",
+                "uuid": "64d9a8bd-35f0-5c97-930a-d4144a52ae9c"
+              },
+              {
+                "control-id": "orp.4.a7.3",
+                "description": "Component capability addressing control orp.4.a7.3 (Vergabe von Zugriffsrechten — ORP.4.A7.3).",
+                "uuid": "e77000ea-c7e1-52bc-ad41-f0b388b9dad8"
+              },
+              {
+                "control-id": "orp.4.a7.4",
+                "description": "Component capability addressing control orp.4.a7.4 (Vergabe von Zugriffsrechten — ORP.4.A7.4).",
+                "uuid": "3e2fb756-7741-5cd0-9620-82ae7069bd93"
+              },
+              {
+                "control-id": "orp.4.a8.1",
+                "description": "Component capability addressing control orp.4.a8.1 (Regelung des Passwortgebrauchs — ORP.4.A8.1).",
+                "uuid": "33d12ae8-2c32-5064-9f46-4d242178f76f"
+              },
+              {
+                "control-id": "orp.4.a8.10",
+                "description": "Component capability addressing control orp.4.a8.10 (Regelung des Passwortgebrauchs — ORP.4.A8.10).",
+                "uuid": "a46cb23d-cc78-5946-b993-c99ec2d70c09"
+              },
+              {
+                "control-id": "orp.4.a8.11",
+                "description": "Component capability addressing control orp.4.a8.11 (Regelung des Passwortgebrauchs — ORP.4.A8.11).",
+                "uuid": "d61d3c97-0ea4-528a-8228-693c6498605c"
+              },
+              {
+                "control-id": "orp.4.a8.12",
+                "description": "Component capability addressing control orp.4.a8.12 (Regelung des Passwortgebrauchs — ORP.4.A8.12).",
+                "uuid": "834c549a-94ae-512e-9f79-ec3e5482f77a"
+              },
+              {
+                "control-id": "orp.4.a8.13",
+                "description": "Component capability addressing control orp.4.a8.13 (Regelung des Passwortgebrauchs — ORP.4.A8.13).",
+                "uuid": "ca6a61d4-c92a-5c3c-a173-8235145b92c8"
+              },
+              {
+                "control-id": "orp.4.a8.14",
+                "description": "Component capability addressing control orp.4.a8.14 (Regelung des Passwortgebrauchs — ORP.4.A8.14).",
+                "uuid": "ee0e6053-f5c0-53d7-a29c-c7886f0d5454"
+              },
+              {
+                "control-id": "orp.4.a8.2",
+                "description": "Component capability addressing control orp.4.a8.2 (Regelung des Passwortgebrauchs — ORP.4.A8.2).",
+                "uuid": "3a6ddb16-3501-55ae-adcb-96eb4c111950"
+              },
+              {
+                "control-id": "orp.4.a8.3",
+                "description": "Component capability addressing control orp.4.a8.3 (Regelung des Passwortgebrauchs — ORP.4.A8.3).",
+                "uuid": "306eddf5-b2ec-5bdd-a79e-42fc26901ed6"
+              },
+              {
+                "control-id": "orp.4.a8.4",
+                "description": "Component capability addressing control orp.4.a8.4 (Regelung des Passwortgebrauchs — ORP.4.A8.4).",
+                "uuid": "301cd846-4cbb-50c4-b2d0-0ec17bf471f1"
+              },
+              {
+                "control-id": "orp.4.a8.5",
+                "description": "Component capability addressing control orp.4.a8.5 (Regelung des Passwortgebrauchs — ORP.4.A8.5).",
+                "uuid": "f4bbf501-5710-5aef-a692-5c25a843f2bc"
+              },
+              {
+                "control-id": "orp.4.a8.6",
+                "description": "Component capability addressing control orp.4.a8.6 (Regelung des Passwortgebrauchs — ORP.4.A8.6).",
+                "uuid": "7f7ab84a-caee-5797-b539-ba2b1cd6e285"
+              },
+              {
+                "control-id": "orp.4.a8.7",
+                "description": "Component capability addressing control orp.4.a8.7 (Regelung des Passwortgebrauchs — ORP.4.A8.7).",
+                "uuid": "9043415d-71a5-5c0c-b776-9de4be9ef9fe"
+              },
+              {
+                "control-id": "orp.4.a8.8",
+                "description": "Component capability addressing control orp.4.a8.8 (Regelung des Passwortgebrauchs — ORP.4.A8.8).",
+                "uuid": "496742fe-86c6-57e5-bd4d-0b16adc8dcaa"
+              },
+              {
+                "control-id": "orp.4.a8.9",
+                "description": "Component capability addressing control orp.4.a8.9 (Regelung des Passwortgebrauchs — ORP.4.A8.9).",
+                "uuid": "12f4a113-5711-565a-91a5-6081c95bb697"
+              },
+              {
+                "control-id": "orp.4.a9.1",
+                "description": "Component capability addressing control orp.4.a9.1 (Identifikation und Authentisierung — ORP.4.A9.1).",
+                "uuid": "751c5800-2bb8-51fa-8f86-2ceb07619aca"
+              },
+              {
+                "control-id": "orp.4.a9.2",
+                "description": "Component capability addressing control orp.4.a9.2 (Identifikation und Authentisierung — ORP.4.A9.2).",
+                "uuid": "8477581f-8f96-5faa-8386-30ab238058f9"
+              },
+              {
+                "control-id": "orp.5.a1.1",
+                "description": "Component capability addressing control orp.5.a1.1 (Identifikation der Rahmenbedingungen — ORP.5.A1.1).",
+                "uuid": "8e0b9c44-d704-5f5c-ace0-c87c9fed90a1"
+              },
+              {
+                "control-id": "orp.5.a1.2",
+                "description": "Component capability addressing control orp.5.a1.2 (Identifikation der Rahmenbedingungen — ORP.5.A1.2).",
+                "uuid": "1eb082ef-1700-53b0-ad0d-9bb59002c1b8"
+              },
+              {
+                "control-id": "orp.5.a1.3",
+                "description": "Component capability addressing control orp.5.a1.3 (Identifikation der Rahmenbedingungen — ORP.5.A1.3).",
+                "uuid": "e7de7b8f-ea56-51b7-af6a-9743e979f6db"
+              },
+              {
+                "control-id": "orp.5.a2.1",
+                "description": "Component capability addressing control orp.5.a2.1 (Beachtung der Rahmenbedingungen — ORP.5.A2.1).",
+                "uuid": "82c9583a-986a-5487-b43b-2be9e6936411"
+              },
+              {
+                "control-id": "orp.5.a2.2",
+                "description": "Component capability addressing control orp.5.a2.2 (Beachtung der Rahmenbedingungen — ORP.5.A2.2).",
+                "uuid": "5f4162f1-88df-5002-bcea-2a7f6866e0a7"
+              },
+              {
+                "control-id": "orp.5.a2.3",
+                "description": "Component capability addressing control orp.5.a2.3 (Beachtung der Rahmenbedingungen — ORP.5.A2.3).",
+                "uuid": "16997e92-0b1b-5dfa-a116-58b4163dd818"
+              },
+              {
+                "control-id": "orp.5.a2.4",
+                "description": "Component capability addressing control orp.5.a2.4 (Beachtung der Rahmenbedingungen — ORP.5.A2.4).",
+                "uuid": "1dab355a-f5f5-5f0e-85d4-042025623933"
+              },
+              {
+                "control-id": "orp.5.a2.5",
+                "description": "Component capability addressing control orp.5.a2.5 (Beachtung der Rahmenbedingungen — ORP.5.A2.5).",
+                "uuid": "c2c513b5-4fb9-5f5c-966e-25775ad2746a"
+              },
+              {
+                "control-id": "orp.5.a4.1",
+                "description": "Component capability addressing control orp.5.a4.1 (Konzeption und Organisation des Compliance Managements — ORP.5.A4.1).",
+                "uuid": "f0af4257-100a-5645-9dc4-0d5d596f0cee"
+              },
+              {
+                "control-id": "orp.5.a4.2",
+                "description": "Component capability addressing control orp.5.a4.2 (Konzeption und Organisation des Compliance Managements — ORP.5.A4.2).",
+                "uuid": "55fc5d61-f0fa-572b-a4ef-8e3d95a35293"
+              },
+              {
+                "control-id": "orp.5.a4.3",
+                "description": "Component capability addressing control orp.5.a4.3 (Konzeption und Organisation des Compliance Managements — ORP.5.A4.3).",
+                "uuid": "5fae49fc-d716-5a56-a18e-3de678426a7e"
+              },
+              {
+                "control-id": "orp.5.a4.4",
+                "description": "Component capability addressing control orp.5.a4.4 (Konzeption und Organisation des Compliance Managements — ORP.5.A4.4).",
+                "uuid": "ec360989-2528-501f-b50d-6dfedb83440e"
+              },
+              {
+                "control-id": "orp.5.a4.5",
+                "description": "Component capability addressing control orp.5.a4.5 (Konzeption und Organisation des Compliance Managements — ORP.5.A4.5).",
+                "uuid": "bceaa7f8-9d2a-55f4-8d99-263b3f6c27a8"
+              },
+              {
+                "control-id": "orp.5.a5.1",
+                "description": "Component capability addressing control orp.5.a5.1 (Ausnahmegenehmigungen — ORP.5.A5.1).",
+                "uuid": "cd416f19-c6a8-5138-b622-412be6dc2624"
+              },
+              {
+                "control-id": "orp.5.a5.2",
+                "description": "Component capability addressing control orp.5.a5.2 (Ausnahmegenehmigungen — ORP.5.A5.2).",
+                "uuid": "a6384bb0-773e-52d5-89e8-31ecd1856efa"
+              },
+              {
+                "control-id": "orp.5.a5.3",
+                "description": "Component capability addressing control orp.5.a5.3 (Ausnahmegenehmigungen — ORP.5.A5.3).",
+                "uuid": "fbf75fe0-be47-5e7d-8517-5a9874609ed9"
+              },
+              {
+                "control-id": "orp.5.a5.4",
+                "description": "Component capability addressing control orp.5.a5.4 (Ausnahmegenehmigungen — ORP.5.A5.4).",
+                "uuid": "34f34984-a240-5f5c-adef-f950b83c0dc6"
+              },
+              {
+                "control-id": "orp.5.a5.5",
+                "description": "Component capability addressing control orp.5.a5.5 (Ausnahmegenehmigungen — ORP.5.A5.5).",
+                "uuid": "1d4b942e-5f22-536c-b9da-3713e6041c87"
+              },
+              {
+                "control-id": "orp.5.a8.1",
+                "description": "Component capability addressing control orp.5.a8.1 (Regelmäßige Überprüfungen des Compliance Managements — ORP.5.A8.1).",
+                "uuid": "62e11d92-c2f7-5edd-b66a-cf6a43c80ee9"
+              },
+              {
+                "control-id": "orp.5.a8.2",
+                "description": "Component capability addressing control orp.5.a8.2 (Regelmäßige Überprüfungen des Compliance Managements — ORP.5.A8.2).",
+                "uuid": "35ed5289-10cd-5837-b15e-fd6262fe863c"
+              }
+            ],
+            "source": "./catalog.json",
+            "uuid": "7a8b577e-6f32-55c2-8249-a363ff119425"
+          }
+        ],
+        "description": "Enterprise technical and operational capabilities implementing controls for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "title": "IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal Platform Component",
+        "type": "software",
+        "uuid": "b02338c0-0c22-56c7-a530-f05b7bce634c"
+      }
+    ],
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:13Z",
+      "oscal-version": "1.2.3",
+      "title": "IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal Component Definition Template",
+      "version": "1"
+    },
+    "uuid": "887c27f7-9501-55ec-a45c-b014038c1ed5"
+  }
+}

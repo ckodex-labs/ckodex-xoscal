@@ -1,0 +1,1111 @@
+{
+  "catalog": {
+    "back-matter": {
+      "resources": [
+        {
+          "description": "Source framework metadata for anssi-referentiel-general-de-securite-annexe-b2 snapshot portal",
+          "props": [
+            {
+              "name": "type",
+              "value": "standard"
+            },
+            {
+              "name": "version",
+              "value": "portal"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "https://raw.githubusercontent.com/intuitem/ciso-assistant-community/main/backend/library/libraries/anssi-referentiel-general-de-securite-annexe-b2.yaml"
+            }
+          ],
+          "title": "anssi-referentiel-general-de-securite-annexe-b2 Framework Reference",
+          "uuid": "3f6e10ed-c5ec-51da-a3cb-648bb4ab6f70"
+        }
+      ]
+    },
+    "groups": [
+      {
+        "controls": [
+          {
+            "id": "_2.1.1",
+            "parts": [
+              {
+                "id": "_2.1.1-stmt",
+                "name": "statement",
+                "prose": "Dans une architecture de gestion de clés l’impact de chaque clé du système doit être évalué."
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[Règle]"
+              }
+            ],
+            "title": "RègleImpact-1"
+          },
+          {
+            "id": "_2.1.2",
+            "parts": [
+              {
+                "id": "_2.1.2-stmt",
+                "name": "statement",
+                "prose": "Dans une architecture de gestion de clés l’étude d’impact d’une clé doit prendre en compte les différentes durées associées à celle-ci."
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[Règle]"
+              }
+            ],
+            "title": "RègleDurée-1"
+          },
+          {
+            "id": "_2.1.3",
+            "parts": [
+              {
+                "id": "_2.1.3-stmt",
+                "name": "statement",
+                "prose": "Dans une architecture de gestion de clés les procédures de récupération du système en cas d’atteinte à la confidentialité à l’intégrité ou à l’authenticité d’une clé présentant un risque d’impact systémique doivent être étudiées et documentées."
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[Règle]"
+              }
+            ],
+            "title": "RègleImpactSystémique-1"
+          },
+          {
+            "id": "_2.1.4",
+            "parts": [
+              {
+                "id": "_2.1.4-stmt",
+                "name": "statement",
+                "prose": "Dans une architecture de gestion de clés il est recommandé d’éviter d’avoir recours à des clés présentant un risque systémique."
+              }
+            ],
+            "props": [
+              {
+                "name": "implementation-groups",
+                "ns": "https://ckodex.io/ns/xoscal/props",
+                "value": "[Recommandation]"
+              }
+            ],
+            "title": "RecomImpactSystémique-1"
+          }
+        ],
+        "id": "_2.1",
+        "title": "Règles et recommandations générales"
+      },
+      {
+        "groups": [
+          {
+            "groups": [
+              {
+                "controls": [
+                  {
+                    "id": "_2.3.1.1.1",
+                    "parts": [
+                      {
+                        "id": "_2.3.1.1.1-stmt",
+                        "name": "statement",
+                        "prose": "La génération locale d’une clé cryptographique aléatoire doit faire appel à un générateur d’aléa conforme au référentiel."
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[Règle]"
+                      }
+                    ],
+                    "title": "RègleAléaLocal-1"
+                  }
+                ],
+                "id": "_2.3.1.1",
+                "title": "Génération locale de clé aléatoire"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "_2.3.1.2.1",
+                    "parts": [
+                      {
+                        "id": "_2.3.1.2.1-stmt",
+                        "name": "statement",
+                        "prose": "La différentiation locale d’une clé cryptographique doit faire appel à un mécanisme cryptographique conforme au référentiel."
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[Règle]"
+                      }
+                    ],
+                    "title": "RègleDifférentiation-1"
+                  }
+                ],
+                "id": "_2.3.1.2",
+                "title": "Différentiation locale de clé"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "_2.3.1.3.1",
+                    "parts": [
+                      {
+                        "id": "_2.3.1.3.1-stmt",
+                        "name": "statement",
+                        "prose": "L’échange d’une clé cryptographique avec une entité homologue distante doit faire appel à un mécanisme cryptographique conforme au référentiel."
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[Règle]"
+                      }
+                    ],
+                    "title": "RègleÉchangeClés-1"
+                  }
+                ],
+                "id": "_2.3.1.3",
+                "title": "Échange de clés"
+              }
+            ],
+            "id": "_2.3.1",
+            "title": "Génération locale de clé"
+          },
+          {
+            "groups": [
+              {
+                "controls": [
+                  {
+                    "id": "_2.3.2.1.1",
+                    "parts": [
+                      {
+                        "id": "_2.3.2.1.1-stmt",
+                        "name": "statement",
+                        "prose": "La génération centralisée d’une clé cryptographique aléatoire doit faire appel à un générateur d’aléa conforme au référentiel."
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[Règle]"
+                      }
+                    ],
+                    "title": "RègleAléaCentral-1"
+                  },
+                  {
+                    "id": "_2.3.2.1.2",
+                    "parts": [
+                      {
+                        "id": "_2.3.2.1.2-stmt",
+                        "name": "statement",
+                        "prose": "Il est recommandé que la génération centralisée d’une clé cryptographique aléatoire fasse appel à un générateur d’aléa conforme au référentiel et respectant de plus l’ensemble des recommandations associées."
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[Recommandation]"
+                      }
+                    ],
+                    "title": "RecomAléaCentral-1"
+                  },
+                  {
+                    "id": "_2.3.2.1.3",
+                    "parts": [
+                      {
+                        "id": "_2.3.2.1.3-stmt",
+                        "name": "statement",
+                        "prose": "La génération centralisée d’une clé cryptographique aléatoire doit intervenir dans un environnement de confiance conforme au référentiel."
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[Règle]"
+                      }
+                    ],
+                    "title": "RègleGénérationCentralisée-1"
+                  },
+                  {
+                    "id": "_2.3.2.1.4",
+                    "parts": [
+                      {
+                        "id": "_2.3.2.1.4-stmt",
+                        "name": "statement",
+                        "prose": "Il est recommandé que la génération centralisée d’une clé cryptographique aléatoire intervienne dans un environnement de confiance conforme au référentiel et respectant de plus l’ensemble des recommandations associées."
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[Recommandation]"
+                      }
+                    ],
+                    "title": "RecomGénérationCentralisée-1"
+                  }
+                ],
+                "id": "_2.3.2.1",
+                "title": "Génération centralisée de clé aléatoire"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "_2.3.2.2.1",
+                    "parts": [
+                      {
+                        "id": "_2.3.2.2.1-stmt",
+                        "name": "statement",
+                        "prose": "La clé maître d’un mécanisme de dérivation de clé doit être exploitée dans un environnement de confiance conforme au référentiel."
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[Règle]"
+                      }
+                    ],
+                    "title": "RègleDérivation-1"
+                  },
+                  {
+                    "id": "_2.3.2.2.2",
+                    "parts": [
+                      {
+                        "id": "_2.3.2.2.2-stmt",
+                        "name": "statement",
+                        "prose": "Il est recommandé que la clé maître d’un mécanisme de dérivation de clé soit exploitée dans un environnement de confiance conforme au référentiel et respectant de plus l’ensemble des recommandations associées."
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[Recommandation]"
+                      }
+                    ],
+                    "title": "RecomDérivation-1"
+                  },
+                  {
+                    "id": "_2.3.2.2.3",
+                    "parts": [
+                      {
+                        "id": "_2.3.2.2.3-stmt",
+                        "name": "statement",
+                        "prose": "Les mécanismes de dérivation de clé ne devraient être utilisés que dans des architectures applicatives centralisées."
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[Recommandation]"
+                      }
+                    ],
+                    "title": "RecomDérivation-2"
+                  }
+                ],
+                "id": "_2.3.2.2",
+                "title": "Dérivation de clés"
+              }
+            ],
+            "id": "_2.3.2",
+            "title": "Génération centralisée de clé"
+          },
+          {
+            "controls": [
+              {
+                "id": "_2.3.3.1",
+                "parts": [
+                  {
+                    "id": "_2.3.3.1-stmt",
+                    "name": "statement",
+                    "prose": "La génération d’une clé de signature ne doit pas faire intervenir de mécanisme de dérivation de clé."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[Règle]"
+                  }
+                ],
+                "title": "RègleDérivationSignature-1"
+              },
+              {
+                "id": "_2.3.3.2",
+                "parts": [
+                  {
+                    "id": "_2.3.3.2-stmt",
+                    "name": "statement",
+                    "prose": "Il est recommandé que la génération d’une clé de signature aléatoire soit effectuée directement par l’utilisateur final dans son environnement de confiance."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[Recommandation]"
+                  }
+                ],
+                "title": "RecomGénérationAléatoireSignature-1"
+              },
+              {
+                "id": "_2.3.3.3",
+                "parts": [
+                  {
+                    "id": "_2.3.3.3-stmt",
+                    "name": "statement",
+                    "prose": "Il est recommandé que la génération d’une clé de signature aléatoire fasse intervenir de l’aléa provenant d’une source maîtrisée par l’utilisateur final."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[Recommandation]"
+                  }
+                ],
+                "title": "RecomGénérationAléatoireSignature-2"
+              }
+            ],
+            "id": "_2.3.3",
+            "title": "Génération de clé de signature"
+          }
+        ],
+        "id": "_2.3",
+        "title": "Génération de clé"
+      },
+      {
+        "groups": [
+          {
+            "controls": [
+              {
+                "id": "_2.4.1.1",
+                "parts": [
+                  {
+                    "id": "_2.4.1.1-stmt",
+                    "name": "statement",
+                    "prose": "L’usage d’une clé doit être unique (Afin de ne pas freiner la mise en place de solutions sécurisées dans les systèmes d’information de l’administration, il est possible que le corps du RGS, ainsi que ses annexes A, définissent des exceptions ponctuelles à cette règle.)"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[Règle]"
+                  }
+                ],
+                "title": "RègleUsage-1"
+              }
+            ],
+            "id": "_2.4.1",
+            "title": "Usage d’une clé cryptographique"
+          },
+          {
+            "controls": [
+              {
+                "id": "_2.4.2.1",
+                "parts": [
+                  {
+                    "id": "_2.4.2.1-stmt",
+                    "name": "statement",
+                    "prose": "Les mécanismes cryptographiques utilisés lors de l’affectation d’une clé cryptographique à un utilisateur ou à un équipement donné doivent être conformes au référentiel. Ces mécanismes doivent garantir la confidentialité, l’intégrité et l’authenticité de la clé."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[Règle]"
+                  }
+                ],
+                "title": "RègleAffectation-1"
+              },
+              {
+                "id": "_2.4.2.2",
+                "parts": [
+                  {
+                    "id": "_2.4.2.2-stmt",
+                    "name": "statement",
+                    "prose": "Il est recommandé que les mécanismes cryptographiques utilisés lors de l’affectation d’une clé cryptographique à un utilisateur ou à un équipement donné garantissent la possession de la clé par l’utilisateur ou l’équipement auquel elle est affectée."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[Recommandation]"
+                  }
+                ],
+                "title": "RecomAffectation-1"
+              }
+            ],
+            "id": "_2.4.2",
+            "title": "Objectifs de sécurité de l’affectation"
+          },
+          {
+            "groups": [
+              {
+                "groups": [
+                  {
+                    "controls": [
+                      {
+                        "id": "_2.4.3.1.1.1",
+                        "parts": [
+                          {
+                            "id": "_2.4.3.1.1.1-stmt",
+                            "name": "statement",
+                            "prose": "Lors de son premier enrôlement, l’utilisateur final d’un système doit proposer à ses interlocuteurs un moyen de contrôler son identité, l’authenticité de la clé qu’il cherche à s’affecter et le fait qu’il possède bien cette clé."
+                          }
+                        ],
+                        "props": [
+                          {
+                            "name": "implementation-groups",
+                            "ns": "https://ckodex.io/ns/xoscal/props",
+                            "value": "[Règle]"
+                          }
+                        ],
+                        "title": "RègleEnrôlementPrivatif-1"
+                      },
+                      {
+                        "id": "_2.4.3.1.1.2",
+                        "parts": [
+                          {
+                            "id": "_2.4.3.1.1.2-stmt",
+                            "name": "statement",
+                            "prose": "Dans un système, il est recommandé que le moyen de contrôle proposé par l’utilisateur final lors de son premier enrôlement soit véhiculé de façon indépendante de sa clé."
+                          }
+                        ],
+                        "props": [
+                          {
+                            "name": "implementation-groups",
+                            "ns": "https://ckodex.io/ns/xoscal/props",
+                            "value": "[Recommandation]"
+                          }
+                        ],
+                        "title": "RecomContrôleIndépendant-1"
+                      }
+                    ],
+                    "id": "_2.4.3.1.1",
+                    "title": "Premier enrôlement d’une clé générée localement sans tiers de confiance"
+                  },
+                  {
+                    "controls": [
+                      {
+                        "id": "_2.4.3.1.2.1",
+                        "parts": [
+                          {
+                            "id": "_2.4.3.1.2.1-stmt",
+                            "name": "statement",
+                            "prose": "Dans un système avec tiers de confiance, pour assurer le premier enrôlement d’une clé générée localement, le tiers de confiance doit disposer d’un moyen de contrôler l’identité de l’utilisateur final, l’authenticité de sa clé et le fait qu’il possède bien cette clé. L’utilisateur final doit disposer de même d’un moyen de contrôler l’authenticité des éléments publics de l’IGC."
+                          }
+                        ],
+                        "props": [
+                          {
+                            "name": "implementation-groups",
+                            "ns": "https://ckodex.io/ns/xoscal/props",
+                            "value": "[Règle]"
+                          }
+                        ],
+                        "title": "RègleEnrôlementIGC-1"
+                      },
+                      {
+                        "id": "_2.4.3.1.2.2",
+                        "parts": [
+                          {
+                            "id": "_2.4.3.1.2.2-stmt",
+                            "name": "statement",
+                            "prose": "Il est recommandé que le premier enrôlement auprès d’un tiers de confiance d’un utilisateur final générant localement sa clé utilise un moyen d’acheminement indépendant du processus d’enregistrement pour tous les éléments de contrôle de l’identité de l’utilisateur, de l’authenticité de la clé et de celle des éléments publics de l’IGC."
+                          }
+                        ],
+                        "props": [
+                          {
+                            "name": "implementation-groups",
+                            "ns": "https://ckodex.io/ns/xoscal/props",
+                            "value": "[Recommandation]"
+                          }
+                        ],
+                        "title": "RecomContrôleIndépendant-1"
+                      }
+                    ],
+                    "id": "_2.4.3.1.2",
+                    "title": "Premier enrôlement d’une clé générée localement auprès d’un tiers de confiance"
+                  }
+                ],
+                "id": "_2.4.3.1",
+                "title": "Premier enrôlement d’une clé générée localement"
+              },
+              {
+                "groups": [
+                  {
+                    "controls": [
+                      {
+                        "id": "_2.4.3.2.1.1",
+                        "parts": [
+                          {
+                            "id": "_2.4.3.2.1.1-stmt",
+                            "name": "statement",
+                            "prose": "Dans un système avec tiers de confiance, le premier enrôlement d’une clé générée de façon centralisée doit être réalisé dans un environnement de confiance et par un lien physique de confiance."
+                          }
+                        ],
+                        "props": [
+                          {
+                            "name": "implementation-groups",
+                            "ns": "https://ckodex.io/ns/xoscal/props",
+                            "value": "[Règle]"
+                          }
+                        ],
+                        "title": "RègleEnrôlementCntralSécuritéPhysique-1"
+                      },
+                      {
+                        "id": "_2.4.3.2.1.2",
+                        "parts": [
+                          {
+                            "id": "_2.4.3.2.1.2-stmt",
+                            "name": "statement",
+                            "prose": "Dans un système avec tiers de confiance, lors d’un premier enrôlement, le tiers de confiance doit disposer d’un moyen de contrôler l’identité de l’utilisateur final et l’utilisateur final doit avoir un moyen de vérifier l’authenticité de sa clé générée de façon centralisée par le tiers de confiance."
+                          }
+                        ],
+                        "props": [
+                          {
+                            "name": "implementation-groups",
+                            "ns": "https://ckodex.io/ns/xoscal/props",
+                            "value": "[Règle]"
+                          }
+                        ],
+                        "title": "RègleEnrôlementCentral-1"
+                      }
+                    ],
+                    "id": "_2.4.3.2.1",
+                    "title": "Premier enrôlement d’une clé générée de façon centralisée avec tiers de confiance"
+                  },
+                  {
+                    "controls": [
+                      {
+                        "id": "_2.4.3.2.2.1",
+                        "parts": [
+                          {
+                            "id": "_2.4.3.2.2.1-stmt",
+                            "name": "statement",
+                            "prose": "Le premier enrôlement d’une clé générée par un processus de dérivation à partir d’une clé maître doit être réalisé dans un environnement de confiance et par un lien physique de confiance."
+                          }
+                        ],
+                        "props": [
+                          {
+                            "name": "implementation-groups",
+                            "ns": "https://ckodex.io/ns/xoscal/props",
+                            "value": "[Règle]"
+                          }
+                        ],
+                        "title": "RègleEnrôlementDérivationSécuritéPhysique-1"
+                      },
+                      {
+                        "id": "_2.4.3.2.2.2",
+                        "parts": [
+                          {
+                            "id": "_2.4.3.2.2.2-stmt",
+                            "name": "statement",
+                            "prose": "Lors d’un premier enrôlement, le tiers de confiance doit disposer d’un moyen de contrôler l’identité de l’utilisateur final et l’utilisateur final doit avoir un moyen de vérifier l’authenticité de sa clé générée par dérivation d’une clé maître contrôlée par le tiers de confiance."
+                          }
+                        ],
+                        "props": [
+                          {
+                            "name": "implementation-groups",
+                            "ns": "https://ckodex.io/ns/xoscal/props",
+                            "value": "[Règle]"
+                          }
+                        ],
+                        "title": "RègleEnrôlementDérivation-1"
+                      }
+                    ],
+                    "id": "_2.4.3.2.2",
+                    "title": "Premier enrôlement d’une clé dérivée"
+                  }
+                ],
+                "id": "_2.4.3.2",
+                "title": "Premier enrôlement d’une clé générée de façon centralisée"
+              }
+            ],
+            "id": "_2.4.3",
+            "title": "Objectifs sur le premier enrôlement"
+          }
+        ],
+        "id": "_2.4",
+        "title": "Affectation d’une clé"
+      },
+      {
+        "groups": [
+          {
+            "groups": [
+              {
+                "controls": [
+                  {
+                    "id": "_2.5.1.1.1",
+                    "parts": [
+                      {
+                        "id": "_2.5.1.1.1-stmt",
+                        "name": "statement",
+                        "prose": "L’acheminement jusqu’à l’utilisateur final d’une clé cryptographique générée aléatoirement de façon centralisée doit bénéficier de moyens de protection conformes au référentiel. Ces moyens doivent garantir l’authenticité, l’intégrité et la confidentialité de la clé acheminée."
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[Règle]"
+                      }
+                    ],
+                    "title": "RègleAcheminemementCléCentral-1"
+                  },
+                  {
+                    "id": "_2.5.1.1.2",
+                    "parts": [
+                      {
+                        "id": "_2.5.1.1.2-stmt",
+                        "name": "statement",
+                        "prose": "Il est recommandé que l’acheminement jusqu’à l’utilisateur final d’une clé cryptographique générée aléatoirement de façon centralisée soit protégé cryptographiquement de bout en bout en authenticité, intégrité et confidentialité par des mécanismes de protection conformes au référentiel."
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[Recommandation]"
+                      }
+                    ],
+                    "title": "RecomAcheminementNoirCentralBout-en-bout-1"
+                  }
+                ],
+                "id": "_2.5.1.1",
+                "title": "Acheminement de clé aléatoire générée de façon centralisée"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "_2.5.1.2.1",
+                    "parts": [
+                      {
+                        "id": "_2.5.1.2.1-stmt",
+                        "name": "statement",
+                        "prose": "L’acheminement jusqu’à l’utilisateur final d’une clé cryptographique générée par un procédé de dérivation à partir d’une clé maître doit bénéficier de moyens de protection conformes au référentiels. Ces moyens doivent garantir l’authenticité, l’intégrité et la confidentialité de la clé acheminée."
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[Règle]"
+                      }
+                    ],
+                    "title": "RègleAcheminemementCléDérivée-1"
+                  },
+                  {
+                    "id": "_2.5.1.2.2",
+                    "parts": [
+                      {
+                        "id": "_2.5.1.2.2-stmt",
+                        "name": "statement",
+                        "prose": "Il est recommandé que l’acheminement jusqu’à l’utilisateur final d’une clé cryptographique générée par un procédé de dérivation à partir d’une clé maître soit protégé cryptographiquement de bout en bout en authenticité, intégrité et confidentialité par des mécanismes de protection conformes au référentiel."
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[Recommandation]"
+                      }
+                    ],
+                    "title": "RecomAcheminementNoirDérivéeBout-en-bout-1"
+                  }
+                ],
+                "id": "_2.5.1.2",
+                "title": "Acheminement de clé générée par dérivation"
+              }
+            ],
+            "id": "_2.5.1",
+            "title": "Acheminement de clé"
+          },
+          {
+            "groups": [
+              {
+                "controls": [
+                  {
+                    "id": "_2.5.2.1.1",
+                    "parts": [
+                      {
+                        "id": "_2.5.2.1.1-stmt",
+                        "name": "statement",
+                        "prose": "Il est recommandé que la génération locale d’une clé cryptographique ne donne pas lieu à un processus d’injection."
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[Recommandation]"
+                      }
+                    ],
+                    "title": "RecomInjectionCléLocale-1"
+                  },
+                  {
+                    "id": "_2.5.2.1.2",
+                    "parts": [
+                      {
+                        "id": "_2.5.2.1.2-stmt",
+                        "name": "statement",
+                        "prose": "L’injection d’une clé cryptographique générée localement doit bénéficier de moyens de protection conformes au référentiel. Ces moyens doivent garantir l’authenticité, l’intégrité et la confidentialité de la clé injectée."
+                      }
+                    ],
+                    "props": [
+                      {
+                        "name": "implementation-groups",
+                        "ns": "https://ckodex.io/ns/xoscal/props",
+                        "value": "[Règle]"
+                      }
+                    ],
+                    "title": "RègleInjectionCléLocale-1"
+                  }
+                ],
+                "id": "_2.5.2.1",
+                "title": "Injection de clé générée localement"
+              },
+              {
+                "groups": [
+                  {
+                    "controls": [
+                      {
+                        "id": "_2.5.2.2.1.1",
+                        "parts": [
+                          {
+                            "id": "_2.5.2.2.1.1-stmt",
+                            "name": "statement",
+                            "prose": "L’injection dans l’environnement de confiance de l’utilisateur final d’une clé cryptographique générée aléatoirement de façon centralisée doit bénéficier de moyens de protection conformes au référentiel. Ces moyens doivent garantir l’authenticité, l’intégrité et la confidentialité de la clé injectée."
+                          }
+                        ],
+                        "props": [
+                          {
+                            "name": "implementation-groups",
+                            "ns": "https://ckodex.io/ns/xoscal/props",
+                            "value": "[Règle]"
+                          }
+                        ],
+                        "title": "RègleInjectionCléCentral-1"
+                      },
+                      {
+                        "id": "_2.5.2.2.1.2",
+                        "parts": [
+                          {
+                            "id": "_2.5.2.2.1.2-stmt",
+                            "name": "statement",
+                            "prose": "Il est recommandé que l’injection dans l’environnement de confiance de l’utilisateur final d’une clé cryptographique générée aléatoirement de façon centralisée soit effectuée à partir d’une donnée protégée dès la génération en confidentialité, authenticité et intégrité par des mécanismes cryptographiques conformes au référentiel."
+                          }
+                        ],
+                        "props": [
+                          {
+                            "name": "implementation-groups",
+                            "ns": "https://ckodex.io/ns/xoscal/props",
+                            "value": "[Recommandation]"
+                          }
+                        ],
+                        "title": "RecomInjectionCléCentral-1"
+                      }
+                    ],
+                    "id": "_2.5.2.2.1",
+                    "title": "Injection de clé aléatoire générée de façon centralisée"
+                  },
+                  {
+                    "controls": [
+                      {
+                        "id": "_2.5.2.2.2.1",
+                        "parts": [
+                          {
+                            "id": "_2.5.2.2.2.1-stmt",
+                            "name": "statement",
+                            "prose": "L’injection dans l’environnement de confiance de l’utilisateur final d’une clé cryptographique générée par un processus de dérivation à partir d’une clé maître doit bénéficier de moyens de protection conformes au référentiel. Ces moyens doivent garantir l’authenticité, l’intégrité et la confidentialité de la clé injectée."
+                          }
+                        ],
+                        "props": [
+                          {
+                            "name": "implementation-groups",
+                            "ns": "https://ckodex.io/ns/xoscal/props",
+                            "value": "[Règle]"
+                          }
+                        ],
+                        "title": "RègleInjectionCléDérivée-1"
+                      },
+                      {
+                        "id": "_2.5.2.2.2.2",
+                        "parts": [
+                          {
+                            "id": "_2.5.2.2.2.2-stmt",
+                            "name": "statement",
+                            "prose": "Il est recommandé que l’injection dans l’environnement de confiance de l’utilisateur final d’une clé cryptographique générée par un processus de dérivation à partir d’une clé maître soit effectuée à partir d’une donnée protégée dès la génération en confidentialité, authenticité et intégrité par des mécanismes cryptographiques conformes au référentiel."
+                          }
+                        ],
+                        "props": [
+                          {
+                            "name": "implementation-groups",
+                            "ns": "https://ckodex.io/ns/xoscal/props",
+                            "value": "[Recommandation]"
+                          }
+                        ],
+                        "title": "RecomInjectionCléDérivée-1"
+                      }
+                    ],
+                    "id": "_2.5.2.2.2",
+                    "title": "Injection de clé générée par dérivation"
+                  }
+                ],
+                "id": "_2.5.2.2",
+                "title": "Injection de clé générée de façon centralisée"
+              }
+            ],
+            "id": "_2.5.2",
+            "title": "Injection de clé"
+          }
+        ],
+        "id": "_2.5",
+        "title": "Introduction d’une clé"
+      },
+      {
+        "groups": [
+          {
+            "controls": [
+              {
+                "id": "_2.6.1.1",
+                "parts": [
+                  {
+                    "id": "_2.6.1.1-stmt",
+                    "name": "statement",
+                    "prose": "Il est recommandé que la diffusion d’une clé privée ou secrète soit limitée aux seuls environnements de confiance qui l’utilisent vraiment."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[Recommandation]"
+                  }
+                ],
+                "title": "RecomDiffusion-1"
+              }
+            ],
+            "id": "_2.6.1",
+            "title": "Diffusion d’une clé"
+          },
+          {
+            "controls": [
+              {
+                "id": "_2.6.2.1",
+                "parts": [
+                  {
+                    "id": "_2.6.2.1-stmt",
+                    "name": "statement",
+                    "prose": "L’utilisation d’une clé cryptographique dans un système applicatif doit obligatoirement se faire dans un environnement de confiance ayant un niveau de sécurité conforme au référentiel."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[Règle]"
+                  }
+                ],
+                "title": "RègleEnvironnementConfiance-1"
+              },
+              {
+                "id": "_2.6.2.2",
+                "parts": [
+                  {
+                    "id": "_2.6.2.2-stmt",
+                    "name": "statement",
+                    "prose": "Avant toute utilisation d’une clé dans un système applicatif, son authenticité et son intégrité doivent être vérifiées par un mécanisme de sécurité conforme au référentiel."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[Règle]"
+                  }
+                ],
+                "title": "RègleVérificationAuthenticité-1"
+              },
+              {
+                "id": "_2.6.2.3",
+                "parts": [
+                  {
+                    "id": "_2.6.2.3-stmt",
+                    "name": "statement",
+                    "prose": "Avant toute utilisation d’une clé dans un système applicatif, il doit être vérifié par un mécanisme de sécurité conforme au référentiel que la clé est toujours utilisable."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[Règle]"
+                  }
+                ],
+                "title": "RègleVérificationUtilisabilité-1"
+              }
+            ],
+            "id": "_2.6.2",
+            "title": "Utilisation applicative d’une clé"
+          },
+          {
+            "controls": [
+              {
+                "id": "_2.7.1",
+                "parts": [
+                  {
+                    "id": "_2.7.1-stmt",
+                    "name": "statement",
+                    "prose": "Une architecture de gestion de clés doit prévoir la fin de vie de l’ensemble des clés qu’elle gère ou utilise."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[Règle]"
+                  }
+                ],
+                "title": "RègleFinUtilisation-1"
+              },
+              {
+                "id": "_2.7.2",
+                "parts": [
+                  {
+                    "id": "_2.7.2-stmt",
+                    "name": "statement",
+                    "prose": "Il est recommandé qu’une architecture de gestion de clés traite les différentes causes de fin de vie d’une clé de façon distincte."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[Recommandation]"
+                  }
+                ],
+                "title": "RecomCauseFinUtilisation-1"
+              },
+              {
+                "id": "_2.7.3",
+                "parts": [
+                  {
+                    "id": "_2.7.3-stmt",
+                    "name": "statement",
+                    "prose": "Une clé dont la durée d’utilisation est dépassée doit être effacée des environnements de confiance où elle était utilisée par un moyen technique conforme au référentiel."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[Règle]"
+                  }
+                ],
+                "title": "RègleEffacement-1"
+              }
+            ],
+            "id": "_2.7",
+            "title": "Fin de vie d’une clé"
+          },
+          {
+            "controls": [
+              {
+                "id": "_2.8.1",
+                "parts": [
+                  {
+                    "id": "_2.8.1-stmt",
+                    "name": "statement",
+                    "prose": "Une architecture de gestion de clés doit prévoir le renouvellement de l’ensemble des clés qu’elle gère ou utilise."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[Règle]"
+                  }
+                ],
+                "title": "RègleRenouvellement-1"
+              },
+              {
+                "id": "_2.8.2",
+                "parts": [
+                  {
+                    "id": "_2.8.2-stmt",
+                    "name": "statement",
+                    "prose": "Une architecture de gestion de clés doit assurer que le renouvellement d’une clé ne puisse se faire qu’après vérification de l’authenticité de la nouvelle clé et de la possession de celle-ci par l’utilisateur. Les mécanismes utilisés pour cette vérification doivent être conformes au référentiel."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[Règle]"
+                  }
+                ],
+                "title": "RègleRenouvellementEnrôlement-1"
+              }
+            ],
+            "id": "_2.8",
+            "title": "Renouvellement d’une clé"
+          },
+          {
+            "controls": [
+              {
+                "id": "_2.9.1",
+                "parts": [
+                  {
+                    "id": "_2.9.1-stmt",
+                    "name": "statement",
+                    "prose": "Une architecture de gestion de clés qui prévoit des fonctions de recouvrement de clés doit mettre en place des contrôles d’accès à cette fonctionnalité conformes au référentiel et respectant de plus l’ensemble des recommandations associées."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[Règle]"
+                  }
+                ],
+                "title": "RègleRecouvrement-1"
+              }
+            ],
+            "id": "_2.9",
+            "title": "Recouvrement d’une clé"
+          }
+        ],
+        "id": "_2.6",
+        "title": "Utilisation d’une clé"
+      }
+    ],
+    "metadata": {
+      "last-modified": "2026-11-08T00:30:51Z",
+      "oscal-version": "1.2.3",
+      "title": "Référentiel Général de Sécurité 2.0 - Annexe B2",
+      "version": "1"
+    },
+    "uuid": "ac89f4f1-f398-5427-9d7a-ee6b4c77dcba"
+  }
+}

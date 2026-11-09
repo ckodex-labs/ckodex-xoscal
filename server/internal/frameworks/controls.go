@@ -57,13 +57,25 @@ func LoadControlsFromBytes(data []byte, frameworkID string) ([]ControlInfo, erro
 			IsEnhancement:   parentID != "",
 		}
 
-		// Check props for Canadian sovereignty
+		// Check props for Canadian sovereignty and optional family metadata
 		for _, prop := range c.Props {
-			if prop.Name == "jurisdiction" && strings.ToLower(prop.Value) == "ca" {
-				info.IsCanadian = true
-			}
-			if prop.Name == "sovereign-guidance" && strings.ToLower(prop.Value) == "true" {
-				info.IsCanadian = true
+			switch strings.ToLower(prop.Name) {
+			case "jurisdiction":
+				if strings.EqualFold(prop.Value, "ca") {
+					info.IsCanadian = true
+				}
+			case "sovereign-guidance", "sovereign-control", "sovereign-specification":
+				if strings.EqualFold(prop.Value, "true") {
+					info.IsCanadian = true
+				}
+			case "family-id":
+				if info.FamilyID == "" || info.FamilyID == "GENERAL" {
+					info.FamilyID = strings.ToUpper(prop.Value)
+				}
+			case "family-title":
+				if info.FamilyTitle == "" || info.FamilyTitle == "General Controls" {
+					info.FamilyTitle = prop.Value
+				}
 			}
 		}
 
@@ -73,38 +85,64 @@ func LoadControlsFromBytes(data []byte, frameworkID string) ([]ControlInfo, erro
 			if len(p.Values) > 0 {
 				val = strings.Join(p.Values, ", ")
 			}
+			if val == "" && p.Select != nil && len(p.Select.Choice) > 0 {
+				val = strings.Join(p.Select.Choice, "; ")
+			}
 			info.Parameters[p.ID] = val
 		}
 
-		// Parts
+		// Recursive helper to extract nested statement items
+		var extractPartStmts func(part oscalJSONPart)
 		var stmts []string
+		extractPartStmts = func(part oscalJSONPart) {
+			lbl := part.Title
+			for _, prop := range part.Props {
+				if strings.EqualFold(prop.Name, "label") && prop.Value != "" {
+					lbl = prop.Value
+				}
+				if (strings.EqualFold(prop.Name, "jurisdiction") && strings.EqualFold(prop.Value, "ca")) ||
+					(strings.EqualFold(prop.Name, "sovereign-specification") && strings.EqualFold(prop.Value, "true")) {
+					info.IsCanadian = true
+				}
+			}
+			if part.Prose != "" {
+				if strings.EqualFold(part.Name, "item") && lbl != "" {
+					stmts = append(stmts, lbl+" "+part.Prose)
+				} else {
+					stmts = append(stmts, part.Prose)
+				}
+			}
+			for _, sub := range part.Parts {
+				extractPartStmts(sub)
+			}
+		}
+
+		// Parts
 		for _, p := range c.Parts {
-			switch strings.ToLower(p.Name) {
-			case "statement":
-				if p.Prose != "" {
-					stmts = append(stmts, p.Prose)
+			pName := strings.ToLower(p.Name)
+			isSovereignGuidance := pName == "gc-guidance" || pName == "canadian-guidance" || strings.EqualFold(p.Title, "GC Discussion")
+			for _, prop := range p.Props {
+				if (strings.EqualFold(prop.Name, "sovereign-guidance") && strings.EqualFold(prop.Value, "true")) ||
+					(strings.EqualFold(prop.Name, "jurisdiction") && strings.EqualFold(prop.Value, "ca")) {
+					isSovereignGuidance = true
 				}
-				for _, sub := range p.Parts {
-					if sub.Prose != "" {
-						prefix := ""
-						if sub.Title != "" {
-							prefix = sub.Title + " "
-						}
-						stmts = append(stmts, prefix+sub.Prose)
-					}
-				}
-			case "guidance":
-				if p.Prose != "" {
-					info.Guidance = p.Prose
-				}
-			case "gc-guidance", "canadian-guidance":
+			}
+
+			switch {
+			case pName == "statement":
+				extractPartStmts(p)
+			case isSovereignGuidance && (pName == "guidance" || pName == "gc-guidance" || pName == "canadian-guidance"):
 				if p.Prose != "" {
 					info.CanadianGuidance = p.Prose
 					info.IsCanadian = true
 				}
+			case pName == "guidance":
+				if p.Prose != "" {
+					info.Guidance = p.Prose
+				}
 			default:
-				if p.Prose != "" && !strings.Contains(strings.ToLower(p.Name), "assessment") {
-					stmts = append(stmts, p.Prose)
+				if !strings.Contains(pName, "assessment") {
+					extractPartStmts(p)
 				}
 			}
 		}
@@ -120,14 +158,25 @@ func LoadControlsFromBytes(data []byte, frameworkID string) ([]ControlInfo, erro
 		return info
 	}
 
-	// Traverse Groups
-	for _, g := range doc.Catalog.Groups {
-		famID := g.ID
-		famTitle := g.Title
+	// Traverse Groups (including nested sub-groups)
+	var traverseGroup func(g oscalJSONGroup, topFamID, topFamTitle string)
+	traverseGroup = func(g oscalJSONGroup, topFamID, topFamTitle string) {
+		famID := topFamID
+		famTitle := topFamTitle
+		if famID == "" {
+			famID = g.ID
+			famTitle = g.Title
+		}
 		for _, c := range g.Controls {
 			ctrl := parseControl(c, famID, famTitle, "")
 			result = append(result, ctrl)
 		}
+		for _, sub := range g.Groups {
+			traverseGroup(sub, famID, famTitle)
+		}
+	}
+	for _, g := range doc.Catalog.Groups {
+		traverseGroup(g, g.ID, g.Title)
 	}
 
 	// Traverse Top-level Controls

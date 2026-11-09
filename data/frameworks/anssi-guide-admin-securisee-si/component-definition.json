@@ -1,0 +1,413 @@
+{
+  "component-definition": {
+    "components": [
+      {
+        "control-implementations": [
+          {
+            "description": "Security control implementations for Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+            "implemented-requirements": [
+              {
+                "control-id": "r1",
+                "description": "Component capability addressing control r1 (Informer les administrateurs de leurs droits et devoirs).",
+                "uuid": "21d842da-465f-5938-a218-56502e766ddf"
+              },
+              {
+                "control-id": "r10",
+                "description": "Component capability addressing control r10 (Bloquer tout accès à Internet depuis ou vers le poste d'administration).",
+                "uuid": "4632d985-f3d9-5e7f-9d2f-5fc7cf0e0bf2"
+              },
+              {
+                "control-id": "r11",
+                "description": "Component capability addressing control r11 (Durcir le système d'exploitation du poste d'administration).",
+                "uuid": "2937f37d-bda3-5dce-8e8f-3c1417607981"
+              },
+              {
+                "control-id": "r12",
+                "description": "Component capability addressing control r12 (Restreindre les droits d'administration sur le poste d'administration).",
+                "uuid": "ced4f3db-d059-5e34-bc7d-a6ccb0b2d4c2"
+              },
+              {
+                "control-id": "r13",
+                "description": "Component capability addressing control r13 (Limiter les logiciels installés sur le poste d'administration).",
+                "uuid": "aff6738a-b506-5d8f-af29-a3ac63685c80"
+              },
+              {
+                "control-id": "r14",
+                "description": "Component capability addressing control r14 (Chiffrer l'ensemble des périphériques de stockage utilisés pour l'administration).",
+                "uuid": "bbff4bcb-da97-531d-85b3-f6474102c34f"
+              },
+              {
+                "control-id": "r15",
+                "description": "Component capability addressing control r15 (Connecter les ressources d'administration sur un réseau physique dédié).",
+                "uuid": "bffa6ebb-0149-59b1-a06d-265cf8838144"
+              },
+              {
+                "control-id": "r15-",
+                "description": "Component capability addressing control r15- (Connecter les ressources d'administration sur un réseau VPN IPsec dédié).",
+                "uuid": "cb8bccb8-7dbe-5314-9f51-407de5ab6f1e"
+              },
+              {
+                "control-id": "r16",
+                "description": "Component capability addressing control r16 (Appliquer un filtrage interne et périmétrique au SI d'administration).",
+                "uuid": "d414a913-505c-54e3-befb-8d09a3187641"
+              },
+              {
+                "control-id": "r17",
+                "description": "Component capability addressing control r17 (Appliquer un filtrage local sur les ressources administrées).",
+                "uuid": "b26ccc81-c557-52bd-88ee-85756ec94f6f"
+              },
+              {
+                "control-id": "r18",
+                "description": "Component capability addressing control r18 (Dédier une interface réseau physique d'administration).",
+                "uuid": "a9d01f3a-ad64-5aac-93a1-2d6ba6146c8b"
+              },
+              {
+                "control-id": "r18-",
+                "description": "Component capability addressing control r18- (Dédier une interface réseau virtuelle d'administration).",
+                "uuid": "2b27e854-c95d-5aa7-af06-3ba74a053dc9"
+              },
+              {
+                "control-id": "r19",
+                "description": "Component capability addressing control r19 (Appliquer un filtrage entre ressources d'administration et ressources administrées).",
+                "uuid": "7d781bc4-c0f2-5050-9c26-b23b06e590e4"
+              },
+              {
+                "control-id": "r2",
+                "description": "Component capability addressing control r2 (Former les administrateurs à l'état de l'art en matière de SSI).",
+                "uuid": "674e1a23-a7f4-5f68-82c0-935f3617640c"
+              },
+              {
+                "control-id": "r20",
+                "description": "Component capability addressing control r20 (Bloquer toute connexion entre ressources administrées à travers le réseau d'administration).",
+                "uuid": "3c49adb7-eaaa-5496-9dc3-fcf7d26944eb"
+              },
+              {
+                "control-id": "r21",
+                "description": "Component capability addressing control r21 (Protéger les flux d'administration transitant sur un réseau tiers).",
+                "uuid": "7d0a5d1a-ce30-50ee-a7a6-51c6ba53661f"
+              },
+              {
+                "control-id": "r22",
+                "description": "Component capability addressing control r22 (Déployer les outils d'administration sur des serveurs dédiés par zone d'administration).",
+                "uuid": "bced43c6-ac84-5456-9856-3b8d883b14dc"
+              },
+              {
+                "control-id": "r23",
+                "description": "Component capability addressing control r23 (Appliquer un filtrage entre les postes d'administration et les serveurs outils d'administration).",
+                "uuid": "04ba99db-9f32-5c60-9763-0e25834e2429"
+              },
+              {
+                "control-id": "r24",
+                "description": "Component capability addressing control r24 (Utiliser des protocoles sécurisés pour les flux d'administration).",
+                "uuid": "779bf48f-59be-57f5-b48d-3b5c35eb477a"
+              },
+              {
+                "control-id": "r24-",
+                "description": "Component capability addressing control r24- (Protéger le cas échéant les flux d'administration dans un tunnel VPN IPsec).",
+                "uuid": "22826952-f931-5f14-9b6c-96b1601dd0cc"
+              },
+              {
+                "control-id": "r25",
+                "description": "Component capability addressing control r25 (Étudier la mise en oeuvre d'une rupture protocolaire des flux d'administration).",
+                "uuid": "3203dbb7-6034-5146-a289-859812b7b2ec"
+              },
+              {
+                "control-id": "r26",
+                "description": "Component capability addressing control r26 (Renoncer à la rupture protocolaire pour les besoins en confidentialité).",
+                "uuid": "d14a003f-9676-5aeb-accd-0a08b154e565"
+              },
+              {
+                "control-id": "r27",
+                "description": "Component capability addressing control r27 (Utiliser des comptes d'administration dédiés).",
+                "uuid": "f19eeb7c-d421-587c-b2e0-810041b5c6d8"
+              },
+              {
+                "control-id": "r28",
+                "description": "Component capability addressing control r28 (Protéger l'accès aux annuaires des comptes d'administration).",
+                "uuid": "a5a3f7f2-728f-50b5-b607-a7e36d0afb7e"
+              },
+              {
+                "control-id": "r29",
+                "description": "Component capability addressing control r29 (Réserver les comptes d'administration aux seules actions d'administration).",
+                "uuid": "b67d8c3e-2b87-52f6-aafc-c12345affe12"
+              },
+              {
+                "control-id": "r3",
+                "description": "Component capability addressing control r3 (Disposer d'une documentation des SI à jour).",
+                "uuid": "7e76f711-cc22-58d6-b806-1bf2b0a79454"
+              },
+              {
+                "control-id": "r30",
+                "description": "Component capability addressing control r30 (Utiliser par défaut des comptes d'administration individuels).",
+                "uuid": "c04bfde5-2271-585e-b044-4e84cce7ce76"
+              },
+              {
+                "control-id": "r31",
+                "description": "Component capability addressing control r31 (Journaliser les événements liés aux comptes d'administration).",
+                "uuid": "8231ca18-81b9-51f2-84ed-ac647934caea"
+              },
+              {
+                "control-id": "r32",
+                "description": "Component capability addressing control r32 (Prévoir un processus de gestion des comptes d'administration).",
+                "uuid": "b5d573c8-28a8-51de-93f8-c5817c556b74"
+              },
+              {
+                "control-id": "r33",
+                "description": "Component capability addressing control r33 (Se référer au RGS pour choisir les mécanismes d'authentification).",
+                "uuid": "46810bf5-c627-591c-b34e-0f363cc2519b"
+              },
+              {
+                "control-id": "r34",
+                "description": "Component capability addressing control r34 (Modifier les mots de passe par défaut des comptes natifs).",
+                "uuid": "ac37de31-84f2-57e9-ad60-a8a5b8c9f251"
+              },
+              {
+                "control-id": "r35",
+                "description": "Component capability addressing control r35 (Stocker les mots de passe dans un coffre-fort de mots de passe).",
+                "uuid": "847fa26c-4a7f-5238-b780-86fde4c60906"
+              },
+              {
+                "control-id": "r36",
+                "description": "Component capability addressing control r36 (Privilégier une authentification double facteur pour les actions d'administration).",
+                "uuid": "d180bd2e-6964-5569-804e-080d6cacb28e"
+              },
+              {
+                "control-id": "r37",
+                "description": "Component capability addressing control r37 (Utiliser des certificats électroniques de confiance pour l'authentification).",
+                "uuid": "e4c91c65-aa06-5947-8982-012813daee04"
+              },
+              {
+                "control-id": "r38",
+                "description": "Component capability addressing control r38 (Mettre en œuvre une gestion centralisée de l'authentification).",
+                "uuid": "d3449f92-4867-5ca0-8e19-9f85df85f916"
+              },
+              {
+                "control-id": "r39",
+                "description": "Component capability addressing control r39 (Respecter le principe du moindre privilège dans l'attribution des droits d'administration).",
+                "uuid": "16c8b4cb-59ec-5cd5-a70d-f30724c573a1"
+              },
+              {
+                "control-id": "r4",
+                "description": "Component capability addressing control r4 (Mener une analyse de risque sur le SI d'administration et son écosystème).",
+                "uuid": "11326a68-794b-59c7-ae4a-b885664281f6"
+              },
+              {
+                "control-id": "r40",
+                "description": "Component capability addressing control r40 (Attribuer les droits d'administration à des groupes).",
+                "uuid": "e8e9ae17-d01d-5043-82d1-f4cf56e70798"
+              },
+              {
+                "control-id": "r41",
+                "description": "Component capability addressing control r41 (Déployer des politiques de sécurité).",
+                "uuid": "155fccb8-4b8c-5d54-a8f7-91b058c5c483"
+              },
+              {
+                "control-id": "r42",
+                "description": "Component capability addressing control r42 (Réaliser scrupuleusement le MCS du SI d'administration).",
+                "uuid": "765144c5-1229-5747-84bb-774a193e661c"
+              },
+              {
+                "control-id": "r43",
+                "description": "Component capability addressing control r43 (Mettre en place des serveurs relais pour la récupération des mises à jour).",
+                "uuid": "479d5f6a-ef76-5628-b13b-45665337369a"
+              },
+              {
+                "control-id": "r44",
+                "description": "Component capability addressing control r44 (Valider les correctifs de sécurité avant leur généralisation).",
+                "uuid": "1384db59-2a18-5f3a-891e-51d657eeb1e1"
+              },
+              {
+                "control-id": "r45",
+                "description": "Component capability addressing control r45 (Définir une politique de sauvegarde du SI d'administration).",
+                "uuid": "677ece44-76cf-53a1-9a8b-4e4e7fab5368"
+              },
+              {
+                "control-id": "r46",
+                "description": "Component capability addressing control r46 (Dédier une zone d'administration à la journalisation).",
+                "uuid": "b1e3a62b-147d-5ef5-b703-768dd2413347"
+              },
+              {
+                "control-id": "r47",
+                "description": "Component capability addressing control r47 (Centraliser la collecte des journaux d'événements).",
+                "uuid": "f1d8a93f-16a1-5cbb-aef3-962294e8e1f5"
+              },
+              {
+                "control-id": "r48",
+                "description": "Component capability addressing control r48 (Installer un filtre de confidentialité sur le poste d'administration nomade).",
+                "uuid": "7dd9d905-9fb1-502f-9b42-4dad1591b336"
+              },
+              {
+                "control-id": "r49",
+                "description": "Component capability addressing control r49 (Utiliser un tunnel VPN IPsec pour la connexion du poste d'administration à distance).",
+                "uuid": "773bc9d1-b85d-58a7-aa4a-7b072a861451"
+              },
+              {
+                "control-id": "r5",
+                "description": "Component capability addressing control r5 (Définir les zones de confiance du SI administré et déduire les zones d'administration).",
+                "uuid": "7491c8e5-7960-5bbe-9c9a-3d5d9b089820"
+              },
+              {
+                "control-id": "r50",
+                "description": "Component capability addressing control r50 (Empêcher toute modification de la configuration VPN du poste d'administration).",
+                "uuid": "d85b4e6f-7aea-5fdc-ba8b-3c7cfd72b922"
+              },
+              {
+                "control-id": "r51",
+                "description": "Component capability addressing control r51 (Dédier un concentrateur VPN IPsec physique pour l'administration à distance).",
+                "uuid": "28045d11-421f-582a-b016-1627215ecb3a"
+              },
+              {
+                "control-id": "r52",
+                "description": "Component capability addressing control r52 (Déployer des systèmes d'échanges sécurisés).",
+                "uuid": "c8cd46fc-7892-5b1a-b229-bf449ac9e45e"
+              },
+              {
+                "control-id": "r53",
+                "description": "Component capability addressing control r53 (Dédier le système d'échange interne au SI d'administration).",
+                "uuid": "6b2eef5e-df53-5008-94f9-b1b41797e987"
+              },
+              {
+                "control-id": "r54",
+                "description": "Component capability addressing control r54 (N'autoriser que des protocoles de transfert vers le système d'échange externe).",
+                "uuid": "66762063-c7bf-55ee-b298-5259520983fd"
+              },
+              {
+                "control-id": "r55",
+                "description": "Component capability addressing control r55 (Limiter au strict besoin opérationnel l'accès au système d'échange externe).",
+                "uuid": "6a17d1df-6fe0-55dc-9cec-24efcde24e49"
+              },
+              {
+                "control-id": "r56",
+                "description": "Component capability addressing control r56 (Ne pas s'authentifier avec un compte d'administration sur le système d'échange externe).",
+                "uuid": "c333184c-8633-592f-a277-1593d90a28f1"
+              },
+              {
+                "control-id": "r57",
+                "description": "Component capability addressing control r57 (Ne pas stocker de données de manière permanente dans un système d'échange externe).",
+                "uuid": "221d131c-a780-5624-9c7a-99980031f9e9"
+              },
+              {
+                "control-id": "r58",
+                "description": "Component capability addressing control r58 (Analyser le contenu des données échangées par le système d'échange externe).",
+                "uuid": "602b6f3f-a9a0-5a52-8d7c-f33b6d78fba3"
+              },
+              {
+                "control-id": "r59",
+                "description": "Component capability addressing control r59 (Recourir à une prestation d'infogérance qualifiée d'un PAMS).",
+                "uuid": "e04a7b0a-6ed7-56d4-9e86-447794898873"
+              },
+              {
+                "control-id": "r6",
+                "description": "Component capability addressing control r6 (Privilégier l'utilisation de produits qualifiés par l'ANSSI).",
+                "uuid": "c14af2e2-9df2-5769-95c4-f112db73c37a"
+              },
+              {
+                "control-id": "r60",
+                "description": "Component capability addressing control r60 (Intégrer au contrat d'infogérance les exigences de sécurité d'accès à distance).",
+                "uuid": "9e2c690f-ff08-58cb-ae42-76d8d780015f"
+              },
+              {
+                "control-id": "r61",
+                "description": "Component capability addressing control r61 (Imposer une sécurisation à l'état de l'art des postes de travail des administrateurs tiers).",
+                "uuid": "f00047cb-25b0-571f-8c0d-fddaf2f2a1f9"
+              },
+              {
+                "control-id": "r62",
+                "description": "Component capability addressing control r62 (Dédier une chaîne d'accès à distance pour les administrateurs tiers).",
+                "uuid": "9fce372b-774b-53ed-ba55-b403a566d5c8"
+              },
+              {
+                "control-id": "r63",
+                "description": "Component capability addressing control r63 (Utiliser un tunnel VPN IPSec pour la connexion du poste de travail des administrateurs tiers).",
+                "uuid": "c66c93ef-a6a3-509c-9c72-cd13a01fb908"
+              },
+              {
+                "control-id": "r63-",
+                "description": "Component capability addressing control r63- (Utiliser un tunnel VPN TLS pour la connexion du poste de travail des administrateurs tiers).",
+                "uuid": "b749167f-4d0b-5cbe-8f36-1fd0afdc2dce"
+              },
+              {
+                "control-id": "r64",
+                "description": "Component capability addressing control r64 (Dédier des comptes d'accès et des comptes d'administration aux administrateurs tiers).",
+                "uuid": "7ac23736-afea-5293-8b19-fb0ba0e8c877"
+              },
+              {
+                "control-id": "r65_",
+                "description": "Component capability addressing control r65_ (Dédier un annuaire aux comptes d'accès des administrateurs tiers).",
+                "uuid": "f2a9d606-f950-58ed-a8d6-087207d46508"
+              },
+              {
+                "control-id": "r66",
+                "description": "Component capability addressing control r66 (Activer à la demande les comptes des administrateurs tiers).",
+                "uuid": "46df6371-d97a-5f07-8de9-a2e3d750d4d5"
+              },
+              {
+                "control-id": "r67",
+                "description": "Component capability addressing control r67 (Renforcer l'authentification des administrateurs tiers).",
+                "uuid": "93bdf774-2094-535a-ad53-42088bb06562"
+              },
+              {
+                "control-id": "r68",
+                "description": "Component capability addressing control r68 (Mettre en oeuvre un rebond éphémère en coupure de la terminaison VPN et du SI administré).",
+                "uuid": "d92d3f8f-a2d7-55fe-91c6-f651bbd7305c"
+              },
+              {
+                "control-id": "r69",
+                "description": "Component capability addressing control r69 (Mettre en oeuvre un contrôle d'accès strict et une traçabilité pour les administrateurs).",
+                "uuid": "abba3026-6b02-5172-8fcc-40f92fab8b14"
+              },
+              {
+                "control-id": "r7",
+                "description": "Component capability addressing control r7 (Dédier des socles physiques en cas de virtualisation des infrastructures d'administration).",
+                "uuid": "4b570556-d42f-5f6a-aee8-27efbadac97b"
+              },
+              {
+                "control-id": "r70",
+                "description": "Component capability addressing control r70 (Utiliser un boîtier matériel d'acquisition vidéo pour l'assistance à distance).",
+                "uuid": "f729e0ec-12da-5587-9c95-53dc78f2ccb8"
+              },
+              {
+                "control-id": "r71",
+                "description": "Component capability addressing control r71 (Mettre en oeuvre une solution logicielle dédiée pour l'assistance à distance).",
+                "uuid": "14596939-8af8-568c-a104-ae8b5936a585"
+              },
+              {
+                "control-id": "r8",
+                "description": "Component capability addressing control r8 (Gérer et configurer le poste d'administration).",
+                "uuid": "ca88d6a8-f0ac-5a1e-aca5-32070c2e75cc"
+              },
+              {
+                "control-id": "r9",
+                "description": "Component capability addressing control r9 (Utiliser un poste d'administration dédié).",
+                "uuid": "2dde1c2b-9be0-5d0f-8110-599573e23d81"
+              },
+              {
+                "control-id": "r9-",
+                "description": "Component capability addressing control r9- (Utiliser un poste d'administration multi-niveaux).",
+                "uuid": "80598d74-b69d-5662-b727-c16307685552"
+              },
+              {
+                "control-id": "r9--",
+                "description": "Component capability addressing control r9-- (Utiliser un poste d’administration avec accès distant au SI bureautique).",
+                "uuid": "bd06a7de-4db3-567d-a079-735e50de9f8d"
+              }
+            ],
+            "source": "./catalog.json",
+            "uuid": "57d68923-95ba-5e0b-b5da-181e0e463748"
+          }
+        ],
+        "description": "Enterprise technical and operational capabilities implementing controls for Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "title": "Recommandations relatives à l'administration sécurisée des systèmes d'information Platform Component",
+        "type": "software",
+        "uuid": "b0e39a34-baf4-5fbe-bf0e-c88f8b43d410"
+      }
+    ],
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:12Z",
+      "oscal-version": "1.2.3",
+      "title": "Recommandations relatives à l'administration sécurisée des systèmes d'information Component Definition Template",
+      "version": "1"
+    },
+    "uuid": "83cdaf22-88e2-5d2e-973a-5f2fd99aaa8a"
+  }
+}

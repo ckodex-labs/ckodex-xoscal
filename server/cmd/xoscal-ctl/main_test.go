@@ -198,7 +198,7 @@ func TestXoscalCtl_GenerateAndIngest(t *testing.T) {
 
 	runIngest([]string{"-dsn", dbPath, "-input", reqPath, "-framework", "eu-ai-act"})
 
-	// 3. Test generate with validation
+	// 3. Test generate assessment-results-only with validation on v1.0
 	runGenerate([]string{
 		"-dsn", dbPath,
 		"-snapshot", "v1.0",
@@ -211,5 +211,32 @@ func TestXoscalCtl_GenerateAndIngest(t *testing.T) {
 	arPath := filepath.Join(outDir, "assessment-results.json")
 	if _, err := os.Stat(arPath); err != nil {
 		t.Fatalf("expected assessment-results.json generated, got err: %v", err)
+	}
+
+	// 4. Test full 7-layer generate from seeded "baseline" snapshot with schema validation
+	fullOutDir := filepath.Join(tmpDir, "generated-full")
+	runGenerate([]string{
+		"-dsn", dbPath,
+		"-snapshot", "baseline",
+		"-framework", "cybersecure-canada",
+		"-out", fullOutDir,
+		"-validate",
+	})
+	for _, f := range []string{
+		"catalog.json",
+		"profile.json",
+		"component-definition.json",
+		"system-security-plan.json",
+		"assessment-plan.json",
+		"assessment-results.json",
+		"plan-of-action-and-milestones.json",
+	} {
+		artFile := filepath.Join(fullOutDir, f)
+		if _, err := os.Stat(artFile); err != nil {
+			t.Fatalf("expected %s generated in full 7-layer output, got err: %v", f, err)
+		}
+		if err := dbutil.CheckDigestSidecar(artFile); err != nil {
+			t.Fatalf("expected valid .sha256 sidecar for generated %s, got err: %v", f, err)
+		}
 	}
 }

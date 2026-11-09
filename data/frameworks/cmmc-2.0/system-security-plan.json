@@ -1,0 +1,1728 @@
+{
+  "system-security-plan": {
+    "control-implementation": {
+      "description": "Control implementations for CMMC version 2.0.",
+      "implemented-requirements": [
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control ac.l1-3.1.1 (Authorized Access Control) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "51626dfc-ac05-5dea-95a9-63f9b544aa77"
+            }
+          ],
+          "control-id": "ac.l1-3.1.1",
+          "remarks": "Control ac.l1-3.1.1 (Authorized Access Control) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "b633a9a1-2845-5956-a634-6758c2dd37f6"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control ac.l1-3.1.2 (Transaction \u0026 Function Control) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "e35f287a-a3ea-56b0-83aa-b7de9a7deafd"
+            }
+          ],
+          "control-id": "ac.l1-3.1.2",
+          "remarks": "Control ac.l1-3.1.2 (Transaction \u0026 Function Control) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "2a2881e2-8c03-5e4f-91dc-2e91d0073703"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control ac.l1-3.1.20 (External Connections) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "57c5210a-3cfa-5552-a4d9-27ea785416da"
+            }
+          ],
+          "control-id": "ac.l1-3.1.20",
+          "remarks": "Control ac.l1-3.1.20 (External Connections) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "ff947a22-9a1a-5d2d-a222-3fc03cae63c8"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control ac.l1-3.1.22 (Control Public Information) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "f134b6e2-94e1-5052-a1dc-b36b84d09c4f"
+            }
+          ],
+          "control-id": "ac.l1-3.1.22",
+          "remarks": "Control ac.l1-3.1.22 (Control Public Information) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "9db34133-be37-5cd6-b9ec-4013f5f56dfd"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control ac.l2-3.1.10 (Session Lock) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "da00778b-59f1-56c7-b840-1a4046268afa"
+            }
+          ],
+          "control-id": "ac.l2-3.1.10",
+          "remarks": "Control ac.l2-3.1.10 (Session Lock) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "6492b110-e1c1-57f0-86f5-2db5aaa317de"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control ac.l2-3.1.11 (Session Termination) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "fa44c3eb-3de6-511d-9343-ca7ffe05a964"
+            }
+          ],
+          "control-id": "ac.l2-3.1.11",
+          "remarks": "Control ac.l2-3.1.11 (Session Termination) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "b9416ddd-2eaf-5ced-beb1-d93e7bb0389a"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control ac.l2-3.1.12 (ACCESS CONTROL — AC.L2-3.1.12) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "e2c55361-6b1b-5499-8622-3466e80fd4b5"
+            }
+          ],
+          "control-id": "ac.l2-3.1.12",
+          "remarks": "Control ac.l2-3.1.12 (ACCESS CONTROL — AC.L2-3.1.12) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "6b177fe7-3ede-5c6d-8a1e-ba5436e38f1d"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control ac.l2-3.1.13 (Remote Access Confidentiality) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "6d4978d1-1a38-5d52-acf3-bb6afe38d8f5"
+            }
+          ],
+          "control-id": "ac.l2-3.1.13",
+          "remarks": "Control ac.l2-3.1.13 (Remote Access Confidentiality) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "d867885c-0a23-5e93-bf1c-4777774831db"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control ac.l2-3.1.14 (Remote Access Routing) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "9cc8eb6c-9fcb-50fb-8a74-49f9ce562d29"
+            }
+          ],
+          "control-id": "ac.l2-3.1.14",
+          "remarks": "Control ac.l2-3.1.14 (Remote Access Routing) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "dc44ad28-2033-5052-b6ca-74916cc7ef65"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control ac.l2-3.1.15 (Privileged Remote Access) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "d9dc7b5a-25e5-5aa4-bf45-2f255527db1f"
+            }
+          ],
+          "control-id": "ac.l2-3.1.15",
+          "remarks": "Control ac.l2-3.1.15 (Privileged Remote Access) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "d587b3e8-28e4-5a96-9f9a-911da46d7bdc"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control ac.l2-3.1.16 (Wireless Access Authorization) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "30ec1628-ff2e-5ffb-a39e-72daac7370b6"
+            }
+          ],
+          "control-id": "ac.l2-3.1.16",
+          "remarks": "Control ac.l2-3.1.16 (Wireless Access Authorization) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "843d712a-5329-5713-81e1-a752faef9ee2"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control ac.l2-3.1.17 (Wireless Access Protection) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "2163ca6a-d407-5cd3-930d-92687befade4"
+            }
+          ],
+          "control-id": "ac.l2-3.1.17",
+          "remarks": "Control ac.l2-3.1.17 (Wireless Access Protection) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f3d483ee-37bc-5d5a-ab96-322595f6253b"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control ac.l2-3.1.18 (Mobile Device Connection) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "c1aea749-a7ff-54ec-a63e-7bf9542441bc"
+            }
+          ],
+          "control-id": "ac.l2-3.1.18",
+          "remarks": "Control ac.l2-3.1.18 (Mobile Device Connection) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "2ca8c559-427a-57a7-b24a-08618bca91f8"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control ac.l2-3.1.19 (Encrypt CUI on Mobile) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "7fa824c9-c085-58e7-9b2f-553bbcc69e8c"
+            }
+          ],
+          "control-id": "ac.l2-3.1.19",
+          "remarks": "Control ac.l2-3.1.19 (Encrypt CUI on Mobile) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f0092acd-7666-571b-a7fd-d40e5c132007"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control ac.l2-3.1.21 (Portable Storage Use) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "d3d12bed-d0c8-5207-ba84-7bc2f114e620"
+            }
+          ],
+          "control-id": "ac.l2-3.1.21",
+          "remarks": "Control ac.l2-3.1.21 (Portable Storage Use) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "26fdcbe6-17b0-5622-b0a2-8cae7fb6cbd0"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control ac.l2-3.1.3 (ACCESS CONTROL — AC.L2-3.1.3) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "cab59b70-db46-5818-b24e-ba3b38df1411"
+            }
+          ],
+          "control-id": "ac.l2-3.1.3",
+          "remarks": "Control ac.l2-3.1.3 (ACCESS CONTROL — AC.L2-3.1.3) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "2d2f7777-99fa-512e-99e6-fa42f0e6f2b6"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control ac.l2-3.1.4 (Separation of Duties) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "d102b567-0a23-5686-915e-2d9c41d4477f"
+            }
+          ],
+          "control-id": "ac.l2-3.1.4",
+          "remarks": "Control ac.l2-3.1.4 (Separation of Duties) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "79688ed4-711e-58cc-9875-0c392eaef14d"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control ac.l2-3.1.5 (Least Privilege) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "14c51f90-9d2f-5078-9d1c-e1fbd3396b9e"
+            }
+          ],
+          "control-id": "ac.l2-3.1.5",
+          "remarks": "Control ac.l2-3.1.5 (Least Privilege) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "38dbd04a-6a80-5111-b1b7-a256578e9023"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control ac.l2-3.1.6 (Non-Privileged Account Use) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "9e4ba96a-c1ce-598c-bf5a-818c9d4348d9"
+            }
+          ],
+          "control-id": "ac.l2-3.1.6",
+          "remarks": "Control ac.l2-3.1.6 (Non-Privileged Account Use) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "0db10b02-4ebc-5a5f-b824-41eb4b629905"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control ac.l2-3.1.7 (Privileged Functions) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "dc75d2f9-86f2-5813-822d-16593f1578d4"
+            }
+          ],
+          "control-id": "ac.l2-3.1.7",
+          "remarks": "Control ac.l2-3.1.7 (Privileged Functions) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "da4afe94-5de7-5dc8-b98b-31e5d2f513f1"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control ac.l2-3.1.8 (Unsuccessful Logon Attempts) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "5ac5c021-a1c9-5dce-a995-9f3776f3e330"
+            }
+          ],
+          "control-id": "ac.l2-3.1.8",
+          "remarks": "Control ac.l2-3.1.8 (Unsuccessful Logon Attempts) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "e67d6932-6a23-5238-85b4-8d25b526b188"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control ac.l2-3.1.9 (Privacy \u0026 Security Notices) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "a3cf8b9c-5f64-5189-a5d6-f1c4670cae3c"
+            }
+          ],
+          "control-id": "ac.l2-3.1.9",
+          "remarks": "Control ac.l2-3.1.9 (Privacy \u0026 Security Notices) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "1619b66d-fb02-563b-9666-64ee76efe90a"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control at.l2-3.2.1 (Role-Based Risk Awareness) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "540bc60e-7d9b-5d09-b1fb-47e93c97b2ca"
+            }
+          ],
+          "control-id": "at.l2-3.2.1",
+          "remarks": "Control at.l2-3.2.1 (Role-Based Risk Awareness) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f9fe367a-256f-5754-b280-a2f7f7a56cf0"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control at.l2-3.2.2 (Role-Based Training) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "711bbcfd-49df-5811-ba62-093fb0dc25bf"
+            }
+          ],
+          "control-id": "at.l2-3.2.2",
+          "remarks": "Control at.l2-3.2.2 (Role-Based Training) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "d22414e6-e931-57f2-b902-f8f20374a9ac"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control at.l2-3.2.3 (Insider Threat Awareness) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "cdb5023f-4543-5d8c-9aeb-1759eee3d582"
+            }
+          ],
+          "control-id": "at.l2-3.2.3",
+          "remarks": "Control at.l2-3.2.3 (Insider Threat Awareness) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "8a79d28c-277f-53e0-b1c1-6fff8a212f17"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control au.l2-3.3.1 (System Auditing) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ee6fa7da-bb02-53dc-b86b-6da74100885e"
+            }
+          ],
+          "control-id": "au.l2-3.3.1",
+          "remarks": "Control au.l2-3.3.1 (System Auditing) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "4a4e3893-098a-595b-9f8f-9a40903b06a1"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control au.l2-3.3.2 (User Accountability) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "5b3d185f-ca2f-5e37-929a-9fe4c1904724"
+            }
+          ],
+          "control-id": "au.l2-3.3.2",
+          "remarks": "Control au.l2-3.3.2 (User Accountability) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "c905d92f-f541-56d8-9ab9-6984c2e3d193"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control au.l2-3.3.3 (Event Review) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "9304655a-b1ae-5571-9dcb-e5d263007521"
+            }
+          ],
+          "control-id": "au.l2-3.3.3",
+          "remarks": "Control au.l2-3.3.3 (Event Review) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "cb36491c-9594-5195-a75c-2d8e31a404c7"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control au.l2-3.3.4 (Audit Failure Alerting) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "acdf3104-213c-5a66-afd7-d289ad4639b5"
+            }
+          ],
+          "control-id": "au.l2-3.3.4",
+          "remarks": "Control au.l2-3.3.4 (Audit Failure Alerting) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "235c7ee7-9265-5f15-b3f5-24bfa97fe259"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control au.l2-3.3.5 (Audit Correlation) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "20e7e907-2945-586f-9e2d-4f7aaddb8798"
+            }
+          ],
+          "control-id": "au.l2-3.3.5",
+          "remarks": "Control au.l2-3.3.5 (Audit Correlation) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "e1c111fc-e3c8-524f-b28f-b08c4f54983e"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control au.l2-3.3.6 (Reduction \u0026 Reporting) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "f1488454-c2f5-54ad-bcbd-82bc3823ab05"
+            }
+          ],
+          "control-id": "au.l2-3.3.6",
+          "remarks": "Control au.l2-3.3.6 (Reduction \u0026 Reporting) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "3b9296e8-fddd-541b-8825-155bce72889a"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control au.l2-3.3.7 (Authoritative Time Source) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "bdbc961e-ed08-51a9-b9bd-00c386b43660"
+            }
+          ],
+          "control-id": "au.l2-3.3.7",
+          "remarks": "Control au.l2-3.3.7 (Authoritative Time Source) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "2f6883be-f879-56de-86be-0559e3b9a285"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control au.l2-3.3.8 (Audit Protection) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "afccd982-cbc9-5e32-912a-76599fe64f29"
+            }
+          ],
+          "control-id": "au.l2-3.3.8",
+          "remarks": "Control au.l2-3.3.8 (Audit Protection) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "66089235-7b45-5aa1-95c7-4608d3023728"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control au.l2-3.3.9 (Audit Management) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "2bb101bd-efad-5369-aaff-4e2b71582e00"
+            }
+          ],
+          "control-id": "au.l2-3.3.9",
+          "remarks": "Control au.l2-3.3.9 (Audit Management) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "2ba83220-a536-5074-b387-3133b88c53ff"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control ca.l2-3.12.1 (Security Control Assessment) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "37856b9f-5f9c-54df-a318-235d74141339"
+            }
+          ],
+          "control-id": "ca.l2-3.12.1",
+          "remarks": "Control ca.l2-3.12.1 (Security Control Assessment) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "cb6a80d8-3367-541b-8bf0-5c18dbcb7b9d"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control ca.l2-3.12.2 (Plan of Action) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "2ce5759b-6f00-5da7-b12c-d5be39d38cb5"
+            }
+          ],
+          "control-id": "ca.l2-3.12.2",
+          "remarks": "Control ca.l2-3.12.2 (Plan of Action) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "8fc0022b-04f4-57fe-aef7-92dda190a2ef"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control ca.l2-3.12.3 (Security Control Monitoring) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "7820aff5-8a8a-5740-8ac8-aeda700258b3"
+            }
+          ],
+          "control-id": "ca.l2-3.12.3",
+          "remarks": "Control ca.l2-3.12.3 (Security Control Monitoring) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f430ec9b-212c-5033-afbd-993156a93183"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control ca.l2-3.12.4 (System Security Plan) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "df2f783f-14c8-5252-aa94-8ab10a8a0eea"
+            }
+          ],
+          "control-id": "ca.l2-3.12.4",
+          "remarks": "Control ca.l2-3.12.4 (System Security Plan) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "cc8ea0a9-9140-5900-822f-e9f5aa6ecf87"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control cm.l2-3.4.1 (System Baselining) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "1e461a10-785e-58cc-b024-22c8b9400364"
+            }
+          ],
+          "control-id": "cm.l2-3.4.1",
+          "remarks": "Control cm.l2-3.4.1 (System Baselining) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "c6ec78fb-10aa-5cef-8809-1de007ae7746"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control cm.l2-3.4.2 (Security Configuration Enforcement) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "e7c4f826-993b-5aed-b993-e4b2cdcc7611"
+            }
+          ],
+          "control-id": "cm.l2-3.4.2",
+          "remarks": "Control cm.l2-3.4.2 (Security Configuration Enforcement) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "d0c713e5-2985-5e7a-84f2-b972aab6b34d"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control cm.l2-3.4.3 (System Change Management) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "0054aced-5b0f-5c5f-8b60-27d364e95d99"
+            }
+          ],
+          "control-id": "cm.l2-3.4.3",
+          "remarks": "Control cm.l2-3.4.3 (System Change Management) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "6cd21361-2074-5005-9156-06afb0a984ef"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control cm.l2-3.4.4 (Security Impact Analysis) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "9236aa62-7db1-559f-ac67-b25bf9cfdb27"
+            }
+          ],
+          "control-id": "cm.l2-3.4.4",
+          "remarks": "Control cm.l2-3.4.4 (Security Impact Analysis) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "53d13070-e4ce-5150-954a-8817fe0cc651"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control cm.l2-3.4.5 (Access Restrictions for Change) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "41232809-0cc1-5b81-93d4-f6cad20cfe2e"
+            }
+          ],
+          "control-id": "cm.l2-3.4.5",
+          "remarks": "Control cm.l2-3.4.5 (Access Restrictions for Change) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "e263af25-44eb-52ef-ba38-f44d7830a29c"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control cm.l2-3.4.6 (Least Functionality) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "22e74ae7-82af-50c5-bfd9-dc237e063055"
+            }
+          ],
+          "control-id": "cm.l2-3.4.6",
+          "remarks": "Control cm.l2-3.4.6 (Least Functionality) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "d36856e8-3f69-5056-bdbe-9bfa1ca067e4"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control cm.l2-3.4.7 (Nonessential Functionality) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "8f641d05-dab8-58d5-aefd-ab3054d8be97"
+            }
+          ],
+          "control-id": "cm.l2-3.4.7",
+          "remarks": "Control cm.l2-3.4.7 (Nonessential Functionality) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "db554e00-289e-5b9a-86e2-268b82367027"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control cm.l2-3.4.8 (Application Execution Policy) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "2db2a565-270b-5cd6-896d-4cd05a5146e7"
+            }
+          ],
+          "control-id": "cm.l2-3.4.8",
+          "remarks": "Control cm.l2-3.4.8 (Application Execution Policy) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "6b3b0c0d-a394-5a2f-a09a-b7adf6df7db3"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control cm.l2-3.4.9 (User-Installed Software) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "d6513dbf-a34d-50e7-bd94-98d9dbb417f9"
+            }
+          ],
+          "control-id": "cm.l2-3.4.9",
+          "remarks": "Control cm.l2-3.4.9 (User-Installed Software) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "dbac2a7d-6f64-5714-83d8-2a2280921425"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control ia.l1-3.5.1 (Identification) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "0542d7e3-caae-5ca8-b9c0-8166d84cf182"
+            }
+          ],
+          "control-id": "ia.l1-3.5.1",
+          "remarks": "Control ia.l1-3.5.1 (Identification) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "33135931-0a22-50ba-b2ef-166a69f81bfa"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control ia.l1-3.5.2 (Authentication) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "5d96083a-609a-5206-8573-4aa848d26b31"
+            }
+          ],
+          "control-id": "ia.l1-3.5.2",
+          "remarks": "Control ia.l1-3.5.2 (Authentication) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "68e0bacc-1648-536f-9b89-760b2d6fa4c8"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control ia.l2-3.5.10 (Cryptographically-Protected Passwords) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "29e4f47b-9df3-5649-be14-9d3b5f7d1479"
+            }
+          ],
+          "control-id": "ia.l2-3.5.10",
+          "remarks": "Control ia.l2-3.5.10 (Cryptographically-Protected Passwords) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "7a84ef52-2f0b-550f-94e4-164045148612"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control ia.l2-3.5.11 (Obscure Feedback) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "1e965b6c-0e6c-582c-80ee-4b9859504281"
+            }
+          ],
+          "control-id": "ia.l2-3.5.11",
+          "remarks": "Control ia.l2-3.5.11 (Obscure Feedback) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "6e9ede9b-92be-5c0e-9138-6d83113b2761"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control ia.l2-3.5.3 (Multifactor Authentication) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "9176ff56-5f78-5d43-8f87-7cb7dff4e8e9"
+            }
+          ],
+          "control-id": "ia.l2-3.5.3",
+          "remarks": "Control ia.l2-3.5.3 (Multifactor Authentication) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "e0940767-6ce6-52d7-90e2-14c31250c50b"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control ia.l2-3.5.4 (Replay-Resistant Authentication) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "07e6cac8-960c-52b1-a59b-8f23b5c13b7a"
+            }
+          ],
+          "control-id": "ia.l2-3.5.4",
+          "remarks": "Control ia.l2-3.5.4 (Replay-Resistant Authentication) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "41ac4f4a-8a02-5558-9829-bc301cf579b3"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control ia.l2-3.5.5 (Identifier Reuse) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "9d9ba0e7-fed6-5d13-978f-db47d918a0c7"
+            }
+          ],
+          "control-id": "ia.l2-3.5.5",
+          "remarks": "Control ia.l2-3.5.5 (Identifier Reuse) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "531e312f-b74f-52b4-a62f-09a31c13b9cd"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control ia.l2-3.5.6 (Identifier Handling) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "4fc5e894-ccbe-5c85-874b-d020c8f3b715"
+            }
+          ],
+          "control-id": "ia.l2-3.5.6",
+          "remarks": "Control ia.l2-3.5.6 (Identifier Handling) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "43f9cad6-521c-5633-b095-5f3ba4465eb1"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control ia.l2-3.5.7 (Password Complexity) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "7183a21e-8da7-5266-9cda-7461fc4ade6c"
+            }
+          ],
+          "control-id": "ia.l2-3.5.7",
+          "remarks": "Control ia.l2-3.5.7 (Password Complexity) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "4f7baba4-eb8b-5e2f-85fd-7075faad2bdd"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control ia.l2-3.5.8 (Password Reuse) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "eecfed03-e9e5-58a9-bd82-82a28b20acff"
+            }
+          ],
+          "control-id": "ia.l2-3.5.8",
+          "remarks": "Control ia.l2-3.5.8 (Password Reuse) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "b154bb6c-4461-5719-a8ee-b6bfd0469847"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control ia.l2-3.5.9 (Temporary Passwords) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "161900bc-1846-5ce7-b95c-9edc9c159b61"
+            }
+          ],
+          "control-id": "ia.l2-3.5.9",
+          "remarks": "Control ia.l2-3.5.9 (Temporary Passwords) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "dce8bf56-29b9-5b94-9fdf-247ee1ca85ad"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control ir.l2-3.6.1 (Incident Handling) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "6946c27c-bc64-5c3b-bb32-d01671ef1e1c"
+            }
+          ],
+          "control-id": "ir.l2-3.6.1",
+          "remarks": "Control ir.l2-3.6.1 (Incident Handling) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "96a7136a-cdc2-51b6-8e06-2f1a6da3854b"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control ir.l2-3.6.2 (Incident Reporting) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "2f33ae47-3b44-5b6c-a8ba-4a8bbbaad703"
+            }
+          ],
+          "control-id": "ir.l2-3.6.2",
+          "remarks": "Control ir.l2-3.6.2 (Incident Reporting) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "400fc7fc-004f-5877-9cc7-57d83a5fbad5"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control ir.l2-3.6.3 (Incident Response Testing) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "c151eb21-33e0-5315-b251-bce00260d828"
+            }
+          ],
+          "control-id": "ir.l2-3.6.3",
+          "remarks": "Control ir.l2-3.6.3 (Incident Response Testing) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "c417ea8e-efe8-5991-a2d6-cc346493459c"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control ma.l2-3.7.1 (Perform Maintenance) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "aac8caa3-0663-55e9-aa65-3811f6f89574"
+            }
+          ],
+          "control-id": "ma.l2-3.7.1",
+          "remarks": "Control ma.l2-3.7.1 (Perform Maintenance) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "b69baf0b-2a74-5afa-9c89-30a163ca70b4"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control ma.l2-3.7.2 (System Maintenance Control) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "150134bd-6e01-5a93-bd66-75bf15af7b02"
+            }
+          ],
+          "control-id": "ma.l2-3.7.2",
+          "remarks": "Control ma.l2-3.7.2 (System Maintenance Control) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "03e1d7b2-fe7e-515c-8155-34e582093238"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control ma.l2-3.7.3 (Equipment Sanitization) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "1aa6bfd2-28d9-56d2-81cb-a59df8fc10bd"
+            }
+          ],
+          "control-id": "ma.l2-3.7.3",
+          "remarks": "Control ma.l2-3.7.3 (Equipment Sanitization) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "48acdbfc-fbfe-522b-8d87-34ec56f25365"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control ma.l2-3.7.4 (Media Inspection) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "8d07138d-864a-5a10-b1cd-e9cf333557ea"
+            }
+          ],
+          "control-id": "ma.l2-3.7.4",
+          "remarks": "Control ma.l2-3.7.4 (Media Inspection) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "7de97d21-5d0c-5d64-8271-f4a8dc8981c7"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control ma.l2-3.7.5 (Nonlocal Maintenance) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "d7595b17-8e1a-5690-a213-3b5f0c7225c0"
+            }
+          ],
+          "control-id": "ma.l2-3.7.5",
+          "remarks": "Control ma.l2-3.7.5 (Nonlocal Maintenance) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "8cdd39cd-6541-5ba1-915b-1769babbc076"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control ma.l2-3.7.6 (Maintenance Personnel) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "09e45ffa-6bb5-51be-9799-edf8e28fc6d3"
+            }
+          ],
+          "control-id": "ma.l2-3.7.6",
+          "remarks": "Control ma.l2-3.7.6 (Maintenance Personnel) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "87954eb5-3ce8-52e0-8ee9-08f3a62b35a4"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control mp.l1-3.8.3 (Media Disposal) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ce37daff-e25d-5de5-818e-e0679ea18600"
+            }
+          ],
+          "control-id": "mp.l1-3.8.3",
+          "remarks": "Control mp.l1-3.8.3 (Media Disposal) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "e4c93bbc-d990-52ae-a6a1-d8f0129718ce"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control mp.l2-3.8.1 (Media Protection) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "678b6755-f687-5bbe-aea2-e31014be9e8e"
+            }
+          ],
+          "control-id": "mp.l2-3.8.1",
+          "remarks": "Control mp.l2-3.8.1 (Media Protection) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "9585c560-f42a-56a3-a751-ae986646624f"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control mp.l2-3.8.2 (Media Access) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "3b4eca70-b1b9-5d3f-ac41-886c72eb299d"
+            }
+          ],
+          "control-id": "mp.l2-3.8.2",
+          "remarks": "Control mp.l2-3.8.2 (Media Access) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "fb5743bf-4fd0-543c-8a8d-a6528d9c7f56"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control mp.l2-3.8.4 (Media Markings) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "73242696-372e-5af7-a5c4-3803230bc41d"
+            }
+          ],
+          "control-id": "mp.l2-3.8.4",
+          "remarks": "Control mp.l2-3.8.4 (Media Markings) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "fe5f9390-b55b-5cd5-8dac-19890df01f68"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control mp.l2-3.8.5 (Media Accountability) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "aa901f75-be5d-5dc1-a6e1-2e7e64cfbc8c"
+            }
+          ],
+          "control-id": "mp.l2-3.8.5",
+          "remarks": "Control mp.l2-3.8.5 (Media Accountability) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "3ef32787-9da9-533c-beaf-99ccb466cbdf"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control mp.l2-3.8.6 (Portable Storage Encryption) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "17cf593a-5a24-591f-9b06-9a0b61f0203c"
+            }
+          ],
+          "control-id": "mp.l2-3.8.6",
+          "remarks": "Control mp.l2-3.8.6 (Portable Storage Encryption) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "b31b3580-cf85-5eaf-8184-5be1af7a1065"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control mp.l2-3.8.7 (Removable Media) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "cdd0557f-a4e6-53f4-9c25-6adfb3bba363"
+            }
+          ],
+          "control-id": "mp.l2-3.8.7",
+          "remarks": "Control mp.l2-3.8.7 (Removable Media) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "ab17b0a1-e887-5fee-a244-b75a785561b9"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control mp.l2-3.8.8 (Shared Media) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "bcbe409d-052e-5633-9eac-3cf55cd0369a"
+            }
+          ],
+          "control-id": "mp.l2-3.8.8",
+          "remarks": "Control mp.l2-3.8.8 (Shared Media) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "b3345ba4-59db-5001-98a3-d25b639ad63c"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control mp.l2-3.8.9 (Protect Backups) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "fb963a04-f930-543c-95bc-4eadd11cef3d"
+            }
+          ],
+          "control-id": "mp.l2-3.8.9",
+          "remarks": "Control mp.l2-3.8.9 (Protect Backups) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "32c746c1-df2c-54cd-84b0-791294231b25"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control pe.l1-3.10.1 (Limit Physical Access) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "bb01957c-ccd8-55c7-9c92-32728bf114ce"
+            }
+          ],
+          "control-id": "pe.l1-3.10.1",
+          "remarks": "Control pe.l1-3.10.1 (Limit Physical Access) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "1858e64e-534c-5704-bb9e-e95f60237e35"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control pe.l1-3.10.3 (Escort Visitors) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "7eadb032-b2dd-5cd3-a7c5-44889ee66b78"
+            }
+          ],
+          "control-id": "pe.l1-3.10.3",
+          "remarks": "Control pe.l1-3.10.3 (Escort Visitors) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f1ae9f94-3382-59c9-8183-038df3044392"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control pe.l1-3.10.4 (Physical Access Logs) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "440bfeb9-1482-5013-b7d2-6759e6dc732e"
+            }
+          ],
+          "control-id": "pe.l1-3.10.4",
+          "remarks": "Control pe.l1-3.10.4 (Physical Access Logs) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "b50c2d31-de7a-5785-8e6a-51a23d815a3d"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control pe.l1-3.10.5 (Manage Physical Access) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "5b1a302c-169b-59d5-8ebc-369a2ac52a20"
+            }
+          ],
+          "control-id": "pe.l1-3.10.5",
+          "remarks": "Control pe.l1-3.10.5 (Manage Physical Access) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "d422fcf1-a397-51d7-b711-41c8797b8558"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control pe.l2-3.10.2 (Monitor Facility) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "01ae9d22-9484-59ac-8031-ce9ed8282fb8"
+            }
+          ],
+          "control-id": "pe.l2-3.10.2",
+          "remarks": "Control pe.l2-3.10.2 (Monitor Facility) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f54e6f1f-b0bf-5332-b62f-cb02c5b083a9"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control pe.l2-3.10.6 (Alternative Work Sites) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "bc388036-b92d-5927-ac50-a34976c40700"
+            }
+          ],
+          "control-id": "pe.l2-3.10.6",
+          "remarks": "Control pe.l2-3.10.6 (Alternative Work Sites) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "5ef32a9d-ba87-5799-bd44-4895b1ffc9fc"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control ps.l2-3.9.1 (Screen Individuals) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "77dd9f91-1c72-56dc-a6d0-d8ba7a755160"
+            }
+          ],
+          "control-id": "ps.l2-3.9.1",
+          "remarks": "Control ps.l2-3.9.1 (Screen Individuals) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "a54b46bf-c279-5204-8823-ba225c51ab45"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control ps.l2-3.9.2 (Personnel Actions) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "be4a71d5-8fb8-5e14-8f5c-888663d1612a"
+            }
+          ],
+          "control-id": "ps.l2-3.9.2",
+          "remarks": "Control ps.l2-3.9.2 (Personnel Actions) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "62e351b6-7640-5b31-ab29-f120a56acd32"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control ra.l2-3.11.1 (Risk Assessments) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "796503ca-bf2f-5bcf-b095-7b8e5061fccb"
+            }
+          ],
+          "control-id": "ra.l2-3.11.1",
+          "remarks": "Control ra.l2-3.11.1 (Risk Assessments) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "4d09c60c-4503-51d4-9959-b9bed42681a6"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control ra.l2-3.11.2 (Vulnerability Scan) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "3578f3e5-88df-58d3-b688-2fc8701de24b"
+            }
+          ],
+          "control-id": "ra.l2-3.11.2",
+          "remarks": "Control ra.l2-3.11.2 (Vulnerability Scan) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "77fb4514-0bc6-5953-a80c-fe97e251e782"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control ra.l2-3.11.3 (Vulnerability Remediation) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "022b1711-8b3d-5b10-954e-415c8871b3c9"
+            }
+          ],
+          "control-id": "ra.l2-3.11.3",
+          "remarks": "Control ra.l2-3.11.3 (Vulnerability Remediation) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "52d01220-bb91-5051-a77c-51d90fedeb87"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control sc.l1-3.13.1 (Boundary Protection) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "4d4113de-1803-51b4-8227-1f109ffc46c8"
+            }
+          ],
+          "control-id": "sc.l1-3.13.1",
+          "remarks": "Control sc.l1-3.13.1 (Boundary Protection) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "881a2b0c-aa61-59de-aabf-b528fc4d01a9"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control sc.l1-3.13.5 (Public-Access System Separation) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "e1dfdb5f-661d-511d-9e0a-8d8d81e579ec"
+            }
+          ],
+          "control-id": "sc.l1-3.13.5",
+          "remarks": "Control sc.l1-3.13.5 (Public-Access System Separation) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "14ca3ee2-b4ed-51d1-ad22-fa2f90c5f7c7"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control sc.l2-3.13.10 (Key Management) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "a7d4aa59-fa26-5a55-91cd-a57e576acf9a"
+            }
+          ],
+          "control-id": "sc.l2-3.13.10",
+          "remarks": "Control sc.l2-3.13.10 (Key Management) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "74851259-3bec-531e-9094-4aea743a1cb5"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control sc.l2-3.13.11 (CUI Encryption) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "356b7005-4219-5f2d-b2a2-8df764196054"
+            }
+          ],
+          "control-id": "sc.l2-3.13.11",
+          "remarks": "Control sc.l2-3.13.11 (CUI Encryption) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "1c616cd2-e730-572b-90d4-8588ce2910f4"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control sc.l2-3.13.12 (Collaborative Device Control) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "3fc90411-3ae4-51e9-b15b-528d132de64d"
+            }
+          ],
+          "control-id": "sc.l2-3.13.12",
+          "remarks": "Control sc.l2-3.13.12 (Collaborative Device Control) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "df99a91d-ce23-56b2-bbbc-e9209d14695b"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control sc.l2-3.13.13 (Mobile Code) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "fc2e6dae-0ec2-53f7-b12a-44677b4b8bf9"
+            }
+          ],
+          "control-id": "sc.l2-3.13.13",
+          "remarks": "Control sc.l2-3.13.13 (Mobile Code) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "fa87677c-d2c4-5077-a886-16cd944019a0"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control sc.l2-3.13.14 (Voice over Internet Protocol) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "f5d5cce8-00d9-5cfe-817a-a37ed1ca3d2b"
+            }
+          ],
+          "control-id": "sc.l2-3.13.14",
+          "remarks": "Control sc.l2-3.13.14 (Voice over Internet Protocol) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "cc3c6d11-4f6f-55ba-ab54-7f471f4f75ac"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control sc.l2-3.13.15 (Communications Authenticity) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "cb0c728c-0fd9-5782-8f50-9f07afbdb04e"
+            }
+          ],
+          "control-id": "sc.l2-3.13.15",
+          "remarks": "Control sc.l2-3.13.15 (Communications Authenticity) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "6809c38c-0db1-5106-9838-9a9371645c74"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control sc.l2-3.13.16 (Data at Rest) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "d89b219f-7e6c-51e2-8e83-0406f8292481"
+            }
+          ],
+          "control-id": "sc.l2-3.13.16",
+          "remarks": "Control sc.l2-3.13.16 (Data at Rest) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "85614226-a00c-5e36-8c5a-65be29e42d42"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control sc.l2-3.13.2 (Security Engineering) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "776ec8d6-80e8-5fa8-a21d-2bc0af9a0c1b"
+            }
+          ],
+          "control-id": "sc.l2-3.13.2",
+          "remarks": "Control sc.l2-3.13.2 (Security Engineering) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "66bb7b7e-48ca-5be0-8f8b-1c53abf45879"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control sc.l2-3.13.3 (Role Separation) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "e80aef5a-0ea2-5458-b289-93c8c2f44588"
+            }
+          ],
+          "control-id": "sc.l2-3.13.3",
+          "remarks": "Control sc.l2-3.13.3 (Role Separation) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "fcd8c3c9-b9ae-5a3d-b7e0-177c921a5c11"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control sc.l2-3.13.4 (Shared Resource Control) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ea352825-91a0-5cef-9c2a-81a6a2a5a335"
+            }
+          ],
+          "control-id": "sc.l2-3.13.4",
+          "remarks": "Control sc.l2-3.13.4 (Shared Resource Control) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "83cc76ec-3701-5ef7-8e1a-01536b908e1b"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control sc.l2-3.13.6 (Network Communication by Exception) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "62856642-f58a-5551-bbc7-976f70fc172f"
+            }
+          ],
+          "control-id": "sc.l2-3.13.6",
+          "remarks": "Control sc.l2-3.13.6 (Network Communication by Exception) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "805f6f5f-c774-583e-b326-a061a3778f11"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control sc.l2-3.13.7 (Split Tunneling) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "84545c64-599b-5c6a-962a-b448c791d15b"
+            }
+          ],
+          "control-id": "sc.l2-3.13.7",
+          "remarks": "Control sc.l2-3.13.7 (Split Tunneling) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "79b30a70-d607-578a-bc02-4678ce5aa351"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control sc.l2-3.13.8 (Data in Transit) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "7b73ca1c-ed55-5d03-9c40-25d8b01624c1"
+            }
+          ],
+          "control-id": "sc.l2-3.13.8",
+          "remarks": "Control sc.l2-3.13.8 (Data in Transit) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "65069f48-3809-53eb-91c5-ae6ac069c30e"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control sc.l2-3.13.9 (Connections Termination) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "fc196272-4177-595f-aaf8-c84e8bcc64d5"
+            }
+          ],
+          "control-id": "sc.l2-3.13.9",
+          "remarks": "Control sc.l2-3.13.9 (Connections Termination) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "9301c88d-78de-5891-b54a-f117fe98d9b4"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control si.l1-3.14.1 (Flaw Remediation) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "cf3611f4-bedc-5a95-b0f1-5bc471df830d"
+            }
+          ],
+          "control-id": "si.l1-3.14.1",
+          "remarks": "Control si.l1-3.14.1 (Flaw Remediation) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "ed614b03-7bba-570b-b340-737ee84cf49f"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control si.l1-3.14.2 (Malicious Code Protection) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "5ca8707b-eafd-573d-943a-7a7f9d942a25"
+            }
+          ],
+          "control-id": "si.l1-3.14.2",
+          "remarks": "Control si.l1-3.14.2 (Malicious Code Protection) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "959351ab-acd8-530b-9292-035f0b024363"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control si.l1-3.14.4 (Update Malicious Code Protection) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "b903e024-c97c-56d3-9e8c-b50870d175f9"
+            }
+          ],
+          "control-id": "si.l1-3.14.4",
+          "remarks": "Control si.l1-3.14.4 (Update Malicious Code Protection) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "aaed48d9-750d-5584-9a92-a6de0c124d8e"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control si.l1-3.14.5 (System \u0026 File Scanning) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "c642cf46-429a-54ed-8ae5-e8b7d1b3720e"
+            }
+          ],
+          "control-id": "si.l1-3.14.5",
+          "remarks": "Control si.l1-3.14.5 (System \u0026 File Scanning) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "ab6a3a52-931f-553c-b06a-8f2db19b6e26"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control si.l2-3.14.3 (Security Alerts \u0026 Advisories) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "a20a8dbf-c00e-5da2-9315-bd9ca708ce89"
+            }
+          ],
+          "control-id": "si.l2-3.14.3",
+          "remarks": "Control si.l2-3.14.3 (Security Alerts \u0026 Advisories) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "1dbd64e5-c81a-558c-a337-600a163dfda9"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control si.l2-3.14.6 (Monitor Communications for Attacks) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "de179cce-99e2-5a4b-b518-1114c78fcd28"
+            }
+          ],
+          "control-id": "si.l2-3.14.6",
+          "remarks": "Control si.l2-3.14.6 (Monitor Communications for Attacks) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "84b467dc-fc58-5999-87c8-ce111eeb4709"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622",
+              "description": "Control si.l2-3.14.7 (Identify Unauthorized Use) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "cc5f3827-181b-5e76-b4b0-f6a2b234748c"
+            }
+          ],
+          "control-id": "si.l2-3.14.7",
+          "remarks": "Control si.l2-3.14.7 (Identify Unauthorized Use) is satisfied by the CMMC version 2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "c70b4ee1-b152-5c23-a519-fdcbdde04ee9"
+        }
+      ]
+    },
+    "import-profile": {
+      "href": "./catalog.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:13Z",
+      "oscal-version": "1.2.3",
+      "roles": [
+        {
+          "id": "sec-admin",
+          "title": "Security Administrator"
+        }
+      ],
+      "title": "CMMC version 2.0 System Security Plan Template",
+      "version": "6"
+    },
+    "system-characteristics": {
+      "authorization-boundary": {
+        "description": "The authorization boundary encompasses all computing resources, cloud tenancies, and network zones supporting CMMC version 2.0 operations."
+      },
+      "description": "Reference system architecture implementing security controls for CMMC version 2.0.",
+      "security-impact-level": {
+        "security-objective-availability": "moderate",
+        "security-objective-confidentiality": "moderate",
+        "security-objective-integrity": "high"
+      },
+      "security-sensitivity-level": "moderate",
+      "status": {
+        "state": "operational"
+      },
+      "system-ids": [
+        {
+          "id": "cmmc-2.0-system"
+        }
+      ],
+      "system-information": {
+        "information-types": [
+          {
+            "description": "Operational and compliance data processed within the usa jurisdiction boundary.",
+            "title": "Sovereign Program Data",
+            "uuid": "2d7a38b4-a6b2-5a1a-831a-cca7505a4369"
+          }
+        ]
+      },
+      "system-name": "CMMC version 2.0 Reference System",
+      "system-name-short": "cmmc-2.0"
+    },
+    "system-implementation": {
+      "components": [
+        {
+          "description": "Central execution platform providing control implementations for CMMC version 2.0.",
+          "status": {
+            "state": "operational"
+          },
+          "title": "CMMC version 2.0 Core System Component",
+          "type": "software",
+          "uuid": "55536980-b1cc-5cd9-9326-cecd7c0ec622"
+        }
+      ],
+      "users": [
+        {
+          "role-ids": [
+            "sec-admin"
+          ],
+          "title": "Security Administrator",
+          "uuid": "5bcca40e-e46a-54bc-b687-7a711ec59c68"
+        }
+      ]
+    },
+    "uuid": "93afcec8-0019-5885-8201-1c3d3614022f"
+  }
+}

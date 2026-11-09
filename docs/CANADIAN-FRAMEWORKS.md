@@ -66,9 +66,9 @@ Published on March 31, 2026, **ITSP.10.033** represents the Government of Canada
 - **Base Controls & Activities**: 330
 - **Control Enhancements**: 918
 - **Total Addressable Controls**: 1,248
-- **Organization-Defined Parameters (ODP)**: 1,272
-- **Schema Conformance**: NIST OSCAL 1.2.3 JSON Schema (0 errors)
-- **Artifact Size**: 3.39 MB (`catalog.json`)
+- **Organization-Defined Parameters (ODP)**: 1,273
+- **Schema & Metaschema Conformance**: NIST OSCAL 1.2.3 JSON Schema (Tier 1) + NIST `oscal-cli 1.0.3` Metaschema Constraints (Tier 2, 0 errors)
+- **Artifact Size**: 3.44 MB (`catalog.json`)
 
 ### Sovereign Canadian Delta
 

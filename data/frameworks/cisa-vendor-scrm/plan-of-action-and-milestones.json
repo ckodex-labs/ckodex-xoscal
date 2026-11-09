@@ -1,0 +1,21 @@
+{
+  "plan-of-action-and-milestones": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:13Z",
+      "oscal-version": "1.2.3",
+      "title": "VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE Plan of Action and Milestones Template",
+      "version": "2"
+    },
+    "poam-items": [
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "title": "Compliance Roadmap and Parameter Tailoring for VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE",
+        "uuid": "e330c86f-2007-5249-959a-f8218c9c2bf7"
+      }
+    ],
+    "uuid": "4639fa4f-a2bc-5c02-b269-995ca4f4ae78"
+  }
+}

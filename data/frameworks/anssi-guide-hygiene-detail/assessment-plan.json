@@ -1,0 +1,84 @@
+{
+  "assessment-plan": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:12Z",
+      "oscal-version": "1.2.3",
+      "title": "ANSSI - Guide d'hygiène informatique - version détaillée Security Assessment Plan Template",
+      "version": "4"
+    },
+    "reviewed-controls": {
+      "control-selections": [
+        {
+          "description": "All controls in ANSSI - Guide d'hygiène informatique - version détaillée",
+          "include-all": {}
+        }
+      ]
+    },
+    "tasks": [
+      {
+        "description": "Verify and examine implementation of 23 controls in the Sensibiliser et former family for ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "title": "Assess Family I (Sensibiliser et former)",
+        "type": "examination",
+        "uuid": "daf4c6c4-e9d6-5e25-a481-c1d6b6bbb998"
+      },
+      {
+        "description": "Verify and examine implementation of 20 controls in the Connaître le système d'information family for ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "title": "Assess Family II (Connaître le système d'information)",
+        "type": "examination",
+        "uuid": "de7e2fb8-7a3a-55d1-a843-0e91536ed7f4"
+      },
+      {
+        "description": "Verify and examine implementation of 24 controls in the Authentifier et contrôler les accès family for ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "title": "Assess Family III (Authentifier et contrôler les accès)",
+        "type": "examination",
+        "uuid": "fc648414-7331-5447-8af1-6531e6420342"
+      },
+      {
+        "description": "Verify and examine implementation of 18 controls in the Sécuriser les postes family for ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "title": "Assess Family IV (Sécuriser les postes)",
+        "type": "examination",
+        "uuid": "2e5c477f-c7da-5e47-8242-5393dab35755"
+      },
+      {
+        "description": "Verify and examine implementation of 34 controls in the Superviser, auditer, réagir family for ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "title": "Assess Family IX (Superviser, auditer, réagir)",
+        "type": "examination",
+        "uuid": "bb512ef6-85b3-55b7-bc91-131386f41f3f"
+      },
+      {
+        "description": "Verify and examine implementation of 38 controls in the Sécuriser le réseau family for ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "title": "Assess Family V (Sécuriser le réseau)",
+        "type": "examination",
+        "uuid": "c2a53b68-86c7-5fc7-86a6-5d4c34b1fba1"
+      },
+      {
+        "description": "Verify and examine implementation of 11 controls in the Sécuriser l'administration family for ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "title": "Assess Family VI (Sécuriser l'administration)",
+        "type": "examination",
+        "uuid": "c261232e-7274-5203-84d8-386b852b1319"
+      },
+      {
+        "description": "Verify and examine implementation of 16 controls in the Gérer le nomadisme family for ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "title": "Assess Family VII (Gérer le nomadisme)",
+        "type": "examination",
+        "uuid": "5e571be5-e34d-59d9-b4bb-f0911182b76e"
+      },
+      {
+        "description": "Verify and examine implementation of 13 controls in the Maintenir le système d'information à jour family for ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "title": "Assess Family VIII (Maintenir le système d'information à jour)",
+        "type": "examination",
+        "uuid": "72442caa-3cd4-584f-bebb-aae7c62a768c"
+      },
+      {
+        "description": "Verify and examine implementation of 3 controls in the Pour aller plus loin family for ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "title": "Assess Family X (Pour aller plus loin)",
+        "type": "examination",
+        "uuid": "080bfc57-1487-589f-a313-049110162d93"
+      }
+    ],
+    "uuid": "6fec0e96-cd3b-52f1-adb6-fdaccf3cf7e1"
+  }
+}

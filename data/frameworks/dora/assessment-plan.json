@@ -1,0 +1,60 @@
+{
+  "assessment-plan": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:11Z",
+      "oscal-version": "1.2.3",
+      "title": "Digital Operational Resilience Act (DORA) Security Assessment Plan Template",
+      "version": "7"
+    },
+    "reviewed-controls": {
+      "control-selections": [
+        {
+          "description": "All controls in Digital Operational Resilience Act (DORA)",
+          "include-all": {}
+        }
+      ]
+    },
+    "tasks": [
+      {
+        "description": "Verify and examine implementation of 126 controls in the Chapter II family for Digital Operational Resilience Act (DORA).",
+        "title": "Assess Family NODE189 (Chapter II)",
+        "type": "examination",
+        "uuid": "4ae69a1d-27c3-52e0-b124-2a65b9f0e0fb"
+      },
+      {
+        "description": "Verify and examine implementation of 33 controls in the CHAPTER III family for Digital Operational Resilience Act (DORA).",
+        "title": "Assess Family NODE335 (CHAPTER III)",
+        "type": "examination",
+        "uuid": "7c8d58ae-348c-575f-b920-78ef009f9350"
+      },
+      {
+        "description": "Verify and examine implementation of 34 controls in the Chapter IV family for Digital Operational Resilience Act (DORA).",
+        "title": "Assess Family NODE388 (Chapter IV)",
+        "type": "examination",
+        "uuid": "8da307b1-ce6a-5aff-b280-880f124c316d"
+      },
+      {
+        "description": "Verify and examine implementation of 61 controls in the Chapter V family for Digital Operational Resilience Act (DORA).",
+        "title": "Assess Family NODE431 (Chapter V)",
+        "type": "examination",
+        "uuid": "44057ef7-fc17-56df-8121-976a877b26cd"
+      },
+      {
+        "description": "Verify and examine implementation of 5 controls in the CHAPTER VI family for Digital Operational Resilience Act (DORA).",
+        "title": "Assess Family NODE603 (CHAPTER VI)",
+        "type": "examination",
+        "uuid": "14bb28f9-2271-5892-bee8-a5b7b8f0e52e"
+      },
+      {
+        "description": "Verify and examine implementation of 1 controls in the CHAPTER IX family for Digital Operational Resilience Act (DORA).",
+        "title": "Assess Family NODE663 (CHAPTER IX)",
+        "type": "examination",
+        "uuid": "ee5f50f4-4fc2-5371-a181-e6bc7c0646e4"
+      }
+    ],
+    "uuid": "55f96301-acb6-5578-b27f-25aacd0f8fcd"
+  }
+}

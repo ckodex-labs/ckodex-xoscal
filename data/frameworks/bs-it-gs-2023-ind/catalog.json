@@ -1,0 +1,4579 @@
+{
+  "catalog": {
+    "back-matter": {
+      "resources": [
+        {
+          "description": "Source framework metadata for bs-it-gs-2023-ind snapshot portal",
+          "props": [
+            {
+              "name": "type",
+              "value": "standard"
+            },
+            {
+              "name": "version",
+              "value": "portal"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "https://raw.githubusercontent.com/intuitem/ciso-assistant-community/main/backend/library/libraries/bs-it-gs-2023-ind.yaml"
+            }
+          ],
+          "title": "bs-it-gs-2023-ind Framework Reference",
+          "uuid": "35ba6722-f237-597b-b767-a393a41089db"
+        }
+      ]
+    },
+    "groups": [
+      {
+        "groups": [
+          {
+            "controls": [
+              {
+                "id": "IND.1.A1.1",
+                "parts": [
+                  {
+                    "id": "IND.1.A1.1-stmt",
+                    "name": "statement",
+                    "prose": "Ein Managementsystem für Informationssicherheit (ISMS) für den Betrieb der OT-Infrastruktur MUSS entweder als selbständiges ISMS oder als Teil eines Gesamt-ISMS existieren."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Einbindung in die Sicherheitsorganisation — IND.1.A1.1"
+              },
+              {
+                "id": "IND.1.A1.2",
+                "parts": [
+                  {
+                    "id": "IND.1.A1.2-stmt",
+                    "name": "statement",
+                    "prose": "Eine gesamtverantwortliche Person für die Informationssicherheit im OT-Bereich MUSS benannt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Einbindung in die Sicherheitsorganisation — IND.1.A1.2"
+              },
+              {
+                "id": "IND.1.A1.3",
+                "parts": [
+                  {
+                    "id": "IND.1.A1.3-stmt",
+                    "name": "statement",
+                    "prose": "Er oder sie MUSS innerhalb der Institution bekannt gegeben werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Einbindung in die Sicherheitsorganisation — IND.1.A1.3"
+              }
+            ],
+            "id": "IND.1.A1",
+            "title": "Einbindung in die Sicherheitsorganisation"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.1.A10.1",
+                "parts": [
+                  {
+                    "id": "IND.1.A10.1-stmt",
+                    "name": "statement",
+                    "prose": "Betriebs- und sicherheitsrelevante Ereignisse SOLLTEN zeitnah identifiziert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Monitoring, Protokollierung und Detektion — IND.1.A10.1"
+              },
+              {
+                "id": "IND.1.A10.2",
+                "parts": [
+                  {
+                    "id": "IND.1.A10.2-stmt",
+                    "name": "statement",
+                    "prose": "Hierzu SOLLTE ein geeignetes Log- und Event-Management entwickelt und umgesetzt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Monitoring, Protokollierung und Detektion — IND.1.A10.2"
+              },
+              {
+                "id": "IND.1.A10.3",
+                "parts": [
+                  {
+                    "id": "IND.1.A10.3-stmt",
+                    "name": "statement",
+                    "prose": "Das Log- und Event-Management SOLLTE angemessene Maßnahmen umfassen, um sicherheitsrelevante Ereignisse zu erkennen und zu erheben."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Monitoring, Protokollierung und Detektion — IND.1.A10.3"
+              },
+              {
+                "id": "IND.1.A10.4",
+                "parts": [
+                  {
+                    "id": "IND.1.A10.4-stmt",
+                    "name": "statement",
+                    "prose": "Es SOLLTE zudem einen Reaktionsplan (Security Incident Response) enthalten."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Monitoring, Protokollierung und Detektion — IND.1.A10.4"
+              },
+              {
+                "id": "IND.1.A10.5",
+                "parts": [
+                  {
+                    "id": "IND.1.A10.5-stmt",
+                    "name": "statement",
+                    "prose": "Der Reaktionsplan SOLLTE Verfahren zur Behandlung von Sicherheitsvorfällen festlegen."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Monitoring, Protokollierung und Detektion — IND.1.A10.5"
+              },
+              {
+                "id": "IND.1.A10.6",
+                "parts": [
+                  {
+                    "id": "IND.1.A10.6-stmt",
+                    "name": "statement",
+                    "prose": "Darin abgedeckt sein SOLLTEN die Klassifizierung von Ereignissen, Meldewege und Festlegung der einzubeziehenden Organisationseinheiten, Reaktionspläne zur Schadensbegrenzung, Analyse und Wiederherstellung von Systemen und Diensten sowie die Dokumentation und Nachbereitung von Vorfällen."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Monitoring, Protokollierung und Detektion — IND.1.A10.6"
+              }
+            ],
+            "id": "IND.1.A10",
+            "title": "Monitoring, Protokollierung und Detektion"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.1.A11.1",
+                "parts": [
+                  {
+                    "id": "IND.1.A11.1-stmt",
+                    "name": "statement",
+                    "prose": "Sollen OT-Systeme beschafft, geplant oder entwickelt werden, SOLLTEN Regelungen zur Informationssicherheit getroffen und dokumentiert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Sichere Beschaffung und Systementwicklung — IND.1.A11.1"
+              },
+              {
+                "id": "IND.1.A11.2",
+                "parts": [
+                  {
+                    "id": "IND.1.A11.2-stmt",
+                    "name": "statement",
+                    "prose": "Die Unterlagen SOLLTEN Teil der Ausschreibung sein."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Sichere Beschaffung und Systementwicklung — IND.1.A11.2"
+              },
+              {
+                "id": "IND.1.A11.3",
+                "parts": [
+                  {
+                    "id": "IND.1.A11.3-stmt",
+                    "name": "statement",
+                    "prose": "Bei Beschaffungen, Planungen oder Entwicklungen SOLLTE die Informationssicherheit in dem gesamten Lebenszyklus berücksichtigt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Sichere Beschaffung und Systementwicklung — IND.1.A11.3"
+              },
+              {
+                "id": "IND.1.A11.4",
+                "parts": [
+                  {
+                    "id": "IND.1.A11.4-stmt",
+                    "name": "statement",
+                    "prose": "Voraussetzungen und Umsetzungshinweise für einen sicheren Betrieb von ICS-Komponenten von den herstellenden Unternehmen SOLLTEN frühzeitig eingeplant und umgesetzt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Sichere Beschaffung und Systementwicklung — IND.1.A11.4"
+              },
+              {
+                "id": "IND.1.A11.5",
+                "parts": [
+                  {
+                    "id": "IND.1.A11.5-stmt",
+                    "name": "statement",
+                    "prose": "Für ICS-Komponenten SOLLTEN einheitliche und dem Schutzbedarf angemessene Anforderungen an die Informationssicherheit definiert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Sichere Beschaffung und Systementwicklung — IND.1.A11.5"
+              },
+              {
+                "id": "IND.1.A11.6",
+                "parts": [
+                  {
+                    "id": "IND.1.A11.6-stmt",
+                    "name": "statement",
+                    "prose": "Diese SOLLTEN berücksichtigt werden, wenn neue ICS-Komponenten beschafft werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Sichere Beschaffung und Systementwicklung — IND.1.A11.6"
+              },
+              {
+                "id": "IND.1.A11.7",
+                "parts": [
+                  {
+                    "id": "IND.1.A11.7-stmt",
+                    "name": "statement",
+                    "prose": "Die Einhaltung und Umsetzung SOLLTE dokumentiert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Sichere Beschaffung und Systementwicklung — IND.1.A11.7"
+              },
+              {
+                "id": "IND.1.A11.8",
+                "parts": [
+                  {
+                    "id": "IND.1.A11.8-stmt",
+                    "name": "statement",
+                    "prose": "Die Institution SOLLTE dokumentieren, wie sich das System in die Konzepte für die Zoneneinteilung, das Berechtigungs- und Schwachstellen-Management sowie für den Virenschutz einfügt und diese gegebenenfalls anpassen."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Sichere Beschaffung und Systementwicklung — IND.1.A11.8"
+              },
+              {
+                "id": "IND.1.A11.9",
+                "parts": [
+                  {
+                    "id": "IND.1.A11.9-stmt",
+                    "name": "statement",
+                    "prose": "Es SOLLTE geregelt sein, wie der Betrieb aufrechterhalten werden kann, falls einer der Kooperationspartner keine Dienstleistungen mehr anbietet."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Sichere Beschaffung und Systementwicklung — IND.1.A11.9"
+              }
+            ],
+            "id": "IND.1.A11",
+            "title": "Sichere Beschaffung und Systementwicklung"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.1.A12.1",
+                "parts": [
+                  {
+                    "id": "IND.1.A12.1-stmt",
+                    "name": "statement",
+                    "prose": "Für den sicheren Betrieb einer OT-Umgebung SOLLTE die Institution ein Schwachstellen-Management etablieren."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Etablieren eines Schwachstellen-Managements — IND.1.A12.1"
+              },
+              {
+                "id": "IND.1.A12.2",
+                "parts": [
+                  {
+                    "id": "IND.1.A12.2-stmt",
+                    "name": "statement",
+                    "prose": "Das Schwachstellen-Management SOLLTE Lücken in Software, Komponenten, Protokollen und Außenschnittstellen der Umgebung identifizieren."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Etablieren eines Schwachstellen-Managements — IND.1.A12.2"
+              },
+              {
+                "id": "IND.1.A12.3",
+                "parts": [
+                  {
+                    "id": "IND.1.A12.3-stmt",
+                    "name": "statement",
+                    "prose": "Außerdem SOLLTEN sich daraus erforderliche Handlungen ableiten, bewerten und umsetzen lassen."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Etablieren eines Schwachstellen-Managements — IND.1.A12.3"
+              },
+              {
+                "id": "IND.1.A12.4",
+                "parts": [
+                  {
+                    "id": "IND.1.A12.4-stmt",
+                    "name": "statement",
+                    "prose": "Grundlage dafür SOLLTEN Schwachstellenmeldungen von herstellenden Unternehmen oder öffentlich verfügbare CERT-Meldungen sein."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Etablieren eines Schwachstellen-Managements — IND.1.A12.4"
+              },
+              {
+                "id": "IND.1.A12.5",
+                "parts": [
+                  {
+                    "id": "IND.1.A12.5-stmt",
+                    "name": "statement",
+                    "prose": "Ergänzend hierzu SOLLTEN organisatorische und technische Audits zur Schwachstellenanalyse durchgeführt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Etablieren eines Schwachstellen-Managements — IND.1.A12.5"
+              }
+            ],
+            "id": "IND.1.A12",
+            "title": "Etablieren eines Schwachstellen-Managements"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.1.A13.1",
+                "parts": [
+                  {
+                    "id": "IND.1.A13.1-stmt",
+                    "name": "statement",
+                    "prose": "Notfallpläne für den Ausfall und für die Kompromittierung jeder Zone SOLLTEN definiert, dokumentiert, nach jeder größeren Änderung getestet und regelmäßig geübt sein."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[E]"
+                  }
+                ],
+                "title": "Notfallplanung für OT — IND.1.A13.1"
+              },
+              {
+                "id": "IND.1.A13.2",
+                "parts": [
+                  {
+                    "id": "IND.1.A13.2-stmt",
+                    "name": "statement",
+                    "prose": "Zudem SOLLTE ein wirksames Ersatzverfahren für den Ausfall der (Fern-) Administrationsmöglichkeit definiert, dokumentiert und getestet sein."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[E]"
+                  }
+                ],
+                "title": "Notfallplanung für OT — IND.1.A13.2"
+              }
+            ],
+            "id": "IND.1.A13",
+            "title": "Notfallplanung für OT"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.1.A14.1",
+                "parts": [
+                  {
+                    "id": "IND.1.A14.1-stmt",
+                    "name": "statement",
+                    "prose": "Zur sicheren Authentisierung von privilegierten Benutzenden in Steuerungssystemen SOLLTE ein zentraler Verzeichnisdienst eingerichtet werden (siehe Baustein ORP.4 Identitäts- und Berechtigungsmanagement)."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[E]"
+                  }
+                ],
+                "title": "Starke Authentisierung an OT-Komponenten — IND.1.A14.1"
+              },
+              {
+                "id": "IND.1.A14.2",
+                "parts": [
+                  {
+                    "id": "IND.1.A14.2-stmt",
+                    "name": "statement",
+                    "prose": "Die Authentisierung SOLLTE durch den Einsatz mehrerer Faktoren wie Wissen, Besitz oder Biometrie zusätzlich abgesichert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[E]"
+                  }
+                ],
+                "title": "Starke Authentisierung an OT-Komponenten — IND.1.A14.2"
+              },
+              {
+                "id": "IND.1.A14.3",
+                "parts": [
+                  {
+                    "id": "IND.1.A14.3-stmt",
+                    "name": "statement",
+                    "prose": "Bei der Planung SOLLTE darauf geachtet werden, dass daraus entstehende Abhängigkeiten in der Authentisierung bekannt sind und bei der Umsetzung der Lösung berücksichtigt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[E]"
+                  }
+                ],
+                "title": "Starke Authentisierung an OT-Komponenten — IND.1.A14.3"
+              },
+              {
+                "id": "IND.1.A14.4",
+                "parts": [
+                  {
+                    "id": "IND.1.A14.4-stmt",
+                    "name": "statement",
+                    "prose": "Es SOLLTE sichergestellt werden, dass die Authentisierung von betrieblich erforderlichen technischen Konten auch in Notfällen durchgeführt werden kann."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[E]"
+                  }
+                ],
+                "title": "Starke Authentisierung an OT-Komponenten — IND.1.A14.4"
+              }
+            ],
+            "id": "IND.1.A14",
+            "title": "Starke Authentisierung an OT-Komponenten"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.1.A15.1",
+                "parts": [
+                  {
+                    "id": "IND.1.A15.1-stmt",
+                    "name": "statement",
+                    "prose": "Die Institution SOLLTE ein Bestandsverzeichnis führen, das alle vergebenen Zutritts-, Zugangs und Zugriffsrechte auf kritische Systeme enthält."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[E]"
+                  }
+                ],
+                "title": "Überwachung von weitreichenden Berechtigungen — IND.1.A15.1"
+              },
+              {
+                "id": "IND.1.A15.2",
+                "parts": [
+                  {
+                    "id": "IND.1.A15.2-stmt",
+                    "name": "statement",
+                    "prose": "Das Verzeichnis SOLLTE beinhalten, welche Rechte ein bestimmter Benutzender oder eine bestimme Benutzende effektiv hat und wer an einem bestimmten System über welche Rechte verfügt."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[E]"
+                  }
+                ],
+                "title": "Überwachung von weitreichenden Berechtigungen — IND.1.A15.2"
+              },
+              {
+                "id": "IND.1.A15.3",
+                "parts": [
+                  {
+                    "id": "IND.1.A15.3-stmt",
+                    "name": "statement",
+                    "prose": "Alle kritischen administrativen Tätigkeiten SOLLTEN protokolliert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[E]"
+                  }
+                ],
+                "title": "Überwachung von weitreichenden Berechtigungen — IND.1.A15.3"
+              },
+              {
+                "id": "IND.1.A15.4",
+                "parts": [
+                  {
+                    "id": "IND.1.A15.4-stmt",
+                    "name": "statement",
+                    "prose": "Der IT-Betrieb SOLLTE NICHT die Protokolle löschen oder manipulieren können."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[E]"
+                  }
+                ],
+                "title": "Überwachung von weitreichenden Berechtigungen — IND.1.A15.4"
+              }
+            ],
+            "id": "IND.1.A15",
+            "title": "Überwachung von weitreichenden Berechtigungen"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.1.A16.1",
+                "parts": [
+                  {
+                    "id": "IND.1.A16.1-stmt",
+                    "name": "statement",
+                    "prose": "Bei hoch schutzbedürftigen oder schlecht absicherbaren ICS-Umgebungen SOLLTEN vorbeugend Schnittstellensysteme mit Sicherheitsprüffunktionen eingesetzt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[E]"
+                  }
+                ],
+                "title": "Stärkere Abschottung der Zonen — IND.1.A16.1"
+              },
+              {
+                "id": "IND.1.A16.2",
+                "parts": [
+                  {
+                    "id": "IND.1.A16.2-stmt",
+                    "name": "statement",
+                    "prose": "Durch Realisierung einer oder mehrerer Anbindungszonen (DMZ) in P-A-P-Struktur SOLLTEN durchgängige Außenverbindungen terminiert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[E]"
+                  }
+                ],
+                "title": "Stärkere Abschottung der Zonen — IND.1.A16.2"
+              },
+              {
+                "id": "IND.1.A16.3",
+                "parts": [
+                  {
+                    "id": "IND.1.A16.3-stmt",
+                    "name": "statement",
+                    "prose": "Erforderliche Sicherheitsprüfungen SOLLTEN so erfolgen, dass die ICS-Anlage nicht angepasst werden muss."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[E]"
+                  }
+                ],
+                "title": "Stärkere Abschottung der Zonen — IND.1.A16.3"
+              }
+            ],
+            "id": "IND.1.A16",
+            "title": "Stärkere Abschottung der Zonen"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.1.A17.1",
+                "parts": [
+                  {
+                    "id": "IND.1.A17.1-stmt",
+                    "name": "statement",
+                    "prose": "Die Sicherheitskonfiguration von OT-Komponenten SOLLTE regelmäßig und bedarfsorientiert bei plötzlich auftretenden neuen, bisher unbekannten Gefährdungen überprüft werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[E]"
+                  }
+                ],
+                "title": "Regelmäßige Sicherheitsüberprüfung — IND.1.A17.1"
+              },
+              {
+                "id": "IND.1.A17.2",
+                "parts": [
+                  {
+                    "id": "IND.1.A17.2-stmt",
+                    "name": "statement",
+                    "prose": "Die Sicherheitsüberprüfung SOLLTE zumindest die exponierten Systeme mit Außenschnittstellen oder Benutzendeninteraktion umfassen."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[E]"
+                  }
+                ],
+                "title": "Regelmäßige Sicherheitsüberprüfung — IND.1.A17.2"
+              },
+              {
+                "id": "IND.1.A17.3",
+                "parts": [
+                  {
+                    "id": "IND.1.A17.3-stmt",
+                    "name": "statement",
+                    "prose": "Auch das realisierte Sicherheitskonzept SOLLTE regelmäßig überprüft werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[E]"
+                  }
+                ],
+                "title": "Regelmäßige Sicherheitsüberprüfung — IND.1.A17.3"
+              },
+              {
+                "id": "IND.1.A17.4",
+                "parts": [
+                  {
+                    "id": "IND.1.A17.4-stmt",
+                    "name": "statement",
+                    "prose": "Die Sicherheitsüberprüfung SOLLTE als Konfigurationsprüfung oder auch durch automatisierte Konformitätsprüfungen erfolgen."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[E]"
+                  }
+                ],
+                "title": "Regelmäßige Sicherheitsüberprüfung — IND.1.A17.4"
+              }
+            ],
+            "id": "IND.1.A17",
+            "title": "Regelmäßige Sicherheitsüberprüfung"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.1.A18.1",
+                "parts": [
+                  {
+                    "id": "IND.1.A18.1-stmt",
+                    "name": "statement",
+                    "prose": "Jede Änderung an ICS-Komponenten MUSS protokolliert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Protokollierung — IND.1.A18.1"
+              },
+              {
+                "id": "IND.1.A18.2",
+                "parts": [
+                  {
+                    "id": "IND.1.A18.2-stmt",
+                    "name": "statement",
+                    "prose": "Außerdem MÜSSEN alle Zugriffe auf ICS-Komponenten protokolliert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Protokollierung — IND.1.A18.2"
+              }
+            ],
+            "id": "IND.1.A18",
+            "title": "Protokollierung"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.1.A19.1",
+                "parts": [
+                  {
+                    "id": "IND.1.A19.1-stmt",
+                    "name": "statement",
+                    "prose": "Programme und Daten MÜSSEN regelmäßig gesichert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Erstellung von Datensicherungen — IND.1.A19.1"
+              },
+              {
+                "id": "IND.1.A19.2",
+                "parts": [
+                  {
+                    "id": "IND.1.A19.2-stmt",
+                    "name": "statement",
+                    "prose": "Auch nach jeder Systemänderung an OT-Komponenten MUSS eine Sicherung erstellt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Erstellung von Datensicherungen — IND.1.A19.2"
+              }
+            ],
+            "id": "IND.1.A19",
+            "title": "Erstellung von Datensicherungen"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.1.A20.1",
+                "parts": [
+                  {
+                    "id": "IND.1.A20.1-stmt",
+                    "name": "statement",
+                    "prose": "Es SOLLTE eine erweiterte Systemdokumentation erstellt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Systemdokumentation — IND.1.A20.1"
+              },
+              {
+                "id": "IND.1.A20.2",
+                "parts": [
+                  {
+                    "id": "IND.1.A20.2-stmt",
+                    "name": "statement",
+                    "prose": "Darin SOLLTEN Besonderheiten im Betrieb und die Möglichkeiten zur Systemverwaltung festgehalten werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Systemdokumentation — IND.1.A20.2"
+              },
+              {
+                "id": "IND.1.A20.3",
+                "parts": [
+                  {
+                    "id": "IND.1.A20.3-stmt",
+                    "name": "statement",
+                    "prose": "Außerdem SOLLTE dokumentiert werden, wenn ICS-Komponenten verändert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Systemdokumentation — IND.1.A20.3"
+              }
+            ],
+            "id": "IND.1.A20",
+            "title": "Systemdokumentation"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.1.A21.1",
+                "parts": [
+                  {
+                    "id": "IND.1.A21.1-stmt",
+                    "name": "statement",
+                    "prose": "Es SOLLTE dokumentiert werden, mit welchen Systemen eine ICS-Komponente welche Daten austauscht."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Dokumentation der Kommunikationsbeziehungen — IND.1.A21.1"
+              },
+              {
+                "id": "IND.1.A21.2",
+                "parts": [
+                  {
+                    "id": "IND.1.A21.2-stmt",
+                    "name": "statement",
+                    "prose": "Außerdem SOLLTEN die Kommunikationsverbindungen neu integrierter ICS-Komponenten dokumentiert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Dokumentation der Kommunikationsbeziehungen — IND.1.A21.2"
+              }
+            ],
+            "id": "IND.1.A21",
+            "title": "Dokumentation der Kommunikationsbeziehungen"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.1.A22.1",
+                "parts": [
+                  {
+                    "id": "IND.1.A22.1-stmt",
+                    "name": "statement",
+                    "prose": "Die Protokollierungsdaten von ICS-Komponenten SOLLTEN zentral gespeichert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Zentrale Systemprotokollierung und -überwachung — IND.1.A22.1"
+              },
+              {
+                "id": "IND.1.A22.2",
+                "parts": [
+                  {
+                    "id": "IND.1.A22.2-stmt",
+                    "name": "statement",
+                    "prose": "Bei sicherheitskritischen Ereignissen SOLLTE automatisch alarmiert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Zentrale Systemprotokollierung und -überwachung — IND.1.A22.2"
+              }
+            ],
+            "id": "IND.1.A22",
+            "title": "Zentrale Systemprotokollierung und -überwachung"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.1.A23.1",
+                "parts": [
+                  {
+                    "id": "IND.1.A23.1-stmt",
+                    "name": "statement",
+                    "prose": "Wenn alte oder defekte ICS-Komponenten ausgesondert werden, SOLLTEN alle schützenswerten Daten sicher gelöscht werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Aussonderung von ICS-Komponenten — IND.1.A23.1"
+              },
+              {
+                "id": "IND.1.A23.2",
+                "parts": [
+                  {
+                    "id": "IND.1.A23.2-stmt",
+                    "name": "statement",
+                    "prose": "Es SOLLTE insbesondere sichergestellt sein, dass alle Zugangsdaten nachhaltig entfernt wurden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Aussonderung von ICS-Komponenten — IND.1.A23.2"
+              }
+            ],
+            "id": "IND.1.A23",
+            "title": "Aussonderung von ICS-Komponenten"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.1.A24.1",
+                "parts": [
+                  {
+                    "id": "IND.1.A24.1-stmt",
+                    "name": "statement",
+                    "prose": "Alternative und unabhängige Kommunikationsmöglichkeiten SOLLTEN aufgebaut und betrieben werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[E]"
+                  }
+                ],
+                "title": "Kommunikation im Störfall — IND.1.A24.1"
+              }
+            ],
+            "id": "IND.1.A24",
+            "title": "Kommunikation im Störfall"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.1.A3.1",
+                "parts": [
+                  {
+                    "id": "IND.1.A3.1-stmt",
+                    "name": "statement",
+                    "prose": "Beim Einsatz von Virenschutz-Software auf OT-Komponenten MUSS berücksichtigt werden, ob und in welcher Konfiguration der Betrieb von Virenschutz-Software vom herstellenden Unternehmen unterstützt wird."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Schutz vor Schadprogrammen — IND.1.A3.1"
+              },
+              {
+                "id": "IND.1.A3.2",
+                "parts": [
+                  {
+                    "id": "IND.1.A3.2-stmt",
+                    "name": "statement",
+                    "prose": "Ist dies nicht der Fall, MUSS der Bedarf an alternativen Schutzverfahren geprüft werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Schutz vor Schadprogrammen — IND.1.A3.2"
+              },
+              {
+                "id": "IND.1.A3.3",
+                "parts": [
+                  {
+                    "id": "IND.1.A3.3-stmt",
+                    "name": "statement",
+                    "prose": "Die Virensignaturen DÜRFEN NICHT von OT-Systemen direkt aus dem Internet bezogen werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Schutz vor Schadprogrammen — IND.1.A3.3"
+              }
+            ],
+            "id": "IND.1.A3",
+            "title": "Schutz vor Schadprogrammen"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.1.A4.1",
+                "parts": [
+                  {
+                    "id": "IND.1.A4.1-stmt",
+                    "name": "statement",
+                    "prose": "Alle sicherheitsrelevanten Parameter der OT-Infrastruktur SOLLTEN dokumentiert sein."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Dokumentation der OT-Infrastruktur — IND.1.A4.1"
+              },
+              {
+                "id": "IND.1.A4.2",
+                "parts": [
+                  {
+                    "id": "IND.1.A4.2-stmt",
+                    "name": "statement",
+                    "prose": "In einem Bestandsverzeichnis SOLLTEN alle Software- und Systemkomponenten geführt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Dokumentation der OT-Infrastruktur — IND.1.A4.2"
+              },
+              {
+                "id": "IND.1.A4.3",
+                "parts": [
+                  {
+                    "id": "IND.1.A4.3-stmt",
+                    "name": "statement",
+                    "prose": "Hieraus SOLLTEN die eingesetzten Produkt- und Protokollversionen sowie die Zuständigkeiten hervorgehen."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Dokumentation der OT-Infrastruktur — IND.1.A4.3"
+              },
+              {
+                "id": "IND.1.A4.4",
+                "parts": [
+                  {
+                    "id": "IND.1.A4.4-stmt",
+                    "name": "statement",
+                    "prose": "Zu den eingesetzten Komponenten SOLLTEN eventuelle Restriktionen der herstellenden Unternehmen oder regulatorische Auflagen bestimmt sein."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Dokumentation der OT-Infrastruktur — IND.1.A4.4"
+              },
+              {
+                "id": "IND.1.A4.5",
+                "parts": [
+                  {
+                    "id": "IND.1.A4.5-stmt",
+                    "name": "statement",
+                    "prose": "Diese Dokumentation und ein Systeminventar SOLLTEN beispielsweise in einem Leitsystem geführt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Dokumentation der OT-Infrastruktur — IND.1.A4.5"
+              },
+              {
+                "id": "IND.1.A4.6",
+                "parts": [
+                  {
+                    "id": "IND.1.A4.6-stmt",
+                    "name": "statement",
+                    "prose": "Zusätzlich SOLLTE ein aktueller Netzplan Zonen, Zonenübergänge (Conduits), eingesetzte Kommunikationsprotokolle und -verfahren sowie Außenschnittstellen dokumentieren."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Dokumentation der OT-Infrastruktur — IND.1.A4.6"
+              },
+              {
+                "id": "IND.1.A4.7",
+                "parts": [
+                  {
+                    "id": "IND.1.A4.7-stmt",
+                    "name": "statement",
+                    "prose": "Bei den Schnittstellen SOLLTEN aktive Netzkomponenten und manuelle Datentransferverfahren, z. B. durch Wechseldatenträger, berücksichtigt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Dokumentation der OT-Infrastruktur — IND.1.A4.7"
+              },
+              {
+                "id": "IND.1.A4.8",
+                "parts": [
+                  {
+                    "id": "IND.1.A4.8-stmt",
+                    "name": "statement",
+                    "prose": "Zonen und Conduits schützen die OT-Infrastrukur, indem die Automatisierungslösung in Zellen und Kommunikationskanälen strukturiert werden SOLLTE."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Dokumentation der OT-Infrastruktur — IND.1.A4.8"
+              }
+            ],
+            "id": "IND.1.A4",
+            "title": "Dokumentation der OT-Infrastruktur"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.1.A5.1",
+                "parts": [
+                  {
+                    "id": "IND.1.A5.1-stmt",
+                    "name": "statement",
+                    "prose": "Die OT-Infrastruktur SOLLTE auch horizontal in unabhängige Funktionsbereiche, wie etwa Anlagen, segmentiert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Entwicklung eines geeigneten Zonenkonzepts — IND.1.A5.1"
+              },
+              {
+                "id": "IND.1.A5.2",
+                "parts": [
+                  {
+                    "id": "IND.1.A5.2-stmt",
+                    "name": "statement",
+                    "prose": "Die einzelnen Zonen SOLLTEN, so weit wie möglich, im Betrieb voneinander unabhängig sein."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Entwicklung eines geeigneten Zonenkonzepts — IND.1.A5.2"
+              },
+              {
+                "id": "IND.1.A5.3",
+                "parts": [
+                  {
+                    "id": "IND.1.A5.3-stmt",
+                    "name": "statement",
+                    "prose": "Insbesondere die Zonen, in denen der technische Prozess gesteuert wird, SOLLTEN bei einem Ausfall der anderen Zonen für einen gewissen Zeitraum weiter funktionstüchtig sein."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Entwicklung eines geeigneten Zonenkonzepts — IND.1.A5.3"
+              },
+              {
+                "id": "IND.1.A5.4",
+                "parts": [
+                  {
+                    "id": "IND.1.A5.4-stmt",
+                    "name": "statement",
+                    "prose": "Auch SOLLTE die Abkopplung nach einem Angriff weiter funktionieren."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Entwicklung eines geeigneten Zonenkonzepts — IND.1.A5.4"
+              },
+              {
+                "id": "IND.1.A5.5",
+                "parts": [
+                  {
+                    "id": "IND.1.A5.5-stmt",
+                    "name": "statement",
+                    "prose": "Dieser Zeitraum SOLLTE geeignet definiert und dokumentiert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Entwicklung eines geeigneten Zonenkonzepts — IND.1.A5.5"
+              },
+              {
+                "id": "IND.1.A5.6",
+                "parts": [
+                  {
+                    "id": "IND.1.A5.6-stmt",
+                    "name": "statement",
+                    "prose": "Das Netz SOLLTE manipulations- und fehlerresistent konzipiert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Entwicklung eines geeigneten Zonenkonzepts — IND.1.A5.6"
+              }
+            ],
+            "id": "IND.1.A5",
+            "title": "Entwicklung eines geeigneten Zonenkonzepts"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.1.A6.1",
+                "parts": [
+                  {
+                    "id": "IND.1.A6.1-stmt",
+                    "name": "statement",
+                    "prose": "Für Änderungen an der OT SOLLTE ein eigener Änderungsprozess definiert, dokumentiert und gelebt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Änderungsmanagement im OT-Betrieb — IND.1.A6.1"
+              }
+            ],
+            "id": "IND.1.A6",
+            "title": "Änderungsmanagement im OT-Betrieb"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.1.A7.1",
+                "parts": [
+                  {
+                    "id": "IND.1.A7.1-stmt",
+                    "name": "statement",
+                    "prose": "Die Institution SOLLTE einen Prozess zur Verwaltung von Zugängen und zugeordneten Berechtigungen für den Zugriff auf die OT etablieren."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Etablieren einer übergreifenden Berechtigungsverwaltung zwischen der OT und in der Office-IT — IND.1.A7.1"
+              },
+              {
+                "id": "IND.1.A7.2",
+                "parts": [
+                  {
+                    "id": "IND.1.A7.2-stmt",
+                    "name": "statement",
+                    "prose": "Die Berechtigungsverwaltung SOLLTE den Prozess, die Durchführung und die Dokumentation für die Beantragung, Einrichtung und den Entzug von Berechtigungen umfassen."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Etablieren einer übergreifenden Berechtigungsverwaltung zwischen der OT und in der Office-IT — IND.1.A7.2"
+              },
+              {
+                "id": "IND.1.A7.3",
+                "parts": [
+                  {
+                    "id": "IND.1.A7.3-stmt",
+                    "name": "statement",
+                    "prose": "Die Berechtigungsverwaltung SOLLTE gewährleisten, dass Berechtigungen nach dem Minimalprinzip vergeben und regelmäßig überprüft werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Etablieren einer übergreifenden Berechtigungsverwaltung zwischen der OT und in der Office-IT — IND.1.A7.3"
+              },
+              {
+                "id": "IND.1.A7.4",
+                "parts": [
+                  {
+                    "id": "IND.1.A7.4-stmt",
+                    "name": "statement",
+                    "prose": "In der Berechtigungsverwaltung SOLLTEN die Zugriffe auf IT-Systeme für Mitarbeitende, Administrierende und Dritte geregelt sein."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Etablieren einer übergreifenden Berechtigungsverwaltung zwischen der OT und in der Office-IT — IND.1.A7.4"
+              },
+              {
+                "id": "IND.1.A7.5",
+                "parts": [
+                  {
+                    "id": "IND.1.A7.5-stmt",
+                    "name": "statement",
+                    "prose": "Jeder oder jede Beteiligte SOLLTE regelmäßig zu den einzuhaltenden Regelungen sensibilisiert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Etablieren einer übergreifenden Berechtigungsverwaltung zwischen der OT und in der Office-IT — IND.1.A7.5"
+              },
+              {
+                "id": "IND.1.A7.6",
+                "parts": [
+                  {
+                    "id": "IND.1.A7.6-stmt",
+                    "name": "statement",
+                    "prose": "Die Einhaltung SOLLTE überprüft werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Etablieren einer übergreifenden Berechtigungsverwaltung zwischen der OT und in der Office-IT — IND.1.A7.6"
+              },
+              {
+                "id": "IND.1.A7.7",
+                "parts": [
+                  {
+                    "id": "IND.1.A7.7-stmt",
+                    "name": "statement",
+                    "prose": "Fehlverhalten SOLLTE sanktioniert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Etablieren einer übergreifenden Berechtigungsverwaltung zwischen der OT und in der Office-IT — IND.1.A7.7"
+              }
+            ],
+            "id": "IND.1.A7",
+            "title": "Etablieren einer übergreifenden Berechtigungsverwaltung zwischen der OT und in der Office-IT"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.1.A8.1",
+                "parts": [
+                  {
+                    "id": "IND.1.A8.1-stmt",
+                    "name": "statement",
+                    "prose": "Für die Erstkonfiguration, Verwaltung und Fernwartung in der OT SOLLTEN entweder sichere Protokolle oder abgetrennte Administrationsnetze mit entsprechendem Schutzbedarf genutzt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Sichere Administration — IND.1.A8.1"
+              },
+              {
+                "id": "IND.1.A8.2",
+                "parts": [
+                  {
+                    "id": "IND.1.A8.2-stmt",
+                    "name": "statement",
+                    "prose": "Der Zugang zu diesen Schnittstellen SOLLTE auf die Berechtigten eingeschränkt sein."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Sichere Administration — IND.1.A8.2"
+              },
+              {
+                "id": "IND.1.A8.3",
+                "parts": [
+                  {
+                    "id": "IND.1.A8.3-stmt",
+                    "name": "statement",
+                    "prose": "Es SOLLTE nur der Zugriff auf die Systeme und Funktionen gewährt sein, die für die jeweilige Administrationsaufgabe benötigt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Sichere Administration — IND.1.A8.3"
+              },
+              {
+                "id": "IND.1.A8.4",
+                "parts": [
+                  {
+                    "id": "IND.1.A8.4-stmt",
+                    "name": "statement",
+                    "prose": "Die Systeme und Kommunikationskanäle, mit denen die Administration oder Fernwartung durchgeführt wird, SOLLTEN das gleiche Schutzniveau aufweisen wie die verwaltete OT-Komponente."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Sichere Administration — IND.1.A8.4"
+              }
+            ],
+            "id": "IND.1.A8",
+            "title": "Sichere Administration"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.1.A9.1",
+                "parts": [
+                  {
+                    "id": "IND.1.A9.1-stmt",
+                    "name": "statement",
+                    "prose": "Für die Nutzung von Wechseldatenträgern und mobilen Endgeräten SOLLTEN Regelungen aufgestellt und bekannt gegeben werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Restriktiver Einsatz von Wechseldatenträgern und mobilen Endgeräten in ICS-Umgebungen — IND.1.A9.1"
+              },
+              {
+                "id": "IND.1.A9.2",
+                "parts": [
+                  {
+                    "id": "IND.1.A9.2-stmt",
+                    "name": "statement",
+                    "prose": "Der Einsatz von Wechseldatenträgern und mobilen Endgeräten in ICS-Umgebungen SOLLTE beschränkt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Restriktiver Einsatz von Wechseldatenträgern und mobilen Endgeräten in ICS-Umgebungen — IND.1.A9.2"
+              },
+              {
+                "id": "IND.1.A9.3",
+                "parts": [
+                  {
+                    "id": "IND.1.A9.3-stmt",
+                    "name": "statement",
+                    "prose": "Für Medien und Geräte von Dienstleistenden SOLLTEN ein Genehmigungsprozess und eine Anforderungsliste existieren."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Restriktiver Einsatz von Wechseldatenträgern und mobilen Endgeräten in ICS-Umgebungen — IND.1.A9.3"
+              },
+              {
+                "id": "IND.1.A9.4",
+                "parts": [
+                  {
+                    "id": "IND.1.A9.4-stmt",
+                    "name": "statement",
+                    "prose": "Die Vorgaben SOLLTEN allen Dienstleistenden bekannt sein und von diesen schriftlich bestätigt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Restriktiver Einsatz von Wechseldatenträgern und mobilen Endgeräten in ICS-Umgebungen — IND.1.A9.4"
+              },
+              {
+                "id": "IND.1.A9.5",
+                "parts": [
+                  {
+                    "id": "IND.1.A9.5-stmt",
+                    "name": "statement",
+                    "prose": "Auf den OT-Komponenten SOLLTEN alle nicht benötigten Schnittstellen deaktiviert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Restriktiver Einsatz von Wechseldatenträgern und mobilen Endgeräten in ICS-Umgebungen — IND.1.A9.5"
+              },
+              {
+                "id": "IND.1.A9.6",
+                "parts": [
+                  {
+                    "id": "IND.1.A9.6-stmt",
+                    "name": "statement",
+                    "prose": "An den aktiven Schnittstellen SOLLTE die Nutzung auf bestimmte Geräte oder Medien eingeschränkt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Restriktiver Einsatz von Wechseldatenträgern und mobilen Endgeräten in ICS-Umgebungen — IND.1.A9.6"
+              }
+            ],
+            "id": "IND.1.A9",
+            "title": "Restriktiver Einsatz von Wechseldatenträgern und mobilen Endgeräten in ICS-Umgebungen"
+          }
+        ],
+        "id": "IND.1",
+        "title": "Prozessleit- und Automatisierungstechnik"
+      },
+      {
+        "groups": [
+          {
+            "controls": [
+              {
+                "id": "IND.2.1.A1.1",
+                "parts": [
+                  {
+                    "id": "IND.2.1.A1.1-stmt",
+                    "name": "statement",
+                    "prose": "Standardmäßig eingerichtete bzw. vom herstellenden Unternehmen gesetzte Passwörter MÜSSEN gewechselt werden (siehe ORP.4 Identitäts- und Berechtigungsmanagement)."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Einschränkung des Zugriffs auf Konfigurations- und Wartungsschnittstellen — IND.2.1.A1.1"
+              },
+              {
+                "id": "IND.2.1.A1.2",
+                "parts": [
+                  {
+                    "id": "IND.2.1.A1.2-stmt",
+                    "name": "statement",
+                    "prose": "Der Wechsel MUSS dokumentiert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Einschränkung des Zugriffs auf Konfigurations- und Wartungsschnittstellen — IND.2.1.A1.2"
+              },
+              {
+                "id": "IND.2.1.A1.3",
+                "parts": [
+                  {
+                    "id": "IND.2.1.A1.3-stmt",
+                    "name": "statement",
+                    "prose": "Die Passwörter MÜSSEN sicher hinterlegt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Einschränkung des Zugriffs auf Konfigurations- und Wartungsschnittstellen — IND.2.1.A1.3"
+              },
+              {
+                "id": "IND.2.1.A1.4",
+                "parts": [
+                  {
+                    "id": "IND.2.1.A1.4-stmt",
+                    "name": "statement",
+                    "prose": "Es MUSS sichergestellt werden, dass nur berechtigte Mitarbeitende auf Konfigurations- und Wartungsschnittstellen von ICS-Komponenten zugreifen können."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Einschränkung des Zugriffs auf Konfigurations- und Wartungsschnittstellen — IND.2.1.A1.4"
+              },
+              {
+                "id": "IND.2.1.A1.5",
+                "parts": [
+                  {
+                    "id": "IND.2.1.A1.5-stmt",
+                    "name": "statement",
+                    "prose": "Die Konfiguration von ICS-Komponenten DARF NUR nach einer Freigabe durch die verantwortliche Person oder nach einer Authentisierung geändert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Einschränkung des Zugriffs auf Konfigurations- und Wartungsschnittstellen — IND.2.1.A1.5"
+              }
+            ],
+            "id": "IND.2.1.A1",
+            "title": "Einschränkung des Zugriffs auf Konfigurations- und Wartungsschnittstellen"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.2.1.A11.1",
+                "parts": [
+                  {
+                    "id": "IND.2.1.A11.1-stmt",
+                    "name": "statement",
+                    "prose": "Bei der Wartung einer ICS-Komponente SOLLTEN immer die aktuellen und freigegebenen Sicherheitsupdates eingespielt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Wartung der ICS-Komponenten — IND.2.1.A11.1"
+              },
+              {
+                "id": "IND.2.1.A11.2",
+                "parts": [
+                  {
+                    "id": "IND.2.1.A11.2-stmt",
+                    "name": "statement",
+                    "prose": "Updates für das Betriebssystem SOLLTEN erst nach Freigabe durch das herstellende Unternehmen einer ICS-Komponente installiert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Wartung der ICS-Komponenten — IND.2.1.A11.2"
+              },
+              {
+                "id": "IND.2.1.A11.3",
+                "parts": [
+                  {
+                    "id": "IND.2.1.A11.3-stmt",
+                    "name": "statement",
+                    "prose": "Alternativ SOLLTE die Aktualisierung in einer Testumgebung erprobt werden, bevor diese in einer produktiven ICS-Komponente eingesetzt wird."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Wartung der ICS-Komponenten — IND.2.1.A11.3"
+              },
+              {
+                "id": "IND.2.1.A11.4",
+                "parts": [
+                  {
+                    "id": "IND.2.1.A11.4-stmt",
+                    "name": "statement",
+                    "prose": "Für kritische Sicherheitsupdates SOLLTE kurzfristig eine Wartung durchgeführt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Wartung der ICS-Komponenten — IND.2.1.A11.4"
+              }
+            ],
+            "id": "IND.2.1.A11",
+            "title": "Wartung der ICS-Komponenten"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.2.1.A13.1",
+                "parts": [
+                  {
+                    "id": "IND.2.1.A13.1-stmt",
+                    "name": "statement",
+                    "prose": "Bevor ICS-Komponenten in Betrieb genommen werden, SOLLTEN sie dem aktuellen, intern freigegebenen Firmware-, Software- und Patch-Stand entsprechen."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Geeignete Inbetriebnahme von ICS-Komponenten — IND.2.1.A13.1"
+              },
+              {
+                "id": "IND.2.1.A13.2",
+                "parts": [
+                  {
+                    "id": "IND.2.1.A13.2-stmt",
+                    "name": "statement",
+                    "prose": "Neue ICS-Komponenten SOLLTEN in die bestehenden Betriebs-, Überwachungs- und Informationssicherheitsmanagement-Prozesse eingebunden werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Geeignete Inbetriebnahme von ICS-Komponenten — IND.2.1.A13.2"
+              }
+            ],
+            "id": "IND.2.1.A13",
+            "title": "Geeignete Inbetriebnahme von ICS-Komponenten"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.2.1.A16.1",
+                "parts": [
+                  {
+                    "id": "IND.2.1.A16.1-stmt",
+                    "name": "statement",
+                    "prose": "Von außen erreichbare Schnittstellen SOLLTEN vor Missbrauch geschützt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Schutz externer Schnittstellen — IND.2.1.A16.1"
+              }
+            ],
+            "id": "IND.2.1.A16",
+            "title": "Schutz externer Schnittstellen"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.2.1.A17.1",
+                "parts": [
+                  {
+                    "id": "IND.2.1.A17.1-stmt",
+                    "name": "statement",
+                    "prose": "Mess- oder Steuerdaten SOLLTEN bei der Übertragung vor unberechtigten Zugriffen oder Veränderungen geschützt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Nutzung sicherer Protokolle für die Übertragung von Mess- und Steuerdaten — IND.2.1.A17.1"
+              },
+              {
+                "id": "IND.2.1.A17.2",
+                "parts": [
+                  {
+                    "id": "IND.2.1.A17.2-stmt",
+                    "name": "statement",
+                    "prose": "Bei Anwendungen mit Echtzeitanforderungen SOLLTE geprüft werden, ob dies umsetzbar ist."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Nutzung sicherer Protokolle für die Übertragung von Mess- und Steuerdaten — IND.2.1.A17.2"
+              },
+              {
+                "id": "IND.2.1.A17.3",
+                "parts": [
+                  {
+                    "id": "IND.2.1.A17.3-stmt",
+                    "name": "statement",
+                    "prose": "Werden Mess- oder Steuerdaten über öffentliche Netze übertragen, SOLLTEN sie angemessen geschützt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Nutzung sicherer Protokolle für die Übertragung von Mess- und Steuerdaten — IND.2.1.A17.3"
+              }
+            ],
+            "id": "IND.2.1.A17",
+            "title": "Nutzung sicherer Protokolle für die Übertragung von Mess- und Steuerdaten"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.2.1.A18.1",
+                "parts": [
+                  {
+                    "id": "IND.2.1.A18.1-stmt",
+                    "name": "statement",
+                    "prose": "Es SOLLTE alternative und unabhängige Kommunikationsmöglichkeiten geben, die bei einem Störfall benutzt werden können, um handlungsfähig zu bleiben."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[E]"
+                  }
+                ],
+                "title": "Kommunikation im Störfall — IND.2.1.A18.1"
+              }
+            ],
+            "id": "IND.2.1.A18",
+            "title": "Kommunikation im Störfall"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.2.1.A19.1",
+                "parts": [
+                  {
+                    "id": "IND.2.1.A19.1-stmt",
+                    "name": "statement",
+                    "prose": "Mithilfe von regelmäßigen Security-Tests SOLLTE geprüft werden, ob die technischen Sicherheitsmaßnahmen noch effektiv umgesetzt sind."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[E]"
+                  }
+                ],
+                "title": "Security-Tests — IND.2.1.A19.1"
+              },
+              {
+                "id": "IND.2.1.A19.2",
+                "parts": [
+                  {
+                    "id": "IND.2.1.A19.2-stmt",
+                    "name": "statement",
+                    "prose": "Die Security-Tests SOLLTEN nicht im laufenden Anlagenbetrieb erfolgen."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[E]"
+                  }
+                ],
+                "title": "Security-Tests — IND.2.1.A19.2"
+              },
+              {
+                "id": "IND.2.1.A19.3",
+                "parts": [
+                  {
+                    "id": "IND.2.1.A19.3-stmt",
+                    "name": "statement",
+                    "prose": "Die Tests SOLLTEN auf die Wartungszeiten geplant werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[E]"
+                  }
+                ],
+                "title": "Security-Tests — IND.2.1.A19.3"
+              },
+              {
+                "id": "IND.2.1.A19.4",
+                "parts": [
+                  {
+                    "id": "IND.2.1.A19.4-stmt",
+                    "name": "statement",
+                    "prose": "Die Ergebnisse SOLLTEN dokumentiert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[E]"
+                  }
+                ],
+                "title": "Security-Tests — IND.2.1.A19.4"
+              },
+              {
+                "id": "IND.2.1.A19.5",
+                "parts": [
+                  {
+                    "id": "IND.2.1.A19.5-stmt",
+                    "name": "statement",
+                    "prose": "Erkannte Risiken SOLLTEN bewertet und behandelt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[E]"
+                  }
+                ],
+                "title": "Security-Tests — IND.2.1.A19.5"
+              }
+            ],
+            "id": "IND.2.1.A19",
+            "title": "Security-Tests"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.2.1.A2.1",
+                "parts": [
+                  {
+                    "id": "IND.2.1.A2.1-stmt",
+                    "name": "statement",
+                    "prose": "Für die Konfiguration und Wartung von ICS-Komponenten MÜSSEN sichere Protokolle eingesetzt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Nutzung sicherer Übertragungs-Protokolle für die Konfiguration und Wartung — IND.2.1.A2.1"
+              },
+              {
+                "id": "IND.2.1.A2.2",
+                "parts": [
+                  {
+                    "id": "IND.2.1.A2.2-stmt",
+                    "name": "statement",
+                    "prose": "Die Informationen MÜSSEN geschützt übertragen werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Nutzung sicherer Übertragungs-Protokolle für die Konfiguration und Wartung — IND.2.1.A2.2"
+              }
+            ],
+            "id": "IND.2.1.A2",
+            "title": "Nutzung sicherer Übertragungs-Protokolle für die Konfiguration und Wartung"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.2.1.A20.1",
+                "parts": [
+                  {
+                    "id": "IND.2.1.A20.1-stmt",
+                    "name": "statement",
+                    "prose": "Firmware-Updates oder neue Steuerungsprogramme SOLLTEN NUR eingespielt werden, wenn vorher ihre Integrität überprüft wurde."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[E]"
+                  }
+                ],
+                "title": "Vertrauenswürdiger Code — IND.2.1.A20.1"
+              },
+              {
+                "id": "IND.2.1.A20.2",
+                "parts": [
+                  {
+                    "id": "IND.2.1.A20.2-stmt",
+                    "name": "statement",
+                    "prose": "Sie SOLLTEN nur aus vertrauenswürdigen Quellen stammen."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[E]"
+                  }
+                ],
+                "title": "Vertrauenswürdiger Code — IND.2.1.A20.2"
+              }
+            ],
+            "id": "IND.2.1.A20",
+            "title": "Vertrauenswürdiger Code"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.2.1.A4.1",
+                "parts": [
+                  {
+                    "id": "IND.2.1.A4.1-stmt",
+                    "name": "statement",
+                    "prose": "Alle nicht genutzten Dienste, Funktionen und Schnittstellen der ICS-Komponenten MÜSSEN deaktiviert oder deinstalliert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Deaktivierung oder Deinstallation nicht genutzter Dienste, Funktionen und Schnittstellen — IND.2.1.A4.1"
+              }
+            ],
+            "id": "IND.2.1.A4",
+            "title": "Deaktivierung oder Deinstallation nicht genutzter Dienste, Funktionen und Schnittstellen"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.2.1.A6.1",
+                "parts": [
+                  {
+                    "id": "IND.2.1.A6.1-stmt",
+                    "name": "statement",
+                    "prose": "ICS-Komponenten MÜSSEN von der Office-IT getrennt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Netzsegmentierung — IND.2.1.A6.1"
+              },
+              {
+                "id": "IND.2.1.A6.2",
+                "parts": [
+                  {
+                    "id": "IND.2.1.A6.2-stmt",
+                    "name": "statement",
+                    "prose": "Hängen ICS-Komponenten von anderen Diensten im Netz ab, SOLLTE das ausreichend dokumentiert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Netzsegmentierung — IND.2.1.A6.2"
+              },
+              {
+                "id": "IND.2.1.A6.3",
+                "parts": [
+                  {
+                    "id": "IND.2.1.A6.3-stmt",
+                    "name": "statement",
+                    "prose": "ICS-Komponenten SOLLTEN so wenig wie möglich mit anderen ICS-Komponenten kommunizieren."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Netzsegmentierung — IND.2.1.A6.3"
+              }
+            ],
+            "id": "IND.2.1.A6",
+            "title": "Netzsegmentierung"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.2.1.A7.1",
+                "parts": [
+                  {
+                    "id": "IND.2.1.A7.1-stmt",
+                    "name": "statement",
+                    "prose": "Vor jeder Systemänderung an einer ICS-Komponente MÜSSEN Backups erstellt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Erstellung von Datensicherungen — IND.2.1.A7.1"
+              }
+            ],
+            "id": "IND.2.1.A7",
+            "title": "Erstellung von Datensicherungen"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.2.1.A8.1",
+                "parts": [
+                  {
+                    "id": "IND.2.1.A8.1-stmt",
+                    "name": "statement",
+                    "prose": "ICS-Komponenten SOLLTEN durch geeignete Mechanismen vor Schadprogrammen geschützt werden (siehe OPS.1.1.4 Schutz vor Schadprogrammen)."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Schutz vor Schadsoftware — IND.2.1.A8.1"
+              },
+              {
+                "id": "IND.2.1.A8.2",
+                "parts": [
+                  {
+                    "id": "IND.2.1.A8.2-stmt",
+                    "name": "statement",
+                    "prose": "Wird dafür ein Virenschutzprogramm benutzt, SOLLTEN das Programm und die Virensignaturen nach der Freigabe durch das herstellende Unternehmen immer auf dem aktuellen Stand sein."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Schutz vor Schadsoftware — IND.2.1.A8.2"
+              },
+              {
+                "id": "IND.2.1.A8.3",
+                "parts": [
+                  {
+                    "id": "IND.2.1.A8.3-stmt",
+                    "name": "statement",
+                    "prose": "Wenn die Ressourcen auf der ICS-Komponente nicht ausreichend sind oder die Echtzeitanforderung durch den Einsatz von Virenschutzprogrammen gefährdet werden könnte, SOLLTEN alternative Maßnahmen ergriffen werden, etwa die Abschottung der ICS-Komponente oder des Produktionsnetzes."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Schutz vor Schadsoftware — IND.2.1.A8.3"
+              }
+            ],
+            "id": "IND.2.1.A8",
+            "title": "Schutz vor Schadsoftware"
+          }
+        ],
+        "id": "IND.2.1",
+        "title": "Allgemeine ICS-Komponente"
+      },
+      {
+        "groups": [
+          {
+            "controls": [
+              {
+                "id": "IND.2.2.A1.1",
+                "parts": [
+                  {
+                    "id": "IND.2.2.A1.1-stmt",
+                    "name": "statement",
+                    "prose": "Steuerungsprogramme und Konfigurationen SOLLTEN immer gesichert werden, bevor an ihnen etwas verändert wird."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Erweiterte Systemdokumentation für Speicherprogrammierbare Steuerungen — IND.2.2.A1.1"
+              },
+              {
+                "id": "IND.2.2.A1.2",
+                "parts": [
+                  {
+                    "id": "IND.2.2.A1.2-stmt",
+                    "name": "statement",
+                    "prose": "Änderungen an der Konfiguration oder der Tausch von Komponenten SOLLTEN vollständig dokumentiert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Erweiterte Systemdokumentation für Speicherprogrammierbare Steuerungen — IND.2.2.A1.2"
+              }
+            ],
+            "id": "IND.2.2.A1",
+            "title": "Erweiterte Systemdokumentation für Speicherprogrammierbare Steuerungen"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.2.2.A3.1",
+                "parts": [
+                  {
+                    "id": "IND.2.2.A3.1-stmt",
+                    "name": "statement",
+                    "prose": "Die Systemzeit SOLLTE automatisch über eine zentrale automatisierte Zeitsynchronisation eingestellt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Zeitsynchronisation — IND.2.2.A3.1"
+              }
+            ],
+            "id": "IND.2.2.A3",
+            "title": "Zeitsynchronisation"
+          }
+        ],
+        "id": "IND.2.2",
+        "title": "Speicherprogrammierbare Steuerung (SPS)"
+      },
+      {
+        "groups": [
+          {
+            "controls": [
+              {
+                "id": "IND.2.3.A1.1",
+                "parts": [
+                  {
+                    "id": "IND.2.3.A1.1-stmt",
+                    "name": "statement",
+                    "prose": "Sensoren MÜSSEN in geeigneter Weise installiert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Installation von Sensoren — IND.2.3.A1.1"
+              },
+              {
+                "id": "IND.2.3.A1.2",
+                "parts": [
+                  {
+                    "id": "IND.2.3.A1.2-stmt",
+                    "name": "statement",
+                    "prose": "Sensoren MÜSSEN ausreichend robust sein."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Installation von Sensoren — IND.2.3.A1.2"
+              },
+              {
+                "id": "IND.2.3.A1.3",
+                "parts": [
+                  {
+                    "id": "IND.2.3.A1.3-stmt",
+                    "name": "statement",
+                    "prose": "Sie MÜSSEN zuverlässig unter den vorhandenen Umgebungsbedingungen wie großer Wärme, Kälte, Staub, Vibration oder Korrosion messen können."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Installation von Sensoren — IND.2.3.A1.3"
+              }
+            ],
+            "id": "IND.2.3.A1",
+            "title": "Installation von Sensoren"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.2.3.A2.1",
+                "parts": [
+                  {
+                    "id": "IND.2.3.A2.1-stmt",
+                    "name": "statement",
+                    "prose": "Wenn notwendig, SOLLTEN Sensoren regelmäßig kalibriert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Kalibrierung von Sensoren — IND.2.3.A2.1"
+              },
+              {
+                "id": "IND.2.3.A2.2",
+                "parts": [
+                  {
+                    "id": "IND.2.3.A2.2-stmt",
+                    "name": "statement",
+                    "prose": "Die Kalibrierungen SOLLTEN geeignet dokumentiert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Kalibrierung von Sensoren — IND.2.3.A2.2"
+              },
+              {
+                "id": "IND.2.3.A2.3",
+                "parts": [
+                  {
+                    "id": "IND.2.3.A2.3-stmt",
+                    "name": "statement",
+                    "prose": "Der Zugang zur Kalibrierung eines Sensors MUSS geschützt sein."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Kalibrierung von Sensoren — IND.2.3.A2.3"
+              }
+            ],
+            "id": "IND.2.3.A2",
+            "title": "Kalibrierung von Sensoren"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.2.3.A3.1",
+                "parts": [
+                  {
+                    "id": "IND.2.3.A3.1-stmt",
+                    "name": "statement",
+                    "prose": "Drahtlose Verwaltungsschnittstellen wie Bluetooth, WLAN oder NFC SOLLTEN NICHT benutzt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[E]"
+                  }
+                ],
+                "title": "Drahtlose Kommunikation — IND.2.3.A3.1"
+              },
+              {
+                "id": "IND.2.3.A3.2",
+                "parts": [
+                  {
+                    "id": "IND.2.3.A3.2-stmt",
+                    "name": "statement",
+                    "prose": "Alle nicht benutzten Kommunikationsschnittstellen SOLLTEN deaktiviert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[E]"
+                  }
+                ],
+                "title": "Drahtlose Kommunikation — IND.2.3.A3.2"
+              }
+            ],
+            "id": "IND.2.3.A3",
+            "title": "Drahtlose Kommunikation"
+          }
+        ],
+        "id": "IND.2.3",
+        "title": "Sensoren und Aktoren"
+      },
+      {
+        "groups": [
+          {
+            "controls": [
+              {
+                "id": "IND.2.4.A1.1",
+                "parts": [
+                  {
+                    "id": "IND.2.4.A1.1-stmt",
+                    "name": "statement",
+                    "prose": "Für die Fernwartung einer Maschine MUSS es eine zentrale Richtlinie geben."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Fernwartung durch Maschinen- und Anlagenbauende — IND.2.4.A1.1"
+              },
+              {
+                "id": "IND.2.4.A1.2",
+                "parts": [
+                  {
+                    "id": "IND.2.4.A1.2-stmt",
+                    "name": "statement",
+                    "prose": "Darin MUSS geregelt werden, wie die jeweiligen Fernwartungslösungen einzusetzen sind."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Fernwartung durch Maschinen- und Anlagenbauende — IND.2.4.A1.2"
+              },
+              {
+                "id": "IND.2.4.A1.3",
+                "parts": [
+                  {
+                    "id": "IND.2.4.A1.3-stmt",
+                    "name": "statement",
+                    "prose": "Die Richtlinie MUSS auch festlegen, wie Kommunikationsverbindungen geschützt werden sollen."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Fernwartung durch Maschinen- und Anlagenbauende — IND.2.4.A1.3"
+              },
+              {
+                "id": "IND.2.4.A1.4",
+                "parts": [
+                  {
+                    "id": "IND.2.4.A1.4-stmt",
+                    "name": "statement",
+                    "prose": "Hierüber hinaus MUSS sie auch beschreiben, welche Aktivitäten während der Fernwartung überwacht werden sollen."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Fernwartung durch Maschinen- und Anlagenbauende — IND.2.4.A1.4"
+              },
+              {
+                "id": "IND.2.4.A1.5",
+                "parts": [
+                  {
+                    "id": "IND.2.4.A1.5-stmt",
+                    "name": "statement",
+                    "prose": "Außerdem SOLLTE NICHT möglich sein, dass über die Fernwartung einer Maschine auf andere IT-Systeme oder Maschinen der Institution zugegriffen werden kann."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Fernwartung durch Maschinen- und Anlagenbauende — IND.2.4.A1.5"
+              },
+              {
+                "id": "IND.2.4.A1.6",
+                "parts": [
+                  {
+                    "id": "IND.2.4.A1.6-stmt",
+                    "name": "statement",
+                    "prose": "Mit Dienstleistenden MUSS vereinbart werden, wie sie die in der Maschine gespeicherten Informationen verwerten dürfen."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Fernwartung durch Maschinen- und Anlagenbauende — IND.2.4.A1.6"
+              }
+            ],
+            "id": "IND.2.4.A1",
+            "title": "Fernwartung durch Maschinen- und Anlagenbauende"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.2.4.A2.1",
+                "parts": [
+                  {
+                    "id": "IND.2.4.A2.1-stmt",
+                    "name": "statement",
+                    "prose": "Es MUSS ein Prozess etabliert werden, der gewährleistet, dass die Maschine auch über den Gewährleistungszeitraum hinaus sicher weiterbetrieben werden kann."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Betrieb nach Ende der Gewährleistung — IND.2.4.A2.1"
+              },
+              {
+                "id": "IND.2.4.A2.2",
+                "parts": [
+                  {
+                    "id": "IND.2.4.A2.2-stmt",
+                    "name": "statement",
+                    "prose": "Hierzu MÜSSEN mit den Liefernden weitere Unterstützungsleistungen vertraglich vereinbart werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Betrieb nach Ende der Gewährleistung — IND.2.4.A2.2"
+              }
+            ],
+            "id": "IND.2.4.A2",
+            "title": "Betrieb nach Ende der Gewährleistung"
+          }
+        ],
+        "id": "IND.2.4",
+        "title": "Maschine"
+      },
+      {
+        "groups": [
+          {
+            "controls": [
+              {
+                "id": "IND.2.7.A1.1",
+                "parts": [
+                  {
+                    "id": "IND.2.7.A1.1-stmt",
+                    "name": "statement",
+                    "prose": "Alle zum SIS gehörenden Hardware- und Softwarekomponenten, relevante Informationen, Verbindungen sowie Rollen und Zuständigkeiten MÜSSEN gesondert erfasst und dokumentiert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Erfassung und Dokumentation — IND.2.7.A1.1"
+              }
+            ],
+            "id": "IND.2.7.A1",
+            "title": "Erfassung und Dokumentation"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.2.7.A10.1",
+                "parts": [
+                  {
+                    "id": "IND.2.7.A10.1-stmt",
+                    "name": "statement",
+                    "prose": "Variablen der SIS, die durch Ersatzwerte besetzt (simuliert) oder von außen gebrückt werden, SOLLTEN in geeigneter Weise überwacht werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Anzeige und Alarmierung von simulierten oder gebrückten Variablen — IND.2.7.A10.1"
+              },
+              {
+                "id": "IND.2.7.A10.2",
+                "parts": [
+                  {
+                    "id": "IND.2.7.A10.2-stmt",
+                    "name": "statement",
+                    "prose": "Die Werte SOLLTEN den Benutzenden fortlaufend angezeigt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Anzeige und Alarmierung von simulierten oder gebrückten Variablen — IND.2.7.A10.2"
+              },
+              {
+                "id": "IND.2.7.A10.3",
+                "parts": [
+                  {
+                    "id": "IND.2.7.A10.3-stmt",
+                    "name": "statement",
+                    "prose": "Grenzwerte SOLLTEN definiert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Anzeige und Alarmierung von simulierten oder gebrückten Variablen — IND.2.7.A10.3"
+              },
+              {
+                "id": "IND.2.7.A10.4",
+                "parts": [
+                  {
+                    "id": "IND.2.7.A10.4-stmt",
+                    "name": "statement",
+                    "prose": "Wenn diese Grenzwerte erreicht werden, SOLLTEN die zuständigen Personen in geeigneter Weise alarmiert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Anzeige und Alarmierung von simulierten oder gebrückten Variablen — IND.2.7.A10.4"
+              }
+            ],
+            "id": "IND.2.7.A10",
+            "title": "Anzeige und Alarmierung von simulierten oder gebrückten Variablen"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.2.7.A11.1",
+                "parts": [
+                  {
+                    "id": "IND.2.7.A11.1-stmt",
+                    "name": "statement",
+                    "prose": "Für integrierte Systeme SOLLTE eine passende Strategie entwickelt werden, die den Umgang mit Komponenten regelt, welche die funktionale Sicherheit (Safety) betreffen."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Umgang mit integrierten Systemen — IND.2.7.A11.1"
+              }
+            ],
+            "id": "IND.2.7.A11",
+            "title": "Umgang mit integrierten Systemen"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.2.7.A12.1",
+                "parts": [
+                  {
+                    "id": "IND.2.7.A12.1-stmt",
+                    "name": "statement",
+                    "prose": "Es SOLLTE darauf geachtet werden, dass die herstellenden Unternehmen geeignete Mechanismen entwickeln und integrieren, die die Integrität und Authentizität von Konfigurationsdaten und Anwendungsprogrammen auf dem Logiksystem oder auf den damit verbundenen Sensoren und Aktoren gewährleisten."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[E]"
+                  }
+                ],
+                "title": "Sicherstellen der Integrität und Authentizität von Anwendungsprogrammen und Konfigurationsdaten — IND.2.7.A12.1"
+              },
+              {
+                "id": "IND.2.7.A12.2",
+                "parts": [
+                  {
+                    "id": "IND.2.7.A12.2-stmt",
+                    "name": "statement",
+                    "prose": "Jegliche Software, die als Download angeboten wird, SOLLTE vor Manipulation geschützt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[E]"
+                  }
+                ],
+                "title": "Sicherstellen der Integrität und Authentizität von Anwendungsprogrammen und Konfigurationsdaten — IND.2.7.A12.2"
+              },
+              {
+                "id": "IND.2.7.A12.3",
+                "parts": [
+                  {
+                    "id": "IND.2.7.A12.3-stmt",
+                    "name": "statement",
+                    "prose": "Verletzungen der Integrität SOLLTEN automatisch erkannt und gemeldet werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[E]"
+                  }
+                ],
+                "title": "Sicherstellen der Integrität und Authentizität von Anwendungsprogrammen und Konfigurationsdaten — IND.2.7.A12.3"
+              }
+            ],
+            "id": "IND.2.7.A12",
+            "title": "Sicherstellen der Integrität und Authentizität von Anwendungsprogrammen und Konfigurationsdaten"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.2.7.A2.1",
+                "parts": [
+                  {
+                    "id": "IND.2.7.A2.1-stmt",
+                    "name": "statement",
+                    "prose": "Die Hard- und Softwarekomponenten, die zum SIS gehören oder im Zusammenhang mit diesem genutzt werden, DÜRFEN NICHT zweckentfremdet werde."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Zweckgebundene Nutzung der Hard- und Softwarekomponenten — IND.2.7.A2.1"
+              }
+            ],
+            "id": "IND.2.7.A2",
+            "title": "Zweckgebundene Nutzung der Hard- und Softwarekomponenten"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.2.7.A3.1",
+                "parts": [
+                  {
+                    "id": "IND.2.7.A3.1-stmt",
+                    "name": "statement",
+                    "prose": "Bereits vorhandene Schutzmechanismen am Logiksystem MÜSSEN aktiviert sein."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Änderung des Anwendungsprogramms auf dem Logiksystem — IND.2.7.A3.1"
+              },
+              {
+                "id": "IND.2.7.A3.2",
+                "parts": [
+                  {
+                    "id": "IND.2.7.A3.2-stmt",
+                    "name": "statement",
+                    "prose": "Wenn dies nicht möglich ist, MÜSSEN alternative Maßnahmen ergriffen werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Änderung des Anwendungsprogramms auf dem Logiksystem — IND.2.7.A3.2"
+              },
+              {
+                "id": "IND.2.7.A3.3",
+                "parts": [
+                  {
+                    "id": "IND.2.7.A3.3-stmt",
+                    "name": "statement",
+                    "prose": "Anwendungsprogramme auf den Logiksystemen DÜRFEN NUR von autorisierten Personen geändert oder zur Übertragung freigegeben werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Änderung des Anwendungsprogramms auf dem Logiksystem — IND.2.7.A3.3"
+              }
+            ],
+            "id": "IND.2.7.A3",
+            "title": "Änderung des Anwendungsprogramms auf dem Logiksystem"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.2.7.A4.1",
+                "parts": [
+                  {
+                    "id": "IND.2.7.A4.1-stmt",
+                    "name": "statement",
+                    "prose": "Alle Prozesse und Zuständigkeiten bezüglich der Informationssicherheit von SIS SOLLTEN klar definiert sein."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Verankerung von Informationssicherheit im Functional Safety Management — IND.2.7.A4.1"
+              },
+              {
+                "id": "IND.2.7.A4.2",
+                "parts": [
+                  {
+                    "id": "IND.2.7.A4.2-stmt",
+                    "name": "statement",
+                    "prose": "Im Functional Safety Management SOLLTEN diese beschrieben und namentlich genannt sein."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Verankerung von Informationssicherheit im Functional Safety Management — IND.2.7.A4.2"
+              }
+            ],
+            "id": "IND.2.7.A4",
+            "title": "Verankerung von Informationssicherheit im Functional Safety Management"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.2.7.A5.1",
+                "parts": [
+                  {
+                    "id": "IND.2.7.A5.1-stmt",
+                    "name": "statement",
+                    "prose": "Die Behandlung von Sicherheitsvorfällen SOLLTE in einem Vorfallreaktionsplan festgehalten werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Notfallmanagement von SIS — IND.2.7.A5.1"
+              },
+              {
+                "id": "IND.2.7.A5.2",
+                "parts": [
+                  {
+                    "id": "IND.2.7.A5.2-stmt",
+                    "name": "statement",
+                    "prose": "Dieser SOLLTE die Rollen und Zuständigkeiten festhalten und die zu ergreifenden Maßnahmen enthalten."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Notfallmanagement von SIS — IND.2.7.A5.2"
+              }
+            ],
+            "id": "IND.2.7.A5",
+            "title": "Notfallmanagement von SIS"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.2.7.A6.1",
+                "parts": [
+                  {
+                    "id": "IND.2.7.A6.1-stmt",
+                    "name": "statement",
+                    "prose": "Versehentliche oder unautorisierte Änderungen an der Spezifikation, Implementierung und an den Engineering-Daten SOLLTEN verhindert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Sichere Planung und Spezifikation des SIS — IND.2.7.A6.1"
+              }
+            ],
+            "id": "IND.2.7.A6",
+            "title": "Sichere Planung und Spezifikation des SIS"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.2.7.A7.1",
+                "parts": [
+                  {
+                    "id": "IND.2.7.A7.1-stmt",
+                    "name": "statement",
+                    "prose": "Das SIS SOLLTE rückwirkungsfrei von seiner Umgebung betrieben werden, um seine Sicherheitsfunktionen gewährleisten zu können."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Trennung und Unabhängigkeit des SIS von der Umgebung — IND.2.7.A7.1"
+              },
+              {
+                "id": "IND.2.7.A7.2",
+                "parts": [
+                  {
+                    "id": "IND.2.7.A7.2-stmt",
+                    "name": "statement",
+                    "prose": "Prozesse, die potenziell Auswirkungen auf das SIS haben, SOLLTEN dem Änderungsmanagementprozess des Functional Safety Management unterstellt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Trennung und Unabhängigkeit des SIS von der Umgebung — IND.2.7.A7.2"
+              }
+            ],
+            "id": "IND.2.7.A7",
+            "title": "Trennung und Unabhängigkeit des SIS von der Umgebung"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.2.7.A8.1",
+                "parts": [
+                  {
+                    "id": "IND.2.7.A8.1-stmt",
+                    "name": "statement",
+                    "prose": "Die Integrität der Engineering-Daten SOLLTE während der Übertragung auf SIS sichergestellt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Sichere Übertragung von Engineering Daten auf SIS — IND.2.7.A8.1"
+              }
+            ],
+            "id": "IND.2.7.A8",
+            "title": "Sichere Übertragung von Engineering Daten auf SIS"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.2.7.A9.1",
+                "parts": [
+                  {
+                    "id": "IND.2.7.A9.1-stmt",
+                    "name": "statement",
+                    "prose": "Sofern keine Rückwirkungsfreiheit von Daten- und Signalverbindungen (Unidirektionalität) nachgewiesen werden kann, SOLLTEN diese Verbindungen geeignet abgesichert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Absicherung der Daten- und Signalverbindungen — IND.2.7.A9.1"
+              }
+            ],
+            "id": "IND.2.7.A9",
+            "title": "Absicherung der Daten- und Signalverbindungen"
+          }
+        ],
+        "id": "IND.2.7",
+        "title": "Safety Instrumented Systems"
+      },
+      {
+        "groups": [
+          {
+            "controls": [
+              {
+                "id": "IND.3.2.A1.1",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A1.1-stmt",
+                    "name": "statement",
+                    "prose": "Im industriellen Umfeld MUSS für sämtliche Einrichtungen zur Fernwartung ein einheitliches, zentrales Fernwartungskonzept für die gesamte OT der Institution erstellt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Planung des Einsatzes der Fernwartung in der OT — IND.3.2.A1.1"
+              },
+              {
+                "id": "IND.3.2.A1.10",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A1.10-stmt",
+                    "name": "statement",
+                    "prose": "Alle diese Aspekte MÜSSEN mit sämtlichen beteiligten internen und externen Stellen abgestimmt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Planung des Einsatzes der Fernwartung in der OT — IND.3.2.A1.10"
+              },
+              {
+                "id": "IND.3.2.A1.11",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A1.11-stmt",
+                    "name": "statement",
+                    "prose": "Sämtliche Fernwartungszugänge, über die Zugriffe auf ein ICS der Institution möglich sind, MÜSSEN in einer zentralen Dokumentation erfasst werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Planung des Einsatzes der Fernwartung in der OT — IND.3.2.A1.11"
+              },
+              {
+                "id": "IND.3.2.A1.12",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A1.12-stmt",
+                    "name": "statement",
+                    "prose": "Für neu anzuschaffende fernwartbare Maschinen MÜSSEN die Anforderungen an die Informationssicherheit mit den Liefernden abgestimmt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Planung des Einsatzes der Fernwartung in der OT — IND.3.2.A1.12"
+              },
+              {
+                "id": "IND.3.2.A1.13",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A1.13-stmt",
+                    "name": "statement",
+                    "prose": "Das Ziel SOLLTE eine Standardisierung der verwendeten Fernwartungslösungen sein."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Planung des Einsatzes der Fernwartung in der OT — IND.3.2.A1.13"
+              },
+              {
+                "id": "IND.3.2.A1.14",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A1.14-stmt",
+                    "name": "statement",
+                    "prose": "Sobald standardisierte Lösungen für die Fernwartung geplant werden, MÜSSEN sich die OT und die Büro- und Gebäude-IT gemeinsam abstimmen."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Planung des Einsatzes der Fernwartung in der OT — IND.3.2.A1.14"
+              },
+              {
+                "id": "IND.3.2.A1.2",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A1.2-stmt",
+                    "name": "statement",
+                    "prose": "In dem OT-Fernwartungskonzept MÜSSEN folgende Aspekte berücksichtigt werden:"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Planung des Einsatzes der Fernwartung in der OT — IND.3.2.A1.2"
+              },
+              {
+                "id": "IND.3.2.A1.3",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A1.3-stmt",
+                    "name": "statement",
+                    "prose": "• spezifische gesetzliche Vorgaben, z. B. Schutz von Personen,"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Planung des Einsatzes der Fernwartung in der OT — IND.3.2.A1.3"
+              },
+              {
+                "id": "IND.3.2.A1.4",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A1.4-stmt",
+                    "name": "statement",
+                    "prose": "• spezifische Vorgaben durch anlagenherstellende Unternehmen,"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Planung des Einsatzes der Fernwartung in der OT — IND.3.2.A1.4"
+              },
+              {
+                "id": "IND.3.2.A1.5",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A1.5-stmt",
+                    "name": "statement",
+                    "prose": "• spezifische Anforderungen durch dezentrale Infrastrukturen,"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Planung des Einsatzes der Fernwartung in der OT — IND.3.2.A1.5"
+              },
+              {
+                "id": "IND.3.2.A1.6",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A1.6-stmt",
+                    "name": "statement",
+                    "prose": "• spezifische Anforderungen an die Anbindungen für die Fernwartung,"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Planung des Einsatzes der Fernwartung in der OT — IND.3.2.A1.6"
+              },
+              {
+                "id": "IND.3.2.A1.7",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A1.7-stmt",
+                    "name": "statement",
+                    "prose": "• spezifische Anforderungen an die Verfügbarkeit der Fernwartung,"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Planung des Einsatzes der Fernwartung in der OT — IND.3.2.A1.7"
+              },
+              {
+                "id": "IND.3.2.A1.8",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A1.8-stmt",
+                    "name": "statement",
+                    "prose": "• spezifische Anforderungen durch Umgebungsbedingungen sowie"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Planung des Einsatzes der Fernwartung in der OT — IND.3.2.A1.8"
+              },
+              {
+                "id": "IND.3.2.A1.9",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A1.9-stmt",
+                    "name": "statement",
+                    "prose": "• spezifische Anforderungen durch Bestandsanlagen."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Planung des Einsatzes der Fernwartung in der OT — IND.3.2.A1.9"
+              }
+            ],
+            "id": "IND.3.2.A1",
+            "title": "Planung des Einsatzes der Fernwartung in der OT"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.3.2.A10.1",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A10.1-stmt",
+                    "name": "statement",
+                    "prose": "Im industriellen Umfeld MUSS sichergestellt werden, dass weder direkt noch indirekt Personen an oder in Anlagen und Maschinen sowie die Anlagen oder Maschinen selbst durch eine aktive Fernwartung gefährdet werden können."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Beobachtung und Kontrolle von OT-Fernwartungssitzungen — IND.3.2.A10.1"
+              },
+              {
+                "id": "IND.3.2.A10.2",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A10.2-stmt",
+                    "name": "statement",
+                    "prose": "Darüber hinaus MUSS sichergestellt werden, dass eine aktive Fernwartung den Produktionsprozess nicht beeinträchtigt."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Beobachtung und Kontrolle von OT-Fernwartungssitzungen — IND.3.2.A10.2"
+              },
+              {
+                "id": "IND.3.2.A10.3",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A10.3-stmt",
+                    "name": "statement",
+                    "prose": "Falls Personen- oder Sachschäden möglich sind, MUSS sichergestellt sein, dass die OT-Mitarbeitenden die Fernwartungstätigkeiten vor Ort mitverfolgen können (Vier-Augen-Prinzip)."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Beobachtung und Kontrolle von OT-Fernwartungssitzungen — IND.3.2.A10.3"
+              },
+              {
+                "id": "IND.3.2.A10.4",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A10.4-stmt",
+                    "name": "statement",
+                    "prose": "Die OT-Mitarbeitenden SOLLTEN bei Bedarf eingreifen können sowie eine Fernwartungssitzung unterbrechen können."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Beobachtung und Kontrolle von OT-Fernwartungssitzungen — IND.3.2.A10.4"
+              }
+            ],
+            "id": "IND.3.2.A10",
+            "title": "Beobachtung und Kontrolle von OT-Fernwartungssitzungen"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.3.2.A11.1",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A11.1-stmt",
+                    "name": "statement",
+                    "prose": "Für den Fernwartungszugriff in der OT SOLLTEN ausschließlich Konten verwendet werden, die in einem zentralen Verzeichnisdienst der OT oder der Institution verwaltet werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Zentrale Verwaltung aller Konten für die OT-Fernwartung — IND.3.2.A11.1"
+              }
+            ],
+            "id": "IND.3.2.A11",
+            "title": "Zentrale Verwaltung aller Konten für die OT-Fernwartung"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.3.2.A12.1",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A12.1-stmt",
+                    "name": "statement",
+                    "prose": "Für die Fernwartung im industriellen Umfeld SOLLTE eine dedizierte OT-Fernwartungslösung eingesetzt werden, die unabhängig von der Büro- und Gebäude-IT ist."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[E]"
+                  }
+                ],
+                "title": "Dedizierte Fernwartungslösung in der OT — IND.3.2.A12.1"
+              },
+              {
+                "id": "IND.3.2.A12.2",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A12.2-stmt",
+                    "name": "statement",
+                    "prose": "Alle weiteren Funktionen auf den IT-Systemen zur OT-Fernwartung, insbesondere auch Funktionen zur Administration von IT-Systemen und Netzen außerhalb der OT, SOLLTEN deaktiviert bzw. unterbunden werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[E]"
+                  }
+                ],
+                "title": "Dedizierte Fernwartungslösung in der OT — IND.3.2.A12.2"
+              },
+              {
+                "id": "IND.3.2.A12.3",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A12.3-stmt",
+                    "name": "statement",
+                    "prose": "Falls eine maximale Unabhängigkeit realisiert werden soll, SOLLTE auch ein dedizierter Internet-Zugang für die OT-Fernwartung genutzt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[E]"
+                  }
+                ],
+                "title": "Dedizierte Fernwartungslösung in der OT — IND.3.2.A12.3"
+              }
+            ],
+            "id": "IND.3.2.A12",
+            "title": "Dedizierte Fernwartungslösung in der OT"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.3.2.A13.1",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A13.1-stmt",
+                    "name": "statement",
+                    "prose": "Für die Fernwartung von OT-Anwendungen oder -Systemen SOLLTE die Protokollierung so ausgeweitet werden, dass sämtliche Tätigkeiten lückenlos und umgehend nachvollziehbar sind."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[E]"
+                  }
+                ],
+                "title": "Protokollierung der Inhalte von Fernwartungszugriffen in der OT — IND.3.2.A13.1"
+              },
+              {
+                "id": "IND.3.2.A13.2",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A13.2-stmt",
+                    "name": "statement",
+                    "prose": "Hierzu SOLLTEN ergänzend zur Protokollierung von Ereignissen und Sitzungsdaten auch die Inhalte von Fernwartungszugriffen protokolliert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[E]"
+                  }
+                ],
+                "title": "Protokollierung der Inhalte von Fernwartungszugriffen in der OT — IND.3.2.A13.2"
+              }
+            ],
+            "id": "IND.3.2.A13",
+            "title": "Protokollierung der Inhalte von Fernwartungszugriffen in der OT"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.3.2.A14.1",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A14.1-stmt",
+                    "name": "statement",
+                    "prose": "OT-Fernwartungssitzungen SOLLTEN ergänzend zu IND.3.2.A10 Beobachtung und Kontrolle von OT-Fernwartungssitzungen kontinuierlich durch eine technische Lösung reglementiert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[E]"
+                  }
+                ],
+                "title": "Technische Kontrolle von Fernwartungssitzungen — IND.3.2.A14.1"
+              },
+              {
+                "id": "IND.3.2.A14.2",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A14.2-stmt",
+                    "name": "statement",
+                    "prose": "Dabei SOLLTEN die Aktivitäten auf Befehlsebene, d. h. manuelle und automatisierte Befehle, technisch überwacht und gegebenenfalls automatisch unterbunden werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[E]"
+                  }
+                ],
+                "title": "Technische Kontrolle von Fernwartungssitzungen — IND.3.2.A14.2"
+              },
+              {
+                "id": "IND.3.2.A14.3",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A14.3-stmt",
+                    "name": "statement",
+                    "prose": "Zusätzlich SOLLTEN Sitzungen komponentenübergreifend überwacht werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[E]"
+                  }
+                ],
+                "title": "Technische Kontrolle von Fernwartungssitzungen — IND.3.2.A14.3"
+              },
+              {
+                "id": "IND.3.2.A14.4",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A14.4-stmt",
+                    "name": "statement",
+                    "prose": "Falls technisch überwacht wird, dann SOLLTE nicht nur bei konkreten Regelverstößen, sondern auch bei Anomalien im Benutzungsverhalten ein Alarm ausgelöst werden, z. B. sobald ein plötzlich erhöhtes Kommunikationsvolumen erkannt wird."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[E]"
+                  }
+                ],
+                "title": "Technische Kontrolle von Fernwartungssitzungen — IND.3.2.A14.4"
+              }
+            ],
+            "id": "IND.3.2.A14",
+            "title": "Technische Kontrolle von Fernwartungssitzungen"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.3.2.A2.1",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A2.1-stmt",
+                    "name": "statement",
+                    "prose": "Im industriellen Umfeld MÜSSEN die OT und die Büro- und Gebäude-IT sämtliche OT-Fernwartungszugänge gemeinsam erfassen und dokumentieren."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Konsistente Dokumentation der Fernwartung durch OT sowie Büro- und Gebäude-IT — IND.3.2.A2.1"
+              },
+              {
+                "id": "IND.3.2.A2.2",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A2.2-stmt",
+                    "name": "statement",
+                    "prose": "Insbesondere bei Fernwartungskomponenten, die in Package Units integriert sind, MÜSSEN auch alle deaktivierten Zugänge dokumentiert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Konsistente Dokumentation der Fernwartung durch OT sowie Büro- und Gebäude-IT — IND.3.2.A2.2"
+              }
+            ],
+            "id": "IND.3.2.A2",
+            "title": "Konsistente Dokumentation der Fernwartung durch OT sowie Büro- und Gebäude-IT"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.3.2.A3.1",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A3.1-stmt",
+                    "name": "statement",
+                    "prose": "Sämtliche Anlagen MÜSSEN regelmäßig geprüft werden, ob alle ihre Fernwartungszugänge dem Soll-Zustand, d. h. dem aktuellen Fernwartungskonzept für die OT, entsprechen."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Regelmäßige Prüfungen sowie Ausnahmegenehmigungen bestehender OT-Fernwartungszugänge — IND.3.2.A3.1"
+              },
+              {
+                "id": "IND.3.2.A3.2",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A3.2-stmt",
+                    "name": "statement",
+                    "prose": "Für notwendige Abweichungen vom Konzept MUSS innerhalb der OT ein Genehmigungsprozess etabliert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Regelmäßige Prüfungen sowie Ausnahmegenehmigungen bestehender OT-Fernwartungszugänge — IND.3.2.A3.2"
+              }
+            ],
+            "id": "IND.3.2.A3",
+            "title": "Regelmäßige Prüfungen sowie Ausnahmegenehmigungen bestehender OT-Fernwartungszugänge"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.3.2.A4.1",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A4.1-stmt",
+                    "name": "statement",
+                    "prose": "Mit sämtlichen externen Benutzenden, d. h. herstellenden Unternehmen, Integratoren und Wartungsdienstleistenden, MÜSSEN angemessen restriktive Regelungen für die OT-Fernwartung vertraglich vereinbart werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Verbindliche Regelung der OT-Fernwartung durch Dritte — IND.3.2.A4.1"
+              },
+              {
+                "id": "IND.3.2.A4.2",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A4.2-stmt",
+                    "name": "statement",
+                    "prose": "Diese vertraglichen Regelungen MÜSSEN zu jedem Zeitpunkt gewährleisten, dass externe Benutzende jegliche OT-Fernwartungszugänge ausschließlich kontrolliert und abgestimmt nutzen."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Verbindliche Regelung der OT-Fernwartung durch Dritte — IND.3.2.A4.2"
+              },
+              {
+                "id": "IND.3.2.A4.3",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A4.3-stmt",
+                    "name": "statement",
+                    "prose": "Intern MUSS festgelegt werden, über welche Fernwartungszugänge welche Tätigkeiten durch welche externen Benutzenden zulässig sind."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Verbindliche Regelung der OT-Fernwartung durch Dritte — IND.3.2.A4.3"
+              },
+              {
+                "id": "IND.3.2.A4.4",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A4.4-stmt",
+                    "name": "statement",
+                    "prose": "Darüber hinaus MUSS festgelegt werden, welche internen Mitarbeitende Fernwartungszugriffe und -tätigkeiten von Externen autorisieren, beobachten und gegebenenfalls unterstützen."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Verbindliche Regelung der OT-Fernwartung durch Dritte — IND.3.2.A4.4"
+              },
+              {
+                "id": "IND.3.2.A4.5",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A4.5-stmt",
+                    "name": "statement",
+                    "prose": "Im industriellen Umfeld MUSS sichergestellt werden, dass Personen an oder in Anlagen und Maschinen weder direkt noch indirekt durch eine aktive Fernwartung gefährdet werden können."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Verbindliche Regelung der OT-Fernwartung durch Dritte — IND.3.2.A4.5"
+              },
+              {
+                "id": "IND.3.2.A4.6",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A4.6-stmt",
+                    "name": "statement",
+                    "prose": "Insbesondere bei Safety-Maschinen MUSS der oder die interne OT-Mitarbeitende sowohl organisatorisch als auch technisch die Hoheit über den Beginn und das Ende der Fernwartung haben."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Verbindliche Regelung der OT-Fernwartung durch Dritte — IND.3.2.A4.6"
+              },
+              {
+                "id": "IND.3.2.A4.7",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A4.7-stmt",
+                    "name": "statement",
+                    "prose": "Vertraglich MUSS ausgeschlossen werden, dass der Remote-Zugriff ohne explizite Zustimmung der internen OT-Mitarbeitenden aufgebaut und aufrechterhalten werden kann."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Verbindliche Regelung der OT-Fernwartung durch Dritte — IND.3.2.A4.7"
+              }
+            ],
+            "id": "IND.3.2.A4",
+            "title": "Verbindliche Regelung der OT-Fernwartung durch Dritte"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.3.2.A5.1",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A5.1-stmt",
+                    "name": "statement",
+                    "prose": "Die OT, die Büro- und Gebäude-IT sowie alle weiteren beteiligten Organisationseinheiten MÜSSEN angemessen restriktive Regelungen für sämtliche Komponenten und Schnittstellen festlegen, die direkt oder indirekt OT-Fernwartung in der Institution ermöglichen."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Interne Abstimmung für die OT-Fernwartung mit der Büro- und Gebäude-IT — IND.3.2.A5.1"
+              },
+              {
+                "id": "IND.3.2.A5.2",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A5.2-stmt",
+                    "name": "statement",
+                    "prose": "Diese internen Regelungen MÜSSEN zu jedem Zeitpunkt eine kontrollierte und abgestimmte Nutzung der jeweiligen OT-Fernwartungszugänge gewährleisten."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Interne Abstimmung für die OT-Fernwartung mit der Büro- und Gebäude-IT — IND.3.2.A5.2"
+              },
+              {
+                "id": "IND.3.2.A5.3",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A5.3-stmt",
+                    "name": "statement",
+                    "prose": "Folgende Aspekte MÜSSEN geregelt werden:"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Interne Abstimmung für die OT-Fernwartung mit der Büro- und Gebäude-IT — IND.3.2.A5.3"
+              },
+              {
+                "id": "IND.3.2.A5.4",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A5.4-stmt",
+                    "name": "statement",
+                    "prose": "• Prozesse"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Interne Abstimmung für die OT-Fernwartung mit der Büro- und Gebäude-IT — IND.3.2.A5.4"
+              },
+              {
+                "id": "IND.3.2.A5.5",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A5.5-stmt",
+                    "name": "statement",
+                    "prose": "• Zuständigkeiten"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Interne Abstimmung für die OT-Fernwartung mit der Büro- und Gebäude-IT — IND.3.2.A5.5"
+              },
+              {
+                "id": "IND.3.2.A5.6",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A5.6-stmt",
+                    "name": "statement",
+                    "prose": "• Berechtigungen"
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Interne Abstimmung für die OT-Fernwartung mit der Büro- und Gebäude-IT — IND.3.2.A5.6"
+              }
+            ],
+            "id": "IND.3.2.A5",
+            "title": "Interne Abstimmung für die OT-Fernwartung mit der Büro- und Gebäude-IT"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.3.2.A6.1",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A6.1-stmt",
+                    "name": "statement",
+                    "prose": "Im industriellen Umfeld MUSS die OT jeden Zugriff auf ein IT-System, das einen Fernwartungsdienst für die OT bereitstellt, selbst steuern können."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Absicherung jedes Fernwartungszugriffs auf die OT — IND.3.2.A6.1"
+              },
+              {
+                "id": "IND.3.2.A6.2",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A6.2-stmt",
+                    "name": "statement",
+                    "prose": "Hierfür MUSS der Zugriff durch mindestens eine Sicherheitskomponente in der Zuständigkeit der OT abgesichert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Absicherung jedes Fernwartungszugriffs auf die OT — IND.3.2.A6.2"
+              },
+              {
+                "id": "IND.3.2.A6.3",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A6.3-stmt",
+                    "name": "statement",
+                    "prose": "Der Zugang zur Fernwartung SOLLTE für alle Zugriffe vereinheitlicht werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Absicherung jedes Fernwartungszugriffs auf die OT — IND.3.2.A6.3"
+              },
+              {
+                "id": "IND.3.2.A6.4",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A6.4-stmt",
+                    "name": "statement",
+                    "prose": "Jeder Zugriff SOLLTE mithilfe zentraler Authentisierungskomponenten kontrolliert und explizit zugelassen werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Absicherung jedes Fernwartungszugriffs auf die OT — IND.3.2.A6.4"
+              },
+              {
+                "id": "IND.3.2.A6.5",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A6.5-stmt",
+                    "name": "statement",
+                    "prose": "Falls Komponenten von OT-Fernwartungszugängen dezentral liegen oder in Package Units integriert sind, dann MÜSSEN diese Zugänge durch eine zusätzliche Sicherheitskomponente abgesichert werden, die ihrerseits zentral liegt und nicht in eine Package Unit integriert ist."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[B]"
+                  }
+                ],
+                "title": "Absicherung jedes Fernwartungszugriffs auf die OT — IND.3.2.A6.5"
+              }
+            ],
+            "id": "IND.3.2.A6",
+            "title": "Absicherung jedes Fernwartungszugriffs auf die OT"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.3.2.A7.1",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A7.1-stmt",
+                    "name": "statement",
+                    "prose": "Jeder Fernzugriff auf jegliche Komponenten in einer OT-Zone SOLLTE entkoppelt erfolgen."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Technische Entkopplung von Zugriffen — IND.3.2.A7.1"
+              },
+              {
+                "id": "IND.3.2.A7.2",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A7.2-stmt",
+                    "name": "statement",
+                    "prose": "In jedem Fernwartungszugang in die OT SOLLTE ein IT-System positioniert sein, das die Verbindung vor dem Übergang in die OT-Zielzone terminiert und zum Fernwartungsdienst eine neue, überwachte und reglementierte Kommunikation aufbaut."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Technische Entkopplung von Zugriffen — IND.3.2.A7.2"
+              },
+              {
+                "id": "IND.3.2.A7.3",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A7.3-stmt",
+                    "name": "statement",
+                    "prose": "Alle für die Fernwartung benötigten Werkzeuge und Programme SOLLTEN auf dem IT-System des Fernwartungszugangs installiert und lauffähig sein sowie einen Mehrbenutzendenbetrieb unterstützen."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Technische Entkopplung von Zugriffen — IND.3.2.A7.3"
+              },
+              {
+                "id": "IND.3.2.A7.4",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A7.4-stmt",
+                    "name": "statement",
+                    "prose": "Das IT-System SOLLTE ein Sprungserver oder ein vergleichbares Application Layer Gateway (ALG) sein, das in einem dedizierten Sicherheitssegment, z. B. in einer demilitarisierten Zone (DMZ) positioniert ist."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Technische Entkopplung von Zugriffen — IND.3.2.A7.4"
+              },
+              {
+                "id": "IND.3.2.A7.5",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A7.5-stmt",
+                    "name": "statement",
+                    "prose": "Für das IT-System zur Entkopplung der Zugriffe SOLLTE die OT zuständig sein, d. h. es liegt idealerweise in einer OT-DMZ."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Technische Entkopplung von Zugriffen — IND.3.2.A7.5"
+              }
+            ],
+            "id": "IND.3.2.A7",
+            "title": "Technische Entkopplung von Zugriffen"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.3.2.A8.1",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A8.1-stmt",
+                    "name": "statement",
+                    "prose": "Jede Fernwartungssitzung SOLLTE vorab durch einen oder einer OT-Mitarbeitenden der betreibenden Institution, der oder die für das Zielsystem der Sitzung zuständig ist, genehmigt werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Explizite Freigabe jeder OT-Fernwartungssitzung — IND.3.2.A8.1"
+              },
+              {
+                "id": "IND.3.2.A8.2",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A8.2-stmt",
+                    "name": "statement",
+                    "prose": "Erst danach SOLLTE der oder die OT-Mitarbeitende den Fernwartungszugang freischalten."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Explizite Freigabe jeder OT-Fernwartungssitzung — IND.3.2.A8.2"
+              },
+              {
+                "id": "IND.3.2.A8.3",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A8.3-stmt",
+                    "name": "statement",
+                    "prose": "Die explizite Freigabe SOLLTE sowohl im Bedarfsfall als auch während abgestimmter Wartungsfenster eingehalten werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Explizite Freigabe jeder OT-Fernwartungssitzung — IND.3.2.A8.3"
+              },
+              {
+                "id": "IND.3.2.A8.4",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A8.4-stmt",
+                    "name": "statement",
+                    "prose": "Die Freigabe SOLLTE grundsätzlich nur für einen begrenzten Zeitraum gültig sein, d. h. die zuständigen OT-Mitarbeitenden behalten die Hoheit über den Zeitpunkt der Fernwartung (siehe Anforderung IND.3.2.A3 Regelmäßige Prüfungen sowie Ausnahmegenehmigungen bestehender OT-Fernwartungszugänge)."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Explizite Freigabe jeder OT-Fernwartungssitzung — IND.3.2.A8.4"
+              },
+              {
+                "id": "IND.3.2.A8.5",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A8.5-stmt",
+                    "name": "statement",
+                    "prose": "Darüber hinaus SOLLTEN externe Fernwartungszugriffe ausschließlich von innen nach außen, d. h. aus dem OT-Netz heraus, aufgebaut werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Explizite Freigabe jeder OT-Fernwartungssitzung — IND.3.2.A8.5"
+              }
+            ],
+            "id": "IND.3.2.A8",
+            "title": "Explizite Freigabe jeder OT-Fernwartungssitzung"
+          },
+          {
+            "controls": [
+              {
+                "id": "IND.3.2.A9.1",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A9.1-stmt",
+                    "name": "statement",
+                    "prose": "Für einen Dateiaustausch im Rahmen der OT-Fernwartung, z. B. von Konfigurationsdateien, Updates oder Handbüchern, SOLLTE ein sicheres Vorgehen etabliert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Sicherer Austausch von Dateien begleitend zur OT-Fernwartung — IND.3.2.A9.1"
+              },
+              {
+                "id": "IND.3.2.A9.2",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A9.2-stmt",
+                    "name": "statement",
+                    "prose": "Dies MUSS mindestens eine Überprüfung auf Schadsoftware beinhalten."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Sicherer Austausch von Dateien begleitend zur OT-Fernwartung — IND.3.2.A9.2"
+              },
+              {
+                "id": "IND.3.2.A9.3",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A9.3-stmt",
+                    "name": "statement",
+                    "prose": "Der Verbindungsaufbau zwischen einem Datenaustauschsystem und der Dateiquelle SOLLTE nicht automatisiert erfolgen, sondern vor jedem Dateiaustausch von der OT der Institution initiiert und authentisiert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Sicherer Austausch von Dateien begleitend zur OT-Fernwartung — IND.3.2.A9.3"
+              },
+              {
+                "id": "IND.3.2.A9.4",
+                "parts": [
+                  {
+                    "id": "IND.3.2.A9.4-stmt",
+                    "name": "statement",
+                    "prose": "Ein Dateiaustausch SOLLTE grundsätzlich protokolliert werden."
+                  }
+                ],
+                "props": [
+                  {
+                    "name": "implementation-groups",
+                    "ns": "https://ckodex.io/ns/xoscal/props",
+                    "value": "[S]"
+                  }
+                ],
+                "title": "Sicherer Austausch von Dateien begleitend zur OT-Fernwartung — IND.3.2.A9.4"
+              }
+            ],
+            "id": "IND.3.2.A9",
+            "title": "Sicherer Austausch von Dateien begleitend zur OT-Fernwartung"
+          }
+        ],
+        "id": "IND.3.2",
+        "title": "Fernwartung im industriellen Umfeld"
+      }
+    ],
+    "metadata": {
+      "last-modified": "2026-11-08T00:30:59Z",
+      "oscal-version": "1.2.3",
+      "title": "IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT",
+      "version": "1"
+    },
+    "uuid": "641a8a8c-46df-5018-aedc-623e4565fda0"
+  }
+}

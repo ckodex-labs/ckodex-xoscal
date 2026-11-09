@@ -1,0 +1,759 @@
+{
+  "assessment-results": {
+    "import-ap": {
+      "href": "./assessment-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:13Z",
+      "oscal-version": "1.2.3",
+      "title": "IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - SYS: IT-Systeme Assessment Results Template",
+      "version": "1"
+    },
+    "results": [
+      {
+        "description": "Assessment evaluation findings and observations for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - SYS: IT-Systeme.",
+        "findings": [
+          {
+            "description": "Control sys.1.1.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "a2ed4230-80fd-5ba2-8f23-faea9e869606"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "sys.1.1.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for sys.1.1.a1.1",
+            "uuid": "c3c2186d-d5cd-5b97-a048-246a2f23e072"
+          },
+          {
+            "description": "Control sys.1.2.2.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "89a802b1-3ded-5487-96fa-9c16b2ec102c"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "sys.1.2.2.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for sys.1.2.2.a1.1",
+            "uuid": "51cfaff9-11b5-5add-887a-f4cce6770e5e"
+          },
+          {
+            "description": "Control sys.1.2.3.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "fda101b5-bdbe-550e-8d6a-b2946f13c9b4"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "sys.1.2.3.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for sys.1.2.3.a1.1",
+            "uuid": "90e299fd-3d6c-5af8-bc5f-db1b3bd99bde"
+          },
+          {
+            "description": "Control sys.1.3.a10.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "cf5cfb97-536a-59c8-af34-acb8ddbdc355"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "sys.1.3.a10.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for sys.1.3.a10.1",
+            "uuid": "b98cba5e-90e1-5e7e-a5f8-5b9a23c5aa1e"
+          },
+          {
+            "description": "Control sys.1.5.a10.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "564bee8e-21a6-522d-9002-b8b1510a6bcf"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "sys.1.5.a10.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for sys.1.5.a10.1",
+            "uuid": "20349381-7dcf-5389-b4ec-7d2ce040b21f"
+          },
+          {
+            "description": "Control sys.1.6.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "a10e0fdb-45d6-57c4-bed4-7d0b30a7b752"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "sys.1.6.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for sys.1.6.a1.1",
+            "uuid": "62dfd02e-030e-5277-bb6f-00a842579bb4"
+          },
+          {
+            "description": "Control sys.1.7.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "d8a0b38b-18df-5e4f-823d-7a7c2fc3b91a"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "sys.1.7.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for sys.1.7.a1.1",
+            "uuid": "f1de90af-89d3-54ff-b4ce-2f09a8f92c1e"
+          },
+          {
+            "description": "Control sys.1.8.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "2c27e22a-ada7-59ae-be3f-5ae1d6919b18"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "sys.1.8.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for sys.1.8.a1.1",
+            "uuid": "bce94998-5b72-52ff-b08e-9a249fc9b787"
+          },
+          {
+            "description": "Control sys.1.9.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "77773da2-e861-537d-97e2-4b32520a9df1"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "sys.1.9.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for sys.1.9.a1.1",
+            "uuid": "834a58ba-6e68-5744-b33f-69d3ed1ffba7"
+          },
+          {
+            "description": "Control sys.2.1.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "04435945-f432-5e30-afb3-abe86157cce6"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "sys.2.1.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for sys.2.1.a1.1",
+            "uuid": "31f4216d-5b44-5aec-a308-10f7f50d9b5e"
+          },
+          {
+            "description": "Control sys.2.2.3.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "3940c631-eebe-57a6-b42f-f1e9f11489e1"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "sys.2.2.3.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for sys.2.2.3.a1.1",
+            "uuid": "cf34be94-29f0-53dc-a50a-e2c2ababba1a"
+          },
+          {
+            "description": "Control sys.2.3.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "7285afa8-d875-5de0-ae33-a38479895a09"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "sys.2.3.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for sys.2.3.a1.1",
+            "uuid": "884ceae5-80f3-557d-a8d5-cabb321622a6"
+          },
+          {
+            "description": "Control sys.2.4.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "00a8ca2e-c063-5111-bf31-ac2005ffa4af"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "sys.2.4.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for sys.2.4.a1.1",
+            "uuid": "c49d302d-3256-5e92-b39a-0145fe2adf2c"
+          },
+          {
+            "description": "Control sys.2.5.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "90c6fbf6-4e15-5570-a419-b708990b42b8"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "sys.2.5.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for sys.2.5.a1.1",
+            "uuid": "bf47b6f6-cdc2-541a-806e-40d9cc96d3e3"
+          },
+          {
+            "description": "Control sys.2.6.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "59187137-fd2e-5656-9618-6500e1e3ff8c"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "sys.2.6.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for sys.2.6.a1.1",
+            "uuid": "a97a75e1-8b19-50bc-8695-87d1859886cb"
+          },
+          {
+            "description": "Control sys.3.1.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "826a64bf-74e3-5bc3-b55d-5ea53de45ae6"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "sys.3.1.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for sys.3.1.a1.1",
+            "uuid": "f8c81067-ce60-57ba-8a40-3a0cac348084"
+          },
+          {
+            "description": "Control sys.3.2.1.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "c6b81663-008d-56b1-970d-458895d9a1fc"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "sys.3.2.1.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for sys.3.2.1.a1.1",
+            "uuid": "0305a7e9-be6b-5dfd-8e27-f9b910eef04d"
+          },
+          {
+            "description": "Control sys.3.2.2.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "be1f30ae-010c-5cc0-b3fe-400cca1b7b49"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "sys.3.2.2.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for sys.3.2.2.a1.1",
+            "uuid": "8fafb4c6-54eb-5d04-a2e8-f8e56230e8c6"
+          },
+          {
+            "description": "Control sys.3.2.3.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "0c2367ae-4af4-5f58-9786-8d81bf9f7f9b"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "sys.3.2.3.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for sys.3.2.3.a1.1",
+            "uuid": "b9f03154-38f0-5da5-9662-480fa16ac002"
+          },
+          {
+            "description": "Control sys.3.2.4.a2.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "702647ee-1c98-569c-a387-3a4dfdad14c1"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "sys.3.2.4.a2.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for sys.3.2.4.a2.1",
+            "uuid": "1649ce9d-4e72-5542-98ce-cdf0ab69a56b"
+          },
+          {
+            "description": "Control sys.3.3.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "37e7d65c-9d73-5bdd-a6c3-0678842ed977"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "sys.3.3.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for sys.3.3.a1.1",
+            "uuid": "69afbfb1-9d8b-568b-8bfb-9cb37583fd80"
+          },
+          {
+            "description": "Control sys.4.1.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "8d71fb74-3a28-5346-a81f-4287e01cc3dd"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "sys.4.1.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for sys.4.1.a1.1",
+            "uuid": "e7f57d8b-8941-592d-be5f-ad8fbf210bb9"
+          },
+          {
+            "description": "Control sys.4.3.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "a333632b-4662-5ef4-be80-f4cb9feb9e65"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "sys.4.3.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for sys.4.3.a1.1",
+            "uuid": "ccbc5eb5-ecd4-5152-9adf-2c11cf527288"
+          },
+          {
+            "description": "Control sys.4.4.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "190e5f11-f7d2-5a92-90dc-6326a806e7c9"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "sys.4.4.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for sys.4.4.a1.1",
+            "uuid": "bfc8452a-dedb-5f92-806f-ece735857c72"
+          },
+          {
+            "description": "Control sys.4.5.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "bf766e17-2bd6-5f6c-9b3e-2c55edc1cb99"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "sys.4.5.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for sys.4.5.a1.1",
+            "uuid": "d51f3e55-ff50-5a4f-bdbe-261d87f7c27d"
+          }
+        ],
+        "observations": [
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control sys.1.1.a1.1 (Zugriffsschutz und Nutzung — SYS.1.1.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "a2ed4230-80fd-5ba2-8f23-faea9e869606"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control sys.1.2.2.a1.1 (Planung von Windows Server 2012 — SYS.1.2.2.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "89a802b1-3ded-5487-96fa-9c16b2ec102c"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control sys.1.2.3.a1.1 (Planung von Windows Server — SYS.1.2.3.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "fda101b5-bdbe-550e-8d6a-b2946f13c9b4"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control sys.1.3.a10.1 (Verhinderung der Ausbreitung bei der Ausnutzung von Schwachstellen — SYS.1.3.A10.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "cf5cfb97-536a-59c8-af34-acb8ddbdc355"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control sys.1.5.a10.1 (Einführung von Verwaltungsprozessen für virtuelle IT-Systeme — SYS.1.5.A10.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "564bee8e-21a6-522d-9002-b8b1510a6bcf"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control sys.1.6.a1.1 (Planung des Container-Einsatzes — SYS.1.6.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "a10e0fdb-45d6-57c4-bed4-7d0b30a7b752"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control sys.1.7.a1.1 (Einsatz restriktiver z/OS-Kennungen — SYS.1.7.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "d8a0b38b-18df-5e4f-823d-7a7c2fc3b91a"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control sys.1.8.a1.1 (Geeignete Aufstellung von Speichersystemen — SYS.1.8.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "2c27e22a-ada7-59ae-be3f-5ae1d6919b18"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control sys.1.9.a1.1 (Erstellung einer Sicherheitsrichtlinie für den Einsatz von Terminalservern — SYS.1.9.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "77773da2-e861-537d-97e2-4b32520a9df1"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control sys.2.1.a1.1 (Sichere Authentisierung von Benutzenden — SYS.2.1.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "04435945-f432-5e30-afb3-abe86157cce6"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control sys.2.2.3.a1.1 (Planung des Einsatzes von Cloud-Diensten unter Windows — SYS.2.2.3.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "3940c631-eebe-57a6-b42f-f1e9f11489e1"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control sys.2.3.a1.1 (Authentisierung von Administrierenden und Benutzenden — SYS.2.3.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "7285afa8-d875-5de0-ae33-a38479895a09"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control sys.2.4.a1.1 (Planung des sicheren Einsatzes von macOS — SYS.2.4.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "00a8ca2e-c063-5111-bf31-ac2005ffa4af"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control sys.2.5.a1.1 (Planung des Einsatzes virtueller Clients — SYS.2.5.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "90c6fbf6-4e15-5570-a419-b708990b42b8"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control sys.2.6.a1.1 (Planung des Einsatzes einer VDI — SYS.2.6.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "59187137-fd2e-5656-9618-6500e1e3ff8c"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control sys.3.1.a1.1 (Regelungen zur mobilen Nutzung von Laptops — SYS.3.1.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "826a64bf-74e3-5bc3-b55d-5ea53de45ae6"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control sys.3.2.1.a1.1 (Festlegung einer Richtlinie für den Einsatz von Smartphones und Tablets — SYS.3.2.1.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "c6b81663-008d-56b1-970d-458895d9a1fc"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control sys.3.2.2.a1.1 (Festlegung einer Strategie für das Mobile Device Management — SYS.3.2.2.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "be1f30ae-010c-5cc0-b3fe-400cca1b7b49"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control sys.3.2.3.a1.1 (Strategie für die iOS-Nutzung — SYS.3.2.3.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "0c2367ae-4af4-5f58-9786-8d81bf9f7f9b"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control sys.3.2.4.a2.1 (Deaktivieren des Entwicklermodus — SYS.3.2.4.A2.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "702647ee-1c98-569c-a387-3a4dfdad14c1"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control sys.3.3.a1.1 (Sicherheitsrichtlinien und Regelungen für die Nutzung von Mobiltelefonen — SYS.3.3.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "37e7d65c-9d73-5bdd-a6c3-0678842ed977"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control sys.4.1.a1.1 (Planung des Einsatzes von Druckern, Kopierern und Multifunktionsgeräten — SYS.4.1.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "8d71fb74-3a28-5346-a81f-4287e01cc3dd"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control sys.4.3.a1.1 (Regelungen zum Umgang mit eingebetteten Systemen — SYS.4.3.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "a333632b-4662-5ef4-be80-f4cb9feb9e65"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control sys.4.4.a1.1 (Einsatzkriterien für IoT-Geräte — SYS.4.4.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "190e5f11-f7d2-5a92-90dc-6326a806e7c9"
+          },
+          {
+            "collected": "2026-11-08T01:42:13Z",
+            "description": "Verified control sys.4.5.a1.1 (Sensibilisierung zum sicheren Umgang mit Wechseldatenträgern — SYS.4.5.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "bf766e17-2bd6-5f6c-9b3e-2c55edc1cb99"
+          }
+        ],
+        "reviewed-controls": {
+          "control-selections": [
+            {
+              "description": "All controls evaluated for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - SYS: IT-Systeme",
+              "include-all": {}
+            }
+          ]
+        },
+        "start": "2026-11-08T01:42:13Z",
+        "title": "IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - SYS: IT-Systeme Assessment Results",
+        "uuid": "44595a59-e795-5c22-94fd-0c0d9acd22c5"
+      }
+    ],
+    "uuid": "8c34f50f-ec74-5068-b0a9-d9c21f05903f"
+  }
+}

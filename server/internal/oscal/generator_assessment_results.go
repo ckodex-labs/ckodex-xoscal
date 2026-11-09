@@ -4,6 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"strings"
 
 	assessment_resultsv1 "github.com/mchorfa/xoscal/proto/oscal/assessment_results/v1"
 	commonv1 "github.com/mchorfa/xoscal/proto/oscal/common/v1"
@@ -27,31 +28,39 @@ func (g *Generator) GenerateAssessmentResults(ctx context.Context, snapshotName,
 		if err := json.Unmarshal(e.Payload, &req); err != nil {
 			continue
 		}
-		if req.Framework != framework {
+		if !strings.EqualFold(req.Framework, framework) || !req.Assessable {
 			continue
+		}
+		title := singleLine(req.Title)
+		if title == "" {
+			title = singleLine(req.Citation)
+		}
+		if title == "" {
+			title = singleLine(req.NodeRefID)
+		}
+		desc := req.Text
+		if desc == "" {
+			desc = title
 		}
 		observations = append(observations, &assessment_resultsv1.Observation{
 			Uuid:        newUUID(uuidNamespace, fmt.Sprintf("obs-%s", req.Citation)),
-			Description: &commonv1.MarkupMultiline{Value: req.Text},
+			Description: &commonv1.MarkupMultiline{Value: desc},
 			Methods:     []string{"INTERVIEW"},
 			Collected:   &commonv1.DateTime{Value: timestamppb.Now()},
 			Subjects: []*assessment_resultsv1.SubjectReference{{
 				SubjectUuid: newUUID(uuidNamespace, fmt.Sprintf("ctrl-%s", req.Citation)),
 				Type:        "component",
-				Title:       &commonv1.MarkupLine{Value: req.Title},
+				Title:       &commonv1.MarkupLine{Value: title},
 			}},
 		})
-		if !req.Assessable {
-			continue
-		}
 		findings = append(findings, &assessment_resultsv1.Finding{
 			Uuid:        newUUID(uuidNamespace, fmt.Sprintf("finding-%s", req.Citation)),
-			Title:       &commonv1.MarkupLine{Value: fmt.Sprintf("Finding for %s", req.Title)},
-			Description: &commonv1.MarkupMultiline{Value: req.Text},
+			Title:       &commonv1.MarkupLine{Value: fmt.Sprintf("Finding for %s", title)},
+			Description: &commonv1.MarkupMultiline{Value: desc},
 			Target: &assessment_resultsv1.FindingTarget{
 				Type:     "objective-id",
 				TargetId: &commonv1.Token{Value: sanitizeToken(req.Citation)},
-				Title:    &commonv1.MarkupLine{Value: req.Title},
+				Title:    &commonv1.MarkupLine{Value: title},
 				Status:   &assessment_resultsv1.ObjectiveStatus{State: "not-satisfied"},
 			},
 		})

@@ -1,0 +1,1233 @@
+{
+  "system-security-plan": {
+    "control-implementation": {
+      "description": "Control implementations for Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+      "implemented-requirements": [
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r1 (Informer les administrateurs de leurs droits et devoirs) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "bd77c6ca-0708-54ff-bcf0-dbfd1d241548"
+            }
+          ],
+          "control-id": "r1",
+          "remarks": "Control r1 (Informer les administrateurs de leurs droits et devoirs) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "ff80624b-461d-54ee-b122-8e4b3e579f10"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r10 (Bloquer tout accès à Internet depuis ou vers le poste d'administration) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ad9b74b8-376d-53fe-9d06-3f1dc5ded8ef"
+            }
+          ],
+          "control-id": "r10",
+          "remarks": "Control r10 (Bloquer tout accès à Internet depuis ou vers le poste d'administration) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "89bb11fa-89f0-50ae-b7f1-4223416b0a4e"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r11 (Durcir le système d'exploitation du poste d'administration) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "3b75ba8e-dfa5-537b-b88c-414603591355"
+            }
+          ],
+          "control-id": "r11",
+          "remarks": "Control r11 (Durcir le système d'exploitation du poste d'administration) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "8fb4263d-4a06-5be3-9225-ec4f09c7d435"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r12 (Restreindre les droits d'administration sur le poste d'administration) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "6467c67b-d502-5f7a-a509-cb68b142cfdd"
+            }
+          ],
+          "control-id": "r12",
+          "remarks": "Control r12 (Restreindre les droits d'administration sur le poste d'administration) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "c7c24bd0-4963-576a-8f76-82d03e1eb7f2"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r13 (Limiter les logiciels installés sur le poste d'administration) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "f5a064d6-6855-51ff-be77-6108da21a7df"
+            }
+          ],
+          "control-id": "r13",
+          "remarks": "Control r13 (Limiter les logiciels installés sur le poste d'administration) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "dc5df354-fcec-582c-a1a3-f9cdacd386af"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r14 (Chiffrer l'ensemble des périphériques de stockage utilisés pour l'administration) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "166f4b6b-9f92-5ec1-97f6-b71c935a86c0"
+            }
+          ],
+          "control-id": "r14",
+          "remarks": "Control r14 (Chiffrer l'ensemble des périphériques de stockage utilisés pour l'administration) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "547aba0a-67b1-53d9-a849-2fa8bf0d1e12"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r15 (Connecter les ressources d'administration sur un réseau physique dédié) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "4caf346e-860f-5931-b05b-660dd7719f57"
+            }
+          ],
+          "control-id": "r15",
+          "remarks": "Control r15 (Connecter les ressources d'administration sur un réseau physique dédié) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "a252c5eb-c578-56bd-9022-6c7726088d1a"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r15- (Connecter les ressources d'administration sur un réseau VPN IPsec dédié) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "9739c64a-fc58-5ded-abe1-88af277b8c4f"
+            }
+          ],
+          "control-id": "r15-",
+          "remarks": "Control r15- (Connecter les ressources d'administration sur un réseau VPN IPsec dédié) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "cd986c0b-f95b-56a5-89ec-c13adc2f3fec"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r16 (Appliquer un filtrage interne et périmétrique au SI d'administration) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "f045e28b-aba8-5f39-8566-426c529af429"
+            }
+          ],
+          "control-id": "r16",
+          "remarks": "Control r16 (Appliquer un filtrage interne et périmétrique au SI d'administration) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "3402f1bd-c116-5c9c-9095-239e4406a194"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r17 (Appliquer un filtrage local sur les ressources administrées) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "72a417fd-76be-5ae5-886b-76ae054e559e"
+            }
+          ],
+          "control-id": "r17",
+          "remarks": "Control r17 (Appliquer un filtrage local sur les ressources administrées) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "9140830f-5bb1-52b5-9b09-83cdbdf76dda"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r18 (Dédier une interface réseau physique d'administration) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "62d06ff1-ec45-5b63-ae58-52dc15368271"
+            }
+          ],
+          "control-id": "r18",
+          "remarks": "Control r18 (Dédier une interface réseau physique d'administration) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "6cc8065a-91c3-5970-8e61-5b37db7990dd"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r18- (Dédier une interface réseau virtuelle d'administration) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "9c188f40-fcba-58a1-bddf-577815b3d4cf"
+            }
+          ],
+          "control-id": "r18-",
+          "remarks": "Control r18- (Dédier une interface réseau virtuelle d'administration) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "a4caef4b-cf58-5ef9-9cf3-1b48e8ed67c8"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r19 (Appliquer un filtrage entre ressources d'administration et ressources administrées) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "94db3e0f-28cd-5f08-9154-e2d6e01c0312"
+            }
+          ],
+          "control-id": "r19",
+          "remarks": "Control r19 (Appliquer un filtrage entre ressources d'administration et ressources administrées) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "ac9d166d-1825-5072-99aa-b6388b0f2aa1"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r2 (Former les administrateurs à l'état de l'art en matière de SSI) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "9f4e094e-fa68-54b1-9301-c0c1e174f2ad"
+            }
+          ],
+          "control-id": "r2",
+          "remarks": "Control r2 (Former les administrateurs à l'état de l'art en matière de SSI) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "037a32f7-d0e9-5777-b134-ec13e5c03894"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r20 (Bloquer toute connexion entre ressources administrées à travers le réseau d'administration) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "58722aee-295b-50e2-89f7-df537f099bde"
+            }
+          ],
+          "control-id": "r20",
+          "remarks": "Control r20 (Bloquer toute connexion entre ressources administrées à travers le réseau d'administration) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "74dbbe45-5e08-5629-9b0f-f125695d348a"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r21 (Protéger les flux d'administration transitant sur un réseau tiers) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "530effe3-a8bf-56fa-a8cc-6cc5208ab1ca"
+            }
+          ],
+          "control-id": "r21",
+          "remarks": "Control r21 (Protéger les flux d'administration transitant sur un réseau tiers) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "98eff55f-0e42-5811-8137-47106766c650"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r22 (Déployer les outils d'administration sur des serveurs dédiés par zone d'administration) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "608653c2-0daa-5bcc-9bf0-589e497666be"
+            }
+          ],
+          "control-id": "r22",
+          "remarks": "Control r22 (Déployer les outils d'administration sur des serveurs dédiés par zone d'administration) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "c0f2b97b-70f4-51f7-b2b9-686d1f938e9d"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r23 (Appliquer un filtrage entre les postes d'administration et les serveurs outils d'administration) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "9067076c-ce92-5b47-8db5-e767f8d0e95f"
+            }
+          ],
+          "control-id": "r23",
+          "remarks": "Control r23 (Appliquer un filtrage entre les postes d'administration et les serveurs outils d'administration) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "3dcb105e-7938-5f61-abbd-97fc4242b1a0"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r24 (Utiliser des protocoles sécurisés pour les flux d'administration) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "2c6c4533-49d4-5bd1-9688-fac04c6d9333"
+            }
+          ],
+          "control-id": "r24",
+          "remarks": "Control r24 (Utiliser des protocoles sécurisés pour les flux d'administration) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "4e61ac15-326e-5b3c-a0ce-d1d89c078fb2"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r24- (Protéger le cas échéant les flux d'administration dans un tunnel VPN IPsec) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "36d0ac94-0ea3-5b71-bb5d-2ebbb509600b"
+            }
+          ],
+          "control-id": "r24-",
+          "remarks": "Control r24- (Protéger le cas échéant les flux d'administration dans un tunnel VPN IPsec) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "1d6f3ea3-633f-5340-9f7c-a3fb4a0e1a76"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r25 (Étudier la mise en oeuvre d'une rupture protocolaire des flux d'administration) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "94c5f684-0f42-51e3-886a-4ba56a6ef001"
+            }
+          ],
+          "control-id": "r25",
+          "remarks": "Control r25 (Étudier la mise en oeuvre d'une rupture protocolaire des flux d'administration) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "ea6eea98-b9d2-53bf-b9ed-28a41f289755"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r26 (Renoncer à la rupture protocolaire pour les besoins en confidentialité) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "0404e531-a533-5c00-b954-c711607ad0eb"
+            }
+          ],
+          "control-id": "r26",
+          "remarks": "Control r26 (Renoncer à la rupture protocolaire pour les besoins en confidentialité) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "a01c9c66-6fac-5f74-85fe-0a7ca916c203"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r27 (Utiliser des comptes d'administration dédiés) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ef695271-7e3e-5f32-b153-c00e908ebd2e"
+            }
+          ],
+          "control-id": "r27",
+          "remarks": "Control r27 (Utiliser des comptes d'administration dédiés) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "be48c73c-d354-526f-b663-f1f1f5ddcf6c"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r28 (Protéger l'accès aux annuaires des comptes d'administration) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "5bf82cf0-2c0a-507f-b179-3bf4bff311a1"
+            }
+          ],
+          "control-id": "r28",
+          "remarks": "Control r28 (Protéger l'accès aux annuaires des comptes d'administration) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "041fadaf-a84a-5910-83e4-bf9b4c823758"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r29 (Réserver les comptes d'administration aux seules actions d'administration) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "720eeeba-1903-5c0c-9368-04c29d017619"
+            }
+          ],
+          "control-id": "r29",
+          "remarks": "Control r29 (Réserver les comptes d'administration aux seules actions d'administration) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "03098edf-ff15-5a18-beb6-30d148609db6"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r3 (Disposer d'une documentation des SI à jour) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "4a956c7c-8c82-50f9-80d5-8cb186980796"
+            }
+          ],
+          "control-id": "r3",
+          "remarks": "Control r3 (Disposer d'une documentation des SI à jour) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "a7dfee6b-8e5f-59da-a1aa-f5ba61278150"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r30 (Utiliser par défaut des comptes d'administration individuels) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "6fe188ec-05e2-5daf-a84c-58e72461d38c"
+            }
+          ],
+          "control-id": "r30",
+          "remarks": "Control r30 (Utiliser par défaut des comptes d'administration individuels) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "9d4e57fe-1c72-5481-95ef-c559c7aa8e33"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r31 (Journaliser les événements liés aux comptes d'administration) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "274eb228-a9de-5594-8622-739d50f0439d"
+            }
+          ],
+          "control-id": "r31",
+          "remarks": "Control r31 (Journaliser les événements liés aux comptes d'administration) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "2f195a0f-03c4-5f0c-bac8-d278f6f41b9f"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r32 (Prévoir un processus de gestion des comptes d'administration) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "35797269-8d47-5baf-8e71-a325fb916769"
+            }
+          ],
+          "control-id": "r32",
+          "remarks": "Control r32 (Prévoir un processus de gestion des comptes d'administration) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "b3846330-42cf-54d1-a822-fd561ecbefd0"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r33 (Se référer au RGS pour choisir les mécanismes d'authentification) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "01fe15be-a83b-5616-a2ec-6bc88fe9fc9d"
+            }
+          ],
+          "control-id": "r33",
+          "remarks": "Control r33 (Se référer au RGS pour choisir les mécanismes d'authentification) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "a88e7dc3-aa9b-5cb4-a64e-666693248c5b"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r34 (Modifier les mots de passe par défaut des comptes natifs) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "e0ed9e16-d5c4-5958-ba02-15dd6122dcfa"
+            }
+          ],
+          "control-id": "r34",
+          "remarks": "Control r34 (Modifier les mots de passe par défaut des comptes natifs) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "4245cc23-c37e-51ac-b9bd-3b31514f84f9"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r35 (Stocker les mots de passe dans un coffre-fort de mots de passe) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "21e4a102-8754-5da1-b259-1947d2904621"
+            }
+          ],
+          "control-id": "r35",
+          "remarks": "Control r35 (Stocker les mots de passe dans un coffre-fort de mots de passe) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "2e2f7591-523c-5012-99a8-bd17559fb054"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r36 (Privilégier une authentification double facteur pour les actions d'administration) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "3992358b-5819-5da6-8db1-543407051fca"
+            }
+          ],
+          "control-id": "r36",
+          "remarks": "Control r36 (Privilégier une authentification double facteur pour les actions d'administration) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "58306b1c-3e5d-5ab4-819a-465ed261f78e"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r37 (Utiliser des certificats électroniques de confiance pour l'authentification) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "8d0898b3-3eb8-513f-9a07-a9a82d25cf2f"
+            }
+          ],
+          "control-id": "r37",
+          "remarks": "Control r37 (Utiliser des certificats électroniques de confiance pour l'authentification) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "b023dca1-bd11-56a1-b19c-513226fa3047"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r38 (Mettre en œuvre une gestion centralisée de l'authentification) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "f36d31fa-9d50-5648-a11b-f16bf2d9d3c0"
+            }
+          ],
+          "control-id": "r38",
+          "remarks": "Control r38 (Mettre en œuvre une gestion centralisée de l'authentification) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "e402d946-27a6-5576-8493-6b3b36ee06b5"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r39 (Respecter le principe du moindre privilège dans l'attribution des droits d'administration) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "52afd54d-2163-55cf-897c-1c30467aad86"
+            }
+          ],
+          "control-id": "r39",
+          "remarks": "Control r39 (Respecter le principe du moindre privilège dans l'attribution des droits d'administration) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "4bac9c6a-8b1b-52c0-a495-50f6ed9b836a"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r4 (Mener une analyse de risque sur le SI d'administration et son écosystème) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "4f3ce48f-0317-5e38-8db0-ac04d3044db9"
+            }
+          ],
+          "control-id": "r4",
+          "remarks": "Control r4 (Mener une analyse de risque sur le SI d'administration et son écosystème) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "b349268c-853c-5345-a8d2-4ab110d5e1d2"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r40 (Attribuer les droits d'administration à des groupes) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "560aa338-0094-5b15-8d9e-9d765daec3e8"
+            }
+          ],
+          "control-id": "r40",
+          "remarks": "Control r40 (Attribuer les droits d'administration à des groupes) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "731bed11-b51e-54f0-889f-3e234b66b5c7"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r41 (Déployer des politiques de sécurité) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "b9ababfa-64e6-5647-85a2-fc9a4b41a2cb"
+            }
+          ],
+          "control-id": "r41",
+          "remarks": "Control r41 (Déployer des politiques de sécurité) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "e41858a6-32c7-5ebc-86ed-2c4c55d7389c"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r42 (Réaliser scrupuleusement le MCS du SI d'administration) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "6d5dd968-9deb-52fd-8807-bdde82de3b35"
+            }
+          ],
+          "control-id": "r42",
+          "remarks": "Control r42 (Réaliser scrupuleusement le MCS du SI d'administration) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "e5928ac2-158f-5341-be36-9d1402c6b740"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r43 (Mettre en place des serveurs relais pour la récupération des mises à jour) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "9109cf55-f1ec-5627-a29d-fbd9318415de"
+            }
+          ],
+          "control-id": "r43",
+          "remarks": "Control r43 (Mettre en place des serveurs relais pour la récupération des mises à jour) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "84ef7a3a-f486-5971-aebe-f501fe4fd041"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r44 (Valider les correctifs de sécurité avant leur généralisation) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "db3e846f-636b-597a-9a4d-c6f86dc25676"
+            }
+          ],
+          "control-id": "r44",
+          "remarks": "Control r44 (Valider les correctifs de sécurité avant leur généralisation) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "b9836be4-485b-56cb-9f52-89a1b399e443"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r45 (Définir une politique de sauvegarde du SI d'administration) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "dc1db39d-234b-5e43-9d14-bd28e6a39822"
+            }
+          ],
+          "control-id": "r45",
+          "remarks": "Control r45 (Définir une politique de sauvegarde du SI d'administration) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "457e8460-89a1-5021-9777-6382b24a6fb5"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r46 (Dédier une zone d'administration à la journalisation) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "b01a81b6-c571-5138-bcf6-395f17add7b4"
+            }
+          ],
+          "control-id": "r46",
+          "remarks": "Control r46 (Dédier une zone d'administration à la journalisation) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "fb44d8e8-6a7f-5fba-a379-4834ad203c92"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r47 (Centraliser la collecte des journaux d'événements) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "99cf0eb4-f1e0-5555-adde-7134270d1607"
+            }
+          ],
+          "control-id": "r47",
+          "remarks": "Control r47 (Centraliser la collecte des journaux d'événements) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "fbb50d63-83ad-5e55-a889-fc8a64d3ea14"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r48 (Installer un filtre de confidentialité sur le poste d'administration nomade) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "e90d2a14-b11b-5189-8c2a-410f4f249f1c"
+            }
+          ],
+          "control-id": "r48",
+          "remarks": "Control r48 (Installer un filtre de confidentialité sur le poste d'administration nomade) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "93affc6f-a901-57a0-b7a4-86e5df42e17a"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r49 (Utiliser un tunnel VPN IPsec pour la connexion du poste d'administration à distance) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "b200b9ed-0c09-5d5b-8b1d-c1ec7a7e83b0"
+            }
+          ],
+          "control-id": "r49",
+          "remarks": "Control r49 (Utiliser un tunnel VPN IPsec pour la connexion du poste d'administration à distance) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "878d8e0f-0423-52f4-999e-6b80e9e5f4e5"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r5 (Définir les zones de confiance du SI administré et déduire les zones d'administration) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "49239f9f-5a47-532b-9356-888b1b4de570"
+            }
+          ],
+          "control-id": "r5",
+          "remarks": "Control r5 (Définir les zones de confiance du SI administré et déduire les zones d'administration) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "84b9a27b-3600-5fd1-8551-8d0917c7c879"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r50 (Empêcher toute modification de la configuration VPN du poste d'administration) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "77261133-a65d-5f93-86b5-2c16a145cf59"
+            }
+          ],
+          "control-id": "r50",
+          "remarks": "Control r50 (Empêcher toute modification de la configuration VPN du poste d'administration) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "2702c9b1-287e-5f34-8b8b-33663fb24337"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r51 (Dédier un concentrateur VPN IPsec physique pour l'administration à distance) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "c09d9b9a-a0e7-5793-964c-abccf302d2e5"
+            }
+          ],
+          "control-id": "r51",
+          "remarks": "Control r51 (Dédier un concentrateur VPN IPsec physique pour l'administration à distance) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "d0d67db8-c785-582f-bba9-33d45c8ef6e7"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r52 (Déployer des systèmes d'échanges sécurisés) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "24c42fb1-9303-5de2-a2d3-51c50e163c43"
+            }
+          ],
+          "control-id": "r52",
+          "remarks": "Control r52 (Déployer des systèmes d'échanges sécurisés) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "2e821531-307f-58b6-b9c8-2813d824fc9c"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r53 (Dédier le système d'échange interne au SI d'administration) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "1b917d12-2888-5d16-84f0-363dabb4a3c8"
+            }
+          ],
+          "control-id": "r53",
+          "remarks": "Control r53 (Dédier le système d'échange interne au SI d'administration) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "428b5cfb-ccac-510a-904d-51b671712f93"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r54 (N'autoriser que des protocoles de transfert vers le système d'échange externe) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "731866e3-303b-504e-af43-72f2055cf87f"
+            }
+          ],
+          "control-id": "r54",
+          "remarks": "Control r54 (N'autoriser que des protocoles de transfert vers le système d'échange externe) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "7b0e56ed-ca3c-5dd8-a9fe-d021691ac054"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r55 (Limiter au strict besoin opérationnel l'accès au système d'échange externe) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "7aa516f4-86d7-5df0-85a4-7df8612ce0e0"
+            }
+          ],
+          "control-id": "r55",
+          "remarks": "Control r55 (Limiter au strict besoin opérationnel l'accès au système d'échange externe) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "b3656591-c50b-53cd-8a2d-51ae7a38af84"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r56 (Ne pas s'authentifier avec un compte d'administration sur le système d'échange externe) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "07d3413e-c2ea-5d5a-a438-b83f7a260755"
+            }
+          ],
+          "control-id": "r56",
+          "remarks": "Control r56 (Ne pas s'authentifier avec un compte d'administration sur le système d'échange externe) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "50e453ae-ac41-5505-b9ee-9f16d0540ee3"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r57 (Ne pas stocker de données de manière permanente dans un système d'échange externe) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "afed69b6-7889-5175-9710-498015654d88"
+            }
+          ],
+          "control-id": "r57",
+          "remarks": "Control r57 (Ne pas stocker de données de manière permanente dans un système d'échange externe) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "24b0c0cd-d6ff-5839-8eed-bbe7378a2755"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r58 (Analyser le contenu des données échangées par le système d'échange externe) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "8ae90aff-22b2-5fd8-b1f8-ace21006bfe2"
+            }
+          ],
+          "control-id": "r58",
+          "remarks": "Control r58 (Analyser le contenu des données échangées par le système d'échange externe) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "7e4ba859-575c-5e2f-9bb9-3707d95a0f87"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r59 (Recourir à une prestation d'infogérance qualifiée d'un PAMS) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "4c335f32-eec9-530a-8f18-55206c33d397"
+            }
+          ],
+          "control-id": "r59",
+          "remarks": "Control r59 (Recourir à une prestation d'infogérance qualifiée d'un PAMS) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "8091cc19-6c81-5151-b25b-77d2836e152e"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r6 (Privilégier l'utilisation de produits qualifiés par l'ANSSI) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "7d7b584e-aebd-5e08-b7bf-43c97aed27cf"
+            }
+          ],
+          "control-id": "r6",
+          "remarks": "Control r6 (Privilégier l'utilisation de produits qualifiés par l'ANSSI) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "534bf752-91de-5c00-b9e0-fbb6190d8232"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r60 (Intégrer au contrat d'infogérance les exigences de sécurité d'accès à distance) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "d672b7f0-7927-50ea-93a5-ac225456d973"
+            }
+          ],
+          "control-id": "r60",
+          "remarks": "Control r60 (Intégrer au contrat d'infogérance les exigences de sécurité d'accès à distance) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f19de06c-4097-529a-be22-e967adc7944c"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r61 (Imposer une sécurisation à l'état de l'art des postes de travail des administrateurs tiers) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "3546becb-a51e-5295-8c0c-bb75f1c3ff6e"
+            }
+          ],
+          "control-id": "r61",
+          "remarks": "Control r61 (Imposer une sécurisation à l'état de l'art des postes de travail des administrateurs tiers) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f7af54d3-2608-51b9-92a2-dc12c44f6f61"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r62 (Dédier une chaîne d'accès à distance pour les administrateurs tiers) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "4582e6c3-15ba-5448-81d7-dbc089deb69a"
+            }
+          ],
+          "control-id": "r62",
+          "remarks": "Control r62 (Dédier une chaîne d'accès à distance pour les administrateurs tiers) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "1f63ad93-acab-5fe7-94e8-96b0a2172380"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r63 (Utiliser un tunnel VPN IPSec pour la connexion du poste de travail des administrateurs tiers) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "23f7157c-9b62-5d42-83e5-790cc719ffd0"
+            }
+          ],
+          "control-id": "r63",
+          "remarks": "Control r63 (Utiliser un tunnel VPN IPSec pour la connexion du poste de travail des administrateurs tiers) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "07bb5900-190e-5078-8730-463b1a4e17f8"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r63- (Utiliser un tunnel VPN TLS pour la connexion du poste de travail des administrateurs tiers) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "0c6b5878-25d0-5940-b911-a7912782587f"
+            }
+          ],
+          "control-id": "r63-",
+          "remarks": "Control r63- (Utiliser un tunnel VPN TLS pour la connexion du poste de travail des administrateurs tiers) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "ee93edff-a27c-5ece-a70a-e6d4e66ef630"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r64 (Dédier des comptes d'accès et des comptes d'administration aux administrateurs tiers) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "1da2f4ec-52f3-547b-9d24-23ac8ed9aabb"
+            }
+          ],
+          "control-id": "r64",
+          "remarks": "Control r64 (Dédier des comptes d'accès et des comptes d'administration aux administrateurs tiers) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "2c5b5a12-4bfc-512a-a82f-3ba2e0ba6ef7"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r65_ (Dédier un annuaire aux comptes d'accès des administrateurs tiers) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "58f9e73c-f46d-5e2c-9cdf-683535bc083a"
+            }
+          ],
+          "control-id": "r65_",
+          "remarks": "Control r65_ (Dédier un annuaire aux comptes d'accès des administrateurs tiers) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "ae900eb5-2281-5ecd-8cff-69b35dc5f6b4"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r66 (Activer à la demande les comptes des administrateurs tiers) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "a4ed0ee2-a0f1-5d44-b317-9ae3e4594b7b"
+            }
+          ],
+          "control-id": "r66",
+          "remarks": "Control r66 (Activer à la demande les comptes des administrateurs tiers) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "cafca91d-28d0-57c1-a940-fc5bd4843331"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r67 (Renforcer l'authentification des administrateurs tiers) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "aa90310c-3612-5545-9654-eccc693926b1"
+            }
+          ],
+          "control-id": "r67",
+          "remarks": "Control r67 (Renforcer l'authentification des administrateurs tiers) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "34b4ea6d-b909-538e-83aa-a603adaa6616"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r68 (Mettre en oeuvre un rebond éphémère en coupure de la terminaison VPN et du SI administré) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "542a5de6-9b2e-590e-9b49-6da819947d73"
+            }
+          ],
+          "control-id": "r68",
+          "remarks": "Control r68 (Mettre en oeuvre un rebond éphémère en coupure de la terminaison VPN et du SI administré) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "4d65b0df-c16e-524c-b3bf-4310d4ebf7c6"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r69 (Mettre en oeuvre un contrôle d'accès strict et une traçabilité pour les administrateurs) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "08385c44-aaa4-5a8d-a17f-075a180f0363"
+            }
+          ],
+          "control-id": "r69",
+          "remarks": "Control r69 (Mettre en oeuvre un contrôle d'accès strict et une traçabilité pour les administrateurs) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "8022707d-f283-521e-b4f8-117b160abbd7"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r7 (Dédier des socles physiques en cas de virtualisation des infrastructures d'administration) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "5148bdd2-410a-5787-af5b-7618656cf85c"
+            }
+          ],
+          "control-id": "r7",
+          "remarks": "Control r7 (Dédier des socles physiques en cas de virtualisation des infrastructures d'administration) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "da373c57-2173-567d-a001-b1143916978c"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r70 (Utiliser un boîtier matériel d'acquisition vidéo pour l'assistance à distance) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "adeb577f-f0b7-59fc-a7bd-aa3961458a11"
+            }
+          ],
+          "control-id": "r70",
+          "remarks": "Control r70 (Utiliser un boîtier matériel d'acquisition vidéo pour l'assistance à distance) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "5ca7e6ac-ad23-50da-8b0e-a5e1b9791405"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r71 (Mettre en oeuvre une solution logicielle dédiée pour l'assistance à distance) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "28a6a244-747f-5117-9f8e-ea4e2a5d491c"
+            }
+          ],
+          "control-id": "r71",
+          "remarks": "Control r71 (Mettre en oeuvre une solution logicielle dédiée pour l'assistance à distance) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "e305c6a6-6011-5d39-b4de-31eb39aac810"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r8 (Gérer et configurer le poste d'administration) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "77ae86af-6405-5267-a8b5-825656202465"
+            }
+          ],
+          "control-id": "r8",
+          "remarks": "Control r8 (Gérer et configurer le poste d'administration) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "98eb398d-aac3-569b-a0bc-ec1ccc52e14e"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r9 (Utiliser un poste d'administration dédié) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "cbccc25d-cc1f-5d10-b200-2a5704c4fb11"
+            }
+          ],
+          "control-id": "r9",
+          "remarks": "Control r9 (Utiliser un poste d'administration dédié) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "dcf573b2-b7b5-5ac7-82b2-c93cacb40806"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r9- (Utiliser un poste d'administration multi-niveaux) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "38da766a-4941-578f-a48d-9bdf0e2e1b8f"
+            }
+          ],
+          "control-id": "r9-",
+          "remarks": "Control r9- (Utiliser un poste d'administration multi-niveaux) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "b8066011-5b8d-5ba1-8ff7-47a60ad479aa"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "303b0077-e233-59de-83f5-e9f21f8212f9",
+              "description": "Control r9-- (Utiliser un poste d’administration avec accès distant au SI bureautique) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "58e3513e-11e4-5aaf-87d2-bceaaa4c7713"
+            }
+          ],
+          "control-id": "r9--",
+          "remarks": "Control r9-- (Utiliser un poste d’administration avec accès distant au SI bureautique) is satisfied by the Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "5c284ac2-5bba-5bfa-8dd7-bdb49d7c338e"
+        }
+      ]
+    },
+    "import-profile": {
+      "href": "./catalog.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:12Z",
+      "oscal-version": "1.2.3",
+      "roles": [
+        {
+          "id": "sec-admin",
+          "title": "Security Administrator"
+        }
+      ],
+      "title": "Recommandations relatives à l'administration sécurisée des systèmes d'information System Security Plan Template",
+      "version": "1"
+    },
+    "system-characteristics": {
+      "authorization-boundary": {
+        "description": "The authorization boundary encompasses all computing resources, cloud tenancies, and network zones supporting Recommandations relatives à l'administration sécurisée des systèmes d'information operations."
+      },
+      "description": "Reference system architecture implementing security controls for Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+      "security-impact-level": {
+        "security-objective-availability": "moderate",
+        "security-objective-confidentiality": "moderate",
+        "security-objective-integrity": "high"
+      },
+      "security-sensitivity-level": "moderate",
+      "status": {
+        "state": "operational"
+      },
+      "system-ids": [
+        {
+          "id": "anssi-guide-admin-securisee-si-system"
+        }
+      ],
+      "system-information": {
+        "information-types": [
+          {
+            "description": "Operational and compliance data processed within the france jurisdiction boundary.",
+            "title": "Sovereign Program Data",
+            "uuid": "1c8f2803-6e1a-5bca-b58a-5e09edb69d1b"
+          }
+        ]
+      },
+      "system-name": "Recommandations relatives à l'administration sécurisée des systèmes d'information Reference System",
+      "system-name-short": "anssi-guide-admin-securisee-si"
+    },
+    "system-implementation": {
+      "components": [
+        {
+          "description": "Central execution platform providing control implementations for Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+          "status": {
+            "state": "operational"
+          },
+          "title": "Recommandations relatives à l'administration sécurisée des systèmes d'information Core System Component",
+          "type": "software",
+          "uuid": "303b0077-e233-59de-83f5-e9f21f8212f9"
+        }
+      ],
+      "users": [
+        {
+          "role-ids": [
+            "sec-admin"
+          ],
+          "title": "Security Administrator",
+          "uuid": "02d2d961-1042-58b6-b3f2-667a4fdf2d55"
+        }
+      ]
+    },
+    "uuid": "7e3dd5f0-6b9e-572c-b827-b5cbb8becb50"
+  }
+}

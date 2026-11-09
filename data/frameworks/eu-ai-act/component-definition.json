@@ -1,0 +1,1763 @@
+{
+  "component-definition": {
+    "components": [
+      {
+        "control-implementations": [
+          {
+            "description": "Security control implementations for EU Artificial Intelligence Act (AI Act).",
+            "implemented-requirements": [
+              {
+                "control-id": "_10.2",
+                "description": "Component capability addressing control _10.2 (Article 10 — 10.2).",
+                "uuid": "0b84b65f-8ab7-56d8-a22f-a972327b13fc"
+              },
+              {
+                "control-id": "_10.2.a",
+                "description": "Component capability addressing control _10.2.a (Article 10 — 10.2.a).",
+                "uuid": "48e4090a-6e90-5a9b-9631-46459c66687b"
+              },
+              {
+                "control-id": "_10.2.b",
+                "description": "Component capability addressing control _10.2.b (Article 10 — 10.2.b).",
+                "uuid": "b858407c-79ed-547d-9b0b-fb613107e706"
+              },
+              {
+                "control-id": "_10.2.c",
+                "description": "Component capability addressing control _10.2.c (Article 10 — 10.2.c).",
+                "uuid": "d1161cbd-db0d-5724-9c52-1a64bf461014"
+              },
+              {
+                "control-id": "_10.2.d",
+                "description": "Component capability addressing control _10.2.d (Article 10 — 10.2.d).",
+                "uuid": "3d2eebfd-5d53-5f0c-af93-503b2c3c9144"
+              },
+              {
+                "control-id": "_10.2.e",
+                "description": "Component capability addressing control _10.2.e (Article 10 — 10.2.e).",
+                "uuid": "3ede780d-26d3-5268-8193-8587646ab4ba"
+              },
+              {
+                "control-id": "_10.2.f",
+                "description": "Component capability addressing control _10.2.f (Article 10 — 10.2.f).",
+                "uuid": "02bb6d18-d718-5b49-ae50-245f7e6f477c"
+              },
+              {
+                "control-id": "_10.2.g",
+                "description": "Component capability addressing control _10.2.g (Article 10 — 10.2.g).",
+                "uuid": "c4461236-ed08-5af6-85a0-4f976aab46c9"
+              },
+              {
+                "control-id": "_10.2.h",
+                "description": "Component capability addressing control _10.2.h (Article 10 — 10.2.h).",
+                "uuid": "ba2eaa66-4e65-5893-86c1-fd294cb0f1ec"
+              },
+              {
+                "control-id": "_10.3",
+                "description": "Component capability addressing control _10.3 (Article 10 — 10.3).",
+                "uuid": "df53e81c-8996-5afb-8a7b-1fb402ada379"
+              },
+              {
+                "control-id": "_10.4",
+                "description": "Component capability addressing control _10.4 (Article 10 — 10.4).",
+                "uuid": "4ff00b22-2c7e-5e4d-8047-cdf567288108"
+              },
+              {
+                "control-id": "_10.5",
+                "description": "Component capability addressing control _10.5 (Article 10 — 10.5).",
+                "uuid": "a0b14298-b506-59c5-b9f8-88cdb254e99d"
+              },
+              {
+                "control-id": "_10.5.a",
+                "description": "Component capability addressing control _10.5.a (Article 10 — 10.5.a).",
+                "uuid": "5969d24b-188e-5a05-a30c-da8c47fc6ae1"
+              },
+              {
+                "control-id": "_10.5.b",
+                "description": "Component capability addressing control _10.5.b (Article 10 — 10.5.b).",
+                "uuid": "e46cac55-2178-50ea-87f9-ad45b6fc52dd"
+              },
+              {
+                "control-id": "_10.5.c",
+                "description": "Component capability addressing control _10.5.c (Article 10 — 10.5.c).",
+                "uuid": "b9a8f952-051a-5664-a110-1092f0fcaef4"
+              },
+              {
+                "control-id": "_10.5.d",
+                "description": "Component capability addressing control _10.5.d (Article 10 — 10.5.d).",
+                "uuid": "b42c055f-8686-5e08-9881-ecabafc12a95"
+              },
+              {
+                "control-id": "_10.5.e",
+                "description": "Component capability addressing control _10.5.e (Article 10 — 10.5.e).",
+                "uuid": "696c6b0a-d5de-5044-a394-d850db7e664f"
+              },
+              {
+                "control-id": "_10.5.f",
+                "description": "Component capability addressing control _10.5.f (Article 10 — 10.5.f).",
+                "uuid": "d89373f1-a1ba-55cc-83b7-6949e2de7314"
+              },
+              {
+                "control-id": "_10.6",
+                "description": "Component capability addressing control _10.6 (Article 10 — 10.6).",
+                "uuid": "52ae588f-55f1-553f-b6c6-f9aa3ffb25cb"
+              },
+              {
+                "control-id": "_11.1",
+                "description": "Component capability addressing control _11.1 (Article 11 — 11.1).",
+                "uuid": "2903cb16-aa10-5848-98e5-8e4ff3649796"
+              },
+              {
+                "control-id": "_11.2",
+                "description": "Component capability addressing control _11.2 (Article 11 — 11.2).",
+                "uuid": "28850818-52c1-5d55-8436-56954ef819f3"
+              },
+              {
+                "control-id": "_12.1",
+                "description": "Component capability addressing control _12.1 (Article 12 — 12.1).",
+                "uuid": "55e17232-17db-5b27-be9f-7c79ed437d04"
+              },
+              {
+                "control-id": "_12.2",
+                "description": "Component capability addressing control _12.2 (Article 12 — 12.2).",
+                "uuid": "4c813869-4ae4-53ad-a3b5-cf73478162ef"
+              },
+              {
+                "control-id": "_12.2.a",
+                "description": "Component capability addressing control _12.2.a (Article 12 — 12.2.a).",
+                "uuid": "fd61fe7e-f2af-59c9-af5b-246dde1ddbe6"
+              },
+              {
+                "control-id": "_12.2.b",
+                "description": "Component capability addressing control _12.2.b (Article 12 — 12.2.b).",
+                "uuid": "74ac4b66-1587-5c6a-a7d3-98fcbf8dac14"
+              },
+              {
+                "control-id": "_12.2.c",
+                "description": "Component capability addressing control _12.2.c (Article 12 — 12.2.c).",
+                "uuid": "defc6cd5-bbf1-5a6a-aa35-0a6b16b306b1"
+              },
+              {
+                "control-id": "_12.3",
+                "description": "Component capability addressing control _12.3 (Article 12 — 12.3).",
+                "uuid": "ad3872f9-8d3f-5c58-bc46-0c5455e995ef"
+              },
+              {
+                "control-id": "_12.3.a",
+                "description": "Component capability addressing control _12.3.a (For high-risk AI systems referred to in point 1 (a) of Annex III, the logging capabilities shall provide, at a minimum: — 12.3.a).",
+                "uuid": "34f1cb50-5c50-519c-b1ff-675c9e0f230f"
+              },
+              {
+                "control-id": "_12.3.b",
+                "description": "Component capability addressing control _12.3.b (For high-risk AI systems referred to in point 1 (a) of Annex III, the logging capabilities shall provide, at a minimum: — 12.3.b).",
+                "uuid": "6926ce77-93e6-5bf8-9e5e-4de139cf46a3"
+              },
+              {
+                "control-id": "_12.3.c",
+                "description": "Component capability addressing control _12.3.c (For high-risk AI systems referred to in point 1 (a) of Annex III, the logging capabilities shall provide, at a minimum: — 12.3.c).",
+                "uuid": "c986fcb5-ad07-5e07-9e5a-993692d88ead"
+              },
+              {
+                "control-id": "_12.3.d",
+                "description": "Component capability addressing control _12.3.d (For high-risk AI systems referred to in point 1 (a) of Annex III, the logging capabilities shall provide, at a minimum: — 12.3.d).",
+                "uuid": "5e1ec5fb-0b5b-526b-a3ff-fb103b0c134b"
+              },
+              {
+                "control-id": "_13.1",
+                "description": "Component capability addressing control _13.1 (Article 13 — 13.1).",
+                "uuid": "eeb1b346-6903-5104-9b21-ef839f7f75f1"
+              },
+              {
+                "control-id": "_13.2",
+                "description": "Component capability addressing control _13.2 (Article 13 — 13.2).",
+                "uuid": "8e01e4d6-2bd0-519b-9c47-814173feee7a"
+              },
+              {
+                "control-id": "_13.3",
+                "description": "Component capability addressing control _13.3 (Article 13 — 13.3).",
+                "uuid": "c22146ab-e21c-5e5c-a72c-a82bfb98c419"
+              },
+              {
+                "control-id": "_13.3.a",
+                "description": "Component capability addressing control _13.3.a (The instructions for use shall contain at least the following information: — 13.3.a).",
+                "uuid": "8b08b0fd-c05f-5727-ba34-1a613d3b0313"
+              },
+              {
+                "control-id": "_13.3.b",
+                "description": "Component capability addressing control _13.3.b (The instructions for use shall contain at least the following information: — 13.3.b).",
+                "uuid": "b092abd9-a562-5cd4-8b0c-957328f85346"
+              },
+              {
+                "control-id": "_13.3.b.i",
+                "description": "Component capability addressing control _13.3.b.i (the characteristics, capabilities and limitations of performance of the high-risk AI system, including: — 13.3.b.i).",
+                "uuid": "6d5f1803-e322-5a10-9a10-7b405c4a5d8d"
+              },
+              {
+                "control-id": "_13.3.b.ii",
+                "description": "Component capability addressing control _13.3.b.ii (the characteristics, capabilities and limitations of performance of the high-risk AI system, including: — 13.3.b.ii).",
+                "uuid": "aac2743a-7685-50d2-a0bd-1ea700a25542"
+              },
+              {
+                "control-id": "_13.3.b.iii",
+                "description": "Component capability addressing control _13.3.b.iii (the characteristics, capabilities and limitations of performance of the high-risk AI system, including: — 13.3.b.iii).",
+                "uuid": "51893586-9714-5702-9563-e43e2f3082ba"
+              },
+              {
+                "control-id": "_13.3.b.iv",
+                "description": "Component capability addressing control _13.3.b.iv (the characteristics, capabilities and limitations of performance of the high-risk AI system, including: — 13.3.b.iv).",
+                "uuid": "aa81379f-fc65-51a1-a3a1-dc4ea42a905e"
+              },
+              {
+                "control-id": "_13.3.b.v",
+                "description": "Component capability addressing control _13.3.b.v (the characteristics, capabilities and limitations of performance of the high-risk AI system, including: — 13.3.b.v).",
+                "uuid": "11d6869d-d905-5b2c-a0db-8d0396e974dc"
+              },
+              {
+                "control-id": "_13.3.b.vi",
+                "description": "Component capability addressing control _13.3.b.vi (the characteristics, capabilities and limitations of performance of the high-risk AI system, including: — 13.3.b.vi).",
+                "uuid": "b349fcb9-f7fb-5aa8-b751-ad92a9efb16b"
+              },
+              {
+                "control-id": "_13.3.b.vii",
+                "description": "Component capability addressing control _13.3.b.vii (the characteristics, capabilities and limitations of performance of the high-risk AI system, including: — 13.3.b.vii).",
+                "uuid": "304385d1-9e7f-5c32-b9fc-ab455eeb967b"
+              },
+              {
+                "control-id": "_13.3.c",
+                "description": "Component capability addressing control _13.3.c (The instructions for use shall contain at least the following information: — 13.3.c).",
+                "uuid": "ceafb385-f240-5907-a08a-50be9ab5edbf"
+              },
+              {
+                "control-id": "_13.3.d",
+                "description": "Component capability addressing control _13.3.d (The instructions for use shall contain at least the following information: — 13.3.d).",
+                "uuid": "52c4d55d-e3f9-5529-bf46-1bf6a218a6f9"
+              },
+              {
+                "control-id": "_13.3.e",
+                "description": "Component capability addressing control _13.3.e (The instructions for use shall contain at least the following information: — 13.3.e).",
+                "uuid": "e23013f7-f693-5d7b-8fe1-8ecbe418033d"
+              },
+              {
+                "control-id": "_13.3.f",
+                "description": "Component capability addressing control _13.3.f (The instructions for use shall contain at least the following information: — 13.3.f).",
+                "uuid": "0d04662b-c32d-576e-9593-d7cd828fc7d5"
+              },
+              {
+                "control-id": "_14.1",
+                "description": "Component capability addressing control _14.1 (Article 14 — 14.1).",
+                "uuid": "3019a76e-e29b-59f8-893b-2c45ff926b7b"
+              },
+              {
+                "control-id": "_14.2",
+                "description": "Component capability addressing control _14.2 (Article 14 — 14.2).",
+                "uuid": "262992d5-e395-522c-b50d-d4f84b76dac8"
+              },
+              {
+                "control-id": "_14.3",
+                "description": "Component capability addressing control _14.3 (Article 14 — 14.3).",
+                "uuid": "3ef1738f-0529-54b0-aad0-b560f7ea97c0"
+              },
+              {
+                "control-id": "_14.3.a",
+                "description": "Component capability addressing control _14.3.a (Article 14 — 14.3.a).",
+                "uuid": "ff9ecb65-0103-56a6-b4fa-afba0fc2d8f3"
+              },
+              {
+                "control-id": "_14.3.b",
+                "description": "Component capability addressing control _14.3.b (Article 14 — 14.3.b).",
+                "uuid": "7f386167-2f70-572e-b8ed-ba6460616501"
+              },
+              {
+                "control-id": "_14.4",
+                "description": "Component capability addressing control _14.4 (Article 14 — 14.4).",
+                "uuid": "ddfd4268-395c-5477-b7f8-360fded43714"
+              },
+              {
+                "control-id": "_14.4.a",
+                "description": "Component capability addressing control _14.4.a (Article 14 — 14.4.a).",
+                "uuid": "2396abc3-54d9-54b1-b8a2-078d3f5c60b6"
+              },
+              {
+                "control-id": "_14.4.b",
+                "description": "Component capability addressing control _14.4.b (Article 14 — 14.4.b).",
+                "uuid": "73ffd705-c2a5-5f7a-ba87-737dc80a36d4"
+              },
+              {
+                "control-id": "_14.4.c",
+                "description": "Component capability addressing control _14.4.c (Article 14 — 14.4.c).",
+                "uuid": "1ec2f5fa-133d-58fe-a81a-4a27f5112764"
+              },
+              {
+                "control-id": "_14.4.d",
+                "description": "Component capability addressing control _14.4.d (Article 14 — 14.4.d).",
+                "uuid": "2096d05a-b5a5-5090-bffe-858f1214cd92"
+              },
+              {
+                "control-id": "_14.4.e",
+                "description": "Component capability addressing control _14.4.e (Article 14 — 14.4.e).",
+                "uuid": "fef0d2e0-e254-5205-9f40-9a0fbbe35336"
+              },
+              {
+                "control-id": "_14.5",
+                "description": "Component capability addressing control _14.5 (Article 14 — 14.5).",
+                "uuid": "b937290d-02c0-53ab-b17c-74e99f9be099"
+              },
+              {
+                "control-id": "_15.1",
+                "description": "Component capability addressing control _15.1 (Article 15 — 15.1).",
+                "uuid": "a865fb8b-d4be-5663-bf1e-1e98fd5daef3"
+              },
+              {
+                "control-id": "_15.3",
+                "description": "Component capability addressing control _15.3 (Article 15 — 15.3).",
+                "uuid": "2fe76ac5-1b85-54f8-b5d1-403d5c875c21"
+              },
+              {
+                "control-id": "_15.4",
+                "description": "Component capability addressing control _15.4 (Article 15 — 15.4).",
+                "uuid": "d3af74d8-dd82-54d1-8cb3-3d6fd2f6ea4f"
+              },
+              {
+                "control-id": "_15.5",
+                "description": "Component capability addressing control _15.5 (Article 15 — 15.5).",
+                "uuid": "ad2ef740-c371-59ec-8f23-88f18e82a8a5"
+              },
+              {
+                "control-id": "_16.a",
+                "description": "Component capability addressing control _16.a (Providers of high-risk AI systems shall: — 16.a).",
+                "uuid": "d98f20a8-4012-5cf7-b39a-810b66f92a8f"
+              },
+              {
+                "control-id": "_16.b",
+                "description": "Component capability addressing control _16.b (Providers of high-risk AI systems shall: — 16.b).",
+                "uuid": "b6752751-5d59-58d3-8679-ae3442022304"
+              },
+              {
+                "control-id": "_16.c",
+                "description": "Component capability addressing control _16.c (Providers of high-risk AI systems shall: — 16.c).",
+                "uuid": "09d55b0d-4df8-598c-b265-36d75f81ee55"
+              },
+              {
+                "control-id": "_16.d",
+                "description": "Component capability addressing control _16.d (Providers of high-risk AI systems shall: — 16.d).",
+                "uuid": "cb19490c-375c-55db-8012-44e9f55987d6"
+              },
+              {
+                "control-id": "_16.e",
+                "description": "Component capability addressing control _16.e (Providers of high-risk AI systems shall: — 16.e).",
+                "uuid": "4fbcb43e-fb24-505e-bf98-c00ad0da7a89"
+              },
+              {
+                "control-id": "_16.f",
+                "description": "Component capability addressing control _16.f (Providers of high-risk AI systems shall: — 16.f).",
+                "uuid": "c7a16dbb-07f3-5845-9b70-c5f121d0bef8"
+              },
+              {
+                "control-id": "_16.g",
+                "description": "Component capability addressing control _16.g (Providers of high-risk AI systems shall: — 16.g).",
+                "uuid": "dc7c4b76-bdf7-500d-bbee-5984ac282634"
+              },
+              {
+                "control-id": "_16.h",
+                "description": "Component capability addressing control _16.h (Providers of high-risk AI systems shall: — 16.h).",
+                "uuid": "a9d55ded-5918-5772-bc2a-7eddd6745003"
+              },
+              {
+                "control-id": "_16.i",
+                "description": "Component capability addressing control _16.i (Providers of high-risk AI systems shall: — 16.i).",
+                "uuid": "f97d2f58-eeb1-56c5-bd0c-ef9a5bbefb46"
+              },
+              {
+                "control-id": "_16.j",
+                "description": "Component capability addressing control _16.j (Providers of high-risk AI systems shall: — 16.j).",
+                "uuid": "22e2fae3-6b6e-589c-87d9-79f728b5ec7d"
+              },
+              {
+                "control-id": "_16.k",
+                "description": "Component capability addressing control _16.k (Providers of high-risk AI systems shall: — 16.k).",
+                "uuid": "ae635dd2-ec0c-562f-a251-54ab68d786e8"
+              },
+              {
+                "control-id": "_16.l",
+                "description": "Component capability addressing control _16.l (Providers of high-risk AI systems shall: — 16.l).",
+                "uuid": "a2445504-474f-5839-9724-060887c6a4f6"
+              },
+              {
+                "control-id": "_17.1",
+                "description": "Component capability addressing control _17.1 (Article 17 — 17.1).",
+                "uuid": "3a99105c-02bf-5917-a167-11f9a7832e43"
+              },
+              {
+                "control-id": "_17.1.a",
+                "description": "Component capability addressing control _17.1.a (Article 17 — 17.1.a).",
+                "uuid": "e3232e7e-a228-586a-918c-183b057f5d4e"
+              },
+              {
+                "control-id": "_17.1.b",
+                "description": "Component capability addressing control _17.1.b (Article 17 — 17.1.b).",
+                "uuid": "e4095abb-becc-59c3-a6bd-bf877feeeba7"
+              },
+              {
+                "control-id": "_17.1.c",
+                "description": "Component capability addressing control _17.1.c (Article 17 — 17.1.c).",
+                "uuid": "c03744cc-d105-5115-9d13-972e20925237"
+              },
+              {
+                "control-id": "_17.1.d",
+                "description": "Component capability addressing control _17.1.d (Article 17 — 17.1.d).",
+                "uuid": "125c219a-17da-595f-bcd8-b8131431f6ca"
+              },
+              {
+                "control-id": "_17.1.e",
+                "description": "Component capability addressing control _17.1.e (Article 17 — 17.1.e).",
+                "uuid": "47a16f69-80d4-5945-a32b-b5938d2b4ed7"
+              },
+              {
+                "control-id": "_17.1.f",
+                "description": "Component capability addressing control _17.1.f (Article 17 — 17.1.f).",
+                "uuid": "74d154c6-ac5e-56bb-80f9-fa1611c5727f"
+              },
+              {
+                "control-id": "_17.1.g",
+                "description": "Component capability addressing control _17.1.g (Article 17 — 17.1.g).",
+                "uuid": "ae35a3b3-fee4-5a0b-8fc4-5cf80211f1fa"
+              },
+              {
+                "control-id": "_17.1.h",
+                "description": "Component capability addressing control _17.1.h (Article 17 — 17.1.h).",
+                "uuid": "9d97a732-a59e-5328-81b4-8356a5073f94"
+              },
+              {
+                "control-id": "_17.1.i",
+                "description": "Component capability addressing control _17.1.i (Article 17 — 17.1.i).",
+                "uuid": "2ee68cd5-8e8a-5dc8-a3a9-54e5b23b090c"
+              },
+              {
+                "control-id": "_17.1.j",
+                "description": "Component capability addressing control _17.1.j (Article 17 — 17.1.j).",
+                "uuid": "7e35a0f4-729a-5fce-a9b6-b3d625fc0c98"
+              },
+              {
+                "control-id": "_17.1.k",
+                "description": "Component capability addressing control _17.1.k (Article 17 — 17.1.k).",
+                "uuid": "96316546-1897-5e36-8ed3-136a2ff5cd2b"
+              },
+              {
+                "control-id": "_17.1.l",
+                "description": "Component capability addressing control _17.1.l (Article 17 — 17.1.l).",
+                "uuid": "658380e0-4a06-5b52-95c1-09886b594da1"
+              },
+              {
+                "control-id": "_17.1.m",
+                "description": "Component capability addressing control _17.1.m (Article 17 — 17.1.m).",
+                "uuid": "be8ebab2-003a-51d5-b154-11bf6c7d7fca"
+              },
+              {
+                "control-id": "_17.2",
+                "description": "Component capability addressing control _17.2 (Article 17 — 17.2).",
+                "uuid": "42235f0c-67b0-5246-84c9-3ba7c8156533"
+              },
+              {
+                "control-id": "_17.3",
+                "description": "Component capability addressing control _17.3 (Article 17 — 17.3).",
+                "uuid": "94b2654a-b774-51f5-8f77-05822b677d02"
+              },
+              {
+                "control-id": "_17.4",
+                "description": "Component capability addressing control _17.4 (Article 17 — 17.4).",
+                "uuid": "c5b4dc01-7be4-5109-ad2e-725b0f531123"
+              },
+              {
+                "control-id": "_18.1",
+                "description": "Component capability addressing control _18.1 (Article 18 — 18.1).",
+                "uuid": "6767a534-1a41-5297-a701-31db67948363"
+              },
+              {
+                "control-id": "_18.1.a",
+                "description": "Component capability addressing control _18.1.a (Article 18 — 18.1.a).",
+                "uuid": "3fd934bc-a92e-5904-b80a-3040e682232e"
+              },
+              {
+                "control-id": "_18.1.b",
+                "description": "Component capability addressing control _18.1.b (Article 18 — 18.1.b).",
+                "uuid": "660440b7-1a8f-59ed-b7e2-4380bb050728"
+              },
+              {
+                "control-id": "_18.1.c",
+                "description": "Component capability addressing control _18.1.c (Article 18 — 18.1.c).",
+                "uuid": "426f285e-0e57-5596-886e-29a8de31c3ae"
+              },
+              {
+                "control-id": "_18.1.d",
+                "description": "Component capability addressing control _18.1.d (Article 18 — 18.1.d).",
+                "uuid": "583957d9-c938-5884-8ddd-1c86c3871a44"
+              },
+              {
+                "control-id": "_18.1.e",
+                "description": "Component capability addressing control _18.1.e (Article 18 — 18.1.e).",
+                "uuid": "6b11e9c5-22de-579f-a75c-327fbff94e61"
+              },
+              {
+                "control-id": "_18.3",
+                "description": "Component capability addressing control _18.3 (Article 18 — 18.3).",
+                "uuid": "b4b718ca-9d71-5c91-a8d4-055fcfadc788"
+              },
+              {
+                "control-id": "_20.1",
+                "description": "Component capability addressing control _20.1 (Article 20 — 20.1).",
+                "uuid": "d61c919c-6d84-5082-a5b0-00ca3242be3f"
+              },
+              {
+                "control-id": "_20.2",
+                "description": "Component capability addressing control _20.2 (Article 20 — 20.2).",
+                "uuid": "94b65b5d-b20e-5e92-969a-2af5bd398924"
+              },
+              {
+                "control-id": "_21.1",
+                "description": "Component capability addressing control _21.1 (Article 21 — 21.1).",
+                "uuid": "776cbebc-2ad8-505d-a672-5cd4eef319fe"
+              },
+              {
+                "control-id": "_21.2",
+                "description": "Component capability addressing control _21.2 (Article 21 — 21.2).",
+                "uuid": "3b2b6431-ed45-5677-b664-ae753f5629ca"
+              },
+              {
+                "control-id": "_22.1",
+                "description": "Component capability addressing control _22.1 (Article 22 — 22.1).",
+                "uuid": "6ccb3c2c-d61c-5f07-9f30-1db1774235b7"
+              },
+              {
+                "control-id": "_22.2",
+                "description": "Component capability addressing control _22.2 (Article 22 — 22.2).",
+                "uuid": "c17d8daf-8ccb-5d66-91b4-7072386e68de"
+              },
+              {
+                "control-id": "_22.3",
+                "description": "Component capability addressing control _22.3 (Article 22 — 22.3).",
+                "uuid": "a442d931-22bc-52c0-b97e-a36da9601efa"
+              },
+              {
+                "control-id": "_22.3.a",
+                "description": "Component capability addressing control _22.3.a (Article 22 — 22.3.a).",
+                "uuid": "f4e72a65-d6b0-5ada-8ead-f4790c5a5bbd"
+              },
+              {
+                "control-id": "_22.3.b",
+                "description": "Component capability addressing control _22.3.b (Article 22 — 22.3.b).",
+                "uuid": "f97e59b5-8658-5a53-a0b5-e31bf8aef68e"
+              },
+              {
+                "control-id": "_22.3.c",
+                "description": "Component capability addressing control _22.3.c (Article 22 — 22.3.c).",
+                "uuid": "1c4154c7-4d0a-53f5-b739-207b4317d1ae"
+              },
+              {
+                "control-id": "_22.3.d",
+                "description": "Component capability addressing control _22.3.d (Article 22 — 22.3.d).",
+                "uuid": "9a3cf862-3e18-51b0-8f67-e26497890210"
+              },
+              {
+                "control-id": "_22.3.e",
+                "description": "Component capability addressing control _22.3.e (Article 22 — 22.3.e).",
+                "uuid": "cfd8a71d-1e6e-5e27-9a3e-cd908faa2306"
+              },
+              {
+                "control-id": "_22.4",
+                "description": "Component capability addressing control _22.4 (Article 22 — 22.4).",
+                "uuid": "d619c894-a328-5f85-93d6-043c2b625984"
+              },
+              {
+                "control-id": "_23.1",
+                "description": "Component capability addressing control _23.1 (Article 23 — 23.1).",
+                "uuid": "4cd1d536-60ac-5e9a-946f-ea16496ad061"
+              },
+              {
+                "control-id": "_23.1.a",
+                "description": "Component capability addressing control _23.1.a (Article 23 — 23.1.a).",
+                "uuid": "6c7a4f06-f6ac-564c-94d6-eda606b3a8d6"
+              },
+              {
+                "control-id": "_23.1.b",
+                "description": "Component capability addressing control _23.1.b (Article 23 — 23.1.b).",
+                "uuid": "eae2b5af-3d2a-559b-9ca9-b70cd45e212e"
+              },
+              {
+                "control-id": "_23.1.c",
+                "description": "Component capability addressing control _23.1.c (Article 23 — 23.1.c).",
+                "uuid": "9ea558bd-36d8-51df-95a6-7c4cca833d43"
+              },
+              {
+                "control-id": "_23.1.d",
+                "description": "Component capability addressing control _23.1.d (Article 23 — 23.1.d).",
+                "uuid": "90839667-bbad-5681-87ba-fb7d130c44f9"
+              },
+              {
+                "control-id": "_23.2",
+                "description": "Component capability addressing control _23.2 (Article 23 — 23.2).",
+                "uuid": "8de4c1a8-6168-5321-99dc-7ec246eb4f32"
+              },
+              {
+                "control-id": "_23.3",
+                "description": "Component capability addressing control _23.3 (Article 23 — 23.3).",
+                "uuid": "6ac27149-162e-5de6-8822-ba31e256614c"
+              },
+              {
+                "control-id": "_23.4",
+                "description": "Component capability addressing control _23.4 (Article 23 — 23.4).",
+                "uuid": "e452dff9-9dc0-556c-943b-8310bd975ab2"
+              },
+              {
+                "control-id": "_23.5",
+                "description": "Component capability addressing control _23.5 (Article 23 — 23.5).",
+                "uuid": "e7b98da6-c0a2-516a-ae9f-a590464239c8"
+              },
+              {
+                "control-id": "_23.6",
+                "description": "Component capability addressing control _23.6 (Article 23 — 23.6).",
+                "uuid": "0076d3bf-f770-51a5-a780-19d265ed19f6"
+              },
+              {
+                "control-id": "_23.7",
+                "description": "Component capability addressing control _23.7 (Article 23 — 23.7).",
+                "uuid": "800e224d-4fd9-54c7-aa74-703025137ad4"
+              },
+              {
+                "control-id": "_24.1",
+                "description": "Component capability addressing control _24.1 (Article 24 — 24.1).",
+                "uuid": "3797f9cd-52e8-564b-8411-cc311bb76b46"
+              },
+              {
+                "control-id": "_24.2",
+                "description": "Component capability addressing control _24.2 (Article 24 — 24.2).",
+                "uuid": "37d8608a-a4a6-5bd3-8270-0b0ffbd62606"
+              },
+              {
+                "control-id": "_24.3",
+                "description": "Component capability addressing control _24.3 (Article 24 — 24.3).",
+                "uuid": "585c0521-ddbf-5807-a534-73dc9d7af77a"
+              },
+              {
+                "control-id": "_24.4",
+                "description": "Component capability addressing control _24.4 (Article 24 — 24.4).",
+                "uuid": "cbdbd27a-0c46-59aa-b4ab-f8562bbe9b3c"
+              },
+              {
+                "control-id": "_24.5",
+                "description": "Component capability addressing control _24.5 (Article 24 — 24.5).",
+                "uuid": "ae2f0da5-ee5d-5af0-a42a-970067c0b072"
+              },
+              {
+                "control-id": "_24.6",
+                "description": "Component capability addressing control _24.6 (Article 24 — 24.6).",
+                "uuid": "8d0983c4-5aef-5f26-860f-227ea98b240b"
+              },
+              {
+                "control-id": "_25.1",
+                "description": "Component capability addressing control _25.1 (Article 25 — 25.1).",
+                "uuid": "5b3aeee5-19c0-50e0-8056-f7f3c30ae418"
+              },
+              {
+                "control-id": "_25.1.a",
+                "description": "Component capability addressing control _25.1.a (Article 25 — 25.1.a).",
+                "uuid": "a7ea202d-8c79-5c45-828b-6a199ba56103"
+              },
+              {
+                "control-id": "_25.1.b",
+                "description": "Component capability addressing control _25.1.b (Article 25 — 25.1.b).",
+                "uuid": "49a45d2d-3a14-5721-b575-5c99e1024d38"
+              },
+              {
+                "control-id": "_25.1.c",
+                "description": "Component capability addressing control _25.1.c (Article 25 — 25.1.c).",
+                "uuid": "09876275-61b7-5a21-9ddc-f7f7bcc1d185"
+              },
+              {
+                "control-id": "_25.2",
+                "description": "Component capability addressing control _25.2 (Article 25 — 25.2).",
+                "uuid": "028c3185-3a10-5566-86f8-37935c12ef19"
+              },
+              {
+                "control-id": "_25.3",
+                "description": "Component capability addressing control _25.3 (Article 25 — 25.3).",
+                "uuid": "0e8c4482-c307-5f9e-b69e-df6d8b92a386"
+              },
+              {
+                "control-id": "_25.3.a",
+                "description": "Component capability addressing control _25.3.a (Article 25 — 25.3.a).",
+                "uuid": "f75402b8-1725-57e4-90d0-5c21ab73d8a8"
+              },
+              {
+                "control-id": "_25.3.b",
+                "description": "Component capability addressing control _25.3.b (Article 25 — 25.3.b).",
+                "uuid": "7b8f5647-88e3-5b54-ab2f-2860ab1608d5"
+              },
+              {
+                "control-id": "_25.4",
+                "description": "Component capability addressing control _25.4 (Article 25 — 25.4).",
+                "uuid": "60a2d1ef-66cb-5a31-9d2f-cf858ce5b708"
+              },
+              {
+                "control-id": "_26.1",
+                "description": "Component capability addressing control _26.1 (Article 26 — 26.1).",
+                "uuid": "ba4650fd-4f6e-5f3b-a3ca-756836e92c14"
+              },
+              {
+                "control-id": "_26.10",
+                "description": "Component capability addressing control _26.10 (Article 26 — 26.10).",
+                "uuid": "a8ab313a-8179-5513-9b77-7c8b02eeabeb"
+              },
+              {
+                "control-id": "_26.11",
+                "description": "Component capability addressing control _26.11 (Article 26 — 26.11).",
+                "uuid": "b42df074-c197-5114-a427-4477c2f30239"
+              },
+              {
+                "control-id": "_26.12",
+                "description": "Component capability addressing control _26.12 (Article 26 — 26.12).",
+                "uuid": "958bd77b-4896-5653-a694-75db16a57a2d"
+              },
+              {
+                "control-id": "_26.2",
+                "description": "Component capability addressing control _26.2 (Article 26 — 26.2).",
+                "uuid": "feba4764-1d62-5d77-a4d2-b55f40999b31"
+              },
+              {
+                "control-id": "_26.4",
+                "description": "Component capability addressing control _26.4 (Article 26 — 26.4).",
+                "uuid": "6c1a0f84-d873-5743-97be-177012dac2fb"
+              },
+              {
+                "control-id": "_26.5",
+                "description": "Component capability addressing control _26.5 (Article 26 — 26.5).",
+                "uuid": "cf3212c7-7293-5bed-8290-410cae0a7150"
+              },
+              {
+                "control-id": "_26.6",
+                "description": "Component capability addressing control _26.6 (Article 26 — 26.6).",
+                "uuid": "8066ea78-3007-5a0d-a425-975b9bd72489"
+              },
+              {
+                "control-id": "_26.7",
+                "description": "Component capability addressing control _26.7 (Article 26 — 26.7).",
+                "uuid": "eb01e2ce-502d-5eca-bd9d-d4a36385f0c1"
+              },
+              {
+                "control-id": "_26.8",
+                "description": "Component capability addressing control _26.8 (Article 26 — 26.8).",
+                "uuid": "e7a72b34-b603-53a5-b017-7464bf2c7fde"
+              },
+              {
+                "control-id": "_26.9",
+                "description": "Component capability addressing control _26.9 (Article 26 — 26.9).",
+                "uuid": "7a28cf8a-4f6a-524b-808f-07435e382104"
+              },
+              {
+                "control-id": "_27.1",
+                "description": "Component capability addressing control _27.1 (Article 27 — 27.1).",
+                "uuid": "cad3c5f2-f08d-563f-bd13-77e0842c3528"
+              },
+              {
+                "control-id": "_27.1.a",
+                "description": "Component capability addressing control _27.1.a (Article 27 — 27.1.a).",
+                "uuid": "e6ca21db-bf63-5161-bab9-223972aea36c"
+              },
+              {
+                "control-id": "_27.1.b",
+                "description": "Component capability addressing control _27.1.b (Article 27 — 27.1.b).",
+                "uuid": "4ddc091a-ffac-5110-a726-cecec512a660"
+              },
+              {
+                "control-id": "_27.1.c",
+                "description": "Component capability addressing control _27.1.c (Article 27 — 27.1.c).",
+                "uuid": "b4fb4663-2267-526f-87f4-cc04941ba6d9"
+              },
+              {
+                "control-id": "_27.1.d",
+                "description": "Component capability addressing control _27.1.d (Article 27 — 27.1.d).",
+                "uuid": "61cf9d62-bb56-569b-8adc-03a3f296f9ea"
+              },
+              {
+                "control-id": "_27.1.e",
+                "description": "Component capability addressing control _27.1.e (Article 27 — 27.1.e).",
+                "uuid": "e592d7f6-0e9e-51d9-8c3c-c4f061397e96"
+              },
+              {
+                "control-id": "_27.1.f",
+                "description": "Component capability addressing control _27.1.f (Article 27 — 27.1.f).",
+                "uuid": "cadaaeb9-6eab-54bf-8e67-a32fca09839f"
+              },
+              {
+                "control-id": "_27.2",
+                "description": "Component capability addressing control _27.2 (Article 27 — 27.2).",
+                "uuid": "d8240e2f-2aea-56cc-bbf7-025d874138c8"
+              },
+              {
+                "control-id": "_27.3",
+                "description": "Component capability addressing control _27.3 (Article 27 — 27.3).",
+                "uuid": "0203abea-4f5b-56ff-8ec5-9553ed0d504b"
+              },
+              {
+                "control-id": "_27.4",
+                "description": "Component capability addressing control _27.4 (Article 27 — 27.4).",
+                "uuid": "8c554f10-876f-5b19-9588-5cec4d774245"
+              },
+              {
+                "control-id": "_41.5",
+                "description": "Component capability addressing control _41.5 (Article 41 — 41.5).",
+                "uuid": "dcc817a1-ceae-5cf4-a873-4e9799c10534"
+              },
+              {
+                "control-id": "_42.1",
+                "description": "Component capability addressing control _42.1 (Article 42 — 42.1).",
+                "uuid": "55f0d94e-6792-555c-b169-c97b5373cdff"
+              },
+              {
+                "control-id": "_42.2",
+                "description": "Component capability addressing control _42.2 (Article 42 — 42.2).",
+                "uuid": "16c1f5ee-7cac-55e9-a4c7-65fe8c251378"
+              },
+              {
+                "control-id": "_43.1",
+                "description": "Component capability addressing control _43.1 (Article 43 — 43.1).",
+                "uuid": "1a02786a-4774-5962-9ac1-1e054b8f53f4"
+              },
+              {
+                "control-id": "_43.1.a",
+                "description": "Component capability addressing control _43.1.a (Article 43 — 43.1.a).",
+                "uuid": "edf36304-1678-5bad-9471-31f6fb43c7d1"
+              },
+              {
+                "control-id": "_43.1.b",
+                "description": "Component capability addressing control _43.1.b (Article 43 — 43.1.b).",
+                "uuid": "b0880d1a-8f45-51a7-bc97-ed5bf592f6fd"
+              },
+              {
+                "control-id": "_43.2",
+                "description": "Component capability addressing control _43.2 (Article 43 — 43.2).",
+                "uuid": "62c9a6ec-a177-59e0-8be2-92d4e90833dd"
+              },
+              {
+                "control-id": "_43.3",
+                "description": "Component capability addressing control _43.3 (Article 43 — 43.3).",
+                "uuid": "a3e0cb11-15bd-533a-9375-1e8a352a3e31"
+              },
+              {
+                "control-id": "_43.4",
+                "description": "Component capability addressing control _43.4 (Article 43 — 43.4).",
+                "uuid": "159c64a7-e3a1-591e-92de-38c9ef0b63d8"
+              },
+              {
+                "control-id": "_44.2",
+                "description": "Component capability addressing control _44.2 (Article 44 — 44.2).",
+                "uuid": "a8da4284-b99e-5010-afbc-4b6e61d180d8"
+              },
+              {
+                "control-id": "_44.3",
+                "description": "Component capability addressing control _44.3 (Article 44 — 44.3).",
+                "uuid": "871ff083-71dd-568b-8093-b041096a7c7c"
+              },
+              {
+                "control-id": "_46.7",
+                "description": "Component capability addressing control _46.7 (Article 46 — 46.7).",
+                "uuid": "f28ed8cd-4e67-5c72-acb3-78c7674b1400"
+              },
+              {
+                "control-id": "_47.1",
+                "description": "Component capability addressing control _47.1 (Article 47 — 47.1).",
+                "uuid": "e2a1872e-c966-50d9-a676-d244f2afbbf1"
+              },
+              {
+                "control-id": "_47.2",
+                "description": "Component capability addressing control _47.2 (Article 47 — 47.2).",
+                "uuid": "32db4978-9121-5943-b9f9-8671261430c7"
+              },
+              {
+                "control-id": "_47.3",
+                "description": "Component capability addressing control _47.3 (Article 47 — 47.3).",
+                "uuid": "b3c83032-d275-5732-9787-26cb7b84405c"
+              },
+              {
+                "control-id": "_47.4",
+                "description": "Component capability addressing control _47.4 (Article 47 — 47.4).",
+                "uuid": "91475c1e-14d8-5b39-9fca-36ceb289ba3d"
+              },
+              {
+                "control-id": "_48.2",
+                "description": "Component capability addressing control _48.2 (Article 48 — 48.2).",
+                "uuid": "e65620b2-64f7-52da-89f0-f5dba37b3f44"
+              },
+              {
+                "control-id": "_48.3",
+                "description": "Component capability addressing control _48.3 (Article 48 — 48.3).",
+                "uuid": "f7d2737d-de74-5173-bb08-10afdff76802"
+              },
+              {
+                "control-id": "_48.4",
+                "description": "Component capability addressing control _48.4 (Article 48 — 48.4).",
+                "uuid": "0306ca46-4a3d-57a3-9382-a12332f2c116"
+              },
+              {
+                "control-id": "_48.5",
+                "description": "Component capability addressing control _48.5 (Article 48 — 48.5).",
+                "uuid": "1540a65b-9a94-5cf7-bdf1-2fafaa980d01"
+              },
+              {
+                "control-id": "_49.1",
+                "description": "Component capability addressing control _49.1 (Article 49 — 49.1).",
+                "uuid": "a58e3b9a-64d4-5aa6-bb73-7818d417b152"
+              },
+              {
+                "control-id": "_49.2",
+                "description": "Component capability addressing control _49.2 (Article 49 — 49.2).",
+                "uuid": "8bee6c8f-4d98-5086-8741-41e4cbc5988b"
+              },
+              {
+                "control-id": "_49.3",
+                "description": "Component capability addressing control _49.3 (Article 49 — 49.3).",
+                "uuid": "7937ec8b-b724-5d2c-898a-ed4e68f781f0"
+              },
+              {
+                "control-id": "_49.5",
+                "description": "Component capability addressing control _49.5 (Article 49 — 49.5).",
+                "uuid": "8b10a17a-f38e-58e7-ba02-d1ef25833a10"
+              },
+              {
+                "control-id": "_5.1.a",
+                "description": "Component capability addressing control _5.1.a (The following AI practices shall be prohibited: — 5.1.a).",
+                "uuid": "ac1c894a-cb3d-5da6-8042-00406bcd8708"
+              },
+              {
+                "control-id": "_5.1.b",
+                "description": "Component capability addressing control _5.1.b (The following AI practices shall be prohibited: — 5.1.b).",
+                "uuid": "1c559179-2b65-560d-af0a-18a8de512827"
+              },
+              {
+                "control-id": "_5.1.c",
+                "description": "Component capability addressing control _5.1.c (The following AI practices shall be prohibited: — 5.1.c).",
+                "uuid": "859a2df9-7d19-57b1-a728-1bca5e7a6828"
+              },
+              {
+                "control-id": "_5.1.c.i",
+                "description": "Component capability addressing control _5.1.c.i (The following AI practices shall be prohibited: — 5.1.c.i).",
+                "uuid": "1f0a4c59-4414-5e59-97fd-6e4e0d133d77"
+              },
+              {
+                "control-id": "_5.1.c.ii",
+                "description": "Component capability addressing control _5.1.c.ii (The following AI practices shall be prohibited: — 5.1.c.ii).",
+                "uuid": "2d86ea71-f687-5ef6-a58e-5eb4fc1c372e"
+              },
+              {
+                "control-id": "_5.1.d",
+                "description": "Component capability addressing control _5.1.d (The following AI practices shall be prohibited: — 5.1.d).",
+                "uuid": "8852379c-7c9f-563e-a624-a4b822868783"
+              },
+              {
+                "control-id": "_5.1.e",
+                "description": "Component capability addressing control _5.1.e (The following AI practices shall be prohibited: — 5.1.e).",
+                "uuid": "30596a59-cd1f-5bac-aee7-d0056ff2abec"
+              },
+              {
+                "control-id": "_5.1.f",
+                "description": "Component capability addressing control _5.1.f (The following AI practices shall be prohibited: — 5.1.f).",
+                "uuid": "f0941532-c0e4-521d-868d-32be5183318b"
+              },
+              {
+                "control-id": "_5.1.g",
+                "description": "Component capability addressing control _5.1.g (The following AI practices shall be prohibited: — 5.1.g).",
+                "uuid": "ab69c652-66d9-5cb2-adea-d5d0ccbaa035"
+              },
+              {
+                "control-id": "_5.1.h",
+                "description": "Component capability addressing control _5.1.h (The following AI practices shall be prohibited: — 5.1.h).",
+                "uuid": "d1a7ec77-bc78-5725-8295-95b6d1648b6f"
+              },
+              {
+                "control-id": "_5.1.h.i",
+                "description": "Component capability addressing control _5.1.h.i (The following AI practices shall be prohibited: — 5.1.h.i).",
+                "uuid": "65cf0ed7-5d4e-5c13-8f64-9da3636641d3"
+              },
+              {
+                "control-id": "_5.1.h.ii",
+                "description": "Component capability addressing control _5.1.h.ii (The following AI practices shall be prohibited: — 5.1.h.ii).",
+                "uuid": "bf6dbef4-f2a3-5360-8d4c-1bdb79f9f9f9"
+              },
+              {
+                "control-id": "_5.1.h.iii",
+                "description": "Component capability addressing control _5.1.h.iii (The following AI practices shall be prohibited: — 5.1.h.iii).",
+                "uuid": "eb25d521-7422-5a63-be88-d4bb96310cd5"
+              },
+              {
+                "control-id": "_5.2",
+                "description": "Component capability addressing control _5.2 (Article 5 — 5.2).",
+                "uuid": "362ab7f2-6f35-50d9-baba-958528f92cdf"
+              },
+              {
+                "control-id": "_5.2.a",
+                "description": "Component capability addressing control _5.2.a (Article 5 — 5.2.a).",
+                "uuid": "0f750d37-e41d-5ec0-bb0f-4fcb830f3cb6"
+              },
+              {
+                "control-id": "_5.2.b",
+                "description": "Component capability addressing control _5.2.b (Article 5 — 5.2.b).",
+                "uuid": "0ae8c01d-8b4e-541c-93ce-354adbb5299e"
+              },
+              {
+                "control-id": "_5.3",
+                "description": "Component capability addressing control _5.3 (Article 5 — 5.3).",
+                "uuid": "f2934924-9ac7-596a-ab8f-4fdd34eeed1f"
+              },
+              {
+                "control-id": "_5.4",
+                "description": "Component capability addressing control _5.4 (Article 5 — 5.4).",
+                "uuid": "fd26f830-6b1d-5b28-89d2-81ab909a4fa1"
+              },
+              {
+                "control-id": "_50.1",
+                "description": "Component capability addressing control _50.1 (Article 50 — 50.1).",
+                "uuid": "f9ec0fec-a0a4-5e71-ab60-2b8fbd9a89b6"
+              },
+              {
+                "control-id": "_50.2",
+                "description": "Component capability addressing control _50.2 (Article 50 — 50.2).",
+                "uuid": "472441b5-a55d-5fca-ad68-43c1bba72081"
+              },
+              {
+                "control-id": "_50.3",
+                "description": "Component capability addressing control _50.3 (Article 50 — 50.3).",
+                "uuid": "a6d4c31a-3ea7-5a22-ac64-c5c6abeee40b"
+              },
+              {
+                "control-id": "_50.4",
+                "description": "Component capability addressing control _50.4 (Article 50 — 50.4).",
+                "uuid": "80abd1ec-402f-5387-83bc-2884243530ce"
+              },
+              {
+                "control-id": "_50.5",
+                "description": "Component capability addressing control _50.5 (Article 50 — 50.5).",
+                "uuid": "816b6075-06da-54c1-a25c-10dd818380b5"
+              },
+              {
+                "control-id": "_51.1",
+                "description": "Component capability addressing control _51.1 (Article 51 — 51.1).",
+                "uuid": "a04ef2a4-7515-5fe0-b6e5-c078a962cd66"
+              },
+              {
+                "control-id": "_51.2",
+                "description": "Component capability addressing control _51.2 (Article 51 — 51.2).",
+                "uuid": "9a03e834-d80c-5777-a897-743498c5a42a"
+              },
+              {
+                "control-id": "_52.1",
+                "description": "Component capability addressing control _52.1 (Article 52 — 52.1).",
+                "uuid": "cbaf3e37-cbf8-542f-b61d-a9c8f7946938"
+              },
+              {
+                "control-id": "_52.2",
+                "description": "Component capability addressing control _52.2 (Article 52 — 52.2).",
+                "uuid": "bc34b7d4-85ed-5314-b758-f5d4f455d1d1"
+              },
+              {
+                "control-id": "_53.1.a",
+                "description": "Component capability addressing control _53.1.a (Providers of general-purpose AI models shall: — 53.1.a).",
+                "uuid": "8da4fd52-2c3d-5b75-bbbe-0afbe117e0f9"
+              },
+              {
+                "control-id": "_53.1.b",
+                "description": "Component capability addressing control _53.1.b (Providers of general-purpose AI models shall: — 53.1.b).",
+                "uuid": "ff1607f3-e379-5379-a7c3-97a12cb8378d"
+              },
+              {
+                "control-id": "_53.1.b.i",
+                "description": "Component capability addressing control _53.1.b.i (Providers of general-purpose AI models shall: — 53.1.b.i).",
+                "uuid": "ea56ee42-bff2-5062-b7b9-59ade5a8beb7"
+              },
+              {
+                "control-id": "_53.1.b.ii",
+                "description": "Component capability addressing control _53.1.b.ii (Providers of general-purpose AI models shall: — 53.1.b.ii).",
+                "uuid": "b8973693-68f1-5fdc-b942-6a3a4e797f2c"
+              },
+              {
+                "control-id": "_53.1.c",
+                "description": "Component capability addressing control _53.1.c (Providers of general-purpose AI models shall: — 53.1.c).",
+                "uuid": "b0a5758b-5c08-598d-a90b-c199dda2f366"
+              },
+              {
+                "control-id": "_53.1.d",
+                "description": "Component capability addressing control _53.1.d (Providers of general-purpose AI models shall: — 53.1.d).",
+                "uuid": "069a865f-db11-5ca5-8b55-498118604ee6"
+              },
+              {
+                "control-id": "_53.2",
+                "description": "Component capability addressing control _53.2 (Article 53 — 53.2).",
+                "uuid": "8e0d7b1b-a59a-5e83-922e-b25ea2da6a62"
+              },
+              {
+                "control-id": "_53.3",
+                "description": "Component capability addressing control _53.3 (Article 53 — 53.3).",
+                "uuid": "bf69966a-be29-5537-aa96-82378540b94f"
+              },
+              {
+                "control-id": "_53.4",
+                "description": "Component capability addressing control _53.4 (Article 53 — 53.4).",
+                "uuid": "1030c23a-2a55-54b2-a631-a39a14345963"
+              },
+              {
+                "control-id": "_54.1",
+                "description": "Component capability addressing control _54.1 (Article 54 — 54.1).",
+                "uuid": "2b4c557a-a27b-5ea7-96c4-ee7d1cd86e18"
+              },
+              {
+                "control-id": "_54.2",
+                "description": "Component capability addressing control _54.2 (Article 54 — 54.2).",
+                "uuid": "6abb2c54-2012-54fc-a681-be2489db252f"
+              },
+              {
+                "control-id": "_54.3",
+                "description": "Component capability addressing control _54.3 (Article 54 — 54.3).",
+                "uuid": "e096ab50-8455-545a-ba39-0d7df4528de8"
+              },
+              {
+                "control-id": "_54.3.a",
+                "description": "Component capability addressing control _54.3.a (Article 54 — 54.3.a).",
+                "uuid": "18f9c3ff-7646-5a50-bcca-31a99205eb6c"
+              },
+              {
+                "control-id": "_54.3.b",
+                "description": "Component capability addressing control _54.3.b (Article 54 — 54.3.b).",
+                "uuid": "5f9b3d13-495f-5e09-a4b0-18343ec35aaa"
+              },
+              {
+                "control-id": "_54.3.c",
+                "description": "Component capability addressing control _54.3.c (Article 54 — 54.3.c).",
+                "uuid": "ba35f5c4-3a46-503f-b531-852e4cedb0e1"
+              },
+              {
+                "control-id": "_54.3.d",
+                "description": "Component capability addressing control _54.3.d (Article 54 — 54.3.d).",
+                "uuid": "7d3668b3-59db-5e84-846e-afbc71564e3d"
+              },
+              {
+                "control-id": "_54.4",
+                "description": "Component capability addressing control _54.4 (Article 54 — 54.4).",
+                "uuid": "9300cf04-454d-514e-a56a-71b163219b42"
+              },
+              {
+                "control-id": "_54.5",
+                "description": "Component capability addressing control _54.5 (Article 54 — 54.5).",
+                "uuid": "04d33d0c-8881-5790-8c72-087e0582e3ba"
+              },
+              {
+                "control-id": "_54.6",
+                "description": "Component capability addressing control _54.6 (Article 54 — 54.6).",
+                "uuid": "4c872ff9-d66c-5ef1-8fbb-e3063250987f"
+              },
+              {
+                "control-id": "_55.1",
+                "description": "Component capability addressing control _55.1 (Article 55 — 55.1).",
+                "uuid": "8b7c3dea-d02c-5002-97d8-c90a183ab9ca"
+              },
+              {
+                "control-id": "_55.1.a",
+                "description": "Component capability addressing control _55.1.a (In addition to the obligations listed in Article 53, providers of general-purpose AI models with systemic risk shall: — 55.1.a).",
+                "uuid": "c33d2d09-7c8a-565b-9966-96bae1d2bfc1"
+              },
+              {
+                "control-id": "_55.1.b",
+                "description": "Component capability addressing control _55.1.b (In addition to the obligations listed in Article 53, providers of general-purpose AI models with systemic risk shall: — 55.1.b).",
+                "uuid": "4967fee9-f79d-56d2-8c0b-aa0feb430708"
+              },
+              {
+                "control-id": "_55.1.c",
+                "description": "Component capability addressing control _55.1.c (In addition to the obligations listed in Article 53, providers of general-purpose AI models with systemic risk shall: — 55.1.c).",
+                "uuid": "618eb67f-398a-5f4f-97bb-0482999a178a"
+              },
+              {
+                "control-id": "_55.1.d",
+                "description": "Component capability addressing control _55.1.d (In addition to the obligations listed in Article 53, providers of general-purpose AI models with systemic risk shall: — 55.1.d).",
+                "uuid": "3bb6b9dd-de30-5cc8-a217-ff5e77e04f96"
+              },
+              {
+                "control-id": "_55.2",
+                "description": "Component capability addressing control _55.2 (Article 55 — 55.2).",
+                "uuid": "b1eefbae-7a59-5da3-9a8f-d0ef1eb862a0"
+              },
+              {
+                "control-id": "_55.3",
+                "description": "Component capability addressing control _55.3 (Article 55 — 55.3).",
+                "uuid": "5c262429-37d1-5554-b0b7-b50cbe3214fc"
+              },
+              {
+                "control-id": "_56.7",
+                "description": "Component capability addressing control _56.7 (Article 56 — 56.7).",
+                "uuid": "91b6d19a-6386-573b-9a5b-0b05edc8325b"
+              },
+              {
+                "control-id": "_59.1",
+                "description": "Component capability addressing control _59.1 (Article 59 — 59.1).",
+                "uuid": "f0ba4904-39db-5914-98ee-839786a83175"
+              },
+              {
+                "control-id": "_59.1.d",
+                "description": "Component capability addressing control _59.1.d (Article 59 — 59.1.d).",
+                "uuid": "d4b9c81a-fa82-5197-a0d5-de9a34c9eeb9"
+              },
+              {
+                "control-id": "_59.1.e",
+                "description": "Component capability addressing control _59.1.e (Article 59 — 59.1.e).",
+                "uuid": "b35be26e-1f71-5ab6-bf1d-976e72f9c13e"
+              },
+              {
+                "control-id": "_6.1",
+                "description": "Component capability addressing control _6.1 (Article 6 — 6.1).",
+                "uuid": "a2eba81d-aab9-5bc0-9e2d-55e70d1bb4fe"
+              },
+              {
+                "control-id": "_6.1.a",
+                "description": "Component capability addressing control _6.1.a (Article 6 — 6.1.a).",
+                "uuid": "c5d68a40-3ac7-5884-a480-d9951759114f"
+              },
+              {
+                "control-id": "_6.1.b",
+                "description": "Component capability addressing control _6.1.b (Article 6 — 6.1.b).",
+                "uuid": "ef7c5394-4a6e-51f0-b9ef-857b896fce84"
+              },
+              {
+                "control-id": "_6.2",
+                "description": "Component capability addressing control _6.2 (Article 6 — 6.2).",
+                "uuid": "0972ab70-3db5-5e9d-bb38-ff5a626b7c20"
+              },
+              {
+                "control-id": "_6.3",
+                "description": "Component capability addressing control _6.3 (Article 6 — 6.3).",
+                "uuid": "362894c5-747c-541e-a44a-688a52202d4f"
+              },
+              {
+                "control-id": "_6.3.a",
+                "description": "Component capability addressing control _6.3.a (Article 6 — 6.3.a).",
+                "uuid": "f5dd97fb-d5ef-5bdf-8337-6d40a09fbb01"
+              },
+              {
+                "control-id": "_6.3.b",
+                "description": "Component capability addressing control _6.3.b (Article 6 — 6.3.b).",
+                "uuid": "d986f5d4-d3a2-5f3d-bb9d-d3d27b2cb64b"
+              },
+              {
+                "control-id": "_6.3.c",
+                "description": "Component capability addressing control _6.3.c (Article 6 — 6.3.c).",
+                "uuid": "2d68e772-ed89-5401-80c8-d77e8db293f7"
+              },
+              {
+                "control-id": "_6.3.d",
+                "description": "Component capability addressing control _6.3.d (Article 6 — 6.3.d).",
+                "uuid": "e3d3dc5e-cb90-5d1c-888d-3d8e6cae141e"
+              },
+              {
+                "control-id": "_6.4",
+                "description": "Component capability addressing control _6.4 (Article 6 — 6.4).",
+                "uuid": "fa9f8242-b8dc-5ae8-b944-a23382650c69"
+              },
+              {
+                "control-id": "_60.1",
+                "description": "Component capability addressing control _60.1 (Article 60 — 60.1).",
+                "uuid": "8d96daec-053a-59e7-aada-7e829c94841f"
+              },
+              {
+                "control-id": "_60.2",
+                "description": "Component capability addressing control _60.2 (Article 60 — 60.2).",
+                "uuid": "31700acf-3624-5a95-9829-664adc322c9a"
+              },
+              {
+                "control-id": "_60.4",
+                "description": "Component capability addressing control _60.4 (Article 60 — 60.4).",
+                "uuid": "f8c62d7a-1c99-504a-986c-fcbd6da3fda8"
+              },
+              {
+                "control-id": "_60.4.a",
+                "description": "Component capability addressing control _60.4.a (Article 60 — 60.4.a).",
+                "uuid": "b09c5520-2be7-5185-a1e2-08a191c02664"
+              },
+              {
+                "control-id": "_60.4.b",
+                "description": "Component capability addressing control _60.4.b (Article 60 — 60.4.b).",
+                "uuid": "3156afea-5680-5808-a9b5-cd55a1ad872a"
+              },
+              {
+                "control-id": "_60.4.c",
+                "description": "Component capability addressing control _60.4.c (Article 60 — 60.4.c).",
+                "uuid": "867aaa65-d56f-5f92-9192-3b19d5482640"
+              },
+              {
+                "control-id": "_60.4.d",
+                "description": "Component capability addressing control _60.4.d (Article 60 — 60.4.d).",
+                "uuid": "cec4c9f2-4330-5a20-9dbd-097749061eb5"
+              },
+              {
+                "control-id": "_60.4.e",
+                "description": "Component capability addressing control _60.4.e (Article 60 — 60.4.e).",
+                "uuid": "57655544-6cc9-5179-a8ec-6462f44c2f5c"
+              },
+              {
+                "control-id": "_60.4.f",
+                "description": "Component capability addressing control _60.4.f (Article 60 — 60.4.f).",
+                "uuid": "dfe703f3-e592-5700-b41f-4525c046c58d"
+              },
+              {
+                "control-id": "_60.4.g",
+                "description": "Component capability addressing control _60.4.g (Article 60 — 60.4.g).",
+                "uuid": "1ec9e058-8d81-5cf7-a2b8-aa8605675bd2"
+              },
+              {
+                "control-id": "_60.4.h",
+                "description": "Component capability addressing control _60.4.h (Article 60 — 60.4.h).",
+                "uuid": "701bffbc-e58c-5fd5-8ac9-0fffc04494d5"
+              },
+              {
+                "control-id": "_60.4.i",
+                "description": "Component capability addressing control _60.4.i (Article 60 — 60.4.i).",
+                "uuid": "680d315b-7202-59a1-9ba0-d1fbadb41e9f"
+              },
+              {
+                "control-id": "_60.4.j",
+                "description": "Component capability addressing control _60.4.j (Article 60 — 60.4.j).",
+                "uuid": "8e93acd1-8e76-5e2a-bf2f-63e0708eeaf5"
+              },
+              {
+                "control-id": "_60.4.k",
+                "description": "Component capability addressing control _60.4.k (Article 60 — 60.4.k).",
+                "uuid": "050cdbdd-88dc-5565-a8de-8e338c92ff43"
+              },
+              {
+                "control-id": "_60.7",
+                "description": "Component capability addressing control _60.7 (Article 60 — 60.7).",
+                "uuid": "40896ffa-555c-5dd6-b335-9e1f59328e37"
+              },
+              {
+                "control-id": "_60.8",
+                "description": "Component capability addressing control _60.8 (Article 60 — 60.8).",
+                "uuid": "e11f3ae8-b4e9-5c14-9884-1d0a1a83ce00"
+              },
+              {
+                "control-id": "_60.9",
+                "description": "Component capability addressing control _60.9 (Article 60 — 60.9).",
+                "uuid": "9e5070b8-f5a4-5be6-bdab-63b6f84fe40d"
+              },
+              {
+                "control-id": "_71.2",
+                "description": "Component capability addressing control _71.2 (Article 71 — 71.2).",
+                "uuid": "6abaf514-8ccd-5cfd-9759-53d6b541badb"
+              },
+              {
+                "control-id": "_71.3",
+                "description": "Component capability addressing control _71.3 (Article 71 — 71.3).",
+                "uuid": "5001d59e-82a7-5537-b07d-6a15cda0676a"
+              },
+              {
+                "control-id": "_72.1",
+                "description": "Component capability addressing control _72.1 (Article 72 — 72.1).",
+                "uuid": "c9f04f39-9fd0-56b7-b1db-17b7912bd890"
+              },
+              {
+                "control-id": "_72.2",
+                "description": "Component capability addressing control _72.2 (Article 72 — 72.2).",
+                "uuid": "e631f47e-e7a3-5d5a-b803-9e8e4c033aec"
+              },
+              {
+                "control-id": "_72.4",
+                "description": "Component capability addressing control _72.4 (Article 72 — 72.4).",
+                "uuid": "673efa48-441f-5748-88c7-8de5c18ecafa"
+              },
+              {
+                "control-id": "_73.1",
+                "description": "Component capability addressing control _73.1 (Article 73 — 73.1).",
+                "uuid": "fc0b1565-aa93-5954-8533-ba9ef335a8f8"
+              },
+              {
+                "control-id": "_73.10",
+                "description": "Component capability addressing control _73.10 (Article 73 — 73.10).",
+                "uuid": "a6ec2527-06dd-5340-ad97-3c9fd248c289"
+              },
+              {
+                "control-id": "_73.11",
+                "description": "Component capability addressing control _73.11 (Article 73 — 73.11).",
+                "uuid": "342d6088-f0be-5064-9ce9-e7f131202ab7"
+              },
+              {
+                "control-id": "_73.2",
+                "description": "Component capability addressing control _73.2 (Article 73 — 73.2).",
+                "uuid": "0870c757-90c1-59b8-8080-31f1c0e17d62"
+              },
+              {
+                "control-id": "_73.3",
+                "description": "Component capability addressing control _73.3 (Article 73 — 73.3).",
+                "uuid": "fe1984c8-41f9-5b97-8672-bcb6ffea1cdd"
+              },
+              {
+                "control-id": "_73.5",
+                "description": "Component capability addressing control _73.5 (Article 73 — 73.5).",
+                "uuid": "34841405-621c-50ca-bb77-142ebda6f180"
+              },
+              {
+                "control-id": "_73.6",
+                "description": "Component capability addressing control _73.6 (Article 73 — 73.6).",
+                "uuid": "6b258cb7-cb1e-55b6-8fe7-93f93f27812e"
+              },
+              {
+                "control-id": "_73.7",
+                "description": "Component capability addressing control _73.7 (Article 73 — 73.7).",
+                "uuid": "ea7caa4e-8f57-5859-a3f9-e25a055869ec"
+              },
+              {
+                "control-id": "_8.1",
+                "description": "Component capability addressing control _8.1 (Article 8 — 8.1).",
+                "uuid": "0d974255-8169-5f9b-ad5c-3c0e9807a72b"
+              },
+              {
+                "control-id": "_8.2",
+                "description": "Component capability addressing control _8.2 (Article 8 — 8.2).",
+                "uuid": "c287c86c-5d77-53f2-af5e-5de86a020965"
+              },
+              {
+                "control-id": "_80.4",
+                "description": "Component capability addressing control _80.4 (Article 80 — 80.4).",
+                "uuid": "b52345c4-0e6f-53ec-8118-8327eaee1ad2"
+              },
+              {
+                "control-id": "_80.5",
+                "description": "Component capability addressing control _80.5 (Article 80 — 80.5).",
+                "uuid": "d057ec0a-64ed-569f-858b-2ad7fbc27ab5"
+              },
+              {
+                "control-id": "_80.6",
+                "description": "Component capability addressing control _80.6 (Article 80 — 80.6).",
+                "uuid": "5217df30-3d1d-5bab-9dff-7bb1d317cf24"
+              },
+              {
+                "control-id": "_82.2",
+                "description": "Component capability addressing control _82.2 (Article 82 — 82.2).",
+                "uuid": "354eb164-b52d-5d4b-86fa-e5bacf969321"
+              },
+              {
+                "control-id": "_83.1.a",
+                "description": "Component capability addressing control _83.1.a (Article 83 — 83.1.a).",
+                "uuid": "0546fcde-3375-539e-a7dd-92bf7872c5e3"
+              },
+              {
+                "control-id": "_83.1.b",
+                "description": "Component capability addressing control _83.1.b (Article 83 — 83.1.b).",
+                "uuid": "7fbd382f-ba00-5506-bfd5-d21431c12e3d"
+              },
+              {
+                "control-id": "_83.1.c",
+                "description": "Component capability addressing control _83.1.c (Article 83 — 83.1.c).",
+                "uuid": "7169aa36-70c0-5b33-99db-646519c63e72"
+              },
+              {
+                "control-id": "_83.1.d",
+                "description": "Component capability addressing control _83.1.d (Article 83 — 83.1.d).",
+                "uuid": "8d97b7cb-6eeb-5a36-84e0-fde89aa5099e"
+              },
+              {
+                "control-id": "_83.1.e",
+                "description": "Component capability addressing control _83.1.e (Article 83 — 83.1.e).",
+                "uuid": "216efee0-67f0-5880-bc4c-1249c8d1b0b9"
+              },
+              {
+                "control-id": "_83.1.f",
+                "description": "Component capability addressing control _83.1.f (Article 83 — 83.1.f).",
+                "uuid": "cb16db0b-26d0-57d0-8b64-c993746b79d6"
+              },
+              {
+                "control-id": "_83.1.g",
+                "description": "Component capability addressing control _83.1.g (Article 83 — 83.1.g).",
+                "uuid": "cd3c1b0d-68ce-5e2e-952c-c5fcdf40afbe"
+              },
+              {
+                "control-id": "_9.1",
+                "description": "Component capability addressing control _9.1 (Article 9 — 9.1).",
+                "uuid": "f1111f7c-be75-5016-9859-45ba428fb06b"
+              },
+              {
+                "control-id": "_9.10",
+                "description": "Component capability addressing control _9.10 (Article 9 — 9.10).",
+                "uuid": "6d0ee4d3-e77f-5ceb-9a45-248f760bd7b5"
+              },
+              {
+                "control-id": "_9.2",
+                "description": "Component capability addressing control _9.2 (Article 9 — 9.2).",
+                "uuid": "6d65815b-186e-5a05-a84e-cd1581f29912"
+              },
+              {
+                "control-id": "_9.2.a",
+                "description": "Component capability addressing control _9.2.a (Article 9 — 9.2.a).",
+                "uuid": "78f024d4-ba2f-5298-943c-f1a51358288b"
+              },
+              {
+                "control-id": "_9.2.b",
+                "description": "Component capability addressing control _9.2.b (Article 9 — 9.2.b).",
+                "uuid": "7b56db80-3ea1-539a-96ea-607b818cda1a"
+              },
+              {
+                "control-id": "_9.2.c",
+                "description": "Component capability addressing control _9.2.c (Article 9 — 9.2.c).",
+                "uuid": "d6053539-2b05-5f0d-abb6-71ccd6a66306"
+              },
+              {
+                "control-id": "_9.2.d",
+                "description": "Component capability addressing control _9.2.d (Article 9 — 9.2.d).",
+                "uuid": "a532619a-f66b-53c5-9f30-828a5a1ec266"
+              },
+              {
+                "control-id": "_9.3",
+                "description": "Component capability addressing control _9.3 (Article 9 — 9.3).",
+                "uuid": "d6228379-6def-5769-81d8-ba4bc9d787ba"
+              },
+              {
+                "control-id": "_9.4",
+                "description": "Component capability addressing control _9.4 (Article 9 — 9.4).",
+                "uuid": "7bf1c81b-8882-5038-95f8-768ab58083ee"
+              },
+              {
+                "control-id": "_9.5",
+                "description": "Component capability addressing control _9.5 (Article 9 — 9.5).",
+                "uuid": "ccfdbb61-bfd1-5193-8cc1-f8c5dcdef728"
+              },
+              {
+                "control-id": "_9.5.a",
+                "description": "Component capability addressing control _9.5.a (Article 9 — 9.5.a).",
+                "uuid": "13888626-8b17-5dbc-90df-1ebddc5a00a7"
+              },
+              {
+                "control-id": "_9.5.b",
+                "description": "Component capability addressing control _9.5.b (Article 9 — 9.5.b).",
+                "uuid": "b0ff607b-0e1e-5938-93db-db55b27ad310"
+              },
+              {
+                "control-id": "_9.5.c",
+                "description": "Component capability addressing control _9.5.c (Article 9 — 9.5.c).",
+                "uuid": "987ab4b3-8edb-5981-930f-36cc26a775a0"
+              },
+              {
+                "control-id": "_9.6",
+                "description": "Component capability addressing control _9.6 (Article 9 — 9.6).",
+                "uuid": "d8febd62-f95a-534f-b1ee-b4eb46fd3366"
+              },
+              {
+                "control-id": "_9.7",
+                "description": "Component capability addressing control _9.7 (Article 9 — 9.7).",
+                "uuid": "b83209c1-05d1-53a5-9116-2ea8a6560391"
+              },
+              {
+                "control-id": "_9.8",
+                "description": "Component capability addressing control _9.8 (Article 9 — 9.8).",
+                "uuid": "387c951b-be89-55a0-8512-7fe3a1aa698c"
+              },
+              {
+                "control-id": "_9.9",
+                "description": "Component capability addressing control _9.9 (Article 9 — 9.9).",
+                "uuid": "b105d049-dc61-55f6-bea9-563d9ec066b8"
+              },
+              {
+                "control-id": "_91.5",
+                "description": "Component capability addressing control _91.5 (Article 91 — 91.5).",
+                "uuid": "d5542ac6-a026-5d1f-9a03-a3468a89308d"
+              },
+              {
+                "control-id": "_92.5",
+                "description": "Component capability addressing control _92.5 (Article 92 — 92.5).",
+                "uuid": "3b76049b-d9bf-5d64-98dd-61c1dce78db9"
+              },
+              {
+                "control-id": "_93.3",
+                "description": "Component capability addressing control _93.3 (Article 93 — 93.3).",
+                "uuid": "59c1589b-f408-5bb7-a40a-d270fa997e14"
+              },
+              {
+                "control-id": "a",
+                "description": "Component capability addressing control a (Article 43 — a).",
+                "uuid": "fcb69180-02c7-5516-ad72-b4d0ccd7c498"
+              },
+              {
+                "control-id": "b",
+                "description": "Component capability addressing control b (Article 43 — b).",
+                "uuid": "aa23d3e5-7c5f-52a1-a5ac-8b1fff35b39e"
+              },
+              {
+                "control-id": "c",
+                "description": "Component capability addressing control c (Article 43 — c).",
+                "uuid": "fdb3018a-993b-532e-91d8-5f22ac7f4136"
+              },
+              {
+                "control-id": "d",
+                "description": "Component capability addressing control d (Article 43 — d).",
+                "uuid": "28e7c16a-b2a6-5aec-9870-9f651fc8dedd"
+              },
+              {
+                "control-id": "node1020",
+                "description": "Component capability addressing control node1020 (Article 86 — node1020).",
+                "uuid": "4301712a-1122-5bdc-bf9e-f248ac848c46"
+              },
+              {
+                "control-id": "node1131",
+                "description": "Component capability addressing control node1131 (Article 113 — node1131).",
+                "uuid": "4dc77cd8-5420-5014-a5e9-8a2aeb996ffb"
+              },
+              {
+                "control-id": "node271",
+                "description": "Component capability addressing control node271 (Article 4 — node271).",
+                "uuid": "41d7877f-ab63-51d9-8c59-b5941e6da4d6"
+              },
+              {
+                "control-id": "node288",
+                "description": "Component capability addressing control node288 (Article 5 — node288).",
+                "uuid": "5470f45d-b044-52c4-b6a0-cd1afaf4208d"
+              },
+              {
+                "control-id": "node292",
+                "description": "Component capability addressing control node292 (Article 5 — node292).",
+                "uuid": "1b88bd71-97aa-58d2-bd5d-8c78e548b2ce"
+              },
+              {
+                "control-id": "node312",
+                "description": "Component capability addressing control node312 (Article 6 — node312).",
+                "uuid": "c52b2a14-8a67-56d9-9f54-27a890c1ccb7"
+              },
+              {
+                "control-id": "node337",
+                "description": "Component capability addressing control node337 (Article 9 — node337).",
+                "uuid": "25357dcf-9553-5ecc-b129-c203ef6cf839"
+              },
+              {
+                "control-id": "node409",
+                "description": "Component capability addressing control node409 (Article 14 — node409).",
+                "uuid": "df749e33-90d9-5209-a7d3-44e5e12d36f7"
+              },
+              {
+                "control-id": "node415",
+                "description": "Component capability addressing control node415 (Article 15 — node415).",
+                "uuid": "d128c106-1d6b-5d56-bda3-6d13aaed5de9"
+              },
+              {
+                "control-id": "node416",
+                "description": "Component capability addressing control node416 (Article 15 — node416).",
+                "uuid": "33e5a3c3-612a-5df0-b973-c94a609612c5"
+              },
+              {
+                "control-id": "node418",
+                "description": "Component capability addressing control node418 (Article 15 — node418).",
+                "uuid": "fd909b86-14ed-5e8d-ba9b-fee6a45c5f0c"
+              },
+              {
+                "control-id": "node419",
+                "description": "Component capability addressing control node419 (Article 15 — node419).",
+                "uuid": "a5f6472c-0c25-57ae-ae93-09265c449ec7"
+              },
+              {
+                "control-id": "node463",
+                "description": "Component capability addressing control node463 (Article 19 — node463).",
+                "uuid": "8e2eede1-a3b1-5f7e-8e20-aa837a1725ec"
+              },
+              {
+                "control-id": "node464",
+                "description": "Component capability addressing control node464 (Article 19 — node464).",
+                "uuid": "cc9444c8-11a1-5302-9b54-54ee8616b610"
+              },
+              {
+                "control-id": "node465",
+                "description": "Component capability addressing control node465 (Article 20).",
+                "uuid": "7f0db158-8c61-530f-9d8d-4e51d2a1fd16"
+              },
+              {
+                "control-id": "node481",
+                "description": "Component capability addressing control node481 (Article 22 — node481).",
+                "uuid": "4a3596e4-a0d3-5ef6-8ec3-deb4f6ad64ff"
+              },
+              {
+                "control-id": "node520",
+                "description": "Component capability addressing control node520 (Article 26 — node520).",
+                "uuid": "a96a1196-f23b-598c-aa93-7202fd46e28a"
+              },
+              {
+                "control-id": "node522",
+                "description": "Component capability addressing control node522 (Article 26 — node522).",
+                "uuid": "44a54321-c666-542d-a787-d8c069048a7a"
+              },
+              {
+                "control-id": "node527",
+                "description": "Component capability addressing control node527 (Article 26 — node527).",
+                "uuid": "a4b59f70-c601-50c9-8727-90d0b17c4ae2"
+              },
+              {
+                "control-id": "node528",
+                "description": "Component capability addressing control node528 (Article 26 — node528).",
+                "uuid": "35ba0b17-5306-5fa8-a69c-455e9d1fce23"
+              },
+              {
+                "control-id": "node530",
+                "description": "Component capability addressing control node530 (Article 26 — node530).",
+                "uuid": "83603ae8-914e-508e-9cde-00acbe6a76eb"
+              },
+              {
+                "control-id": "node531",
+                "description": "Component capability addressing control node531 (Article 26 — node531).",
+                "uuid": "a2f155c5-89d4-5197-a2b5-8d2fa503fd7b"
+              },
+              {
+                "control-id": "node653",
+                "description": "Component capability addressing control node653 (Article 43 — node653).",
+                "uuid": "cb65a055-61a4-542b-a11d-da340fc1aa29"
+              },
+              {
+                "control-id": "node658",
+                "description": "Component capability addressing control node658 (Article 43 — node658).",
+                "uuid": "ee6be73b-79dd-5f1d-8306-7077bd6f09bd"
+              },
+              {
+                "control-id": "node662",
+                "description": "Component capability addressing control node662 (Article 43 — node662).",
+                "uuid": "bf77edd3-037b-54e4-84f8-eaa4e6b8e95e"
+              },
+              {
+                "control-id": "node664",
+                "description": "Component capability addressing control node664 (Article 43 — node664).",
+                "uuid": "e42adfc4-8592-556a-ba8d-d2ab8ba7a180"
+              },
+              {
+                "control-id": "node711",
+                "description": "Component capability addressing control node711 (Article 50 — node711).",
+                "uuid": "c11711a7-072d-53e1-97fe-95e4903c2fc0"
+              },
+              {
+                "control-id": "node719",
+                "description": "Component capability addressing control node719 (Article 51 — node719).",
+                "uuid": "b6136d2e-b85e-5171-a738-91687429ac47"
+              },
+              {
+                "control-id": "node720",
+                "description": "Component capability addressing control node720 (Article 51 — node720).",
+                "uuid": "23737ab7-50b9-5539-a91e-a3fac6b93e82"
+              },
+              {
+                "control-id": "node931",
+                "description": "Component capability addressing control node931 (Article 73 — node931).",
+                "uuid": "b47e3df3-3591-593f-a2c3-f49b2d2011b3"
+              }
+            ],
+            "source": "./catalog.json",
+            "uuid": "d116a0f5-fa14-509b-9f9e-7355440f35c1"
+          }
+        ],
+        "description": "Enterprise technical and operational capabilities implementing controls for EU Artificial Intelligence Act (AI Act).",
+        "title": "EU Artificial Intelligence Act (AI Act) Platform Component",
+        "type": "software",
+        "uuid": "ee97a3c1-a993-57de-b15a-3c3c03ffdd45"
+      }
+    ],
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:11Z",
+      "oscal-version": "1.2.3",
+      "title": "EU Artificial Intelligence Act (AI Act) Component Definition Template",
+      "version": "2"
+    },
+    "uuid": "39a5b555-85aa-5a36-911a-f5c698dd8a8d"
+  }
+}

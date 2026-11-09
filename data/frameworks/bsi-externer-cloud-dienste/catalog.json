@@ -1,0 +1,1229 @@
+{
+  "catalog": {
+    "back-matter": {
+      "resources": [
+        {
+          "description": "Source framework metadata for bsi-externer-cloud-dienste snapshot portal",
+          "props": [
+            {
+              "name": "type",
+              "value": "standard"
+            },
+            {
+              "name": "version",
+              "value": "portal"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "https://raw.githubusercontent.com/intuitem/ciso-assistant-community/main/backend/library/libraries/bsi-externer-cloud-dienste.yaml"
+            }
+          ],
+          "title": "bsi-externer-cloud-dienste Framework Reference",
+          "uuid": "e789ca4f-7752-557a-8988-0bcbe34bd23a"
+        }
+      ]
+    },
+    "groups": [
+      {
+        "controls": [
+          {
+            "id": "NCD.2.1.01.a",
+            "parts": [
+              {
+                "id": "NCD.2.1.01.a-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung MUSS eine Strategie für die Cloud-Nutzung nach OPS.2.2.A1 Erstellung einer Strategie für die Cloud-Nutzung  erstellen."
+              },
+              {
+                "id": "NCD.2.1.01.a-guidance",
+                "name": "guidance",
+                "prose": "IT-Grundschutz-Kompendium 2022 \nOPS.2.2.A1"
+              }
+            ],
+            "title": "Strategie für die Cloud-Nutzung — NCD.2.1.01.a"
+          },
+          {
+            "id": "NCD.2.1.01.b",
+            "parts": [
+              {
+                "id": "NCD.2.1.01.b-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung MUSS in dieser Strategie für die Cloud-Nutzung festlegen, wie sie mit Risiken bei der Nutzung externer Cloud-Dienste umgeht. Hierzu MUSS eine Richtlinie zur Risikoanalyse erstellt werden."
+              }
+            ],
+            "title": "Strategie für die Cloud-Nutzung — NCD.2.1.01.b"
+          },
+          {
+            "id": "NCD.2.1.01.c",
+            "parts": [
+              {
+                "id": "NCD.2.1.01.c-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung MUSS prüfen, ob ein externer Cloud-Dienst grundsätzlich mit den in ihrer Strategie für die Cloud-Nutzung definierten Zielen, Chancen und Risiken vereinbar ist.   Die Einrichtung DARF einen externen Cloud-Dienst NUR nutzen, wenn dieser die in der Strategie für die Cloud-Nutzung definierten Ziele, Chancen und Risiken angemessen unterstützt."
+              }
+            ],
+            "title": "Strategie für die Cloud-Nutzung — NCD.2.1.01.c"
+          },
+          {
+            "id": "NCD.2.1.01.d",
+            "parts": [
+              {
+                "id": "NCD.2.1.01.d-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung MUSS vor der Nutzung eines externen Cloud-Dienstes eine Risikoanalyse gemäß der in NCD.2.1.01 b) festgelegten Richtlinie durchführen."
+              }
+            ],
+            "title": "Strategie für die Cloud-Nutzung — NCD.2.1.01.d"
+          }
+        ],
+        "id": "NCD.2.1.01",
+        "title": "Strategie für die Cloud-Nutzung"
+      },
+      {
+        "controls": [
+          {
+            "id": "NCD.2.1.02.a",
+            "parts": [
+              {
+                "id": "NCD.2.1.02.a-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung MUSS eine Sicherheitsrichtlinie für externe Cloud-Dienste nach OPS.2.2.A2 Erstellung einer Sicherheitsrichtlinie für die Cloud-Nutzung  erstellen."
+              },
+              {
+                "id": "NCD.2.1.02.a-guidance",
+                "name": "guidance",
+                "prose": "IT-Grundschutz-Kompendium 2022 \nOPS.2.2.A2"
+              }
+            ],
+            "title": "Sicherheitsrichtlinie für externe Cloud-Dienste — NCD.2.1.02.a"
+          },
+          {
+            "id": "NCD.2.1.02.b",
+            "parts": [
+              {
+                "id": "NCD.2.1.02.b-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung MUSS in dieser Sicherheitsrichtlinie mindestens die Umsetzung und Einhaltung der Basiskriterien nach dem Cloud Computing Compliance Criteria Catalogue – C5 (Kriterienkatalog Cloud Computing) als spezielle Sicherheitsanforderungen an den Cloud-Diensteanbieter festlegen."
+              }
+            ],
+            "title": "Sicherheitsrichtlinie für externe Cloud-Dienste — NCD.2.1.02.b"
+          },
+          {
+            "id": "NCD.2.1.02.c",
+            "parts": [
+              {
+                "id": "NCD.2.1.02.c-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung MUSS die IT-Sicherheitsbeauftragten bei der Erstellung der Sicherheitsrichtlinie beteiligen und ebenfalls - sofern betroffen - die zuständigen Datenschutz- und Geheimschutzbeauftragten."
+              }
+            ],
+            "title": "Sicherheitsrichtlinie für externe Cloud-Dienste — NCD.2.1.02.c"
+          }
+        ],
+        "id": "NCD.2.1.02",
+        "title": "Sicherheitsrichtlinie für externe Cloud-Dienste"
+      },
+      {
+        "controls": [
+          {
+            "id": "NCD.2.1.03.a",
+            "parts": [
+              {
+                "id": "NCD.2.1.03.a-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung MUSS ein Sicherheitskonzept für den externen Cloud-Dienst nach OPS.2.2.A7 Erstellung eines Sicherheitskonzeptes für die Cloud-Nutzung  erstellen."
+              },
+              {
+                "id": "NCD.2.1.03.a-guidance",
+                "name": "guidance",
+                "prose": "IT-Grundschutz-Kompendium 2022 \nOPS.2.2.A7"
+              }
+            ],
+            "title": "Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.a"
+          },
+          {
+            "id": "NCD.2.1.03.b",
+            "parts": [
+              {
+                "id": "NCD.2.1.03.b-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung MUSS in dem Sicherheitskonzept die aktuellen Veröffentlichungen des BSI zu Cloud-Sicherheit berücksichtigen."
+              }
+            ],
+            "title": "Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.b"
+          },
+          {
+            "id": "NCD.2.1.03.c",
+            "parts": [
+              {
+                "id": "NCD.2.1.03.c-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung MUSS die IT-Sicherheitsbeauftragten bei der Erstellung des Sicherheitskonzeptes beteiligen und ebenfalls – sofern betroffen – die zuständigen Datenschutz- und Geheimschutzbeauftragten."
+              }
+            ],
+            "title": "Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.c"
+          },
+          {
+            "id": "NCD.2.1.03.d",
+            "parts": [
+              {
+                "id": "NCD.2.1.03.d-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung MUSS sämtliche dienstliche Daten identifizieren, die künftig in dem externen Cloud-Dienst verarbeitet werden sollen."
+              }
+            ],
+            "title": "Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.d"
+          },
+          {
+            "id": "NCD.2.1.03.e",
+            "parts": [
+              {
+                "id": "NCD.2.1.03.e-stmt",
+                "name": "statement",
+                "prose": "Kommt die Einrichtung zu dem Ergebnis, dass in dem externen Cloud-Dienst keine dienstlichen Daten  verarbeitet werden, handelt es sich nicht um eine Nutzung oder Mitnutzung externer Cloud-Dienste im Sinne dieses Mindeststandards. In diesen Fällen KANN die Einrichtung die Sicherheitsanforderungen des Mindeststandards umsetzen."
+              }
+            ],
+            "title": "Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.e"
+          },
+          {
+            "id": "NCD.2.1.03.f",
+            "parts": [
+              {
+                "id": "NCD.2.1.03.f-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung MUSS die identifizierten dienstlichen Daten den nachfolgenden Kategorien zuordnen:\n − Kategorie 1 = Privat-, Dienst-, Betriebs- und Geschäftsgeheimnisse gemäß Strafgesetzbuch (StGB) §§ 203 und 353b\n − Kategorie 2 = personenbezogene Daten gemäß Datenschutz-Grundverordnung (DSGVO) Art. 4 Nr. 1\n − Kategorie 3 = Verschlusssachen gemäß Verschlusssachenanweisung - VSA \n − Kategorie 4 = sonstige Daten (weder Kategorie 1, noch 2, noch 3)"
+              }
+            ],
+            "title": "Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.f"
+          },
+          {
+            "id": "NCD.2.1.03.g",
+            "parts": [
+              {
+                "id": "NCD.2.1.03.g-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung KANN die identifizierten dienstlichen Daten den Kategorien 1, 2 und 3 gleichzeitig zuordnen."
+              }
+            ],
+            "title": "Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.g"
+          },
+          {
+            "controls": [
+              {
+                "id": "NCD.2.1.03.h.i",
+                "parts": [
+                  {
+                    "id": "NCD.2.1.03.h.i-stmt",
+                    "name": "statement",
+                    "prose": "Die Einrichtung MUSS Risiken, die aus der künftigen Nutzung des externen Cloud-Dienstes entstehen können, umfassend ermitteln und bewerten.  Die Einrichtung MUSS die ermittelten Risiken gemäß der in der Strategie für die Cloud-Nutzung festgelegten Richtlinie zur Risikoanalyse bewerten."
+                  }
+                ],
+                "title": "Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.h.i"
+              },
+              {
+                "id": "NCD.2.1.03.h.ii",
+                "parts": [
+                  {
+                    "id": "NCD.2.1.03.h.ii-stmt",
+                    "name": "statement",
+                    "prose": "Die Einrichtung DARF den externen Cloud-Dienst NUR nutzen, wenn alle ermittelten Risiken gemäß der in der Strategie für die Cloud-Nutzung genannten Richtlinie zur Risikoanalyse wirksam vermieden oder hinreichend reduziert oder in Übereinstimmung mit den Risikoakzeptanzkriterien bei der Cloud-Nutzung getragen werden können."
+                  }
+                ],
+                "title": "Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.h.ii"
+              }
+            ],
+            "id": "NCD.2.1.03.h",
+            "parts": [
+              {
+                "id": "NCD.2.1.03.h-stmt",
+                "name": "statement",
+                "prose": "Falls Daten den Kategorien 1, 2 oder 3 zugeordnet wurden: Die Einrichtung MUSS für die identifizierten dienstlichen Daten dieser Kategorien die Geheim- und Datenschutzaspekte  sowie Anforderungen hinsichtlich Privat-, Dienst, Betriebs- und Geschäftsgeheimnisse ermitteln und aus diesen ggf. entstehende weitere Anforderungen ableiten."
+              }
+            ],
+            "title": "Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.h"
+          },
+          {
+            "id": "NCD.2.1.03.i",
+            "parts": [
+              {
+                "id": "NCD.2.1.03.i-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung MUSS prüfen, ob sie weiteren Anforderungen (z. B. aus Gesetzen, Verordnungen, Beschlüssen oder anderen Quellen)  unterliegt, die hinsichtlich der Cloud-Nutzung relevant sind. Diese Anforderungen MUSS die Einrichtung einhalten. Sie werden im Übrigen durch diesen Mindeststandard nicht berührt."
+              }
+            ],
+            "title": "Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.i"
+          }
+        ],
+        "id": "NCD.2.1.03",
+        "title": "Sicherheitskonzept für den externen Cloud-Dienst"
+      },
+      {
+        "controls": [
+          {
+            "id": "NCD.2.1.04.a",
+            "parts": [
+              {
+                "id": "NCD.2.1.04.a-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung MUSS bewerten, welche Bedeutung der externe Cloud-Dienst in Notfällen und Krisensituationen einnehmen würde."
+              }
+            ],
+            "title": "Notfall- und Kontinuitätsmanagement — NCD.2.1.04.a"
+          },
+          {
+            "id": "NCD.2.1.04.b",
+            "parts": [
+              {
+                "id": "NCD.2.1.04.b-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung MUSS prüfen, ob sie in Notfällen und Krisensituationen weiter auf den externen Cloud-Dienst zugreifen können muss."
+              }
+            ],
+            "title": "Notfall- und Kontinuitätsmanagement — NCD.2.1.04.b"
+          },
+          {
+            "id": "NCD.2.1.04.c",
+            "parts": [
+              {
+                "id": "NCD.2.1.04.c-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung MUSS die zuständigen Notfallbeauftragten entsprechend einbinden. Diese MÜSSEN prüfen, ob sich die Cloud-Nutzung auf Maßnahmen, die Notfällen und Krisensituationen präventiv und/oder reaktiv entgegenwirken, auswirkt und inwiefern diese Maßnahmen ggf. anzupassen sind. Die Einrichtung MUSS diese Änderungen vor der Cloud-Nutzung umsetzen."
+              },
+              {
+                "id": "NCD.2.1.04.c-guidance",
+                "name": "guidance",
+                "prose": "IT-Grundschutz-Kompendium 2022 \nOPS.2.2.A11"
+              }
+            ],
+            "title": "Notfall- und Kontinuitätsmanagement — NCD.2.1.04.c"
+          }
+        ],
+        "id": "NCD.2.1.04",
+        "title": "Notfall- und Kontinuitätsmanagement"
+      },
+      {
+        "controls": [
+          {
+            "id": "NCD.2.2.01.a",
+            "parts": [
+              {
+                "id": "NCD.2.2.01.a-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung MUSS vor Vertragsabschluss bewerten, inwiefern der externe Cloud-Dienst die in ihrer Sicherheitsrichtlinie festgelegten Sicherheitsanforderungen (siehe NCD.2.1.02, Buchstabe a) erfüllt."
+              }
+            ],
+            "title": "Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.a"
+          },
+          {
+            "id": "NCD.2.2.01.b",
+            "parts": [
+              {
+                "id": "NCD.2.2.01.b-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung MUSS die Erfüllung dieser Sicherheitsanforderungen bereits in der Leistungsbeschreibung des externen Cloud-Dienstes einfordern."
+              },
+              {
+                "id": "NCD.2.2.01.b-guidance",
+                "name": "guidance",
+                "prose": "IT-Grundschutz-Kompendium 2022 \nOPS.2.2.A8"
+              }
+            ],
+            "title": "Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.b"
+          },
+          {
+            "id": "NCD.2.2.01.c",
+            "parts": [
+              {
+                "id": "NCD.2.2.01.c-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung MUSS die Angaben und Nachweise des Cloud-Diensteanbieters zu Buchstabe a hinsichtlich Inhalt, Aussagekraft, Nachvollziehbarkeit, Aktualität, nachteiliger Regelungen sowie Mitwirkungspflichten und Maßnahmen auswerten. Dazu SOLLTE der Leitfaden mit Checkliste zur Auswertung einer Berichterstattung nach BSI C5 verwendet werden."
+              }
+            ],
+            "title": "Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.c"
+          },
+          {
+            "id": "NCD.2.2.01.d",
+            "parts": [
+              {
+                "id": "NCD.2.2.01.d-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung MUSS sich die regelmäßige Vorlage von Sicherheitsnachweisen vom Cloud-Diensteanbieter zusichern lassen."
+              }
+            ],
+            "title": "Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.d"
+          },
+          {
+            "id": "NCD.2.2.01.e",
+            "parts": [
+              {
+                "id": "NCD.2.2.01.e-stmt",
+                "name": "statement",
+                "prose": "Diese Sicherheitsnachweise SOLLTEN mindestens\n− die angemessene und wirksame Erfüllung der Basiskriterien nach C5,\n− die aktuelle Dokumentation der Systembeschreibung,\n− die Aktualität von vertraglich zugesicherten Zertifizierungen und Berichterstattungen sowie\n− die ordnungsgemäße Durchführung von Datensicherungen und erprobten Rücksicherungen\numfassen und KÖNNEN vom Cloud-Diensteanbieter durch die regelmäßige Bereitstellung einer aktuellen C5-Berichterstattung vom Typ2 erbracht werden."
+              }
+            ],
+            "title": "Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.e"
+          },
+          {
+            "id": "NCD.2.2.01.f",
+            "parts": [
+              {
+                "id": "NCD.2.2.01.f-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung MUSS die Sicherheitsnachweise des Cloud-Diensteanbieters auswerten und eventuellen Unklarheiten und insbesondere darin ausgewiesene Abweichungen in geeigneter Form nachgehen. Hierbei MUSS die Einrichtung auch abwägen, ob und inwiefern ein Risiko entsteht und wie mit diesem umzugehen ist."
+              }
+            ],
+            "title": "Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.f"
+          },
+          {
+            "id": "NCD.2.2.01.g",
+            "parts": [
+              {
+                "id": "NCD.2.2.01.g-stmt",
+                "name": "statement",
+                "prose": "Insbesondere MÜSSEN Zertifikate, Prüfberichte und Nachweise den Zeitraum, in dem die Einrichtung den Cloud-Dienst nutzt, jeweils vollständig abdecken und DÜRFEN KEINE zeitlichen Lücken enthalten oder entstehen lassen. Dies MUSS die Einrichtung in ihre Sicherheitsanforderungen sowie demzufolge in die Leistungsbeschreibung aufnehmen."
+              }
+            ],
+            "title": "Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.g"
+          },
+          {
+            "id": "NCD.2.2.01.h",
+            "parts": [
+              {
+                "id": "NCD.2.2.01.h-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung MUSS sich die Einhaltung vorgesehener und vereinbarter Prozesse sowie die Durchführung von Audits, Sicherheitsprüfungen, Penetrationstests und Schwachstellenanalysen durch den Cloud-Diensteanbieter vertraglich zusichern lassen."
+              }
+            ],
+            "title": "Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.h"
+          },
+          {
+            "controls": [
+              {
+                "id": "NCD.2.2.01.i.i",
+                "parts": [
+                  {
+                    "id": "NCD.2.2.01.i.i-stmt",
+                    "name": "statement",
+                    "prose": "Die Einrichtung MUSS die weiteren Anforderungen nach NCD.2.1.03, Buchstabe i, in ihre Sicherheitsanforderungen aufnehmen. Soweit die Einrichtung diese weiteren Anforderungen nur gemeinsam mit dem Cloud-Diensteanbieter erfüllen kann, MUSS die Einrichtung diese in die Leistungsbeschreibung bzw. in das Vertragsverhältnis mit dem Cloud-Diensteanbieter aufnehmen."
+                  }
+                ],
+                "title": "Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.i.i"
+              },
+              {
+                "id": "NCD.2.2.01.i.ii",
+                "parts": [
+                  {
+                    "id": "NCD.2.2.01.i.ii-stmt",
+                    "name": "statement",
+                    "prose": "Für die zusätzlichen Anforderungen MUSS die Einrichtung mit dem Cloud-Diensteanbieter vereinbaren, dass dieser regelmäßig geeignete Nachweise ihrer angemessenen und wirksamen Umsetzung vorlegt. Falls die Anforderungen nur gemeinsam erfüllt werden können, erstrecken sich die Nachweise nur auf den Anteil, der vom Cloud-Diensteanbieter umgesetzt wird."
+                  }
+                ],
+                "title": "Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.i.ii"
+              }
+            ],
+            "id": "NCD.2.2.01.i",
+            "parts": [
+              {
+                "id": "NCD.2.2.01.i-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung MUSS ermittelte Risiken, die nicht bereits durch Basiskriterien nach C5 abgedeckt sind, über zusätzliche Anforderungen, die vom Cloud-Diensteanbieter zu erfüllen sind, abdecken oder diese Risiken transferieren oder akzeptieren, und MUSS dies entsprechend dokumentieren."
+              }
+            ],
+            "title": "Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.i"
+          },
+          {
+            "controls": [
+              {
+                "id": "NCD.2.2.01.j.i",
+                "parts": [
+                  {
+                    "id": "NCD.2.2.01.j.i-stmt",
+                    "name": "statement",
+                    "prose": "Die Einrichtung MUSS die Prüfrechte so ausgestalten, dass die Einrichtung ihre weiteren Anforderungen (z. B. aus Gesetzen, Verordnungen, Beschlüssen oder anderen Quellen) erfüllt."
+                  }
+                ],
+                "title": "Die Einrichtung SOLLTE sich eigene Prüfrechte vertraglich zusichern lassen. — NCD.2.2.01.j.i"
+              },
+              {
+                "id": "NCD.2.2.01.j.ii",
+                "parts": [
+                  {
+                    "id": "NCD.2.2.01.j.ii-stmt",
+                    "name": "statement",
+                    "prose": "Die Einrichtung MUSS die Prüfrechte so ausgestalten, dass sie nach Art und Umfang eine Bewertung des vom Cloud-Diensteanbieter für den betrachteten Cloud-Dienst gebotenen Informationssicherheitsniveaus ermöglichen und die Einrichtung selbst oder Dritte in ihrem Auftrag (z. B. andere Stellen, externe IT-Revision, Wirtschaftsprüfende) die Prüfrechte wahrnehmen können."
+                  }
+                ],
+                "title": "Die Einrichtung SOLLTE sich eigene Prüfrechte vertraglich zusichern lassen. — NCD.2.2.01.j.ii"
+              },
+              {
+                "id": "NCD.2.2.01.j.iii",
+                "parts": [
+                  {
+                    "id": "NCD.2.2.01.j.iii-stmt",
+                    "name": "statement",
+                    "prose": "Sofern der Cloud-Diensteanbieter keinen Prüfbericht nach C5 vorlegen kann, MUSS sich die Einrichtung vom Cloud-Diensteanbieter dazu berechtigen lassen, die Prüfung nach C5 durch Dritte selbst beauftragen zu können."
+                  }
+                ],
+                "title": "Die Einrichtung SOLLTE sich eigene Prüfrechte vertraglich zusichern lassen. — NCD.2.2.01.j.iii"
+              },
+              {
+                "id": "NCD.2.2.01.j.iv",
+                "parts": [
+                  {
+                    "id": "NCD.2.2.01.j.iv-stmt",
+                    "name": "statement",
+                    "prose": "Aufgrund der Ergebnisse aus der Datenkategorisierung und Risikoanalyse KANN die Einrichtung in begründeten Fällen auf eigene Prüfrechte verzichten, soweit weitere Anforderungen (z. B. aus Gesetzen, Verordnungen, Beschlüssen oder anderen Quellen) nicht entgegenstehen."
+                  }
+                ],
+                "title": "Die Einrichtung SOLLTE sich eigene Prüfrechte vertraglich zusichern lassen. — NCD.2.2.01.j.iv"
+              }
+            ],
+            "id": "NCD.2.2.01.j",
+            "parts": [
+              {
+                "id": "NCD.2.2.01.j-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung SOLLTE sich eigene Prüfrechte vertraglich zusichern lassen."
+              }
+            ],
+            "title": "Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.j"
+          }
+        ],
+        "id": "NCD.2.2.01",
+        "title": "Umsetzung der Sicherheitsanforderungen"
+      },
+      {
+        "controls": [
+          {
+            "id": "NCD.2.2.02.a",
+            "parts": [
+              {
+                "id": "NCD.2.2.02.a-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung MUSS sich vom Cloud-Diensteanbieter vollständig benennen lassen, welche seiner Unterauftragnehmer gemäß C5 als Subdienstleistungsunternehmen  anzusehen sind und auf welche Art und in welchem Umfang er diese in die Bereitstellung des Cloud-Dienstes einbezieht."
+              },
+              {
+                "id": "NCD.2.2.02.a-guidance",
+                "name": "guidance",
+                "prose": "IT-Grundschutz-Kompendium 2022 \nOPS.2.2.A9"
+              }
+            ],
+            "title": "Umgang mit Unterauftragnehmern und anderen externen Dritten vertraglich zusichern — NCD.2.2.02.a"
+          },
+          {
+            "controls": [
+              {
+                "id": "NCD.2.2.02.b.i",
+                "parts": [
+                  {
+                    "id": "NCD.2.2.02.b.i-stmt",
+                    "name": "statement",
+                    "prose": "Diese Mitteilung SOLLTE zeitlich vor Umsetzung der Änderung erfolgen."
+                  }
+                ],
+                "title": "Umgang mit Unterauftragnehmern und anderen externen Dritten vertraglich zusichern — NCD.2.2.02.b.i"
+              },
+              {
+                "id": "NCD.2.2.02.b.ii",
+                "parts": [
+                  {
+                    "id": "NCD.2.2.02.b.ii-stmt",
+                    "name": "statement",
+                    "prose": "Der Cloud-Diensteanbieter MUSS der Einrichtung insbesondere mitteilen, wenn er bestehende Vertragsverhältnisse beendet oder neue Vertragsverhältnisse mit Subdienstleistungsunternehmen eingeht. Vertragsverhältnisse in diesem Sinne schließen alle mitgeltenden Dokumente und Regelungen, wie z. B. Leistungsscheine, Dienstgütevereinbarungen oder Allgemeine Geschäfts- und Einkaufsbedingungen ein."
+                  }
+                ],
+                "title": "Umgang mit Unterauftragnehmern und anderen externen Dritten vertraglich zusichern — NCD.2.2.02.b.ii"
+              }
+            ],
+            "id": "NCD.2.2.02.b",
+            "parts": [
+              {
+                "id": "NCD.2.2.02.b-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung MUSS mit dem Cloud-Diensteanbieter vereinbaren, dass er der Einrichtung beabsichtigte Änderungen an vertraglichen Vereinbarungen mit Subdienstleistungsunternehmen, die in die Bereitstellung des Cloud-Dienstes involviert sind, unverzüglich schriftlich oder per E-Mail mitteilt."
+              }
+            ],
+            "title": "Umgang mit Unterauftragnehmern und anderen externen Dritten vertraglich zusichern — NCD.2.2.02.b"
+          },
+          {
+            "id": "NCD.2.2.02.c",
+            "parts": [
+              {
+                "id": "NCD.2.2.02.c-stmt",
+                "name": "statement",
+                "prose": "Diese Mitteilungen KANN der Cloud-Diensteanbieter z. B. über Internetportale oder Push-Benachrichtigungen bereitstellen, wenn die Einrichtung diese Anforderungen als erfüllt ansieht."
+              }
+            ],
+            "title": "Umgang mit Unterauftragnehmern und anderen externen Dritten vertraglich zusichern — NCD.2.2.02.c"
+          },
+          {
+            "id": "NCD.2.2.02.d",
+            "parts": [
+              {
+                "id": "NCD.2.2.02.d-stmt",
+                "name": "statement",
+                "prose": "Falls der Cloud-Diensteanbieter Subdienstleistungsunternehmen einbezieht oder anderweitig wesentliche Teile der Entwicklung oder Bereitstellung des Cloud-Dienstes an Unterauftragnehmer auslagert, MUSS sich die Einrichtung vom Cloud-Diensteanbieter zusichern lassen, dass\n - die Subdienstleistungsunternehmen und Unterauftragnehmer die zwischen der Einrichtung und dem Cloud-Diensteanbieter vertraglich festgelegten Vorgaben ebenfalls erfüllen und\n - sich die Prüfrechte, die der Cloud-Diensteanbieter der Einrichtung zugesichert hat, auch auf die Subdienstleistungsunternehmen und Unterauftragnehmer des Cloud-Diensteanbieters beziehen."
+              }
+            ],
+            "title": "Umgang mit Unterauftragnehmern und anderen externen Dritten vertraglich zusichern — NCD.2.2.02.d"
+          }
+        ],
+        "id": "NCD.2.2.02",
+        "title": "Umgang mit Unterauftragnehmern und anderen externen Dritten vertraglich zusichern"
+      },
+      {
+        "controls": [
+          {
+            "id": "NCD.2.2.03.a",
+            "parts": [
+              {
+                "id": "NCD.2.2.03.a-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung SOLLTE zur Absicherung der Verfügbarkeit als Teil der Informationssicherheit Vereinbarungen ausschließlich nach deutschem Recht und deutschem Gerichtsstand und ohne obligatorisch vorab zu betreibende Schlichtungsverfahren abschließen."
+              }
+            ],
+            "title": "Gerichtsbarkeit — NCD.2.2.03.a"
+          },
+          {
+            "id": "NCD.2.2.03.b",
+            "parts": [
+              {
+                "id": "NCD.2.2.03.b-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung MUSS berücksichtigen, dass bei gegebenenfalls notwendigem Rechtsschutz beziehungsweise Eilrechtsschutz Zeitverluste eintreten können, insbesondere durch eine Einarbeitung in fremde Rechtsordnungen oder ein Auftreten vor entfernt gelegenen Gerichten."
+              }
+            ],
+            "title": "Gerichtsbarkeit — NCD.2.2.03.b"
+          },
+          {
+            "id": "NCD.2.2.03.c",
+            "parts": [
+              {
+                "id": "NCD.2.2.03.c-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung MUSS beim Verhandeln des Vertrages sicherstellen, dass sie handlungsfähig bleibt und ihre Forderungen effektiv durchsetzen kann."
+              }
+            ],
+            "title": "Gerichtsbarkeit — NCD.2.2.03.c"
+          }
+        ],
+        "id": "NCD.2.2.03",
+        "title": "Gerichtsbarkeit"
+      },
+      {
+        "controls": [
+          {
+            "id": "NCD.2.2.04.a",
+            "parts": [
+              {
+                "id": "NCD.2.2.04.a-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung MUSS prüfen, ob die dienstlichen Daten an den vertraglich zugesicherten Lokationen verarbeitet werden dürfen. Hierzu MUSS die Einrichtung die Ergebnisse der Datenkategorisierung und der Risikoanalyse, das mögliche Risiko eines fremdstaatlichen Zugriffs (z. B. durch Nachrichtendienste oder Ermittlungsbehörden) sowie weitere Anforderungen (z. B. aus Gesetzen, Verordnungen, Beschlüssen oder anderen Quellen) bewerten."
+              }
+            ],
+            "title": "Lokation der Datenverarbeitung — NCD.2.2.04.a"
+          },
+          {
+            "id": "NCD.2.2.04.b",
+            "parts": [
+              {
+                "id": "NCD.2.2.04.b-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung MUSS sämtliche Lokationen, an denen der Cloud-Diensteanbieter mit dem Cloud-Dienst dienstliche Daten speichert und verarbeitet, vertraglich festlegen. Dabei MUSS die Einrichtung auch Datensicherungen berücksichtigen, da diese ggf. an Drittlokationen durchgeführt werden."
+              },
+              {
+                "id": "NCD.2.2.04.b-guidance",
+                "name": "guidance",
+                "prose": "IT-Grundschutz-Kompendium 2022 \nOPS.2.2.A9"
+              }
+            ],
+            "title": "Lokation der Datenverarbeitung — NCD.2.2.04.b"
+          }
+        ],
+        "id": "NCD.2.2.04",
+        "title": "Lokation der Datenverarbeitung"
+      },
+      {
+        "controls": [
+          {
+            "controls": [
+              {
+                "id": "NCD.2.2.05.a.i",
+                "parts": [
+                  {
+                    "id": "NCD.2.2.05.a.i-stmt",
+                    "name": "statement",
+                    "prose": "Die Einrichtung MUSS beim Festlegen von Vertragsstrafen und Haftungsfragen auf ein angemessenes Verhältnis zum ermittelten Schutzbedarf der mit dem Cloud-Dienst verarbeiteten dienstlichen Daten achten."
+                  }
+                ],
+                "title": "Meldepflicht sicherheitsrelevanter Vorfälle — NCD.2.2.05.a.i"
+              },
+              {
+                "id": "NCD.2.2.05.a.ii",
+                "parts": [
+                  {
+                    "id": "NCD.2.2.05.a.ii-stmt",
+                    "name": "statement",
+                    "prose": "Beim Festlegen von Vertragsstrafen und Haftungsregelungen sind die aus rechtlicher Sicht zulässigen Grenzen zu berücksichtigen. Die Einrichtung SOLLTE bei der Ansetzung von Vertragsstrafen 5% des Auftragsvolumens nicht unterschreiten."
+                  }
+                ],
+                "title": "Meldepflicht sicherheitsrelevanter Vorfälle — NCD.2.2.05.a.ii"
+              }
+            ],
+            "id": "NCD.2.2.05.a",
+            "parts": [
+              {
+                "id": "NCD.2.2.05.a-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung MUSS die Pflichten des Cloud-Diensteanbieters, sicherheitsrelevante Vorfälle (sowie ggf. andere Vorfälle) gegenüber der Einrichtung zu melden, vertraglich regeln."
+              }
+            ],
+            "title": "Meldepflicht sicherheitsrelevanter Vorfälle — NCD.2.2.05.a"
+          }
+        ],
+        "id": "NCD.2.2.05",
+        "title": "Meldepflicht sicherheitsrelevanter Vorfälle"
+      },
+      {
+        "controls": [
+          {
+            "id": "NCD.2.2.06.a",
+            "parts": [
+              {
+                "id": "NCD.2.2.06.a-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung MUSS dem Anwendungsfall angemessene Kündigungsfristen festlegen."
+              },
+              {
+                "id": "NCD.2.2.06.a-guidance",
+                "name": "guidance",
+                "prose": "IT-Grundschutz-Kompendium 2022 \nOPS.2.2.A9 \u0026 OPS.2.2.A14"
+              }
+            ],
+            "title": "Beendigung des Vertragsverhältnisses — NCD.2.2.06.a"
+          },
+          {
+            "id": "NCD.2.2.06.b",
+            "parts": [
+              {
+                "id": "NCD.2.2.06.b-stmt",
+                "name": "statement",
+                "prose": "Soweit rechtlich möglich, MUSS die Einrichtung kurzfristige einseitige Kündigungs- oder Zurückbehaltungsrechte an den Leistungen zu Lasten der Einrichtung ausschließen."
+              }
+            ],
+            "title": "Beendigung des Vertragsverhältnisses — NCD.2.2.06.b"
+          }
+        ],
+        "id": "NCD.2.2.06",
+        "title": "Beendigung des Vertragsverhältnisses"
+      },
+      {
+        "controls": [
+          {
+            "id": "NCD.2.2.07.a",
+            "parts": [
+              {
+                "id": "NCD.2.2.07.a-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung MUSS mit dem Cloud-Diensteanbieter vertraglich regeln, wie dieser die mit dem Cloud-Dienst verarbeiteten dienstlichen Daten nach Beendigung der Nutzung an die Einrichtung übergibt (z. B. Fristen, Datenformat, Datenträger, Protokolle)."
+              }
+            ],
+            "title": "Regelung der Datenrückgabe und Datenlöschung — NCD.2.2.07.a"
+          },
+          {
+            "id": "NCD.2.2.07.b",
+            "parts": [
+              {
+                "id": "NCD.2.2.07.b-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung MUSS mit dem Cloud-Diensteanbieter vertraglich regeln, welche Maßnahmen dieser zur Löschung der dienstlichen Daten durchführt. Dabei MUSS die Einrichtung sicherstellen, dass die Maßnahmen dem zuvor ermittelten Schutzbedarf entsprechen."
+              },
+              {
+                "id": "NCD.2.2.07.b-guidance",
+                "name": "guidance",
+                "prose": "IT-Grundschutz-Kompendium 2022 \nOPS.2.2.A9"
+              }
+            ],
+            "title": "Regelung der Datenrückgabe und Datenlöschung — NCD.2.2.07.b"
+          }
+        ],
+        "id": "NCD.2.2.07",
+        "title": "Regelung der Datenrückgabe und Datenlöschung"
+      },
+      {
+        "controls": [
+          {
+            "id": "NCD.2.3.01.a",
+            "parts": [
+              {
+                "id": "NCD.2.3.01.a-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung MUSS den externen Cloud-Dienst in ihr eigenes Informationssicherheits-managementsystem (ISMS) einbinden."
+              },
+              {
+                "id": "NCD.2.3.01.a-guidance",
+                "name": "guidance",
+                "prose": "IT-Grundschutz-Kompendium 2022 \nOPS.2.2.A12"
+              }
+            ],
+            "title": "Einbindung in das ISMS — NCD.2.3.01.a"
+          },
+          {
+            "id": "NCD.2.3.01.b",
+            "parts": [
+              {
+                "id": "NCD.2.3.01.b-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung MUSS die im C5-Bericht genannten korrespondierenden Kontrollen für Cloud-Kunden  in ihrem ISMS einrichten. Die Einrichtung SOLLTE darüber hinaus die im C5 beschriebenen korrespondierenden Kriterien für Kunden berücksichtigen."
+              }
+            ],
+            "title": "Einbindung in das ISMS — NCD.2.3.01.b"
+          }
+        ],
+        "id": "NCD.2.3.01",
+        "title": "Einbindung in das ISMS"
+      },
+      {
+        "controls": [
+          {
+            "controls": [
+              {
+                "id": "NCD.2.3.02.a.i",
+                "parts": [
+                  {
+                    "id": "NCD.2.3.02.a.i-stmt",
+                    "name": "statement",
+                    "prose": "Diese DÜRFEN über den Nutzungszeitraum KEINE zeitlichen Lücken enthalten."
+                  }
+                ],
+                "title": "Die Einrichtung MUSS die Nachweise und sonstige Berichte des Cloud-Diensteanbieters auswerten. — NCD.2.3.02.a.i"
+              },
+              {
+                "id": "NCD.2.3.02.a.ii",
+                "parts": [
+                  {
+                    "id": "NCD.2.3.02.a.ii-stmt",
+                    "name": "statement",
+                    "prose": "Ergeben sich aus der Auswertung Unklarheiten, MUSS die Einrichtung diesen nachgehen."
+                  }
+                ],
+                "title": "Die Einrichtung MUSS die Nachweise und sonstige Berichte des Cloud-Diensteanbieters auswerten. — NCD.2.3.02.a.ii"
+              }
+            ],
+            "id": "NCD.2.3.02.a",
+            "parts": [
+              {
+                "id": "NCD.2.3.02.a-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung MUSS die Nachweise und sonstige Berichte des Cloud-Diensteanbieters auswerten."
+              },
+              {
+                "id": "NCD.2.3.02.a-guidance",
+                "name": "guidance",
+                "prose": "IT-Grundschutz-Kompendium 2022 \nOPS.2.2.A13"
+              }
+            ],
+            "title": "Auswertung von Sicherheitsnachweisen — NCD.2.3.02.a"
+          },
+          {
+            "id": "NCD.2.3.02.b",
+            "parts": [
+              {
+                "id": "NCD.2.3.02.b-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung MUSS prüfen, ob festgestellten Unklarheiten durch Wahrnehmung der zugesicherten Prüf- und Kontrollrechte nachzugehen ist."
+              }
+            ],
+            "title": "Auswertung von Sicherheitsnachweisen — NCD.2.3.02.b"
+          }
+        ],
+        "id": "NCD.2.3.02",
+        "title": "Auswertung von Sicherheitsnachweisen"
+      },
+      {
+        "controls": [
+          {
+            "id": "NCD.2.3.03.a",
+            "parts": [
+              {
+                "id": "NCD.2.3.03.a-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung MUSS mindestens jährlich die Leistungsfähigkeiten ihrer eigenen IT-Infrastruktur, wie Performance der Netzanbindung und -verbindungen, vor dem Hintergrund der Nutzung des Cloud-Dienstes beurteilen."
+              }
+            ],
+            "title": "Prüfung der Leistungsfähigkeit — NCD.2.3.03.a"
+          },
+          {
+            "id": "NCD.2.3.03.b",
+            "parts": [
+              {
+                "id": "NCD.2.3.03.b-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung MUSS ggf. auftretende Abweichungen bewerten und auf diese durch geeignete Anpassungen an der eigenen IT-Infrastruktur und Netzanbindung reagieren."
+              }
+            ],
+            "title": "Prüfung der Leistungsfähigkeit — NCD.2.3.03.b"
+          },
+          {
+            "id": "NCD.2.3.03.c",
+            "parts": [
+              {
+                "id": "NCD.2.3.03.c-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung MUSS mindestens jährlich die Leistungsfähigkeiten des Cloud-Diensteanbieters und des Cloud-Dienstes sowie der Netzverbindung zum Cloud-Diensteanbieter beurteilen."
+              },
+              {
+                "id": "NCD.2.3.03.c-guidance",
+                "name": "guidance",
+                "prose": "IT-Grundschutz-Kompendium 2022 \nOPS.2.2.A12"
+              }
+            ],
+            "title": "Prüfung der Leistungsfähigkeit — NCD.2.3.03.c"
+          }
+        ],
+        "id": "NCD.2.3.03",
+        "title": "Prüfung der Leistungsfähigkeit"
+      },
+      {
+        "controls": [
+          {
+            "id": "NCD.2.3.04.a",
+            "parts": [
+              {
+                "id": "NCD.2.3.04.a-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung MUSS nachhalten, dass der Cloud-Diensteanbieter seinen vertraglichen Informationspflichten stets nachkommt. Dies gilt insbesondere bei\n - einer Eingliederung des Cloud-Diensteanbieters in ein anderes Unternehmen oder einen anderen Konzern oder in sonstigen Fällen des Wechsels des wirtschaftlichen Eigentums an ihm,\n - einem Austausch von Unterauftragnehmern oder Dritten (siehe hierzu auch NCD.2.2.02)."
+              }
+            ],
+            "title": "Informationspflichten — NCD.2.3.04.a"
+          },
+          {
+            "id": "NCD.2.3.04.b",
+            "parts": [
+              {
+                "id": "NCD.2.3.04.b-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung MUSS Meldungen des Cloud-Diensteanbieters über relevante Störungen und Cyber-Angriffe dokumentieren und auf diese gemäß der vereinbarten Mitwirkungspflichten nach NCD.2.2.01, Buchstabe c, reagieren."
+              }
+            ],
+            "title": "Informationspflichten — NCD.2.3.04.b"
+          }
+        ],
+        "id": "NCD.2.3.04",
+        "title": "Informationspflichten"
+      },
+      {
+        "controls": [
+          {
+            "id": "NCD.2.3.05.a",
+            "parts": [
+              {
+                "id": "NCD.2.3.05.a-stmt",
+                "name": "statement",
+                "prose": "Bietet der externe Cloud-Dienst eine Multi-Faktor-Authentisierung für Anmeldungen von Benutzenden (Log-in) an, SOLLTE die Einrichtung diese nutzen."
+              }
+            ],
+            "title": "Multi-Faktor-Authentisierung — NCD.2.3.05.a"
+          },
+          {
+            "id": "NCD.2.3.05.b",
+            "parts": [
+              {
+                "id": "NCD.2.3.05.b-stmt",
+                "name": "statement",
+                "prose": "Bietet der externe Cloud-Dienst eine Multi-Faktor-Authentisierung für Anmeldungen von Benutzenden mit privilegierten Rechten (Log-in), wie bspw. zur Administration, an, MUSS die Einrichtung diese nutzen."
+              }
+            ],
+            "title": "Multi-Faktor-Authentisierung — NCD.2.3.05.b"
+          }
+        ],
+        "id": "NCD.2.3.05",
+        "title": "Multi-Faktor-Authentisierung"
+      },
+      {
+        "controls": [
+          {
+            "id": "NCD.2.4.01.a",
+            "parts": [
+              {
+                "id": "NCD.2.4.01.a-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung MUSS prüfen, ob der Cloud-Diensteanbieter alle dienstlichen Daten in der vereinbarten Form zurück übergeben hat."
+              },
+              {
+                "id": "NCD.2.4.01.a-guidance",
+                "name": "guidance",
+                "prose": "IT-Grundschutz-Kompendium 2022 \nOPS.2.2.A14 \u0026 OPS.2.2.A15"
+              }
+            ],
+            "title": "Datenrückgabe bei Beendigung — NCD.2.4.01.a"
+          },
+          {
+            "id": "NCD.2.4.01.b",
+            "parts": [
+              {
+                "id": "NCD.2.4.01.b-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung MUSS die Übergabe dokumentieren."
+              },
+              {
+                "id": "NCD.2.4.01.b-guidance",
+                "name": "guidance",
+                "prose": "IT-Grundschutz-Kompendium 2022 \nOPS.2.2.A14"
+              }
+            ],
+            "title": "Datenrückgabe bei Beendigung — NCD.2.4.01.b"
+          }
+        ],
+        "id": "NCD.2.4.01",
+        "title": "Datenrückgabe bei Beendigung"
+      },
+      {
+        "controls": [
+          {
+            "id": "NCD.2.4.02.a",
+            "parts": [
+              {
+                "id": "NCD.2.4.02.a-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung MUSS sich vom Cloud-Diensteanbieter die gem. NCD.2.2.07 erfolgte Löschung aller dienstlichen Daten, einschließlich vorhandener Datensicherungen, bestätigen lassen.  Dies umfasst die Bestätigung, dass die dienstlichen Daten gemäß der vertraglich vereinbarten Verfahren gelöscht wurden."
+              },
+              {
+                "id": "NCD.2.4.02.a-guidance",
+                "name": "guidance",
+                "prose": "IT-Grundschutz-Kompendium 2022 \nOPS.2.2.A14 \u0026 OPS.2.2.A15"
+              }
+            ],
+            "title": "Datenlöschung bei Beendigung — NCD.2.4.02.a"
+          },
+          {
+            "id": "NCD.2.4.02.b",
+            "parts": [
+              {
+                "id": "NCD.2.4.02.b-stmt",
+                "name": "statement",
+                "prose": "Die Bestätigung nach Buchstabe a MUSS auch Daten und Datensicherungen bei möglichen Unterauftragnehmern (z. B. Subdienstleistungsunternehmen) und anderen externen Dritten umfassen."
+              },
+              {
+                "id": "NCD.2.4.02.b-guidance",
+                "name": "guidance",
+                "prose": "IT-Grundschutz-Kompendium 2022 \nOPS.2.2.A14"
+              }
+            ],
+            "title": "Datenlöschung bei Beendigung — NCD.2.4.02.b"
+          },
+          {
+            "id": "NCD.2.4.02.c",
+            "parts": [
+              {
+                "id": "NCD.2.4.02.c-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung MUSS die durch den Cloud-Diensteanbieter bestätigte Datenlöschung dokumentieren."
+              },
+              {
+                "id": "NCD.2.4.02.c-guidance",
+                "name": "guidance",
+                "prose": "IT-Grundschutz-Kompendium 2022 \nOPS.2.2.A14"
+              }
+            ],
+            "title": "Datenlöschung bei Beendigung — NCD.2.4.02.c"
+          }
+        ],
+        "id": "NCD.2.4.02",
+        "title": "Datenlöschung bei Beendigung"
+      },
+      {
+        "controls": [
+          {
+            "id": "NCD.2.5.01.a",
+            "parts": [
+              {
+                "id": "NCD.2.5.01.a-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung MUSS sicherstellen, dass die Mitnutzung mit der eigenen Strategie für die Cloud-Nutzung (siehe NCD.2.1.01) vereinbar ist."
+              }
+            ],
+            "title": "Mitnutzung externer Cloud-Dienste — NCD.2.5.01.a"
+          },
+          {
+            "id": "NCD.2.5.01.b",
+            "parts": [
+              {
+                "id": "NCD.2.5.01.b-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung MUSS die Sicherheitsanforderungen nach NCD.2.1.03, Buchstaben d bis i, umsetzen und einhalten."
+              }
+            ],
+            "title": "Mitnutzung externer Cloud-Dienste — NCD.2.5.01.b"
+          },
+          {
+            "controls": [
+              {
+                "id": "NCD.2.5.01.c.i",
+                "parts": [
+                  {
+                    "id": "NCD.2.5.01.c.i-stmt",
+                    "name": "statement",
+                    "prose": "Die Einrichtung MUSS bewerten, ob die dienstlichen Daten an diesen Lokationen verarbeitet werden dürfen."
+                  }
+                ],
+                "title": "Mitnutzung externer Cloud-Dienste — NCD.2.5.01.c.i"
+              },
+              {
+                "id": "NCD.2.5.01.c.ii",
+                "parts": [
+                  {
+                    "id": "NCD.2.5.01.c.ii-stmt",
+                    "name": "statement",
+                    "prose": "Für diese Bewertung MUSS die Einrichtung insbesondere die Ergebnisse der Datenkategorisierung sowie, sofern gegeben, weitere Anforderungen (z. B. aus Gesetzen, Verordnungen, Beschlüssen oder anderen Quellen) heranziehen."
+                  }
+                ],
+                "title": "Mitnutzung externer Cloud-Dienste — NCD.2.5.01.c.ii"
+              }
+            ],
+            "id": "NCD.2.5.01.c",
+            "parts": [
+              {
+                "id": "NCD.2.5.01.c-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung MUSS ermitteln, an welchen Lokationen mit dem externen Cloud-Dienst dienstliche Daten verarbeitet werden. Dies schließt auch Datensicherungen sowie, sofern gegeben, Unterauftragnehmer und Subdienstleister des Cloud-Diensteanbieters ein."
+              }
+            ],
+            "title": "Mitnutzung externer Cloud-Dienste — NCD.2.5.01.c"
+          },
+          {
+            "controls": [
+              {
+                "id": "NCD.2.5.01.d.i",
+                "parts": [
+                  {
+                    "id": "NCD.2.5.01.d.i-stmt",
+                    "name": "statement",
+                    "prose": "Die Einrichtung MUSS bewerten, ob diese Rechte mit den eigenen Sicherheitsanforderungen, die sie in der Sicherheitsrichtlinie und dem eigenen Sicherheitskonzept definiert hat, vereinbar sind."
+                  }
+                ],
+                "title": "Mitnutzung externer Cloud-Dienste — NCD.2.5.01.d.i"
+              },
+              {
+                "id": "NCD.2.5.01.d.ii",
+                "parts": [
+                  {
+                    "id": "NCD.2.5.01.d.ii-stmt",
+                    "name": "statement",
+                    "prose": "Die Einrichtung MUSS insbesondere die Nutzungsbedingungen und die Datenschutzerklärung des Cloud-Diensteanbieters auswerten."
+                  }
+                ],
+                "title": "Mitnutzung externer Cloud-Dienste — NCD.2.5.01.d.ii"
+              }
+            ],
+            "id": "NCD.2.5.01.d",
+            "parts": [
+              {
+                "id": "NCD.2.5.01.d-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung MUSS ermitteln, welche Rechte an den dienstlichen Daten dem Cloud-Diensteanbieter oder Dritten durch das Akzeptieren der vom Cloud-Diensteanbieter vorgegebenen Allgemeinen Geschäftsbedingungen (AGB), Datenschutzerklärung oder sonstigen Nutzungsbedingungen eingeräumt werden."
+              }
+            ],
+            "title": "Mitnutzung externer Cloud-Dienste — NCD.2.5.01.d"
+          },
+          {
+            "controls": [
+              {
+                "id": "NCD.2.5.01.e.i",
+                "parts": [
+                  {
+                    "id": "NCD.2.5.01.e.i-stmt",
+                    "name": "statement",
+                    "prose": "Die Einrichtung MUSS dann bewerten, ob die Verschlüsselung mit den Anforderungen aus den Ergebnissen der Datenkategorisierung vereinbar ist."
+                  }
+                ],
+                "title": "Mitnutzung externer Cloud-Dienste — NCD.2.5.01.e.i"
+              },
+              {
+                "id": "NCD.2.5.01.e.ii",
+                "parts": [
+                  {
+                    "id": "NCD.2.5.01.e.ii-stmt",
+                    "name": "statement",
+                    "prose": "Ist die vom Cloud-Diensteanbieter eingesetzte Verschlüsselung nicht geeignet, MUSS die Einrichtung prüfen, ob Anforderungen an die Vertraulichkeit der Daten über eine clientseitige Verschlüsselung erfüllt werden können."
+                  }
+                ],
+                "title": "Mitnutzung externer Cloud-Dienste — NCD.2.5.01.e.ii"
+              }
+            ],
+            "id": "NCD.2.5.01.e",
+            "parts": [
+              {
+                "id": "NCD.2.5.01.e-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung MUSS bewerten, ob und wie die dienstlichen Daten im externen Cloud-Dienst verschlüsselt zu speichern sind. Für die anschließende Bewertung SOLLTE die Einrichtung die identifizierten Risiken mit der eigenen Strategie für die Cloud-Nutzung (siehe NCD.2.1.01) abgleichen."
+              },
+              {
+                "id": "NCD.2.5.01.e-guidance",
+                "name": "guidance",
+                "prose": "IT-Grundschutz-Kompendium 2022 \nOPS.2.2.A17"
+              }
+            ],
+            "title": "Mitnutzung externer Cloud-Dienste — NCD.2.5.01.e"
+          },
+          {
+            "id": "NCD.2.5.01.f",
+            "parts": [
+              {
+                "id": "NCD.2.5.01.f-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung MUSS erheben, wie und wann Daten durch den Cloud-Anbieter gelöscht werden (z.B. Löschfristen). Die Einrichtung MUSS dann bewerten, ob dies mit den Anforderungen aus den Ergebnissen der Datenkategorisierung vereinbar ist."
+              }
+            ],
+            "title": "Mitnutzung externer Cloud-Dienste — NCD.2.5.01.f"
+          },
+          {
+            "controls": [
+              {
+                "id": "NCD.2.5.01.g.i",
+                "parts": [
+                  {
+                    "id": "NCD.2.5.01.g.i-stmt",
+                    "name": "statement",
+                    "prose": "Die Einrichtung MUSS bewerten, ob die hierfür einzuräumenden Zugriffs- und Ausführungsrechte mit der eigenen Sicherheitsrichtlinie vereinbar sind und inwiefern gesonderte Lizenzen für die Mitnutzung eingeholt werden müssen."
+                  }
+                ],
+                "title": "Mitnutzung externer Cloud-Dienste — NCD.2.5.01.g.i"
+              },
+              {
+                "id": "NCD.2.5.01.g.ii",
+                "parts": [
+                  {
+                    "id": "NCD.2.5.01.g.ii-stmt",
+                    "name": "statement",
+                    "prose": "Ist ein Zugriff über mobile Endgeräte geplant, MUSS die Einrichtung diese zentral verwalten. Die Vorgaben des Mindeststandards Mobile Device Management sind zu beachten."
+                  }
+                ],
+                "title": "Mitnutzung externer Cloud-Dienste — NCD.2.5.01.g.ii"
+              }
+            ],
+            "id": "NCD.2.5.01.g",
+            "parts": [
+              {
+                "id": "NCD.2.5.01.g-stmt",
+                "name": "statement",
+                "prose": "Die Einrichtung MUSS ermitteln, ob für die Mitnutzung auf den eigenen Arbeitsplatzcomputern oder mobilen Endgeräten zusätzliche Softwareinstallationen erforderlich sind."
+              }
+            ],
+            "title": "Mitnutzung externer Cloud-Dienste — NCD.2.5.01.g"
+          }
+        ],
+        "id": "NCD.2.5.01",
+        "title": "Mitnutzung externer Cloud-Dienste"
+      }
+    ],
+    "metadata": {
+      "last-modified": "2026-11-08T00:31:01Z",
+      "oscal-version": "1.2.3",
+      "title": "Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1)",
+      "version": "1"
+    },
+    "uuid": "d5f67ca7-f9ca-5b06-bdaf-5420ef6225b8"
+  }
+}

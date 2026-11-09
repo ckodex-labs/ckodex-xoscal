@@ -60,6 +60,7 @@ type Store struct {
 // Load reads derogations from disk. If the file does not exist, an empty store is returned.
 func Load(path string) (*Store, error) {
 	s := &Store{Entries: make([]DerogationEntry, 0)}
+	// #nosec G304 -- path is the explicit derogation ledger path selected by the CLI operator.
 	data, err := os.ReadFile(path)
 	if os.IsNotExist(err) {
 		return s, nil

@@ -1,0 +1,63 @@
+{
+  "assessment-results": {
+    "import-ap": {
+      "href": "./assessment-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:12Z",
+      "oscal-version": "1.2.3",
+      "title": "IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Assessment Results Template",
+      "version": "1"
+    },
+    "results": [
+      {
+        "description": "Assessment evaluation findings and observations for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "findings": [
+          {
+            "description": "Control isms.1.a1.1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "f14fd14b-8314-517d-8ef0-5d005f1647ee"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "isms.1.a1.1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for isms.1.a1.1",
+            "uuid": "84bb1d7b-b0de-5b8f-bd18-49cd940715dc"
+          }
+        ],
+        "observations": [
+          {
+            "collected": "2026-11-08T01:42:12Z",
+            "description": "Verified control isms.1.a1.1 (Übernahme der Gesamtverantwortung für Informationssicherheit durch die Leitung — ISMS.1.A1.1) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "f14fd14b-8314-517d-8ef0-5d005f1647ee"
+          }
+        ],
+        "reviewed-controls": {
+          "control-selections": [
+            {
+              "description": "All controls evaluated for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement",
+              "include-all": {}
+            }
+          ]
+        },
+        "start": "2026-11-08T01:42:12Z",
+        "title": "IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Assessment Results",
+        "uuid": "18c6e738-1856-5826-8ba3-cda6be773da8"
+      }
+    ],
+    "uuid": "13fec64e-4af3-5cfb-a003-a7acc3879eef"
+  }
+}

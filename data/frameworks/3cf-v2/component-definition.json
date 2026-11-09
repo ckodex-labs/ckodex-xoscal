@@ -1,0 +1,2313 @@
+{
+  "component-definition": {
+    "components": [
+      {
+        "control-implementations": [
+          {
+            "description": "Security control implementations for Cadre de Conformité Cyber France (3CF) pour l'aviation civile - v2.",
+            "implemented-requirements": [
+              {
+                "control-id": "node100",
+                "description": "Component capability addressing control node100 (Identification des risques — node100).",
+                "uuid": "8593d116-6ba8-5737-a1fb-b8e2fb718ae1"
+              },
+              {
+                "control-id": "node101",
+                "description": "Component capability addressing control node101 (Identification des risques — node101).",
+                "uuid": "ef9a87f5-f063-530c-bb5b-1576aefeca06"
+              },
+              {
+                "control-id": "node103",
+                "description": "Component capability addressing control node103 (Enfin, l’organisme : — node103).",
+                "uuid": "8f362efe-bb5d-51c5-bb54-c611e884acce"
+              },
+              {
+                "control-id": "node104",
+                "description": "Component capability addressing control node104 (détermine pour chaque fonction identifiée, seul ou en lien avec le ou les organismes en interface concernés : — node104).",
+                "uuid": "23918547-87d7-5bc5-9188-edfe719fa087"
+              },
+              {
+                "control-id": "node105",
+                "description": "Component capability addressing control node105 (détermine pour chaque fonction identifiée, seul ou en lien avec le ou les organismes en interface concernés : — node105).",
+                "uuid": "9666e13b-ad6c-55e9-8679-69a95ec595cf"
+              },
+              {
+                "control-id": "node106",
+                "description": "Component capability addressing control node106 (Enfin, l’organisme : — node106).",
+                "uuid": "2caca243-5d4f-568c-ac91-253d4cad2071"
+              },
+              {
+                "control-id": "node109",
+                "description": "Component capability addressing control node109 (Ensuite, l’organisme : — node109).",
+                "uuid": "a541a438-135b-5a77-8cc3-960e76781c59"
+              },
+              {
+                "control-id": "node11",
+                "description": "Component capability addressing control node11 (Stratégie et objectifs de sécurité de l’information — node11).",
+                "uuid": "c397ddd8-d48d-52b7-9970-6f32e6c95a31"
+              },
+              {
+                "control-id": "node110",
+                "description": "Component capability addressing control node110 (définit une échelle de vraisemblance (ou de probabilité d’occurrence) prenant en compte : — node110).",
+                "uuid": "43363636-38a2-58c2-9fce-58b7bc4244c8"
+              },
+              {
+                "control-id": "node111",
+                "description": "Component capability addressing control node111 (définit une échelle de vraisemblance (ou de probabilité d’occurrence) prenant en compte : — node111).",
+                "uuid": "efe5536b-5722-5db5-8c09-9af860ac27e3"
+              },
+              {
+                "control-id": "node112",
+                "description": "Component capability addressing control node112 (Ensuite, l’organisme : — node112).",
+                "uuid": "6a6c3fdd-3638-51b1-b838-aaaeb9994ad8"
+              },
+              {
+                "control-id": "node113",
+                "description": "Component capability addressing control node113 (identifie ses risques sur la base de l’analyse d’impacts en associant aux évènements redoutés : — node113).",
+                "uuid": "0d7eed5e-8aa7-541d-bc2a-72e0917cf7b1"
+              },
+              {
+                "control-id": "node114",
+                "description": "Component capability addressing control node114 (identifie ses risques sur la base de l’analyse d’impacts en associant aux évènements redoutés : — node114).",
+                "uuid": "56e071ce-3cd5-5b62-93c2-e97826349500"
+              },
+              {
+                "control-id": "node115",
+                "description": "Component capability addressing control node115 (identifie ses risques sur la base de l’analyse d’impacts en associant aux évènements redoutés : — node115).",
+                "uuid": "ae01c2ef-7d19-5ded-8857-97cb1689b912"
+              },
+              {
+                "control-id": "node118",
+                "description": "Component capability addressing control node118 (Enfin, l’organisme : — node118).",
+                "uuid": "5dc76533-6a03-56fc-8817-bfafbd9d4c8c"
+              },
+              {
+                "control-id": "node119",
+                "description": "Component capability addressing control node119 (associe à chaque risque identifié son niveau de risque selon l’échelle prédéfinie sur la base : — node119).",
+                "uuid": "15fc0170-7072-50d1-b4ca-6bd850929c21"
+              },
+              {
+                "control-id": "node12",
+                "description": "Component capability addressing control node12 (Le Dirigeant Responsable définit et approuve une politique de sécurité de l’information dont découle : — node12).",
+                "uuid": "03920e70-5826-5519-9e30-b1758a708164"
+              },
+              {
+                "control-id": "node120",
+                "description": "Component capability addressing control node120 (associe à chaque risque identifié son niveau de risque selon l’échelle prédéfinie sur la base : — node120).",
+                "uuid": "1f2513c2-bdbc-5558-bfd9-45d86e932976"
+              },
+              {
+                "control-id": "node121",
+                "description": "Component capability addressing control node121 (Enfin, l’organisme : — node121).",
+                "uuid": "09ec62ae-6efe-50df-b112-d700f08e9919"
+              },
+              {
+                "control-id": "node125",
+                "description": "Component capability addressing control node125 (formalise : — node125).",
+                "uuid": "3e22ea36-f8e6-53d6-84d8-75f12731996e"
+              },
+              {
+                "control-id": "node126",
+                "description": "Component capability addressing control node126 (formalise : — node126).",
+                "uuid": "684855b7-833e-5ff2-9d3a-afd73a0281d6"
+              },
+              {
+                "control-id": "node127",
+                "description": "Component capability addressing control node127 (formalise : — node127).",
+                "uuid": "9232ad49-2007-5508-94eb-e6ee4b1c0681"
+              },
+              {
+                "control-id": "node128",
+                "description": "Component capability addressing control node128 (formalise : — node128).",
+                "uuid": "575886ba-02d7-559e-bcc1-b7c3ba4fb572"
+              },
+              {
+                "control-id": "node129",
+                "description": "Component capability addressing control node129 (formalise : — node129).",
+                "uuid": "53446404-6d0d-5c6d-b7d1-277a3f8f45b1"
+              },
+              {
+                "control-id": "node13",
+                "description": "Component capability addressing control node13 (Le Dirigeant Responsable définit et approuve une politique de sécurité de l’information dont découle : — node13).",
+                "uuid": "f718a6ac-f521-52ac-a4b7-9a5e20bb62be"
+              },
+              {
+                "control-id": "node13-1",
+                "description": "Component capability addressing control node13-1 (Le Dirigeant Responsable définit et approuve une politique de sécurité de l’information dont découle : — node13-1).",
+                "uuid": "aa3b7021-406a-506e-9292-66b166fab5e2"
+              },
+              {
+                "control-id": "node130",
+                "description": "Component capability addressing control node130 (formalise : — node130).",
+                "uuid": "c730bfaa-6a0e-546d-ad5c-92aa9c887143"
+              },
+              {
+                "control-id": "node131",
+                "description": "Component capability addressing control node131 (formalise : — node131).",
+                "uuid": "bda95c20-efec-5753-98de-8dd39705507c"
+              },
+              {
+                "control-id": "node131-2",
+                "description": "Component capability addressing control node131-2 (formalise : — node131-2).",
+                "uuid": "cba5bdf3-9d5c-55b7-8763-8ab399df2b13"
+              },
+              {
+                "control-id": "node132",
+                "description": "Component capability addressing control node132 (L’organisme : — node132).",
+                "uuid": "3b812443-15c8-53d7-9ce9-1b4473b2093e"
+              },
+              {
+                "control-id": "node133",
+                "description": "Component capability addressing control node133 (L’organisme : — node133).",
+                "uuid": "5d5f5f80-42e1-599f-b5f6-bde1e92feced"
+              },
+              {
+                "control-id": "node137",
+                "description": "Component capability addressing control node137 (Sur la base des résultats de l’appréciation des risques, l’organisme : — node137).",
+                "uuid": "378eed12-2f2d-5374-8dd0-d39b31d584e5"
+              },
+              {
+                "control-id": "node137-3",
+                "description": "Component capability addressing control node137-3 (définit et justifie pour chacun des risques relatifs à la sûreté et/ou à la sécurité aérienne s’il : — node137-3).",
+                "uuid": "24a83e96-13fd-5077-9681-c7c152ac77f3"
+              },
+              {
+                "control-id": "node137-4",
+                "description": "Component capability addressing control node137-4 (définit et justifie pour chacun des risques relatifs à la sûreté et/ou à la sécurité aérienne s’il : — node137-4).",
+                "uuid": "7fc224d9-55d5-5bce-8bf4-01b7c584d75e"
+              },
+              {
+                "control-id": "node137-5",
+                "description": "Component capability addressing control node137-5 (définit et justifie pour chacun des risques relatifs à la sûreté et/ou à la sécurité aérienne s’il : — node137-5).",
+                "uuid": "7c416975-6f16-5b27-b736-2835d6626c90"
+              },
+              {
+                "control-id": "node137-6",
+                "description": "Component capability addressing control node137-6 (définit et justifie pour chacun des risques relatifs à la sûreté et/ou à la sécurité aérienne s’il : — node137-6).",
+                "uuid": "9d518b24-d2fc-5216-b413-1e2982ff9acf"
+              },
+              {
+                "control-id": "node138",
+                "description": "Component capability addressing control node138 (Sur la base des résultats de l’appréciation des risques, l’organisme : — node138).",
+                "uuid": "8abfc012-7ca6-5149-ae40-92a131569519"
+              },
+              {
+                "control-id": "node139",
+                "description": "Component capability addressing control node139 (Sur la base des résultats de l’appréciation des risques, l’organisme : — node139).",
+                "uuid": "72591b8a-c7e8-581f-aa11-66b595b189fb"
+              },
+              {
+                "control-id": "node141",
+                "description": "Component capability addressing control node141 (Mesures pour le traitement du risque — node141).",
+                "uuid": "0d4c0964-4b89-5793-b866-d67a0b365c81"
+              },
+              {
+                "control-id": "node142",
+                "description": "Component capability addressing control node142 (Mesures pour le traitement du risque — node142).",
+                "uuid": "2845ad6b-4b44-56ef-90f9-69695e51ffd3"
+              },
+              {
+                "control-id": "node143",
+                "description": "Component capability addressing control node143 (Mesures pour le traitement du risque — node143).",
+                "uuid": "9f40fb50-d9fa-51b2-a182-b95ff6d096cc"
+              },
+              {
+                "control-id": "node146",
+                "description": "Component capability addressing control node146 (Élaboration du plan de traitement des risques — node146).",
+                "uuid": "975c85e5-c04a-58ed-92ce-970e40023af4"
+              },
+              {
+                "control-id": "node147",
+                "description": "Component capability addressing control node147 (Élaboration du plan de traitement des risques — node147).",
+                "uuid": "011132f4-377a-5e5a-aacf-38453108e3a7"
+              },
+              {
+                "control-id": "node148",
+                "description": "Component capability addressing control node148 (Élaboration du plan de traitement des risques — node148).",
+                "uuid": "6b563785-deda-56e4-8e8c-00dda559798a"
+              },
+              {
+                "control-id": "node149",
+                "description": "Component capability addressing control node149 (Élaboration du plan de traitement des risques — node149).",
+                "uuid": "a724544b-43b7-501f-a45f-5f8ce5c6dd4a"
+              },
+              {
+                "control-id": "node151",
+                "description": "Component capability addressing control node151 (Évaluation des risques résiduels — node151).",
+                "uuid": "fdb94ff3-7e67-538b-8381-efc6fa19a7cb"
+              },
+              {
+                "control-id": "node155",
+                "description": "Component capability addressing control node155 (formalise : — node155).",
+                "uuid": "e4b57009-09f5-59bf-8e4a-e315efa8fb57"
+              },
+              {
+                "control-id": "node156",
+                "description": "Component capability addressing control node156 (formalise : — node156).",
+                "uuid": "adbcfa14-fa75-59e4-9b38-1f0456cd7ead"
+              },
+              {
+                "control-id": "node157",
+                "description": "Component capability addressing control node157 (L’organisme : — node157).",
+                "uuid": "39b2747a-9b52-5dbe-830d-d4bdc7a9f6e4"
+              },
+              {
+                "control-id": "node158",
+                "description": "Component capability addressing control node158 (L’organisme : — node158).",
+                "uuid": "e809f6fa-1c10-5d39-9943-eabfdc74e29f"
+              },
+              {
+                "control-id": "node16",
+                "description": "Component capability addressing control node16 (Le Dirigeant Responsable s’assure de la cohérence entre : — node16).",
+                "uuid": "b5e962a8-a6de-53ee-95e7-b70bcd6b22de"
+              },
+              {
+                "control-id": "node161",
+                "description": "Component capability addressing control node161 (L’organisme définit et met en œuvre des mesures techniques et organisationnelles visant à : — node161).",
+                "uuid": "4d236aba-b79d-58b8-b53a-da4c2e305a97"
+              },
+              {
+                "control-id": "node162",
+                "description": "Component capability addressing control node162 (L’organisme définit et met en œuvre des mesures techniques et organisationnelles visant à : — node162).",
+                "uuid": "a2e37083-9069-5bff-b402-eb009c6478e0"
+              },
+              {
+                "control-id": "node163",
+                "description": "Component capability addressing control node163 (L’organisme définit et met en œuvre des mesures techniques et organisationnelles visant à : — node163).",
+                "uuid": "d0a8bf04-a5f1-5cd3-a40d-563e9ee5ddb0"
+              },
+              {
+                "control-id": "node165",
+                "description": "Component capability addressing control node165 (Pour y parvenir, l’organisme peut s’appuyer, par exemple sur : — node165).",
+                "uuid": "4bfe4e3e-3bfc-5204-ad94-9a1a11339834"
+              },
+              {
+                "control-id": "node166",
+                "description": "Component capability addressing control node166 (Pour y parvenir, l’organisme peut s’appuyer, par exemple sur : — node166).",
+                "uuid": "d5a9e7ed-b804-5251-8ef1-64bce4264b59"
+              },
+              {
+                "control-id": "node167",
+                "description": "Component capability addressing control node167 (Gestion des incidents de sécurité de l’information — node167).",
+                "uuid": "001c9c53-4e3c-57b2-81e4-0e11812ba683"
+              },
+              {
+                "control-id": "node17",
+                "description": "Component capability addressing control node17 (Le Dirigeant Responsable s’assure de la cohérence entre : — node17).",
+                "uuid": "6345cb23-bfff-5398-8501-03b84e0e237c"
+              },
+              {
+                "control-id": "node170",
+                "description": "Component capability addressing control node170 (Identification des incidents redoutés de sécurité de l’information — node170).",
+                "uuid": "64235098-6a37-536a-8bb4-64da0e7d20a7"
+              },
+              {
+                "control-id": "node172",
+                "description": "Component capability addressing control node172 (L’organisme peut également s’appuyer sur un ou plusieurs référentiels, tels que : — node172).",
+                "uuid": "d35c193d-0a44-5ba6-a06d-4137ef22db84"
+              },
+              {
+                "control-id": "node173",
+                "description": "Component capability addressing control node173 (L’organisme peut également s’appuyer sur un ou plusieurs référentiels, tels que : — node173).",
+                "uuid": "cf4a9f84-63c0-5625-9e55-e47ef87a014f"
+              },
+              {
+                "control-id": "node174",
+                "description": "Component capability addressing control node174 (L’organisme peut également s’appuyer sur un ou plusieurs référentiels, tels que : — node174).",
+                "uuid": "97d07f3f-b553-56fb-980a-55e58a248000"
+              },
+              {
+                "control-id": "node175",
+                "description": "Component capability addressing control node175 (L’organisme peut également s’appuyer sur un ou plusieurs référentiels, tels que : — node175).",
+                "uuid": "4db2a150-f064-556b-9d83-6d67b2232acd"
+              },
+              {
+                "control-id": "node179",
+                "description": "Component capability addressing control node179 (Stratégie de collecte — node179).",
+                "uuid": "1584e226-f275-5a94-8e5e-ed58ec08fe01"
+              },
+              {
+                "control-id": "node180",
+                "description": "Component capability addressing control node180 (Stratégie de collecte — node180).",
+                "uuid": "1da3e474-45d8-5b0e-9563-4a938267742a"
+              },
+              {
+                "control-id": "node181",
+                "description": "Component capability addressing control node181 (Stratégie de collecte — node181).",
+                "uuid": "0682d332-6c6d-5359-9f15-fac44277f28a"
+              },
+              {
+                "control-id": "node183",
+                "description": "Component capability addressing control node183 (Pour y parvenir, l’organisme peut s’appuyer sur : — node183).",
+                "uuid": "56b6fcd9-d2df-5711-9bbd-5d81dbe616ff"
+              },
+              {
+                "control-id": "node184",
+                "description": "Component capability addressing control node184 (Pour y parvenir, l’organisme peut s’appuyer sur : — node184).",
+                "uuid": "0284ace4-1c61-59be-84bf-f8f07500c949"
+              },
+              {
+                "control-id": "node187",
+                "description": "Component capability addressing control node187 (L’organisme : — node187).",
+                "uuid": "cc07728b-baf7-59d6-82e4-0cd481386582"
+              },
+              {
+                "control-id": "node188",
+                "description": "Component capability addressing control node188 (L’organisme : — node188).",
+                "uuid": "a686914f-8019-59a2-b06c-7b3eb2cc086c"
+              },
+              {
+                "control-id": "node189",
+                "description": "Component capability addressing control node189 (en précise le fonctionnement, notamment : — node189).",
+                "uuid": "b1328f5d-e85a-5e7c-9744-1f97cafdc566"
+              },
+              {
+                "control-id": "node19",
+                "description": "Component capability addressing control node19 (Intégration ou articulation entre les systèmes de gestion — node19).",
+                "uuid": "850bc132-9bb1-593d-aa85-0a39a427b0f4"
+              },
+              {
+                "control-id": "node190",
+                "description": "Component capability addressing control node190 (en précise le fonctionnement, notamment : — node190).",
+                "uuid": "a10ea175-6cf4-5a90-b1ae-13d0fb11e2cb"
+              },
+              {
+                "control-id": "node191",
+                "description": "Component capability addressing control node191 (en précise le fonctionnement, notamment : — node191).",
+                "uuid": "37af8272-848c-5111-8660-bab8bc638bb3"
+              },
+              {
+                "control-id": "node192",
+                "description": "Component capability addressing control node192 (en précise le fonctionnement, notamment : — node192).",
+                "uuid": "6f89a02f-279f-5b94-8937-df477f7a7c32"
+              },
+              {
+                "control-id": "node193",
+                "description": "Component capability addressing control node193 (L’organisme : — node193).",
+                "uuid": "3d4d75d8-0417-5855-a242-bf47291f5520"
+              },
+              {
+                "control-id": "node194",
+                "description": "Component capability addressing control node194 (L’organisme : — node194).",
+                "uuid": "ab3ebed9-e9e7-59c4-a191-fa594b298155"
+              },
+              {
+                "control-id": "node195",
+                "description": "Component capability addressing control node195 (L’organisme : — node195).",
+                "uuid": "671fca2d-9b3f-5431-817a-40fa92bf3470"
+              },
+              {
+                "control-id": "node196",
+                "description": "Component capability addressing control node196 (L’organisme : — node196).",
+                "uuid": "a66ce23e-29c8-5fb1-857c-70873589e7f0"
+              },
+              {
+                "control-id": "node198",
+                "description": "Component capability addressing control node198 (L’organisme : — node198).",
+                "uuid": "0bda5156-6893-5673-9372-76db7d08175f"
+              },
+              {
+                "control-id": "node199",
+                "description": "Component capability addressing control node199 (L’organisme : — node199).",
+                "uuid": "c38eae76-974b-5439-b1fb-973a9ab95cfc"
+              },
+              {
+                "control-id": "node20",
+                "description": "Component capability addressing control node20 (Intégration ou articulation entre les systèmes de gestion — node20).",
+                "uuid": "2e236c00-be49-5a5e-860d-9015c2993448"
+              },
+              {
+                "control-id": "node200",
+                "description": "Component capability addressing control node200 (formalise la description de ce système et l’intègre ou y fait référence dans : — node200).",
+                "uuid": "3e8e2eab-5c9c-5196-b1fd-5353fbf8d3d0"
+              },
+              {
+                "control-id": "node201",
+                "description": "Component capability addressing control node201 (formalise la description de ce système et l’intègre ou y fait référence dans : — node201).",
+                "uuid": "8673608a-73d9-5ce0-afa7-0395d77c54c8"
+              },
+              {
+                "control-id": "node203",
+                "description": "Component capability addressing control node203 (Stratégie de détection — node203).",
+                "uuid": "c6df9d7d-cd95-5b5d-a461-39e2f743429e"
+              },
+              {
+                "control-id": "node205",
+                "description": "Component capability addressing control node205 (définit : — node205).",
+                "uuid": "d912cbb0-5bf8-5a72-b8d8-2034e3320571"
+              },
+              {
+                "control-id": "node206",
+                "description": "Component capability addressing control node206 (définit : — node206).",
+                "uuid": "01d59782-5c13-5d6f-bbba-26ea49398009"
+              },
+              {
+                "control-id": "node208",
+                "description": "Component capability addressing control node208 (s’appuyant sur : — node208).",
+                "uuid": "df6d22bd-267d-5c2d-a8be-18d91533944b"
+              },
+              {
+                "control-id": "node209",
+                "description": "Component capability addressing control node209 (s’appuyant sur : — node209).",
+                "uuid": "96f21224-58fc-5677-b766-13117e2c870a"
+              },
+              {
+                "control-id": "node21",
+                "description": "Component capability addressing control node21 (Intégration ou articulation entre les systèmes de gestion — node21).",
+                "uuid": "18f64584-f310-5be8-9f87-df79e517615c"
+              },
+              {
+                "control-id": "node210",
+                "description": "Component capability addressing control node210 (s’appuyant sur : — node210).",
+                "uuid": "35c978da-81f2-58d7-b0a5-502c8871e7da"
+              },
+              {
+                "control-id": "node211",
+                "description": "Component capability addressing control node211 (s’appuyant sur : — node211).",
+                "uuid": "8e604321-a090-5809-97b4-655732c3e259"
+              },
+              {
+                "control-id": "node212",
+                "description": "Component capability addressing control node212 (s’appuyant sur : — node212).",
+                "uuid": "995f6481-f0f4-5de8-b276-4f21dc6e6baa"
+              },
+              {
+                "control-id": "node213",
+                "description": "Component capability addressing control node213 (s’appuyant sur : — node213).",
+                "uuid": "ab2b61cf-2e6e-5e84-aa21-7c3500b547c8"
+              },
+              {
+                "control-id": "node214",
+                "description": "Component capability addressing control node214 (s’appuyant sur : — node214).",
+                "uuid": "cd02dab4-f057-5bd4-b436-de18cd0faa71"
+              },
+              {
+                "control-id": "node216",
+                "description": "Component capability addressing control node216 (en précisant pour chaque règle : — node216).",
+                "uuid": "1b587729-6ad4-59ba-99ce-d695f6db059f"
+              },
+              {
+                "control-id": "node217",
+                "description": "Component capability addressing control node217 (en précisant pour chaque règle : — node217).",
+                "uuid": "84ec3fe4-35c5-56e8-b981-dea0ffbfa19c"
+              },
+              {
+                "control-id": "node218",
+                "description": "Component capability addressing control node218 (en précisant pour chaque règle : — node218).",
+                "uuid": "c41a96ab-b53e-537f-b53c-a31c28e3da32"
+              },
+              {
+                "control-id": "node219",
+                "description": "Component capability addressing control node219 (en précisant pour chaque règle : — node219).",
+                "uuid": "6d51d4be-b3d2-5acf-92a7-7c60d0500137"
+              },
+              {
+                "control-id": "node220",
+                "description": "Component capability addressing control node220 (Stratégie de détection — node220).",
+                "uuid": "cfde5f5a-e9c1-5186-9cc1-4a61fa328f45"
+              },
+              {
+                "control-id": "node221",
+                "description": "Component capability addressing control node221 (Stratégie de détection — node221).",
+                "uuid": "846cb403-e8b9-54da-983a-aa8fe7c62688"
+              },
+              {
+                "control-id": "node223",
+                "description": "Component capability addressing control node223 (Qualification — node223).",
+                "uuid": "4236a02d-d184-56ba-bcf9-08d55f638749"
+              },
+              {
+                "control-id": "node224",
+                "description": "Component capability addressing control node224 (Qualification — node224).",
+                "uuid": "33543710-b0c4-5d56-acaa-1187e4698f5f"
+              },
+              {
+                "control-id": "node225",
+                "description": "Component capability addressing control node225 (Qualification — node225).",
+                "uuid": "7341fd6a-27cd-5a3a-894e-fd3e7e553bf2"
+              },
+              {
+                "control-id": "node226",
+                "description": "Component capability addressing control node226 (Qualification — node226).",
+                "uuid": "43884c76-bfab-5660-9b8a-a06f2744594b"
+              },
+              {
+                "control-id": "node227",
+                "description": "Component capability addressing control node227 (identifie les conséquences en matière de sécurité aérienne et en détermine : — node227).",
+                "uuid": "67617ce8-8d11-5a94-b9a3-4cae8a918d9a"
+              },
+              {
+                "control-id": "node228",
+                "description": "Component capability addressing control node228 (identifie les conséquences en matière de sécurité aérienne et en détermine : — node228).",
+                "uuid": "a55ec14c-6504-5d7a-8d1f-36b12064aba7"
+              },
+              {
+                "control-id": "node229",
+                "description": "Component capability addressing control node229 (Qualification — node229).",
+                "uuid": "b437adab-c306-565d-a435-4afa560b1ca7"
+              },
+              {
+                "control-id": "node230",
+                "description": "Component capability addressing control node230 (Qualification — node230).",
+                "uuid": "89167b25-d32d-5546-b6ec-f2f16068180a"
+              },
+              {
+                "control-id": "node231",
+                "description": "Component capability addressing control node231 (Qualification — node231).",
+                "uuid": "2046bed6-9630-5030-99e1-bba20886e886"
+              },
+              {
+                "control-id": "node234",
+                "description": "Component capability addressing control node234 (Pour chaque événement qualifié en incident de sécurité, l’organisme notifie : — node234).",
+                "uuid": "66019914-03e8-53d0-ac03-ab3947ec0d79"
+              },
+              {
+                "control-id": "node236",
+                "description": "Component capability addressing control node236 (le cas échéant : — node236).",
+                "uuid": "e21d223d-c95e-5e73-9a8a-008cb1ee880e"
+              },
+              {
+                "control-id": "node237",
+                "description": "Component capability addressing control node237 (le cas échéant : — node237).",
+                "uuid": "172c5595-0f8f-582d-9808-205ae2fba57b"
+              },
+              {
+                "control-id": "node239",
+                "description": "Component capability addressing control node239 (Réponse aux incidents de sécurité de l’information — node239).",
+                "uuid": "672197e3-cbf2-53ce-bdac-0c10e88643d3"
+              },
+              {
+                "control-id": "node241",
+                "description": "Component capability addressing control node241 (précise : — node241).",
+                "uuid": "f62607dc-d671-55f4-8b0c-a26400f1f82e"
+              },
+              {
+                "control-id": "node242",
+                "description": "Component capability addressing control node242 (précise : — node242).",
+                "uuid": "f4884992-83cf-5a44-89dd-71ff4550ebb3"
+              },
+              {
+                "control-id": "node243",
+                "description": "Component capability addressing control node243 (L’organisme définit un mécanisme de réponse à incident qui : — node243).",
+                "uuid": "90b3a094-11ab-5f2f-8ef3-077df3aec1ed"
+              },
+              {
+                "control-id": "node244",
+                "description": "Component capability addressing control node244 (L’organisme définit un mécanisme de réponse à incident qui : — node244).",
+                "uuid": "db14fa14-efa9-5a47-b611-dad0527e5e5d"
+              },
+              {
+                "control-id": "node245",
+                "description": "Component capability addressing control node245 (L’organisme définit un mécanisme de réponse à incident qui : — node245).",
+                "uuid": "954ffa56-c3fe-5e7e-84ad-228722b63e84"
+              },
+              {
+                "control-id": "node246",
+                "description": "Component capability addressing control node246 (L’organisme définit un mécanisme de réponse à incident qui : — node246).",
+                "uuid": "1e0d3d45-2957-5bd3-89f1-ad4c3f173923"
+              },
+              {
+                "control-id": "node247",
+                "description": "Component capability addressing control node247 (L’organisme définit un mécanisme de réponse à incident qui : — node247).",
+                "uuid": "3729a944-10a6-5013-b0c0-d3da9bbd81af"
+              },
+              {
+                "control-id": "node249",
+                "description": "Component capability addressing control node249 (Remédiation — node249).",
+                "uuid": "3a1380bb-5aa3-5be0-9d15-3e4f582b6957"
+              },
+              {
+                "control-id": "node25",
+                "description": "Component capability addressing control node25 (diffusée et promue de manière appropriée : — node25).",
+                "uuid": "290d5f2d-afef-5670-aa60-1781a4081974"
+              },
+              {
+                "control-id": "node250",
+                "description": "Component capability addressing control node250 (L’organisme définit des plans de remédiation à actionner en cas d’incident, qui : — node250).",
+                "uuid": "b1e54d3b-4bcd-5124-a2a5-b6ad344c152b"
+              },
+              {
+                "control-id": "node251",
+                "description": "Component capability addressing control node251 (L’organisme définit des plans de remédiation à actionner en cas d’incident, qui : — node251).",
+                "uuid": "109fcfca-c8d6-56a1-aedf-f044fcf634e0"
+              },
+              {
+                "control-id": "node252",
+                "description": "Component capability addressing control node252 (L’organisme définit des plans de remédiation à actionner en cas d’incident, qui : — node252).",
+                "uuid": "364c2a7b-c5b0-5547-87fe-6af6b1fc2d6d"
+              },
+              {
+                "control-id": "node254",
+                "description": "Component capability addressing control node254 (précise les actions à mettre en œuvre pour : — node254).",
+                "uuid": "65d54970-42b5-53b7-aa7a-2466db73be59"
+              },
+              {
+                "control-id": "node255",
+                "description": "Component capability addressing control node255 (précise les actions à mettre en œuvre pour : — node255).",
+                "uuid": "7edbebf7-2c43-51e7-8cc0-46d34c86c310"
+              },
+              {
+                "control-id": "node256",
+                "description": "Component capability addressing control node256 (précise les actions à mettre en œuvre pour : — node256).",
+                "uuid": "75167df1-e8c2-5afb-ab6d-90d9a67fb984"
+              },
+              {
+                "control-id": "node257",
+                "description": "Component capability addressing control node257 (L’organisme définit des plans de remédiation à actionner en cas d’incident, qui : — node257).",
+                "uuid": "3ee85d70-c2a2-5da7-9286-1931d4f7a2de"
+              },
+              {
+                "control-id": "node258",
+                "description": "Component capability addressing control node258 (L’organisme définit des plans de remédiation à actionner en cas d’incident, qui : — node258).",
+                "uuid": "9a6539c4-0fa0-55d5-a1b1-572a7d2e0df2"
+              },
+              {
+                "control-id": "node26",
+                "description": "Component capability addressing control node26 (diffusée et promue de manière appropriée : — node26).",
+                "uuid": "b785a54f-342e-5b52-80cb-c1ee584091c3"
+              },
+              {
+                "control-id": "node261",
+                "description": "Component capability addressing control node261 (L’organisme formalise la liste des mesures techniques et organisationnelles visant à : — node261).",
+                "uuid": "ac842ab5-a526-5a53-9f50-108f5618fa4e"
+              },
+              {
+                "control-id": "node262",
+                "description": "Component capability addressing control node262 (L’organisme formalise la liste des mesures techniques et organisationnelles visant à : — node262).",
+                "uuid": "76c30fb7-29fd-5424-b1d0-45b856d2f2e4"
+              },
+              {
+                "control-id": "node263",
+                "description": "Component capability addressing control node263 (L’organisme formalise la liste des mesures techniques et organisationnelles visant à : — node263).",
+                "uuid": "0b84dd5d-2eab-528a-9031-3c75d2464a0c"
+              },
+              {
+                "control-id": "node265",
+                "description": "Component capability addressing control node265 (Résultat de la gestion des incidents de sécurité de l’information — node265).",
+                "uuid": "390a80d1-aedd-590c-91bc-190f4eb8784c"
+              },
+              {
+                "control-id": "node266",
+                "description": "Component capability addressing control node266 (Résultat de la gestion des incidents de sécurité de l’information — node266).",
+                "uuid": "89480619-d6c4-5503-9404-7502e54e769c"
+              },
+              {
+                "control-id": "node267",
+                "description": "Component capability addressing control node267 (Résultat de la gestion des incidents de sécurité de l’information — node267).",
+                "uuid": "3aa8c39f-1f92-5958-bf82-beae8783656f"
+              },
+              {
+                "control-id": "node268",
+                "description": "Component capability addressing control node268 (Résultat de la gestion des incidents de sécurité de l’information — node268).",
+                "uuid": "c991e2cf-363f-5350-b287-3f45276ebd2a"
+              },
+              {
+                "control-id": "node268-7",
+                "description": "Component capability addressing control node268-7 (Résultat de la gestion des incidents de sécurité de l’information — node268-7).",
+                "uuid": "15f78eaa-bd4a-5b24-a0fa-d81f7c4bac6d"
+              },
+              {
+                "control-id": "node269",
+                "description": "Component capability addressing control node269 (Résultat de la gestion des incidents de sécurité de l’information — node269).",
+                "uuid": "d67929b0-0866-5d47-8620-f8faaa4c3d2d"
+              },
+              {
+                "control-id": "node27",
+                "description": "Component capability addressing control node27 (Le Dirigeant Responsable s’assure que la politique de sécurité de l’information est : — node27).",
+                "uuid": "5772b535-5d57-560b-a6b2-d328bffd562b"
+              },
+              {
+                "control-id": "node276",
+                "description": "Component capability addressing control node276 (Organismes présentant un risque pour la sûreté aérienne — node276).",
+                "uuid": "2044a7f2-70c4-51dd-8e27-04ce47c67faa"
+              },
+              {
+                "control-id": "node277",
+                "description": "Component capability addressing control node277 (Organismes présentant un risque pour la sûreté aérienne — node277).",
+                "uuid": "cf60f9e3-9059-51c6-9289-dee2aded9933"
+              },
+              {
+                "control-id": "node278",
+                "description": "Component capability addressing control node278 (précise les exigences à leur faire appliquer. Elles sont d’ordre : — node278).",
+                "uuid": "f7f08e6e-f64a-5f0a-93b5-89319d0af887"
+              },
+              {
+                "control-id": "node279",
+                "description": "Component capability addressing control node279 (règlementaire, notamment celles en matière de : — node279).",
+                "uuid": "9185a897-1b7f-5eee-871e-0d43fcc6e9cb"
+              },
+              {
+                "control-id": "node28",
+                "description": "Component capability addressing control node28 (formalisée et intégrée ou référencée dans : — node28).",
+                "uuid": "c6adc32f-24c7-57e8-8a4a-97d58d29875b"
+              },
+              {
+                "control-id": "node280",
+                "description": "Component capability addressing control node280 (règlementaire, notamment celles en matière de : — node280).",
+                "uuid": "275aca86-b0c6-5c5f-9941-df3c5f5504a0"
+              },
+              {
+                "control-id": "node281",
+                "description": "Component capability addressing control node281 (précise les exigences à leur faire appliquer. Elles sont d’ordre : — node281).",
+                "uuid": "db380fac-1176-5da4-9f68-95dd8ddda066"
+              },
+              {
+                "control-id": "node282",
+                "description": "Component capability addressing control node282 (contractuel, notamment : — node282).",
+                "uuid": "faad8f06-8cce-5fa2-8583-8862353a994f"
+              },
+              {
+                "control-id": "node283",
+                "description": "Component capability addressing control node283 (contractuel, notamment : — node283).",
+                "uuid": "7856f51f-ce31-5fec-88f5-5e63d942be31"
+              },
+              {
+                "control-id": "node284",
+                "description": "Component capability addressing control node284 (Organismes présentant un risque pour la sûreté aérienne — node284).",
+                "uuid": "645d5920-240e-5cec-a7d3-6321cacbbc03"
+              },
+              {
+                "control-id": "node288",
+                "description": "Component capability addressing control node288 (Organismes en interface détenant un agrément ou un certificat de sécurité — node288).",
+                "uuid": "5c64380c-743f-5ea7-90a3-38b15fafc40c"
+              },
+              {
+                "control-id": "node289",
+                "description": "Component capability addressing control node289 (Organismes en interface détenant un agrément ou un certificat de sécurité — node289).",
+                "uuid": "0933d2fc-b9d3-5163-890b-b3e8154f7ac8"
+              },
+              {
+                "control-id": "node29",
+                "description": "Component capability addressing control node29 (formalisée et intégrée ou référencée dans : — node29).",
+                "uuid": "414c689f-8bdf-5e25-b1ed-50adb92779c6"
+              },
+              {
+                "control-id": "node290",
+                "description": "Component capability addressing control node290 (définit un cadre de travail avec ces derniers, qui prévoit : — node290).",
+                "uuid": "2614222a-848f-509c-89e0-5bad0f83eaae"
+              },
+              {
+                "control-id": "node291",
+                "description": "Component capability addressing control node291 (définit un cadre de travail avec ces derniers, qui prévoit : — node291).",
+                "uuid": "fcbcc36b-4e47-5699-ad1d-16cd1bb15931"
+              },
+              {
+                "control-id": "node292",
+                "description": "Component capability addressing control node292 (définit un cadre de travail avec ces derniers, qui prévoit : — node292).",
+                "uuid": "62477081-1c44-55ca-895a-3b05e5b212b8"
+              },
+              {
+                "control-id": "node293",
+                "description": "Component capability addressing control node293 (définit un cadre de travail avec ces derniers, qui prévoit : — node293).",
+                "uuid": "0f5f45ad-ee12-5b1d-ab94-f13f69064e3f"
+              },
+              {
+                "control-id": "node294",
+                "description": "Component capability addressing control node294 (Organismes en interface détenant un agrément ou un certificat de sécurité — node294).",
+                "uuid": "39587cc2-6faf-5576-ad19-f6975ff06ff2"
+              },
+              {
+                "control-id": "node297",
+                "description": "Component capability addressing control node297 (Organismes en interface ne détenant pas d’agrément ou de certificat de sécurité — node297).",
+                "uuid": "05f5264f-8323-5d5f-af6b-e18a2fa7bfef"
+              },
+              {
+                "control-id": "node299",
+                "description": "Component capability addressing control node299 (définit : — node299).",
+                "uuid": "38b73d91-d317-50bb-a553-a4dd7d5df7ea"
+              },
+              {
+                "control-id": "node300",
+                "description": "Component capability addressing control node300 (Lorsque cela est possible, un cadre de travail avec ces derniers qui prévoit : — node300).",
+                "uuid": "9de6ad14-3559-510b-8dc7-6c0d95a2efd0"
+              },
+              {
+                "control-id": "node301",
+                "description": "Component capability addressing control node301 (Lorsque cela est possible, un cadre de travail avec ces derniers qui prévoit : — node301).",
+                "uuid": "108d287e-1dc4-59c3-85ec-d31d12877af2"
+              },
+              {
+                "control-id": "node302",
+                "description": "Component capability addressing control node302 (Lorsque cela est possible, un cadre de travail avec ces derniers qui prévoit : — node302).",
+                "uuid": "aa98db42-d400-5594-892a-62d91158367d"
+              },
+              {
+                "control-id": "node303",
+                "description": "Component capability addressing control node303 (Lorsque cela est possible, un cadre de travail avec ces derniers qui prévoit : — node303).",
+                "uuid": "204e031c-c1aa-5a25-ae52-62c7470b1bde"
+              },
+              {
+                "control-id": "node304",
+                "description": "Component capability addressing control node304 (définit : — node304).",
+                "uuid": "36a73248-2c04-52ff-83cc-8d7168851843"
+              },
+              {
+                "control-id": "node305",
+                "description": "Component capability addressing control node305 (Organismes en interface ne détenant pas d’agrément ou de certificat de sécurité — node305).",
+                "uuid": "7ad17b8e-421d-5e27-a281-d6f3bf7e6a1d"
+              },
+              {
+                "control-id": "node307",
+                "description": "Component capability addressing control node307 (Sous-traitance des activités du SMSI — node307).",
+                "uuid": "2e6a09d6-c93c-56d2-a938-a771b000d364"
+              },
+              {
+                "control-id": "node308",
+                "description": "Component capability addressing control node308 (Sous-traitance des activités du SMSI — node308).",
+                "uuid": "ebb02512-efa1-561b-8c69-cb2edeb62bb7"
+              },
+              {
+                "control-id": "node309",
+                "description": "Component capability addressing control node309 (Sous-traitance des activités du SMSI — node309).",
+                "uuid": "150feb1a-1939-5a9e-bf29-cb577b97214b"
+              },
+              {
+                "control-id": "node310",
+                "description": "Component capability addressing control node310 (Sous-traitance des activités du SMSI — node310).",
+                "uuid": "1f019f68-1ae0-5bfe-aa57-09d7154392a9"
+              },
+              {
+                "control-id": "node311",
+                "description": "Component capability addressing control node311 (Sous-traitance des activités du SMSI — node311).",
+                "uuid": "3fb32631-7c9b-5238-a8e4-a336a760d746"
+              },
+              {
+                "control-id": "node312",
+                "description": "Component capability addressing control node312 (Sous-traitance des activités du SMSI — node312).",
+                "uuid": "29227681-2f3e-5090-9ba1-96db8f394d88"
+              },
+              {
+                "control-id": "node313",
+                "description": "Component capability addressing control node313 (Sous-traitance des activités du SMSI — node313).",
+                "uuid": "56b8c258-3230-56c3-897e-d3d215b602ec"
+              },
+              {
+                "control-id": "node314",
+                "description": "Component capability addressing control node314 (Dans le cas contraire, l’organisme : — node314).",
+                "uuid": "11834217-51ea-5e53-8f04-7b1324d999fe"
+              },
+              {
+                "control-id": "node315",
+                "description": "Component capability addressing control node315 (Dans le cas contraire, l’organisme : — node315).",
+                "uuid": "1b3d9b53-be8a-52fa-8f67-1390505e48b4"
+              },
+              {
+                "control-id": "node316",
+                "description": "Component capability addressing control node316 (Dans le cas contraire, l’organisme : — node316).",
+                "uuid": "ba726def-6d68-5745-8b68-c111ba7a461d"
+              },
+              {
+                "control-id": "node317",
+                "description": "Component capability addressing control node317 (Dans le cas contraire, l’organisme : — node317).",
+                "uuid": "bb14961a-7ff4-54dd-aa58-7d9a9791ef85"
+              },
+              {
+                "control-id": "node318",
+                "description": "Component capability addressing control node318 (Dans le cas contraire, l’organisme : — node318).",
+                "uuid": "5fa03c61-cc40-5cf2-b93a-7d88854c4f4f"
+              },
+              {
+                "control-id": "node319",
+                "description": "Component capability addressing control node319 (élabore un contrat précisant : — node319).",
+                "uuid": "a53e7c49-6d01-5c44-a6b7-edd5b583c661"
+              },
+              {
+                "control-id": "node32",
+                "description": "Component capability addressing control node32 (Le Dirigeant Responsable : — node32).",
+                "uuid": "4370a8f8-c111-51bf-a078-8771c9c26c7f"
+              },
+              {
+                "control-id": "node320",
+                "description": "Component capability addressing control node320 (l’organisation de la prestation : — node320).",
+                "uuid": "ce34f3a0-431e-5620-972f-f6b6352df62a"
+              },
+              {
+                "control-id": "node321",
+                "description": "Component capability addressing control node321 (l’organisation de la prestation : — node321).",
+                "uuid": "a1a28474-c75e-519e-86fe-10ad166c325b"
+              },
+              {
+                "control-id": "node322",
+                "description": "Component capability addressing control node322 (l’organisation de la prestation : — node322).",
+                "uuid": "5dc1bb24-512b-5d6d-b4ed-8f30cdf1d8d3"
+              },
+              {
+                "control-id": "node323",
+                "description": "Component capability addressing control node323 (élabore un contrat précisant : — node323).",
+                "uuid": "db13c8f6-c60a-5c8d-8e6c-4c7fbf3dc1e0"
+              },
+              {
+                "control-id": "node324",
+                "description": "Component capability addressing control node324 (élabore un contrat précisant : — node324).",
+                "uuid": "32d509da-b618-5826-aa8a-e4d43ce6960d"
+              },
+              {
+                "control-id": "node325",
+                "description": "Component capability addressing control node325 (élabore un contrat précisant : — node325).",
+                "uuid": "a9deca11-efab-57d6-9513-b1ceb94177ea"
+              },
+              {
+                "control-id": "node326",
+                "description": "Component capability addressing control node326 (élabore un contrat précisant : — node326).",
+                "uuid": "3c5de69f-2fe2-5f5a-b742-13660d72947e"
+              },
+              {
+                "control-id": "node327",
+                "description": "Component capability addressing control node327 (élabore un contrat précisant : — node327).",
+                "uuid": "90f3c218-c5b5-5c6d-8095-7d0fab120f01"
+              },
+              {
+                "control-id": "node328",
+                "description": "Component capability addressing control node328 (élabore un contrat précisant : — node328).",
+                "uuid": "b8040c1f-5e3c-5ae0-a5ff-ca14713ebfc9"
+              },
+              {
+                "control-id": "node329",
+                "description": "Component capability addressing control node329 (élabore un contrat précisant : — node329).",
+                "uuid": "60f82bde-105d-5f26-a85a-c655e6bff743"
+              },
+              {
+                "control-id": "node33",
+                "description": "Component capability addressing control node33 (Le Dirigeant Responsable : — node33).",
+                "uuid": "e1345dfc-e745-530f-b806-5874872ea20b"
+              },
+              {
+                "control-id": "node330",
+                "description": "Component capability addressing control node330 (élabore un contrat précisant : — node330).",
+                "uuid": "ae8c3ddc-421d-5b2f-89ed-0fa918e1617e"
+              },
+              {
+                "control-id": "node332",
+                "description": "Component capability addressing control node332 (Enfin, l’organisme : — node332).",
+                "uuid": "c9e45367-3a8b-57e0-9bd8-56a77dd96bff"
+              },
+              {
+                "control-id": "node333",
+                "description": "Component capability addressing control node333 (Enfin, l’organisme : — node333).",
+                "uuid": "5adf819b-a14d-5abd-a658-cdcdbc158f62"
+              },
+              {
+                "control-id": "node338",
+                "description": "Component capability addressing control node338 (Personnel de sûreté aérienne — node338).",
+                "uuid": "35e9d7b0-5de9-5959-9a74-8ec6cee3aecc"
+              },
+              {
+                "control-id": "node339",
+                "description": "Component capability addressing control node339 (Personnel de sûreté aérienne — node339).",
+                "uuid": "e8ed67f5-d543-5a93-abf9-f2e72905e8fd"
+              },
+              {
+                "control-id": "node34",
+                "description": "Component capability addressing control node34 (Le Dirigeant Responsable : — node34).",
+                "uuid": "56093800-641a-58b7-96df-b1c98c5afce4"
+              },
+              {
+                "control-id": "node340",
+                "description": "Component capability addressing control node340 (Personnel de sûreté aérienne — node340).",
+                "uuid": "7ea64d26-ff89-5096-9793-de1f14b65231"
+              },
+              {
+                "control-id": "node342",
+                "description": "Component capability addressing control node342 (Il s’agit notamment : — node342).",
+                "uuid": "69f34f54-9f0d-56d9-8e46-60814f91123f"
+              },
+              {
+                "control-id": "node343",
+                "description": "Component capability addressing control node343 (Il s’agit notamment : — node343).",
+                "uuid": "fee84a49-b286-5236-86b2-c4374985586d"
+              },
+              {
+                "control-id": "node344",
+                "description": "Component capability addressing control node344 (Il s’agit notamment : — node344).",
+                "uuid": "bab1e050-5dc8-50d6-91f3-0bd25b2bdd98"
+              },
+              {
+                "control-id": "node345",
+                "description": "Component capability addressing control node345 (Il s’agit notamment : — node345).",
+                "uuid": "241259b6-1734-5f06-8af2-2b365731e132"
+              },
+              {
+                "control-id": "node346",
+                "description": "Component capability addressing control node346 (Il s’agit notamment : — node346).",
+                "uuid": "fade389c-b319-5660-9bd8-2e2c0a280708"
+              },
+              {
+                "control-id": "node347",
+                "description": "Component capability addressing control node347 (Personnel de sûreté aérienne — node347).",
+                "uuid": "1096a3e3-ffd0-5598-af98-15665f6fa9ff"
+              },
+              {
+                "control-id": "node349",
+                "description": "Component capability addressing control node349 (Vérification renforcée des antécédents pour les personnels de sûreté aérienne — node349).",
+                "uuid": "c41223e9-755b-5e53-ad51-2f8c69ed7e60"
+              },
+              {
+                "control-id": "node35",
+                "description": "Component capability addressing control node35 (Le Dirigeant Responsable : — node35).",
+                "uuid": "ff9118f6-9b48-5887-a5d5-51a6822a8a6d"
+              },
+              {
+                "control-id": "node350",
+                "description": "Component capability addressing control node350 (Vérification renforcée des antécédents pour les personnels de sûreté aérienne — node350).",
+                "uuid": "adadf7e9-60fb-5bc7-b06a-7735e6a05877"
+              },
+              {
+                "control-id": "node351",
+                "description": "Component capability addressing control node351 (Vérification renforcée des antécédents pour les personnels de sûreté aérienne — node351).",
+                "uuid": "fe4c2b1e-9dfc-57cb-ac4e-4d8758fcfb97"
+              },
+              {
+                "control-id": "node352",
+                "description": "Component capability addressing control node352 (Vérification renforcée des antécédents pour les personnels de sûreté aérienne — node352).",
+                "uuid": "2ead8b3f-0cdf-560a-81d0-11ab037eecb8"
+              },
+              {
+                "control-id": "node353",
+                "description": "Component capability addressing control node353 (Vérification renforcée des antécédents pour les personnels de sûreté aérienne — node353).",
+                "uuid": "b155d755-2fe7-5a49-bfb7-08452e4335c3"
+              },
+              {
+                "control-id": "node354",
+                "description": "Component capability addressing control node354 (Vérification renforcée des antécédents pour les personnels de sûreté aérienne — node354).",
+                "uuid": "5028f0ef-6e49-532c-9043-1a16bcaa242b"
+              },
+              {
+                "control-id": "node355",
+                "description": "Component capability addressing control node355 (Vérification renforcée des antécédents pour les personnels de sûreté aérienne — node355).",
+                "uuid": "01f49031-16dd-5b10-a279-27d41020da1b"
+              },
+              {
+                "control-id": "node357",
+                "description": "Component capability addressing control node357 (L’organisme : — node357).",
+                "uuid": "c8242a3b-0803-57f3-9cc7-dba0e6d0baa3"
+              },
+              {
+                "control-id": "node358",
+                "description": "Component capability addressing control node358 (L’organisme : — node358).",
+                "uuid": "20f53c5a-28b3-527d-9881-40d3690a48b8"
+              },
+              {
+                "control-id": "node359",
+                "description": "Component capability addressing control node359 (L’organisme : — node359).",
+                "uuid": "eeff6bbf-cdfd-58f8-aa4f-1b63933bb7ae"
+              },
+              {
+                "control-id": "node36",
+                "description": "Component capability addressing control node36 (désigner une personne ou un groupe de personnes responsables : — node36).",
+                "uuid": "9a65e8c4-29d9-5b5b-bf8c-922fe1f2e861"
+              },
+              {
+                "control-id": "node360",
+                "description": "Component capability addressing control node360 (L’organisme : — node360).",
+                "uuid": "401670ae-d8cb-5669-a502-4ff2b1fa1c39"
+              },
+              {
+                "control-id": "node362",
+                "description": "Component capability addressing control node362 (Contrôle de la fiabilité des personnels de sécurité aérienne — node362).",
+                "uuid": "864405a1-e4cd-5806-bde5-09152fb02361"
+              },
+              {
+                "control-id": "node364",
+                "description": "Component capability addressing control node364 (Cette politique identifie : — node364).",
+                "uuid": "3fc6f37f-a6ba-56d7-94ba-136d71cf1d4c"
+              },
+              {
+                "control-id": "node365",
+                "description": "Component capability addressing control node365 (Cette politique identifie : — node365).",
+                "uuid": "769bb4f8-698c-5d72-a141-08c590e73f79"
+              },
+              {
+                "control-id": "node366",
+                "description": "Component capability addressing control node366 (des mesures de contrôle de la fiabilité qui : — node366).",
+                "uuid": "886c6f78-ff5a-58fa-a7f4-9afba738d2e8"
+              },
+              {
+                "control-id": "node367",
+                "description": "Component capability addressing control node367 (des mesures de contrôle de la fiabilité qui : — node367).",
+                "uuid": "afd58e1a-2657-5e04-8c03-b944c6b09297"
+              },
+              {
+                "control-id": "node368",
+                "description": "Component capability addressing control node368 (peuvent, selon les catégories précédemment identifiées et leur niveau de risque pour la sécurité aérienne : — node368).",
+                "uuid": "508dfdcc-bad8-5eb9-9f29-d609e2434696"
+              },
+              {
+                "control-id": "node369",
+                "description": "Component capability addressing control node369 (peuvent, selon les catégories précédemment identifiées et leur niveau de risque pour la sécurité aérienne : — node369).",
+                "uuid": "b7632524-5e16-538c-9f8d-e956d2c55faf"
+              },
+              {
+                "control-id": "node37",
+                "description": "Component capability addressing control node37 (de la mise en œuvre du règlement Part-IS, qui : — node37).",
+                "uuid": "235087ff-00cd-5f9a-9ec8-bcd664be7d25"
+              },
+              {
+                "control-id": "node370",
+                "description": "Component capability addressing control node370 (amener à réaliser une vérification des antécédents selon des modalités à préciser, telles que : — node370).",
+                "uuid": "a7e2db95-e072-5a25-b64f-544385bbb533"
+              },
+              {
+                "control-id": "node371",
+                "description": "Component capability addressing control node371 (amener à réaliser une vérification des antécédents selon des modalités à préciser, telles que : — node371).",
+                "uuid": "f25747d4-5d50-515f-98d9-36f963c65609"
+              },
+              {
+                "control-id": "node372",
+                "description": "Component capability addressing control node372 (amener à réaliser une vérification des antécédents selon des modalités à préciser, telles que : — node372).",
+                "uuid": "214f4856-9d1f-505e-aef0-8f2479e3275c"
+              },
+              {
+                "control-id": "node373",
+                "description": "Component capability addressing control node373 (amener à réaliser une vérification des antécédents selon des modalités à préciser, telles que : — node373).",
+                "uuid": "39eb541b-1a5e-571f-bc71-8e18ac5c647b"
+              },
+              {
+                "control-id": "node375",
+                "description": "Component capability addressing control node375 (L’organisme : — node375).",
+                "uuid": "83a51cef-990f-51e5-94ff-9187e44e73bf"
+              },
+              {
+                "control-id": "node376",
+                "description": "Component capability addressing control node376 (L’organisme : — node376).",
+                "uuid": "268eee4f-8f61-5030-ba53-2e0f45e87ebf"
+              },
+              {
+                "control-id": "node377",
+                "description": "Component capability addressing control node377 (L’organisme : — node377).",
+                "uuid": "2c828be3-dbad-5919-bc2b-fee8228a1ecf"
+              },
+              {
+                "control-id": "node378",
+                "description": "Component capability addressing control node378 (L’organisme : — node378).",
+                "uuid": "0a006c39-ef20-5cf0-a524-fa53a3417bdf"
+              },
+              {
+                "control-id": "node379",
+                "description": "Component capability addressing control node379 (intègre ou fait référence à cette politique dans : — node379).",
+                "uuid": "b75f32fa-ec96-575b-8341-3ad223dfb1a4"
+              },
+              {
+                "control-id": "node38",
+                "description": "Component capability addressing control node38 (de la mise en œuvre du règlement Part-IS, qui : — node38).",
+                "uuid": "ede50eb4-a77f-5f0e-97ee-50453203ca69"
+              },
+              {
+                "control-id": "node380",
+                "description": "Component capability addressing control node380 (intègre ou fait référence à cette politique dans : — node380).",
+                "uuid": "1406acea-af48-52e7-9295-f3aec6d8c215"
+              },
+              {
+                "control-id": "node381",
+                "description": "Component capability addressing control node381 (L’organisme : — node381).",
+                "uuid": "abc828b7-cc0b-56bd-a537-cc0cd6997398"
+              },
+              {
+                "control-id": "node382",
+                "description": "Component capability addressing control node382 (conserve des informations documentées appropriées comme preuves du contrôle de la fiabilité du personnel : — node382).",
+                "uuid": "57fc5127-96fd-5248-ac6b-0f6579d1b9e7"
+              },
+              {
+                "control-id": "node383",
+                "description": "Component capability addressing control node383 (conserve des informations documentées appropriées comme preuves du contrôle de la fiabilité du personnel : — node383).",
+                "uuid": "b26c3176-f8f6-5436-ad3d-928aaf83071e"
+              },
+              {
+                "control-id": "node386",
+                "description": "Component capability addressing control node386 (Personnels soumis aux exigences de sûreté et de sécurité — node386).",
+                "uuid": "46570963-aeec-5cf7-9b9c-9a3fb2e38b1d"
+              },
+              {
+                "control-id": "node389",
+                "description": "Component capability addressing control node389 (Personnels à l’étranger — node389).",
+                "uuid": "e79e273a-5076-5d45-af99-7deefbfe05b5"
+              },
+              {
+                "control-id": "node39",
+                "description": "Component capability addressing control node39 (de la mise en œuvre du règlement Part-IS, qui : — node39).",
+                "uuid": "611a992e-f36c-5029-9742-f7b2ecbf21d3"
+              },
+              {
+                "control-id": "node390",
+                "description": "Component capability addressing control node390 (Personnels à l’étranger — node390).",
+                "uuid": "1da01bf6-cbbb-548f-ad2d-b482fff307b7"
+              },
+              {
+                "control-id": "node391",
+                "description": "Component capability addressing control node391 (Personnels à l’étranger — node391).",
+                "uuid": "ecc45c30-eeb2-5a04-a531-9ad921b360f8"
+              },
+              {
+                "control-id": "node393",
+                "description": "Component capability addressing control node393 (Sensibilisation — node393).",
+                "uuid": "0e557835-f8ae-582c-a519-a52b60d817c8"
+              },
+              {
+                "control-id": "node395",
+                "description": "Component capability addressing control node395 (précise : — node395).",
+                "uuid": "21fea3b9-b716-5691-9a7e-677a2df4eea5"
+              },
+              {
+                "control-id": "node396",
+                "description": "Component capability addressing control node396 (précise : — node396).",
+                "uuid": "f388627b-8e7a-5984-b503-1de4d26ed8b3"
+              },
+              {
+                "control-id": "node397",
+                "description": "Component capability addressing control node397 (Sensibilisation — node397).",
+                "uuid": "2f956de1-631c-5fa1-94f9-5e998738fc95"
+              },
+              {
+                "control-id": "node398",
+                "description": "Component capability addressing control node398 (Sensibilisation — node398).",
+                "uuid": "0f98ccb2-ef01-5e56-86e9-c41045d153db"
+              },
+              {
+                "control-id": "node4",
+                "description": "Component capability addressing control node4 (Engagement du Dirigeant Responsable — node4).",
+                "uuid": "6f104bf5-63a1-5f0a-be81-de79896d332c"
+              },
+              {
+                "control-id": "node40",
+                "description": "Component capability addressing control node40 (désigner une personne ou un groupe de personnes responsables : — node40).",
+                "uuid": "5b06a0b8-60dc-54a3-a0cb-ff0b2c794070"
+              },
+              {
+                "control-id": "node400",
+                "description": "Component capability addressing control node400 (intègre ou fait référence à cette procédure dans : — node400).",
+                "uuid": "e1a54d32-99eb-5115-9986-d2953b097058"
+              },
+              {
+                "control-id": "node401",
+                "description": "Component capability addressing control node401 (intègre ou fait référence à cette procédure dans : — node401).",
+                "uuid": "1f81a45e-39c3-55c2-83d7-4d0bcb4d1cf5"
+              },
+              {
+                "control-id": "node402",
+                "description": "Component capability addressing control node402 (intègre ou fait référence à cette procédure dans : — node402).",
+                "uuid": "646d3eab-e47e-58de-be91-bde73be7d331"
+              },
+              {
+                "control-id": "node403",
+                "description": "Component capability addressing control node403 (Sensibilisation — node403).",
+                "uuid": "349f7caf-91ac-5140-bb10-e5775fe5d72a"
+              },
+              {
+                "control-id": "node405",
+                "description": "Component capability addressing control node405 (Formation — node405).",
+                "uuid": "933a2af0-d116-5d75-bbb7-0b5ab5e2a19f"
+              },
+              {
+                "control-id": "node406",
+                "description": "Component capability addressing control node406 (Formation — node406).",
+                "uuid": "dfe452dc-c409-5287-978f-e48c91da5a53"
+              },
+              {
+                "control-id": "node407",
+                "description": "Component capability addressing control node407 (identifie les besoins au sein de son entreprise, notamment que : — node407).",
+                "uuid": "a19f0945-e5c9-52b2-80ba-5defcac503ac"
+              },
+              {
+                "control-id": "node408",
+                "description": "Component capability addressing control node408 (identifie les besoins au sein de son entreprise, notamment que : — node408).",
+                "uuid": "a41584af-6ef2-5cb7-bb40-d615070f81f7"
+              },
+              {
+                "control-id": "node409",
+                "description": "Component capability addressing control node409 (Formation — node409).",
+                "uuid": "04b12b0b-eb5b-51c4-8b6a-b4826ffa3d52"
+              },
+              {
+                "control-id": "node41",
+                "description": "Component capability addressing control node41 (de la conformité au règlement Part-IS, qui : — node41).",
+                "uuid": "52442be3-8027-5fba-8de8-400debed1112"
+              },
+              {
+                "control-id": "node410",
+                "description": "Component capability addressing control node410 (Formation — node410).",
+                "uuid": "94356955-2049-5c24-9bd1-aed2b35b907a"
+              },
+              {
+                "control-id": "node412",
+                "description": "Component capability addressing control node412 (intègre ou fait référence à cette procédure dans : — node412).",
+                "uuid": "b805202c-6c39-59c7-a2fb-e362f4228cce"
+              },
+              {
+                "control-id": "node413",
+                "description": "Component capability addressing control node413 (intègre ou fait référence à cette procédure dans : — node413).",
+                "uuid": "09339870-a87b-5617-99ce-3be071b74090"
+              },
+              {
+                "control-id": "node414",
+                "description": "Component capability addressing control node414 (intègre ou fait référence à cette procédure dans : — node414).",
+                "uuid": "7046ff77-b8cd-5b7a-959b-e8a05f44a0fc"
+              },
+              {
+                "control-id": "node415",
+                "description": "Component capability addressing control node415 (Formation — node415).",
+                "uuid": "57065507-f33f-574d-9885-3136a312c39b"
+              },
+              {
+                "control-id": "node419",
+                "description": "Component capability addressing control node419 (Organisation du suivi de la gestion des risques — node419).",
+                "uuid": "4b212960-dfb2-53b1-a221-05e32a01ff4c"
+              },
+              {
+                "control-id": "node42",
+                "description": "Component capability addressing control node42 (Le Dirigeant Responsable : — node42).",
+                "uuid": "84ca2c0e-437a-5efc-9362-d2820cd3fe04"
+              },
+              {
+                "control-id": "node420",
+                "description": "Component capability addressing control node420 (L’organisme définit l’organisation du suivi de la gestion des risques et en précise : — node420).",
+                "uuid": "194de8df-a45e-52eb-99b7-34d7bfbfce28"
+              },
+              {
+                "control-id": "node421",
+                "description": "Component capability addressing control node421 (L’organisme définit l’organisation du suivi de la gestion des risques et en précise : — node421).",
+                "uuid": "60228bd4-ecf3-5f0d-8f8d-832e2b770918"
+              },
+              {
+                "control-id": "node422",
+                "description": "Component capability addressing control node422 (L’organisme définit l’organisation du suivi de la gestion des risques et en précise : — node422).",
+                "uuid": "f9fadb58-179f-55b1-8905-6eaca217decf"
+              },
+              {
+                "control-id": "node423",
+                "description": "Component capability addressing control node423 (L’organisme définit l’organisation du suivi de la gestion des risques et en précise : — node423).",
+                "uuid": "17986e97-3276-5190-81ef-1fba28a221cf"
+              },
+              {
+                "control-id": "node424",
+                "description": "Component capability addressing control node424 (la périodicité et/ou les événements significatifs activant cette organisation, notamment lorsque : — node424).",
+                "uuid": "dcad6532-5e07-53ac-8ad0-a93c7070dc64"
+              },
+              {
+                "control-id": "node425",
+                "description": "Component capability addressing control node425 (la périodicité et/ou les événements significatifs activant cette organisation, notamment lorsque : — node425).",
+                "uuid": "24422ae0-9364-5b38-b85d-8a50f71766a5"
+              },
+              {
+                "control-id": "node426",
+                "description": "Component capability addressing control node426 (la périodicité et/ou les événements significatifs activant cette organisation, notamment lorsque : — node426).",
+                "uuid": "926a5c27-f511-52fc-bcde-14df4a459b09"
+              },
+              {
+                "control-id": "node427",
+                "description": "Component capability addressing control node427 (la périodicité et/ou les événements significatifs activant cette organisation, notamment lorsque : — node427).",
+                "uuid": "89f85a2f-6a9f-5a3b-8115-0edd78409c60"
+              },
+              {
+                "control-id": "node429",
+                "description": "Component capability addressing control node429 (Missions du suivi de la gestion des risques — node429).",
+                "uuid": "f0949ebc-81e5-55c7-930b-8687d7808d72"
+              },
+              {
+                "control-id": "node43",
+                "description": "Component capability addressing control node43 (formaliser la désignation de ces personnes ou groupes de personnes, en précisant : — node43).",
+                "uuid": "d3870eef-0db5-5d33-856b-73ddfcd37366"
+              },
+              {
+                "control-id": "node430",
+                "description": "Component capability addressing control node430 (Périodiquement et/ou lors des événements significatifs, l’organisme : — node430).",
+                "uuid": "dab8d4ac-97c9-55a0-a9bf-71235f8c771d"
+              },
+              {
+                "control-id": "node431",
+                "description": "Component capability addressing control node431 (planifie, met en œuvre, contrôle : — node431).",
+                "uuid": "9b179da9-5276-5c12-8f85-37f0212ab079"
+              },
+              {
+                "control-id": "node432",
+                "description": "Component capability addressing control node432 (les activités de gestion des risques : — node432).",
+                "uuid": "23f318ac-037a-5165-8a18-552a9b739a24"
+              },
+              {
+                "control-id": "node433",
+                "description": "Component capability addressing control node433 (les activités de gestion des risques : — node433).",
+                "uuid": "1dfa10a9-13e0-5909-b714-f37695743d40"
+              },
+              {
+                "control-id": "node434",
+                "description": "Component capability addressing control node434 (les activités de gestion des risques : — node434).",
+                "uuid": "4282f5fe-1839-544e-bb47-ddfff1c063d0"
+              },
+              {
+                "control-id": "node435",
+                "description": "Component capability addressing control node435 (les activités de gestion des risques : — node435).",
+                "uuid": "ae0d22e3-0484-5818-b332-aa5f371e2f14"
+              },
+              {
+                "control-id": "node436",
+                "description": "Component capability addressing control node436 (planifie, met en œuvre, contrôle : — node436).",
+                "uuid": "f5251412-ff38-540f-ad52-31b38d155496"
+              },
+              {
+                "control-id": "node437",
+                "description": "Component capability addressing control node437 (planifie, met en œuvre, contrôle : — node437).",
+                "uuid": "7f3d0c70-1915-56da-b7f9-dc4e3c3c8f43"
+              },
+              {
+                "control-id": "node438",
+                "description": "Component capability addressing control node438 (la mise en œuvre des mesures techniques et organisationnelles : — node438).",
+                "uuid": "36eed4c4-fe54-529d-852d-5a2c6d679082"
+              },
+              {
+                "control-id": "node439",
+                "description": "Component capability addressing control node439 (la mise en œuvre des mesures techniques et organisationnelles : — node439).",
+                "uuid": "a482b499-a0bc-5d7a-a339-9a4fa5ba5f40"
+              },
+              {
+                "control-id": "node44",
+                "description": "Component capability addressing control node44 (formaliser la désignation de ces personnes ou groupes de personnes, en précisant : — node44).",
+                "uuid": "1db90cd4-a465-59e6-944f-df50195b6a84"
+              },
+              {
+                "control-id": "node440",
+                "description": "Component capability addressing control node440 (la mise en œuvre des mesures techniques et organisationnelles : — node440).",
+                "uuid": "58ab2042-bf60-54ea-9927-ce7b6cc9948e"
+              },
+              {
+                "control-id": "node441",
+                "description": "Component capability addressing control node441 (Périodiquement et/ou lors des événements significatifs, l’organisme : — node441).",
+                "uuid": "17de89c2-2499-52a1-a1e8-dbfdde3c9741"
+              },
+              {
+                "control-id": "node444",
+                "description": "Component capability addressing control node444 (L’organisme: — node444).",
+                "uuid": "20dc767b-cdb2-51f6-a6d1-ccf328922049"
+              },
+              {
+                "control-id": "node445",
+                "description": "Component capability addressing control node445 (produit et tient à jour des tableaux de bord de suivi : — node445).",
+                "uuid": "898c0c81-10c0-5e9d-8842-8769a7f15276"
+              },
+              {
+                "control-id": "node446",
+                "description": "Component capability addressing control node446 (produit et tient à jour des tableaux de bord de suivi : — node446).",
+                "uuid": "cf08a08d-ae20-521c-a64a-bc2eaf32ad2b"
+              },
+              {
+                "control-id": "node447",
+                "description": "Component capability addressing control node447 (produit et tient à jour des tableaux de bord de suivi : — node447).",
+                "uuid": "394d32b6-d879-5095-b994-9d91160d3c6e"
+              },
+              {
+                "control-id": "node448",
+                "description": "Component capability addressing control node448 (produit et tient à jour des tableaux de bord de suivi : — node448).",
+                "uuid": "9d5917b9-4025-5620-9c6f-666c3bc829ea"
+              },
+              {
+                "control-id": "node449",
+                "description": "Component capability addressing control node449 (L’organisme: — node449).",
+                "uuid": "61a2643a-f000-55f5-9df6-be3f63eeb234"
+              },
+              {
+                "control-id": "node45",
+                "description": "Component capability addressing control node45 (formaliser la désignation de ces personnes ou groupes de personnes, en précisant : — node45).",
+                "uuid": "7e4be81d-590f-519e-9f35-c3f19ade3ec5"
+              },
+              {
+                "control-id": "node450",
+                "description": "Component capability addressing control node450 (L’organisme: — node450).",
+                "uuid": "9d1cf7c3-d33f-5ea6-a5ff-872bbb5f7d70"
+              },
+              {
+                "control-id": "node452",
+                "description": "Component capability addressing control node452 (intègre ou fait référence à cette procédure dans : — node452).",
+                "uuid": "a6f48c67-c583-5503-b5ff-535c8fb05673"
+              },
+              {
+                "control-id": "node453",
+                "description": "Component capability addressing control node453 (intègre ou fait référence à cette procédure dans : — node453).",
+                "uuid": "72d7807c-0367-5402-9cb3-c97c1b98d533"
+              },
+              {
+                "control-id": "node454",
+                "description": "Component capability addressing control node454 (intègre ou fait référence à cette procédure dans : — node454).",
+                "uuid": "fa1cd115-cc91-5752-b030-f14faf4c22a4"
+              },
+              {
+                "control-id": "node455",
+                "description": "Component capability addressing control node455 (L’organisme: — node455).",
+                "uuid": "935b7fc9-3e28-5aae-b6e1-307eea950647"
+              },
+              {
+                "control-id": "node459",
+                "description": "Component capability addressing control node459 (Organisation de l’évaluation de la conformité du SMSI — node459).",
+                "uuid": "2b5922c0-b4a2-5b7a-90fa-da411cfbfd78"
+              },
+              {
+                "control-id": "node46",
+                "description": "Component capability addressing control node46 (Le Dirigeant Responsable : — node46).",
+                "uuid": "f91f9bab-9afd-5b1a-861c-4c9135fc12a2"
+              },
+              {
+                "control-id": "node460",
+                "description": "Component capability addressing control node460 (L’organisme définit l’organisation en charge de l’évaluation de la conformité et en précise : — node460).",
+                "uuid": "c150db7a-8ca5-50eb-9472-3257679a4b2b"
+              },
+              {
+                "control-id": "node461",
+                "description": "Component capability addressing control node461 (L’organisme définit l’organisation en charge de l’évaluation de la conformité et en précise : — node461).",
+                "uuid": "f1d26253-f9ae-51af-b7e8-b0afa952b9e9"
+              },
+              {
+                "control-id": "node462",
+                "description": "Component capability addressing control node462 (L’organisme définit l’organisation en charge de l’évaluation de la conformité et en précise : — node462).",
+                "uuid": "cfa40e30-001a-5c8e-8daa-1d7b57e14871"
+              },
+              {
+                "control-id": "node462-8",
+                "description": "Component capability addressing control node462-8 (L’organisme définit l’organisation en charge de l’évaluation de la conformité et en précise : — node462-8).",
+                "uuid": "a4eae856-f3cf-555e-9e05-f9f5b4db71d5"
+              },
+              {
+                "control-id": "node465",
+                "description": "Component capability addressing control node465 (Périodiquement et/ou lors des événements significatifs et en s’appuyant sur les résultats : — node465).",
+                "uuid": "6b621d80-dd48-53ae-8705-51b6ba9afb4b"
+              },
+              {
+                "control-id": "node466",
+                "description": "Component capability addressing control node466 (Périodiquement et/ou lors des événements significatifs et en s’appuyant sur les résultats : — node466).",
+                "uuid": "b230620a-5830-5849-863f-05a9a7cb0855"
+              },
+              {
+                "control-id": "node468",
+                "description": "Component capability addressing control node468 (l’organisme : — node468).",
+                "uuid": "7d867a4a-d7d5-55c8-b7b0-d05a112fa77c"
+              },
+              {
+                "control-id": "node469",
+                "description": "Component capability addressing control node469 (l’organisme : — node469).",
+                "uuid": "6889167a-6e20-52b3-8828-b2eade64f90f"
+              },
+              {
+                "control-id": "node470",
+                "description": "Component capability addressing control node470 (l’organisme : — node470).",
+                "uuid": "fc651e05-3d07-5796-9dac-302598350312"
+              },
+              {
+                "control-id": "node473",
+                "description": "Component capability addressing control node473 (L’organisme : — node473).",
+                "uuid": "5ae8ca33-67cb-59bf-988a-5094ae0a657e"
+              },
+              {
+                "control-id": "node474",
+                "description": "Component capability addressing control node474 (L’organisme : — node474).",
+                "uuid": "4de7adf4-7755-5927-ab58-8cf4a3f4a926"
+              },
+              {
+                "control-id": "node475",
+                "description": "Component capability addressing control node475 (L’organisme : — node475).",
+                "uuid": "66ef6bc3-ce3b-5a2a-aa3c-e9ace3356887"
+              },
+              {
+                "control-id": "node477",
+                "description": "Component capability addressing control node477 (intègre ou fait référence à cette procédure dans : — node477).",
+                "uuid": "17831eec-765d-55f4-ab4d-2f79f910304b"
+              },
+              {
+                "control-id": "node478",
+                "description": "Component capability addressing control node478 (intègre ou fait référence à cette procédure dans : — node478).",
+                "uuid": "9aa39fc6-627e-500a-a583-4471ce7feb9a"
+              },
+              {
+                "control-id": "node479",
+                "description": "Component capability addressing control node479 (L’organisme : — node479).",
+                "uuid": "80cff0c9-7212-5295-b8dc-99fe60441f89"
+              },
+              {
+                "control-id": "node48",
+                "description": "Component capability addressing control node48 (Les éléments relatifs à la gestion des ressources, aux rôles et responsabilités sont : — node48).",
+                "uuid": "8b9962c3-4b9e-5701-9257-51fb108dca1c"
+              },
+              {
+                "control-id": "node481",
+                "description": "Component capability addressing control node481 (Réponse aux constatations notifiées par l’autorité compétente — node481).",
+                "uuid": "70fabb11-c40c-5df4-b02c-fe17b48d8a30"
+              },
+              {
+                "control-id": "node484",
+                "description": "Component capability addressing control node484 (Organisation de l’évaluation de l’efficacité et de la maturité du SMSI — node484).",
+                "uuid": "da8a4bb1-921f-510e-944d-e3c8a4b32185"
+              },
+              {
+                "control-id": "node485",
+                "description": "Component capability addressing control node485 (Organisation de l’évaluation de l’efficacité et de la maturité du SMSI — node485).",
+                "uuid": "3a40fb19-3281-58be-9276-6fa457363107"
+              },
+              {
+                "control-id": "node486",
+                "description": "Component capability addressing control node486 (Organisation de l’évaluation de l’efficacité et de la maturité du SMSI — node486).",
+                "uuid": "d0ac275e-22aa-5154-802a-a9c160541410"
+              },
+              {
+                "control-id": "node487",
+                "description": "Component capability addressing control node487 (Organisation de l’évaluation de l’efficacité et de la maturité du SMSI — node487).",
+                "uuid": "fb030970-ea6b-5e29-9a8f-e29e6d22df12"
+              },
+              {
+                "control-id": "node488",
+                "description": "Component capability addressing control node488 (Organisation de l’évaluation de l’efficacité et de la maturité du SMSI — node488).",
+                "uuid": "db5bb02c-4e40-5032-924d-a047efbe7983"
+              },
+              {
+                "control-id": "node489",
+                "description": "Component capability addressing control node489 (Organisation de l’évaluation de l’efficacité et de la maturité du SMSI — node489).",
+                "uuid": "d8c97dbb-7004-5d5c-b4b5-107cf847b4f6"
+              },
+              {
+                "control-id": "node49",
+                "description": "Component capability addressing control node49 (Les éléments relatifs à la gestion des ressources, aux rôles et responsabilités sont : — node49).",
+                "uuid": "16039b68-ad93-5f0e-a282-b0cc70c9d1d4"
+              },
+              {
+                "control-id": "node490",
+                "description": "Component capability addressing control node490 (Organisation de l’évaluation de l’efficacité et de la maturité du SMSI — node490).",
+                "uuid": "51210808-aed1-572a-8392-c784e6c46627"
+              },
+              {
+                "control-id": "node493",
+                "description": "Component capability addressing control node493 (Périodiquement et/ou lors des événements significatifs et en s’appuyant sur : — node493).",
+                "uuid": "3b8758d2-2fd6-5356-940a-4f41fe8d5add"
+              },
+              {
+                "control-id": "node494",
+                "description": "Component capability addressing control node494 (Périodiquement et/ou lors des événements significatifs et en s’appuyant sur : — node494).",
+                "uuid": "695108ab-82d2-5da2-934a-bfec57978cca"
+              },
+              {
+                "control-id": "node495",
+                "description": "Component capability addressing control node495 (Périodiquement et/ou lors des événements significatifs et en s’appuyant sur : — node495).",
+                "uuid": "1f24c393-0038-5b05-8472-8e77b5ab3c49"
+              },
+              {
+                "control-id": "node496",
+                "description": "Component capability addressing control node496 (Périodiquement et/ou lors des événements significatifs et en s’appuyant sur : — node496).",
+                "uuid": "0538c71b-4fc0-5994-a6f8-f19d8223da50"
+              },
+              {
+                "control-id": "node497",
+                "description": "Component capability addressing control node497 (Périodiquement et/ou lors des événements significatifs et en s’appuyant sur : — node497).",
+                "uuid": "ebe3f39e-8e7d-547a-8f2c-05702856fba9"
+              },
+              {
+                "control-id": "node5",
+                "description": "Component capability addressing control node5 (Engagement du Dirigeant Responsable — node5).",
+                "uuid": "0686195a-ff18-5f24-8514-b229884bd94c"
+              },
+              {
+                "control-id": "node50",
+                "description": "Component capability addressing control node50 (intégrés ou référencés dans : — node50).",
+                "uuid": "36ff8c85-f3f1-559b-b840-93ecf77db675"
+              },
+              {
+                "control-id": "node500",
+                "description": "Component capability addressing control node500 (évalue : — node500).",
+                "uuid": "a26459c2-5584-5b0f-b20d-d6c4fb2f79eb"
+              },
+              {
+                "control-id": "node501",
+                "description": "Component capability addressing control node501 (évalue : — node501).",
+                "uuid": "fa0e823b-9618-5c20-bd6a-15c6e46a8643"
+              },
+              {
+                "control-id": "node502",
+                "description": "Component capability addressing control node502 (évalue : — node502).",
+                "uuid": "c70c9b7c-7382-5b97-8241-753316ed3fe5"
+              },
+              {
+                "control-id": "node503",
+                "description": "Component capability addressing control node503 (évalue : — node503).",
+                "uuid": "09c2de8c-32e9-5be8-bd87-9424ecee29f8"
+              },
+              {
+                "control-id": "node504",
+                "description": "Component capability addressing control node504 (évalue : — node504).",
+                "uuid": "fa24a105-e01f-51b2-bee7-32118b916d07"
+              },
+              {
+                "control-id": "node505",
+                "description": "Component capability addressing control node505 (évalue : — node505).",
+                "uuid": "794ecf47-3e51-586b-a52e-6574975267db"
+              },
+              {
+                "control-id": "node506",
+                "description": "Component capability addressing control node506 (évalue : — node506).",
+                "uuid": "48cecb43-9d5a-570d-a138-f3bfaa8eaa69"
+              },
+              {
+                "control-id": "node508",
+                "description": "Component capability addressing control node508 (identifie : — node508).",
+                "uuid": "02018963-5a99-5df4-8314-52abf095f0ab"
+              },
+              {
+                "control-id": "node509",
+                "description": "Component capability addressing control node509 (identifie : — node509).",
+                "uuid": "9861ec12-ae74-5f22-8eff-fa989316a7ad"
+              },
+              {
+                "control-id": "node51",
+                "description": "Component capability addressing control node51 (intégrés ou référencés dans : — node51).",
+                "uuid": "d8564933-5f72-5dc6-89c8-d0c88a54f125"
+              },
+              {
+                "control-id": "node512",
+                "description": "Component capability addressing control node512 (L’organisme : — node512).",
+                "uuid": "83934038-2f17-5072-9982-3016b4cbe1e8"
+              },
+              {
+                "control-id": "node513",
+                "description": "Component capability addressing control node513 (produit et tient à jour des tableaux de bord de suivi de : — node513).",
+                "uuid": "e73f157f-bc03-5d44-bd4a-cd13ed7ba298"
+              },
+              {
+                "control-id": "node514",
+                "description": "Component capability addressing control node514 (produit et tient à jour des tableaux de bord de suivi de : — node514).",
+                "uuid": "515d1873-e9e2-580b-9d23-a967310746f0"
+              },
+              {
+                "control-id": "node515",
+                "description": "Component capability addressing control node515 (L’organisme : — node515).",
+                "uuid": "f159e02d-4104-54ce-904b-63c65523069c"
+              },
+              {
+                "control-id": "node516",
+                "description": "Component capability addressing control node516 (L’organisme : — node516).",
+                "uuid": "8f67a9ea-5334-5206-b0a3-8c882aa67d73"
+              },
+              {
+                "control-id": "node517",
+                "description": "Component capability addressing control node517 (L’organisme : — node517).",
+                "uuid": "1ad5e661-df74-5476-8359-d6ef5738ba59"
+              },
+              {
+                "control-id": "node518",
+                "description": "Component capability addressing control node518 (intègre ou fait référence à cette procédure dans : — node518).",
+                "uuid": "2b2a8289-5a71-517e-ac3a-46949f77ed2d"
+              },
+              {
+                "control-id": "node519",
+                "description": "Component capability addressing control node519 (intègre ou fait référence à cette procédure dans : — node519).",
+                "uuid": "b67687d5-4283-5cad-9024-24a365ab656b"
+              },
+              {
+                "control-id": "node520",
+                "description": "Component capability addressing control node520 (L’organisme : — node520).",
+                "uuid": "a1725ca3-f0bb-5dd3-b56d-7718c4f6236e"
+              },
+              {
+                "control-id": "node522",
+                "description": "Component capability addressing control node522 (Les modèles de maturité suivants peuvent être pris pour référence : — node522).",
+                "uuid": "6e590aa1-006c-52b1-9664-f8aff8e37941"
+              },
+              {
+                "control-id": "node523",
+                "description": "Component capability addressing control node523 (Les modèles de maturité suivants peuvent être pris pour référence : — node523).",
+                "uuid": "0ed4054f-b275-515a-92b7-9cebcfa3b31d"
+              },
+              {
+                "control-id": "node524",
+                "description": "Component capability addressing control node524 (Les modèles de maturité suivants peuvent être pris pour référence : — node524).",
+                "uuid": "b2ed68e0-1334-5de5-967d-00c362ecfa85"
+              },
+              {
+                "control-id": "node527",
+                "description": "Component capability addressing control node527 (Organisation du pilotage de l’amélioration continue du SMSI — node527).",
+                "uuid": "4f933c79-8535-5893-9b7d-533af4b13295"
+              },
+              {
+                "control-id": "node528",
+                "description": "Component capability addressing control node528 (L’organisme définit l’organisation du pilotage de l’amélioration continue et en précise : — node528).",
+                "uuid": "47f2f867-ab65-561f-8a37-5f8b2dcdeaaa"
+              },
+              {
+                "control-id": "node529",
+                "description": "Component capability addressing control node529 (L’organisme définit l’organisation du pilotage de l’amélioration continue et en précise : — node529).",
+                "uuid": "c3ec98a5-9d91-509b-882a-af41327ec2f1"
+              },
+              {
+                "control-id": "node53",
+                "description": "Component capability addressing control node53 (Gestion des risques de sécurité de l’information — node53).",
+                "uuid": "f50a4df2-f67f-55f0-8826-bbf3591f41e8"
+              },
+              {
+                "control-id": "node530",
+                "description": "Component capability addressing control node530 (L’organisme définit l’organisation du pilotage de l’amélioration continue et en précise : — node530).",
+                "uuid": "edc5f555-3b7a-5270-99a7-40f1b7a73f05"
+              },
+              {
+                "control-id": "node531",
+                "description": "Component capability addressing control node531 (L’organisme définit l’organisation du pilotage de l’amélioration continue et en précise : — node531).",
+                "uuid": "51bf714f-7329-525a-b028-08e725b8a09c"
+              },
+              {
+                "control-id": "node534",
+                "description": "Component capability addressing control node534 (Périodiquement et/ou lors des événements significatifs et sur la base : — node534).",
+                "uuid": "b7d72775-5b12-5907-9179-4c0309dab13f"
+              },
+              {
+                "control-id": "node535",
+                "description": "Component capability addressing control node535 (des changements de contexte de l’organisme, notamment : — node535).",
+                "uuid": "cd811116-567b-53e1-9a27-b1f1b59eb49d"
+              },
+              {
+                "control-id": "node536",
+                "description": "Component capability addressing control node536 (des changements de contexte de l’organisme, notamment : — node536).",
+                "uuid": "61e768db-aa08-575d-82e9-0bcb94175447"
+              },
+              {
+                "control-id": "node537",
+                "description": "Component capability addressing control node537 (Périodiquement et/ou lors des événements significatifs et sur la base : — node537).",
+                "uuid": "001a2c50-25ef-50e2-824e-9c4ee4817863"
+              },
+              {
+                "control-id": "node538",
+                "description": "Component capability addressing control node538 (des tableaux de bord de suivi : — node538).",
+                "uuid": "9731228a-2e49-593f-b894-9f926f846d9a"
+              },
+              {
+                "control-id": "node539",
+                "description": "Component capability addressing control node539 (des tableaux de bord de suivi : — node539).",
+                "uuid": "0fedf85c-c2e5-542b-b3b1-c8d260187503"
+              },
+              {
+                "control-id": "node54",
+                "description": "Component capability addressing control node54 (Gestion des risques de sécurité de l’information — node54).",
+                "uuid": "43b0dc4e-ff0c-571c-b8e6-263ca66d81e8"
+              },
+              {
+                "control-id": "node540",
+                "description": "Component capability addressing control node540 (des tableaux de bord de suivi : — node540).",
+                "uuid": "116ce909-3104-585d-b591-897bcf1d3d17"
+              },
+              {
+                "control-id": "node541",
+                "description": "Component capability addressing control node541 (des tableaux de bord de suivi : — node541).",
+                "uuid": "9790aa50-429b-5060-aae8-3eac45ec0375"
+              },
+              {
+                "control-id": "node542",
+                "description": "Component capability addressing control node542 (des tableaux de bord de suivi : — node542).",
+                "uuid": "60bf9d27-9676-5c1e-a6aa-a12a9deabfa6"
+              },
+              {
+                "control-id": "node545",
+                "description": "Component capability addressing control node545 (identifie : — node545).",
+                "uuid": "30c7772d-8e76-5936-b203-906c03587be0"
+              },
+              {
+                "control-id": "node546",
+                "description": "Component capability addressing control node546 (identifie : — node546).",
+                "uuid": "a44ee332-a9e0-5a84-9e7e-e5a377341097"
+              },
+              {
+                "control-id": "node547",
+                "description": "Component capability addressing control node547 (identifie : — node547).",
+                "uuid": "0574aae7-0f6a-57e9-b1cd-3f31a7593115"
+              },
+              {
+                "control-id": "node548",
+                "description": "Component capability addressing control node548 (L’organisme : — node548).",
+                "uuid": "91529b56-38ab-5af4-aa04-00ae5d527dd5"
+              },
+              {
+                "control-id": "node549",
+                "description": "Component capability addressing control node549 (L’organisme : — node549).",
+                "uuid": "30f01b06-d1a2-5c1e-b820-44938e0280f5"
+              },
+              {
+                "control-id": "node55",
+                "description": "Component capability addressing control node55 (Gestion des risques de sécurité de l’information — node55).",
+                "uuid": "1ab0c5e1-78e1-58d9-9912-0c4eb800418c"
+              },
+              {
+                "control-id": "node552",
+                "description": "Component capability addressing control node552 (L’organisme : — node552).",
+                "uuid": "b28bec8e-9713-525f-b0f3-34a46b1c430e"
+              },
+              {
+                "control-id": "node553",
+                "description": "Component capability addressing control node553 (L’organisme : — node553).",
+                "uuid": "c8c2291c-40fd-524a-bfeb-3596acf33ece"
+              },
+              {
+                "control-id": "node554",
+                "description": "Component capability addressing control node554 (L’organisme : — node554).",
+                "uuid": "b24fdf6e-9680-54d4-a35f-7debff6b76c1"
+              },
+              {
+                "control-id": "node555",
+                "description": "Component capability addressing control node555 (intègre ou fait référence à cette procédure dans : — node555).",
+                "uuid": "ca826a30-a567-5795-baf4-d80d3b963c20"
+              },
+              {
+                "control-id": "node556",
+                "description": "Component capability addressing control node556 (intègre ou fait référence à cette procédure dans : — node556).",
+                "uuid": "c93f185b-520c-58aa-8390-e0c64ad34d19"
+              },
+              {
+                "control-id": "node557",
+                "description": "Component capability addressing control node557 (L’organisme : — node557).",
+                "uuid": "fe534259-8326-5087-8267-217124507d9c"
+              },
+              {
+                "control-id": "node56",
+                "description": "Component capability addressing control node56 (Gestion des risques de sécurité de l’information — node56).",
+                "uuid": "2456a8b7-5963-5e56-aa31-85a952937ff2"
+              },
+              {
+                "control-id": "node568",
+                "description": "Component capability addressing control node568 (L’organisme intègre ou fait référence aux éléments suivants dans : — node568).",
+                "uuid": "d4a72817-f30b-5eaf-b829-af1affa42c4f"
+              },
+              {
+                "control-id": "node569",
+                "description": "Component capability addressing control node569 (L’organisme intègre ou fait référence aux éléments suivants dans : — node569).",
+                "uuid": "5e42ed2d-c688-53ab-8edc-545cd7ecc419"
+              },
+              {
+                "control-id": "node57",
+                "description": "Component capability addressing control node57 (précise la méthodologie ou le standard utilisée pour mener à bien ces activités : — node57).",
+                "uuid": "cca8b91e-1313-5625-b2dc-67e75b1c1ad4"
+              },
+              {
+                "control-id": "node570",
+                "description": "Component capability addressing control node570 (Éléments du manuel — node570).",
+                "uuid": "ea6e9189-7b91-5d39-a9fa-35ceb49c7189"
+              },
+              {
+                "control-id": "node571",
+                "description": "Component capability addressing control node571 (Éléments du manuel — node571).",
+                "uuid": "eeef327b-21df-5597-bc3a-cf5cc3da8429"
+              },
+              {
+                "control-id": "node572",
+                "description": "Component capability addressing control node572 (Éléments du manuel — node572).",
+                "uuid": "0e53976f-4e41-5dc8-ade6-693f2fd10c35"
+              },
+              {
+                "control-id": "node573",
+                "description": "Component capability addressing control node573 (Éléments du manuel — node573).",
+                "uuid": "a5ce41f8-98fd-5e5a-b09c-bdd98278491e"
+              },
+              {
+                "control-id": "node574",
+                "description": "Component capability addressing control node574 (Éléments du manuel — node574).",
+                "uuid": "883bb5fc-0afa-5a6c-840e-e3b2d9630477"
+              },
+              {
+                "control-id": "node575",
+                "description": "Component capability addressing control node575 (Éléments du manuel — node575).",
+                "uuid": "90a0f65a-6b28-5ed8-82d4-8ebdfeff5f5e"
+              },
+              {
+                "control-id": "node576",
+                "description": "Component capability addressing control node576 (Éléments du manuel — node576).",
+                "uuid": "ad18eb9b-feb3-5997-b605-8f6859d4ff77"
+              },
+              {
+                "control-id": "node577",
+                "description": "Component capability addressing control node577 (Éléments du manuel — node577).",
+                "uuid": "623a7350-d23e-5c13-94a7-d52f04b6dd86"
+              },
+              {
+                "control-id": "node578",
+                "description": "Component capability addressing control node578 (Éléments du manuel — node578).",
+                "uuid": "a37248c2-f1f1-5e28-993c-4d88eca23ff2"
+              },
+              {
+                "control-id": "node579",
+                "description": "Component capability addressing control node579 (Éléments du manuel — node579).",
+                "uuid": "502bb7e8-abbf-5c98-a896-c33f2a8688a0"
+              },
+              {
+                "control-id": "node58",
+                "description": "Component capability addressing control node58 (Il est recommandé de mettre en œuvre une des normes ou méthodes suivantes : — node58).",
+                "uuid": "c48304ff-666d-59c1-a206-7a964f5daeb2"
+              },
+              {
+                "control-id": "node580",
+                "description": "Component capability addressing control node580 (Éléments du manuel — node580).",
+                "uuid": "4eb04d0d-328f-5eb9-a7ea-573f206ed851"
+              },
+              {
+                "control-id": "node581",
+                "description": "Component capability addressing control node581 (Éléments du manuel — node581).",
+                "uuid": "3b85f4f0-c675-52be-8cd2-fff6c96113e7"
+              },
+              {
+                "control-id": "node582",
+                "description": "Component capability addressing control node582 (Éléments du manuel — node582).",
+                "uuid": "3d38dc59-7099-5be4-a854-a8202874b502"
+              },
+              {
+                "control-id": "node583",
+                "description": "Component capability addressing control node583 (Éléments du manuel — node583).",
+                "uuid": "67d2c0ba-7bb8-5f12-9d6c-91c9e5c5c38b"
+              },
+              {
+                "control-id": "node584",
+                "description": "Component capability addressing control node584 (Éléments du manuel — node584).",
+                "uuid": "a2933c53-9ddd-5c95-8acc-d5383f120a0b"
+              },
+              {
+                "control-id": "node585",
+                "description": "Component capability addressing control node585 (Éléments du manuel — node585).",
+                "uuid": "5eb2c15e-6596-5fa5-a284-b336061d47ea"
+              },
+              {
+                "control-id": "node586",
+                "description": "Component capability addressing control node586 (Éléments du manuel — node586).",
+                "uuid": "838f8047-d0e7-506f-b688-813dd5a05fbc"
+              },
+              {
+                "control-id": "node587",
+                "description": "Component capability addressing control node587 (Éléments du manuel — node587).",
+                "uuid": "4fdcd98b-58c6-535d-9951-cf048978753c"
+              },
+              {
+                "control-id": "node588",
+                "description": "Component capability addressing control node588 (Éléments du manuel — node588).",
+                "uuid": "ee9ab9a2-cfdd-5041-9379-a97fc0f01513"
+              },
+              {
+                "control-id": "node59",
+                "description": "Component capability addressing control node59 (Il est recommandé de mettre en œuvre une des normes ou méthodes suivantes : — node59).",
+                "uuid": "c3b2646a-15dc-508e-b7b5-ddb4c36dc784"
+              },
+              {
+                "control-id": "node591",
+                "description": "Component capability addressing control node591 (L’organisme intègre ou fait référence dans son programme de sûreté aux éléments suivants : — node591).",
+                "uuid": "2939dcd6-1d13-5352-bde4-4b1702c5a36a"
+              },
+              {
+                "control-id": "node592",
+                "description": "Component capability addressing control node592 (L’organisme intègre ou fait référence dans son programme de sûreté aux éléments suivants : — node592).",
+                "uuid": "10d8a0a5-4e59-5eea-bd84-326201e0c2cf"
+              },
+              {
+                "control-id": "node593",
+                "description": "Component capability addressing control node593 (L’organisme intègre ou fait référence dans son programme de sûreté aux éléments suivants : — node593).",
+                "uuid": "366b73c8-5f1d-5f75-9ae9-e8a398aa19d9"
+              },
+              {
+                "control-id": "node594",
+                "description": "Component capability addressing control node594 (L’organisme intègre ou fait référence dans son programme de sûreté aux éléments suivants : — node594).",
+                "uuid": "2bd8c198-fa54-5954-a9da-30ce9e196a0a"
+              },
+              {
+                "control-id": "node595",
+                "description": "Component capability addressing control node595 (L’organisme intègre ou fait référence dans son programme de sûreté aux éléments suivants : — node595).",
+                "uuid": "a14f6df7-387b-526c-9c99-19a859f08a88"
+              },
+              {
+                "control-id": "node596",
+                "description": "Component capability addressing control node596 (L’organisme intègre ou fait référence dans son programme de sûreté aux éléments suivants : — node596).",
+                "uuid": "31826de5-a610-55ca-ad0c-97b2f70ac1ed"
+              },
+              {
+                "control-id": "node597",
+                "description": "Component capability addressing control node597 (L’organisme intègre ou fait référence dans son programme de sûreté aux éléments suivants : — node597).",
+                "uuid": "d4b7e765-89a7-59f9-ab53-52502eb47a5b"
+              },
+              {
+                "control-id": "node598",
+                "description": "Component capability addressing control node598 (L’organisme intègre ou fait référence dans son programme de sûreté aux éléments suivants : — node598).",
+                "uuid": "eb461f14-cb06-59e1-b674-122c7da46cab"
+              },
+              {
+                "control-id": "node599",
+                "description": "Component capability addressing control node599 (L’organisme intègre ou fait référence dans son programme de sûreté aux éléments suivants : — node599).",
+                "uuid": "d49f5011-d404-5329-8510-bd69a23d991e"
+              },
+              {
+                "control-id": "node6",
+                "description": "Component capability addressing control node6 (Engagement du Dirigeant Responsable — node6).",
+                "uuid": "10c2cd15-bf8a-5526-b134-4092b369cb84"
+              },
+              {
+                "control-id": "node60",
+                "description": "Component capability addressing control node60 (Il est recommandé de mettre en œuvre une des normes ou méthodes suivantes : — node60).",
+                "uuid": "730dca01-aa25-5f03-8ecf-2f368fa44014"
+              },
+              {
+                "control-id": "node600",
+                "description": "Component capability addressing control node600 (L’organisme intègre ou fait référence dans son programme de sûreté aux éléments suivants : — node600).",
+                "uuid": "a8cf7e12-032d-5fb6-971e-fa177c788c24"
+              },
+              {
+                "control-id": "node61",
+                "description": "Component capability addressing control node61 (précise la méthodologie ou le standard utilisée pour mener à bien ces activités : — node61).",
+                "uuid": "0ad20e7e-21b9-5a00-be7e-bb6a2d805f2c"
+              },
+              {
+                "control-id": "node63",
+                "description": "Component capability addressing control node63 (produit des résultats : — node63).",
+                "uuid": "61b9e4fc-a36a-54d4-a02e-5eb30a93e037"
+              },
+              {
+                "control-id": "node64",
+                "description": "Component capability addressing control node64 (produit des résultats : — node64).",
+                "uuid": "95ebbfef-6fab-5d1d-b315-e551fe4df25d"
+              },
+              {
+                "control-id": "node65",
+                "description": "Component capability addressing control node65 (précise la méthodologie ou le standard utilisée pour mener à bien ces activités : — node65).",
+                "uuid": "1c87469c-1d00-531b-a77f-f2ec1e97d0c1"
+              },
+              {
+                "control-id": "node66",
+                "description": "Component capability addressing control node66 (précise la méthodologie ou le standard utilisée pour mener à bien ces activités : — node66).",
+                "uuid": "bc4a3db3-5c42-5429-b29c-416bb84ded9e"
+              },
+              {
+                "control-id": "node67",
+                "description": "Component capability addressing control node67 (Gestion des risques de sécurité de l’information — node67).",
+                "uuid": "f9039b43-c311-51f4-b7a4-b7ec6fbe724f"
+              },
+              {
+                "control-id": "node68",
+                "description": "Component capability addressing control node68 (formalise les procédures relatives à la gestion des risques, notamment à : — node68).",
+                "uuid": "08c9732e-209f-54dc-928e-b3362c85735d"
+              },
+              {
+                "control-id": "node69",
+                "description": "Component capability addressing control node69 (formalise les procédures relatives à la gestion des risques, notamment à : — node69).",
+                "uuid": "75027c95-1ba2-5536-b41b-89b1b07eddf7"
+              },
+              {
+                "control-id": "node7",
+                "description": "Component capability addressing control node7 (La lettre formalisant cet engagement du Dirigeant Responsable est intégrée ou référencée dans : — node7).",
+                "uuid": "d67227f9-0fcd-50a5-b0fe-bf6118659fec"
+              },
+              {
+                "control-id": "node70",
+                "description": "Component capability addressing control node70 (formalise les procédures relatives à la gestion des risques, notamment à : — node70).",
+                "uuid": "a39c0be3-9b15-5e67-b468-11a8739cc070"
+              },
+              {
+                "control-id": "node71",
+                "description": "Component capability addressing control node71 (formalise les procédures relatives à la gestion des risques, notamment à : — node71).",
+                "uuid": "42550b50-6dd7-5917-a836-770e72601a1c"
+              },
+              {
+                "control-id": "node73",
+                "description": "Component capability addressing control node73 (intègre ou fait référence à ces procédures dans : — node73).",
+                "uuid": "61365a98-1319-5408-93dd-49685193e316"
+              },
+              {
+                "control-id": "node74",
+                "description": "Component capability addressing control node74 (intègre ou fait référence à ces procédures dans : — node74).",
+                "uuid": "e862138d-76c4-56df-ae0f-d3846296e54d"
+              },
+              {
+                "control-id": "node75",
+                "description": "Component capability addressing control node75 (intègre ou fait référence à ces procédures dans : — node75).",
+                "uuid": "ef6a2514-9bc5-5ba4-b5b3-d46254ab642c"
+              },
+              {
+                "control-id": "node79",
+                "description": "Component capability addressing control node79 (Établissement du contexte — node79).",
+                "uuid": "56f9233c-3f81-5113-b680-032c1d5d3b7a"
+              },
+              {
+                "control-id": "node8",
+                "description": "Component capability addressing control node8 (La lettre formalisant cet engagement du Dirigeant Responsable est intégrée ou référencée dans : — node8).",
+                "uuid": "bad4245f-8f3b-52a5-88f9-cfa12b36538b"
+              },
+              {
+                "control-id": "node80",
+                "description": "Component capability addressing control node80 (Établissement du contexte — node80).",
+                "uuid": "a3908b09-588a-5dca-818d-7d02e07130e2"
+              },
+              {
+                "control-id": "node81",
+                "description": "Component capability addressing control node81 (Établissement du contexte — node81).",
+                "uuid": "17058559-0c68-5a39-8c39-9ac243320ad6"
+              },
+              {
+                "control-id": "node83",
+                "description": "Component capability addressing control node83 (De plus, l’organisme définit des échelles : — node83).",
+                "uuid": "31327583-abb5-5d15-8f3b-9739dacff251"
+              },
+              {
+                "control-id": "node84",
+                "description": "Component capability addressing control node84 (De plus, l’organisme définit des échelles : — node84).",
+                "uuid": "e1bce5e1-d543-5f4f-978a-14f3f89d4f93"
+              },
+              {
+                "control-id": "node85",
+                "description": "Component capability addressing control node85 (De plus, l’organisme définit des échelles : — node85).",
+                "uuid": "373ea6b6-d03d-5f42-b213-e65dacd85aa1"
+              },
+              {
+                "control-id": "node88",
+                "description": "Component capability addressing control node88 (Identification des risques — node88).",
+                "uuid": "d512d26a-4f5d-58a4-9611-68447743f722"
+              },
+              {
+                "control-id": "node90",
+                "description": "Component capability addressing control node90 (les fonctions : — node90).",
+                "uuid": "48dd824e-3d66-550c-ae52-dbb20664a51b"
+              },
+              {
+                "control-id": "node91",
+                "description": "Component capability addressing control node91 (les fonctions : — node91).",
+                "uuid": "c7c1791f-ab05-59df-8a5f-d069fcad6543"
+              },
+              {
+                "control-id": "node92",
+                "description": "Component capability addressing control node92 (les fonctions : — node92).",
+                "uuid": "779bd2ae-5774-5192-ac3a-dbff0f5c841a"
+              },
+              {
+                "control-id": "node93",
+                "description": "Component capability addressing control node93 (Identification des risques — node93).",
+                "uuid": "4ae5aa55-3458-5a4d-af7d-0ca2cf7e9c96"
+              },
+              {
+                "control-id": "node95",
+                "description": "Component capability addressing control node95 (Puis, pour chaque fonction et chaque élément identifiés précédemment, l’organisme : — node95).",
+                "uuid": "49f85350-892b-55bb-86c7-c44e2e84539d"
+              },
+              {
+                "control-id": "node96",
+                "description": "Component capability addressing control node96 (Puis, pour chaque fonction et chaque élément identifiés précédemment, l’organisme : — node96).",
+                "uuid": "c344cc2f-c3af-5266-a523-d6ddc926e7b0"
+              },
+              {
+                "control-id": "node97",
+                "description": "Component capability addressing control node97 (Puis, pour chaque fonction et chaque élément identifiés précédemment, l’organisme : — node97).",
+                "uuid": "be4fe85e-d460-5156-b0ff-099406889c9a"
+              },
+              {
+                "control-id": "node98",
+                "description": "Component capability addressing control node98 (Identification des risques — node98).",
+                "uuid": "9f1bd6eb-ff3c-5386-9008-ca7471d94f87"
+              },
+              {
+                "control-id": "node99",
+                "description": "Component capability addressing control node99 (Identification des risques — node99).",
+                "uuid": "d7b912d0-f833-5c4c-8ef6-b4e0d431baf5"
+              }
+            ],
+            "source": "./catalog.json",
+            "uuid": "fedda7a5-640f-596f-b1d5-2eff1074be80"
+          }
+        ],
+        "description": "Enterprise technical and operational capabilities implementing controls for Cadre de Conformité Cyber France (3CF) pour l'aviation civile - v2.",
+        "title": "Cadre de Conformité Cyber France (3CF) pour l'aviation civile - v2 Platform Component",
+        "type": "software",
+        "uuid": "7b8cfb3a-0282-53f8-98a6-49d02309eb42"
+      }
+    ],
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:12Z",
+      "oscal-version": "1.2.3",
+      "title": "Cadre de Conformité Cyber France (3CF) pour l'aviation civile - v2 Component Definition Template",
+      "version": "2"
+    },
+    "uuid": "eb996dd1-2778-5f4b-aca0-09c282320b7c"
+  }
+}

@@ -4,7 +4,7 @@
       "href": "./assessment-plan.json"
     },
     "metadata": {
-      "last-modified": "2026-10-25T23:17:26Z",
+      "last-modified": "2026-11-08T01:42:11Z",
       "oscal-version": "1.2.3",
       "title": "CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3) Assessment Results Template",
       "version": "1.2.3"
@@ -48,157 +48,174 @@
             "uuid": "a0251eec-5bf7-5cbd-95f5-69eca7a85679"
           },
           {
-            "description": "Control au-12 has been evaluated and confirmed satisfied.",
+            "description": "Control au-1 has been evaluated and confirmed satisfied.",
             "related-observations": [
               {
-                "observation-uuid": "cc029a8f-c9ea-588f-b0cb-a2f3a3b7be56"
+                "observation-uuid": "ff554196-089b-51cb-b7c5-ec426ce8b92a"
               }
             ],
             "target": {
               "status": {
                 "state": "satisfied"
               },
-              "target-id": "au-12",
+              "target-id": "au-1",
               "type": "objective-id"
             },
-            "title": "Assessment Finding for au-12",
-            "uuid": "b024a6ea-715b-51b9-bd61-dceb39a5712f"
+            "title": "Assessment Finding for au-1",
+            "uuid": "f40ca49a-ab46-5a7c-a901-bd2c64af5b2e"
           },
           {
-            "description": "Control ca-2 has been evaluated and confirmed satisfied.",
+            "description": "Control ca-1 has been evaluated and confirmed satisfied.",
             "related-observations": [
               {
-                "observation-uuid": "6254bb08-5344-5f20-b5e3-e9c530cae344"
+                "observation-uuid": "25f1a91b-816f-5590-aa3c-d008098fe756"
               }
             ],
             "target": {
               "status": {
                 "state": "satisfied"
               },
-              "target-id": "ca-2",
+              "target-id": "ca-1",
               "type": "objective-id"
             },
-            "title": "Assessment Finding for ca-2",
-            "uuid": "b90a6053-6cf6-5502-a24f-a7c1027341e7"
+            "title": "Assessment Finding for ca-1",
+            "uuid": "2948b829-feeb-5a2c-81f1-769edecde51f"
           },
           {
-            "description": "Control cm-2 has been evaluated and confirmed satisfied.",
+            "description": "Control cm-1 has been evaluated and confirmed satisfied.",
             "related-observations": [
               {
-                "observation-uuid": "ab191440-0937-50c8-8f55-8480ee4dc6f7"
+                "observation-uuid": "e025139a-2584-529a-9682-3f4e005b1510"
               }
             ],
             "target": {
               "status": {
                 "state": "satisfied"
               },
-              "target-id": "cm-2",
+              "target-id": "cm-1",
               "type": "objective-id"
             },
-            "title": "Assessment Finding for cm-2",
-            "uuid": "0a12c3b5-b589-503a-b54f-7a414f56bda0"
+            "title": "Assessment Finding for cm-1",
+            "uuid": "eca40181-426e-508b-b424-0276f493cd95"
           },
           {
-            "description": "Control cp-2 has been evaluated and confirmed satisfied.",
+            "description": "Control cp-1 has been evaluated and confirmed satisfied.",
             "related-observations": [
               {
-                "observation-uuid": "4a75e8f9-76b4-5ae9-85d0-1b8538ea12ee"
+                "observation-uuid": "1bf6b22f-317b-51d5-8202-b75842900f0a"
               }
             ],
             "target": {
               "status": {
                 "state": "satisfied"
               },
-              "target-id": "cp-2",
+              "target-id": "cp-1",
               "type": "objective-id"
             },
-            "title": "Assessment Finding for cp-2",
-            "uuid": "3a0cba78-e0fc-53b3-affc-67945544ac4f"
+            "title": "Assessment Finding for cp-1",
+            "uuid": "2b6c88a6-9742-5f61-a36d-2b4adb01bf02"
           },
           {
-            "description": "Control ia-2 has been evaluated and confirmed satisfied.",
+            "description": "Control ia-1 has been evaluated and confirmed satisfied.",
             "related-observations": [
               {
-                "observation-uuid": "732fed1f-ae25-5d78-aa96-6c36f47181db"
+                "observation-uuid": "3208106f-09c4-5c42-a682-ce3a66500d70"
               }
             ],
             "target": {
               "status": {
                 "state": "satisfied"
               },
-              "target-id": "ia-2",
+              "target-id": "ia-1",
               "type": "objective-id"
             },
-            "title": "Assessment Finding for ia-2",
-            "uuid": "8f22b92e-6136-57e1-a0eb-0aafc096209d"
+            "title": "Assessment Finding for ia-1",
+            "uuid": "80835c28-32ec-58ed-b218-74846dbf9ed3"
           },
           {
-            "description": "Control ir-4 has been evaluated and confirmed satisfied.",
+            "description": "Control ir-1 has been evaluated and confirmed satisfied.",
             "related-observations": [
               {
-                "observation-uuid": "6af2843e-6eaa-5979-80f6-e039a9ef26bf"
+                "observation-uuid": "407efa6f-a6a3-5e4b-a311-42ccb9ec6ed8"
               }
             ],
             "target": {
               "status": {
                 "state": "satisfied"
               },
-              "target-id": "ir-4",
+              "target-id": "ir-1",
               "type": "objective-id"
             },
-            "title": "Assessment Finding for ir-4",
-            "uuid": "da2fd24a-daeb-54d0-8268-7cbbfa7dc9b9"
+            "title": "Assessment Finding for ir-1",
+            "uuid": "351f2fce-4485-5ea4-a151-a9d1a8adaeb6"
           },
           {
-            "description": "Control mp-2 has been evaluated and confirmed satisfied.",
+            "description": "Control ma-1 has been evaluated and confirmed satisfied.",
             "related-observations": [
               {
-                "observation-uuid": "6d14c992-f293-58ca-91ec-1f6034fc8ae7"
+                "observation-uuid": "09769fd1-5805-56a9-a6e6-dda1a2ffa35a"
               }
             ],
             "target": {
               "status": {
                 "state": "satisfied"
               },
-              "target-id": "mp-2",
+              "target-id": "ma-1",
               "type": "objective-id"
             },
-            "title": "Assessment Finding for mp-2",
-            "uuid": "d1898f6b-890a-5ec5-a762-c2f6c18fc751"
+            "title": "Assessment Finding for ma-1",
+            "uuid": "bd82cf66-81ae-5235-9e02-fea1e456052c"
           },
           {
-            "description": "Control pe-2 has been evaluated and confirmed satisfied.",
+            "description": "Control mp-1 has been evaluated and confirmed satisfied.",
             "related-observations": [
               {
-                "observation-uuid": "5c4b38be-f8d8-55e7-b2e8-862d9b844bf9"
+                "observation-uuid": "4c3dcfaa-1bde-51d2-a2bf-e1670d232bc8"
               }
             ],
             "target": {
               "status": {
                 "state": "satisfied"
               },
-              "target-id": "pe-2",
+              "target-id": "mp-1",
               "type": "objective-id"
             },
-            "title": "Assessment Finding for pe-2",
-            "uuid": "2d7a4273-cd0d-5714-a4d2-a8f5010031b2"
+            "title": "Assessment Finding for mp-1",
+            "uuid": "19c51846-7b33-5620-b08b-178eee1220e0"
           },
           {
-            "description": "Control pl-2 has been evaluated and confirmed satisfied.",
+            "description": "Control pe-1 has been evaluated and confirmed satisfied.",
             "related-observations": [
               {
-                "observation-uuid": "6c37c848-394c-50f7-bc6b-8a2da95f9e79"
+                "observation-uuid": "9c2e57d1-0a24-5407-a1c4-c80755cbde52"
               }
             ],
             "target": {
               "status": {
                 "state": "satisfied"
               },
-              "target-id": "pl-2",
+              "target-id": "pe-1",
               "type": "objective-id"
             },
-            "title": "Assessment Finding for pl-2",
-            "uuid": "a8023596-80dd-5899-a6e2-4bbfcc756448"
+            "title": "Assessment Finding for pe-1",
+            "uuid": "2aeeef39-923b-592e-aef4-84fa78ec06ee"
+          },
+          {
+            "description": "Control pl-1 has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "42d79510-98f0-5c11-aade-f79a55182278"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "pl-1",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for pl-1",
+            "uuid": "560ef835-1124-5413-be7d-4763ec6c96af"
           },
           {
             "description": "Control pm-1 has been evaluated and confirmed satisfied.",
@@ -218,112 +235,95 @@
             "uuid": "0fd4912c-8262-5c88-8e13-a295f4076455"
           },
           {
-            "description": "Control ps-2 has been evaluated and confirmed satisfied.",
+            "description": "Control ps-1 has been evaluated and confirmed satisfied.",
             "related-observations": [
               {
-                "observation-uuid": "97ae09cd-c676-5cd6-80ef-d4e1f7e6937c"
+                "observation-uuid": "eaa315c5-316a-5e37-b1a7-1c0aa38feef6"
               }
             ],
             "target": {
               "status": {
                 "state": "satisfied"
               },
-              "target-id": "ps-2",
+              "target-id": "ps-1",
               "type": "objective-id"
             },
-            "title": "Assessment Finding for ps-2",
-            "uuid": "234cd54b-0508-5e71-a904-80aaa6491c82"
+            "title": "Assessment Finding for ps-1",
+            "uuid": "5fa2192f-181f-5485-ae5f-d7cb65d4bce2"
           },
           {
-            "description": "Control ra-3 has been evaluated and confirmed satisfied.",
+            "description": "Control ra-1 has been evaluated and confirmed satisfied.",
             "related-observations": [
               {
-                "observation-uuid": "d4d5765c-c521-58bc-b1df-c2a3d46325ce"
+                "observation-uuid": "453fa0a7-404e-5088-b366-0331194d8554"
               }
             ],
             "target": {
               "status": {
                 "state": "satisfied"
               },
-              "target-id": "ra-3",
+              "target-id": "ra-1",
               "type": "objective-id"
             },
-            "title": "Assessment Finding for ra-3",
-            "uuid": "8f1f6045-6efd-5ba4-a853-57ca0ddaf8f4"
+            "title": "Assessment Finding for ra-1",
+            "uuid": "b2790d93-50b3-5146-938a-e849c4628331"
           },
           {
-            "description": "Control sa-4 has been evaluated and confirmed satisfied.",
+            "description": "Control sa-1 has been evaluated and confirmed satisfied.",
             "related-observations": [
               {
-                "observation-uuid": "d45ae75a-0ff5-5f84-a55a-a05af8c439c0"
+                "observation-uuid": "838f8c2d-c601-530f-ab59-2729f46aeccb"
               }
             ],
             "target": {
               "status": {
                 "state": "satisfied"
               },
-              "target-id": "sa-4",
+              "target-id": "sa-1",
               "type": "objective-id"
             },
-            "title": "Assessment Finding for sa-4",
-            "uuid": "51bddc0c-2810-5ddf-8521-2cd286b97b6b"
+            "title": "Assessment Finding for sa-1",
+            "uuid": "5e121fcc-9344-5048-bf2d-56fe7ba6e46b"
           },
           {
-            "description": "Control sc-13 has been evaluated and confirmed satisfied.",
+            "description": "Control sc-1 has been evaluated and confirmed satisfied.",
             "related-observations": [
               {
-                "observation-uuid": "d7f10404-7239-5f72-ae6d-d0f6de2ea151"
+                "observation-uuid": "e6b2a1de-f4fa-5f94-96c3-d9c43502164e"
               }
             ],
             "target": {
               "status": {
                 "state": "satisfied"
               },
-              "target-id": "sc-13",
+              "target-id": "sc-1",
               "type": "objective-id"
             },
-            "title": "Assessment Finding for sc-13",
-            "uuid": "74c0f90f-7830-5fa9-a3aa-98254d455090"
+            "title": "Assessment Finding for sc-1",
+            "uuid": "c16bfa63-19ed-5b8a-b052-2da3aea9db92"
           },
           {
-            "description": "Control si-2 has been evaluated and confirmed satisfied.",
+            "description": "Control si-1 has been evaluated and confirmed satisfied.",
             "related-observations": [
               {
-                "observation-uuid": "16b179f1-ec28-5ae0-a06c-965a35113105"
+                "observation-uuid": "897e0bab-c8e9-5f24-b6cc-d4de44453715"
               }
             ],
             "target": {
               "status": {
                 "state": "satisfied"
               },
-              "target-id": "si-2",
+              "target-id": "si-1",
               "type": "objective-id"
             },
-            "title": "Assessment Finding for si-2",
-            "uuid": "467ada68-550d-5688-9f57-26f04170e538"
-          },
-          {
-            "description": "Control sr-1 has been evaluated and confirmed satisfied.",
-            "related-observations": [
-              {
-                "observation-uuid": "7eb20c46-bca9-5cf0-9adf-38a2ae3786ed"
-              }
-            ],
-            "target": {
-              "status": {
-                "state": "satisfied"
-              },
-              "target-id": "sr-1",
-              "type": "objective-id"
-            },
-            "title": "Assessment Finding for sr-1",
-            "uuid": "befc7bb2-b0b9-5479-b6ef-acdf7a81006f"
+            "title": "Assessment Finding for si-1",
+            "uuid": "4a572f28-81ae-51ec-a578-06ab200b75c0"
           }
         ],
         "observations": [
           {
-            "collected": "2026-10-25T23:17:26Z",
-            "description": "Verified control ac-1 (Access Control Policy and Procedures) implementation and supporting evidence.",
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control ac-1 (Access control policy and procedures) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
               "TEST"
@@ -334,8 +334,8 @@
             "uuid": "bd26582c-e20b-559d-ad0f-4cace8637a9b"
           },
           {
-            "collected": "2026-10-25T23:17:26Z",
-            "description": "Verified control at-1 (Security Awareness Policy and Procedures) implementation and supporting evidence.",
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control at-1 (Awareness and training policy and procedures) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
               "TEST"
@@ -346,8 +346,8 @@
             "uuid": "c52ba13c-6b0f-59a1-a63a-ba92c735338b"
           },
           {
-            "collected": "2026-10-25T23:17:26Z",
-            "description": "Verified control au-12 (Audit Generation) implementation and supporting evidence.",
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control au-1 (Audit and accountability policy and procedures) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
               "TEST"
@@ -355,11 +355,11 @@
             "types": [
               "finding"
             ],
-            "uuid": "cc029a8f-c9ea-588f-b0cb-a2f3a3b7be56"
+            "uuid": "ff554196-089b-51cb-b7c5-ec426ce8b92a"
           },
           {
-            "collected": "2026-10-25T23:17:26Z",
-            "description": "Verified control ca-2 (Security Assessments) implementation and supporting evidence.",
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control ca-1 (Assessment, authorization and monitoring policy and procedures) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
               "TEST"
@@ -367,11 +367,11 @@
             "types": [
               "finding"
             ],
-            "uuid": "6254bb08-5344-5f20-b5e3-e9c530cae344"
+            "uuid": "25f1a91b-816f-5590-aa3c-d008098fe756"
           },
           {
-            "collected": "2026-10-25T23:17:26Z",
-            "description": "Verified control cm-2 (Baseline Configuration) implementation and supporting evidence.",
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control cm-1 (Configuration management policy and procedures) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
               "TEST"
@@ -379,11 +379,11 @@
             "types": [
               "finding"
             ],
-            "uuid": "ab191440-0937-50c8-8f55-8480ee4dc6f7"
+            "uuid": "e025139a-2584-529a-9682-3f4e005b1510"
           },
           {
-            "collected": "2026-10-25T23:17:26Z",
-            "description": "Verified control cp-2 (Contingency Plan) implementation and supporting evidence.",
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control cp-1 (Contingency planning policy and procedures) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
               "TEST"
@@ -391,11 +391,11 @@
             "types": [
               "finding"
             ],
-            "uuid": "4a75e8f9-76b4-5ae9-85d0-1b8538ea12ee"
+            "uuid": "1bf6b22f-317b-51d5-8202-b75842900f0a"
           },
           {
-            "collected": "2026-10-25T23:17:26Z",
-            "description": "Verified control ia-2 (Identification and Authentication (Organizational Users)) implementation and supporting evidence.",
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control ia-1 (Identification and authentication policy and procedures) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
               "TEST"
@@ -403,11 +403,11 @@
             "types": [
               "finding"
             ],
-            "uuid": "732fed1f-ae25-5d78-aa96-6c36f47181db"
+            "uuid": "3208106f-09c4-5c42-a682-ce3a66500d70"
           },
           {
-            "collected": "2026-10-25T23:17:26Z",
-            "description": "Verified control ir-4 (Incident Handling) implementation and supporting evidence.",
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control ir-1 (Incident response policy and procedures) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
               "TEST"
@@ -415,11 +415,11 @@
             "types": [
               "finding"
             ],
-            "uuid": "6af2843e-6eaa-5979-80f6-e039a9ef26bf"
+            "uuid": "407efa6f-a6a3-5e4b-a311-42ccb9ec6ed8"
           },
           {
-            "collected": "2026-10-25T23:17:26Z",
-            "description": "Verified control mp-2 (Media Access) implementation and supporting evidence.",
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control ma-1 (Maintenance policy and procedures) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
               "TEST"
@@ -427,11 +427,11 @@
             "types": [
               "finding"
             ],
-            "uuid": "6d14c992-f293-58ca-91ec-1f6034fc8ae7"
+            "uuid": "09769fd1-5805-56a9-a6e6-dda1a2ffa35a"
           },
           {
-            "collected": "2026-10-25T23:17:26Z",
-            "description": "Verified control pe-2 (Physical Access Authorizations) implementation and supporting evidence.",
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control mp-1 (Media protection policy and procedures) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
               "TEST"
@@ -439,11 +439,11 @@
             "types": [
               "finding"
             ],
-            "uuid": "5c4b38be-f8d8-55e7-b2e8-862d9b844bf9"
+            "uuid": "4c3dcfaa-1bde-51d2-a2bf-e1670d232bc8"
           },
           {
-            "collected": "2026-10-25T23:17:26Z",
-            "description": "Verified control pl-2 (System Security Plan) implementation and supporting evidence.",
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control pe-1 (Physical and environmental protection policy and procedures) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
               "TEST"
@@ -451,11 +451,23 @@
             "types": [
               "finding"
             ],
-            "uuid": "6c37c848-394c-50f7-bc6b-8a2da95f9e79"
+            "uuid": "9c2e57d1-0a24-5407-a1c4-c80755cbde52"
           },
           {
-            "collected": "2026-10-25T23:17:26Z",
-            "description": "Verified control pm-1 (Information Security Program Plan) implementation and supporting evidence.",
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control pl-1 (Planning policy and procedures) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "42d79510-98f0-5c11-aade-f79a55182278"
+          },
+          {
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control pm-1 (Information security program plan) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
               "TEST"
@@ -466,8 +478,8 @@
             "uuid": "86bab401-0784-5c95-b469-dd4a7dcf15f2"
           },
           {
-            "collected": "2026-10-25T23:17:26Z",
-            "description": "Verified control ps-2 (Position Risk Designation) implementation and supporting evidence.",
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control ps-1 (Personnel security policy and procedures) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
               "TEST"
@@ -475,11 +487,11 @@
             "types": [
               "finding"
             ],
-            "uuid": "97ae09cd-c676-5cd6-80ef-d4e1f7e6937c"
+            "uuid": "eaa315c5-316a-5e37-b1a7-1c0aa38feef6"
           },
           {
-            "collected": "2026-10-25T23:17:26Z",
-            "description": "Verified control ra-3 (Risk Assessment) implementation and supporting evidence.",
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control ra-1 (Risk assessment policy and procedures) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
               "TEST"
@@ -487,11 +499,11 @@
             "types": [
               "finding"
             ],
-            "uuid": "d4d5765c-c521-58bc-b1df-c2a3d46325ce"
+            "uuid": "453fa0a7-404e-5088-b366-0331194d8554"
           },
           {
-            "collected": "2026-10-25T23:17:26Z",
-            "description": "Verified control sa-4 (Acquisition Process) implementation and supporting evidence.",
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control sa-1 (System and services acquisition policy and procedures) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
               "TEST"
@@ -499,11 +511,11 @@
             "types": [
               "finding"
             ],
-            "uuid": "d45ae75a-0ff5-5f84-a55a-a05af8c439c0"
+            "uuid": "838f8c2d-c601-530f-ab59-2729f46aeccb"
           },
           {
-            "collected": "2026-10-25T23:17:26Z",
-            "description": "Verified control sc-13 (Cryptographic Protection) implementation and supporting evidence.",
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control sc-1 (System and communications protection policy and procedures) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
               "TEST"
@@ -511,11 +523,11 @@
             "types": [
               "finding"
             ],
-            "uuid": "d7f10404-7239-5f72-ae6d-d0f6de2ea151"
+            "uuid": "e6b2a1de-f4fa-5f94-96c3-d9c43502164e"
           },
           {
-            "collected": "2026-10-25T23:17:26Z",
-            "description": "Verified control si-2 (Flaw Remediation) implementation and supporting evidence.",
+            "collected": "2026-11-08T01:42:11Z",
+            "description": "Verified control si-1 (System and information integrity policy and procedures) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
               "TEST"
@@ -523,19 +535,7 @@
             "types": [
               "finding"
             ],
-            "uuid": "16b179f1-ec28-5ae0-a06c-965a35113105"
-          },
-          {
-            "collected": "2026-10-25T23:17:26Z",
-            "description": "Verified control sr-1 (Supply Chain Risk Management Policy) implementation and supporting evidence.",
-            "methods": [
-              "EXAMINE",
-              "TEST"
-            ],
-            "types": [
-              "finding"
-            ],
-            "uuid": "7eb20c46-bca9-5cf0-9adf-38a2ae3786ed"
+            "uuid": "897e0bab-c8e9-5f24-b6cc-d4de44453715"
           }
         ],
         "reviewed-controls": {
@@ -546,7 +546,7 @@
             }
           ]
         },
-        "start": "2026-10-25T23:17:26Z",
+        "start": "2026-11-08T01:42:11Z",
         "title": "CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3) Assessment Results",
         "uuid": "5e99520a-873e-5658-86a1-e05d5240d8a0"
       }

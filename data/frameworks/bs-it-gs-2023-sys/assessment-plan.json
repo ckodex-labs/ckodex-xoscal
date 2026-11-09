@@ -1,0 +1,174 @@
+{
+  "assessment-plan": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:13Z",
+      "oscal-version": "1.2.3",
+      "title": "IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - SYS: IT-Systeme Security Assessment Plan Template",
+      "version": "1"
+    },
+    "reviewed-controls": {
+      "control-selections": [
+        {
+          "description": "All controls in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - SYS: IT-Systeme",
+          "include-all": {}
+        }
+      ]
+    },
+    "tasks": [
+      {
+        "description": "Verify and examine implementation of 107 controls in the Allgemeiner Server family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - SYS: IT-Systeme.",
+        "title": "Assess Family SYS.1.1 (Allgemeiner Server)",
+        "type": "examination",
+        "uuid": "3e5132de-31b1-595b-939b-aa965171260a"
+      },
+      {
+        "description": "Verify and examine implementation of 32 controls in the Windows Server 2012 family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - SYS: IT-Systeme.",
+        "title": "Assess Family SYS.1.2.2 (Windows Server 2012)",
+        "type": "examination",
+        "uuid": "ef5dfe5e-4f4d-5a83-a14d-a9317ce19055"
+      },
+      {
+        "description": "Verify and examine implementation of 29 controls in the Windows Server family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - SYS: IT-Systeme.",
+        "title": "Assess Family SYS.1.2.3 (Windows Server)",
+        "type": "examination",
+        "uuid": "9cc302d2-8563-50b9-aadf-cdc202621f73"
+      },
+      {
+        "description": "Verify and examine implementation of 27 controls in the Server unter Linux und Unix family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - SYS: IT-Systeme.",
+        "title": "Assess Family SYS.1.3 (Server unter Linux und Unix)",
+        "type": "examination",
+        "uuid": "3438db4e-9c3b-55e9-9346-05cb29acf21f"
+      },
+      {
+        "description": "Verify and examine implementation of 81 controls in the Virtualisierung family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - SYS: IT-Systeme.",
+        "title": "Assess Family SYS.1.5 (Virtualisierung)",
+        "type": "examination",
+        "uuid": "3b8d7910-cef8-59e3-b0f0-d5848150f956"
+      },
+      {
+        "description": "Verify and examine implementation of 89 controls in the Containerisierung family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - SYS: IT-Systeme.",
+        "title": "Assess Family SYS.1.6 (Containerisierung)",
+        "type": "examination",
+        "uuid": "3ea42558-ae50-5f04-9064-3007d3de08e5"
+      },
+      {
+        "description": "Verify and examine implementation of 135 controls in the IBM Z family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - SYS: IT-Systeme.",
+        "title": "Assess Family SYS.1.7 (IBM Z)",
+        "type": "examination",
+        "uuid": "01184de8-54d3-5919-b134-ce041cc0e18e"
+      },
+      {
+        "description": "Verify and examine implementation of 98 controls in the Speicherlösungen family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - SYS: IT-Systeme.",
+        "title": "Assess Family SYS.1.8 (Speicherlösungen)",
+        "type": "examination",
+        "uuid": "df857a83-96a8-5d52-bdb3-2bb2c78af63e"
+      },
+      {
+        "description": "Verify and examine implementation of 120 controls in the Terminalserver family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - SYS: IT-Systeme.",
+        "title": "Assess Family SYS.1.9 (Terminalserver)",
+        "type": "examination",
+        "uuid": "84639f14-6d15-5e12-9fc1-9cef63d5966b"
+      },
+      {
+        "description": "Verify and examine implementation of 122 controls in the Allgemeiner Client family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - SYS: IT-Systeme.",
+        "title": "Assess Family SYS.2.1 (Allgemeiner Client)",
+        "type": "examination",
+        "uuid": "c4eae434-d9eb-5bca-908e-f8a0e910f3e2"
+      },
+      {
+        "description": "Verify and examine implementation of 63 controls in the Clients unter Windows family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - SYS: IT-Systeme.",
+        "title": "Assess Family SYS.2.2.3 (Clients unter Windows)",
+        "type": "examination",
+        "uuid": "efdda5cd-3f29-5bcb-9024-dcee02e59a7d"
+      },
+      {
+        "description": "Verify and examine implementation of 43 controls in the Clients unter Linux und Unix family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - SYS: IT-Systeme.",
+        "title": "Assess Family SYS.2.3 (Clients unter Linux und Unix)",
+        "type": "examination",
+        "uuid": "e4574c7b-0db0-52df-8886-00255daabe94"
+      },
+      {
+        "description": "Verify and examine implementation of 35 controls in the Clients unter macOS family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - SYS: IT-Systeme.",
+        "title": "Assess Family SYS.2.4 (Clients unter macOS)",
+        "type": "examination",
+        "uuid": "547c946c-ecfd-5a42-abf0-d37aef318c32"
+      },
+      {
+        "description": "Verify and examine implementation of 76 controls in the Client-Virtualisierung family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - SYS: IT-Systeme.",
+        "title": "Assess Family SYS.2.5 (Client-Virtualisierung)",
+        "type": "examination",
+        "uuid": "061949ef-0e94-5388-8bc9-3dc15fe6560c"
+      },
+      {
+        "description": "Verify and examine implementation of 52 controls in the Virtual Desktop Infrastructure family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - SYS: IT-Systeme.",
+        "title": "Assess Family SYS.2.6 (Virtual Desktop Infrastructure)",
+        "type": "examination",
+        "uuid": "747585d5-3d75-5ccf-8cc5-6dd1e58f7e36"
+      },
+      {
+        "description": "Verify and examine implementation of 41 controls in the Laptops family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - SYS: IT-Systeme.",
+        "title": "Assess Family SYS.3.1 (Laptops)",
+        "type": "examination",
+        "uuid": "67cb76b3-b81a-5206-8c6c-6839a9734054"
+      },
+      {
+        "description": "Verify and examine implementation of 85 controls in the Allgemeine Smartphones und Tablets family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - SYS: IT-Systeme.",
+        "title": "Assess Family SYS.3.2.1 (Allgemeine Smartphones und Tablets)",
+        "type": "examination",
+        "uuid": "795a464d-dbdc-5b63-bc92-1e3401485084"
+      },
+      {
+        "description": "Verify and examine implementation of 70 controls in the Mobile Device Management (MDM) family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - SYS: IT-Systeme.",
+        "title": "Assess Family SYS.3.2.2 (Mobile Device Management (MDM))",
+        "type": "examination",
+        "uuid": "e1930959-3ccf-5c45-b54b-5d97467d35c6"
+      },
+      {
+        "description": "Verify and examine implementation of 33 controls in the iOS (for Enterprise) family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - SYS: IT-Systeme.",
+        "title": "Assess Family SYS.3.2.3 (iOS (for Enterprise))",
+        "type": "examination",
+        "uuid": "2fbb8053-fc69-5b2e-a9e0-cd599a52e79f"
+      },
+      {
+        "description": "Verify and examine implementation of 7 controls in the Android family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - SYS: IT-Systeme.",
+        "title": "Assess Family SYS.3.2.4 (Android)",
+        "type": "examination",
+        "uuid": "6354e827-3463-5e72-b2d3-517880e72c2d"
+      },
+      {
+        "description": "Verify and examine implementation of 50 controls in the Mobiltelefon family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - SYS: IT-Systeme.",
+        "title": "Assess Family SYS.3.3 (Mobiltelefon)",
+        "type": "examination",
+        "uuid": "f0cfe6a7-272e-5b79-83f6-13a0cc3b75b9"
+      },
+      {
+        "description": "Verify and examine implementation of 67 controls in the Drucker, Kopierer und Multifunktionsgeräte family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - SYS: IT-Systeme.",
+        "title": "Assess Family SYS.4.1 (Drucker, Kopierer und Multifunktionsgeräte)",
+        "type": "examination",
+        "uuid": "3c7caca4-9155-56e2-a75d-5ea60a8a9c47"
+      },
+      {
+        "description": "Verify and examine implementation of 62 controls in the Eingebettete Systeme family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - SYS: IT-Systeme.",
+        "title": "Assess Family SYS.4.3 (Eingebettete Systeme)",
+        "type": "examination",
+        "uuid": "73ffd125-20ef-59fd-8206-5b78cfb3340d"
+      },
+      {
+        "description": "Verify and examine implementation of 69 controls in the Allgemeines IoT-Gerät family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - SYS: IT-Systeme.",
+        "title": "Assess Family SYS.4.4 (Allgemeines IoT-Gerät)",
+        "type": "examination",
+        "uuid": "89cec01a-f88f-5505-8547-17be6a32159e"
+      },
+      {
+        "description": "Verify and examine implementation of 45 controls in the Wechseldatenträger family for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - SYS: IT-Systeme.",
+        "title": "Assess Family SYS.4.5 (Wechseldatenträger)",
+        "type": "examination",
+        "uuid": "e8dc7ab9-3435-5d02-9a6d-9ab0a82dfd4e"
+      }
+    ],
+    "uuid": "906dcd6b-7ec1-5baa-a12a-fb73a1952b04"
+  }
+}

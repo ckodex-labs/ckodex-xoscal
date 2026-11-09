@@ -1,0 +1,1083 @@
+{
+  "system-security-plan": {
+    "control-implementation": {
+      "description": "Control implementations for ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+      "implemented-requirements": [
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control _10.1 (Continual improvement) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "4b928f96-8678-52d3-8751-436ea654bf54"
+            }
+          ],
+          "control-id": "_10.1",
+          "remarks": "Control _10.1 (Continual improvement) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "69ee4c5f-3e5b-50ee-b924-7ae830984de3"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control _10.2 (Nonconformity and corrective action) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ba67e44d-347b-5aac-bc3e-06ddd45d7b58"
+            }
+          ],
+          "control-id": "_10.2",
+          "remarks": "Control _10.2 (Nonconformity and corrective action) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "77474824-4702-5092-9427-82d981e67484"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control _4.1 (Understanding the organization and its context) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "c9aff7a2-8a52-52f1-9dcc-ec77b6eb1b0c"
+            }
+          ],
+          "control-id": "_4.1",
+          "remarks": "Control _4.1 (Understanding the organization and its context) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "3127b48a-f720-53cc-a478-2b421ec68a6f"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control _4.2 (Understanding the needs and expectations of interested parties) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "b5deb0a7-c094-55c9-adf1-d44bb8239464"
+            }
+          ],
+          "control-id": "_4.2",
+          "remarks": "Control _4.2 (Understanding the needs and expectations of interested parties) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "2d8e311f-bb9e-58d1-97b0-bac4b5585e73"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control _4.3 (Determining the scope of the AI management system) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "9a88d1cc-049d-5c0d-b341-158fdba670a7"
+            }
+          ],
+          "control-id": "_4.3",
+          "remarks": "Control _4.3 (Determining the scope of the AI management system) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "ae3b10cb-46a6-5fd7-8f43-58a4d972d22c"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control _4.4 (AI management system) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "9f0f0b13-78c1-537b-926e-bc0aef1c5d45"
+            }
+          ],
+          "control-id": "_4.4",
+          "remarks": "Control _4.4 (AI management system) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "75f980ad-bd67-5c07-b1ef-b25aff31c9f4"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control _5.1 (Leadership and commitment) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "59650813-9666-5ed1-b393-c46239f1d287"
+            }
+          ],
+          "control-id": "_5.1",
+          "remarks": "Control _5.1 (Leadership and commitment) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "06e84554-1851-5741-baac-4ce36a34a109"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control _5.2 (AI policy) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "3681e7c5-d41e-57a6-9a2e-704e163b69a0"
+            }
+          ],
+          "control-id": "_5.2",
+          "remarks": "Control _5.2 (AI policy) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "6f238cee-c79b-5a0c-bad7-a51d11ad7c93"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control _5.3 (Roles, responsibilities and authorities) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "0a7a3fc8-a104-5a39-a60a-758e721aef9d"
+            }
+          ],
+          "control-id": "_5.3",
+          "remarks": "Control _5.3 (Roles, responsibilities and authorities) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "2c0f4bdf-673c-53b3-baa7-98043f9ec0bb"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control _6.1 (Actions to address risks and opportunities) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "01a8cd1a-ec52-5503-a4e0-f993cdbe606f"
+            }
+          ],
+          "control-id": "_6.1",
+          "remarks": "Control _6.1 (Actions to address risks and opportunities) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f22b87ea-bc31-500d-998b-a7791510eb3c"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control _6.2 (AI objectives and planning to achieve them) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "080c5bba-ce28-5556-b4be-1a3a659f0241"
+            }
+          ],
+          "control-id": "_6.2",
+          "remarks": "Control _6.2 (AI objectives and planning to achieve them) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "25ebc420-fa26-5961-9f22-e2ad397c43b2"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control _6.3 (Planning of changes) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "a99717b0-3efc-555f-9837-7b0feeb6c7db"
+            }
+          ],
+          "control-id": "_6.3",
+          "remarks": "Control _6.3 (Planning of changes) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "0cf1b443-d867-5ab8-895a-ee5a4e16b668"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control _7.1 (Resources) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "219374f3-8bf7-5fa6-ab2c-364f0a63ea66"
+            }
+          ],
+          "control-id": "_7.1",
+          "remarks": "Control _7.1 (Resources) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "29392022-f3d6-5025-822a-0c3ea2301b9f"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control _7.2 (Competence) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "7da60de6-991f-5e98-aa36-7257d333c793"
+            }
+          ],
+          "control-id": "_7.2",
+          "remarks": "Control _7.2 (Competence) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "82ea4b3b-87df-5828-a3e9-cbe328fb831e"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control _7.3 (Awareness) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "48c7dae1-a30a-5217-aa03-5cac9ee11caa"
+            }
+          ],
+          "control-id": "_7.3",
+          "remarks": "Control _7.3 (Awareness) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "bf8941f4-317d-5f0e-96c8-9041df5de27d"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control _7.4 (Communication) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "b0117373-0baf-5fdc-8a46-3d3dece2124d"
+            }
+          ],
+          "control-id": "_7.4",
+          "remarks": "Control _7.4 (Communication) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "96adbc6a-151f-55ae-b126-8ed0fba36a23"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control _7.5.1 (General) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "159b8e60-ac72-53ef-b94c-c4289fbea7b7"
+            }
+          ],
+          "control-id": "_7.5.1",
+          "remarks": "Control _7.5.1 (General) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "9af1df4f-c529-5682-8591-baa92014f4bf"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control _7.5.2 (Creating and updating documented information) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "4dc925b3-a896-5666-b854-ddcded99081c"
+            }
+          ],
+          "control-id": "_7.5.2",
+          "remarks": "Control _7.5.2 (Creating and updating documented information) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "87c2b413-2996-5fee-a385-21a03dd4a066"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control _7.5.3 (Control of documented information) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "495ff766-7c6e-537d-b593-937b2297f6dc"
+            }
+          ],
+          "control-id": "_7.5.3",
+          "remarks": "Control _7.5.3 (Control of documented information) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f03b96e0-b607-5bbc-a8f1-b04f6afb7f05"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control _8.1 (Operational planning and control) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "796133ac-41dc-5f27-aa86-e9602aaa590a"
+            }
+          ],
+          "control-id": "_8.1",
+          "remarks": "Control _8.1 (Operational planning and control) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "bf9e8bb4-2d7d-591d-aefa-22037c98641a"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control _8.2 (AI risk assessment) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "38dcd18f-d6cb-5b8f-9e8c-f9c72f1b1500"
+            }
+          ],
+          "control-id": "_8.2",
+          "remarks": "Control _8.2 (AI risk assessment) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "27ede295-c92e-5d8c-bbbf-02f6454b4db8"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control _8.3 (AI risk treatment) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "310af8ab-20e7-5864-b52c-7cf9d3bb8800"
+            }
+          ],
+          "control-id": "_8.3",
+          "remarks": "Control _8.3 (AI risk treatment) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "4959380d-0ae1-5a51-a1ff-f7b6b45a0c6c"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control _8.4 (AI system impact assessment) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "2edfe6ef-ca69-5252-9d6c-43da37e2c00b"
+            }
+          ],
+          "control-id": "_8.4",
+          "remarks": "Control _8.4 (AI system impact assessment) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "83c5c511-aad9-5d15-bf60-70670265c18d"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control _9.1 (Monitoring, measurement, analysis and evaluation) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "95b51285-dc99-5528-88ba-328bdf3cd005"
+            }
+          ],
+          "control-id": "_9.1",
+          "remarks": "Control _9.1 (Monitoring, measurement, analysis and evaluation) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "73c966c8-0bea-5657-8cbc-97f5d93105df"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control _9.2.1 (General) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ddc31e94-d43b-54e1-bf54-558066e150ff"
+            }
+          ],
+          "control-id": "_9.2.1",
+          "remarks": "Control _9.2.1 (General) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "9310d996-2c84-5860-9aa6-0555bc0ca1d5"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control _9.2.2 (Internal audit programme) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "1fbc02f8-fc66-52f3-8902-6b2b4c1c4297"
+            }
+          ],
+          "control-id": "_9.2.2",
+          "remarks": "Control _9.2.2 (Internal audit programme) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f1d8a2ff-21f2-5ae2-ad1c-50358e7e2ec5"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control _9.3.1 (General) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "5c71f493-4293-586a-8161-74f6753d3304"
+            }
+          ],
+          "control-id": "_9.3.1",
+          "remarks": "Control _9.3.1 (General) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "b1b4686e-97ed-5f97-9b51-4450abc5f083"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control _9.3.2 (Management review inputs) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "9ed348c5-9017-52c5-b67d-1c42288bfa2e"
+            }
+          ],
+          "control-id": "_9.3.2",
+          "remarks": "Control _9.3.2 (Management review inputs) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "890c5bf4-fe26-5d3e-a0e1-776475a5db58"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control _9.3.3 (Management review results) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "30263829-22fb-5760-b913-b3dd20323587"
+            }
+          ],
+          "control-id": "_9.3.3",
+          "remarks": "Control _9.3.3 (Management review results) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "c22d04b5-17ca-5da4-bfd1-c7884db963da"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control a.10.2 (Allocating responsibilities) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "badd0a08-16a2-5f30-9849-f8f0771ffb27"
+            }
+          ],
+          "control-id": "a.10.2",
+          "remarks": "Control a.10.2 (Allocating responsibilities) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "5f5b0aa1-7a38-5a8a-8c51-9d4b98b7ddb8"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control a.10.3 (Suppliers) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "2d383d98-4142-5622-a79a-5db84d06f6f3"
+            }
+          ],
+          "control-id": "a.10.3",
+          "remarks": "Control a.10.3 (Suppliers) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "e45c7f1e-1d5f-52e7-8131-63de829be96b"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control a.10.4 (Customers) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "215e6216-215e-5a65-b002-05f5e41d3174"
+            }
+          ],
+          "control-id": "a.10.4",
+          "remarks": "Control a.10.4 (Customers) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "7432e706-a39d-58b1-8bbd-2201bba8aa70"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control a.2.2 (AI policy) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "0473c3ad-24e1-57da-9910-b84d5d0211dd"
+            }
+          ],
+          "control-id": "a.2.2",
+          "remarks": "Control a.2.2 (AI policy) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f25843e6-2968-57a5-bb41-5354db2afc52"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control a.2.3 (Alignment with other organizational policies) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "2d623037-c7c8-50c4-a174-f205b6f779dd"
+            }
+          ],
+          "control-id": "a.2.3",
+          "remarks": "Control a.2.3 (Alignment with other organizational policies) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "bbf996ef-cd0a-5a63-bf48-e5c548d6e6f3"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control a.2.4 (Review of the AI policy) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "8c96c2c0-2ebe-57e7-bf69-0b999a5d3bfd"
+            }
+          ],
+          "control-id": "a.2.4",
+          "remarks": "Control a.2.4 (Review of the AI policy) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "db17624e-9687-54e2-889b-3b5c76bb2994"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control a.3.2 (AI roles and responsibilities) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "be203c4b-cebe-514a-b83c-091e6f0f8256"
+            }
+          ],
+          "control-id": "a.3.2",
+          "remarks": "Control a.3.2 (AI roles and responsibilities) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "951a833b-5d23-57a1-9348-4a9a7fa650d4"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control a.3.3 (Reporting of concerns) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "a172ed1e-1831-5e71-baef-3866b269396a"
+            }
+          ],
+          "control-id": "a.3.3",
+          "remarks": "Control a.3.3 (Reporting of concerns) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "fdc9bebf-04a5-5063-96a8-9bf8147d9ff7"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control a.4.2 (Resource documentation) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "d594bb7f-11bc-5b45-bcc6-c04e11fe7a8b"
+            }
+          ],
+          "control-id": "a.4.2",
+          "remarks": "Control a.4.2 (Resource documentation) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "d622886d-dbf4-50f8-9504-eb3341b6864e"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control a.4.3 (Data resources) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "75c55873-077c-51b0-a573-70e230266a73"
+            }
+          ],
+          "control-id": "a.4.3",
+          "remarks": "Control a.4.3 (Data resources) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "98dd6b91-9c4f-5116-ac5f-e02e237be2ef"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control a.4.4 (Tooling resources) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "6a08fa8f-bc4f-5170-88ce-f58ca07373be"
+            }
+          ],
+          "control-id": "a.4.4",
+          "remarks": "Control a.4.4 (Tooling resources) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "43160f92-cf7b-5a89-8449-1e10bd4d38a4"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control a.4.5 (System and computing resources) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "a94eb5f1-dfc6-5414-8724-b6d2a716045f"
+            }
+          ],
+          "control-id": "a.4.5",
+          "remarks": "Control a.4.5 (System and computing resources) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "7398c815-0991-5752-b1f4-82556b7afba7"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control a.4.6 (Human resources) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "c7d00c88-6961-5e9f-a28a-59e6aeee4696"
+            }
+          ],
+          "control-id": "a.4.6",
+          "remarks": "Control a.4.6 (Human resources) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "6696e1dc-c857-53ca-bec8-416fa168c881"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control a.5.2 (AI system impact assessment process) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "504fb46b-7283-5bfa-9991-141dc25dc4f2"
+            }
+          ],
+          "control-id": "a.5.2",
+          "remarks": "Control a.5.2 (AI system impact assessment process) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "d9e8bd4c-c1c0-541f-8245-f7b95d94b32d"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control a.5.3 (Documentation of AI system impact assessments) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "f0a32458-7380-539f-aff1-ba06efc39b94"
+            }
+          ],
+          "control-id": "a.5.3",
+          "remarks": "Control a.5.3 (Documentation of AI system impact assessments) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "b1c118fa-a025-5647-9ebb-19c4c3808409"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control a.5.4 (Assessing AI system impact on individuals or groups of individuals) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "556134d9-d3ac-5f44-bbda-b29108fa5835"
+            }
+          ],
+          "control-id": "a.5.4",
+          "remarks": "Control a.5.4 (Assessing AI system impact on individuals or groups of individuals) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "b9391298-0516-5de6-a85e-9f10fb1c327b"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control a.5.5 (Assessing societal impacts of AI systems) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "30121af2-3469-5d1d-ba3b-dd37c6627c91"
+            }
+          ],
+          "control-id": "a.5.5",
+          "remarks": "Control a.5.5 (Assessing societal impacts of AI systems) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "b4e5f410-06a5-5e16-a57b-62b738b28a18"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control a.6.1.2 (Objectives for responsible development of AI system) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "7b467881-6e88-56fc-96f3-5b9147c6f86b"
+            }
+          ],
+          "control-id": "a.6.1.2",
+          "remarks": "Control a.6.1.2 (Objectives for responsible development of AI system) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "660f64ce-2755-55fe-bbd9-e122305dd2e3"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control a.6.1.3 (Processes for responsible AI system design and development) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "cfe8a6fe-a0a3-5fb7-8f75-21d0d6aff116"
+            }
+          ],
+          "control-id": "a.6.1.3",
+          "remarks": "Control a.6.1.3 (Processes for responsible AI system design and development) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "ea4642f9-bf59-5c7e-82f6-13453d272bc8"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control a.6.2.2 (AI system requirements and specification) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "f1277a3e-ffc3-5f78-bb99-ac1ad1113e59"
+            }
+          ],
+          "control-id": "a.6.2.2",
+          "remarks": "Control a.6.2.2 (AI system requirements and specification) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "5525490d-b55f-5455-8254-3618114c2600"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control a.6.2.3 (Documentation of AI system design and development) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "e62a53d3-def8-537d-9457-fbda7a8d3745"
+            }
+          ],
+          "control-id": "a.6.2.3",
+          "remarks": "Control a.6.2.3 (Documentation of AI system design and development) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "676a9964-389b-5845-a095-2c0b66ef00a0"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control a.6.2.4 (AI system verification and validation) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "42c521c6-cd74-5671-9618-3c973cc988d4"
+            }
+          ],
+          "control-id": "a.6.2.4",
+          "remarks": "Control a.6.2.4 (AI system verification and validation) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "9cdf0ed4-25b6-5861-9f95-edd3d16c0593"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control a.6.2.5 (AI system deployment) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "8a143099-c0dc-5440-9371-3b846a266a2c"
+            }
+          ],
+          "control-id": "a.6.2.5",
+          "remarks": "Control a.6.2.5 (AI system deployment) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "ae12f264-6e15-5d77-8856-01be3d77e003"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control a.6.2.6 (AI system operation and monitoring) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "b796fe6a-8fe9-584c-8b2b-d659c58d0ebd"
+            }
+          ],
+          "control-id": "a.6.2.6",
+          "remarks": "Control a.6.2.6 (AI system operation and monitoring) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "bc9cc242-f2e3-51e2-bf1b-2f88fd50cacd"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control a.6.2.7 (AI system technical documentation) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "1526428b-ef31-58bc-a0bc-b92d4bae7426"
+            }
+          ],
+          "control-id": "a.6.2.7",
+          "remarks": "Control a.6.2.7 (AI system technical documentation) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "48b4e08c-c445-5802-bc22-350e4a4c96e5"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control a.6.2.8 (AI system recording of event logs) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "a720d00c-21fb-549e-bf2e-57e866abe87f"
+            }
+          ],
+          "control-id": "a.6.2.8",
+          "remarks": "Control a.6.2.8 (AI system recording of event logs) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "5ceee4da-0a87-5eba-ae0a-8131fc34fe5a"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control a.7.2 (Data for development and enhancement of AI system) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "b12e2289-e81d-5fe8-b3f5-5a160ebc1084"
+            }
+          ],
+          "control-id": "a.7.2",
+          "remarks": "Control a.7.2 (Data for development and enhancement of AI system) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "4b8147fe-e58d-547f-9e12-bd1504145eda"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control a.7.3 (Acquisition of data) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "c74e1aa9-aae7-52ec-9399-87b84e03f2ed"
+            }
+          ],
+          "control-id": "a.7.3",
+          "remarks": "Control a.7.3 (Acquisition of data) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "73890ec3-c5b4-5464-98cf-0bc9219791f3"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control a.7.4 (Quality of data for AI systems) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "51cf54d3-eee7-533c-b906-8be15bf51149"
+            }
+          ],
+          "control-id": "a.7.4",
+          "remarks": "Control a.7.4 (Quality of data for AI systems) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "460cb5ff-5cd5-5838-a271-d5b3a6235cf1"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control a.7.5 (Data provenance) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "fe16a6e5-0069-50ee-87de-1851e36a8f52"
+            }
+          ],
+          "control-id": "a.7.5",
+          "remarks": "Control a.7.5 (Data provenance) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "1378f322-80ef-5467-9df9-e557efa19e2a"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control a.7.6 (Data preparation) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "334518cd-0d04-5d79-bd1f-ec1e9ccca208"
+            }
+          ],
+          "control-id": "a.7.6",
+          "remarks": "Control a.7.6 (Data preparation) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "14fd7f23-f560-55c2-82a0-b863d2c56fab"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control a.8.2 (System documentation and information for users) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "a81218db-3b50-566a-8412-231685fc35ae"
+            }
+          ],
+          "control-id": "a.8.2",
+          "remarks": "Control a.8.2 (System documentation and information for users) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "4bd1f9ca-b7ae-501e-bcd4-f881fa35ed45"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control a.8.3 (External reporting) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "18a62aa9-d517-5bb1-b99f-52b219460145"
+            }
+          ],
+          "control-id": "a.8.3",
+          "remarks": "Control a.8.3 (External reporting) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "9fb056fb-a789-5e67-817e-3873fdd2bc07"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control a.8.4 (Communication of incidents) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "e584e993-dc60-52c6-a796-d91427a06df3"
+            }
+          ],
+          "control-id": "a.8.4",
+          "remarks": "Control a.8.4 (Communication of incidents) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "1d99a569-2f70-5bf7-8cbe-3a1e5fc05cbb"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control a.8.5 (Information for interested parties) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "b0ca8182-dcc2-5ee3-8a5b-913182f9f461"
+            }
+          ],
+          "control-id": "a.8.5",
+          "remarks": "Control a.8.5 (Information for interested parties) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "d30e03d8-8695-579b-bebb-660a33edecb7"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control a.9.2 (Processes for responsible use of AI systems) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "07507517-b681-50b7-ad83-cfc2fc423e92"
+            }
+          ],
+          "control-id": "a.9.2",
+          "remarks": "Control a.9.2 (Processes for responsible use of AI systems) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "e1e93cab-998b-5803-aed7-7dfe1e8d77fc"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control a.9.3 (Objectives for responsible use of AI system) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "febf60cb-fe33-5d19-8eba-b68b4a4e8e45"
+            }
+          ],
+          "control-id": "a.9.3",
+          "remarks": "Control a.9.3 (Objectives for responsible use of AI system) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "2a1f25d2-acaa-5913-a11a-1384b2d87b67"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a",
+              "description": "Control a.9.4 (Intended use of the AI system) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "5401ddfe-cdd2-5008-bb41-a7e9b50d1dcb"
+            }
+          ],
+          "control-id": "a.9.4",
+          "remarks": "Control a.9.4 (Intended use of the AI system) is satisfied by the ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "61e90901-a7bb-5ca7-8dd8-c025ea5828b5"
+        }
+      ]
+    },
+    "import-profile": {
+      "href": "./catalog.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:11Z",
+      "oscal-version": "1.2.3",
+      "roles": [
+        {
+          "id": "sec-admin",
+          "title": "Security Administrator"
+        }
+      ],
+      "title": "ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline System Security Plan Template",
+      "version": "2"
+    },
+    "system-characteristics": {
+      "authorization-boundary": {
+        "description": "The authorization boundary encompasses all computing resources, cloud tenancies, and network zones supporting ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline operations."
+      },
+      "description": "Reference system architecture implementing security controls for ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+      "security-impact-level": {
+        "security-objective-availability": "moderate",
+        "security-objective-confidentiality": "moderate",
+        "security-objective-integrity": "high"
+      },
+      "security-sensitivity-level": "moderate",
+      "status": {
+        "state": "operational"
+      },
+      "system-ids": [
+        {
+          "id": "iso-iec-42001-system"
+        }
+      ],
+      "system-information": {
+        "information-types": [
+          {
+            "description": "Operational and compliance data processed within the eu jurisdiction boundary.",
+            "title": "Sovereign Program Data",
+            "uuid": "5fa64728-2624-51ec-ad06-344f6d2c4300"
+          }
+        ]
+      },
+      "system-name": "ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Reference System",
+      "system-name-short": "iso-iec-42001"
+    },
+    "system-implementation": {
+      "components": [
+        {
+          "description": "Central execution platform providing control implementations for ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+          "status": {
+            "state": "operational"
+          },
+          "title": "ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Core System Component",
+          "type": "software",
+          "uuid": "ff684fe5-66ff-53ea-a8f2-ebe7442fe88a"
+        }
+      ],
+      "users": [
+        {
+          "role-ids": [
+            "sec-admin"
+          ],
+          "title": "Security Administrator",
+          "uuid": "a9b0fee7-feed-51e6-98bd-b5bb28f41a8a"
+        }
+      ]
+    },
+    "uuid": "245e60d2-bf54-57ae-9e7a-5a647f1922a1"
+  }
+}

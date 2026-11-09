@@ -16,6 +16,37 @@ var CommonFrameworkIDs = []string{
 	"cybersecure-canada",
 	"cccs-itsp-10-171",
 	"cccs-medium-cloud-pbmm",
+	"nist-csf-2.0",
+	"cmmc-2.0",
+	"fedramp-rev5",
+	"cisa-cpg-2.0",
+	"cisa-vendor-scrm",
+	"cjis-version-5.9.5",
+	"dfs-500-2023-11",
+	"cyber_essentials",
+	"anssi-guide-hygiene",
+	"anssi-guide-hygiene-detail",
+	"anssi-guide-admin-securisee-si",
+	"anssi-referentiel-general-de-securite-annexe-b2",
+	"cnil-guide-securite",
+	"3cf-v2",
+	"bs-it-gs-2023-isms",
+	"bs-it-gs-2023-orp",
+	"bs-it-gs-2023-con",
+	"bs-it-gs-2023-sys",
+	"bs-it-gs-2023-app",
+	"bs-it-gs-2023-inf",
+	"bs-it-gs-2023-net",
+	"bs-it-gs-2023-ops",
+	"bs-it-gs-2023-ind",
+	"bs-it-gs-2023-der",
+	"bsi-c5-2020",
+	"bsi-externer-cloud-dienste",
+	"e-its-2024",
+	"nis2",
+	"dora",
+	"eu-ai-act",
+	"iso-iec-42001",
 }
 
 // CommandsList provides primary subcommands for completion.
@@ -38,6 +69,7 @@ var CommandsList = []string{
 	"serve",
 	"ui",
 	"quickstart",
+	"doctor",
 	"completion",
 	"seed",
 	"version",
@@ -76,7 +108,7 @@ func generateBash(bin string, w io.Writer) error {
             return 0
             ;;
         -jurisdiction)
-            COMPREPLY=( $(compgen -W "ca us eu" -- "${cur}") )
+            COMPREPLY=( $(compgen -W "ca us usa uk fr france de germany eu" -- "${cur}") )
             return 0
             ;;
         -kind)
@@ -141,6 +173,7 @@ _%s() {
         'serve:Start local zero-dependency xOSCAL Web Studio & Explorer'
         'ui:Launch local xOSCAL Web Studio in default browser'
         'quickstart:Guided onboarding walkthrough'
+        'doctor:Run deep runtime, schema, and registry diagnostics'
         'completion:Generate shell autocompletions (bash, zsh, fish)'
         'seed:Seed Knowledge Graph with authoritative baseline frameworks'
         'version:Print version information'
@@ -192,6 +225,7 @@ func generateFish(bin string, w io.Writer) error {
 	script := fmt.Sprintf(`complete -c %s -f
 complete -c %s -n "__fish_use_subcommand" -a "init" -d "Scaffold OSCAL Component Definition"
 complete -c %s -n "__fish_use_subcommand" -a "generate" -d "Generate OSCAL 1.2.3 artifacts"
+complete -c %s -n "__fish_use_subcommand" -a "ingest" -d "Ingest raw regulatory requirements JSON into Knowledge Graph"
 complete -c %s -n "__fish_use_subcommand" -a "verify" -d "Evaluate Vector State"
 complete -c %s -n "__fish_use_subcommand" -a "validate" -d "Validate OSCAL JSON schemas"
 complete -c %s -n "__fish_use_subcommand" -a "diff" -d "GitOps semantic compliance diff"
@@ -205,9 +239,11 @@ complete -c %s -n "__fish_use_subcommand" -a "compare" -d "Compare frameworks tr
 complete -c %s -n "__fish_use_subcommand" -a "serve" -d "Start local Web Studio"
 complete -c %s -n "__fish_use_subcommand" -a "ui" -d "Open local Web Studio in browser"
 complete -c %s -n "__fish_use_subcommand" -a "quickstart" -d "Guided onboarding tour"
+complete -c %s -n "__fish_use_subcommand" -a "doctor" -d "Run deep runtime, schema, and registry diagnostics"
+complete -c %s -n "__fish_use_subcommand" -a "seed" -d "Seed Knowledge Graph with authoritative baseline frameworks"
 complete -c %s -n "__fish_use_subcommand" -a "completion" -d "Generate shell completion"
 complete -c %s -n "__fish_use_subcommand" -a "version" -d "Print version"
-`, bin, bin, bin, bin, bin, bin, bin, bin, bin, bin, bin, bin, bin, bin, bin, bin, bin, bin)
+`, bin, bin, bin, bin, bin, bin, bin, bin, bin, bin, bin, bin, bin, bin, bin, bin, bin, bin, bin, bin, bin)
 
 	_, err := io.WriteString(w, script)
 	return err

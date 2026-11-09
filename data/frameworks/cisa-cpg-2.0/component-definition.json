@@ -1,0 +1,198 @@
+{
+  "component-definition": {
+    "components": [
+      {
+        "control-implementations": [
+          {
+            "description": "Security control implementations for CISA Cybersecurity Performance Goals v2.0.",
+            "implemented-requirements": [
+              {
+                "control-id": "_1.a",
+                "description": "Component capability addressing control _1.a (Establish Cybersecurity Responsibilities).",
+                "uuid": "ea53c337-8157-54c6-b391-2430e448b563"
+              },
+              {
+                "control-id": "_1.b",
+                "description": "Component capability addressing control _1.b (Manage Cybersecurity Oversight).",
+                "uuid": "5e4e8f66-d3f5-5452-8fee-ed0b8c74cd77"
+              },
+              {
+                "control-id": "_1.c",
+                "description": "Component capability addressing control _1.c (Manage Incident Response Plans).",
+                "uuid": "a09d8749-d409-56f5-9846-4f7a2c1cba1f"
+              },
+              {
+                "control-id": "_1.d",
+                "description": "Component capability addressing control _1.d (Supply Chain Incident Reporting \u0026 Vulnerability Disclosure).",
+                "uuid": "be77c0a3-e3b0-5e23-85ec-2b4e67667193"
+              },
+              {
+                "control-id": "_1.e",
+                "description": "Component capability addressing control _1.e (Manage Risks from Managed Service Providers).",
+                "uuid": "fc696c68-ab1a-579c-bd7e-d4eb6fb48d7b"
+              },
+              {
+                "control-id": "_2.a",
+                "description": "Component capability addressing control _2.a (Manage Organizational Assets).",
+                "uuid": "f2a8fdc4-7049-514c-b48c-3b0924039436"
+              },
+              {
+                "control-id": "_2.b",
+                "description": "Component capability addressing control _2.b (Mitigate Known Vulnerabilities).",
+                "uuid": "14dd0ce7-5fa0-50d9-967a-3cc8125ca08b"
+              },
+              {
+                "control-id": "_2.c",
+                "description": "Component capability addressing control _2.c (Obtain Independent Validation of Cybersecurity Controls).",
+                "uuid": "c214318b-320d-5aaf-a924-69250e407317"
+              },
+              {
+                "control-id": "_2.d",
+                "description": "Component capability addressing control _2.d (Maintain Vulnerability Disclosure/Reporting Process).",
+                "uuid": "8b6fa6c0-42ba-54b9-8177-2e03e6501507"
+              },
+              {
+                "control-id": "_2.e",
+                "description": "Component capability addressing control _2.e (Document Network Topology).",
+                "uuid": "b85ee4f5-3d35-5210-9516-a4153e48a85f"
+              },
+              {
+                "control-id": "_3.a",
+                "description": "Component capability addressing control _3.a (Changing Default Passwords).",
+                "uuid": "068b6906-90be-56f3-822c-446a62aff185"
+              },
+              {
+                "control-id": "_3.b",
+                "description": "Component capability addressing control _3.b (Establish Minimum Password Strength).",
+                "uuid": "16c8f41d-a408-57dd-a2d4-51c8ae8da861"
+              },
+              {
+                "control-id": "_3.c",
+                "description": "Component capability addressing control _3.c (Create Unique Credentials).",
+                "uuid": "21864fd3-9ea1-5a71-afb5-de5707fd9951"
+              },
+              {
+                "control-id": "_3.d",
+                "description": "Component capability addressing control _3.d (Revoking Credentials for Departing Staff).",
+                "uuid": "3d70048b-0089-55e6-a652-ffcbd2c4f738"
+              },
+              {
+                "control-id": "_3.e",
+                "description": "Component capability addressing control _3.e (Monitor Unsuccessful (Automated) Login Attempts).",
+                "uuid": "05426788-1d53-52f1-aba8-905a91682a09"
+              },
+              {
+                "control-id": "_3.f",
+                "description": "Component capability addressing control _3.f (Implement Multi-factor Authentication).",
+                "uuid": "94be5734-b232-52b0-acbf-0eee17c73ac1"
+              },
+              {
+                "control-id": "_3.g",
+                "description": "Component capability addressing control _3.g (Administrators Maintain Separate User and Privileged Accounts).",
+                "uuid": "ecd07445-50cb-56b0-a527-f40cf50127d2"
+              },
+              {
+                "control-id": "_3.h",
+                "description": "Component capability addressing control _3.h (Implement the Principles of Least Privilege).",
+                "uuid": "981a6168-4c97-5386-a87f-bcd62c5f67da"
+              },
+              {
+                "control-id": "_3.i",
+                "description": "Component capability addressing control _3.i (Implement Logical/Physical Network Segmentation).",
+                "uuid": "334ae371-4c33-5004-9e34-cfc25879327e"
+              },
+              {
+                "control-id": "_3.j",
+                "description": "Component capability addressing control _3.j (Implement Cybersecurity Training).",
+                "uuid": "37716bfd-d5b0-5746-9e58-cd98301d04ef"
+              },
+              {
+                "control-id": "_3.k",
+                "description": "Component capability addressing control _3.k (Utilize Strong Encryption).",
+                "uuid": "346b9111-3d1d-5cf6-b391-34f4c6a16cd6"
+              },
+              {
+                "control-id": "_3.l",
+                "description": "Component capability addressing control _3.l (Enable Email Security).",
+                "uuid": "1da382bd-4690-56a5-980f-2493ce5b28f9"
+              },
+              {
+                "control-id": "_3.m",
+                "description": "Component capability addressing control _3.m (Disable Autorun \u0026 Macros By Default).",
+                "uuid": "08bcb3cb-d2ff-5775-9f4f-32038f8bbe91"
+              },
+              {
+                "control-id": "_3.n",
+                "description": "Component capability addressing control _3.n (Establish Change Management Processes).",
+                "uuid": "a0ef32ac-ffcf-552d-a024-7d5d054a0983"
+              },
+              {
+                "control-id": "_3.o",
+                "description": "Component capability addressing control _3.o (Maintain System Backups \u0026 Restoration Ability).",
+                "uuid": "39883076-cc95-52d9-9b7c-1d44d303a996"
+              },
+              {
+                "control-id": "_3.p",
+                "description": "Component capability addressing control _3.p (Maintain Hardware \u0026 Software Approval Process).",
+                "uuid": "5555bcd7-26b5-54f7-985f-40e5d065be82"
+              },
+              {
+                "control-id": "_3.q",
+                "description": "Component capability addressing control _3.q (Maintain Log Collection \u0026 Storage).",
+                "uuid": "00e9d1f2-2356-5d08-a545-c86af347fc12"
+              },
+              {
+                "control-id": "_3.r",
+                "description": "Component capability addressing control _3.r (Prohibit Connection of Unauthorized Devices).",
+                "uuid": "6a77c239-6343-551c-99b2-e2fd8111724d"
+              },
+              {
+                "control-id": "_3.s",
+                "description": "Component capability addressing control _3.s (Secure Internet Facing Devices).",
+                "uuid": "f9a68e33-5b75-57ac-bdb1-e7a5b72658e4"
+              },
+              {
+                "control-id": "_4.a",
+                "description": "Component capability addressing control _4.a (Establish Malicious Code Detection).",
+                "uuid": "baca37a3-f536-5fab-96cb-e84c6225574f"
+              },
+              {
+                "control-id": "_4.b",
+                "description": "Component capability addressing control _4.b (Identify Adverse Events).",
+                "uuid": "f8303a99-a8a5-5896-be28-049ad34f2ed3"
+              },
+              {
+                "control-id": "_5.a",
+                "description": "Component capability addressing control _5.a (Establish Incident Communication Procedures).",
+                "uuid": "9764dc71-0cef-597a-b72e-06877d747dd6"
+              },
+              {
+                "control-id": "_5.b",
+                "description": "Component capability addressing control _5.b (Establish Incident Reporting Procedures).",
+                "uuid": "ea782362-fdc7-5b8c-81c8-633d47d12a44"
+              },
+              {
+                "control-id": "_6.a",
+                "description": "Component capability addressing control _6.a (Incident Planning and Preparedness).",
+                "uuid": "367dd170-bb83-5200-bfd4-bc0da32d26bb"
+              }
+            ],
+            "source": "./catalog.json",
+            "uuid": "dfeb29ac-75c2-5654-a08d-9c6c5e759c9f"
+          }
+        ],
+        "description": "Enterprise technical and operational capabilities implementing controls for CISA Cybersecurity Performance Goals v2.0.",
+        "title": "CISA Cybersecurity Performance Goals v2.0 Platform Component",
+        "type": "software",
+        "uuid": "7018068e-4cba-5fd6-b92b-381419c0cb9d"
+      }
+    ],
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:13Z",
+      "oscal-version": "1.2.3",
+      "title": "CISA Cybersecurity Performance Goals v2.0 Component Definition Template",
+      "version": "1"
+    },
+    "uuid": "ca6ad347-c3e8-5a29-8ac2-eee4a76e25d7"
+  }
+}

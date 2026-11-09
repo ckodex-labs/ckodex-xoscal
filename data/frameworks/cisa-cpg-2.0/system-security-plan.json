@@ -1,0 +1,588 @@
+{
+  "system-security-plan": {
+    "control-implementation": {
+      "description": "Control implementations for CISA Cybersecurity Performance Goals v2.0.",
+      "implemented-requirements": [
+        {
+          "by-components": [
+            {
+              "component-uuid": "45bce707-6eef-52a8-a83e-a5d9048ec717",
+              "description": "Control _1.a (Establish Cybersecurity Responsibilities) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "8f2598b2-5d91-5862-87f8-c35deb939724"
+            }
+          ],
+          "control-id": "_1.a",
+          "remarks": "Control _1.a (Establish Cybersecurity Responsibilities) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "ab1b71b2-dbb0-5a4e-a581-1ab433824b66"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "45bce707-6eef-52a8-a83e-a5d9048ec717",
+              "description": "Control _1.b (Manage Cybersecurity Oversight) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "9ae55c74-9264-5a6a-b53a-2084b049dba3"
+            }
+          ],
+          "control-id": "_1.b",
+          "remarks": "Control _1.b (Manage Cybersecurity Oversight) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "03cd2a81-35db-5f39-8629-7a2656c0c49c"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "45bce707-6eef-52a8-a83e-a5d9048ec717",
+              "description": "Control _1.c (Manage Incident Response Plans) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "e52b166e-69a9-5a96-94d4-c57bfaa3d2d5"
+            }
+          ],
+          "control-id": "_1.c",
+          "remarks": "Control _1.c (Manage Incident Response Plans) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "1d84b072-9106-5fac-89db-4b3b0e732f1b"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "45bce707-6eef-52a8-a83e-a5d9048ec717",
+              "description": "Control _1.d (Supply Chain Incident Reporting \u0026 Vulnerability Disclosure) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "7360305b-8547-5567-8288-db42c214cc0b"
+            }
+          ],
+          "control-id": "_1.d",
+          "remarks": "Control _1.d (Supply Chain Incident Reporting \u0026 Vulnerability Disclosure) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "1fb39f20-5e56-553c-8e02-f62b959bec7e"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "45bce707-6eef-52a8-a83e-a5d9048ec717",
+              "description": "Control _1.e (Manage Risks from Managed Service Providers) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "3495a943-456a-54c2-9fbf-1dcb7ed6ec40"
+            }
+          ],
+          "control-id": "_1.e",
+          "remarks": "Control _1.e (Manage Risks from Managed Service Providers) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "ed1ce1e6-2147-503a-a48a-8b13619aa98d"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "45bce707-6eef-52a8-a83e-a5d9048ec717",
+              "description": "Control _2.a (Manage Organizational Assets) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "7cc344e9-c33f-543a-a928-76cfca48a68a"
+            }
+          ],
+          "control-id": "_2.a",
+          "remarks": "Control _2.a (Manage Organizational Assets) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "855dc197-598f-52ae-bfdf-166d5b6f9f3d"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "45bce707-6eef-52a8-a83e-a5d9048ec717",
+              "description": "Control _2.b (Mitigate Known Vulnerabilities) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "75849c87-5b5a-5016-b19b-50ad6e6ffb2f"
+            }
+          ],
+          "control-id": "_2.b",
+          "remarks": "Control _2.b (Mitigate Known Vulnerabilities) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "d7afb51e-306b-5a0f-8c10-c4f70e7ae0a2"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "45bce707-6eef-52a8-a83e-a5d9048ec717",
+              "description": "Control _2.c (Obtain Independent Validation of Cybersecurity Controls) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "d8cb00d1-86fc-5b01-b1ff-6e0bf4059fcc"
+            }
+          ],
+          "control-id": "_2.c",
+          "remarks": "Control _2.c (Obtain Independent Validation of Cybersecurity Controls) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "e40584aa-06ba-5e9d-8ebb-8b2712800961"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "45bce707-6eef-52a8-a83e-a5d9048ec717",
+              "description": "Control _2.d (Maintain Vulnerability Disclosure/Reporting Process) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ef8e7826-a832-5703-bc19-2c6d75dffe8e"
+            }
+          ],
+          "control-id": "_2.d",
+          "remarks": "Control _2.d (Maintain Vulnerability Disclosure/Reporting Process) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "2c4e841b-834d-513d-9d4e-f37d1544d1c9"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "45bce707-6eef-52a8-a83e-a5d9048ec717",
+              "description": "Control _2.e (Document Network Topology) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "943f3c2e-7234-57c8-9159-7b5ef0fd84ae"
+            }
+          ],
+          "control-id": "_2.e",
+          "remarks": "Control _2.e (Document Network Topology) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "a112fd01-6db8-5e84-b743-c92e5b73d6e3"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "45bce707-6eef-52a8-a83e-a5d9048ec717",
+              "description": "Control _3.a (Changing Default Passwords) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ef5c7804-4351-500e-918e-6daf48bdef11"
+            }
+          ],
+          "control-id": "_3.a",
+          "remarks": "Control _3.a (Changing Default Passwords) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "39a77e9c-b8af-560a-a2d9-83ca88f32953"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "45bce707-6eef-52a8-a83e-a5d9048ec717",
+              "description": "Control _3.b (Establish Minimum Password Strength) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "3cebef07-ba36-5652-8239-aae6dd9d4a3e"
+            }
+          ],
+          "control-id": "_3.b",
+          "remarks": "Control _3.b (Establish Minimum Password Strength) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "e349ee5f-5d8b-5147-abea-769b74bc99eb"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "45bce707-6eef-52a8-a83e-a5d9048ec717",
+              "description": "Control _3.c (Create Unique Credentials) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "1c233e10-6ec0-59d4-a96d-9550f6646259"
+            }
+          ],
+          "control-id": "_3.c",
+          "remarks": "Control _3.c (Create Unique Credentials) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "e29dc80c-5a63-5071-aefd-98c3ef760e58"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "45bce707-6eef-52a8-a83e-a5d9048ec717",
+              "description": "Control _3.d (Revoking Credentials for Departing Staff) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "3abfb407-dd20-55d1-9332-411367127e03"
+            }
+          ],
+          "control-id": "_3.d",
+          "remarks": "Control _3.d (Revoking Credentials for Departing Staff) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "4e01ef4a-7ff3-5ade-8f4d-dbab1a156d4d"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "45bce707-6eef-52a8-a83e-a5d9048ec717",
+              "description": "Control _3.e (Monitor Unsuccessful (Automated) Login Attempts) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "3c9439e1-0e68-5646-b6b1-09bd2b2b7b97"
+            }
+          ],
+          "control-id": "_3.e",
+          "remarks": "Control _3.e (Monitor Unsuccessful (Automated) Login Attempts) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "eaad1c83-c942-5576-af7a-dee708d9d73a"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "45bce707-6eef-52a8-a83e-a5d9048ec717",
+              "description": "Control _3.f (Implement Multi-factor Authentication) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "906d9820-6c6b-5c77-ad24-b633474e3644"
+            }
+          ],
+          "control-id": "_3.f",
+          "remarks": "Control _3.f (Implement Multi-factor Authentication) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "0484942c-588b-5cf8-984f-6850f8a61fb5"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "45bce707-6eef-52a8-a83e-a5d9048ec717",
+              "description": "Control _3.g (Administrators Maintain Separate User and Privileged Accounts) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "3be490a8-a98f-507c-a5fe-5be50a0cdf9b"
+            }
+          ],
+          "control-id": "_3.g",
+          "remarks": "Control _3.g (Administrators Maintain Separate User and Privileged Accounts) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "d2f08289-6e82-5196-b2e3-096fb312278b"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "45bce707-6eef-52a8-a83e-a5d9048ec717",
+              "description": "Control _3.h (Implement the Principles of Least Privilege) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "43b65078-e3b0-51b3-8af2-232561db6b0c"
+            }
+          ],
+          "control-id": "_3.h",
+          "remarks": "Control _3.h (Implement the Principles of Least Privilege) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "a41a5080-c2ca-5bce-8714-afb7093b4bb9"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "45bce707-6eef-52a8-a83e-a5d9048ec717",
+              "description": "Control _3.i (Implement Logical/Physical Network Segmentation) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "9e2a96de-9c12-5daa-86f3-e36bd54d8130"
+            }
+          ],
+          "control-id": "_3.i",
+          "remarks": "Control _3.i (Implement Logical/Physical Network Segmentation) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "d767f01c-79ef-5f51-91fd-7971ce6c780c"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "45bce707-6eef-52a8-a83e-a5d9048ec717",
+              "description": "Control _3.j (Implement Cybersecurity Training) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "51751cf3-3155-5e03-8e6a-7c248e256f70"
+            }
+          ],
+          "control-id": "_3.j",
+          "remarks": "Control _3.j (Implement Cybersecurity Training) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "ae0eaa06-8d50-54c4-9c2b-ec7012d55e33"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "45bce707-6eef-52a8-a83e-a5d9048ec717",
+              "description": "Control _3.k (Utilize Strong Encryption) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "6439b3ae-3416-5b43-8d1f-6f6c73a757e9"
+            }
+          ],
+          "control-id": "_3.k",
+          "remarks": "Control _3.k (Utilize Strong Encryption) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "92583a93-d56f-5804-b030-a6d2dd83f16b"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "45bce707-6eef-52a8-a83e-a5d9048ec717",
+              "description": "Control _3.l (Enable Email Security) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "16a8e550-506f-5785-a3ad-d2610bf94a58"
+            }
+          ],
+          "control-id": "_3.l",
+          "remarks": "Control _3.l (Enable Email Security) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f791841d-41b2-5b0e-b551-d5e6c6cda222"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "45bce707-6eef-52a8-a83e-a5d9048ec717",
+              "description": "Control _3.m (Disable Autorun \u0026 Macros By Default) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "8db2793d-6982-55b7-89df-de8344680d12"
+            }
+          ],
+          "control-id": "_3.m",
+          "remarks": "Control _3.m (Disable Autorun \u0026 Macros By Default) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "12edd4d4-3dbc-5247-8ce2-2a3ac3797b7d"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "45bce707-6eef-52a8-a83e-a5d9048ec717",
+              "description": "Control _3.n (Establish Change Management Processes) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "4307d4c6-95ce-5ea8-8cee-428bdf1aea0f"
+            }
+          ],
+          "control-id": "_3.n",
+          "remarks": "Control _3.n (Establish Change Management Processes) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "1ff871c4-3ee7-5988-baf0-2b5ab6cc31e1"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "45bce707-6eef-52a8-a83e-a5d9048ec717",
+              "description": "Control _3.o (Maintain System Backups \u0026 Restoration Ability) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "85576536-5f3f-5c48-894f-9b15fd1720bc"
+            }
+          ],
+          "control-id": "_3.o",
+          "remarks": "Control _3.o (Maintain System Backups \u0026 Restoration Ability) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "257303d6-68e3-5c06-8c29-936545cc9bdc"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "45bce707-6eef-52a8-a83e-a5d9048ec717",
+              "description": "Control _3.p (Maintain Hardware \u0026 Software Approval Process) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "9ac00c4c-3ef5-5a70-9cb1-c9bffb198f46"
+            }
+          ],
+          "control-id": "_3.p",
+          "remarks": "Control _3.p (Maintain Hardware \u0026 Software Approval Process) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "e6db931d-7dc1-5d57-8312-ec3d1b4cdc1e"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "45bce707-6eef-52a8-a83e-a5d9048ec717",
+              "description": "Control _3.q (Maintain Log Collection \u0026 Storage) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "0c179352-ed64-5656-a6ce-cf83c95df744"
+            }
+          ],
+          "control-id": "_3.q",
+          "remarks": "Control _3.q (Maintain Log Collection \u0026 Storage) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "fd704720-7f38-5e24-9f37-8317d3058376"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "45bce707-6eef-52a8-a83e-a5d9048ec717",
+              "description": "Control _3.r (Prohibit Connection of Unauthorized Devices) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "cc7cd6b5-fb14-5b13-90c0-51ead185797d"
+            }
+          ],
+          "control-id": "_3.r",
+          "remarks": "Control _3.r (Prohibit Connection of Unauthorized Devices) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "57213176-86f9-550b-ab11-d11ed92f46a0"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "45bce707-6eef-52a8-a83e-a5d9048ec717",
+              "description": "Control _3.s (Secure Internet Facing Devices) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "c251a08d-efe3-5701-b337-78dd7777ccd0"
+            }
+          ],
+          "control-id": "_3.s",
+          "remarks": "Control _3.s (Secure Internet Facing Devices) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "e011b31c-756a-5baa-8e1a-f80fa9f9e533"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "45bce707-6eef-52a8-a83e-a5d9048ec717",
+              "description": "Control _4.a (Establish Malicious Code Detection) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "eec6687c-458c-5966-9277-ce9c80ae1005"
+            }
+          ],
+          "control-id": "_4.a",
+          "remarks": "Control _4.a (Establish Malicious Code Detection) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "262d540f-4805-5627-9c45-c06ed52748fa"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "45bce707-6eef-52a8-a83e-a5d9048ec717",
+              "description": "Control _4.b (Identify Adverse Events) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "879ef97a-b5b4-593a-b7df-af1a10c4a067"
+            }
+          ],
+          "control-id": "_4.b",
+          "remarks": "Control _4.b (Identify Adverse Events) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "83d2f091-dddf-5ae3-b8ff-592761387d69"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "45bce707-6eef-52a8-a83e-a5d9048ec717",
+              "description": "Control _5.a (Establish Incident Communication Procedures) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "81a83b27-2f1f-5688-ac6a-9138f712ef6d"
+            }
+          ],
+          "control-id": "_5.a",
+          "remarks": "Control _5.a (Establish Incident Communication Procedures) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "2f6a0c51-8132-563b-a4c4-d4a54063cd0b"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "45bce707-6eef-52a8-a83e-a5d9048ec717",
+              "description": "Control _5.b (Establish Incident Reporting Procedures) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "a3a074c2-086b-5b5e-a8e1-f9931a9cd08b"
+            }
+          ],
+          "control-id": "_5.b",
+          "remarks": "Control _5.b (Establish Incident Reporting Procedures) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "2693ae21-759c-5f9b-8f88-b3aedfba988b"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "45bce707-6eef-52a8-a83e-a5d9048ec717",
+              "description": "Control _6.a (Incident Planning and Preparedness) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "68483984-34db-5dc6-b75d-5f3f17e2bbfc"
+            }
+          ],
+          "control-id": "_6.a",
+          "remarks": "Control _6.a (Incident Planning and Preparedness) is satisfied by the CISA Cybersecurity Performance Goals v2.0 Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "a7d7a0a2-8649-5ab2-a7d1-0c2a90e4b749"
+        }
+      ]
+    },
+    "import-profile": {
+      "href": "./catalog.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:13Z",
+      "oscal-version": "1.2.3",
+      "roles": [
+        {
+          "id": "sec-admin",
+          "title": "Security Administrator"
+        }
+      ],
+      "title": "CISA Cybersecurity Performance Goals v2.0 System Security Plan Template",
+      "version": "1"
+    },
+    "system-characteristics": {
+      "authorization-boundary": {
+        "description": "The authorization boundary encompasses all computing resources, cloud tenancies, and network zones supporting CISA Cybersecurity Performance Goals v2.0 operations."
+      },
+      "description": "Reference system architecture implementing security controls for CISA Cybersecurity Performance Goals v2.0.",
+      "security-impact-level": {
+        "security-objective-availability": "moderate",
+        "security-objective-confidentiality": "moderate",
+        "security-objective-integrity": "high"
+      },
+      "security-sensitivity-level": "moderate",
+      "status": {
+        "state": "operational"
+      },
+      "system-ids": [
+        {
+          "id": "cisa-cpg-2.0-system"
+        }
+      ],
+      "system-information": {
+        "information-types": [
+          {
+            "description": "Operational and compliance data processed within the usa jurisdiction boundary.",
+            "title": "Sovereign Program Data",
+            "uuid": "1b95f972-0276-544b-8afd-7954fc6da717"
+          }
+        ]
+      },
+      "system-name": "CISA Cybersecurity Performance Goals v2.0 Reference System",
+      "system-name-short": "cisa-cpg-2.0"
+    },
+    "system-implementation": {
+      "components": [
+        {
+          "description": "Central execution platform providing control implementations for CISA Cybersecurity Performance Goals v2.0.",
+          "status": {
+            "state": "operational"
+          },
+          "title": "CISA Cybersecurity Performance Goals v2.0 Core System Component",
+          "type": "software",
+          "uuid": "45bce707-6eef-52a8-a83e-a5d9048ec717"
+        }
+      ],
+      "users": [
+        {
+          "role-ids": [
+            "sec-admin"
+          ],
+          "title": "Security Administrator",
+          "uuid": "0a2e16ad-e875-5fe8-96f5-48fe57ec881a"
+        }
+      ]
+    },
+    "uuid": "6802c57f-2ca9-5e73-a9c5-ba48c8b547b8"
+  }
+}

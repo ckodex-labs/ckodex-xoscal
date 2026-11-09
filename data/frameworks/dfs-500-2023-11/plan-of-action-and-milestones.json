@@ -1,0 +1,21 @@
+{
+  "plan-of-action-and-milestones": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:13Z",
+      "oscal-version": "1.2.3",
+      "title": "NY DFS 500 with 2023-11 amendments Plan of Action and Milestones Template",
+      "version": "1"
+    },
+    "poam-items": [
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for NY DFS 500 with 2023-11 amendments.",
+        "title": "Compliance Roadmap and Parameter Tailoring for NY DFS 500 with 2023-11 amendments",
+        "uuid": "53d859f8-6fe8-5a04-bfb3-5d2649a0091d"
+      }
+    ],
+    "uuid": "59acfe5f-0d46-5766-b989-f6134cd2b969"
+  }
+}

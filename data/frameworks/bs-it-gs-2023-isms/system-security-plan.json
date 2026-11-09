@@ -1,0 +1,1338 @@
+{
+  "system-security-plan": {
+    "control-implementation": {
+      "description": "Control implementations for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+      "implemented-requirements": [
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a1.1 (Übernahme der Gesamtverantwortung für Informationssicherheit durch die Leitung — ISMS.1.A1.1) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "22fabfd3-b25d-5162-8923-c6a9f48f05c2"
+            }
+          ],
+          "control-id": "isms.1.a1.1",
+          "remarks": "Control isms.1.a1.1 (Übernahme der Gesamtverantwortung für Informationssicherheit durch die Leitung — ISMS.1.A1.1) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "cc62aa7b-4fc3-53ec-b688-e24feb196e94"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a1.2 (Übernahme der Gesamtverantwortung für Informationssicherheit durch die Leitung — ISMS.1.A1.2) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "721db967-b50f-5ad6-b2c0-be02909eff71"
+            }
+          ],
+          "control-id": "isms.1.a1.2",
+          "remarks": "Control isms.1.a1.2 (Übernahme der Gesamtverantwortung für Informationssicherheit durch die Leitung — ISMS.1.A1.2) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "d1401a59-f111-54b2-bc7c-d373e234da98"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a1.3 (Übernahme der Gesamtverantwortung für Informationssicherheit durch die Leitung — ISMS.1.A1.3) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "b884a8c7-c787-581e-949d-29c1c42b66bc"
+            }
+          ],
+          "control-id": "isms.1.a1.3",
+          "remarks": "Control isms.1.a1.3 (Übernahme der Gesamtverantwortung für Informationssicherheit durch die Leitung — ISMS.1.A1.3) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "dde10a32-e411-5d41-9086-8cc0168bb424"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a1.4 (Übernahme der Gesamtverantwortung für Informationssicherheit durch die Leitung — ISMS.1.A1.4) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "bd532d98-ebd9-5bf7-aeac-666adb66c6ef"
+            }
+          ],
+          "control-id": "isms.1.a1.4",
+          "remarks": "Control isms.1.a1.4 (Übernahme der Gesamtverantwortung für Informationssicherheit durch die Leitung — ISMS.1.A1.4) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "6c28c46d-6270-503a-ae89-4163e6ffe772"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a1.5 (Übernahme der Gesamtverantwortung für Informationssicherheit durch die Leitung — ISMS.1.A1.5) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "6470c897-5f44-57a7-8a73-3187be8eb94c"
+            }
+          ],
+          "control-id": "isms.1.a1.5",
+          "remarks": "Control isms.1.a1.5 (Übernahme der Gesamtverantwortung für Informationssicherheit durch die Leitung — ISMS.1.A1.5) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "8fb0d49b-b45e-5239-8f25-a2dfd6850d9b"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a1.6 (Übernahme der Gesamtverantwortung für Informationssicherheit durch die Leitung — ISMS.1.A1.6) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "e550f241-159a-5312-9a75-e9d64179fc74"
+            }
+          ],
+          "control-id": "isms.1.a1.6",
+          "remarks": "Control isms.1.a1.6 (Übernahme der Gesamtverantwortung für Informationssicherheit durch die Leitung — ISMS.1.A1.6) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "3e2a4af7-62fb-58d3-8ca5-11351182a9df"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a1.7 (Übernahme der Gesamtverantwortung für Informationssicherheit durch die Leitung — ISMS.1.A1.7) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "4f52f0ff-1b72-5dcc-876f-71306ea9f924"
+            }
+          ],
+          "control-id": "isms.1.a1.7",
+          "remarks": "Control isms.1.a1.7 (Übernahme der Gesamtverantwortung für Informationssicherheit durch die Leitung — ISMS.1.A1.7) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "357387d1-2625-5eaa-b0af-c2ae47d61ab0"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a1.8 (Übernahme der Gesamtverantwortung für Informationssicherheit durch die Leitung — ISMS.1.A1.8) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "6ae3201c-5478-5117-8fce-2837916eb251"
+            }
+          ],
+          "control-id": "isms.1.a1.8",
+          "remarks": "Control isms.1.a1.8 (Übernahme der Gesamtverantwortung für Informationssicherheit durch die Leitung — ISMS.1.A1.8) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "8d1747e5-d2a7-5dba-be05-473a1051db2e"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a10.1 (Erstellung eines Sicherheitskonzepts — ISMS.1.A10.1) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "80d578ca-a277-5047-9301-a065f514cfa8"
+            }
+          ],
+          "control-id": "isms.1.a10.1",
+          "remarks": "Control isms.1.a10.1 (Erstellung eines Sicherheitskonzepts — ISMS.1.A10.1) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "a916bd10-4c81-5866-bb5c-d40e883f2eda"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a10.2 (Erstellung eines Sicherheitskonzepts — ISMS.1.A10.2) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "db04eb6c-e895-5cc7-9d99-043fbc583df5"
+            }
+          ],
+          "control-id": "isms.1.a10.2",
+          "remarks": "Control isms.1.a10.2 (Erstellung eines Sicherheitskonzepts — ISMS.1.A10.2) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "627549ff-50d7-536d-ab2b-eade850c2467"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a10.3 (Erstellung eines Sicherheitskonzepts — ISMS.1.A10.3) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "bcbc102e-54f3-519d-ac8a-79c4fddd4b99"
+            }
+          ],
+          "control-id": "isms.1.a10.3",
+          "remarks": "Control isms.1.a10.3 (Erstellung eines Sicherheitskonzepts — ISMS.1.A10.3) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "c9aa57b4-db19-54ee-b56d-08cf87b29771"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a10.4 (Erstellung eines Sicherheitskonzepts — ISMS.1.A10.4) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "9164986b-dc2b-54d5-87dd-fe1c094e7298"
+            }
+          ],
+          "control-id": "isms.1.a10.4",
+          "remarks": "Control isms.1.a10.4 (Erstellung eines Sicherheitskonzepts — ISMS.1.A10.4) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "74e58297-1a5a-5f71-ad5c-f4049f6bf0a9"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a10.5 (Erstellung eines Sicherheitskonzepts — ISMS.1.A10.5) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "df154a70-ad86-5145-9861-7bf544383326"
+            }
+          ],
+          "control-id": "isms.1.a10.5",
+          "remarks": "Control isms.1.a10.5 (Erstellung eines Sicherheitskonzepts — ISMS.1.A10.5) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "45e06b99-454b-59d4-a031-5a75e643d958"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a10.6 (Erstellung eines Sicherheitskonzepts — ISMS.1.A10.6) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "a0faca16-6e3b-5421-8697-501415ea75d8"
+            }
+          ],
+          "control-id": "isms.1.a10.6",
+          "remarks": "Control isms.1.a10.6 (Erstellung eines Sicherheitskonzepts — ISMS.1.A10.6) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "d85ac215-f0db-501f-980f-0f7761c95a1b"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a11.1 (Aufrechterhaltung der Informationssicherheit — ISMS.1.A11.1) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "b432c8ff-42a0-57b6-af20-ce3dd1580316"
+            }
+          ],
+          "control-id": "isms.1.a11.1",
+          "remarks": "Control isms.1.a11.1 (Aufrechterhaltung der Informationssicherheit — ISMS.1.A11.1) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "a47fbc7a-dada-57ed-b9f7-226384b61989"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a11.2 (Aufrechterhaltung der Informationssicherheit — ISMS.1.A11.2) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "53028450-9a50-5b34-874e-e339e3ffc9e2"
+            }
+          ],
+          "control-id": "isms.1.a11.2",
+          "remarks": "Control isms.1.a11.2 (Aufrechterhaltung der Informationssicherheit — ISMS.1.A11.2) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "3cfc1782-1d2a-5e86-8fa2-ea6a41cc7368"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a11.3 (Aufrechterhaltung der Informationssicherheit — ISMS.1.A11.3) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "f2b7696d-8368-5a78-9ca5-2f93435829a7"
+            }
+          ],
+          "control-id": "isms.1.a11.3",
+          "remarks": "Control isms.1.a11.3 (Aufrechterhaltung der Informationssicherheit — ISMS.1.A11.3) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "89517753-049f-5596-be41-5b9f7ac8e04b"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a11.4 (Aufrechterhaltung der Informationssicherheit — ISMS.1.A11.4) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ad1e09b6-2642-5d48-80b6-65c779dc0e1c"
+            }
+          ],
+          "control-id": "isms.1.a11.4",
+          "remarks": "Control isms.1.a11.4 (Aufrechterhaltung der Informationssicherheit — ISMS.1.A11.4) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "96442f29-da6f-54c4-8441-b32f3e7357cf"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a11.5 (Aufrechterhaltung der Informationssicherheit — ISMS.1.A11.5) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "5b110aec-42d3-557b-bf03-0cf5410d6f09"
+            }
+          ],
+          "control-id": "isms.1.a11.5",
+          "remarks": "Control isms.1.a11.5 (Aufrechterhaltung der Informationssicherheit — ISMS.1.A11.5) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "7fe3be9e-b804-5095-a0cb-1789efcc78dd"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a11.6 (Aufrechterhaltung der Informationssicherheit — ISMS.1.A11.6) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "627f08b3-4850-52a5-a351-54815a761d40"
+            }
+          ],
+          "control-id": "isms.1.a11.6",
+          "remarks": "Control isms.1.a11.6 (Aufrechterhaltung der Informationssicherheit — ISMS.1.A11.6) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "907526a9-c2c1-590f-86e6-29508e774bbc"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a11.7 (Aufrechterhaltung der Informationssicherheit — ISMS.1.A11.7) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "26d4b972-91a2-514c-a505-495abff1d06a"
+            }
+          ],
+          "control-id": "isms.1.a11.7",
+          "remarks": "Control isms.1.a11.7 (Aufrechterhaltung der Informationssicherheit — ISMS.1.A11.7) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "752c6651-9941-52aa-a720-0bd6716f6a97"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a11.8 (Aufrechterhaltung der Informationssicherheit — ISMS.1.A11.8) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "219ed2cb-08be-5910-bd76-d1f492a2682b"
+            }
+          ],
+          "control-id": "isms.1.a11.8",
+          "remarks": "Control isms.1.a11.8 (Aufrechterhaltung der Informationssicherheit — ISMS.1.A11.8) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f275615d-5a06-538a-86de-0864e3b7f8c1"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a12.1 (Management-Berichte zur Informationssicherheit — ISMS.1.A12.1) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "44c8db2c-4d09-5856-9ef4-80944b5511c6"
+            }
+          ],
+          "control-id": "isms.1.a12.1",
+          "remarks": "Control isms.1.a12.1 (Management-Berichte zur Informationssicherheit — ISMS.1.A12.1) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "2ba4242b-b565-52ff-b638-c73aea8de3ed"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a12.2 (Management-Berichte zur Informationssicherheit — ISMS.1.A12.2) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "39d7d2dc-ce27-5262-a114-45e74f1e1279"
+            }
+          ],
+          "control-id": "isms.1.a12.2",
+          "remarks": "Control isms.1.a12.2 (Management-Berichte zur Informationssicherheit — ISMS.1.A12.2) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "44cf0cba-2d72-5b61-8176-266fab428cc8"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a12.3 (Management-Berichte zur Informationssicherheit — ISMS.1.A12.3) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "63e2d7ff-022d-5b36-abbd-bdd6bce8db42"
+            }
+          ],
+          "control-id": "isms.1.a12.3",
+          "remarks": "Control isms.1.a12.3 (Management-Berichte zur Informationssicherheit — ISMS.1.A12.3) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "5bcab66c-1e0d-57d9-a3c2-bd3432e8425b"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a12.4 (Management-Berichte zur Informationssicherheit — ISMS.1.A12.4) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "c677f308-2d05-5d1f-ba04-19128b24251c"
+            }
+          ],
+          "control-id": "isms.1.a12.4",
+          "remarks": "Control isms.1.a12.4 (Management-Berichte zur Informationssicherheit — ISMS.1.A12.4) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "3ca18ba7-3d81-566e-af36-1a49a8f82ee0"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a12.5 (Management-Berichte zur Informationssicherheit — ISMS.1.A12.5) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "1954b4ff-6981-54b8-a2d7-6da36472ab60"
+            }
+          ],
+          "control-id": "isms.1.a12.5",
+          "remarks": "Control isms.1.a12.5 (Management-Berichte zur Informationssicherheit — ISMS.1.A12.5) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "57c0a32f-3208-513c-aec9-f57ddc38063a"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a12.6 (Management-Berichte zur Informationssicherheit — ISMS.1.A12.6) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "f44df3e6-53b1-517a-bcc3-026512602059"
+            }
+          ],
+          "control-id": "isms.1.a12.6",
+          "remarks": "Control isms.1.a12.6 (Management-Berichte zur Informationssicherheit — ISMS.1.A12.6) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "d3489521-42c4-5675-8d98-78fb9a95c243"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a12.7 (Management-Berichte zur Informationssicherheit — ISMS.1.A12.7) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "b77ce799-8337-50ee-b501-dcd15e28d9b8"
+            }
+          ],
+          "control-id": "isms.1.a12.7",
+          "remarks": "Control isms.1.a12.7 (Management-Berichte zur Informationssicherheit — ISMS.1.A12.7) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "01c227fd-21a1-5358-a405-20679ff6667d"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a13.1 (Dokumentation des Sicherheitsprozesses — ISMS.1.A13.1) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "6f412993-bf28-5db9-8e23-b07245418998"
+            }
+          ],
+          "control-id": "isms.1.a13.1",
+          "remarks": "Control isms.1.a13.1 (Dokumentation des Sicherheitsprozesses — ISMS.1.A13.1) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "081a8d9f-8ac5-541b-8a38-3676df23b328"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a13.2 (Dokumentation des Sicherheitsprozesses — ISMS.1.A13.2) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "9eee9b05-517d-5cf0-87f3-e7095859fd66"
+            }
+          ],
+          "control-id": "isms.1.a13.2",
+          "remarks": "Control isms.1.a13.2 (Dokumentation des Sicherheitsprozesses — ISMS.1.A13.2) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "5c394403-7a99-54f3-bd5e-98f076d344f7"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a13.3 (Dokumentation des Sicherheitsprozesses — ISMS.1.A13.3) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "6e656bcf-7c13-50b4-9df7-38732eff9aae"
+            }
+          ],
+          "control-id": "isms.1.a13.3",
+          "remarks": "Control isms.1.a13.3 (Dokumentation des Sicherheitsprozesses — ISMS.1.A13.3) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "6d8e23fb-9991-5a6a-a832-864b1f642dbd"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a13.4 (Dokumentation des Sicherheitsprozesses — ISMS.1.A13.4) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "92a44815-595c-531d-b0b1-a0fe5a57b244"
+            }
+          ],
+          "control-id": "isms.1.a13.4",
+          "remarks": "Control isms.1.a13.4 (Dokumentation des Sicherheitsprozesses — ISMS.1.A13.4) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "548f4b37-5d3e-51e5-bf5a-a187ef0c7b74"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a13.5 (Dokumentation des Sicherheitsprozesses — ISMS.1.A13.5) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "d2d6ea51-331c-516c-a9bd-be9fa295dbb3"
+            }
+          ],
+          "control-id": "isms.1.a13.5",
+          "remarks": "Control isms.1.a13.5 (Dokumentation des Sicherheitsprozesses — ISMS.1.A13.5) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "a982fca7-7a70-513c-836f-90ed898d4921"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a13.6 (Dokumentation des Sicherheitsprozesses — ISMS.1.A13.6) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "25468101-85be-5c65-9003-57b18b1fb60c"
+            }
+          ],
+          "control-id": "isms.1.a13.6",
+          "remarks": "Control isms.1.a13.6 (Dokumentation des Sicherheitsprozesses — ISMS.1.A13.6) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "9e100f34-c640-590b-95d5-a407cd6d8a56"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a15.1 (Wirtschaftlicher Einsatz von Ressourcen für Informationssicherheit — ISMS.1.A15.1) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "d7a15776-7497-51c3-9ab3-3d4974b590f5"
+            }
+          ],
+          "control-id": "isms.1.a15.1",
+          "remarks": "Control isms.1.a15.1 (Wirtschaftlicher Einsatz von Ressourcen für Informationssicherheit — ISMS.1.A15.1) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "81723549-d95c-5834-845f-39b3cdb983c9"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a15.2 (Wirtschaftlicher Einsatz von Ressourcen für Informationssicherheit — ISMS.1.A15.2) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "c0013638-1cf2-5c73-af88-fb046ef5cd78"
+            }
+          ],
+          "control-id": "isms.1.a15.2",
+          "remarks": "Control isms.1.a15.2 (Wirtschaftlicher Einsatz von Ressourcen für Informationssicherheit — ISMS.1.A15.2) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "c1d35c8d-a42b-5919-9c20-dabdd0db29db"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a15.3 (Wirtschaftlicher Einsatz von Ressourcen für Informationssicherheit — ISMS.1.A15.3) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "a37a8ed2-9960-55a1-ad86-3cf881886645"
+            }
+          ],
+          "control-id": "isms.1.a15.3",
+          "remarks": "Control isms.1.a15.3 (Wirtschaftlicher Einsatz von Ressourcen für Informationssicherheit — ISMS.1.A15.3) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "1e58f205-cd74-5347-80cf-86556cedafe6"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a15.4 (Wirtschaftlicher Einsatz von Ressourcen für Informationssicherheit — ISMS.1.A15.4) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "eb6111be-169a-5d82-8b47-53313df112c8"
+            }
+          ],
+          "control-id": "isms.1.a15.4",
+          "remarks": "Control isms.1.a15.4 (Wirtschaftlicher Einsatz von Ressourcen für Informationssicherheit — ISMS.1.A15.4) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "a0355a87-8db0-55df-b662-4a6331b16354"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a16.1 (Erstellung von zielgruppengerechten Sicherheitsrichtlinien — ISMS.1.A16.1) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "14f9381f-c700-556f-9a85-cce57b6aaeb1"
+            }
+          ],
+          "control-id": "isms.1.a16.1",
+          "remarks": "Control isms.1.a16.1 (Erstellung von zielgruppengerechten Sicherheitsrichtlinien — ISMS.1.A16.1) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "5ba495d8-0922-52e6-b458-6ff52e6cee77"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a17.1 (Abschließen von Versicherungen — ISMS.1.A17.1) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "9257f224-e7fe-5bf5-bc39-f9d53fcd8a08"
+            }
+          ],
+          "control-id": "isms.1.a17.1",
+          "remarks": "Control isms.1.a17.1 (Abschließen von Versicherungen — ISMS.1.A17.1) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "e101a995-c0c6-53e4-8fe9-f9409e73e766"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a17.2 (Abschließen von Versicherungen — ISMS.1.A17.2) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "c6540671-8024-503b-92d5-048a0b879328"
+            }
+          ],
+          "control-id": "isms.1.a17.2",
+          "remarks": "Control isms.1.a17.2 (Abschließen von Versicherungen — ISMS.1.A17.2) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "263832da-7c46-5323-84f2-265b61fd877c"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a2.1 (Festlegung der Sicherheitsziele und -strategie — ISMS.1.A2.1) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "58e099d7-2ec0-560b-b56b-d9cca99446b0"
+            }
+          ],
+          "control-id": "isms.1.a2.1",
+          "remarks": "Control isms.1.a2.1 (Festlegung der Sicherheitsziele und -strategie — ISMS.1.A2.1) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "fa29df5b-e894-529b-822b-56d15e72be7e"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a2.2 (Festlegung der Sicherheitsziele und -strategie — ISMS.1.A2.2) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "29a9174e-6c88-59ac-b86c-15b69502e79f"
+            }
+          ],
+          "control-id": "isms.1.a2.2",
+          "remarks": "Control isms.1.a2.2 (Festlegung der Sicherheitsziele und -strategie — ISMS.1.A2.2) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "527c3933-f0eb-51f4-a4d2-7e544ac9253b"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a2.3 (Festlegung der Sicherheitsziele und -strategie — ISMS.1.A2.3) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "54ec6f00-49b7-5975-a9ec-614ef165c731"
+            }
+          ],
+          "control-id": "isms.1.a2.3",
+          "remarks": "Control isms.1.a2.3 (Festlegung der Sicherheitsziele und -strategie — ISMS.1.A2.3) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "8fb9899b-d836-57b8-89c8-8e1399ea5421"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a2.4 (Festlegung der Sicherheitsziele und -strategie — ISMS.1.A2.4) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "071b4b86-6bdc-54a1-9f25-4036cee13dfe"
+            }
+          ],
+          "control-id": "isms.1.a2.4",
+          "remarks": "Control isms.1.a2.4 (Festlegung der Sicherheitsziele und -strategie — ISMS.1.A2.4) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "82145405-7015-534c-a9b5-989b297ea71c"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a2.5 (Festlegung der Sicherheitsziele und -strategie — ISMS.1.A2.5) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "98459cb1-6d8b-5a7e-9d23-86ae4fbd9358"
+            }
+          ],
+          "control-id": "isms.1.a2.5",
+          "remarks": "Control isms.1.a2.5 (Festlegung der Sicherheitsziele und -strategie — ISMS.1.A2.5) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "1e876d14-207f-545a-8e50-93b2fc2f9d0c"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a3.1 (Erstellung einer Leitlinie zur Informationssicherheit — ISMS.1.A3.1) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "87579023-b926-5732-b7fd-985012f4417f"
+            }
+          ],
+          "control-id": "isms.1.a3.1",
+          "remarks": "Control isms.1.a3.1 (Erstellung einer Leitlinie zur Informationssicherheit — ISMS.1.A3.1) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "8e6dbfc9-e6a4-5924-9ad2-edac7f15217c"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a3.2 (Erstellung einer Leitlinie zur Informationssicherheit — ISMS.1.A3.2) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "77b47a58-12cc-5665-a60c-cb0b5d664833"
+            }
+          ],
+          "control-id": "isms.1.a3.2",
+          "remarks": "Control isms.1.a3.2 (Erstellung einer Leitlinie zur Informationssicherheit — ISMS.1.A3.2) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "988380c2-de27-531d-9fbe-e662217cb8c2"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a3.3 (Erstellung einer Leitlinie zur Informationssicherheit — ISMS.1.A3.3) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "4a143a63-3839-564f-9cd4-14922e71f2b5"
+            }
+          ],
+          "control-id": "isms.1.a3.3",
+          "remarks": "Control isms.1.a3.3 (Erstellung einer Leitlinie zur Informationssicherheit — ISMS.1.A3.3) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "e132284b-47cf-5a54-a45e-3a0c5faf9dee"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a3.4 (Erstellung einer Leitlinie zur Informationssicherheit — ISMS.1.A3.4) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "0d19cc69-c12f-5f8d-b558-623fe53f82c7"
+            }
+          ],
+          "control-id": "isms.1.a3.4",
+          "remarks": "Control isms.1.a3.4 (Erstellung einer Leitlinie zur Informationssicherheit — ISMS.1.A3.4) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "bb6979ab-9544-5b71-b79e-0ad6f4b62a42"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a3.5 (Erstellung einer Leitlinie zur Informationssicherheit — ISMS.1.A3.5) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "c0addf60-32fc-55c9-bb94-0b1046ec995f"
+            }
+          ],
+          "control-id": "isms.1.a3.5",
+          "remarks": "Control isms.1.a3.5 (Erstellung einer Leitlinie zur Informationssicherheit — ISMS.1.A3.5) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "8cdd6d9a-2074-51c1-ad51-64a5752d72bc"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a3.6 (Erstellung einer Leitlinie zur Informationssicherheit — ISMS.1.A3.6) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "623c4dcf-c1ba-5aaf-9b79-7cb278e334d7"
+            }
+          ],
+          "control-id": "isms.1.a3.6",
+          "remarks": "Control isms.1.a3.6 (Erstellung einer Leitlinie zur Informationssicherheit — ISMS.1.A3.6) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "7d15192f-5683-5ca0-9ed3-8e9933ccc43a"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a4.1 (Benennung eines oder einer Informationssicherheitsbeauftragten — ISMS.1.A4.1) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "3f3a05ec-22a4-56f6-8995-43f5091718b2"
+            }
+          ],
+          "control-id": "isms.1.a4.1",
+          "remarks": "Control isms.1.a4.1 (Benennung eines oder einer Informationssicherheitsbeauftragten — ISMS.1.A4.1) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "6f929eeb-9829-5658-9ece-eb00f70a9d5d"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a4.2 (Benennung eines oder einer Informationssicherheitsbeauftragten — ISMS.1.A4.2) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "84a4aed3-7d34-5735-a8fd-3630ff706ee5"
+            }
+          ],
+          "control-id": "isms.1.a4.2",
+          "remarks": "Control isms.1.a4.2 (Benennung eines oder einer Informationssicherheitsbeauftragten — ISMS.1.A4.2) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "91831985-f130-5251-b802-88639ba3dd83"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a4.3 (Benennung eines oder einer Informationssicherheitsbeauftragten — ISMS.1.A4.3) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "f283c751-f9aa-5198-9c19-e7e8616912cc"
+            }
+          ],
+          "control-id": "isms.1.a4.3",
+          "remarks": "Control isms.1.a4.3 (Benennung eines oder einer Informationssicherheitsbeauftragten — ISMS.1.A4.3) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "32dca143-91cc-5feb-941e-f1e5431817a4"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a4.4 (Benennung eines oder einer Informationssicherheitsbeauftragten — ISMS.1.A4.4) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "da70fcc0-d96d-5094-9d78-d60de7b1be70"
+            }
+          ],
+          "control-id": "isms.1.a4.4",
+          "remarks": "Control isms.1.a4.4 (Benennung eines oder einer Informationssicherheitsbeauftragten — ISMS.1.A4.4) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "14b42748-83da-503d-a456-6d6197ef5fc4"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a4.5 (Benennung eines oder einer Informationssicherheitsbeauftragten — ISMS.1.A4.5) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "793479ba-39a6-5744-9c5a-d3c9cfd45887"
+            }
+          ],
+          "control-id": "isms.1.a4.5",
+          "remarks": "Control isms.1.a4.5 (Benennung eines oder einer Informationssicherheitsbeauftragten — ISMS.1.A4.5) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "a9913653-ed86-5b40-a31d-50b5281fcc1d"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a5.1 (Vertragsgestaltung bei Bestellung eines oder einer externen Informationssicherheitsbeauftragten — ISMS.1.A5.1) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "892f10f6-f712-5dcd-8281-93dd054a9f64"
+            }
+          ],
+          "control-id": "isms.1.a5.1",
+          "remarks": "Control isms.1.a5.1 (Vertragsgestaltung bei Bestellung eines oder einer externen Informationssicherheitsbeauftragten — ISMS.1.A5.1) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "840ba7f7-2505-5a80-8e15-769922d32b17"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a5.2 (Vertragsgestaltung bei Bestellung eines oder einer externen Informationssicherheitsbeauftragten — ISMS.1.A5.2) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "fefe678d-8b3c-5ad7-8bea-9642418d5afe"
+            }
+          ],
+          "control-id": "isms.1.a5.2",
+          "remarks": "Control isms.1.a5.2 (Vertragsgestaltung bei Bestellung eines oder einer externen Informationssicherheitsbeauftragten — ISMS.1.A5.2) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "4b7db630-741a-5792-9f6f-65d0594f206b"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a5.3 (Vertragsgestaltung bei Bestellung eines oder einer externen Informationssicherheitsbeauftragten — ISMS.1.A5.3) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "0d79233d-5dc5-5077-9ea2-8ab950b0e02f"
+            }
+          ],
+          "control-id": "isms.1.a5.3",
+          "remarks": "Control isms.1.a5.3 (Vertragsgestaltung bei Bestellung eines oder einer externen Informationssicherheitsbeauftragten — ISMS.1.A5.3) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "0c28cf61-19fc-5fd2-b5ee-a3406413cb84"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a5.4 (Vertragsgestaltung bei Bestellung eines oder einer externen Informationssicherheitsbeauftragten — ISMS.1.A5.4) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "7e20f987-c2b7-5ad6-8fbb-3c1493a462f8"
+            }
+          ],
+          "control-id": "isms.1.a5.4",
+          "remarks": "Control isms.1.a5.4 (Vertragsgestaltung bei Bestellung eines oder einer externen Informationssicherheitsbeauftragten — ISMS.1.A5.4) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "f936d93c-0a05-567f-a0ea-309cdc79f7d2"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a6.1 (Aufbau einer geeigneten Organisationsstruktur für Informationssicherheit — ISMS.1.A6.1) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "f54915b9-2259-513c-b0a1-67910c961d09"
+            }
+          ],
+          "control-id": "isms.1.a6.1",
+          "remarks": "Control isms.1.a6.1 (Aufbau einer geeigneten Organisationsstruktur für Informationssicherheit — ISMS.1.A6.1) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "d7c781bf-80d9-5039-a0df-074ef7895c78"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a6.2 (Aufbau einer geeigneten Organisationsstruktur für Informationssicherheit — ISMS.1.A6.2) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ec1bdb8f-81c3-586c-9ddf-d0e60a1f8ed8"
+            }
+          ],
+          "control-id": "isms.1.a6.2",
+          "remarks": "Control isms.1.a6.2 (Aufbau einer geeigneten Organisationsstruktur für Informationssicherheit — ISMS.1.A6.2) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "ebac2c10-ce2a-5ccf-9ed9-6877c9a9e6aa"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a6.3 (Aufbau einer geeigneten Organisationsstruktur für Informationssicherheit — ISMS.1.A6.3) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "157c6c8a-8f03-5118-8e71-a8b05e311e23"
+            }
+          ],
+          "control-id": "isms.1.a6.3",
+          "remarks": "Control isms.1.a6.3 (Aufbau einer geeigneten Organisationsstruktur für Informationssicherheit — ISMS.1.A6.3) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "2543dfbd-853e-547a-a998-df2229f4def5"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a6.4 (Aufbau einer geeigneten Organisationsstruktur für Informationssicherheit — ISMS.1.A6.4) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "7213c688-5c38-50f4-9efc-45f6aa3a3872"
+            }
+          ],
+          "control-id": "isms.1.a6.4",
+          "remarks": "Control isms.1.a6.4 (Aufbau einer geeigneten Organisationsstruktur für Informationssicherheit — ISMS.1.A6.4) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "6aba7ea9-f04f-5f81-b3f4-0df282177f97"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a6.5 (Aufbau einer geeigneten Organisationsstruktur für Informationssicherheit — ISMS.1.A6.5) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "eb1e4193-7b69-5ac2-998c-9ed3209db23e"
+            }
+          ],
+          "control-id": "isms.1.a6.5",
+          "remarks": "Control isms.1.a6.5 (Aufbau einer geeigneten Organisationsstruktur für Informationssicherheit — ISMS.1.A6.5) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "7ea58e1d-01bb-5b51-ae8a-b632e75d3929"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a6.6 (Aufbau einer geeigneten Organisationsstruktur für Informationssicherheit — ISMS.1.A6.6) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "f58f6bd6-f3d8-55e9-8972-916b78551a39"
+            }
+          ],
+          "control-id": "isms.1.a6.6",
+          "remarks": "Control isms.1.a6.6 (Aufbau einer geeigneten Organisationsstruktur für Informationssicherheit — ISMS.1.A6.6) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "2e42c246-87da-5ff7-a9b4-87c7b02e91b8"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a6.7 (Aufbau einer geeigneten Organisationsstruktur für Informationssicherheit — ISMS.1.A6.7) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "e8a0943e-879d-574a-a6fd-5b8cc5720b29"
+            }
+          ],
+          "control-id": "isms.1.a6.7",
+          "remarks": "Control isms.1.a6.7 (Aufbau einer geeigneten Organisationsstruktur für Informationssicherheit — ISMS.1.A6.7) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "57d83217-3e04-5e05-81e0-72fc56c49688"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a6.8 (Aufbau einer geeigneten Organisationsstruktur für Informationssicherheit — ISMS.1.A6.8) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "4a214db2-1680-510b-9d15-af4007d0b228"
+            }
+          ],
+          "control-id": "isms.1.a6.8",
+          "remarks": "Control isms.1.a6.8 (Aufbau einer geeigneten Organisationsstruktur für Informationssicherheit — ISMS.1.A6.8) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "41ac1ffd-1f2b-5786-ad86-afa55194c1f3"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a7.1 (Festlegung von Sicherheitsmaßnahmen — ISMS.1.A7.1) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "4901868a-8b06-5894-ae23-890df87cd65a"
+            }
+          ],
+          "control-id": "isms.1.a7.1",
+          "remarks": "Control isms.1.a7.1 (Festlegung von Sicherheitsmaßnahmen — ISMS.1.A7.1) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "5e2b4ce5-5723-57d8-8381-b828d90447cb"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a7.2 (Festlegung von Sicherheitsmaßnahmen — ISMS.1.A7.2) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "6f4aab4c-c49c-5973-a096-174ff8e2c8b6"
+            }
+          ],
+          "control-id": "isms.1.a7.2",
+          "remarks": "Control isms.1.a7.2 (Festlegung von Sicherheitsmaßnahmen — ISMS.1.A7.2) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "506b4d43-c025-5c96-bd2c-6f947b4f2894"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a7.3 (Festlegung von Sicherheitsmaßnahmen — ISMS.1.A7.3) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "3a185588-ca4d-51a8-988e-37c9980125d2"
+            }
+          ],
+          "control-id": "isms.1.a7.3",
+          "remarks": "Control isms.1.a7.3 (Festlegung von Sicherheitsmaßnahmen — ISMS.1.A7.3) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "2b6df083-7e39-5a52-a6ae-9c6ddc0e93d3"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a8.1 (Integration der Mitarbeitenden in den Sicherheitsprozess — ISMS.1.A8.1) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "5946bd22-0bb6-52ca-9130-9a629e1a12ab"
+            }
+          ],
+          "control-id": "isms.1.a8.1",
+          "remarks": "Control isms.1.a8.1 (Integration der Mitarbeitenden in den Sicherheitsprozess — ISMS.1.A8.1) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "2e3c28b0-e0aa-532a-b0d8-5b89101d58af"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a8.2 (Integration der Mitarbeitenden in den Sicherheitsprozess — ISMS.1.A8.2) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "342d4d61-3c7b-5082-80b7-da95ee1260e2"
+            }
+          ],
+          "control-id": "isms.1.a8.2",
+          "remarks": "Control isms.1.a8.2 (Integration der Mitarbeitenden in den Sicherheitsprozess — ISMS.1.A8.2) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "6d3e826e-1b76-5048-9a54-13be458b942b"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a8.3 (Integration der Mitarbeitenden in den Sicherheitsprozess — ISMS.1.A8.3) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "c9c50800-dc87-52ce-ad3d-f709f58abb48"
+            }
+          ],
+          "control-id": "isms.1.a8.3",
+          "remarks": "Control isms.1.a8.3 (Integration der Mitarbeitenden in den Sicherheitsprozess — ISMS.1.A8.3) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "19869ab7-ba80-50ed-8f3b-450fcf7be97b"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a8.4 (Integration der Mitarbeitenden in den Sicherheitsprozess — ISMS.1.A8.4) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "b5d46fb0-f7d3-5bd3-8e75-cf5d56e8b063"
+            }
+          ],
+          "control-id": "isms.1.a8.4",
+          "remarks": "Control isms.1.a8.4 (Integration der Mitarbeitenden in den Sicherheitsprozess — ISMS.1.A8.4) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "3a75122d-cdb7-5ba0-9fc6-705c17c4b713"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a8.5 (Integration der Mitarbeitenden in den Sicherheitsprozess — ISMS.1.A8.5) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "c754b1b2-3539-5b98-8163-1be951abfe10"
+            }
+          ],
+          "control-id": "isms.1.a8.5",
+          "remarks": "Control isms.1.a8.5 (Integration der Mitarbeitenden in den Sicherheitsprozess — ISMS.1.A8.5) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "752865d6-ca89-58b7-9d4c-b040ee4f1cf0"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a8.6 (Integration der Mitarbeitenden in den Sicherheitsprozess — ISMS.1.A8.6) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ce56966c-fadd-5f65-aa1f-f4d03ec91192"
+            }
+          ],
+          "control-id": "isms.1.a8.6",
+          "remarks": "Control isms.1.a8.6 (Integration der Mitarbeitenden in den Sicherheitsprozess — ISMS.1.A8.6) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "23cffd99-87fc-50df-af90-e07f7cbf7a53"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a8.7 (Integration der Mitarbeitenden in den Sicherheitsprozess — ISMS.1.A8.7) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "7f76c81a-3183-5f29-9ba8-f1e802426e68"
+            }
+          ],
+          "control-id": "isms.1.a8.7",
+          "remarks": "Control isms.1.a8.7 (Integration der Mitarbeitenden in den Sicherheitsprozess — ISMS.1.A8.7) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "2957d276-0271-50fe-9086-705b703840fd"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a9.1 (Integration der Informationssicherheit in organisationsweite Abläufe und Prozesse — ISMS.1.A9.1) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "2b34638c-4777-5fd8-9ef9-4ceb7683a181"
+            }
+          ],
+          "control-id": "isms.1.a9.1",
+          "remarks": "Control isms.1.a9.1 (Integration der Informationssicherheit in organisationsweite Abläufe und Prozesse — ISMS.1.A9.1) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "49a58ad4-182e-5abb-9113-1de5f6b0d280"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a9.2 (Integration der Informationssicherheit in organisationsweite Abläufe und Prozesse — ISMS.1.A9.2) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "44c57abc-5168-5664-a889-136cf9342544"
+            }
+          ],
+          "control-id": "isms.1.a9.2",
+          "remarks": "Control isms.1.a9.2 (Integration der Informationssicherheit in organisationsweite Abläufe und Prozesse — ISMS.1.A9.2) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "d632c7a4-48a5-57cf-8c28-6b0a533de7e5"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a9.3 (Integration der Informationssicherheit in organisationsweite Abläufe und Prozesse — ISMS.1.A9.3) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "804478b3-005b-5f24-b911-4defe8c969cf"
+            }
+          ],
+          "control-id": "isms.1.a9.3",
+          "remarks": "Control isms.1.a9.3 (Integration der Informationssicherheit in organisationsweite Abläufe und Prozesse — ISMS.1.A9.3) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "666c414b-3e6d-597c-8d41-09b72e4cd81a"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "0d929543-0435-53d9-b835-a5227d993e61",
+              "description": "Control isms.1.a9.4 (Integration der Informationssicherheit in organisationsweite Abläufe und Prozesse — ISMS.1.A9.4) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "628a570b-f740-5712-88c1-158552a2f433"
+            }
+          ],
+          "control-id": "isms.1.a9.4",
+          "remarks": "Control isms.1.a9.4 (Integration der Informationssicherheit in organisationsweite Abläufe und Prozesse — ISMS.1.A9.4) is satisfied by the IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+          "uuid": "88170e38-7b6e-5d60-a4d6-ac7023340110"
+        }
+      ]
+    },
+    "import-profile": {
+      "href": "./catalog.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:12Z",
+      "oscal-version": "1.2.3",
+      "roles": [
+        {
+          "id": "sec-admin",
+          "title": "Security Administrator"
+        }
+      ],
+      "title": "IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement System Security Plan Template",
+      "version": "1"
+    },
+    "system-characteristics": {
+      "authorization-boundary": {
+        "description": "The authorization boundary encompasses all computing resources, cloud tenancies, and network zones supporting IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement operations."
+      },
+      "description": "Reference system architecture implementing security controls for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+      "security-impact-level": {
+        "security-objective-availability": "moderate",
+        "security-objective-confidentiality": "moderate",
+        "security-objective-integrity": "high"
+      },
+      "security-sensitivity-level": "moderate",
+      "status": {
+        "state": "operational"
+      },
+      "system-ids": [
+        {
+          "id": "bs-it-gs-2023-isms-system"
+        }
+      ],
+      "system-information": {
+        "information-types": [
+          {
+            "description": "Operational and compliance data processed within the germany jurisdiction boundary.",
+            "title": "Sovereign Program Data",
+            "uuid": "50826e25-65ae-5b0d-9b4d-bed877b46956"
+          }
+        ]
+      },
+      "system-name": "IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Reference System",
+      "system-name-short": "bs-it-gs-2023-isms"
+    },
+    "system-implementation": {
+      "components": [
+        {
+          "description": "Central execution platform providing control implementations for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+          "status": {
+            "state": "operational"
+          },
+          "title": "IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Core System Component",
+          "type": "software",
+          "uuid": "0d929543-0435-53d9-b835-a5227d993e61"
+        }
+      ],
+      "users": [
+        {
+          "role-ids": [
+            "sec-admin"
+          ],
+          "title": "Security Administrator",
+          "uuid": "bc1180ce-f120-50a1-9ad9-b6feff320146"
+        }
+      ]
+    },
+    "uuid": "a44eb7a1-dd05-576c-b657-f8a11e3be264"
+  }
+}

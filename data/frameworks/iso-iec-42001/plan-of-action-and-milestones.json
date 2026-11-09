@@ -1,0 +1,21 @@
+{
+  "plan-of-action-and-milestones": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:11Z",
+      "oscal-version": "1.2.3",
+      "title": "ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Plan of Action and Milestones Template",
+      "version": "2"
+    },
+    "poam-items": [
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "title": "Compliance Roadmap and Parameter Tailoring for ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline",
+        "uuid": "f12c0539-c892-5910-b4ee-f4dce43d1336"
+      }
+    ],
+    "uuid": "72822831-04ae-5928-8819-9a2aa9341118"
+  }
+}

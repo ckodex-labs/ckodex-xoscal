@@ -1,0 +1,268 @@
+{
+  "component-definition": {
+    "components": [
+      {
+        "control-implementations": [
+          {
+            "description": "Security control implementations for Référentiel Général de Sécurité 2.0 - Annexe B2.",
+            "implemented-requirements": [
+              {
+                "control-id": "_2.1.1",
+                "description": "Component capability addressing control _2.1.1 (RègleImpact-1).",
+                "uuid": "288b1cab-67e2-5506-ab02-4a0f873a45ef"
+              },
+              {
+                "control-id": "_2.1.2",
+                "description": "Component capability addressing control _2.1.2 (RègleDurée-1).",
+                "uuid": "7b85ef71-4b0c-5571-a809-701fc378e9d3"
+              },
+              {
+                "control-id": "_2.1.3",
+                "description": "Component capability addressing control _2.1.3 (RègleImpactSystémique-1).",
+                "uuid": "183b4bb6-9ad0-5d27-994d-ea63090eea31"
+              },
+              {
+                "control-id": "_2.1.4",
+                "description": "Component capability addressing control _2.1.4 (RecomImpactSystémique-1).",
+                "uuid": "ead80aa4-aa34-5022-8e34-1be622064c3c"
+              },
+              {
+                "control-id": "_2.3.1.1.1",
+                "description": "Component capability addressing control _2.3.1.1.1 (RègleAléaLocal-1).",
+                "uuid": "26db8ca3-9bb7-5a1f-a9ac-a5c408c96e13"
+              },
+              {
+                "control-id": "_2.3.1.2.1",
+                "description": "Component capability addressing control _2.3.1.2.1 (RègleDifférentiation-1).",
+                "uuid": "13c69f0a-b5d7-5fab-b013-3894abf27f15"
+              },
+              {
+                "control-id": "_2.3.1.3.1",
+                "description": "Component capability addressing control _2.3.1.3.1 (RègleÉchangeClés-1).",
+                "uuid": "4b18d80b-43b3-5c21-bfcb-fb13d661837b"
+              },
+              {
+                "control-id": "_2.3.2.1.1",
+                "description": "Component capability addressing control _2.3.2.1.1 (RègleAléaCentral-1).",
+                "uuid": "9a8fe90f-b36f-5648-b113-138d4ad3211b"
+              },
+              {
+                "control-id": "_2.3.2.1.2",
+                "description": "Component capability addressing control _2.3.2.1.2 (RecomAléaCentral-1).",
+                "uuid": "538a8bf7-cdd1-51f3-b888-636dde4411cc"
+              },
+              {
+                "control-id": "_2.3.2.1.3",
+                "description": "Component capability addressing control _2.3.2.1.3 (RègleGénérationCentralisée-1).",
+                "uuid": "c8f048f1-b145-57f2-a6dc-65df1cc3d65a"
+              },
+              {
+                "control-id": "_2.3.2.1.4",
+                "description": "Component capability addressing control _2.3.2.1.4 (RecomGénérationCentralisée-1).",
+                "uuid": "406f4a37-f1b4-52a2-aa56-4d7b6908a853"
+              },
+              {
+                "control-id": "_2.3.2.2.1",
+                "description": "Component capability addressing control _2.3.2.2.1 (RègleDérivation-1).",
+                "uuid": "d8c42b31-5076-5741-a57b-dbd7704bbc34"
+              },
+              {
+                "control-id": "_2.3.2.2.2",
+                "description": "Component capability addressing control _2.3.2.2.2 (RecomDérivation-1).",
+                "uuid": "f0e6342c-d306-54c4-813a-003abcc1b722"
+              },
+              {
+                "control-id": "_2.3.2.2.3",
+                "description": "Component capability addressing control _2.3.2.2.3 (RecomDérivation-2).",
+                "uuid": "5a43c616-c940-5b6b-9851-f4b3e010adec"
+              },
+              {
+                "control-id": "_2.3.3.1",
+                "description": "Component capability addressing control _2.3.3.1 (RègleDérivationSignature-1).",
+                "uuid": "06e62db1-45f7-5756-a0d9-aaa2a298bae9"
+              },
+              {
+                "control-id": "_2.3.3.2",
+                "description": "Component capability addressing control _2.3.3.2 (RecomGénérationAléatoireSignature-1).",
+                "uuid": "a52053c9-a3f4-54f2-9a7a-c762f8d2a54b"
+              },
+              {
+                "control-id": "_2.3.3.3",
+                "description": "Component capability addressing control _2.3.3.3 (RecomGénérationAléatoireSignature-2).",
+                "uuid": "485d0857-6204-5acf-b622-dad55f83536f"
+              },
+              {
+                "control-id": "_2.4.1.1",
+                "description": "Component capability addressing control _2.4.1.1 (RègleUsage-1).",
+                "uuid": "380bea75-2110-5499-9fa8-46c4113813aa"
+              },
+              {
+                "control-id": "_2.4.2.1",
+                "description": "Component capability addressing control _2.4.2.1 (RègleAffectation-1).",
+                "uuid": "579e9d3c-5e9a-55e8-a5c0-bc9f7b5630b6"
+              },
+              {
+                "control-id": "_2.4.2.2",
+                "description": "Component capability addressing control _2.4.2.2 (RecomAffectation-1).",
+                "uuid": "9263407e-d0eb-5aaf-98f3-111caa30a38d"
+              },
+              {
+                "control-id": "_2.4.3.1.1.1",
+                "description": "Component capability addressing control _2.4.3.1.1.1 (RègleEnrôlementPrivatif-1).",
+                "uuid": "4c57db64-dc8e-53b0-bda0-a2a1f6eeecfa"
+              },
+              {
+                "control-id": "_2.4.3.1.1.2",
+                "description": "Component capability addressing control _2.4.3.1.1.2 (RecomContrôleIndépendant-1).",
+                "uuid": "a309d462-7297-5797-892b-2e9316e90b94"
+              },
+              {
+                "control-id": "_2.4.3.1.2.1",
+                "description": "Component capability addressing control _2.4.3.1.2.1 (RègleEnrôlementIGC-1).",
+                "uuid": "7f610d17-fdfc-5172-99ba-26c953ee3f1c"
+              },
+              {
+                "control-id": "_2.4.3.1.2.2",
+                "description": "Component capability addressing control _2.4.3.1.2.2 (RecomContrôleIndépendant-1).",
+                "uuid": "b4953d7f-9f0d-51ac-b9db-6d4d0ea2ba97"
+              },
+              {
+                "control-id": "_2.4.3.2.1.1",
+                "description": "Component capability addressing control _2.4.3.2.1.1 (RègleEnrôlementCntralSécuritéPhysique-1).",
+                "uuid": "a2aaf365-9dd7-5d33-bbe6-41e382a9251b"
+              },
+              {
+                "control-id": "_2.4.3.2.1.2",
+                "description": "Component capability addressing control _2.4.3.2.1.2 (RègleEnrôlementCentral-1).",
+                "uuid": "a92beccd-191a-5af2-b575-435340c2af2d"
+              },
+              {
+                "control-id": "_2.4.3.2.2.1",
+                "description": "Component capability addressing control _2.4.3.2.2.1 (RègleEnrôlementDérivationSécuritéPhysique-1).",
+                "uuid": "988265f2-72e8-5efe-a4b4-af92f44a6b90"
+              },
+              {
+                "control-id": "_2.4.3.2.2.2",
+                "description": "Component capability addressing control _2.4.3.2.2.2 (RègleEnrôlementDérivation-1).",
+                "uuid": "bbd39cbd-1d56-5593-8544-74d8d2130a3d"
+              },
+              {
+                "control-id": "_2.5.1.1.1",
+                "description": "Component capability addressing control _2.5.1.1.1 (RègleAcheminemementCléCentral-1).",
+                "uuid": "13241195-1452-5aba-a4ca-d996ba1a9fdc"
+              },
+              {
+                "control-id": "_2.5.1.1.2",
+                "description": "Component capability addressing control _2.5.1.1.2 (RecomAcheminementNoirCentralBout-en-bout-1).",
+                "uuid": "486203c4-637b-5ee1-9546-4b489d537715"
+              },
+              {
+                "control-id": "_2.5.1.2.1",
+                "description": "Component capability addressing control _2.5.1.2.1 (RègleAcheminemementCléDérivée-1).",
+                "uuid": "de7ceff8-bdc3-564c-8598-fd2c2491ede9"
+              },
+              {
+                "control-id": "_2.5.1.2.2",
+                "description": "Component capability addressing control _2.5.1.2.2 (RecomAcheminementNoirDérivéeBout-en-bout-1).",
+                "uuid": "7c87c516-e5ba-5908-ad9c-f69293b3a39b"
+              },
+              {
+                "control-id": "_2.5.2.1.1",
+                "description": "Component capability addressing control _2.5.2.1.1 (RecomInjectionCléLocale-1).",
+                "uuid": "b30037ad-103a-5dbd-af08-c2909d9c1ec7"
+              },
+              {
+                "control-id": "_2.5.2.1.2",
+                "description": "Component capability addressing control _2.5.2.1.2 (RègleInjectionCléLocale-1).",
+                "uuid": "79621253-6b7d-519c-8ed1-d8b3c0d18b9f"
+              },
+              {
+                "control-id": "_2.5.2.2.1.1",
+                "description": "Component capability addressing control _2.5.2.2.1.1 (RègleInjectionCléCentral-1).",
+                "uuid": "2fe9f85e-ce0d-5a87-9ea2-7ebb11506319"
+              },
+              {
+                "control-id": "_2.5.2.2.1.2",
+                "description": "Component capability addressing control _2.5.2.2.1.2 (RecomInjectionCléCentral-1).",
+                "uuid": "9f54af69-2c49-5894-92e2-272f8ad78f51"
+              },
+              {
+                "control-id": "_2.5.2.2.2.1",
+                "description": "Component capability addressing control _2.5.2.2.2.1 (RègleInjectionCléDérivée-1).",
+                "uuid": "5d4b0469-6a14-5409-a434-a856ff6262b5"
+              },
+              {
+                "control-id": "_2.5.2.2.2.2",
+                "description": "Component capability addressing control _2.5.2.2.2.2 (RecomInjectionCléDérivée-1).",
+                "uuid": "7a0ef6d9-b854-537e-8e54-89490ff76e34"
+              },
+              {
+                "control-id": "_2.6.1.1",
+                "description": "Component capability addressing control _2.6.1.1 (RecomDiffusion-1).",
+                "uuid": "4dd2e7c6-ed9c-5da4-b159-e0f4df3f734a"
+              },
+              {
+                "control-id": "_2.6.2.1",
+                "description": "Component capability addressing control _2.6.2.1 (RègleEnvironnementConfiance-1).",
+                "uuid": "8082ad46-8b1b-53d0-bea0-086cc69fa1ff"
+              },
+              {
+                "control-id": "_2.6.2.2",
+                "description": "Component capability addressing control _2.6.2.2 (RègleVérificationAuthenticité-1).",
+                "uuid": "e1490b95-856e-5c7f-804c-03d2ac36d98d"
+              },
+              {
+                "control-id": "_2.6.2.3",
+                "description": "Component capability addressing control _2.6.2.3 (RègleVérificationUtilisabilité-1).",
+                "uuid": "c7c2d2d6-110e-5e41-8dd3-a2c85d7da9a1"
+              },
+              {
+                "control-id": "_2.7.1",
+                "description": "Component capability addressing control _2.7.1 (RègleFinUtilisation-1).",
+                "uuid": "6301b4fb-452e-5887-9f42-9e1d710119e9"
+              },
+              {
+                "control-id": "_2.7.2",
+                "description": "Component capability addressing control _2.7.2 (RecomCauseFinUtilisation-1).",
+                "uuid": "8f7ab5d7-f1b4-5fb6-bb3f-c45ee0143950"
+              },
+              {
+                "control-id": "_2.7.3",
+                "description": "Component capability addressing control _2.7.3 (RègleEffacement-1).",
+                "uuid": "7a23088f-354b-5c7b-b778-544d04f4752a"
+              },
+              {
+                "control-id": "_2.8.1",
+                "description": "Component capability addressing control _2.8.1 (RègleRenouvellement-1).",
+                "uuid": "c790737c-9e79-5c1a-b5a1-e212a4289837"
+              },
+              {
+                "control-id": "_2.8.2",
+                "description": "Component capability addressing control _2.8.2 (RègleRenouvellementEnrôlement-1).",
+                "uuid": "a9dd918a-6085-5adf-9b9a-a6de37b59297"
+              },
+              {
+                "control-id": "_2.9.1",
+                "description": "Component capability addressing control _2.9.1 (RègleRecouvrement-1).",
+                "uuid": "59da2643-1e5a-5a41-8354-95d6e27d78a3"
+              }
+            ],
+            "source": "./catalog.json",
+            "uuid": "4594f955-d18f-5d8d-91fe-b7ad026a44d9"
+          }
+        ],
+        "description": "Enterprise technical and operational capabilities implementing controls for Référentiel Général de Sécurité 2.0 - Annexe B2.",
+        "title": "Référentiel Général de Sécurité 2.0 - Annexe B2 Platform Component",
+        "type": "software",
+        "uuid": "6cd8cc46-1360-5008-acca-207a12281d10"
+      }
+    ],
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:12Z",
+      "oscal-version": "1.2.3",
+      "title": "Référentiel Général de Sécurité 2.0 - Annexe B2 Component Definition Template",
+      "version": "1"
+    },
+    "uuid": "828b02d7-dcbc-5318-9a48-d13b2545c72a"
+  }
+}

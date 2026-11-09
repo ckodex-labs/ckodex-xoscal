@@ -1,0 +1,21 @@
+{
+  "plan-of-action-and-milestones": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:12Z",
+      "oscal-version": "1.2.3",
+      "title": "Cadre de Conformité Cyber France (3CF) pour l'aviation civile - v2 Plan of Action and Milestones Template",
+      "version": "2"
+    },
+    "poam-items": [
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for Cadre de Conformité Cyber France (3CF) pour l'aviation civile - v2.",
+        "title": "Compliance Roadmap and Parameter Tailoring for Cadre de Conformité Cyber France (3CF) pour l'aviation civile - v2",
+        "uuid": "e4124f7b-c033-51e9-9869-acbd4c7252fd"
+      }
+    ],
+    "uuid": "394ffb05-f405-58ba-ad1f-a90a8a24004d"
+  }
+}

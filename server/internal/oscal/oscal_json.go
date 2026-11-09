@@ -70,6 +70,7 @@ var oscalSingleValueFields = map[string]bool{
 // scalar field with a structured one under the same OSCAL key).
 var oscalFieldRenames = map[string]string{
 	"citationObj": "citation",
+	"choices":     "choice",
 }
 
 // oscalDeprecatedFields are proto field names that have been superseded by
@@ -153,6 +154,40 @@ func transformOSCAL(data interface{}) interface{} {
 				}
 			}
 
+			if oscalKey == "how-many" {
+				if b, ok := transformed.(bool); ok {
+					if !b {
+						continue
+					}
+					transformed = "one-or-more"
+				}
+			}
+
+			if oscalKey == "set-parameters" {
+				if arr, ok := transformed.([]interface{}); ok {
+					normalized := normalizeSetParameters(arr)
+					if len(normalized) == 0 {
+						continue
+					}
+					transformed = normalized
+				}
+			}
+
+			if oscalKey == "imports" {
+				if arr, ok := transformed.([]interface{}); ok {
+					for _, impRaw := range arr {
+						if im, ok := impRaw.(map[string]interface{}); ok {
+							if customObj, hasCustom := im["custom"].(map[string]interface{}); hasCustom {
+								if _, hasWithIDs := customObj["with-ids"]; hasWithIDs {
+									im["include-controls"] = []interface{}{customObj}
+									delete(im, "custom")
+								}
+							}
+						}
+					}
+				}
+			}
+
 			result[oscalKey] = transformed
 		}
 		if len(result) == 0 {
@@ -230,4 +265,55 @@ func ensureMetadata(data map[string]interface{}) {
 	if _, ok := meta["version"]; !ok {
 		meta["version"] = "1.0"
 	}
+}
+
+// normalizeSetParameters converts proto SetParameters / SetParameter objects into
+// schema-valid OSCAL 1.2.3 set-parameter entries.
+func normalizeSetParameters(arr []interface{}) []interface{} {
+	var out []interface{}
+	for _, raw := range arr {
+		m, ok := raw.(map[string]interface{})
+		if !ok {
+			continue
+		}
+		if paramsArr, hasParams := m["params"].([]interface{}); hasParams {
+			for _, pRaw := range paramsArr {
+				pm, ok := pRaw.(map[string]interface{})
+				if !ok {
+					continue
+				}
+				paramID, _ := pm["id"].(string)
+				if paramID == "" {
+					paramID, _ = pm["param-id"].(string)
+				}
+				if paramID == "" {
+					continue
+				}
+				sp := map[string]interface{}{
+					"param-id": paramID,
+				}
+				for _, k := range []string{"class", "depends-on", "props", "links", "label", "usage", "constraints", "guidelines", "values", "select", "remarks"} {
+					if v, exists := pm[k]; exists && !isEmpty(v) {
+						sp[k] = v
+					} else if v, exists := m[k]; exists && !isEmpty(v) {
+						sp[k] = v
+					}
+				}
+				out = append(out, sp)
+			}
+			continue
+		}
+		paramID, _ := m["param-id"].(string)
+		if paramID == "" {
+			continue
+		}
+		if val, hasDeprecatedVal := m["value"]; hasDeprecatedVal {
+			if _, hasValues := m["values"]; !hasValues && !isEmpty(val) {
+				m["values"] = []interface{}{val}
+			}
+			delete(m, "value")
+		}
+		out = append(out, m)
+	}
+	return out
 }

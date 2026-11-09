@@ -649,27 +649,37 @@
       }
     }
 
+    function escapeHtml(str) {
+      if (str === null || str === undefined) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+
     function renderFrameworksGrid(fws) {
       const container = document.getElementById('frameworks-grid');
       container.innerHTML = fws.map(fw => `
         <div class="card">
           <div>
             <div class="card-header">
-              <span class="card-id">${fw.id}</span>
-              <span class="card-jurisdiction">${fw.jurisdiction}</span>
+              <span class="card-id">${escapeHtml(fw.id)}</span>
+              <span class="card-jurisdiction">${escapeHtml(fw.jurisdiction)}</span>
             </div>
-            <div class="card-title">${fw.title}</div>
-            <div class="card-desc">${fw.authority}</div>
+            <div class="card-title">${escapeHtml(fw.title)}</div>
+            <div class="card-desc">${escapeHtml(fw.authority)}</div>
           </div>
           <div>
             <div class="card-stats">
-              <span>Controls: <b>${fw.control_count}</b></span>
-              <span>Version: <b>${fw.version}</b></span>
+              <span>Controls: <b>${escapeHtml(fw.control_count)}</b></span>
+              <span>Version: <b>${escapeHtml(fw.version)}</b></span>
               <span>Profile: <b>${fw.has_profile ? 'Yes' : 'No'}</b></span>
             </div>
             <div style="display: flex; gap: 0.5rem; margin-top: 0.5rem;">
-              <button class="btn" style="flex: 1;" onclick="selectAndExplore('${fw.id}')">Explore</button>
-              <button class="btn btn-secondary" style="flex: 1;" onclick="openLayersModal('${fw.id}', '${fw.title.replace(/'/g, "\\'")}')">7 Layers &amp; Parity</button>
+              <button class="btn" style="flex: 1;" data-fw-id="${escapeHtml(fw.id)}" onclick="selectAndExplore(this.getAttribute('data-fw-id'))">Explore</button>
+              <button class="btn btn-secondary" style="flex: 1;" data-fw-id="${escapeHtml(fw.id)}" data-fw-title="${escapeHtml(fw.title)}" onclick="openLayersModal(this.getAttribute('data-fw-id'), this.getAttribute('data-fw-title'))">7 Layers &amp; Parity</button>
             </div>
           </div>
         </div>
@@ -679,8 +689,8 @@
     function populateFrameworkSelector(fws) {
       const sel = document.getElementById('fw-selector');
       sel.innerHTML = fws.map(f => `
-        <option value="${f.id}" ${f.id === 'cccs-itsp-10-033' ? 'selected' : ''}>
-          ${f.title} (${f.id})
+        <option value="${escapeHtml(f.id)}" ${f.id === 'cccs-itsp-10-033' ? 'selected' : ''}>
+          ${escapeHtml(f.title)} (${escapeHtml(f.id)})
         </option>
       `).join('');
     }
@@ -697,14 +707,14 @@
       tbody.innerHTML = '<tr><td colspan="4" style="text-align: center; color: var(--text-muted);">Loading controls...</td></tr>';
 
       try {
-        const res = await fetch(`/api/v1/frameworks/${fwID}/controls`);
+        const res = await fetch(`/api/v1/frameworks/${encodeURIComponent(fwID)}/controls`);
         if (!res.ok) {
           throw new Error('HTTP ' + res.status);
         }
         currentControls = await res.json();
         renderControlsTable(currentControls);
       } catch (err) {
-        tbody.innerHTML = `<tr><td colspan="4" style="color: var(--danger);">Failed to load controls: ${err}</td></tr>`;
+        tbody.innerHTML = `<tr><td colspan="4" style="color: var(--danger);">Failed to load controls: ${escapeHtml(err)}</td></tr>`;
         showErrorBanner(`Failed to load controls for ${fwID}: ${err.message}`);
       }
     }
@@ -717,12 +727,12 @@
       }
 
       tbody.innerHTML = ctrls.slice(0, 100).map(c => `
-        <tr onclick="showControlModal('${c.id}')" tabindex="0" onkeydown="if(event.key==='Enter'){showControlModal('${c.id}')}">
-          <td style="font-family: var(--font-mono); font-weight: 600; color: var(--primary);">${c.id}</td>
-          <td><span style="font-family: var(--font-mono); font-size: 0.75rem; background: var(--code-bg); padding: 0.2rem 0.4rem; border-radius: 4px;">${c.family_id}</span></td>
+        <tr data-ctrl-id="${escapeHtml(c.id)}" onclick="showControlModal(this.getAttribute('data-ctrl-id'))" tabindex="0" onkeydown="if(event.key==='Enter'){showControlModal(this.getAttribute('data-ctrl-id'))}">
+          <td style="font-family: var(--font-mono); font-weight: 600; color: var(--primary);">${escapeHtml(c.id)}</td>
+          <td><span style="font-family: var(--font-mono); font-size: 0.75rem; background: var(--code-bg); padding: 0.2rem 0.4rem; border-radius: 4px;">${escapeHtml(c.family_id)}</span></td>
           <td>
-            <div style="font-weight: 600;">${c.title}</div>
-            <div style="color: var(--text-muted); font-size: 0.8rem; margin-top: 0.2rem;">${c.statements && c.statements[0] ? c.statements[0].substring(0, 120) + '...' : ''}</div>
+            <div style="font-weight: 600;">${escapeHtml(c.title)}</div>
+            <div style="color: var(--text-muted); font-size: 0.8rem; margin-top: 0.2rem;">${c.statements && c.statements[0] ? escapeHtml(c.statements[0].substring(0, 120)) + '...' : ''}</div>
           </td>
           <td>
             ${c.is_canadian ? '<span class="tag-badge">CA SOVEREIGN</span>' : '<span style="color: var(--text-muted); font-size: 0.75rem;">Standard</span>'}
@@ -737,7 +747,7 @@
         const q = document.getElementById('control-search-input').value.trim();
         const fwID = document.getElementById('fw-selector').value;
         try {
-          const res = await fetch(`/api/v1/frameworks/${fwID}/controls?q=${encodeURIComponent(q)}`);
+          const res = await fetch(`/api/v1/frameworks/${encodeURIComponent(fwID)}/controls?q=${encodeURIComponent(q)}`);
           if (!res.ok) throw new Error('HTTP ' + res.status);
           const results = await res.json();
           renderControlsTable(results);
@@ -761,7 +771,7 @@
         contentHTML += `
           <div class="modal-section">
             <h4>Control Statement</h4>
-            <div class="modal-prose">${ctrl.statements.join('\n\n')}</div>
+            <div class="modal-prose">${escapeHtml(ctrl.statements.join('\n\n'))}</div>
           </div>
         `;
       }
@@ -770,7 +780,7 @@
         contentHTML += `
           <div class="modal-section">
             <h4>Canadian Sovereign Guidance (GC Discussion)</h4>
-            <div class="gc-guidance-box">${ctrl.canadian_guidance}</div>
+            <div class="gc-guidance-box">${escapeHtml(ctrl.canadian_guidance)}</div>
           </div>
         `;
       }
@@ -779,7 +789,7 @@
         contentHTML += `
           <div class="modal-section">
             <h4>General Discussion</h4>
-            <div class="modal-prose">${ctrl.guidance}</div>
+            <div class="modal-prose">${escapeHtml(ctrl.guidance)}</div>
           </div>
         `;
       }
@@ -793,7 +803,7 @@
                 <thead><tr><th>Param ID</th><th>Assigned Value</th></tr></thead>
                 <tbody>
                   ${Object.entries(ctrl.parameters).map(([k,v]) => `
-                    <tr><td style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--primary);">${k}</td><td style="font-size: 0.8rem;">${v}</td></tr>
+                    <tr><td style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--primary);">${escapeHtml(k)}</td><td style="font-size: 0.8rem;">${escapeHtml(v)}</td></tr>
                   `).join('')}
                 </tbody>
               </table>
@@ -807,7 +817,7 @@
           <div class="modal-section">
             <h4>Enhancements (${ctrl.enhancements.length})</h4>
             <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.5rem;">
-              ${ctrl.enhancements.map(e => `<span class="tag-badge" style="cursor: pointer;" onclick="showControlModal('${e}')">${e}</span>`).join('')}
+              ${ctrl.enhancements.map(e => `<span class="tag-badge" style="cursor: pointer;" data-ctrl-id="${escapeHtml(e)}" onclick="showControlModal(this.getAttribute('data-ctrl-id'))">${escapeHtml(e)}</span>`).join('')}
             </div>
           </div>
         `;
@@ -833,8 +843,8 @@
 
       try {
         const [layersRes, parityRes] = await Promise.all([
-          fetch(`/api/v1/frameworks/${fwID}/layers`),
-          fetch(`/api/v1/frameworks/${fwID}/parity`)
+          fetch(`/api/v1/frameworks/${encodeURIComponent(fwID)}/layers`),
+          fetch(`/api/v1/frameworks/${encodeURIComponent(fwID)}/parity`)
         ]);
 
         const layers = await layersRes.json();
@@ -846,15 +856,15 @@
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem;">
               <h4 style="margin: 0;">Verbatim Parity Verification</h4>
               <div style="display: flex; gap: 0.5rem; align-items: center;">
-                <a href="/api/v1/frameworks/${fwID}/layers/checksums.sha256?download=1" class="btn btn-secondary" style="padding: 0.25rem 0.6rem; font-size: 0.75rem; text-decoration: none;">Download Checksums (.sha256)</a>
-                <span class="badge ${parityBadgeClass}">${parity.verdict} (${(parity.parity_score || 100).toFixed(1)}%)</span>
+                <a href="/api/v1/frameworks/${encodeURIComponent(fwID)}/layers/checksums.sha256?download=1" class="btn btn-secondary" style="padding: 0.25rem 0.6rem; font-size: 0.75rem; text-decoration: none;">Download Checksums (.sha256)</a>
+                <span class="badge ${parityBadgeClass}">${escapeHtml(parity.verdict)} (${(parity.parity_score || 100).toFixed(1)}%)</span>
               </div>
             </div>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.75rem; font-size: 0.85rem;">
               <div>Schema 1.2.3: <b style="color: ${parity.schema_valid ? 'var(--accent)' : 'var(--danger)'};">${parity.schema_valid ? 'VALID' : 'INVALID'}</b></div>
               <div>Integrity: <b style="color: ${parity.integrity_valid ? 'var(--accent)' : 'var(--danger)'};">${parity.integrity_valid ? 'PASS' : 'FAIL'}</b></div>
-              <div>Controls: <b>${parity.matched_controls} / ${parity.total_expected_controls}</b></div>
-              <div>Statements: <b>${parity.statement_matches}</b></div>
+              <div>Controls: <b>${escapeHtml(parity.matched_controls)} / ${escapeHtml(parity.total_expected_controls)}</b></div>
+              <div>Statements: <b>${escapeHtml(parity.statement_matches)}</b></div>
             </div>
           </div>
         `;
@@ -862,15 +872,15 @@
         const layersRows = layers.map((l, idx) => `
           <tr>
             <td style="font-family: var(--font-mono); font-size: 0.8rem; font-weight: 600;">Layer ${idx + 1}</td>
-            <td style="font-weight: 600;">${l.kind}</td>
-            <td style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">${l.name}</td>
+            <td style="font-weight: 600;">${escapeHtml(l.kind)}</td>
+            <td style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">${escapeHtml(l.name)}</td>
             <td style="font-size: 0.85rem;">${(l.size_bytes / 1024).toFixed(1)} KB</td>
             <td style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">
-              <span title="${l.sha256}" style="cursor: pointer;" onclick="copyTextToClipboard('${l.sha256}', this)">${l.sha256.substring(0, 16)}... 📋</span>
+              <span title="${escapeHtml(l.sha256)}" style="cursor: pointer;" data-sha="${escapeHtml(l.sha256)}" onclick="copyTextToClipboard(this.getAttribute('data-sha'), this)">${escapeHtml(l.sha256.substring(0, 16))}... 📋</span>
             </td>
             <td style="text-align: right; white-space: nowrap;">
-              <a href="/api/v1/frameworks/${fwID}/layers/${l.kind}" target="_blank" class="btn btn-secondary" style="padding: 0.25rem 0.5rem; font-size: 0.75rem; text-decoration: none; display: inline-block;">View</a>
-              <a href="/api/v1/frameworks/${fwID}/layers/${l.kind}?download=1" class="btn" style="padding: 0.25rem 0.5rem; font-size: 0.75rem; text-decoration: none; display: inline-block; margin-left: 0.25rem;">Download</a>
+              <a href="/api/v1/frameworks/${encodeURIComponent(fwID)}/layers/${encodeURIComponent(l.kind)}" target="_blank" class="btn btn-secondary" style="padding: 0.25rem 0.5rem; font-size: 0.75rem; text-decoration: none; display: inline-block;">View</a>
+              <a href="/api/v1/frameworks/${encodeURIComponent(fwID)}/layers/${encodeURIComponent(l.kind)}?download=1" class="btn" style="padding: 0.25rem 0.5rem; font-size: 0.75rem; text-decoration: none; display: inline-block; margin-left: 0.25rem;">Download</a>
             </td>
           </tr>
         `).join('');
@@ -900,7 +910,7 @@
 
         content.innerHTML = parityHtml + layersHtml;
       } catch (e) {
-        content.innerHTML = `<div style="color: var(--danger); padding: 1rem;">Failed to load layers or parity: ${e.message}</div>`;
+        content.innerHTML = `<div style="color: var(--danger); padding: 1rem;">Failed to load layers or parity: ${escapeHtml(e.message)}</div>`;
       }
     }
 
@@ -925,30 +935,30 @@
         document.getElementById('transition-summary-cards').innerHTML = `
           <div class="card" style="flex: 1; min-width: 180px;">
             <div style="color: var(--text-muted); font-size: 0.8rem;">ITSG-33 Base</div>
-            <div style="font-size: 1.75rem; font-weight: 700; color: var(--text-main);">${comp.from_total}</div>
+            <div style="font-size: 1.75rem; font-weight: 700; color: var(--text-main);">${escapeHtml(comp.from_total)}</div>
           </div>
           <div class="card" style="flex: 1; min-width: 180px;">
             <div style="color: var(--text-muted); font-size: 0.8rem;">ITSP.10.033 Target</div>
-            <div style="font-size: 1.75rem; font-weight: 700; color: var(--accent);">${comp.to_total}</div>
+            <div style="font-size: 1.75rem; font-weight: 700; color: var(--accent);">${escapeHtml(comp.to_total)}</div>
           </div>
           <div class="card" style="flex: 1; min-width: 180px;">
             <div style="color: var(--text-muted); font-size: 0.8rem;">New Requirements Added</div>
-            <div style="font-size: 1.75rem; font-weight: 700; color: var(--primary);">+${comp.added_count}</div>
+            <div style="font-size: 1.75rem; font-weight: 700; color: var(--primary);">+${escapeHtml(comp.added_count)}</div>
           </div>
           <div class="card" style="flex: 1; min-width: 180px;">
             <div style="color: var(--text-muted); font-size: 0.8rem;">Modified Controls</div>
-            <div style="font-size: 1.75rem; font-weight: 700; color: var(--warning);">${comp.modified_count}</div>
+            <div style="font-size: 1.75rem; font-weight: 700; color: var(--warning);">${escapeHtml(comp.modified_count)}</div>
           </div>
         `;
 
         document.getElementById('transition-family-body').innerHTML = comp.families.map(f => `
           <tr>
-            <td style="font-family: var(--font-mono); font-weight: 600; color: var(--primary);">${f.family_id}</td>
-            <td style="font-weight: 500;">${f.family_name}</td>
-            <td>${f.from_count}</td>
-            <td style="font-weight: 600;">${f.to_count}</td>
+            <td style="font-family: var(--font-mono); font-weight: 600; color: var(--primary);">${escapeHtml(f.family_id)}</td>
+            <td style="font-weight: 500;">${escapeHtml(f.family_name)}</td>
+            <td>${escapeHtml(f.from_count)}</td>
+            <td style="font-weight: 600;">${escapeHtml(f.to_count)}</td>
             <td style="font-weight: 700; color: ${f.net_delta > 0 ? 'var(--accent)' : 'var(--text-muted)'};">
-              ${f.net_delta > 0 ? '+' + f.net_delta : f.net_delta}
+              ${f.net_delta > 0 ? '+' + escapeHtml(f.net_delta) : escapeHtml(f.net_delta)}
             </td>
           </tr>
         `).join('');
@@ -985,12 +995,13 @@
         let statePills = '';
         if (data.vector_state) {
           const vs = data.vector_state;
+          const lm = vs.lifecycle_mode || vs.lifecycle || 'UNKNOWN';
           statePills = `
             <div style="margin-top: 1rem;">
-              <span class="vector-pill blue">Presence: ${vs.presence}</span>
-              <span class="vector-pill green">Valence: ${vs.valence}</span>
-              <span class="vector-pill blue">Coherence: ${vs.coherence}</span>
-              <span class="vector-pill ${vs.lifecycle === 'CONFORMANT' ? 'green' : 'yellow'}">Lifecycle: ${vs.lifecycle}</span>
+              <span class="vector-pill blue">Presence: ${escapeHtml(vs.presence)}</span>
+              <span class="vector-pill green">Valence: ${escapeHtml(vs.valence)}</span>
+              <span class="vector-pill blue">Coherence: ${escapeHtml(vs.coherence)}</span>
+              <span class="vector-pill ${lm === 'NORMAL' || lm === 'CONFORMANT' ? 'green' : 'yellow'}">Lifecycle: ${escapeHtml(lm)}</span>
             </div>
           `;
         }
@@ -998,17 +1009,17 @@
         resBox.innerHTML = `
           <div class="card" style="border-color: ${data.valid ? 'var(--accent)' : 'var(--danger)'};">
             <div style="font-weight: 700; font-size: 1.1rem; color: ${data.valid ? 'var(--accent)' : 'var(--danger)'};">
-              ${data.valid ? 'Schema Valid: Passes NIST OSCAL ' + data.schema_version : 'Schema Invalid'}
+              ${data.valid ? 'Schema Valid: Passes NIST OSCAL ' + escapeHtml(data.schema_version) : 'Schema Invalid'}
             </div>
             <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.25rem;">
-              Detected Kind: <b>${data.kind || 'Unknown'}</b>
+              Detected Kind: <b>${escapeHtml(data.kind || 'Unknown')}</b>
             </div>
-            ${data.schema_error ? `<div class="modal-prose" style="color: var(--danger); margin-top: 0.75rem;">${data.schema_error}</div>` : ''}
+            ${data.schema_error ? `<div class="modal-prose" style="color: var(--danger); margin-top: 0.75rem;">${escapeHtml(data.schema_error)}</div>` : ''}
             ${statePills}
           </div>
         `;
       } catch (err) {
-        resBox.innerHTML = `<div class="card" style="border-color: var(--danger); color: var(--danger);">Network error: ${err}</div>`;
+        resBox.innerHTML = `<div class="card" style="border-color: var(--danger); color: var(--danger);">Network error: ${escapeHtml(err)}</div>`;
       }
     }
 

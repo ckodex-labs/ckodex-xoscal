@@ -1,0 +1,21 @@
+{
+  "plan-of-action-and-milestones": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:12Z",
+      "oscal-version": "1.2.3",
+      "title": "CNIL : guide de sécurité des données Plan of Action and Milestones Template",
+      "version": "1"
+    },
+    "poam-items": [
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for CNIL : guide de sécurité des données.",
+        "title": "Compliance Roadmap and Parameter Tailoring for CNIL : guide de sécurité des données",
+        "uuid": "9ce0d05a-2ffc-508b-8932-7762b6dda5f4"
+      }
+    ],
+    "uuid": "ed42c51b-dd16-5d1f-b5a9-08c80d3e972f"
+  }
+}

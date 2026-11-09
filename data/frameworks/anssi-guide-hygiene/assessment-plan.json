@@ -1,0 +1,84 @@
+{
+  "assessment-plan": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-11-08T01:42:12Z",
+      "oscal-version": "1.2.3",
+      "title": "ANSSI - Guide d'hygiène informatique Security Assessment Plan Template",
+      "version": "3"
+    },
+    "reviewed-controls": {
+      "control-selections": [
+        {
+          "description": "All controls in ANSSI - Guide d'hygiène informatique",
+          "include-all": {}
+        }
+      ]
+    },
+    "tasks": [
+      {
+        "description": "Verify and examine implementation of 4 controls in the Sensibiliser et former family for ANSSI - Guide d'hygiène informatique.",
+        "title": "Assess Family I (Sensibiliser et former)",
+        "type": "examination",
+        "uuid": "7dcc698a-d9a9-5480-88bc-ce2c74f42d23"
+      },
+      {
+        "description": "Verify and examine implementation of 6 controls in the Connaître le système d'information family for ANSSI - Guide d'hygiène informatique.",
+        "title": "Assess Family II (Connaître le système d'information)",
+        "type": "examination",
+        "uuid": "21cf79b1-1a54-506d-8a7a-27288ba3fd0c"
+      },
+      {
+        "description": "Verify and examine implementation of 9 controls in the Authentifier et contrôler les accès family for ANSSI - Guide d'hygiène informatique.",
+        "title": "Assess Family III (Authentifier et contrôler les accès)",
+        "type": "examination",
+        "uuid": "a495021f-9975-5d39-bdf8-a0096627b670"
+      },
+      {
+        "description": "Verify and examine implementation of 8 controls in the Sécuriser les postes family for ANSSI - Guide d'hygiène informatique.",
+        "title": "Assess Family IV (Sécuriser les postes)",
+        "type": "examination",
+        "uuid": "c92440ef-08fd-5aec-b407-52a938f03785"
+      },
+      {
+        "description": "Verify and examine implementation of 7 controls in the Superviser, auditer, réagir family for ANSSI - Guide d'hygiène informatique.",
+        "title": "Assess Family IX (Superviser, auditer, réagir)",
+        "type": "examination",
+        "uuid": "546c9fe3-c92b-59f7-819c-9479c2bfb37a"
+      },
+      {
+        "description": "Verify and examine implementation of 11 controls in the Sécuriser le réseau family for ANSSI - Guide d'hygiène informatique.",
+        "title": "Assess Family V (Sécuriser le réseau)",
+        "type": "examination",
+        "uuid": "6e24828b-009b-5b11-b43f-e46ec96158d4"
+      },
+      {
+        "description": "Verify and examine implementation of 5 controls in the Sécuriser l'administration family for ANSSI - Guide d'hygiène informatique.",
+        "title": "Assess Family VI (Sécuriser l'administration)",
+        "type": "examination",
+        "uuid": "2aadac99-bbe1-54f2-9225-09b23b482158"
+      },
+      {
+        "description": "Verify and examine implementation of 7 controls in the Gérer le nomadisme family for ANSSI - Guide d'hygiène informatique.",
+        "title": "Assess Family VII (Gérer le nomadisme)",
+        "type": "examination",
+        "uuid": "16564305-a5b3-5900-9c61-8d39eacade01"
+      },
+      {
+        "description": "Verify and examine implementation of 2 controls in the Maintenir le système d'information à jour family for ANSSI - Guide d'hygiène informatique.",
+        "title": "Assess Family VIII (Maintenir le système d'information à jour)",
+        "type": "examination",
+        "uuid": "135d6950-d0e3-50d7-a202-9a20ce6c1def"
+      },
+      {
+        "description": "Verify and examine implementation of 2 controls in the Pour aller plus loin family for ANSSI - Guide d'hygiène informatique.",
+        "title": "Assess Family X (Pour aller plus loin)",
+        "type": "examination",
+        "uuid": "cf6b027a-99a9-5e02-9dec-99c5f133d011"
+      }
+    ],
+    "uuid": "235d2d30-f47d-5faa-b753-c9af55f5760a"
+  }
+}
