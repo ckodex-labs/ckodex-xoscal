@@ -97,6 +97,7 @@ require (
  google.golang.org/grpc v1.83.2
  google.golang.org/protobuf v1.36.12
  google.golang.org/genproto/googleapis/api v0.0.0-20260526163538-3dc84a4a5aaa
+ golang.org/x/net v0.62.0
  go.opentelemetry.io/otel v1.45.0
  go.opentelemetry.io/otel/metric v1.45.0
  go.opentelemetry.io/otel/trace v1.45.0
@@ -144,9 +145,13 @@ include = ["xoscal_sdk*"]
  <scm><url>{REPOSITORY}</url></scm>
  <licenses><license><name>Apache License 2.0</name><url>https://www.apache.org/licenses/LICENSE-2.0</url><distribution>repo</distribution></license></licenses>
  <properties><maven.compiler.release>17</maven.compiler.release><project.build.sourceEncoding>UTF-8</project.build.sourceEncoding><project.build.outputTimestamp>1980-01-01T00:00:02Z</project.build.outputTimestamp></properties>
+ <dependencyManagement><dependencies>
+  <dependency><groupId>com.google.guava</groupId><artifactId>guava</artifactId><version>33.8.0-android</version></dependency>
+ </dependencies></dependencyManagement>
  <dependencies>
   <dependency><groupId>com.google.protobuf</groupId><artifactId>protobuf-java</artifactId><version>4.36.1</version></dependency>
   <dependency><groupId>com.google.api.grpc</groupId><artifactId>proto-google-common-protos</artifactId><version>2.68.0</version></dependency>
+  <dependency><groupId>com.google.guava</groupId><artifactId>guava</artifactId><version>33.8.0-android</version></dependency>
   <dependency><groupId>io.grpc</groupId><artifactId>grpc-protobuf</artifactId><version>1.84.0</version></dependency>
   <dependency><groupId>io.grpc</groupId><artifactId>grpc-stub</artifactId><version>1.84.0</version></dependency>
   <dependency><groupId>javax.annotation</groupId><artifactId>javax.annotation-api</artifactId><version>1.3.2</version></dependency>

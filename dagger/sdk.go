@@ -99,7 +99,7 @@ func (m *Xoscal) sdkPackage(source, generated *dagger.Directory, language string
 		builder = builder.WithExec([]string{"go", "mod", "tidy"}).
 			// Retain security pins even though a message-only consumer does not
 			// import grpc's optional OpenTelemetry instrumentation packages.
-			WithExec([]string{"go", "mod", "edit", "-require=go.opentelemetry.io/otel@v1.45.0", "-require=go.opentelemetry.io/otel/metric@v1.45.0", "-require=go.opentelemetry.io/otel/trace@v1.45.0", "-require=go.opentelemetry.io/otel/sdk@v1.45.0", "-require=go.opentelemetry.io/otel/sdk/metric@v1.45.0"}).
+			WithExec([]string{"go", "mod", "edit", "-require=golang.org/x/net@v0.62.0", "-require=go.opentelemetry.io/otel@v1.45.0", "-require=go.opentelemetry.io/otel/metric@v1.45.0", "-require=go.opentelemetry.io/otel/trace@v1.45.0", "-require=go.opentelemetry.io/otel/sdk@v1.45.0", "-require=go.opentelemetry.io/otel/sdk/metric@v1.45.0"}).
 			WithExec([]string{"go", "mod", "download"}).
 			WithExec([]string{"go", "test", "./..."})
 	case "python":
@@ -139,7 +139,7 @@ func sdkConsumer(source, output *dagger.Directory, language string) *dagger.Cont
 		WithWorkdir("/consumer")
 	switch language {
 	case "go":
-		consumer = consumer.WithExec([]string{"sh", "-ec", "apt-get update && apt-get install -y --no-install-recommends unzip; unzip -q /artifacts/go.zip -d /module; cp /checks/go.mod /checks/go-main.go .; mv go-main.go main.go; go mod tidy; go run .; go list -m all > /go-module-graph.txt; for suffix in '' /metric /trace /sdk /sdk/metric; do grep -Fx \"go.opentelemetry.io/otel${suffix} v1.45.0\" /go-module-graph.txt; done"})
+		consumer = consumer.WithExec([]string{"sh", "-ec", "apt-get update && apt-get install -y --no-install-recommends unzip; unzip -q /artifacts/go.zip -d /module; cp /checks/go.mod /checks/go-main.go .; mv go-main.go main.go; go mod tidy; go run .; go list -m all > /go-module-graph.txt; grep -Fx 'golang.org/x/net v0.62.0' /go-module-graph.txt; for suffix in '' /metric /trace /sdk /sdk/metric; do grep -Fx \"go.opentelemetry.io/otel${suffix} v1.45.0\" /go-module-graph.txt; done"})
 	case "python":
 		consumer = consumer.WithExec([]string{"sh", "-ec", "python3 -m venv /venv; /venv/bin/pip install /artifacts/packages/python/*.whl; /venv/bin/python /checks/python-smoke.py; /venv/bin/pip check; python3 -m venv /sdist-venv; /sdist-venv/bin/pip install /artifacts/packages/python/*.tar.gz; /sdist-venv/bin/python /checks/python-smoke.py; /sdist-venv/bin/pip check"})
 	case "java":
