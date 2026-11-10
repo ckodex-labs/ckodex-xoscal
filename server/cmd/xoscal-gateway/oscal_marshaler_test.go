@@ -1,7 +1,14 @@
 package main
 
 import (
+	"bytes"
+	"fmt"
+	"net/http"
+	"net/http/httptest"
+	"strings"
+	"sync"
 	"testing"
+	"time"
 
 	assessment_planv1 "github.com/mchorfa/xoscal/proto/oscal/assessment_plan/v1"
 	assessment_resultsv1 "github.com/mchorfa/xoscal/proto/oscal/assessment_results/v1"
@@ -314,6 +321,75 @@ func TestOSCALMarshalerContentType(t *testing.T) {
 	}
 }
 
+func TestGatewayUTCPEndpoints(t *testing.T) {
+	mux := http.NewServeMux()
+	registerUTCPHandlers(mux, "127.0.0.1:50051")
+
+	for _, path := range []string{"/.well-known/utcp", "/api/v1/utcp"} {
+		req := httptest.NewRequest(http.MethodGet, path, nil)
+		req.Host = "127.0.0.1:8080"
+		rec := httptest.NewRecorder()
+		mux.ServeHTTP(rec, req)
+		if rec.Code != http.StatusOK {
+			t.Fatalf("GET %s: expected 200 OK, got %d", path, rec.Code)
+		}
+		if !strings.Contains(rec.Body.String(), `"utcp_version":"1.0.1"`) {
+			t.Errorf("GET %s: expected utcp_version 1.0.1 in body: %s", path, rec.Body.String())
+		}
+
+		// Validate the returned manual via POST /api/v1/utcp/validate
+		valReq := httptest.NewRequest(http.MethodPost, "/api/v1/utcp/validate", bytes.NewReader(rec.Body.Bytes()))
+		valRec := httptest.NewRecorder()
+		mux.ServeHTTP(valRec, valReq)
+		if valRec.Code != http.StatusOK {
+			t.Fatalf("POST /api/v1/utcp/validate: expected 200 OK, got %d", valRec.Code)
+		}
+		if !strings.Contains(valRec.Body.String(), `"verdict":"CONFORMANT"`) {
+			t.Errorf("POST /api/v1/utcp/validate: expected CONFORMANT verdict, got %s", valRec.Body.String())
+		}
+	}
+
+	// Verify 405 Method Not Allowed on POST /.well-known/utcp and GET /api/v1/utcp/validate
+	postManualReq := httptest.NewRequest(http.MethodPost, "/.well-known/utcp", nil)
+	postManualRec := httptest.NewRecorder()
+	mux.ServeHTTP(postManualRec, postManualReq)
+	if postManualRec.Code != http.StatusMethodNotAllowed {
+		t.Errorf("POST /.well-known/utcp: expected 405, got %d", postManualRec.Code)
+	}
+
+	getValReq := httptest.NewRequest(http.MethodGet, "/api/v1/utcp/validate", nil)
+	getValRec := httptest.NewRecorder()
+	mux.ServeHTTP(getValRec, getValReq)
+	if getValRec.Code != http.StatusMethodNotAllowed {
+		t.Errorf("GET /api/v1/utcp/validate: expected 405, got %d", getValRec.Code)
+	}
+
+	// Verify 400 Bad Request on malformed JSON payload
+	badReq := httptest.NewRequest(http.MethodPost, "/api/v1/utcp/validate", strings.NewReader("{bad-json"))
+	badRec := httptest.NewRecorder()
+	mux.ServeHTTP(badRec, badReq)
+	if badRec.Code != http.StatusBadRequest {
+		t.Errorf("POST /api/v1/utcp/validate malformed JSON: expected 400, got %d", badRec.Code)
+	}
+
+	// Verify token authentication wrapper on UTCP endpoints
+	authedHandler := withTokenAuth(mux, "secret-token-123")
+	unauthReq := httptest.NewRequest(http.MethodGet, "/.well-known/utcp", nil)
+	unauthRec := httptest.NewRecorder()
+	authedHandler.ServeHTTP(unauthRec, unauthReq)
+	if unauthRec.Code != http.StatusUnauthorized {
+		t.Errorf("unauthenticated GET /.well-known/utcp: expected 401, got %d", unauthRec.Code)
+	}
+
+	authReq := httptest.NewRequest(http.MethodGet, "/.well-known/utcp", nil)
+	authReq.Header.Set("Authorization", "Bearer secret-token-123")
+	authRec := httptest.NewRecorder()
+	authedHandler.ServeHTTP(authRec, authReq)
+	if authRec.Code != http.StatusOK {
+		t.Errorf("authenticated GET /.well-known/utcp: expected 200, got %d", authRec.Code)
+	}
+}
+
 // mustValidator creates a Validator or fails the test.
 func mustValidator(t *testing.T) *schemavalidate.Validator {
 	t.Helper()
@@ -322,4 +398,180 @@ func mustValidator(t *testing.T) *schemavalidate.Validator {
 		t.Fatalf("NewValidator: %v", err)
 	}
 	return v
+}
+
+func TestGatewayMetricsHistogramAndCardinalityCap(t *testing.T) {
+	mc := newMetricsCollector()
+
+	// Bombard collector with 500 distinct random 404/scan URLs + UUID routes
+	for i := 0; i < 500; i++ {
+		mc.record(fmt.Sprintf("GET /scan-probe-%d/secret", i), http.StatusNotFound, 12*time.Millisecond)
+	}
+	mc.record("GET /v1/catalogs/123e4567-e89b-42d3-a456-426614174000", http.StatusOK, 40*time.Millisecond)
+
+	if got := mc.trackedRouteCount(); got > maxTrackedRoutes {
+		t.Fatalf("metricsCollector cardinality exceeded maxTrackedRoutes (%d > %d)", got, maxTrackedRoutes)
+	}
+
+	prom := mc.prometheusText()
+	if !strings.Contains(prom, "# TYPE http_request_duration_seconds histogram") {
+		t.Errorf("expected Prometheus histogram type header in:\n%s", prom)
+	}
+	if !strings.Contains(prom, `http_request_duration_seconds_bucket{`) || !strings.Contains(prom, `le="+Inf"`) {
+		t.Errorf("expected Prometheus histogram buckets (+Inf) in:\n%s", prom)
+	}
+	if !strings.Contains(prom, `path="OTHER"`) {
+		t.Errorf("expected overflow routes bucketed into path=\"OTHER\"")
+	}
+}
+
+func TestGatewayRouteParityAndObservability(t *testing.T) {
+	root := http.NewServeMux()
+	metrics := newMetricsCollector()
+	dialOpts, err := grpcDialOptions("", "", "", "", "")
+	if err != nil {
+		t.Fatal(err)
+	}
+	prober := newHealthProber("127.0.0.1:1", dialOpts)
+	defer func() { _ = prober.Close() }()
+
+	registerUTCPHandlers(root, "127.0.0.1:50051")
+	registerGatewayObservability(root, prober, metrics)
+
+	wrapped := buildGatewayHandler(root, metrics, "", parseAllowedOrigins("http://127.0.0.1:8765"), 128)
+
+	// 1. /api/v1/graph/export parity
+	expReq := httptest.NewRequest(http.MethodGet, "/api/v1/graph/export?target=CVE-2024-3400&format=cypher&depth=1", nil)
+	expRec := httptest.NewRecorder()
+	wrapped.ServeHTTP(expRec, expReq)
+	if expRec.Code != http.StatusOK || !strings.Contains(expRec.Body.String(), "MERGE") {
+		t.Fatalf("GET /api/v1/graph/export failed: status=%d body=%s", expRec.Code, expRec.Body.String())
+	}
+
+	// 2. /api/v1/feeds/sync parity (POST & GET)
+	for _, method := range []string{http.MethodPost, http.MethodGet} {
+		syncReq := httptest.NewRequest(method, "/api/v1/feeds/sync?feed=cisa-kev-active-threats", nil)
+		syncRec := httptest.NewRecorder()
+		wrapped.ServeHTTP(syncRec, syncReq)
+		if syncRec.Code != http.StatusOK || !strings.Contains(syncRec.Body.String(), `"bundle_sha256"`) {
+			t.Fatalf("%s /api/v1/feeds/sync failed: status=%d body=%s", method, syncRec.Code, syncRec.Body.String())
+		}
+	}
+
+	// 3. /api/v1/feeds?feed=cisa-kev-active-threats inspection parity
+	feedInspReq := httptest.NewRequest(http.MethodGet, "/api/v1/feeds?feed=cisa-kev-active-threats", nil)
+	feedInspRec := httptest.NewRecorder()
+	wrapped.ServeHTTP(feedInspRec, feedInspReq)
+	if feedInspRec.Code != http.StatusOK || !strings.Contains(feedInspRec.Body.String(), `"kev_advisories"`) {
+		t.Fatalf("GET /api/v1/feeds?feed=... failed: status=%d", feedInspRec.Code)
+	}
+
+	// 3b. Full Web Studio + UTCP HTTP tool parity (/api/v1/frameworks, /api/v1/compare, /api/v1/validate, parity traversal 400)
+	fwReq := httptest.NewRequest(http.MethodGet, "/api/v1/frameworks", nil)
+	fwRec := httptest.NewRecorder()
+	wrapped.ServeHTTP(fwRec, fwReq)
+	if fwRec.Code != http.StatusOK || !strings.Contains(fwRec.Body.String(), `"cccs-itsp-10-033"`) {
+		t.Fatalf("GET /api/v1/frameworks failed: status=%d body=%s", fwRec.Code, fwRec.Body.String())
+	}
+
+	cmpReq := httptest.NewRequest(http.MethodGet, "/api/v1/compare?from=cccs-itsg-33&to=cccs-itsp-10-033", nil)
+	cmpRec := httptest.NewRecorder()
+	wrapped.ServeHTTP(cmpRec, cmpReq)
+	if cmpRec.Code != http.StatusOK {
+		t.Fatalf("GET /api/v1/compare failed: status=%d body=%s", cmpRec.Code, cmpRec.Body.String())
+	}
+
+	valPayload := []byte(`{"component-definition":{"uuid":"` + testUUID + `","metadata":{"title":"Test","last-modified":"2026-10-23T00:00:00Z","version":"1.0","oscal-version":"1.2.3"}}}`)
+	valReq := httptest.NewRequest(http.MethodPost, "/api/v1/validate", bytes.NewReader(valPayload))
+	valRec := httptest.NewRecorder()
+	wrapped.ServeHTTP(valRec, valReq)
+	if valRec.Code != http.StatusOK || !strings.Contains(valRec.Body.String(), `"valid":true`) {
+		t.Fatalf("POST /api/v1/validate failed: status=%d body=%s", valRec.Code, valRec.Body.String())
+	}
+
+	travReq := httptest.NewRequest(http.MethodGet, "/api/v1/frameworks/cybersecure-canada/parity?layer=../../etc/passwd", nil)
+	travRec := httptest.NewRecorder()
+	wrapped.ServeHTTP(travRec, travReq)
+	if travRec.Code != http.StatusBadRequest {
+		t.Fatalf("expected 400 Bad Request on Gateway parity traversal, got %d", travRec.Code)
+	}
+
+	// 4. /metrics & /readyz on root mux (without touching http.DefaultServeMux)
+	readyReq := httptest.NewRequest(http.MethodGet, "/readyz", nil)
+	readyRec := httptest.NewRecorder()
+	wrapped.ServeHTTP(readyRec, readyReq)
+	if readyRec.Code != http.StatusServiceUnavailable {
+		t.Fatalf("expected 503 when upstream gRPC is down on /readyz, got %d", readyRec.Code)
+	}
+
+	mReq := httptest.NewRequest(http.MethodGet, "/metrics", nil)
+	mRec := httptest.NewRecorder()
+	wrapped.ServeHTTP(mRec, mReq)
+	if mRec.Code != http.StatusOK || !strings.Contains(mRec.Body.String(), `path="/api/v1/graph/export"`) {
+		t.Fatalf("GET /metrics missing expected route metrics: status=%d body=%s", mRec.Code, mRec.Body.String())
+	}
+}
+
+func TestGatewayMiddlewareMetricsCapture(t *testing.T) {
+	blockCh := make(chan struct{})
+	enteredCh := make(chan struct{}, 2)
+
+	root := http.NewServeMux()
+	metrics := newMetricsCollector()
+	registerGatewayObservability(root, nil, metrics)
+	root.HandleFunc("/boom", func(_ http.ResponseWriter, _ *http.Request) {
+		panic("simulated handler crash")
+	})
+	root.HandleFunc("/hold", func(w http.ResponseWriter, _ *http.Request) {
+		enteredCh <- struct{}{}
+		<-blockCh
+		w.WriteHeader(http.StatusOK)
+	})
+
+	handler := buildGatewayHandler(root, metrics, "tok-xyz", parseAllowedOrigins("http://127.0.0.1:8765"), 1)
+
+	// 1. 401 unauthenticated request must be recorded in metrics
+	unauthReq := httptest.NewRequest(http.MethodGet, "/boom", nil)
+	unauthRec := httptest.NewRecorder()
+	handler.ServeHTTP(unauthRec, unauthReq)
+	if unauthRec.Code != http.StatusUnauthorized {
+		t.Fatalf("expected 401, got %d", unauthRec.Code)
+	}
+
+	// 2. 500 recovered panic must be recorded in metrics
+	panicReq := httptest.NewRequest(http.MethodGet, "/boom", nil)
+	panicReq.Header.Set("Authorization", "Bearer tok-xyz")
+	panicRec := httptest.NewRecorder()
+	handler.ServeHTTP(panicRec, panicReq)
+	if panicRec.Code != http.StatusInternalServerError {
+		t.Fatalf("expected 500, got %d", panicRec.Code)
+	}
+
+	// 3. 503 concurrency backpressure must be recorded in metrics
+	var wg sync.WaitGroup
+	wg.Add(1)
+	go func() {
+		defer wg.Done()
+		holdReq := httptest.NewRequest(http.MethodGet, "/hold", nil)
+		holdReq.Header.Set("Authorization", "Bearer tok-xyz")
+		handler.ServeHTTP(httptest.NewRecorder(), holdReq)
+	}()
+	<-enteredCh
+
+	satReq := httptest.NewRequest(http.MethodGet, "/hold", nil)
+	satReq.Header.Set("Authorization", "Bearer tok-xyz")
+	satRec := httptest.NewRecorder()
+	handler.ServeHTTP(satRec, satReq)
+	if satRec.Code != http.StatusServiceUnavailable {
+		t.Fatalf("expected 503 when saturated, got %d", satRec.Code)
+	}
+	close(blockCh)
+	wg.Wait()
+
+	prom := metrics.prometheusText()
+	for _, want := range []string{`status="401"`, `status="500"`, `status="503"`} {
+		if !strings.Contains(prom, want) {
+			t.Errorf("expected Prometheus metrics to record %s, got:\n%s", want, prom)
+		}
+	}
 }

@@ -6,6 +6,8 @@ import (
 	"encoding/json"
 	"net/http"
 	"net/http/httptest"
+	"os"
+	"path/filepath"
 	"strings"
 	"testing"
 
@@ -33,8 +35,14 @@ func TestWebStudioServer_Endpoints(t *testing.T) {
 	if rec.Code != http.StatusOK {
 		t.Errorf("expected 200 OK, got %d", rec.Code)
 	}
-	if !strings.Contains(rec.Body.String(), "xOSCAL Dev Studio") {
+	bodyStr := rec.Body.String()
+	if !strings.Contains(bodyStr, "xOSCAL Dev Studio") {
 		t.Errorf("expected body to contain 'xOSCAL Dev Studio'")
+	}
+	for _, cssOrText := range []string{".badge-pass", ".badge-fail", "16,237"} {
+		if !strings.Contains(bodyStr, cssOrText) {
+			t.Errorf("expected index.html to contain %q", cssOrText)
+		}
 	}
 
 	// 2. Test GET /healthz and /readyz
@@ -159,6 +167,79 @@ func TestWebStudioServer_Endpoints(t *testing.T) {
 	if !strings.Contains(recChecksums.Body.String(), "catalog.json") {
 		t.Errorf("expected checksums to list catalog.json")
 	}
+
+	// 11. Test GET /.well-known/utcp and POST /api/v1/utcp/validate
+	recUTCP := httptest.NewRecorder()
+	reqUTCP := httptest.NewRequest(http.MethodGet, "/.well-known/utcp", nil)
+	handler.ServeHTTP(recUTCP, reqUTCP)
+	if recUTCP.Code != http.StatusOK {
+		t.Errorf("expected 200 OK for /.well-known/utcp, got %d", recUTCP.Code)
+	}
+	if !strings.Contains(recUTCP.Body.String(), `"utcp_version":"1.0.1"`) {
+		t.Errorf("expected /.well-known/utcp to return utcp_version 1.0.1, got %s", recUTCP.Body.String())
+	}
+
+	recUTCPVal := httptest.NewRecorder()
+	reqUTCPVal := httptest.NewRequest(http.MethodPost, "/api/v1/utcp/validate", bytes.NewReader(recUTCP.Body.Bytes()))
+	reqUTCPVal.Header.Set("Content-Type", "application/json")
+	handler.ServeHTTP(recUTCPVal, reqUTCPVal)
+	if recUTCPVal.Code != http.StatusOK {
+		t.Errorf("expected 200 OK for /api/v1/utcp/validate, got %d", recUTCPVal.Code)
+	}
+	if !strings.Contains(recUTCPVal.Body.String(), `"CONFORMANT"`) {
+		t.Errorf("expected CONFORMANT verdict from /api/v1/utcp/validate, got %s", recUTCPVal.Body.String())
+	}
+
+	// 12. Test GET /api/v1/ontology
+	recOnt := httptest.NewRecorder()
+	reqOnt := httptest.NewRequest(http.MethodGet, "/api/v1/ontology", nil)
+	handler.ServeHTTP(recOnt, reqOnt)
+	if recOnt.Code != http.StatusOK {
+		t.Errorf("expected 200 OK for /api/v1/ontology, got %d", recOnt.Code)
+	}
+	if !strings.Contains(recOnt.Body.String(), `"https://xoscal.dev/ns/ontology/v1#"`) {
+		t.Errorf("expected ontology namespace in /api/v1/ontology response")
+	}
+
+	// 13. Test GET /api/v1/graph/crosswalk?control=ac-2
+	recCW := httptest.NewRecorder()
+	reqCW := httptest.NewRequest(http.MethodGet, "/api/v1/graph/crosswalk?control=ac-2", nil)
+	handler.ServeHTTP(recCW, reqCW)
+	if recCW.Code != http.StatusOK {
+		t.Errorf("expected 200 OK for /api/v1/graph/crosswalk, got %d: %s", recCW.Code, recCW.Body.String())
+	}
+	if !strings.Contains(recCW.Body.String(), `"canonical_control_id":"ac-2"`) {
+		t.Errorf("expected canonical_control_id ac-2 in crosswalk response, got %s", recCW.Body.String())
+	}
+
+	// 14. Test GET /api/v1/graph/blast-radius?target=CVE-2024-3400
+	recBR := httptest.NewRecorder()
+	reqBR := httptest.NewRequest(http.MethodGet, "/api/v1/graph/blast-radius?target=CVE-2024-3400", nil)
+	handler.ServeHTTP(recBR, reqBR)
+	if recBR.Code != http.StatusOK {
+		t.Errorf("expected 200 OK for /api/v1/graph/blast-radius, got %d: %s", recBR.Code, recBR.Body.String())
+	}
+	if !strings.Contains(recBR.Body.String(), `"CVE-2024-3400"`) {
+		t.Errorf("expected CVE-2024-3400 in blast radius response")
+	}
+
+	// 15. Test GET /api/v1/feeds and POST /api/v1/feeds/sync
+	recFeeds := httptest.NewRecorder()
+	reqFeeds := httptest.NewRequest(http.MethodGet, "/api/v1/feeds", nil)
+	handler.ServeHTTP(recFeeds, reqFeeds)
+	if recFeeds.Code != http.StatusOK {
+		t.Errorf("expected 200 OK for /api/v1/feeds, got %d", recFeeds.Code)
+	}
+	if !strings.Contains(recFeeds.Body.String(), `"cisa-kev-active-threats"`) {
+		t.Errorf("expected cisa-kev-active-threats in /api/v1/feeds response")
+	}
+
+	recSync := httptest.NewRecorder()
+	reqSync := httptest.NewRequest(http.MethodPost, "/api/v1/feeds/sync", nil)
+	handler.ServeHTTP(recSync, reqSync)
+	if recSync.Code != http.StatusOK {
+		t.Errorf("expected 200 OK for /api/v1/feeds/sync, got %d", recSync.Code)
+	}
 }
 
 func TestWebStudioServer_PortFallback(t *testing.T) {
@@ -197,5 +278,67 @@ func TestWebStudioServer_PortFallback(t *testing.T) {
 
 	if addr1 == addr2 {
 		t.Errorf("expected server 2 to bind to fallback port, but got same addr: %s", addr2)
+	}
+}
+
+func TestWebStudioServer_ParityPathTraversalAndSecurityHeaders(t *testing.T) {
+	srv, err := webstudio.NewServer(webstudio.Config{
+		Host:     "127.0.0.1",
+		Port:     8080,
+		Registry: frameworks.DefaultRegistry(),
+	})
+	if err != nil {
+		t.Fatalf("failed to create server: %v", err)
+	}
+	handler := srv.Handler()
+
+	maliciousURLs := []string{
+		"/api/v1/frameworks/cybersecure-canada/parity?layer=../../etc/passwd",
+		"/api/v1/frameworks/cybersecure-canada/parity?layer=secret-config.json",
+		"/api/v1/frameworks/cybersecure-canada/parity?dir=../../../etc",
+		"/api/v1/frameworks/cybersecure-canada/parity?dir=/etc",
+		"/api/v1/frameworks/cybersecure-canada/parity?dir=data/../../etc",
+	}
+
+	for _, u := range maliciousURLs {
+		rec := httptest.NewRecorder()
+		req := httptest.NewRequest(http.MethodGet, u, nil)
+		handler.ServeHTTP(rec, req)
+		if rec.Code != http.StatusBadRequest {
+			t.Errorf("GET %s: expected 400 Bad Request, got %d (body=%s)", u, rec.Code, rec.Body.String())
+		}
+		if got := rec.Header().Get("X-Frame-Options"); got != "DENY" {
+			t.Errorf("GET %s: expected X-Frame-Options=DENY, got %q", u, got)
+		}
+		if got := rec.Header().Get("X-Content-Type-Options"); got != "nosniff" {
+			t.Errorf("GET %s: expected X-Content-Type-Options=nosniff, got %q", u, got)
+		}
+		if got := rec.Header().Get("X-Request-ID"); got == "" {
+			t.Errorf("GET %s: expected non-empty X-Request-ID header", u)
+		}
+	}
+
+	// Verify symlink inside workspace pointing outside workspace is rejected with 400 Bad Request (os.OpenRoot(cwd) confinement)
+	cwd, err := os.Getwd()
+	if err != nil {
+		t.Fatal(err)
+	}
+	outsideDir := t.TempDir()
+	localTmpDir, err := os.MkdirTemp(cwd, ".tmp-symlink-test-")
+	if err != nil {
+		t.Fatal(err)
+	}
+	t.Cleanup(func() { _ = os.RemoveAll(localTmpDir) })
+
+	relBase := filepath.Base(localTmpDir)
+	escapeLink := filepath.Join(localTmpDir, "escape_link")
+	if err := os.Symlink(outsideDir, escapeLink); err == nil {
+		symURL := "/api/v1/frameworks/cybersecure-canada/parity?dir=" + relBase + "/escape_link"
+		rec := httptest.NewRecorder()
+		req := httptest.NewRequest(http.MethodGet, symURL, nil)
+		handler.ServeHTTP(rec, req)
+		if rec.Code != http.StatusBadRequest {
+			t.Fatalf("GET %s (workspace symlink escape): expected 400 Bad Request, got %d (body=%s)", symURL, rec.Code, rec.Body.String())
+		}
 	}
 }

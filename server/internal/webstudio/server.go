@@ -6,6 +6,7 @@ import (
 	_ "embed"
 	"encoding/hex"
 	"encoding/json"
+	"errors"
 	"fmt"
 	"io"
 	"net"
@@ -19,8 +20,14 @@ import (
 	"sync"
 	"time"
 
+	"github.com/mchorfa/xoscal/server/internal/feeds"
 	"github.com/mchorfa/xoscal/server/internal/frameworks"
+	"github.com/mchorfa/xoscal/server/internal/graph"
+	"github.com/mchorfa/xoscal/server/internal/ontology"
+	"github.com/mchorfa/xoscal/server/internal/resilience"
+	"github.com/mchorfa/xoscal/server/internal/rootfs"
 	"github.com/mchorfa/xoscal/server/internal/schemavalidate"
+	"github.com/mchorfa/xoscal/server/internal/utcp"
 	"github.com/mchorfa/xoscal/server/internal/vectorstate"
 )
 
@@ -66,19 +73,42 @@ func NewServer(cfg Config) (*Server, error) {
 	mux.HandleFunc("/", s.handleIndex)
 	mux.HandleFunc("/healthz", s.handleHealthz)
 	mux.HandleFunc("/readyz", s.handleHealthz)
-	mux.HandleFunc("/api/v1/frameworks", s.handleFrameworks)
-	mux.HandleFunc("/api/v1/frameworks/", s.handleFrameworkSubpath)
-	mux.HandleFunc("/api/v1/compare", s.handleCompare)
-	mux.HandleFunc("/api/v1/validate", s.handleValidate)
+	s.RegisterFrameworkAndValidationRoutes(mux)
+	mux.HandleFunc("/api/v1/ontology", s.handleOntology)
+	mux.HandleFunc("/api/v1/graph/stats", s.handleGraphStats)
+	mux.HandleFunc("/api/v1/graph/crosswalk", s.handleGraphCrosswalk)
+	mux.HandleFunc("/api/v1/graph/blast-radius", s.handleGraphBlastRadius)
+	mux.HandleFunc("/api/v1/graph/export", s.handleGraphExport)
+	mux.HandleFunc("/api/v1/feeds", s.handleFeeds)
+	mux.HandleFunc("/api/v1/feeds/sync", s.handleFeedsSync)
+	mux.HandleFunc("/.well-known/utcp", s.handleUTCPManual)
+	mux.HandleFunc("/api/v1/utcp", s.handleUTCPManual)
+	mux.HandleFunc("/api/v1/utcp/validate", s.handleUTCPValidate)
 
 	addr := fmt.Sprintf("%s:%d", cfg.Host, cfg.Port)
 	s.httpServer = &http.Server{
 		Addr:              addr,
-		Handler:           mux,
+		Handler:           resilience.WrapHTTPHandler(mux, 128),
 		ReadHeaderTimeout: 5 * time.Second,
+		ReadTimeout:       30 * time.Second,
+		WriteTimeout:      60 * time.Second,
+		IdleTimeout:       120 * time.Second,
+		MaxHeaderBytes:    1 << 20,
 	}
 
 	return s, nil
+}
+
+// RegisterFrameworkAndValidationRoutes mounts the shared framework registry, control explorer,
+// parity verifier, framework comparison, and OSCAL schema/vector-state validation endpoints on mux.
+func (s *Server) RegisterFrameworkAndValidationRoutes(mux *http.ServeMux) {
+	if s == nil || mux == nil {
+		return
+	}
+	mux.HandleFunc("/api/v1/frameworks", s.handleFrameworks)
+	mux.HandleFunc("/api/v1/frameworks/", s.handleFrameworkSubpath)
+	mux.HandleFunc("/api/v1/compare", s.handleCompare)
+	mux.HandleFunc("/api/v1/validate", s.handleValidate)
 }
 
 // Start begins listening on the configured address.
@@ -178,12 +208,24 @@ func (s *Server) handleFrameworkSubpath(w http.ResponseWriter, r *http.Request) 
 	}
 
 	if parts[1] == "parity" {
-		dir := r.URL.Query().Get("dir")
+		dir := strings.TrimSpace(r.URL.Query().Get("dir"))
 		if dir == "" {
 			dir = "data/frameworks"
 		}
-		rawLayer := strings.ToLower(r.URL.Query().Get("layer"))
-		layer := "catalog.json"
+		if strings.Contains(dir, "..") || strings.ContainsRune(dir, '\x00') || strings.Contains(dir, "\\") {
+			http.Error(w, "invalid dir parameter: path traversal is forbidden", http.StatusBadRequest)
+			return
+		}
+		cwd, cwdErr := os.Getwd()
+		absDir, absErr := filepath.Abs(dir)
+		relDir, relErr := filepath.Rel(cwd, absDir)
+		if cwdErr != nil || absErr != nil || relErr != nil || relDir == ".." || strings.HasPrefix(relDir, ".."+string(filepath.Separator)) {
+			http.Error(w, "invalid dir parameter: directory must reside within workspace", http.StatusBadRequest)
+			return
+		}
+
+		rawLayer := strings.ToLower(strings.TrimSpace(r.URL.Query().Get("layer")))
+		var layer string
 		switch rawLayer {
 		case "", "catalog", "catalog.json":
 			layer = "catalog.json"
@@ -200,20 +242,74 @@ func (s *Server) handleFrameworkSubpath(w http.ResponseWriter, r *http.Request) 
 		case "plan-of-action-and-milestones", "plan-of-action-and-milestones.json", "poam":
 			layer = "plan-of-action-and-milestones.json"
 		default:
-			if strings.HasSuffix(rawLayer, ".json") {
-				layer = rawLayer
-			} else {
-				layer = rawLayer + ".json"
-			}
+			http.Error(w, fmt.Sprintf("invalid layer %q: must be one of the 7 canonical OSCAL layers", rawLayer), http.StatusBadRequest)
+			return
 		}
 
-		artPath := filepath.Join(dir, fw.ID(), layer)
 		var rep *frameworks.ParityReport
 		var err error
-		// #nosec G703,G304 -- artPath is resolved within the configured framework artifact directory.
-		if _, statErr := os.Stat(artPath); statErr == nil {
-			rep, err = frameworks.VerifyArtifactParity(fw, artPath)
-		} else {
+		loadedFromDisk := false
+
+		if wsRoot, rootErr := os.OpenRoot(cwd); rootErr == nil {
+			canReadDisk := true
+			if relDir != "." {
+				dirInfo, statErr := rootfs.OptionalStat(wsRoot, relDir)
+				if statErr != nil {
+					_ = wsRoot.Close()
+					http.Error(w, "invalid dir parameter: symlink or path escapes workspace", http.StatusBadRequest)
+					return
+				}
+				if dirInfo == nil {
+					canReadDisk = false
+				} else if !dirInfo.IsDir() {
+					_ = wsRoot.Close()
+					http.Error(w, "invalid dir parameter: target is not a directory", http.StatusBadRequest)
+					return
+				}
+			}
+
+			if canReadDisk {
+				relArt := filepath.Join(fw.ID(), layer)
+				if relDir != "." {
+					relArt = filepath.Join(relDir, relArt)
+				}
+				artBytes, readErr := rootfs.ReadFile(wsRoot, relArt)
+				if readErr == nil {
+					loadedFromDisk = true
+					rep, err = frameworks.VerifyBytesParity(fw, artBytes, "memory://"+fw.ID()+"/"+layer)
+					if err == nil && rep != nil {
+						rep.ArtifactPath = relArt
+						if scBytes, scErr := rootfs.OptionalReadFile(wsRoot, relArt+".sha256"); scErr == nil && scBytes != nil {
+							scContent := strings.TrimSpace(string(scBytes))
+							rep.SidecarPath = rep.ArtifactPath + ".sha256"
+							rep.SidecarSHA256 = scContent
+							if strings.Contains(strings.ToLower(scContent), strings.ToLower(rep.ArtifactSHA256)) {
+								rep.SidecarMatch = true
+							} else {
+								rep.SidecarMatch = false
+								rep.Verdict = frameworks.VerdictDeviationDetected
+								rep.Discrepancies = append(rep.Discrepancies, frameworks.Discrepancy{
+									ControlID: "*",
+									Aspect:    "SHA256Sidecar",
+									Expected:  rep.ArtifactSHA256,
+									Actual:    scContent,
+									Message:   "SHA-256 sidecar digest does not match computed artifact hash",
+								})
+							}
+						} else {
+							rep.SidecarMatch = false
+						}
+					}
+				} else if !errors.Is(readErr, os.ErrNotExist) {
+					_ = wsRoot.Close()
+					http.Error(w, "invalid artifact path inside dir parameter", http.StatusBadRequest)
+					return
+				}
+			}
+			_ = wsRoot.Close()
+		}
+
+		if !loadedFromDisk {
 			layers, pErr := frameworks.ProjectAllLayers(fw)
 			if pErr != nil {
 				http.Error(w, fmt.Sprintf("project layers: %v", pErr), http.StatusInternalServerError)
@@ -235,9 +331,6 @@ func (s *Server) handleFrameworkSubpath(w http.ResponseWriter, r *http.Request) 
 				b = layers.AssessmentResults
 			case "plan-of-action-and-milestones.json":
 				b = layers.POAM
-			default:
-				http.Error(w, fmt.Sprintf("unknown layer %s", layer), http.StatusBadRequest)
-				return
 			}
 			rep, err = frameworks.VerifyBytesParity(fw, b, "memory://"+fw.ID()+"/"+layer)
 		}
@@ -276,9 +369,10 @@ func (s *Server) handleFrameworkSubpath(w http.ResponseWriter, r *http.Request) 
 				w.Header().Set("Content-Type", "text/plain; charset=utf-8")
 				w.Header().Set("X-Content-Type-Options", "nosniff")
 				if r.URL.Query().Get("download") == "1" {
-					w.Header().Set("Content-Disposition", fmt.Sprintf("attachment; filename=\"%s-checksums.sha256\"", fwID))
+					w.Header().Set("Content-Disposition", fmt.Sprintf("attachment; filename=%q", fw.ID()+"-checksums.sha256"))
 				}
 				w.WriteHeader(http.StatusOK)
+				// #nosec G705 -- response is strictly text/plain SHA-256 hex digests with X-Content-Type-Options: nosniff.
 				_, _ = w.Write(data)
 				return
 			}
@@ -315,9 +409,10 @@ func (s *Server) handleFrameworkSubpath(w http.ResponseWriter, r *http.Request) 
 			w.Header().Set("Content-Type", "application/json; charset=utf-8")
 			w.Header().Set("X-Content-Type-Options", "nosniff")
 			if r.URL.Query().Get("download") == "1" {
-				w.Header().Set("Content-Disposition", fmt.Sprintf("attachment; filename=\"%s-%s\"", fwID, fileName))
+				w.Header().Set("Content-Disposition", fmt.Sprintf("attachment; filename=%q", fw.ID()+"-"+fileName))
 			}
 			w.WriteHeader(http.StatusOK)
+			// #nosec G705 -- response is strictly application/json OSCAL document with X-Content-Type-Options: nosniff.
 			_, _ = w.Write(data)
 			return
 		}
@@ -520,6 +615,204 @@ func writeJSON(w http.ResponseWriter, status int, data interface{}) {
 	w.Header().Set("Content-Type", "application/json; charset=utf-8")
 	w.WriteHeader(status)
 	_ = json.NewEncoder(w).Encode(data)
+}
+
+func sanitizeHTTPHost(raw string) string {
+	s := strings.TrimSpace(raw)
+	if s == "" || len(s) > 255 {
+		return ""
+	}
+	for i := 0; i < len(s); i++ {
+		c := s[i]
+		if !((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9') ||
+			c == '.' || c == '-' || c == ':' || c == '[' || c == ']') {
+			return ""
+		}
+	}
+	return s
+}
+
+func (s *Server) handleUTCPManual(w http.ResponseWriter, r *http.Request) {
+	if r.Method != http.MethodGet {
+		http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
+		return
+	}
+	scheme := "http://"
+	if r.TLS != nil {
+		scheme = "https://"
+	}
+	baseURL := "http://127.0.0.1:8080"
+	if host := sanitizeHTTPHost(r.Host); host != "" {
+		baseURL = scheme + host
+	}
+	manual := utcp.GenerateManual(utcp.ManualOptions{
+		BaseHTTPURL: baseURL,
+	})
+	writeJSON(w, http.StatusOK, manual)
+}
+
+func (s *Server) handleUTCPValidate(w http.ResponseWriter, r *http.Request) {
+	if r.Method != http.MethodPost {
+		http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
+		return
+	}
+	body, err := io.ReadAll(http.MaxBytesReader(w, r.Body, 10<<20))
+	if err != nil {
+		writeJSON(w, http.StatusBadRequest, map[string]any{"error": err.Error()})
+		return
+	}
+	rep, err := utcp.ValidateManual(body)
+	if err != nil {
+		writeJSON(w, http.StatusBadRequest, map[string]any{"error": err.Error()})
+		return
+	}
+	writeJSON(w, http.StatusOK, rep)
+}
+
+func (s *Server) handleOntology(w http.ResponseWriter, r *http.Request) {
+	if r.Method != http.MethodGet {
+		http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
+		return
+	}
+	writeJSON(w, http.StatusOK, ontology.CanonicalSpec())
+}
+
+func (s *Server) handleGraphStats(w http.ResponseWriter, r *http.Request) {
+	if r.Method != http.MethodGet {
+		http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
+		return
+	}
+	ug, err := graph.DefaultUnifiedGraph()
+	if err != nil {
+		http.Error(w, fmt.Sprintf("unified graph error: %v", err), http.StatusInternalServerError)
+		return
+	}
+	writeJSON(w, http.StatusOK, ug.Stats())
+}
+
+func (s *Server) handleGraphCrosswalk(w http.ResponseWriter, r *http.Request) {
+	if r.Method != http.MethodGet {
+		http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
+		return
+	}
+	ctrl := strings.TrimSpace(r.URL.Query().Get("control"))
+	if ctrl == "" {
+		ctrl = "ac-2"
+	}
+	ug, err := graph.DefaultUnifiedGraph()
+	if err != nil {
+		http.Error(w, fmt.Sprintf("unified graph error: %v", err), http.StatusInternalServerError)
+		return
+	}
+	rep, err := ug.QueryCrosswalk(ctrl)
+	if err != nil {
+		http.Error(w, fmt.Sprintf("crosswalk error: %v", err), http.StatusBadRequest)
+		return
+	}
+	writeJSON(w, http.StatusOK, rep)
+}
+
+func (s *Server) handleGraphBlastRadius(w http.ResponseWriter, r *http.Request) {
+	if r.Method != http.MethodGet {
+		http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
+		return
+	}
+	target := strings.TrimSpace(r.URL.Query().Get("target"))
+	if target == "" {
+		target = "CVE-2024-3400"
+	}
+	depth := 2
+	if dStr := strings.TrimSpace(r.URL.Query().Get("depth")); dStr != "" {
+		if dVal, err := strconv.Atoi(dStr); err == nil && dVal > 0 {
+			depth = dVal
+		}
+	}
+	ug, err := graph.DefaultUnifiedGraph()
+	if err != nil {
+		http.Error(w, fmt.Sprintf("unified graph error: %v", err), http.StatusInternalServerError)
+		return
+	}
+	rep, err := ug.ComputeBlastRadius(target, depth)
+	if err != nil {
+		http.Error(w, fmt.Sprintf("blast radius error: %v", err), http.StatusBadRequest)
+		return
+	}
+	writeJSON(w, http.StatusOK, rep)
+}
+
+func (s *Server) handleGraphExport(w http.ResponseWriter, r *http.Request) {
+	if r.Method != http.MethodGet {
+		http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
+		return
+	}
+	target := strings.TrimSpace(r.URL.Query().Get("target"))
+	if target == "" {
+		target = "CVE-2024-3400"
+	}
+	format := strings.TrimSpace(r.URL.Query().Get("format"))
+	if format == "" {
+		format = "jsonld"
+	}
+	depth := 2
+	if dStr := strings.TrimSpace(r.URL.Query().Get("depth")); dStr != "" {
+		if dVal, err := strconv.Atoi(dStr); err == nil && dVal > 0 {
+			depth = dVal
+		}
+	}
+	ug, err := graph.DefaultUnifiedGraph()
+	if err != nil {
+		http.Error(w, fmt.Sprintf("unified graph error: %v", err), http.StatusInternalServerError)
+		return
+	}
+	out, err := ug.ExportSubgraph(target, depth, format)
+	if err != nil {
+		http.Error(w, fmt.Sprintf("export error: %v", err), http.StatusBadRequest)
+		return
+	}
+	if strings.EqualFold(format, "cypher") {
+		w.Header().Set("Content-Type", "text/plain; charset=utf-8")
+	} else {
+		w.Header().Set("Content-Type", "application/json; charset=utf-8")
+	}
+	w.Header().Set("X-Content-Type-Options", "nosniff")
+	w.WriteHeader(http.StatusOK)
+	// #nosec G705 -- response is strictly text/plain or application/json with X-Content-Type-Options: nosniff.
+	_, _ = w.Write([]byte(out))
+}
+
+func (s *Server) handleFeeds(w http.ResponseWriter, r *http.Request) {
+	if r.Method != http.MethodGet {
+		http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
+		return
+	}
+	feedID := strings.TrimSpace(r.URL.Query().Get("feed"))
+	if feedID != "" {
+		b, err := feeds.InspectFeed(feedID)
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusNotFound)
+			return
+		}
+		writeJSON(w, http.StatusOK, b)
+		return
+	}
+	writeJSON(w, http.StatusOK, feeds.ListFeeds())
+}
+
+func (s *Server) handleFeedsSync(w http.ResponseWriter, r *http.Request) {
+	if r.Method != http.MethodPost && r.Method != http.MethodGet {
+		http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
+		return
+	}
+	feedID := strings.TrimSpace(r.URL.Query().Get("feed"))
+	receipt, err := feeds.SyncFeeds(r.Context(), feeds.SyncOptions{
+		FeedID:  feedID,
+		Offline: true,
+	})
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusBadRequest)
+		return
+	}
+	writeJSON(w, http.StatusOK, receipt)
 }
 
 // OpenBrowser attempts to open the specified URL in the system's default browser.

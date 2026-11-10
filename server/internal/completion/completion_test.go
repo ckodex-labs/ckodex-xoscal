@@ -9,6 +9,35 @@ import (
 )
 
 func TestGenerateCompletions(t *testing.T) {
+	requiredTokens := []string{
+		"utcp",
+		"ontology",
+		"graph",
+		"feeds",
+		"crosswalk",
+		"blast-radius",
+		"reconcile",
+		"verify-checkpoint",
+		"-checkpoint-dir",
+		"-control",
+		"-depth",
+		"-format",
+		"-feed",
+		"-offline",
+		"-target",
+		"-out",
+		"-base-url",
+		"-grpc-host",
+		"-manual-url",
+		"-manual-file",
+		"-file",
+		"-json",
+		"-validate-constraints",
+		"-oscal-cli",
+		"-db",
+		"-dsn",
+	}
+
 	for _, sh := range completion.SupportedShells {
 		var buf bytes.Buffer
 		err := completion.Generate(sh, "xoscal", &buf)
@@ -21,6 +50,11 @@ func TestGenerateCompletions(t *testing.T) {
 		}
 		if !strings.Contains(out, "xoscal") {
 			t.Errorf("expected completion script to contain binary name 'xoscal'")
+		}
+		for _, tok := range requiredTokens {
+			if !strings.Contains(out, tok) {
+				t.Errorf("%s completion missing expected flag/token %q", sh, tok)
+			}
 		}
 	}
 

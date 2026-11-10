@@ -20,6 +20,7 @@ import (
 func main() {
 	var (
 		dsn                 = flag.String("dsn", "oscal.db", "SQLite DSN")
+		dbAlias             = flag.String("db", "", "Alias for -dsn")
 		snapshot            = flag.String("snapshot", "", "Snapshot name")
 		framework           = flag.String("framework", "eu-ai-act", "Framework identifier")
 		outDir              = flag.String("out", "./oscal-out", "Output directory")
@@ -29,6 +30,30 @@ func main() {
 		oscalCLIPath        = flag.String("oscal-cli", "", "path to oscal-cli binary (default: search PATH)")
 	)
 	flag.Parse()
+
+	isPlaceholder := func(s string) bool {
+		s = strings.TrimSpace(s)
+		return (strings.HasPrefix(s, "${") && strings.HasSuffix(s, "}")) ||
+			(strings.HasPrefix(s, "UTCP_ARG_") && strings.HasSuffix(s, "_UTCP_END"))
+	}
+	if isPlaceholder(*dbAlias) {
+		*dbAlias = ""
+	}
+	if *dbAlias != "" {
+		*dsn = *dbAlias
+	}
+	if isPlaceholder(*dsn) || *dsn == "" {
+		*dsn = "oscal.db"
+	}
+	if isPlaceholder(*framework) || *framework == "" {
+		*framework = "eu-ai-act"
+	}
+	if isPlaceholder(*outDir) || *outDir == "" {
+		*outDir = "./oscal-out"
+	}
+	if isPlaceholder(*snapshot) {
+		*snapshot = ""
+	}
 
 	if *snapshot == "" {
 		log.Fatal("-snapshot is required")
@@ -194,8 +219,13 @@ func main() {
 		if err != nil {
 			log.Fatalf("marshal mappings: %v", err)
 		}
-		if err := os.WriteFile(fmt.Sprintf("%s/mappings.json", *outDir), mappingsData, 0600); err != nil {
+		mappingsPath := fmt.Sprintf("%s/mappings.json", *outDir)
+		// #nosec G304,G306 -- mappingsPath is beneath the explicit output directory selected by the operator.
+		if err := os.WriteFile(mappingsPath, mappingsData, 0600); err != nil {
 			log.Fatalf("write mappings: %v", err)
+		}
+		if _, err := dbutil.WriteDigestSidecar(mappingsPath); err != nil {
+			log.Fatalf("write digest sidecar for %s: %v", mappingsPath, err)
 		}
 	}
 
@@ -227,7 +257,9 @@ func writeOSCAL(path string, marshal func() ([]byte, error), validator *schemava
 	if err := os.WriteFile(path, b, 0600); err != nil {
 		log.Fatalf("write %s: %v", path, err)
 	}
-	_, _ = dbutil.WriteDigestSidecar(path)
+	if _, err := dbutil.WriteDigestSidecar(path); err != nil {
+		log.Fatalf("write digest sidecar for %s: %v", path, err)
+	}
 }
 
 // kindToCLIModel maps an ArtifactKind to the oscal-cli subcommand name.

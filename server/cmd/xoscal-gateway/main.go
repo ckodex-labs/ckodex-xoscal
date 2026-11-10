@@ -5,8 +5,10 @@ import (
 	"crypto/subtle"
 	"crypto/tls"
 	"crypto/x509"
+	"encoding/json"
 	"flag"
 	"fmt"
+	"io"
 	"log"
 	"log/slog"
 	"net/http"
@@ -26,80 +28,550 @@ import (
 	healthpb "google.golang.org/grpc/health/grpc_health_v1"
 
 	servicesv1 "github.com/mchorfa/xoscal/proto/oscal/services/v1"
+	_ "github.com/mchorfa/xoscal/server/internal/canadianframeworks"
+	"github.com/mchorfa/xoscal/server/internal/feeds"
+	"github.com/mchorfa/xoscal/server/internal/frameworks"
+	"github.com/mchorfa/xoscal/server/internal/graph"
+	"github.com/mchorfa/xoscal/server/internal/ontology"
+	"github.com/mchorfa/xoscal/server/internal/resilience"
+	"github.com/mchorfa/xoscal/server/internal/utcp"
+	"github.com/mchorfa/xoscal/server/internal/webstudio"
 )
 
-// metricsCollector tracks HTTP request counts and durations without external deps.
+const maxTrackedRoutes = 128
+
+var defaultHistogramBuckets = []float64{
+	0.005, 0.01, 0.025, 0.05, 0.1, 0.25, 0.5, 1.0, 2.5, 5.0, 10.0,
+}
+
+type routeHistogram struct {
+	method  string
+	path    string
+	counts  map[int]int64
+	buckets []int64 // non-cumulative counts per bucket index; accumulated at exposition time
+	sum     float64
+	count   int64
+}
+
+// metricsCollector tracks HTTP request counts and fixed-bucket latency histograms
+// with strict cardinality bounding (maxTrackedRoutes) to prevent OOM leaks.
 type metricsCollector struct {
-	mu        sync.RWMutex
-	counts    map[string]map[int]int64
-	durations map[string][]time.Duration
+	mu     sync.RWMutex
+	routes map[string]*routeHistogram
 }
 
 func newMetricsCollector() *metricsCollector {
 	return &metricsCollector{
-		counts:    make(map[string]map[int]int64),
-		durations: make(map[string][]time.Duration),
+		routes: make(map[string]*routeHistogram, 32),
 	}
 }
 
-func (m *metricsCollector) record(route string, status int, d time.Duration) {
+func normalizeHTTPMethod(m string) string {
+	switch strings.ToUpper(strings.TrimSpace(m)) {
+	case http.MethodGet, http.MethodPost, http.MethodPut, http.MethodDelete,
+		http.MethodPatch, http.MethodHead, http.MethodOptions:
+		return strings.ToUpper(strings.TrimSpace(m))
+	default:
+		return "OTHER"
+	}
+}
+
+func looksDynamicSegment(seg string) bool {
+	if seg == "" {
+		return false
+	}
+	// Numeric IDs
+	allDigits := true
+	for i := 0; i < len(seg); i++ {
+		if seg[i] < '0' || seg[i] > '9' {
+			allDigits = false
+			break
+		}
+	}
+	if allDigits {
+		return true
+	}
+	// UUIDs or long hex/random tokens
+	if len(seg) >= 16 {
+		hexOrDash := true
+		for i := 0; i < len(seg); i++ {
+			c := seg[i]
+			if !((c >= '0' && c <= '9') || (c >= 'a' && c <= 'f') || (c >= 'A' && c <= 'F') || c == '-') {
+				hexOrDash = false
+				break
+			}
+		}
+		if hexOrDash {
+			return true
+		}
+	}
+	return false
+}
+
+// normalizeMetricsRoute canonicalizes URL paths to bound Prometheus label cardinality.
+func normalizeMetricsRoute(rawPath string) string {
+	p := strings.TrimSpace(rawPath)
+	if idx := strings.IndexByte(p, '?'); idx >= 0 {
+		p = p[:idx]
+	}
+	if p == "" || p == "/" {
+		return "/"
+	}
+	if !strings.HasPrefix(p, "/") {
+		p = "/" + p
+	}
+
+	parts := strings.Split(strings.Trim(p, "/"), "/")
+	if len(parts) > 6 {
+		parts = append(parts[:6], ":tail")
+	}
+	for i, seg := range parts {
+		if looksDynamicSegment(seg) {
+			parts[i] = ":id"
+		}
+	}
+	return "/" + strings.Join(parts, "/")
+}
+
+func (m *metricsCollector) record(rawRoute string, status int, d time.Duration) {
+	parts := strings.SplitN(strings.TrimSpace(rawRoute), " ", 2)
+	method := "GET"
+	rawPath := rawRoute
+	if len(parts) == 2 {
+		method = normalizeHTTPMethod(parts[0])
+		rawPath = parts[1]
+	} else {
+		method = "OTHER"
+	}
+	normPath := normalizeMetricsRoute(rawPath)
+	key := method + " " + normPath
+
+	sec := d.Seconds()
+	if sec < 0 {
+		sec = 0
+	}
+
 	m.mu.Lock()
 	defer m.mu.Unlock()
-	if m.counts[route] == nil {
-		m.counts[route] = make(map[int]int64)
+
+	rh, exists := m.routes[key]
+	if !exists {
+		overflowKey := "OTHER OTHER"
+		if len(m.routes) >= maxTrackedRoutes-1 && key != overflowKey {
+			method = "OTHER"
+			normPath = "OTHER"
+			key = overflowKey
+			rh = m.routes[key]
+		}
+		if rh == nil {
+			rh = &routeHistogram{
+				method:  method,
+				path:    normPath,
+				counts:  make(map[int]int64, 4),
+				buckets: make([]int64, len(defaultHistogramBuckets)),
+			}
+			m.routes[key] = rh
+		}
 	}
-	m.counts[route][status]++
-	m.durations[route] = append(m.durations[route], d)
+
+	// Bound distinct status codes per route as well
+	if status < 100 || status > 599 {
+		status = 0
+	}
+	rh.counts[status]++
+	rh.sum += sec
+	rh.count++
+
+	for i, bound := range defaultHistogramBuckets {
+		if sec <= bound {
+			rh.buckets[i]++
+			break
+		}
+	}
+}
+
+func (m *metricsCollector) trackedRouteCount() int {
+	m.mu.RLock()
+	defer m.mu.RUnlock()
+	return len(m.routes)
 }
 
 func (m *metricsCollector) prometheusText() string {
 	m.mu.RLock()
 	defer m.mu.RUnlock()
+
 	var b strings.Builder
 	b.WriteString("# TYPE http_request_total counter\n")
 	b.WriteString("# HELP http_request_total Total HTTP requests by route and status\n")
-	routes := make([]string, 0, len(m.counts))
-	for r := range m.counts {
-		routes = append(routes, r)
+
+	keys := make([]string, 0, len(m.routes))
+	for k := range m.routes {
+		keys = append(keys, k)
 	}
-	sort.Strings(routes)
-	for _, r := range routes {
-		parts := strings.SplitN(r, " ", 2)
-		method := parts[0]
-		path := r
-		if len(parts) == 2 {
-			path = parts[1]
-		}
-		statuses := make([]int, 0, len(m.counts[r]))
-		for status := range m.counts[r] {
-			statuses = append(statuses, status)
+	sort.Strings(keys)
+
+	for _, k := range keys {
+		rh := m.routes[k]
+		statuses := make([]int, 0, len(rh.counts))
+		for st := range rh.counts {
+			statuses = append(statuses, st)
 		}
 		sort.Ints(statuses)
-		for _, status := range statuses {
-			count := m.counts[r][status]
-			fmt.Fprintf(&b, "http_request_total{method=%s,path=%s,status=%s} %d\n", strconv.Quote(method), strconv.Quote(path), strconv.Quote(strconv.Itoa(status)), count)
+		for _, st := range statuses {
+			fmt.Fprintf(&b, "http_request_total{method=%s,path=%s,status=%s} %d\n",
+				strconv.Quote(rh.method), strconv.Quote(rh.path), strconv.Quote(strconv.Itoa(st)), rh.counts[st])
 		}
 	}
-	b.WriteString("# TYPE http_request_duration_seconds summary\n")
+
+	b.WriteString("# TYPE http_request_duration_seconds histogram\n")
 	b.WriteString("# HELP http_request_duration_seconds HTTP request latencies in seconds\n")
-	for _, r := range routes {
-		parts := strings.SplitN(r, " ", 2)
-		method := parts[0]
-		path := r
-		if len(parts) == 2 {
-			path = parts[1]
+	for _, k := range keys {
+		rh := m.routes[k]
+		if rh.count == 0 {
+			continue
 		}
-		vals := m.durations[r]
-		if len(vals) > 0 {
-			var sum float64
-			for _, d := range vals {
-				sum += d.Seconds()
-			}
-			fmt.Fprintf(&b, "http_request_duration_seconds_sum{method=\"%s\",path=\"%s\"} %.4f\n", method, path, sum)
-			fmt.Fprintf(&b, "http_request_duration_seconds_count{method=\"%s\",path=\"%s\"} %d\n", method, path, len(vals))
+		qMethod := strconv.Quote(rh.method)
+		qPath := strconv.Quote(rh.path)
+		var cumulative int64
+		for i, bound := range defaultHistogramBuckets {
+			cumulative += rh.buckets[i]
+			leStr := strconv.FormatFloat(bound, 'g', -1, 64)
+			fmt.Fprintf(&b, "http_request_duration_seconds_bucket{method=%s,path=%s,le=%s} %d\n",
+				qMethod, qPath, strconv.Quote(leStr), cumulative)
 		}
+		fmt.Fprintf(&b, "http_request_duration_seconds_bucket{method=%s,path=%s,le=\"+Inf\"} %d\n",
+			qMethod, qPath, rh.count)
+		fmt.Fprintf(&b, "http_request_duration_seconds_sum{method=%s,path=%s} %.6f\n",
+			qMethod, qPath, rh.sum)
+		fmt.Fprintf(&b, "http_request_duration_seconds_count{method=%s,path=%s} %d\n",
+			qMethod, qPath, rh.count)
 	}
 	return b.String()
+}
+
+// healthProber reuses a single shared upstream *grpc.ClientConn across /healthz and /readyz probes
+// to eliminate per-probe TCP socket churn.
+type healthProber struct {
+	mu       sync.Mutex
+	endpoint string
+	dialOpts []grpc.DialOption
+	conn     *grpc.ClientConn
+}
+
+func newHealthProber(endpoint string, dialOpts []grpc.DialOption) *healthProber {
+	return &healthProber{
+		endpoint: endpoint,
+		dialOpts: dialOpts,
+	}
+}
+
+func (p *healthProber) getConn() (*grpc.ClientConn, error) {
+	p.mu.Lock()
+	defer p.mu.Unlock()
+	if p.conn != nil {
+		return p.conn, nil
+	}
+	conn, err := grpc.NewClient(p.endpoint, p.dialOpts...)
+	if err != nil {
+		return nil, err
+	}
+	p.conn = conn
+	return conn, nil
+}
+
+func (p *healthProber) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json; charset=utf-8")
+	conn, err := p.getConn()
+	if err != nil {
+		w.WriteHeader(http.StatusServiceUnavailable)
+		_, _ = w.Write([]byte(`{"status":"unavailable"}`))
+		return
+	}
+	probeCtx, cancel := context.WithTimeout(r.Context(), 2*time.Second)
+	defer cancel()
+
+	client := healthpb.NewHealthClient(conn)
+	resp, err := client.Check(probeCtx, &healthpb.HealthCheckRequest{})
+	if err != nil || resp.Status != healthpb.HealthCheckResponse_SERVING {
+		w.WriteHeader(http.StatusServiceUnavailable)
+		_, _ = w.Write([]byte(`{"status":"unavailable"}`))
+		return
+	}
+	w.WriteHeader(http.StatusOK)
+	_, _ = w.Write([]byte(`{"status":"ok"}`))
+}
+
+func (p *healthProber) Close() error {
+	p.mu.Lock()
+	defer p.mu.Unlock()
+	if p.conn == nil {
+		return nil
+	}
+	err := p.conn.Close()
+	p.conn = nil
+	return err
+}
+
+func sanitizeGatewayHost(raw string) string {
+	s := strings.TrimSpace(raw)
+	if s == "" || len(s) > 255 {
+		return ""
+	}
+	for i := 0; i < len(s); i++ {
+		c := s[i]
+		if !((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9') ||
+			c == '.' || c == '-' || c == ':' || c == '[' || c == ']') {
+			return ""
+		}
+	}
+	return s
+}
+
+func registerUTCPHandlers(mux *http.ServeMux, grpcEndpoint string) {
+	if ws, err := webstudio.NewServer(webstudio.Config{Registry: frameworks.DefaultRegistry()}); err == nil {
+		ws.RegisterFrameworkAndValidationRoutes(mux)
+	}
+
+	handleManual := func(w http.ResponseWriter, r *http.Request) {
+		if r.Method != http.MethodGet {
+			http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
+			return
+		}
+		scheme := "http://"
+		if r.TLS != nil {
+			scheme = "https://"
+		}
+		baseURL := "http://127.0.0.1:8080"
+		if host := sanitizeGatewayHost(r.Host); host != "" {
+			baseURL = scheme + host
+		}
+		manual := utcp.GenerateManual(utcp.ManualOptions{
+			BaseHTTPURL: baseURL,
+			GRPCHost:    grpcEndpoint,
+		})
+		w.Header().Set("Content-Type", "application/json; charset=utf-8")
+		w.WriteHeader(http.StatusOK)
+		_ = json.NewEncoder(w).Encode(manual)
+	}
+
+	handleValidate := func(w http.ResponseWriter, r *http.Request) {
+		if r.Method != http.MethodPost {
+			http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
+			return
+		}
+		body, err := io.ReadAll(http.MaxBytesReader(w, r.Body, 10<<20))
+		if err != nil {
+			w.Header().Set("Content-Type", "application/json; charset=utf-8")
+			w.WriteHeader(http.StatusBadRequest)
+			_ = json.NewEncoder(w).Encode(map[string]any{"error": err.Error()})
+			return
+		}
+		rep, err := utcp.ValidateManual(body)
+		if err != nil {
+			w.Header().Set("Content-Type", "application/json; charset=utf-8")
+			w.WriteHeader(http.StatusBadRequest)
+			_ = json.NewEncoder(w).Encode(map[string]any{"error": err.Error()})
+			return
+		}
+		w.Header().Set("Content-Type", "application/json; charset=utf-8")
+		w.WriteHeader(http.StatusOK)
+		_ = json.NewEncoder(w).Encode(rep)
+	}
+
+	mux.HandleFunc("/.well-known/utcp", handleManual)
+	mux.HandleFunc("/api/v1/utcp", handleManual)
+	mux.HandleFunc("/api/v1/utcp/validate", handleValidate)
+
+	mux.HandleFunc("/api/v1/ontology", func(w http.ResponseWriter, r *http.Request) {
+		if r.Method != http.MethodGet {
+			http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
+			return
+		}
+		w.Header().Set("Content-Type", "application/json; charset=utf-8")
+		w.WriteHeader(http.StatusOK)
+		_ = json.NewEncoder(w).Encode(ontology.CanonicalSpec())
+	})
+
+	mux.HandleFunc("/api/v1/graph/stats", func(w http.ResponseWriter, r *http.Request) {
+		if r.Method != http.MethodGet {
+			http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
+			return
+		}
+		ug, err := graph.DefaultUnifiedGraph()
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
+		}
+		w.Header().Set("Content-Type", "application/json; charset=utf-8")
+		w.WriteHeader(http.StatusOK)
+		_ = json.NewEncoder(w).Encode(ug.Stats())
+	})
+
+	mux.HandleFunc("/api/v1/graph/crosswalk", func(w http.ResponseWriter, r *http.Request) {
+		if r.Method != http.MethodGet {
+			http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
+			return
+		}
+		ctrl := strings.TrimSpace(r.URL.Query().Get("control"))
+		if ctrl == "" {
+			ctrl = "ac-2"
+		}
+		ug, err := graph.DefaultUnifiedGraph()
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
+		}
+		rep, err := ug.QueryCrosswalk(ctrl)
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusBadRequest)
+			return
+		}
+		w.Header().Set("Content-Type", "application/json; charset=utf-8")
+		w.WriteHeader(http.StatusOK)
+		_ = json.NewEncoder(w).Encode(rep)
+	})
+
+	mux.HandleFunc("/api/v1/graph/blast-radius", func(w http.ResponseWriter, r *http.Request) {
+		if r.Method != http.MethodGet {
+			http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
+			return
+		}
+		target := strings.TrimSpace(r.URL.Query().Get("target"))
+		if target == "" {
+			target = "CVE-2024-3400"
+		}
+		depth := 2
+		if dStr := strings.TrimSpace(r.URL.Query().Get("depth")); dStr != "" {
+			if dVal, err := strconv.Atoi(dStr); err == nil && dVal > 0 {
+				depth = dVal
+			}
+		}
+		ug, err := graph.DefaultUnifiedGraph()
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
+		}
+		rep, err := ug.ComputeBlastRadius(target, depth)
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusBadRequest)
+			return
+		}
+		w.Header().Set("Content-Type", "application/json; charset=utf-8")
+		w.WriteHeader(http.StatusOK)
+		_ = json.NewEncoder(w).Encode(rep)
+	})
+
+	mux.HandleFunc("/api/v1/graph/export", func(w http.ResponseWriter, r *http.Request) {
+		if r.Method != http.MethodGet {
+			http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
+			return
+		}
+		target := strings.TrimSpace(r.URL.Query().Get("target"))
+		if target == "" {
+			target = "CVE-2024-3400"
+		}
+		format := strings.TrimSpace(r.URL.Query().Get("format"))
+		if format == "" {
+			format = "jsonld"
+		}
+		depth := 2
+		if dStr := strings.TrimSpace(r.URL.Query().Get("depth")); dStr != "" {
+			if dVal, err := strconv.Atoi(dStr); err == nil && dVal > 0 {
+				depth = dVal
+			}
+		}
+		ug, err := graph.DefaultUnifiedGraph()
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
+		}
+		out, err := ug.ExportSubgraph(target, depth, format)
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusBadRequest)
+			return
+		}
+		if strings.EqualFold(format, "cypher") {
+			w.Header().Set("Content-Type", "text/plain; charset=utf-8")
+		} else {
+			w.Header().Set("Content-Type", "application/json; charset=utf-8")
+		}
+		w.Header().Set("X-Content-Type-Options", "nosniff")
+		w.WriteHeader(http.StatusOK)
+		// #nosec G705 -- response is strictly text/plain or application/json with X-Content-Type-Options: nosniff.
+		_, _ = w.Write([]byte(out))
+	})
+
+	mux.HandleFunc("/api/v1/feeds", func(w http.ResponseWriter, r *http.Request) {
+		if r.Method != http.MethodGet {
+			http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
+			return
+		}
+		feedID := strings.TrimSpace(r.URL.Query().Get("feed"))
+		if feedID != "" {
+			insp, err := feeds.InspectFeed(feedID)
+			if err != nil {
+				http.Error(w, err.Error(), http.StatusNotFound)
+				return
+			}
+			w.Header().Set("Content-Type", "application/json; charset=utf-8")
+			w.WriteHeader(http.StatusOK)
+			_ = json.NewEncoder(w).Encode(insp)
+			return
+		}
+		w.Header().Set("Content-Type", "application/json; charset=utf-8")
+		w.WriteHeader(http.StatusOK)
+		_ = json.NewEncoder(w).Encode(feeds.ListFeeds())
+	})
+
+	mux.HandleFunc("/api/v1/feeds/sync", func(w http.ResponseWriter, r *http.Request) {
+		if r.Method != http.MethodPost && r.Method != http.MethodGet {
+			http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
+			return
+		}
+		feedID := strings.TrimSpace(r.URL.Query().Get("feed"))
+		receipt, err := feeds.SyncFeeds(r.Context(), feeds.SyncOptions{
+			FeedID:  feedID,
+			Offline: true,
+		})
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusBadRequest)
+			return
+		}
+		w.Header().Set("Content-Type", "application/json; charset=utf-8")
+		w.WriteHeader(http.StatusOK)
+		_ = json.NewEncoder(w).Encode(receipt)
+	})
+}
+
+func registerGatewayObservability(root *http.ServeMux, prober *healthProber, metrics *metricsCollector) {
+	if prober != nil {
+		root.Handle("/healthz", prober)
+		root.Handle("/readyz", prober)
+	}
+	if metrics != nil {
+		root.HandleFunc("/metrics", func(w http.ResponseWriter, _ *http.Request) {
+			w.Header().Set("Content-Type", "text/plain; version=0.0.4; charset=utf-8")
+			_, _ = w.Write([]byte(metrics.prometheusText()))
+		})
+	}
+
+	openAPIFiles := map[string]string{
+		"/openapi/governance.yaml": "proto/oscal/gen/openapi/services/v1/governance_service.openapi.yaml",
+		"/openapi/oscal.yaml":      "proto/oscal/gen/openapi/services/v1/oscal_service.openapi.yaml",
+	}
+	for route, relPath := range openAPIFiles {
+		path := relPath
+		root.HandleFunc(route, func(w http.ResponseWriter, _ *http.Request) {
+			// #nosec G304 -- path is selected from the static OpenAPI route map above.
+			data, err := os.ReadFile(path)
+			if err != nil {
+				http.Error(w, "not found", http.StatusNotFound)
+				return
+			}
+			w.Header().Set("Content-Type", "application/x-yaml")
+			_, _ = w.Write(data)
+		})
+	}
 }
 
 func main() {
@@ -143,68 +615,24 @@ func main() {
 		log.Fatalf("register transparency graph handler: %v", err)
 	}
 
-	// --- Observability ---
 	metrics := newMetricsCollector()
+	prober := newHealthProber(*grpcEndpoint, dialOpts)
+	defer func() { _ = prober.Close() }()
 
-	// Health check: probe gRPC server.
-	http.HandleFunc("/healthz", func(w http.ResponseWriter, r *http.Request) {
-		conn, err := grpc.Dial(*grpcEndpoint, dialOpts...)
-		if err != nil {
-			http.Error(w, `{"status":"unavailable"}`, http.StatusServiceUnavailable)
-			return
-		}
-		defer conn.Close()
-		client := healthpb.NewHealthClient(conn)
-		resp, err := client.Check(r.Context(), &healthpb.HealthCheckRequest{})
-		if err != nil || resp.Status != healthpb.HealthCheckResponse_SERVING {
-			w.WriteHeader(http.StatusServiceUnavailable)
-			_, _ = w.Write([]byte(`{"status":"unavailable"}`))
-			return
-		}
-		w.Header().Set("Content-Type", "application/json")
-		_, _ = w.Write([]byte(`{"status":"ok"}`))
-	})
-
-	// Metrics endpoint.
-	http.HandleFunc("/metrics", func(w http.ResponseWriter, r *http.Request) {
-		w.Header().Set("Content-Type", "text/plain; version=0.0.4")
-		_, _ = w.Write([]byte(metrics.prometheusText()))
-	})
-
-	// OpenAPI spec serving.
-	openAPIFiles := map[string]string{
-		"/openapi/governance.yaml": "proto/oscal/gen/openapi/services/v1/governance_service.openapi.yaml",
-		"/openapi/oscal.yaml":      "proto/oscal/gen/openapi/services/v1/oscal_service.openapi.yaml",
-	}
-	for route, relPath := range openAPIFiles {
-		path := relPath
-		http.HandleFunc(route, func(w http.ResponseWriter, r *http.Request) {
-			// #nosec G304 -- path is selected from the static OpenAPI route map above.
-			data, err := os.ReadFile(path)
-			if err != nil {
-				http.Error(w, "not found", http.StatusNotFound)
-				return
-			}
-			w.Header().Set("Content-Type", "application/x-yaml")
-			_, _ = w.Write(data)
-		})
-	}
-
-	// Wrap the gateway mux with metrics and CORS.
 	root := http.NewServeMux()
+	registerUTCPHandlers(root, *grpcEndpoint)
+	registerGatewayObservability(root, prober, metrics)
 	root.Handle("/", mux)
-	for route := range openAPIFiles {
-		root.Handle(route, http.DefaultServeMux)
-	}
-	root.Handle("/healthz", http.DefaultServeMux)
-	root.Handle("/metrics", http.DefaultServeMux)
 
-	handler := withCORS(withTokenAuth(withMetrics(root, metrics), token), parseAllowedOrigins(*corsOrigin))
+	handler := buildGatewayHandler(root, metrics, token, parseAllowedOrigins(*corsOrigin), 128)
 
 	server := &http.Server{
 		Addr:              *httpAddr,
 		Handler:           handler,
 		ReadHeaderTimeout: 10 * time.Second,
+		ReadTimeout:       30 * time.Second,
+		WriteTimeout:      60 * time.Second,
+		IdleTimeout:       120 * time.Second,
 		MaxHeaderBytes:    1 << 20, // 1 MB
 	}
 
@@ -214,7 +642,10 @@ func main() {
 		<-sigCh
 		logger.Info("shutting down gateway")
 		cancel()
-		_ = server.Shutdown(context.Background())
+		shutdownCtx, shutdownCancel := context.WithTimeout(context.Background(), 10*time.Second)
+		defer shutdownCancel()
+		_ = server.Shutdown(shutdownCtx)
+		_ = prober.Close()
 	}()
 
 	logger.Info("HTTP gateway listening", "addr", *httpAddr, "grpc", *grpcEndpoint)
@@ -293,10 +724,20 @@ func grpcDialOptions(caPath, certPath, keyPath, serverName, token string) ([]grp
 	return opts, nil
 }
 
+func buildGatewayHandler(root http.Handler, metrics *metricsCollector, token string, allowedOrigins map[string]bool, maxInFlight int) http.Handler {
+	h := withTokenAuth(root, token)
+	h = withCORS(h, allowedOrigins)
+	h = resilience.WrapHTTPHandler(h, maxInFlight)
+	if metrics != nil {
+		h = withMetrics(h, metrics)
+	}
+	return h
+}
+
 func withMetrics(next http.Handler, m *metricsCollector) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		start := time.Now()
-		rw := &responseRecorder{ResponseWriter: w, statusCode: 200}
+		rw := &responseRecorder{ResponseWriter: w, statusCode: http.StatusOK}
 		next.ServeHTTP(rw, r)
 		d := time.Since(start)
 		route := fmt.Sprintf("%s %s", r.Method, r.URL.Path)
@@ -306,12 +747,33 @@ func withMetrics(next http.Handler, m *metricsCollector) http.Handler {
 
 type responseRecorder struct {
 	http.ResponseWriter
-	statusCode int
+	statusCode  int
+	wroteHeader bool
 }
 
 func (rr *responseRecorder) WriteHeader(code int) {
-	rr.statusCode = code
+	if !rr.wroteHeader {
+		rr.statusCode = code
+		rr.wroteHeader = true
+	}
 	rr.ResponseWriter.WriteHeader(code)
+}
+
+func (rr *responseRecorder) Write(b []byte) (int, error) {
+	if !rr.wroteHeader {
+		rr.wroteHeader = true
+	}
+	return rr.ResponseWriter.Write(b)
+}
+
+func (rr *responseRecorder) Flush() {
+	if fl, ok := rr.ResponseWriter.(http.Flusher); ok {
+		fl.Flush()
+	}
+}
+
+func (rr *responseRecorder) Unwrap() http.ResponseWriter {
+	return rr.ResponseWriter
 }
 
 func parseAllowedOrigins(value string) map[string]bool {

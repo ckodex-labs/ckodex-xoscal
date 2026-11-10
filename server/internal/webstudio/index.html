@@ -7,15 +7,19 @@
   <style>
     :root {
       --bg: #090d16;
+      --bg-elevated: #111827;
       --card-bg: #111827;
+      --border: #1f2937;
       --card-border: #1f2937;
       --text-main: #f3f4f6;
       --text-muted: #9ca3af;
       --primary: #3b82f6;
       --primary-hover: #2563eb;
       --accent: #10b981;
+      --success: #10b981;
       --accent-badge: rgba(16, 185, 129, 0.15);
       --danger: #ef4444;
+      --danger-badge: rgba(239, 68, 68, 0.15);
       --warning: #f59e0b;
       --code-bg: #030712;
       --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
@@ -61,7 +65,7 @@
       align-items: center;
       justify-content: center;
       font-weight: 800;
-      color: #fff;
+      color: var(--text-main);
       font-size: 0.9rem;
       font-family: var(--font-mono);
     }
@@ -190,7 +194,7 @@
       justify-content: center;
       gap: 0.5rem;
       background: var(--primary);
-      color: #fff;
+      color: var(--text-main);
       border: none;
       padding: 0.5rem 1rem;
       border-radius: 6px;
@@ -279,6 +283,28 @@
       padding: 0.15rem 0.4rem;
       border-radius: 4px;
       font-weight: 600;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.2rem 0.55rem;
+      border-radius: 4px;
+      background: var(--bg-elevated);
+      color: var(--text-main);
+      border: 1px solid var(--border);
+    }
+    .badge-pass {
+      background: var(--accent-badge);
+      color: var(--success);
+      border-color: var(--success);
+    }
+    .badge-fail {
+      background: var(--danger-badge);
+      color: var(--danger);
+      border-color: var(--danger);
     }
 
     /* Modal / Drawer */
@@ -385,10 +411,10 @@
       margin-right: 0.5rem;
       margin-top: 0.5rem;
     }
-    .vector-pill.green { background: rgba(16,185,129,0.15); color: #10b981; border: 1px solid rgba(16,185,129,0.3); }
-    .vector-pill.blue { background: rgba(59,130,246,0.15); color: #3b82f6; border: 1px solid rgba(59,130,246,0.3); }
-    .vector-pill.red { background: rgba(239,68,68,0.15); color: #ef4444; border: 1px solid rgba(239,68,68,0.3); }
-    .vector-pill.yellow { background: rgba(245,158,11,0.15); color: #f59e0b; border: 1px solid rgba(245,158,11,0.3); }
+    .vector-pill.green { background: rgba(16,185,129,0.15); color: var(--success); border: 1px solid rgba(16,185,129,0.3); }
+    .vector-pill.blue { background: rgba(59,130,246,0.15); color: var(--primary); border: 1px solid rgba(59,130,246,0.3); }
+    .vector-pill.red { background: rgba(239,68,68,0.15); color: var(--danger); border: 1px solid rgba(239,68,68,0.3); }
+    .vector-pill.yellow { background: rgba(245,158,11,0.15); color: var(--warning); border: 1px solid rgba(245,158,11,0.3); }
     :focus-visible {
       outline: 2px solid var(--primary);
       outline-offset: 2px;
@@ -396,7 +422,7 @@
     .banner-alert {
       background: rgba(239, 68, 68, 0.1);
       border: 1px solid var(--danger);
-      color: #fca5a5;
+      color: var(--text-main);
       padding: 0.75rem 1.25rem;
       border-radius: 8px;
       margin-bottom: 1.5rem;
@@ -421,6 +447,7 @@
       <button id="tab-btn-frameworks" role="tab" aria-selected="true" aria-controls="tab-frameworks" class="active" onclick="switchTab('frameworks', this)">Frameworks</button>
       <button id="tab-btn-controls" role="tab" aria-selected="false" aria-controls="tab-controls" onclick="switchTab('controls', this)">Controls Explorer</button>
       <button id="tab-btn-transition" role="tab" aria-selected="false" aria-controls="tab-transition" onclick="switchTab('transition', this)">Sovereign Transition</button>
+      <button id="tab-btn-ontology" role="tab" aria-selected="false" aria-controls="tab-ontology" onclick="switchTab('ontology', this)">Ontology, Crosswalk &amp; Feeds</button>
       <button id="tab-btn-validator" role="tab" aria-selected="false" aria-controls="tab-validator" onclick="switchTab('validator', this)">OSCAL Inspector</button>
     </nav>
   </header>
@@ -435,7 +462,7 @@
     <div id="tab-frameworks" class="tab-content active" role="tabpanel" aria-labelledby="tab-btn-frameworks">
       <h2>Authoritative Compliance Frameworks</h2>
       <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.25rem;">
-        Complete sovereign Canadian standards and international baselines embedded in xOSCAL.
+        36 Sovereign &amp; Global Frameworks (16,237 Controls across 252 7-Layer OSCAL 1.2.3 Artifacts) embedded in xOSCAL.
       </p>
       <div id="frameworks-grid" class="grid">
         <!-- Rendered dynamically -->
@@ -446,7 +473,7 @@
     <div id="tab-controls" class="tab-content" role="tabpanel" aria-labelledby="tab-btn-controls">
       <h2>Control Intelligence Explorer</h2>
       <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.25rem; margin-bottom: 1.5rem;">
-        Instant search across all 1,248 controls, enhancements, statements, and Canadian GC guidance.
+        Instant search across all 36 Sovereign &amp; Global Frameworks (16,237 controls, enhancements, statements, and Canadian GC guidance).
       </p>
 
       <div class="toolbar">
@@ -505,7 +532,75 @@
       </div>
     </div>
 
-    <!-- TAB 4: OSCAL VALIDATOR -->
+    <!-- TAB 4: ONTOLOGY, CROSSWALK & THREAT FEEDS -->
+    <div id="tab-ontology" class="tab-content" role="tabpanel" aria-labelledby="tab-btn-ontology">
+      <h2>OWL/JSON-LD Ontology, Multi-Jurisdiction Crosswalk &amp; Threat Feeds</h2>
+      <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.25rem; margin-bottom: 1.5rem;">
+        12 OWL/JSON-LD Node Classes, 16 Typed Semantic Predicates (including CKODEX Rule 17 ANTI relations), 36-Framework Crosswalk Engine, and 4 Sovereign &amp; Threat Feeds.
+      </p>
+
+      <div id="ontology-summary-cards" style="display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap;">
+        <!-- Populated dynamically -->
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem;">
+        <div class="card">
+          <div>
+            <div class="card-header">
+              <span class="card-id">MULTI-JURISDICTION CROSSWALK</span>
+              <span class="card-jurisdiction">CA / US / EU / DE / FR / GB</span>
+            </div>
+            <div class="card-title">Cross-Framework Control Equivalency &amp; Harmonization</div>
+            <p class="card-desc">Query <code>EQUIVALENT_TO</code>, <code>HARMONIZES_WITH</code>, and active KEV/ATT&amp;CK threats across all 36 frameworks.</p>
+            <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+              <input type="text" id="crosswalk-input" class="search-input" style="min-width: 160px;" value="ac-2" aria-label="Control ID for crosswalk" placeholder="e.g. ac-2, si-2, sc-7, ia-2">
+              <button class="btn" onclick="runCrosswalkQuery()">Crosswalk</button>
+            </div>
+            <div id="crosswalk-result-box" class="modal-prose" style="max-height: 280px; overflow-y: auto;">Loading crosswalk...</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <div class="card-header">
+              <span class="card-id">6D VECTOR BLAST-RADIUS ENGINE</span>
+              <span class="card-jurisdiction">CKODEX RULE 14 &amp; 17</span>
+            </div>
+            <div class="card-title">CISA KEV, MITRE ATT&amp;CK &amp; Supersession Blast Radius</div>
+            <p class="card-desc">Evaluate multi-hop impact and 6D Vector State <code>S(e,t) = &lt;P,V,A,C,E,L,tau&gt;</code> for any CVE, technique, or framework.</p>
+            <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+              <input type="text" id="blast-target-input" class="search-input" style="min-width: 160px;" value="CVE-2024-3400" aria-label="Target CVE, ATT&CK technique, or framework" placeholder="e.g. CVE-2024-3400, T1190, cccs-itsg-33">
+              <button class="btn" onclick="runBlastRadiusQuery()">Evaluate</button>
+            </div>
+            <div id="blast-result-box" class="modal-prose" style="max-height: 280px; overflow-y: auto;">Loading blast radius...</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+        <h3 style="font-size: 1.05rem;">Authoritative Sovereign &amp; Threat Intelligence Feeds (Air-Gap Ready)</h3>
+        <button class="btn btn-secondary" onclick="syncFeedsOffline()">Sync Feeds (Offline Receipt)</button>
+      </div>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Feed ID</th>
+              <th>Locale</th>
+              <th>Authority</th>
+              <th>Items</th>
+              <th>SHA-256 Digest</th>
+              <th>Title</th>
+            </tr>
+          </thead>
+          <tbody id="feeds-table-body">
+            <!-- Populated dynamically -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- TAB 5: OSCAL VALIDATOR -->
     <div id="tab-validator" class="tab-content" role="tabpanel" aria-labelledby="tab-btn-validator">
       <h2>OSCAL Inspector & Vector State Verifier</h2>
       <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.25rem; margin-bottom: 1.5rem;">
@@ -646,6 +741,9 @@
 
       if (tabId === 'controls' && currentControls.length === 0) {
         onFrameworkSelectChange();
+      }
+      if (tabId === 'ontology') {
+        loadOntologyAndFeeds();
       }
     }
 
@@ -1035,6 +1133,120 @@
         handleFileUpload({ target: { files: e.dataTransfer.files } });
       }
     });
+
+    let ontologyLoaded = false;
+
+    async function loadOntologyAndFeeds() {
+      try {
+        const [ontRes, statsRes, feedsRes] = await Promise.all([
+          fetch('/api/v1/ontology'),
+          fetch('/api/v1/graph/stats'),
+          fetch('/api/v1/feeds')
+        ]);
+        const ont = await ontRes.json();
+        const stats = await statsRes.json();
+        const feedsList = await feedsRes.json();
+
+        document.getElementById('ontology-summary-cards').innerHTML = `
+          <div class="card" style="flex: 1; min-width: 180px;">
+            <div style="color: var(--text-muted); font-size: 0.8rem;">OWL/JSON-LD Ontology</div>
+            <div style="font-size: 1.5rem; font-weight: 700; color: var(--text-main);">${escapeHtml((ont.classes || []).length)} Classes / ${escapeHtml((ont.predicates || []).length)} Preds</div>
+          </div>
+          <div class="card" style="flex: 1; min-width: 180px;">
+            <div style="color: var(--text-muted); font-size: 0.8rem;">Unified Property Graph</div>
+            <div style="font-size: 1.5rem; font-weight: 700; color: var(--primary);">${escapeHtml(stats.total_nodes)} Nodes / ${escapeHtml(stats.total_edges)} Edges</div>
+          </div>
+          <div class="card" style="flex: 1; min-width: 180px;">
+            <div style="color: var(--text-muted); font-size: 0.8rem;">Sovereign &amp; Threat Feeds</div>
+            <div style="font-size: 1.5rem; font-weight: 700; color: var(--accent);">${escapeHtml(feedsList.length)} Feeds (${escapeHtml(stats.frameworks_count)} FWs)</div>
+          </div>
+          <div class="card" style="flex: 1; min-width: 180px;">
+            <div style="color: var(--text-muted); font-size: 0.8rem;">Active ANTI Relations</div>
+            <div style="font-size: 1.5rem; font-weight: 700; color: var(--danger);">${escapeHtml(stats.anti_edge_count)} ANTI Edges</div>
+          </div>
+        `;
+
+        document.getElementById('feeds-table-body').innerHTML = feedsList.map(f => `
+          <tr>
+            <td style="font-family: var(--font-mono); font-weight: 600; color: var(--primary);">${escapeHtml(f.id)}</td>
+            <td><span class="card-jurisdiction">${escapeHtml((f.jurisdictions || []).join(', '))}</span></td>
+            <td>${escapeHtml(f.authority)}</td>
+            <td><b>${escapeHtml(f.record_count)}</b></td>
+            <td style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">${escapeHtml((f.sha256 || '').substring(0, 16))}...</td>
+            <td>${escapeHtml(f.title)}</td>
+          </tr>
+        `).join('');
+
+        if (!ontologyLoaded) {
+          ontologyLoaded = true;
+          runCrosswalkQuery();
+          runBlastRadiusQuery();
+        }
+      } catch (e) {
+        showErrorBanner('Failed to load ontology/graph/feeds: ' + e.message);
+      }
+    }
+
+    async function runCrosswalkQuery() {
+      const ctrl = (document.getElementById('crosswalk-input').value || 'ac-2').trim();
+      const box = document.getElementById('crosswalk-result-box');
+      box.innerText = 'Querying crosswalk for ' + ctrl + '...';
+      try {
+        const res = await fetch('/api/v1/graph/crosswalk?control=' + encodeURIComponent(ctrl));
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const rep = await res.json();
+        const vs = rep.vector_posture || {};
+        const lines = [
+          `Control: ${rep.canonical_control_id.toUpperCase()} | Domain: ${rep.thematic_domain}`,
+          `6D Vector: <${vs.presence}, ${vs.valence}, Anti=${vs.anti_count}, ${vs.coherence}, ${vs.evidence_status}, ${vs.lifecycle_mode}>`,
+          `Equivalent (${(rep.equivalent_controls || []).length}): ${(rep.equivalent_controls || []).slice(0, 8).map(m => m.framework_id + ':' + m.control_id).join(', ')}`,
+          `Harmonized (${(rep.harmonized_controls || []).length}): ${(rep.harmonized_controls || []).slice(0, 8).map(m => m.framework_id + ':' + m.control_id + ' [' + m.jurisdiction.toUpperCase() + ']').join(', ')}`,
+          `Active Threats (${(rep.active_threats || []).length}): ${(rep.active_threats || []).map(t => t.id + ' (' + t.relation + ')').join(', ') || 'None'}`
+        ];
+        box.innerText = lines.join('\n\n');
+      } catch (e) {
+        box.innerText = 'Crosswalk query failed: ' + e.message;
+      }
+    }
+
+    async function runBlastRadiusQuery() {
+      const target = (document.getElementById('blast-target-input').value || 'CVE-2024-3400').trim();
+      const box = document.getElementById('blast-result-box');
+      box.innerText = 'Computing blast radius for ' + target + '...';
+      try {
+        const res = await fetch('/api/v1/graph/blast-radius?target=' + encodeURIComponent(target));
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const rep = await res.json();
+        const vs = rep.vector_posture || {};
+        const jurKeys = Object.keys(rep.jurisdiction_impact || {}).map(k => k.toUpperCase());
+        const lines = [
+          `Root: ${rep.root_node.urn} (${rep.root_node.kind})`,
+          `6D Vector: <${vs.presence}, ${vs.valence}, Anti=${vs.anti_count}, ${vs.coherence}, ${vs.evidence_status}, ${vs.lifecycle_mode}>`,
+          `Subgraph: ${(rep.impacted_nodes || []).length} nodes / ${(rep.impacted_edges || []).length} edges (Depth=${rep.max_depth})`,
+          `ANTI Edges: ${rep.anti_edge_count} | Mitigating Edges: ${rep.mitigation_edge_count}`,
+          `Impacted Frameworks (${(rep.impacted_frameworks || []).length}): ${(rep.impacted_frameworks || []).slice(0, 10).join(', ')}`,
+          `Jurisdictions: ${jurKeys.join(', ')}`
+        ];
+        box.innerText = lines.join('\n\n');
+      } catch (e) {
+        box.innerText = 'Blast radius query failed: ' + e.message;
+      }
+    }
+
+    async function syncFeedsOffline() {
+      try {
+        const res = await fetch('/api/v1/feeds/sync', { method: 'POST' });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const receipt = await res.json();
+        await loadOntologyAndFeeds();
+        const box = document.getElementById('crosswalk-result-box');
+        if (box) {
+          box.innerText = 'Synced ' + ((receipt.feeds || []).length) + ' feeds offline (Receipt: ' + receipt.receipt_id + ', SHA-256: ' + (receipt.bundle_sha256 || '').substring(0, 16) + '...)\n\n' + box.innerText;
+        }
+      } catch (e) {
+        showErrorBanner('Feed sync failed: ' + e.message);
+      }
+    }
 
     init();
   </script>

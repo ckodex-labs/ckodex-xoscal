@@ -57,6 +57,7 @@ contains illustrative data; release verification requires the actual pinned proo
 | **Rule 23 Derogation Lifecycle** | CISOs / Risk Officers | Time-bounded risk acceptances with strict TTLs, justifications, and compensating controls | `xoscal derogate` |
 | **Air-Gapped Audit Bundles** | 3PAO / SCIF Auditors | Immutable `.tar.gz` bundle with embedded zero-dependency offline WebCrypto viewer | `xoscal bundle-export` |
 | **Sovereign Framework Registry** | GRC Architects / SecOps | Unified compliance framework registry across 36 sovereign & international frameworks (16,237 controls, 252 7-layer artifacts), schema-verified exports & SHA-256 sidecars | `xoscal frameworks` |
+| **Universal Tool Calling Protocol (UTCP)** | AI Agent Builders / Platform Engineers | Direct zero-wrapper tool discovery & invocation (`utcp-specification` v1.0.1, `utcp-mcp`, `rs-utcp`, `typescript-utcp`, `go-utcp`, `python-utcp`) across CLI, HTTP, and gRPC | `xoscal utcp` |
 | **Shell Autocompletions** | Terminal Users | Fast tab-completion for bash, zsh, and fish shells | `xoscal completion` |
 
 *Note: `xoscal-ctl` remains fully supported as a backward-compatible command alias.*
@@ -351,7 +352,32 @@ Features:
 
 ---
 
-### 11. Shell Autocompletions (`xoscal completion`)
+### 11. OWL/JSON-LD Ontology, Unified Property Graph, Threat Feeds & UTCP v1.0.1 (`xoscal ontology` / `graph` / `feeds` / `utcp`)
+
+Query the unified **20,109-node / 61,916-edge** regulatory and threat property graph across all **36 frameworks** and **6 sovereign jurisdictions** (`CA`, `US`, `EU`, `DE`, `FR`, `GB`), synchronize air-gapped or live threat feeds with cryptographic flight-recorder receipts, and expose native **UTCP v1.0.1** tool manuals:
+
+```bash
+# Inspect OWL/JSON-LD v1.0.0 ontology classes (12) and typed predicates (16, incl. Rule 17 ANTI relations)
+xoscal ontology classes
+xoscal ontology predicates
+
+# Crosswalk controls across 6 jurisdictions & compute 6D Vector-State blast radius
+xoscal graph crosswalk -control cccs-itsp-10-033:ac-2
+xoscal graph blast-radius -target CVE-2024-3400 -depth 2
+xoscal graph reconcile
+
+# Sync CISA KEV, MITRE ATT&CK, Crosswalk & Lifecycle feeds with hash-chained flight-recorder receipts
+xoscal feeds sync -offline -checkpoint-dir .xoscal/checkpoints
+xoscal feeds verify-checkpoint -checkpoint-dir .xoscal/checkpoints
+
+# Validate UTCP v1.0.1 manual (17 tools) & generate SDK harnesses (go-utcp, python-utcp, typescript-utcp, rs-utcp, utcp-mcp)
+xoscal utcp validate
+xoscal utcp sdk -target all -out ./utcp-harnesses
+```
+
+---
+
+### 12. Shell Autocompletions (`xoscal completion`)
 
 Generate fast tab-completion scripts for your shell:
 

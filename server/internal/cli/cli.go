@@ -22,15 +22,19 @@ import (
 	"github.com/mchorfa/xoscal/server/internal/dbutil"
 	"github.com/mchorfa/xoscal/server/internal/derogation"
 	"github.com/mchorfa/xoscal/server/internal/diff"
+	"github.com/mchorfa/xoscal/server/internal/feeds"
 	"github.com/mchorfa/xoscal/server/internal/frameworks"
+	"github.com/mchorfa/xoscal/server/internal/graph"
 	"github.com/mchorfa/xoscal/server/internal/ingestion"
 	"github.com/mchorfa/xoscal/server/internal/integrity"
 	"github.com/mchorfa/xoscal/server/internal/kg"
+	"github.com/mchorfa/xoscal/server/internal/ontology"
 	"github.com/mchorfa/xoscal/server/internal/oscal"
 	"github.com/mchorfa/xoscal/server/internal/reconciler"
 	"github.com/mchorfa/xoscal/server/internal/scaffold"
 	"github.com/mchorfa/xoscal/server/internal/schemavalidate"
 	"github.com/mchorfa/xoscal/server/internal/tabular"
+	"github.com/mchorfa/xoscal/server/internal/utcp"
 	"github.com/mchorfa/xoscal/server/internal/vectorstate"
 	"github.com/mchorfa/xoscal/server/internal/webstudio"
 )
@@ -50,6 +54,9 @@ USAGE:
 COMMANDS:
   controls       Search and inspect controls across registered frameworks
   compare        Compare two frameworks and compute sovereign transition delta
+  ontology       Inspect formal OWL/JSON-LD regulatory & threat ontology (12 classes, 16 predicates)
+  graph          Query 36-framework property graph, multi-jurisdiction crosswalks & 6D blast radius
+  feeds          List, sync, and inspect sovereign regulatory & threat intelligence feeds
   serve          Start local zero-dependency xOSCAL Web Studio & Explorer
   ui             Launch local xOSCAL Web Studio in default browser
   quickstart     Guided onboarding walkthrough
@@ -65,6 +72,7 @@ COMMANDS:
   frameworks     List, export, compare, or verify authoritative compliance frameworks
   verify-parity  Verify verbatim parity between framework definitions and created OSCAL artifacts
   seed           Seed Knowledge Graph database with authoritative baseline frameworks
+  utcp           Generate, validate, and bridge Universal Tool Calling Protocol (UTCP) manuals & SDKs
   doctor         Run deep diagnostic checks on runtime substrate, schemas, and framework registry
   completion     Generate shell autocompletions (bash, zsh, fish)
   version        Print CLI version and exit
@@ -86,6 +94,12 @@ func Execute(args []string, version string) {
 		RunControls(args[2:])
 	case "compare":
 		RunCompare(args[2:])
+	case "ontology":
+		RunOntology(args[2:])
+	case "graph":
+		RunGraph(args[2:])
+	case "feeds":
+		RunFeeds(args[2:])
 	case "serve":
 		RunServe(args[2:])
 	case "ui":
@@ -118,6 +132,8 @@ func Execute(args []string, version string) {
 		RunVerifyParity(args[2:])
 	case "seed":
 		RunSeed(args[2:])
+	case "utcp":
+		RunUTCP(args[2:])
 	case "doctor", "diagnostics":
 		RunDoctor(args[2:], version)
 	case "version", "-version", "--version":
@@ -161,10 +177,13 @@ func RunVerify(args []string) {
 	file := fs.String("file", "", "Path to OSCAL JSON artifact to evaluate")
 	evidenceDir := fs.String("evidence-dir", "", "Optional path to evidence directory with SHA-256 sidecars")
 	jsonOut := fs.Bool("json", false, "Output Vector State as JSON")
-	_ = fs.Parse(args)
+	parseFlagsInterspersed(fs, args)
 
 	targetFile := *file
-	if targetFile == "" && fs.NArg() > 0 {
+	if isUnexpandedPlaceholder(targetFile) {
+		targetFile = ""
+	}
+	if targetFile == "" && fs.NArg() > 0 && !isUnexpandedPlaceholder(fs.Arg(0)) {
 		targetFile = fs.Arg(0)
 	}
 
@@ -561,6 +580,67 @@ func RunValidate(args []string) {
 	fmt.Printf("VALID: %s passes official OSCAL %s schema validation\n", kind.Name, schemavalidate.SchemaVersion)
 }
 
+type boolFlag interface {
+	flag.Value
+	IsBoolFlag() bool
+}
+
+// parseFlagsInterspersed parses flags even when positional arguments precede flag arguments.
+func parseFlagsInterspersed(fs *flag.FlagSet, args []string) {
+	var flagArgs []string
+	var posArgs []string
+	for i := 0; i < len(args); i++ {
+		a := args[i]
+		if a == "--" {
+			posArgs = append(posArgs, args[i+1:]...)
+			break
+		}
+		if strings.HasPrefix(a, "-") && len(a) > 1 {
+			flagArgs = append(flagArgs, a)
+			if !strings.Contains(a, "=") {
+				name := strings.TrimLeft(a, "-")
+				if f := fs.Lookup(name); f != nil {
+					if bf, ok := f.Value.(boolFlag); !ok || !bf.IsBoolFlag() {
+						if i+1 < len(args) {
+							i++
+							flagArgs = append(flagArgs, args[i])
+						}
+					}
+				}
+			}
+		} else {
+			posArgs = append(posArgs, a)
+		}
+	}
+	_ = fs.Parse(append(flagArgs, posArgs...))
+}
+
+// isUnexpandedPlaceholder reports whether s is an unexpanded UTCP template placeholder
+// such as "${jurisdiction}" or "UTCP_ARG_jurisdiction_UTCP_END".
+func isUnexpandedPlaceholder(s string) bool {
+	s = strings.TrimSpace(s)
+	if strings.HasPrefix(s, "${") && strings.HasSuffix(s, "}") && len(s) > 3 {
+		return isPlaceholderIdent(s[2 : len(s)-1])
+	}
+	if strings.HasPrefix(s, "UTCP_ARG_") && strings.HasSuffix(s, "_UTCP_END") && len(s) > len("UTCP_ARG__UTCP_END") {
+		return isPlaceholderIdent(s[len("UTCP_ARG_") : len(s)-len("_UTCP_END")])
+	}
+	return false
+}
+
+func isPlaceholderIdent(s string) bool {
+	if s == "" {
+		return false
+	}
+	for i := 0; i < len(s); i++ {
+		c := s[i]
+		if !((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9') || c == '_') {
+			return false
+		}
+	}
+	return true
+}
+
 // RunFrameworks lists, exports, compares, or verifies compliance frameworks.
 func RunFrameworks(args []string) {
 	if len(args) < 1 {
@@ -575,14 +655,34 @@ func RunFrameworks(args []string) {
 	case "list":
 		fs := flag.NewFlagSet("frameworks list", flag.ExitOnError)
 		jurisdiction := fs.String("jurisdiction", "", "Optional filter by jurisdiction code (e.g. 'ca', 'us')")
-		_ = fs.Parse(args[1:])
+		jsonOut := fs.Bool("json", false, "Output frameworks in JSON format")
+		parseFlagsInterspersed(fs, args[1:])
+
+		if isUnexpandedPlaceholder(*jurisdiction) {
+			*jurisdiction = ""
+		}
 
 		var fws []frameworks.Framework
 		if *jurisdiction != "" {
 			fws = reg.FindByJurisdiction(*jurisdiction)
-			fmt.Printf("\n=== AUTHORITATIVE CYBERSECURITY FRAMEWORKS (%s) ===\n", strings.ToUpper(*jurisdiction))
 		} else {
 			fws = reg.List()
+		}
+
+		if *jsonOut {
+			infos := make([]frameworks.Info, len(fws))
+			for i, fw := range fws {
+				infos[i] = frameworks.InfoOf(fw)
+			}
+			enc := json.NewEncoder(os.Stdout)
+			enc.SetIndent("", "  ")
+			_ = enc.Encode(infos)
+			return
+		}
+
+		if *jurisdiction != "" {
+			fmt.Printf("\n=== AUTHORITATIVE CYBERSECURITY FRAMEWORKS (%s) ===\n", strings.ToUpper(*jurisdiction))
+		} else {
 			fmt.Printf("\n=== AUTHORITATIVE CYBERSECURITY FRAMEWORKS ===\n")
 		}
 
@@ -603,7 +703,17 @@ func RunFrameworks(args []string) {
 		outDir := fs.String("out", "data/frameworks", "Output destination directory")
 		fwName := fs.String("framework", "", "Optional specific framework ref_id or alias")
 		jurisdiction := fs.String("jurisdiction", "", "Optional filter by jurisdiction (e.g. 'ca')")
-		_ = fs.Parse(args[1:])
+		parseFlagsInterspersed(fs, args[1:])
+
+		if isUnexpandedPlaceholder(*fwName) {
+			*fwName = ""
+		}
+		if isUnexpandedPlaceholder(*jurisdiction) {
+			*jurisdiction = ""
+		}
+		if isUnexpandedPlaceholder(*outDir) || *outDir == "" {
+			*outDir = "data/frameworks"
+		}
 
 		if *fwName != "" {
 			if !reg.Has(*fwName) {
@@ -658,7 +768,17 @@ func RunVerifyParity(args []string) {
 	asMarkdown := fs.Bool("markdown", false, "Output results in Markdown format")
 	verbose := fs.Bool("v", false, "Verbose output showing individual discrepancies")
 	strict := fs.Bool("strict", true, "Exit with non-zero status if any deviation is detected")
-	_ = fs.Parse(args)
+	parseFlagsInterspersed(fs, args)
+
+	if isUnexpandedPlaceholder(*fwName) {
+		*fwName = ""
+	}
+	if isUnexpandedPlaceholder(*dir) || *dir == "" {
+		*dir = "data/frameworks"
+	}
+	if isUnexpandedPlaceholder(*artifact) {
+		*artifact = ""
+	}
 
 	reg := frameworks.DefaultRegistry()
 
@@ -773,7 +893,20 @@ func RunSeed(args []string) {
 	dbAlias := fs.String("db", "", "Alias for -dsn")
 	fwName := fs.String("framework", "", "Optional specific framework ref_id or alias to seed")
 	snapshot := fs.String("snapshot", "baseline", "Snapshot name to create after seeding")
-	_ = fs.Parse(args)
+	parseFlagsInterspersed(fs, args)
+
+	if isUnexpandedPlaceholder(*fwName) {
+		*fwName = ""
+	}
+	if isUnexpandedPlaceholder(*dsn) || *dsn == "" {
+		*dsn = "oscal.db"
+	}
+	if isUnexpandedPlaceholder(*dbAlias) {
+		*dbAlias = ""
+	}
+	if isUnexpandedPlaceholder(*snapshot) || *snapshot == "" {
+		*snapshot = "baseline"
+	}
 
 	effectiveDSN := *dsn
 	if *dbAlias != "" {
@@ -788,7 +921,7 @@ func RunSeed(args []string) {
 	}
 	defer store.Close()
 
-	ctx, cancel := context.WithTimeout(context.Background(), 60*time.Second)
+	ctx, cancel := context.WithTimeout(context.Background(), 3*time.Minute)
 	defer cancel()
 
 	reg := frameworks.DefaultRegistry()
@@ -808,6 +941,14 @@ func RunSeed(args []string) {
 		if err := reg.SeedKG(ctx, store); err != nil {
 			fmt.Fprintf(os.Stderr, "error seeding baseline frameworks: %v\n", err)
 			os.Exit(1)
+		}
+		if sqlStore, ok := store.(*kg.SQLiteStore); ok && sqlStore.DB() != nil {
+			if gStore, gErr := graph.NewSQLiteStoreFromDB(sqlStore.DB()); gErr == nil {
+				if _, err := graph.BuildUnifiedKnowledgeGraph(ctx, gStore, reg); err != nil {
+					fmt.Fprintf(os.Stderr, "error building unified property graph: %v\n", err)
+					os.Exit(1)
+				}
+			}
 		}
 	}
 
@@ -850,16 +991,85 @@ func countSnapshotRequirements(ctx context.Context, store kg.Store, snapshotName
 	return count, nil
 }
 
+func resolveOSCALCLI(explicit string) (string, error) {
+	if explicit != "" {
+		if _, err := os.Stat(explicit); err != nil {
+			return "", fmt.Errorf("oscal-cli not found at %s: %w", explicit, err)
+		}
+		return explicit, nil
+	}
+	if p, err := exec.LookPath("oscal-cli"); err == nil {
+		return p, nil
+	}
+	local := "tools/oscal-cli/bin/oscal-cli"
+	if _, err := os.Stat(local); err == nil {
+		return local, nil
+	}
+	return "", fmt.Errorf("oscal-cli not found in PATH or at %s; install via scripts/install-oscal-cli.sh", local)
+}
+
+var kindToCLIModel = map[schemavalidate.ArtifactKind]string{
+	schemavalidate.KindCatalog:             "catalog",
+	schemavalidate.KindProfile:             "profile",
+	schemavalidate.KindSSP:                 "ssp",
+	schemavalidate.KindComponentDefinition: "component-definition",
+	schemavalidate.KindAssessmentPlan:      "ap",
+	schemavalidate.KindAssessmentResults:   "ar",
+	schemavalidate.KindPOAM:                "poam",
+}
+
+func runConstraintValidation(oscalCLI, filePath string, kind schemavalidate.ArtifactKind) {
+	model, ok := kindToCLIModel[kind]
+	if !ok {
+		return
+	}
+	ctx, cancel := context.WithTimeout(context.Background(), 2*time.Minute)
+	defer cancel()
+
+	// #nosec G204 -- oscalCLI is resolved via explicit operator flag or exec.LookPath("oscal-cli").
+	cmd := exec.CommandContext(ctx, oscalCLI, model, "validate", filePath)
+	out, err := cmd.CombinedOutput()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "constraint validation failed for %s:\n%s\n", filePath, string(out))
+		os.Exit(1)
+	}
+}
+
 // RunGenerate generates OSCAL artifacts from the Knowledge Graph snapshot.
 func RunGenerate(args []string) {
 	fs := flag.NewFlagSet("generate", flag.ExitOnError)
 	dsn := fs.String("dsn", "oscal.db", "SQLite DSN")
+	dbAlias := fs.String("db", "", "Alias for -dsn")
 	snapshot := fs.String("snapshot", "", "Snapshot name (required)")
 	framework := fs.String("framework", "eu-ai-act", "Framework identifier")
 	outDir := fs.String("out", "./oscal-out", "Output directory")
 	arOnly := fs.Bool("assessment-results-only", false, "Emit only assessment-results")
 	validate := fs.Bool("validate", false, "Schema-validate generated artifacts")
-	_ = fs.Parse(args)
+	validateConstraints := fs.Bool("validate-constraints", false, "Run oscal-cli Metaschema constraint validation (implies -validate)")
+	oscalCLI := fs.String("oscal-cli", "", "Path to oscal-cli binary (defaults to PATH lookup or tools/oscal-cli/bin/oscal-cli)")
+	parseFlagsInterspersed(fs, args)
+
+	if isUnexpandedPlaceholder(*dbAlias) {
+		*dbAlias = ""
+	}
+	if *dbAlias != "" {
+		*dsn = *dbAlias
+	}
+	if isUnexpandedPlaceholder(*dsn) || *dsn == "" {
+		*dsn = "oscal.db"
+	}
+	if isUnexpandedPlaceholder(*framework) || *framework == "" {
+		*framework = "eu-ai-act"
+	}
+	if isUnexpandedPlaceholder(*outDir) || *outDir == "" {
+		*outDir = "./oscal-out"
+	}
+	if isUnexpandedPlaceholder(*snapshot) {
+		*snapshot = ""
+	}
+	if *validateConstraints {
+		*validate = true
+	}
 
 	if *snapshot == "" {
 		fmt.Fprintln(os.Stderr, "error: -snapshot is required")
@@ -920,6 +1130,16 @@ func RunGenerate(args []string) {
 		validator = v
 	}
 
+	var cliBin string
+	if *validateConstraints {
+		bin, err := resolveOSCALCLI(*oscalCLI)
+		if err != nil {
+			fmt.Fprintf(os.Stderr, "error resolving oscal-cli: %v\n", err)
+			os.Exit(1)
+		}
+		cliBin = bin
+	}
+
 	gen := oscal.NewGenerator(store)
 
 	if *arOnly {
@@ -946,6 +1166,9 @@ func RunGenerate(args []string) {
 			os.Exit(1)
 		}
 		_, _ = dbutil.WriteDigestSidecar(path)
+		if cliBin != "" {
+			runConstraintValidation(cliBin, path, schemavalidate.KindAssessmentResults)
+		}
 		fmt.Printf("[OK] Generated %s\n", path)
 		return
 	}
@@ -1034,6 +1257,9 @@ func RunGenerate(args []string) {
 			os.Exit(1)
 		}
 		_, _ = dbutil.WriteDigestSidecar(path)
+		if cliBin != "" {
+			runConstraintValidation(cliBin, path, fe.kind)
+		}
 		fmt.Printf("[OK] Generated %s\n", path)
 	}
 }
@@ -1042,10 +1268,18 @@ func RunGenerate(args []string) {
 func RunIngest(args []string) {
 	fs := flag.NewFlagSet("ingest", flag.ExitOnError)
 	dsn := fs.String("dsn", "oscal.db", "SQLite DSN")
+	dbAlias := fs.String("db", "", "Alias for -dsn")
 	input := fs.String("input", "", "Input JSON file path (required)")
 	framework := fs.String("framework", "eu-ai-act", "Framework identifier")
 	snapshot := fs.String("snapshot", "baseline", "Snapshot name to create after ingestion")
-	_ = fs.Parse(args)
+	parseFlagsInterspersed(fs, args)
+
+	if isUnexpandedPlaceholder(*dbAlias) {
+		*dbAlias = ""
+	}
+	if *dbAlias != "" {
+		*dsn = *dbAlias
+	}
 
 	if *input == "" {
 		fmt.Fprintln(os.Stderr, "error: -input is required")
@@ -1117,11 +1351,19 @@ func RunControls(args []string) {
 		fs := flag.NewFlagSet("controls search", flag.ExitOnError)
 		fwName := fs.String("framework", "cccs-itsp-10-033", "Framework identifier")
 		limit := fs.Int("limit", 25, "Maximum results to display")
-		_ = fs.Parse(args[1:])
+		jsonOut := fs.Bool("json", false, "Output search results in JSON format")
+		parseFlagsInterspersed(fs, args[1:])
+
+		if isUnexpandedPlaceholder(*fwName) || *fwName == "" {
+			*fwName = "cccs-itsp-10-033"
+		}
 
 		query := ""
 		if fs.NArg() > 0 {
 			query = strings.Join(fs.Args(), " ")
+			if isUnexpandedPlaceholder(query) {
+				query = ""
+			}
 		}
 
 		fw, ok := reg.Get(*fwName)
@@ -1137,6 +1379,16 @@ func RunControls(args []string) {
 		}
 
 		matches := frameworks.SearchControls(ctrls, query, *limit)
+		if *jsonOut {
+			if matches == nil {
+				matches = []frameworks.ControlInfo{}
+			}
+			enc := json.NewEncoder(os.Stdout)
+			enc.SetIndent("", "  ")
+			_ = enc.Encode(matches)
+			return
+		}
+
 		fmt.Printf("\n=== SEARCH RESULTS IN %s (Query: '%s', Matches: %d) ===\n", fw.ID(), query, len(matches))
 		fmt.Printf("%-14s %-8s %-14s %s\n", "CONTROL ID", "FAMILY", "SOVEREIGN", "TITLE")
 		fmt.Println(strings.Repeat("-", 80))
@@ -1152,7 +1404,12 @@ func RunControls(args []string) {
 	case "get":
 		fs := flag.NewFlagSet("controls get", flag.ExitOnError)
 		fwName := fs.String("framework", "cccs-itsp-10-033", "Framework identifier")
-		_ = fs.Parse(args[1:])
+		jsonOut := fs.Bool("json", false, "Output control details in JSON format")
+		parseFlagsInterspersed(fs, args[1:])
+
+		if isUnexpandedPlaceholder(*fwName) || *fwName == "" {
+			*fwName = "cccs-itsp-10-033"
+		}
 
 		if fs.NArg() < 1 {
 			fmt.Fprintln(os.Stderr, "error: control ID is required (e.g. 'xoscal controls get ac-2')")
@@ -1176,6 +1433,13 @@ func RunControls(args []string) {
 		if !found {
 			fmt.Fprintf(os.Stderr, "error: control '%s' not found in framework %s\n", ctrlID, *fwName)
 			os.Exit(1)
+		}
+
+		if *jsonOut {
+			enc := json.NewEncoder(os.Stdout)
+			enc.SetIndent("", "  ")
+			_ = enc.Encode(c)
+			return
 		}
 
 		sovereignTag := ""
@@ -1220,7 +1484,15 @@ func RunControls(args []string) {
 		fs := flag.NewFlagSet("controls list", flag.ExitOnError)
 		fwName := fs.String("framework", "cccs-itsp-10-033", "Framework identifier")
 		fam := fs.String("family", "", "Optional filter by family code (e.g. AC, IA, SC)")
-		_ = fs.Parse(args[1:])
+		jsonOut := fs.Bool("json", false, "Output controls list in JSON format")
+		parseFlagsInterspersed(fs, args[1:])
+
+		if isUnexpandedPlaceholder(*fwName) || *fwName == "" {
+			*fwName = "cccs-itsp-10-033"
+		}
+		if isUnexpandedPlaceholder(*fam) {
+			*fam = ""
+		}
 
 		fw, ok := reg.Get(*fwName)
 		if !ok {
@@ -1240,6 +1512,16 @@ func RunControls(args []string) {
 			if famUpper == "" || c.FamilyID == famUpper {
 				filtered = append(filtered, c)
 			}
+		}
+
+		if *jsonOut {
+			if filtered == nil {
+				filtered = []frameworks.ControlInfo{}
+			}
+			enc := json.NewEncoder(os.Stdout)
+			enc.SetIndent("", "  ")
+			_ = enc.Encode(filtered)
+			return
 		}
 
 		famHeader := ""
@@ -1270,7 +1552,15 @@ func RunCompare(args []string) {
 	fromFlag := fs.String("from", "", "Base framework (e.g. cccs-itsg-33)")
 	toFlag := fs.String("to", "", "Target framework (e.g. cccs-itsp-10-033)")
 	markdown := fs.Bool("markdown", false, "Output Markdown transition report")
-	_ = fs.Parse(args)
+	jsonOut := fs.Bool("json", false, "Output comparison delta in JSON format")
+	parseFlagsInterspersed(fs, args)
+
+	if isUnexpandedPlaceholder(*fromFlag) {
+		*fromFlag = ""
+	}
+	if isUnexpandedPlaceholder(*toFlag) {
+		*toFlag = ""
+	}
 
 	fromID := *fromFlag
 	toID := *toFlag
@@ -1307,6 +1597,12 @@ func RunCompare(args []string) {
 		os.Exit(1)
 	}
 
+	if *jsonOut {
+		enc := json.NewEncoder(os.Stdout)
+		enc.SetIndent("", "  ")
+		_ = enc.Encode(comp)
+		return
+	}
 	if *markdown {
 		fmt.Print(comp.FormatMarkdown())
 	} else {
@@ -1648,6 +1944,72 @@ func RunDoctor(args []string, version string) {
 		}
 	}
 
+	// 7. Universal Tool Calling Protocol (UTCP v1.0.1) & Multi-Language Ecosystem
+	utcpManual := utcp.GenerateManual(utcp.ManualOptions{Version: version})
+	utcpBytes, utcpMarshalErr := json.Marshal(utcpManual)
+	if utcpMarshalErr != nil {
+		report.Checks = append(report.Checks, DoctorCheck{
+			Name:     "utcp_protocol",
+			Category: "UTCP Protocol",
+			Status:   "FAIL",
+			Evidence: "OBSERVED",
+			Detail:   fmt.Sprintf("Failed to serialize UTCP manual: %v", utcpMarshalErr),
+		})
+	} else if utcpRep, utcpValErr := utcp.ValidateManual(utcpBytes); utcpValErr != nil || !utcpRep.Valid {
+		report.Checks = append(report.Checks, DoctorCheck{
+			Name:     "utcp_protocol",
+			Category: "UTCP Protocol",
+			Status:   "FAIL",
+			Evidence: "OBSERVED",
+			Detail:   fmt.Sprintf("UTCP manual failed validation: %v", utcpValErr),
+		})
+	} else {
+		report.Checks = append(report.Checks, DoctorCheck{
+			Name:     "utcp_protocol",
+			Category: "UTCP Protocol",
+			Status:   "PASS",
+			Evidence: "VERIFIED",
+			Detail:   fmt.Sprintf("UTCP v%s manual verified (%d native tools across CLI/HTTP/gRPC; 7 ecosystem targets: utcp-specification, utcp-mcp, rs-utcp, typescript-utcp, go-utcp, python-utcp)", utcpRep.UTCPVersion, utcpRep.ToolCount),
+		})
+	}
+
+	// 8. Formal Ontology, 36-Framework Property Graph & Sovereign/Threat Feeds
+	ontSpec := ontology.CanonicalSpec()
+	feedCatalog := feeds.ListFeeds()
+	ug, ugErr := graph.DefaultUnifiedGraph()
+	if ugErr != nil {
+		report.Checks = append(report.Checks, DoctorCheck{
+			Name:        "ontology_graph_feeds",
+			Category:    "Knowledge Graph & Feeds",
+			Status:      "FAIL",
+			Evidence:    "OBSERVED",
+			Detail:      fmt.Sprintf("Failed to initialize unified property graph: %v", ugErr),
+			Remediation: "Verify server/internal/ontology, server/internal/feeds, and server/internal/graph",
+		})
+	} else if recRep, recErr := ug.ReconcileInvariants(); recErr != nil || !recRep.Coherent {
+		errDetail := fmt.Sprintf("%v", recErr)
+		if recRep != nil && len(recRep.Violations) > 0 {
+			errDetail = strings.Join(recRep.Violations, "; ")
+		}
+		report.Checks = append(report.Checks, DoctorCheck{
+			Name:        "ontology_graph_feeds",
+			Category:    "Knowledge Graph & Feeds",
+			Status:      "FAIL",
+			Evidence:    "OBSERVED",
+			Detail:      fmt.Sprintf("Unified property graph invariant decoherence: %s", errDetail),
+			Remediation: "Run 'xoscal graph reconcile' to inspect violations",
+		})
+	} else {
+		gStats := ug.Stats()
+		report.Checks = append(report.Checks, DoctorCheck{
+			Name:     "ontology_graph_feeds",
+			Category: "Knowledge Graph & Feeds",
+			Status:   "PASS",
+			Evidence: "VERIFIED",
+			Detail:   fmt.Sprintf("OWL/JSON-LD v%s (%d classes, %d predicates); %d nodes, %d edges across %d frameworks & %d feeds; reconciled (0 violations)", ontSpec.Version, len(ontSpec.Classes), len(ontSpec.Predicates), gStats.TotalNodes, gStats.TotalEdges, gStats.FrameworksCount, len(feedCatalog)),
+		})
+	}
+
 	// Compute totals
 	for _, c := range report.Checks {
 		switch c.Status {
@@ -1699,6 +2061,579 @@ func RunDoctor(args []string, version string) {
 	fmt.Printf("Overall Verdict:    %s\n\n", report.Verdict)
 
 	if report.Failed > 0 {
+		os.Exit(1)
+	}
+}
+
+// RunUTCP executes Universal Tool Calling Protocol (UTCP) operations.
+func RunUTCP(args []string) {
+	sub := "manual"
+	rest := args
+	if len(args) > 0 && !strings.HasPrefix(args[0], "-") {
+		sub = strings.ToLower(args[0])
+		rest = args[1:]
+	}
+
+	switch sub {
+	case "manual":
+		fs := flag.NewFlagSet("utcp manual", flag.ExitOnError)
+		outPath := fs.String("out", "", "Write UTCP manual JSON to file (default: stdout)")
+		baseURL := fs.String("base-url", "http://127.0.0.1:8080", "Base HTTP URL for HTTP tool call templates")
+		grpcHost := fs.String("grpc-host", "127.0.0.1:50051", "gRPC host:port for gRPC tool call templates")
+		binPath := fs.String("bin", "xoscal", "CLI binary name or path for CLI tool call templates")
+		_ = fs.Parse(rest)
+
+		manual := utcp.GenerateManual(utcp.ManualOptions{
+			BaseHTTPURL: *baseURL,
+			GRPCHost:    *grpcHost,
+			BinaryPath:  *binPath,
+		})
+		data, err := json.MarshalIndent(manual, "", "  ")
+		if err != nil {
+			fmt.Fprintf(os.Stderr, "error marshaling UTCP manual: %v\n", err)
+			os.Exit(1)
+		}
+		if *outPath != "" {
+			cleanOut := filepath.Clean(*outPath)
+			// #nosec G306 -- UTCP manual is a public machine-readable contract.
+			if err := os.WriteFile(cleanOut, append(data, '\n'), 0o644); err != nil {
+				fmt.Fprintf(os.Stderr, "error writing UTCP manual to %s: %v\n", cleanOut, err)
+				os.Exit(1)
+			}
+			fmt.Printf("[OK] Emitted UTCP v%s manual (%d tools) to %s\n", manual.UTCPVersion, len(manual.Tools), cleanOut)
+			return
+		}
+		fmt.Println(string(data))
+
+	case "validate":
+		fs := flag.NewFlagSet("utcp validate", flag.ExitOnError)
+		filePath := fs.String("file", "", "Path to UTCP manual JSON file (if omitted, validates built-in xOSCAL manual)")
+		jsonOut := fs.Bool("json", false, "Emit validation report as JSON")
+		_ = fs.Parse(rest)
+
+		if *filePath == "" && fs.NArg() > 0 {
+			*filePath = fs.Arg(0)
+		}
+
+		var data []byte
+		var err error
+		if *filePath != "" {
+			cleanIn := filepath.Clean(*filePath)
+			// #nosec G304 -- operator-selected UTCP manual path for validation.
+			data, err = os.ReadFile(cleanIn)
+			if err != nil {
+				fmt.Fprintf(os.Stderr, "error reading %s: %v\n", cleanIn, err)
+				os.Exit(1)
+			}
+		} else {
+			manual := utcp.GenerateManual(utcp.ManualOptions{})
+			data, err = json.MarshalIndent(manual, "", "  ")
+			if err != nil {
+				fmt.Fprintf(os.Stderr, "error marshaling built-in manual: %v\n", err)
+				os.Exit(1)
+			}
+		}
+
+		rep, err := utcp.ValidateManual(data)
+		if err != nil {
+			fmt.Fprintf(os.Stderr, "error validating UTCP manual: %v\n", err)
+			os.Exit(1)
+		}
+
+		if *jsonOut {
+			out, _ := json.MarshalIndent(rep, "", "  ")
+			fmt.Println(string(out))
+		} else {
+			fmt.Printf("=== xOSCAL UTCP v%s Conformance Report ===\n", rep.UTCPVersion)
+			fmt.Printf("Verdict:        %s (Valid: %t)\n", rep.Verdict, rep.Valid)
+			fmt.Printf("Manual Version: %s\n", rep.ManualVersion)
+			fmt.Printf("Tools Count:    %d (Transports: %v)\n", rep.ToolCount, rep.Transports)
+			fmt.Printf("Manual SHA-256: %s\n", rep.ManualSHA256)
+			for _, f := range rep.Findings {
+				fmt.Printf("  [%s] %s (%s): %s\n", f.Severity, f.Code, f.ToolName, f.Message)
+			}
+		}
+		if !rep.Valid {
+			os.Exit(1)
+		}
+
+	case "mcp-config":
+		fs := flag.NewFlagSet("utcp mcp-config", flag.ExitOnError)
+		manualURL := fs.String("manual-url", "http://127.0.0.1:8080/.well-known/utcp", "HTTP URL of UTCP manual")
+		manualFile := fs.String("manual-file", "./utcp.json", "Local file path of UTCP manual")
+		outPath := fs.String("out", "", "Optional output file path")
+		_ = fs.Parse(rest)
+
+		cfgBytes, err := utcp.GenerateMCPBridgeConfig(*manualURL, *manualFile)
+		if err != nil {
+			fmt.Fprintf(os.Stderr, "error generating utcp-mcp config: %v\n", err)
+			os.Exit(1)
+		}
+		if *outPath != "" {
+			cleanOut := filepath.Clean(*outPath)
+			// #nosec G306 -- utcp-mcp configuration file is non-sensitive.
+			if err := os.WriteFile(cleanOut, append(cfgBytes, '\n'), 0o644); err != nil {
+				fmt.Fprintf(os.Stderr, "error writing %s: %v\n", cleanOut, err)
+				os.Exit(1)
+			}
+			fmt.Printf("[OK] Emitted utcp-mcp bridge config to %s\n", cleanOut)
+			return
+		}
+		fmt.Println(string(cfgBytes))
+
+	case "sdk":
+		fs := flag.NewFlagSet("utcp sdk", flag.ExitOnError)
+		target := fs.String("target", "go-utcp", "Target UTCP SDK (go-utcp, python-utcp, typescript-utcp, rs-utcp, utcp-mcp)")
+		manualURL := fs.String("manual-url", "http://127.0.0.1:8080/.well-known/utcp", "HTTP URL of UTCP manual")
+		manualFile := fs.String("manual-file", "./utcp.json", "Local file path of UTCP manual")
+		outPath := fs.String("out", "", "Optional output file path")
+		_ = fs.Parse(rest)
+
+		if fs.NArg() > 0 && *target == "go-utcp" {
+			*target = fs.Arg(0)
+		}
+
+		code, err := utcp.GenerateSDKHarness(*target, *manualURL, *manualFile)
+		if err != nil {
+			fmt.Fprintf(os.Stderr, "error: %v\n", err)
+			os.Exit(1)
+		}
+		if *outPath != "" {
+			cleanOut := filepath.Clean(*outPath)
+			// #nosec G306 -- generated SDK harness source file.
+			if err := os.WriteFile(cleanOut, []byte(code), 0o644); err != nil {
+				fmt.Fprintf(os.Stderr, "error writing %s: %v\n", cleanOut, err)
+				os.Exit(1)
+			}
+			fmt.Printf("[OK] Emitted %s harness to %s\n", *target, cleanOut)
+			return
+		}
+		fmt.Print(code)
+
+	case "ecosystem", "list":
+		fs := flag.NewFlagSet("utcp ecosystem", flag.ExitOnError)
+		jsonOut := fs.Bool("json", false, "Emit supported UTCP ecosystem repositories as JSON")
+		_ = fs.Parse(rest)
+
+		if *jsonOut {
+			out, _ := json.MarshalIndent(utcp.SupportedRepositories, "", "  ")
+			fmt.Println(string(out))
+			return
+		}
+		fmt.Println("=== Supported Universal Tool Calling Protocol (UTCP) Ecosystem ===")
+		for _, r := range utcp.SupportedRepositories {
+			fmt.Printf("  * %-32s [%-22s] %s\n    ↳ %s (%s)\n", r.Name, r.Language, r.URL, r.Role, r.Package)
+		}
+
+	default:
+		fmt.Fprintf(os.Stderr, "unknown utcp subcommand %q (expected: manual, validate, mcp-config, sdk, ecosystem)\n", sub)
+		os.Exit(1)
+	}
+}
+
+// RunOntology inspects the formal OWL/JSON-LD regulatory & threat ontology.
+func RunOntology(args []string) {
+	sub := "spec"
+	rest := args
+	if len(args) > 0 && !strings.HasPrefix(args[0], "-") {
+		sub = strings.ToLower(args[0])
+		rest = args[1:]
+	}
+
+	fs := flag.NewFlagSet("ontology", flag.ExitOnError)
+	jsonOut := fs.Bool("json", false, "Output ontology specification in JSON-LD format")
+	parseFlagsInterspersed(fs, rest)
+
+	spec := ontology.CanonicalSpec()
+
+	switch sub {
+	case "classes":
+		if *jsonOut {
+			out, _ := json.MarshalIndent(spec.Classes, "", "  ")
+			fmt.Println(string(out))
+			return
+		}
+		fmt.Printf("\n=== xOSCAL OWL/JSON-LD ONTOLOGY CLASSES (v%s) ===\n", spec.Version)
+		fmt.Printf("%-26s %-14s %-34s %s\n", "CLASS ID", "DOMAIN", "URN PATTERN", "LABEL")
+		fmt.Println(strings.Repeat("-", 96))
+		for _, c := range spec.Classes {
+			fmt.Printf("%-26s %-14s %-34s %s\n", c.ID, c.Domain, c.URNPattern, c.Label)
+		}
+		fmt.Println()
+
+	case "predicates":
+		if *jsonOut {
+			out, _ := json.MarshalIndent(spec.Predicates, "", "  ")
+			fmt.Println(string(out))
+			return
+		}
+		fmt.Printf("\n=== xOSCAL OWL/JSON-LD SEMANTIC PREDICATES (v%s) ===\n", spec.Version)
+		fmt.Printf("%-24s %-12s %-8s %-8s %s\n", "PREDICATE", "CATEGORY", "IS_ANTI", "WEIGHT", "DESCRIPTION")
+		fmt.Println(strings.Repeat("-", 96))
+		for _, p := range spec.Predicates {
+			fmt.Printf("%-24s %-12s %-8v %-8.2f %s\n", p.Name, p.Category, p.IsAnti, p.DefaultWeight, p.Description)
+		}
+		fmt.Println()
+
+	case "spec":
+		if *jsonOut {
+			out, _ := json.MarshalIndent(spec, "", "  ")
+			fmt.Println(string(out))
+			return
+		}
+		fmt.Printf("\n=== xOSCAL FORMAL OWL/JSON-LD ONTOLOGY SPECIFICATION ===\n")
+		fmt.Printf("Version:          %s\n", spec.Version)
+		fmt.Printf("Namespace:        %s\n", spec.Namespace)
+		fmt.Printf("Classes:          %d\n", len(spec.Classes))
+		fmt.Printf("Predicates:       %d (including 2 CKODEX Rule 17 ANTI relations)\n", len(spec.Predicates))
+		fmt.Printf("Thematic Domains: %d\n", len(spec.ThematicDomains))
+		fmt.Printf("SHA-256 Digest:   %s\n\n", spec.SHA256)
+
+	default:
+		fmt.Fprintf(os.Stderr, "unknown ontology subcommand %q (expected: classes, predicates, spec)\n", sub)
+		os.Exit(1)
+	}
+}
+
+// RunGraph queries the 36-framework property graph, crosswalks, and 6D blast radius engine.
+func RunGraph(args []string) {
+	sub := "stats"
+	rest := args
+	if len(args) > 0 && !strings.HasPrefix(args[0], "-") {
+		sub = strings.ToLower(args[0])
+		rest = args[1:]
+	}
+
+	ug, err := graph.DefaultUnifiedGraph()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "error loading unified property graph: %v\n", err)
+		os.Exit(1)
+	}
+
+	switch sub {
+	case "stats":
+		fs := flag.NewFlagSet("graph stats", flag.ExitOnError)
+		jsonOut := fs.Bool("json", false, "Output graph statistics as JSON")
+		parseFlagsInterspersed(fs, rest)
+
+		stats := ug.Stats()
+		if *jsonOut {
+			out, _ := json.MarshalIndent(stats, "", "  ")
+			fmt.Println(string(out))
+			return
+		}
+		fmt.Printf("\n=== xOSCAL UNIFIED 36-FRAMEWORK PROPERTY GRAPH STATS ===\n")
+		fmt.Printf("Total Nodes:        %d\n", stats.TotalNodes)
+		fmt.Printf("Total Edges:        %d\n", stats.TotalEdges)
+		fmt.Printf("Frameworks Seeded:  %d\n", stats.FrameworksCount)
+		fmt.Printf("Feeds Seeded:       %d\n", stats.FeedsCount)
+		fmt.Printf("Active ANTI Edges:  %d\n", stats.AntiEdgeCount)
+		fmt.Printf("Ontology Version:   %s (%s)\n\n", stats.OntologyVersion, stats.OntologySHA256)
+
+	case "crosswalk":
+		fs := flag.NewFlagSet("graph crosswalk", flag.ExitOnError)
+		ctrl := fs.String("control", "ac-2", "Control ID or <framework>:<control-id> (e.g. ac-2, cccs-itsp-10-033:si-2)")
+		jsonOut := fs.Bool("json", false, "Output crosswalk report as JSON")
+		parseFlagsInterspersed(fs, rest)
+
+		if isUnexpandedPlaceholder(*ctrl) || *ctrl == "" {
+			*ctrl = "ac-2"
+		}
+		if *ctrl == "ac-2" && fs.NArg() > 0 && !isUnexpandedPlaceholder(fs.Arg(0)) {
+			*ctrl = fs.Arg(0)
+		}
+
+		rep, err := ug.QueryCrosswalk(*ctrl)
+		if err != nil {
+			fmt.Fprintf(os.Stderr, "error querying crosswalk for %s: %v\n", *ctrl, err)
+			os.Exit(1)
+		}
+
+		if *jsonOut {
+			out, _ := json.MarshalIndent(rep, "", "  ")
+			fmt.Println(string(out))
+			return
+		}
+
+		fmt.Printf("\n=== MULTI-JURISDICTION CONTROL CROSSWALK: %s ===\n", strings.ToUpper(rep.CanonicalControlID))
+		fmt.Printf("Thematic Domain:    %s\n", rep.ThematicDomain)
+		fmt.Printf("Equivalent Matches: %d | Harmonized Matches: %d | Active Threats: %d\n",
+			len(rep.EquivalentControls), len(rep.HarmonizedControls), len(rep.ActiveThreats))
+		fmt.Printf("6D Vector Posture:  <%s, %s, Anti=%d, %s, %s, %s>\n\n",
+			rep.VectorPosture.Presence, rep.VectorPosture.Valence, rep.VectorPosture.AntiCount,
+			rep.VectorPosture.Coherence, rep.VectorPosture.Evidence, rep.VectorPosture.Lifecycle)
+
+		fmt.Printf("%-26s %-6s %-16s %-18s %s\n", "FRAMEWORK", "LOCALE", "CONTROL ID", "RELATION", "TITLE")
+		fmt.Println(strings.Repeat("-", 96))
+		for _, m := range rep.EquivalentControls {
+			fmt.Printf("%-26s %-6s %-16s %-18s %s\n", m.FrameworkID, strings.ToUpper(m.Jurisdiction), m.ControlID, m.Relation, m.Title)
+		}
+		for _, m := range rep.HarmonizedControls {
+			fmt.Printf("%-26s %-6s %-16s %-18s %s\n", m.FrameworkID, strings.ToUpper(m.Jurisdiction), m.ControlID, m.Relation, m.Title)
+		}
+		fmt.Println()
+
+	case "blast-radius":
+		fs := flag.NewFlagSet("graph blast-radius", flag.ExitOnError)
+		target := fs.String("target", "CVE-2024-3400", "Target CVE/KEV ID, ATT&CK technique, framework, or control ID")
+		depth := fs.Int("depth", 2, "Maximum traversal depth (1..5)")
+		jsonOut := fs.Bool("json", false, "Output blast-radius report as JSON")
+		parseFlagsInterspersed(fs, rest)
+
+		if isUnexpandedPlaceholder(*target) || *target == "" {
+			*target = "CVE-2024-3400"
+		}
+		if *target == "CVE-2024-3400" && fs.NArg() > 0 && !isUnexpandedPlaceholder(fs.Arg(0)) {
+			*target = fs.Arg(0)
+		}
+
+		rep, err := ug.ComputeBlastRadius(*target, *depth)
+		if err != nil {
+			fmt.Fprintf(os.Stderr, "error computing blast radius for %s: %v\n", *target, err)
+			os.Exit(1)
+		}
+
+		if *jsonOut {
+			out, _ := json.MarshalIndent(rep, "", "  ")
+			fmt.Println(string(out))
+			return
+		}
+
+		fmt.Printf("\n=== 6D VECTOR-STATE BLAST RADIUS REPORT: %s ===\n", rep.RootNode.URN)
+		fmt.Printf("Root Node ID:         %s (%s)\n", rep.RootNode.ID, rep.RootNode.Kind)
+		fmt.Printf("Max Depth:            %d\n", rep.MaxDepth)
+		fmt.Printf("Impacted Nodes/Edges: %d nodes / %d edges\n", len(rep.ImpactedNodes), len(rep.ImpactedEdges))
+		fmt.Printf("Impacted Controls:    %d across %d frameworks (%v)\n", len(rep.ImpactedControls), len(rep.ImpactedFrameworks), rep.JurisdictionImpact)
+		fmt.Printf("ANTI Edges:           %d | Mitigating Edges: %d\n", rep.AntiEdgeCount, rep.MitigationEdgeCount)
+		fmt.Printf("6D Vector State:      <%s, %s, Anti=%d, %s, %s, %s>\n\n",
+			rep.VectorPosture.Presence, rep.VectorPosture.Valence, rep.VectorPosture.AntiCount,
+			rep.VectorPosture.Coherence, rep.VectorPosture.Evidence, rep.VectorPosture.Lifecycle)
+
+	case "export":
+		fs := flag.NewFlagSet("graph export", flag.ExitOnError)
+		target := fs.String("target", "CVE-2024-3400", "Target URN or ID for subgraph export")
+		depth := fs.Int("depth", 2, "Maximum traversal depth")
+		format := fs.String("format", "jsonld", "Export format (jsonld, cytoscape, cypher)")
+		jsonOut := fs.Bool("json", false, "Output as JSON")
+		parseFlagsInterspersed(fs, rest)
+
+		if isUnexpandedPlaceholder(*target) || *target == "" {
+			*target = "CVE-2024-3400"
+		}
+		if isUnexpandedPlaceholder(*format) || *format == "" {
+			*format = "jsonld"
+		}
+		_ = jsonOut
+
+		out, err := ug.ExportSubgraph(*target, *depth, *format)
+		if err != nil {
+			fmt.Fprintf(os.Stderr, "error exporting subgraph: %v\n", err)
+			os.Exit(1)
+		}
+		fmt.Println(out)
+
+	case "reconcile":
+		fs := flag.NewFlagSet("graph reconcile", flag.ExitOnError)
+		jsonOut := fs.Bool("json", false, "Output graph reconciliation report as JSON")
+		parseFlagsInterspersed(fs, rest)
+
+		rep, err := ug.ReconcileInvariants()
+		if err != nil {
+			fmt.Fprintf(os.Stderr, "error reconciling unified property graph: %v\n", err)
+			os.Exit(1)
+		}
+		if *jsonOut {
+			out, _ := json.MarshalIndent(rep, "", "  ")
+			fmt.Println(string(out))
+			if !rep.Coherent {
+				os.Exit(1)
+			}
+			return
+		}
+
+		verdict := "COHERENT"
+		if !rep.Coherent {
+			verdict = "DECOHERENT"
+		}
+		fmt.Printf("\n=== xOSCAL UNIFIED GRAPH INVARIANT RECONCILIATION (Rule 34) ===\n")
+		fmt.Printf("Verdict:           %s\n", verdict)
+		fmt.Printf("Checked Nodes:     %d\n", rep.CheckedNodes)
+		fmt.Printf("Checked Edges:     %d\n", rep.CheckedEdges)
+		fmt.Printf("Graph SHA-256:     %s\n", rep.GraphSHA256)
+		fmt.Printf("6D Vector Posture: <%s, %s, Anti=%d, %s, %s, %s>\n",
+			rep.VectorPosture.Presence, rep.VectorPosture.Valence, rep.VectorPosture.AntiCount,
+			rep.VectorPosture.Coherence, rep.VectorPosture.Evidence, rep.VectorPosture.Lifecycle)
+		for _, v := range rep.Violations {
+			fmt.Printf("  [VIOLATION] %s\n", v)
+		}
+		fmt.Println()
+		if !rep.Coherent {
+			os.Exit(1)
+		}
+
+	default:
+		fmt.Fprintf(os.Stderr, "unknown graph subcommand %q (expected: stats, crosswalk, blast-radius, export, reconcile)\n", sub)
+		os.Exit(1)
+	}
+}
+
+// RunFeeds lists, syncs, inspects, and verifies checkpoints for sovereign regulatory & threat intelligence feeds.
+func RunFeeds(args []string) {
+	sub := "list"
+	rest := args
+	if len(args) > 0 && !strings.HasPrefix(args[0], "-") {
+		sub = strings.ToLower(args[0])
+		rest = args[1:]
+	}
+
+	switch sub {
+	case "list":
+		fs := flag.NewFlagSet("feeds list", flag.ExitOnError)
+		jsonOut := fs.Bool("json", false, "Output feeds list as JSON")
+		parseFlagsInterspersed(fs, rest)
+
+		list := feeds.ListFeeds()
+		if *jsonOut {
+			out, _ := json.MarshalIndent(list, "", "  ")
+			fmt.Println(string(out))
+			return
+		}
+
+		fmt.Printf("\n=== AUTHORITATIVE SOVEREIGN & THREAT INTELLIGENCE FEEDS ===\n")
+		fmt.Printf("%-32s %-18s %-26s %-8s %s\n", "FEED ID", "LOCALES", "AUTHORITY", "RECORDS", "TITLE")
+		fmt.Println(strings.Repeat("-", 96))
+		for _, f := range list {
+			fmt.Printf("%-32s %-18s %-26s %-8d %s\n", f.ID, strings.ToUpper(strings.Join(f.Jurisdictions, ",")), f.Authority, f.RecordCount, f.Title)
+		}
+		fmt.Println()
+
+	case "sync":
+		fs := flag.NewFlagSet("feeds sync", flag.ExitOnError)
+		feedID := fs.String("feed", "", "Optional specific feed ID to sync (default: all 4 feeds)")
+		offline := fs.Bool("offline", true, "Air-gap offline deterministic sync mode (Rule 40)")
+		checkpointDir := fs.String("checkpoint-dir", "", "Optional directory for atomic SHA-256 receipt checkpoint and flight recorder")
+		jsonOut := fs.Bool("json", false, "Output execution receipt(s) as JSON")
+		parseFlagsInterspersed(fs, rest)
+
+		if isUnexpandedPlaceholder(*feedID) {
+			*feedID = ""
+		}
+		if isUnexpandedPlaceholder(*checkpointDir) {
+			*checkpointDir = ""
+		}
+
+		ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)
+		defer cancel()
+
+		receipt, err := feeds.SyncFeeds(ctx, feeds.SyncOptions{
+			FeedID:        *feedID,
+			Offline:       *offline,
+			CheckpointDir: *checkpointDir,
+		})
+		if err != nil {
+			fmt.Fprintf(os.Stderr, "error syncing feeds: %v\n", err)
+			os.Exit(1)
+		}
+		if *jsonOut {
+			out, _ := json.MarshalIndent(receipt, "", "  ")
+			fmt.Println(string(out))
+			return
+		}
+		fmt.Printf("\n=== FEED SYNC EXECUTION RECEIPT (Rule 12): %s ===\n", receipt.ReceiptID)
+		fmt.Printf("Mode: %s (%s, Fallbacks: %d) | Total Nodes: %d | Total Edges: %d | Bundle SHA-256: %s\n",
+			receipt.Mode, receipt.OperationalMode, receipt.FallbackCount, receipt.TotalNodes, receipt.TotalEdges, receipt.BundleSHA256)
+		for _, r := range receipt.Feeds {
+			fmt.Printf("  [OK] %-32s Mode=%-16s Circuit=%-9s Records=%-4d Nodes=%-4d Edges=%-4d SHA256=%s\n",
+				r.FeedID, r.Mode, r.CircuitState, r.RecordCount, r.NodesProjected, r.EdgesProjected, r.SHA256[:16]+"...")
+		}
+		if *checkpointDir != "" {
+			fmt.Printf("  [CHECKPOINT] Persisted atomic receipt + hash-chained flight recorder in %s\n", *checkpointDir)
+		}
+		fmt.Println()
+
+	case "verify-checkpoint":
+		fs := flag.NewFlagSet("feeds verify-checkpoint", flag.ExitOnError)
+		checkpointDir := fs.String("checkpoint-dir", "", "Directory containing latest_sync_receipt.json and sync_flight_recorder.jsonl")
+		jsonOut := fs.Bool("json", false, "Output checkpoint verification report as JSON")
+		parseFlagsInterspersed(fs, rest)
+
+		if isUnexpandedPlaceholder(*checkpointDir) {
+			*checkpointDir = ""
+		}
+		if *checkpointDir == "" && fs.NArg() > 0 && !isUnexpandedPlaceholder(fs.Arg(0)) {
+			*checkpointDir = fs.Arg(0)
+		}
+		if *checkpointDir == "" {
+			fmt.Fprintln(os.Stderr, "error: -checkpoint-dir is required")
+			os.Exit(1)
+		}
+
+		rcpt, entries, err := feeds.VerifyCheckpointDir(*checkpointDir)
+		if err != nil {
+			if *jsonOut {
+				out, _ := json.MarshalIndent(map[string]any{
+					"valid":          false,
+					"verdict":        "TAMPERED_OR_INVALID",
+					"checkpoint_dir": *checkpointDir,
+					"error":          err.Error(),
+				}, "", "  ")
+				fmt.Println(string(out))
+			} else {
+				fmt.Fprintf(os.Stderr, "checkpoint verification failed for %s: %v\n", *checkpointDir, err)
+			}
+			os.Exit(1)
+		}
+
+		if *jsonOut {
+			out, _ := json.MarshalIndent(map[string]any{
+				"valid":          true,
+				"verdict":        "VERIFIED",
+				"checkpoint_dir": *checkpointDir,
+				"ledger_entries": entries,
+				"receipt":        rcpt,
+			}, "", "  ")
+			fmt.Println(string(out))
+			return
+		}
+
+		fmt.Printf("\n=== FEED CHECKPOINT & FLIGHT RECORDER VERIFICATION (Rules 12 & 38) ===\n")
+		fmt.Printf("Verdict:        VERIFIED\n")
+		fmt.Printf("Checkpoint Dir: %s\n", *checkpointDir)
+		fmt.Printf("Ledger Entries: %d hash-chained receipt(s)\n", entries)
+		fmt.Printf("Latest Receipt: %s (Bundle SHA-256: %s)\n\n", rcpt.ReceiptID, rcpt.BundleSHA256)
+
+	case "inspect":
+		fs := flag.NewFlagSet("feeds inspect", flag.ExitOnError)
+		feedID := fs.String("feed", "cisa-kev-active-threats", "Feed ID to inspect")
+		jsonOut := fs.Bool("json", false, "Output feed bundle as JSON")
+		parseFlagsInterspersed(fs, rest)
+
+		if isUnexpandedPlaceholder(*feedID) || *feedID == "" {
+			*feedID = "cisa-kev-active-threats"
+		}
+		if *feedID == "cisa-kev-active-threats" && fs.NArg() > 0 && !isUnexpandedPlaceholder(fs.Arg(0)) {
+			*feedID = fs.Arg(0)
+		}
+
+		bundle, err := feeds.InspectFeed(*feedID)
+		if err != nil {
+			fmt.Fprintf(os.Stderr, "error inspecting feed %s: %v\n", *feedID, err)
+			os.Exit(1)
+		}
+		if *jsonOut {
+			out, _ := json.MarshalIndent(bundle, "", "  ")
+			fmt.Println(string(out))
+			return
+		}
+		fmt.Printf("\n=== FEED INSPECTION: %s ===\n", bundle.Descriptor.Title)
+		fmt.Printf("ID:             %s\n", bundle.Descriptor.ID)
+		fmt.Printf("Authority:      %s (%s)\n", bundle.Descriptor.Authority, strings.ToUpper(strings.Join(bundle.Descriptor.Jurisdictions, ", ")))
+		fmt.Printf("Upstream URL:   %s\n", bundle.Descriptor.UpstreamURL)
+		fmt.Printf("Records:        %d\n", bundle.Descriptor.RecordCount)
+		fmt.Printf("SHA-256 Digest: %s\n\n", bundle.Descriptor.SHA256)
+
+	default:
+		fmt.Fprintf(os.Stderr, "unknown feeds subcommand %q (expected: list, sync, inspect, verify-checkpoint)\n", sub)
 		os.Exit(1)
 	}
 }

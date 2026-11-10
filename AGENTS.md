@@ -26,6 +26,11 @@ go test ./server/cmd/xoscal/...                 # unified CLI binary
 go test ./server/cmd/xoscal-ctl/...             # CLI command tests (incl. frameworks & seed)
 go test ./server/internal/frameworks/...        # framework abstraction, registry, controls & compare
 go test ./server/internal/canadianframeworks/...# Canadian sovereign frameworks tests
+go test ./server/internal/ontology/...          # OWL/JSON-LD v1.0.0 regulatory & threat ontology tests
+go test ./server/internal/graph/...             # property graph, 36-framework crosswalk, blast-radius & reconciler tests
+go test ./server/internal/feeds/...             # CISA KEV, MITRE ATT&CK, crosswalk & flight-recorder feed tests
+go test ./server/internal/resilience/...        # circuit breaker, retry w/ jitter, atomic fsync & HTTP backpressure tests
+go test ./server/internal/utcp/...              # Universal Tool Calling Protocol (UTCP v1.0.1) & multi-language SDK tests
 go test ./server/internal/webstudio/...         # embedded web studio & API tests
 go test ./server/internal/completion/...        # shell completion tests
 go test ./server/internal/integrity/...         # semantic reference integrity validator
