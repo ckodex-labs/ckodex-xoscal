@@ -118,3 +118,43 @@ func TestScaffoldWorkspace_CanadianFrameworks(t *testing.T) {
 		})
 	}
 }
+
+func TestScanRepository_DetectsUTCPEcosystem(t *testing.T) {
+	tmpDir := t.TempDir()
+
+	goMod := "module github.com/test/utcp-agent\n\ngo 1.24\n\nrequire github.com/universal-tool-calling-protocol/go-utcp v1.0.0\n"
+	pkgJSON := `{"name":"utcp-agent","version":"1.0.0","dependencies":{"@utcp/sdk":"^1.0.0","@utcp/mcp":"^1.0.0"}}`
+	cargoToml := "[package]\nname = \"utcp-agent\"\n[dependencies]\nrs-utcp = \"1.0\"\n"
+	pyProject := "[project]\ndependencies = [\"python-utcp>=1.0.0\"]\n"
+
+	for name, content := range map[string]string{
+		"go.mod":         goMod,
+		"package.json":   pkgJSON,
+		"Cargo.toml":     cargoToml,
+		"pyproject.toml": pyProject,
+		"utcp.json":      `{"manual_version":"1.0.0","utcp_version":"1.0.1","tools":[]}`,
+	} {
+		if err := os.WriteFile(filepath.Join(tmpDir, name), []byte(content), 0o600); err != nil {
+			t.Fatalf("write %s: %v", name, err)
+		}
+	}
+
+	scan, jsonBytes, err := ScaffoldWorkspace(tmpDir, "cccs-itsp-10-033")
+	if err != nil {
+		t.Fatalf("ScaffoldWorkspace: %v", err)
+	}
+	if !scan.HasUTCP {
+		t.Fatalf("expected HasUTCP=true, got false")
+	}
+	if len(scan.UTCPSDKs) != 5 {
+		t.Errorf("expected 5 detected UTCP SDKs (go-utcp, typescript-utcp, utcp-mcp, python-utcp, rs-utcp), got %v", scan.UTCPSDKs)
+	}
+
+	v, err := schemavalidate.NewValidator()
+	if err != nil {
+		t.Fatalf("NewValidator: %v", err)
+	}
+	if err := v.Validate(jsonBytes, schemavalidate.KindComponentDefinition); err != nil {
+		t.Fatalf("scaffolded UTCP component-definition failed schema validation: %v", err)
+	}
+}

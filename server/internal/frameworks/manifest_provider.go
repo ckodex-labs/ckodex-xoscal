@@ -101,7 +101,7 @@ func RegisterManifestFrameworks(r *Registry) {
 			}
 
 			for _, p := range candidates {
-				// #nosec G304 -- path is derived from the static compiled manifestFrameworkSpecs table.
+				// #nosec G304,G703 -- path is derived from the static compiled manifestFrameworkSpecs table.
 				if data, err := os.ReadFile(p); err == nil && len(data) > 0 {
 					cached = data
 					return cached, nil

@@ -175,4 +175,33 @@ func TestRegistry_SeedKG(t *testing.T) {
 	if len(reqs) == 0 {
 		t.Fatalf("expected requirements entities, got 0")
 	}
+
+	// Also seed cccs-itsp-10-033 (which has base controls, enhancements, and ODPs) and verify kg_graph_nodes & kg_graph_edges
+	f33, ok := frameworks.DefaultRegistry().Get("cccs-itsp-10-033")
+	if !ok {
+		t.Fatalf("cccs-itsp-10-033 framework not found")
+	}
+	if err := frameworks.SeedFramework(ctx, store, f33); err != nil {
+		t.Fatalf("SeedFramework(cccs-itsp-10-033) failed: %v", err)
+	}
+
+	db := store.(*kg.SQLiteStore).DB()
+	var labelsJSON string
+	err = db.QueryRowContext(ctx, `SELECT labels_json FROM kg_graph_nodes WHERE id = ?`, "urn:xoscal:requirement:cccs-itsp-10-033:ac-2").Scan(&labelsJSON)
+	if err != nil {
+		t.Fatalf("query ac-2 graph node: %v", err)
+	}
+	if labelsJSON == "" || labelsJSON == `{"framework":"cccs-itsp-10-033"}` {
+		t.Errorf("expected full labels_json on parent control ac-2 (not overwritten by enhancement stub), got %s", labelsJSON)
+	}
+
+	for _, rel := range []string{"BELONGS_TO_FRAMEWORK", "IN_CONTROL_FAMILY", "ENHANCES_CONTROL", "DEFINES_ODP"} {
+		var edgeCount int
+		if err := db.QueryRowContext(ctx, `SELECT COUNT(*) FROM kg_graph_edges WHERE relation = ?`, rel).Scan(&edgeCount); err != nil {
+			t.Fatalf("count %s edges: %v", rel, err)
+		}
+		if edgeCount < 100 {
+			t.Errorf("expected >= 100 %s edges preserved in kg_graph_edges without ON DELETE CASCADE wipeout, got %d", rel, edgeCount)
+		}
+	}
 }

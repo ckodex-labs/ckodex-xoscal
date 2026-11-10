@@ -28,6 +28,8 @@ type Store interface {
 	ListEdgesFrom(ctx context.Context, nodeID string, relations []string, minTrustState string, limit int) ([]*Edge, error)
 	ListEdgesTo(ctx context.Context, nodeID string, relations []string, minTrustState string, limit int) ([]*Edge, error)
 
+	BulkUpsertGraph(ctx context.Context, nodes []*Node, edges []*Edge) error
+
 	Close() error
 }
 
@@ -145,6 +147,207 @@ END;
 }
 
 func (s *SQLiteStore) Close() error { return s.db.Close() }
+
+// NewSQLiteStoreFromDB wraps an existing *sql.DB connection and ensures the graph schema is migrated.
+func NewSQLiteStoreFromDB(db *sql.DB) (*SQLiteStore, error) {
+	if db == nil {
+		return nil, fmt.Errorf("nil sql.DB")
+	}
+	s := &SQLiteStore{db: db}
+	if err := s.migrate(); err != nil {
+		return nil, fmt.Errorf("migrate graph schema: %w", err)
+	}
+	return s, nil
+}
+
+// BulkUpsertGraph inserts or updates a batch of graph nodes and edges inside a single SQLite transaction
+// using bounded multi-row batches to avoid per-row statement overhead on large (80k+ row) graphs.
+func (s *SQLiteStore) BulkUpsertGraph(ctx context.Context, nodes []*Node, edges []*Edge) error {
+	if len(nodes) == 0 && len(edges) == 0 {
+		return nil
+	}
+	tx, err := s.db.BeginTx(ctx, nil)
+	if err != nil {
+		return fmt.Errorf("begin bulk graph tx: %w", err)
+	}
+	defer func() { _ = tx.Rollback() }()
+
+	now := time.Now().UTC()
+	const batchSize = 100
+
+	var validNodes []*Node
+	seenNodeIDs := make(map[string]int, len(nodes))
+	for _, n := range nodes {
+		if n == nil || n.ID == "" {
+			continue
+		}
+		if idx, dup := seenNodeIDs[n.ID]; dup {
+			validNodes[idx] = n
+			continue
+		}
+		seenNodeIDs[n.ID] = len(validNodes)
+		validNodes = append(validNodes, n)
+	}
+
+	if len(validNodes) >= batchSize {
+		var sb strings.Builder
+		sb.WriteString("INSERT INTO kg_graph_nodes(id, kind, urn, labels_json, created_at) VALUES ")
+		for i := 0; i < batchSize; i++ {
+			if i > 0 {
+				sb.WriteByte(',')
+			}
+			sb.WriteString("(?,?,?,?,?)")
+		}
+		sb.WriteString(" ON CONFLICT(id) DO UPDATE SET kind=excluded.kind, urn=excluded.urn, labels_json=excluded.labels_json")
+		batchNodeStmt, prepErr := tx.PrepareContext(ctx, sb.String())
+		if prepErr != nil {
+			return fmt.Errorf("prepare batch node upsert: %w", prepErr)
+		}
+		defer batchNodeStmt.Close()
+
+		args := make([]any, 0, batchSize*5)
+		for start := 0; start+batchSize <= len(validNodes); start += batchSize {
+			args = args[:0]
+			for _, n := range validNodes[start : start+batchSize] {
+				createdAt := n.CreatedAt
+				if createdAt.IsZero() {
+					createdAt = now
+				}
+				urn := n.URN
+				if urn == "" {
+					urn = n.ID
+				}
+				args = append(args, n.ID, n.Kind, urn, n.LabelsJSON, createdAt)
+			}
+			if _, err := batchNodeStmt.ExecContext(ctx, args...); err != nil {
+				return fmt.Errorf("batch upsert nodes [%d:%d]: %w", start, start+batchSize, err)
+			}
+		}
+	}
+
+	if remStart := (len(validNodes) / batchSize) * batchSize; remStart < len(validNodes) {
+		nodeStmt, prepErr := tx.PrepareContext(ctx,
+			`INSERT INTO kg_graph_nodes(id, kind, urn, labels_json, created_at) VALUES (?,?,?,?,?)
+			 ON CONFLICT(id) DO UPDATE SET kind=excluded.kind, urn=excluded.urn, labels_json=excluded.labels_json`)
+		if prepErr != nil {
+			return fmt.Errorf("prepare node upsert: %w", prepErr)
+		}
+		defer nodeStmt.Close()
+		for _, n := range validNodes[remStart:] {
+			createdAt := n.CreatedAt
+			if createdAt.IsZero() {
+				createdAt = now
+			}
+			urn := n.URN
+			if urn == "" {
+				urn = n.ID
+			}
+			if _, err := nodeStmt.ExecContext(ctx, n.ID, n.Kind, urn, n.LabelsJSON, createdAt); err != nil {
+				return fmt.Errorf("upsert node %s: %w", n.ID, err)
+			}
+		}
+	}
+
+	var validEdges []*Edge
+	seenEdgeIDs := make(map[string]int, len(edges))
+	for _, e := range edges {
+		if e == nil || e.ID == "" {
+			continue
+		}
+		if idx, dup := seenEdgeIDs[e.ID]; dup {
+			validEdges[idx] = e
+			continue
+		}
+		seenEdgeIDs[e.ID] = len(validEdges)
+		validEdges = append(validEdges, e)
+	}
+
+	edgeConflictSuffix := ` ON CONFLICT(id) DO UPDATE SET
+		from_node=excluded.from_node, to_node=excluded.to_node, relation=excluded.relation,
+		qualifier=excluded.qualifier, claim_id=excluded.claim_id, evidence_digest=excluded.evidence_digest,
+		proof_state_json=excluded.proof_state_json, valid_from=excluded.valid_from, valid_to=excluded.valid_to,
+		trust_state=excluded.trust_state, weight=excluded.weight, extensions_json=excluded.extensions_json`
+
+	appendEdgeArgs := func(args []any, e *Edge) []any {
+		validFrom := e.ValidFrom
+		if validFrom.IsZero() {
+			validFrom = now
+		}
+		trustState := e.TrustState
+		if trustState == "" {
+			trustState = "verified"
+		}
+		weight := e.Weight
+		if weight == 0 {
+			weight = 1.0
+		}
+		claimID := e.ClaimID
+		if claimID == "" {
+			claimID = "claim:" + e.ID
+		}
+		evDigest := e.EvidenceDigest
+		if evDigest == "" {
+			evDigest = "sha256:canonical"
+		}
+		return append(args,
+			e.ID, e.FromNode, e.ToNode, e.Relation, e.Qualifier,
+			claimID, evDigest, e.ProofStateJSON, validFrom, e.ValidTo,
+			trustState, weight, e.ExtensionsJSON,
+		)
+	}
+
+	if len(validEdges) >= batchSize {
+		var sb strings.Builder
+		sb.WriteString(`INSERT INTO kg_graph_edges(id, from_node, to_node, relation, qualifier, claim_id, evidence_digest,
+			proof_state_json, valid_from, valid_to, trust_state, weight, extensions_json) VALUES `)
+		for i := 0; i < batchSize; i++ {
+			if i > 0 {
+				sb.WriteByte(',')
+			}
+			sb.WriteString("(?,?,?,?,?,?,?,?,?,?,?,?,?)")
+		}
+		sb.WriteString(edgeConflictSuffix)
+		batchEdgeStmt, prepErr := tx.PrepareContext(ctx, sb.String())
+		if prepErr != nil {
+			return fmt.Errorf("prepare batch edge upsert: %w", prepErr)
+		}
+		defer batchEdgeStmt.Close()
+
+		args := make([]any, 0, batchSize*13)
+		for start := 0; start+batchSize <= len(validEdges); start += batchSize {
+			args = args[:0]
+			for _, e := range validEdges[start : start+batchSize] {
+				args = appendEdgeArgs(args, e)
+			}
+			if _, err := batchEdgeStmt.ExecContext(ctx, args...); err != nil {
+				return fmt.Errorf("batch upsert edges [%d:%d]: %w", start, start+batchSize, err)
+			}
+		}
+	}
+
+	if remStart := (len(validEdges) / batchSize) * batchSize; remStart < len(validEdges) {
+		edgeStmt, prepErr := tx.PrepareContext(ctx,
+			`INSERT INTO kg_graph_edges(id, from_node, to_node, relation, qualifier, claim_id, evidence_digest,
+			proof_state_json, valid_from, valid_to, trust_state, weight, extensions_json)
+			VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)`+edgeConflictSuffix)
+		if prepErr != nil {
+			return fmt.Errorf("prepare edge upsert: %w", prepErr)
+		}
+		defer edgeStmt.Close()
+		args := make([]any, 0, 13)
+		for _, e := range validEdges[remStart:] {
+			args = appendEdgeArgs(args[:0], e)
+			if _, err := edgeStmt.ExecContext(ctx, args...); err != nil {
+				return fmt.Errorf("upsert edge %s (%s -> %s): %w", e.ID, e.FromNode, e.ToNode, err)
+			}
+		}
+	}
+
+	if err := tx.Commit(); err != nil {
+		return fmt.Errorf("commit bulk graph tx: %w", err)
+	}
+	return nil
+}
 
 func (s *SQLiteStore) CreateEdge(ctx context.Context, edge *Edge) error {
 	_, err := s.db.ExecContext(ctx,

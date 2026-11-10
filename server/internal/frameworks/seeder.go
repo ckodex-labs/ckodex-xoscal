@@ -2,6 +2,7 @@ package frameworks
 
 import (
 	"context"
+	"database/sql"
 	"encoding/json"
 	"errors"
 	"fmt"
@@ -11,7 +12,20 @@ import (
 	catalogv1 "github.com/mchorfa/xoscal/proto/oscal/catalog/v1"
 	commonv1 "github.com/mchorfa/xoscal/proto/oscal/common/v1"
 	"github.com/mchorfa/xoscal/server/internal/kg"
+	"github.com/mchorfa/xoscal/server/internal/ontology"
 )
+
+// SeedKnowledgeGraph seeds all frameworks in the provided registry (or DefaultRegistry if nil)
+// into both kg_entities and the property graph tables (kg_graph_nodes, kg_graph_edges).
+func SeedKnowledgeGraph(ctx context.Context, store kg.Store, regs ...*Registry) error {
+	var reg *Registry
+	if len(regs) > 0 && regs[0] != nil {
+		reg = regs[0]
+	} else {
+		reg = DefaultRegistry()
+	}
+	return reg.SeedKG(ctx, store)
+}
 
 // SeedFramework seeds a single framework and its controls into the Knowledge Graph store.
 func SeedFramework(ctx context.Context, store kg.Store, f Framework) error {
@@ -797,16 +811,238 @@ type bulkUpsertStore interface {
 	BulkUpsertEntities(ctx context.Context, entities []*kg.Entity) error
 }
 
+type sqlDBProvider interface {
+	DB() *sql.DB
+}
+
 func upsertEntitiesBatch(ctx context.Context, store kg.Store, batch []*kg.Entity) error {
 	if bs, ok := store.(bulkUpsertStore); ok {
-		return bs.BulkUpsertEntities(ctx, batch)
+		if err := bs.BulkUpsertEntities(ctx, batch); err != nil {
+			return err
+		}
+	} else {
+		for _, e := range batch {
+			if err := upsertEntity(ctx, store, e); err != nil {
+				return err
+			}
+		}
 	}
-	for _, e := range batch {
-		if err := upsertEntity(ctx, store, e); err != nil {
+	if dbProv, ok := store.(sqlDBProvider); ok && dbProv.DB() != nil {
+		if err := projectBatchToPropertyGraph(ctx, dbProv.DB(), batch); err != nil {
 			return err
 		}
 	}
 	return nil
+}
+
+func normalizeISOJurisdiction(j string) string {
+	switch strings.ToLower(strings.TrimSpace(j)) {
+	case "ca", "can", "canada":
+		return "ca"
+	case "us", "usa", "united-states", "united states":
+		return "us"
+	case "uk", "gb", "gbr", "united-kingdom", "united kingdom":
+		return "gb"
+	case "fr", "fra", "france":
+		return "fr"
+	case "de", "deu", "germany":
+		return "de"
+	case "eu", "european-union", "european union":
+		return "eu"
+	default:
+		return strings.ToLower(strings.TrimSpace(j))
+	}
+}
+
+func authoritySlug(auth string) string {
+	low := strings.ToLower(strings.TrimSpace(auth))
+	switch {
+	case strings.Contains(low, "canadian centre") || strings.Contains(low, "cccs") || strings.Contains(low, "cse"):
+		return "cccs-cse"
+	case strings.Contains(low, "ised"):
+		return "ised-ca"
+	case strings.Contains(low, "nist"):
+		return "nist"
+	case strings.Contains(low, "cisa"):
+		return "cisa"
+	case strings.Contains(low, "dod"):
+		return "us-dod"
+	case strings.Contains(low, "general services") || strings.Contains(low, "gsa"):
+		return "us-gsa"
+	case strings.Contains(low, "cjis"):
+		return "us-cjis"
+	case strings.Contains(low, "new york"):
+		return "ny-dfs"
+	case strings.Contains(low, "ncsc"):
+		return "ncsc-uk"
+	case strings.Contains(low, "anssi"):
+		return "anssi"
+	case strings.Contains(low, "cnil"):
+		return "cnil"
+	case strings.Contains(low, "aviation"):
+		return "dsac-fr"
+	case strings.Contains(low, "bsi"):
+		return "bsi"
+	case strings.Contains(low, "ria"):
+		return "ria"
+	case strings.Contains(low, "enisa") || strings.Contains(low, "european commission"):
+		return "enisa"
+	case strings.Contains(low, "iso"):
+		return "iso"
+	case low == "eu":
+		return "eu-commission"
+	default:
+		s := strings.ReplaceAll(low, " ", "-")
+		s = strings.ReplaceAll(s, "/", "-")
+		if s == "" {
+			return "authority-default"
+		}
+		return s
+	}
+}
+
+func projectBatchToPropertyGraph(ctx context.Context, db *sql.DB, batch []*kg.Entity) error {
+	if len(batch) == 0 {
+		return nil
+	}
+	tx, err := db.BeginTx(ctx, nil)
+	if err != nil {
+		return fmt.Errorf("begin property graph tx: %w", err)
+	}
+	defer func() { _ = tx.Rollback() }()
+
+	nodeStmt, err := tx.PrepareContext(ctx,
+		`INSERT INTO kg_graph_nodes(id, kind, urn, labels_json, created_at) VALUES (?, ?, ?, ?, ?)
+		 ON CONFLICT(id) DO UPDATE SET kind=excluded.kind, urn=excluded.urn, labels_json=excluded.labels_json`)
+	if err != nil {
+		return fmt.Errorf("prepare graph node stmt: %w", err)
+	}
+	defer nodeStmt.Close()
+
+	stubNodeStmt, err := tx.PrepareContext(ctx,
+		`INSERT OR IGNORE INTO kg_graph_nodes(id, kind, urn, labels_json, created_at) VALUES (?, ?, ?, ?, ?)`)
+	if err != nil {
+		return fmt.Errorf("prepare graph stub node stmt: %w", err)
+	}
+	defer stubNodeStmt.Close()
+
+	edgeStmt, err := tx.PrepareContext(ctx,
+		`INSERT OR REPLACE INTO kg_graph_edges(id, from_node, to_node, relation, qualifier, claim_id, evidence_digest,
+		proof_state_json, valid_from, valid_to, trust_state, weight, extensions_json)
+		VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`)
+	if err != nil {
+		return fmt.Errorf("prepare graph edge stmt: %w", err)
+	}
+	defer edgeStmt.Close()
+
+	now := time.Now().UTC()
+	addNode := func(urn, kind string, labels map[string]any) error {
+		lb, _ := json.Marshal(labels)
+		_, err := nodeStmt.ExecContext(ctx, urn, kind, urn, string(lb), now)
+		return err
+	}
+	ensureStubNode := func(urn, kind string, labels map[string]any) error {
+		lb, _ := json.Marshal(labels)
+		_, err := stubNodeStmt.ExecContext(ctx, urn, kind, urn, string(lb), now)
+		return err
+	}
+	addEdge := func(fromURN, rel, toURN string, weight float64) error {
+		edgeID := fmt.Sprintf("edge:%s:%s:%s", fromURN, rel, toURN)
+		claimID := "claim:" + edgeID
+		_, err := edgeStmt.ExecContext(ctx, edgeID, fromURN, toURN, rel, "", claimID, "sha256:seeded", "{}", now, nil, "verified", weight, "{}")
+		return err
+	}
+
+	for _, ent := range batch {
+		if ent == nil {
+			continue
+		}
+		if ent.Type == "reg:Framework" {
+			var fw kg.Framework
+			if err := json.Unmarshal(ent.Payload, &fw); err != nil {
+				continue
+			}
+			jurCode := normalizeISOJurisdiction(fw.Locale)
+			jurURN := "urn:xoscal:jurisdiction:" + jurCode
+			authSlug := authoritySlug(fw.Provider)
+			authURN := "urn:xoscal:authority:" + authSlug
+
+			if err := ensureStubNode(jurURN, ontology.ClassJurisdiction, map[string]any{"code": jurCode}); err != nil {
+				return err
+			}
+			if err := ensureStubNode(authURN, ontology.ClassAuthority, map[string]any{"slug": authSlug, "name": fw.Provider}); err != nil {
+				return err
+			}
+			if err := addNode(fw.URN, ontology.ClassFramework, map[string]any{"id": fw.RefID, "title": fw.Name, "version": fw.Version, "jurisdiction": jurCode}); err != nil {
+				return err
+			}
+			if err := addEdge(fw.URN, ontology.PredInJurisdiction, jurURN, 1.0); err != nil {
+				return err
+			}
+			if err := addEdge(fw.URN, ontology.PredGovernedByAuthority, authURN, 1.0); err != nil {
+				return err
+			}
+		} else if ent.Type == "reg:Requirement" {
+			var req kg.Requirement
+			if err := json.Unmarshal(ent.Payload, &req); err != nil {
+				continue
+			}
+			if !req.Assessable {
+				continue
+			}
+			fwURN := "urn:xoscal:framework:" + req.Framework
+			if err := ensureStubNode(fwURN, ontology.ClassFramework, map[string]any{"id": req.Framework}); err != nil {
+				return err
+			}
+			isEnh := strings.HasPrefix(req.ParentURN, "urn:xoscal:requirement:") && !strings.Contains(req.ParentURN, ":group:")
+			nodeClass := ontology.ClassControl
+			if isEnh {
+				nodeClass = ontology.ClassControlEnhancement
+			}
+			domain := ontology.ClassifyThematicDomain(req.NodeRefID, req.Section, req.Title, req.Text)
+			if err := addNode(req.URN, nodeClass, map[string]any{
+				"id":              req.NodeRefID,
+				"framework":       req.Framework,
+				"title":           req.Title,
+				"family":          req.Section,
+				"thematic_domain": domain,
+			}); err != nil {
+				return err
+			}
+			if err := addEdge(req.URN, ontology.PredBelongsToFramework, fwURN, 1.0); err != nil {
+				return err
+			}
+			domURN := "urn:xoscal:family:" + domain
+			if err := ensureStubNode(domURN, ontology.ClassControlFamily, map[string]any{"id": domain, "kind": "thematic_domain"}); err != nil {
+				return err
+			}
+			if err := addEdge(req.URN, ontology.PredInControlFamily, domURN, 1.0); err != nil {
+				return err
+			}
+			if isEnh && req.ParentURN != "" {
+				if err := ensureStubNode(req.ParentURN, ontology.ClassControl, map[string]any{"framework": req.Framework}); err != nil {
+					return err
+				}
+				if err := addEdge(req.URN, ontology.PredEnhancesControl, req.ParentURN, 1.0); err != nil {
+					return err
+				}
+			}
+			for _, p := range req.Params {
+				if p.ID == "" {
+					continue
+				}
+				odpURN := fmt.Sprintf("urn:xoscal:odp:%s:%s", req.Framework, p.ID)
+				if err := addNode(odpURN, ontology.ClassParameterODP, map[string]any{"id": p.ID, "label": p.Label, "framework": req.Framework}); err != nil {
+					return err
+				}
+				if err := addEdge(req.URN, ontology.PredDefinesODP, odpURN, 1.0); err != nil {
+					return err
+				}
+			}
+		}
+	}
+
+	return tx.Commit()
 }
 
 func upsertEntity(ctx context.Context, store kg.Store, e *kg.Entity) error {

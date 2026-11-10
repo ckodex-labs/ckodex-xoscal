@@ -36,6 +36,8 @@ type ProjectScan struct {
 	HasDocker   bool
 	HasK8s      bool
 	HasTF       bool
+	HasUTCP     bool
+	UTCPSDKs    []string
 	Components  []ComponentCandidate
 }
 
@@ -91,13 +93,18 @@ func scanMetadata(root *os.Root, scan *ProjectScan) error {
 	}
 	if data != nil {
 		scan.Languages = append(scan.Languages, "Go")
-		for _, line := range strings.Split(string(data), "\n") {
+		raw := string(data)
+		for _, line := range strings.Split(raw, "\n") {
 			line = strings.TrimSpace(line)
 			if strings.HasPrefix(line, "module ") {
 				parts := strings.Split(strings.TrimSpace(strings.TrimPrefix(line, "module")), "/")
 				scan.Name = parts[len(parts)-1]
 				break
 			}
+		}
+		if strings.Contains(raw, "universal-tool-calling-protocol/go-utcp") || strings.Contains(raw, "go-utcp") {
+			scan.HasUTCP = true
+			scan.UTCPSDKs = append(scan.UTCPSDKs, "go-utcp")
 		}
 	}
 	data, err = rootfs.OptionalReadFile(root, "package.json")
@@ -107,6 +114,32 @@ func scanMetadata(root *os.Root, scan *ProjectScan) error {
 	if data != nil {
 		scan.Languages = append(scan.Languages, "TypeScript/JavaScript")
 		applyPackageMetadata(data, scan)
+		raw := string(data)
+		if strings.Contains(raw, "@utcp/sdk") || strings.Contains(raw, "typescript-utcp") {
+			scan.HasUTCP = true
+			scan.UTCPSDKs = append(scan.UTCPSDKs, "typescript-utcp")
+		}
+		if strings.Contains(raw, "@utcp/mcp") || strings.Contains(raw, "utcp-mcp") {
+			scan.HasUTCP = true
+			scan.UTCPSDKs = append(scan.UTCPSDKs, "utcp-mcp")
+		}
+	}
+	for _, pyFile := range []string{"requirements.txt", "pyproject.toml", "Pipfile"} {
+		if pyData, rErr := rootfs.OptionalReadFile(root, pyFile); rErr == nil && pyData != nil {
+			raw := string(pyData)
+			if strings.Contains(raw, "python-utcp") || strings.Contains(raw, "utcp-http") || strings.Contains(raw, "utcp-cli") || strings.Contains(raw, "\"utcp") {
+				scan.HasUTCP = true
+				scan.UTCPSDKs = append(scan.UTCPSDKs, "python-utcp")
+				break
+			}
+		}
+	}
+	if cargoData, rErr := rootfs.OptionalReadFile(root, "Cargo.toml"); rErr == nil && cargoData != nil {
+		raw := string(cargoData)
+		if strings.Contains(raw, "rs-utcp") || strings.Contains(raw, "universal-tool-calling-protocol/rs-utcp") {
+			scan.HasUTCP = true
+			scan.UTCPSDKs = append(scan.UTCPSDKs, "rs-utcp")
+		}
 	}
 	return nil
 }
@@ -139,6 +172,7 @@ func scanMarkers(root *os.Root, scan *ProjectScan) error {
 		{names: []string{"Dockerfile", "Containerfile", "docker-compose.yml"}, detected: &scan.HasDocker},
 		{names: []string{"k8s", "manifests", "charts"}, directory: true, detected: &scan.HasK8s},
 		{names: []string{"terraform"}, directory: true, detected: &scan.HasTF},
+		{names: []string{"utcp.json", ".utcp.json", ".utcp_config.json"}, detected: &scan.HasUTCP},
 	}
 	for _, marker := range markers {
 		found := false
@@ -154,8 +188,8 @@ func scanMarkers(root *os.Root, scan *ProjectScan) error {
 		if found && marker.language != "" {
 			scan.Languages = append(scan.Languages, marker.language)
 		}
-		if marker.detected != nil {
-			*marker.detected = found
+		if marker.detected != nil && found {
+			*marker.detected = true
 		}
 	}
 	return nil
@@ -192,4 +226,23 @@ func addDefaultComponents(scan *ProjectScan) {
 		scan.Components = append(scan.Components, infraComp)
 	}
 
+	if scan.HasUTCP {
+		sdkNote := "utcp-specification"
+		if len(scan.UTCPSDKs) > 0 {
+			sdkNote = strings.Join(scan.UTCPSDKs, ", ")
+		}
+		utcpComp := ComponentCandidate{
+			Name:        scan.Name + "-utcp-gateway",
+			Type:        "interconnection",
+			Title:       scan.Name + " Universal Tool Calling Protocol (UTCP) Surface",
+			Description: fmt.Sprintf("Direct native UTCP v1.0.1 tool manual and call templates (%s)", sdkNote),
+			Controls: []SuggestedControl{
+				{ControlID: "ac-3", Description: "Least-authority capability enforcement across UTCP tool call templates."},
+				{ControlID: "ca-3", Description: "System interconnections governed via explicit UTCP v1.0.1 manual schemas."},
+				{ControlID: "sc-7", Description: "Boundary protection enforced across HTTP, gRPC, and CLI UTCP transports (WebSockets forbidden per Rule 10)."},
+				{ControlID: "si-10", Description: "Information input validation enforced via strict JSON Schema inputs/outputs on every UTCP tool."},
+			},
+		}
+		scan.Components = append(scan.Components, utcpComp)
+	}
 }

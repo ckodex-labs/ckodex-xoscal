@@ -88,12 +88,46 @@ CREATE TABLE IF NOT EXISTS kg_releases (
 	 snapshot_name TEXT NOT NULL REFERENCES kg_snapshots(name),
 	 created_at DATETIME NOT NULL DEFAULT (datetime('now'))
 );
+
+CREATE TABLE IF NOT EXISTS kg_graph_nodes (
+	id TEXT PRIMARY KEY,
+	kind TEXT NOT NULL,
+	urn TEXT NOT NULL,
+	labels_json TEXT,
+	created_at DATETIME NOT NULL DEFAULT (datetime('now'))
+);
+CREATE INDEX IF NOT EXISTS idx_nodes_kind ON kg_graph_nodes(kind);
+CREATE INDEX IF NOT EXISTS idx_nodes_urn ON kg_graph_nodes(urn);
+
+CREATE TABLE IF NOT EXISTS kg_graph_edges (
+	id TEXT PRIMARY KEY,
+	from_node TEXT NOT NULL REFERENCES kg_graph_nodes(id) ON DELETE CASCADE,
+	to_node TEXT NOT NULL REFERENCES kg_graph_nodes(id) ON DELETE CASCADE,
+	relation TEXT NOT NULL,
+	qualifier TEXT,
+	claim_id TEXT NOT NULL,
+	evidence_digest TEXT NOT NULL,
+	proof_state_json TEXT,
+	valid_from DATETIME NOT NULL,
+	valid_to DATETIME,
+	trust_state TEXT NOT NULL DEFAULT 'candidate',
+	weight REAL DEFAULT 1.0,
+	extensions_json TEXT
+);
+CREATE INDEX IF NOT EXISTS idx_edges_from ON kg_graph_edges(from_node);
+CREATE INDEX IF NOT EXISTS idx_edges_to ON kg_graph_edges(to_node);
+CREATE INDEX IF NOT EXISTS idx_edges_relation ON kg_graph_edges(relation);
+CREATE INDEX IF NOT EXISTS idx_edges_trust ON kg_graph_edges(trust_state);
+CREATE INDEX IF NOT EXISTS idx_edges_valid ON kg_graph_edges(valid_from, valid_to);
 `
 	if _, err := s.db.Exec(schema); err != nil {
 		return fmt.Errorf("exec schema: %w", err)
 	}
 	return nil
 }
+
+// DB returns the underlying *sql.DB connection for unified property graph projection.
+func (s *SQLiteStore) DB() *sql.DB { return s.db }
 
 func (s *SQLiteStore) Close() error { return s.db.Close() }
 
