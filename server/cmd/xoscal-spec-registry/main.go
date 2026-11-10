@@ -57,9 +57,11 @@ func run(mode, registryPath, version string) (int, error) {
 	}
 }
 
+var schemaURLForModel = specregistry.SchemaURL
+
 func populate(reg *specregistry.Registry, path, version string) (int, error) {
 	for i := range reg.Models {
-		data, err := fetch(specregistry.SchemaURL(version, reg.Models[i].SchemaAsset))
+		data, err := fetch(schemaURLForModel(version, reg.Models[i].SchemaAsset))
 		if err != nil {
 			return 1, fmt.Errorf("populate %s: %w", reg.Models[i].Model, err)
 		}
@@ -86,7 +88,7 @@ func verify(reg *specregistry.Registry, version string) (int, error) {
 	}
 	var statuses []specregistry.ModelStatus
 	for _, m := range reg.Models {
-		data, err := fetch(specregistry.SchemaURL(version, m.SchemaAsset))
+		data, err := fetch(schemaURLForModel(version, m.SchemaAsset))
 		if err != nil {
 			return 1, fmt.Errorf("verify %s: %w", m.Model, err)
 		}
@@ -115,7 +117,7 @@ func fetch(url string) ([]byte, error) {
 	if err != nil {
 		return nil, fmt.Errorf("get %s: %w", url, err)
 	}
-	defer resp.Body.Close()
+	defer func() { _ = resp.Body.Close() }()
 	if resp.StatusCode != http.StatusOK {
 		return nil, fmt.Errorf("get %s: status %d (asset missing or renamed)", url, resp.StatusCode)
 	}

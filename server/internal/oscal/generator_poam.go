@@ -2,55 +2,58 @@ package oscal
 
 import (
 	"context"
-	"encoding/json"
 	"fmt"
 	"strings"
 
 	commonv1 "github.com/mchorfa/xoscal/proto/oscal/common/v1"
 	poamv1 "github.com/mchorfa/xoscal/proto/oscal/poam/v1"
-	"github.com/mchorfa/xoscal/server/internal/kg"
 )
 
 func (g *Generator) GeneratePOAM(ctx context.Context, snapshotName string, framework string) (*poamv1.PlanOfActionAndMilestones, error) {
-	entities, err := g.store.GetSnapshot(ctx, snapshotName)
+	snap, err := g.loadParsedSnapshot(ctx, snapshotName, framework, false)
 	if err != nil {
-		return nil, fmt.Errorf("get snapshot: %w", err)
+		return nil, err
 	}
+	return g.generatePOAMFromSnapshot(snap, snapshotName, framework), nil
+}
 
-	var risks []*poamv1.Risk
-	var poamItems []*poamv1.PoamItem
+func (g *Generator) generatePOAMFromSnapshot(snap *parsedSnapshot, snapshotName string, framework string) *poamv1.PlanOfActionAndMilestones {
+	risks := make([]*poamv1.Risk, 0, len(snap.assessableReqs))
+	poamItems := make([]*poamv1.PoamItem, 0, len(snap.assessableReqs))
 	var roles []*commonv1.Role
 	roleSeen := make(map[string]bool)
-	for _, e := range entities {
-		if e.Type != "reg:Requirement" {
-			continue
+
+	for _, req := range snap.assessableReqs {
+		ctrlID := sanitizeToken(req.Citation)
+		if ctrlID == "" {
+			ctrlID = sanitizeToken(req.NodeRefID)
 		}
-		var req kg.Requirement
-		if err := json.Unmarshal(e.Payload, &req); err != nil {
-			continue
-		}
-		if !strings.EqualFold(req.Framework, framework) || !req.Assessable {
-			continue
-		}
+
 		title := singleLine(req.Title)
 		if title == "" {
 			title = singleLine(req.Citation)
 		}
-		desc := req.Text
-		if desc == "" {
-			desc = fmt.Sprintf("Action item for control %s (%s)", req.Citation, title)
-		}
+		desc := fmt.Sprintf("Action item and continuous monitoring milestone for control %s (%s).", ctrlID, title)
 		risk := &poamv1.Risk{
 			Uuid:        newUUID(uuidNamespace, fmt.Sprintf("risk-%s", req.Citation)),
 			Title:       &commonv1.MarkupLine{Value: fmt.Sprintf("Risk: %s", title)},
 			Description: &commonv1.MarkupMultiline{Value: desc},
 			Status:      &poamv1.RiskStatus{State: "open"},
 		}
-		// Build the POAM item with a distinct deterministic UUID.
+		var itemProps []*commonv1.Property
+		if ctrlID != "" {
+			itemProps = []*commonv1.Property{{
+				Name:  "control-id",
+				Ns:    xoscalPropNamespace,
+				Value: ctrlID,
+			}}
+		}
+		// Build the POAM item with a distinct deterministic UUID and control-id reference.
 		poamItem := &poamv1.PoamItem{
 			Uuid:        newUUID(uuidNamespace, fmt.Sprintf("poam-item-%s", req.Citation)),
 			Title:       risk.Title,
 			Description: risk.Description,
+			Props:       itemProps,
 		}
 		// Add remediation task for high-risk requirements.
 		if strings.ToLower(req.RiskLevel) == "high" {
@@ -95,10 +98,10 @@ func (g *Generator) GeneratePOAM(ctx context.Context, snapshotName string, frame
 		ImportSsp: &poamv1.ImportSsp{
 			Href: &commonv1.URIReference{Value: fmt.Sprintf("ssp-%s-%s", framework, snapshotName)},
 		},
-		Risks:      risks,
+		Risks:      risks, //nolint:staticcheck // SA1019: backward-compatible deprecated proto field
 		PoamItems:  poamItems,
 		BackMatter: buildBackMatter(framework, snapshotName),
-	}, nil
+	}
 }
 
 // GenerateAssessmentResults builds OSCAL Assessment Results from a snapshot.

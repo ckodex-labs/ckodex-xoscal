@@ -2,7 +2,6 @@ package oscal
 
 import (
 	"context"
-	"encoding/json"
 	"fmt"
 	"strings"
 
@@ -22,24 +21,17 @@ func hasImplementationGroup(req kg.Requirement, group string) bool {
 }
 
 func (g *Generator) GenerateProfile(ctx context.Context, snapshotName string, framework string, selected []string) (*profilev1.Profile, error) {
-	entities, err := g.store.GetSnapshot(ctx, snapshotName)
+	snap, err := g.loadParsedSnapshot(ctx, snapshotName, framework, false)
 	if err != nil {
-		return nil, fmt.Errorf("get snapshot: %w", err)
+		return nil, err
 	}
+	return g.generateProfileFromSnapshot(snap, snapshotName, framework, selected), nil
+}
 
-	var allControls []string
+func (g *Generator) generateProfileFromSnapshot(snap *parsedSnapshot, snapshotName string, framework string, selected []string) *profilev1.Profile {
+	allControls := make([]string, 0, len(snap.assessableReqs))
 	var profileSelectedControls []string
-	for _, e := range entities {
-		if e.Type != "reg:Requirement" {
-			continue
-		}
-		var req kg.Requirement
-		if err := json.Unmarshal(e.Payload, &req); err != nil {
-			continue
-		}
-		if !strings.EqualFold(req.Framework, framework) || !req.Assessable {
-			continue
-		}
+	for _, req := range snap.assessableReqs {
 		ctrlID := sanitizeToken(req.Citation)
 		if ctrlID == "" {
 			ctrlID = sanitizeToken(req.NodeRefID)
@@ -67,17 +59,10 @@ func (g *Generator) GenerateProfile(ctx context.Context, snapshotName string, fr
 	}
 
 	var alterations []*profilev1.Alter
-	for _, e := range entities {
-		if e.Type != "reg:Requirement" {
-			continue
-		}
-		var req kg.Requirement
-		if err := json.Unmarshal(e.Payload, &req); err != nil {
-			continue
-		}
-		if !strings.EqualFold(req.Framework, framework) || !req.Assessable {
-			continue
-		}
+	var setParams []*profilev1.SetParameters
+	seenParamIDs := make(map[string]bool)
+
+	for _, req := range snap.assessableReqs {
 		ctrlID := sanitizeToken(req.Citation)
 		if ctrlID == "" {
 			ctrlID = sanitizeToken(req.NodeRefID)
@@ -85,6 +70,7 @@ func (g *Generator) GenerateProfile(ctx context.Context, snapshotName string, fr
 		if ctrlID == "" || !selectedSet[strings.ToLower(ctrlID)] {
 			continue
 		}
+
 		props := requirementToProps(req)
 		if len(props) > 0 {
 			var addParts []*catalogv1.Part
@@ -134,28 +120,7 @@ func (g *Generator) GenerateProfile(ctx context.Context, snapshotName string, fr
 			}
 			alterations = append(alterations, alter)
 		}
-	}
 
-	var setParams []*profilev1.SetParameters
-	seenParamIDs := make(map[string]bool)
-	for _, e := range entities {
-		if e.Type != "reg:Requirement" {
-			continue
-		}
-		var req kg.Requirement
-		if err := json.Unmarshal(e.Payload, &req); err != nil {
-			continue
-		}
-		if !strings.EqualFold(req.Framework, framework) || !req.Assessable {
-			continue
-		}
-		ctrlID := sanitizeToken(req.Citation)
-		if ctrlID == "" {
-			ctrlID = sanitizeToken(req.NodeRefID)
-		}
-		if ctrlID == "" || !selectedSet[strings.ToLower(ctrlID)] {
-			continue
-		}
 		for _, p := range req.Params {
 			paramID := sanitizeToken(p.ID)
 			if paramID == "" || seenParamIDs[paramID] {
@@ -226,10 +191,10 @@ func (g *Generator) GenerateProfile(ctx context.Context, snapshotName string, fr
 			SetParameters: setParams,
 			Alters:        alterations,
 		},
+		BackMatter: buildBackMatter(framework, snapshotName),
 	}
 
-	profile.BackMatter = buildBackMatter(framework, snapshotName)
-	return profile, nil
+	return profile
 }
 
 // GenerateSSP builds an OSCAL System Security Plan from a snapshot.

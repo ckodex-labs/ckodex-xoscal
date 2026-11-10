@@ -19,12 +19,12 @@ func TestGraphProjectionUsesClaimIdentityAndTrustState(t *testing.T) {
 	if err != nil {
 		t.Fatalf("new graph store: %v", err)
 	}
-	defer graphStore.Close()
+	defer func() { _ = graphStore.Close() }()
 	exchangeStore, err := transparency.NewSQLiteStore(":memory:")
 	if err != nil {
 		t.Fatalf("new exchange store: %v", err)
 	}
-	defer exchangeStore.Close()
+	defer func() { _ = exchangeStore.Close() }()
 
 	exchange := transparency.NewExchangeServer(exchangeStore)
 	blob := []byte("graph-evidence")
@@ -107,7 +107,7 @@ func TestGraphProjectionAuditChainGate(t *testing.T) {
 	if err != nil {
 		t.Fatalf("new graph store: %v", err)
 	}
-	defer store.Close()
+	defer func() { _ = store.Close() }()
 
 	from := &Node{ID: "node:chain:from", Kind: "artifact", URN: "urn:chain:from", CreatedAt: time.Now().UTC()}
 	to := &Node{ID: "node:chain:to", Kind: "component", URN: "urn:chain:to", CreatedAt: time.Now().UTC()}

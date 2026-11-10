@@ -230,6 +230,20 @@ except Exception:
         self.run_installer(success=False)
         self.assert_not_installed()
 
+    def test_multi_binary_archive_installs_all_verified_clis(self):
+        self.make_archive([
+            ("xoscal", PAYLOAD + b"main-cli\n", tarfile.REGTYPE),
+            ("xoscal-ctl", PAYLOAD, tarfile.REGTYPE),
+            ("xoscal-gateway", PAYLOAD + b"gateway\n", tarfile.REGTYPE),
+            ("README.md", b"readme", tarfile.REGTYPE),
+        ])
+        self.write_manifest()
+        self.run_installer()
+        for name, expected in (("xoscal", PAYLOAD + b"main-cli\n"), ("xoscal-ctl", PAYLOAD), ("xoscal-gateway", PAYLOAD + b"gateway\n")):
+            installed = self.prefix / "bin" / name
+            self.assertEqual(installed.read_bytes(), expected)
+            self.assertEqual(installed.stat().st_mode & 0o777, 0o755)
+
 
 if __name__ == "__main__":
     print("Local fixture checks only; hosted GitHub/Sigstore verification is not exercised.", flush=True)

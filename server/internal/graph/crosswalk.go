@@ -107,16 +107,18 @@ type GraphStats struct {
 
 // UnifiedGraph holds the in-memory indexed property graph of all 36 frameworks and 4 intelligence feeds.
 type UnifiedGraph struct {
-	Nodes       []*Node
-	Edges       []*Edge
-	nodeByURN   map[string]*Node
-	edgesFrom   map[string][]*Edge
-	edgesTo     map[string][]*Edge
-	ctrlByCanon map[string][]*Node
-	canonAlias  map[string]string
-	knownFw     map[string]string
-	domainCtrls map[string][]*Node
-	stats       *GraphStats
+	Nodes         []*Node
+	Edges         []*Edge
+	nodeByURN     map[string]*Node
+	edgesFrom     map[string][]*Edge
+	edgesTo       map[string][]*Edge
+	ctrlByCanon   map[string][]*Node
+	canonAlias    map[string]string
+	knownFw       map[string]string
+	domainCtrls   map[string][]*Node
+	expectedFwIDs []string
+	loadErrors    []string
+	stats         *GraphStats
 }
 
 var (
@@ -456,10 +458,14 @@ func BuildUnifiedKnowledgeGraph(ctx context.Context, store Store, reg *framework
 		}
 
 		repByFwDomain[fwID] = make(map[string]*Node)
+		ug.expectedFwIDs = append(ug.expectedFwIDs, fwID)
 
 		ctrls, err := frameworks.LoadControls(fw)
 		if err != nil {
-			continue
+			return nil, fmt.Errorf("load controls for framework %s (fail-closed): %w", fwID, err)
+		}
+		if len(ctrls) == 0 {
+			return nil, fmt.Errorf("framework %s returned 0 controls (fail-closed)", fwID)
 		}
 
 		for _, c := range ctrls {
@@ -761,7 +767,7 @@ func BuildUnifiedKnowledgeGraph(ctx context.Context, store Store, reg *framework
 	}
 
 	// 6. Ingest Feed 2: cisa-kev-active-threats (threat:KEVAdvisory, threat:CVE, threat:CWE, ATTACKS_CONTROL, MITIGATES_CWE)
-	for _, kev := range feeds.BuiltinKEVAdvisories {
+	for _, kev := range feeds.ActiveThreatAdvisories() {
 		kevURN := "urn:xoscal:kev:" + kev.CVEID
 		cveURN := "urn:xoscal:cve:" + kev.CVEID
 		cweURN := "urn:xoscal:cwe:" + kev.CWEID
@@ -828,7 +834,7 @@ func BuildUnifiedKnowledgeGraph(ctx context.Context, store Store, reg *framework
 	}
 
 	// 7. Ingest Feed 3: mitre-attack-800-53 (threat:AttackTechnique, MITIGATES_TECHNIQUE, ATTACKS_CONTROL)
-	for _, tech := range feeds.BuiltinAttackTechniques {
+	for _, tech := range feeds.ActiveAttackMappings() {
 		techURN := "urn:xoscal:attack:" + tech.TechniqueID
 		// Overwrite/enrich labels on technique node
 		lb, _ := json.Marshal(map[string]any{
@@ -1098,7 +1104,12 @@ func (ug *UnifiedGraph) ReconcileInvariants() (*GraphReconcileReport, error) {
 		violations = append(violations, fmt.Sprintf("nodeByURN index size mismatch: index=%d slice=%d", len(ug.nodeByURN), len(seenNodes)))
 	}
 
+	if len(ug.loadErrors) > 0 {
+		violations = append(violations, ug.loadErrors...)
+	}
+
 	seenEdges := make(map[string]bool, len(ug.Edges))
+	fwCtrlCounts := make(map[string]int, len(ug.expectedFwIDs))
 	for idx, e := range ug.Edges {
 		if e == nil || strings.TrimSpace(e.ID) == "" {
 			violations = append(violations, fmt.Sprintf("nil or empty ID edge at index %d", idx))
@@ -1123,7 +1134,23 @@ func (ug *UnifiedGraph) ReconcileInvariants() (*GraphReconcileReport, error) {
 			if err := ontology.ValidateTriple(fromNode.Kind, e.Relation, toNode.Kind); err != nil {
 				violations = append(violations, fmt.Sprintf("ontology triple violation on edge %q: %v", e.ID, err))
 			}
+			if e.Relation == ontology.PredBelongsToFramework &&
+				(fromNode.Kind == ontology.ClassControl || fromNode.Kind == ontology.ClassControlEnhancement) {
+				fwCtrlCounts[e.ToNode]++
+			}
 		}
+	}
+
+	for _, fwID := range ug.expectedFwIDs {
+		fwURN := "urn:xoscal:framework:" + fwID
+		if seenNodes[fwURN] == nil {
+			violations = append(violations, fmt.Sprintf("missing registered framework node %q", fwURN))
+		} else if fwCtrlCounts[fwURN] == 0 {
+			violations = append(violations, fmt.Sprintf("registered framework %q has 0 loaded control nodes", fwID))
+		}
+	}
+	if len(ug.expectedFwIDs) > 0 && ug.stats != nil && ug.stats.FrameworksCount < len(ug.expectedFwIDs) {
+		violations = append(violations, fmt.Sprintf("frameworks_count (%d) is below registered framework count (%d)", ug.stats.FrameworksCount, len(ug.expectedFwIDs)))
 	}
 
 	for _, jur := range []string{"ca", "us", "eu", "de", "fr", "gb"} {
@@ -1706,21 +1733,272 @@ func (ug *UnifiedGraph) ExportSubgraph(targetURNOrID string, maxDepth int, forma
 		var sb strings.Builder
 		sb.WriteString("// xOSCAL Property Graph Cypher Export\n")
 		for _, n := range rep.ImpactedNodes {
-			label := strings.ReplaceAll(n.Kind, ":", "_")
+			label := sanitizeCypherIdentifier(n.Kind)
 			var lbl map[string]any
 			_ = json.Unmarshal([]byte(n.LabelsJSON), &lbl)
 			title, _ := lbl["title"].(string)
-			sb.WriteString(fmt.Sprintf("MERGE (n:%s {urn: %q, title: %q});\n", label, n.URN, title))
+			_, _ = fmt.Fprintf(&sb, "MERGE (n:%s {urn: %s, title: %s});\n",
+				label, escapeCypherString(n.URN), escapeCypherString(title))
 		}
 		for _, e := range rep.ImpactedEdges {
-			sb.WriteString(fmt.Sprintf("MATCH (a {urn: %q}), (b {urn: %q}) MERGE (a)-[:%s {is_anti: %t, weight: %.2f}]->(b);\n",
-				e.FromNode, e.ToNode, e.Relation, ontology.IsAntiPredicate(e.Relation), e.Weight))
+			relLabel := sanitizeCypherIdentifier(e.Relation)
+			_, _ = fmt.Fprintf(&sb, "MATCH (a {urn: %s}), (b {urn: %s}) MERGE (a)-[:%s {is_anti: %t, weight: %.2f}]->(b);\n",
+				escapeCypherString(e.FromNode), escapeCypherString(e.ToNode), relLabel, ontology.IsAntiPredicate(e.Relation), e.Weight)
 		}
 		return sb.String(), nil
 
 	default:
 		return "", fmt.Errorf("unsupported subgraph export format %q (expected: jsonld, cytoscape, cypher)", format)
 	}
+}
+
+func escapeCypherString(s string) string {
+	var sb strings.Builder
+	sb.Grow(len(s) + 8)
+	sb.WriteByte('"')
+	for _, r := range s {
+		switch r {
+		case '\\':
+			sb.WriteString(`\\`)
+		case '"':
+			sb.WriteString(`\"`)
+		case '\n':
+			sb.WriteString(`\n`)
+		case '\r':
+			sb.WriteString(`\r`)
+		case '\t':
+			sb.WriteString(`\t`)
+		default:
+			if r < 0x20 {
+				_, _ = fmt.Fprintf(&sb, `\u%04x`, r)
+			} else {
+				sb.WriteRune(r)
+			}
+		}
+	}
+	sb.WriteByte('"')
+	return sb.String()
+}
+
+func sanitizeCypherIdentifier(raw string) string {
+	var sb strings.Builder
+	for _, r := range raw {
+		if (r >= 'a' && r <= 'z') || (r >= 'A' && r <= 'Z') || (r >= '0' && r <= '9') || r == '_' {
+			sb.WriteRune(r)
+		} else {
+			sb.WriteByte('_')
+		}
+	}
+	out := sb.String()
+	if out == "" {
+		return "_Node"
+	}
+	if out[0] >= '0' && out[0] <= '9' {
+		return "_" + out
+	}
+	return out
+}
+
+// LoadUnifiedGraphFromSQLite reconstructs an operational UnifiedGraph directly from SQLite
+// kg_graph_nodes and kg_graph_edges tables without rebuilding from static embedded catalogs.
+func LoadUnifiedGraphFromSQLite(ctx context.Context, dsn string) (*UnifiedGraph, error) {
+	if ctx == nil {
+		ctx = context.Background()
+	}
+	if err := ctx.Err(); err != nil {
+		return nil, err
+	}
+	if strings.TrimSpace(dsn) == "" {
+		return nil, fmt.Errorf("sqlite dsn is required")
+	}
+	st, err := NewSQLiteStore(dsn)
+	if err != nil {
+		return nil, fmt.Errorf("open sqlite graph store %q: %w", dsn, err)
+	}
+	defer func() { _ = st.Close() }()
+
+	sqlStore, ok := st.(*SQLiteStore)
+	if !ok {
+		return nil, fmt.Errorf("unexpected graph store implementation %T", st)
+	}
+	return LoadUnifiedGraphFromStore(ctx, sqlStore)
+}
+
+// LoadUnifiedGraphFromStore reconstructs an operational UnifiedGraph from an open *SQLiteStore.
+func LoadUnifiedGraphFromStore(ctx context.Context, sqlStore *SQLiteStore) (*UnifiedGraph, error) {
+	if sqlStore == nil {
+		return nil, fmt.Errorf("sqlite graph store is nil")
+	}
+	nodes, edges, err := sqlStore.LoadAllGraph(ctx)
+	if err != nil {
+		return nil, err
+	}
+	if len(nodes) == 0 {
+		return nil, fmt.Errorf("sqlite graph store contains 0 nodes (run 'xoscal seed' first)")
+	}
+
+	ug := &UnifiedGraph{
+		Nodes:       nodes,
+		Edges:       edges,
+		nodeByURN:   make(map[string]*Node, len(nodes)),
+		edgesFrom:   make(map[string][]*Edge, len(nodes)),
+		edgesTo:     make(map[string][]*Edge, len(nodes)),
+		ctrlByCanon: make(map[string][]*Node, 2048),
+		canonAlias:  make(map[string]string, 1024),
+		knownFw:     make(map[string]string, 128),
+		domainCtrls: make(map[string][]*Node, 16),
+	}
+
+	for _, fw := range frameworks.DefaultRegistry().List() {
+		fwID := fw.ID()
+		ug.knownFw[strings.ToLower(fwID)] = fwID
+		for _, al := range fw.Aliases() {
+			ug.knownFw[strings.ToLower(al)] = fwID
+		}
+	}
+	crosswalkAliases := map[string]string{
+		"nist-sp-800-53-rev5":  "nist-sp-800-53-rev5",
+		"nist-800-53":          "nist-sp-800-53-rev5",
+		"800-53":               "nist-sp-800-53-rev5",
+		"nist-sp-800-171-rev2": "nist-sp-800-171-rev2",
+		"nist-800-171":         "nist-sp-800-171-rev2",
+		"800-171":              "nist-sp-800-171-rev2",
+		"sp-800-171":           "nist-sp-800-171-rev2",
+		"iso-27001-2022":       "iso-27001-2022",
+		"iso-27001":            "iso-27001-2022",
+		"iso27001":             "iso-27001-2022",
+		"bsi-it-gs-2023":       "bsi-it-gs-2023",
+		"bsi-it-gs":            "bsi-it-gs-2023",
+		"anssi-hygiene":        "anssi-hygiene",
+		"anssi":                "anssi-hygiene",
+		"uk-cyber-essentials":  "uk-cyber-essentials",
+		"cyber-essentials":     "uk-cyber-essentials",
+	}
+	for k, v := range crosswalkAliases {
+		ug.knownFw[k] = v
+	}
+
+	sort.Slice(ug.Nodes, func(i, j int) bool { return ug.Nodes[i].URN < ug.Nodes[j].URN })
+	sort.Slice(ug.Edges, func(i, j int) bool { return ug.Edges[i].ID < ug.Edges[j].ID })
+
+	repByFwDomain := make(map[string]map[string]*Node)
+	cmmcBy171 := make(map[string][]*Node)
+	nodesByClass := make(map[string]int)
+	jurCounts := make(map[string]int)
+
+	for _, n := range ug.Nodes {
+		ug.nodeByURN[n.URN] = n
+		nodesByClass[n.Kind]++
+		var lbl map[string]any
+		_ = json.Unmarshal([]byte(n.LabelsJSON), &lbl)
+		if j, ok := lbl["jurisdiction"].(string); ok && j != "" {
+			jurCounts[j]++
+		}
+		if n.Kind == ontology.ClassFramework {
+			fwID, _ := lbl["id"].(string)
+			if fwID != "" {
+				ug.knownFw[strings.ToLower(fwID)] = fwID
+				if ver, _ := lbl["version"].(string); ver != "" {
+					ug.expectedFwIDs = append(ug.expectedFwIDs, fwID)
+				}
+			}
+		}
+		if n.Kind == ontology.ClassControl || n.Kind == ontology.ClassControlEnhancement {
+			cid, _ := lbl["id"].(string)
+			cid = strings.ToLower(strings.TrimSpace(cid))
+			fwID, _ := lbl["framework_id"].(string)
+			dom, _ := lbl["thematic_domain"].(string)
+			isEnh, _ := lbl["is_enhancement"].(bool)
+			if cid != "" {
+				ug.ctrlByCanon[cid] = appendUniqueNode(ug.ctrlByCanon[cid], n)
+				if fwID == "cmmc-2.0" {
+					if dashIdx := strings.LastIndex(cid, "-"); dashIdx != -1 && dashIdx+1 < len(cid) {
+						sec171 := normalizeSP800171ID(cid[dashIdx+1:])
+						cmmcBy171[sec171] = append(cmmcBy171[sec171], n)
+					}
+				}
+			}
+			if !isEnh && n.Kind == ontology.ClassControl && fwID != "" && dom != "" {
+				if repByFwDomain[fwID] == nil {
+					repByFwDomain[fwID] = make(map[string]*Node)
+				}
+				if _, exists := repByFwDomain[fwID][dom]; !exists {
+					repByFwDomain[fwID][dom] = n
+					ug.domainCtrls[dom] = append(ug.domainCtrls[dom], n)
+				}
+			}
+		}
+	}
+
+	for _, cw := range feeds.BuiltinCrosswalks {
+		canonID := strings.ToLower(cw.CanonicalControl)
+		ug.canonAlias[canonID] = canonID
+		if n53 := ug.nodeByURN["urn:xoscal:requirement:nist-sp-800-53-rev5:"+canonID]; n53 != nil {
+			ug.ctrlByCanon[canonID] = appendUniqueNode(ug.ctrlByCanon[canonID], n53)
+		}
+		for _, s171 := range cw.SP800171Controls {
+			raw171 := strings.ToLower(strings.TrimSpace(s171))
+			short171 := normalizeSP800171ID(raw171)
+			ug.canonAlias[raw171] = canonID
+			ug.canonAlias[short171] = canonID
+			for _, idForm := range []string{short171, raw171} {
+				if n171 := ug.nodeByURN["urn:xoscal:requirement:nist-sp-800-171-rev2:"+idForm]; n171 != nil {
+					ug.ctrlByCanon[canonID] = appendUniqueNode(ug.ctrlByCanon[canonID], n171)
+				}
+			}
+			for _, cmmcNode := range cmmcBy171[short171] {
+				ug.ctrlByCanon[canonID] = appendUniqueNode(ug.ctrlByCanon[canonID], cmmcNode)
+				var lbl map[string]any
+				_ = json.Unmarshal([]byte(cmmcNode.LabelsJSON), &lbl)
+				if cid, _ := lbl["id"].(string); cid != "" {
+					ug.canonAlias[cid] = canonID
+				}
+			}
+		}
+		for _, c171 := range cw.ITSP10171Controls {
+			low171 := strings.ToLower(c171)
+			ug.canonAlias[low171] = canonID
+			ug.canonAlias[strings.TrimPrefix(low171, "_")] = canonID
+			if n171 := ug.nodeByURN["urn:xoscal:requirement:cccs-itsp-10-171:"+low171]; n171 != nil {
+				ug.ctrlByCanon[canonID] = appendUniqueNode(ug.ctrlByCanon[canonID], n171)
+			}
+		}
+	}
+
+	edgesByPred := make(map[string]int)
+	antiEdges := 0
+	for _, e := range ug.Edges {
+		ug.edgesFrom[e.FromNode] = append(ug.edgesFrom[e.FromNode], e)
+		ug.edgesTo[e.ToNode] = append(ug.edgesTo[e.ToNode], e)
+		edgesByPred[e.Relation]++
+		if ontology.IsAntiPredicate(e.Relation) {
+			antiEdges++
+		}
+	}
+
+	fwCount := len(ug.expectedFwIDs)
+	if fwCount == 0 {
+		fwCount = nodesByClass[ontology.ClassFramework]
+	}
+	ontSpec := ontology.CanonicalSpec()
+	graphHex := computeGraphContentSHA256(ug.Nodes, ug.Edges, ontSpec.SHA256)
+
+	ug.stats = &GraphStats{
+		OntologyVersion:    ontology.OntologyVersion,
+		OntologyNamespace:  ontology.OntologyNamespace,
+		OntologySHA256:     ontSpec.SHA256,
+		TotalNodes:         len(ug.Nodes),
+		TotalEdges:         len(ug.Edges),
+		AntiEdgeCount:      antiEdges,
+		FrameworksCount:    fwCount,
+		FeedsCount:         len(feeds.ListFeeds()),
+		NodesByClass:       nodesByClass,
+		EdgesByPredicate:   edgesByPred,
+		JurisdictionCounts: jurCounts,
+		GraphSHA256:        graphHex,
+	}
+
+	return ug, nil
 }
 
 func (ug *UnifiedGraph) resolveNode(query string) *Node {

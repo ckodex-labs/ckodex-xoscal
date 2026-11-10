@@ -38,7 +38,7 @@ var SupportedRepositories = []RepositoryDescriptor{
 		Name:        "utcp-mcp",
 		Language:    "TypeScript / MCP Bridge",
 		URL:         "https://github.com/universal-tool-calling-protocol/utcp-mcp",
-		Package:     "@utcp/mcp",
+		Package:     "@utcp/mcp-bridge",
 		Role:        "UTCP-to-MCP Bridge Server",
 		Description: "Universal MCP bridge exposing UTCP manuals and native call templates directly to MCP clients.",
 	},
@@ -76,65 +76,79 @@ var SupportedRepositories = []RepositoryDescriptor{
 	},
 }
 
-// MCPBridgeConfig represents the configuration bundle for universal-tool-calling-protocol/utcp-mcp.
-type MCPBridgeConfig struct {
-	Schema              string               `json:"$schema,omitempty"`
-	BridgeRepository    string               `json:"bridge_repository"`
-	SpecificationURL    string               `json:"specification_url"`
-	ManualCallTemplates []CallTemplate       `json:"manual_call_templates"`
-	MCPServers          map[string]MCPServer `json:"mcpServers"`
+// UTCPClientConfig represents a strict UTCP v1.0.1 .utcp_config.json file consumed by
+// @utcp/mcp-bridge, @utcp/sdk, python-utcp, go-utcp, and rs-utcp.
+type UTCPClientConfig struct {
+	ManualCallTemplates []CallTemplate `json:"manual_call_templates"`
 }
 
-// MCPServer represents a standard MCP server entry invoking @utcp/mcp (utcp-mcp).
+// MCPBridgeConfig represents a standard MCP host configuration invoking @utcp/mcp-bridge.
+type MCPBridgeConfig struct {
+	MCPServers map[string]MCPServer `json:"mcpServers"`
+}
+
+// MCPServer represents a standard MCP server entry invoking @utcp/mcp-bridge.
 type MCPServer struct {
 	Command string            `json:"command"`
 	Args    []string          `json:"args"`
 	Env     map[string]string `json:"env,omitempty"`
 }
 
-// BuildDiscoveryConfig is an alias for GenerateMCPBridgeConfig returning the UTCP discovery and MCP bridge configuration.
-func BuildDiscoveryConfig(manualURL, manualFilePath string) ([]byte, error) {
-	return GenerateMCPBridgeConfig(manualURL, manualFilePath)
+func resolveManualDiscoveryURL(baseOrManualURL string) string {
+	u := strings.TrimSpace(baseOrManualURL)
+	if u == "" {
+		return "http://127.0.0.1:8080/.well-known/utcp"
+	}
+	u = strings.TrimRight(u, "/")
+	if strings.HasSuffix(u, "/.well-known/utcp") ||
+		strings.HasSuffix(u, "/api/v1/utcp/manual") ||
+		strings.HasSuffix(u, "/api/v1/utcp") ||
+		strings.HasSuffix(u, ".json") {
+		return u
+	}
+	return u + "/.well-known/utcp"
 }
 
-// GenerateMCPBridgeConfig produces a ready-to-use configuration for
-// https://github.com/universal-tool-calling-protocol/utcp-mcp so MCP clients
-// can invoke xOSCAL's native UTCP manual without custom wrapper code.
-func GenerateMCPBridgeConfig(manualURL, manualFilePath string) ([]byte, error) {
-	if manualURL == "" {
-		manualURL = "http://127.0.0.1:8080/.well-known/utcp"
-	}
-	if manualFilePath == "" {
-		manualFilePath = "./utcp.json"
-	}
-
-	allowed := DefaultAllowedCommunicationProtocols()
-	cfg := MCPBridgeConfig{
-		BridgeRepository: "https://github.com/universal-tool-calling-protocol/utcp-mcp",
-		SpecificationURL: SpecRepositoryURL,
+// GenerateUTCPClientConfig produces a pure UTCP v1.0.1 .utcp_config.json document
+// registering the xOSCAL HTTP manual discovery endpoint under manual_call_templates.
+func GenerateUTCPClientConfig(baseURL string) ([]byte, error) {
+	manualURL := resolveManualDiscoveryURL(baseURL)
+	cfg := UTCPClientConfig{
 		ManualCallTemplates: []CallTemplate{
 			{
-				Name:                          "xoscal_local_manual",
-				CallTemplateType:              "text",
-				FilePath:                      manualFilePath,
-				AllowedCommunicationProtocols: allowed,
-			},
-			{
-				Name:                          "xoscal_http_manual",
+				Name:                          "xoscal",
 				CallTemplateType:              "http",
 				URL:                           manualURL,
 				HTTPMethod:                    "GET",
-				Headers:                       map[string]string{"Accept": "application/json"},
-				AllowedCommunicationProtocols: allowed,
+				AllowedCommunicationProtocols: []string{"http"},
 			},
 		},
+	}
+	return json.MarshalIndent(cfg, "", "  ")
+}
+
+// BuildDiscoveryConfig produces the UTCP discovery .utcp_config.json configuration.
+func BuildDiscoveryConfig(manualURL, _ string) ([]byte, error) {
+	return GenerateUTCPClientConfig(manualURL)
+}
+
+// GenerateMCPBridgeConfig produces an MCP host configuration invoking @utcp/mcp-bridge
+// pointed at utcpConfigPath (defaulting to ".utcp_config.json" when empty or set to the
+// legacy "./utcp.json" manual flag default).
+func GenerateMCPBridgeConfig(baseURL, utcpConfigPath string) ([]byte, error) {
+	_ = resolveManualDiscoveryURL(baseURL)
+	cfgPath := strings.TrimSpace(utcpConfigPath)
+	if cfgPath == "" || cfgPath == "./utcp.json" {
+		cfgPath = ".utcp_config.json"
+	}
+
+	cfg := MCPBridgeConfig{
 		MCPServers: map[string]MCPServer{
-			"xoscal-utcp": {
+			"utcp-xoscal": {
 				Command: "npx",
-				Args:    []string{"-y", "@utcp/mcp", "--config", ".utcp_config.json"},
+				Args:    []string{"-y", "@utcp/mcp-bridge"},
 				Env: map[string]string{
-					"UTCP_MANUAL_PATH": manualFilePath,
-					"UTCP_MANUAL_URL":  manualURL,
+					"UTCP_CONFIG_FILE": cfgPath,
 				},
 			},
 		},
@@ -147,16 +161,12 @@ func GenerateMCPBridgeConfig(manualURL, manualFilePath string) ([]byte, error) {
 // UTCP language SDKs: "go" (go-utcp), "python" (python-utcp), "typescript" (typescript-utcp),
 // "rust" (rs-utcp), or "mcp" (utcp-mcp).
 func GenerateSDKHarness(target, manualURL, manualFilePath string) (string, error) {
-	if manualURL == "" {
-		manualURL = "http://127.0.0.1:8080/.well-known/utcp"
-	}
-	if manualFilePath == "" {
-		manualFilePath = "./utcp.json"
-	}
+	resolvedManualURL := resolveManualDiscoveryURL(manualURL)
 
 	switch strings.ToLower(strings.TrimSpace(target)) {
 	case "go", "go-utcp":
 		return fmt.Sprintf(`// Generated by xOSCAL for https://github.com/universal-tool-calling-protocol/go-utcp
+// Expects .utcp_config.json pointing to %s
 package main
 
 import (
@@ -169,127 +179,113 @@ import (
 
 func main() {
 	ctx := context.Background()
-	cfg := &utcp.UtcpClientConfig{
-		ManualCallTemplates: []utcp.CallTemplate{
-			{
-				Name:                          "xoscal_http_manual",
-				CallTemplateType:              "http",
-				URL:                           %q,
-				HTTPMethod:                    "GET",
-				AllowedCommunicationProtocols: []string{"cli", "http", "grpc", "sse", "text", "mcp"},
-			},
-			{
-				Name:                          "xoscal_local_manual",
-				CallTemplateType:              "text",
-				FilePath:                      %q,
-				AllowedCommunicationProtocols: []string{"cli", "http", "grpc", "sse", "text", "mcp"},
-			},
-		},
-	}
+	cfg := &utcp.UtcpClientConfig{ProvidersFilePath: ".utcp_config.json"}
 
-	client, err := utcp.NewUtcpClient(ctx, cfg, nil, nil)
+	client, err := utcp.NewUTCPClient(ctx, cfg, nil, nil)
 	if err != nil {
 		log.Fatalf("init go-utcp client: %%v", err)
 	}
 
-	out, err := client.CallTool(ctx, "xoscal_http_manual.xoscal_controls_search", map[string]any{
+	out, err := client.CallTool(ctx, "xoscal.xoscal_controls_search", map[string]any{
+		"q":         "encryption",
 		"framework": "cccs-itsp-10-033",
-		"query":     "account management",
 	})
 	if err != nil {
-		log.Fatalf("call xoscal_http_manual.xoscal_controls_search: %%v", err)
+		log.Fatalf("call xoscal.xoscal_controls_search: %%v", err)
 	}
 	fmt.Printf("xOSCAL UTCP result: %%v\n", out)
 }
-`, manualURL, manualFilePath), nil
+`, resolvedManualURL), nil
 
 	case "python", "py", "python-utcp":
 		return fmt.Sprintf(`# Generated by xOSCAL for https://github.com/universal-tool-calling-protocol/python-utcp
 import asyncio
+import utcp_http  # registers HTTP call template plugin
 from utcp.utcp_client import UtcpClient
-from utcp.data.utcp_client_config import UtcpClientConfig
 
 async def main() -> None:
-    config = UtcpClientConfig(
-        manual_call_templates=[
-            {
-                "name": "xoscal_http_manual",
-                "call_template_type": "http",
-                "url": %q,
-                "http_method": "GET",
-                "allowed_communication_protocols": ["cli", "http", "grpc", "sse", "text", "mcp"],
-            },
-            {
-                "name": "xoscal_local_manual",
-                "call_template_type": "text",
-                "file_path": %q,
-                "allowed_communication_protocols": ["cli", "http", "grpc", "sse", "text", "mcp"],
-            },
-        ]
+    client = await UtcpClient.create(
+        config={
+            "manual_call_templates": [
+                {
+                    "name": "xoscal",
+                    "call_template_type": "http",
+                    "url": %q,
+                    "http_method": "GET",
+                    "allowed_communication_protocols": ["http"],
+                }
+            ]
+        }
     )
-    client = await UtcpClient.create(config=config)
-    result = await client.call_tool(
-        "xoscal_http_manual.xoscal_controls_search",
-        {"framework": "cccs-itsp-10-033", "query": "account management"},
-    )
-    print(result)
+    try:
+        result = await client.call_tool(
+            "xoscal.xoscal_controls_search",
+            {"q": "encryption", "framework": "cccs-itsp-10-033"},
+        )
+        print(result)
+    finally:
+        await client.close()
 
 if __name__ == "__main__":
     asyncio.run(main())
-`, manualURL, manualFilePath), nil
+`, resolvedManualURL), nil
 
 	case "ts", "typescript", "javascript", "js", "typescript-utcp":
 		return fmt.Sprintf(`// Generated by xOSCAL for https://github.com/universal-tool-calling-protocol/typescript-utcp
+import "@utcp/http";
 import { UtcpClient } from "@utcp/sdk";
 
 async function main() {
   const client = await UtcpClient.create(process.cwd(), {
     manual_call_templates: [
       {
-        name: "xoscal_http_manual",
+        name: "xoscal",
         call_template_type: "http",
         url: %q,
         http_method: "GET",
-        allowed_communication_protocols: ["cli", "http", "grpc", "sse", "text", "mcp"],
-      },
-      {
-        name: "xoscal_local_manual",
-        call_template_type: "text",
-        file_path: %q,
-        allowed_communication_protocols: ["cli", "http", "grpc", "sse", "text", "mcp"],
+        allowed_communication_protocols: ["http"],
       },
     ],
   });
-
-  const result = await client.callTool("xoscal_http_manual.xoscal_controls_search", {
-    framework: "cccs-itsp-10-033",
-    query: "account management",
-  });
-  console.log("xOSCAL UTCP result:", result);
+  try {
+    const result = await client.callTool("xoscal.xoscal_controls_search", {
+      q: "encryption",
+      framework: "cccs-itsp-10-033",
+    });
+    console.log("xOSCAL UTCP result:", result);
+  } finally {
+    await client.close();
+  }
 }
 
 main().catch(console.error);
-`, manualURL, manualFilePath), nil
+`, resolvedManualURL), nil
 
 	case "rust", "rs", "rs-utcp":
 		return fmt.Sprintf(`// Generated by xOSCAL for https://github.com/universal-tool-calling-protocol/rs-utcp
-use rs_utcp::{UtcpClient, UtcpClientConfig, CallTemplate};
+// Expects .utcp_config.json pointing to %s
+use std::sync::Arc;
 use serde_json::json;
+use rs_utcp::{
+    UtcpClient, UtcpClientInterface,
+    config::UtcpClientConfig,
+    repository::in_memory::InMemoryToolRepository,
+    tag::tag_search::TagSearchStrategy,
+};
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    let config = UtcpClientConfig::builder()
-        .add_manual_template(CallTemplate::http("xoscal_http_manual", %q, "GET"))
-        .add_manual_template(CallTemplate::text("xoscal_local_manual", %q))
-        .build();
+    let config = UtcpClientConfig::new().with_providers_file_path(".utcp_config.json".into());
+    let repo = Arc::new(InMemoryToolRepository::new());
+    let search = Arc::new(TagSearchStrategy::new(repo.clone(), 1.0));
+    let client = UtcpClient::create(config, repo, search).await?;
 
-    let client = UtcpClient::new(config, None, None).await?;
     let result = client
         .call_tool(
-            "xoscal_http_manual.xoscal_controls_search",
+            "xoscal.xoscal_controls_search",
             json!({
-                "framework": "cccs-itsp-10-033",
-                "query": "account management"
+                "q": "encryption",
+                "framework": "cccs-itsp-10-033"
             }),
         )
         .await?;
@@ -297,10 +293,10 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     println!("xOSCAL UTCP result: {}", result);
     Ok(())
 }
-`, manualURL, manualFilePath), nil
+`, resolvedManualURL), nil
 
 	case "mcp", "utcp-mcp":
-		b, err := GenerateMCPBridgeConfig(manualURL, manualFilePath)
+		b, err := GenerateMCPBridgeConfig(resolvedManualURL, manualFilePath)
 		if err != nil {
 			return "", err
 		}

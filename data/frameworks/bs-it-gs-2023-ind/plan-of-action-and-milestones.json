@@ -4,16 +4,2735 @@
       "href": "./system-security-plan.json"
     },
     "metadata": {
-      "last-modified": "2026-11-08T01:42:12Z",
+      "last-modified": "2026-11-08T00:30:59Z",
       "oscal-version": "1.2.3",
       "title": "IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT Plan of Action and Milestones Template",
       "version": "1"
     },
     "poam-items": [
       {
-        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
-        "title": "Compliance Roadmap and Parameter Tailoring for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT",
-        "uuid": "858ed6b8-71d0-5893-980d-21805d33c57d"
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a1.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a1.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a1.1 (Einbindung in die Sicherheitsorganisation — IND.1.A1.1)",
+        "uuid": "f1c0dc9c-b9e0-5b4c-98a5-2dec67c50c06"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a1.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a1.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a1.2 (Einbindung in die Sicherheitsorganisation — IND.1.A1.2)",
+        "uuid": "fd345222-1f24-554f-91f2-c7eccfe3e21f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a1.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a1.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a1.3 (Einbindung in die Sicherheitsorganisation — IND.1.A1.3)",
+        "uuid": "42c1223f-faa1-5bb9-9d48-314e5840bf64"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a10.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a10.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a10.1 (Monitoring, Protokollierung und Detektion — IND.1.A10.1)",
+        "uuid": "b80e3568-b4e1-50b3-840a-64df58e0273b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a10.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a10.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a10.2 (Monitoring, Protokollierung und Detektion — IND.1.A10.2)",
+        "uuid": "36ba5b25-ec47-59c5-8537-7ab7b476a31c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a10.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a10.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a10.3 (Monitoring, Protokollierung und Detektion — IND.1.A10.3)",
+        "uuid": "7f9a6b7a-c291-58f4-93e9-d113e2c9e86d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a10.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a10.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a10.4 (Monitoring, Protokollierung und Detektion — IND.1.A10.4)",
+        "uuid": "22481589-c755-5ecb-b278-55705af9d408"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a10.5 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a10.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a10.5 (Monitoring, Protokollierung und Detektion — IND.1.A10.5)",
+        "uuid": "ed9779d0-3fff-51c6-982c-5119c7950a27"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a10.6 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a10.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a10.6 (Monitoring, Protokollierung und Detektion — IND.1.A10.6)",
+        "uuid": "f7f008b1-34dd-5319-888f-2cb9f98b48a6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a11.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a11.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a11.1 (Sichere Beschaffung und Systementwicklung — IND.1.A11.1)",
+        "uuid": "f7e94716-8632-5f03-825a-c67852c09f60"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a11.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a11.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a11.2 (Sichere Beschaffung und Systementwicklung — IND.1.A11.2)",
+        "uuid": "d24b285b-99cb-5f3d-bf76-cf0caa27f5ee"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a11.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a11.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a11.3 (Sichere Beschaffung und Systementwicklung — IND.1.A11.3)",
+        "uuid": "2f12c675-3952-55e6-b6db-a3324b84510f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a11.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a11.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a11.4 (Sichere Beschaffung und Systementwicklung — IND.1.A11.4)",
+        "uuid": "56652416-1d35-5f78-99c9-1b7648ef9d34"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a11.5 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a11.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a11.5 (Sichere Beschaffung und Systementwicklung — IND.1.A11.5)",
+        "uuid": "bfdf6755-aa8a-552e-8e4b-49d9be55a9aa"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a11.6 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a11.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a11.6 (Sichere Beschaffung und Systementwicklung — IND.1.A11.6)",
+        "uuid": "5f219614-8ee1-5f66-835f-d8b784623fc5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a11.7 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a11.7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a11.7 (Sichere Beschaffung und Systementwicklung — IND.1.A11.7)",
+        "uuid": "586d43fa-91e9-5070-b9aa-499e47508e63"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a11.8 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a11.8"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a11.8 (Sichere Beschaffung und Systementwicklung — IND.1.A11.8)",
+        "uuid": "fc4ac96b-b795-5444-82f9-75d1e1a4f7c1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a11.9 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a11.9"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a11.9 (Sichere Beschaffung und Systementwicklung — IND.1.A11.9)",
+        "uuid": "89c0c450-fb44-57e4-b650-b589d734b0cf"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a12.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a12.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a12.1 (Etablieren eines Schwachstellen-Managements — IND.1.A12.1)",
+        "uuid": "652ec045-6891-56b8-9ab6-51b125c58153"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a12.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a12.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a12.2 (Etablieren eines Schwachstellen-Managements — IND.1.A12.2)",
+        "uuid": "a56f0ab2-f233-51a2-9ded-902e455fd765"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a12.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a12.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a12.3 (Etablieren eines Schwachstellen-Managements — IND.1.A12.3)",
+        "uuid": "58b8589f-aee7-5e4d-81f4-c409f12e665c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a12.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a12.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a12.4 (Etablieren eines Schwachstellen-Managements — IND.1.A12.4)",
+        "uuid": "4306e413-eac4-56a4-8548-7aeaaf511772"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a12.5 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a12.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a12.5 (Etablieren eines Schwachstellen-Managements — IND.1.A12.5)",
+        "uuid": "1db2ff0e-9ae4-560a-a022-7acf24b04a54"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a13.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a13.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a13.1 (Notfallplanung für OT — IND.1.A13.1)",
+        "uuid": "937447ab-8212-5547-b701-79cb38616c92"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a13.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a13.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a13.2 (Notfallplanung für OT — IND.1.A13.2)",
+        "uuid": "9f9ef521-5d38-59ae-b1f4-7506003652b0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a14.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a14.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a14.1 (Starke Authentisierung an OT-Komponenten — IND.1.A14.1)",
+        "uuid": "4f49ad12-9f75-5a1d-a24b-8ea646f2bd28"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a14.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a14.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a14.2 (Starke Authentisierung an OT-Komponenten — IND.1.A14.2)",
+        "uuid": "ab9953c8-41a4-500c-bbe0-1abb506895d2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a14.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a14.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a14.3 (Starke Authentisierung an OT-Komponenten — IND.1.A14.3)",
+        "uuid": "875c9e6d-e1b4-5de6-81a7-7366339e1783"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a14.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a14.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a14.4 (Starke Authentisierung an OT-Komponenten — IND.1.A14.4)",
+        "uuid": "c2a5a2d7-fe14-5e8a-bacb-dc42447bba79"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a15.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a15.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a15.1 (Überwachung von weitreichenden Berechtigungen — IND.1.A15.1)",
+        "uuid": "384cabc6-f2ef-52da-aaaa-3c6f8c821cde"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a15.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a15.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a15.2 (Überwachung von weitreichenden Berechtigungen — IND.1.A15.2)",
+        "uuid": "cb236d10-7755-5914-8c12-ddfcbcfe47e9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a15.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a15.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a15.3 (Überwachung von weitreichenden Berechtigungen — IND.1.A15.3)",
+        "uuid": "0874b09c-1750-5eb6-9a2f-8ee42a35748c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a15.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a15.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a15.4 (Überwachung von weitreichenden Berechtigungen — IND.1.A15.4)",
+        "uuid": "f04ea2e2-b510-5281-88c8-8deb3886c4c1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a16.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a16.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a16.1 (Stärkere Abschottung der Zonen — IND.1.A16.1)",
+        "uuid": "324f8f79-7980-59fb-941e-394d0d433831"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a16.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a16.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a16.2 (Stärkere Abschottung der Zonen — IND.1.A16.2)",
+        "uuid": "c0c7961d-67f2-5111-800c-567dc293135c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a16.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a16.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a16.3 (Stärkere Abschottung der Zonen — IND.1.A16.3)",
+        "uuid": "5d5faf46-89bc-56f9-aed1-2b2110782ecc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a17.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a17.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a17.1 (Regelmäßige Sicherheitsüberprüfung — IND.1.A17.1)",
+        "uuid": "7ff966b4-fb18-50b7-8c99-69471ea9b978"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a17.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a17.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a17.2 (Regelmäßige Sicherheitsüberprüfung — IND.1.A17.2)",
+        "uuid": "62aac497-9aa9-561b-894c-bd1262c1ed69"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a17.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a17.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a17.3 (Regelmäßige Sicherheitsüberprüfung — IND.1.A17.3)",
+        "uuid": "7b49d67d-8058-5ba7-85fd-f80c7430883c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a17.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a17.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a17.4 (Regelmäßige Sicherheitsüberprüfung — IND.1.A17.4)",
+        "uuid": "1fdbca7d-494a-5380-8b15-ef7119c344ab"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a18.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a18.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a18.1 (Protokollierung — IND.1.A18.1)",
+        "uuid": "ac100bab-32b2-5a7b-9d03-efec370e65ee"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a18.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a18.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a18.2 (Protokollierung — IND.1.A18.2)",
+        "uuid": "c092ab33-e37a-5ee3-b3d2-7e6c170826c3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a19.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a19.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a19.1 (Erstellung von Datensicherungen — IND.1.A19.1)",
+        "uuid": "3190829a-3384-5511-a6ba-4181db926203"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a19.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a19.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a19.2 (Erstellung von Datensicherungen — IND.1.A19.2)",
+        "uuid": "5e0d2c82-b4a6-51aa-88a5-dcff8de61fb0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a20.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a20.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a20.1 (Systemdokumentation — IND.1.A20.1)",
+        "uuid": "7f15d625-b1e8-5bb2-9d6e-53eee558b8d8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a20.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a20.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a20.2 (Systemdokumentation — IND.1.A20.2)",
+        "uuid": "f68174ee-c5b0-51b4-9ddf-051eeb246e0a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a20.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a20.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a20.3 (Systemdokumentation — IND.1.A20.3)",
+        "uuid": "9b832029-1685-5ff1-bf13-294dea631a12"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a21.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a21.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a21.1 (Dokumentation der Kommunikationsbeziehungen — IND.1.A21.1)",
+        "uuid": "c6178b28-6f40-57ea-a87d-c5dc481dda77"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a21.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a21.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a21.2 (Dokumentation der Kommunikationsbeziehungen — IND.1.A21.2)",
+        "uuid": "74f2530c-97dd-56a9-98af-1c368c5b656b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a22.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a22.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a22.1 (Zentrale Systemprotokollierung und -überwachung — IND.1.A22.1)",
+        "uuid": "da06393b-4444-5f86-b916-02bccd8226d7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a22.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a22.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a22.2 (Zentrale Systemprotokollierung und -überwachung — IND.1.A22.2)",
+        "uuid": "01453e22-a5a7-5c41-920e-a5fa45a94de4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a23.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a23.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a23.1 (Aussonderung von ICS-Komponenten — IND.1.A23.1)",
+        "uuid": "3699a078-d98d-5526-98b3-0fcf657a83aa"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a23.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a23.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a23.2 (Aussonderung von ICS-Komponenten — IND.1.A23.2)",
+        "uuid": "7a8a683e-ee37-5f92-a850-85e91938f94c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a24.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a24.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a24.1 (Kommunikation im Störfall — IND.1.A24.1)",
+        "uuid": "e34889da-fa4a-501f-bde3-7fafe838505f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a3.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a3.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a3.1 (Schutz vor Schadprogrammen — IND.1.A3.1)",
+        "uuid": "1c9cf4e0-9454-5af2-97ce-ce73de3d23e1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a3.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a3.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a3.2 (Schutz vor Schadprogrammen — IND.1.A3.2)",
+        "uuid": "8a6a6c6f-827c-5a48-88e5-5cab20bb45be"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a3.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a3.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a3.3 (Schutz vor Schadprogrammen — IND.1.A3.3)",
+        "uuid": "7f9f65a3-118e-5049-92c3-6748805e6f5c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a4.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a4.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a4.1 (Dokumentation der OT-Infrastruktur — IND.1.A4.1)",
+        "uuid": "b0909639-7ca1-59fb-b0ae-72b26ecf759b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a4.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a4.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a4.2 (Dokumentation der OT-Infrastruktur — IND.1.A4.2)",
+        "uuid": "ceefec8f-cc98-5ee3-977c-6f88c231d545"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a4.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a4.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a4.3 (Dokumentation der OT-Infrastruktur — IND.1.A4.3)",
+        "uuid": "edb61932-7381-5ced-b11f-c312bccd6266"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a4.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a4.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a4.4 (Dokumentation der OT-Infrastruktur — IND.1.A4.4)",
+        "uuid": "d131bd6c-c48b-5a41-9630-284c9a91cf09"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a4.5 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a4.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a4.5 (Dokumentation der OT-Infrastruktur — IND.1.A4.5)",
+        "uuid": "b2790b4a-2341-58a8-abc4-0262ac4c7dbc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a4.6 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a4.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a4.6 (Dokumentation der OT-Infrastruktur — IND.1.A4.6)",
+        "uuid": "9074daaa-0c23-5cda-97bc-d37220ace673"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a4.7 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a4.7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a4.7 (Dokumentation der OT-Infrastruktur — IND.1.A4.7)",
+        "uuid": "b2b5db01-91d9-5f81-9720-a8cc56e550e9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a4.8 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a4.8"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a4.8 (Dokumentation der OT-Infrastruktur — IND.1.A4.8)",
+        "uuid": "f05d8068-731a-536b-b09c-93927f34e476"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a5.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a5.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a5.1 (Entwicklung eines geeigneten Zonenkonzepts — IND.1.A5.1)",
+        "uuid": "d1af85a8-a44d-5919-a7b8-ab7df71f3b31"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a5.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a5.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a5.2 (Entwicklung eines geeigneten Zonenkonzepts — IND.1.A5.2)",
+        "uuid": "1f17f6ea-2f5f-589d-99c1-e401e87552ca"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a5.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a5.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a5.3 (Entwicklung eines geeigneten Zonenkonzepts — IND.1.A5.3)",
+        "uuid": "46048352-3189-5bd3-867d-4a49546ab47f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a5.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a5.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a5.4 (Entwicklung eines geeigneten Zonenkonzepts — IND.1.A5.4)",
+        "uuid": "9725795d-750b-5217-b8bd-1558d59f90d9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a5.5 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a5.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a5.5 (Entwicklung eines geeigneten Zonenkonzepts — IND.1.A5.5)",
+        "uuid": "f8ba924d-153d-5cb9-9150-d47a28ce1e94"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a5.6 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a5.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a5.6 (Entwicklung eines geeigneten Zonenkonzepts — IND.1.A5.6)",
+        "uuid": "3ebf72f6-5cf3-5806-b81c-03841793de10"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a6.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a6.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a6.1 (Änderungsmanagement im OT-Betrieb — IND.1.A6.1)",
+        "uuid": "fe5d0496-a64c-52ec-b4c3-3a6425197c82"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a7.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a7.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a7.1 (Etablieren einer übergreifenden Berechtigungsverwaltung zwischen der OT und in der Office-IT — IND.1.A7.1)",
+        "uuid": "10e7be73-6682-58fb-b0e0-2822cc1efc10"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a7.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a7.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a7.2 (Etablieren einer übergreifenden Berechtigungsverwaltung zwischen der OT und in der Office-IT — IND.1.A7.2)",
+        "uuid": "6e3caad4-d8c9-549f-b6a9-eb754acb9d33"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a7.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a7.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a7.3 (Etablieren einer übergreifenden Berechtigungsverwaltung zwischen der OT und in der Office-IT — IND.1.A7.3)",
+        "uuid": "15539f2f-5d19-5397-a923-f3ac661048b4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a7.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a7.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a7.4 (Etablieren einer übergreifenden Berechtigungsverwaltung zwischen der OT und in der Office-IT — IND.1.A7.4)",
+        "uuid": "84c04eb9-1679-5faf-96bc-d4331b08e807"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a7.5 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a7.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a7.5 (Etablieren einer übergreifenden Berechtigungsverwaltung zwischen der OT und in der Office-IT — IND.1.A7.5)",
+        "uuid": "c488e77a-6580-5d94-8d21-7533f4026041"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a7.6 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a7.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a7.6 (Etablieren einer übergreifenden Berechtigungsverwaltung zwischen der OT und in der Office-IT — IND.1.A7.6)",
+        "uuid": "0052da5f-4b39-57fb-87f3-414c45a75896"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a7.7 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a7.7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a7.7 (Etablieren einer übergreifenden Berechtigungsverwaltung zwischen der OT und in der Office-IT — IND.1.A7.7)",
+        "uuid": "7c97d9a9-309b-5bf3-96f7-e01957bc4b5c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a8.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a8.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a8.1 (Sichere Administration — IND.1.A8.1)",
+        "uuid": "7f83b2a5-6acb-5388-90ca-5653bc1fc95d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a8.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a8.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a8.2 (Sichere Administration — IND.1.A8.2)",
+        "uuid": "98181d5b-6b56-51a3-8913-a747f7959a84"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a8.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a8.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a8.3 (Sichere Administration — IND.1.A8.3)",
+        "uuid": "39c9aca8-4aaa-5508-a122-4418feb8c917"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a8.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a8.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a8.4 (Sichere Administration — IND.1.A8.4)",
+        "uuid": "a33db32e-5be3-5f93-a01e-fcf8ef42ca32"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a9.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a9.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a9.1 (Restriktiver Einsatz von Wechseldatenträgern und mobilen Endgeräten in ICS-Umgebungen — IND.1.A9.1)",
+        "uuid": "10102390-2d03-5dad-825b-2dc691e9ed4e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a9.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a9.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a9.2 (Restriktiver Einsatz von Wechseldatenträgern und mobilen Endgeräten in ICS-Umgebungen — IND.1.A9.2)",
+        "uuid": "46b404ae-5b0e-55b4-96cf-067e95ba9b5a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a9.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a9.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a9.3 (Restriktiver Einsatz von Wechseldatenträgern und mobilen Endgeräten in ICS-Umgebungen — IND.1.A9.3)",
+        "uuid": "ddfeb812-483f-582d-ab88-9b9437393334"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a9.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a9.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a9.4 (Restriktiver Einsatz von Wechseldatenträgern und mobilen Endgeräten in ICS-Umgebungen — IND.1.A9.4)",
+        "uuid": "eed9989a-3105-58d8-9b1d-5f9abf984036"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a9.5 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a9.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a9.5 (Restriktiver Einsatz von Wechseldatenträgern und mobilen Endgeräten in ICS-Umgebungen — IND.1.A9.5)",
+        "uuid": "a7fae625-5ea6-5db2-943b-e62937f66711"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.1.a9.6 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.1.a9.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.1.a9.6 (Restriktiver Einsatz von Wechseldatenträgern und mobilen Endgeräten in ICS-Umgebungen — IND.1.A9.6)",
+        "uuid": "2d369e34-1792-543a-b5d7-9c00f4c0a5c3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.1.a1.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.1.a1.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.1.a1.1 (Einschränkung des Zugriffs auf Konfigurations- und Wartungsschnittstellen — IND.2.1.A1.1)",
+        "uuid": "7c43c68b-5633-580d-8ff0-696d560af929"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.1.a1.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.1.a1.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.1.a1.2 (Einschränkung des Zugriffs auf Konfigurations- und Wartungsschnittstellen — IND.2.1.A1.2)",
+        "uuid": "dd98415c-6818-55cc-98b1-771906d6da5c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.1.a1.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.1.a1.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.1.a1.3 (Einschränkung des Zugriffs auf Konfigurations- und Wartungsschnittstellen — IND.2.1.A1.3)",
+        "uuid": "3e190bed-521d-5b3b-9ab8-91fd43b6c0ef"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.1.a1.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.1.a1.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.1.a1.4 (Einschränkung des Zugriffs auf Konfigurations- und Wartungsschnittstellen — IND.2.1.A1.4)",
+        "uuid": "fb2ceb5d-bbf7-5687-bf20-3df5bb45a15c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.1.a1.5 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.1.a1.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.1.a1.5 (Einschränkung des Zugriffs auf Konfigurations- und Wartungsschnittstellen — IND.2.1.A1.5)",
+        "uuid": "68c9ec5a-2110-5d21-9858-a8a201c293df"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.1.a11.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.1.a11.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.1.a11.1 (Wartung der ICS-Komponenten — IND.2.1.A11.1)",
+        "uuid": "9d4177b7-342f-50c1-864e-0cf87131fe42"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.1.a11.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.1.a11.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.1.a11.2 (Wartung der ICS-Komponenten — IND.2.1.A11.2)",
+        "uuid": "2e682022-8170-562c-a0e7-f690ddd70809"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.1.a11.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.1.a11.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.1.a11.3 (Wartung der ICS-Komponenten — IND.2.1.A11.3)",
+        "uuid": "e3cf8e07-a560-5bdb-9fc3-d28b3c591d07"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.1.a11.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.1.a11.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.1.a11.4 (Wartung der ICS-Komponenten — IND.2.1.A11.4)",
+        "uuid": "a3ce4428-13d3-5a43-9d58-2c1bc61eaee3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.1.a13.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.1.a13.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.1.a13.1 (Geeignete Inbetriebnahme von ICS-Komponenten — IND.2.1.A13.1)",
+        "uuid": "411dd630-5d7b-5f87-8ed4-5ea6d0710e65"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.1.a13.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.1.a13.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.1.a13.2 (Geeignete Inbetriebnahme von ICS-Komponenten — IND.2.1.A13.2)",
+        "uuid": "e1a23b29-d57a-5329-843f-cf80c96dbc4d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.1.a16.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.1.a16.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.1.a16.1 (Schutz externer Schnittstellen — IND.2.1.A16.1)",
+        "uuid": "baada84d-27ac-53a0-b738-4915c6aa0a55"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.1.a17.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.1.a17.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.1.a17.1 (Nutzung sicherer Protokolle für die Übertragung von Mess- und Steuerdaten — IND.2.1.A17.1)",
+        "uuid": "baf7c440-3e44-5da4-bf12-15e33da6fe37"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.1.a17.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.1.a17.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.1.a17.2 (Nutzung sicherer Protokolle für die Übertragung von Mess- und Steuerdaten — IND.2.1.A17.2)",
+        "uuid": "a4be6bd4-f478-592d-b39b-9bcff5ec30b9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.1.a17.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.1.a17.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.1.a17.3 (Nutzung sicherer Protokolle für die Übertragung von Mess- und Steuerdaten — IND.2.1.A17.3)",
+        "uuid": "f72bd8cc-0811-59d8-85f5-9da070780a6b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.1.a18.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.1.a18.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.1.a18.1 (Kommunikation im Störfall — IND.2.1.A18.1)",
+        "uuid": "c697c9b7-b919-552b-ac82-8dc97923b714"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.1.a19.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.1.a19.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.1.a19.1 (Security-Tests — IND.2.1.A19.1)",
+        "uuid": "0665eeb2-98b3-5e80-9a80-ccc11ad7e101"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.1.a19.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.1.a19.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.1.a19.2 (Security-Tests — IND.2.1.A19.2)",
+        "uuid": "911a1508-cfd4-5ac4-b499-fcbdff77f241"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.1.a19.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.1.a19.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.1.a19.3 (Security-Tests — IND.2.1.A19.3)",
+        "uuid": "66339630-2d24-598d-be6f-85891b81e732"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.1.a19.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.1.a19.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.1.a19.4 (Security-Tests — IND.2.1.A19.4)",
+        "uuid": "12c977bf-3994-5313-925a-f318170746a0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.1.a19.5 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.1.a19.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.1.a19.5 (Security-Tests — IND.2.1.A19.5)",
+        "uuid": "150b40f5-a9aa-5e1c-97af-2074f6a38693"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.1.a2.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.1.a2.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.1.a2.1 (Nutzung sicherer Übertragungs-Protokolle für die Konfiguration und Wartung — IND.2.1.A2.1)",
+        "uuid": "dab3dbf4-646b-50e6-b514-69e68190be31"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.1.a2.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.1.a2.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.1.a2.2 (Nutzung sicherer Übertragungs-Protokolle für die Konfiguration und Wartung — IND.2.1.A2.2)",
+        "uuid": "f3f37d14-0198-5140-a0cf-c79e0107f4db"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.1.a20.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.1.a20.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.1.a20.1 (Vertrauenswürdiger Code — IND.2.1.A20.1)",
+        "uuid": "80570f89-736c-53d0-b794-ed4e09edb003"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.1.a20.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.1.a20.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.1.a20.2 (Vertrauenswürdiger Code — IND.2.1.A20.2)",
+        "uuid": "acf23b8b-2a7d-5771-8133-ecf85abdde12"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.1.a4.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.1.a4.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.1.a4.1 (Deaktivierung oder Deinstallation nicht genutzter Dienste, Funktionen und Schnittstellen — IND.2.1.A4.1)",
+        "uuid": "73062995-b6c9-5522-8ffa-1f456bf5cf1d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.1.a6.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.1.a6.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.1.a6.1 (Netzsegmentierung — IND.2.1.A6.1)",
+        "uuid": "156ca7cc-0b48-5789-878e-f1e35ea2be57"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.1.a6.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.1.a6.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.1.a6.2 (Netzsegmentierung — IND.2.1.A6.2)",
+        "uuid": "06e8d04c-9c18-5fdb-a87e-7f5b66244a1e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.1.a6.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.1.a6.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.1.a6.3 (Netzsegmentierung — IND.2.1.A6.3)",
+        "uuid": "0571ef56-f28d-582d-b6be-76db46e8b69f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.1.a7.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.1.a7.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.1.a7.1 (Erstellung von Datensicherungen — IND.2.1.A7.1)",
+        "uuid": "ce1aa75a-97f7-5726-94ce-e8751e01835a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.1.a8.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.1.a8.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.1.a8.1 (Schutz vor Schadsoftware — IND.2.1.A8.1)",
+        "uuid": "22c49a53-d088-5cf7-b6a3-c07713212d19"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.1.a8.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.1.a8.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.1.a8.2 (Schutz vor Schadsoftware — IND.2.1.A8.2)",
+        "uuid": "c25fdb1a-1042-5d07-841c-e860f68852ce"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.1.a8.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.1.a8.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.1.a8.3 (Schutz vor Schadsoftware — IND.2.1.A8.3)",
+        "uuid": "066b6143-bb1a-5600-a292-cae96cb9f53d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.2.a1.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.2.a1.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.2.a1.1 (Erweiterte Systemdokumentation für Speicherprogrammierbare Steuerungen — IND.2.2.A1.1)",
+        "uuid": "f2757036-65ab-526f-a836-ad6883426843"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.2.a1.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.2.a1.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.2.a1.2 (Erweiterte Systemdokumentation für Speicherprogrammierbare Steuerungen — IND.2.2.A1.2)",
+        "uuid": "ae112139-51f6-521b-828d-45e37d6103ad"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.2.a3.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.2.a3.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.2.a3.1 (Zeitsynchronisation — IND.2.2.A3.1)",
+        "uuid": "8d34da24-1ccd-5e54-b8ac-c7735f2d8d36"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.3.a1.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.3.a1.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.3.a1.1 (Installation von Sensoren — IND.2.3.A1.1)",
+        "uuid": "599ca95f-07de-5a3b-919f-777c7b8c84e9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.3.a1.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.3.a1.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.3.a1.2 (Installation von Sensoren — IND.2.3.A1.2)",
+        "uuid": "45659d34-d0ca-5de5-a9f4-354db809582c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.3.a1.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.3.a1.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.3.a1.3 (Installation von Sensoren — IND.2.3.A1.3)",
+        "uuid": "34eae010-6eaa-5fa5-b29c-1c3fe2a6ccbd"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.3.a2.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.3.a2.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.3.a2.1 (Kalibrierung von Sensoren — IND.2.3.A2.1)",
+        "uuid": "26358367-d5fc-5460-8a64-5162bd312d59"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.3.a2.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.3.a2.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.3.a2.2 (Kalibrierung von Sensoren — IND.2.3.A2.2)",
+        "uuid": "91880f68-008d-5e31-befa-0a794bff4be2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.3.a2.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.3.a2.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.3.a2.3 (Kalibrierung von Sensoren — IND.2.3.A2.3)",
+        "uuid": "9ed79808-0b68-5dfa-ba30-10eaa001be6e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.3.a3.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.3.a3.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.3.a3.1 (Drahtlose Kommunikation — IND.2.3.A3.1)",
+        "uuid": "b628fc6c-4f1f-51c5-b5f7-cdafb07bd902"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.3.a3.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.3.a3.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.3.a3.2 (Drahtlose Kommunikation — IND.2.3.A3.2)",
+        "uuid": "1b9fc177-4ccc-5ffc-969b-7d74fa208e6f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.4.a1.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.4.a1.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.4.a1.1 (Fernwartung durch Maschinen- und Anlagenbauende — IND.2.4.A1.1)",
+        "uuid": "15004b94-543a-5636-8ed5-8e32f4ad73be"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.4.a1.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.4.a1.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.4.a1.2 (Fernwartung durch Maschinen- und Anlagenbauende — IND.2.4.A1.2)",
+        "uuid": "a65ada25-0f58-5043-a0dd-2fad8be34abb"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.4.a1.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.4.a1.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.4.a1.3 (Fernwartung durch Maschinen- und Anlagenbauende — IND.2.4.A1.3)",
+        "uuid": "e91757bf-7479-52c5-a938-0ff6ae88c51a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.4.a1.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.4.a1.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.4.a1.4 (Fernwartung durch Maschinen- und Anlagenbauende — IND.2.4.A1.4)",
+        "uuid": "65cc54f9-1cef-52ed-8d3e-9cfc729a2ec0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.4.a1.5 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.4.a1.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.4.a1.5 (Fernwartung durch Maschinen- und Anlagenbauende — IND.2.4.A1.5)",
+        "uuid": "272443b1-c534-5cb5-ab92-bf1bdf39be51"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.4.a1.6 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.4.a1.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.4.a1.6 (Fernwartung durch Maschinen- und Anlagenbauende — IND.2.4.A1.6)",
+        "uuid": "d9dcce8a-fd22-5dbe-86ea-ff37e9fe5b82"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.4.a2.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.4.a2.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.4.a2.1 (Betrieb nach Ende der Gewährleistung — IND.2.4.A2.1)",
+        "uuid": "f302a62c-d1c9-5d8b-aa96-9c72b56373a7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.4.a2.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.4.a2.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.4.a2.2 (Betrieb nach Ende der Gewährleistung — IND.2.4.A2.2)",
+        "uuid": "79ebf423-4468-5d36-9bc7-24afc493f077"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.7.a1.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.7.a1.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.7.a1.1 (Erfassung und Dokumentation — IND.2.7.A1.1)",
+        "uuid": "e67f1a3d-39ab-5e84-bbbe-aec7236a9008"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.7.a10.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.7.a10.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.7.a10.1 (Anzeige und Alarmierung von simulierten oder gebrückten Variablen — IND.2.7.A10.1)",
+        "uuid": "525b8987-097c-50da-b72e-688df086b66a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.7.a10.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.7.a10.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.7.a10.2 (Anzeige und Alarmierung von simulierten oder gebrückten Variablen — IND.2.7.A10.2)",
+        "uuid": "e0293dca-7088-5035-8e96-5e26a8f98a2b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.7.a10.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.7.a10.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.7.a10.3 (Anzeige und Alarmierung von simulierten oder gebrückten Variablen — IND.2.7.A10.3)",
+        "uuid": "2302ef1a-032a-56ad-bc77-6e9e1ef1f912"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.7.a10.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.7.a10.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.7.a10.4 (Anzeige und Alarmierung von simulierten oder gebrückten Variablen — IND.2.7.A10.4)",
+        "uuid": "a3473ae3-7c3d-5560-9ae8-36c120358440"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.7.a11.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.7.a11.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.7.a11.1 (Umgang mit integrierten Systemen — IND.2.7.A11.1)",
+        "uuid": "cad43c52-6d37-5503-b31f-6a0e6fafc558"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.7.a12.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.7.a12.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.7.a12.1 (Sicherstellen der Integrität und Authentizität von Anwendungsprogrammen und Konfigurationsdaten — IND.2.7.A12.1)",
+        "uuid": "041b3b5e-55cf-53e0-90d5-0c5d67be1712"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.7.a12.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.7.a12.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.7.a12.2 (Sicherstellen der Integrität und Authentizität von Anwendungsprogrammen und Konfigurationsdaten — IND.2.7.A12.2)",
+        "uuid": "7893ffba-ca8f-59a0-aeb2-4d73fed62b8b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.7.a12.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.7.a12.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.7.a12.3 (Sicherstellen der Integrität und Authentizität von Anwendungsprogrammen und Konfigurationsdaten — IND.2.7.A12.3)",
+        "uuid": "1eaa618c-71ba-5727-aa08-dd04aebe61e4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.7.a2.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.7.a2.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.7.a2.1 (Zweckgebundene Nutzung der Hard- und Softwarekomponenten — IND.2.7.A2.1)",
+        "uuid": "789612da-d67c-5818-a603-8db8b5126d36"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.7.a3.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.7.a3.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.7.a3.1 (Änderung des Anwendungsprogramms auf dem Logiksystem — IND.2.7.A3.1)",
+        "uuid": "6a38796d-2bbd-5468-a625-4298622c0385"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.7.a3.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.7.a3.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.7.a3.2 (Änderung des Anwendungsprogramms auf dem Logiksystem — IND.2.7.A3.2)",
+        "uuid": "3ea0ae33-128b-5f04-b348-37939a59a7af"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.7.a3.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.7.a3.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.7.a3.3 (Änderung des Anwendungsprogramms auf dem Logiksystem — IND.2.7.A3.3)",
+        "uuid": "76deb074-062d-5ddf-b215-ee0416c55519"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.7.a4.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.7.a4.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.7.a4.1 (Verankerung von Informationssicherheit im Functional Safety Management — IND.2.7.A4.1)",
+        "uuid": "76a7400e-da9b-500b-b8ac-ed5c73355f07"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.7.a4.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.7.a4.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.7.a4.2 (Verankerung von Informationssicherheit im Functional Safety Management — IND.2.7.A4.2)",
+        "uuid": "4b1d941e-03a6-5097-9ac9-f7be23befb26"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.7.a5.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.7.a5.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.7.a5.1 (Notfallmanagement von SIS — IND.2.7.A5.1)",
+        "uuid": "c798d782-8a7a-59fb-96cc-8d465cc10acf"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.7.a5.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.7.a5.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.7.a5.2 (Notfallmanagement von SIS — IND.2.7.A5.2)",
+        "uuid": "1c4fe306-21d5-53da-b48f-cb12b2729018"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.7.a6.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.7.a6.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.7.a6.1 (Sichere Planung und Spezifikation des SIS — IND.2.7.A6.1)",
+        "uuid": "20db13fa-e314-5519-aee3-6adb8913e6e6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.7.a7.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.7.a7.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.7.a7.1 (Trennung und Unabhängigkeit des SIS von der Umgebung — IND.2.7.A7.1)",
+        "uuid": "8b598131-042d-531b-bb5b-052d2d897fb0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.7.a7.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.7.a7.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.7.a7.2 (Trennung und Unabhängigkeit des SIS von der Umgebung — IND.2.7.A7.2)",
+        "uuid": "dd423e70-dd02-5b8e-99bf-817fd013e22b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.7.a8.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.7.a8.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.7.a8.1 (Sichere Übertragung von Engineering Daten auf SIS — IND.2.7.A8.1)",
+        "uuid": "edb79769-c05c-57ba-b14b-e62cd26e6705"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.2.7.a9.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.2.7.a9.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.2.7.a9.1 (Absicherung der Daten- und Signalverbindungen — IND.2.7.A9.1)",
+        "uuid": "a135cac0-233e-5c17-9cc3-0f285add6d09"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a1.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a1.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a1.1 (Planung des Einsatzes der Fernwartung in der OT — IND.3.2.A1.1)",
+        "uuid": "e905fb0a-c9b8-5738-8b72-85e984be839c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a1.10 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a1.10"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a1.10 (Planung des Einsatzes der Fernwartung in der OT — IND.3.2.A1.10)",
+        "uuid": "1f595468-c063-500f-9773-11add0fd5fa8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a1.11 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a1.11"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a1.11 (Planung des Einsatzes der Fernwartung in der OT — IND.3.2.A1.11)",
+        "uuid": "2198ad3f-52be-5ef3-a451-bcd0d7a08520"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a1.12 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a1.12"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a1.12 (Planung des Einsatzes der Fernwartung in der OT — IND.3.2.A1.12)",
+        "uuid": "08908e44-73e2-5837-a5cb-cf7b914b1858"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a1.13 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a1.13"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a1.13 (Planung des Einsatzes der Fernwartung in der OT — IND.3.2.A1.13)",
+        "uuid": "50808570-1f76-55cb-b5e3-d73875b4d6d2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a1.14 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a1.14"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a1.14 (Planung des Einsatzes der Fernwartung in der OT — IND.3.2.A1.14)",
+        "uuid": "6139ee7f-978c-5bb1-aa34-6a0d81436e76"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a1.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a1.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a1.2 (Planung des Einsatzes der Fernwartung in der OT — IND.3.2.A1.2)",
+        "uuid": "edbe72fb-efab-5265-a94f-ba187de82cde"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a1.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a1.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a1.3 (Planung des Einsatzes der Fernwartung in der OT — IND.3.2.A1.3)",
+        "uuid": "84f8a5d7-96c9-584a-8c1e-5a9f69bb888d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a1.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a1.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a1.4 (Planung des Einsatzes der Fernwartung in der OT — IND.3.2.A1.4)",
+        "uuid": "3b0ed3ed-ff15-524a-879b-90fe3b7ae44f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a1.5 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a1.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a1.5 (Planung des Einsatzes der Fernwartung in der OT — IND.3.2.A1.5)",
+        "uuid": "f0f491e6-05d8-502d-86a3-88bf20dfb850"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a1.6 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a1.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a1.6 (Planung des Einsatzes der Fernwartung in der OT — IND.3.2.A1.6)",
+        "uuid": "cd03637d-8352-5874-ae58-eacfc497792a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a1.7 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a1.7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a1.7 (Planung des Einsatzes der Fernwartung in der OT — IND.3.2.A1.7)",
+        "uuid": "e4343585-a9e6-5a73-8221-41c448d13928"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a1.8 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a1.8"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a1.8 (Planung des Einsatzes der Fernwartung in der OT — IND.3.2.A1.8)",
+        "uuid": "514521ce-b5f3-5023-aa10-fc67f7cb0330"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a1.9 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a1.9"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a1.9 (Planung des Einsatzes der Fernwartung in der OT — IND.3.2.A1.9)",
+        "uuid": "4823d0c0-a9b7-570d-89a7-003a01f61cbd"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a10.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a10.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a10.1 (Beobachtung und Kontrolle von OT-Fernwartungssitzungen — IND.3.2.A10.1)",
+        "uuid": "5b9da540-b732-597e-af95-91f1dd34bb31"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a10.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a10.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a10.2 (Beobachtung und Kontrolle von OT-Fernwartungssitzungen — IND.3.2.A10.2)",
+        "uuid": "831af951-1266-5dab-9cd0-3f53e3efa8c6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a10.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a10.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a10.3 (Beobachtung und Kontrolle von OT-Fernwartungssitzungen — IND.3.2.A10.3)",
+        "uuid": "9737afc3-82aa-53e5-83c9-b26e8ba24654"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a10.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a10.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a10.4 (Beobachtung und Kontrolle von OT-Fernwartungssitzungen — IND.3.2.A10.4)",
+        "uuid": "b4c0a1ed-74fb-5372-baed-e5fe7eba8ede"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a11.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a11.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a11.1 (Zentrale Verwaltung aller Konten für die OT-Fernwartung — IND.3.2.A11.1)",
+        "uuid": "5ecc54a3-b47d-54a8-857b-b23511e2249d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a12.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a12.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a12.1 (Dedizierte Fernwartungslösung in der OT — IND.3.2.A12.1)",
+        "uuid": "d6854d39-0bef-5ebd-80e6-f1cabd6e8b63"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a12.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a12.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a12.2 (Dedizierte Fernwartungslösung in der OT — IND.3.2.A12.2)",
+        "uuid": "5edb2246-66f5-5da9-87e8-eef5cc7fb219"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a12.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a12.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a12.3 (Dedizierte Fernwartungslösung in der OT — IND.3.2.A12.3)",
+        "uuid": "08023e15-cd4f-5fa3-961e-dd0f3e64f1e4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a13.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a13.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a13.1 (Protokollierung der Inhalte von Fernwartungszugriffen in der OT — IND.3.2.A13.1)",
+        "uuid": "06a1c1a4-01cb-5290-ae5a-81906557eb51"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a13.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a13.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a13.2 (Protokollierung der Inhalte von Fernwartungszugriffen in der OT — IND.3.2.A13.2)",
+        "uuid": "ae1156c5-a07a-5669-abea-02d354968bef"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a14.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a14.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a14.1 (Technische Kontrolle von Fernwartungssitzungen — IND.3.2.A14.1)",
+        "uuid": "1741eb1f-a2a3-5e2d-b06e-74644535e6ff"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a14.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a14.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a14.2 (Technische Kontrolle von Fernwartungssitzungen — IND.3.2.A14.2)",
+        "uuid": "2ee870d4-5509-5053-b70f-4dcbeac7d923"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a14.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a14.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a14.3 (Technische Kontrolle von Fernwartungssitzungen — IND.3.2.A14.3)",
+        "uuid": "44d18f9d-20da-5a41-b1b2-a8fcdb7aed7d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a14.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a14.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a14.4 (Technische Kontrolle von Fernwartungssitzungen — IND.3.2.A14.4)",
+        "uuid": "73f67548-a79b-55cc-af0d-c4b573d3a743"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a2.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a2.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a2.1 (Konsistente Dokumentation der Fernwartung durch OT sowie Büro- und Gebäude-IT — IND.3.2.A2.1)",
+        "uuid": "c6c35d60-b429-51eb-bb1c-b39ba516a306"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a2.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a2.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a2.2 (Konsistente Dokumentation der Fernwartung durch OT sowie Büro- und Gebäude-IT — IND.3.2.A2.2)",
+        "uuid": "834f305a-5379-5607-af04-941a3264850a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a3.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a3.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a3.1 (Regelmäßige Prüfungen sowie Ausnahmegenehmigungen bestehender OT-Fernwartungszugänge — IND.3.2.A3.1)",
+        "uuid": "cd724b97-fc1b-5767-958c-236330c528a4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a3.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a3.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a3.2 (Regelmäßige Prüfungen sowie Ausnahmegenehmigungen bestehender OT-Fernwartungszugänge — IND.3.2.A3.2)",
+        "uuid": "1c07d5ca-03db-5805-b369-54fffba41afc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a4.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a4.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a4.1 (Verbindliche Regelung der OT-Fernwartung durch Dritte — IND.3.2.A4.1)",
+        "uuid": "4155d7bd-a08d-5df5-ab3b-c1b7f4730d8e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a4.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a4.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a4.2 (Verbindliche Regelung der OT-Fernwartung durch Dritte — IND.3.2.A4.2)",
+        "uuid": "20c4d23a-5d81-52e9-9ad6-ddc5447f5ee3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a4.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a4.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a4.3 (Verbindliche Regelung der OT-Fernwartung durch Dritte — IND.3.2.A4.3)",
+        "uuid": "301776ac-f89d-5175-a781-8cdc8415fdfb"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a4.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a4.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a4.4 (Verbindliche Regelung der OT-Fernwartung durch Dritte — IND.3.2.A4.4)",
+        "uuid": "da3089d6-838a-5fc1-aedd-bbfbc98e3c0e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a4.5 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a4.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a4.5 (Verbindliche Regelung der OT-Fernwartung durch Dritte — IND.3.2.A4.5)",
+        "uuid": "dc92c3b4-aef3-525a-a4dc-992a065f4616"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a4.6 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a4.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a4.6 (Verbindliche Regelung der OT-Fernwartung durch Dritte — IND.3.2.A4.6)",
+        "uuid": "c67fd030-c4a4-59c7-9331-72f4917d7d8c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a4.7 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a4.7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a4.7 (Verbindliche Regelung der OT-Fernwartung durch Dritte — IND.3.2.A4.7)",
+        "uuid": "297a67ec-26d0-5275-b02c-d584d1eba85c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a5.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a5.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a5.1 (Interne Abstimmung für die OT-Fernwartung mit der Büro- und Gebäude-IT — IND.3.2.A5.1)",
+        "uuid": "8828876e-5a74-5fc7-b57b-f4ffb6f4b7b3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a5.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a5.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a5.2 (Interne Abstimmung für die OT-Fernwartung mit der Büro- und Gebäude-IT — IND.3.2.A5.2)",
+        "uuid": "7e642e39-9739-55b2-9508-6dac7bccea7f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a5.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a5.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a5.3 (Interne Abstimmung für die OT-Fernwartung mit der Büro- und Gebäude-IT — IND.3.2.A5.3)",
+        "uuid": "104f8c60-c83f-5ac1-bcc6-f5e9a103feba"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a5.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a5.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a5.4 (Interne Abstimmung für die OT-Fernwartung mit der Büro- und Gebäude-IT — IND.3.2.A5.4)",
+        "uuid": "f0236f71-83f4-51b7-85ea-b5e36c393e26"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a5.5 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a5.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a5.5 (Interne Abstimmung für die OT-Fernwartung mit der Büro- und Gebäude-IT — IND.3.2.A5.5)",
+        "uuid": "87964f3b-2f46-52b3-b8db-ace31888a981"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a5.6 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a5.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a5.6 (Interne Abstimmung für die OT-Fernwartung mit der Büro- und Gebäude-IT — IND.3.2.A5.6)",
+        "uuid": "9baecbce-5910-55d8-b269-1cc578cb7998"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a6.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a6.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a6.1 (Absicherung jedes Fernwartungszugriffs auf die OT — IND.3.2.A6.1)",
+        "uuid": "2f8881a0-3e00-5027-8774-5445580c008e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a6.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a6.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a6.2 (Absicherung jedes Fernwartungszugriffs auf die OT — IND.3.2.A6.2)",
+        "uuid": "3daa96f9-f02c-55ea-a9c3-f0d4b2b213a4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a6.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a6.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a6.3 (Absicherung jedes Fernwartungszugriffs auf die OT — IND.3.2.A6.3)",
+        "uuid": "448a79e6-b562-5987-a1b8-d886ccbade86"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a6.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a6.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a6.4 (Absicherung jedes Fernwartungszugriffs auf die OT — IND.3.2.A6.4)",
+        "uuid": "79eb6585-216b-520b-816e-646ed4780fa6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a6.5 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a6.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a6.5 (Absicherung jedes Fernwartungszugriffs auf die OT — IND.3.2.A6.5)",
+        "uuid": "c4f8256e-ea25-5005-96df-218f777fbbec"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a7.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a7.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a7.1 (Technische Entkopplung von Zugriffen — IND.3.2.A7.1)",
+        "uuid": "db015142-8fcd-573f-a87c-d3249c545daf"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a7.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a7.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a7.2 (Technische Entkopplung von Zugriffen — IND.3.2.A7.2)",
+        "uuid": "43b19c6a-c36c-501f-a9b6-7b54f0c69cdc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a7.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a7.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a7.3 (Technische Entkopplung von Zugriffen — IND.3.2.A7.3)",
+        "uuid": "bc678227-15c7-529e-ac85-6aa60e1838aa"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a7.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a7.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a7.4 (Technische Entkopplung von Zugriffen — IND.3.2.A7.4)",
+        "uuid": "0cb8691a-558d-5931-8df0-4a58a6086189"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a7.5 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a7.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a7.5 (Technische Entkopplung von Zugriffen — IND.3.2.A7.5)",
+        "uuid": "f3166981-120a-5567-a856-82b1fcc0eecf"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a8.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a8.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a8.1 (Explizite Freigabe jeder OT-Fernwartungssitzung — IND.3.2.A8.1)",
+        "uuid": "b5daae1f-cfd6-544c-bbdd-02be16bdb628"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a8.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a8.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a8.2 (Explizite Freigabe jeder OT-Fernwartungssitzung — IND.3.2.A8.2)",
+        "uuid": "b4518b3e-8684-5f19-96f4-7084b86baf8f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a8.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a8.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a8.3 (Explizite Freigabe jeder OT-Fernwartungssitzung — IND.3.2.A8.3)",
+        "uuid": "0d9dc301-4a61-5504-97d1-f026b0cdd2da"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a8.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a8.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a8.4 (Explizite Freigabe jeder OT-Fernwartungssitzung — IND.3.2.A8.4)",
+        "uuid": "2fb23080-9eae-5835-92e2-b0fab3a4f86a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a8.5 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a8.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a8.5 (Explizite Freigabe jeder OT-Fernwartungssitzung — IND.3.2.A8.5)",
+        "uuid": "e81e7443-7da5-5a15-9183-a8f352a0bfa6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a9.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a9.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a9.1 (Sicherer Austausch von Dateien begleitend zur OT-Fernwartung — IND.3.2.A9.1)",
+        "uuid": "2fac43c9-c8a4-5184-bcc9-53e7f618071f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a9.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a9.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a9.2 (Sicherer Austausch von Dateien begleitend zur OT-Fernwartung — IND.3.2.A9.2)",
+        "uuid": "117f9857-a6c3-5dde-8c2f-812be042807e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a9.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a9.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a9.3 (Sicherer Austausch von Dateien begleitend zur OT-Fernwartung — IND.3.2.A9.3)",
+        "uuid": "674dc7b7-dadc-5706-b6bf-827cb3f56060"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ind.3.2.a9.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - IND: Industrielle IT.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ind.3.2.a9.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ind.3.2.a9.4 (Sicherer Austausch von Dateien begleitend zur OT-Fernwartung — IND.3.2.A9.4)",
+        "uuid": "da85896f-6fb5-507c-ad33-26da82494ccc"
       }
     ],
     "uuid": "283274ed-61f5-5386-a60b-050a90cc7229"

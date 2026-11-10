@@ -4,7 +4,7 @@
       "href": "./assessment-plan.json"
     },
     "metadata": {
-      "last-modified": "2026-11-08T01:42:13Z",
+      "last-modified": "2026-11-08T00:31:00Z",
       "oscal-version": "1.2.3",
       "title": "BSI C5 Library Assessment Results Template",
       "version": "1"
@@ -305,7 +305,7 @@
         ],
         "observations": [
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:31:00Z",
             "description": "Verified control am-01 (Asset Inventory) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -317,7 +317,7 @@
             "uuid": "681bc709-b50c-52e1-9dec-8aa7b1b1c426"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:31:00Z",
             "description": "Verified control bcm-01 (Top management responsibility) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -329,7 +329,7 @@
             "uuid": "a0cfda6d-b873-5580-b81d-0a1b870b38e8"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:31:00Z",
             "description": "Verified control com-01 (Identification of applicable legal, regulatory, self-imposed or contractual requirements) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -341,7 +341,7 @@
             "uuid": "ac19d27a-6ba9-5070-b0be-117c64745e65"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:31:00Z",
             "description": "Verified control cos-01 (Technical safeguards) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -353,7 +353,7 @@
             "uuid": "42aa3ce7-76ab-5c06-a777-a7fce1d0856c"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:31:00Z",
             "description": "Verified control cry-01 (Policy for the use of encryption procedures and key management) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -365,7 +365,7 @@
             "uuid": "2673a280-5a83-5e1d-882d-cc518d645d93"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:31:00Z",
             "description": "Verified control dev-01 (Policies for the development/procurement of information systems) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -377,7 +377,7 @@
             "uuid": "710e9fbe-e39c-5319-bcf9-86e325a94755"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:31:00Z",
             "description": "Verified control hr-01 (Verification of qualification and trustworthiness) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -389,7 +389,7 @@
             "uuid": "711ef34a-1a45-5929-a5b4-2c188f35269d"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:31:00Z",
             "description": "Verified control idm-01 (Policy for user accounts and access rights) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -401,7 +401,7 @@
             "uuid": "b99b14f0-f158-5a8d-b53f-6d6a08cac6c8"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:31:00Z",
             "description": "Verified control inq-01 (Legal Assessment of Investigative Inquiries) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -413,7 +413,7 @@
             "uuid": "29080413-f95a-51d1-bb99-37f313480711"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:31:00Z",
             "description": "Verified control ois-01 (Information Security Management System (ISMS)) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -425,7 +425,7 @@
             "uuid": "e194f8ff-646b-520e-8f9d-4626668394db"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:31:00Z",
             "description": "Verified control ops-01 (Capacity Management - Planning) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -437,7 +437,7 @@
             "uuid": "1e5df954-c3e4-56f1-89ed-aa3784249016"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:31:00Z",
             "description": "Verified control pi-01 (Documentation and safety of input and output interfaces) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -449,7 +449,7 @@
             "uuid": "f0962be1-03f3-5a7c-bb45-004cfdc80320"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:31:00Z",
             "description": "Verified control ps-01 (Physical Security and Environmental Control Requirements) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -461,7 +461,7 @@
             "uuid": "3aedbe8e-6cb8-5307-82e4-afa58e415af8"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:31:00Z",
             "description": "Verified control pss-01 (Guidelines and Recommendations for Cloud Customers) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -473,7 +473,7 @@
             "uuid": "54681d6f-39ed-57dd-858c-8a69521205bb"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:31:00Z",
             "description": "Verified control sim-01 (Policy for security incident management) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -485,7 +485,7 @@
             "uuid": "78f15593-4932-5eaf-af57-7299dfe6d6ba"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:31:00Z",
             "description": "Verified control sp-01 (Documentation, communication and provision of policies and instructions) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -497,7 +497,7 @@
             "uuid": "c3824425-1582-545c-aafb-775bd3a2e9a7"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:31:00Z",
             "description": "Verified control sso-01 (Policies and instructions for controlling and monitoring third parties) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -513,11 +513,375 @@
           "control-selections": [
             {
               "description": "All controls evaluated for BSI C5 Library",
-              "include-all": {}
+              "include-controls": [
+                {
+                  "control-id": "am-01"
+                },
+                {
+                  "control-id": "am-02"
+                },
+                {
+                  "control-id": "am-03"
+                },
+                {
+                  "control-id": "am-04"
+                },
+                {
+                  "control-id": "am-05"
+                },
+                {
+                  "control-id": "am-06"
+                },
+                {
+                  "control-id": "bcm-01"
+                },
+                {
+                  "control-id": "bcm-02"
+                },
+                {
+                  "control-id": "bcm-03"
+                },
+                {
+                  "control-id": "bcm-04"
+                },
+                {
+                  "control-id": "com-01"
+                },
+                {
+                  "control-id": "com-02"
+                },
+                {
+                  "control-id": "com-03"
+                },
+                {
+                  "control-id": "com-04"
+                },
+                {
+                  "control-id": "cos-01"
+                },
+                {
+                  "control-id": "cos-02"
+                },
+                {
+                  "control-id": "cos-03"
+                },
+                {
+                  "control-id": "cos-04"
+                },
+                {
+                  "control-id": "cos-05"
+                },
+                {
+                  "control-id": "cos-06"
+                },
+                {
+                  "control-id": "cos-07"
+                },
+                {
+                  "control-id": "cos-08"
+                },
+                {
+                  "control-id": "cry-01"
+                },
+                {
+                  "control-id": "cry-02"
+                },
+                {
+                  "control-id": "cry-03"
+                },
+                {
+                  "control-id": "cry-04"
+                },
+                {
+                  "control-id": "dev-01"
+                },
+                {
+                  "control-id": "dev-02"
+                },
+                {
+                  "control-id": "dev-03"
+                },
+                {
+                  "control-id": "dev-04"
+                },
+                {
+                  "control-id": "dev-05"
+                },
+                {
+                  "control-id": "dev-06"
+                },
+                {
+                  "control-id": "dev-07"
+                },
+                {
+                  "control-id": "dev-08"
+                },
+                {
+                  "control-id": "dev-09"
+                },
+                {
+                  "control-id": "dev-10"
+                },
+                {
+                  "control-id": "hr-01"
+                },
+                {
+                  "control-id": "hr-02"
+                },
+                {
+                  "control-id": "hr-03"
+                },
+                {
+                  "control-id": "hr-04"
+                },
+                {
+                  "control-id": "hr-05"
+                },
+                {
+                  "control-id": "hr-06"
+                },
+                {
+                  "control-id": "idm-01"
+                },
+                {
+                  "control-id": "idm-02"
+                },
+                {
+                  "control-id": "idm-03"
+                },
+                {
+                  "control-id": "idm-04"
+                },
+                {
+                  "control-id": "idm-05"
+                },
+                {
+                  "control-id": "idm-06"
+                },
+                {
+                  "control-id": "idm-07"
+                },
+                {
+                  "control-id": "idm-08"
+                },
+                {
+                  "control-id": "idm-09"
+                },
+                {
+                  "control-id": "inq-01"
+                },
+                {
+                  "control-id": "inq-02"
+                },
+                {
+                  "control-id": "inq-03"
+                },
+                {
+                  "control-id": "inq-04"
+                },
+                {
+                  "control-id": "ois-01"
+                },
+                {
+                  "control-id": "ois-02"
+                },
+                {
+                  "control-id": "ois-03"
+                },
+                {
+                  "control-id": "ois-04"
+                },
+                {
+                  "control-id": "ois-05"
+                },
+                {
+                  "control-id": "ois-06"
+                },
+                {
+                  "control-id": "ois-07"
+                },
+                {
+                  "control-id": "ops-01"
+                },
+                {
+                  "control-id": "ops-02"
+                },
+                {
+                  "control-id": "ops-03"
+                },
+                {
+                  "control-id": "ops-04"
+                },
+                {
+                  "control-id": "ops-05"
+                },
+                {
+                  "control-id": "ops-06"
+                },
+                {
+                  "control-id": "ops-07"
+                },
+                {
+                  "control-id": "ops-08"
+                },
+                {
+                  "control-id": "ops-09"
+                },
+                {
+                  "control-id": "ops-10"
+                },
+                {
+                  "control-id": "ops-11"
+                },
+                {
+                  "control-id": "ops-12"
+                },
+                {
+                  "control-id": "ops-13"
+                },
+                {
+                  "control-id": "ops-14"
+                },
+                {
+                  "control-id": "ops-15"
+                },
+                {
+                  "control-id": "ops-16"
+                },
+                {
+                  "control-id": "ops-17"
+                },
+                {
+                  "control-id": "ops-18"
+                },
+                {
+                  "control-id": "ops-19"
+                },
+                {
+                  "control-id": "ops-20"
+                },
+                {
+                  "control-id": "ops-21"
+                },
+                {
+                  "control-id": "ops-22"
+                },
+                {
+                  "control-id": "ops-23"
+                },
+                {
+                  "control-id": "ops-24"
+                },
+                {
+                  "control-id": "pi-01"
+                },
+                {
+                  "control-id": "pi-02"
+                },
+                {
+                  "control-id": "pi-03"
+                },
+                {
+                  "control-id": "ps-01"
+                },
+                {
+                  "control-id": "ps-02"
+                },
+                {
+                  "control-id": "ps-03"
+                },
+                {
+                  "control-id": "ps-04"
+                },
+                {
+                  "control-id": "ps-05"
+                },
+                {
+                  "control-id": "ps-06"
+                },
+                {
+                  "control-id": "ps-07"
+                },
+                {
+                  "control-id": "pss-01"
+                },
+                {
+                  "control-id": "pss-02"
+                },
+                {
+                  "control-id": "pss-03"
+                },
+                {
+                  "control-id": "pss-04"
+                },
+                {
+                  "control-id": "pss-05"
+                },
+                {
+                  "control-id": "pss-06"
+                },
+                {
+                  "control-id": "pss-07"
+                },
+                {
+                  "control-id": "pss-08"
+                },
+                {
+                  "control-id": "pss-09"
+                },
+                {
+                  "control-id": "pss-10"
+                },
+                {
+                  "control-id": "pss-11"
+                },
+                {
+                  "control-id": "pss-12"
+                },
+                {
+                  "control-id": "sim-01"
+                },
+                {
+                  "control-id": "sim-02"
+                },
+                {
+                  "control-id": "sim-03"
+                },
+                {
+                  "control-id": "sim-04"
+                },
+                {
+                  "control-id": "sim-05"
+                },
+                {
+                  "control-id": "sp-01"
+                },
+                {
+                  "control-id": "sp-02"
+                },
+                {
+                  "control-id": "sp-03"
+                },
+                {
+                  "control-id": "sso-01"
+                },
+                {
+                  "control-id": "sso-02"
+                },
+                {
+                  "control-id": "sso-03"
+                },
+                {
+                  "control-id": "sso-04"
+                },
+                {
+                  "control-id": "sso-05"
+                }
+              ]
             }
           ]
         },
-        "start": "2026-11-08T01:42:13Z",
+        "start": "2026-11-08T00:31:00Z",
         "title": "BSI C5 Library Assessment Results",
         "uuid": "dc344a2e-ec5b-5e9f-9537-b68f91e6382a"
       }

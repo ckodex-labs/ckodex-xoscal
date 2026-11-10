@@ -4,7 +4,7 @@
       "href": "./system-security-plan.json"
     },
     "metadata": {
-      "last-modified": "2026-11-08T01:42:12Z",
+      "last-modified": "2026-11-08T00:30:50Z",
       "oscal-version": "1.2.3",
       "title": "Recommandations relatives à l'administration sécurisée des systèmes d'information Security Assessment Plan Template",
       "version": "1"
@@ -13,7 +13,239 @@
       "control-selections": [
         {
           "description": "All controls in Recommandations relatives à l'administration sécurisée des systèmes d'information",
-          "include-all": {}
+          "include-controls": [
+            {
+              "control-id": "r1"
+            },
+            {
+              "control-id": "r10"
+            },
+            {
+              "control-id": "r11"
+            },
+            {
+              "control-id": "r12"
+            },
+            {
+              "control-id": "r13"
+            },
+            {
+              "control-id": "r14"
+            },
+            {
+              "control-id": "r15"
+            },
+            {
+              "control-id": "r15-"
+            },
+            {
+              "control-id": "r16"
+            },
+            {
+              "control-id": "r17"
+            },
+            {
+              "control-id": "r18"
+            },
+            {
+              "control-id": "r18-"
+            },
+            {
+              "control-id": "r19"
+            },
+            {
+              "control-id": "r2"
+            },
+            {
+              "control-id": "r20"
+            },
+            {
+              "control-id": "r21"
+            },
+            {
+              "control-id": "r22"
+            },
+            {
+              "control-id": "r23"
+            },
+            {
+              "control-id": "r24"
+            },
+            {
+              "control-id": "r24-"
+            },
+            {
+              "control-id": "r25"
+            },
+            {
+              "control-id": "r26"
+            },
+            {
+              "control-id": "r27"
+            },
+            {
+              "control-id": "r28"
+            },
+            {
+              "control-id": "r29"
+            },
+            {
+              "control-id": "r3"
+            },
+            {
+              "control-id": "r30"
+            },
+            {
+              "control-id": "r31"
+            },
+            {
+              "control-id": "r32"
+            },
+            {
+              "control-id": "r33"
+            },
+            {
+              "control-id": "r34"
+            },
+            {
+              "control-id": "r35"
+            },
+            {
+              "control-id": "r36"
+            },
+            {
+              "control-id": "r37"
+            },
+            {
+              "control-id": "r38"
+            },
+            {
+              "control-id": "r39"
+            },
+            {
+              "control-id": "r4"
+            },
+            {
+              "control-id": "r40"
+            },
+            {
+              "control-id": "r41"
+            },
+            {
+              "control-id": "r42"
+            },
+            {
+              "control-id": "r43"
+            },
+            {
+              "control-id": "r44"
+            },
+            {
+              "control-id": "r45"
+            },
+            {
+              "control-id": "r46"
+            },
+            {
+              "control-id": "r47"
+            },
+            {
+              "control-id": "r48"
+            },
+            {
+              "control-id": "r49"
+            },
+            {
+              "control-id": "r5"
+            },
+            {
+              "control-id": "r50"
+            },
+            {
+              "control-id": "r51"
+            },
+            {
+              "control-id": "r52"
+            },
+            {
+              "control-id": "r53"
+            },
+            {
+              "control-id": "r54"
+            },
+            {
+              "control-id": "r55"
+            },
+            {
+              "control-id": "r56"
+            },
+            {
+              "control-id": "r57"
+            },
+            {
+              "control-id": "r58"
+            },
+            {
+              "control-id": "r59"
+            },
+            {
+              "control-id": "r6"
+            },
+            {
+              "control-id": "r60"
+            },
+            {
+              "control-id": "r61"
+            },
+            {
+              "control-id": "r62"
+            },
+            {
+              "control-id": "r63"
+            },
+            {
+              "control-id": "r63-"
+            },
+            {
+              "control-id": "r64"
+            },
+            {
+              "control-id": "r65_"
+            },
+            {
+              "control-id": "r66"
+            },
+            {
+              "control-id": "r67"
+            },
+            {
+              "control-id": "r68"
+            },
+            {
+              "control-id": "r69"
+            },
+            {
+              "control-id": "r7"
+            },
+            {
+              "control-id": "r70"
+            },
+            {
+              "control-id": "r71"
+            },
+            {
+              "control-id": "r8"
+            },
+            {
+              "control-id": "r9"
+            },
+            {
+              "control-id": "r9-"
+            },
+            {
+              "control-id": "r9--"
+            }
+          ]
         }
       ]
     },

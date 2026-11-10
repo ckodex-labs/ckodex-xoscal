@@ -27,7 +27,7 @@ func newRegistryFixture(t *testing.T) (*ExchangeServer, ed25519.PublicKey, ed255
 	if err != nil {
 		t.Fatalf("new store: %v", err)
 	}
-	t.Cleanup(func() { store.Close() })
+	t.Cleanup(func() { _ = store.Close() })
 
 	pub, priv, err := ed25519.GenerateKey(rand.Reader)
 	if err != nil {
@@ -83,11 +83,9 @@ func registryClaimWithSignature(t *testing.T, server *ExchangeServer, pub ed2551
 		if !ok {
 			t.Fatalf("key %q not in fixture registry", issuer["key_id"])
 		}
-		raw, err := base64.StdEncoding.DecodeString(strings.TrimPrefix(entry.PublicKey, "base64:"))
-		if err != nil {
+		if _, err := base64.StdEncoding.DecodeString(strings.TrimPrefix(entry.PublicKey, "base64:")); err != nil {
 			t.Fatalf("decode registry key: %v", err)
 		}
-		pub = ed25519.PublicKey(raw)
 	}
 	payload, err := canonicalClaimPayload(claim)
 	if err != nil {
@@ -163,7 +161,7 @@ func TestRemotePolicyRequiresEnabledFetchPolicy(t *testing.T) {
 	if err != nil {
 		t.Fatalf("new store: %v", err)
 	}
-	defer store.Close()
+	defer func() { _ = store.Close() }()
 	server := NewExchangeServer(store) // no fetch policy
 	claim := &Claim{PolicyRefsJSON: `[{"type":"xoscal-remote","url":"https://policy.example.com/p.json"}]`}
 
@@ -184,7 +182,7 @@ func TestRemotePolicyFetchesAndEvaluates(t *testing.T) {
 	if err != nil {
 		t.Fatalf("new store: %v", err)
 	}
-	defer store.Close()
+	defer func() { _ = store.Close() }()
 	server := NewExchangeServer(store).WithFetchPolicy(&FetchPolicy{Enabled: true, Timeout: 5 * time.Second})
 	server.fetchClientFn = func(*FetchPolicy) *http.Client {
 		return &http.Client{Transport: ts.Client().Transport}
@@ -213,7 +211,7 @@ func TestRemotePolicyPolicyDenialIsInadmissible(t *testing.T) {
 	if err != nil {
 		t.Fatalf("new store: %v", err)
 	}
-	defer store.Close()
+	defer func() { _ = store.Close() }()
 	server := NewExchangeServer(store).WithFetchPolicy(&FetchPolicy{Enabled: true, Timeout: 5 * time.Second})
 	server.fetchClientFn = func(*FetchPolicy) *http.Client {
 		return &http.Client{Transport: ts.Client().Transport}
@@ -236,7 +234,7 @@ func transparencyFixture(t *testing.T) (*ExchangeServer, ed25519.PublicKey, ed25
 	if err != nil {
 		t.Fatalf("new store: %v", err)
 	}
-	t.Cleanup(func() { store.Close() })
+	t.Cleanup(func() { _ = store.Close() })
 
 	logPub, logPriv, err := ed25519.GenerateKey(rand.Reader)
 	if err != nil {
@@ -353,48 +351,6 @@ func TestTransparencyInclusionRejectsWrongLogID(t *testing.T) {
 
 // ---- ECDSA P-256 / P-384 signature algorithms ----
 
-func ecdsaClaimFixture(t *testing.T, server *ExchangeServer, curve elliptic.Curve, algorithm string) (*Claim, ed25519.PublicKey) {
-	t.Helper()
-	private, err := ecdsa.GenerateKey(curve, rand.Reader)
-	if err != nil {
-		t.Fatalf("generate ecdsa key: %v", err)
-	}
-	size := (curve.Params().BitSize + 7) / 8
-	point := make([]byte, 2*size)
-	private.PublicKey.X.FillBytes(point[:size])
-	private.PublicKey.Y.FillBytes(point[size:])
-
-	claim := registryClaim(t, server, fmt.Sprintf(`{"kind":"ci","key":"{\"algorithm\":%q,\"public_key\":\"base64:%s\"}"}`,
-		algorithm, base64.StdEncoding.EncodeToString(point)))
-	payload, err := canonicalClaimPayload(claim)
-	if err != nil {
-		t.Fatalf("canonical payload: %v", err)
-	}
-	h := sha256.Sum256(payload)
-	sigDER, err := ecdsa.SignASN1(rand.Reader, private, h[:])
-	if err != nil {
-		t.Fatalf("sign: %v", err)
-	}
-	// Parse the DER signature into raw r||s.
-	var der struct{ R, S *big.Int }
-	if _, err := asn1.Unmarshal(sigDER, &der); err != nil {
-		t.Fatalf("parse der: %v", err)
-	}
-	byteLen := size / 2
-	raw := make([]byte, 2*byteLen)
-	der.R.FillBytes(raw[:byteLen])
-	der.S.FillBytes(raw[byteLen:])
-
-	claim.ProofRefsJSON = fmt.Sprintf("[{\"type\":\"signature\",\"ref\":\"ev-sig-%s\"}]", claim.ID)
-	if err := server.store.CreateEvidence(context.Background(), &Evidence{
-		ID: "ev-sig-" + claim.ID, MediaType: "application/octet-stream", BomKind: "signature",
-		Digest: digestFor(raw), SizeBytes: int64(len(raw)), ValidFrom: time.Now().UTC(), Blob: raw,
-	}); err != nil {
-		t.Fatalf("store signature evidence: %v", err)
-	}
-	return claim, nil
-}
-
 func TestECDSAP256SignatureVerifies(t *testing.T) {
 	server, _, _, _ := newRegistryFixture(t)
 	curve := elliptic.P256()
@@ -402,10 +358,11 @@ func TestECDSAP256SignatureVerifies(t *testing.T) {
 	if err != nil {
 		t.Fatalf("generate key: %v", err)
 	}
-	point := make([]byte, 64)
-	curve.Params().BitSize = curve.Params().BitSize // no-op clarity
-	private.PublicKey.X.FillBytes(point[:32])
-	private.PublicKey.Y.FillBytes(point[32:])
+	uncompressed, err := private.PublicKey.Bytes()
+	if err != nil {
+		t.Fatalf("public key bytes: %v", err)
+	}
+	point := uncompressed[1:]
 	issuerJSON := fmt.Sprintf(`{"kind":"ci","key":"{\"algorithm\":\"ecdsa-p256\",\"public_key\":\"base64:%s\"}"}`,
 		base64.StdEncoding.EncodeToString(point))
 	claim := registryClaim(t, server, issuerJSON)
@@ -441,14 +398,16 @@ func TestECDSAP384SignatureVerifies(t *testing.T) {
 	if err != nil {
 		t.Fatalf("new store: %v", err)
 	}
-	defer store.Close()
+	defer func() { _ = store.Close() }()
 	private, err := ecdsa.GenerateKey(elliptic.P384(), rand.Reader)
 	if err != nil {
 		t.Fatalf("generate key: %v", err)
 	}
-	point := make([]byte, 96)
-	private.PublicKey.X.FillBytes(point[:48])
-	private.PublicKey.Y.FillBytes(point[48:])
+	uncompressed, err := private.PublicKey.Bytes()
+	if err != nil {
+		t.Fatalf("public key bytes: %v", err)
+	}
+	point := uncompressed[1:]
 	claim := &Claim{
 		ID: "claim-p384", Type: "artifact.produced_by",
 		SubjectJSON: `{"kind":"artifact","digest":"sha256:s"}`,

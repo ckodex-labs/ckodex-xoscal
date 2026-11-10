@@ -6,7 +6,11 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"runtime"
+	"sort"
+	"strconv"
 	"strings"
+	"sync"
 	"time"
 
 	catalogv1 "github.com/mchorfa/xoscal/proto/oscal/catalog/v1"
@@ -27,6 +31,113 @@ func SeedKnowledgeGraph(ctx context.Context, store kg.Store, regs ...*Registry) 
 	return reg.SeedKG(ctx, store)
 }
 
+type seedBatch struct {
+	entities       []*kg.Entity
+	frameworks     []kg.Framework
+	assessableReqs []kg.Requirement
+}
+
+func (b *seedBatch) appendFrom(other *seedBatch) {
+	if other == nil {
+		return
+	}
+	b.entities = append(b.entities, other.entities...)
+	b.frameworks = append(b.frameworks, other.frameworks...)
+	b.assessableReqs = append(b.assessableReqs, other.assessableReqs...)
+}
+
+func seedFrameworksBatch(ctx context.Context, store kg.Store, fws []Framework) error {
+	if len(fws) == 0 {
+		return nil
+	}
+	standard := make([]Framework, 0, len(fws))
+	for _, f := range fws {
+		if seeder, ok := f.(KGSeeder); ok {
+			err := seeder.SeedKG(ctx, store)
+			if err == nil {
+				continue
+			}
+			if !errors.Is(err, ErrNoCustomSeeder) {
+				return fmt.Errorf("seed framework %s: %w", f.ID(), err)
+			}
+		}
+		standard = append(standard, f)
+	}
+	if len(standard) == 0 {
+		return nil
+	}
+
+	workers := runtime.GOMAXPROCS(0)
+	if workers < 1 {
+		workers = 1
+	}
+	if workers > 8 {
+		workers = 8
+	}
+	if workers > len(standard) {
+		workers = len(standard)
+	}
+
+	batches := make([]*seedBatch, len(standard))
+	errs := make([]error, len(standard))
+	jobs := make(chan int, len(standard))
+	for i := range standard {
+		jobs <- i
+	}
+	close(jobs)
+
+	var wg sync.WaitGroup
+	wg.Add(workers)
+	for w := 0; w < workers; w++ {
+		go func() {
+			defer wg.Done()
+			for idx := range jobs {
+				sb, err := collectFrameworkSeedBatch(standard[idx])
+				if err != nil {
+					errs[idx] = fmt.Errorf("seed framework %s: %w", standard[idx].ID(), err)
+					continue
+				}
+				batches[idx] = sb
+			}
+		}()
+	}
+	wg.Wait()
+
+	totalEntities := 0
+	totalFws := 0
+	totalReqs := 0
+	for i, err := range errs {
+		if err != nil {
+			return err
+		}
+		if batches[i] != nil {
+			totalEntities += len(batches[i].entities)
+			totalFws += len(batches[i].frameworks)
+			totalReqs += len(batches[i].assessableReqs)
+		}
+	}
+
+	combined := &seedBatch{
+		entities:       make([]*kg.Entity, 0, totalEntities),
+		frameworks:     make([]kg.Framework, 0, totalFws),
+		assessableReqs: make([]kg.Requirement, 0, totalReqs),
+	}
+	for _, sb := range batches {
+		combined.appendFrom(sb)
+	}
+	return commitSeedBatch(ctx, store, combined)
+}
+
+func collectFrameworkSeedBatch(f Framework) (*seedBatch, error) {
+	if protoProv, ok := f.(ProtoCatalogProvider); ok {
+		catProto, err := protoProv.CatalogProto()
+		if err == nil && catProto != nil {
+			return buildProtoCatalogBatch(f, catProto)
+		}
+	}
+	return buildJSONCatalogBatch(f)
+}
+
 // SeedFramework seeds a single framework and its controls into the Knowledge Graph store.
 func SeedFramework(ctx context.Context, store kg.Store, f Framework) error {
 	// If custom seeder is provided and active, invoke it
@@ -40,16 +151,11 @@ func SeedFramework(ctx context.Context, store kg.Store, f Framework) error {
 		}
 	}
 
-	// If native proto is provided, seed via proto
-	if protoProv, ok := f.(ProtoCatalogProvider); ok {
-		catProto, err := protoProv.CatalogProto()
-		if err == nil && catProto != nil {
-			return seedProtoCatalog(ctx, store, f, catProto)
-		}
+	sb, err := collectFrameworkSeedBatch(f)
+	if err != nil {
+		return err
 	}
-
-	// Fallback to seeding from OSCAL Catalog JSON
-	return seedJSONCatalog(ctx, store, f)
+	return commitSeedBatch(ctx, store, sb)
 }
 
 func extractExplicitProfileSelection(f Framework) map[string]bool {
@@ -89,7 +195,7 @@ func extractExplicitProfileSelection(f Framework) map[string]bool {
 	return selected
 }
 
-func seedProtoCatalog(ctx context.Context, store kg.Store, f Framework, cat *catalogv1.Catalog) error {
+func buildProtoCatalogBatch(f Framework, cat *catalogv1.Catalog) (*seedBatch, error) {
 	now := time.Now().UTC()
 
 	fw := kg.Framework{
@@ -104,7 +210,7 @@ func seedProtoCatalog(ctx context.Context, store kg.Store, f Framework, cat *cat
 
 	fwPayload, err := json.Marshal(fw)
 	if err != nil {
-		return fmt.Errorf("marshal framework %s: %w", f.ID(), err)
+		return nil, fmt.Errorf("marshal framework %s: %w", f.ID(), err)
 	}
 
 	fwEntity := &kg.Entity{
@@ -116,8 +222,10 @@ func seedProtoCatalog(ctx context.Context, store kg.Store, f Framework, cat *cat
 		Payload:   fwPayload,
 	}
 
-	var batch []*kg.Entity
-	batch = append(batch, fwEntity)
+	sb := &seedBatch{
+		entities:   []*kg.Entity{fwEntity},
+		frameworks: []kg.Framework{fw},
+	}
 
 	seededGroups := make(map[string]bool)
 	controls := extractAllProtoControls(cat)
@@ -156,9 +264,9 @@ func seedProtoCatalog(ctx context.Context, store kg.Store, f Framework, cat *cat
 				}
 				gPayload, err := json.Marshal(groupReq)
 				if err != nil {
-					return fmt.Errorf("marshal group %s: %w", groupURN, err)
+					return nil, fmt.Errorf("marshal group %s: %w", groupURN, err)
 				}
-				batch = append(batch, &kg.Entity{
+				sb.entities = append(sb.entities, &kg.Entity{
 					URN:       groupURN,
 					Type:      "reg:Requirement",
 					Version:   1,
@@ -244,10 +352,10 @@ func seedProtoCatalog(ctx context.Context, store kg.Store, f Framework, cat *cat
 
 		reqPayload, err := json.Marshal(req)
 		if err != nil {
-			return fmt.Errorf("marshal requirement %s: %w", req.URN, err)
+			return nil, fmt.Errorf("marshal requirement %s: %w", req.URN, err)
 		}
 
-		batch = append(batch, &kg.Entity{
+		sb.entities = append(sb.entities, &kg.Entity{
 			URN:       req.URN,
 			Type:      "reg:Requirement",
 			Version:   1,
@@ -255,9 +363,10 @@ func seedProtoCatalog(ctx context.Context, store kg.Store, f Framework, cat *cat
 			ValidFrom: now,
 			Payload:   reqPayload,
 		})
+		sb.assessableReqs = append(sb.assessableReqs, req)
 	}
 
-	return upsertEntitiesBatch(ctx, store, batch)
+	return sb, nil
 }
 
 type protoControlWithContext struct {
@@ -359,9 +468,10 @@ func extractProtoStatementAndGuidance(ctrl *catalogv1.Control) (string, string, 
 			return
 		}
 		pName := strings.ToLower(part.Name)
-		if pName == "gc-guidance" || pName == "canadian-guidance" {
+		switch pName {
+		case "gc-guidance", "canadian-guidance":
 			mode = "canadian"
-		} else if pName == "guidance" {
+		case "guidance":
 			mode = "guidance"
 		}
 		lbl := ""
@@ -537,15 +647,15 @@ type oscalJSONPart struct {
 	Props []oscalJSONProp `json:"props"`
 }
 
-func seedJSONCatalog(ctx context.Context, store kg.Store, f Framework) error {
+func buildJSONCatalogBatch(f Framework) (*seedBatch, error) {
 	data, err := f.CatalogJSON()
 	if err != nil {
-		return err
+		return nil, err
 	}
 
 	var doc oscalCatalogDoc
 	if err := json.Unmarshal(data, &doc); err != nil {
-		return fmt.Errorf("unmarshal oscal catalog json: %w", err)
+		return nil, fmt.Errorf("unmarshal oscal catalog json: %w", err)
 	}
 
 	now := time.Now().UTC()
@@ -561,18 +671,20 @@ func seedJSONCatalog(ctx context.Context, store kg.Store, f Framework) error {
 
 	fwPayload, err := json.Marshal(fw)
 	if err != nil {
-		return fmt.Errorf("marshal framework %s: %w", f.ID(), err)
+		return nil, fmt.Errorf("marshal framework %s: %w", f.ID(), err)
 	}
 
-	var batch []*kg.Entity
-	batch = append(batch, &kg.Entity{
-		URN:       fw.URN,
-		Type:      "reg:Framework",
-		Version:   1,
-		Status:    kg.EntityStatusActive,
-		ValidFrom: now,
-		Payload:   fwPayload,
-	})
+	sb := &seedBatch{
+		entities: []*kg.Entity{{
+			URN:       fw.URN,
+			Type:      "reg:Framework",
+			Version:   1,
+			Status:    kg.EntityStatusActive,
+			ValidFrom: now,
+			Payload:   fwPayload,
+		}},
+		frameworks: []kg.Framework{fw},
+	}
 
 	seededGroups := make(map[string]bool)
 	profSelected := extractExplicitProfileSelection(f)
@@ -617,7 +729,7 @@ func seedJSONCatalog(ctx context.Context, store kg.Store, f Framework) error {
 				if err != nil {
 					return fmt.Errorf("marshal group %s: %w", groupURN, err)
 				}
-				batch = append(batch, &kg.Entity{
+				sb.entities = append(sb.entities, &kg.Entity{
 					URN:       groupURN,
 					Type:      "reg:Requirement",
 					Version:   1,
@@ -635,9 +747,10 @@ func seedJSONCatalog(ctx context.Context, store kg.Store, f Framework) error {
 		var visitPart func(p oscalJSONPart, mode string)
 		visitPart = func(p oscalJSONPart, mode string) {
 			pName := strings.ToLower(p.Name)
-			if pName == "gc-guidance" || pName == "canadian-guidance" {
+			switch pName {
+			case "gc-guidance", "canadian-guidance":
 				mode = "canadian"
-			} else if pName == "guidance" {
+			case "guidance":
 				mode = "guidance"
 			}
 			lbl := p.Title
@@ -720,7 +833,7 @@ func seedJSONCatalog(ctx context.Context, store kg.Store, f Framework) error {
 			return fmt.Errorf("marshal requirement %s: %w", req.URN, err)
 		}
 
-		batch = append(batch, &kg.Entity{
+		sb.entities = append(sb.entities, &kg.Entity{
 			URN:       req.URN,
 			Type:      "reg:Requirement",
 			Version:   1,
@@ -728,6 +841,7 @@ func seedJSONCatalog(ctx context.Context, store kg.Store, f Framework) error {
 			ValidFrom: now,
 			Payload:   reqPayload,
 		})
+		sb.assessableReqs = append(sb.assessableReqs, req)
 
 		ctrlURN := req.URN
 		for _, sc := range c.Controls {
@@ -767,7 +881,7 @@ func seedJSONCatalog(ctx context.Context, store kg.Store, f Framework) error {
 			if err != nil {
 				return fmt.Errorf("marshal group %s: %w", groupURN, err)
 			}
-			batch = append(batch, &kg.Entity{
+			sb.entities = append(sb.entities, &kg.Entity{
 				URN:       groupURN,
 				Type:      "reg:Requirement",
 				Version:   1,
@@ -795,16 +909,16 @@ func seedJSONCatalog(ctx context.Context, store kg.Store, f Framework) error {
 
 	for _, g := range doc.Catalog.Groups {
 		if err := seedGroup(g, ""); err != nil {
-			return err
+			return nil, err
 		}
 	}
 	for _, c := range doc.Catalog.Controls {
 		if err := seedControl(c, "", ""); err != nil {
-			return err
+			return nil, err
 		}
 	}
 
-	return upsertEntitiesBatch(ctx, store, batch)
+	return sb, nil
 }
 
 type bulkUpsertStore interface {
@@ -815,24 +929,542 @@ type sqlDBProvider interface {
 	DB() *sql.DB
 }
 
-func upsertEntitiesBatch(ctx context.Context, store kg.Store, batch []*kg.Entity) error {
-	if bs, ok := store.(bulkUpsertStore); ok {
-		if err := bs.BulkUpsertEntities(ctx, batch); err != nil {
-			return err
-		}
-	} else {
-		for _, e := range batch {
-			if err := upsertEntity(ctx, store, e); err != nil {
-				return err
-			}
-		}
+func commitSeedBatch(ctx context.Context, store kg.Store, sb *seedBatch) error {
+	if sb == nil || len(sb.entities) == 0 {
+		return nil
 	}
 	if dbProv, ok := store.(sqlDBProvider); ok && dbProv.DB() != nil {
-		if err := projectBatchToPropertyGraph(ctx, dbProv.DB(), batch); err != nil {
+		return commitSeedBatchSQLite(ctx, dbProv.DB(), sb)
+	}
+	if bs, ok := store.(bulkUpsertStore); ok {
+		return bs.BulkUpsertEntities(ctx, sb.entities)
+	}
+	for _, e := range sb.entities {
+		if err := upsertEntity(ctx, store, e); err != nil {
 			return err
 		}
 	}
 	return nil
+}
+
+type graphNodeRow struct {
+	urn        string
+	kind       string
+	labelsJSON string
+}
+
+type graphEdgeRow struct {
+	id      string
+	fromURN string
+	toURN   string
+	rel     string
+	claimID string
+	weight  float64
+}
+
+type jurLabel struct {
+	Code string `json:"code"`
+}
+
+type authLabel struct {
+	Name string `json:"name"`
+	Slug string `json:"slug"`
+}
+
+type fwLabel struct {
+	ID           string `json:"id"`
+	Jurisdiction string `json:"jurisdiction"`
+	Title        string `json:"title"`
+	Version      string `json:"version"`
+}
+
+type fwStubLabel struct {
+	ID string `json:"id"`
+}
+
+type domStubLabel struct {
+	ID   string `json:"id"`
+	Kind string `json:"kind"`
+}
+
+type parentStubLabel struct {
+	Framework string `json:"framework"`
+}
+
+func formatCtrlLabelJSON(family, framework, id, domain, title string) string {
+	b := make([]byte, 0, len(family)+len(framework)+len(id)+len(domain)+len(title)+76)
+	b = append(b, `{"family":`...)
+	b = strconv.AppendQuote(b, family)
+	b = append(b, `,"framework":`...)
+	b = strconv.AppendQuote(b, framework)
+	b = append(b, `,"id":`...)
+	b = strconv.AppendQuote(b, id)
+	b = append(b, `,"thematic_domain":`...)
+	b = strconv.AppendQuote(b, domain)
+	b = append(b, `,"title":`...)
+	b = strconv.AppendQuote(b, title)
+	b = append(b, '}')
+	return string(b)
+}
+
+func formatODPLabelJSON(framework, id, label string) string {
+	b := make([]byte, 0, len(framework)+len(id)+len(label)+36)
+	b = append(b, `{"framework":`...)
+	b = strconv.AppendQuote(b, framework)
+	b = append(b, `,"id":`...)
+	b = strconv.AppendQuote(b, id)
+	b = append(b, `,"label":`...)
+	b = strconv.AppendQuote(b, label)
+	b = append(b, '}')
+	return string(b)
+}
+
+const sqliteHexDigits = "0123456789abcdef"
+
+func appendSQLiteBlob(b *strings.Builder, data []byte) {
+	b.Grow(len(data)*2 + 3)
+	b.WriteString("X'")
+	for _, v := range data {
+		b.WriteByte(sqliteHexDigits[v>>4])
+		b.WriteByte(sqliteHexDigits[v&0x0f])
+	}
+	b.WriteByte('\'')
+}
+
+func appendSQLiteText(b *strings.Builder, s string) {
+	b.WriteByte('\'')
+	if strings.IndexByte(s, '\'') < 0 && strings.IndexByte(s, 0) < 0 {
+		b.WriteString(s)
+	} else {
+		for i := 0; i < len(s); i++ {
+			ch := s[i]
+			if ch == '\'' {
+				b.WriteString("''")
+			} else if ch != 0 {
+				b.WriteByte(ch)
+			}
+		}
+	}
+	b.WriteByte('\'')
+}
+
+func buildValuesPlaceholders(rows, cols int) string {
+	var b strings.Builder
+	b.Grow(rows * (cols*2 + 3))
+	for r := 0; r < rows; r++ {
+		if r > 0 {
+			b.WriteByte(',')
+		}
+		b.WriteByte('(')
+		for c := 0; c < cols; c++ {
+			if c > 0 {
+				b.WriteByte(',')
+			}
+			b.WriteByte('?')
+		}
+		b.WriteByte(')')
+	}
+	return b.String()
+}
+
+func commitSeedBatchSQLite(ctx context.Context, db *sql.DB, sb *seedBatch) error {
+	conn, err := db.Conn(ctx)
+	if err != nil {
+		return fmt.Errorf("acquire sqlite conn: %w", err)
+	}
+	defer func() {
+		_, _ = conn.ExecContext(context.Background(), `PRAGMA foreign_keys = ON; PRAGMA synchronous = NORMAL;`)
+		_ = conn.Close()
+	}()
+
+	// PRAGMA foreign_keys MUST be set outside an active transaction in SQLite.
+	// Referential integrity is guaranteed below because every edge endpoint is
+	// explicitly inserted into kg_graph_nodes before kg_graph_edges in the same tx.
+	_, _ = conn.ExecContext(ctx, `PRAGMA foreign_keys = OFF; PRAGMA synchronous = OFF; PRAGMA temp_store = MEMORY; PRAGMA cache_size = -64000;`)
+
+	tx, err := conn.BeginTx(ctx, nil)
+	if err != nil {
+		return fmt.Errorf("begin seed tx: %w", err)
+	}
+	defer func() { _ = tx.Rollback() }()
+
+	// 1. Load existing max versions in one query so fresh DBs do zero per-row SELECTs.
+	existingMaxVer := make(map[string]int)
+	rows, err := tx.QueryContext(ctx, `SELECT urn, MAX(version) FROM kg_entities GROUP BY urn`)
+	if err != nil {
+		return fmt.Errorf("query existing entity versions: %w", err)
+	}
+	for rows.Next() {
+		var urn string
+		var mv int
+		if err := rows.Scan(&urn, &mv); err != nil {
+			_ = rows.Close()
+			return fmt.Errorf("scan entity version: %w", err)
+		}
+		existingMaxVer[urn] = mv
+	}
+	if err := rows.Err(); err != nil {
+		_ = rows.Close()
+		return err
+	}
+	_ = rows.Close()
+
+	var existingNodes, existingEdges int
+	if len(existingMaxVer) == 0 {
+		_ = tx.QueryRowContext(ctx, `SELECT COUNT(*) FROM kg_graph_nodes`).Scan(&existingNodes)
+		_ = tx.QueryRowContext(ctx, `SELECT COUNT(*) FROM kg_graph_edges`).Scan(&existingEdges)
+	}
+
+	now := time.Now().UTC()
+	var expireStmt *sql.Stmt
+	defer func() {
+		if expireStmt != nil {
+			_ = expireStmt.Close()
+		}
+	}()
+
+	dedupEntities := make([]*kg.Entity, 0, len(sb.entities))
+	for _, entity := range sb.entities {
+		if entity == nil {
+			continue
+		}
+		if entity.Status == "" {
+			entity.Status = kg.EntityStatusActive
+		}
+		if entity.ValidFrom.IsZero() {
+			entity.ValidFrom = now
+		}
+		mv := existingMaxVer[entity.URN]
+		if mv > 0 {
+			if expireStmt == nil {
+				expireStmt, err = tx.PrepareContext(ctx,
+					`UPDATE kg_entities SET status = ?, valid_to = ? WHERE urn = ? AND status = ?`)
+				if err != nil {
+					return fmt.Errorf("prepare expire entity stmt: %w", err)
+				}
+			}
+			if _, err := expireStmt.ExecContext(ctx, string(kg.EntityStatusSuperseded), now, entity.URN, string(kg.EntityStatusActive)); err != nil {
+				return fmt.Errorf("expire old version %s: %w", entity.URN, err)
+			}
+		}
+		entity.Version = mv + 1
+		existingMaxVer[entity.URN] = entity.Version
+		dedupEntities = append(dedupEntities, entity)
+	}
+
+	isFreshBulk := len(existingMaxVer) == len(dedupEntities) && existingNodes == 0 && existingEdges == 0 && expireStmt == nil
+
+	if isFreshBulk {
+		dropIdxSQL := `
+DROP INDEX IF EXISTS idx_kg_type;
+DROP INDEX IF EXISTS idx_kg_status;
+DROP INDEX IF EXISTS idx_kg_valid;
+DROP INDEX IF EXISTS idx_nodes_kind;
+DROP INDEX IF EXISTS idx_nodes_urn;
+DROP INDEX IF EXISTS idx_edges_from;
+DROP INDEX IF EXISTS idx_edges_to;
+DROP INDEX IF EXISTS idx_edges_relation;
+DROP INDEX IF EXISTS idx_edges_trust;
+DROP INDEX IF EXISTS idx_edges_valid;
+`
+		if _, err := tx.ExecContext(ctx, dropIdxSQL); err != nil {
+			return fmt.Errorf("drop secondary indexes for bulk seed: %w", err)
+		}
+		sort.Slice(dedupEntities, func(i, j int) bool {
+			return dedupEntities[i].URN < dedupEntities[j].URN
+		})
+	}
+
+	// 2. Multi-row bulk INSERT into kg_entities.
+	// Using SQL-escaped text literals with a single bound ?1 (now) avoids hundreds of thousands
+	// of per-parameter modernc.org/libc Xmalloc/Xfree C-heap allocations under -race.
+	const entityPrefix = `INSERT INTO kg_entities(urn, entity_type, version, status, valid_from, valid_to, payload) VALUES `
+	var sqlBuf strings.Builder
+	if isFreshBulk {
+		const freshEntityBatch = 200
+		sqlBuf.Grow(freshEntityBatch * 512)
+		for start := 0; start < len(dedupEntities); start += freshEntityBatch {
+			end := start + freshEntityBatch
+			if end > len(dedupEntities) {
+				end = len(dedupEntities)
+			}
+			chunk := dedupEntities[start:end]
+			sqlBuf.Reset()
+			sqlBuf.WriteString(entityPrefix)
+			for i, ent := range chunk {
+				if i > 0 {
+					sqlBuf.WriteByte(',')
+				}
+				sqlBuf.WriteByte('(')
+				appendSQLiteText(&sqlBuf, ent.URN)
+				sqlBuf.WriteByte(',')
+				appendSQLiteText(&sqlBuf, ent.Type)
+				sqlBuf.WriteString(",1,'active',?1,NULL,")
+				appendSQLiteBlob(&sqlBuf, ent.Payload)
+				sqlBuf.WriteByte(')')
+			}
+			if _, err := tx.ExecContext(ctx, sqlBuf.String(), now); err != nil {
+				return fmt.Errorf("bulk insert kg_entities: %w", err)
+			}
+		}
+	} else {
+		const entityChunkSize = 25
+		var entityStmt *sql.Stmt
+		if len(dedupEntities) >= entityChunkSize {
+			entityStmt, err = tx.PrepareContext(ctx, entityPrefix+buildValuesPlaceholders(entityChunkSize, 7))
+			if err != nil {
+				return fmt.Errorf("prepare bulk entity stmt: %w", err)
+			}
+			defer func() { _ = entityStmt.Close() }()
+		}
+		entityArgs := make([]any, 0, entityChunkSize*7)
+		for start := 0; start < len(dedupEntities); start += entityChunkSize {
+			end := start + entityChunkSize
+			if end > len(dedupEntities) {
+				end = len(dedupEntities)
+			}
+			chunk := dedupEntities[start:end]
+			entityArgs = entityArgs[:0]
+			for _, ent := range chunk {
+				entityArgs = append(entityArgs, ent.URN, ent.Type, ent.Version, string(ent.Status), ent.ValidFrom, ent.ValidTo, []byte(ent.Payload))
+			}
+			if len(chunk) == entityChunkSize && entityStmt != nil {
+				if _, err := entityStmt.ExecContext(ctx, entityArgs...); err != nil {
+					return fmt.Errorf("bulk insert kg_entities: %w", err)
+				}
+			} else {
+				q := entityPrefix + buildValuesPlaceholders(len(chunk), 7)
+				if _, err := tx.ExecContext(ctx, q, entityArgs...); err != nil {
+					return fmt.Errorf("bulk insert kg_entities remainder: %w", err)
+				}
+			}
+		}
+	}
+
+	// 3. Build property graph nodes and edges in memory.
+	stubMap := make(map[string]graphNodeRow, 128)
+	var stubOrder []string
+	addStubJSON := func(urn, kind string, labels any) {
+		if _, exists := stubMap[urn]; exists {
+			return
+		}
+		lb, _ := json.Marshal(labels)
+		stubMap[urn] = graphNodeRow{urn: urn, kind: kind, labelsJSON: string(lb)}
+		stubOrder = append(stubOrder, urn)
+	}
+
+	nodeMap := make(map[string]graphNodeRow, len(sb.frameworks)+len(sb.assessableReqs)+128)
+	nodeOrder := make([]string, 0, len(sb.frameworks)+len(sb.assessableReqs)+128)
+	addNodeRaw := func(urn, kind, labelsJSON string) {
+		if _, exists := nodeMap[urn]; !exists {
+			nodeOrder = append(nodeOrder, urn)
+		}
+		nodeMap[urn] = graphNodeRow{urn: urn, kind: kind, labelsJSON: labelsJSON}
+	}
+	addNodeJSON := func(urn, kind string, labels any) {
+		lb, _ := json.Marshal(labels)
+		addNodeRaw(urn, kind, string(lb))
+	}
+
+	edgeMap := make(map[string]graphEdgeRow, len(sb.assessableReqs)*3)
+	edgeOrder := make([]string, 0, len(sb.assessableReqs)*3)
+	addEdge := func(fromURN, rel, toURN string, weight float64) {
+		edgeID := "edge:" + fromURN + ":" + rel + ":" + toURN
+		if _, exists := edgeMap[edgeID]; !exists {
+			edgeOrder = append(edgeOrder, edgeID)
+		}
+		edgeMap[edgeID] = graphEdgeRow{
+			id:      edgeID,
+			fromURN: fromURN,
+			toURN:   toURN,
+			rel:     rel,
+			claimID: "claim:" + edgeID,
+			weight:  weight,
+		}
+	}
+
+	for _, fw := range sb.frameworks {
+		jurCode := normalizeISOJurisdiction(fw.Locale)
+		jurURN := "urn:xoscal:jurisdiction:" + jurCode
+		authSlug := authoritySlug(fw.Provider)
+		authURN := "urn:xoscal:authority:" + authSlug
+
+		addStubJSON(jurURN, ontology.ClassJurisdiction, jurLabel{Code: jurCode})
+		addStubJSON(authURN, ontology.ClassAuthority, authLabel{Name: fw.Provider, Slug: authSlug})
+		addNodeJSON(fw.URN, ontology.ClassFramework, fwLabel{
+			ID:           fw.RefID,
+			Jurisdiction: jurCode,
+			Title:        fw.Name,
+			Version:      fw.Version,
+		})
+		addEdge(fw.URN, ontology.PredInJurisdiction, jurURN, 1.0)
+		addEdge(fw.URN, ontology.PredGovernedByAuthority, authURN, 1.0)
+	}
+
+	for _, req := range sb.assessableReqs {
+		fwURN := "urn:xoscal:framework:" + req.Framework
+		addStubJSON(fwURN, ontology.ClassFramework, fwStubLabel{ID: req.Framework})
+
+		isEnh := strings.HasPrefix(req.ParentURN, "urn:xoscal:requirement:") && !strings.Contains(req.ParentURN, ":group:")
+		nodeClass := ontology.ClassControl
+		if isEnh {
+			nodeClass = ontology.ClassControlEnhancement
+		}
+		domain := ontology.ClassifyThematicDomain(req.NodeRefID, req.Section, req.Title, req.Text)
+		addNodeRaw(req.URN, nodeClass, formatCtrlLabelJSON(req.Section, req.Framework, req.NodeRefID, domain, req.Title))
+		addEdge(req.URN, ontology.PredBelongsToFramework, fwURN, 1.0)
+
+		domURN := "urn:xoscal:family:" + domain
+		addStubJSON(domURN, ontology.ClassControlFamily, domStubLabel{ID: domain, Kind: "thematic_domain"})
+		addEdge(req.URN, ontology.PredInControlFamily, domURN, 1.0)
+
+		if isEnh && req.ParentURN != "" {
+			addStubJSON(req.ParentURN, ontology.ClassControl, parentStubLabel{Framework: req.Framework})
+			addEdge(req.URN, ontology.PredEnhancesControl, req.ParentURN, 1.0)
+		}
+		for _, p := range req.Params {
+			if p.ID == "" {
+				continue
+			}
+			odpURN := "urn:xoscal:odp:" + req.Framework + ":" + p.ID
+			addNodeRaw(odpURN, ontology.ClassParameterODP, formatODPLabelJSON(req.Framework, p.ID, p.Label))
+			addEdge(req.URN, ontology.PredDefinesODP, odpURN, 1.0)
+		}
+	}
+
+	var stubsToInsert []graphNodeRow
+	for _, urn := range stubOrder {
+		if _, inFull := nodeMap[urn]; !inFull {
+			if isFreshBulk {
+				nodeMap[urn] = stubMap[urn]
+				nodeOrder = append(nodeOrder, urn)
+			} else {
+				stubsToInsert = append(stubsToInsert, stubMap[urn])
+			}
+		}
+	}
+	sort.Strings(nodeOrder)
+	sort.Strings(edgeOrder)
+
+	const graphBatchSize = 300
+	for start := 0; start < len(stubsToInsert); start += graphBatchSize {
+		end := start + graphBatchSize
+		if end > len(stubsToInsert) {
+			end = len(stubsToInsert)
+		}
+		chunk := stubsToInsert[start:end]
+		sqlBuf.Reset()
+		sqlBuf.WriteString(`INSERT OR IGNORE INTO kg_graph_nodes(id, kind, urn, labels_json, created_at) VALUES `)
+		for i, n := range chunk {
+			if i > 0 {
+				sqlBuf.WriteByte(',')
+			}
+			sqlBuf.WriteByte('(')
+			appendSQLiteText(&sqlBuf, n.urn)
+			sqlBuf.WriteByte(',')
+			appendSQLiteText(&sqlBuf, n.kind)
+			sqlBuf.WriteByte(',')
+			appendSQLiteText(&sqlBuf, n.urn)
+			sqlBuf.WriteByte(',')
+			appendSQLiteText(&sqlBuf, n.labelsJSON)
+			sqlBuf.WriteString(",?1)")
+		}
+		if _, err := tx.ExecContext(ctx, sqlBuf.String(), now); err != nil {
+			return fmt.Errorf("bulk insert stub graph nodes: %w", err)
+		}
+	}
+
+	const nodePrefix = `INSERT INTO kg_graph_nodes(id, kind, urn, labels_json, created_at) VALUES `
+	nodeSuffix := ` ON CONFLICT(id) DO UPDATE SET kind=excluded.kind, urn=excluded.urn, labels_json=excluded.labels_json`
+	if isFreshBulk {
+		nodeSuffix = ""
+	}
+	for start := 0; start < len(nodeOrder); start += graphBatchSize {
+		end := start + graphBatchSize
+		if end > len(nodeOrder) {
+			end = len(nodeOrder)
+		}
+		chunkURNs := nodeOrder[start:end]
+		sqlBuf.Reset()
+		sqlBuf.Grow(len(chunkURNs)*220 + 256)
+		sqlBuf.WriteString(nodePrefix)
+		for i, urn := range chunkURNs {
+			n := nodeMap[urn]
+			if i > 0 {
+				sqlBuf.WriteByte(',')
+			}
+			sqlBuf.WriteByte('(')
+			appendSQLiteText(&sqlBuf, n.urn)
+			sqlBuf.WriteByte(',')
+			appendSQLiteText(&sqlBuf, n.kind)
+			sqlBuf.WriteByte(',')
+			appendSQLiteText(&sqlBuf, n.urn)
+			sqlBuf.WriteByte(',')
+			appendSQLiteText(&sqlBuf, n.labelsJSON)
+			sqlBuf.WriteString(",?1)")
+		}
+		sqlBuf.WriteString(nodeSuffix)
+		if _, err := tx.ExecContext(ctx, sqlBuf.String(), now); err != nil {
+			return fmt.Errorf("bulk upsert graph nodes: %w", err)
+		}
+	}
+
+	const edgePrefix = `INSERT INTO kg_graph_edges(id, from_node, to_node, relation, qualifier, claim_id, evidence_digest, proof_state_json, valid_from, valid_to, trust_state, weight, extensions_json) VALUES `
+	edgeSuffix := ` ON CONFLICT(id) DO UPDATE SET from_node=excluded.from_node, to_node=excluded.to_node, relation=excluded.relation, qualifier=excluded.qualifier, claim_id=excluded.claim_id, evidence_digest=excluded.evidence_digest, proof_state_json=excluded.proof_state_json, valid_from=excluded.valid_from, valid_to=excluded.valid_to, trust_state=excluded.trust_state, weight=excluded.weight, extensions_json=excluded.extensions_json`
+	if isFreshBulk {
+		edgeSuffix = ""
+	}
+	for start := 0; start < len(edgeOrder); start += graphBatchSize {
+		end := start + graphBatchSize
+		if end > len(edgeOrder) {
+			end = len(edgeOrder)
+		}
+		chunkIDs := edgeOrder[start:end]
+		sqlBuf.Reset()
+		sqlBuf.Grow(len(chunkIDs)*360 + 512)
+		sqlBuf.WriteString(edgePrefix)
+		for i, id := range chunkIDs {
+			e := edgeMap[id]
+			if i > 0 {
+				sqlBuf.WriteByte(',')
+			}
+			sqlBuf.WriteByte('(')
+			appendSQLiteText(&sqlBuf, e.id)
+			sqlBuf.WriteByte(',')
+			appendSQLiteText(&sqlBuf, e.fromURN)
+			sqlBuf.WriteByte(',')
+			appendSQLiteText(&sqlBuf, e.toURN)
+			sqlBuf.WriteByte(',')
+			appendSQLiteText(&sqlBuf, e.rel)
+			sqlBuf.WriteString(",'',")
+			appendSQLiteText(&sqlBuf, e.claimID)
+			sqlBuf.WriteString(",'sha256:seeded','{}',?1,NULL,'verified',1.0,'{}')")
+		}
+		sqlBuf.WriteString(edgeSuffix)
+		if _, err := tx.ExecContext(ctx, sqlBuf.String(), now); err != nil {
+			return fmt.Errorf("bulk upsert graph edges: %w", err)
+		}
+	}
+
+	if isFreshBulk {
+		createIdxSQL := `
+CREATE INDEX IF NOT EXISTS idx_kg_type ON kg_entities(entity_type);
+CREATE INDEX IF NOT EXISTS idx_kg_status ON kg_entities(status);
+CREATE INDEX IF NOT EXISTS idx_kg_valid ON kg_entities(valid_from, valid_to);
+CREATE INDEX IF NOT EXISTS idx_nodes_kind ON kg_graph_nodes(kind);
+CREATE INDEX IF NOT EXISTS idx_nodes_urn ON kg_graph_nodes(urn);
+CREATE INDEX IF NOT EXISTS idx_edges_from ON kg_graph_edges(from_node);
+CREATE INDEX IF NOT EXISTS idx_edges_to ON kg_graph_edges(to_node);
+CREATE INDEX IF NOT EXISTS idx_edges_relation ON kg_graph_edges(relation);
+CREATE INDEX IF NOT EXISTS idx_edges_trust ON kg_graph_edges(trust_state);
+CREATE INDEX IF NOT EXISTS idx_edges_valid ON kg_graph_edges(valid_from, valid_to);
+`
+		if _, err := tx.ExecContext(ctx, createIdxSQL); err != nil {
+			return fmt.Errorf("recreate secondary indexes after bulk seed: %w", err)
+		}
+	}
+
+	return tx.Commit()
 }
 
 func normalizeISOJurisdiction(j string) string {
@@ -847,8 +1479,12 @@ func normalizeISOJurisdiction(j string) string {
 		return "fr"
 	case "de", "deu", "germany":
 		return "de"
+	case "ee", "est", "estonia":
+		return "ee"
 	case "eu", "european-union", "european union":
 		return "eu"
+	case "int", "intl", "international", "global", "iso":
+		return "international"
 	default:
 		return strings.ToLower(strings.TrimSpace(j))
 	}
@@ -899,150 +1535,6 @@ func authoritySlug(auth string) string {
 		}
 		return s
 	}
-}
-
-func projectBatchToPropertyGraph(ctx context.Context, db *sql.DB, batch []*kg.Entity) error {
-	if len(batch) == 0 {
-		return nil
-	}
-	tx, err := db.BeginTx(ctx, nil)
-	if err != nil {
-		return fmt.Errorf("begin property graph tx: %w", err)
-	}
-	defer func() { _ = tx.Rollback() }()
-
-	nodeStmt, err := tx.PrepareContext(ctx,
-		`INSERT INTO kg_graph_nodes(id, kind, urn, labels_json, created_at) VALUES (?, ?, ?, ?, ?)
-		 ON CONFLICT(id) DO UPDATE SET kind=excluded.kind, urn=excluded.urn, labels_json=excluded.labels_json`)
-	if err != nil {
-		return fmt.Errorf("prepare graph node stmt: %w", err)
-	}
-	defer nodeStmt.Close()
-
-	stubNodeStmt, err := tx.PrepareContext(ctx,
-		`INSERT OR IGNORE INTO kg_graph_nodes(id, kind, urn, labels_json, created_at) VALUES (?, ?, ?, ?, ?)`)
-	if err != nil {
-		return fmt.Errorf("prepare graph stub node stmt: %w", err)
-	}
-	defer stubNodeStmt.Close()
-
-	edgeStmt, err := tx.PrepareContext(ctx,
-		`INSERT OR REPLACE INTO kg_graph_edges(id, from_node, to_node, relation, qualifier, claim_id, evidence_digest,
-		proof_state_json, valid_from, valid_to, trust_state, weight, extensions_json)
-		VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`)
-	if err != nil {
-		return fmt.Errorf("prepare graph edge stmt: %w", err)
-	}
-	defer edgeStmt.Close()
-
-	now := time.Now().UTC()
-	addNode := func(urn, kind string, labels map[string]any) error {
-		lb, _ := json.Marshal(labels)
-		_, err := nodeStmt.ExecContext(ctx, urn, kind, urn, string(lb), now)
-		return err
-	}
-	ensureStubNode := func(urn, kind string, labels map[string]any) error {
-		lb, _ := json.Marshal(labels)
-		_, err := stubNodeStmt.ExecContext(ctx, urn, kind, urn, string(lb), now)
-		return err
-	}
-	addEdge := func(fromURN, rel, toURN string, weight float64) error {
-		edgeID := fmt.Sprintf("edge:%s:%s:%s", fromURN, rel, toURN)
-		claimID := "claim:" + edgeID
-		_, err := edgeStmt.ExecContext(ctx, edgeID, fromURN, toURN, rel, "", claimID, "sha256:seeded", "{}", now, nil, "verified", weight, "{}")
-		return err
-	}
-
-	for _, ent := range batch {
-		if ent == nil {
-			continue
-		}
-		if ent.Type == "reg:Framework" {
-			var fw kg.Framework
-			if err := json.Unmarshal(ent.Payload, &fw); err != nil {
-				continue
-			}
-			jurCode := normalizeISOJurisdiction(fw.Locale)
-			jurURN := "urn:xoscal:jurisdiction:" + jurCode
-			authSlug := authoritySlug(fw.Provider)
-			authURN := "urn:xoscal:authority:" + authSlug
-
-			if err := ensureStubNode(jurURN, ontology.ClassJurisdiction, map[string]any{"code": jurCode}); err != nil {
-				return err
-			}
-			if err := ensureStubNode(authURN, ontology.ClassAuthority, map[string]any{"slug": authSlug, "name": fw.Provider}); err != nil {
-				return err
-			}
-			if err := addNode(fw.URN, ontology.ClassFramework, map[string]any{"id": fw.RefID, "title": fw.Name, "version": fw.Version, "jurisdiction": jurCode}); err != nil {
-				return err
-			}
-			if err := addEdge(fw.URN, ontology.PredInJurisdiction, jurURN, 1.0); err != nil {
-				return err
-			}
-			if err := addEdge(fw.URN, ontology.PredGovernedByAuthority, authURN, 1.0); err != nil {
-				return err
-			}
-		} else if ent.Type == "reg:Requirement" {
-			var req kg.Requirement
-			if err := json.Unmarshal(ent.Payload, &req); err != nil {
-				continue
-			}
-			if !req.Assessable {
-				continue
-			}
-			fwURN := "urn:xoscal:framework:" + req.Framework
-			if err := ensureStubNode(fwURN, ontology.ClassFramework, map[string]any{"id": req.Framework}); err != nil {
-				return err
-			}
-			isEnh := strings.HasPrefix(req.ParentURN, "urn:xoscal:requirement:") && !strings.Contains(req.ParentURN, ":group:")
-			nodeClass := ontology.ClassControl
-			if isEnh {
-				nodeClass = ontology.ClassControlEnhancement
-			}
-			domain := ontology.ClassifyThematicDomain(req.NodeRefID, req.Section, req.Title, req.Text)
-			if err := addNode(req.URN, nodeClass, map[string]any{
-				"id":              req.NodeRefID,
-				"framework":       req.Framework,
-				"title":           req.Title,
-				"family":          req.Section,
-				"thematic_domain": domain,
-			}); err != nil {
-				return err
-			}
-			if err := addEdge(req.URN, ontology.PredBelongsToFramework, fwURN, 1.0); err != nil {
-				return err
-			}
-			domURN := "urn:xoscal:family:" + domain
-			if err := ensureStubNode(domURN, ontology.ClassControlFamily, map[string]any{"id": domain, "kind": "thematic_domain"}); err != nil {
-				return err
-			}
-			if err := addEdge(req.URN, ontology.PredInControlFamily, domURN, 1.0); err != nil {
-				return err
-			}
-			if isEnh && req.ParentURN != "" {
-				if err := ensureStubNode(req.ParentURN, ontology.ClassControl, map[string]any{"framework": req.Framework}); err != nil {
-					return err
-				}
-				if err := addEdge(req.URN, ontology.PredEnhancesControl, req.ParentURN, 1.0); err != nil {
-					return err
-				}
-			}
-			for _, p := range req.Params {
-				if p.ID == "" {
-					continue
-				}
-				odpURN := fmt.Sprintf("urn:xoscal:odp:%s:%s", req.Framework, p.ID)
-				if err := addNode(odpURN, ontology.ClassParameterODP, map[string]any{"id": p.ID, "label": p.Label, "framework": req.Framework}); err != nil {
-					return err
-				}
-				if err := addEdge(req.URN, ontology.PredDefinesODP, odpURN, 1.0); err != nil {
-					return err
-				}
-			}
-		}
-	}
-
-	return tx.Commit()
 }
 
 func upsertEntity(ctx context.Context, store kg.Store, e *kg.Entity) error {

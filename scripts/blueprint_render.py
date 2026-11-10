@@ -141,7 +141,8 @@ def framework_rows(root=ROOT):
     ids = policy["framework_ids"]
     if len(ids) != len(set(ids)) or not all(re.fullmatch(r"[A-Za-z0-9_.-]+", value) for value in ids):
         raise ValueError("invalid exact framework inventory")
-    paths = [value + "/catalog.json" for value in ids] + ["cccs-medium-cloud-pbmm/profile.json"]
+    profile_paths = [p.removeprefix("frameworks/") for p in policy.get("profile_paths", [policy["profile_path"]])]
+    paths = [value + "/catalog.json" for value in ids] + profile_paths
     return [{"name": path, "lang": "OSCAL profile — illustrative producer inventory" if path.endswith("profile.json") else "OSCAL catalog — illustrative producer inventory", "digest": "not supplied", "signed": False} for path in paths]
 
 

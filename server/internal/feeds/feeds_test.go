@@ -562,3 +562,120 @@ func TestSyncCheckpointMultiProcessAndConcurrentReaderContention(t *testing.T) {
 		t.Fatalf("expected 41 serialized hash-chained ledger entries (1 + 20 goroutines + 20 OS child writes), got %d", totalCount)
 	}
 }
+
+func TestSyncFeedsLivePersistenceAndActiveAdvisories(t *testing.T) {
+	t.Cleanup(feeds.ResetSyncedCache)
+	feeds.ResetSyncedCache()
+
+	cpDir := filepath.Join(t.TempDir(), "live_synced_cp")
+	ts := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Content-Type", "application/json")
+		w.WriteHeader(http.StatusOK)
+		switch {
+		case strings.HasSuffix(r.URL.Path, "/"+feeds.FeedCISAKEV):
+			_, _ = w.Write([]byte(`{
+				"catalogVersion":"2026.11.10",
+				"vulnerabilities":[
+					{
+						"cveID":"CVE-2099-9999",
+						"vendorProject":"SyntheticEdge",
+						"product":"GatewayOS",
+						"vulnerabilityName":"Synthetic Zero-Day Command Injection",
+						"dateAdded":"2026-11-10",
+						"dueDate":"2026-11-17",
+						"knownRansomwareCampaignUse":"Known",
+						"shortDescription":"Novel live-synced CVE for persistence verification",
+						"cwes":["CWE-78"]
+					}
+				]
+			}`))
+		case strings.HasSuffix(r.URL.Path, "/"+feeds.FeedMITREAttack):
+			_, _ = w.Write([]byte(`{
+				"type":"bundle",
+				"id":"bundle--live-test",
+				"objects":[
+					{
+						"type":"attack-pattern",
+						"id":"attack-pattern--t1999",
+						"name":"Synthetic Container Escape",
+						"description":"Novel adversary technique synced live",
+						"external_references":[{"source_name":"mitre-attack","external_id":"T1999"}],
+						"kill_chain_phases":[{"kill_chain_name":"mitre-attack","phase_name":"privilege-escalation"}]
+					},
+					{
+						"type":"course-of-action",
+						"id":"course-of-action--si2",
+						"name":"SI-2 Flaw Remediation",
+						"external_references":[{"source_name":"NIST 800-53","external_id":"SI-2"}]
+					},
+					{
+						"type":"relationship",
+						"id":"relationship--mit1",
+						"relationship_type":"mitigates",
+						"source_ref":"course-of-action--si2",
+						"target_ref":"attack-pattern--t1999"
+					}
+				]
+			}`))
+		case strings.HasSuffix(r.URL.Path, "/"+feeds.FeedCrosswalk):
+			_, _ = w.Write([]byte(`{"catalog":{"uuid":"11111111-2222-3333-4444-555555555555","controls":[{"id":"ac-2"}]}}`))
+		default:
+			_, _ = w.Write([]byte(`<html><body>CCCS ITSP.10.033 Sovereign Security Control Catalogue Effective 2026-03-31</body></html>`))
+		}
+	}))
+	defer ts.Close()
+
+	rcpt, err := feeds.SyncFeeds(context.Background(), feeds.SyncOptions{
+		Offline:         false,
+		HTTPClient:      ts.Client(),
+		BaseURL:         ts.URL,
+		CheckpointDir:   cpDir,
+		CircuitRegistry: resilience.NewCircuitRegistry(resilience.CircuitConfig{FailureThreshold: 3}),
+	})
+	if err != nil {
+		t.Fatalf("SyncFeeds live persistence error: %v", err)
+	}
+	if rcpt.OperationalMode != "NORMAL" {
+		t.Fatalf("expected OperationalMode NORMAL, got %s", rcpt.OperationalMode)
+	}
+
+	// Verify synced_cisa_kev.json and synced_mitre_attack.json + .sha256 sidecars exist and pass ReadVerifiedFile
+	for _, fn := range []string{feeds.SyncedCISAKEVFile, feeds.SyncedMITREAttackFile} {
+		if _, _, err := resilience.ReadVerifiedFile(filepath.Join(cpDir, fn), feeds.DefaultMaxPayloadBytes); err != nil {
+			t.Fatalf("ReadVerifiedFile(%s) failed: %v", fn, err)
+		}
+	}
+
+	// Clear in-memory cache so ActiveThreatAdvisories / ActiveAttackMappings must read from verified checkpoint files
+	feeds.ResetSyncedCache()
+
+	kevActive := feeds.ActiveThreatAdvisories(cpDir)
+	foundCVE := false
+	for _, adv := range kevActive {
+		if adv.CVEID == "CVE-2099-9999" {
+			foundCVE = true
+			if adv.CWEID != "CWE-78" || len(adv.MitigatingControls) == 0 {
+				t.Errorf("unexpected CVE-2099-9999 mapping: %+v", adv)
+			}
+			break
+		}
+	}
+	if !foundCVE {
+		t.Fatalf("expected novel CVE-2099-9999 in ActiveThreatAdvisories(%s)", cpDir)
+	}
+
+	attActive := feeds.ActiveAttackMappings(cpDir)
+	foundTech := false
+	for _, tech := range attActive {
+		if tech.TechniqueID == "T1999" {
+			foundTech = true
+			if len(tech.MitigatingControls) == 0 || tech.MitigatingControls[0] != "si-2" {
+				t.Errorf("unexpected T1999 mitigating controls: %+v", tech)
+			}
+			break
+		}
+	}
+	if !foundTech {
+		t.Fatalf("expected novel T1999 in ActiveAttackMappings(%s)", cpDir)
+	}
+}

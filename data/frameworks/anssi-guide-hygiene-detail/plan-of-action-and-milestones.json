@@ -4,16 +4,2411 @@
       "href": "./system-security-plan.json"
     },
     "metadata": {
-      "last-modified": "2026-11-08T01:42:12Z",
+      "last-modified": "2026-11-08T00:30:49Z",
       "oscal-version": "1.2.3",
       "title": "ANSSI - Guide d'hygiène informatique - version détaillée Plan of Action and Milestones Template",
       "version": "4"
     },
     "poam-items": [
       {
-        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for ANSSI - Guide d'hygiène informatique - version détaillée.",
-        "title": "Compliance Roadmap and Parameter Tailoring for ANSSI - Guide d'hygiène informatique - version détaillée",
-        "uuid": "7ea4f678-22c9-533a-871b-80e80da7f4a0"
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _1.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_1.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _1.1 (Former les équipes opérationnelles à la sécurité des systèmes d’information — 1.1)",
+        "uuid": "60d2d5f3-655d-5892-81e3-4044f7e14cd8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _1.1.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_1.1.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _1.1.1 (Former les équipes opérationnelles à la sécurité des systèmes d’information — 1.1.1)",
+        "uuid": "27082c35-9d32-5986-bc03-17ea448e8d7c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _1.1.2 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_1.1.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _1.1.2 (Former les équipes opérationnelles à la sécurité des systèmes d’information — 1.1.2)",
+        "uuid": "26643830-d74c-51e8-abda-698a1edaf36f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _1.1.3 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_1.1.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _1.1.3 (Former les équipes opérationnelles à la sécurité des systèmes d’information — 1.1.3)",
+        "uuid": "d087aa2c-d1d6-5cb6-bd54-30ebd8edf770"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _1.1.4 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_1.1.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _1.1.4 (Former les équipes opérationnelles à la sécurité des systèmes d’information — 1.1.4)",
+        "uuid": "a489d9d3-0662-5f65-8486-77bcaf36c04c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _1.1.5 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_1.1.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _1.1.5 (Former les équipes opérationnelles à la sécurité des systèmes d’information — 1.1.5)",
+        "uuid": "eef2c92f-3294-5a0d-b8d5-58f0d0e62f77"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _1.1.6 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_1.1.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _1.1.6 (Former les équipes opérationnelles à la sécurité des systèmes d’information — 1.1.6)",
+        "uuid": "ebad7185-fae4-5e81-b49b-5f8104e3a83d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _1.1.7 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_1.1.7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _1.1.7 (Former les équipes opérationnelles à la sécurité des systèmes d’information — 1.1.7)",
+        "uuid": "c6847b3f-c670-5a3e-9d60-b8ec2e91d1d9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _1.2 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_1.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _1.2 (Former les équipes opérationnelles à la sécurité des systèmes d’information — 1.2)",
+        "uuid": "33f11cd3-da2f-5a00-b82a-3bd53508dcba"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _1.3 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_1.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _1.3 (Former les équipes opérationnelles à la sécurité des systèmes d’information — 1.3)",
+        "uuid": "1988e5af-07a7-5f8d-b475-973dcb6ab9ed"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _10.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_10.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _10.1 (Définir et vérifier des règles de choix et de dimensionnement des mots de passe — 10.1)",
+        "uuid": "9509081f-f022-5c35-8683-6c82e5a595fe"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _10.2 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_10.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _10.2 (Définir et vérifier des règles de choix et de dimensionnement des mots de passe — 10.2)",
+        "uuid": "fe397e7d-d000-53f5-ac5f-9dc6023fd550"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _10.2.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_10.2.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _10.2.1 (Définir et vérifier des règles de choix et de dimensionnement des mots de passe — 10.2.1)",
+        "uuid": "8a3d71ad-54a5-5c90-9b61-ad72d9312d17"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _10.2.2 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_10.2.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _10.2.2 (Définir et vérifier des règles de choix et de dimensionnement des mots de passe — 10.2.2)",
+        "uuid": "07f30ba6-74ce-5aac-b900-612a4a59e8ae"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _10.2.3 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_10.2.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _10.2.3 (Définir et vérifier des règles de choix et de dimensionnement des mots de passe — 10.2.3)",
+        "uuid": "e4282361-7562-59a3-a254-e8e187216348"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _10.3 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_10.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _10.3 (Définir et vérifier des règles de choix et de dimensionnement des mots de passe — 10.3)",
+        "uuid": "67c63a0c-adcd-55c6-8532-837480cd5d47"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _11.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_11.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _11.1 (Protéger les mots de passe stockés sur les systèmes — 11.1)",
+        "uuid": "ca4763f4-ff0b-580b-a95c-4b6b70a52620"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _11.2 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_11.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _11.2 (Protéger les mots de passe stockés sur les systèmes — 11.2)",
+        "uuid": "c984477d-396d-5487-aa57-6bdbfb99a0f2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _12.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_12.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _12.1 (Changer les éléments d’authentification par défaut sur les équipements et services — 12.1)",
+        "uuid": "58fb67bb-0a8e-58d9-a5a9-ecad76e7e230"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _12.2 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_12.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _12.2 (Changer les éléments d’authentification par défaut sur les équipements et services — 12.2)",
+        "uuid": "ec6e2c9e-c35d-5315-bac4-1fb54981293e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _12.3 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_12.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _12.3 (Changer les éléments d’authentification par défaut sur les équipements et services — 12.3)",
+        "uuid": "5b6c7c14-a663-5044-98c7-21d04aa61773"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _13.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_13.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _13.1 (Privilégier lorsque c’est possible une authentification forte — 13.1)",
+        "uuid": "5f7894c2-a4dc-5c0e-828c-a29838b7e5aa"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _13.2 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_13.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _13.2 (Privilégier lorsque c’est possible une authentification forte — 13.2)",
+        "uuid": "41d79c70-19a2-5645-8c6a-87fefa589b38"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _14.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_14.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _14.1 (Mettre en place un niveau de sécurité minimal sur l’ensemble du parc informatique — 14.1)",
+        "uuid": "73a26367-18e9-52ef-a179-c8ed12efffc6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _14.1.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_14.1.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _14.1.1 (Mettre en place un niveau de sécurité minimal sur l’ensemble du parc informatique — 14.1.1)",
+        "uuid": "d3c6c77d-0592-56fd-9779-92832f258ccc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _14.1.2 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_14.1.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _14.1.2 (Mettre en place un niveau de sécurité minimal sur l’ensemble du parc informatique — 14.1.2)",
+        "uuid": "5c96a46f-a7b8-5d87-89be-e1396339245e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _14.1.3 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_14.1.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _14.1.3 (Mettre en place un niveau de sécurité minimal sur l’ensemble du parc informatique — 14.1.3)",
+        "uuid": "1109410f-9d8d-55e0-9084-c2b9da2988d3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _14.1.4 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_14.1.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _14.1.4 (Mettre en place un niveau de sécurité minimal sur l’ensemble du parc informatique — 14.1.4)",
+        "uuid": "c2bf2428-836c-5dd0-baa7-f2c6bd043c25"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _14.2 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_14.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _14.2 (Mettre en place un niveau de sécurité minimal sur l’ensemble du parc informatique — 14.2)",
+        "uuid": "52083815-20e3-5078-83af-d39acf192db8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _14.3 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_14.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _14.3 (Mettre en place un niveau de sécurité minimal sur l’ensemble du parc informatique — 14.3)",
+        "uuid": "998f523a-154a-5a54-ab09-4b97c435b483"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _15.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_15.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _15.1 (Se protéger des menaces relatives à l’utilisation de supports amovibles — 15.1)",
+        "uuid": "4760dd61-b71c-5b6b-9646-06eec1a392bb"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _15.2 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_15.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _15.2 (Se protéger des menaces relatives à l’utilisation de supports amovibles — 15.2)",
+        "uuid": "11e17064-8228-5bfe-9805-afcb38af7e31"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _15.3 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_15.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _15.3 (Se protéger des menaces relatives à l’utilisation de supports amovibles — 15.3)",
+        "uuid": "5127a223-4c85-58a2-9059-e1cb542eafd4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _15.4 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_15.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _15.4 (Se protéger des menaces relatives à l’utilisation de supports amovibles — 15.4)",
+        "uuid": "ddafb086-9d6e-56b6-9f64-84b570d4601e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _16.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_16.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _16.1 (Utiliser un outil de gestion centralisée afin d’homogénéiser les politiques de sécurité — 16.1)",
+        "uuid": "cee50fb1-230f-5715-a97c-feb14696924c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _17.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_17.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _17.1 (Activer et configurer le pare-feu local des postes de travail — 17.1)",
+        "uuid": "f6e7866d-4c8f-58b9-84ea-887dbd0a694a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _17.2 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_17.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _17.2 (Activer et configurer le pare-feu local des postes de travail — 17.2)",
+        "uuid": "b49bdea0-e2f7-5a68-8b72-8c0fa5d78d9d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _17.3 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_17.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _17.3 (Activer et configurer le pare-feu local des postes de travail — 17.3)",
+        "uuid": "32ad19ae-acdc-5f58-b548-54358921db42"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _17.4 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_17.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _17.4 (Activer et configurer le pare-feu local des postes de travail — 17.4)",
+        "uuid": "2f4da35d-301f-504a-b47e-2e21d2590a07"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _18.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_18.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _18.1 (Chiffrer les données sensibles transmises par voie Internet — 18.1)",
+        "uuid": "d065a4c5-7de6-5001-a11f-e76838e2807e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _18.2 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_18.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _18.2 (Chiffrer les données sensibles transmises par voie Internet — 18.2)",
+        "uuid": "1cee5c0e-0580-5559-b821-ed2d72742579"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _19.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_19.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _19.1 (Segmenter le réseau et mettre en place un cloisonnement entre ces zones — 19.1)",
+        "uuid": "8e712bc7-87a2-5138-8e16-f4a22b736b4a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _19.2 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_19.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _19.2 (Segmenter le réseau et mettre en place un cloisonnement entre ces zones — 19.2)",
+        "uuid": "a4049bc9-9fa7-54b7-9949-36b3a3f4f084"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _19.3 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_19.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _19.3 (Segmenter le réseau et mettre en place un cloisonnement entre ces zones — 19.3)",
+        "uuid": "82aec5f5-46c4-5ac2-844d-50c0012ca385"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.1 (Sensibiliser les utilisateurs aux bonnes pratiques élémentaires de sécurité informatique — 2.1)",
+        "uuid": "d8005bc0-c3cf-598a-9803-d63465c2e798"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.2 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.2 (Sensibiliser les utilisateurs aux bonnes pratiques élémentaires de sécurité informatique — 2.2)",
+        "uuid": "9ccfcf46-8bb4-5e0c-959f-9d21a677b2f7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.2.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.2.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.2.1 (Sensibiliser les utilisateurs aux bonnes pratiques élémentaires de sécurité informatique — 2.2.1)",
+        "uuid": "f73718c3-2abd-530c-8d86-d2dbfbbb45ef"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.2.2 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.2.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.2.2 (Sensibiliser les utilisateurs aux bonnes pratiques élémentaires de sécurité informatique — 2.2.2)",
+        "uuid": "cf3a5fc4-c1c8-5a78-ac49-57fb337e01ad"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.2.3 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.2.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.2.3 (Sensibiliser les utilisateurs aux bonnes pratiques élémentaires de sécurité informatique — 2.2.3)",
+        "uuid": "0c5e263f-dac7-5983-9e0b-80a2ed9f5bcb"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.2.4 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.2.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.2.4 (Sensibiliser les utilisateurs aux bonnes pratiques élémentaires de sécurité informatique — 2.2.4)",
+        "uuid": "518963dd-091e-5070-a46e-381422673dbb"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.2.5 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.2.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.2.5 (Sensibiliser les utilisateurs aux bonnes pratiques élémentaires de sécurité informatique — 2.2.5)",
+        "uuid": "c8a0b432-466b-5096-9ff5-6786ab0c0c97"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.3 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.3 (Sensibiliser les utilisateurs aux bonnes pratiques élémentaires de sécurité informatique — 2.3)",
+        "uuid": "72c0da03-8020-519c-8b82-e3133cd3fec3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _20.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_20.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _20.1 (S'assurer de la sécurité des réseaux d'accès Wi-Fi et de la séparation des usages — 20.1)",
+        "uuid": "0647ab52-f93f-547b-b5ea-ed8386b3f7c2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _20.2 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_20.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _20.2 (S'assurer de la sécurité des réseaux d'accès Wi-Fi et de la séparation des usages — 20.2)",
+        "uuid": "f0ca746e-aaab-5a34-9004-75f964216d18"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _20.3 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_20.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _20.3 (S'assurer de la sécurité des réseaux d'accès Wi-Fi et de la séparation des usages — 20.3)",
+        "uuid": "82d38f5d-0961-551c-81c3-70036dda5e2b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _20.4 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_20.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _20.4 (S'assurer de la sécurité des réseaux d'accès Wi-Fi et de la séparation des usages — 20.4)",
+        "uuid": "c5c11e49-640d-5a8b-97e5-40b9fb64705d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _20.5 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_20.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _20.5 (S'assurer de la sécurité des réseaux d'accès Wi-Fi et de la séparation des usages — 20.5)",
+        "uuid": "939cd786-0134-5ae6-8121-0324aa25ce2a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _21.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_21.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _21.1 (Utiliser des protocoles réseaux sécurisés dès qu'ils existent — 21.1)",
+        "uuid": "78530b90-543b-587d-9cf2-a5f1f7b52d9a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _22.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_22.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _22.1 (Mettre en place une passerelle d'accès sécurisé à Internet — 22.1)",
+        "uuid": "64e2e365-9410-5d11-853f-969419bfe84b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _22.2 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_22.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _22.2 (Mettre en place une passerelle d'accès sécurisé à Internet — 22.2)",
+        "uuid": "6a00aab4-1240-56c2-b169-c36d3cb4cd24"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _22.3 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_22.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _22.3 (Mettre en place une passerelle d'accès sécurisé à Internet — 22.3)",
+        "uuid": "e85e7782-d6f7-52c3-8466-473053e642af"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _22.4 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_22.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _22.4 (Mettre en place une passerelle d'accès sécurisé à Internet — 22.4)",
+        "uuid": "d70c986e-d6b6-5924-92ec-914ee42068f1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _22.5 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_22.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _22.5 (Mettre en place une passerelle d'accès sécurisé à Internet — 22.5)",
+        "uuid": "e97766a1-78c0-5d51-82a9-29fdcb75d0cf"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _22.6 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_22.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _22.6 (Mettre en place une passerelle d'accès sécurisé à Internet — 22.6)",
+        "uuid": "65f542ba-08d1-588d-872d-2238cb01f102"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _22.7 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_22.7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _22.7 (Mettre en place une passerelle d'accès sécurisé à Internet — 22.7)",
+        "uuid": "42bd5551-ded6-5937-804c-6cc6e49b1dbc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _23.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_23.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _23.1 (Cloisonner les services visibles depuis Internet du reste du système d'information — 23.1)",
+        "uuid": "049132b8-77a3-52cd-91ae-4ae38cfc8f35"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _23.2 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_23.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _23.2 (Cloisonner les services visibles depuis Internet du reste du système d'information — 23.2)",
+        "uuid": "d4b42a5d-ed8a-5e7e-8af9-43f3e78e07d6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _23.3 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_23.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _23.3 (Cloisonner les services visibles depuis Internet du reste du système d'information — 23.3)",
+        "uuid": "8cb87437-3c8a-551d-adbf-0ebbed1b21bb"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _24.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_24.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _24.1 (Protéger sa messagerie professionnelle — 24.1)",
+        "uuid": "e6ca9f05-a575-5c5c-833e-239f5d1fb9e4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _24.2 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_24.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _24.2 (Protéger sa messagerie professionnelle — 24.2)",
+        "uuid": "9213be5e-a8bd-55a2-9f33-b93c7fc06b04"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _24.3 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_24.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _24.3 (Protéger sa messagerie professionnelle — 24.3)",
+        "uuid": "6c61cce0-95fe-5cb0-a24f-c892fab0b799"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _24.4.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_24.4.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _24.4.1 (Que l’entité héberge ou fasse héberger son système de messagerie, elle doit s’assurer : — 24.4.1)",
+        "uuid": "deaa1665-0b59-58d1-9503-712531859e11"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _24.4.2 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_24.4.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _24.4.2 (Que l’entité héberge ou fasse héberger son système de messagerie, elle doit s’assurer : — 24.4.2)",
+        "uuid": "683b50c1-bd7a-5b31-9807-4229738d7354"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _24.5 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_24.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _24.5 (Protéger sa messagerie professionnelle — 24.5)",
+        "uuid": "421cab60-7d6c-57df-8d55-ac1f645ad251"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _24.6 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_24.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _24.6 (Protéger sa messagerie professionnelle — 24.6)",
+        "uuid": "d8440bf9-900b-53c7-b433-480f82fbd583"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _24.7 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_24.7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _24.7 (Protéger sa messagerie professionnelle — 24.7)",
+        "uuid": "f5d78ed0-8b03-5162-8c00-fcc208ae7399"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _25.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_25.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _25.1 (Sécuriser les interconnexions réseau dédiées avec les partenaires — 25.1)",
+        "uuid": "1249e6a3-d6f6-5ed9-8c63-5981fc90ddfb"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _25.2 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_25.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _25.2 (Sécuriser les interconnexions réseau dédiées avec les partenaires — 25.2)",
+        "uuid": "b75a07f2-976d-565c-94df-0cdfc09fc1e4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _25.3 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_25.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _25.3 (Sécuriser les interconnexions réseau dédiées avec les partenaires — 25.3)",
+        "uuid": "6c49e493-8036-577f-883f-458554a983a4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _25.4 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_25.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _25.4 (Sécuriser les interconnexions réseau dédiées avec les partenaires — 25.4)",
+        "uuid": "b124bc90-4799-59a8-86ce-065d3b1cf60e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _25.5 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_25.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _25.5 (Sécuriser les interconnexions réseau dédiées avec les partenaires — 25.5)",
+        "uuid": "2be7ca06-a31f-51ee-a01e-5d6945cf97b2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _26.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_26.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _26.1 (Contrôler et protéger l'accès aux salles serveurs et aux locaux techniques — 26.1)",
+        "uuid": "566a2390-4f02-5c84-891f-bd95b1deeb41"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _26.2 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_26.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _26.2 (Contrôler et protéger l'accès aux salles serveurs et aux locaux techniques — 26.2)",
+        "uuid": "437876d7-cf58-55d7-a757-0113a3a6694e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _26.3 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_26.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _26.3 (Contrôler et protéger l'accès aux salles serveurs et aux locaux techniques — 26.3)",
+        "uuid": "8332d4d4-b6b5-5297-9bf7-3521261ad43e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _26.4 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_26.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _26.4 (Contrôler et protéger l'accès aux salles serveurs et aux locaux techniques — 26.4)",
+        "uuid": "8498e2f9-dfa2-545c-82b3-0aa2a989ce52"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _26.5 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_26.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _26.5 (Contrôler et protéger l'accès aux salles serveurs et aux locaux techniques — 26.5)",
+        "uuid": "ef016171-2f15-5345-b6b1-765bfbeaf59e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _26.6 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_26.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _26.6 (Contrôler et protéger l'accès aux salles serveurs et aux locaux techniques — 26.6)",
+        "uuid": "c55cabcc-9c57-5f8f-a4d8-6b3b604c88f8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _27.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_27.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _27.1 (Interdire l’accès à Internet depuis les postes ou serveurs utilisés pour l’administration du système d’information — 27.1)",
+        "uuid": "e707ce7a-b331-5cd9-af77-bb1570064bc9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _27.2 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_27.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _27.2 (Interdire l’accès à Internet depuis les postes ou serveurs utilisés pour l’administration du système d’information — 27.2)",
+        "uuid": "6f76e5a0-5900-5b54-b52b-59eaaef1b716"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _27.3 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_27.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _27.3 (Interdire l’accès à Internet depuis les postes ou serveurs utilisés pour l’administration du système d’information — 27.3)",
+        "uuid": "862b99bd-a318-54ee-867b-23629ce41323"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _27.4 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_27.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _27.4 (Interdire l’accès à Internet depuis les postes ou serveurs utilisés pour l’administration du système d’information — 27.4)",
+        "uuid": "891c0e0a-aa0f-5d6d-9511-05e161ec0581"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _27.5 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_27.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _27.5 (Interdire l’accès à Internet depuis les postes ou serveurs utilisés pour l’administration du système d’information — 27.5)",
+        "uuid": "84247a1c-ecf1-5361-9108-292b0fb96b5f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _28.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_28.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _28.1 (Utiliser un réseau dédié et cloisonné pour l’administration du système d’information — 28.1)",
+        "uuid": "d176f54d-921e-5d45-8165-7ebbad1d287e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _28.2.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_28.2.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _28.2.1 (Selon les besoins de sécurité de l’entité, il est recommandé : — 28.2.1)",
+        "uuid": "149782e6-9a9b-5e83-b6a5-669bcc837a4c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _28.2.2 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_28.2.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _28.2.2 (Selon les besoins de sécurité de l’entité, il est recommandé : — 28.2.2)",
+        "uuid": "89cb866d-3d96-5e2d-84b5-fc6e87cf91a2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _28.2.3 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_28.2.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _28.2.3 (Selon les besoins de sécurité de l’entité, il est recommandé : — 28.2.3)",
+        "uuid": "25e35247-9e6a-58e6-a31c-5940bf3552d5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _29.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_29.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _29.1 (Limiter au strict besoin opérationnel les droits d’administration sur les postes de travail — 29.1)",
+        "uuid": "3f895100-f2f7-5a70-ae45-06f894cbb354"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _29.2 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_29.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _29.2 (Limiter au strict besoin opérationnel les droits d’administration sur les postes de travail — 29.2)",
+        "uuid": "27fdbc6f-0b88-5ef7-ad0f-1cb5069b8063"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.1 (Maîtriser les risques de l’infogérance — 3.1)",
+        "uuid": "c3c13316-8e27-5946-8b58-425873c7a8bb"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.2.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.2.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.2.1 (Maîtriser les risques de l’infogérance — 3.2.1)",
+        "uuid": "4330e3ed-b887-5988-8b7f-60fdd00b1f36"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.2.2 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.2.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.2.2 (Maîtriser les risques de l’infogérance — 3.2.2)",
+        "uuid": "a2a3e3a4-d152-5407-8ed8-5554a13242d8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.3 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.3 (Maîtriser les risques de l’infogérance — 3.3)",
+        "uuid": "b71fc24d-a526-550a-a87c-0201029dbd6b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.4 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.4 (Maîtriser les risques de l’infogérance — 3.4)",
+        "uuid": "2e1f26d4-b36c-53ff-b4a3-289a87ccd704"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _30.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_30.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _30.1 (Prendre des mesures de sécurisation physique des terminaux nomades — 30.1)",
+        "uuid": "ed10e85d-3957-5ead-a129-b533070e61c4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _30.2 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_30.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _30.2 (Prendre des mesures de sécurisation physique des terminaux nomades — 30.2)",
+        "uuid": "03597d80-ab9e-5cf7-9bd4-f18ce30c1597"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _30.3 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_30.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _30.3 (Prendre des mesures de sécurisation physique des terminaux nomades — 30.3)",
+        "uuid": "f0775502-c715-551b-8adc-748b174f33e2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _30.4 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_30.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _30.4 (Prendre des mesures de sécurisation physique des terminaux nomades — 30.4)",
+        "uuid": "5ce201fb-2bca-5518-b469-746bb16be98e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _30.5 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_30.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _30.5 (Prendre des mesures de sécurisation physique des terminaux nomades — 30.5)",
+        "uuid": "297579c5-beb6-5be3-87f9-b0de5600f4fa"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _31.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_31.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _31.1 (Chiffrer les données sensibles, en particulier sur le matériel potentiellement perdable — 31.1)",
+        "uuid": "e084e97f-5eb6-5e0c-9753-2168e9ab4c64"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _31.2 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_31.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _31.2 (Chiffrer les données sensibles, en particulier sur le matériel potentiellement perdable — 31.2)",
+        "uuid": "d57d1443-c931-53e2-978e-e6d6ff2257a0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _31.3 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_31.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _31.3 (Chiffrer les données sensibles, en particulier sur le matériel potentiellement perdable — 31.3)",
+        "uuid": "90c06f18-d161-57dd-b384-193bd6fe6892"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _32.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_32.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _32.1 (Sécuriser la connexion réseau des postes utilisés en situation de nomadisme — 32.1)",
+        "uuid": "9f1730e0-b78d-591c-afa6-d9eb5dc9afd2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _32.2 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_32.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _32.2 (Sécuriser la connexion réseau des postes utilisés en situation de nomadisme — 32.2)",
+        "uuid": "a158d3ab-80a9-579d-9afd-9578d01090bd"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _32.3 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_32.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _32.3 (Sécuriser la connexion réseau des postes utilisés en situation de nomadisme — 32.3)",
+        "uuid": "285cad50-1c91-5a1c-988c-9118daeaec15"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _32.4 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_32.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _32.4 (Sécuriser la connexion réseau des postes utilisés en situation de nomadisme — 32.4)",
+        "uuid": "a8f052bb-622e-51b5-94c5-98db7fe1cb83"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _33.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_33.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _33.1 (Adopter des politiques de sécurité dédiées aux terminaux mobiles — 33.1)",
+        "uuid": "c07bfdf8-89c2-5097-990a-31433324adbc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _33.2 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_33.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _33.2 (Adopter des politiques de sécurité dédiées aux terminaux mobiles — 33.2)",
+        "uuid": "92eb6c67-a5b1-543d-819a-c55899779258"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _33.3 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_33.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _33.3 (Adopter des politiques de sécurité dédiées aux terminaux mobiles — 33.3)",
+        "uuid": "3c9e9fa6-bc6b-5690-b6f0-074bb32a5483"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _33.4 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_33.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _33.4 (Adopter des politiques de sécurité dédiées aux terminaux mobiles — 33.4)",
+        "uuid": "61f139c8-23b9-5524-a315-94917cba9013"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _34.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_34.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _34.1 (Définir une politique de mise à jour des composants du système d’information — 34.1)",
+        "uuid": "f59c1fbc-baed-5a8d-aa4f-e51a61cf3b1d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _34.2.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_34.2.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _34.2.1 (Celles-ci doivent notamment préciser : — 34.2.1)",
+        "uuid": "50116a64-739b-5579-919f-312155c12a57"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _34.2.2 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_34.2.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _34.2.2 (Celles-ci doivent notamment préciser : — 34.2.2)",
+        "uuid": "a36c27ca-4e8a-5154-863d-efb94542e9ae"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _34.2.3 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_34.2.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _34.2.3 (Celles-ci doivent notamment préciser : — 34.2.3)",
+        "uuid": "2fde0fad-5702-5b7e-93ea-c2194d2dde16"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _34.2.4 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_34.2.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _34.2.4 (Celles-ci doivent notamment préciser : — 34.2.4)",
+        "uuid": "f73575ca-8a15-5a3b-a672-9c004abd2c9f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _34.3 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_34.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _34.3 (Définir une politique de mise à jour des composants du système d’information — 34.3)",
+        "uuid": "92890faf-5e4a-505e-ad15-c9d70f872109"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _35.1.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_35.1.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _35.1.1 (Anticiper la fin de la maintenance des logiciels et systèmes et limiter les adhérences logicielles — 35.1.1)",
+        "uuid": "f334335f-b48a-5aeb-94ff-d6b443fc95c9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _35.1.2 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_35.1.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _35.1.2 (Anticiper la fin de la maintenance des logiciels et systèmes et limiter les adhérences logicielles — 35.1.2)",
+        "uuid": "1b9e7755-b8c8-552d-adb2-c03a48c86645"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _35.1.3 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_35.1.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _35.1.3 (Anticiper la fin de la maintenance des logiciels et systèmes et limiter les adhérences logicielles — 35.1.3)",
+        "uuid": "d2007fac-f369-52e7-b90b-ffcbc65750b9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _35.1.4 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_35.1.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _35.1.4 (Anticiper la fin de la maintenance des logiciels et systèmes et limiter les adhérences logicielles — 35.1.4)",
+        "uuid": "7f476827-d1ac-53ae-89fc-042cea082c36"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _35.1.5 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_35.1.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _35.1.5 (Anticiper la fin de la maintenance des logiciels et systèmes et limiter les adhérences logicielles — 35.1.5)",
+        "uuid": "c8b54a5f-82cd-5f31-b9c8-2489742d4363"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _35.1.6 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_35.1.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _35.1.6 (Anticiper la fin de la maintenance des logiciels et systèmes et limiter les adhérences logicielles — 35.1.6)",
+        "uuid": "38a4d64d-8339-5a19-bea2-10427b5ec112"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _35.1.7 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_35.1.7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _35.1.7 (Anticiper la fin de la maintenance des logiciels et systèmes et limiter les adhérences logicielles — 35.1.7)",
+        "uuid": "12ef074e-85eb-5ec7-aa61-4634ead57673"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _36.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_36.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _36.1 (Activer et configurer les journaux des composants les plus importants — 36.1)",
+        "uuid": "6dec74d8-29a4-55a5-9322-a82f6eb9f345"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _36.2 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_36.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _36.2 (Activer et configurer les journaux des composants les plus importants — 36.2)",
+        "uuid": "06a515de-7232-5952-894e-72d863f3b56c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _36.3 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_36.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _36.3 (Activer et configurer les journaux des composants les plus importants — 36.3)",
+        "uuid": "99267e71-c664-5078-be38-64d179986b0a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _36.4 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_36.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _36.4 (Activer et configurer les journaux des composants les plus importants — 36.4)",
+        "uuid": "8766eeab-e275-5f6f-81bc-9f991d111f71"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _36.5 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_36.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _36.5 (Activer et configurer les journaux des composants les plus importants — 36.5)",
+        "uuid": "70118afa-e43e-5b05-b014-fd682953530b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _36.5.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_36.5.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _36.5.1 (Activer et configurer les journaux des composants les plus importants — 36.5.1)",
+        "uuid": "a01ae585-1821-5b88-8ea4-7d50d02ac1c5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _36.5.2 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_36.5.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _36.5.2 (Activer et configurer les journaux des composants les plus importants — 36.5.2)",
+        "uuid": "eef81cee-dd07-57c2-a03b-09fe1935744c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _36.5.3 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_36.5.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _36.5.3 (Activer et configurer les journaux des composants les plus importants — 36.5.3)",
+        "uuid": "620193fb-9867-5ac4-9f99-58042dd9965b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _36.6 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_36.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _36.6 (Activer et configurer les journaux des composants les plus importants — 36.6)",
+        "uuid": "cb8c8d58-5b4c-5115-b964-c6ca25c2d068"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _36.7 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_36.7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _36.7 (Activer et configurer les journaux des composants les plus importants — 36.7)",
+        "uuid": "21ed3f7e-5bc2-53ba-ad32-a48e183d1215"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _37.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_37.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _37.1 (Définir et appliquer une politique de sauvegarde des composants critiques — 37.1)",
+        "uuid": "0ade2430-4044-53dc-a441-eac3e59e7dad"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _37.2.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_37.2.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _37.2.1 (Cette politique doit au moins intégrer les éléments suivants : — 37.2.1)",
+        "uuid": "85fef684-92de-5a01-99ad-09017cc759f9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _37.2.2 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_37.2.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _37.2.2 (Cette politique doit au moins intégrer les éléments suivants : — 37.2.2)",
+        "uuid": "6a8f2b43-61f4-599b-a2d0-f0f6c16526a1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _37.2.3 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_37.2.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _37.2.3 (Cette politique doit au moins intégrer les éléments suivants : — 37.2.3)",
+        "uuid": "fad2d1cd-6f0b-5c7f-8647-92a7c03d6448"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _37.2.4 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_37.2.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _37.2.4 (Cette politique doit au moins intégrer les éléments suivants : — 37.2.4)",
+        "uuid": "6c5d7fb1-3c69-5d2d-b146-f6b941dee74a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _37.2.5 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_37.2.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _37.2.5 (Cette politique doit au moins intégrer les éléments suivants : — 37.2.5)",
+        "uuid": "25cdbbbb-8877-5a4b-8d49-449cefab9f1e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _37.2.6 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_37.2.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _37.2.6 (Cette politique doit au moins intégrer les éléments suivants : — 37.2.6)",
+        "uuid": "08e8855a-eb57-5554-a122-313fdc9977b8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _37.2.7 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_37.2.7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _37.2.7 (Cette politique doit au moins intégrer les éléments suivants : — 37.2.7)",
+        "uuid": "ac598696-9536-56f4-94eb-9e3f97b4f07e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _37.3.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_37.3.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _37.3.1 (Les tests de restauration peuvent être réalisés de plusieurs manières : — 37.3.1)",
+        "uuid": "7086b358-6c95-52d6-b315-072d30d625e2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _37.3.2 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_37.3.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _37.3.2 (Les tests de restauration peuvent être réalisés de plusieurs manières : — 37.3.2)",
+        "uuid": "1749d452-524c-5222-975b-dd05376ad50b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _37.3.3 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_37.3.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _37.3.3 (Les tests de restauration peuvent être réalisés de plusieurs manières : — 37.3.3)",
+        "uuid": "143888c8-097a-5358-956b-41247d3253fb"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _37.4 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_37.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _37.4 (Définir et appliquer une politique de sauvegarde des composants critiques — 37.4)",
+        "uuid": "e7360efe-d44e-5683-bcb7-f83d81277e1f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _38.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_38.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _38.1 (Procéder à des contrôles et audits de sécurité réguliers puis appliquer les actions correctives associées (renforcé) — 38.1)",
+        "uuid": "572c1792-6669-5c39-8359-01b8bf53501f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _38.2 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_38.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _38.2 (Procéder à des contrôles et audits de sécurité réguliers puis appliquer les actions correctives associées (renforcé) — 38.2)",
+        "uuid": "02a5ddb9-84eb-5b67-9278-45fb37ce7d00"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _38.3 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_38.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _38.3 (Procéder à des contrôles et audits de sécurité réguliers puis appliquer les actions correctives associées (renforcé) — 38.3)",
+        "uuid": "6d850079-2410-5d9d-bce2-ad98dae45788"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _38.4 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_38.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _38.4 (Procéder à des contrôles et audits de sécurité réguliers puis appliquer les actions correctives associées (renforcé) — 38.4)",
+        "uuid": "5ae5fa29-ed0f-5b0e-a6b8-4be65cc0f075"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _39.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_39.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _39.1 (Désigner un référent en sécurité des systèmes d’information et le faire connaître auprès du personnel — 39.1)",
+        "uuid": "614ba54c-e502-5b1f-86ab-4ff310e0f805"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _39.2 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_39.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _39.2 (Désigner un référent en sécurité des systèmes d’information et le faire connaître auprès du personnel — 39.2)",
+        "uuid": "182981ab-287a-5528-9534-f38cc947adce"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _39.3 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_39.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _39.3 (Désigner un référent en sécurité des systèmes d’information et le faire connaître auprès du personnel — 39.3)",
+        "uuid": "8d497d6c-87a2-5502-85a6-a7ca2efff231"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _39.4 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_39.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _39.4 (Désigner un référent en sécurité des systèmes d’information et le faire connaître auprès du personnel — 39.4)",
+        "uuid": "43c78251-90d9-54ab-92c6-5e9783d5042e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.1 (Identifier les informations et serveurs les plus sensibles et maintenir un schéma du réseau — 4.1)",
+        "uuid": "901ee896-f50f-589c-8200-33185eb21927"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.2 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.2 (Identifier les informations et serveurs les plus sensibles et maintenir un schéma du réseau — 4.2)",
+        "uuid": "01dc6a6e-8bff-5e79-9ba2-c257026ad2bb"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.3 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.3 (Identifier les informations et serveurs les plus sensibles et maintenir un schéma du réseau — 4.3)",
+        "uuid": "f6b1aa86-1ed6-5ec3-81f7-9359d8bd15a9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.4 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.4 (Identifier les informations et serveurs les plus sensibles et maintenir un schéma du réseau — 4.4)",
+        "uuid": "e56b274b-5693-5f24-9517-5c58f2c5c1d9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _40.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_40.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _40.1 (Définir une procédure de gestion des incidents de sécurité — 40.1)",
+        "uuid": "a6518e56-78e6-5d1c-9686-b79f60ef301f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _40.2 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_40.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _40.2 (Définir une procédure de gestion des incidents de sécurité — 40.2)",
+        "uuid": "afc556cc-53e6-5f4b-9752-715f32b65a47"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _40.3 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_40.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _40.3 (Définir une procédure de gestion des incidents de sécurité — 40.3)",
+        "uuid": "30f7751a-15f0-5547-b1a1-8792093fe4f3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _40.4 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_40.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _40.4 (Définir une procédure de gestion des incidents de sécurité — 40.4)",
+        "uuid": "62867442-d499-5117-bc07-d26985534296"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _41.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_41.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _41.1 (Mener une analyse de risques formelle (renforcé) — 41.1)",
+        "uuid": "75cfa216-9299-545a-9e66-fc6e414b7cd5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _41.2 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_41.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _41.2 (Mener une analyse de risques formelle (renforcé) — 41.2)",
+        "uuid": "1118f006-33fb-548b-ad91-7c80d635bf81"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _42.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_42.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _42.1 (Privilégier l’usage de produits et de services qualifiés par l'ANSSI (renforcé) — 42.1)",
+        "uuid": "76277a9d-e6b2-51fa-a7a5-db89031a973e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.1 (Disposer d’un inventaire exhaustif des comptes privilégiés et le maintenir à jour — 5.1)",
+        "uuid": "6c3488bb-8c1c-5230-aadd-89172eacddd5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.1.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.1.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.1.1 (Disposer d’un inventaire exhaustif des comptes privilégiés et le maintenir à jour — 5.1.1)",
+        "uuid": "ccee7748-0fdc-5274-acff-13ac3c18720e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.1.2 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.1.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.1.2 (Disposer d’un inventaire exhaustif des comptes privilégiés et le maintenir à jour — 5.1.2)",
+        "uuid": "482224d0-b2cf-5944-a32d-77996ac37bb4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.1.3 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.1.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.1.3 (Disposer d’un inventaire exhaustif des comptes privilégiés et le maintenir à jour — 5.1.3)",
+        "uuid": "a669d139-bdf4-5407-a96e-aadbd9939f75"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.2 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.2 (Disposer d’un inventaire exhaustif des comptes privilégiés et le maintenir à jour — 5.2)",
+        "uuid": "822c535f-0848-5612-8437-e81df1108fe9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.3 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.3 (Disposer d’un inventaire exhaustif des comptes privilégiés et le maintenir à jour — 5.3)",
+        "uuid": "267cb014-55f2-5800-a70e-92eed4f27538"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.1 (Organiser les procédures d’arrivée, de départ et de changement de fonction des utilisateurs — 6.1)",
+        "uuid": "c5d39491-fc3f-5643-a075-431b2e6ae622"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.1.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.1.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.1.1 (Organiser les procédures d’arrivée, de départ et de changement de fonction des utilisateurs — 6.1.1)",
+        "uuid": "d7b6c9b6-d325-53ce-9f04-b152feb3ddef"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.1.2 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.1.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.1.2 (Organiser les procédures d’arrivée, de départ et de changement de fonction des utilisateurs — 6.1.2)",
+        "uuid": "094c3a4c-0501-5e32-8526-378ac680d687"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.1.3 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.1.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.1.3 (Organiser les procédures d’arrivée, de départ et de changement de fonction des utilisateurs — 6.1.3)",
+        "uuid": "1342d680-f75d-52c2-abf5-87257a078829"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.1.4 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.1.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.1.4 (Organiser les procédures d’arrivée, de départ et de changement de fonction des utilisateurs — 6.1.4)",
+        "uuid": "9d5fb65a-8aa2-5c1b-9780-1a1560060b9e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.2 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.2 (Organiser les procédures d’arrivée, de départ et de changement de fonction des utilisateurs — 6.2)",
+        "uuid": "cb91d320-c524-5044-b083-3ede467cc9dc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _7.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_7.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _7.1 (Autoriser la connexion au réseau de l’entité aux seuls équipements maîtrisés — 7.1)",
+        "uuid": "4c6275ef-d0b1-545d-846e-58ce393d4251"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _7.2 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_7.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _7.2 (Autoriser la connexion au réseau de l’entité aux seuls équipements maîtrisés — 7.2)",
+        "uuid": "87bc2f18-990d-547f-a85c-8c7a358753d2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _7.3 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_7.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _7.3 (Autoriser la connexion au réseau de l’entité aux seuls équipements maîtrisés — 7.3)",
+        "uuid": "e1325c13-74c8-593c-b5e1-9da725e0d880"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _7.4 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_7.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _7.4 (Autoriser la connexion au réseau de l’entité aux seuls équipements maîtrisés — 7.4)",
+        "uuid": "7c5d27cb-08b5-5a79-8be5-efbce599ba59"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _8.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_8.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _8.1 (Identifier nommément chaque personne accédant au système et distinguer les rôles utilisateur/administrateur — 8.1)",
+        "uuid": "607d4efa-9510-5d56-bcb4-631ad748c8ac"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _8.2 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_8.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _8.2 (Identifier nommément chaque personne accédant au système et distinguer les rôles utilisateur/administrateur — 8.2)",
+        "uuid": "51cc3140-dfbd-5ff3-9602-ddb0571a5e97"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _8.3 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_8.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _8.3 (Identifier nommément chaque personne accédant au système et distinguer les rôles utilisateur/administrateur — 8.3)",
+        "uuid": "c0f60816-917d-56a5-9059-15d6980f1620"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _8.4 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_8.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _8.4 (Identifier nommément chaque personne accédant au système et distinguer les rôles utilisateur/administrateur — 8.4)",
+        "uuid": "47e0f21a-e11e-5b78-9063-d8d0f63436c2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _9.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_9.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _9.1 (Attribuer les bons droits sur les ressources sensibles du système d’information — 9.1)",
+        "uuid": "faadc40a-c778-54f0-9910-a64234cec8bc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _9.1.1 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_9.1.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _9.1.1 (Attribuer les bons droits sur les ressources sensibles du système d’information — 9.1.1)",
+        "uuid": "9ed13a43-126b-5952-b888-7d436f32c7d2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _9.1.2 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_9.1.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _9.1.2 (Attribuer les bons droits sur les ressources sensibles du système d’information — 9.1.2)",
+        "uuid": "97c1c307-7a9c-58d6-bd7e-5da62c8d5eca"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _9.1.3 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_9.1.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _9.1.3 (Attribuer les bons droits sur les ressources sensibles du système d’information — 9.1.3)",
+        "uuid": "0e67bc27-b66c-53f8-a84f-452f548b387b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _9.2 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_9.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _9.2 (Attribuer les bons droits sur les ressources sensibles du système d’information — 9.2)",
+        "uuid": "abf328e8-d4d0-5d3d-ae1a-821e0c2a47b7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _9.3 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_9.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _9.3 (Attribuer les bons droits sur les ressources sensibles du système d’information — 9.3)",
+        "uuid": "e12e6af7-e42d-55da-b3fd-910b7faec06c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _9.4 in ANSSI - Guide d'hygiène informatique - version détaillée.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_9.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _9.4 (Attribuer les bons droits sur les ressources sensibles du système d’information — 9.4)",
+        "uuid": "6747838e-e376-5ea5-93a3-eb74b5e1b86c"
       }
     ],
     "uuid": "9e19a3f4-c9e7-50a0-8716-396dceac44e5"

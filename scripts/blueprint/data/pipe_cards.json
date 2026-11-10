@@ -202,7 +202,7 @@
     "cls": "evidence",
     "status": "requires hosted proof",
     "inputs": "framework manifest and pinned source",
-    "outputs": "35 catalog JSON files and the PBMM profile",
+    "outputs": "36 catalog JSON files and two sovereign profiles",
     "desc": "Generates and validates catalogs plus the profile. Every artifact carries a producer and OSCAL touchpoint.",
     "cmd": "dagger call oscal-frameworks --source=. export --path=frameworks",
     "oscal": "catalog — profile",
@@ -278,7 +278,7 @@
     "status": "requires hosted proof",
     "inputs": "pinned tagged source and analysis policy",
     "outputs": "complete payload and initial payload manifest",
-    "desc": "Dagger packages six SDKs, 35 catalogs, PBMM profile, platform archives, multi-architecture OCI archive, API assets and enforced analysis. No public release or image tag is created here.",
+    "desc": "Dagger packages six SDKs, 36 catalogs, sovereign profiles, platform archives, multi-architecture OCI archive, API assets and enforced analysis. No public release or image tag is created here.",
     "cmd": "dagger call release-candidate --source=. --release-tag=\"$RELEASE_TAG\" --source-revision=\"$SOURCE_REVISION\" export --path=candidate",
     "oscal": "component-definition — catalog — profile — assessment-results",
     "tags": [

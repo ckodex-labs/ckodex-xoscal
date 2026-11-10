@@ -31,7 +31,7 @@ func TestSQLiteVectorStore_VectorSearch(t *testing.T) {
 	if err != nil {
 		t.Fatalf("open sqlite vector store: %v", err)
 	}
-	defer store.Close()
+	defer func() { _ = store.Close() }()
 
 	// Target query vector: points towards [1.0, 0.0, 0.0]
 	queryVec := []float32{1.0, 0.0, 0.0}

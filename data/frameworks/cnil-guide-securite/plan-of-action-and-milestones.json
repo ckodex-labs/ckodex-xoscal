@@ -4,16 +4,875 @@
       "href": "./system-security-plan.json"
     },
     "metadata": {
-      "last-modified": "2026-11-08T01:42:12Z",
+      "last-modified": "2026-11-08T00:30:51Z",
       "oscal-version": "1.2.3",
       "title": "CNIL : guide de sécurité des données Plan of Action and Milestones Template",
       "version": "1"
     },
     "poam-items": [
       {
-        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for CNIL : guide de sécurité des données.",
-        "title": "Compliance Roadmap and Parameter Tailoring for CNIL : guide de sécurité des données",
-        "uuid": "9ce0d05a-2ffc-508b-8932-7762b6dda5f4"
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _1.1 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_1.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _1.1 (Piloter la sécurité des données — 1.1)",
+        "uuid": "82cc3c9e-8fdc-52a8-ac23-76d398d8a4e2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _1.2 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_1.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _1.2 (Piloter la sécurité des données — 1.2)",
+        "uuid": "6ac92a77-2a5d-55ce-a199-4cf08510e7b9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _10.1 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_10.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _10.1 (Sécuriser les sites web — 10.1)",
+        "uuid": "79624c4e-01da-58e5-9044-9386bdbf4531"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _10.2 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_10.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _10.2 (Sécuriser les sites web — 10.2)",
+        "uuid": "6fccf5a1-b167-5948-8587-1fce75dd5cc7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _10.3 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_10.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _10.3 (Sécuriser les sites web — 10.3)",
+        "uuid": "f2a8b6ec-5c6c-5ec3-afa9-40b26c62bf1d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _11.1 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_11.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _11.1 (Encadrer les développements informatiques — 11.1)",
+        "uuid": "9a07431f-817a-5462-9fec-4f3b280915ac"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _11.2 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_11.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _11.2 (Encadrer les développements informatiques — 11.2)",
+        "uuid": "b6682bd9-3834-5549-aca9-3ad976b6f82d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _11.3 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_11.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _11.3 (Encadrer les développements informatiques — 11.3)",
+        "uuid": "4f977250-c66f-50bc-855c-84a185cd5c04"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _11.4 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_11.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _11.4 (Encadrer les développements informatiques — 11.4)",
+        "uuid": "dd070631-bb42-59ba-a9ea-3b70803925be"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _12.1 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_12.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _12.1 (Protéger les locaux — 12.1)",
+        "uuid": "0142dd9b-0e6d-5ee3-a217-cd2f062b4ba2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _12.2 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_12.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _12.2 (Protéger les locaux — 12.2)",
+        "uuid": "cb55251b-7c6e-557f-a60f-017f30a84249"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _13.1 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_13.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _13.1 (Sécuriser les échanges avec l’extérieur — 13.1)",
+        "uuid": "d95990e2-3c0a-50d0-b936-0ea4a1162495"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _13.2 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_13.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _13.2 (Sécuriser les échanges avec l’extérieur — 13.2)",
+        "uuid": "f89d6f89-7f79-5155-8cab-868a8a76c963"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _13.3 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_13.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _13.3 (Sécuriser les échanges avec l’extérieur — 13.3)",
+        "uuid": "c38774f8-3ad9-56b7-9b9c-c8f4812ca135"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _14.1 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_14.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _14.1 (Gérer la sous-traitance — 14.1)",
+        "uuid": "56b3e219-f79c-5295-b884-69e334e0aa6a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _14.2 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_14.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _14.2 (Gérer la sous-traitance — 14.2)",
+        "uuid": "44b7c16c-8102-5c4e-86a4-e9b8d53781b4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _14.3 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_14.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _14.3 (Gérer la sous-traitance — 14.3)",
+        "uuid": "b6419b51-4038-5f38-99ad-be52e72f5555"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _15.1 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_15.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _15.1 (Encadrer la maintenance et la fin de vie des matériels et des logiciels — 15.1)",
+        "uuid": "cdca24a7-0ba4-56de-9e5f-83092de2f065"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _15.2 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_15.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _15.2 (Encadrer la maintenance et la fin de vie des matériels et des logiciels — 15.2)",
+        "uuid": "21c95b38-5769-56a1-88f4-0529b9204fed"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _15.3 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_15.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _15.3 (Encadrer la maintenance et la fin de vie des matériels et des logiciels — 15.3)",
+        "uuid": "7c588391-1c3e-5f27-86cd-2c4a9cf5a9d1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _16.1 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_16.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _16.1 (Tracer les opérations — 16.1)",
+        "uuid": "3f83b08c-61d9-5d65-89e2-7731867165bf"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _16.2 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_16.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _16.2 (Tracer les opérations — 16.2)",
+        "uuid": "e56813d0-44a3-50ee-92c2-e0e2edc66cf7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _16.3 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_16.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _16.3 (Tracer les opérations — 16.3)",
+        "uuid": "a7aac1d9-ad6e-51be-8612-7c216ff1673f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _16.4 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_16.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _16.4 (Tracer les opérations — 16.4)",
+        "uuid": "5bfb3d44-d0fa-5836-aac3-ca5098ae8cf1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _17.1 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_17.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _17.1 (Sauvegarder — 17.1)",
+        "uuid": "6e8bebc9-1d7e-57dc-af40-017f466f222b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _17.2 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_17.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _17.2 (Sauvegarder — 17.2)",
+        "uuid": "0b7e83e7-d4bc-55b9-a2b9-bc461d4d2145"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _17.3 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_17.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _17.3 (Sauvegarder — 17.3)",
+        "uuid": "fd95d00a-b00b-5894-8028-54cb882061ac"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _18.1 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_18.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _18.1 (Prévoir la continuité et la reprise d’activité — 18.1)",
+        "uuid": "4b3becca-f374-53f2-a263-e9c105fd481f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _18.2 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_18.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _18.2 (Prévoir la continuité et la reprise d’activité — 18.2)",
+        "uuid": "349e2574-92e4-59be-9b3d-db16213023ab"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _19.1 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_19.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _19.1 (Gérer les incidents et les violations — 19.1)",
+        "uuid": "271b6b54-26ef-57ea-a1c0-43e9c23ffb2a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _19.2 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_19.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _19.2 (Gérer les incidents et les violations — 19.2)",
+        "uuid": "cbb12e34-729e-5d7f-8e3b-82ce4ba962a6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.1 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.1 (Définir un cadre pour les utilisateurs — 2.1)",
+        "uuid": "00bef7a0-4bd4-511a-be47-8f1571016a7a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.2 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.2 (Définir un cadre pour les utilisateurs — 2.2)",
+        "uuid": "44d59009-794b-5e3f-9f4b-5482bff2e293"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _20.1 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_20.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _20.1 (Analyse de risques — 20.1)",
+        "uuid": "152feac8-16eb-59cf-a82f-7782300ba222"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _20.2 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_20.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _20.2 (Analyse de risques — 20.2)",
+        "uuid": "5e0f1dd6-5792-524d-96a4-1b364565a9e7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _20.3 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_20.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _20.3 (Analyse de risques — 20.3)",
+        "uuid": "ec7061d7-f676-5e50-9543-042edf766118"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _21.1 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_21.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _21.1 (Chiffrement, hachage, signature — 21.1)",
+        "uuid": "faa03f52-2563-5bf9-b7e7-59782f670b3f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _21.2 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_21.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _21.2 (Chiffrement, hachage, signature — 21.2)",
+        "uuid": "1cd260cd-63dc-52b9-b507-28c47e7f1e84"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _22.1 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_22.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _22.1 (Cloud : Informatique en nuage — 22.1)",
+        "uuid": "8f11b5ad-bb73-5467-a6a0-7afead0104af"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _22.2 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_22.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _22.2 (Cloud : Informatique en nuage — 22.2)",
+        "uuid": "ee4bc765-75f7-59b1-8455-a78af8b592ca"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _22.3 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_22.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _22.3 (Cloud : Informatique en nuage — 22.3)",
+        "uuid": "ac75dd0d-be94-5974-bf12-d8cebeed481e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _22.4 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_22.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _22.4 (Cloud : Informatique en nuage — 22.4)",
+        "uuid": "d08d2445-5eb0-5d5d-9a62-a744255f5f08"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _23.1 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_23.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _23.1 (Applications mobiles : Conception et développement — 23.1)",
+        "uuid": "f7ed57bb-7f4d-58d9-b90f-60060092e94d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _23.2 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_23.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _23.2 (Applications mobiles : Conception et développement — 23.2)",
+        "uuid": "06fda68a-e5e3-5c14-ac02-89904e8a8a35"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _23.3 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_23.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _23.3 (Applications mobiles : Conception et développement — 23.3)",
+        "uuid": "4616b19e-51d7-5fe5-bd1a-02b433abf6bc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _24.1 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_24.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _24.1 (Intelligence artificielle : Conception et apprentissage — 24.1)",
+        "uuid": "8ca9953b-e9aa-549a-ae80-e70fd9de5605"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _24.2 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_24.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _24.2 (Intelligence artificielle : Conception et apprentissage — 24.2)",
+        "uuid": "714010f4-e4ad-518d-9f4c-9d04d6ae3d50"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _24.3 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_24.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _24.3 (Intelligence artificielle : Conception et apprentissage — 24.3)",
+        "uuid": "af8584de-2658-5aad-a7ef-3841b3057100"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _25.1 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_25.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _25.1 (API : Interfaces de programmation applicative — 25.1)",
+        "uuid": "8dcfb489-a7a3-5690-a9e5-9c5ab8e2b892"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _25.2 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_25.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _25.2 (API : Interfaces de programmation applicative — 25.2)",
+        "uuid": "b5721133-4366-5ed4-a806-0eecbddb0fef"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.1 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.1 (Impliquer et former les utilisateurs — 3.1)",
+        "uuid": "887da819-b10b-5548-9290-fe13984133f2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.2 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.2 (Impliquer et former les utilisateurs — 3.2)",
+        "uuid": "84fd1164-2992-5d8a-a986-f568c9bc74a4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.1 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.1 (Authentifier les utilisateurs — 4.1)",
+        "uuid": "37638bcc-9056-52b7-8b58-59b9e0480dfc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.2 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.2 (Authentifier les utilisateurs — 4.2)",
+        "uuid": "b001ccc1-210d-5a8a-95ee-39d3ad294f47"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.3 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.3 (Authentifier les utilisateurs — 4.3)",
+        "uuid": "2d8ec9df-75ab-501d-a1b9-5d4f55c27d20"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.1 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.1 (Gérer les habilitations — 5.1)",
+        "uuid": "8f494a35-c516-5481-a6a6-6fb9a6cdad42"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.2 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.2 (Gérer les habilitations — 5.2)",
+        "uuid": "6e53c149-3ecd-537c-b9e0-a68ad5254302"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.3 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.3 (Gérer les habilitations — 5.3)",
+        "uuid": "fc9ee871-90fa-5803-9019-bd5b19aa8e03"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.1 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.1 (Sécuriser les postes de travail — 6.1)",
+        "uuid": "e9e2aa37-2130-5bed-9972-02258427a064"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.2 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.2 (Sécuriser les postes de travail — 6.2)",
+        "uuid": "05b68002-6116-5172-988e-6cbe31ec1563"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.3 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.3 (Sécuriser les postes de travail — 6.3)",
+        "uuid": "d93e0bd2-da73-557d-b410-406960f0e3fd"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.4 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.4 (Sécuriser les postes de travail — 6.4)",
+        "uuid": "41cb8951-f6ab-58d1-96e0-30bd5aba1351"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _7.1 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_7.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _7.1 (Sécuriser l’informatique mobile — 7.1)",
+        "uuid": "c61a8224-cd02-5d5c-a4e0-c61b1ac8e0dc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _7.2 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_7.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _7.2 (Sécuriser l’informatique mobile — 7.2)",
+        "uuid": "658f0cd0-3159-5d6f-a158-e8e2101ade0e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _7.3 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_7.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _7.3 (Sécuriser l’informatique mobile — 7.3)",
+        "uuid": "0b99f9d9-3ba5-5088-aa9b-fdd5eeebe680"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _8.1 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_8.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _8.1 (Protéger le réseau informatique — 8.1)",
+        "uuid": "85988306-380a-53b5-a83f-eaf603688afe"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _8.2 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_8.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _8.2 (Protéger le réseau informatique — 8.2)",
+        "uuid": "d80e8f91-3e4f-56f0-a09b-caf6cd8031fc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _8.3 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_8.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _8.3 (Protéger le réseau informatique — 8.3)",
+        "uuid": "a52faedd-22e1-5d18-a874-99f358cbffbb"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _8.4 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_8.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _8.4 (Protéger le réseau informatique — 8.4)",
+        "uuid": "51244b0d-19be-5411-8c0b-fcff1e79c2d7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _9.1 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_9.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _9.1 (Sécuriser les serveurs — 9.1)",
+        "uuid": "36c6c2c1-477a-56a4-bf17-b38159f1e726"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _9.2 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_9.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _9.2 (Sécuriser les serveurs — 9.2)",
+        "uuid": "7e5e8c16-2e24-5b2f-89a1-8f5a8065a10a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _9.3 in CNIL : guide de sécurité des données.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_9.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _9.3 (Sécuriser les serveurs — 9.3)",
+        "uuid": "c9e5fdff-4172-56cc-be3d-140191e00943"
       }
     ],
     "uuid": "ed42c51b-dd16-5d1f-b5a9-08c80d3e972f"

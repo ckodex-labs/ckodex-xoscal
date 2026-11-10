@@ -108,7 +108,7 @@ The `server/internal/frameworks` package provides a jurisdiction-agnostic framew
 - `frameworks.Export`: Exports all 7 schema-validated OSCAL JSON layers with cryptographic SHA-256 sidecars.
 - `frameworks.VerifyArtifactParity`: Verbatim parity verification engine (`xoscal verify-parity`) comparing framework models against OSCAL artifacts across all 7 model types with hard anti-invariant checks (placeholder titles, empty statements, unextracted ODPs, missing sovereign tags).
 - `frameworks.SeedKnowledgeGraph`: Ingests framework requirements into SQLite Knowledge Graph store.
-- `frameworks/manifest_provider.go`: Registers all 31 non-Canadian sovereign & international frameworks from `data/frameworks/manifest.yaml` (USA: 7, UK: 1, France: 6, Germany: 13, EU: 4; 14,058 controls total) alongside the 5 Canadian frameworks (2,179 controls total), for 36 registered frameworks and 16,237 controls across 252 7-layer OSCAL 1.2.3 artifacts.
+- `frameworks/manifest_provider.go`: Registers all 31 non-Canadian sovereign & international frameworks from `data/frameworks/manifest.yaml` (USA: 7, UK: 1, France: 6, Germany: 12, EU: 3, Estonia: 1, International: 1; 14,058 controls total) alongside the 5 Canadian frameworks (2,179 controls total), for 36 registered frameworks and 16,237 controls across 252 7-layer OSCAL 1.2.3 artifacts.
 
 ### Verbatim Parity & Framework Export CLI
 

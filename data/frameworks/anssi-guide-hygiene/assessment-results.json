@@ -4,7 +4,7 @@
       "href": "./assessment-plan.json"
     },
     "metadata": {
-      "last-modified": "2026-11-08T01:42:12Z",
+      "last-modified": "2026-11-08T00:30:49Z",
       "oscal-version": "1.2.3",
       "title": "ANSSI - Guide d'hygiène informatique Assessment Results Template",
       "version": "3"
@@ -186,7 +186,7 @@
         ],
         "observations": [
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:49Z",
             "description": "Verified control _1 (Former les équipes opérationnelles à la sécurité des systèmes d’information) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -198,7 +198,7 @@
             "uuid": "ac705b50-2f0a-5a69-8f1b-2d115c1bf168"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:49Z",
             "description": "Verified control _10 (Définir et vérifier des règles de choix et de dimensionnement des mots de passe) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -210,7 +210,7 @@
             "uuid": "023b88f6-bd88-524a-b090-6690560df06e"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:49Z",
             "description": "Verified control _14 (Mettre en place un niveau de sécurité minimal sur l’ensemble du parc informatique) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -222,7 +222,7 @@
             "uuid": "08e93d71-bade-5f41-adfc-49b02f7c0683"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:49Z",
             "description": "Verified control _19 (Segmenter le réseau et mettre en place un cloisonnement entre ces zones) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -234,7 +234,7 @@
             "uuid": "26374511-58dc-55a6-b275-01b93a6ae2c5"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:49Z",
             "description": "Verified control _27 (Interdire l’accès à Internet depuis les postes ou serveurs utilisés pour l’administration du système d’information) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -246,7 +246,7 @@
             "uuid": "5ced12d2-4fbc-5ea4-9870-1beea5961b83"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:49Z",
             "description": "Verified control _30 (Prendre des mesures de sécurisation physique des terminaux nomades) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -258,7 +258,7 @@
             "uuid": "08d83252-9c1e-5d15-8bf3-60a3ae2fbde6"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:49Z",
             "description": "Verified control _34 (Définir une politique de mise à jour des composants du système d’information) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -270,7 +270,7 @@
             "uuid": "b5e7abc5-5889-5a07-9b2c-1cfa5353e7a3"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:49Z",
             "description": "Verified control _36 (Activer et configurer les journaux des composants les plus importants) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -282,7 +282,7 @@
             "uuid": "30a0b4d1-0e8e-5016-8786-f795ae97e388"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:49Z",
             "description": "Verified control _4 (Identifier les informations et serveurs les plus sensibles et maintenir un schéma du réseau) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -294,7 +294,7 @@
             "uuid": "a7e16fec-9b1b-5e84-8b2e-51f8413bf479"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:49Z",
             "description": "Verified control _41.r (Mener une analyse de risques formelle (renforcé)) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -310,11 +310,195 @@
           "control-selections": [
             {
               "description": "All controls evaluated for ANSSI - Guide d'hygiène informatique",
-              "include-all": {}
+              "include-controls": [
+                {
+                  "control-id": "_1"
+                },
+                {
+                  "control-id": "_10"
+                },
+                {
+                  "control-id": "_11"
+                },
+                {
+                  "control-id": "_12"
+                },
+                {
+                  "control-id": "_12.r"
+                },
+                {
+                  "control-id": "_13"
+                },
+                {
+                  "control-id": "_13.r"
+                },
+                {
+                  "control-id": "_14"
+                },
+                {
+                  "control-id": "_14.r"
+                },
+                {
+                  "control-id": "_15"
+                },
+                {
+                  "control-id": "_15.r"
+                },
+                {
+                  "control-id": "_16"
+                },
+                {
+                  "control-id": "_17"
+                },
+                {
+                  "control-id": "_17.r"
+                },
+                {
+                  "control-id": "_18"
+                },
+                {
+                  "control-id": "_19"
+                },
+                {
+                  "control-id": "_2"
+                },
+                {
+                  "control-id": "_2.r"
+                },
+                {
+                  "control-id": "_20"
+                },
+                {
+                  "control-id": "_21"
+                },
+                {
+                  "control-id": "_22"
+                },
+                {
+                  "control-id": "_22.r"
+                },
+                {
+                  "control-id": "_23"
+                },
+                {
+                  "control-id": "_24"
+                },
+                {
+                  "control-id": "_24.r"
+                },
+                {
+                  "control-id": "_25"
+                },
+                {
+                  "control-id": "_25.r"
+                },
+                {
+                  "control-id": "_26"
+                },
+                {
+                  "control-id": "_27"
+                },
+                {
+                  "control-id": "_27.r"
+                },
+                {
+                  "control-id": "_28"
+                },
+                {
+                  "control-id": "_28.r"
+                },
+                {
+                  "control-id": "_29"
+                },
+                {
+                  "control-id": "_3"
+                },
+                {
+                  "control-id": "_30"
+                },
+                {
+                  "control-id": "_30.r"
+                },
+                {
+                  "control-id": "_31"
+                },
+                {
+                  "control-id": "_32"
+                },
+                {
+                  "control-id": "_32.r"
+                },
+                {
+                  "control-id": "_33"
+                },
+                {
+                  "control-id": "_33.r"
+                },
+                {
+                  "control-id": "_34"
+                },
+                {
+                  "control-id": "_35"
+                },
+                {
+                  "control-id": "_36"
+                },
+                {
+                  "control-id": "_36.r"
+                },
+                {
+                  "control-id": "_37"
+                },
+                {
+                  "control-id": "_37.r"
+                },
+                {
+                  "control-id": "_38.r"
+                },
+                {
+                  "control-id": "_39"
+                },
+                {
+                  "control-id": "_4"
+                },
+                {
+                  "control-id": "_40"
+                },
+                {
+                  "control-id": "_41.r"
+                },
+                {
+                  "control-id": "_42.r"
+                },
+                {
+                  "control-id": "_5"
+                },
+                {
+                  "control-id": "_6"
+                },
+                {
+                  "control-id": "_6.r"
+                },
+                {
+                  "control-id": "_7"
+                },
+                {
+                  "control-id": "_7.r"
+                },
+                {
+                  "control-id": "_8"
+                },
+                {
+                  "control-id": "_8.r"
+                },
+                {
+                  "control-id": "_9"
+                }
+              ]
             }
           ]
         },
-        "start": "2026-11-08T01:42:12Z",
+        "start": "2026-11-08T00:30:49Z",
         "title": "ANSSI - Guide d'hygiène informatique Assessment Results",
         "uuid": "030e4b72-88f5-56b0-9f19-468f89dab92a"
       }

@@ -4,7 +4,7 @@
       "href": "./assessment-plan.json"
     },
     "metadata": {
-      "last-modified": "2026-11-08T01:42:13Z",
+      "last-modified": "2026-11-08T00:30:46Z",
       "oscal-version": "1.2.3",
       "title": "VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE Assessment Results Template",
       "version": "2"
@@ -152,7 +152,7 @@
         ],
         "observations": [
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:30:46Z",
             "description": "Verified control _1 (Qualifying Questions) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -164,7 +164,7 @@
             "uuid": "7b4e0c3c-9c57-54af-8d25-abb46bc6046a"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:30:46Z",
             "description": "Verified control _2.1 (General — 2.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -176,7 +176,7 @@
             "uuid": "15690f44-9f8a-5dce-b1a9-ecbf7ecbc9b8"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:30:46Z",
             "description": "Verified control _3.1 (Secure Design and Engineering — 3.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -188,7 +188,7 @@
             "uuid": "069c4ca3-4cfd-511e-8098-2bdb4899545d"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:30:46Z",
             "description": "Verified control _4.1 (Information Security — 4.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -200,7 +200,7 @@
             "uuid": "41a3f8fe-3422-5e8c-af0f-500ca35ce3c7"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:30:46Z",
             "description": "Verified control _5.1 (Physical Security — 5.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -212,7 +212,7 @@
             "uuid": "a648fb40-c8aa-5b14-add4-771f87519bf8"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:30:46Z",
             "description": "Verified control _6.1 (Personnel Security — 6.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -224,7 +224,7 @@
             "uuid": "753bd778-9814-52ae-a35a-7c574a70725c"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:30:46Z",
             "description": "Verified control _7.1 (Supply Chain Integrity — 7.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -236,7 +236,7 @@
             "uuid": "34fb622d-a824-51c0-84cf-ed6048177318"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:30:46Z",
             "description": "Verified control _8.1 (General — 8.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -252,11 +252,780 @@
           "control-selections": [
             {
               "description": "All controls evaluated for VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE",
-              "include-all": {}
+              "include-controls": [
+                {
+                  "control-id": "_1"
+                },
+                {
+                  "control-id": "_1.1"
+                },
+                {
+                  "control-id": "_1.2"
+                },
+                {
+                  "control-id": "_1.2.1"
+                },
+                {
+                  "control-id": "_1.2.2"
+                },
+                {
+                  "control-id": "_2.1"
+                },
+                {
+                  "control-id": "_2.1.1"
+                },
+                {
+                  "control-id": "_2.1.2"
+                },
+                {
+                  "control-id": "_2.10"
+                },
+                {
+                  "control-id": "_2.10.1"
+                },
+                {
+                  "control-id": "_2.2"
+                },
+                {
+                  "control-id": "_2.2.1"
+                },
+                {
+                  "control-id": "_2.3"
+                },
+                {
+                  "control-id": "_2.3.1"
+                },
+                {
+                  "control-id": "_2.3.2"
+                },
+                {
+                  "control-id": "_2.4"
+                },
+                {
+                  "control-id": "_2.5"
+                },
+                {
+                  "control-id": "_2.5.1"
+                },
+                {
+                  "control-id": "_2.5.2"
+                },
+                {
+                  "control-id": "_2.5.3"
+                },
+                {
+                  "control-id": "_2.6"
+                },
+                {
+                  "control-id": "_2.7"
+                },
+                {
+                  "control-id": "_2.7.1"
+                },
+                {
+                  "control-id": "_2.7.2"
+                },
+                {
+                  "control-id": "_2.8"
+                },
+                {
+                  "control-id": "_2.8.1"
+                },
+                {
+                  "control-id": "_2.8.2"
+                },
+                {
+                  "control-id": "_2.8.3"
+                },
+                {
+                  "control-id": "_2.9"
+                },
+                {
+                  "control-id": "_3.1"
+                },
+                {
+                  "control-id": "_3.1.1"
+                },
+                {
+                  "control-id": "_3.10"
+                },
+                {
+                  "control-id": "_3.10.1"
+                },
+                {
+                  "control-id": "_3.10.2"
+                },
+                {
+                  "control-id": "_3.10.3"
+                },
+                {
+                  "control-id": "_3.10.4"
+                },
+                {
+                  "control-id": "_3.11"
+                },
+                {
+                  "control-id": "_3.11.1"
+                },
+                {
+                  "control-id": "_3.12"
+                },
+                {
+                  "control-id": "_3.13"
+                },
+                {
+                  "control-id": "_3.13.1"
+                },
+                {
+                  "control-id": "_3.14"
+                },
+                {
+                  "control-id": "_3.14.1"
+                },
+                {
+                  "control-id": "_3.14.2"
+                },
+                {
+                  "control-id": "_3.15"
+                },
+                {
+                  "control-id": "_3.15.1"
+                },
+                {
+                  "control-id": "_3.16"
+                },
+                {
+                  "control-id": "_3.16.1"
+                },
+                {
+                  "control-id": "_3.16.2"
+                },
+                {
+                  "control-id": "_3.17"
+                },
+                {
+                  "control-id": "_3.17.1"
+                },
+                {
+                  "control-id": "_3.2"
+                },
+                {
+                  "control-id": "_3.2.1"
+                },
+                {
+                  "control-id": "_3.3"
+                },
+                {
+                  "control-id": "_3.4"
+                },
+                {
+                  "control-id": "_3.4.1"
+                },
+                {
+                  "control-id": "_3.5"
+                },
+                {
+                  "control-id": "_3.6"
+                },
+                {
+                  "control-id": "_3.6.1"
+                },
+                {
+                  "control-id": "_3.7"
+                },
+                {
+                  "control-id": "_3.8"
+                },
+                {
+                  "control-id": "_3.9"
+                },
+                {
+                  "control-id": "_3.9.1"
+                },
+                {
+                  "control-id": "_4.1"
+                },
+                {
+                  "control-id": "_4.10"
+                },
+                {
+                  "control-id": "_4.10.1"
+                },
+                {
+                  "control-id": "_4.10.1.1"
+                },
+                {
+                  "control-id": "_4.11"
+                },
+                {
+                  "control-id": "_4.11.1"
+                },
+                {
+                  "control-id": "_4.11.1.1"
+                },
+                {
+                  "control-id": "_4.11.1.2"
+                },
+                {
+                  "control-id": "_4.12"
+                },
+                {
+                  "control-id": "_4.12.1"
+                },
+                {
+                  "control-id": "_4.12.2"
+                },
+                {
+                  "control-id": "_4.12.3"
+                },
+                {
+                  "control-id": "_4.13"
+                },
+                {
+                  "control-id": "_4.13.1"
+                },
+                {
+                  "control-id": "_4.13.1.1"
+                },
+                {
+                  "control-id": "_4.14"
+                },
+                {
+                  "control-id": "_4.14.1"
+                },
+                {
+                  "control-id": "_4.14.1.1"
+                },
+                {
+                  "control-id": "_4.14.1.2"
+                },
+                {
+                  "control-id": "_4.15"
+                },
+                {
+                  "control-id": "_4.15.1"
+                },
+                {
+                  "control-id": "_4.15.2"
+                },
+                {
+                  "control-id": "_4.15.2.1"
+                },
+                {
+                  "control-id": "_4.15.2.2"
+                },
+                {
+                  "control-id": "_4.16"
+                },
+                {
+                  "control-id": "_4.16.1"
+                },
+                {
+                  "control-id": "_4.16.2"
+                },
+                {
+                  "control-id": "_4.16.2.1"
+                },
+                {
+                  "control-id": "_4.17"
+                },
+                {
+                  "control-id": "_4.17.1"
+                },
+                {
+                  "control-id": "_4.18"
+                },
+                {
+                  "control-id": "_4.18.1"
+                },
+                {
+                  "control-id": "_4.18.2"
+                },
+                {
+                  "control-id": "_4.18.2.1"
+                },
+                {
+                  "control-id": "_4.19"
+                },
+                {
+                  "control-id": "_4.19.1"
+                },
+                {
+                  "control-id": "_4.19.2"
+                },
+                {
+                  "control-id": "_4.19.3"
+                },
+                {
+                  "control-id": "_4.19.4"
+                },
+                {
+                  "control-id": "_4.2"
+                },
+                {
+                  "control-id": "_4.2.1"
+                },
+                {
+                  "control-id": "_4.20"
+                },
+                {
+                  "control-id": "_4.20.1"
+                },
+                {
+                  "control-id": "_4.20.1.1"
+                },
+                {
+                  "control-id": "_4.21"
+                },
+                {
+                  "control-id": "_4.21.1"
+                },
+                {
+                  "control-id": "_4.21.2"
+                },
+                {
+                  "control-id": "_4.22"
+                },
+                {
+                  "control-id": "_4.22.1"
+                },
+                {
+                  "control-id": "_4.22.2"
+                },
+                {
+                  "control-id": "_4.23"
+                },
+                {
+                  "control-id": "_4.23.1"
+                },
+                {
+                  "control-id": "_4.24"
+                },
+                {
+                  "control-id": "_4.24.1"
+                },
+                {
+                  "control-id": "_4.24.1.1"
+                },
+                {
+                  "control-id": "_4.25"
+                },
+                {
+                  "control-id": "_4.25.1"
+                },
+                {
+                  "control-id": "_4.25.2"
+                },
+                {
+                  "control-id": "_4.26"
+                },
+                {
+                  "control-id": "_4.26.1"
+                },
+                {
+                  "control-id": "_4.27"
+                },
+                {
+                  "control-id": "_4.27.1"
+                },
+                {
+                  "control-id": "_4.3"
+                },
+                {
+                  "control-id": "_4.3.1"
+                },
+                {
+                  "control-id": "_4.3.2"
+                },
+                {
+                  "control-id": "_4.3.2.1"
+                },
+                {
+                  "control-id": "_4.4"
+                },
+                {
+                  "control-id": "_4.4.1"
+                },
+                {
+                  "control-id": "_4.5"
+                },
+                {
+                  "control-id": "_4.6"
+                },
+                {
+                  "control-id": "_4.6.1"
+                },
+                {
+                  "control-id": "_4.7"
+                },
+                {
+                  "control-id": "_4.7.1"
+                },
+                {
+                  "control-id": "_4.7.1.1"
+                },
+                {
+                  "control-id": "_4.7.2"
+                },
+                {
+                  "control-id": "_4.8"
+                },
+                {
+                  "control-id": "_4.8.1"
+                },
+                {
+                  "control-id": "_4.8.2"
+                },
+                {
+                  "control-id": "_4.8.3"
+                },
+                {
+                  "control-id": "_4.9"
+                },
+                {
+                  "control-id": "_4.9.1"
+                },
+                {
+                  "control-id": "_5.1"
+                },
+                {
+                  "control-id": "_5.1.1"
+                },
+                {
+                  "control-id": "_5.1.2"
+                },
+                {
+                  "control-id": "_5.10"
+                },
+                {
+                  "control-id": "_5.10.1"
+                },
+                {
+                  "control-id": "_5.10.2"
+                },
+                {
+                  "control-id": "_5.10.2.1"
+                },
+                {
+                  "control-id": "_5.2"
+                },
+                {
+                  "control-id": "_5.2.1"
+                },
+                {
+                  "control-id": "_5.2.1.1"
+                },
+                {
+                  "control-id": "_5.2.1.2"
+                },
+                {
+                  "control-id": "_5.3"
+                },
+                {
+                  "control-id": "_5.3.1"
+                },
+                {
+                  "control-id": "_5.3.2"
+                },
+                {
+                  "control-id": "_5.3.2.1"
+                },
+                {
+                  "control-id": "_5.3.3"
+                },
+                {
+                  "control-id": "_5.3.3.1"
+                },
+                {
+                  "control-id": "_5.4"
+                },
+                {
+                  "control-id": "_5.4.1"
+                },
+                {
+                  "control-id": "_5.4.1.1"
+                },
+                {
+                  "control-id": "_5.5"
+                },
+                {
+                  "control-id": "_5.5.1"
+                },
+                {
+                  "control-id": "_5.5.2"
+                },
+                {
+                  "control-id": "_5.5.2.1"
+                },
+                {
+                  "control-id": "_5.6"
+                },
+                {
+                  "control-id": "_5.6.1"
+                },
+                {
+                  "control-id": "_5.7"
+                },
+                {
+                  "control-id": "_5.7.1"
+                },
+                {
+                  "control-id": "_5.8"
+                },
+                {
+                  "control-id": "_5.8.1"
+                },
+                {
+                  "control-id": "_5.9"
+                },
+                {
+                  "control-id": "_5.9.1"
+                },
+                {
+                  "control-id": "_5.9.1.1"
+                },
+                {
+                  "control-id": "_6.1"
+                },
+                {
+                  "control-id": "_6.1.1"
+                },
+                {
+                  "control-id": "_6.1.2"
+                },
+                {
+                  "control-id": "_6.1.3"
+                },
+                {
+                  "control-id": "_6.10"
+                },
+                {
+                  "control-id": "_6.11"
+                },
+                {
+                  "control-id": "_6.12"
+                },
+                {
+                  "control-id": "_6.12.1"
+                },
+                {
+                  "control-id": "_6.13"
+                },
+                {
+                  "control-id": "_6.13.1"
+                },
+                {
+                  "control-id": "_6.13.2"
+                },
+                {
+                  "control-id": "_6.13.3"
+                },
+                {
+                  "control-id": "_6.13.4"
+                },
+                {
+                  "control-id": "_6.2"
+                },
+                {
+                  "control-id": "_6.2.1"
+                },
+                {
+                  "control-id": "_6.2.2"
+                },
+                {
+                  "control-id": "_6.2.3"
+                },
+                {
+                  "control-id": "_6.2.4"
+                },
+                {
+                  "control-id": "_6.2.4.1"
+                },
+                {
+                  "control-id": "_6.3"
+                },
+                {
+                  "control-id": "_6.3.1"
+                },
+                {
+                  "control-id": "_6.3.2"
+                },
+                {
+                  "control-id": "_6.4"
+                },
+                {
+                  "control-id": "_6.4.1"
+                },
+                {
+                  "control-id": "_6.4.2"
+                },
+                {
+                  "control-id": "_6.5"
+                },
+                {
+                  "control-id": "_6.5.1"
+                },
+                {
+                  "control-id": "_6.5.2"
+                },
+                {
+                  "control-id": "_6.6"
+                },
+                {
+                  "control-id": "_6.6.1"
+                },
+                {
+                  "control-id": "_6.6.2"
+                },
+                {
+                  "control-id": "_6.6.3"
+                },
+                {
+                  "control-id": "_6.6.4"
+                },
+                {
+                  "control-id": "_6.7"
+                },
+                {
+                  "control-id": "_6.8"
+                },
+                {
+                  "control-id": "_6.9"
+                },
+                {
+                  "control-id": "_7.1"
+                },
+                {
+                  "control-id": "_7.10"
+                },
+                {
+                  "control-id": "_7.10.1"
+                },
+                {
+                  "control-id": "_7.11"
+                },
+                {
+                  "control-id": "_7.11.1"
+                },
+                {
+                  "control-id": "_7.2"
+                },
+                {
+                  "control-id": "_7.2.1"
+                },
+                {
+                  "control-id": "_7.3"
+                },
+                {
+                  "control-id": "_7.3.1"
+                },
+                {
+                  "control-id": "_7.3.1.1"
+                },
+                {
+                  "control-id": "_7.3.1.2"
+                },
+                {
+                  "control-id": "_7.3.2"
+                },
+                {
+                  "control-id": "_7.3.2.1"
+                },
+                {
+                  "control-id": "_7.4"
+                },
+                {
+                  "control-id": "_7.4.1"
+                },
+                {
+                  "control-id": "_7.4.1.1"
+                },
+                {
+                  "control-id": "_7.5"
+                },
+                {
+                  "control-id": "_7.5.1"
+                },
+                {
+                  "control-id": "_7.6"
+                },
+                {
+                  "control-id": "_7.6.1"
+                },
+                {
+                  "control-id": "_7.6.1.1"
+                },
+                {
+                  "control-id": "_7.7"
+                },
+                {
+                  "control-id": "_7.7.1"
+                },
+                {
+                  "control-id": "_7.7.1.1"
+                },
+                {
+                  "control-id": "_7.8"
+                },
+                {
+                  "control-id": "_7.8.1"
+                },
+                {
+                  "control-id": "_7.8.1.1"
+                },
+                {
+                  "control-id": "_7.9"
+                },
+                {
+                  "control-id": "_7.9.1"
+                },
+                {
+                  "control-id": "_7.9.2"
+                },
+                {
+                  "control-id": "_8.1"
+                },
+                {
+                  "control-id": "_8.1.1"
+                },
+                {
+                  "control-id": "_8.2"
+                },
+                {
+                  "control-id": "_8.3"
+                },
+                {
+                  "control-id": "_8.3.1"
+                },
+                {
+                  "control-id": "_8.4"
+                },
+                {
+                  "control-id": "_8.4.1"
+                },
+                {
+                  "control-id": "_8.5"
+                },
+                {
+                  "control-id": "_8.5.1"
+                },
+                {
+                  "control-id": "_8.5.1.1"
+                },
+                {
+                  "control-id": "_8.5.1.2"
+                },
+                {
+                  "control-id": "_8.6"
+                },
+                {
+                  "control-id": "_8.7"
+                }
+              ]
             }
           ]
         },
-        "start": "2026-11-08T01:42:13Z",
+        "start": "2026-11-08T00:30:46Z",
         "title": "VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE Assessment Results",
         "uuid": "a8246692-ab24-501c-96d7-692ff0a1f21a"
       }

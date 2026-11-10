@@ -4,16 +4,1019 @@
       "href": "./system-security-plan.json"
     },
     "metadata": {
-      "last-modified": "2026-11-08T01:42:12Z",
+      "last-modified": "2026-11-08T00:30:53Z",
       "oscal-version": "1.2.3",
       "title": "IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Plan of Action and Milestones Template",
       "version": "1"
     },
     "poam-items": [
       {
-        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
-        "title": "Compliance Roadmap and Parameter Tailoring for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement",
-        "uuid": "0b6abe53-da56-5e34-b489-2ab9d1985973"
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a1.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a1.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a1.1 (Übernahme der Gesamtverantwortung für Informationssicherheit durch die Leitung — ISMS.1.A1.1)",
+        "uuid": "31270f58-7883-5b71-87ec-d53e022028d5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a1.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a1.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a1.2 (Übernahme der Gesamtverantwortung für Informationssicherheit durch die Leitung — ISMS.1.A1.2)",
+        "uuid": "f9e5d490-275c-5db2-8838-9f33d96ee076"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a1.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a1.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a1.3 (Übernahme der Gesamtverantwortung für Informationssicherheit durch die Leitung — ISMS.1.A1.3)",
+        "uuid": "df9522fa-d8c3-5128-96e7-63a56f11f024"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a1.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a1.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a1.4 (Übernahme der Gesamtverantwortung für Informationssicherheit durch die Leitung — ISMS.1.A1.4)",
+        "uuid": "7f77acee-7819-5fa6-a057-ecb7fa7abe9b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a1.5 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a1.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a1.5 (Übernahme der Gesamtverantwortung für Informationssicherheit durch die Leitung — ISMS.1.A1.5)",
+        "uuid": "5d5c9700-f4e9-5a3b-b87c-f449d8430d33"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a1.6 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a1.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a1.6 (Übernahme der Gesamtverantwortung für Informationssicherheit durch die Leitung — ISMS.1.A1.6)",
+        "uuid": "6e71b38d-9c87-53f6-a9ff-c66cdcb6e368"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a1.7 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a1.7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a1.7 (Übernahme der Gesamtverantwortung für Informationssicherheit durch die Leitung — ISMS.1.A1.7)",
+        "uuid": "c673cbac-3fcb-585a-88d1-ee0e5b477a2e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a1.8 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a1.8"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a1.8 (Übernahme der Gesamtverantwortung für Informationssicherheit durch die Leitung — ISMS.1.A1.8)",
+        "uuid": "27273260-8b61-535d-be21-d06c96d03b7d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a10.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a10.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a10.1 (Erstellung eines Sicherheitskonzepts — ISMS.1.A10.1)",
+        "uuid": "61279654-2c77-5d56-b942-3524489ccf6e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a10.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a10.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a10.2 (Erstellung eines Sicherheitskonzepts — ISMS.1.A10.2)",
+        "uuid": "a452f418-9874-5ba6-8131-2051676fdb3e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a10.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a10.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a10.3 (Erstellung eines Sicherheitskonzepts — ISMS.1.A10.3)",
+        "uuid": "a6bbb613-71a8-5ef4-971e-e8faec6ab8cf"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a10.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a10.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a10.4 (Erstellung eines Sicherheitskonzepts — ISMS.1.A10.4)",
+        "uuid": "cf0dd097-7a5e-5018-b5ad-56846940bdb1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a10.5 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a10.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a10.5 (Erstellung eines Sicherheitskonzepts — ISMS.1.A10.5)",
+        "uuid": "b6d12a38-a979-5b15-9a51-32daec98cdd2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a10.6 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a10.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a10.6 (Erstellung eines Sicherheitskonzepts — ISMS.1.A10.6)",
+        "uuid": "27f9f892-fa30-503f-9796-1d44872ea1e8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a11.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a11.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a11.1 (Aufrechterhaltung der Informationssicherheit — ISMS.1.A11.1)",
+        "uuid": "283ff2a5-37f8-5328-9479-396dcd2fe926"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a11.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a11.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a11.2 (Aufrechterhaltung der Informationssicherheit — ISMS.1.A11.2)",
+        "uuid": "2ec07e2e-59e4-56fd-9923-2ad3a3b8c201"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a11.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a11.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a11.3 (Aufrechterhaltung der Informationssicherheit — ISMS.1.A11.3)",
+        "uuid": "724f32a1-93f1-5117-a137-65001cefd538"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a11.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a11.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a11.4 (Aufrechterhaltung der Informationssicherheit — ISMS.1.A11.4)",
+        "uuid": "2a1f1641-18c9-551b-905d-055acf15a927"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a11.5 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a11.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a11.5 (Aufrechterhaltung der Informationssicherheit — ISMS.1.A11.5)",
+        "uuid": "2876fb96-dc74-5c8a-8637-af7459859604"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a11.6 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a11.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a11.6 (Aufrechterhaltung der Informationssicherheit — ISMS.1.A11.6)",
+        "uuid": "57f8eec4-802f-5214-b44e-d656c868a941"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a11.7 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a11.7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a11.7 (Aufrechterhaltung der Informationssicherheit — ISMS.1.A11.7)",
+        "uuid": "4f51d9d8-78f2-51cc-8e96-df57bb4d3945"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a11.8 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a11.8"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a11.8 (Aufrechterhaltung der Informationssicherheit — ISMS.1.A11.8)",
+        "uuid": "0de4354f-91ac-5df8-920e-95703f349389"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a12.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a12.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a12.1 (Management-Berichte zur Informationssicherheit — ISMS.1.A12.1)",
+        "uuid": "1b5833e4-c3a8-5f84-a189-16d87a32408b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a12.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a12.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a12.2 (Management-Berichte zur Informationssicherheit — ISMS.1.A12.2)",
+        "uuid": "453226b6-d149-5c34-ace4-0f99743b7e92"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a12.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a12.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a12.3 (Management-Berichte zur Informationssicherheit — ISMS.1.A12.3)",
+        "uuid": "56bd281f-dbb2-5d35-be62-3ce39fe6289f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a12.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a12.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a12.4 (Management-Berichte zur Informationssicherheit — ISMS.1.A12.4)",
+        "uuid": "4502ac67-fa21-5bcc-82e1-f6a526c11f7d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a12.5 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a12.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a12.5 (Management-Berichte zur Informationssicherheit — ISMS.1.A12.5)",
+        "uuid": "a205d22f-50b3-505e-91ad-47e303d65829"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a12.6 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a12.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a12.6 (Management-Berichte zur Informationssicherheit — ISMS.1.A12.6)",
+        "uuid": "57857171-25c1-5107-9a1e-35a1cd004a4d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a12.7 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a12.7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a12.7 (Management-Berichte zur Informationssicherheit — ISMS.1.A12.7)",
+        "uuid": "d0137af1-e017-5b70-90a0-eccb50308556"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a13.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a13.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a13.1 (Dokumentation des Sicherheitsprozesses — ISMS.1.A13.1)",
+        "uuid": "8c5e4975-9924-5b6d-8424-942f3bdb1d82"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a13.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a13.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a13.2 (Dokumentation des Sicherheitsprozesses — ISMS.1.A13.2)",
+        "uuid": "eb8aa912-2ec4-57e7-9ed4-d436ba941212"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a13.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a13.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a13.3 (Dokumentation des Sicherheitsprozesses — ISMS.1.A13.3)",
+        "uuid": "c78ef11a-7947-596a-a862-1d3c33fd2645"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a13.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a13.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a13.4 (Dokumentation des Sicherheitsprozesses — ISMS.1.A13.4)",
+        "uuid": "87cf6057-e188-556c-a460-763624458801"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a13.5 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a13.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a13.5 (Dokumentation des Sicherheitsprozesses — ISMS.1.A13.5)",
+        "uuid": "cd9b9af1-e3e0-59d7-9616-35455b027fc7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a13.6 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a13.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a13.6 (Dokumentation des Sicherheitsprozesses — ISMS.1.A13.6)",
+        "uuid": "db074ede-053b-5c0d-886b-b734af7f6d52"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a15.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a15.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a15.1 (Wirtschaftlicher Einsatz von Ressourcen für Informationssicherheit — ISMS.1.A15.1)",
+        "uuid": "b875f8dc-56d7-5b46-9e66-3e2968f455a8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a15.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a15.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a15.2 (Wirtschaftlicher Einsatz von Ressourcen für Informationssicherheit — ISMS.1.A15.2)",
+        "uuid": "2b845b71-7e67-5568-b7a1-41fc736bc372"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a15.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a15.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a15.3 (Wirtschaftlicher Einsatz von Ressourcen für Informationssicherheit — ISMS.1.A15.3)",
+        "uuid": "30dfb030-d22b-5235-a6ec-917695107869"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a15.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a15.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a15.4 (Wirtschaftlicher Einsatz von Ressourcen für Informationssicherheit — ISMS.1.A15.4)",
+        "uuid": "722e977e-9c6c-5edc-88c0-489bbf3fd07d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a16.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a16.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a16.1 (Erstellung von zielgruppengerechten Sicherheitsrichtlinien — ISMS.1.A16.1)",
+        "uuid": "6a962d96-e701-5c4f-8f08-ce848450378c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a17.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a17.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a17.1 (Abschließen von Versicherungen — ISMS.1.A17.1)",
+        "uuid": "bc4f258e-a6ce-59ee-a2d8-948e244925ac"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a17.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a17.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a17.2 (Abschließen von Versicherungen — ISMS.1.A17.2)",
+        "uuid": "537786c1-5c9c-54a7-aeca-67d65cb295c8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a2.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a2.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a2.1 (Festlegung der Sicherheitsziele und -strategie — ISMS.1.A2.1)",
+        "uuid": "f7291efb-b5c9-5bd6-9273-af29daecd772"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a2.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a2.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a2.2 (Festlegung der Sicherheitsziele und -strategie — ISMS.1.A2.2)",
+        "uuid": "32848cbd-8303-56a3-962a-ee475aa2d3f0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a2.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a2.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a2.3 (Festlegung der Sicherheitsziele und -strategie — ISMS.1.A2.3)",
+        "uuid": "b540841d-0798-576e-8650-79e12f40ebb3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a2.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a2.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a2.4 (Festlegung der Sicherheitsziele und -strategie — ISMS.1.A2.4)",
+        "uuid": "beb269a3-6d7a-5cd7-a0a9-dd43d8aca498"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a2.5 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a2.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a2.5 (Festlegung der Sicherheitsziele und -strategie — ISMS.1.A2.5)",
+        "uuid": "7dd190b1-138c-54d0-90e5-ab64415f0ff5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a3.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a3.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a3.1 (Erstellung einer Leitlinie zur Informationssicherheit — ISMS.1.A3.1)",
+        "uuid": "0264bf72-633b-5599-b915-6460f7ed2b52"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a3.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a3.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a3.2 (Erstellung einer Leitlinie zur Informationssicherheit — ISMS.1.A3.2)",
+        "uuid": "d31eb78b-5ded-56f1-a80e-868e3193c379"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a3.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a3.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a3.3 (Erstellung einer Leitlinie zur Informationssicherheit — ISMS.1.A3.3)",
+        "uuid": "89cb254a-2341-5290-bf6f-81aaf58566d7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a3.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a3.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a3.4 (Erstellung einer Leitlinie zur Informationssicherheit — ISMS.1.A3.4)",
+        "uuid": "0a88b2c8-5cec-5529-97dd-b0c4c038495b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a3.5 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a3.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a3.5 (Erstellung einer Leitlinie zur Informationssicherheit — ISMS.1.A3.5)",
+        "uuid": "b10971b4-c242-5f92-bdf3-07869b6c4857"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a3.6 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a3.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a3.6 (Erstellung einer Leitlinie zur Informationssicherheit — ISMS.1.A3.6)",
+        "uuid": "6064d302-cb9e-5d5a-beda-8e7ea6d5553f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a4.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a4.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a4.1 (Benennung eines oder einer Informationssicherheitsbeauftragten — ISMS.1.A4.1)",
+        "uuid": "3db8ba69-4576-5bbe-a0a4-e4c253007fde"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a4.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a4.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a4.2 (Benennung eines oder einer Informationssicherheitsbeauftragten — ISMS.1.A4.2)",
+        "uuid": "6ff80790-5a07-5fbd-ab1b-e37f001de06a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a4.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a4.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a4.3 (Benennung eines oder einer Informationssicherheitsbeauftragten — ISMS.1.A4.3)",
+        "uuid": "0a415b12-e3dc-5e7f-ae2a-6113104241d3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a4.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a4.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a4.4 (Benennung eines oder einer Informationssicherheitsbeauftragten — ISMS.1.A4.4)",
+        "uuid": "385445a9-a326-5711-b0d3-75144f852184"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a4.5 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a4.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a4.5 (Benennung eines oder einer Informationssicherheitsbeauftragten — ISMS.1.A4.5)",
+        "uuid": "221d3ec6-b079-5e26-ba8f-38883924233d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a5.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a5.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a5.1 (Vertragsgestaltung bei Bestellung eines oder einer externen Informationssicherheitsbeauftragten — ISMS.1.A5.1)",
+        "uuid": "47392c93-ad37-56f2-b6dd-825b1e2f6a66"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a5.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a5.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a5.2 (Vertragsgestaltung bei Bestellung eines oder einer externen Informationssicherheitsbeauftragten — ISMS.1.A5.2)",
+        "uuid": "88a5f0ff-0e39-5da7-a179-e88c213ada93"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a5.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a5.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a5.3 (Vertragsgestaltung bei Bestellung eines oder einer externen Informationssicherheitsbeauftragten — ISMS.1.A5.3)",
+        "uuid": "d6acf51f-6cfc-5184-9856-80660a2fe722"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a5.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a5.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a5.4 (Vertragsgestaltung bei Bestellung eines oder einer externen Informationssicherheitsbeauftragten — ISMS.1.A5.4)",
+        "uuid": "1361869d-e700-51d5-a5ac-fa223ab572d5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a6.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a6.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a6.1 (Aufbau einer geeigneten Organisationsstruktur für Informationssicherheit — ISMS.1.A6.1)",
+        "uuid": "78a9373e-0cb7-5dbc-a785-305bce5685ac"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a6.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a6.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a6.2 (Aufbau einer geeigneten Organisationsstruktur für Informationssicherheit — ISMS.1.A6.2)",
+        "uuid": "a6e88df8-143d-5865-9fbf-d68fcdf49305"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a6.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a6.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a6.3 (Aufbau einer geeigneten Organisationsstruktur für Informationssicherheit — ISMS.1.A6.3)",
+        "uuid": "4a67a5e1-83b8-5659-834d-eeaea996f8b9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a6.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a6.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a6.4 (Aufbau einer geeigneten Organisationsstruktur für Informationssicherheit — ISMS.1.A6.4)",
+        "uuid": "fd250600-807a-559a-90fc-b3095611ae67"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a6.5 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a6.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a6.5 (Aufbau einer geeigneten Organisationsstruktur für Informationssicherheit — ISMS.1.A6.5)",
+        "uuid": "bfef88f4-7dfb-5490-8dbd-90eb6e8fdae3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a6.6 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a6.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a6.6 (Aufbau einer geeigneten Organisationsstruktur für Informationssicherheit — ISMS.1.A6.6)",
+        "uuid": "4e15aa76-b102-512d-a3d2-b024bc935d2d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a6.7 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a6.7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a6.7 (Aufbau einer geeigneten Organisationsstruktur für Informationssicherheit — ISMS.1.A6.7)",
+        "uuid": "91f6698d-4f08-5952-951c-753539abced8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a6.8 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a6.8"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a6.8 (Aufbau einer geeigneten Organisationsstruktur für Informationssicherheit — ISMS.1.A6.8)",
+        "uuid": "cb858ad1-c5a9-5c92-8014-b82837c2da3a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a7.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a7.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a7.1 (Festlegung von Sicherheitsmaßnahmen — ISMS.1.A7.1)",
+        "uuid": "039c573c-2051-5bf8-a8d3-ded5e4ae1d29"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a7.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a7.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a7.2 (Festlegung von Sicherheitsmaßnahmen — ISMS.1.A7.2)",
+        "uuid": "bb98d66b-f257-5fea-b7a7-b221117e10fb"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a7.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a7.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a7.3 (Festlegung von Sicherheitsmaßnahmen — ISMS.1.A7.3)",
+        "uuid": "cce64bdd-bf7d-5318-97bd-254c6d3efe40"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a8.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a8.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a8.1 (Integration der Mitarbeitenden in den Sicherheitsprozess — ISMS.1.A8.1)",
+        "uuid": "1bfb9246-6564-574d-ae38-4039a7e6ed12"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a8.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a8.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a8.2 (Integration der Mitarbeitenden in den Sicherheitsprozess — ISMS.1.A8.2)",
+        "uuid": "f837a8a9-4041-50d4-8cec-66d7deb317ee"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a8.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a8.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a8.3 (Integration der Mitarbeitenden in den Sicherheitsprozess — ISMS.1.A8.3)",
+        "uuid": "670dd1bd-d56c-59b6-8021-f82bc5e66bb4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a8.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a8.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a8.4 (Integration der Mitarbeitenden in den Sicherheitsprozess — ISMS.1.A8.4)",
+        "uuid": "f4188712-e7b1-539d-91bb-7dd88cb79e61"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a8.5 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a8.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a8.5 (Integration der Mitarbeitenden in den Sicherheitsprozess — ISMS.1.A8.5)",
+        "uuid": "5d76f379-c462-520d-ba20-0f73caa9bec9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a8.6 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a8.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a8.6 (Integration der Mitarbeitenden in den Sicherheitsprozess — ISMS.1.A8.6)",
+        "uuid": "1c51aac3-2223-5347-bfb6-3f7cd1ba3cd6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a8.7 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a8.7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a8.7 (Integration der Mitarbeitenden in den Sicherheitsprozess — ISMS.1.A8.7)",
+        "uuid": "5abd692e-829f-5e8e-9b2a-f1cc4f1b77dd"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a9.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a9.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a9.1 (Integration der Informationssicherheit in organisationsweite Abläufe und Prozesse — ISMS.1.A9.1)",
+        "uuid": "5aef2336-119d-5577-a8f5-8b6a1ea0dcdc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a9.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a9.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a9.2 (Integration der Informationssicherheit in organisationsweite Abläufe und Prozesse — ISMS.1.A9.2)",
+        "uuid": "b9a633aa-d1ea-5815-a164-16b6db4fea55"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a9.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a9.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a9.3 (Integration der Informationssicherheit in organisationsweite Abläufe und Prozesse — ISMS.1.A9.3)",
+        "uuid": "bd96766e-fb79-5025-8e29-2549392e3cdb"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control isms.1.a9.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "isms.1.a9.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: isms.1.a9.4 (Integration der Informationssicherheit in organisationsweite Abläufe und Prozesse — ISMS.1.A9.4)",
+        "uuid": "2523bfc9-cd48-56f8-bc0b-6d7f04919c9d"
       }
     ],
     "uuid": "548c4984-7857-52f5-87e4-ceab932e7a5d"

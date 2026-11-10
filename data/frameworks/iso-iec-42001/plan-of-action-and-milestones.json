@@ -4,16 +4,815 @@
       "href": "./system-security-plan.json"
     },
     "metadata": {
-      "last-modified": "2026-11-08T01:42:11Z",
+      "last-modified": "2026-11-08T00:31:04Z",
       "oscal-version": "1.2.3",
       "title": "ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline Plan of Action and Milestones Template",
       "version": "2"
     },
     "poam-items": [
       {
-        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
-        "title": "Compliance Roadmap and Parameter Tailoring for ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline",
-        "uuid": "f12c0539-c892-5910-b4ee-f4dce43d1336"
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _10.1 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_10.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _10.1 (Continual improvement)",
+        "uuid": "3d9662f6-9de4-5715-a814-8de81f178ada"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _10.2 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_10.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _10.2 (Nonconformity and corrective action)",
+        "uuid": "4508d26c-2c43-58d5-b949-e3566b1c126a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.1 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.1 (Understanding the organization and its context)",
+        "uuid": "16f9c21c-f102-5363-b5cc-c5f8296684d5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.2 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.2 (Understanding the needs and expectations of interested parties)",
+        "uuid": "cc0ef7c8-e16d-567a-8c65-f10c3ebf5463"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.3 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.3 (Determining the scope of the AI management system)",
+        "uuid": "74446f64-1fc6-577e-bf01-fd1e9a455d17"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.4 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.4 (AI management system)",
+        "uuid": "2a993c92-5afc-535f-805e-2671d7f1d9eb"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.1 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.1 (Leadership and commitment)",
+        "uuid": "b5a10297-3e93-5f43-adbd-fe52934c3a85"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.2 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.2 (AI policy)",
+        "uuid": "1d35c05f-fe8b-524b-9f16-8f0f13ac7ad5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.3 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.3 (Roles, responsibilities and authorities)",
+        "uuid": "47cdb978-5947-5a59-8c4d-d976653430f2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.1 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.1 (Actions to address risks and opportunities)",
+        "uuid": "142d0bf7-765b-54e2-b9e5-211077f9813b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.2 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.2 (AI objectives and planning to achieve them)",
+        "uuid": "0666afda-1d52-5590-b790-7e58a278ec93"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.3 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.3 (Planning of changes)",
+        "uuid": "78f46e95-c11e-508c-b059-535b3d4652b0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _7.1 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_7.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _7.1 (Resources)",
+        "uuid": "e0b0df63-f562-5356-9dee-d1a9176d58f8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _7.2 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_7.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _7.2 (Competence)",
+        "uuid": "81c5f6fe-f9b2-5762-9955-349567c55dcf"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _7.3 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_7.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _7.3 (Awareness)",
+        "uuid": "587c1f14-7c5f-5ec9-b00a-2cbdf9d181d5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _7.4 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_7.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _7.4 (Communication)",
+        "uuid": "05c44fa1-7d2d-56c4-b014-439bffe1838e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _7.5.1 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_7.5.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _7.5.1 (General)",
+        "uuid": "4aef5c1e-ec71-5723-afc0-504bba407c03"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _7.5.2 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_7.5.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _7.5.2 (Creating and updating documented information)",
+        "uuid": "3d8e1a86-6f3c-5a9f-9c83-a999c344b834"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _7.5.3 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_7.5.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _7.5.3 (Control of documented information)",
+        "uuid": "fcbfc48e-ee19-57d3-ad76-82dfa8d78d94"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _8.1 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_8.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _8.1 (Operational planning and control)",
+        "uuid": "e656d24a-e5f2-5f60-a898-f13d21821c10"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _8.2 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_8.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _8.2 (AI risk assessment)",
+        "uuid": "69c8b412-3071-5aec-9cb4-e92b3174973d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _8.3 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_8.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _8.3 (AI risk treatment)",
+        "uuid": "c2ea8619-d036-5b84-9a0f-bf024b373b13"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _8.4 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_8.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _8.4 (AI system impact assessment)",
+        "uuid": "53273340-e61c-59f1-8bf3-a92386ebfaf4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _9.1 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_9.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _9.1 (Monitoring, measurement, analysis and evaluation)",
+        "uuid": "f06dc264-2424-5a43-ab03-d7529f9e1905"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _9.2.1 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_9.2.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _9.2.1 (General)",
+        "uuid": "889112b4-a9b4-5fd8-809a-0a90bcaa933f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _9.2.2 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_9.2.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _9.2.2 (Internal audit programme)",
+        "uuid": "ea8db6f5-1897-5560-88b4-a26896d0b5d4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _9.3.1 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_9.3.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _9.3.1 (General)",
+        "uuid": "0e795365-3bf5-5144-b913-af65c36054cb"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _9.3.2 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_9.3.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _9.3.2 (Management review inputs)",
+        "uuid": "f882bf49-2148-50ba-8262-5a125906a8d5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _9.3.3 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_9.3.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _9.3.3 (Management review results)",
+        "uuid": "dffacb97-f3df-54c5-a55f-5ea91b6e0d6d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control a.10.2 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "a.10.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: a.10.2 (Allocating responsibilities)",
+        "uuid": "9df6d604-aba4-5c36-be59-daa49294fd9b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control a.10.3 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "a.10.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: a.10.3 (Suppliers)",
+        "uuid": "ba9e6ac2-de1b-50eb-b88e-d48210474e56"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control a.10.4 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "a.10.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: a.10.4 (Customers)",
+        "uuid": "b8c32c28-9585-576d-8655-fba373080371"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control a.2.2 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "a.2.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: a.2.2 (AI policy)",
+        "uuid": "c3e34ace-d773-56df-a097-cebc36388e09"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control a.2.3 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "a.2.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: a.2.3 (Alignment with other organizational policies)",
+        "uuid": "26afe848-1ee4-5721-93b7-6edc462f6ca8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control a.2.4 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "a.2.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: a.2.4 (Review of the AI policy)",
+        "uuid": "421a94dc-fe09-5af9-b2d7-4bdee3229d09"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control a.3.2 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "a.3.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: a.3.2 (AI roles and responsibilities)",
+        "uuid": "6297e57f-c9eb-57df-8fbe-fe011f52f235"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control a.3.3 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "a.3.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: a.3.3 (Reporting of concerns)",
+        "uuid": "a05b819d-8fa8-5d5b-8ed6-24d7514cc6cc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control a.4.2 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "a.4.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: a.4.2 (Resource documentation)",
+        "uuid": "c858a958-c4b9-560f-9ab5-049ba4ee1836"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control a.4.3 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "a.4.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: a.4.3 (Data resources)",
+        "uuid": "aa124727-b5c9-523c-a8d5-1761de13cfbf"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control a.4.4 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "a.4.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: a.4.4 (Tooling resources)",
+        "uuid": "b29ab79a-49bc-564c-adb0-e3408539aa4d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control a.4.5 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "a.4.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: a.4.5 (System and computing resources)",
+        "uuid": "219ceda8-22c3-5b03-b048-b0e0075bb474"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control a.4.6 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "a.4.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: a.4.6 (Human resources)",
+        "uuid": "3a0cfb64-da0c-5c81-bab3-36fab5eb9a92"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control a.5.2 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "a.5.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: a.5.2 (AI system impact assessment process)",
+        "uuid": "92e9f02e-c9d9-5dfe-82cf-b645b5a8756a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control a.5.3 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "a.5.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: a.5.3 (Documentation of AI system impact assessments)",
+        "uuid": "aa63c55c-541c-551c-8443-1d6f63f1a1d5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control a.5.4 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "a.5.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: a.5.4 (Assessing AI system impact on individuals or groups of individuals)",
+        "uuid": "f9c566a3-9afb-5623-9e71-00df4177fde2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control a.5.5 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "a.5.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: a.5.5 (Assessing societal impacts of AI systems)",
+        "uuid": "9d64160a-7e59-5d99-982c-8707ddd00e84"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control a.6.1.2 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "a.6.1.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: a.6.1.2 (Objectives for responsible development of AI system)",
+        "uuid": "99ca3990-0300-57cc-afe4-8882e3b21eb3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control a.6.1.3 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "a.6.1.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: a.6.1.3 (Processes for responsible AI system design and development)",
+        "uuid": "0114ac8e-a983-5a8d-8c86-c07c91e696dd"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control a.6.2.2 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "a.6.2.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: a.6.2.2 (AI system requirements and specification)",
+        "uuid": "e966ebdb-bab6-555a-8c0e-fc576ffd8366"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control a.6.2.3 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "a.6.2.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: a.6.2.3 (Documentation of AI system design and development)",
+        "uuid": "23a34c66-964f-525d-b890-6b7909b24fba"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control a.6.2.4 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "a.6.2.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: a.6.2.4 (AI system verification and validation)",
+        "uuid": "29903f72-10b6-505a-9da3-642d8e1568ab"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control a.6.2.5 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "a.6.2.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: a.6.2.5 (AI system deployment)",
+        "uuid": "6c98a49a-7b1c-5b7a-a527-6147da934019"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control a.6.2.6 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "a.6.2.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: a.6.2.6 (AI system operation and monitoring)",
+        "uuid": "1b268b20-cf09-5047-83bc-03e8257dbae7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control a.6.2.7 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "a.6.2.7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: a.6.2.7 (AI system technical documentation)",
+        "uuid": "2f238abf-0187-5369-9e93-20d33ea1f9f4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control a.6.2.8 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "a.6.2.8"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: a.6.2.8 (AI system recording of event logs)",
+        "uuid": "8f56a4fb-e232-5112-b41e-b76a27f85801"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control a.7.2 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "a.7.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: a.7.2 (Data for development and enhancement of AI system)",
+        "uuid": "1eef2f0c-e4d0-51c9-aeec-a445113507db"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control a.7.3 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "a.7.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: a.7.3 (Acquisition of data)",
+        "uuid": "c73045c3-24e6-591b-afc7-e92a42f6745d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control a.7.4 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "a.7.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: a.7.4 (Quality of data for AI systems)",
+        "uuid": "a60106c9-244f-5191-bd90-d56546d12398"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control a.7.5 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "a.7.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: a.7.5 (Data provenance)",
+        "uuid": "6a5679e2-c1ec-5be6-a89e-efe814b3c4bf"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control a.7.6 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "a.7.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: a.7.6 (Data preparation)",
+        "uuid": "9cfe8d76-9643-5db1-b949-20ea9ae73087"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control a.8.2 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "a.8.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: a.8.2 (System documentation and information for users)",
+        "uuid": "a7a662d5-f594-5212-9f3b-1d1fbf57cca8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control a.8.3 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "a.8.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: a.8.3 (External reporting)",
+        "uuid": "2b3278f9-f648-5f6a-9ea9-30052598b3f4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control a.8.4 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "a.8.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: a.8.4 (Communication of incidents)",
+        "uuid": "dccabbaa-26c5-5164-90f9-ee1cfe0f73c3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control a.8.5 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "a.8.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: a.8.5 (Information for interested parties)",
+        "uuid": "eab4578f-003c-5ca5-b8cd-95bf77674865"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control a.9.2 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "a.9.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: a.9.2 (Processes for responsible use of AI systems)",
+        "uuid": "84073413-12b7-56b3-bdec-f81929b1630b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control a.9.3 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "a.9.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: a.9.3 (Objectives for responsible use of AI system)",
+        "uuid": "a23e2e8e-3640-5a8c-b6e5-0ff8ee43e95f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control a.9.4 in ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "a.9.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: a.9.4 (Intended use of the AI system)",
+        "uuid": "934357eb-f0aa-5bc7-b436-902f9a6e7ee4"
       }
     ],
     "uuid": "72822831-04ae-5928-8819-9a2aa9341118"

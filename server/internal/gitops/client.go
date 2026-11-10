@@ -3,7 +3,9 @@ package gitops
 import (
 	"context"
 	"fmt"
+	"net/url"
 	"os"
+	"strings"
 
 	"github.com/google/go-github/v62/github"
 )
@@ -23,6 +25,24 @@ func NewClient() *Client {
 		client = github.NewClient(nil)
 	}
 	return &Client{gh: client}
+}
+
+// NewClientWithBaseURL creates a GitOps client targeting an explicit GitHub Enterprise or test API base URL.
+func NewClientWithBaseURL(baseURL, token string) (*Client, error) {
+	if !strings.HasSuffix(baseURL, "/") {
+		baseURL += "/"
+	}
+	parsed, err := url.Parse(baseURL)
+	if err != nil {
+		return nil, fmt.Errorf("parse base URL: %w", err)
+	}
+	client := github.NewClient(nil)
+	if token != "" {
+		client = client.WithAuthToken(token)
+	}
+	client.BaseURL = parsed
+	client.UploadURL = parsed
+	return &Client{gh: client}, nil
 }
 
 // PublishRelease creates a GitHub release with the given tag and artifacts.

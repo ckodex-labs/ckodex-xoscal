@@ -212,7 +212,7 @@ func (s *ExchangeServer) fetchBounded(ctx context.Context, raw string, policy *F
 	if err != nil {
 		return nil, fmt.Errorf("request: %w", err)
 	}
-	defer resp.Body.Close()
+	defer func() { _ = resp.Body.Close() }()
 
 	if resp.StatusCode != http.StatusOK {
 		return nil, fmt.Errorf("unexpected status %d", resp.StatusCode)

@@ -4,16 +4,3131 @@
       "href": "./system-security-plan.json"
     },
     "metadata": {
-      "last-modified": "2026-11-08T01:42:11Z",
+      "last-modified": "2026-11-08T00:31:03Z",
       "oscal-version": "1.2.3",
       "title": "Digital Operational Resilience Act (DORA) Plan of Action and Milestones Template",
       "version": "7"
     },
     "poam-items": [
       {
-        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for Digital Operational Resilience Act (DORA).",
-        "title": "Compliance Roadmap and Parameter Tailoring for Digital Operational Resilience Act (DORA)",
-        "uuid": "8b07ff75-a321-5d85-a714-434edf5170c7"
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _10.1 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_10.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _10.1 (Article 10 — 10.1)",
+        "uuid": "f06c4824-0274-5f94-b877-ee03008ab948"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _10.2 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_10.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _10.2 (Article 10 — 10.2)",
+        "uuid": "d996ca0c-64ba-58af-9302-6d1c45390896"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _10.3 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_10.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _10.3 (Article 10 — 10.3)",
+        "uuid": "83eb649a-557e-5011-9e20-3eeee32c1567"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _10.4 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_10.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _10.4 (Article 10 — 10.4)",
+        "uuid": "2a9f8fd5-9e90-5c2f-8b28-0dd76c8879ab"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _11.1 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_11.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _11.1 (Article 11 — 11.1)",
+        "uuid": "24c5ff7d-0246-5233-ae1c-43b12d079fdb"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _11.10 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_11.10"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _11.10 (Article 11 — 11.10)",
+        "uuid": "c7542461-5881-5df1-947d-7248eb808930"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _11.2 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_11.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _11.2 (Article 11 — 11.2)",
+        "uuid": "12b624fe-438c-5c65-be86-50f2cf835348"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _11.2.a in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_11.2.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _11.2.a (Article 11 — 11.2.a)",
+        "uuid": "91bed79b-9117-5788-8ad4-32e588df696d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _11.2.b in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_11.2.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _11.2.b (Article 11 — 11.2.b)",
+        "uuid": "69edc86b-944f-57a6-9021-744b4c989632"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _11.2.c in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_11.2.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _11.2.c (Article 11 — 11.2.c)",
+        "uuid": "2dd17b49-8558-5f78-a2d4-2e1a331e1690"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _11.2.d in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_11.2.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _11.2.d (Article 11 — 11.2.d)",
+        "uuid": "c4a9ccbd-cc98-5450-91d7-344649b38a66"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _11.2.e in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_11.2.e"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _11.2.e (Article 11 — 11.2.e)",
+        "uuid": "50839860-b62a-55ee-8adc-e383d703ffcc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _11.3 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_11.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _11.3 (Article 11 — 11.3)",
+        "uuid": "a1c4cb1f-1a87-517e-be29-cca152afd244"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _11.4 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_11.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _11.4 (Article 11 — 11.4)",
+        "uuid": "b1743a4b-52b1-5d39-bd7c-723c870c629f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _11.5 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_11.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _11.5 (Article 11 — 11.5)",
+        "uuid": "d48eef27-00f3-5a1c-b9d5-268040192b78"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _11.6.a in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_11.6.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _11.6.a (As part of their comprehensive ICT risk management, financial entities shall: — 11.6.a)",
+        "uuid": "ae2fd266-7b37-5dc7-8d72-0480a56d92d3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _11.6.b in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_11.6.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _11.6.b (As part of their comprehensive ICT risk management, financial entities shall: — 11.6.b)",
+        "uuid": "93591aef-ae17-5465-af4c-e65db18a0325"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _11.7 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_11.7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _11.7 (Article 11 — 11.7)",
+        "uuid": "5900cf28-966e-5d91-b41a-b9451ba9f1e1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _11.8 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_11.8"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _11.8 (Article 11 — 11.8)",
+        "uuid": "35c81728-ab16-5fd4-bbbb-e3757a863aed"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _11.9 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_11.9"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _11.9 (Article 11 — 11.9)",
+        "uuid": "c93fc79e-1545-5574-8bde-de708c3f2dbe"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _12.1 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_12.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _12.1 (Article 12 — 12.1)",
+        "uuid": "de7b66cf-70fe-516e-9b9b-8683f00405e7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _12.1.a in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_12.1.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _12.1.a (Article 12 — 12.1.a)",
+        "uuid": "631da87b-0886-57cf-8997-35839be7269e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _12.1.b in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_12.1.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _12.1.b (Article 12 — 12.1.b)",
+        "uuid": "62c092f5-79d1-55ab-a34c-1a3046b3b8dc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _12.2 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_12.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _12.2 (Article 12 — 12.2)",
+        "uuid": "e6488c89-df56-50d2-aa91-622136ebf5aa"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _12.3 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_12.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _12.3 (Article 12 — 12.3)",
+        "uuid": "149278c5-aeed-5982-9883-965b6707968a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _12.4 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_12.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _12.4 (Article 12 — 12.4)",
+        "uuid": "0fb1d24b-8c74-55eb-94d5-c860332accc6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _12.5 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_12.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _12.5 (Article 12 — 12.5)",
+        "uuid": "ab35faa0-7b2e-593a-8861-f53e84892f84"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _12.5.a in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_12.5.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _12.5.a (The secondary processing site shall be: — 12.5.a)",
+        "uuid": "6eb3c056-17b5-50d4-87d8-e1e2dbfd66a5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _12.5.b in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_12.5.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _12.5.b (The secondary processing site shall be: — 12.5.b)",
+        "uuid": "edf1a2fc-e60a-53cb-b645-f3b8f0339812"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _12.5.c in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_12.5.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _12.5.c (The secondary processing site shall be: — 12.5.c)",
+        "uuid": "7e41c9f5-fb03-57b7-aa7f-f6eb70badd66"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _12.6 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_12.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _12.6 (Article 12 — 12.6)",
+        "uuid": "ffff5030-2ce8-5fe5-9e9a-808ba41c56f1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _12.7 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_12.7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _12.7 (Article 12 — 12.7)",
+        "uuid": "ae47ec14-5e98-5e17-b417-bf6b63a34a1a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _13.1 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_13.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _13.1 (Article 13 — 13.1)",
+        "uuid": "9cba53ae-222d-54ea-8fd5-059b45a1c45f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _13.2 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_13.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _13.2 (Article 13 — 13.2)",
+        "uuid": "9af30e0f-b7a1-5cbf-acac-590b2b4f98b3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _13.2.a in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_13.2.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _13.2.a (Article 13 — 13.2.a)",
+        "uuid": "a066e82a-c918-55ec-9dbc-fe2f503dce4a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _13.2.b in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_13.2.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _13.2.b (Article 13 — 13.2.b)",
+        "uuid": "47f1d8a4-80c3-57b0-8e9b-fce63625f83e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _13.2.c in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_13.2.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _13.2.c (Article 13 — 13.2.c)",
+        "uuid": "c1a13b00-b89c-571e-81c9-0f91f5a70a33"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _13.2.d in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_13.2.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _13.2.d (Article 13 — 13.2.d)",
+        "uuid": "e64b9be1-49c5-5b72-864b-4a62e243b2fd"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _13.3 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_13.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _13.3 (Article 13 — 13.3)",
+        "uuid": "cbca8da3-8699-596f-840b-f963e69671b3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _13.4 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_13.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _13.4 (Article 13 — 13.4)",
+        "uuid": "7ad62bd0-a9ac-59c0-8078-3bfd0c2012cc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _13.5 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_13.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _13.5 (Article 13 — 13.5)",
+        "uuid": "2d521435-0cac-5a4f-a399-4b6892d0abc4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _13.6 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_13.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _13.6 (Article 13 — 13.6)",
+        "uuid": "2ab58aad-abda-588e-a4bc-00414e2205fa"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _13.7 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_13.7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _13.7 (Article 13 — 13.7)",
+        "uuid": "6760ce75-286e-5290-8337-47740e122faa"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _14.1 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_14.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _14.1 (Article 14 — 14.1)",
+        "uuid": "3df7daad-c54a-57a7-8462-e7b31604a76d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _14.2 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_14.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _14.2 (Article 14 — 14.2)",
+        "uuid": "44bacb8a-c5ce-5185-bfe4-edbcbf93dfb8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _14.3 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_14.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _14.3 (Article 14 — 14.3)",
+        "uuid": "ee3e0b48-885c-5f82-820f-c79f96433271"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _16.1 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_16.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _16.1 (Article 16 — 16.1)",
+        "uuid": "5de30d60-e1ec-5412-b5e4-158ce3eae255"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _16.1.a in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_16.1.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _16.1.a (Without prejudice to the first subparagraph, the entities listed in the first subparagraph shall: — 16.1.a)",
+        "uuid": "58cf4309-51a3-5270-af60-a0b8674aa3a8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _16.1.b in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_16.1.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _16.1.b (Without prejudice to the first subparagraph, the entities listed in the first subparagraph shall: — 16.1.b)",
+        "uuid": "39e78df6-5e19-5017-8947-a403ac79fecf"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _16.1.c in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_16.1.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _16.1.c (Without prejudice to the first subparagraph, the entities listed in the first subparagraph shall: — 16.1.c)",
+        "uuid": "e1710cac-d02e-53c2-bb64-2d0bf5c6c473"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _16.1.d in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_16.1.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _16.1.d (Without prejudice to the first subparagraph, the entities listed in the first subparagraph shall: — 16.1.d)",
+        "uuid": "1390e91e-7411-532d-bf0a-4d4f6bd22505"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _16.1.e in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_16.1.e"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _16.1.e (Without prejudice to the first subparagraph, the entities listed in the first subparagraph shall: — 16.1.e)",
+        "uuid": "e3f9ceaa-fbf5-50dc-8bea-9a7cf3c9f339"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _16.1.f in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_16.1.f"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _16.1.f (Without prejudice to the first subparagraph, the entities listed in the first subparagraph shall: — 16.1.f)",
+        "uuid": "3d30c7a2-dad3-5fc8-b208-091318d6a28b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _16.1.g in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_16.1.g"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _16.1.g (Without prejudice to the first subparagraph, the entities listed in the first subparagraph shall: — 16.1.g)",
+        "uuid": "c75c60b8-4058-59c9-869c-93931f240453"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _16.1.h in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_16.1.h"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _16.1.h (Without prejudice to the first subparagraph, the entities listed in the first subparagraph shall: — 16.1.h)",
+        "uuid": "9301f7e7-e2f4-5608-b3af-b3ba15dd1b01"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _16.2 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_16.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _16.2 (Article 16 — 16.2)",
+        "uuid": "1da4a1a1-af9f-5f7e-b0f7-7a060849f364"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _17.1 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_17.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _17.1 (Article 17 — 17.1)",
+        "uuid": "f1ece21f-1f52-5d02-aa69-da7e067d7b1d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _17.2 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_17.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _17.2 (Article 17 — 17.2)",
+        "uuid": "3d12196b-cd72-541f-93dc-66e2164b7586"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _17.3 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_17.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _17.3 (Article 17 — 17.3)",
+        "uuid": "d0897815-daee-57c1-b66f-544d0e40105f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _17.3.a in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_17.3.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _17.3.a (The ICT-related incident management process referred to in paragraph 1 shall: — 17.3.a)",
+        "uuid": "5bae65fd-0e4d-5821-9871-4edb38d8a34e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _17.3.b in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_17.3.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _17.3.b (The ICT-related incident management process referred to in paragraph 1 shall: — 17.3.b)",
+        "uuid": "bd8efe01-79dc-5028-a1cf-871677e7d661"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _17.3.c in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_17.3.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _17.3.c (The ICT-related incident management process referred to in paragraph 1 shall: — 17.3.c)",
+        "uuid": "6f731abe-2d03-53f2-8e95-eb51a398c109"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _17.3.d in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_17.3.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _17.3.d (The ICT-related incident management process referred to in paragraph 1 shall: — 17.3.d)",
+        "uuid": "de82fa69-80c3-5263-9c70-5dce30a9837d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _17.3.e in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_17.3.e"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _17.3.e (The ICT-related incident management process referred to in paragraph 1 shall: — 17.3.e)",
+        "uuid": "e6f3c76c-2e3c-5539-85ae-8a637664b792"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _17.3.f in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_17.3.f"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _17.3.f (The ICT-related incident management process referred to in paragraph 1 shall: — 17.3.f)",
+        "uuid": "2697c5a5-e365-5ae1-857c-c7a9f03e295b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _18.1 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_18.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _18.1 (Article 18 — 18.1)",
+        "uuid": "6891987e-ac59-5e64-a511-8dc3887958eb"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _18.1.a in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_18.1.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _18.1.a (Article 18 — 18.1.a)",
+        "uuid": "1a4d3d74-dc0a-5c83-b527-1546d5a129da"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _18.1.b in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_18.1.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _18.1.b (Article 18 — 18.1.b)",
+        "uuid": "1a1b39a9-6499-5f67-acfb-02f37420d32e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _18.1.c in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_18.1.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _18.1.c (Article 18 — 18.1.c)",
+        "uuid": "4953508a-2927-573b-8b68-8cbbc462887e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _18.1.d in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_18.1.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _18.1.d (Article 18 — 18.1.d)",
+        "uuid": "76a54533-a0fa-5cd6-92e0-2bcfdbd9f688"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _18.1.e in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_18.1.e"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _18.1.e (Article 18 — 18.1.e)",
+        "uuid": "7b91f437-0d04-5f4b-a73b-460e1da7d3bc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _18.1.f in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_18.1.f"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _18.1.f (Article 18 — 18.1.f)",
+        "uuid": "95c7df1f-3aed-5b59-b91c-f981ac32fc62"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _18.2 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_18.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _18.2 (Article 18 — 18.2)",
+        "uuid": "38336269-2120-5436-8e0f-8dd286486f1e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _19.1 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_19.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _19.1 (Article 19 — 19.1)",
+        "uuid": "5168ee12-1ead-50ef-a838-026919c4a8d3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _19.2 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_19.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _19.2 (Article 19 — 19.2)",
+        "uuid": "2fa6a779-8705-5d33-84ba-63412a0b3fd4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _19.3 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_19.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _19.3 (Article 19 — 19.3)",
+        "uuid": "5b7c7157-46f5-55e9-aa3e-c82da321918f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _19.4 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_19.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _19.4 (Article 19 — 19.4)",
+        "uuid": "6d5fbf02-9baa-5849-b3fd-c08c116a76ce"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _19.4.a in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_19.4.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _19.4.a (Article 19 — 19.4.a)",
+        "uuid": "2d0ab6bc-9ae5-57d2-8c2b-7080ad282b8a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _19.4.b in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_19.4.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _19.4.b (Article 19 — 19.4.b)",
+        "uuid": "95b9090d-380c-58fa-bdce-ca65c177e8b5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _19.4.c in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_19.4.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _19.4.c (Article 19 — 19.4.c)",
+        "uuid": "69edb221-6751-55ff-aee6-9d2225454344"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _19.5 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_19.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _19.5 (Article 19 — 19.5)",
+        "uuid": "f7d029b1-52fb-5f80-a627-60bad5a605c9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _24.1 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_24.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _24.1 (Article 24 — 24.1)",
+        "uuid": "86f2cdb7-e29c-5de0-a3e8-8593e9ab1bcd"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _24.2 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_24.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _24.2 (Article 24 — 24.2)",
+        "uuid": "57abb601-3427-5064-b996-eb27f09a126b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _24.3 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_24.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _24.3 (Article 24 — 24.3)",
+        "uuid": "547d1d12-71b5-5e25-a9ab-74a13e90e026"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _24.4 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_24.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _24.4 (Article 24 — 24.4)",
+        "uuid": "ec978a76-7a31-5844-bd04-67df7fa8bbf9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _24.5 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_24.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _24.5 (Article 24 — 24.5)",
+        "uuid": "2e2aeff3-f7da-5856-b4fe-4452232e4c92"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _24.6 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_24.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _24.6 (Article 24 — 24.6)",
+        "uuid": "655a098a-ebe8-5e7b-a8c4-f5d8d6fad3bc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _25.1 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_25.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _25.1 (Article 25 — 25.1)",
+        "uuid": "741bf1c9-3d0f-5c68-b842-ffa042d6419f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _25.2 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_25.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _25.2 (Article 25 — 25.2)",
+        "uuid": "30f83c79-82ea-522a-8a83-0400f7103bfc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _25.3 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_25.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _25.3 (Article 25 — 25.3)",
+        "uuid": "2aa0aa79-adee-578c-b1bd-1fbb2b18c791"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _26.1 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_26.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _26.1 (Article 26 — 26.1)",
+        "uuid": "3cb93b3c-cebd-558f-837d-e0eac1444c93"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _26.2 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_26.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _26.2 (Article 26 — 26.2)",
+        "uuid": "651d9e7d-7bc8-5536-bee8-15cba3ff90cb"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _26.3 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_26.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _26.3 (Article 26 — 26.3)",
+        "uuid": "ae84f895-8f03-5c68-9a89-3393edfff5e8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _26.4 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_26.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _26.4 (Article 26 — 26.4)",
+        "uuid": "c3ed0def-523d-5827-998d-43f72cca6f65"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _26.5 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_26.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _26.5 (Article 26 — 26.5)",
+        "uuid": "a49a65a0-bbc3-5797-ba05-cb2f33d96da9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _26.6 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_26.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _26.6 (Article 26 — 26.6)",
+        "uuid": "9e4a12f8-d5ec-5676-99a8-53a17e2393e0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _26.7 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_26.7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _26.7 (Article 26 — 26.7)",
+        "uuid": "2e27562f-d6ca-5569-ba86-bb18861d95f5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _26.8 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_26.8"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _26.8 (Article 26 — 26.8)",
+        "uuid": "6ae29080-d252-5214-9de7-a654ed18cc85"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _27.1 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_27.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _27.1 (Article 27 — 27.1)",
+        "uuid": "3e8460b4-bff3-5d0d-be02-e1319d94aefb"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _27.1.a in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_27.1.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _27.1.a (Financial entities shall only use testers for the carrying out of TLPT, that: — 27.1.a)",
+        "uuid": "5daa6e53-e4eb-5e92-8ca2-b317b0699a4c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _27.1.b in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_27.1.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _27.1.b (Financial entities shall only use testers for the carrying out of TLPT, that: — 27.1.b)",
+        "uuid": "a53981f3-4eae-5f58-b492-4683c028293e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _27.1.c in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_27.1.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _27.1.c (Financial entities shall only use testers for the carrying out of TLPT, that: — 27.1.c)",
+        "uuid": "73e00034-be96-510e-8ca6-15c6d3fca1c6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _27.1.d in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_27.1.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _27.1.d (Financial entities shall only use testers for the carrying out of TLPT, that: — 27.1.d)",
+        "uuid": "04e21b3d-b205-516d-bbb1-5d826ddfd9a4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _27.1.e in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_27.1.e"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _27.1.e (Financial entities shall only use testers for the carrying out of TLPT, that: — 27.1.e)",
+        "uuid": "f2cf5868-aa55-5cc4-81db-62a33a629ded"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _27.2 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_27.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _27.2 (Article 27 — 27.2)",
+        "uuid": "ce3ea8b1-b2a7-54a1-9592-1cafdc0bd1ad"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _27.2.a in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_27.2.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _27.2.a (Article 27 — 27.2.a)",
+        "uuid": "c8110cf4-1c5d-557a-8e26-2c3549144a95"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _27.2.b in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_27.2.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _27.2.b (Article 27 — 27.2.b)",
+        "uuid": "3173484a-c0ba-5d15-ab64-d67a56a29f21"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _27.2.c in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_27.2.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _27.2.c (Article 27 — 27.2.c)",
+        "uuid": "a7cbffdb-f32e-550c-8dcf-3ac64044dc4c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _27.3 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_27.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _27.3 (Article 27 — 27.3)",
+        "uuid": "efdd874f-c67b-5ac3-aa73-35188e6d1f98"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _28.1 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_28.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _28.1 (Article 28 — 28.1)",
+        "uuid": "bd643daf-0907-57c3-88d7-3e0f2cd1fa19"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _28.1.a in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_28.1.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _28.1.a (Article 28 — 28.1.a)",
+        "uuid": "94890aea-a96c-56c1-99c2-8259195ce926"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _28.1.b in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_28.1.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _28.1.b (Article 28 — 28.1.b)",
+        "uuid": "24d8e5c7-47a3-5320-bfac-207d554d08c9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _28.1.b.i in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_28.1.b.i"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _28.1.b.i (Article 28 — 28.1.b.i)",
+        "uuid": "e90668fe-894a-5451-bbad-a48cb4774bc9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _28.1.b.ii in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_28.1.b.ii"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _28.1.b.ii (Article 28 — 28.1.b.ii)",
+        "uuid": "a447c7d2-bb23-51ed-9daa-a5a194bd53bc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _28.2 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_28.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _28.2 (Article 28 — 28.2)",
+        "uuid": "048b5387-8147-517a-ba00-03e2236b2346"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _28.3 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_28.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _28.3 (Article 28 — 28.3)",
+        "uuid": "d2d9d2fe-72c6-523c-a57a-b9fbb3582f4f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _28.4.a in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_28.4.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _28.4.a (Before entering into a contractual arrangement on the use of ICT services, financial entities shall: — 28.4.a)",
+        "uuid": "afb9189e-75c8-5894-a440-4a37d2f8a4e3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _28.4.b in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_28.4.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _28.4.b (Before entering into a contractual arrangement on the use of ICT services, financial entities shall: — 28.4.b)",
+        "uuid": "8da57e61-dbf9-58d5-bb2e-93c176113dd9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _28.4.c in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_28.4.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _28.4.c (Before entering into a contractual arrangement on the use of ICT services, financial entities shall: — 28.4.c)",
+        "uuid": "66500631-3d0c-50c8-a833-9c3f2f640bc1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _28.4.d in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_28.4.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _28.4.d (Before entering into a contractual arrangement on the use of ICT services, financial entities shall: — 28.4.d)",
+        "uuid": "981ce909-cb52-5930-a7a3-a274b840c8af"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _28.4.e in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_28.4.e"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _28.4.e (Before entering into a contractual arrangement on the use of ICT services, financial entities shall: — 28.4.e)",
+        "uuid": "60781e97-ef62-5171-98bd-858251af05c3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _28.5 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_28.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _28.5 (Article 28 — 28.5)",
+        "uuid": "0d402869-a6ce-5487-96f9-05b8535bf275"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _28.6 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_28.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _28.6 (Article 28 — 28.6)",
+        "uuid": "4c40b54c-874e-590b-8274-276543af84f0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _28.7.a in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_28.7.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _28.7.a (Article 28 — 28.7.a)",
+        "uuid": "4d00039a-dd38-5b7e-92d1-0e7fe59f57a7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _28.7.b in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_28.7.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _28.7.b (Article 28 — 28.7.b)",
+        "uuid": "954355cd-4160-5c2c-9761-0efcbcd2a40a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _28.7.c in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_28.7.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _28.7.c (Article 28 — 28.7.c)",
+        "uuid": "b073b36b-70ec-5f09-87d3-e6ee4f4c2df7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _28.7.d in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_28.7.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _28.7.d (Article 28 — 28.7.d)",
+        "uuid": "6ae0e709-52a0-5cc2-9ba6-4e9c6b0678a4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _28.8 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_28.8"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _28.8 (Article 28 — 28.8)",
+        "uuid": "acfc0f85-8272-52d3-b5c6-34cc1282f35f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _28.8.a in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_28.8.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _28.8.a (Financial entities shall ensure that they are able to exit contractual arrangements without: — 28.8.a)",
+        "uuid": "0c63680a-6d8d-5274-badd-b4905e8b5437"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _28.8.b in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_28.8.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _28.8.b (Financial entities shall ensure that they are able to exit contractual arrangements without: — 28.8.b)",
+        "uuid": "9cac1418-e79c-597d-b085-78260445966e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _28.8.c in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_28.8.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _28.8.c (Financial entities shall ensure that they are able to exit contractual arrangements without: — 28.8.c)",
+        "uuid": "6a3cfb60-198d-579c-9f45-871dd10c5fec"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _29.1.a in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_29.1.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _29.1.a (Article 29 — 29.1.a)",
+        "uuid": "fbcef1bd-3b45-534a-8be8-7f60b8db750a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _29.1.b in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_29.1.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _29.1.b (Article 29 — 29.1.b)",
+        "uuid": "82a6d9ff-d8f9-5287-9699-c0e66d718c25"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _29.2 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_29.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _29.2 (Article 29 — 29.2)",
+        "uuid": "00ccffb2-2e28-5fd4-9c73-34f395908683"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _30.1 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_30.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _30.1 (Article 30 — 30.1)",
+        "uuid": "cc20b49b-2be7-5474-8436-9e1c4694b344"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _30.2.a in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_30.2.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _30.2.a (The contractual arrangements on the use of ICT services shall include at least the following elements: — 30.2.a)",
+        "uuid": "71ec851b-a097-5189-904a-3301b723777c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _30.2.b in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_30.2.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _30.2.b (The contractual arrangements on the use of ICT services shall include at least the following elements: — 30.2.b)",
+        "uuid": "28021449-665c-570f-a2f3-3dbe0074b77c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _30.2.c in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_30.2.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _30.2.c (The contractual arrangements on the use of ICT services shall include at least the following elements: — 30.2.c)",
+        "uuid": "a1d63a5d-8f3f-5b45-b1c3-fb884d033b14"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _30.2.d in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_30.2.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _30.2.d (The contractual arrangements on the use of ICT services shall include at least the following elements: — 30.2.d)",
+        "uuid": "a3ec24b8-f375-55f8-b71c-593460f1ecff"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _30.2.e in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_30.2.e"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _30.2.e (The contractual arrangements on the use of ICT services shall include at least the following elements: — 30.2.e)",
+        "uuid": "3b82b037-8949-5902-987f-07fad527c8a0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _30.2.f in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_30.2.f"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _30.2.f (The contractual arrangements on the use of ICT services shall include at least the following elements: — 30.2.f)",
+        "uuid": "1fed8943-70a5-5ee2-8c5c-53570b5dc1a6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _30.2.g in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_30.2.g"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _30.2.g (The contractual arrangements on the use of ICT services shall include at least the following elements: — 30.2.g)",
+        "uuid": "0372198f-5f2a-50e9-8cb0-17e9e6f7aeb6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _30.2.h in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_30.2.h"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _30.2.h (The contractual arrangements on the use of ICT services shall include at least the following elements: — 30.2.h)",
+        "uuid": "13f17a82-768e-50c5-9255-857094aa4277"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _30.2.i in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_30.2.i"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _30.2.i (The contractual arrangements on the use of ICT services shall include at least the following elements: — 30.2.i)",
+        "uuid": "ee498b55-0803-5b7f-9859-728009987360"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _30.3.a in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_30.3.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _30.3.a (Article 30 — 30.3.a)",
+        "uuid": "cb9a0f53-7f58-5caf-b94b-2e8e3a201f89"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _30.3.b in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_30.3.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _30.3.b (Article 30 — 30.3.b)",
+        "uuid": "c889c03e-da4f-5bca-b9f7-fd208c5744f2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _30.3.c in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_30.3.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _30.3.c (Article 30 — 30.3.c)",
+        "uuid": "4cb0fc75-9c83-5d2b-9c35-83a31738ea87"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _30.3.d in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_30.3.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _30.3.d (Article 30 — 30.3.d)",
+        "uuid": "2f76baf4-fc54-56fd-82f8-2b870aaf2171"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _30.3.e in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_30.3.e"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _30.3.e (Article 30 — 30.3.e)",
+        "uuid": "57a62bf8-ac2d-5d7b-948a-1c67307b1e7d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _30.3.e.i in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_30.3.e.i"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _30.3.e.i (Article 30 — 30.3.e.i)",
+        "uuid": "25477491-1f05-51ae-b93b-b0e9feccae0e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _30.3.e.ii in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_30.3.e.ii"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _30.3.e.ii (Article 30 — 30.3.e.ii)",
+        "uuid": "238b4aed-2c03-5a67-9826-e9af7931ddfa"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _30.3.e.iii in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_30.3.e.iii"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _30.3.e.iii (Article 30 — 30.3.e.iii)",
+        "uuid": "bcdcb555-00c4-5a31-bc6b-99bdf2d5c927"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _30.3.e.iv in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_30.3.e.iv"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _30.3.e.iv (Article 30 — 30.3.e.iv)",
+        "uuid": "dce03296-2f20-5ec9-935c-887a7eb576b2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _30.3.f in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_30.3.f"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _30.3.f (Article 30 — 30.3.f)",
+        "uuid": "ff8b4290-5fa3-511f-ba6b-afc1cf066cc4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _30.3.f.i in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_30.3.f.i"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _30.3.f.i (exit strategies, in particular the establishment of a mandatory adequate transition period: — 30.3.f.i)",
+        "uuid": "2412bc3b-67e4-5264-8334-777f93c765b0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _30.3.f.ii in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_30.3.f.ii"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _30.3.f.ii (exit strategies, in particular the establishment of a mandatory adequate transition period: — 30.3.f.ii)",
+        "uuid": "382dadd7-6d3b-5f44-b548-0f1f5d1b8508"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _30.4 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_30.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _30.4 (Article 30 — 30.4)",
+        "uuid": "23408902-a057-5766-9d4e-be8077e5eeb1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _45.1.a in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_45.1.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _45.1.a (Article 45 — 45.1.a)",
+        "uuid": "cc107534-6290-5eba-b71e-0d8448eb5e40"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _45.1.b in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_45.1.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _45.1.b (Article 45 — 45.1.b)",
+        "uuid": "db854d96-faf3-58ec-8a4f-5adea0d60370"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _45.1.c in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_45.1.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _45.1.c (Article 45 — 45.1.c)",
+        "uuid": "6d80aa61-a44b-57de-810b-6b85db5c8196"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _45.2 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_45.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _45.2 (Article 45 — 45.2)",
+        "uuid": "38a1e8c1-de6e-5215-8b2f-0b5dd60d22c0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _45.3 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_45.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _45.3 (Article 45 — 45.3)",
+        "uuid": "18e622c3-4dad-5a55-a5f9-31c1e6a25468"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.1 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.1 (Article 5 — 5.1)",
+        "uuid": "1632c110-1c4c-522a-812b-dab805468430"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.2 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.2 (Article 5 — 5.2)",
+        "uuid": "cff424d0-5f51-5543-859f-84600dd1f57a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.2.a in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.2.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.2.a (For the purposes of the first subparagraph, the management body shall: — 5.2.a)",
+        "uuid": "a70abda6-973a-5325-8950-00751867d402"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.2.b in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.2.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.2.b (For the purposes of the first subparagraph, the management body shall: — 5.2.b)",
+        "uuid": "338cd9a6-a526-5db6-981a-db75c791641e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.2.c in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.2.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.2.c (For the purposes of the first subparagraph, the management body shall: — 5.2.c)",
+        "uuid": "15959f0a-de78-542f-b903-fc8e87bf12f2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.2.d in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.2.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.2.d (For the purposes of the first subparagraph, the management body shall: — 5.2.d)",
+        "uuid": "72475b49-e6de-51f1-b64f-48fb439a05e0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.2.e in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.2.e"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.2.e (For the purposes of the first subparagraph, the management body shall: — 5.2.e)",
+        "uuid": "4b5b371c-0c75-5338-875d-c8777191adf8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.2.f in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.2.f"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.2.f (For the purposes of the first subparagraph, the management body shall: — 5.2.f)",
+        "uuid": "ebef805d-a10b-5c83-a0e1-c47491884199"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.2.g in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.2.g"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.2.g (For the purposes of the first subparagraph, the management body shall: — 5.2.g)",
+        "uuid": "e429528c-1939-5ce3-b169-bb8e5b36d3ff"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.2.h in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.2.h"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.2.h (For the purposes of the first subparagraph, the management body shall: — 5.2.h)",
+        "uuid": "3a0b8838-2c36-5ab9-952c-b49f981345e8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.2.i in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.2.i"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.2.i (For the purposes of the first subparagraph, the management body shall: — 5.2.i)",
+        "uuid": "9a65c514-8ca6-5045-bf9a-b8749fbe98c6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.2.i.i in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.2.i.i"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.2.i.i (put in place, at corporate level, reporting channels enabling it to be duly informed of the following: — 5.2.i.i)",
+        "uuid": "07fa517d-ea74-5fa5-9915-8147f9c7d4c1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.2.i.ii in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.2.i.ii"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.2.i.ii (put in place, at corporate level, reporting channels enabling it to be duly informed of the following: — 5.2.i.ii)",
+        "uuid": "a1776f6d-e8d6-588c-99ec-7521f0b66c8b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.2.i.iii in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.2.i.iii"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.2.i.iii (put in place, at corporate level, reporting channels enabling it to be duly informed of the following: — 5.2.i.iii)",
+        "uuid": "1b8c72c1-ab17-5295-bfe0-785063f57c3c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.3 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.3 (Article 5 — 5.3)",
+        "uuid": "0553f655-c575-5669-9c8d-04976345dfa3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.4 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.4 (Article 5 — 5.4)",
+        "uuid": "130e590a-f2c8-54ec-8a10-3c55bcb5886a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.1 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.1 (Article 6 — 6.1)",
+        "uuid": "ef0f2d50-aa48-5694-a475-ccb221299a61"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.10 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.10"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.10 (Article 6 — 6.10)",
+        "uuid": "74ab5624-794f-56ec-beb5-611a5ef6ea51"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.2 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.2 (Article 6 — 6.2)",
+        "uuid": "a5dc2e4d-cd30-5737-9f4c-2017a43a2a14"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.3 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.3 (Article 6 — 6.3)",
+        "uuid": "1efafce1-106f-5a89-8b78-6bbde7710979"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.4 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.4 (Article 6 — 6.4)",
+        "uuid": "980e0477-a46a-5c77-b870-0ecc7b500d1d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.5 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.5 (Article 6 — 6.5)",
+        "uuid": "53df8311-dcc5-5b99-998d-404e0ce8ab5c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.6 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.6 (Article 6 — 6.6)",
+        "uuid": "2fbcbb86-a12c-55f9-b673-45bc08996350"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.7 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.7 (Article 6 — 6.7)",
+        "uuid": "f296d1e2-a40d-52b7-977b-8aebc54e07a6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.8 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.8"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.8 (Article 6 — 6.8)",
+        "uuid": "c6ea14ab-b11e-5ca3-bfeb-cb7ae7baacb2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.8.a in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.8.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.8.a (Article 6 — 6.8.a)",
+        "uuid": "b61286f0-e382-57ad-9ea6-dbce823f7268"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.8.b in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.8.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.8.b (Article 6 — 6.8.b)",
+        "uuid": "a7e64488-bc71-5f81-a8e4-d00ce5d42d4b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.8.c in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.8.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.8.c (Article 6 — 6.8.c)",
+        "uuid": "6ff60509-e78e-5a2d-9efa-00cf8d1e0f62"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.8.d in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.8.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.8.d (Article 6 — 6.8.d)",
+        "uuid": "b1f3077f-19dc-57a1-8d23-71c74088626a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.8.e in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.8.e"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.8.e (Article 6 — 6.8.e)",
+        "uuid": "8afb78ee-3868-5edf-be7a-2b115060f3c0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.8.f in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.8.f"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.8.f (Article 6 — 6.8.f)",
+        "uuid": "b4071a3c-f66f-5e76-8fcb-86fbf1e905a9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.8.g in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.8.g"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.8.g (Article 6 — 6.8.g)",
+        "uuid": "7e5b146c-8ecf-5416-ae82-5becc606d438"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.8.h in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.8.h"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.8.h (Article 6 — 6.8.h)",
+        "uuid": "25317071-3493-5b9d-96a5-c74a316297ac"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.9 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.9"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.9 (Article 6 — 6.9)",
+        "uuid": "d72abc57-39af-54a9-b9fc-2171d4d1a9a9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _64.1 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_64.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _64.1 (Article 64 — 64.1)",
+        "uuid": "06895741-b99e-546e-95df-d4f3c7db880a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _7.a in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_7.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _7.a (Article 7 — 7.a)",
+        "uuid": "64325c4c-2661-5d03-a950-0d5f34ddc554"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _7.b in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_7.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _7.b (Article 7 — 7.b)",
+        "uuid": "0754b186-6fbc-52ef-adc1-de2e0d6a9e11"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _7.c in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_7.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _7.c (Article 7 — 7.c)",
+        "uuid": "0757eef8-da04-5d9b-8279-66f2b5996b6d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _7.d in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_7.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _7.d (Article 7 — 7.d)",
+        "uuid": "b5560289-fba9-5aa2-8657-9af7da196d24"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _8.1 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_8.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _8.1 (Article 8 — 8.1)",
+        "uuid": "5504f82b-c2f3-5846-9502-bd8b066135df"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _8.2 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_8.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _8.2 (Article 8 — 8.2)",
+        "uuid": "64303496-b0f0-5f20-974c-501c0517d135"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _8.3 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_8.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _8.3 (Article 8 — 8.3)",
+        "uuid": "8f8c4ba1-0e34-5516-851b-2a0d08655f0b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _8.4 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_8.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _8.4 (Article 8 — 8.4)",
+        "uuid": "1d7e60f2-3c9c-58af-9e53-6b989037f257"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _8.5 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_8.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _8.5 (Article 8 — 8.5)",
+        "uuid": "e0277bb2-a780-5575-988e-20b205197504"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _8.6 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_8.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _8.6 (Article 8 — 8.6)",
+        "uuid": "b6a5ed2d-7aa9-5b2e-a7d7-4d3560ec3299"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _8.7 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_8.7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _8.7 (Article 8 — 8.7)",
+        "uuid": "e58b1cb9-b0f1-58da-a5c0-8d759348b04d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _9.1 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_9.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _9.1 (Article 9 — 9.1)",
+        "uuid": "9878fdd6-4896-5245-8e65-0481ea166d14"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _9.2 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_9.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _9.2 (Article 9 — 9.2)",
+        "uuid": "032f2021-853d-5d62-9178-f9da060e9336"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _9.3 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_9.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _9.3 (Article 9 — 9.3)",
+        "uuid": "3d3cbe65-5ab3-5511-b1f1-863769f1ffe9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _9.3.a in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_9.3.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _9.3.a (Article 9 — 9.3.a)",
+        "uuid": "7bf07a5a-1780-5b99-a1ec-ce6852f733e9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _9.3.b in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_9.3.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _9.3.b (Article 9 — 9.3.b)",
+        "uuid": "22b65846-8081-5aee-b8e1-8e6ce45b97db"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _9.3.c in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_9.3.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _9.3.c (Article 9 — 9.3.c)",
+        "uuid": "6747183a-163a-54fc-b560-b648ead99a18"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _9.3.d in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_9.3.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _9.3.d (Article 9 — 9.3.d)",
+        "uuid": "9c4e51d4-0cd6-52ed-b705-9dbf8717e2f2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _9.4 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_9.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _9.4 (Article 9 — 9.4)",
+        "uuid": "b72f73a8-cff2-5ebc-8ca3-6f51c2d66bad"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _9.4.a in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_9.4.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _9.4.a (As part of the ICT risk management framework referred to in Article 6(1), financial entities shall: — 9.4.a)",
+        "uuid": "ce0b6a43-7f57-5cf1-8c35-79a8f08ddfc8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _9.4.b in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_9.4.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _9.4.b (As part of the ICT risk management framework referred to in Article 6(1), financial entities shall: — 9.4.b)",
+        "uuid": "121b47cd-3001-5ab5-bfde-f9e440cc3c26"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _9.4.c in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_9.4.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _9.4.c (As part of the ICT risk management framework referred to in Article 6(1), financial entities shall: — 9.4.c)",
+        "uuid": "30f39423-7b31-5905-9e97-160a48953da2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _9.4.d in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_9.4.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _9.4.d (As part of the ICT risk management framework referred to in Article 6(1), financial entities shall: — 9.4.d)",
+        "uuid": "a5a4a45f-8d21-55c5-9483-82649326092b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _9.4.e in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_9.4.e"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _9.4.e (As part of the ICT risk management framework referred to in Article 6(1), financial entities shall: — 9.4.e)",
+        "uuid": "392b1ca7-3aec-5613-a35f-9884908db9d9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _9.4.f in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_9.4.f"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _9.4.f (As part of the ICT risk management framework referred to in Article 6(1), financial entities shall: — 9.4.f)",
+        "uuid": "122d4139-8630-5782-b679-6b66c2d6fa33"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node230 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node230"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node230 (Article 7 — node230)",
+        "uuid": "f2fe3441-825f-5cc7-9391-42a73865a479"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node258 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node258"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node258 (Article 9 — node258)",
+        "uuid": "585f3de8-cd7e-5041-9e4e-29833632a812"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node259 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node259"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node259 (Article 9 — node259)",
+        "uuid": "627b0a75-a5c9-522b-9273-ddf9d6680edc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node262 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node262"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node262 (Article 10 — node262)",
+        "uuid": "e7725a4e-118e-5202-aeab-ecbfb4ed87ae"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node280 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node280"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node280 (Article 11 — node280)",
+        "uuid": "0a86b833-d31c-5cdb-974f-60271baa144e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node281 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node281"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node281 (Article 11 — node281)",
+        "uuid": "e7c86714-db33-5984-b267-b4be080a55cf"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node293 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node293"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node293 (Article 12 — node293)",
+        "uuid": "74407092-959e-510c-abc8-e5154b171785"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node294 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node294"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node294 (Article 12 — node294)",
+        "uuid": "3b51222c-a6f5-50aa-bfb1-f3c91a5bff7d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node306 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node306"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node306 (Article 13 — node306)",
+        "uuid": "9311cdca-73f7-57bd-97cd-2d9ca62cc7d0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node307 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node307"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node307 (Article 13 — node307)",
+        "uuid": "14ae074a-b07f-5bcc-b617-a7a1ed70a6a9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node324 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node324"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node324 (Article 16 — node324)",
+        "uuid": "db0dd072-ef0c-5daf-a22d-927fd8e13016"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node360 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node360"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node360 (Article 19 — node360)",
+        "uuid": "60c7898e-2c2d-5975-b591-30d7cc60e984"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node361 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node361"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node361 (Article 19 — node361)",
+        "uuid": "c86e9297-c3fb-5170-b452-915d8098f730"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node362 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node362"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node362 (Article 19 — node362)",
+        "uuid": "e025a358-d7d9-591f-a112-faa675b8350b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node363 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node363"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node363 (Article 19 — node363)",
+        "uuid": "329471e4-904e-5f5d-898d-ed1773b7a7f7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node365 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node365"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node365 (Article 19 — node365)",
+        "uuid": "d8e24e6c-054d-5b6a-9f68-1ef27d6a3acc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node366 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node366"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node366 (Article 19 — node366)",
+        "uuid": "a2ca6780-92e9-5100-b3bc-f1c556d84cb9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node368 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node368"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node368 (Article 19 — node368)",
+        "uuid": "bd21b8f8-b075-5b7b-858d-d0236b71259b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node387 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node387"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node387 (Article 23 — node387)",
+        "uuid": "9d96368a-9c40-582b-aa33-2706393fd570"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node403 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node403"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node403 (Article 26 — node403)",
+        "uuid": "4f837b90-07c5-5522-84e9-ac7814e04909"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node404 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node404"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node404 (Article 26 — node404)",
+        "uuid": "d33ccc89-d2c2-52e5-80b3-0895cc046532"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node407 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node407"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node407 (Article 26 — node407)",
+        "uuid": "6c263e40-a4af-592d-98ce-c831780c667a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node408 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node408"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node408 (Article 26 — node408)",
+        "uuid": "a8d18e45-7832-512b-90cd-0e160deb307a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node412 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node412"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node412 (Article 26 — node412)",
+        "uuid": "c3f84631-079b-533a-a5ac-cef7027d6bcd"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node414 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node414"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node414 (Article 26 — node414)",
+        "uuid": "9aab4c07-daed-5d4d-b303-f3e400492a27"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node441 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node441"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node441 (Article 28 — node441)",
+        "uuid": "a0c02935-4e95-5889-8602-f1462148aef0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node442 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node442"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node442 (Article 28 — node442)",
+        "uuid": "30fd433d-47ac-5415-a313-766bae1b4001"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node443 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node443"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node443 (Article 28 — node443)",
+        "uuid": "9c4d43b0-a9e7-5bf0-9527-ebc3c3ecfd72"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node444 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node444"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node444 (Article 28 — node444)",
+        "uuid": "596ee63c-c27b-5d00-a4aa-76bd1e038f36"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node453 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node453"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node453 (Article 28 — node453)",
+        "uuid": "edf62d69-682f-5f3d-aee1-aa6039ae033b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node464 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node464"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node464 (Article 28 — node464)",
+        "uuid": "3ba1a987-8b07-511f-a5d6-3f7f1bc49815"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node465 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node465"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node465 (Article 28 — node465)",
+        "uuid": "c95dd2e5-b8c2-536c-ab1b-2a60bf2c9b48"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node466 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node466"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node466 (Article 28 — node466)",
+        "uuid": "ac566fba-464e-5041-bfad-3ab03e2974ed"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node473 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node473"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node473 (Article 29 — node473)",
+        "uuid": "ce043b3f-9dfe-5f83-b988-ffbdf37caf00"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node475 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node475"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node475 (Article 29 — node475)",
+        "uuid": "2e604d87-5ae2-52aa-96d8-53e38d6e7d81"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node476 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node476"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node476 (Article 29 — node476)",
+        "uuid": "3a9fce95-beb1-58e9-b9ae-a83611ee04d9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node477 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node477"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node477 (Article 29 — node477)",
+        "uuid": "28cb88cf-7b95-5d18-acad-e431cf2609d3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node503 in Digital Operational Resilience Act (DORA).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node503"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node503 (Article 30 — node503)",
+        "uuid": "5c5ec42f-19c0-559c-b596-a9c965726599"
       }
     ],
     "uuid": "4609e5cf-76bb-5efc-bf27-990bf47aa450"

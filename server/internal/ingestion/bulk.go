@@ -14,7 +14,6 @@ import (
 // BulkIngestor orchestrates fetch → parse → normalize → reconcile for multiple frameworks.
 type BulkIngestor struct {
 	fetcher    *fetcher.GitHubFetcher
-	normalizer *Normalizer
 	reconciler *reconciler.Reconciler
 	kgStore    kg.Store
 }

@@ -16,7 +16,7 @@ variables:
 
 lint:
   stage: lint
-  image: golang:1.25-bookworm
+  image: golang:1.26-bookworm
   before_script:
     - apt-get update && apt-get install -y --no-install-recommends python3
   script:
@@ -26,7 +26,7 @@ lint:
 
 test:
   stage: test
-  image: golang:1.25-bookworm
+  image: golang:1.26-bookworm
   extends: .go-cache
   before_script:
     - go mod download
@@ -35,18 +35,24 @@ test:
 
 build:
   stage: build
-  image: golang:1.25-bookworm
+  image: golang:1.26-bookworm
   extends: .go-cache
   needs: [test, lint]
   before_script:
     - go mod download
   script:
     - mkdir -p bin
-    - go build -ldflags="-s -w" -o bin/xoscal-server ./server/cmd/xoscal-server
-    - go build -ldflags="-s -w" -o bin/xoscal-ctl ./server/cmd/xoscal-ctl
+    - go build -trimpath -ldflags="-s -w" -o bin/xoscal-server ./server/cmd/xoscal-server
+    - go build -trimpath -ldflags="-s -w" -o bin/xoscal ./server/cmd/xoscal
+    - go build -trimpath -ldflags="-s -w" -o bin/xoscal-ctl ./server/cmd/xoscal-ctl
+    - go build -trimpath -ldflags="-s -w" -o bin/xoscal-backup ./server/cmd/xoscal-backup
+    - go build -trimpath -ldflags="-s -w" -o bin/xoscal-gateway ./server/cmd/xoscal-gateway
   artifacts:
     name: "xoscal-binaries-$CI_COMMIT_REF_SLUG"
     paths:
       - bin/xoscal-server
+      - bin/xoscal
       - bin/xoscal-ctl
+      - bin/xoscal-backup
+      - bin/xoscal-gateway
     expire_in: 1 week

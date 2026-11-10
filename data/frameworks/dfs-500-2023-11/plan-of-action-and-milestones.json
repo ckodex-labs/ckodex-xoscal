@@ -4,16 +4,1991 @@
       "href": "./system-security-plan.json"
     },
     "metadata": {
-      "last-modified": "2026-11-08T01:42:13Z",
+      "last-modified": "2026-11-08T00:30:47Z",
       "oscal-version": "1.2.3",
       "title": "NY DFS 500 with 2023-11 amendments Plan of Action and Milestones Template",
       "version": "1"
     },
     "poam-items": [
       {
-        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for NY DFS 500 with 2023-11 amendments.",
-        "title": "Compliance Roadmap and Parameter Tailoring for NY DFS 500 with 2023-11 amendments",
-        "uuid": "53d859f8-6fe8-5a04-bfb3-5d2649a0091d"
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.10.a.1 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.10.a.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.10.a.1 (In addition to the requirements set forth in section 500.4(a) of this Part, each covered entity shall: — 500.10.a.1)",
+        "uuid": "722ad3f7-1666-5bb8-b1ea-070ef22a8f35"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.10.a.2 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.10.a.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.10.a.2 (In addition to the requirements set forth in section 500.4(a) of this Part, each covered entity shall: — 500.10.a.2)",
+        "uuid": "c81f4da9-d6a6-5b70-b190-0a947efb27df"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.10.a.3 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.10.a.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.10.a.3 (In addition to the requirements set forth in section 500.4(a) of this Part, each covered entity shall: — 500.10.a.3)",
+        "uuid": "43c8fccf-4514-5584-98e0-05fe6de62b19"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.10.b in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.10.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.10.b (Cybersecurity personnel and intelligence — 500.10.b)",
+        "uuid": "0126d14e-184d-52d5-88e3-7eac3ff79f41"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.11.a in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.11.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.11.a (Third-party service provider security policy — 500.11.a)",
+        "uuid": "229a7926-1ae7-5804-a02b-e0fcca575958"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.11.a.1 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.11.a.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.11.a.1 (Third-party service provider security policy — 500.11.a.1)",
+        "uuid": "22d0aa6c-79ec-591a-9740-bd2209df274f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.11.a.2 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.11.a.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.11.a.2 (Third-party service provider security policy — 500.11.a.2)",
+        "uuid": "5bb85ceb-438d-5a91-b8b5-391f6eef707b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.11.a.3 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.11.a.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.11.a.3 (Third-party service provider security policy — 500.11.a.3)",
+        "uuid": "a4533ad1-3f30-51d1-bbf9-32db999ceffd"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.11.a.4 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.11.a.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.11.a.4 (Third-party service provider security policy — 500.11.a.4)",
+        "uuid": "b10bdbd5-93a8-539d-b580-688505570a06"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.11.b in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.11.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.11.b (Third-party service provider security policy — 500.11.b)",
+        "uuid": "81152129-789b-5944-b4ac-6515a00db6c6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.11.b.1 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.11.b.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.11.b.1 (Third-party service provider security policy — 500.11.b.1)",
+        "uuid": "c3814f13-53e3-5c01-9aba-d2e8a0b794e4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.11.b.2 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.11.b.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.11.b.2 (Third-party service provider security policy — 500.11.b.2)",
+        "uuid": "5c5a4fc5-c62d-5f40-adb2-736edb6af28e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.11.b.3 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.11.b.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.11.b.3 (Third-party service provider security policy — 500.11.b.3)",
+        "uuid": "5493aab3-0b7b-5040-80c8-7eb402553ba8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.11.b.4 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.11.b.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.11.b.4 (Third-party service provider security policy — 500.11.b.4)",
+        "uuid": "50aa5bd4-1e1b-5276-bed9-9b506b7fb5bc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.12.a in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.12.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.12.a (Multi-factor authentication — 500.12.a)",
+        "uuid": "c0585aba-0afb-5762-ba1a-f87e43c54153"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.12.a.1 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.12.a.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.12.a.1 (Multi-factor authentication — 500.12.a.1)",
+        "uuid": "9a42e5af-b16a-50e7-a893-c6ba56499ada"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.12.a.2 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.12.a.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.12.a.2 (Multi-factor authentication — 500.12.a.2)",
+        "uuid": "2af868cb-02ff-5658-85c4-f3b637e09ef0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.12.a.3 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.12.a.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.12.a.3 (Multi-factor authentication — 500.12.a.3)",
+        "uuid": "422d8f72-e57e-50f2-b723-61a7df1d637b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.12.b in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.12.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.12.b (Multi-factor authentication — 500.12.b)",
+        "uuid": "59f7cb3c-9983-5373-84cc-763f38d6a719"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.13.a in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.13.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.13.a (Asset management and data retention requirements — 500.13.a)",
+        "uuid": "a7232b9b-9798-518a-8f94-5401c5975fb4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.13.a.1 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.13.a.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.13.a.1 (Asset management and data retention requirements — 500.13.a.1)",
+        "uuid": "c9190d33-6d51-5587-8e31-b2dfaa5271be"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.13.a.1.i in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.13.a.1.i"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.13.a.1.i (a method to track key information for each asset, including, as applicable, the following: — 500.13.a.1.i)",
+        "uuid": "8583c0c5-c17e-5d6f-bbd3-895caf64578c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.13.a.1.ii in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.13.a.1.ii"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.13.a.1.ii (a method to track key information for each asset, including, as applicable, the following: — 500.13.a.1.ii)",
+        "uuid": "42b1e2d5-f25a-59e8-bf55-1572045e4a7c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.13.a.1.iii in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.13.a.1.iii"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.13.a.1.iii (a method to track key information for each asset, including, as applicable, the following: — 500.13.a.1.iii)",
+        "uuid": "1722436f-9c03-5bab-8423-388fa240d275"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.13.a.1.iv in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.13.a.1.iv"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.13.a.1.iv (a method to track key information for each asset, including, as applicable, the following: — 500.13.a.1.iv)",
+        "uuid": "d2de8a9e-0a18-522f-8167-dfaa25f4f407"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.13.a.1.v in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.13.a.1.v"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.13.a.1.v (a method to track key information for each asset, including, as applicable, the following: — 500.13.a.1.v)",
+        "uuid": "8bc0302a-b337-58a3-871c-4f620a955026"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.13.a.2 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.13.a.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.13.a.2 (Asset management and data retention requirements — 500.13.a.2)",
+        "uuid": "c69b24b4-7da9-5588-a853-1a4ba58a9d2e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.13.b in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.13.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.13.b (Asset management and data retention requirements — 500.13.b)",
+        "uuid": "9295ef49-6b91-5740-a113-aded3bf03618"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.14.a.1 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.14.a.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.14.a.1 (As part of its cybersecurity program, each covered entity shall: — 500.14.a.1)",
+        "uuid": "9c21688e-aa35-561c-a37a-841955b06d56"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.14.a.2 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.14.a.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.14.a.2 (As part of its cybersecurity program, each covered entity shall: — 500.14.a.2)",
+        "uuid": "a9716596-2338-5038-9314-f67f69a1ab65"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.14.a.3 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.14.a.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.14.a.3 (As part of its cybersecurity program, each covered entity shall: — 500.14.a.3)",
+        "uuid": "3515e638-7195-567e-aff3-b600b24c26a2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.14.b in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.14.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.14.b (Monitoring and training — 500.14.b)",
+        "uuid": "4469ec11-8663-563a-85d9-f3a2621b3c39"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.14.b.1 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.14.b.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.14.b.1 (Monitoring and training — 500.14.b.1)",
+        "uuid": "a059e6bf-d122-53ad-8d2a-e17be74b3526"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.14.b.2 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.14.b.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.14.b.2 (Monitoring and training — 500.14.b.2)",
+        "uuid": "28043235-b81d-5930-9852-67c14b73e273"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.15.a in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.15.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.15.a (Encryption of nonpublic information — 500.15.a)",
+        "uuid": "f8ade562-334d-5dde-a25b-f5fa3cbf0ba8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.15.b in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.15.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.15.b (Encryption of nonpublic information — 500.15.b)",
+        "uuid": "eda6042a-8b31-53d6-ae52-eb709be3eb71"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.16.a in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.16.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.16.a (Incident response and business continuity management — 500.16.a)",
+        "uuid": "674848b0-65fa-5679-89c0-acaa70a40bc6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.16.a.1 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.16.a.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.16.a.1 (Incident response plan)",
+        "uuid": "54d8c2b5-62a7-5bc5-81b2-cd11a8479aca"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.16.a.1.i in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.16.a.1.i"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.16.a.1.i (Incident response plan — 500.16.a.1.i)",
+        "uuid": "f89bc9fc-7d61-5253-a05c-70198e0ab8cf"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.16.a.1.ii in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.16.a.1.ii"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.16.a.1.ii (Incident response plan — 500.16.a.1.ii)",
+        "uuid": "488b5649-4365-586a-80e8-338c9db1111d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.16.a.1.iii in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.16.a.1.iii"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.16.a.1.iii (Incident response plan — 500.16.a.1.iii)",
+        "uuid": "d343f337-a23b-5d07-b7e3-83c30667b4df"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.16.a.1.iv in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.16.a.1.iv"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.16.a.1.iv (Incident response plan — 500.16.a.1.iv)",
+        "uuid": "1c83f994-82be-5fd3-94ee-a7c3e80abf63"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.16.a.1.ix in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.16.a.1.ix"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.16.a.1.ix (Incident response plan — 500.16.a.1.ix)",
+        "uuid": "18e9ca92-9955-5e53-89b4-5fc18e3ba0ea"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.16.a.1.v in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.16.a.1.v"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.16.a.1.v (Incident response plan — 500.16.a.1.v)",
+        "uuid": "9cc0a8dd-afe6-567e-8dae-7eb636ce2e8d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.16.a.1.vi in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.16.a.1.vi"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.16.a.1.vi (Incident response plan — 500.16.a.1.vi)",
+        "uuid": "ccdc796f-0db9-558f-8792-311d8353764f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.16.a.1.vii in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.16.a.1.vii"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.16.a.1.vii (Incident response plan — 500.16.a.1.vii)",
+        "uuid": "4bc5ae2c-e38d-5fa8-b5d1-339c954cac5f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.16.a.1.viii in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.16.a.1.viii"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.16.a.1.viii (Incident response plan — 500.16.a.1.viii)",
+        "uuid": "c1c9fe93-3012-5969-ba7f-d848413398c0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.16.a.2 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.16.a.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.16.a.2 (Business continuity and disaster recovery (BCDR) plan)",
+        "uuid": "f0157a3f-ece7-584f-8f29-9e207b2a1afb"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.16.a.2.i in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.16.a.2.i"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.16.a.2.i (Business continuity and disaster recovery (BCDR) plan — 500.16.a.2.i)",
+        "uuid": "5284c3d7-3a31-546c-be2a-853c6cc09af7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.16.a.2.ii in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.16.a.2.ii"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.16.a.2.ii (Business continuity and disaster recovery (BCDR) plan — 500.16.a.2.ii)",
+        "uuid": "c55bc2f7-f057-52b9-a38a-ed956ca36573"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.16.a.2.iii in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.16.a.2.iii"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.16.a.2.iii (Business continuity and disaster recovery (BCDR) plan — 500.16.a.2.iii)",
+        "uuid": "cdbc150e-2041-5631-b62a-998a4d5d42c2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.16.a.2.iv in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.16.a.2.iv"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.16.a.2.iv (Business continuity and disaster recovery (BCDR) plan — 500.16.a.2.iv)",
+        "uuid": "3ffdffac-9868-5745-a516-93d8cb14c3d5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.16.a.2.v in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.16.a.2.v"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.16.a.2.v (Business continuity and disaster recovery (BCDR) plan — 500.16.a.2.v)",
+        "uuid": "e12c97c2-92bc-56cc-ab94-bfc12e11b00d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.16.a.2.vi in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.16.a.2.vi"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.16.a.2.vi (Business continuity and disaster recovery (BCDR) plan — 500.16.a.2.vi)",
+        "uuid": "0f365bca-56e9-5294-b472-9cb3de81c396"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.16.b in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.16.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.16.b (Incident response and business continuity management — 500.16.b)",
+        "uuid": "627f2ecf-693c-5585-abc9-bb7f10e50b6e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.16.c in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.16.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.16.c (Incident response and business continuity management — 500.16.c)",
+        "uuid": "d63e10fd-deb0-5f60-8e44-d2bfed828633"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.16.d in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.16.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.16.d (Incident response and business continuity management — 500.16.d)",
+        "uuid": "2ee3a21c-53be-5005-9150-3fdddfa8001e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.16.d.1 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.16.d.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.16.d.1 (Each covered entity shall periodically, but at a minimum annually, test its: — 500.16.d.1)",
+        "uuid": "4b8e4df3-4ce2-5292-b241-535db5667f10"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.16.d.2 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.16.d.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.16.d.2 (Each covered entity shall periodically, but at a minimum annually, test its: — 500.16.d.2)",
+        "uuid": "0a98f13d-4f60-5a02-81ba-56ec61fe6e12"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.16.e in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.16.e"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.16.e (Incident response and business continuity management — 500.16.e)",
+        "uuid": "6bcc6560-86c5-5c2d-a04b-e4ecfafba217"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.17.a.1 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.17.a.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.17.a.1 (Notice of cybersecurity incident — 500.17.a.1)",
+        "uuid": "74469742-ee11-59f6-af94-4dbf1f31399d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.17.a.2 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.17.a.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.17.a.2 (Notice of cybersecurity incident — 500.17.a.2)",
+        "uuid": "abfbbd2b-4585-55e0-b4e8-fa67ce278ee8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.17.b.1 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.17.b.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.17.b.1 (Notice of compliance — 500.17.b.1)",
+        "uuid": "8249f6b0-64dc-5096-85dc-51f370fd6766"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.17.b.1.i in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.17.b.1.i"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.17.b.1.i (Annually each covered entity shall submit to the superintendent electronically by April 15 either: — 500.17.b.1.i)",
+        "uuid": "4775dccd-605f-5c6d-a7d6-62ae1406e9fd"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.17.b.1.i.a in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.17.b.1.i.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.17.b.1.i.a (a written certification that: — 500.17.b.1.i.a)",
+        "uuid": "9c85b04c-213d-50d4-87ec-0581ed6e9647"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.17.b.1.i.b in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.17.b.1.i.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.17.b.1.i.b (a written certification that: — 500.17.b.1.i.b)",
+        "uuid": "d7ef3649-6638-5894-a19d-dd9a97f9c588"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.17.b.1.ii in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.17.b.1.ii"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.17.b.1.ii (Annually each covered entity shall submit to the superintendent electronically by April 15 either: — 500.17.b.1.ii)",
+        "uuid": "7b62856b-bce4-53c4-af3d-d96539d9d921"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.17.b.1.ii.a in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.17.b.1.ii.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.17.b.1.ii.a (a written acknowledgment that: — 500.17.b.1.ii.a)",
+        "uuid": "06b5322f-ee43-5467-b21b-81a802c2ca8c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.17.b.1.ii.b in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.17.b.1.ii.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.17.b.1.ii.b (a written acknowledgment that: — 500.17.b.1.ii.b)",
+        "uuid": "c8bfa666-31fc-55fc-a398-a15d7a3399cc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.17.b.1.ii.c in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.17.b.1.ii.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.17.b.1.ii.c (a written acknowledgment that: — 500.17.b.1.ii.c)",
+        "uuid": "85b75282-d6b7-5443-9c07-f6cdb13f9f81"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.17.b.2 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.17.b.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.17.b.2 (Notice of compliance — 500.17.b.2)",
+        "uuid": "cd19922c-9b8f-568b-be89-03cfa606d106"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.17.b.3 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.17.b.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.17.b.3 (Notice of compliance — 500.17.b.3)",
+        "uuid": "5e51730d-a5bd-5073-9a9a-3bfe459ef515"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.17.c in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.17.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.17.c (Notice and explanation of extortion payment)",
+        "uuid": "42f4b7d2-c80a-5e00-8855-f64449b7e58c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.17.c.1 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.17.c.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.17.c.1 (Notice and explanation of extortion payment — 500.17.c.1)",
+        "uuid": "168d2a22-e26b-5940-9de9-601409096b68"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.17.c.2 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.17.c.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.17.c.2 (Notice and explanation of extortion payment — 500.17.c.2)",
+        "uuid": "ed80dfd0-aeeb-53ba-9f62-60d34601514b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.19.a in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.19.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.19.a (Limited exemption)",
+        "uuid": "f85e7985-4302-5d05-b870-8114a35d5b0f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.19.b in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.19.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.19.b (Exemptions — 500.19.b)",
+        "uuid": "bbcac160-ac49-5a59-a104-85743696f733"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.19.c in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.19.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.19.c (Exemptions — 500.19.c)",
+        "uuid": "c48ade3b-5489-531a-b1bf-e8062808be46"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.19.d in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.19.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.19.d (Exemptions — 500.19.d)",
+        "uuid": "15fe5a7c-220c-5602-873e-d24342db3d6f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.19.e in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.19.e"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.19.e (Exemptions — 500.19.e)",
+        "uuid": "db4cef81-84d6-5fe1-aba6-3fbed5af192c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.19.f in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.19.f"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.19.f (Exemptions — 500.19.f)",
+        "uuid": "e3315f36-1fc9-5bb5-8308-bbf529bc0722"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.19.g in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.19.g"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.19.g (Exemptions — 500.19.g)",
+        "uuid": "6c194064-0ac0-5222-89ba-4488d2537caf"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.19.h in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.19.h"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.19.h (Exemptions — 500.19.h)",
+        "uuid": "7d68e819-53bb-5aca-98f3-3e3dbc3f9e6c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.2.a in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.2.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.2.a (Cybersecurity program — 500.2.a)",
+        "uuid": "9163e61f-c031-5909-87fd-f45f9306ba6e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.2.b in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.2.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.2.b (Cybersecurity program — 500.2.b)",
+        "uuid": "118209d6-e31b-57ff-b3bd-baca2595c148"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.2.b.1 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.2.b.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.2.b.1 (Cybersecurity program — 500.2.b.1)",
+        "uuid": "cfe34eb6-dab4-5e55-bab5-186adfa3d675"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.2.b.2 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.2.b.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.2.b.2 (Cybersecurity program — 500.2.b.2)",
+        "uuid": "8dc4fa53-bb08-5a2f-9b00-8a0db7f5c721"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.2.b.3 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.2.b.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.2.b.3 (Cybersecurity program — 500.2.b.3)",
+        "uuid": "59adb192-2e78-58fe-aa09-3cbc627c2693"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.2.b.4 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.2.b.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.2.b.4 (Cybersecurity program — 500.2.b.4)",
+        "uuid": "2c403842-c9a3-536c-9ef1-d58f0c33f56d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.2.b.5 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.2.b.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.2.b.5 (Cybersecurity program — 500.2.b.5)",
+        "uuid": "65c4fe84-567e-580d-885c-b6d87cb01214"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.2.b.6 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.2.b.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.2.b.6 (Cybersecurity program — 500.2.b.6)",
+        "uuid": "b3e4e865-c5da-5e47-8a5f-bc85417e8753"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.2.c in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.2.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.2.c (Cybersecurity program — 500.2.c)",
+        "uuid": "0b4f65e6-85d6-5f43-ae72-335e5276bb7c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.2.d in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.2.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.2.d (Cybersecurity program — 500.2.d)",
+        "uuid": "7ef1b040-ba1d-5e15-ab83-ee36a883ab7f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.2.e in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.2.e"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.2.e (Cybersecurity program — 500.2.e)",
+        "uuid": "dbf1cb21-5f53-5f53-bb2b-317fbd50ffa6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.24.a in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.24.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.24.a (Exemptions from electronic filing and submission requirements — 500.24.a)",
+        "uuid": "98b618c1-4e64-5c14-b2c5-7cafe5fd755c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.24.b.1 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.24.b.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.24.b.1 (The request for an exemption shall: — 500.24.b.1)",
+        "uuid": "2bb0bb2f-7457-5bbe-a84e-26564d72af74"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.24.b.2 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.24.b.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.24.b.2 (The request for an exemption shall: — 500.24.b.2)",
+        "uuid": "9b4c93f7-c51b-500a-bf03-55c13432732c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.24.b.3 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.24.b.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.24.b.3 (The request for an exemption shall: — 500.24.b.3)",
+        "uuid": "24d64bfc-c0bc-5dc9-b087-8f044e1c91a9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.24.b.4 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.24.b.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.24.b.4 (The request for an exemption shall: — 500.24.b.4)",
+        "uuid": "0b20c234-eb03-5708-a974-4b6bfee16531"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.24.c in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.24.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.24.c (Exemptions from electronic filing and submission requirements — 500.24.c)",
+        "uuid": "ac35c914-72e8-50ea-a574-ee1cf13017ef"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.24.d in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.24.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.24.d (Exemptions from electronic filing and submission requirements — 500.24.d)",
+        "uuid": "c20e91d3-3047-58f5-83c4-65023f03f91d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.24.e in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.24.e"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.24.e (Exemptions from electronic filing and submission requirements — 500.24.e)",
+        "uuid": "a3786524-27e7-5a9d-823b-08a47bd42227"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.3.a in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.3.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.3.a (Procedures — 500.3.a)",
+        "uuid": "22a97fbc-5990-5a00-80ed-5372df0fed7b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.3.b in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.3.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.3.b (Procedures — 500.3.b)",
+        "uuid": "269fc93b-4774-52ff-8c3a-55ef81b89af6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.3.c in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.3.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.3.c (Procedures — 500.3.c)",
+        "uuid": "dbab3387-655a-53d3-ada7-5fd362134495"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.3.d in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.3.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.3.d (Procedures — 500.3.d)",
+        "uuid": "cf7a2b16-7f3c-589b-80ac-ecf21ec3d798"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.3.e in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.3.e"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.3.e (Procedures — 500.3.e)",
+        "uuid": "12363a5f-ee42-5d75-911c-aaebbfbd7184"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.3.f in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.3.f"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.3.f (Procedures — 500.3.f)",
+        "uuid": "8190f6d2-c9ec-569d-adda-86939f51f03a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.3.g in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.3.g"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.3.g (Procedures — 500.3.g)",
+        "uuid": "99e6321f-dfda-5dee-8302-af71bdbe15cd"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.3.h in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.3.h"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.3.h (Procedures — 500.3.h)",
+        "uuid": "b3ba8eb0-1574-533e-99c8-fd9d5e768511"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.3.i in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.3.i"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.3.i (Procedures — 500.3.i)",
+        "uuid": "1c6999d5-bfb9-53b4-affa-ae1df85c91f0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.3.j in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.3.j"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.3.j (Procedures — 500.3.j)",
+        "uuid": "faf5c351-42fe-5ed5-8531-db1ed82d5dcc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.3.k in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.3.k"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.3.k (Procedures — 500.3.k)",
+        "uuid": "bc96b979-12c7-547d-a8b4-f079f538011c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.3.l in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.3.l"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.3.l (Procedures — 500.3.l)",
+        "uuid": "8b028bc6-ea31-501e-8893-9355129e798f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.3.m in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.3.m"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.3.m (Procedures — 500.3.m)",
+        "uuid": "1251ba83-f758-5e45-af5b-0ac0a71fa049"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.3.n in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.3.n"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.3.n (Procedures — 500.3.n)",
+        "uuid": "de78424a-be0b-5c6f-b5e9-d18138a7d02b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.3.o in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.3.o"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.3.o (Procedures — 500.3.o)",
+        "uuid": "72b352c7-90a9-57e7-898b-5f447f27fc8d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.4.a in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.4.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.4.a (Chief information security officer)",
+        "uuid": "f366c5d1-1dc4-5ce5-84ca-005920652a47"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.4.a.1 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.4.a.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.4.a.1 (Chief information security officer — 500.4.a.1)",
+        "uuid": "5d189c19-ff6e-5879-9efb-642fa7cf333a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.4.a.2 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.4.a.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.4.a.2 (Chief information security officer — 500.4.a.2)",
+        "uuid": "5b647506-f322-576c-ae84-1817d380547e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.4.a.3 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.4.a.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.4.a.3 (Chief information security officer — 500.4.a.3)",
+        "uuid": "bcd21082-1cbb-5516-985f-4b645729a7a4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.4.b in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.4.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.4.b (Report)",
+        "uuid": "9ea47a62-df5a-5ed8-97db-690b26a682e5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.4.b.1 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.4.b.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.4.b.1 (Report — 500.4.b.1)",
+        "uuid": "65f59e08-d327-5f48-93e1-23d38f1fb9b2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.4.b.2 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.4.b.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.4.b.2 (Report — 500.4.b.2)",
+        "uuid": "90ac24e9-aaee-5ef6-9607-8e0480a3820e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.4.b.3 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.4.b.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.4.b.3 (Report — 500.4.b.3)",
+        "uuid": "460ce8c0-af95-562d-ace4-5e0cd0b85f24"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.4.b.4 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.4.b.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.4.b.4 (Report — 500.4.b.4)",
+        "uuid": "339c92a3-1872-5c85-9ac4-9ed6f63f23a1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.4.b.5 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.4.b.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.4.b.5 (Report — 500.4.b.5)",
+        "uuid": "09c32e3a-3537-5482-84f6-7a6b2c9e23aa"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.4.b.6 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.4.b.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.4.b.6 (Report — 500.4.b.6)",
+        "uuid": "8f8f6148-6791-5576-9792-4db618b7a4a9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.4.c in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.4.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.4.c (Cybersecurity governance — 500.4.c)",
+        "uuid": "7fb5264d-7a9f-523e-9de5-4b7d618b18c3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.4.d in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.4.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.4.d (Cybersecurity governance — 500.4.d)",
+        "uuid": "7c5ed25f-3da4-5db1-a6ef-1aa1926219ba"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.4.d.1 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.4.d.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.4.d.1 (Cybersecurity governance — 500.4.d.1)",
+        "uuid": "cbd9cc07-e3b2-5fad-9bca-2e486f5cac8b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.4.d.2 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.4.d.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.4.d.2 (Cybersecurity governance — 500.4.d.2)",
+        "uuid": "ca9c903d-363a-5ded-b8e5-77d524567214"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.4.d.3 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.4.d.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.4.d.3 (Cybersecurity governance — 500.4.d.3)",
+        "uuid": "bd31fd34-8f32-5494-b31b-1252a4580005"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.4.d.4 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.4.d.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.4.d.4 (Cybersecurity governance — 500.4.d.4)",
+        "uuid": "16087582-c591-5a8e-bf7e-d51f61c7573d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.5.a.1 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.5.a.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.5.a.1 (conduct, at a minimum: — 500.5.a.1)",
+        "uuid": "74e15451-d32f-5da2-b4ce-5226f8fb5a68"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.5.a.2 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.5.a.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.5.a.2 (conduct, at a minimum: — 500.5.a.2)",
+        "uuid": "5f3d9a05-f6f7-5699-912b-645bd53c1bd8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.5.b in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.5.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.5.b (These policies and procedures shall be designed to ensure that covered entities: — 500.5.b)",
+        "uuid": "e90afc85-028e-5b85-955a-b9253a3c3ba1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.5.c in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.5.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.5.c (These policies and procedures shall be designed to ensure that covered entities: — 500.5.c)",
+        "uuid": "1f2b128c-0388-55e7-b41b-4783b2ca8119"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.6.a in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.6.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.6.a (Audit trail — 500.6.a)",
+        "uuid": "5566edc0-ee8a-5d31-9c92-7c82327dd1c0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.6.a.1 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.6.a.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.6.a.1 (Each covered entity shall securely maintain systems that, to the extent applicable and based on its risk assessment: — 500.6.a.1)",
+        "uuid": "755d39c5-6be6-599a-a0c0-d974e577c572"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.6.a.2 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.6.a.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.6.a.2 (Each covered entity shall securely maintain systems that, to the extent applicable and based on its risk assessment: — 500.6.a.2)",
+        "uuid": "2414fad7-a8d2-5aa5-b9be-553dab9e3d38"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.6.b in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.6.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.6.b (Audit trail — 500.6.b)",
+        "uuid": "8075fb8e-0b3e-5bdd-9248-af9c7ace7097"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.7.a in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.7.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.7.a (Access privileges and management — 500.7.a)",
+        "uuid": "c0de47f1-877a-5549-b0fb-ec8d2d6b300f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.7.a.1 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.7.a.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.7.a.1 (As part of its cybersecurity program, based on the covered entity’s risk assessment each covered entity shall: — 500.7.a.1)",
+        "uuid": "adbba962-23fe-53d4-aff3-2b56ba5e8c3e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.7.a.2 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.7.a.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.7.a.2 (As part of its cybersecurity program, based on the covered entity’s risk assessment each covered entity shall: — 500.7.a.2)",
+        "uuid": "831ecc0f-2510-5258-be70-94b87208978a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.7.a.3 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.7.a.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.7.a.3 (As part of its cybersecurity program, based on the covered entity’s risk assessment each covered entity shall: — 500.7.a.3)",
+        "uuid": "479a7fde-c21d-5814-a37b-780a8ad4c082"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.7.a.4 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.7.a.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.7.a.4 (As part of its cybersecurity program, based on the covered entity’s risk assessment each covered entity shall: — 500.7.a.4)",
+        "uuid": "1e8785ff-f363-5392-ba7c-5bb5056499ef"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.7.a.5 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.7.a.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.7.a.5 (As part of its cybersecurity program, based on the covered entity’s risk assessment each covered entity shall: — 500.7.a.5)",
+        "uuid": "eb512a40-0803-5f2b-bab2-53340bef8727"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.7.a.6 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.7.a.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.7.a.6 (As part of its cybersecurity program, based on the covered entity’s risk assessment each covered entity shall: — 500.7.a.6)",
+        "uuid": "1c7c1e9e-2265-5e36-835f-6a370d217426"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.7.b in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.7.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.7.b (Access privileges and management — 500.7.b)",
+        "uuid": "d18842e1-803a-5837-8bc7-d0d6dc8e4e5b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.7.c in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.7.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.7.c (Access privileges and management — 500.7.c)",
+        "uuid": "0dd1b8a0-6d67-5b6c-a9a2-81685e334ca2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.7.c.1 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.7.c.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.7.c.1 (Each class A company shall monitor privileged access activity and shall implement: — 500.7.c.1)",
+        "uuid": "3b96cae8-81a5-5d88-8f41-4831caf8d7b1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.7.c.2 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.7.c.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.7.c.2 (Each class A company shall monitor privileged access activity and shall implement: — 500.7.c.2)",
+        "uuid": "0460f42d-7ae6-5850-a361-04e90ab5ad1a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.8.a in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.8.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.8.a (Application security — 500.8.a)",
+        "uuid": "eded075e-1dec-590d-a252-043a6270fdb9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.8.b in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.8.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.8.b (Application security — 500.8.b)",
+        "uuid": "0d9c196c-d1ca-5e54-80ac-70a1e2eb2b46"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.9.a in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.9.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.9.a (Risk assessment — 500.9.a)",
+        "uuid": "de5b10c6-291e-569e-b3bf-23ff1600c8e1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.9.b in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.9.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.9.b (Risk assessment — 500.9.b)",
+        "uuid": "8c3fbd2c-ed71-5bc3-9748-6be8c4852fe3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.9.b.1 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.9.b.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.9.b.1 (Risk assessment — 500.9.b.1)",
+        "uuid": "304dc2cd-e8e9-54c9-8c09-47fd540e269a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.9.b.2 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.9.b.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.9.b.2 (Risk assessment — 500.9.b.2)",
+        "uuid": "3cfb46b1-1aae-56b9-8270-12e87a6e6177"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _500.9.b.3 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_500.9.b.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _500.9.b.3 (Risk assessment — 500.9.b.3)",
+        "uuid": "3d2ef7e3-5550-5862-b66c-c4462571aa6f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node196 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node196"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node196 (Confidentiality — node196)",
+        "uuid": "3f99710f-6fc8-57c6-afb2-148ec4c0a704"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node39 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node39"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node39 (Policies)",
+        "uuid": "496107fc-e0ef-5313-a452-57d4f19a73d1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node40 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node40"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node40 (Procedures)",
+        "uuid": "902f250f-be21-5052-9e71-66c155993ebd"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node75 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node75"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node75 (Vulnerability management — node75)",
+        "uuid": "e1b75e13-a9bb-5c7a-935b-3af171df1acc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node76 in NY DFS 500 with 2023-11 amendments.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node76"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node76 (Vulnerability management — node76)",
+        "uuid": "996e9ec0-3555-5bf6-a01e-015feaa16d1a"
       }
     ],
     "uuid": "59acfe5f-0d46-5766-b989-f6134cd2b969"

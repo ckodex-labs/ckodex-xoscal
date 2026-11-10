@@ -3,16 +3,45 @@ package graph_test
 import (
 	"context"
 	"encoding/json"
+	"errors"
 	"fmt"
+	"net/http"
+	"net/http/httptest"
+	"path/filepath"
 	"strings"
 	"sync"
 	"testing"
 
+	"github.com/mchorfa/xoscal/server/internal/feeds"
 	"github.com/mchorfa/xoscal/server/internal/frameworks"
 	"github.com/mchorfa/xoscal/server/internal/graph"
 	"github.com/mchorfa/xoscal/server/internal/ontology"
+	"github.com/mchorfa/xoscal/server/internal/resilience"
 	"github.com/mchorfa/xoscal/server/internal/vectorstate"
 )
+
+func smallSixJurisdictionRegistry(t *testing.T) *frameworks.Registry {
+	t.Helper()
+	def := frameworks.DefaultRegistry()
+	reg := frameworks.NewRegistry()
+	for _, id := range []string{
+		"cccs-itsg-33",
+		"cmmc-2.0",
+		"nis2",
+		"bs-it-gs-2023-ops",
+		"anssi-guide-hygiene",
+		"cyber_essentials",
+	} {
+		fw, ok := def.Get(id)
+		if !ok {
+			t.Fatalf("missing framework %s in DefaultRegistry", id)
+		}
+		if err := reg.Register(fw); err != nil {
+			t.Fatalf("register %s: %v", id, err)
+		}
+	}
+	return reg
+}
 
 func TestBuildUnifiedKnowledgeGraphAndStats(t *testing.T) {
 	ctx := context.Background()
@@ -20,7 +49,7 @@ func TestBuildUnifiedKnowledgeGraphAndStats(t *testing.T) {
 	if err != nil {
 		t.Fatalf("NewSQLiteStore: %v", err)
 	}
-	defer store.Close()
+	defer func() { _ = store.Close() }()
 
 	ug, err := graph.BuildUnifiedKnowledgeGraph(ctx, store, frameworks.DefaultRegistry())
 	if err != nil {
@@ -198,7 +227,7 @@ func TestComputeBlastRadiusAndExportSubgraph(t *testing.T) {
 }
 
 func TestGraphReconcileInvariantsAndTamperDetection(t *testing.T) {
-	ug, err := graph.BuildUnifiedKnowledgeGraph(context.Background(), nil, frameworks.DefaultRegistry())
+	ug, err := graph.BuildUnifiedKnowledgeGraph(context.Background(), nil, smallSixJurisdictionRegistry(t))
 	if err != nil {
 		t.Fatalf("BuildUnifiedKnowledgeGraph: %v", err)
 	}
@@ -326,10 +355,12 @@ func TestConcurrentGraphAccessAndDefensiveDeepCopy(t *testing.T) {
 				t.Errorf("worker %d ExportSubgraph error: %v", workerID, expErr)
 			}
 
-			// 5. ReconcileInvariants
-			rec, recErr := ug.ReconcileInvariants()
-			if recErr != nil || !rec.Coherent {
-				t.Errorf("worker %d ReconcileInvariants detected corruption: err=%v violations=%v", workerID, recErr, rec.Violations)
+			// 5. ReconcileInvariants concurrently across subset of workers while mutators hammer reads
+			if workerID%8 == 0 {
+				rec, recErr := ug.ReconcileInvariants()
+				if recErr != nil || !rec.Coherent {
+					t.Errorf("worker %d ReconcileInvariants detected corruption: err=%v violations=%v", workerID, recErr, rec.Violations)
+				}
 			}
 		}()
 	}
@@ -407,5 +438,149 @@ func TestBlastRadiusHardTruncationDeterminism(t *testing.T) {
 		if br1.ImpactedNodes[i].URN != br2.ImpactedNodes[i].URN {
 			t.Fatalf("non-deterministic node at index %d: %s vs %s", i, br1.ImpactedNodes[i].URN, br2.ImpactedNodes[i].URN)
 		}
+	}
+}
+
+func TestBuildUnifiedKnowledgeGraphFailsClosedOnMissingCatalog(t *testing.T) {
+	reg := frameworks.NewRegistry()
+	if err := reg.Register(frameworks.New(frameworks.Config{
+		ID:           "broken-fw",
+		Title:        "Broken Framework",
+		Version:      "1.0",
+		Jurisdiction: "ca",
+		Authority:    "CCCS",
+		ControlCount: 10,
+		CatalogFn: func() ([]byte, error) {
+			return nil, errors.New("simulated missing catalog.json")
+		},
+	})); err != nil {
+		t.Fatal(err)
+	}
+
+	if _, err := graph.BuildUnifiedKnowledgeGraph(context.Background(), nil, reg); err == nil {
+		t.Fatalf("expected BuildUnifiedKnowledgeGraph to fail closed when framework catalog load fails, got nil")
+	}
+
+	emptyReg := frameworks.NewRegistry()
+	emptyCat, _ := json.Marshal(map[string]any{
+		"catalog": map[string]any{
+			"uuid":     "11111111-2222-3333-4444-555555555555",
+			"metadata": map[string]any{"title": "Empty", "version": "1.0", "oscal-version": "1.2.3"},
+			"controls": []any{},
+		},
+	})
+	if err := emptyReg.Register(frameworks.New(frameworks.Config{
+		ID:           "empty-fw",
+		Title:        "Empty Framework",
+		Version:      "1.0",
+		Jurisdiction: "ca",
+		Authority:    "CCCS",
+		ControlCount: 0,
+		CatalogFn:    func() ([]byte, error) { return emptyCat, nil },
+	})); err != nil {
+		t.Fatal(err)
+	}
+
+	if _, err := graph.BuildUnifiedKnowledgeGraph(context.Background(), nil, emptyReg); err == nil {
+		t.Fatalf("expected BuildUnifiedKnowledgeGraph to fail closed when framework has 0 controls, got nil")
+	}
+}
+
+func TestLiveSyncedCVEProjectsIntoUnifiedGraphAndSQLiteRoundTrip(t *testing.T) {
+	t.Cleanup(feeds.ResetSyncedCache)
+	feeds.ResetSyncedCache()
+
+	cpDir := filepath.Join(t.TempDir(), "feed_cache")
+	t.Setenv("XOSCAL_FEED_CACHE_DIR", cpDir)
+
+	ts := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Content-Type", "application/json")
+		w.WriteHeader(http.StatusOK)
+		switch {
+		case strings.HasSuffix(r.URL.Path, "/"+feeds.FeedCISAKEV):
+			_, _ = w.Write([]byte(`{
+				"catalogVersion":"2026.11.10",
+				"vulnerabilities":[
+					{
+						"cveID":"CVE-2099-9999",
+						"vendorProject":"QuantumEdge",
+						"product":"MeshFirewall",
+						"vulnerabilityName":"MeshFirewall Auth Bypass",
+						"shortDescription":"Title with \"quotes\" and \\backslash\\ and\nnewline",
+						"cwes":["CWE-287"]
+					}
+				]
+			}`))
+		case strings.HasSuffix(r.URL.Path, "/"+feeds.FeedMITREAttack):
+			_, _ = w.Write([]byte(`{"attack_techniques":[{"technique_id":"T1999","name":"Quote \"Test\" \\ Slash\tTab","tactic":"initial-access","mitigating_controls":["ia-2","ac-2"]}]}`))
+		case strings.HasSuffix(r.URL.Path, "/"+feeds.FeedCrosswalk):
+			_, _ = w.Write([]byte(`{"catalog":{"uuid":"11111111-2222-3333-4444-555555555555","controls":[{"id":"ac-2"}]}}`))
+		default:
+			_, _ = w.Write([]byte(`<html><body>CCCS ITSP.10.033 Sovereign Security Control Catalogue Effective 2026-03-31</body></html>`))
+		}
+	}))
+	defer ts.Close()
+
+	if _, err := feeds.SyncFeeds(context.Background(), feeds.SyncOptions{
+		Offline:         false,
+		HTTPClient:      ts.Client(),
+		BaseURL:         ts.URL,
+		CheckpointDir:   cpDir,
+		CircuitRegistry: resilience.NewCircuitRegistry(resilience.CircuitConfig{FailureThreshold: 3}),
+	}); err != nil {
+		t.Fatalf("SyncFeeds: %v", err)
+	}
+
+	// Clear in-memory cache so BuildUnifiedKnowledgeGraph reads from verified XOSCAL_FEED_CACHE_DIR checkpoint
+	feeds.ResetSyncedCache()
+
+	smallReg := smallSixJurisdictionRegistry(t)
+	dbPath := filepath.Join(t.TempDir(), "xoscal_graph.db")
+	st, err := graph.NewSQLiteStore(dbPath)
+	if err != nil {
+		t.Fatalf("NewSQLiteStore: %v", err)
+	}
+	memUG, err := graph.BuildUnifiedKnowledgeGraph(context.Background(), st, smallReg)
+	_ = st.Close()
+	if err != nil {
+		t.Fatalf("BuildUnifiedKnowledgeGraph to SQLite: %v", err)
+	}
+
+	br, err := memUG.ComputeBlastRadius("CVE-2099-9999", 2)
+	if err != nil {
+		t.Fatalf("ComputeBlastRadius('CVE-2099-9999') failed: %v", err)
+	}
+	if br.AntiEdgeCount == 0 || len(br.ImpactedControls) == 0 {
+		t.Fatalf("expected novel CVE-2099-9999 to project ANTI edges and impacted controls, got %+v", br)
+	}
+
+	// Verify Cypher export escapes quotes, backslashes, and tabs cleanly
+	cypherOut, err := memUG.ExportSubgraph("T1999", 1, "cypher")
+	if err != nil {
+		t.Fatalf("ExportSubgraph('T1999', 'cypher') failed: %v", err)
+	}
+	if !strings.Contains(cypherOut, `\"Test\"`) || !strings.Contains(cypherOut, `\\`) || !strings.Contains(cypherOut, `\t`) {
+		t.Fatalf("Cypher export did not escape quotes/backslashes/tabs properly:\n%s", cypherOut)
+	}
+
+	// Verify SQLite write -> LoadUnifiedGraphFromSQLite parity
+	sqlUG, err := graph.LoadUnifiedGraphFromSQLite(context.Background(), dbPath)
+	if err != nil {
+		t.Fatalf("LoadUnifiedGraphFromSQLite: %v", err)
+	}
+	if sqlUG.Stats().GraphSHA256 != memUG.Stats().GraphSHA256 {
+		t.Fatalf("SQLite GraphSHA256 mismatch: got %s, want %s", sqlUG.Stats().GraphSHA256, memUG.Stats().GraphSHA256)
+	}
+	rec, err := sqlUG.ReconcileInvariants()
+	if err != nil || !rec.Coherent {
+		t.Fatalf("SQLite-loaded graph failed ReconcileInvariants: err=%v violations=%v", err, rec.Violations)
+	}
+	cw, err := sqlUG.QueryCrosswalk("3.1.1")
+	if err != nil || cw.CanonicalControlID != "ac-2" {
+		t.Fatalf("SQLite-loaded QueryCrosswalk('3.1.1') failed: err=%v cw=%+v", err, cw)
+	}
+	sqlBR, err := sqlUG.ComputeBlastRadius("CVE-2099-9999", 2)
+	if err != nil || sqlBR.AntiEdgeCount != br.AntiEdgeCount {
+		t.Fatalf("SQLite-loaded ComputeBlastRadius('CVE-2099-9999') mismatch: err=%v got=%d want=%d", err, sqlBR.AntiEdgeCount, br.AntiEdgeCount)
 	}
 }

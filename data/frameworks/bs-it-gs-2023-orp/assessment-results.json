@@ -4,7 +4,7 @@
       "href": "./assessment-plan.json"
     },
     "metadata": {
-      "last-modified": "2026-11-08T01:42:13Z",
+      "last-modified": "2026-11-08T00:30:54Z",
       "oscal-version": "1.2.3",
       "title": "IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal Assessment Results Template",
       "version": "1"
@@ -101,7 +101,7 @@
         ],
         "observations": [
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:30:54Z",
             "description": "Verified control orp.1.a1.1 (Festlegung von Verantwortlichkeiten und Regelungen — ORP.1.A1.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -113,7 +113,7 @@
             "uuid": "2ee6e3ac-a905-591a-ac53-ad2977f42dd1"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:30:54Z",
             "description": "Verified control orp.2.a1.1 (Geregelte Einarbeitung neuer Mitarbeitender — ORP.2.A1.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -125,7 +125,7 @@
             "uuid": "3420842e-213b-5290-bdf1-decd473ff339"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:30:54Z",
             "description": "Verified control orp.3.a1.1 (Sensibilisierung der Institutionsleitung für Informationssicherheit — ORP.3.A1.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -137,7 +137,7 @@
             "uuid": "3cae42d3-0a86-52e9-866a-b0a348f505f1"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:30:54Z",
             "description": "Verified control orp.4.a1.1 (Regelung für die Einrichtung und Löschung von Benutzenden und Benutzendengruppen — ORP.4.A1.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -149,7 +149,7 @@
             "uuid": "47e7d48d-5997-59e7-a4b4-379d36b21ba7"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:30:54Z",
             "description": "Verified control orp.5.a1.1 (Identifikation der Rahmenbedingungen — ORP.5.A1.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -165,11 +165,699 @@
           "control-selections": [
             {
               "description": "All controls evaluated for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal",
-              "include-all": {}
+              "include-controls": [
+                {
+                  "control-id": "orp.1.a1.1"
+                },
+                {
+                  "control-id": "orp.1.a1.2"
+                },
+                {
+                  "control-id": "orp.1.a1.3"
+                },
+                {
+                  "control-id": "orp.1.a1.4"
+                },
+                {
+                  "control-id": "orp.1.a13.1"
+                },
+                {
+                  "control-id": "orp.1.a13.2"
+                },
+                {
+                  "control-id": "orp.1.a13.3"
+                },
+                {
+                  "control-id": "orp.1.a15.1"
+                },
+                {
+                  "control-id": "orp.1.a15.2"
+                },
+                {
+                  "control-id": "orp.1.a15.3"
+                },
+                {
+                  "control-id": "orp.1.a16.1"
+                },
+                {
+                  "control-id": "orp.1.a16.10"
+                },
+                {
+                  "control-id": "orp.1.a16.11"
+                },
+                {
+                  "control-id": "orp.1.a16.2"
+                },
+                {
+                  "control-id": "orp.1.a16.3"
+                },
+                {
+                  "control-id": "orp.1.a16.4"
+                },
+                {
+                  "control-id": "orp.1.a16.5"
+                },
+                {
+                  "control-id": "orp.1.a16.6"
+                },
+                {
+                  "control-id": "orp.1.a16.7"
+                },
+                {
+                  "control-id": "orp.1.a16.8"
+                },
+                {
+                  "control-id": "orp.1.a16.9"
+                },
+                {
+                  "control-id": "orp.1.a17.1"
+                },
+                {
+                  "control-id": "orp.1.a17.2"
+                },
+                {
+                  "control-id": "orp.1.a2.1"
+                },
+                {
+                  "control-id": "orp.1.a2.2"
+                },
+                {
+                  "control-id": "orp.1.a3.1"
+                },
+                {
+                  "control-id": "orp.1.a3.2"
+                },
+                {
+                  "control-id": "orp.1.a3.3"
+                },
+                {
+                  "control-id": "orp.1.a4.1"
+                },
+                {
+                  "control-id": "orp.1.a4.2"
+                },
+                {
+                  "control-id": "orp.1.a4.3"
+                },
+                {
+                  "control-id": "orp.1.a8.1"
+                },
+                {
+                  "control-id": "orp.1.a8.2"
+                },
+                {
+                  "control-id": "orp.1.a8.3"
+                },
+                {
+                  "control-id": "orp.1.a8.4"
+                },
+                {
+                  "control-id": "orp.2.a1.1"
+                },
+                {
+                  "control-id": "orp.2.a1.2"
+                },
+                {
+                  "control-id": "orp.2.a1.3"
+                },
+                {
+                  "control-id": "orp.2.a13.1"
+                },
+                {
+                  "control-id": "orp.2.a13.2"
+                },
+                {
+                  "control-id": "orp.2.a13.3"
+                },
+                {
+                  "control-id": "orp.2.a14.1"
+                },
+                {
+                  "control-id": "orp.2.a14.2"
+                },
+                {
+                  "control-id": "orp.2.a14.3"
+                },
+                {
+                  "control-id": "orp.2.a14.4"
+                },
+                {
+                  "control-id": "orp.2.a14.5"
+                },
+                {
+                  "control-id": "orp.2.a15.1"
+                },
+                {
+                  "control-id": "orp.2.a15.2"
+                },
+                {
+                  "control-id": "orp.2.a15.3"
+                },
+                {
+                  "control-id": "orp.2.a15.4"
+                },
+                {
+                  "control-id": "orp.2.a15.5"
+                },
+                {
+                  "control-id": "orp.2.a15.6"
+                },
+                {
+                  "control-id": "orp.2.a2.1"
+                },
+                {
+                  "control-id": "orp.2.a2.10"
+                },
+                {
+                  "control-id": "orp.2.a2.11"
+                },
+                {
+                  "control-id": "orp.2.a2.2"
+                },
+                {
+                  "control-id": "orp.2.a2.3"
+                },
+                {
+                  "control-id": "orp.2.a2.4"
+                },
+                {
+                  "control-id": "orp.2.a2.5"
+                },
+                {
+                  "control-id": "orp.2.a2.6"
+                },
+                {
+                  "control-id": "orp.2.a2.7"
+                },
+                {
+                  "control-id": "orp.2.a2.8"
+                },
+                {
+                  "control-id": "orp.2.a2.9"
+                },
+                {
+                  "control-id": "orp.2.a3.1"
+                },
+                {
+                  "control-id": "orp.2.a3.2"
+                },
+                {
+                  "control-id": "orp.2.a3.3"
+                },
+                {
+                  "control-id": "orp.2.a3.4"
+                },
+                {
+                  "control-id": "orp.2.a3.5"
+                },
+                {
+                  "control-id": "orp.2.a3.6"
+                },
+                {
+                  "control-id": "orp.2.a4.1"
+                },
+                {
+                  "control-id": "orp.2.a4.2"
+                },
+                {
+                  "control-id": "orp.2.a4.3"
+                },
+                {
+                  "control-id": "orp.2.a4.4"
+                },
+                {
+                  "control-id": "orp.2.a4.5"
+                },
+                {
+                  "control-id": "orp.2.a5.1"
+                },
+                {
+                  "control-id": "orp.2.a5.2"
+                },
+                {
+                  "control-id": "orp.2.a7.1"
+                },
+                {
+                  "control-id": "orp.2.a7.2"
+                },
+                {
+                  "control-id": "orp.2.a7.3"
+                },
+                {
+                  "control-id": "orp.2.a7.4"
+                },
+                {
+                  "control-id": "orp.3.a1.1"
+                },
+                {
+                  "control-id": "orp.3.a1.2"
+                },
+                {
+                  "control-id": "orp.3.a1.3"
+                },
+                {
+                  "control-id": "orp.3.a1.4"
+                },
+                {
+                  "control-id": "orp.3.a1.5"
+                },
+                {
+                  "control-id": "orp.3.a1.6"
+                },
+                {
+                  "control-id": "orp.3.a3.1"
+                },
+                {
+                  "control-id": "orp.3.a3.2"
+                },
+                {
+                  "control-id": "orp.3.a3.3"
+                },
+                {
+                  "control-id": "orp.3.a4.1"
+                },
+                {
+                  "control-id": "orp.3.a4.2"
+                },
+                {
+                  "control-id": "orp.3.a4.3"
+                },
+                {
+                  "control-id": "orp.3.a4.4"
+                },
+                {
+                  "control-id": "orp.3.a4.5"
+                },
+                {
+                  "control-id": "orp.3.a4.6"
+                },
+                {
+                  "control-id": "orp.3.a6.1"
+                },
+                {
+                  "control-id": "orp.3.a7.1"
+                },
+                {
+                  "control-id": "orp.3.a7.2"
+                },
+                {
+                  "control-id": "orp.3.a7.3"
+                },
+                {
+                  "control-id": "orp.3.a7.4"
+                },
+                {
+                  "control-id": "orp.3.a7.5"
+                },
+                {
+                  "control-id": "orp.3.a8.1"
+                },
+                {
+                  "control-id": "orp.3.a8.2"
+                },
+                {
+                  "control-id": "orp.3.a8.3"
+                },
+                {
+                  "control-id": "orp.3.a8.4"
+                },
+                {
+                  "control-id": "orp.3.a9.1"
+                },
+                {
+                  "control-id": "orp.4.a1.1"
+                },
+                {
+                  "control-id": "orp.4.a1.2"
+                },
+                {
+                  "control-id": "orp.4.a1.3"
+                },
+                {
+                  "control-id": "orp.4.a1.4"
+                },
+                {
+                  "control-id": "orp.4.a1.5"
+                },
+                {
+                  "control-id": "orp.4.a10.1"
+                },
+                {
+                  "control-id": "orp.4.a11.1"
+                },
+                {
+                  "control-id": "orp.4.a11.2"
+                },
+                {
+                  "control-id": "orp.4.a11.3"
+                },
+                {
+                  "control-id": "orp.4.a12.1"
+                },
+                {
+                  "control-id": "orp.4.a12.2"
+                },
+                {
+                  "control-id": "orp.4.a12.3"
+                },
+                {
+                  "control-id": "orp.4.a12.4"
+                },
+                {
+                  "control-id": "orp.4.a13.1"
+                },
+                {
+                  "control-id": "orp.4.a13.2"
+                },
+                {
+                  "control-id": "orp.4.a13.3"
+                },
+                {
+                  "control-id": "orp.4.a13.4"
+                },
+                {
+                  "control-id": "orp.4.a13.5"
+                },
+                {
+                  "control-id": "orp.4.a14.1"
+                },
+                {
+                  "control-id": "orp.4.a14.2"
+                },
+                {
+                  "control-id": "orp.4.a15.1"
+                },
+                {
+                  "control-id": "orp.4.a15.2"
+                },
+                {
+                  "control-id": "orp.4.a15.3"
+                },
+                {
+                  "control-id": "orp.4.a15.4"
+                },
+                {
+                  "control-id": "orp.4.a15.5"
+                },
+                {
+                  "control-id": "orp.4.a15.6"
+                },
+                {
+                  "control-id": "orp.4.a16.1"
+                },
+                {
+                  "control-id": "orp.4.a16.2"
+                },
+                {
+                  "control-id": "orp.4.a16.3"
+                },
+                {
+                  "control-id": "orp.4.a17.1"
+                },
+                {
+                  "control-id": "orp.4.a17.2"
+                },
+                {
+                  "control-id": "orp.4.a17.3"
+                },
+                {
+                  "control-id": "orp.4.a17.4"
+                },
+                {
+                  "control-id": "orp.4.a18.1"
+                },
+                {
+                  "control-id": "orp.4.a18.2"
+                },
+                {
+                  "control-id": "orp.4.a18.3"
+                },
+                {
+                  "control-id": "orp.4.a19.1"
+                },
+                {
+                  "control-id": "orp.4.a19.2"
+                },
+                {
+                  "control-id": "orp.4.a19.3"
+                },
+                {
+                  "control-id": "orp.4.a2.1"
+                },
+                {
+                  "control-id": "orp.4.a2.2"
+                },
+                {
+                  "control-id": "orp.4.a2.3"
+                },
+                {
+                  "control-id": "orp.4.a2.4"
+                },
+                {
+                  "control-id": "orp.4.a2.5"
+                },
+                {
+                  "control-id": "orp.4.a20.1"
+                },
+                {
+                  "control-id": "orp.4.a20.2"
+                },
+                {
+                  "control-id": "orp.4.a20.3"
+                },
+                {
+                  "control-id": "orp.4.a21.1"
+                },
+                {
+                  "control-id": "orp.4.a22.1"
+                },
+                {
+                  "control-id": "orp.4.a22.2"
+                },
+                {
+                  "control-id": "orp.4.a22.3"
+                },
+                {
+                  "control-id": "orp.4.a23.1"
+                },
+                {
+                  "control-id": "orp.4.a23.10"
+                },
+                {
+                  "control-id": "orp.4.a23.11"
+                },
+                {
+                  "control-id": "orp.4.a23.12"
+                },
+                {
+                  "control-id": "orp.4.a23.13"
+                },
+                {
+                  "control-id": "orp.4.a23.2"
+                },
+                {
+                  "control-id": "orp.4.a23.3"
+                },
+                {
+                  "control-id": "orp.4.a23.4"
+                },
+                {
+                  "control-id": "orp.4.a23.5"
+                },
+                {
+                  "control-id": "orp.4.a23.6"
+                },
+                {
+                  "control-id": "orp.4.a23.7"
+                },
+                {
+                  "control-id": "orp.4.a23.8"
+                },
+                {
+                  "control-id": "orp.4.a23.9"
+                },
+                {
+                  "control-id": "orp.4.a24.1"
+                },
+                {
+                  "control-id": "orp.4.a24.2"
+                },
+                {
+                  "control-id": "orp.4.a24.3"
+                },
+                {
+                  "control-id": "orp.4.a3.1"
+                },
+                {
+                  "control-id": "orp.4.a3.2"
+                },
+                {
+                  "control-id": "orp.4.a3.3"
+                },
+                {
+                  "control-id": "orp.4.a3.4"
+                },
+                {
+                  "control-id": "orp.4.a3.5"
+                },
+                {
+                  "control-id": "orp.4.a4.1"
+                },
+                {
+                  "control-id": "orp.4.a5.1"
+                },
+                {
+                  "control-id": "orp.4.a5.2"
+                },
+                {
+                  "control-id": "orp.4.a5.3"
+                },
+                {
+                  "control-id": "orp.4.a5.4"
+                },
+                {
+                  "control-id": "orp.4.a5.5"
+                },
+                {
+                  "control-id": "orp.4.a6.1"
+                },
+                {
+                  "control-id": "orp.4.a6.2"
+                },
+                {
+                  "control-id": "orp.4.a6.3"
+                },
+                {
+                  "control-id": "orp.4.a6.4"
+                },
+                {
+                  "control-id": "orp.4.a6.5"
+                },
+                {
+                  "control-id": "orp.4.a7.1"
+                },
+                {
+                  "control-id": "orp.4.a7.2"
+                },
+                {
+                  "control-id": "orp.4.a7.3"
+                },
+                {
+                  "control-id": "orp.4.a7.4"
+                },
+                {
+                  "control-id": "orp.4.a8.1"
+                },
+                {
+                  "control-id": "orp.4.a8.10"
+                },
+                {
+                  "control-id": "orp.4.a8.11"
+                },
+                {
+                  "control-id": "orp.4.a8.12"
+                },
+                {
+                  "control-id": "orp.4.a8.13"
+                },
+                {
+                  "control-id": "orp.4.a8.14"
+                },
+                {
+                  "control-id": "orp.4.a8.2"
+                },
+                {
+                  "control-id": "orp.4.a8.3"
+                },
+                {
+                  "control-id": "orp.4.a8.4"
+                },
+                {
+                  "control-id": "orp.4.a8.5"
+                },
+                {
+                  "control-id": "orp.4.a8.6"
+                },
+                {
+                  "control-id": "orp.4.a8.7"
+                },
+                {
+                  "control-id": "orp.4.a8.8"
+                },
+                {
+                  "control-id": "orp.4.a8.9"
+                },
+                {
+                  "control-id": "orp.4.a9.1"
+                },
+                {
+                  "control-id": "orp.4.a9.2"
+                },
+                {
+                  "control-id": "orp.5.a1.1"
+                },
+                {
+                  "control-id": "orp.5.a1.2"
+                },
+                {
+                  "control-id": "orp.5.a1.3"
+                },
+                {
+                  "control-id": "orp.5.a2.1"
+                },
+                {
+                  "control-id": "orp.5.a2.2"
+                },
+                {
+                  "control-id": "orp.5.a2.3"
+                },
+                {
+                  "control-id": "orp.5.a2.4"
+                },
+                {
+                  "control-id": "orp.5.a2.5"
+                },
+                {
+                  "control-id": "orp.5.a4.1"
+                },
+                {
+                  "control-id": "orp.5.a4.2"
+                },
+                {
+                  "control-id": "orp.5.a4.3"
+                },
+                {
+                  "control-id": "orp.5.a4.4"
+                },
+                {
+                  "control-id": "orp.5.a4.5"
+                },
+                {
+                  "control-id": "orp.5.a5.1"
+                },
+                {
+                  "control-id": "orp.5.a5.2"
+                },
+                {
+                  "control-id": "orp.5.a5.3"
+                },
+                {
+                  "control-id": "orp.5.a5.4"
+                },
+                {
+                  "control-id": "orp.5.a5.5"
+                },
+                {
+                  "control-id": "orp.5.a8.1"
+                },
+                {
+                  "control-id": "orp.5.a8.2"
+                }
+              ]
             }
           ]
         },
-        "start": "2026-11-08T01:42:13Z",
+        "start": "2026-11-08T00:30:54Z",
         "title": "IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal Assessment Results",
         "uuid": "0d410bdc-859a-57ec-8ce9-bc5a29b6ff4e"
       }

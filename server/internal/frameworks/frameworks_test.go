@@ -75,13 +75,9 @@ func TestRegistry_DefaultRegistryPopulation(t *testing.T) {
 }
 
 func TestRegistry_SchemaConformance(t *testing.T) {
-	v, err := schemavalidate.NewValidator()
-	if err != nil {
-		t.Fatalf("init schema validator: %v", err)
-	}
-
 	reg := frameworks.DefaultRegistry()
 	for _, f := range reg.List() {
+		f := f
 		t.Run(f.ID()+"/Catalog", func(t *testing.T) {
 			catData, err := f.CatalogJSON()
 			if err != nil {
@@ -90,7 +86,7 @@ func TestRegistry_SchemaConformance(t *testing.T) {
 			if len(catData) == 0 {
 				t.Fatalf("CatalogJSON() returned empty data")
 			}
-			if err := v.Validate(catData, schemavalidate.KindCatalog); err != nil {
+			if err := frameworks.ValidateSchemaCached(catData, schemavalidate.KindCatalog); err != nil {
 				t.Fatalf("catalog for %s failed OSCAL 1.2.3 schema validation: %v", f.ID(), err)
 			}
 		})
@@ -104,7 +100,7 @@ func TestRegistry_SchemaConformance(t *testing.T) {
 				if len(profData) == 0 {
 					t.Fatalf("ProfileJSON() returned empty data")
 				}
-				if err := v.Validate(profData, schemavalidate.KindProfile); err != nil {
+				if err := frameworks.ValidateSchemaCached(profData, schemavalidate.KindProfile); err != nil {
 					t.Fatalf("profile for %s failed OSCAL 1.2.3 schema validation: %v", f.ID(), err)
 				}
 			})
@@ -146,7 +142,7 @@ func TestRegistry_SeedKG(t *testing.T) {
 	if err != nil {
 		t.Fatalf("open sqlite store: %v", err)
 	}
-	defer store.Close()
+	defer func() { _ = store.Close() }()
 
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()

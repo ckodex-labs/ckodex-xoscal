@@ -4,6 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"errors"
+	"fmt"
 	"net/http"
 	"net/http/httptest"
 	"os"
@@ -138,14 +139,31 @@ func TestRetryWithBackoff(t *testing.T) {
 		t.Fatalf("expected 1 attempt on permanent error, got attempts=%d calls=%d err=%v", permAttempts, permCalls, permErr)
 	}
 
-	// 2b. Negative MaxRetries disables retries cleanly (1 attempt total)
-	noRetryAttempts, noRetryErr := resilience.RetryWithBackoff(context.Background(), resilience.RetryConfig{
-		MaxRetries: -1,
-	}, func(_ context.Context, _ int) error {
+	// 2b. Negative MaxRetries, NoRetryConfig, MaxAttempts=1, and explicit MaxRetries=0 w/ BaseDelay>0 all run 0 retries (1 attempt)
+	for name, cfg := range map[string]resilience.RetryConfig{
+		"negative_max_retries":     {MaxRetries: -1},
+		"no_retry_config":          resilience.NoRetryConfig(),
+		"max_attempts_one":         {MaxAttempts: 1, BaseDelay: 5 * time.Millisecond},
+		"zero_retries_with_delay":  {MaxRetries: 0, BaseDelay: 5 * time.Millisecond},
+		"disable_retries_explicit": {DisableRetries: true, MaxRetries: 5},
+	} {
+		noRetryAttempts, noRetryErr := resilience.RetryWithBackoff(context.Background(), cfg, func(_ context.Context, _ int) error {
+			return resilience.MarkRetryable(errors.New("transient"))
+		})
+		if noRetryErr == nil || noRetryAttempts != 1 {
+			t.Fatalf("[%s] expected 1 attempt (0 retries), got attempts=%d err=%v", name, noRetryAttempts, noRetryErr)
+		}
+	}
+
+	// 2c. DefaultRetryConfig and zero-struct RetryConfig{} execute DefaultMaxRetries (3 attempts total)
+	defCfg := resilience.DefaultRetryConfig()
+	defCfg.BaseDelay = 2 * time.Millisecond
+	defCfg.MaxDelay = 5 * time.Millisecond
+	defAttempts, _ := resilience.RetryWithBackoff(context.Background(), defCfg, func(_ context.Context, _ int) error {
 		return resilience.MarkRetryable(errors.New("transient"))
 	})
-	if noRetryErr == nil || noRetryAttempts != 1 {
-		t.Fatalf("expected 1 attempt when MaxRetries=-1, got attempts=%d err=%v", noRetryAttempts, noRetryErr)
+	if defAttempts != resilience.DefaultMaxRetries+1 {
+		t.Fatalf("expected %d attempts on DefaultRetryConfig, got %d", resilience.DefaultMaxRetries+1, defAttempts)
 	}
 
 	// 3. Context cancellation aborts immediately during backoff wait
@@ -191,8 +209,15 @@ func TestAtomicFilePersistenceAndTamperDetection(t *testing.T) {
 	if err != nil {
 		t.Fatalf("stat target: %v", err)
 	}
-	if info.Mode().Perm() != 0o600 {
-		t.Errorf("expected 0600 permissions, got %o", info.Mode().Perm())
+	if info.Mode().Perm() != 0o644 {
+		t.Errorf("expected 0644 permissions on target file, got %o", info.Mode().Perm())
+	}
+	scInfo, err := os.Stat(target + ".sha256")
+	if err != nil {
+		t.Fatalf("stat sidecar: %v", err)
+	}
+	if scInfo.Mode().Perm() != 0o644 {
+		t.Errorf("expected 0644 permissions on .sha256 sidecar, got %o", scInfo.Mode().Perm())
 	}
 
 	// Verified read succeeds
@@ -349,5 +374,37 @@ func TestWrapHTTPHandler_PanicRecoveryAndConcurrencyBackpressure(t *testing.T) {
 	wrapped.ServeHTTP(afterRec, afterReq)
 	if afterRec.Code != http.StatusOK {
 		t.Fatalf("expected 200 OK after saturation cleared, got %d", afterRec.Code)
+	}
+}
+
+func TestWithDirLockBoundedRefCountNoLeak(t *testing.T) {
+	baseDir := t.TempDir()
+	const numPaths = 500
+
+	var wg sync.WaitGroup
+	for i := 0; i < numPaths; i++ {
+		dirPath := filepath.Join(baseDir, fmt.Sprintf("lock-dir-%03d", i))
+		wg.Add(2)
+		go func(p string) {
+			defer wg.Done()
+			if err := resilience.WithDirLock(p, true, func() error {
+				return os.WriteFile(filepath.Join(p, "marker.txt"), []byte("ok"), 0o600)
+			}); err != nil {
+				t.Errorf("WithDirLock exclusive(%s) error: %v", p, err)
+			}
+		}(dirPath)
+		go func(p string) {
+			defer wg.Done()
+			if err := resilience.WithDirLock(p, false, func() error {
+				return nil
+			}); err != nil {
+				t.Errorf("WithDirLock shared(%s) error: %v", p, err)
+			}
+		}(dirPath)
+	}
+	wg.Wait()
+
+	if leaked := resilience.ActiveDirLockCount(); leaked != 0 {
+		t.Fatalf("expected 0 active dirLocks at rest across %d distinct paths (Rule 30), got %d", numPaths, leaked)
 	}
 }

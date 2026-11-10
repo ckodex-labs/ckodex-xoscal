@@ -227,9 +227,7 @@ func (v *Validator) Validate(data []byte, kind ArtifactKind) error {
 	if err := schema.Validate(doc); err != nil {
 		var errs []ValidationError
 		if ve, ok := err.(*jsonschema.ValidationError); ok {
-			for _, e := range flattenErrors(ve) {
-				errs = append(errs, e)
-			}
+			errs = append(errs, flattenErrors(ve)...)
 		} else {
 			errs = append(errs, ValidationError{Message: err.Error()})
 		}
@@ -250,9 +248,9 @@ func (r *ValidationResult) Error() string {
 		return "validation failed"
 	}
 	var sb strings.Builder
-	sb.WriteString(fmt.Sprintf("OSCAL %s schema validation failed (%d errors):\n", r.Kind, len(r.Errors)))
+	fmt.Fprintf(&sb, "OSCAL %s schema validation failed (%d errors):\n", r.Kind, len(r.Errors))
 	for i, e := range r.Errors {
-		sb.WriteString(fmt.Sprintf("  [%d] %s\n", i+1, e.Error()))
+		fmt.Fprintf(&sb, "  [%d] %s\n", i+1, e.Error())
 	}
 	return sb.String()
 }

@@ -351,3 +351,75 @@ func TestOntology_Graph_Feeds_CLI(t *testing.T) {
 		t.Errorf("expected VERIFIED and ledger_entries 1 in RunFeeds verify-checkpoint -json, got: %s", outVerifyCP)
 	}
 }
+
+func TestEmptyStringFlag_UTCP_AndGraphSQLiteDSN_CLI(t *testing.T) {
+	// 1. Empty string flag value (-jurisdiction "" -json) must not swallow -json
+	outEmptyJur := captureOutput(func() {
+		cli.RunFrameworks([]string{"list", "-jurisdiction", "", "-json"})
+	})
+	var infos []frameworks.Info
+	if err := json.Unmarshal([]byte(outEmptyJur), &infos); err != nil {
+		t.Fatalf("expected valid JSON when passing empty string flag '-jurisdiction \"\" -json': %v\nout=%s", err, outEmptyJur)
+	}
+	if len(infos) < 36 {
+		t.Errorf("expected >=36 frameworks for empty jurisdiction filter, got %d", len(infos))
+	}
+
+	// 2. UTCP strict wire manual vs extended envelope + mcp-config with -utcp-config-out
+	outWireManual := captureOutput(func() {
+		cli.RunUTCP([]string{"manual", "-protocols", "http"})
+	})
+	var wireObj map[string]any
+	if err := json.Unmarshal([]byte(outWireManual), &wireObj); err != nil {
+		t.Fatalf("unmarshal strict UTCP wire manual: %v", err)
+	}
+	if len(wireObj) != 3 {
+		t.Errorf("expected strict 3-key UTCP wire manual (utcp_version, manual_version, tools), got keys: %v", wireObj)
+	}
+
+	outExtManual := captureOutput(func() {
+		cli.RunUTCP([]string{"manual", "-protocols", "all", "-extended"})
+	})
+	if !strings.Contains(outExtManual, `"allowed_communication_protocols"`) {
+		t.Errorf("expected allowed_communication_protocols in extended UTCP manual, got: %s", outExtManual)
+	}
+
+	tmpDir := t.TempDir()
+	utcpCfgPath := filepath.Join(tmpDir, ".utcp_config.json")
+	mcpCfgPath := filepath.Join(tmpDir, "mcp.json")
+	_ = captureOutput(func() {
+		cli.RunUTCP([]string{"mcp-config", "-utcp-config-out", utcpCfgPath, "-out", mcpCfgPath})
+	})
+	if _, err := os.Stat(utcpCfgPath); err != nil {
+		t.Fatalf("expected .utcp_config.json written at %s: %v", utcpCfgPath, err)
+	}
+	if _, err := os.Stat(mcpCfgPath); err != nil {
+		t.Fatalf("expected mcp.json written at %s: %v", mcpCfgPath, err)
+	}
+
+	// 3. Seed single framework to SQLite and query RunGraph with -dsn and RunGenerate with -timeout
+	dbPath := filepath.Join(tmpDir, "cli_graph.db")
+	genOut := filepath.Join(tmpDir, "gen_out")
+	_ = captureOutput(func() {
+		cli.RunSeed([]string{"-dsn", dbPath, "-framework", "cybersecure-canada"})
+	})
+	outGraphStats := captureOutput(func() {
+		cli.RunGraph([]string{"stats", "-dsn", dbPath, "-json"})
+	})
+	if !strings.Contains(outGraphStats, `"total_nodes"`) {
+		t.Errorf("expected total_nodes in RunGraph stats -dsn %s -json, got: %s", dbPath, outGraphStats)
+	}
+
+	_ = captureOutput(func() {
+		cli.RunGenerate([]string{
+			"-dsn", dbPath,
+			"-snapshot", "baseline",
+			"-framework", "cybersecure-canada",
+			"-out", genOut,
+			"-timeout", "2m",
+		})
+	})
+	if _, err := os.Stat(filepath.Join(genOut, "catalog.json")); err != nil {
+		t.Fatalf("expected generated catalog.json with -timeout 2m: %v", err)
+	}
+}

@@ -16,15 +16,27 @@ func (g *Generator) GenerateMappings(ctx context.Context, snapshotName string) (
 		return nil, fmt.Errorf("get snapshot: %w", err)
 	}
 
-	var maps []*mappingv1.Map
+	var raw []kg.Mapping
 	for _, e := range entities {
-		if e.Type != "reg:Mapping" {
+		if e == nil || e.Type != "reg:Mapping" {
 			continue
 		}
 		var m kg.Mapping
 		if err := json.Unmarshal(e.Payload, &m); err != nil {
 			continue
 		}
+		raw = append(raw, m)
+	}
+	return buildMappingProtos(raw), nil
+}
+
+func (g *Generator) generateMappingsFromSnapshot(snap *parsedSnapshot) []*mappingv1.Map {
+	return buildMappingProtos(snap.mappings)
+}
+
+func buildMappingProtos(mappings []kg.Mapping) []*mappingv1.Map {
+	maps := make([]*mappingv1.Map, 0, len(mappings))
+	for _, m := range mappings {
 		maps = append(maps, &mappingv1.Map{
 			Uuid:         &commonv1.UUID{Value: m.URN},
 			Relationship: &commonv1.Token{Value: m.Relationship},
@@ -36,7 +48,7 @@ func (g *Generator) GenerateMappings(ctx context.Context, snapshotName string) (
 			}},
 		})
 	}
-	return maps, nil
+	return maps
 }
 
 // GenerateAssessmentPlan builds an OSCAL Assessment Plan from a snapshot.

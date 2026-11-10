@@ -4,16 +4,1211 @@
       "href": "./system-security-plan.json"
     },
     "metadata": {
-      "last-modified": "2026-11-08T01:42:13Z",
+      "last-modified": "2026-11-08T00:30:48Z",
       "oscal-version": "1.2.3",
       "title": "Cyber Essentials: Requirements for IT infrastructure v3.1 Plan of Action and Milestones Template",
       "version": "2"
     },
     "poam-items": [
       {
-        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for Cyber Essentials: Requirements for IT infrastructure v3.1.",
-        "title": "Compliance Roadmap and Parameter Tailoring for Cyber Essentials: Requirements for IT infrastructure v3.1",
-        "uuid": "33dc3660-a91d-5390-abad-3155ae917259"
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node128 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node128"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node128 (Firewalls — node128)",
+        "uuid": "2b8ddfab-ded4-5260-a553-968eb1890b00"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node136 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node136"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node136 (Requirements — node136)",
+        "uuid": "bd367b53-420a-587c-bf47-033c1e9cd8d7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node138 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node138"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node138 (Requirements — node138)",
+        "uuid": "f5300e25-fea6-5406-9209-bd4d34876287"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node139 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node139"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node139 (For all firewalls (or network devices with firewall functionality), your organisation must: — node139)",
+        "uuid": "e06695b8-d4e0-5e49-b997-e6bb99d3db3e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node140 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node140"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node140 (For all firewalls (or network devices with firewall functionality), your organisation must: — node140)",
+        "uuid": "893d2738-eab3-5460-aa8c-9e5b848447ae"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node141 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node141"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node141 (For all firewalls (or network devices with firewall functionality), your organisation must: — node141)",
+        "uuid": "b3419874-51f9-5b19-b497-54d173c5d90d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node142 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node142"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node142 (For all firewalls (or network devices with firewall functionality), your organisation must: — node142)",
+        "uuid": "3fc43269-c9e3-57f2-812f-f38bab0144fc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node143 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node143"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node143 (For all firewalls (or network devices with firewall functionality), your organisation must: — node143)",
+        "uuid": "2aee3e0c-bdb2-54e1-87c0-3f4052521ede"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node144 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node144"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node144 (For all firewalls (or network devices with firewall functionality), your organisation must: — node144)",
+        "uuid": "2f225b32-83d4-55cf-900e-6e88cab38ca3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node145 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node145"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node145 (For all firewalls (or network devices with firewall functionality), your organisation must: — node145)",
+        "uuid": "f6bc50ed-9d41-514d-917e-a77538d5d145"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node146 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node146"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node146 (Requirements — node146)",
+        "uuid": "2438daaa-9bed-53a1-9533-f70a279fff95"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node162 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node162"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node162 (Computers and network devices — node162)",
+        "uuid": "d6318739-0670-5ed7-a852-0425e0914745"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node163 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node163"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node163 (Your organisation must proactively manage your computers and network devices. You must regularly: — node163)",
+        "uuid": "90340868-489b-57b6-863c-c9669e148796"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node164 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node164"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node164 (Your organisation must proactively manage your computers and network devices. You must regularly: — node164)",
+        "uuid": "bb05e22b-b46a-51dc-8350-de53f25beda7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node165 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node165"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node165 (Your organisation must proactively manage your computers and network devices. You must regularly: — node165)",
+        "uuid": "56a73f8e-40c1-57dc-8386-dc0aa6787752"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node166 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node166"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node166 (Your organisation must proactively manage your computers and network devices. You must regularly: — node166)",
+        "uuid": "934b8542-2d18-5f9f-9393-e1df02829581"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node167 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node167"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node167 (Your organisation must proactively manage your computers and network devices. You must regularly: — node167)",
+        "uuid": "9eb527f7-ba7c-57f0-b96d-ca052b8b908e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node168 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node168"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node168 (Your organisation must proactively manage your computers and network devices. You must regularly: — node168)",
+        "uuid": "614aaa44-96f9-58a5-b400-3cc0289dd227"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node170 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node170"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node170 (Device unlocking credentials — node170)",
+        "uuid": "30c0e820-0678-5922-902a-85aac7999df7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node171 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node171"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node171 (Device unlocking credentials — node171)",
+        "uuid": "c54dc259-3bf1-5b41-81cf-b6bf9ec46302"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node172 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node172"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node172 (Device unlocking credentials — node172)",
+        "uuid": "12e2ffa7-95f7-56ec-957f-99cbdeb376b5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node173 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node173"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node173 (Device unlocking credentials — node173)",
+        "uuid": "ed42feea-4bfd-5f00-8b7a-3fcf6ae2331b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node174 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node174"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node174 (Device unlocking credentials — node174)",
+        "uuid": "9cf33567-736b-5fdd-ac0c-80cfd6c8c5f5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node175 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node175"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node175 (Device unlocking credentials — node175)",
+        "uuid": "bc42be84-67ec-5ff2-aeb4-a0d1111053d1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node185 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node185"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node185 (Requirements — node185)",
+        "uuid": "d2d6ed8d-98c7-5bdc-95d4-a203d74f3418"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node186 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node186"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node186 (You must make sure that all software in scope is kept up to date. All software on in-scope devices must: — node186)",
+        "uuid": "5ec9b1e4-cfe4-5181-ab94-7a3d8a770b53"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node187 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node187"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node187 (You must make sure that all software in scope is kept up to date. All software on in-scope devices must: — node187)",
+        "uuid": "ed1ecc6b-8975-59dd-8cdb-6e907c5510ec"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node188 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node188"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node188 (You must make sure that all software in scope is kept up to date. All software on in-scope devices must: — node188)",
+        "uuid": "7c3376ac-39b3-5f44-95a3-13b13f21771d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node189 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node189"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node189 (You must make sure that all software in scope is kept up to date. All software on in-scope devices must: — node189)",
+        "uuid": "5e042715-c009-5240-ac34-fdcd702d6204"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node190 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node190"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node190 (You must make sure that all software in scope is kept up to date. All software on in-scope devices must: — node190)",
+        "uuid": "91341007-01b0-5c21-8ede-d84c519580fc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node191 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node191"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node191 (You must make sure that all software in scope is kept up to date. All software on in-scope devices must: — node191)",
+        "uuid": "df169ba2-10af-5520-b772-4b625ab0c897"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node192 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node192"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node192 (You must make sure that all software in scope is kept up to date. All software on in-scope devices must: — node192)",
+        "uuid": "da141daa-b5ee-5746-9203-d78e81562435"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node204 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node204"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node204 (Introduction — node204)",
+        "uuid": "35c32737-feb8-5a52-8dca-0ca7aeb7f615"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node205 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node205"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node205 (Introduction — node205)",
+        "uuid": "e5152ce5-b5f6-5c75-8cd5-1a53c7df3c68"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node206 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node206"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node206 (Introduction — node206)",
+        "uuid": "1f73b467-5c31-5a12-b776-6bfced225e83"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node207 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node207"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node207 (Administrative accounts are especially highly privileged, for example. These accounts typically allow the user to: — node207)",
+        "uuid": "fe1edb6d-9a6d-55b5-98d4-bb53e6903ef8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node208 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node208"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node208 (Administrative accounts are especially highly privileged, for example. These accounts typically allow the user to: — node208)",
+        "uuid": "eca7f0bd-f171-57ec-8777-bcf38354cafb"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node209 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node209"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node209 (Administrative accounts are especially highly privileged, for example. These accounts typically allow the user to: — node209)",
+        "uuid": "042679f8-5fe2-56d5-becc-59f6bc01f3ef"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node210 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node210"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node210 (Introduction — node210)",
+        "uuid": "eb1463f6-f04c-5314-ba80-dc8f17790c21"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node211 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node211"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node211 (Introduction — node211)",
+        "uuid": "c1e244eb-15d2-528c-9f78-deda9fcb43f1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node214 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node214"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node214 (Requirements — node214)",
+        "uuid": "c6458c69-6683-51ef-8976-7c5f996b590d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node215 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node215"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node215 (Requirements — node215)",
+        "uuid": "62372e0e-3ec5-5dd0-94c8-586a26a6fede"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node216 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node216"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node216 (This means your organisation must: — node216)",
+        "uuid": "73d8d897-997a-55d4-b7ff-536f2af17ded"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node217 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node217"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node217 (This means your organisation must: — node217)",
+        "uuid": "5f7cd93c-bd6f-5afe-9bf1-792dd6a91bec"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node218 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node218"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node218 (This means your organisation must: — node218)",
+        "uuid": "64fbc0fd-04d2-568b-bd0d-47d875aee314"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node219 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node219"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node219 (This means your organisation must: — node219)",
+        "uuid": "384675c9-54e8-55f6-a757-d5ce80665f33"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node220 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node220"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node220 (This means your organisation must: — node220)",
+        "uuid": "85ebd7a7-90cf-50a8-a98c-71c3b4c42219"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node221 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node221"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node221 (This means your organisation must: — node221)",
+        "uuid": "b8ba1ab9-7c57-5a7f-bcc9-1e845b44e7ed"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node223 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node223"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node223 (Password-based authentication — node223)",
+        "uuid": "c44c3e07-6258-5ecd-9dbb-ea4ffe72e335"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node224 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node224"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node224 (Password-based authentication — node224)",
+        "uuid": "54f124f2-8801-5c26-ac4c-2a638fddaf52"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node225 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node225"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node225 (Where this is carried out using a password, you should put in place the following protective measures: — node225)",
+        "uuid": "e39d3804-7fef-5753-96c2-87a0ec501d69"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node226 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node226"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node226 (• Passwords are protected against brute-force password guessing by implementing at least one of: — node226)",
+        "uuid": "4fc6c4fa-b68a-5218-9b07-6969b9c6d6cf"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node227 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node227"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node227 (• Passwords are protected against brute-force password guessing by implementing at least one of: — node227)",
+        "uuid": "b126684f-7866-5565-ba1a-54829cbb60eb"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node228 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node228"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node228 (• Passwords are protected against brute-force password guessing by implementing at least one of: — node228)",
+        "uuid": "7108d9fe-3de6-57ab-9dd9-0128a582c478"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node229 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node229"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node229 (Where this is carried out using a password, you should put in place the following protective measures: — node229)",
+        "uuid": "6da42575-884b-5d73-bb7e-3a5ebb893eca"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node230 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node230"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node230 (• Use technical controls to manage the quality of passwords. This will include one of the following: — node230)",
+        "uuid": "ab4a63e3-61a7-5a3d-a412-e53a818d673f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node231 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node231"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node231 (• Use technical controls to manage the quality of passwords. This will include one of the following: — node231)",
+        "uuid": "71600514-c74b-593c-83a1-3dc891fb0fb7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node232 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node232"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node232 (• Use technical controls to manage the quality of passwords. This will include one of the following: — node232)",
+        "uuid": "96d678e7-40c9-5cbf-b85b-bf73756c9ffa"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node233 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node233"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node233 (Where this is carried out using a password, you should put in place the following protective measures: — node233)",
+        "uuid": "a11ab206-08e1-5491-9b97-f69a67df6a88"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node234 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node234"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node234 (• Support users to choose unique passwords for their work accounts by: — node234)",
+        "uuid": "2391693b-235a-546c-aab2-f9751df84f56"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node235 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node235"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node235 (• Support users to choose unique passwords for their work accounts by: — node235)",
+        "uuid": "c2ae3ac3-2fa0-5fc6-b368-b91a7ef71350"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node236 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node236"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node236 (• Support users to choose unique passwords for their work accounts by: — node236)",
+        "uuid": "9ab98fb0-691c-516e-a0f8-24aec730580f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node237 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node237"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node237 (• Support users to choose unique passwords for their work accounts by: — node237)",
+        "uuid": "99bdccd9-bf5b-5998-b3b7-1f29b6567dab"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node238 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node238"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node238 (• Support users to choose unique passwords for their work accounts by: — node238)",
+        "uuid": "38559f72-ed5c-52cf-82df-75bd54b94778"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node239 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node239"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node239 (Password-based authentication — node239)",
+        "uuid": "96519ff4-f10a-5eff-99b9-78c646a0ea16"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node241 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node241"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node241 (Multi-factor authentication (MFA) — node241)",
+        "uuid": "e410bc39-4bc9-5d8e-9d78-5b22940dce15"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node242 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node242"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node242 (Multi-factor authentication (MFA) — node242)",
+        "uuid": "8e2dba3b-604e-54f1-a0f0-f3c06c7b673f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node243 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node243"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node243 (Multi-factor authentication (MFA) — node243)",
+        "uuid": "14751e54-f429-51aa-b049-c8c50498a970"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node244 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node244"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node244 (There are four types of additional factor to consider: — node244)",
+        "uuid": "9605d9d8-449c-5788-96ec-a89ad5c6b5e7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node245 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node245"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node245 (There are four types of additional factor to consider: — node245)",
+        "uuid": "772063f3-cd8b-50cb-97d6-9e688a3ce20c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node246 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node246"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node246 (There are four types of additional factor to consider: — node246)",
+        "uuid": "ed7b48be-c8d7-575a-9c7a-6456b43beea3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node247 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node247"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node247 (There are four types of additional factor to consider: — node247)",
+        "uuid": "b9b54537-d38f-5128-a7af-b539c3b38103"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node248 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node248"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node248 (Multi-factor authentication (MFA) — node248)",
+        "uuid": "8c2718e0-165c-57a9-9c0f-98d973ee4050"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node249 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node249"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node249 (Information:)",
+        "uuid": "64e026b2-bf7b-5b2e-b89a-a6caddc77260"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node255 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node255"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node255 (Introduction — node255)",
+        "uuid": "bd439324-16a6-549b-8ff9-877cf272cf34"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node256 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node256"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node256 (Introduction — node256)",
+        "uuid": "ef0a0ded-a671-582d-a38a-3080ca61e96a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node257 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node257"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node257 (Introduction — node257)",
+        "uuid": "ada89bf5-7f93-541d-8914-7681d34f1279"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node258 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node258"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node258 (You can largely avoid the potential for harm by: — node258)",
+        "uuid": "5f2f3c0e-421a-5a0c-9804-f8945f40507c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node259 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node259"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node259 (You can largely avoid the potential for harm by: — node259)",
+        "uuid": "c93b6d41-464d-5bac-b37b-895f269df326"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node262 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node262"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node262 (Requirements — node262)",
+        "uuid": "b0c193d7-8e94-5f3a-88da-949912d4f683"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node264 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node264"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node264 (Anti-malware software — node264)",
+        "uuid": "92d134bc-a7f7-5420-871d-bd57a8a059a7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node265 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node265"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node265 (If you use anti-malware software to protect your device it must be configured to: — node265)",
+        "uuid": "7ef54a3b-e5a5-5ae1-933b-00b49bb0ab6e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node266 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node266"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node266 (If you use anti-malware software to protect your device it must be configured to: — node266)",
+        "uuid": "6cedb5b9-45f1-5f91-999e-2a69afb27d62"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node267 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node267"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node267 (If you use anti-malware software to protect your device it must be configured to: — node267)",
+        "uuid": "74e83565-2c2c-5bd0-a5f8-0f9c5f35114a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node268 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node268"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node268 (If you use anti-malware software to protect your device it must be configured to: — node268)",
+        "uuid": "5f479ece-32fc-5dd3-af8d-35be050505ed"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node269 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node269"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node269 (If you use anti-malware software to protect your device it must be configured to: — node269)",
+        "uuid": "4fcfd9e0-4844-5efc-a706-d131c1fe16f6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node271 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node271"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node271 (Application allow listing — node271)",
+        "uuid": "fdd45638-0014-526e-9c9a-e1ffab77cc3d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node272 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node272"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node272 (Only approved applications, restricted by code signing, are allowed to execute on devices. You must: — node272)",
+        "uuid": "5a260007-6063-5b3d-ac1c-ffb484a41593"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node273 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node273"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node273 (Only approved applications, restricted by code signing, are allowed to execute on devices. You must: — node273)",
+        "uuid": "7ef70e8a-0bac-59b0-b490-53d3bbb6d745"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node276 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node276"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node276 (Backing up your data — node276)",
+        "uuid": "bfcd42c8-b8d0-5c0b-bb53-8b6d06ac36db"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node277 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node277"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node277 (Backing up your data — node277)",
+        "uuid": "4c6b5e4a-5dba-57ec-80a5-50b66615a2d7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node278 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node278"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node278 (Backing up your data — node278)",
+        "uuid": "7f720e31-46f3-50d5-87b0-0fab9758f07c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node279 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node279"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node279 (Backing up your data — node279)",
+        "uuid": "39ed4bf3-8889-5c02-bd81-61d763e02d21"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node280 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node280"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node280 (Backing up your data — node280)",
+        "uuid": "368c469a-fe3d-5dc2-8526-8636f30c1c79"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node282 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node282"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node282 (Zero trust and Cyber Essentials — node282)",
+        "uuid": "f04d9e61-f0ad-535e-9d46-41f9c65580b5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node283 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node283"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node283 (Zero trust and Cyber Essentials — node283)",
+        "uuid": "b14fb294-0508-5a93-a266-a5e8d940b234"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node284 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node284"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node284 (Zero trust and Cyber Essentials — node284)",
+        "uuid": "e50f6be1-0fa8-5874-8561-be74f51db4bc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node285 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node285"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node285 (Zero trust and Cyber Essentials — node285)",
+        "uuid": "bb0806a5-0dca-523b-a2c4-bef17546a1bb"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node286 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node286"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node286 (Zero trust and Cyber Essentials — node286)",
+        "uuid": "24032b3c-6a43-5e6b-8c80-beb22fe27338"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node85 in Cyber Essentials: Requirements for IT infrastructure v3.1.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node85"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node85 (Cloud services — node85)",
+        "uuid": "91bbce1f-e2ca-50c4-851c-074866d370ec"
       }
     ],
     "uuid": "e7f60207-8790-59fc-a48b-597c5c1e0be6"

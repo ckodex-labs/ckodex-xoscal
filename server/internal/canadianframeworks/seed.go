@@ -11,10 +11,11 @@ import (
 // individual control requirements directly into a Knowledge Graph store.
 // The operation is idempotent: existing entities are updated in place.
 func SeedKG(ctx context.Context, store kg.Store) error {
+	reg := frameworks.NewRegistry()
 	for _, f := range frameworks.DefaultRegistry().FindByJurisdiction("ca") {
-		if err := frameworks.SeedFramework(ctx, store, f); err != nil {
+		if err := reg.Register(f); err != nil {
 			return err
 		}
 	}
-	return nil
+	return reg.SeedKG(ctx, store)
 }

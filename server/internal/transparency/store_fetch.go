@@ -85,7 +85,7 @@ FROM kg_fetch_events ORDER BY id DESC LIMIT ?`, limit)
 	if err != nil {
 		return nil, err
 	}
-	defer rows.Close()
+	defer func() { _ = rows.Close() }()
 
 	events := make([]FetchEvent, 0, limit)
 	for rows.Next() {

@@ -4,7 +4,7 @@
       "href": "./assessment-plan.json"
     },
     "metadata": {
-      "last-modified": "2026-11-08T01:42:12Z",
+      "last-modified": "2026-11-08T00:30:58Z",
       "oscal-version": "1.2.3",
       "title": "IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - OPS: Betrieb Assessment Results Template",
       "version": "1"
@@ -254,7 +254,7 @@
         ],
         "observations": [
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:58Z",
             "description": "Verified control ops.1.1.1.a1.1 (Festlegung der Aufgaben und Zuständigkeiten des IT-Betriebs — OPS.1.1.1.A1.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -266,7 +266,7 @@
             "uuid": "5907748e-70e7-57c5-be91-59fddb93db35"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:58Z",
             "description": "Verified control ops.1.1.2.a11.1 (Dokumentation von IT-Administrationstätigkeiten — OPS.1.1.2.A11.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -278,7 +278,7 @@
             "uuid": "6ea131cc-fbf7-5aa8-abb7-fcc08a9415ec"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:58Z",
             "description": "Verified control ops.1.1.3.a1.1 (Konzept für das Patch- und Änderungsmanagement — OPS.1.1.3.A1.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -290,7 +290,7 @@
             "uuid": "d683db04-97aa-5088-801e-a03f5aae86b3"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:58Z",
             "description": "Verified control ops.1.1.4.a1.1 (Erstellung eines Konzepts für den Schutz vor Schadprogrammen — OPS.1.1.4.A1.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -302,7 +302,7 @@
             "uuid": "0389e4f3-7e9c-57e2-bed2-0e1ff8c55dc2"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:58Z",
             "description": "Verified control ops.1.1.5.a1.1 (Erstellung einer Sicherheitsrichtlinie für die Protokollierung — OPS.1.1.5.A1.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -314,7 +314,7 @@
             "uuid": "2919f29e-1292-5cfe-8530-b4840c1028fe"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:58Z",
             "description": "Verified control ops.1.1.6.a1.1 (Planung der Software-Tests — OPS.1.1.6.A1.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -326,7 +326,7 @@
             "uuid": "38c896c0-9efe-523c-9008-1f3de18f4e46"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:58Z",
             "description": "Verified control ops.1.1.7.a1.1 (Anforderungsspezifikation für das Systemmanagement — OPS.1.1.7.A1.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -338,7 +338,7 @@
             "uuid": "fd5ef091-a918-5455-a809-da604455bd91"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:58Z",
             "description": "Verified control ops.1.2.2.a1.1 (Ermittlung von Einflussfaktoren für die elektronische Archivierung — OPS.1.2.2.A1.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -350,7 +350,7 @@
             "uuid": "f8dbb6b9-055c-52ab-b3c5-0e4b3955f9b5"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:58Z",
             "description": "Verified control ops.1.2.4.a1.1 (Regelungen für Telearbeit — OPS.1.2.4.A1.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -362,7 +362,7 @@
             "uuid": "40e07699-467e-5134-8e7c-a07f7e62918c"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:58Z",
             "description": "Verified control ops.1.2.5.a1.1 (Planung des Einsatzes der Fernwartung — OPS.1.2.5.A1.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -374,7 +374,7 @@
             "uuid": "3876b3ac-34be-59d1-a62f-91230e35adac"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:58Z",
             "description": "Verified control ops.1.2.6.a1.1 (Planung des NTP- Einsatzes — OPS.1.2.6.A1.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -386,7 +386,7 @@
             "uuid": "a3041ad6-ff4e-5742-a727-7752e0a43965"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:58Z",
             "description": "Verified control ops.2.2.a1.1 (Erstellung einer Strategie für die Cloud-Nutzung — OPS.2.2.A1.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -398,7 +398,7 @@
             "uuid": "363f9fd5-8b84-5edb-a5ed-1b974d5067aa"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:58Z",
             "description": "Verified control ops.2.3.a1.1 (Erstellung von Anforderungsprofilen für Prozesse — OPS.2.3.A1.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -410,7 +410,7 @@
             "uuid": "a3e1d1c4-fbb9-59d2-b889-4069d439a87c"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:58Z",
             "description": "Verified control ops.3.2.a1.1 (Einhaltung der Schutzziele der Informationssicherheit durch ein Informationssicherheitsmanagement — OPS.3.2.A1.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -426,11 +426,3120 @@
           "control-selections": [
             {
               "description": "All controls evaluated for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - OPS: Betrieb",
-              "include-all": {}
+              "include-controls": [
+                {
+                  "control-id": "ops.1.1.1.a1.1"
+                },
+                {
+                  "control-id": "ops.1.1.1.a1.2"
+                },
+                {
+                  "control-id": "ops.1.1.1.a1.3"
+                },
+                {
+                  "control-id": "ops.1.1.1.a10.1"
+                },
+                {
+                  "control-id": "ops.1.1.1.a10.2"
+                },
+                {
+                  "control-id": "ops.1.1.1.a10.3"
+                },
+                {
+                  "control-id": "ops.1.1.1.a10.4"
+                },
+                {
+                  "control-id": "ops.1.1.1.a10.5"
+                },
+                {
+                  "control-id": "ops.1.1.1.a10.6"
+                },
+                {
+                  "control-id": "ops.1.1.1.a10.7"
+                },
+                {
+                  "control-id": "ops.1.1.1.a11.1"
+                },
+                {
+                  "control-id": "ops.1.1.1.a11.2"
+                },
+                {
+                  "control-id": "ops.1.1.1.a12.1"
+                },
+                {
+                  "control-id": "ops.1.1.1.a12.10"
+                },
+                {
+                  "control-id": "ops.1.1.1.a12.2"
+                },
+                {
+                  "control-id": "ops.1.1.1.a12.3"
+                },
+                {
+                  "control-id": "ops.1.1.1.a12.4"
+                },
+                {
+                  "control-id": "ops.1.1.1.a12.5"
+                },
+                {
+                  "control-id": "ops.1.1.1.a12.6"
+                },
+                {
+                  "control-id": "ops.1.1.1.a12.7"
+                },
+                {
+                  "control-id": "ops.1.1.1.a12.8"
+                },
+                {
+                  "control-id": "ops.1.1.1.a12.9"
+                },
+                {
+                  "control-id": "ops.1.1.1.a13.1"
+                },
+                {
+                  "control-id": "ops.1.1.1.a13.2"
+                },
+                {
+                  "control-id": "ops.1.1.1.a13.3"
+                },
+                {
+                  "control-id": "ops.1.1.1.a13.4"
+                },
+                {
+                  "control-id": "ops.1.1.1.a13.5"
+                },
+                {
+                  "control-id": "ops.1.1.1.a14.1"
+                },
+                {
+                  "control-id": "ops.1.1.1.a14.2"
+                },
+                {
+                  "control-id": "ops.1.1.1.a14.3"
+                },
+                {
+                  "control-id": "ops.1.1.1.a15.1"
+                },
+                {
+                  "control-id": "ops.1.1.1.a15.2"
+                },
+                {
+                  "control-id": "ops.1.1.1.a15.3"
+                },
+                {
+                  "control-id": "ops.1.1.1.a15.4"
+                },
+                {
+                  "control-id": "ops.1.1.1.a15.5"
+                },
+                {
+                  "control-id": "ops.1.1.1.a16.1"
+                },
+                {
+                  "control-id": "ops.1.1.1.a16.2"
+                },
+                {
+                  "control-id": "ops.1.1.1.a16.3"
+                },
+                {
+                  "control-id": "ops.1.1.1.a16.4"
+                },
+                {
+                  "control-id": "ops.1.1.1.a16.5"
+                },
+                {
+                  "control-id": "ops.1.1.1.a16.6"
+                },
+                {
+                  "control-id": "ops.1.1.1.a17.1"
+                },
+                {
+                  "control-id": "ops.1.1.1.a17.2"
+                },
+                {
+                  "control-id": "ops.1.1.1.a17.3"
+                },
+                {
+                  "control-id": "ops.1.1.1.a17.4"
+                },
+                {
+                  "control-id": "ops.1.1.1.a17.5"
+                },
+                {
+                  "control-id": "ops.1.1.1.a17.6"
+                },
+                {
+                  "control-id": "ops.1.1.1.a18.1"
+                },
+                {
+                  "control-id": "ops.1.1.1.a18.2"
+                },
+                {
+                  "control-id": "ops.1.1.1.a18.3"
+                },
+                {
+                  "control-id": "ops.1.1.1.a18.4"
+                },
+                {
+                  "control-id": "ops.1.1.1.a19.1"
+                },
+                {
+                  "control-id": "ops.1.1.1.a19.2"
+                },
+                {
+                  "control-id": "ops.1.1.1.a19.3"
+                },
+                {
+                  "control-id": "ops.1.1.1.a19.4"
+                },
+                {
+                  "control-id": "ops.1.1.1.a19.5"
+                },
+                {
+                  "control-id": "ops.1.1.1.a19.6"
+                },
+                {
+                  "control-id": "ops.1.1.1.a2.1"
+                },
+                {
+                  "control-id": "ops.1.1.1.a2.2"
+                },
+                {
+                  "control-id": "ops.1.1.1.a2.3"
+                },
+                {
+                  "control-id": "ops.1.1.1.a2.4"
+                },
+                {
+                  "control-id": "ops.1.1.1.a2.5"
+                },
+                {
+                  "control-id": "ops.1.1.1.a2.6"
+                },
+                {
+                  "control-id": "ops.1.1.1.a2.7"
+                },
+                {
+                  "control-id": "ops.1.1.1.a2.8"
+                },
+                {
+                  "control-id": "ops.1.1.1.a2.9"
+                },
+                {
+                  "control-id": "ops.1.1.1.a20.1"
+                },
+                {
+                  "control-id": "ops.1.1.1.a20.2"
+                },
+                {
+                  "control-id": "ops.1.1.1.a20.3"
+                },
+                {
+                  "control-id": "ops.1.1.1.a20.4"
+                },
+                {
+                  "control-id": "ops.1.1.1.a20.5"
+                },
+                {
+                  "control-id": "ops.1.1.1.a20.6"
+                },
+                {
+                  "control-id": "ops.1.1.1.a20.7"
+                },
+                {
+                  "control-id": "ops.1.1.1.a21.1"
+                },
+                {
+                  "control-id": "ops.1.1.1.a21.2"
+                },
+                {
+                  "control-id": "ops.1.1.1.a21.3"
+                },
+                {
+                  "control-id": "ops.1.1.1.a22.1"
+                },
+                {
+                  "control-id": "ops.1.1.1.a22.2"
+                },
+                {
+                  "control-id": "ops.1.1.1.a22.3"
+                },
+                {
+                  "control-id": "ops.1.1.1.a23.1"
+                },
+                {
+                  "control-id": "ops.1.1.1.a23.2"
+                },
+                {
+                  "control-id": "ops.1.1.1.a24.1"
+                },
+                {
+                  "control-id": "ops.1.1.1.a25.1"
+                },
+                {
+                  "control-id": "ops.1.1.1.a25.2"
+                },
+                {
+                  "control-id": "ops.1.1.1.a25.3"
+                },
+                {
+                  "control-id": "ops.1.1.1.a25.4"
+                },
+                {
+                  "control-id": "ops.1.1.1.a26.1"
+                },
+                {
+                  "control-id": "ops.1.1.1.a26.2"
+                },
+                {
+                  "control-id": "ops.1.1.1.a3.1"
+                },
+                {
+                  "control-id": "ops.1.1.1.a3.10"
+                },
+                {
+                  "control-id": "ops.1.1.1.a3.11"
+                },
+                {
+                  "control-id": "ops.1.1.1.a3.2"
+                },
+                {
+                  "control-id": "ops.1.1.1.a3.3"
+                },
+                {
+                  "control-id": "ops.1.1.1.a3.4"
+                },
+                {
+                  "control-id": "ops.1.1.1.a3.5"
+                },
+                {
+                  "control-id": "ops.1.1.1.a3.6"
+                },
+                {
+                  "control-id": "ops.1.1.1.a3.7"
+                },
+                {
+                  "control-id": "ops.1.1.1.a3.8"
+                },
+                {
+                  "control-id": "ops.1.1.1.a3.9"
+                },
+                {
+                  "control-id": "ops.1.1.1.a4.1"
+                },
+                {
+                  "control-id": "ops.1.1.1.a4.2"
+                },
+                {
+                  "control-id": "ops.1.1.1.a4.3"
+                },
+                {
+                  "control-id": "ops.1.1.1.a4.4"
+                },
+                {
+                  "control-id": "ops.1.1.1.a4.5"
+                },
+                {
+                  "control-id": "ops.1.1.1.a4.6"
+                },
+                {
+                  "control-id": "ops.1.1.1.a5.1"
+                },
+                {
+                  "control-id": "ops.1.1.1.a5.2"
+                },
+                {
+                  "control-id": "ops.1.1.1.a5.3"
+                },
+                {
+                  "control-id": "ops.1.1.1.a5.4"
+                },
+                {
+                  "control-id": "ops.1.1.1.a5.5"
+                },
+                {
+                  "control-id": "ops.1.1.1.a5.6"
+                },
+                {
+                  "control-id": "ops.1.1.1.a5.7"
+                },
+                {
+                  "control-id": "ops.1.1.1.a5.8"
+                },
+                {
+                  "control-id": "ops.1.1.1.a6.1"
+                },
+                {
+                  "control-id": "ops.1.1.1.a6.2"
+                },
+                {
+                  "control-id": "ops.1.1.1.a6.3"
+                },
+                {
+                  "control-id": "ops.1.1.1.a6.4"
+                },
+                {
+                  "control-id": "ops.1.1.1.a7.1"
+                },
+                {
+                  "control-id": "ops.1.1.1.a7.10"
+                },
+                {
+                  "control-id": "ops.1.1.1.a7.11"
+                },
+                {
+                  "control-id": "ops.1.1.1.a7.12"
+                },
+                {
+                  "control-id": "ops.1.1.1.a7.13"
+                },
+                {
+                  "control-id": "ops.1.1.1.a7.14"
+                },
+                {
+                  "control-id": "ops.1.1.1.a7.2"
+                },
+                {
+                  "control-id": "ops.1.1.1.a7.3"
+                },
+                {
+                  "control-id": "ops.1.1.1.a7.4"
+                },
+                {
+                  "control-id": "ops.1.1.1.a7.5"
+                },
+                {
+                  "control-id": "ops.1.1.1.a7.6"
+                },
+                {
+                  "control-id": "ops.1.1.1.a7.7"
+                },
+                {
+                  "control-id": "ops.1.1.1.a7.8"
+                },
+                {
+                  "control-id": "ops.1.1.1.a7.9"
+                },
+                {
+                  "control-id": "ops.1.1.1.a8.1"
+                },
+                {
+                  "control-id": "ops.1.1.1.a8.2"
+                },
+                {
+                  "control-id": "ops.1.1.1.a9.1"
+                },
+                {
+                  "control-id": "ops.1.1.1.a9.2"
+                },
+                {
+                  "control-id": "ops.1.1.1.a9.3"
+                },
+                {
+                  "control-id": "ops.1.1.1.a9.4"
+                },
+                {
+                  "control-id": "ops.1.1.1.a9.5"
+                },
+                {
+                  "control-id": "ops.1.1.1.a9.6"
+                },
+                {
+                  "control-id": "ops.1.1.1.a9.7"
+                },
+                {
+                  "control-id": "ops.1.1.1.a9.8"
+                },
+                {
+                  "control-id": "ops.1.1.1.a9.9"
+                },
+                {
+                  "control-id": "ops.1.1.2.a11.1"
+                },
+                {
+                  "control-id": "ops.1.1.2.a11.10"
+                },
+                {
+                  "control-id": "ops.1.1.2.a11.11"
+                },
+                {
+                  "control-id": "ops.1.1.2.a11.12"
+                },
+                {
+                  "control-id": "ops.1.1.2.a11.13"
+                },
+                {
+                  "control-id": "ops.1.1.2.a11.14"
+                },
+                {
+                  "control-id": "ops.1.1.2.a11.2"
+                },
+                {
+                  "control-id": "ops.1.1.2.a11.3"
+                },
+                {
+                  "control-id": "ops.1.1.2.a11.4"
+                },
+                {
+                  "control-id": "ops.1.1.2.a11.5"
+                },
+                {
+                  "control-id": "ops.1.1.2.a11.6"
+                },
+                {
+                  "control-id": "ops.1.1.2.a11.7"
+                },
+                {
+                  "control-id": "ops.1.1.2.a11.8"
+                },
+                {
+                  "control-id": "ops.1.1.2.a11.9"
+                },
+                {
+                  "control-id": "ops.1.1.2.a16.1"
+                },
+                {
+                  "control-id": "ops.1.1.2.a16.2"
+                },
+                {
+                  "control-id": "ops.1.1.2.a16.3"
+                },
+                {
+                  "control-id": "ops.1.1.2.a16.4"
+                },
+                {
+                  "control-id": "ops.1.1.2.a17.1"
+                },
+                {
+                  "control-id": "ops.1.1.2.a17.2"
+                },
+                {
+                  "control-id": "ops.1.1.2.a18.1"
+                },
+                {
+                  "control-id": "ops.1.1.2.a18.2"
+                },
+                {
+                  "control-id": "ops.1.1.2.a18.3"
+                },
+                {
+                  "control-id": "ops.1.1.2.a19.1"
+                },
+                {
+                  "control-id": "ops.1.1.2.a19.2"
+                },
+                {
+                  "control-id": "ops.1.1.2.a2.1"
+                },
+                {
+                  "control-id": "ops.1.1.2.a2.2"
+                },
+                {
+                  "control-id": "ops.1.1.2.a2.3"
+                },
+                {
+                  "control-id": "ops.1.1.2.a2.4"
+                },
+                {
+                  "control-id": "ops.1.1.2.a21.1"
+                },
+                {
+                  "control-id": "ops.1.1.2.a21.2"
+                },
+                {
+                  "control-id": "ops.1.1.2.a21.3"
+                },
+                {
+                  "control-id": "ops.1.1.2.a21.4"
+                },
+                {
+                  "control-id": "ops.1.1.2.a22.1"
+                },
+                {
+                  "control-id": "ops.1.1.2.a22.2"
+                },
+                {
+                  "control-id": "ops.1.1.2.a22.3"
+                },
+                {
+                  "control-id": "ops.1.1.2.a22.4"
+                },
+                {
+                  "control-id": "ops.1.1.2.a22.5"
+                },
+                {
+                  "control-id": "ops.1.1.2.a22.6"
+                },
+                {
+                  "control-id": "ops.1.1.2.a23.1"
+                },
+                {
+                  "control-id": "ops.1.1.2.a23.2"
+                },
+                {
+                  "control-id": "ops.1.1.2.a23.3"
+                },
+                {
+                  "control-id": "ops.1.1.2.a23.4"
+                },
+                {
+                  "control-id": "ops.1.1.2.a23.5"
+                },
+                {
+                  "control-id": "ops.1.1.2.a23.6"
+                },
+                {
+                  "control-id": "ops.1.1.2.a24.1"
+                },
+                {
+                  "control-id": "ops.1.1.2.a24.2"
+                },
+                {
+                  "control-id": "ops.1.1.2.a24.3"
+                },
+                {
+                  "control-id": "ops.1.1.2.a24.4"
+                },
+                {
+                  "control-id": "ops.1.1.2.a24.5"
+                },
+                {
+                  "control-id": "ops.1.1.2.a25.1"
+                },
+                {
+                  "control-id": "ops.1.1.2.a25.2"
+                },
+                {
+                  "control-id": "ops.1.1.2.a26.1"
+                },
+                {
+                  "control-id": "ops.1.1.2.a26.2"
+                },
+                {
+                  "control-id": "ops.1.1.2.a26.3"
+                },
+                {
+                  "control-id": "ops.1.1.2.a27.1"
+                },
+                {
+                  "control-id": "ops.1.1.2.a27.2"
+                },
+                {
+                  "control-id": "ops.1.1.2.a27.3"
+                },
+                {
+                  "control-id": "ops.1.1.2.a28.1"
+                },
+                {
+                  "control-id": "ops.1.1.2.a28.2"
+                },
+                {
+                  "control-id": "ops.1.1.2.a28.3"
+                },
+                {
+                  "control-id": "ops.1.1.2.a28.4"
+                },
+                {
+                  "control-id": "ops.1.1.2.a29.1"
+                },
+                {
+                  "control-id": "ops.1.1.2.a29.2"
+                },
+                {
+                  "control-id": "ops.1.1.2.a29.3"
+                },
+                {
+                  "control-id": "ops.1.1.2.a29.4"
+                },
+                {
+                  "control-id": "ops.1.1.2.a30.1"
+                },
+                {
+                  "control-id": "ops.1.1.2.a30.2"
+                },
+                {
+                  "control-id": "ops.1.1.2.a4.1"
+                },
+                {
+                  "control-id": "ops.1.1.2.a4.2"
+                },
+                {
+                  "control-id": "ops.1.1.2.a4.3"
+                },
+                {
+                  "control-id": "ops.1.1.2.a4.4"
+                },
+                {
+                  "control-id": "ops.1.1.2.a4.5"
+                },
+                {
+                  "control-id": "ops.1.1.2.a4.6"
+                },
+                {
+                  "control-id": "ops.1.1.2.a5.1"
+                },
+                {
+                  "control-id": "ops.1.1.2.a5.2"
+                },
+                {
+                  "control-id": "ops.1.1.2.a5.3"
+                },
+                {
+                  "control-id": "ops.1.1.2.a5.4"
+                },
+                {
+                  "control-id": "ops.1.1.2.a5.5"
+                },
+                {
+                  "control-id": "ops.1.1.2.a5.6"
+                },
+                {
+                  "control-id": "ops.1.1.2.a5.7"
+                },
+                {
+                  "control-id": "ops.1.1.2.a5.8"
+                },
+                {
+                  "control-id": "ops.1.1.2.a5.9"
+                },
+                {
+                  "control-id": "ops.1.1.2.a6.1"
+                },
+                {
+                  "control-id": "ops.1.1.2.a6.2"
+                },
+                {
+                  "control-id": "ops.1.1.2.a6.3"
+                },
+                {
+                  "control-id": "ops.1.1.2.a6.4"
+                },
+                {
+                  "control-id": "ops.1.1.2.a7.1"
+                },
+                {
+                  "control-id": "ops.1.1.2.a7.2"
+                },
+                {
+                  "control-id": "ops.1.1.2.a7.3"
+                },
+                {
+                  "control-id": "ops.1.1.2.a7.4"
+                },
+                {
+                  "control-id": "ops.1.1.2.a7.5"
+                },
+                {
+                  "control-id": "ops.1.1.2.a7.6"
+                },
+                {
+                  "control-id": "ops.1.1.2.a7.7"
+                },
+                {
+                  "control-id": "ops.1.1.2.a7.8"
+                },
+                {
+                  "control-id": "ops.1.1.2.a7.9"
+                },
+                {
+                  "control-id": "ops.1.1.2.a8.1"
+                },
+                {
+                  "control-id": "ops.1.1.2.a8.2"
+                },
+                {
+                  "control-id": "ops.1.1.2.a8.3"
+                },
+                {
+                  "control-id": "ops.1.1.2.a8.4"
+                },
+                {
+                  "control-id": "ops.1.1.3.a1.1"
+                },
+                {
+                  "control-id": "ops.1.1.3.a1.2"
+                },
+                {
+                  "control-id": "ops.1.1.3.a1.3"
+                },
+                {
+                  "control-id": "ops.1.1.3.a1.4"
+                },
+                {
+                  "control-id": "ops.1.1.3.a1.5"
+                },
+                {
+                  "control-id": "ops.1.1.3.a1.6"
+                },
+                {
+                  "control-id": "ops.1.1.3.a1.7"
+                },
+                {
+                  "control-id": "ops.1.1.3.a1.8"
+                },
+                {
+                  "control-id": "ops.1.1.3.a10.1"
+                },
+                {
+                  "control-id": "ops.1.1.3.a10.2"
+                },
+                {
+                  "control-id": "ops.1.1.3.a10.3"
+                },
+                {
+                  "control-id": "ops.1.1.3.a10.4"
+                },
+                {
+                  "control-id": "ops.1.1.3.a10.5"
+                },
+                {
+                  "control-id": "ops.1.1.3.a11.1"
+                },
+                {
+                  "control-id": "ops.1.1.3.a11.2"
+                },
+                {
+                  "control-id": "ops.1.1.3.a12.1"
+                },
+                {
+                  "control-id": "ops.1.1.3.a12.2"
+                },
+                {
+                  "control-id": "ops.1.1.3.a13.1"
+                },
+                {
+                  "control-id": "ops.1.1.3.a13.2"
+                },
+                {
+                  "control-id": "ops.1.1.3.a13.3"
+                },
+                {
+                  "control-id": "ops.1.1.3.a14.1"
+                },
+                {
+                  "control-id": "ops.1.1.3.a15.1"
+                },
+                {
+                  "control-id": "ops.1.1.3.a15.2"
+                },
+                {
+                  "control-id": "ops.1.1.3.a15.3"
+                },
+                {
+                  "control-id": "ops.1.1.3.a15.4"
+                },
+                {
+                  "control-id": "ops.1.1.3.a15.5"
+                },
+                {
+                  "control-id": "ops.1.1.3.a15.6"
+                },
+                {
+                  "control-id": "ops.1.1.3.a15.7"
+                },
+                {
+                  "control-id": "ops.1.1.3.a15.8"
+                },
+                {
+                  "control-id": "ops.1.1.3.a15.9"
+                },
+                {
+                  "control-id": "ops.1.1.3.a2.1"
+                },
+                {
+                  "control-id": "ops.1.1.3.a2.2"
+                },
+                {
+                  "control-id": "ops.1.1.3.a3.1"
+                },
+                {
+                  "control-id": "ops.1.1.3.a3.2"
+                },
+                {
+                  "control-id": "ops.1.1.3.a3.3"
+                },
+                {
+                  "control-id": "ops.1.1.3.a5.1"
+                },
+                {
+                  "control-id": "ops.1.1.3.a5.2"
+                },
+                {
+                  "control-id": "ops.1.1.3.a6.1"
+                },
+                {
+                  "control-id": "ops.1.1.3.a6.2"
+                },
+                {
+                  "control-id": "ops.1.1.3.a6.3"
+                },
+                {
+                  "control-id": "ops.1.1.3.a7.1"
+                },
+                {
+                  "control-id": "ops.1.1.3.a7.2"
+                },
+                {
+                  "control-id": "ops.1.1.3.a7.3"
+                },
+                {
+                  "control-id": "ops.1.1.3.a7.4"
+                },
+                {
+                  "control-id": "ops.1.1.3.a7.5"
+                },
+                {
+                  "control-id": "ops.1.1.3.a8.1"
+                },
+                {
+                  "control-id": "ops.1.1.3.a8.2"
+                },
+                {
+                  "control-id": "ops.1.1.3.a9.1"
+                },
+                {
+                  "control-id": "ops.1.1.3.a9.2"
+                },
+                {
+                  "control-id": "ops.1.1.3.a9.3"
+                },
+                {
+                  "control-id": "ops.1.1.3.a9.4"
+                },
+                {
+                  "control-id": "ops.1.1.3.a9.5"
+                },
+                {
+                  "control-id": "ops.1.1.3.a9.6"
+                },
+                {
+                  "control-id": "ops.1.1.4.a1.1"
+                },
+                {
+                  "control-id": "ops.1.1.4.a1.2"
+                },
+                {
+                  "control-id": "ops.1.1.4.a1.3"
+                },
+                {
+                  "control-id": "ops.1.1.4.a1.4"
+                },
+                {
+                  "control-id": "ops.1.1.4.a1.5"
+                },
+                {
+                  "control-id": "ops.1.1.4.a10.1"
+                },
+                {
+                  "control-id": "ops.1.1.4.a11.1"
+                },
+                {
+                  "control-id": "ops.1.1.4.a12.1"
+                },
+                {
+                  "control-id": "ops.1.1.4.a13.1"
+                },
+                {
+                  "control-id": "ops.1.1.4.a13.2"
+                },
+                {
+                  "control-id": "ops.1.1.4.a14.1"
+                },
+                {
+                  "control-id": "ops.1.1.4.a14.2"
+                },
+                {
+                  "control-id": "ops.1.1.4.a14.3"
+                },
+                {
+                  "control-id": "ops.1.1.4.a2.1"
+                },
+                {
+                  "control-id": "ops.1.1.4.a2.2"
+                },
+                {
+                  "control-id": "ops.1.1.4.a2.3"
+                },
+                {
+                  "control-id": "ops.1.1.4.a3.1"
+                },
+                {
+                  "control-id": "ops.1.1.4.a3.2"
+                },
+                {
+                  "control-id": "ops.1.1.4.a3.3"
+                },
+                {
+                  "control-id": "ops.1.1.4.a3.4"
+                },
+                {
+                  "control-id": "ops.1.1.4.a3.5"
+                },
+                {
+                  "control-id": "ops.1.1.4.a3.6"
+                },
+                {
+                  "control-id": "ops.1.1.4.a3.7"
+                },
+                {
+                  "control-id": "ops.1.1.4.a5.1"
+                },
+                {
+                  "control-id": "ops.1.1.4.a5.2"
+                },
+                {
+                  "control-id": "ops.1.1.4.a5.3"
+                },
+                {
+                  "control-id": "ops.1.1.4.a5.4"
+                },
+                {
+                  "control-id": "ops.1.1.4.a5.5"
+                },
+                {
+                  "control-id": "ops.1.1.4.a6.1"
+                },
+                {
+                  "control-id": "ops.1.1.4.a7.1"
+                },
+                {
+                  "control-id": "ops.1.1.4.a7.2"
+                },
+                {
+                  "control-id": "ops.1.1.4.a7.3"
+                },
+                {
+                  "control-id": "ops.1.1.4.a7.4"
+                },
+                {
+                  "control-id": "ops.1.1.4.a7.5"
+                },
+                {
+                  "control-id": "ops.1.1.4.a9.1"
+                },
+                {
+                  "control-id": "ops.1.1.4.a9.2"
+                },
+                {
+                  "control-id": "ops.1.1.4.a9.3"
+                },
+                {
+                  "control-id": "ops.1.1.4.a9.4"
+                },
+                {
+                  "control-id": "ops.1.1.4.a9.5"
+                },
+                {
+                  "control-id": "ops.1.1.5.a1.1"
+                },
+                {
+                  "control-id": "ops.1.1.5.a1.2"
+                },
+                {
+                  "control-id": "ops.1.1.5.a1.3"
+                },
+                {
+                  "control-id": "ops.1.1.5.a1.4"
+                },
+                {
+                  "control-id": "ops.1.1.5.a1.5"
+                },
+                {
+                  "control-id": "ops.1.1.5.a1.6"
+                },
+                {
+                  "control-id": "ops.1.1.5.a1.7"
+                },
+                {
+                  "control-id": "ops.1.1.5.a1.8"
+                },
+                {
+                  "control-id": "ops.1.1.5.a1.9"
+                },
+                {
+                  "control-id": "ops.1.1.5.a10.1"
+                },
+                {
+                  "control-id": "ops.1.1.5.a11.1"
+                },
+                {
+                  "control-id": "ops.1.1.5.a11.2"
+                },
+                {
+                  "control-id": "ops.1.1.5.a11.3"
+                },
+                {
+                  "control-id": "ops.1.1.5.a11.4"
+                },
+                {
+                  "control-id": "ops.1.1.5.a12.1"
+                },
+                {
+                  "control-id": "ops.1.1.5.a12.2"
+                },
+                {
+                  "control-id": "ops.1.1.5.a12.3"
+                },
+                {
+                  "control-id": "ops.1.1.5.a13.1"
+                },
+                {
+                  "control-id": "ops.1.1.5.a3.1"
+                },
+                {
+                  "control-id": "ops.1.1.5.a3.2"
+                },
+                {
+                  "control-id": "ops.1.1.5.a3.3"
+                },
+                {
+                  "control-id": "ops.1.1.5.a3.4"
+                },
+                {
+                  "control-id": "ops.1.1.5.a3.5"
+                },
+                {
+                  "control-id": "ops.1.1.5.a3.6"
+                },
+                {
+                  "control-id": "ops.1.1.5.a4.1"
+                },
+                {
+                  "control-id": "ops.1.1.5.a4.2"
+                },
+                {
+                  "control-id": "ops.1.1.5.a5.1"
+                },
+                {
+                  "control-id": "ops.1.1.5.a5.2"
+                },
+                {
+                  "control-id": "ops.1.1.5.a5.3"
+                },
+                {
+                  "control-id": "ops.1.1.5.a5.4"
+                },
+                {
+                  "control-id": "ops.1.1.5.a5.5"
+                },
+                {
+                  "control-id": "ops.1.1.5.a6.1"
+                },
+                {
+                  "control-id": "ops.1.1.5.a6.2"
+                },
+                {
+                  "control-id": "ops.1.1.5.a6.3"
+                },
+                {
+                  "control-id": "ops.1.1.5.a6.4"
+                },
+                {
+                  "control-id": "ops.1.1.5.a6.5"
+                },
+                {
+                  "control-id": "ops.1.1.5.a6.6"
+                },
+                {
+                  "control-id": "ops.1.1.5.a8.1"
+                },
+                {
+                  "control-id": "ops.1.1.5.a8.2"
+                },
+                {
+                  "control-id": "ops.1.1.5.a9.1"
+                },
+                {
+                  "control-id": "ops.1.1.5.a9.2"
+                },
+                {
+                  "control-id": "ops.1.1.5.a9.3"
+                },
+                {
+                  "control-id": "ops.1.1.5.a9.4"
+                },
+                {
+                  "control-id": "ops.1.1.5.a9.5"
+                },
+                {
+                  "control-id": "ops.1.1.5.a9.6"
+                },
+                {
+                  "control-id": "ops.1.1.6.a1.1"
+                },
+                {
+                  "control-id": "ops.1.1.6.a1.2"
+                },
+                {
+                  "control-id": "ops.1.1.6.a1.3"
+                },
+                {
+                  "control-id": "ops.1.1.6.a1.4"
+                },
+                {
+                  "control-id": "ops.1.1.6.a1.5"
+                },
+                {
+                  "control-id": "ops.1.1.6.a1.6"
+                },
+                {
+                  "control-id": "ops.1.1.6.a1.7"
+                },
+                {
+                  "control-id": "ops.1.1.6.a10.1"
+                },
+                {
+                  "control-id": "ops.1.1.6.a10.2"
+                },
+                {
+                  "control-id": "ops.1.1.6.a10.3"
+                },
+                {
+                  "control-id": "ops.1.1.6.a11.1"
+                },
+                {
+                  "control-id": "ops.1.1.6.a11.2"
+                },
+                {
+                  "control-id": "ops.1.1.6.a11.3"
+                },
+                {
+                  "control-id": "ops.1.1.6.a11.4"
+                },
+                {
+                  "control-id": "ops.1.1.6.a12.1"
+                },
+                {
+                  "control-id": "ops.1.1.6.a12.2"
+                },
+                {
+                  "control-id": "ops.1.1.6.a12.3"
+                },
+                {
+                  "control-id": "ops.1.1.6.a12.4"
+                },
+                {
+                  "control-id": "ops.1.1.6.a12.5"
+                },
+                {
+                  "control-id": "ops.1.1.6.a13.1"
+                },
+                {
+                  "control-id": "ops.1.1.6.a13.2"
+                },
+                {
+                  "control-id": "ops.1.1.6.a13.3"
+                },
+                {
+                  "control-id": "ops.1.1.6.a13.4"
+                },
+                {
+                  "control-id": "ops.1.1.6.a14.1"
+                },
+                {
+                  "control-id": "ops.1.1.6.a14.2"
+                },
+                {
+                  "control-id": "ops.1.1.6.a14.3"
+                },
+                {
+                  "control-id": "ops.1.1.6.a14.4"
+                },
+                {
+                  "control-id": "ops.1.1.6.a14.5"
+                },
+                {
+                  "control-id": "ops.1.1.6.a15.1"
+                },
+                {
+                  "control-id": "ops.1.1.6.a15.2"
+                },
+                {
+                  "control-id": "ops.1.1.6.a16.1"
+                },
+                {
+                  "control-id": "ops.1.1.6.a16.2"
+                },
+                {
+                  "control-id": "ops.1.1.6.a16.3"
+                },
+                {
+                  "control-id": "ops.1.1.6.a2.1"
+                },
+                {
+                  "control-id": "ops.1.1.6.a2.2"
+                },
+                {
+                  "control-id": "ops.1.1.6.a3.1"
+                },
+                {
+                  "control-id": "ops.1.1.6.a3.2"
+                },
+                {
+                  "control-id": "ops.1.1.6.a3.3"
+                },
+                {
+                  "control-id": "ops.1.1.6.a4.1"
+                },
+                {
+                  "control-id": "ops.1.1.6.a4.2"
+                },
+                {
+                  "control-id": "ops.1.1.6.a4.3"
+                },
+                {
+                  "control-id": "ops.1.1.6.a4.4"
+                },
+                {
+                  "control-id": "ops.1.1.6.a4.5"
+                },
+                {
+                  "control-id": "ops.1.1.6.a5.1"
+                },
+                {
+                  "control-id": "ops.1.1.6.a5.2"
+                },
+                {
+                  "control-id": "ops.1.1.6.a5.3"
+                },
+                {
+                  "control-id": "ops.1.1.6.a6.1"
+                },
+                {
+                  "control-id": "ops.1.1.6.a6.2"
+                },
+                {
+                  "control-id": "ops.1.1.6.a7.1"
+                },
+                {
+                  "control-id": "ops.1.1.6.a7.2"
+                },
+                {
+                  "control-id": "ops.1.1.6.a7.3"
+                },
+                {
+                  "control-id": "ops.1.1.6.a7.4"
+                },
+                {
+                  "control-id": "ops.1.1.7.a1.1"
+                },
+                {
+                  "control-id": "ops.1.1.7.a1.2"
+                },
+                {
+                  "control-id": "ops.1.1.7.a1.3"
+                },
+                {
+                  "control-id": "ops.1.1.7.a1.4"
+                },
+                {
+                  "control-id": "ops.1.1.7.a10.1"
+                },
+                {
+                  "control-id": "ops.1.1.7.a10.2"
+                },
+                {
+                  "control-id": "ops.1.1.7.a11.1"
+                },
+                {
+                  "control-id": "ops.1.1.7.a11.2"
+                },
+                {
+                  "control-id": "ops.1.1.7.a11.3"
+                },
+                {
+                  "control-id": "ops.1.1.7.a11.4"
+                },
+                {
+                  "control-id": "ops.1.1.7.a11.5"
+                },
+                {
+                  "control-id": "ops.1.1.7.a11.6"
+                },
+                {
+                  "control-id": "ops.1.1.7.a11.7"
+                },
+                {
+                  "control-id": "ops.1.1.7.a12.1"
+                },
+                {
+                  "control-id": "ops.1.1.7.a12.2"
+                },
+                {
+                  "control-id": "ops.1.1.7.a13.1"
+                },
+                {
+                  "control-id": "ops.1.1.7.a13.2"
+                },
+                {
+                  "control-id": "ops.1.1.7.a14.1"
+                },
+                {
+                  "control-id": "ops.1.1.7.a14.2"
+                },
+                {
+                  "control-id": "ops.1.1.7.a14.3"
+                },
+                {
+                  "control-id": "ops.1.1.7.a14.4"
+                },
+                {
+                  "control-id": "ops.1.1.7.a14.5"
+                },
+                {
+                  "control-id": "ops.1.1.7.a14.6"
+                },
+                {
+                  "control-id": "ops.1.1.7.a14.7"
+                },
+                {
+                  "control-id": "ops.1.1.7.a15.1"
+                },
+                {
+                  "control-id": "ops.1.1.7.a15.10"
+                },
+                {
+                  "control-id": "ops.1.1.7.a15.11"
+                },
+                {
+                  "control-id": "ops.1.1.7.a15.12"
+                },
+                {
+                  "control-id": "ops.1.1.7.a15.13"
+                },
+                {
+                  "control-id": "ops.1.1.7.a15.14"
+                },
+                {
+                  "control-id": "ops.1.1.7.a15.15"
+                },
+                {
+                  "control-id": "ops.1.1.7.a15.2"
+                },
+                {
+                  "control-id": "ops.1.1.7.a15.3"
+                },
+                {
+                  "control-id": "ops.1.1.7.a15.4"
+                },
+                {
+                  "control-id": "ops.1.1.7.a15.5"
+                },
+                {
+                  "control-id": "ops.1.1.7.a15.6"
+                },
+                {
+                  "control-id": "ops.1.1.7.a15.7"
+                },
+                {
+                  "control-id": "ops.1.1.7.a15.8"
+                },
+                {
+                  "control-id": "ops.1.1.7.a15.9"
+                },
+                {
+                  "control-id": "ops.1.1.7.a16.1"
+                },
+                {
+                  "control-id": "ops.1.1.7.a16.2"
+                },
+                {
+                  "control-id": "ops.1.1.7.a17.1"
+                },
+                {
+                  "control-id": "ops.1.1.7.a18.1"
+                },
+                {
+                  "control-id": "ops.1.1.7.a18.2"
+                },
+                {
+                  "control-id": "ops.1.1.7.a19.1"
+                },
+                {
+                  "control-id": "ops.1.1.7.a19.2"
+                },
+                {
+                  "control-id": "ops.1.1.7.a2.1"
+                },
+                {
+                  "control-id": "ops.1.1.7.a2.10"
+                },
+                {
+                  "control-id": "ops.1.1.7.a2.11"
+                },
+                {
+                  "control-id": "ops.1.1.7.a2.12"
+                },
+                {
+                  "control-id": "ops.1.1.7.a2.13"
+                },
+                {
+                  "control-id": "ops.1.1.7.a2.14"
+                },
+                {
+                  "control-id": "ops.1.1.7.a2.15"
+                },
+                {
+                  "control-id": "ops.1.1.7.a2.16"
+                },
+                {
+                  "control-id": "ops.1.1.7.a2.17"
+                },
+                {
+                  "control-id": "ops.1.1.7.a2.18"
+                },
+                {
+                  "control-id": "ops.1.1.7.a2.19"
+                },
+                {
+                  "control-id": "ops.1.1.7.a2.2"
+                },
+                {
+                  "control-id": "ops.1.1.7.a2.20"
+                },
+                {
+                  "control-id": "ops.1.1.7.a2.21"
+                },
+                {
+                  "control-id": "ops.1.1.7.a2.3"
+                },
+                {
+                  "control-id": "ops.1.1.7.a2.4"
+                },
+                {
+                  "control-id": "ops.1.1.7.a2.5"
+                },
+                {
+                  "control-id": "ops.1.1.7.a2.6"
+                },
+                {
+                  "control-id": "ops.1.1.7.a2.7"
+                },
+                {
+                  "control-id": "ops.1.1.7.a2.8"
+                },
+                {
+                  "control-id": "ops.1.1.7.a2.9"
+                },
+                {
+                  "control-id": "ops.1.1.7.a20.1"
+                },
+                {
+                  "control-id": "ops.1.1.7.a20.2"
+                },
+                {
+                  "control-id": "ops.1.1.7.a21.1"
+                },
+                {
+                  "control-id": "ops.1.1.7.a22.1"
+                },
+                {
+                  "control-id": "ops.1.1.7.a22.2"
+                },
+                {
+                  "control-id": "ops.1.1.7.a22.3"
+                },
+                {
+                  "control-id": "ops.1.1.7.a22.4"
+                },
+                {
+                  "control-id": "ops.1.1.7.a23.1"
+                },
+                {
+                  "control-id": "ops.1.1.7.a23.2"
+                },
+                {
+                  "control-id": "ops.1.1.7.a24.1"
+                },
+                {
+                  "control-id": "ops.1.1.7.a25.1"
+                },
+                {
+                  "control-id": "ops.1.1.7.a25.2"
+                },
+                {
+                  "control-id": "ops.1.1.7.a25.3"
+                },
+                {
+                  "control-id": "ops.1.1.7.a26.1"
+                },
+                {
+                  "control-id": "ops.1.1.7.a3.1"
+                },
+                {
+                  "control-id": "ops.1.1.7.a3.2"
+                },
+                {
+                  "control-id": "ops.1.1.7.a4.1"
+                },
+                {
+                  "control-id": "ops.1.1.7.a4.2"
+                },
+                {
+                  "control-id": "ops.1.1.7.a4.3"
+                },
+                {
+                  "control-id": "ops.1.1.7.a5.1"
+                },
+                {
+                  "control-id": "ops.1.1.7.a5.2"
+                },
+                {
+                  "control-id": "ops.1.1.7.a5.3"
+                },
+                {
+                  "control-id": "ops.1.1.7.a6.1"
+                },
+                {
+                  "control-id": "ops.1.1.7.a6.2"
+                },
+                {
+                  "control-id": "ops.1.1.7.a6.3"
+                },
+                {
+                  "control-id": "ops.1.1.7.a6.4"
+                },
+                {
+                  "control-id": "ops.1.1.7.a6.5"
+                },
+                {
+                  "control-id": "ops.1.1.7.a6.6"
+                },
+                {
+                  "control-id": "ops.1.1.7.a6.7"
+                },
+                {
+                  "control-id": "ops.1.1.7.a7.1"
+                },
+                {
+                  "control-id": "ops.1.1.7.a7.10"
+                },
+                {
+                  "control-id": "ops.1.1.7.a7.11"
+                },
+                {
+                  "control-id": "ops.1.1.7.a7.12"
+                },
+                {
+                  "control-id": "ops.1.1.7.a7.13"
+                },
+                {
+                  "control-id": "ops.1.1.7.a7.14"
+                },
+                {
+                  "control-id": "ops.1.1.7.a7.15"
+                },
+                {
+                  "control-id": "ops.1.1.7.a7.16"
+                },
+                {
+                  "control-id": "ops.1.1.7.a7.2"
+                },
+                {
+                  "control-id": "ops.1.1.7.a7.3"
+                },
+                {
+                  "control-id": "ops.1.1.7.a7.4"
+                },
+                {
+                  "control-id": "ops.1.1.7.a7.5"
+                },
+                {
+                  "control-id": "ops.1.1.7.a7.6"
+                },
+                {
+                  "control-id": "ops.1.1.7.a7.7"
+                },
+                {
+                  "control-id": "ops.1.1.7.a7.8"
+                },
+                {
+                  "control-id": "ops.1.1.7.a7.9"
+                },
+                {
+                  "control-id": "ops.1.1.7.a8.1"
+                },
+                {
+                  "control-id": "ops.1.1.7.a8.10"
+                },
+                {
+                  "control-id": "ops.1.1.7.a8.11"
+                },
+                {
+                  "control-id": "ops.1.1.7.a8.12"
+                },
+                {
+                  "control-id": "ops.1.1.7.a8.13"
+                },
+                {
+                  "control-id": "ops.1.1.7.a8.2"
+                },
+                {
+                  "control-id": "ops.1.1.7.a8.3"
+                },
+                {
+                  "control-id": "ops.1.1.7.a8.4"
+                },
+                {
+                  "control-id": "ops.1.1.7.a8.5"
+                },
+                {
+                  "control-id": "ops.1.1.7.a8.6"
+                },
+                {
+                  "control-id": "ops.1.1.7.a8.7"
+                },
+                {
+                  "control-id": "ops.1.1.7.a8.8"
+                },
+                {
+                  "control-id": "ops.1.1.7.a8.9"
+                },
+                {
+                  "control-id": "ops.1.1.7.a9.1"
+                },
+                {
+                  "control-id": "ops.1.1.7.a9.2"
+                },
+                {
+                  "control-id": "ops.1.2.2.a1.1"
+                },
+                {
+                  "control-id": "ops.1.2.2.a1.2"
+                },
+                {
+                  "control-id": "ops.1.2.2.a10.1"
+                },
+                {
+                  "control-id": "ops.1.2.2.a10.10"
+                },
+                {
+                  "control-id": "ops.1.2.2.a10.11"
+                },
+                {
+                  "control-id": "ops.1.2.2.a10.12"
+                },
+                {
+                  "control-id": "ops.1.2.2.a10.2"
+                },
+                {
+                  "control-id": "ops.1.2.2.a10.3"
+                },
+                {
+                  "control-id": "ops.1.2.2.a10.4"
+                },
+                {
+                  "control-id": "ops.1.2.2.a10.5"
+                },
+                {
+                  "control-id": "ops.1.2.2.a10.6"
+                },
+                {
+                  "control-id": "ops.1.2.2.a10.7"
+                },
+                {
+                  "control-id": "ops.1.2.2.a10.8"
+                },
+                {
+                  "control-id": "ops.1.2.2.a10.9"
+                },
+                {
+                  "control-id": "ops.1.2.2.a11.1"
+                },
+                {
+                  "control-id": "ops.1.2.2.a11.10"
+                },
+                {
+                  "control-id": "ops.1.2.2.a11.11"
+                },
+                {
+                  "control-id": "ops.1.2.2.a11.2"
+                },
+                {
+                  "control-id": "ops.1.2.2.a11.3"
+                },
+                {
+                  "control-id": "ops.1.2.2.a11.4"
+                },
+                {
+                  "control-id": "ops.1.2.2.a11.5"
+                },
+                {
+                  "control-id": "ops.1.2.2.a11.6"
+                },
+                {
+                  "control-id": "ops.1.2.2.a11.7"
+                },
+                {
+                  "control-id": "ops.1.2.2.a11.8"
+                },
+                {
+                  "control-id": "ops.1.2.2.a11.9"
+                },
+                {
+                  "control-id": "ops.1.2.2.a12.1"
+                },
+                {
+                  "control-id": "ops.1.2.2.a12.2"
+                },
+                {
+                  "control-id": "ops.1.2.2.a12.3"
+                },
+                {
+                  "control-id": "ops.1.2.2.a12.4"
+                },
+                {
+                  "control-id": "ops.1.2.2.a13.1"
+                },
+                {
+                  "control-id": "ops.1.2.2.a13.2"
+                },
+                {
+                  "control-id": "ops.1.2.2.a13.3"
+                },
+                {
+                  "control-id": "ops.1.2.2.a13.4"
+                },
+                {
+                  "control-id": "ops.1.2.2.a14.1"
+                },
+                {
+                  "control-id": "ops.1.2.2.a14.2"
+                },
+                {
+                  "control-id": "ops.1.2.2.a14.3"
+                },
+                {
+                  "control-id": "ops.1.2.2.a14.4"
+                },
+                {
+                  "control-id": "ops.1.2.2.a14.5"
+                },
+                {
+                  "control-id": "ops.1.2.2.a14.6"
+                },
+                {
+                  "control-id": "ops.1.2.2.a15.1"
+                },
+                {
+                  "control-id": "ops.1.2.2.a15.2"
+                },
+                {
+                  "control-id": "ops.1.2.2.a16.1"
+                },
+                {
+                  "control-id": "ops.1.2.2.a16.2"
+                },
+                {
+                  "control-id": "ops.1.2.2.a16.3"
+                },
+                {
+                  "control-id": "ops.1.2.2.a16.4"
+                },
+                {
+                  "control-id": "ops.1.2.2.a16.5"
+                },
+                {
+                  "control-id": "ops.1.2.2.a16.6"
+                },
+                {
+                  "control-id": "ops.1.2.2.a17.1"
+                },
+                {
+                  "control-id": "ops.1.2.2.a17.2"
+                },
+                {
+                  "control-id": "ops.1.2.2.a18.1"
+                },
+                {
+                  "control-id": "ops.1.2.2.a18.2"
+                },
+                {
+                  "control-id": "ops.1.2.2.a18.3"
+                },
+                {
+                  "control-id": "ops.1.2.2.a18.4"
+                },
+                {
+                  "control-id": "ops.1.2.2.a18.5"
+                },
+                {
+                  "control-id": "ops.1.2.2.a18.6"
+                },
+                {
+                  "control-id": "ops.1.2.2.a19.1"
+                },
+                {
+                  "control-id": "ops.1.2.2.a19.2"
+                },
+                {
+                  "control-id": "ops.1.2.2.a19.3"
+                },
+                {
+                  "control-id": "ops.1.2.2.a19.4"
+                },
+                {
+                  "control-id": "ops.1.2.2.a19.5"
+                },
+                {
+                  "control-id": "ops.1.2.2.a2.1"
+                },
+                {
+                  "control-id": "ops.1.2.2.a2.2"
+                },
+                {
+                  "control-id": "ops.1.2.2.a2.3"
+                },
+                {
+                  "control-id": "ops.1.2.2.a2.4"
+                },
+                {
+                  "control-id": "ops.1.2.2.a2.5"
+                },
+                {
+                  "control-id": "ops.1.2.2.a20.1"
+                },
+                {
+                  "control-id": "ops.1.2.2.a21.1"
+                },
+                {
+                  "control-id": "ops.1.2.2.a3.1"
+                },
+                {
+                  "control-id": "ops.1.2.2.a3.2"
+                },
+                {
+                  "control-id": "ops.1.2.2.a3.3"
+                },
+                {
+                  "control-id": "ops.1.2.2.a4.1"
+                },
+                {
+                  "control-id": "ops.1.2.2.a4.2"
+                },
+                {
+                  "control-id": "ops.1.2.2.a5.1"
+                },
+                {
+                  "control-id": "ops.1.2.2.a5.2"
+                },
+                {
+                  "control-id": "ops.1.2.2.a5.3"
+                },
+                {
+                  "control-id": "ops.1.2.2.a5.4"
+                },
+                {
+                  "control-id": "ops.1.2.2.a5.5"
+                },
+                {
+                  "control-id": "ops.1.2.2.a5.6"
+                },
+                {
+                  "control-id": "ops.1.2.2.a6.1"
+                },
+                {
+                  "control-id": "ops.1.2.2.a6.2"
+                },
+                {
+                  "control-id": "ops.1.2.2.a6.3"
+                },
+                {
+                  "control-id": "ops.1.2.2.a6.4"
+                },
+                {
+                  "control-id": "ops.1.2.2.a7.1"
+                },
+                {
+                  "control-id": "ops.1.2.2.a8.1"
+                },
+                {
+                  "control-id": "ops.1.2.2.a8.2"
+                },
+                {
+                  "control-id": "ops.1.2.2.a8.3"
+                },
+                {
+                  "control-id": "ops.1.2.2.a8.4"
+                },
+                {
+                  "control-id": "ops.1.2.2.a8.5"
+                },
+                {
+                  "control-id": "ops.1.2.2.a8.6"
+                },
+                {
+                  "control-id": "ops.1.2.2.a8.7"
+                },
+                {
+                  "control-id": "ops.1.2.2.a9.1"
+                },
+                {
+                  "control-id": "ops.1.2.2.a9.2"
+                },
+                {
+                  "control-id": "ops.1.2.2.a9.3"
+                },
+                {
+                  "control-id": "ops.1.2.2.a9.4"
+                },
+                {
+                  "control-id": "ops.1.2.2.a9.5"
+                },
+                {
+                  "control-id": "ops.1.2.4.a1.1"
+                },
+                {
+                  "control-id": "ops.1.2.4.a1.2"
+                },
+                {
+                  "control-id": "ops.1.2.4.a1.3"
+                },
+                {
+                  "control-id": "ops.1.2.4.a1.4"
+                },
+                {
+                  "control-id": "ops.1.2.4.a10.1"
+                },
+                {
+                  "control-id": "ops.1.2.4.a10.2"
+                },
+                {
+                  "control-id": "ops.1.2.4.a10.3"
+                },
+                {
+                  "control-id": "ops.1.2.4.a10.4"
+                },
+                {
+                  "control-id": "ops.1.2.4.a2.1"
+                },
+                {
+                  "control-id": "ops.1.2.4.a2.2"
+                },
+                {
+                  "control-id": "ops.1.2.4.a2.3"
+                },
+                {
+                  "control-id": "ops.1.2.4.a5.1"
+                },
+                {
+                  "control-id": "ops.1.2.4.a5.2"
+                },
+                {
+                  "control-id": "ops.1.2.4.a5.3"
+                },
+                {
+                  "control-id": "ops.1.2.4.a6.1"
+                },
+                {
+                  "control-id": "ops.1.2.4.a6.2"
+                },
+                {
+                  "control-id": "ops.1.2.4.a6.3"
+                },
+                {
+                  "control-id": "ops.1.2.4.a7.1"
+                },
+                {
+                  "control-id": "ops.1.2.4.a7.2"
+                },
+                {
+                  "control-id": "ops.1.2.4.a7.3"
+                },
+                {
+                  "control-id": "ops.1.2.4.a8.1"
+                },
+                {
+                  "control-id": "ops.1.2.4.a8.2"
+                },
+                {
+                  "control-id": "ops.1.2.4.a8.3"
+                },
+                {
+                  "control-id": "ops.1.2.4.a8.4"
+                },
+                {
+                  "control-id": "ops.1.2.4.a9.1"
+                },
+                {
+                  "control-id": "ops.1.2.4.a9.2"
+                },
+                {
+                  "control-id": "ops.1.2.4.a9.3"
+                },
+                {
+                  "control-id": "ops.1.2.5.a1.1"
+                },
+                {
+                  "control-id": "ops.1.2.5.a1.2"
+                },
+                {
+                  "control-id": "ops.1.2.5.a1.3"
+                },
+                {
+                  "control-id": "ops.1.2.5.a10.1"
+                },
+                {
+                  "control-id": "ops.1.2.5.a10.2"
+                },
+                {
+                  "control-id": "ops.1.2.5.a10.3"
+                },
+                {
+                  "control-id": "ops.1.2.5.a10.4"
+                },
+                {
+                  "control-id": "ops.1.2.5.a10.5"
+                },
+                {
+                  "control-id": "ops.1.2.5.a14.1"
+                },
+                {
+                  "control-id": "ops.1.2.5.a14.2"
+                },
+                {
+                  "control-id": "ops.1.2.5.a14.3"
+                },
+                {
+                  "control-id": "ops.1.2.5.a14.4"
+                },
+                {
+                  "control-id": "ops.1.2.5.a17.1"
+                },
+                {
+                  "control-id": "ops.1.2.5.a17.2"
+                },
+                {
+                  "control-id": "ops.1.2.5.a17.3"
+                },
+                {
+                  "control-id": "ops.1.2.5.a19.1"
+                },
+                {
+                  "control-id": "ops.1.2.5.a19.2"
+                },
+                {
+                  "control-id": "ops.1.2.5.a19.3"
+                },
+                {
+                  "control-id": "ops.1.2.5.a19.4"
+                },
+                {
+                  "control-id": "ops.1.2.5.a19.5"
+                },
+                {
+                  "control-id": "ops.1.2.5.a19.6"
+                },
+                {
+                  "control-id": "ops.1.2.5.a2.1"
+                },
+                {
+                  "control-id": "ops.1.2.5.a20.1"
+                },
+                {
+                  "control-id": "ops.1.2.5.a20.2"
+                },
+                {
+                  "control-id": "ops.1.2.5.a20.3"
+                },
+                {
+                  "control-id": "ops.1.2.5.a21.1"
+                },
+                {
+                  "control-id": "ops.1.2.5.a21.2"
+                },
+                {
+                  "control-id": "ops.1.2.5.a21.3"
+                },
+                {
+                  "control-id": "ops.1.2.5.a21.4"
+                },
+                {
+                  "control-id": "ops.1.2.5.a22.1"
+                },
+                {
+                  "control-id": "ops.1.2.5.a22.2"
+                },
+                {
+                  "control-id": "ops.1.2.5.a24.1"
+                },
+                {
+                  "control-id": "ops.1.2.5.a24.2"
+                },
+                {
+                  "control-id": "ops.1.2.5.a24.3"
+                },
+                {
+                  "control-id": "ops.1.2.5.a24.4"
+                },
+                {
+                  "control-id": "ops.1.2.5.a24.5"
+                },
+                {
+                  "control-id": "ops.1.2.5.a25.1"
+                },
+                {
+                  "control-id": "ops.1.2.5.a25.2"
+                },
+                {
+                  "control-id": "ops.1.2.5.a25.3"
+                },
+                {
+                  "control-id": "ops.1.2.5.a25.4"
+                },
+                {
+                  "control-id": "ops.1.2.5.a3.1"
+                },
+                {
+                  "control-id": "ops.1.2.5.a3.2"
+                },
+                {
+                  "control-id": "ops.1.2.5.a3.3"
+                },
+                {
+                  "control-id": "ops.1.2.5.a3.4"
+                },
+                {
+                  "control-id": "ops.1.2.5.a3.5"
+                },
+                {
+                  "control-id": "ops.1.2.5.a5.1"
+                },
+                {
+                  "control-id": "ops.1.2.5.a5.2"
+                },
+                {
+                  "control-id": "ops.1.2.5.a5.3"
+                },
+                {
+                  "control-id": "ops.1.2.5.a5.4"
+                },
+                {
+                  "control-id": "ops.1.2.5.a6.1"
+                },
+                {
+                  "control-id": "ops.1.2.5.a6.2"
+                },
+                {
+                  "control-id": "ops.1.2.5.a7.1"
+                },
+                {
+                  "control-id": "ops.1.2.5.a7.2"
+                },
+                {
+                  "control-id": "ops.1.2.5.a7.3"
+                },
+                {
+                  "control-id": "ops.1.2.5.a7.4"
+                },
+                {
+                  "control-id": "ops.1.2.5.a8.1"
+                },
+                {
+                  "control-id": "ops.1.2.5.a8.2"
+                },
+                {
+                  "control-id": "ops.1.2.5.a8.3"
+                },
+                {
+                  "control-id": "ops.1.2.5.a8.4"
+                },
+                {
+                  "control-id": "ops.1.2.5.a9.1"
+                },
+                {
+                  "control-id": "ops.1.2.5.a9.2"
+                },
+                {
+                  "control-id": "ops.1.2.6.a1.1"
+                },
+                {
+                  "control-id": "ops.1.2.6.a1.2"
+                },
+                {
+                  "control-id": "ops.1.2.6.a1.3"
+                },
+                {
+                  "control-id": "ops.1.2.6.a1.4"
+                },
+                {
+                  "control-id": "ops.1.2.6.a1.5"
+                },
+                {
+                  "control-id": "ops.1.2.6.a1.6"
+                },
+                {
+                  "control-id": "ops.1.2.6.a10.1"
+                },
+                {
+                  "control-id": "ops.1.2.6.a11.1"
+                },
+                {
+                  "control-id": "ops.1.2.6.a12.1"
+                },
+                {
+                  "control-id": "ops.1.2.6.a12.2"
+                },
+                {
+                  "control-id": "ops.1.2.6.a12.3"
+                },
+                {
+                  "control-id": "ops.1.2.6.a2.1"
+                },
+                {
+                  "control-id": "ops.1.2.6.a2.2"
+                },
+                {
+                  "control-id": "ops.1.2.6.a2.3"
+                },
+                {
+                  "control-id": "ops.1.2.6.a3.1"
+                },
+                {
+                  "control-id": "ops.1.2.6.a3.2"
+                },
+                {
+                  "control-id": "ops.1.2.6.a3.3"
+                },
+                {
+                  "control-id": "ops.1.2.6.a4.1"
+                },
+                {
+                  "control-id": "ops.1.2.6.a5.1"
+                },
+                {
+                  "control-id": "ops.1.2.6.a5.2"
+                },
+                {
+                  "control-id": "ops.1.2.6.a6.1"
+                },
+                {
+                  "control-id": "ops.1.2.6.a6.2"
+                },
+                {
+                  "control-id": "ops.1.2.6.a6.3"
+                },
+                {
+                  "control-id": "ops.1.2.6.a6.4"
+                },
+                {
+                  "control-id": "ops.1.2.6.a6.5"
+                },
+                {
+                  "control-id": "ops.1.2.6.a6.6"
+                },
+                {
+                  "control-id": "ops.1.2.6.a6.7"
+                },
+                {
+                  "control-id": "ops.1.2.6.a7.1"
+                },
+                {
+                  "control-id": "ops.1.2.6.a7.2"
+                },
+                {
+                  "control-id": "ops.1.2.6.a7.3"
+                },
+                {
+                  "control-id": "ops.1.2.6.a7.4"
+                },
+                {
+                  "control-id": "ops.1.2.6.a7.5"
+                },
+                {
+                  "control-id": "ops.1.2.6.a7.6"
+                },
+                {
+                  "control-id": "ops.1.2.6.a8.1"
+                },
+                {
+                  "control-id": "ops.1.2.6.a8.2"
+                },
+                {
+                  "control-id": "ops.1.2.6.a9.1"
+                },
+                {
+                  "control-id": "ops.1.2.6.a9.2"
+                },
+                {
+                  "control-id": "ops.1.2.6.a9.3"
+                },
+                {
+                  "control-id": "ops.2.2.a1.1"
+                },
+                {
+                  "control-id": "ops.2.2.a1.2"
+                },
+                {
+                  "control-id": "ops.2.2.a1.3"
+                },
+                {
+                  "control-id": "ops.2.2.a1.4"
+                },
+                {
+                  "control-id": "ops.2.2.a1.5"
+                },
+                {
+                  "control-id": "ops.2.2.a1.6"
+                },
+                {
+                  "control-id": "ops.2.2.a1.7"
+                },
+                {
+                  "control-id": "ops.2.2.a1.8"
+                },
+                {
+                  "control-id": "ops.2.2.a1.9"
+                },
+                {
+                  "control-id": "ops.2.2.a10.1"
+                },
+                {
+                  "control-id": "ops.2.2.a10.2"
+                },
+                {
+                  "control-id": "ops.2.2.a10.3"
+                },
+                {
+                  "control-id": "ops.2.2.a10.4"
+                },
+                {
+                  "control-id": "ops.2.2.a10.5"
+                },
+                {
+                  "control-id": "ops.2.2.a11.1"
+                },
+                {
+                  "control-id": "ops.2.2.a11.2"
+                },
+                {
+                  "control-id": "ops.2.2.a11.3"
+                },
+                {
+                  "control-id": "ops.2.2.a11.4"
+                },
+                {
+                  "control-id": "ops.2.2.a12.1"
+                },
+                {
+                  "control-id": "ops.2.2.a12.2"
+                },
+                {
+                  "control-id": "ops.2.2.a12.3"
+                },
+                {
+                  "control-id": "ops.2.2.a12.4"
+                },
+                {
+                  "control-id": "ops.2.2.a13.1"
+                },
+                {
+                  "control-id": "ops.2.2.a13.2"
+                },
+                {
+                  "control-id": "ops.2.2.a13.3"
+                },
+                {
+                  "control-id": "ops.2.2.a13.4"
+                },
+                {
+                  "control-id": "ops.2.2.a14.1"
+                },
+                {
+                  "control-id": "ops.2.2.a14.2"
+                },
+                {
+                  "control-id": "ops.2.2.a15.1"
+                },
+                {
+                  "control-id": "ops.2.2.a15.2"
+                },
+                {
+                  "control-id": "ops.2.2.a15.3"
+                },
+                {
+                  "control-id": "ops.2.2.a16.1"
+                },
+                {
+                  "control-id": "ops.2.2.a16.2"
+                },
+                {
+                  "control-id": "ops.2.2.a17.1"
+                },
+                {
+                  "control-id": "ops.2.2.a17.2"
+                },
+                {
+                  "control-id": "ops.2.2.a17.3"
+                },
+                {
+                  "control-id": "ops.2.2.a18.1"
+                },
+                {
+                  "control-id": "ops.2.2.a18.2"
+                },
+                {
+                  "control-id": "ops.2.2.a18.3"
+                },
+                {
+                  "control-id": "ops.2.2.a19.1"
+                },
+                {
+                  "control-id": "ops.2.2.a19.2"
+                },
+                {
+                  "control-id": "ops.2.2.a2.1"
+                },
+                {
+                  "control-id": "ops.2.2.a2.2"
+                },
+                {
+                  "control-id": "ops.2.2.a2.3"
+                },
+                {
+                  "control-id": "ops.2.2.a2.4"
+                },
+                {
+                  "control-id": "ops.2.2.a3.1"
+                },
+                {
+                  "control-id": "ops.2.2.a3.2"
+                },
+                {
+                  "control-id": "ops.2.2.a4.1"
+                },
+                {
+                  "control-id": "ops.2.2.a4.2"
+                },
+                {
+                  "control-id": "ops.2.2.a5.1"
+                },
+                {
+                  "control-id": "ops.2.2.a5.2"
+                },
+                {
+                  "control-id": "ops.2.2.a5.3"
+                },
+                {
+                  "control-id": "ops.2.2.a5.4"
+                },
+                {
+                  "control-id": "ops.2.2.a5.5"
+                },
+                {
+                  "control-id": "ops.2.2.a6.1"
+                },
+                {
+                  "control-id": "ops.2.2.a6.2"
+                },
+                {
+                  "control-id": "ops.2.2.a6.3"
+                },
+                {
+                  "control-id": "ops.2.2.a7.1"
+                },
+                {
+                  "control-id": "ops.2.2.a8.1"
+                },
+                {
+                  "control-id": "ops.2.2.a8.2"
+                },
+                {
+                  "control-id": "ops.2.2.a8.3"
+                },
+                {
+                  "control-id": "ops.2.2.a8.4"
+                },
+                {
+                  "control-id": "ops.2.2.a9.1"
+                },
+                {
+                  "control-id": "ops.2.2.a9.2"
+                },
+                {
+                  "control-id": "ops.2.2.a9.3"
+                },
+                {
+                  "control-id": "ops.2.2.a9.4"
+                },
+                {
+                  "control-id": "ops.2.2.a9.5"
+                },
+                {
+                  "control-id": "ops.2.2.a9.6"
+                },
+                {
+                  "control-id": "ops.2.3.a1.1"
+                },
+                {
+                  "control-id": "ops.2.3.a1.2"
+                },
+                {
+                  "control-id": "ops.2.3.a1.3"
+                },
+                {
+                  "control-id": "ops.2.3.a1.4"
+                },
+                {
+                  "control-id": "ops.2.3.a10.1"
+                },
+                {
+                  "control-id": "ops.2.3.a10.2"
+                },
+                {
+                  "control-id": "ops.2.3.a10.3"
+                },
+                {
+                  "control-id": "ops.2.3.a10.4"
+                },
+                {
+                  "control-id": "ops.2.3.a10.5"
+                },
+                {
+                  "control-id": "ops.2.3.a10.6"
+                },
+                {
+                  "control-id": "ops.2.3.a10.7"
+                },
+                {
+                  "control-id": "ops.2.3.a11.1"
+                },
+                {
+                  "control-id": "ops.2.3.a11.2"
+                },
+                {
+                  "control-id": "ops.2.3.a11.3"
+                },
+                {
+                  "control-id": "ops.2.3.a12.1"
+                },
+                {
+                  "control-id": "ops.2.3.a12.2"
+                },
+                {
+                  "control-id": "ops.2.3.a12.3"
+                },
+                {
+                  "control-id": "ops.2.3.a13.1"
+                },
+                {
+                  "control-id": "ops.2.3.a13.2"
+                },
+                {
+                  "control-id": "ops.2.3.a14.1"
+                },
+                {
+                  "control-id": "ops.2.3.a14.2"
+                },
+                {
+                  "control-id": "ops.2.3.a14.3"
+                },
+                {
+                  "control-id": "ops.2.3.a14.4"
+                },
+                {
+                  "control-id": "ops.2.3.a14.5"
+                },
+                {
+                  "control-id": "ops.2.3.a14.6"
+                },
+                {
+                  "control-id": "ops.2.3.a14.7"
+                },
+                {
+                  "control-id": "ops.2.3.a15.1"
+                },
+                {
+                  "control-id": "ops.2.3.a15.2"
+                },
+                {
+                  "control-id": "ops.2.3.a15.3"
+                },
+                {
+                  "control-id": "ops.2.3.a15.4"
+                },
+                {
+                  "control-id": "ops.2.3.a15.5"
+                },
+                {
+                  "control-id": "ops.2.3.a16.1"
+                },
+                {
+                  "control-id": "ops.2.3.a16.2"
+                },
+                {
+                  "control-id": "ops.2.3.a17.1"
+                },
+                {
+                  "control-id": "ops.2.3.a17.2"
+                },
+                {
+                  "control-id": "ops.2.3.a17.3"
+                },
+                {
+                  "control-id": "ops.2.3.a17.4"
+                },
+                {
+                  "control-id": "ops.2.3.a17.5"
+                },
+                {
+                  "control-id": "ops.2.3.a18.1"
+                },
+                {
+                  "control-id": "ops.2.3.a18.2"
+                },
+                {
+                  "control-id": "ops.2.3.a18.3"
+                },
+                {
+                  "control-id": "ops.2.3.a19.1"
+                },
+                {
+                  "control-id": "ops.2.3.a19.2"
+                },
+                {
+                  "control-id": "ops.2.3.a19.3"
+                },
+                {
+                  "control-id": "ops.2.3.a19.4"
+                },
+                {
+                  "control-id": "ops.2.3.a2.1"
+                },
+                {
+                  "control-id": "ops.2.3.a2.2"
+                },
+                {
+                  "control-id": "ops.2.3.a2.3"
+                },
+                {
+                  "control-id": "ops.2.3.a2.4"
+                },
+                {
+                  "control-id": "ops.2.3.a20.1"
+                },
+                {
+                  "control-id": "ops.2.3.a20.2"
+                },
+                {
+                  "control-id": "ops.2.3.a20.3"
+                },
+                {
+                  "control-id": "ops.2.3.a20.4"
+                },
+                {
+                  "control-id": "ops.2.3.a20.5"
+                },
+                {
+                  "control-id": "ops.2.3.a20.6"
+                },
+                {
+                  "control-id": "ops.2.3.a21.1"
+                },
+                {
+                  "control-id": "ops.2.3.a21.2"
+                },
+                {
+                  "control-id": "ops.2.3.a21.3"
+                },
+                {
+                  "control-id": "ops.2.3.a21.4"
+                },
+                {
+                  "control-id": "ops.2.3.a22.1"
+                },
+                {
+                  "control-id": "ops.2.3.a22.2"
+                },
+                {
+                  "control-id": "ops.2.3.a22.3"
+                },
+                {
+                  "control-id": "ops.2.3.a23.1"
+                },
+                {
+                  "control-id": "ops.2.3.a23.2"
+                },
+                {
+                  "control-id": "ops.2.3.a23.3"
+                },
+                {
+                  "control-id": "ops.2.3.a24.1"
+                },
+                {
+                  "control-id": "ops.2.3.a24.2"
+                },
+                {
+                  "control-id": "ops.2.3.a25.1"
+                },
+                {
+                  "control-id": "ops.2.3.a25.2"
+                },
+                {
+                  "control-id": "ops.2.3.a25.3"
+                },
+                {
+                  "control-id": "ops.2.3.a3.1"
+                },
+                {
+                  "control-id": "ops.2.3.a3.2"
+                },
+                {
+                  "control-id": "ops.2.3.a3.3"
+                },
+                {
+                  "control-id": "ops.2.3.a3.4"
+                },
+                {
+                  "control-id": "ops.2.3.a3.5"
+                },
+                {
+                  "control-id": "ops.2.3.a3.6"
+                },
+                {
+                  "control-id": "ops.2.3.a4.1"
+                },
+                {
+                  "control-id": "ops.2.3.a4.2"
+                },
+                {
+                  "control-id": "ops.2.3.a4.3"
+                },
+                {
+                  "control-id": "ops.2.3.a4.4"
+                },
+                {
+                  "control-id": "ops.2.3.a4.5"
+                },
+                {
+                  "control-id": "ops.2.3.a4.6"
+                },
+                {
+                  "control-id": "ops.2.3.a5.1"
+                },
+                {
+                  "control-id": "ops.2.3.a5.2"
+                },
+                {
+                  "control-id": "ops.2.3.a5.3"
+                },
+                {
+                  "control-id": "ops.2.3.a6.1"
+                },
+                {
+                  "control-id": "ops.2.3.a6.2"
+                },
+                {
+                  "control-id": "ops.2.3.a6.3"
+                },
+                {
+                  "control-id": "ops.2.3.a6.4"
+                },
+                {
+                  "control-id": "ops.2.3.a6.5"
+                },
+                {
+                  "control-id": "ops.2.3.a6.6"
+                },
+                {
+                  "control-id": "ops.2.3.a6.7"
+                },
+                {
+                  "control-id": "ops.2.3.a6.8"
+                },
+                {
+                  "control-id": "ops.2.3.a7.1"
+                },
+                {
+                  "control-id": "ops.2.3.a7.2"
+                },
+                {
+                  "control-id": "ops.2.3.a7.3"
+                },
+                {
+                  "control-id": "ops.2.3.a7.4"
+                },
+                {
+                  "control-id": "ops.2.3.a8.1"
+                },
+                {
+                  "control-id": "ops.2.3.a8.2"
+                },
+                {
+                  "control-id": "ops.2.3.a8.3"
+                },
+                {
+                  "control-id": "ops.2.3.a8.4"
+                },
+                {
+                  "control-id": "ops.2.3.a8.5"
+                },
+                {
+                  "control-id": "ops.2.3.a8.6"
+                },
+                {
+                  "control-id": "ops.2.3.a9.1"
+                },
+                {
+                  "control-id": "ops.2.3.a9.2"
+                },
+                {
+                  "control-id": "ops.2.3.a9.3"
+                },
+                {
+                  "control-id": "ops.2.3.a9.4"
+                },
+                {
+                  "control-id": "ops.3.2.a1.1"
+                },
+                {
+                  "control-id": "ops.3.2.a1.2"
+                },
+                {
+                  "control-id": "ops.3.2.a1.3"
+                },
+                {
+                  "control-id": "ops.3.2.a10.1"
+                },
+                {
+                  "control-id": "ops.3.2.a10.2"
+                },
+                {
+                  "control-id": "ops.3.2.a10.3"
+                },
+                {
+                  "control-id": "ops.3.2.a10.4"
+                },
+                {
+                  "control-id": "ops.3.2.a10.5"
+                },
+                {
+                  "control-id": "ops.3.2.a11.1"
+                },
+                {
+                  "control-id": "ops.3.2.a11.2"
+                },
+                {
+                  "control-id": "ops.3.2.a12.1"
+                },
+                {
+                  "control-id": "ops.3.2.a12.2"
+                },
+                {
+                  "control-id": "ops.3.2.a12.3"
+                },
+                {
+                  "control-id": "ops.3.2.a13.1"
+                },
+                {
+                  "control-id": "ops.3.2.a13.2"
+                },
+                {
+                  "control-id": "ops.3.2.a13.3"
+                },
+                {
+                  "control-id": "ops.3.2.a13.4"
+                },
+                {
+                  "control-id": "ops.3.2.a13.5"
+                },
+                {
+                  "control-id": "ops.3.2.a14.1"
+                },
+                {
+                  "control-id": "ops.3.2.a15.1"
+                },
+                {
+                  "control-id": "ops.3.2.a15.2"
+                },
+                {
+                  "control-id": "ops.3.2.a15.3"
+                },
+                {
+                  "control-id": "ops.3.2.a16.1"
+                },
+                {
+                  "control-id": "ops.3.2.a16.2"
+                },
+                {
+                  "control-id": "ops.3.2.a16.3"
+                },
+                {
+                  "control-id": "ops.3.2.a16.4"
+                },
+                {
+                  "control-id": "ops.3.2.a16.5"
+                },
+                {
+                  "control-id": "ops.3.2.a17.1"
+                },
+                {
+                  "control-id": "ops.3.2.a17.2"
+                },
+                {
+                  "control-id": "ops.3.2.a17.3"
+                },
+                {
+                  "control-id": "ops.3.2.a18.1"
+                },
+                {
+                  "control-id": "ops.3.2.a18.2"
+                },
+                {
+                  "control-id": "ops.3.2.a18.3"
+                },
+                {
+                  "control-id": "ops.3.2.a18.4"
+                },
+                {
+                  "control-id": "ops.3.2.a19.1"
+                },
+                {
+                  "control-id": "ops.3.2.a19.2"
+                },
+                {
+                  "control-id": "ops.3.2.a2.1"
+                },
+                {
+                  "control-id": "ops.3.2.a2.2"
+                },
+                {
+                  "control-id": "ops.3.2.a2.3"
+                },
+                {
+                  "control-id": "ops.3.2.a2.4"
+                },
+                {
+                  "control-id": "ops.3.2.a2.5"
+                },
+                {
+                  "control-id": "ops.3.2.a2.6"
+                },
+                {
+                  "control-id": "ops.3.2.a2.7"
+                },
+                {
+                  "control-id": "ops.3.2.a2.8"
+                },
+                {
+                  "control-id": "ops.3.2.a20.1"
+                },
+                {
+                  "control-id": "ops.3.2.a20.2"
+                },
+                {
+                  "control-id": "ops.3.2.a20.3"
+                },
+                {
+                  "control-id": "ops.3.2.a21.1"
+                },
+                {
+                  "control-id": "ops.3.2.a21.2"
+                },
+                {
+                  "control-id": "ops.3.2.a21.3"
+                },
+                {
+                  "control-id": "ops.3.2.a3.1"
+                },
+                {
+                  "control-id": "ops.3.2.a3.2"
+                },
+                {
+                  "control-id": "ops.3.2.a3.3"
+                },
+                {
+                  "control-id": "ops.3.2.a4.1"
+                },
+                {
+                  "control-id": "ops.3.2.a4.2"
+                },
+                {
+                  "control-id": "ops.3.2.a4.3"
+                },
+                {
+                  "control-id": "ops.3.2.a4.4"
+                },
+                {
+                  "control-id": "ops.3.2.a4.5"
+                },
+                {
+                  "control-id": "ops.3.2.a4.6"
+                },
+                {
+                  "control-id": "ops.3.2.a4.7"
+                },
+                {
+                  "control-id": "ops.3.2.a5.1"
+                },
+                {
+                  "control-id": "ops.3.2.a5.2"
+                },
+                {
+                  "control-id": "ops.3.2.a5.3"
+                },
+                {
+                  "control-id": "ops.3.2.a5.4"
+                },
+                {
+                  "control-id": "ops.3.2.a5.5"
+                },
+                {
+                  "control-id": "ops.3.2.a5.6"
+                },
+                {
+                  "control-id": "ops.3.2.a5.7"
+                },
+                {
+                  "control-id": "ops.3.2.a6.1"
+                },
+                {
+                  "control-id": "ops.3.2.a6.2"
+                },
+                {
+                  "control-id": "ops.3.2.a6.3"
+                },
+                {
+                  "control-id": "ops.3.2.a6.4"
+                },
+                {
+                  "control-id": "ops.3.2.a6.5"
+                },
+                {
+                  "control-id": "ops.3.2.a7.1"
+                },
+                {
+                  "control-id": "ops.3.2.a7.2"
+                },
+                {
+                  "control-id": "ops.3.2.a8.1"
+                },
+                {
+                  "control-id": "ops.3.2.a8.2"
+                },
+                {
+                  "control-id": "ops.3.2.a8.3"
+                },
+                {
+                  "control-id": "ops.3.2.a8.4"
+                },
+                {
+                  "control-id": "ops.3.2.a9.1"
+                },
+                {
+                  "control-id": "ops.3.2.a9.2"
+                },
+                {
+                  "control-id": "ops.3.2.a9.3"
+                },
+                {
+                  "control-id": "ops.3.2.a9.4"
+                }
+              ]
             }
           ]
         },
-        "start": "2026-11-08T01:42:12Z",
+        "start": "2026-11-08T00:30:58Z",
         "title": "IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - OPS: Betrieb Assessment Results",
         "uuid": "89c64fef-add5-5e2d-839c-0f5daa2fdae0"
       }

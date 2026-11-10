@@ -213,7 +213,7 @@ func (s *SQLiteStore) ListClaims(ctx context.Context, subjectDigest, bomKind, re
 	if err != nil {
 		return nil, "", fmt.Errorf("list claims: %w", err)
 	}
-	defer rows.Close()
+	defer func() { _ = rows.Close() }()
 	var out []*Claim
 	hasMore := false
 	for rows.Next() {

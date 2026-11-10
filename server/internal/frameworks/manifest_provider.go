@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
-	"runtime"
 	"sync"
 )
 
@@ -19,7 +18,7 @@ type manifestFrameworkSpec struct {
 }
 
 var manifestFrameworkSpecs = []manifestFrameworkSpec{
-	{ID: "nist-csf-2.0", Aliases: []string{"csf-2.0", "nist-csf"}, Title: "NIST CSF version 2.0", Version: "6", Jurisdiction: "usa", Authority: "NIST", ControlCount: 106},
+	{ID: "nist-csf-2.0", Aliases: []string{"csf-2.0", "nist-csf", "nist_csf_2"}, Title: "NIST CSF version 2.0", Version: "6", Jurisdiction: "usa", Authority: "NIST", ControlCount: 106},
 	{ID: "cmmc-2.0", Aliases: []string{"cmmc"}, Title: "CMMC version 2.0", Version: "6", Jurisdiction: "usa", Authority: "DoD", ControlCount: 110},
 	{ID: "fedramp-rev5", Aliases: []string{"fedramp"}, Title: "GSA FedRAMP Rev5", Version: "1", Jurisdiction: "usa", Authority: "US General Services Administration", ControlCount: 410},
 	{ID: "cisa-cpg-2.0", Aliases: []string{"cisa-cpg"}, Title: "CISA Cybersecurity Performance Goals v2.0", Version: "1", Jurisdiction: "usa", Authority: "CISA", ControlCount: 34},
@@ -45,11 +44,11 @@ var manifestFrameworkSpecs = []manifestFrameworkSpec{
 	{ID: "bs-it-gs-2023-der", Aliases: []string{"bsi-it-gs-2023-der"}, Title: "IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - DER: Detektion und Reaktion", Version: "1", Jurisdiction: "germany", Authority: "BSI", ControlCount: 546},
 	{ID: "bsi-c5-2020", Aliases: []string{"c5-2020"}, Title: "BSI C5 Library", Version: "1", Jurisdiction: "germany", Authority: "BSI", ControlCount: 121},
 	{ID: "bsi-externer-cloud-dienste", Title: "Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1)", Version: "1", Jurisdiction: "germany", Authority: "BSI", ControlCount: 88},
-	{ID: "e-its-2024", Title: "E-ITS 2024", Version: "1", Jurisdiction: "germany", Authority: "RIA", ControlCount: 1802},
+	{ID: "e-its-2024", Title: "E-ITS 2024", Version: "1", Jurisdiction: "ee", Authority: "RIA", ControlCount: 1802},
 	{ID: "nis2", Title: "NIS2 - Annex to the Commission Implementing Regulation 2024/2690 with Technical Implementation Guidance by ENISA", Version: "13", Jurisdiction: "eu", Authority: "EUROPEAN COMMISSION + ENISA", ControlCount: 351},
 	{ID: "dora", Title: "Digital Operational Resilience Act (DORA)", Version: "7", Jurisdiction: "eu", Authority: "EU", ControlCount: 260},
 	{ID: "eu-ai-act", Aliases: []string{"ai-act"}, Title: "EU Artificial Intelligence Act (AI Act)", Version: "2", Jurisdiction: "eu", Authority: "EU", ControlCount: 347},
-	{ID: "iso-iec-42001", Aliases: []string{"iso42001-2023", "iso-42001"}, Title: "ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline", Version: "2", Jurisdiction: "eu", Authority: "ISO", ControlCount: 67},
+	{ID: "iso-iec-42001", Aliases: []string{"iso42001-2023", "iso-42001"}, Title: "ISO 42001-2023 — Artificial intelligence  — Requirements and Controls outline", Version: "2", Jurisdiction: "international", Authority: "ISO", ControlCount: 67},
 }
 
 func init() {
@@ -58,36 +57,37 @@ func init() {
 
 // RegisterManifestFrameworks registers all 31 non-Canadian manifest frameworks into the provided registry.
 func RegisterManifestFrameworks(r *Registry) {
-	_, callerFile, _, _ := runtime.Caller(0)
-	repoRoot := ""
-	if callerFile != "" {
-		repoRoot = filepath.Clean(filepath.Join(filepath.Dir(callerFile), "..", "..", ".."))
-	}
-
 	for _, spec := range manifestFrameworkSpecs {
 		s := spec
 		var mu sync.Mutex
 		var cached []byte
 
 		loadCatalog := func() ([]byte, error) {
+			if envDir := os.Getenv("XOSCAL_DATA_DIR"); envDir != "" {
+				envCandidates := []string{
+					filepath.Join(envDir, s.ID, "catalog.json"),
+					filepath.Join(envDir, "frameworks", s.ID, "catalog.json"),
+				}
+				for _, p := range envCandidates {
+					// #nosec G304,G703 -- path is derived from operator XOSCAL_DATA_DIR and compiled manifestFrameworkSpecs table.
+					if data, err := os.ReadFile(p); err == nil && len(data) > 0 {
+						return data, nil
+					}
+				}
+				return nil, fmt.Errorf("catalog.json not found in XOSCAL_DATA_DIR for framework %s", s.ID)
+			}
+
 			mu.Lock()
 			defer mu.Unlock()
 			if len(cached) > 0 {
 				return cached, nil
 			}
 
-			var candidates []string
-			if envDir := os.Getenv("XOSCAL_DATA_DIR"); envDir != "" {
-				candidates = append(candidates,
-					filepath.Join(envDir, s.ID, "catalog.json"),
-					filepath.Join(envDir, "frameworks", s.ID, "catalog.json"),
-				)
-			}
-			candidates = append(candidates,
+			candidates := []string{
 				filepath.Join("data", "frameworks", s.ID, "catalog.json"),
 				filepath.Join("/data", "frameworks", s.ID, "catalog.json"),
 				filepath.Join("/usr/share/xoscal/data/frameworks", s.ID, "catalog.json"),
-			)
+			}
 			if exePath, err := os.Executable(); err == nil && exePath != "" {
 				exeDir := filepath.Dir(exePath)
 				candidates = append(candidates,
@@ -95,9 +95,6 @@ func RegisterManifestFrameworks(r *Registry) {
 					filepath.Join(exeDir, "..", "data", "frameworks", s.ID, "catalog.json"),
 					filepath.Join(exeDir, "..", "share", "xoscal", "data", "frameworks", s.ID, "catalog.json"),
 				)
-			}
-			if repoRoot != "" {
-				candidates = append(candidates, filepath.Join(repoRoot, "data", "frameworks", s.ID, "catalog.json"))
 			}
 
 			for _, p := range candidates {
@@ -107,7 +104,13 @@ func RegisterManifestFrameworks(r *Registry) {
 					return cached, nil
 				}
 			}
-			return nil, fmt.Errorf("catalog.json not found for framework %s", s.ID)
+
+			embData, err := loadEmbeddedCatalog(s.ID)
+			if err != nil {
+				return nil, fmt.Errorf("catalog.json not found for framework %s: %w", s.ID, err)
+			}
+			cached = embData
+			return cached, nil
 		}
 
 		_ = r.Register(New(Config{

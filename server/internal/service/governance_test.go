@@ -17,12 +17,12 @@ func TestGovernanceEntityCRUD(t *testing.T) {
 	if err != nil {
 		t.Fatalf("kg store: %v", err)
 	}
-	defer kgStore.Close()
+	defer func() { _ = kgStore.Close() }()
 	vs, err := embedding.NewSQLiteVectorStore(":memory:", dbutil.PoolConfig{})
 	if err != nil {
 		t.Fatalf("vector store: %v", err)
 	}
-	defer vs.Close()
+	defer func() { _ = vs.Close() }()
 
 	srv := NewGovernanceServer(kgStore, reconciler.NewReconciler(kgStore), vs)
 
@@ -82,9 +82,9 @@ func TestGovernanceSnapshotAndRelease(t *testing.T) {
 	if err != nil {
 		t.Fatalf("kg store: %v", err)
 	}
-	defer kgStore.Close()
+	defer func() { _ = kgStore.Close() }()
 	vs, _ := embedding.NewSQLiteVectorStore(":memory:", dbutil.PoolConfig{})
-	defer vs.Close()
+	defer func() { _ = vs.Close() }()
 
 	srv := NewGovernanceServer(kgStore, reconciler.NewReconciler(kgStore), vs)
 
@@ -118,12 +118,12 @@ func TestGovernanceIngestAndSearch(t *testing.T) {
 	if err != nil {
 		t.Fatalf("kg store: %v", err)
 	}
-	defer kgStore.Close()
+	defer func() { _ = kgStore.Close() }()
 	vs, err := embedding.NewSQLiteVectorStore(":memory:", dbutil.PoolConfig{})
 	if err != nil {
 		t.Fatalf("vector store: %v", err)
 	}
-	defer vs.Close()
+	defer func() { _ = vs.Close() }()
 
 	rec := reconciler.NewReconciler(kgStore)
 	srv := NewGovernanceServer(kgStore, rec, vs)

@@ -4,7 +4,7 @@
       "href": "./system-security-plan.json"
     },
     "metadata": {
-      "last-modified": "2026-11-08T01:42:12Z",
+      "last-modified": "2026-11-08T00:30:52Z",
       "oscal-version": "1.2.3",
       "title": "Cadre de Conformité Cyber France (3CF) pour l'aviation civile - v2 Security Assessment Plan Template",
       "version": "2"
@@ -13,7 +13,1379 @@
       "control-selections": [
         {
           "description": "All controls in Cadre de Conformité Cyber France (3CF) pour l'aviation civile - v2",
-          "include-all": {}
+          "include-controls": [
+            {
+              "control-id": "node100"
+            },
+            {
+              "control-id": "node101"
+            },
+            {
+              "control-id": "node103"
+            },
+            {
+              "control-id": "node104"
+            },
+            {
+              "control-id": "node105"
+            },
+            {
+              "control-id": "node106"
+            },
+            {
+              "control-id": "node109"
+            },
+            {
+              "control-id": "node11"
+            },
+            {
+              "control-id": "node110"
+            },
+            {
+              "control-id": "node111"
+            },
+            {
+              "control-id": "node112"
+            },
+            {
+              "control-id": "node113"
+            },
+            {
+              "control-id": "node114"
+            },
+            {
+              "control-id": "node115"
+            },
+            {
+              "control-id": "node118"
+            },
+            {
+              "control-id": "node119"
+            },
+            {
+              "control-id": "node12"
+            },
+            {
+              "control-id": "node120"
+            },
+            {
+              "control-id": "node121"
+            },
+            {
+              "control-id": "node125"
+            },
+            {
+              "control-id": "node126"
+            },
+            {
+              "control-id": "node127"
+            },
+            {
+              "control-id": "node128"
+            },
+            {
+              "control-id": "node129"
+            },
+            {
+              "control-id": "node13"
+            },
+            {
+              "control-id": "node13-1"
+            },
+            {
+              "control-id": "node130"
+            },
+            {
+              "control-id": "node131"
+            },
+            {
+              "control-id": "node131-2"
+            },
+            {
+              "control-id": "node132"
+            },
+            {
+              "control-id": "node133"
+            },
+            {
+              "control-id": "node137"
+            },
+            {
+              "control-id": "node137-3"
+            },
+            {
+              "control-id": "node137-4"
+            },
+            {
+              "control-id": "node137-5"
+            },
+            {
+              "control-id": "node137-6"
+            },
+            {
+              "control-id": "node138"
+            },
+            {
+              "control-id": "node139"
+            },
+            {
+              "control-id": "node141"
+            },
+            {
+              "control-id": "node142"
+            },
+            {
+              "control-id": "node143"
+            },
+            {
+              "control-id": "node146"
+            },
+            {
+              "control-id": "node147"
+            },
+            {
+              "control-id": "node148"
+            },
+            {
+              "control-id": "node149"
+            },
+            {
+              "control-id": "node151"
+            },
+            {
+              "control-id": "node155"
+            },
+            {
+              "control-id": "node156"
+            },
+            {
+              "control-id": "node157"
+            },
+            {
+              "control-id": "node158"
+            },
+            {
+              "control-id": "node16"
+            },
+            {
+              "control-id": "node161"
+            },
+            {
+              "control-id": "node162"
+            },
+            {
+              "control-id": "node163"
+            },
+            {
+              "control-id": "node165"
+            },
+            {
+              "control-id": "node166"
+            },
+            {
+              "control-id": "node167"
+            },
+            {
+              "control-id": "node17"
+            },
+            {
+              "control-id": "node170"
+            },
+            {
+              "control-id": "node172"
+            },
+            {
+              "control-id": "node173"
+            },
+            {
+              "control-id": "node174"
+            },
+            {
+              "control-id": "node175"
+            },
+            {
+              "control-id": "node179"
+            },
+            {
+              "control-id": "node180"
+            },
+            {
+              "control-id": "node181"
+            },
+            {
+              "control-id": "node183"
+            },
+            {
+              "control-id": "node184"
+            },
+            {
+              "control-id": "node187"
+            },
+            {
+              "control-id": "node188"
+            },
+            {
+              "control-id": "node189"
+            },
+            {
+              "control-id": "node19"
+            },
+            {
+              "control-id": "node190"
+            },
+            {
+              "control-id": "node191"
+            },
+            {
+              "control-id": "node192"
+            },
+            {
+              "control-id": "node193"
+            },
+            {
+              "control-id": "node194"
+            },
+            {
+              "control-id": "node195"
+            },
+            {
+              "control-id": "node196"
+            },
+            {
+              "control-id": "node198"
+            },
+            {
+              "control-id": "node199"
+            },
+            {
+              "control-id": "node20"
+            },
+            {
+              "control-id": "node200"
+            },
+            {
+              "control-id": "node201"
+            },
+            {
+              "control-id": "node203"
+            },
+            {
+              "control-id": "node205"
+            },
+            {
+              "control-id": "node206"
+            },
+            {
+              "control-id": "node208"
+            },
+            {
+              "control-id": "node209"
+            },
+            {
+              "control-id": "node21"
+            },
+            {
+              "control-id": "node210"
+            },
+            {
+              "control-id": "node211"
+            },
+            {
+              "control-id": "node212"
+            },
+            {
+              "control-id": "node213"
+            },
+            {
+              "control-id": "node214"
+            },
+            {
+              "control-id": "node216"
+            },
+            {
+              "control-id": "node217"
+            },
+            {
+              "control-id": "node218"
+            },
+            {
+              "control-id": "node219"
+            },
+            {
+              "control-id": "node220"
+            },
+            {
+              "control-id": "node221"
+            },
+            {
+              "control-id": "node223"
+            },
+            {
+              "control-id": "node224"
+            },
+            {
+              "control-id": "node225"
+            },
+            {
+              "control-id": "node226"
+            },
+            {
+              "control-id": "node227"
+            },
+            {
+              "control-id": "node228"
+            },
+            {
+              "control-id": "node229"
+            },
+            {
+              "control-id": "node230"
+            },
+            {
+              "control-id": "node231"
+            },
+            {
+              "control-id": "node234"
+            },
+            {
+              "control-id": "node236"
+            },
+            {
+              "control-id": "node237"
+            },
+            {
+              "control-id": "node239"
+            },
+            {
+              "control-id": "node241"
+            },
+            {
+              "control-id": "node242"
+            },
+            {
+              "control-id": "node243"
+            },
+            {
+              "control-id": "node244"
+            },
+            {
+              "control-id": "node245"
+            },
+            {
+              "control-id": "node246"
+            },
+            {
+              "control-id": "node247"
+            },
+            {
+              "control-id": "node249"
+            },
+            {
+              "control-id": "node25"
+            },
+            {
+              "control-id": "node250"
+            },
+            {
+              "control-id": "node251"
+            },
+            {
+              "control-id": "node252"
+            },
+            {
+              "control-id": "node254"
+            },
+            {
+              "control-id": "node255"
+            },
+            {
+              "control-id": "node256"
+            },
+            {
+              "control-id": "node257"
+            },
+            {
+              "control-id": "node258"
+            },
+            {
+              "control-id": "node26"
+            },
+            {
+              "control-id": "node261"
+            },
+            {
+              "control-id": "node262"
+            },
+            {
+              "control-id": "node263"
+            },
+            {
+              "control-id": "node265"
+            },
+            {
+              "control-id": "node266"
+            },
+            {
+              "control-id": "node267"
+            },
+            {
+              "control-id": "node268"
+            },
+            {
+              "control-id": "node268-7"
+            },
+            {
+              "control-id": "node269"
+            },
+            {
+              "control-id": "node27"
+            },
+            {
+              "control-id": "node276"
+            },
+            {
+              "control-id": "node277"
+            },
+            {
+              "control-id": "node278"
+            },
+            {
+              "control-id": "node279"
+            },
+            {
+              "control-id": "node28"
+            },
+            {
+              "control-id": "node280"
+            },
+            {
+              "control-id": "node281"
+            },
+            {
+              "control-id": "node282"
+            },
+            {
+              "control-id": "node283"
+            },
+            {
+              "control-id": "node284"
+            },
+            {
+              "control-id": "node288"
+            },
+            {
+              "control-id": "node289"
+            },
+            {
+              "control-id": "node29"
+            },
+            {
+              "control-id": "node290"
+            },
+            {
+              "control-id": "node291"
+            },
+            {
+              "control-id": "node292"
+            },
+            {
+              "control-id": "node293"
+            },
+            {
+              "control-id": "node294"
+            },
+            {
+              "control-id": "node297"
+            },
+            {
+              "control-id": "node299"
+            },
+            {
+              "control-id": "node300"
+            },
+            {
+              "control-id": "node301"
+            },
+            {
+              "control-id": "node302"
+            },
+            {
+              "control-id": "node303"
+            },
+            {
+              "control-id": "node304"
+            },
+            {
+              "control-id": "node305"
+            },
+            {
+              "control-id": "node307"
+            },
+            {
+              "control-id": "node308"
+            },
+            {
+              "control-id": "node309"
+            },
+            {
+              "control-id": "node310"
+            },
+            {
+              "control-id": "node311"
+            },
+            {
+              "control-id": "node312"
+            },
+            {
+              "control-id": "node313"
+            },
+            {
+              "control-id": "node314"
+            },
+            {
+              "control-id": "node315"
+            },
+            {
+              "control-id": "node316"
+            },
+            {
+              "control-id": "node317"
+            },
+            {
+              "control-id": "node318"
+            },
+            {
+              "control-id": "node319"
+            },
+            {
+              "control-id": "node32"
+            },
+            {
+              "control-id": "node320"
+            },
+            {
+              "control-id": "node321"
+            },
+            {
+              "control-id": "node322"
+            },
+            {
+              "control-id": "node323"
+            },
+            {
+              "control-id": "node324"
+            },
+            {
+              "control-id": "node325"
+            },
+            {
+              "control-id": "node326"
+            },
+            {
+              "control-id": "node327"
+            },
+            {
+              "control-id": "node328"
+            },
+            {
+              "control-id": "node329"
+            },
+            {
+              "control-id": "node33"
+            },
+            {
+              "control-id": "node330"
+            },
+            {
+              "control-id": "node332"
+            },
+            {
+              "control-id": "node333"
+            },
+            {
+              "control-id": "node338"
+            },
+            {
+              "control-id": "node339"
+            },
+            {
+              "control-id": "node34"
+            },
+            {
+              "control-id": "node340"
+            },
+            {
+              "control-id": "node342"
+            },
+            {
+              "control-id": "node343"
+            },
+            {
+              "control-id": "node344"
+            },
+            {
+              "control-id": "node345"
+            },
+            {
+              "control-id": "node346"
+            },
+            {
+              "control-id": "node347"
+            },
+            {
+              "control-id": "node349"
+            },
+            {
+              "control-id": "node35"
+            },
+            {
+              "control-id": "node350"
+            },
+            {
+              "control-id": "node351"
+            },
+            {
+              "control-id": "node352"
+            },
+            {
+              "control-id": "node353"
+            },
+            {
+              "control-id": "node354"
+            },
+            {
+              "control-id": "node355"
+            },
+            {
+              "control-id": "node357"
+            },
+            {
+              "control-id": "node358"
+            },
+            {
+              "control-id": "node359"
+            },
+            {
+              "control-id": "node36"
+            },
+            {
+              "control-id": "node360"
+            },
+            {
+              "control-id": "node362"
+            },
+            {
+              "control-id": "node364"
+            },
+            {
+              "control-id": "node365"
+            },
+            {
+              "control-id": "node366"
+            },
+            {
+              "control-id": "node367"
+            },
+            {
+              "control-id": "node368"
+            },
+            {
+              "control-id": "node369"
+            },
+            {
+              "control-id": "node37"
+            },
+            {
+              "control-id": "node370"
+            },
+            {
+              "control-id": "node371"
+            },
+            {
+              "control-id": "node372"
+            },
+            {
+              "control-id": "node373"
+            },
+            {
+              "control-id": "node375"
+            },
+            {
+              "control-id": "node376"
+            },
+            {
+              "control-id": "node377"
+            },
+            {
+              "control-id": "node378"
+            },
+            {
+              "control-id": "node379"
+            },
+            {
+              "control-id": "node38"
+            },
+            {
+              "control-id": "node380"
+            },
+            {
+              "control-id": "node381"
+            },
+            {
+              "control-id": "node382"
+            },
+            {
+              "control-id": "node383"
+            },
+            {
+              "control-id": "node386"
+            },
+            {
+              "control-id": "node389"
+            },
+            {
+              "control-id": "node39"
+            },
+            {
+              "control-id": "node390"
+            },
+            {
+              "control-id": "node391"
+            },
+            {
+              "control-id": "node393"
+            },
+            {
+              "control-id": "node395"
+            },
+            {
+              "control-id": "node396"
+            },
+            {
+              "control-id": "node397"
+            },
+            {
+              "control-id": "node398"
+            },
+            {
+              "control-id": "node4"
+            },
+            {
+              "control-id": "node40"
+            },
+            {
+              "control-id": "node400"
+            },
+            {
+              "control-id": "node401"
+            },
+            {
+              "control-id": "node402"
+            },
+            {
+              "control-id": "node403"
+            },
+            {
+              "control-id": "node405"
+            },
+            {
+              "control-id": "node406"
+            },
+            {
+              "control-id": "node407"
+            },
+            {
+              "control-id": "node408"
+            },
+            {
+              "control-id": "node409"
+            },
+            {
+              "control-id": "node41"
+            },
+            {
+              "control-id": "node410"
+            },
+            {
+              "control-id": "node412"
+            },
+            {
+              "control-id": "node413"
+            },
+            {
+              "control-id": "node414"
+            },
+            {
+              "control-id": "node415"
+            },
+            {
+              "control-id": "node419"
+            },
+            {
+              "control-id": "node42"
+            },
+            {
+              "control-id": "node420"
+            },
+            {
+              "control-id": "node421"
+            },
+            {
+              "control-id": "node422"
+            },
+            {
+              "control-id": "node423"
+            },
+            {
+              "control-id": "node424"
+            },
+            {
+              "control-id": "node425"
+            },
+            {
+              "control-id": "node426"
+            },
+            {
+              "control-id": "node427"
+            },
+            {
+              "control-id": "node429"
+            },
+            {
+              "control-id": "node43"
+            },
+            {
+              "control-id": "node430"
+            },
+            {
+              "control-id": "node431"
+            },
+            {
+              "control-id": "node432"
+            },
+            {
+              "control-id": "node433"
+            },
+            {
+              "control-id": "node434"
+            },
+            {
+              "control-id": "node435"
+            },
+            {
+              "control-id": "node436"
+            },
+            {
+              "control-id": "node437"
+            },
+            {
+              "control-id": "node438"
+            },
+            {
+              "control-id": "node439"
+            },
+            {
+              "control-id": "node44"
+            },
+            {
+              "control-id": "node440"
+            },
+            {
+              "control-id": "node441"
+            },
+            {
+              "control-id": "node444"
+            },
+            {
+              "control-id": "node445"
+            },
+            {
+              "control-id": "node446"
+            },
+            {
+              "control-id": "node447"
+            },
+            {
+              "control-id": "node448"
+            },
+            {
+              "control-id": "node449"
+            },
+            {
+              "control-id": "node45"
+            },
+            {
+              "control-id": "node450"
+            },
+            {
+              "control-id": "node452"
+            },
+            {
+              "control-id": "node453"
+            },
+            {
+              "control-id": "node454"
+            },
+            {
+              "control-id": "node455"
+            },
+            {
+              "control-id": "node459"
+            },
+            {
+              "control-id": "node46"
+            },
+            {
+              "control-id": "node460"
+            },
+            {
+              "control-id": "node461"
+            },
+            {
+              "control-id": "node462"
+            },
+            {
+              "control-id": "node462-8"
+            },
+            {
+              "control-id": "node465"
+            },
+            {
+              "control-id": "node466"
+            },
+            {
+              "control-id": "node468"
+            },
+            {
+              "control-id": "node469"
+            },
+            {
+              "control-id": "node470"
+            },
+            {
+              "control-id": "node473"
+            },
+            {
+              "control-id": "node474"
+            },
+            {
+              "control-id": "node475"
+            },
+            {
+              "control-id": "node477"
+            },
+            {
+              "control-id": "node478"
+            },
+            {
+              "control-id": "node479"
+            },
+            {
+              "control-id": "node48"
+            },
+            {
+              "control-id": "node481"
+            },
+            {
+              "control-id": "node484"
+            },
+            {
+              "control-id": "node485"
+            },
+            {
+              "control-id": "node486"
+            },
+            {
+              "control-id": "node487"
+            },
+            {
+              "control-id": "node488"
+            },
+            {
+              "control-id": "node489"
+            },
+            {
+              "control-id": "node49"
+            },
+            {
+              "control-id": "node490"
+            },
+            {
+              "control-id": "node493"
+            },
+            {
+              "control-id": "node494"
+            },
+            {
+              "control-id": "node495"
+            },
+            {
+              "control-id": "node496"
+            },
+            {
+              "control-id": "node497"
+            },
+            {
+              "control-id": "node5"
+            },
+            {
+              "control-id": "node50"
+            },
+            {
+              "control-id": "node500"
+            },
+            {
+              "control-id": "node501"
+            },
+            {
+              "control-id": "node502"
+            },
+            {
+              "control-id": "node503"
+            },
+            {
+              "control-id": "node504"
+            },
+            {
+              "control-id": "node505"
+            },
+            {
+              "control-id": "node506"
+            },
+            {
+              "control-id": "node508"
+            },
+            {
+              "control-id": "node509"
+            },
+            {
+              "control-id": "node51"
+            },
+            {
+              "control-id": "node512"
+            },
+            {
+              "control-id": "node513"
+            },
+            {
+              "control-id": "node514"
+            },
+            {
+              "control-id": "node515"
+            },
+            {
+              "control-id": "node516"
+            },
+            {
+              "control-id": "node517"
+            },
+            {
+              "control-id": "node518"
+            },
+            {
+              "control-id": "node519"
+            },
+            {
+              "control-id": "node520"
+            },
+            {
+              "control-id": "node522"
+            },
+            {
+              "control-id": "node523"
+            },
+            {
+              "control-id": "node524"
+            },
+            {
+              "control-id": "node527"
+            },
+            {
+              "control-id": "node528"
+            },
+            {
+              "control-id": "node529"
+            },
+            {
+              "control-id": "node53"
+            },
+            {
+              "control-id": "node530"
+            },
+            {
+              "control-id": "node531"
+            },
+            {
+              "control-id": "node534"
+            },
+            {
+              "control-id": "node535"
+            },
+            {
+              "control-id": "node536"
+            },
+            {
+              "control-id": "node537"
+            },
+            {
+              "control-id": "node538"
+            },
+            {
+              "control-id": "node539"
+            },
+            {
+              "control-id": "node54"
+            },
+            {
+              "control-id": "node540"
+            },
+            {
+              "control-id": "node541"
+            },
+            {
+              "control-id": "node542"
+            },
+            {
+              "control-id": "node545"
+            },
+            {
+              "control-id": "node546"
+            },
+            {
+              "control-id": "node547"
+            },
+            {
+              "control-id": "node548"
+            },
+            {
+              "control-id": "node549"
+            },
+            {
+              "control-id": "node55"
+            },
+            {
+              "control-id": "node552"
+            },
+            {
+              "control-id": "node553"
+            },
+            {
+              "control-id": "node554"
+            },
+            {
+              "control-id": "node555"
+            },
+            {
+              "control-id": "node556"
+            },
+            {
+              "control-id": "node557"
+            },
+            {
+              "control-id": "node56"
+            },
+            {
+              "control-id": "node568"
+            },
+            {
+              "control-id": "node569"
+            },
+            {
+              "control-id": "node57"
+            },
+            {
+              "control-id": "node570"
+            },
+            {
+              "control-id": "node571"
+            },
+            {
+              "control-id": "node572"
+            },
+            {
+              "control-id": "node573"
+            },
+            {
+              "control-id": "node574"
+            },
+            {
+              "control-id": "node575"
+            },
+            {
+              "control-id": "node576"
+            },
+            {
+              "control-id": "node577"
+            },
+            {
+              "control-id": "node578"
+            },
+            {
+              "control-id": "node579"
+            },
+            {
+              "control-id": "node58"
+            },
+            {
+              "control-id": "node580"
+            },
+            {
+              "control-id": "node581"
+            },
+            {
+              "control-id": "node582"
+            },
+            {
+              "control-id": "node583"
+            },
+            {
+              "control-id": "node584"
+            },
+            {
+              "control-id": "node585"
+            },
+            {
+              "control-id": "node586"
+            },
+            {
+              "control-id": "node587"
+            },
+            {
+              "control-id": "node588"
+            },
+            {
+              "control-id": "node59"
+            },
+            {
+              "control-id": "node591"
+            },
+            {
+              "control-id": "node592"
+            },
+            {
+              "control-id": "node593"
+            },
+            {
+              "control-id": "node594"
+            },
+            {
+              "control-id": "node595"
+            },
+            {
+              "control-id": "node596"
+            },
+            {
+              "control-id": "node597"
+            },
+            {
+              "control-id": "node598"
+            },
+            {
+              "control-id": "node599"
+            },
+            {
+              "control-id": "node6"
+            },
+            {
+              "control-id": "node60"
+            },
+            {
+              "control-id": "node600"
+            },
+            {
+              "control-id": "node61"
+            },
+            {
+              "control-id": "node63"
+            },
+            {
+              "control-id": "node64"
+            },
+            {
+              "control-id": "node65"
+            },
+            {
+              "control-id": "node66"
+            },
+            {
+              "control-id": "node67"
+            },
+            {
+              "control-id": "node68"
+            },
+            {
+              "control-id": "node69"
+            },
+            {
+              "control-id": "node7"
+            },
+            {
+              "control-id": "node70"
+            },
+            {
+              "control-id": "node71"
+            },
+            {
+              "control-id": "node73"
+            },
+            {
+              "control-id": "node74"
+            },
+            {
+              "control-id": "node75"
+            },
+            {
+              "control-id": "node79"
+            },
+            {
+              "control-id": "node8"
+            },
+            {
+              "control-id": "node80"
+            },
+            {
+              "control-id": "node81"
+            },
+            {
+              "control-id": "node83"
+            },
+            {
+              "control-id": "node84"
+            },
+            {
+              "control-id": "node85"
+            },
+            {
+              "control-id": "node88"
+            },
+            {
+              "control-id": "node90"
+            },
+            {
+              "control-id": "node91"
+            },
+            {
+              "control-id": "node92"
+            },
+            {
+              "control-id": "node93"
+            },
+            {
+              "control-id": "node95"
+            },
+            {
+              "control-id": "node96"
+            },
+            {
+              "control-id": "node97"
+            },
+            {
+              "control-id": "node98"
+            },
+            {
+              "control-id": "node99"
+            }
+          ]
         }
       ]
     },

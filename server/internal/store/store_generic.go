@@ -116,7 +116,7 @@ func list[T proto.Message](ctx context.Context, db *sql.DB, table string, filter
 	if err != nil {
 		return nil, "", fmt.Errorf("query %s: %w", table, err)
 	}
-	defer rows.Close()
+	defer func() { _ = rows.Close() }()
 
 	var results []T
 	count := 0

@@ -95,7 +95,8 @@ func checkUUIDsAndFragments(node interface{}, currentPath string, resourceUUIDs 
 	case map[string]interface{}:
 		for k, val := range v {
 			subPath := currentPath + "/" + k
-			if k == "uuid" {
+			switch k {
+			case "uuid":
 				if s, ok := val.(string); ok {
 					if !uuidRegex.MatchString(s) {
 						*findings = append(*findings, Finding{
@@ -106,7 +107,7 @@ func checkUUIDsAndFragments(node interface{}, currentPath string, resourceUUIDs 
 						})
 					}
 				}
-			} else if k == "href" {
+			case "href":
 				if s, ok := val.(string); ok && strings.HasPrefix(s, "#") {
 					target := strings.TrimPrefix(s, "#")
 					targetNorm := strings.ToLower(target)
@@ -119,7 +120,7 @@ func checkUUIDsAndFragments(node interface{}, currentPath string, resourceUUIDs 
 						})
 					}
 				}
-			} else if k == "prose" || k == "description" {
+			case "prose", "description":
 				if s, ok := val.(string); ok {
 					matches := paramInsert.FindAllStringSubmatch(s, -1)
 					for _, m := range matches {

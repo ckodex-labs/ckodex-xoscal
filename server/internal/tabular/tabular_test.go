@@ -152,7 +152,7 @@ func TestTabular_SSPRoundTrip(t *testing.T) {
 	}
 
 	// 2. Modify CSV
-	modifiedCSV := strings.Replace(csvStr, "Initial account management implementation.", "Hardened automated provisioning with quarterly account reconciliation.", -1)
+	modifiedCSV := strings.ReplaceAll(csvStr, "Initial account management implementation.", "Hardened automated provisioning with quarterly account reconciliation.")
 
 	// 3. Import back into SSP
 	updatedJSON, err := ImportFromCSV([]byte(sampleSSP), []byte(modifiedCSV))

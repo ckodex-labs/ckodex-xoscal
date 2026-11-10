@@ -38,53 +38,6 @@ func (r *KeyRegistry) lookup(keyID string) (KeyEntry, bool) {
 	return entry, ok
 }
 
-// resolveIssuerKey returns the Ed25519 public key for a claim issuer. The
-// inline `key` object wins when present; otherwise the registry resolves the
-// issuer's key_id. The second return value flags a retired key so the
-// diagnostic can surface the rotation.
-func (r *KeyRegistry) resolveIssuerKey(claim *Claim) (ed25519.PublicKey, bool, error) {
-	var issuer map[string]string
-	if err := json.Unmarshal([]byte(claim.IssuerJSON), &issuer); err != nil {
-		return nil, false, fmt.Errorf("claim issuer is not valid JSON")
-	}
-	if inline, ok := issuer["key"]; ok && strings.TrimSpace(inline) != "" {
-		var key struct {
-			Algorithm string `json:"algorithm"`
-			PublicKey string `json:"public_key"`
-		}
-		if err := json.Unmarshal([]byte(inline), &key); err != nil {
-			return nil, false, fmt.Errorf("issuer key metadata is not valid JSON")
-		}
-		if key.Algorithm != "ed25519" {
-			return nil, false, fmt.Errorf("issuer key algorithm must be ed25519")
-		}
-		publicKey, err := decodeBase64Key(key.PublicKey)
-		if err != nil || len(publicKey) != ed25519.PublicKeySize {
-			return nil, false, fmt.Errorf("issuer public key is not a valid Ed25519 key")
-		}
-		return ed25519.PublicKey(publicKey), false, nil
-	}
-
-	keyID := strings.TrimSpace(issuer["key_id"])
-	if keyID == "" {
-		return nil, false, fmt.Errorf("issuer has neither an inline key nor a key_id")
-	}
-	entry, ok := r.lookup(keyID)
-	if !ok {
-		// Unknown key IDs are unavailable, not invalid: the registry may not
-		// know keys a later rotation introduces.
-		return nil, false, fmt.Errorf("issuer key_id %q is not registered", keyID)
-	}
-	if entry.Algorithm != "ed25519" {
-		return nil, false, fmt.Errorf("registered key %q algorithm must be ed25519", keyID)
-	}
-	publicKey, err := decodeBase64Key(entry.PublicKey)
-	if err != nil || len(publicKey) != ed25519.PublicKeySize {
-		return nil, false, fmt.Errorf("registered key %q is not a valid Ed25519 key", keyID)
-	}
-	return ed25519.PublicKey(publicKey), entry.Status == "retired", nil
-}
-
 // ---- Remote policy provider ----
 
 // evaluateRemoteClaimPolicy fetches a policy document from an allowlisted

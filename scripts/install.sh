@@ -147,9 +147,10 @@ def main():
                 actual.update(block)
         if archive.stat().st_size != size or "sha256:" + actual.hexdigest() != digest:
             fail("archive digest/size mismatch; nothing installed")
-        # Do not extractall: validate all members, then copy the one regular binary.
+        # Do not extractall: validate all members, then copy verified regular CLI binaries.
+        CLI_BINARIES = ("xoscal", "xoscal-ctl", "xoscal-backup", "xoscal-gateway")
         with tarfile.open(archive, mode="r:gz") as package:
-            binary = None
+            found_binaries = {}
             names = set()
             total = 0
             for member in package:
@@ -161,37 +162,49 @@ def main():
                 total += member.size
                 if total > MAX_ARCHIVE:
                     fail("archive expands beyond the size limit")
-                if name == "xoscal-ctl" and member.isfile():
+                if name in CLI_BINARIES and member.isfile():
                     if member.size <= 0 or member.size > MAX_BINARY:
-                        fail("invalid xoscal-ctl binary size")
-                    binary = member
-            if binary is None:
+                        fail(f"invalid {name} binary size")
+                    found_binaries[name] = member
+            if "xoscal-ctl" not in found_binaries:
                 fail("archive is missing the regular xoscal-ctl binary")
+            ordered_names = [b for b in CLI_BINARIES if b in found_binaries]
             if args.dry_run:
-                print("Verified release " + args.release + " at " + args.source + "; archive " + path.name + "; no installation requested")
+                print("Verified release " + args.release + " at " + args.source + "; archive " + path.name + "; binaries " + ",".join(ordered_names) + "; no installation requested")
                 return
             bindir = args.prefix.expanduser().absolute() / "bin"
             bindir.mkdir(parents=True, exist_ok=True)
-            destination = bindir / "xoscal-ctl"
-            if os.path.lexists(destination) and not args.force:
-                fail(str(destination) + " already exists; choose another --prefix or use --force")
-            descriptor, temporary = tempfile.mkstemp(prefix=".xoscal-ctl-", dir=bindir)
+            if not args.force:
+                for bname in ordered_names:
+                    destination = bindir / bname
+                    if os.path.lexists(destination):
+                        fail(str(destination) + " already exists; choose another --prefix or use --force")
+            staged = []
             try:
-                with os.fdopen(descriptor, "wb") as out, package.extractfile(binary) as stream:
-                    shutil.copyfileobj(stream, out)
-                    out.flush()
-                    os.fsync(out.fileno())
-                os.chmod(temporary, 0o755)
-                if args.force:
-                    os.replace(temporary, destination)
-                else:
-                    # Atomic no-clobber install, including a concurrent existing target.
-                    os.link(temporary, destination)
-                    os.unlink(temporary)
-                print("Installed verified xoscal-ctl to " + str(destination))
+                for bname in ordered_names:
+                    member = found_binaries[bname]
+                    descriptor, temporary = tempfile.mkstemp(prefix=f".{bname}-", dir=bindir)
+                    staged.append((bname, temporary))
+                    with os.fdopen(descriptor, "wb") as out, package.extractfile(member) as stream:
+                        shutil.copyfileobj(stream, out)
+                        out.flush()
+                        os.fsync(out.fileno())
+                    os.chmod(temporary, 0o755)
+                installed_paths = []
+                for bname, temporary in staged:
+                    destination = bindir / bname
+                    if args.force:
+                        os.replace(temporary, destination)
+                    else:
+                        # Atomic no-clobber install, including a concurrent existing target.
+                        os.link(temporary, destination)
+                        os.unlink(temporary)
+                    installed_paths.append(str(destination))
+                print("Installed verified CLI binaries: " + ", ".join(installed_paths))
             finally:
-                if os.path.exists(temporary):
-                    os.unlink(temporary)
+                for _, temporary in staged:
+                    if os.path.exists(temporary):
+                        os.unlink(temporary)
 
 try:
     main()

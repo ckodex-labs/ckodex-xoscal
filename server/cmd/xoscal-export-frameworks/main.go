@@ -29,14 +29,15 @@ func main() {
 	manifestPath := flag.String("manifest", "data/frameworks/manifest.yaml", "Framework manifest path")
 	outDir := flag.String("out", "./oscal-frameworks", "Output directory")
 	dsn := flag.String("dsn", "portal-export.db", "Temp SQLite DSN")
+	online := flag.Bool("online", false, "Fetch upstream YAML frameworks over network instead of using registered local/embedded catalogs")
 	flag.Parse()
 
-	if err := run(*manifestPath, *outDir, *dsn); err != nil {
+	if err := run(*manifestPath, *outDir, *dsn, *online); err != nil {
 		log.Fatal(err)
 	}
 }
 
-func run(manifestPath, outDir, dsn string) error {
+func run(manifestPath, outDir, dsn string, online bool) error {
 	// #nosec G304 -- manifestPath is the explicit operator-selected input manifest.
 	raw, err := os.ReadFile(manifestPath)
 	if err != nil {
@@ -46,6 +47,30 @@ func run(manifestPath, outDir, dsn string) error {
 	if err != nil {
 		return fmt.Errorf("parse manifest: %w", err)
 	}
+
+	reg := frameworks.DefaultRegistry()
+
+	// Offline/air-gap-first fast path: when all manifest frameworks are registered
+	// in the local/embedded framework registry and -online is not requested, export
+	// authoritative catalogs and profiles deterministically without network I/O.
+	if !online {
+		allRegistered := true
+		for _, refID := range m.RefIDs() {
+			if !reg.Has(refID) {
+				allRegistered = false
+				break
+			}
+		}
+		if allRegistered {
+			for _, refID := range m.RefIDs() {
+				if err := reg.ExportAuthoritative(outDir, refID); err != nil {
+					return fmt.Errorf("export authoritative %s: %w", refID, err)
+				}
+			}
+			return nil
+		}
+	}
+
 	owner, repo, path, err := m.Source()
 	if err != nil {
 		return fmt.Errorf("derive source: %w", err)
@@ -55,16 +80,15 @@ func run(manifestPath, outDir, dsn string) error {
 	if err != nil {
 		return fmt.Errorf("open store: %w", err)
 	}
-	defer store.Close()
+	defer func() { _ = store.Close() }()
 
 	ctx := context.Background()
-	reg := frameworks.DefaultRegistry()
 
 	var fetchFilters []string
 	filenameToManifest := make(map[string]portal.Framework)
 	yamlRefIDs := make(map[string]bool)
 	for _, fw := range m.Frameworks {
-		if !strings.HasSuffix(fw.Filename, ".yaml") && reg.Has(fw.RefID) {
+		if (!online || !strings.HasSuffix(fw.Filename, ".yaml")) && reg.Has(fw.RefID) {
 			continue
 		}
 		yamlRefIDs[fw.RefID] = true

@@ -11,7 +11,8 @@ import (
 
 // mockStore implements kg.Store for testing.
 type mockStore struct {
-	entities []*kg.Entity
+	entities         []*kg.Entity
+	getSnapshotCalls int
 }
 
 func (m *mockStore) CreateEntity(ctx context.Context, entity *kg.Entity) error     { return nil }
@@ -25,6 +26,7 @@ func (m *mockStore) CreateSnapshot(ctx context.Context, name string) (*kg.Snapsh
 	return nil, nil
 }
 func (m *mockStore) GetSnapshot(ctx context.Context, name string) ([]*kg.Entity, error) {
+	m.getSnapshotCalls++
 	return m.entities, nil
 }
 func (m *mockStore) ListSnapshots(ctx context.Context) ([]*kg.Snapshot, error) { return nil, nil }
@@ -125,11 +127,11 @@ func TestGeneratePOAM_HighRiskRemediation(t *testing.T) {
 	if err != nil {
 		t.Fatalf("expected no error, got %v", err)
 	}
-	if len(poam.Risks) != 2 {
-		t.Fatalf("expected 2 risks, got %d", len(poam.Risks))
+	if len(poam.Risks) != 2 { //nolint:staticcheck // SA1019: verify backward-compatible deprecated proto field
+		t.Fatalf("expected 2 risks, got %d", len(poam.Risks)) //nolint:staticcheck // SA1019
 	}
 	// High risk should have remediation.
-	highRisk := poam.Risks[0]
+	highRisk := poam.Risks[0] //nolint:staticcheck // SA1019
 	if len(highRisk.Remediations) == 0 {
 		t.Fatal("expected high-risk risk to have remediations")
 	}
@@ -144,7 +146,7 @@ func TestGeneratePOAM_HighRiskRemediation(t *testing.T) {
 		t.Fatalf("expected security-officer, got %s", resp.ResponsibleRoles[0].RoleId.Value)
 	}
 	// Low risk should have no remediation.
-	lowRisk := poam.Risks[1]
+	lowRisk := poam.Risks[1] //nolint:staticcheck // SA1019
 	if len(lowRisk.Remediations) != 0 {
 		t.Fatalf("expected 0 remediations for low risk, got %d", len(lowRisk.Remediations))
 	}
@@ -182,6 +184,9 @@ func TestGenerateAllArtifacts_BackMatterPresent(t *testing.T) {
 	}
 	if res.POAM.BackMatter == nil {
 		t.Error("expected poam BackMatter")
+	}
+	if store.getSnapshotCalls != 1 {
+		t.Errorf("expected GenerateAllArtifacts to call GetSnapshot once, got %d calls", store.getSnapshotCalls)
 	}
 }
 

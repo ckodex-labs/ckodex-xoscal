@@ -1,6 +1,7 @@
 package frameworks
 
 import (
+	"bytes"
 	"context"
 	"crypto/sha256"
 	"encoding/hex"
@@ -8,11 +9,13 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"runtime"
 	"sort"
 	"strings"
+	"sync"
 	"time"
 
-	"github.com/mchorfa/xoscal/server/internal/dbutil"
+	catalogv1 "github.com/mchorfa/xoscal/proto/oscal/catalog/v1"
 	"github.com/mchorfa/xoscal/server/internal/integrity"
 	"github.com/mchorfa/xoscal/server/internal/kg"
 	"github.com/mchorfa/xoscal/server/internal/oscal"
@@ -67,6 +70,179 @@ type ParityReport struct {
 	Timestamp             time.Time     `json:"timestamp"`
 }
 
+type integrityCacheResult struct {
+	findings []integrity.Finding
+	errMsg   string
+	hasErr   bool
+}
+
+var (
+	validatorOnce   sync.Once
+	cachedValidator *schemavalidate.Validator
+	validatorInitEr error
+
+	controlsCacheMu sync.RWMutex
+	controlsCache   = make(map[string][]ControlInfo)
+
+	schemaCacheMu sync.RWMutex
+	schemaCache   = make(map[string]string) // key: kind.RootKey+":"+sha256 -> "" (valid) or err.Error()
+
+	integrityCacheMu sync.RWMutex
+	integrityCache   = make(map[string]integrityCacheResult) // key: kind.RootKey+":"+sha256
+
+	kgRoundTripCacheMu sync.RWMutex
+	kgRoundTripCache   = make(map[string][]Discrepancy)
+)
+
+// SharedSchemaValidator returns the process-wide cached OSCAL 1.2.3 schema validator.
+func SharedSchemaValidator() (*schemavalidate.Validator, error) {
+	return sharedSchemaValidator()
+}
+
+func sharedSchemaValidator() (*schemavalidate.Validator, error) {
+	validatorOnce.Do(func() {
+		cachedValidator, validatorInitEr = schemavalidate.NewValidator()
+	})
+	return cachedValidator, validatorInitEr
+}
+
+// ValidateSchemaCached validates data against the embedded NIST OSCAL 1.2.3 JSON schema,
+// memoizing the deterministic outcome by (kind.RootKey, SHA-256(data)).
+func ValidateSchemaCached(data []byte, kind schemavalidate.ArtifactKind) error {
+	sum := sha256.Sum256(data)
+	return validateSchemaCachedWithSum(data, sum, kind)
+}
+
+func validateSchemaCachedWithSum(data []byte, sum [32]byte, kind schemavalidate.ArtifactKind) error {
+	key := kind.RootKey + ":" + hex.EncodeToString(sum[:])
+	schemaCacheMu.RLock()
+	cachedErr, ok := schemaCache[key]
+	schemaCacheMu.RUnlock()
+	if ok {
+		if cachedErr == "" {
+			return nil
+		}
+		return fmt.Errorf("%s", cachedErr)
+	}
+
+	v, err := sharedSchemaValidator()
+	if err != nil {
+		return fmt.Errorf("init validator: %w", err)
+	}
+	valErr := v.Validate(data, kind)
+	errStr := ""
+	if valErr != nil {
+		errStr = valErr.Error()
+	}
+	schemaCacheMu.Lock()
+	schemaCache[key] = errStr
+	schemaCacheMu.Unlock()
+	return valErr
+}
+
+// CheckIntegrityCached runs semantic reference integrity checks on data,
+// memoizing the deterministic findings by (kind.RootKey, SHA-256(data)).
+func CheckIntegrityCached(data []byte, kind schemavalidate.ArtifactKind) ([]integrity.Finding, error) {
+	sum := sha256.Sum256(data)
+	return checkIntegrityCachedWithSum(data, sum, kind)
+}
+
+func checkIntegrityCachedWithSum(data []byte, sum [32]byte, kind schemavalidate.ArtifactKind) ([]integrity.Finding, error) {
+	key := kind.RootKey + ":" + hex.EncodeToString(sum[:])
+	integrityCacheMu.RLock()
+	cached, ok := integrityCache[key]
+	integrityCacheMu.RUnlock()
+	if ok {
+		if cached.hasErr {
+			return nil, fmt.Errorf("%s", cached.errMsg)
+		}
+		out := make([]integrity.Finding, len(cached.findings))
+		copy(out, cached.findings)
+		return out, nil
+	}
+
+	findings, err := integrity.Check(data, kind)
+	entry := integrityCacheResult{}
+	if err != nil {
+		entry.hasErr = true
+		entry.errMsg = err.Error()
+	} else if len(findings) > 0 {
+		entry.findings = make([]integrity.Finding, len(findings))
+		copy(entry.findings, findings)
+	}
+	integrityCacheMu.Lock()
+	integrityCache[key] = entry
+	integrityCacheMu.Unlock()
+	return findings, err
+}
+
+func loadCachedControlsFromBytes(data []byte, sum [32]byte, frameworkID string) ([]ControlInfo, error) {
+	key := strings.ToLower(frameworkID) + ":" + hex.EncodeToString(sum[:])
+	controlsCacheMu.RLock()
+	cached, ok := controlsCache[key]
+	controlsCacheMu.RUnlock()
+	if ok {
+		return cached, nil
+	}
+	ctrls, err := LoadControlsFromBytes(data, frameworkID)
+	if err != nil {
+		return nil, err
+	}
+	controlsCacheMu.Lock()
+	controlsCache[key] = ctrls
+	controlsCacheMu.Unlock()
+	return ctrls, nil
+}
+
+func loadCachedExpectedControls(f Framework) ([]ControlInfo, error) {
+	data, err := f.CatalogJSON()
+	if err != nil {
+		return nil, fmt.Errorf("load catalog for %s: %w", f.ID(), err)
+	}
+	sum := sha256.Sum256(data)
+	return loadCachedControlsFromBytes(data, sum, f.ID())
+}
+
+func detectOSCALKind(data []byte) (schemavalidate.ArtifactKind, error) {
+	dec := json.NewDecoder(bytes.NewReader(data))
+	tok, err := dec.Token()
+	if err != nil {
+		return schemavalidate.KindCatalog, err
+	}
+	if delim, ok := tok.(json.Delim); !ok || delim != '{' {
+		return schemavalidate.KindCatalog, fmt.Errorf("expected JSON object root")
+	}
+	for dec.More() {
+		keyTok, err := dec.Token()
+		if err != nil {
+			return schemavalidate.KindCatalog, err
+		}
+		key, _ := keyTok.(string)
+		switch key {
+		case "catalog":
+			return schemavalidate.KindCatalog, nil
+		case "profile":
+			return schemavalidate.KindProfile, nil
+		case "component-definition":
+			return schemavalidate.KindComponentDefinition, nil
+		case "system-security-plan":
+			return schemavalidate.KindSSP, nil
+		case "assessment-plan":
+			return schemavalidate.KindAssessmentPlan, nil
+		case "assessment-results":
+			return schemavalidate.KindAssessmentResults, nil
+		case "plan-of-action-and-milestones":
+			return schemavalidate.KindPOAM, nil
+		default:
+			var skip json.RawMessage
+			if err := dec.Decode(&skip); err != nil {
+				return schemavalidate.KindCatalog, err
+			}
+		}
+	}
+	return schemavalidate.KindCatalog, nil
+}
+
 // VerifyArtifactParity verifies verbatim parity between a Framework and an OSCAL artifact on disk.
 func VerifyArtifactParity(f Framework, artifactPath string) (*ParityReport, error) {
 	// #nosec G703,G304 -- artifactPath is explicitly provided by the operator for parity verification.
@@ -79,6 +255,10 @@ func VerifyArtifactParity(f Framework, artifactPath string) (*ParityReport, erro
 
 // VerifyBytesParity verifies verbatim parity between a Framework and raw OSCAL artifact bytes.
 func VerifyBytesParity(f Framework, data []byte, artifactPath string) (*ParityReport, error) {
+	return verifyBytesParityWithExpected(f, data, artifactPath, nil)
+}
+
+func verifyBytesParityWithExpected(f Framework, data []byte, artifactPath string, preloadedExpected []ControlInfo) (*ParityReport, error) {
 	rep := &ParityReport{
 		FrameworkID:    f.ID(),
 		FrameworkTitle: f.Title(),
@@ -119,34 +299,15 @@ func VerifyBytesParity(f Framework, data []byte, artifactPath string) (*ParityRe
 		rep.SidecarMatch = true
 	}
 
-	// 2. Identify artifact kind
-	var root map[string]interface{}
-	if err := json.Unmarshal(data, &root); err != nil {
+	// 2. Identify artifact kind without unmarshaling full document trees into map[string]interface{}
+	kind, err := detectOSCALKind(data)
+	if err != nil {
 		return nil, fmt.Errorf("unmarshal artifact json: %w", err)
-	}
-
-	kind := schemavalidate.KindCatalog
-	if _, ok := root["profile"]; ok {
-		kind = schemavalidate.KindProfile
-	} else if _, ok := root["component-definition"]; ok {
-		kind = schemavalidate.KindComponentDefinition
-	} else if _, ok := root["system-security-plan"]; ok {
-		kind = schemavalidate.KindSSP
-	} else if _, ok := root["assessment-plan"]; ok {
-		kind = schemavalidate.KindAssessmentPlan
-	} else if _, ok := root["assessment-results"]; ok {
-		kind = schemavalidate.KindAssessmentResults
-	} else if _, ok := root["plan-of-action-and-milestones"]; ok {
-		kind = schemavalidate.KindPOAM
 	}
 	rep.ArtifactKind = kind.Name
 
-	// 3. NIST OSCAL 1.2.3 Schema Validation
-	v, err := schemavalidate.NewValidator()
-	if err != nil {
-		return nil, fmt.Errorf("init validator: %w", err)
-	}
-	if err := v.Validate(data, kind); err != nil {
+	// 3. NIST OSCAL 1.2.3 Schema Validation (content-addressed by SHA-256)
+	if err := validateSchemaCachedWithSum(data, sum, kind); err != nil {
 		rep.SchemaValid = false
 		rep.Verdict = VerdictDeviationDetected
 		rep.SchemaErrors = append(rep.SchemaErrors, err.Error())
@@ -154,8 +315,8 @@ func VerifyBytesParity(f Framework, data []byte, artifactPath string) (*ParityRe
 		rep.SchemaValid = true
 	}
 
-	// 4. Semantic Reference Integrity Check
-	findings, err := integrity.Check(data, kind)
+	// 4. Semantic Reference Integrity Check (content-addressed by SHA-256)
+	findings, err := checkIntegrityCachedWithSum(data, sum, kind)
 	if err != nil {
 		rep.IntegrityValid = false
 		rep.IntegrityErrors = append(rep.IntegrityErrors, err.Error())
@@ -170,15 +331,22 @@ func VerifyBytesParity(f Framework, data []byte, artifactPath string) (*ParityRe
 		}
 	}
 
+	getExpected := func() ([]ControlInfo, error) {
+		if preloadedExpected != nil {
+			return preloadedExpected, nil
+		}
+		return loadCachedExpectedControls(f)
+	}
+
 	// 5. Verbatim Control, Anti-Invariant & Cross-Layer Parity Verification
 	switch kind.RootKey {
 	case "catalog":
-		expectedCtrls, err := LoadControls(f)
+		expectedCtrls, err := getExpected()
 		if err != nil {
 			return nil, fmt.Errorf("load expected controls for %s: %w", f.ID(), err)
 		}
 
-		actualCtrls, err := LoadControlsFromBytes(data, f.ID())
+		actualCtrls, err := loadCachedControlsFromBytes(data, sum, f.ID())
 		if err != nil {
 			return nil, fmt.Errorf("load actual controls from artifact: %w", err)
 		}
@@ -188,38 +356,62 @@ func VerifyBytesParity(f Framework, data []byte, artifactPath string) (*ParityRe
 		verifyKGRoundTripParity(f, actualCtrls, rep)
 
 	case "profile":
-		expectedCtrls, _ := LoadControls(f)
+		var root map[string]interface{}
+		if err := json.Unmarshal(data, &root); err != nil {
+			return nil, fmt.Errorf("unmarshal artifact json: %w", err)
+		}
+		expectedCtrls, _ := getExpected()
 		var expectedProfileBytes []byte
 		if f.HasProfile() {
 			expectedProfileBytes, _ = f.ProfileJSON()
 		} else if len(expectedCtrls) > 0 {
 			expectedProfileBytes, _ = ProjectProfile(f, expectedCtrls)
 		}
-		compareProfiles(f, expectedCtrls, expectedProfileBytes, data, rep)
+		compareProfiles(f, expectedCtrls, expectedProfileBytes, root, rep)
 
 	case "component-definition":
-		expectedCtrls, err := LoadControls(f)
+		var doc oscalVerifyCDDoc
+		if err := json.Unmarshal(data, &doc); err != nil {
+			return nil, fmt.Errorf("unmarshal artifact json: %w", err)
+		}
+		expectedCtrls, err := getExpected()
 		if err == nil {
-			compareComponentDefinition(expectedCtrls, data, rep)
+			compareComponentDefinition(expectedCtrls, &doc, rep)
 		}
 
 	case "system-security-plan":
-		expectedCtrls, err := LoadControls(f)
+		var doc oscalVerifySSPDoc
+		if err := json.Unmarshal(data, &doc); err != nil {
+			return nil, fmt.Errorf("unmarshal artifact json: %w", err)
+		}
+		expectedCtrls, err := getExpected()
 		if err == nil {
-			compareSSP(expectedCtrls, data, rep)
+			compareSSP(expectedCtrls, &doc, rep)
 		}
 
 	case "assessment-plan":
-		expectedCtrls, _ := LoadControls(f)
-		compareAssessmentPlan(expectedCtrls, data, rep)
+		var doc oscalVerifyAPDoc
+		if err := json.Unmarshal(data, &doc); err != nil {
+			return nil, fmt.Errorf("unmarshal artifact json: %w", err)
+		}
+		expectedCtrls, _ := getExpected()
+		compareAssessmentPlan(expectedCtrls, &doc, rep)
 
 	case "assessment-results":
-		expectedCtrls, _ := LoadControls(f)
-		compareAssessmentResults(expectedCtrls, data, rep)
+		var doc oscalVerifyARDoc
+		if err := json.Unmarshal(data, &doc); err != nil {
+			return nil, fmt.Errorf("unmarshal artifact json: %w", err)
+		}
+		expectedCtrls, _ := getExpected()
+		compareAssessmentResults(expectedCtrls, &doc, rep)
 
 	case "plan-of-action-and-milestones":
-		expectedCtrls, _ := LoadControls(f)
-		comparePOAM(expectedCtrls, data, rep)
+		var doc oscalVerifyPOAMDoc
+		if err := json.Unmarshal(data, &doc); err != nil {
+			return nil, fmt.Errorf("unmarshal artifact json: %w", err)
+		}
+		expectedCtrls, _ := getExpected()
+		comparePOAM(expectedCtrls, &doc, rep)
 	}
 
 	// Calculate overall score
@@ -476,16 +668,197 @@ func compareControls(f Framework, expected, actual []ControlInfo, rep *ParityRep
 	}
 }
 
-// verifyKGRoundTripParity seeds the framework into an in-memory SQLite Knowledge Graph,
+// memKGStore is an ephemeral, concurrency-safe in-memory kg.Store used by
+// in-memory KG round-trip parity checks so repeated catalog verifications
+// exercise the exact SeedFramework -> Snapshot -> oscal.Generator pipeline
+// without spawning dozens of C-to-Go SQLite VM instances per test run.
+type memKGStore struct {
+	mu        sync.RWMutex
+	entities  []*kg.Entity
+	byURN     map[string]int
+	snapshots map[string][]*kg.Entity
+	releases  map[string]*kg.Release
+}
+
+func newMemKGStore() *memKGStore {
+	return &memKGStore{
+		byURN:     make(map[string]int),
+		snapshots: make(map[string][]*kg.Entity),
+		releases:  make(map[string]*kg.Release),
+	}
+}
+
+func (m *memKGStore) BulkUpsertEntities(_ context.Context, entities []*kg.Entity) error {
+	m.mu.Lock()
+	defer m.mu.Unlock()
+	now := time.Now().UTC()
+	for _, e := range entities {
+		if e == nil {
+			continue
+		}
+		cp := *e
+		if cp.Status == "" {
+			cp.Status = kg.EntityStatusActive
+		}
+		if cp.ValidFrom.IsZero() {
+			cp.ValidFrom = now
+		}
+		if idx, exists := m.byURN[cp.URN]; exists {
+			old := m.entities[idx]
+			cp.Version = old.Version + 1
+			m.entities[idx] = &cp
+		} else {
+			if cp.Version == 0 {
+				cp.Version = 1
+			}
+			m.byURN[cp.URN] = len(m.entities)
+			m.entities = append(m.entities, &cp)
+		}
+	}
+	return nil
+}
+
+func (m *memKGStore) CreateEntity(ctx context.Context, e *kg.Entity) error {
+	return m.BulkUpsertEntities(ctx, []*kg.Entity{e})
+}
+
+func (m *memKGStore) GetEntity(_ context.Context, urn string) (*kg.Entity, error) {
+	m.mu.RLock()
+	defer m.mu.RUnlock()
+	if idx, ok := m.byURN[urn]; ok {
+		cp := *m.entities[idx]
+		return &cp, nil
+	}
+	return nil, fmt.Errorf("not found: %s", urn)
+}
+
+func (m *memKGStore) UpdateEntity(ctx context.Context, e *kg.Entity) error {
+	return m.BulkUpsertEntities(ctx, []*kg.Entity{e})
+}
+
+func (m *memKGStore) ListEntities(_ context.Context, entityType string, status kg.EntityStatus) ([]*kg.Entity, error) {
+	m.mu.RLock()
+	defer m.mu.RUnlock()
+	out := make([]*kg.Entity, 0, len(m.entities))
+	for _, e := range m.entities {
+		if entityType != "" && e.Type != entityType {
+			continue
+		}
+		if status != "" && e.Status != status {
+			continue
+		}
+		cp := *e
+		out = append(out, &cp)
+	}
+	return out, nil
+}
+
+func (m *memKGStore) Snapshot(ctx context.Context, _ time.Time) ([]*kg.Entity, error) {
+	return m.ListEntities(ctx, "", kg.EntityStatusActive)
+}
+
+func (m *memKGStore) CreateSnapshot(_ context.Context, name string) (*kg.Snapshot, error) {
+	m.mu.Lock()
+	defer m.mu.Unlock()
+	snap := make([]*kg.Entity, 0, len(m.entities))
+	for _, e := range m.entities {
+		if e.Status == kg.EntityStatusActive {
+			cp := *e
+			snap = append(snap, &cp)
+		}
+	}
+	m.snapshots[name] = snap
+	return &kg.Snapshot{Name: name, CreatedAt: time.Now().UTC()}, nil
+}
+
+func (m *memKGStore) GetSnapshot(_ context.Context, name string) ([]*kg.Entity, error) {
+	m.mu.RLock()
+	defer m.mu.RUnlock()
+	snap, ok := m.snapshots[name]
+	if !ok {
+		return nil, fmt.Errorf("snapshot %s not found", name)
+	}
+	return snap, nil
+}
+
+func (m *memKGStore) ListSnapshots(_ context.Context) ([]*kg.Snapshot, error) {
+	m.mu.RLock()
+	defer m.mu.RUnlock()
+	var out []*kg.Snapshot
+	for name := range m.snapshots {
+		out = append(out, &kg.Snapshot{Name: name})
+	}
+	return out, nil
+}
+
+func (m *memKGStore) CreateRelease(_ context.Context, name, snapshotName string) (*kg.Release, error) {
+	m.mu.Lock()
+	defer m.mu.Unlock()
+	rel := &kg.Release{Name: name, Snapshot: snapshotName, CreatedAt: time.Now().UTC()}
+	m.releases[name] = rel
+	return rel, nil
+}
+
+func (m *memKGStore) GetRelease(_ context.Context, name string) (*kg.Release, error) {
+	m.mu.RLock()
+	defer m.mu.RUnlock()
+	rel, ok := m.releases[name]
+	if !ok {
+		return nil, fmt.Errorf("release %s not found", name)
+	}
+	return rel, nil
+}
+
+func (m *memKGStore) ListReleases(_ context.Context) ([]*kg.Release, error) {
+	m.mu.RLock()
+	defer m.mu.RUnlock()
+	var out []*kg.Release
+	for _, rel := range m.releases {
+		out = append(out, rel)
+	}
+	return out, nil
+}
+
+func (m *memKGStore) Close() error { return nil }
+
+// verifyKGRoundTripParity seeds the framework into an in-memory Knowledge Graph,
 // creates a snapshot, generates an OSCAL catalog from the KG snapshot via oscal.Generator,
 // and verifies that every control is faithfully represented with verbatim title, statement AST,
 // guidance, parameters, and sovereign properties.
 func verifyKGRoundTripParity(f Framework, actual []ControlInfo, rep *ParityReport) {
-	store, err := kg.NewSQLiteStore(":memory:", dbutil.PoolConfig{})
-	if err != nil {
-		return
+	var cacheKey string
+	if catBytes, err := f.CatalogJSON(); err == nil && rep.ArtifactSHA256 != "" {
+		catSum := sha256.Sum256(catBytes)
+		profHex := ""
+		if f.HasProfile() {
+			if pb, err := f.ProfileJSON(); err == nil {
+				ps := sha256.Sum256(pb)
+				profHex = hex.EncodeToString(ps[:])
+			}
+		}
+		cacheKey = f.ID() + "|" + f.Jurisdiction() + "|" + hex.EncodeToString(catSum[:]) + "|" + profHex + "|" + rep.ArtifactSHA256
+		kgRoundTripCacheMu.RLock()
+		cached, ok := kgRoundTripCache[cacheKey]
+		kgRoundTripCacheMu.RUnlock()
+		if ok {
+			rep.Discrepancies = append(rep.Discrepancies, cached...)
+			return
+		}
 	}
-	defer store.Close()
+	baseDiscIdx := len(rep.Discrepancies)
+	defer func() {
+		if cacheKey != "" {
+			added := rep.Discrepancies[baseDiscIdx:]
+			stored := make([]Discrepancy, len(added))
+			copy(stored, added)
+			kgRoundTripCacheMu.Lock()
+			kgRoundTripCache[cacheKey] = stored
+			kgRoundTripCacheMu.Unlock()
+		}
+	}()
+
+	store := newMemKGStore()
+	defer func() { _ = store.Close() }()
 
 	ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)
 	defer cancel()
@@ -562,29 +935,7 @@ func verifyKGRoundTripParity(f Framework, actual []ControlInfo, rep *ParityRepor
 		return
 	}
 
-	genBytes, err := oscal.ExportCatalogJSON(genCat)
-	if err != nil {
-		rep.Discrepancies = append(rep.Discrepancies, Discrepancy{
-			ControlID: "*",
-			Aspect:    "KGExportCatalogJSON",
-			Expected:  "ExportCatalogJSON succeeds",
-			Actual:    err.Error(),
-			Message:   fmt.Sprintf("ExportCatalogJSON from KG failed for framework '%s'", f.ID()),
-		})
-		return
-	}
-
-	genControls, err := LoadControlsFromBytes(genBytes, f.ID())
-	if err != nil {
-		rep.Discrepancies = append(rep.Discrepancies, Discrepancy{
-			ControlID: "*",
-			Aspect:    "KGParseCatalogJSON",
-			Expected:  "LoadControlsFromBytes succeeds",
-			Actual:    err.Error(),
-			Message:   fmt.Sprintf("LoadControlsFromBytes on KG-generated catalog failed for framework '%s'", f.ID()),
-		})
-		return
-	}
+	genControls := loadControlsFromProto(genCat, f.ID())
 
 	if len(genControls) != len(actual) {
 		rep.Discrepancies = append(rep.Discrepancies, Discrepancy{
@@ -662,6 +1013,242 @@ func verifyKGRoundTripParity(f Framework, actual []ControlInfo, rep *ParityRepor
 	}
 }
 
+func loadControlsFromProto(cat *catalogv1.Catalog, frameworkID string) []ControlInfo {
+	if cat == nil {
+		return nil
+	}
+	var result []ControlInfo
+	partProse := func(p *catalogv1.Part) string {
+		if p == nil || len(p.Prose) == 0 {
+			return ""
+		}
+		if len(p.Prose) == 1 {
+			if p.Prose[0] == nil {
+				return ""
+			}
+			return p.Prose[0].Value
+		}
+		var parts []string
+		for _, pr := range p.Prose {
+			if pr != nil && pr.Value != "" {
+				parts = append(parts, pr.Value)
+			}
+		}
+		return strings.Join(parts, "\n\n")
+	}
+
+	var parseControl func(c *catalogv1.Control, famID, famTitle, parentID string) ControlInfo
+	parseControl = func(c *catalogv1.Control, famID, famTitle, parentID string) ControlInfo {
+		ctrlID := ""
+		if c.Id != nil {
+			ctrlID = c.Id.Value
+		}
+		title := ""
+		if c.Title != nil {
+			title = c.Title.Value
+		}
+		info := ControlInfo{
+			ID:              strings.ToLower(ctrlID),
+			Title:           title,
+			Class:           c.Class,
+			FamilyID:        strings.ToUpper(famID),
+			FamilyTitle:     famTitle,
+			FrameworkID:     frameworkID,
+			Parameters:      make(map[string]string),
+			ParentControlID: strings.ToLower(parentID),
+			IsEnhancement:   parentID != "",
+		}
+
+		for _, prop := range c.Props {
+			if prop == nil {
+				continue
+			}
+			switch strings.ToLower(prop.Name) {
+			case "jurisdiction":
+				if strings.EqualFold(prop.Value, "ca") {
+					info.IsCanadian = true
+				}
+			case "sovereign-guidance", "sovereign-control", "sovereign-specification":
+				if strings.EqualFold(prop.Value, "true") {
+					info.IsCanadian = true
+				}
+			case "family-id":
+				if info.FamilyID == "" || info.FamilyID == "GENERAL" {
+					info.FamilyID = strings.ToUpper(prop.Value)
+				}
+			case "family-title":
+				if info.FamilyTitle == "" || info.FamilyTitle == "General Controls" {
+					info.FamilyTitle = prop.Value
+				}
+			}
+		}
+
+		for _, p := range c.Params {
+			if p == nil || p.Id == nil || p.Id.Value == "" {
+				continue
+			}
+			val := ""
+			if p.Label != nil {
+				val = p.Label.Value
+			}
+			var vals []string
+			for _, v := range p.Values {
+				if v != nil && v.Value != "" {
+					vals = append(vals, v.Value)
+				}
+			}
+			if len(vals) > 0 {
+				val = strings.Join(vals, ", ")
+			}
+			if val == "" && p.Select != nil {
+				var choices []string
+				for _, ch := range p.Select.Choices {
+					if ch != nil && ch.Value != "" {
+						choices = append(choices, ch.Value)
+					}
+				}
+				if len(choices) > 0 {
+					val = strings.Join(choices, "; ")
+				}
+			}
+			info.Parameters[p.Id.Value] = val
+		}
+
+		var stmts []string
+		var extractPartStmts func(part *catalogv1.Part)
+		extractPartStmts = func(part *catalogv1.Part) {
+			if part == nil {
+				return
+			}
+			lbl := ""
+			if part.Title != nil {
+				lbl = part.Title.Value
+			}
+			for _, prop := range part.Props {
+				if prop == nil {
+					continue
+				}
+				if strings.EqualFold(prop.Name, "label") && prop.Value != "" {
+					lbl = prop.Value
+				}
+				if (strings.EqualFold(prop.Name, "jurisdiction") && strings.EqualFold(prop.Value, "ca")) ||
+					(strings.EqualFold(prop.Name, "sovereign-specification") && strings.EqualFold(prop.Value, "true")) {
+					info.IsCanadian = true
+				}
+			}
+			prose := partProse(part)
+			if prose != "" {
+				if strings.EqualFold(part.Name, "item") && lbl != "" {
+					stmts = append(stmts, lbl+" "+prose)
+				} else {
+					stmts = append(stmts, prose)
+				}
+			}
+			for _, sub := range part.Parts {
+				extractPartStmts(sub)
+			}
+		}
+
+		for _, p := range c.Parts {
+			if p == nil {
+				continue
+			}
+			pName := strings.ToLower(p.Name)
+			pTitle := ""
+			if p.Title != nil {
+				pTitle = p.Title.Value
+			}
+			isSovereignGuidance := pName == "gc-guidance" || pName == "canadian-guidance" || strings.EqualFold(pTitle, "GC Discussion")
+			for _, prop := range p.Props {
+				if prop == nil {
+					continue
+				}
+				if (strings.EqualFold(prop.Name, "sovereign-guidance") && strings.EqualFold(prop.Value, "true")) ||
+					(strings.EqualFold(prop.Name, "jurisdiction") && strings.EqualFold(prop.Value, "ca")) {
+					isSovereignGuidance = true
+				}
+			}
+			prose := partProse(p)
+			switch {
+			case pName == "statement":
+				extractPartStmts(p)
+			case isSovereignGuidance && (pName == "guidance" || pName == "gc-guidance" || pName == "canadian-guidance"):
+				if prose != "" {
+					info.CanadianGuidance = prose
+					info.IsCanadian = true
+				}
+			case pName == "guidance":
+				if prose != "" {
+					info.Guidance = prose
+				}
+			default:
+				if !strings.Contains(pName, "assessment") {
+					extractPartStmts(p)
+				}
+			}
+		}
+		info.Statements = stmts
+
+		for _, sub := range c.Controls {
+			if sub == nil {
+				continue
+			}
+			enh := parseControl(sub, famID, famTitle, ctrlID)
+			result = append(result, enh)
+			info.Enhancements = append(info.Enhancements, enh.ID)
+		}
+		return info
+	}
+
+	var traverseGroup func(g *catalogv1.Group, topFamID, topFamTitle string)
+	traverseGroup = func(g *catalogv1.Group, topFamID, topFamTitle string) {
+		if g == nil {
+			return
+		}
+		famID := topFamID
+		famTitle := topFamTitle
+		if famID == "" {
+			if g.Id != nil {
+				famID = g.Id.Value
+			}
+			if g.Title != nil {
+				famTitle = g.Title.Value
+			}
+		}
+		for _, c := range g.Controls {
+			if c != nil {
+				result = append(result, parseControl(c, famID, famTitle, ""))
+			}
+		}
+		for _, sub := range g.Groups {
+			traverseGroup(sub, famID, famTitle)
+		}
+	}
+
+	for _, g := range cat.Groups {
+		if g == nil {
+			continue
+		}
+		gid, gtitle := "", ""
+		if g.Id != nil {
+			gid = g.Id.Value
+		}
+		if g.Title != nil {
+			gtitle = g.Title.Value
+		}
+		traverseGroup(g, gid, gtitle)
+	}
+	for _, c := range cat.Controls {
+		if c != nil {
+			result = append(result, parseControl(c, "GENERAL", "General Controls", ""))
+		}
+	}
+	sort.Slice(result, func(i, j int) bool {
+		return result[i].ID < result[j].ID
+	})
+	return result
+}
+
 func extractProfileSelectedIDs(prof map[string]interface{}, allCatalogIDs []string) []string {
 	imports, _ := prof["imports"].([]interface{})
 	var ids []string
@@ -695,10 +1282,9 @@ func extractProfileSelectedIDs(prof map[string]interface{}, allCatalogIDs []stri
 	return ids
 }
 
-func compareProfiles(f Framework, catalogCtrls []ControlInfo, expectedJSON, actualJSON []byte, rep *ParityReport) {
-	var expRoot, actRoot map[string]interface{}
+func compareProfiles(f Framework, catalogCtrls []ControlInfo, expectedJSON []byte, actRoot map[string]interface{}, rep *ParityReport) {
+	var expRoot map[string]interface{}
 	_ = json.Unmarshal(expectedJSON, &expRoot)
-	_ = json.Unmarshal(actualJSON, &actRoot)
 
 	expProf, _ := expRoot["profile"].(map[string]interface{})
 	actProf, _ := actRoot["profile"].(map[string]interface{})
@@ -827,35 +1413,82 @@ func compareProfiles(f Framework, catalogCtrls []ControlInfo, expectedJSON, actu
 	}
 }
 
-func compareComponentDefinition(expected []ControlInfo, data []byte, rep *ParityReport) {
+type oscalVerifyCDDoc struct {
+	ComponentDefinition *struct {
+		Components []struct {
+			ControlImplementations []struct {
+				ImplementedRequirements []struct {
+					ControlID   string `json:"control-id"`
+					Description string `json:"description"`
+				} `json:"implemented-requirements"`
+			} `json:"control-implementations"`
+		} `json:"components"`
+	} `json:"component-definition"`
+}
+
+type oscalVerifySSPDoc struct {
+	SSP *struct {
+		ControlImplementation *struct {
+			ImplementedRequirements []struct {
+				ControlID    string            `json:"control-id"`
+				ByComponents []json.RawMessage `json:"by-components"`
+			} `json:"implemented-requirements"`
+		} `json:"control-implementation"`
+	} `json:"system-security-plan"`
+}
+
+type oscalVerifyReviewedControls struct {
+	ControlSelections []struct {
+		IncludeControls []struct {
+			ControlID string   `json:"control-id"`
+			WithIDs   []string `json:"with-ids"`
+		} `json:"include-controls"`
+	} `json:"control-selections"`
+}
+
+type oscalVerifyAPDoc struct {
+	AssessmentPlan *struct {
+		Tasks            []json.RawMessage            `json:"tasks"`
+		ReviewedControls *oscalVerifyReviewedControls `json:"reviewed-controls"`
+	} `json:"assessment-plan"`
+}
+
+type oscalVerifyARDoc struct {
+	AssessmentResults *struct {
+		Results []struct {
+			ReviewedControls *oscalVerifyReviewedControls `json:"reviewed-controls"`
+		} `json:"results"`
+	} `json:"assessment-results"`
+}
+
+type oscalVerifyPOAMDoc struct {
+	POAM *struct {
+		PoamItems []struct {
+			Props []struct {
+				Name  string `json:"name"`
+				Value string `json:"value"`
+			} `json:"props"`
+		} `json:"poam-items"`
+	} `json:"plan-of-action-and-milestones"`
+}
+
+func compareComponentDefinition(expected []ControlInfo, doc *oscalVerifyCDDoc, rep *ParityReport) {
 	rep.TotalExpectedControls = len(expected)
-	var root map[string]interface{}
-	if err := json.Unmarshal(data, &root); err != nil {
+	if doc == nil || doc.ComponentDefinition == nil {
 		return
 	}
-	cd, _ := root["component-definition"].(map[string]interface{})
-	if cd == nil {
-		return
-	}
-	comps, _ := cd["components"].([]interface{})
-	ctrlDesc := make(map[string]string)
-	for _, compRaw := range comps {
-		comp, _ := compRaw.(map[string]interface{})
-		ctrlImpls, _ := comp["control-implementations"].([]interface{})
-		for _, implRaw := range ctrlImpls {
-			impl, _ := implRaw.(map[string]interface{})
-			reqs, _ := impl["implemented-requirements"].([]interface{})
-			for _, reqRaw := range reqs {
-				req, _ := reqRaw.(map[string]interface{})
-				if cid, ok := req["control-id"].(string); ok && cid != "" {
-					desc, _ := req["description"].(string)
-					ctrlDesc[strings.ToLower(cid)] = strings.TrimSpace(desc)
+	ctrlDesc := make(map[string]string, len(expected))
+	for _, comp := range doc.ComponentDefinition.Components {
+		for _, impl := range comp.ControlImplementations {
+			for _, req := range impl.ImplementedRequirements {
+				if req.ControlID != "" {
+					ctrlDesc[strings.ToLower(req.ControlID)] = strings.TrimSpace(req.Description)
 				}
 			}
 		}
 	}
 	rep.TotalActualControls = len(ctrlDesc)
-	expMap := make(map[string]ControlInfo)
+	expMap := make(map[string]ControlInfo, len(expected))
 	for _, c := range expected {
 		cid := strings.ToLower(c.ID)
 		expMap[cid] = c
@@ -895,34 +1528,23 @@ func compareComponentDefinition(expected []ControlInfo, data []byte, rep *Parity
 	}
 }
 
-func compareSSP(expected []ControlInfo, data []byte, rep *ParityReport) {
+func compareSSP(expected []ControlInfo, doc *oscalVerifySSPDoc, rep *ParityReport) {
 	rep.TotalExpectedControls = len(expected)
-	var root map[string]interface{}
-	if err := json.Unmarshal(data, &root); err != nil {
+	if doc == nil || doc.SSP == nil || doc.SSP.ControlImplementation == nil {
 		return
 	}
-	ssp, _ := root["system-security-plan"].(map[string]interface{})
-	if ssp == nil {
-		return
-	}
-	ci, _ := ssp["control-implementation"].(map[string]interface{})
-	if ci == nil {
-		return
-	}
-	reqs, _ := ci["implemented-requirements"].([]interface{})
-	ctrlReqs := make(map[string]map[string]interface{})
-	for _, reqRaw := range reqs {
-		req, _ := reqRaw.(map[string]interface{})
-		if cid, ok := req["control-id"].(string); ok && cid != "" {
-			ctrlReqs[strings.ToLower(cid)] = req
+	ctrlByCompCount := make(map[string]int, len(expected))
+	for _, req := range doc.SSP.ControlImplementation.ImplementedRequirements {
+		if req.ControlID != "" {
+			ctrlByCompCount[strings.ToLower(req.ControlID)] = len(req.ByComponents)
 		}
 	}
-	rep.TotalActualControls = len(ctrlReqs)
-	expMap := make(map[string]ControlInfo)
+	rep.TotalActualControls = len(ctrlByCompCount)
+	expMap := make(map[string]ControlInfo, len(expected))
 	for _, c := range expected {
 		cid := strings.ToLower(c.ID)
 		expMap[cid] = c
-		req, ok := ctrlReqs[cid]
+		byCompCount, ok := ctrlByCompCount[cid]
 		if !ok {
 			rep.MissingControls = append(rep.MissingControls, cid)
 			rep.Discrepancies = append(rep.Discrepancies, Discrepancy{
@@ -935,8 +1557,7 @@ func compareSSP(expected []ControlInfo, data []byte, rep *ParityReport) {
 			continue
 		}
 		rep.MatchedControls++
-		byComps, _ := req["by-components"].([]interface{})
-		if len(byComps) > 0 {
+		if byCompCount > 0 {
 			rep.StatementMatches++
 			rep.TitleMatches++
 			rep.GuidanceMatches++
@@ -952,24 +1573,90 @@ func compareSSP(expected []ControlInfo, data []byte, rep *ParityReport) {
 			})
 		}
 	}
-	for cid := range ctrlReqs {
+	for cid := range ctrlByCompCount {
 		if _, ok := expMap[cid]; !ok {
 			rep.ExtraControls = append(rep.ExtraControls, cid)
 		}
 	}
 }
 
-func compareAssessmentPlan(expected []ControlInfo, data []byte, rep *ParityReport) {
-	var root map[string]interface{}
-	if err := json.Unmarshal(data, &root); err != nil {
+func extractTypedReviewedControlIDs(rc *oscalVerifyReviewedControls, dest map[string]bool) {
+	if rc == nil {
 		return
 	}
-	ap, _ := root["assessment-plan"].(map[string]interface{})
-	if ap == nil {
+	for _, sel := range rc.ControlSelections {
+		for _, inc := range sel.IncludeControls {
+			if cid := strings.ToLower(strings.TrimSpace(inc.ControlID)); cid != "" {
+				dest[cid] = true
+			}
+			for _, wid := range inc.WithIDs {
+				if s := strings.ToLower(strings.TrimSpace(wid)); s != "" {
+					dest[s] = true
+				}
+			}
+		}
+	}
+}
+
+func compareControlIDSet(expected []ControlInfo, actualSet map[string]bool, aspect string, rep *ParityReport) {
+	rep.TotalExpectedControls = len(expected)
+	rep.TotalActualControls = len(actualSet)
+
+	expMap := make(map[string]ControlInfo, len(expected))
+	for _, c := range expected {
+		cid := strings.ToLower(strings.TrimSpace(c.ID))
+		if cid == "" {
+			continue
+		}
+		expMap[cid] = c
+		if !actualSet[cid] {
+			rep.MissingControls = append(rep.MissingControls, cid)
+			rep.Discrepancies = append(rep.Discrepancies, Discrepancy{
+				ControlID: cid,
+				Aspect:    aspect,
+				Expected:  "PRESENT",
+				Actual:    "MISSING",
+				Message:   fmt.Sprintf("Control '%s' missing from %s", cid, aspect),
+			})
+			continue
+		}
+		rep.MatchedControls++
+		rep.TitleMatches++
+		rep.StatementMatches++
+		rep.GuidanceMatches++
+		rep.ParameterMatches++
+		rep.SovereignTagMatches++
+	}
+	sort.Strings(rep.MissingControls)
+
+	for cid := range actualSet {
+		if _, ok := expMap[cid]; !ok {
+			rep.ExtraControls = append(rep.ExtraControls, cid)
+			rep.Discrepancies = append(rep.Discrepancies, Discrepancy{
+				ControlID: cid,
+				Aspect:    aspect,
+				Expected:  "ABSENT",
+				Actual:    "PRESENT",
+				Message:   fmt.Sprintf("Unexpected control '%s' present in %s", cid, aspect),
+			})
+		}
+	}
+	sort.Strings(rep.ExtraControls)
+}
+
+func compareAssessmentPlan(expected []ControlInfo, doc *oscalVerifyAPDoc, rep *ParityReport) {
+	rep.TotalExpectedControls = len(expected)
+	if doc == nil || doc.AssessmentPlan == nil {
+		rep.Discrepancies = append(rep.Discrepancies, Discrepancy{
+			ControlID: "*",
+			Aspect:    "AssessmentPlanRoot",
+			Expected:  "valid assessment-plan",
+			Actual:    "missing assessment-plan",
+			Message:   "Assessment Plan root object missing",
+		})
 		return
 	}
-	tasks, _ := ap["tasks"].([]interface{})
-	if len(tasks) == 0 {
+	if len(expected) > 0 && len(doc.AssessmentPlan.Tasks) == 0 {
 		rep.Discrepancies = append(rep.Discrepancies, Discrepancy{
 			ControlID: "*",
 			Aspect:    "AssessmentPlanTasks",
@@ -977,29 +1664,26 @@ func compareAssessmentPlan(expected []ControlInfo, data []byte, rep *ParityRepor
 			Actual:    "0 tasks",
 			Message:   "Assessment Plan contains no assessment tasks",
 		})
-		return
 	}
-	rep.TotalExpectedControls = len(tasks)
-	rep.TotalActualControls = len(tasks)
-	rep.MatchedControls = len(tasks)
-	rep.TitleMatches = len(tasks)
-	rep.StatementMatches = len(tasks)
-	rep.GuidanceMatches = len(tasks)
-	rep.ParameterMatches = len(tasks)
-	rep.SovereignTagMatches = len(tasks)
+
+	actualSet := make(map[string]bool, len(expected))
+	extractTypedReviewedControlIDs(doc.AssessmentPlan.ReviewedControls, actualSet)
+	compareControlIDSet(expected, actualSet, "AssessmentPlanReviewedControls", rep)
 }
 
-func compareAssessmentResults(expected []ControlInfo, data []byte, rep *ParityReport) {
-	var root map[string]interface{}
-	if err := json.Unmarshal(data, &root); err != nil {
+func compareAssessmentResults(expected []ControlInfo, doc *oscalVerifyARDoc, rep *ParityReport) {
+	rep.TotalExpectedControls = len(expected)
+	if doc == nil || doc.AssessmentResults == nil {
+		rep.Discrepancies = append(rep.Discrepancies, Discrepancy{
+			ControlID: "*",
+			Aspect:    "AssessmentResultsRoot",
+			Expected:  "valid assessment-results",
+			Actual:    "missing assessment-results",
+			Message:   "Assessment Results root object missing",
+		})
 		return
 	}
-	ar, _ := root["assessment-results"].(map[string]interface{})
-	if ar == nil {
-		return
-	}
-	results, _ := ar["results"].([]interface{})
-	if len(results) == 0 {
+	if len(doc.AssessmentResults.Results) == 0 {
 		rep.Discrepancies = append(rep.Discrepancies, Discrepancy{
 			ControlID: "*",
 			Aspect:    "AssessmentResults",
@@ -1007,29 +1691,28 @@ func compareAssessmentResults(expected []ControlInfo, data []byte, rep *ParityRe
 			Actual:    "0 results",
 			Message:   "Assessment Results contains no result entries",
 		})
-		return
 	}
-	rep.TotalExpectedControls = len(results)
-	rep.TotalActualControls = len(results)
-	rep.MatchedControls = len(results)
-	rep.TitleMatches = len(results)
-	rep.StatementMatches = len(results)
-	rep.GuidanceMatches = len(results)
-	rep.ParameterMatches = len(results)
-	rep.SovereignTagMatches = len(results)
+
+	actualSet := make(map[string]bool, len(expected))
+	for _, res := range doc.AssessmentResults.Results {
+		extractTypedReviewedControlIDs(res.ReviewedControls, actualSet)
+	}
+	compareControlIDSet(expected, actualSet, "AssessmentResultsReviewedControls", rep)
 }
 
-func comparePOAM(expected []ControlInfo, data []byte, rep *ParityReport) {
-	var root map[string]interface{}
-	if err := json.Unmarshal(data, &root); err != nil {
+func comparePOAM(expected []ControlInfo, doc *oscalVerifyPOAMDoc, rep *ParityReport) {
+	rep.TotalExpectedControls = len(expected)
+	if doc == nil || doc.POAM == nil {
+		rep.Discrepancies = append(rep.Discrepancies, Discrepancy{
+			ControlID: "*",
+			Aspect:    "POAMRoot",
+			Expected:  "valid plan-of-action-and-milestones",
+			Actual:    "missing plan-of-action-and-milestones",
+			Message:   "POA&M root object missing",
+		})
 		return
 	}
-	poam, _ := root["plan-of-action-and-milestones"].(map[string]interface{})
-	if poam == nil {
-		return
-	}
-	items, _ := poam["poam-items"].([]interface{})
-	if len(items) == 0 {
+	if len(doc.POAM.PoamItems) == 0 {
 		rep.Discrepancies = append(rep.Discrepancies, Discrepancy{
 			ControlID: "*",
 			Aspect:    "POAMItems",
@@ -1037,22 +1720,23 @@ func comparePOAM(expected []ControlInfo, data []byte, rep *ParityReport) {
 			Actual:    "0 poam-items",
 			Message:   "POA&M contains no poam-items",
 		})
-		return
 	}
-	rep.TotalExpectedControls = len(items)
-	rep.TotalActualControls = len(items)
-	rep.MatchedControls = len(items)
-	rep.TitleMatches = len(items)
-	rep.StatementMatches = len(items)
-	rep.GuidanceMatches = len(items)
-	rep.ParameterMatches = len(items)
-	rep.SovereignTagMatches = len(items)
+
+	actualSet := make(map[string]bool, len(expected))
+	for _, item := range doc.POAM.PoamItems {
+		for _, prop := range item.Props {
+			if strings.EqualFold(strings.TrimSpace(prop.Name), "control-id") {
+				if cid := strings.ToLower(strings.TrimSpace(prop.Value)); cid != "" {
+					actualSet[cid] = true
+				}
+			}
+		}
+	}
+	compareControlIDSet(expected, actualSet, "POAMControlCoverage", rep)
 }
 
 // VerifyAllFrameworksParity iterates across all frameworks in registry and checks parity against directory.
 func VerifyAllFrameworksParity(r *Registry, baseDir string) ([]*ParityReport, error) {
-	var reports []*ParityReport
-
 	artifactNames := []string{
 		"catalog.json",
 		"profile.json",
@@ -1063,30 +1747,82 @@ func VerifyAllFrameworksParity(r *Registry, baseDir string) ([]*ParityReport, er
 		"plan-of-action-and-milestones.json",
 	}
 
-	for _, f := range r.List() {
-		fwDir := filepath.Join(baseDir, f.ID())
-		foundAny := false
-		for _, name := range artifactNames {
-			artPath := filepath.Join(fwDir, name)
-			// #nosec G703,G304 -- artPath is resolved within the verified base directory.
-			if _, err := os.Stat(artPath); err == nil {
-				foundAny = true
-				rep, err := VerifyArtifactParity(f, artPath)
-				if err != nil {
-					return nil, fmt.Errorf("verify %s %s: %w", f.ID(), name, err)
-				}
-				reports = append(reports, rep)
-			}
-		}
+	fws := r.List()
+	if len(fws) == 0 {
+		return nil, nil
+	}
 
-		if !foundAny {
-			// Compare against in-memory export
-			catData, err := f.CatalogJSON()
-			if err == nil {
-				rep, _ := VerifyBytesParity(f, catData, "memory://"+f.ID()+"/catalog.json")
-				reports = append(reports, rep)
+	// Pre-initialize shared schema validator before spawning workers.
+	if _, err := sharedSchemaValidator(); err != nil {
+		return nil, fmt.Errorf("init schema validator: %w", err)
+	}
+
+	workers := runtime.GOMAXPROCS(0)
+	if workers < 1 {
+		workers = 1
+	}
+	if workers > 8 {
+		workers = 8
+	}
+	if workers > len(fws) {
+		workers = len(fws)
+	}
+
+	perFwReports := make([][]*ParityReport, len(fws))
+	perFwErr := make([]error, len(fws))
+	jobs := make(chan int, len(fws))
+	for i := range fws {
+		jobs <- i
+	}
+	close(jobs)
+
+	var wg sync.WaitGroup
+	wg.Add(workers)
+	for w := 0; w < workers; w++ {
+		go func() {
+			defer wg.Done()
+			for idx := range jobs {
+				f := fws[idx]
+				expectedCtrls, _ := loadCachedExpectedControls(f)
+				fwDir := filepath.Join(baseDir, f.ID())
+				var fwReps []*ParityReport
+				foundAny := false
+				for _, name := range artifactNames {
+					artPath := filepath.Join(fwDir, name)
+					// #nosec G703,G304 -- artPath is resolved within the verified base directory.
+					data, err := os.ReadFile(artPath)
+					if err == nil {
+						foundAny = true
+						rep, err := verifyBytesParityWithExpected(f, data, artPath, expectedCtrls)
+						if err != nil {
+							perFwErr[idx] = fmt.Errorf("verify %s %s: %w", f.ID(), name, err)
+							break
+						}
+						fwReps = append(fwReps, rep)
+					}
+				}
+				if perFwErr[idx] != nil {
+					continue
+				}
+				if !foundAny {
+					catData, err := f.CatalogJSON()
+					if err == nil {
+						rep, _ := verifyBytesParityWithExpected(f, catData, "memory://"+f.ID()+"/catalog.json", expectedCtrls)
+						fwReps = append(fwReps, rep)
+					}
+				}
+				perFwReports[idx] = fwReps
 			}
+		}()
+	}
+	wg.Wait()
+
+	var reports []*ParityReport
+	for i, err := range perFwErr {
+		if err != nil {
+			return nil, err
 		}
+		reports = append(reports, perFwReports[i]...)
 	}
 
 	return reports, nil
@@ -1096,56 +1832,56 @@ func VerifyAllFrameworksParity(r *Registry, baseDir string) ([]*ParityReport, er
 func (r *ParityReport) FormatTerminal(verbose bool) string {
 	var b strings.Builder
 	b.WriteString("\n=== xOSCAL FRAMEWORK VERBATIM PARITY REPORT ===\n")
-	b.WriteString(fmt.Sprintf("Framework:    %s (%s)\n", r.FrameworkTitle, r.FrameworkID))
-	b.WriteString(fmt.Sprintf("Artifact:     %s [%s]\n", r.ArtifactPath, r.ArtifactKind))
-	b.WriteString(fmt.Sprintf("Artifact SHA: %s\n", r.ArtifactSHA256))
+	fmt.Fprintf(&b, "Framework:    %s (%s)\n", r.FrameworkTitle, r.FrameworkID)
+	fmt.Fprintf(&b, "Artifact:     %s [%s]\n", r.ArtifactPath, r.ArtifactKind)
+	fmt.Fprintf(&b, "Artifact SHA: %s\n", r.ArtifactSHA256)
 	if r.SidecarPath != "" {
 		matchStr := "MATCH"
 		if !r.SidecarMatch {
 			matchStr = "MISMATCH"
 		}
-		b.WriteString(fmt.Sprintf("Sidecar:      %s [%s]\n", r.SidecarPath, matchStr))
+		fmt.Fprintf(&b, "Sidecar:      %s [%s]\n", r.SidecarPath, matchStr)
 	}
 	schemaStr := "VALID"
 	if !r.SchemaValid {
 		schemaStr = "INVALID"
 	}
-	b.WriteString(fmt.Sprintf("OSCAL 1.2.3:  %s\n", schemaStr))
-	b.WriteString(fmt.Sprintf("Integrity:    %t\n", r.IntegrityValid))
-	b.WriteString(fmt.Sprintf("Controls:     %d Expected | %d Actual | %d Matched\n",
-		r.TotalExpectedControls, r.TotalActualControls, r.MatchedControls))
-	b.WriteString(fmt.Sprintf("Parity Score: %.1f%%\n", r.ParityScore))
-	b.WriteString(fmt.Sprintf("Verdict:      %s\n\n", r.Verdict))
+	fmt.Fprintf(&b, "OSCAL 1.2.3:  %s\n", schemaStr)
+	fmt.Fprintf(&b, "Integrity:    %t\n", r.IntegrityValid)
+	fmt.Fprintf(&b, "Controls:     %d Expected | %d Actual | %d Matched\n",
+		r.TotalExpectedControls, r.TotalActualControls, r.MatchedControls)
+	fmt.Fprintf(&b, "Parity Score: %.1f%%\n", r.ParityScore)
+	fmt.Fprintf(&b, "Verdict:      %s\n\n", r.Verdict)
 
 	b.WriteString("VERBATIM FIELD PARITY AUDIT:\n")
-	b.WriteString(fmt.Sprintf("  * Control Titles:    %d / %d matches\n", r.TitleMatches, r.TotalExpectedControls))
-	b.WriteString(fmt.Sprintf("  * Statements (AST):  %d / %d matches\n", r.StatementMatches, r.TotalExpectedControls))
-	b.WriteString(fmt.Sprintf("  * Guidance/GC Disc:  %d / %d matches\n", r.GuidanceMatches, r.TotalExpectedControls))
-	b.WriteString(fmt.Sprintf("  * Parameters (ODP):  %d / %d matches\n", r.ParameterMatches, r.TotalExpectedControls))
-	b.WriteString(fmt.Sprintf("  * Sovereign Tagging: %d / %d matches\n", r.SovereignTagMatches, r.TotalExpectedControls))
+	fmt.Fprintf(&b, "  * Control Titles:    %d / %d matches\n", r.TitleMatches, r.TotalExpectedControls)
+	fmt.Fprintf(&b, "  * Statements (AST):  %d / %d matches\n", r.StatementMatches, r.TotalExpectedControls)
+	fmt.Fprintf(&b, "  * Guidance/GC Disc:  %d / %d matches\n", r.GuidanceMatches, r.TotalExpectedControls)
+	fmt.Fprintf(&b, "  * Parameters (ODP):  %d / %d matches\n", r.ParameterMatches, r.TotalExpectedControls)
+	fmt.Fprintf(&b, "  * Sovereign Tagging: %d / %d matches\n", r.SovereignTagMatches, r.TotalExpectedControls)
 
 	if len(r.MissingControls) > 0 {
-		b.WriteString(fmt.Sprintf("\nMISSING CONTROLS (%d):\n", len(r.MissingControls)))
+		fmt.Fprintf(&b, "\nMISSING CONTROLS (%d):\n", len(r.MissingControls))
 		for _, m := range r.MissingControls {
-			b.WriteString(fmt.Sprintf("  - %s\n", m))
+			fmt.Fprintf(&b, "  - %s\n", m)
 		}
 	}
 
 	if len(r.ExtraControls) > 0 {
-		b.WriteString(fmt.Sprintf("\nEXTRA CONTROLS (%d):\n", len(r.ExtraControls)))
+		fmt.Fprintf(&b, "\nEXTRA CONTROLS (%d):\n", len(r.ExtraControls))
 		for _, e := range r.ExtraControls {
-			b.WriteString(fmt.Sprintf("  + %s\n", e))
+			fmt.Fprintf(&b, "  + %s\n", e)
 		}
 	}
 
 	if len(r.Discrepancies) > 0 && verbose {
-		b.WriteString(fmt.Sprintf("\nDISCREPANCIES (%d):\n", len(r.Discrepancies)))
+		fmt.Fprintf(&b, "\nDISCREPANCIES (%d):\n", len(r.Discrepancies))
 		for i, d := range r.Discrepancies {
 			if i >= 10 {
-				b.WriteString(fmt.Sprintf("  ... and %d more discrepancies (use -json for complete dump)\n", len(r.Discrepancies)-10))
+				fmt.Fprintf(&b, "  ... and %d more discrepancies (use -json for complete dump)\n", len(r.Discrepancies)-10)
 				break
 			}
-			b.WriteString(fmt.Sprintf("  [%s] Control %s: %s\n", d.Aspect, d.ControlID, d.Message))
+			fmt.Fprintf(&b, "  [%s] Control %s: %s\n", d.Aspect, d.ControlID, d.Message)
 		}
 	}
 
@@ -1155,34 +1891,34 @@ func (r *ParityReport) FormatTerminal(verbose bool) string {
 // FormatMarkdown renders a clean GitHub Flavored Markdown audit report.
 func (r *ParityReport) FormatMarkdown() string {
 	var b strings.Builder
-	b.WriteString(fmt.Sprintf("### xOSCAL Framework Verbatim Parity Report: %s\n\n", r.FrameworkID))
-	b.WriteString(fmt.Sprintf("- **Framework:** %s (`%s`)\n", r.FrameworkTitle, r.FrameworkID))
-	b.WriteString(fmt.Sprintf("- **Artifact:** `%s` (`%s`)\n", r.ArtifactPath, r.ArtifactKind))
-	b.WriteString(fmt.Sprintf("- **Computed SHA-256:** `%s`\n", r.ArtifactSHA256))
-	b.WriteString(fmt.Sprintf("- **Sidecar Match:** `%t`\n", r.SidecarMatch))
-	b.WriteString(fmt.Sprintf("- **OSCAL 1.2.3 Schema:** `%t`\n", r.SchemaValid))
-	b.WriteString(fmt.Sprintf("- **Parity Score:** **%.1f%%**\n", r.ParityScore))
-	b.WriteString(fmt.Sprintf("- **Verdict:** `%s`\n\n", r.Verdict))
+	fmt.Fprintf(&b, "### xOSCAL Framework Verbatim Parity Report: %s\n\n", r.FrameworkID)
+	fmt.Fprintf(&b, "- **Framework:** %s (`%s`)\n", r.FrameworkTitle, r.FrameworkID)
+	fmt.Fprintf(&b, "- **Artifact:** `%s` (`%s`)\n", r.ArtifactPath, r.ArtifactKind)
+	fmt.Fprintf(&b, "- **Computed SHA-256:** `%s`\n", r.ArtifactSHA256)
+	fmt.Fprintf(&b, "- **Sidecar Match:** `%t`\n", r.SidecarMatch)
+	fmt.Fprintf(&b, "- **OSCAL 1.2.3 Schema:** `%t`\n", r.SchemaValid)
+	fmt.Fprintf(&b, "- **Parity Score:** **%.1f%%**\n", r.ParityScore)
+	fmt.Fprintf(&b, "- **Verdict:** `%s`\n\n", r.Verdict)
 
 	b.WriteString("| Verification Aspect | Matches | Expected | Parity Posture |\n")
 	b.WriteString("| :--- | :--- | :--- | :--- |\n")
-	b.WriteString(fmt.Sprintf("| **Control Presence** | %d | %d | %s |\n", r.MatchedControls, r.TotalExpectedControls, postureBadge(r.MatchedControls == r.TotalExpectedControls)))
-	b.WriteString(fmt.Sprintf("| **Control Titles** | %d | %d | %s |\n", r.TitleMatches, r.TotalExpectedControls, postureBadge(r.TitleMatches == r.TotalExpectedControls)))
-	b.WriteString(fmt.Sprintf("| **Statement Prose (AST)** | %d | %d | %s |\n", r.StatementMatches, r.TotalExpectedControls, postureBadge(r.StatementMatches == r.TotalExpectedControls)))
-	b.WriteString(fmt.Sprintf("| **Guidance / GC Discussion** | %d | %d | %s |\n", r.GuidanceMatches, r.TotalExpectedControls, postureBadge(r.GuidanceMatches == r.TotalExpectedControls)))
-	b.WriteString(fmt.Sprintf("| **ODP Parameters** | %d | %d | %s |\n", r.ParameterMatches, r.TotalExpectedControls, postureBadge(r.ParameterMatches == r.TotalExpectedControls)))
-	b.WriteString(fmt.Sprintf("| **Sovereign Canadian Tagging** | %d | %d | %s |\n", r.SovereignTagMatches, r.TotalExpectedControls, postureBadge(r.SovereignTagMatches == r.TotalExpectedControls)))
+	fmt.Fprintf(&b, "| **Control Presence** | %d | %d | %s |\n", r.MatchedControls, r.TotalExpectedControls, postureBadge(r.MatchedControls == r.TotalExpectedControls))
+	fmt.Fprintf(&b, "| **Control Titles** | %d | %d | %s |\n", r.TitleMatches, r.TotalExpectedControls, postureBadge(r.TitleMatches == r.TotalExpectedControls))
+	fmt.Fprintf(&b, "| **Statement Prose (AST)** | %d | %d | %s |\n", r.StatementMatches, r.TotalExpectedControls, postureBadge(r.StatementMatches == r.TotalExpectedControls))
+	fmt.Fprintf(&b, "| **Guidance / GC Discussion** | %d | %d | %s |\n", r.GuidanceMatches, r.TotalExpectedControls, postureBadge(r.GuidanceMatches == r.TotalExpectedControls))
+	fmt.Fprintf(&b, "| **ODP Parameters** | %d | %d | %s |\n", r.ParameterMatches, r.TotalExpectedControls, postureBadge(r.ParameterMatches == r.TotalExpectedControls))
+	fmt.Fprintf(&b, "| **Sovereign Canadian Tagging** | %d | %d | %s |\n", r.SovereignTagMatches, r.TotalExpectedControls, postureBadge(r.SovereignTagMatches == r.TotalExpectedControls))
 
 	if len(r.Discrepancies) > 0 {
-		b.WriteString(fmt.Sprintf("\n#### Discrepancies (%d)\n\n", len(r.Discrepancies)))
+		fmt.Fprintf(&b, "\n#### Discrepancies (%d)\n\n", len(r.Discrepancies))
 		b.WriteString("| Control ID | Aspect | Message |\n")
 		b.WriteString("| :--- | :--- | :--- |\n")
 		for i, d := range r.Discrepancies {
 			if i >= 15 {
-				b.WriteString(fmt.Sprintf("| ... | ... | *%d more discrepancies omitted* |\n", len(r.Discrepancies)-15))
+				fmt.Fprintf(&b, "| ... | ... | *%d more discrepancies omitted* |\n", len(r.Discrepancies)-15)
 				break
 			}
-			b.WriteString(fmt.Sprintf("| `%s` | %s | %s |\n", d.ControlID, d.Aspect, d.Message))
+			fmt.Fprintf(&b, "| `%s` | %s | %s |\n", d.ControlID, d.Aspect, d.Message)
 		}
 	}
 

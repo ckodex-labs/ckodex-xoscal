@@ -4,9 +4,12 @@ package main
 
 import (
 	"context"
+	"errors"
 	"flag"
 	"fmt"
+	"io"
 	"log"
+	"os"
 
 	"github.com/mchorfa/xoscal/server/internal/dbutil"
 )
@@ -14,18 +17,28 @@ import (
 var version = "dev"
 
 func main() {
-	showVersion := flag.Bool("version", false, "Print build version and exit")
-	dsn := flag.String("dsn", "oscal.db", "SQLite data source path")
-	out := flag.String("out", "", "New backup destination path")
-	file := flag.String("file", "", "Target backup file for verify or restore")
-	verify := flag.Bool("verify", false, "Verify integrity and compute SHA-256 sidecar of backup file")
-	restore := flag.Bool("restore", false, "Restore verified backup file into target -dsn")
-	force := flag.Bool("force", false, "Allow overwriting target database during restore")
-	sidecar := flag.Bool("sidecar", true, "Automatically generate SHA-256 checksum sidecar (.sha256)")
-	flag.Parse()
+	if err := run(os.Args[1:], os.Stdout); err != nil {
+		log.Fatal(err)
+	}
+}
+
+func run(args []string, stdout io.Writer) error {
+	fs := flag.NewFlagSet("xoscal-backup", flag.ContinueOnError)
+	fs.SetOutput(io.Discard)
+	showVersion := fs.Bool("version", false, "Print build version and exit")
+	dsn := fs.String("dsn", "oscal.db", "SQLite data source path")
+	out := fs.String("out", "", "New backup destination path")
+	file := fs.String("file", "", "Target backup file for verify or restore")
+	verify := fs.Bool("verify", false, "Verify integrity and compute SHA-256 sidecar of backup file")
+	restore := fs.Bool("restore", false, "Restore verified backup file into target -dsn")
+	force := fs.Bool("force", false, "Allow overwriting target database during restore")
+	sidecar := fs.Bool("sidecar", true, "Automatically generate SHA-256 checksum sidecar (.sha256)")
+	if err := fs.Parse(args); err != nil {
+		return err
+	}
 	if *showVersion {
-		fmt.Println(version)
-		return
+		_, _ = fmt.Fprintln(stdout, version)
+		return nil
 	}
 
 	ctx := context.Background()
@@ -37,60 +50,61 @@ func main() {
 			targetFile = *out
 		}
 		if targetFile == "" {
-			log.Fatal("-file is required for verify mode")
+			return errors.New("-file is required for verify mode")
 		}
 		digest, err := dbutil.VerifySQLite(ctx, targetFile)
 		if err != nil {
-			log.Fatalf("[FAIL] Backup verification failed: %v", err)
+			return fmt.Errorf("[FAIL] Backup verification failed: %w", err)
 		}
-		fmt.Printf("[OK] SQLite integrity verified for %s\n", targetFile)
-		fmt.Printf("[OK] Digest: %s\n", digest)
+		_, _ = fmt.Fprintf(stdout, "[OK] SQLite integrity verified for %s\n", targetFile)
+		_, _ = fmt.Fprintf(stdout, "[OK] Digest: %s\n", digest)
 
 		if *sidecar {
 			if _, err := dbutil.WriteDigestSidecar(targetFile); err != nil {
-				log.Fatalf("[FAIL] Failed to write sidecar: %v", err)
+				return fmt.Errorf("[FAIL] Failed to write sidecar: %w", err)
 			}
-			fmt.Printf("[OK] Sidecar written: %s.sha256\n", targetFile)
+			_, _ = fmt.Fprintf(stdout, "[OK] Sidecar written: %s.sha256\n", targetFile)
 		}
-		return
+		return nil
 	}
 
 	// Mode 2: Restore backup file into target database
 	if *restore {
 		if *file == "" {
-			log.Fatal("-file is required for restore mode")
+			return errors.New("-file is required for restore mode")
 		}
 		if *dsn == "" {
-			log.Fatal("-dsn is required for restore destination")
+			return errors.New("-dsn is required for restore destination")
 		}
-		fmt.Printf("Restoring backup %s into %s ...\n", *file, *dsn)
+		_, _ = fmt.Fprintf(stdout, "Restoring backup %s into %s ...\n", *file, *dsn)
 		if err := dbutil.RestoreSQLite(ctx, *file, *dsn, *force); err != nil {
-			log.Fatalf("[FAIL] Restore failed: %v", err)
+			return fmt.Errorf("[FAIL] Restore failed: %w", err)
 		}
-		fmt.Printf("[OK] Database restored successfully to %s\n", *dsn)
-		return
+		_, _ = fmt.Fprintf(stdout, "[OK] Database restored successfully to %s\n", *dsn)
+		return nil
 	}
 
 	// Mode 3: Create backup snapshot
 	if *out == "" {
-		log.Fatal("-out is required for backup mode (or use -verify / -restore)")
+		return errors.New("-out is required for backup mode (or use -verify / -restore)")
 	}
 	if err := dbutil.BackupSQLite(ctx, *dsn, *out); err != nil {
-		log.Fatalf("[FAIL] Backup failed: %v", err)
+		return fmt.Errorf("[FAIL] Backup failed: %w", err)
 	}
-	fmt.Printf("[OK] SQLite backup written to %s\n", *out)
+	_, _ = fmt.Fprintf(stdout, "[OK] SQLite backup written to %s\n", *out)
 
 	// Validate snapshot immediately and write sidecar
 	digest, err := dbutil.VerifySQLite(ctx, *out)
 	if err != nil {
-		log.Fatalf("[FAIL] Snapshot created but failed verification: %v", err)
+		return fmt.Errorf("[FAIL] Snapshot created but failed verification: %w", err)
 	}
-	fmt.Printf("[OK] Snapshot verified: %s\n", digest)
+	_, _ = fmt.Fprintf(stdout, "[OK] Snapshot verified: %s\n", digest)
 
 	if *sidecar {
 		if _, err := dbutil.WriteDigestSidecar(*out); err != nil {
-			log.Fatalf("[FAIL] Failed to write sidecar: %v", err)
+			return fmt.Errorf("[FAIL] Failed to write sidecar: %w", err)
 		}
-		fmt.Printf("[OK] Sidecar written: %s.sha256\n", *out)
+		_, _ = fmt.Fprintf(stdout, "[OK] Sidecar written: %s.sha256\n", *out)
 	}
+	return nil
 }

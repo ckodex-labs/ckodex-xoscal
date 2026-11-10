@@ -4,7 +4,7 @@
       "href": "./system-security-plan.json"
     },
     "metadata": {
-      "last-modified": "2026-11-08T01:42:13Z",
+      "last-modified": "2026-11-08T00:30:47Z",
       "oscal-version": "1.2.3",
       "title": "NY DFS 500 with 2023-11 amendments Security Assessment Plan Template",
       "version": "1"
@@ -13,7 +13,503 @@
       "control-selections": [
         {
           "description": "All controls in NY DFS 500 with 2023-11 amendments",
-          "include-all": {}
+          "include-controls": [
+            {
+              "control-id": "_500.10.a.1"
+            },
+            {
+              "control-id": "_500.10.a.2"
+            },
+            {
+              "control-id": "_500.10.a.3"
+            },
+            {
+              "control-id": "_500.10.b"
+            },
+            {
+              "control-id": "_500.11.a"
+            },
+            {
+              "control-id": "_500.11.a.1"
+            },
+            {
+              "control-id": "_500.11.a.2"
+            },
+            {
+              "control-id": "_500.11.a.3"
+            },
+            {
+              "control-id": "_500.11.a.4"
+            },
+            {
+              "control-id": "_500.11.b"
+            },
+            {
+              "control-id": "_500.11.b.1"
+            },
+            {
+              "control-id": "_500.11.b.2"
+            },
+            {
+              "control-id": "_500.11.b.3"
+            },
+            {
+              "control-id": "_500.11.b.4"
+            },
+            {
+              "control-id": "_500.12.a"
+            },
+            {
+              "control-id": "_500.12.a.1"
+            },
+            {
+              "control-id": "_500.12.a.2"
+            },
+            {
+              "control-id": "_500.12.a.3"
+            },
+            {
+              "control-id": "_500.12.b"
+            },
+            {
+              "control-id": "_500.13.a"
+            },
+            {
+              "control-id": "_500.13.a.1"
+            },
+            {
+              "control-id": "_500.13.a.1.i"
+            },
+            {
+              "control-id": "_500.13.a.1.ii"
+            },
+            {
+              "control-id": "_500.13.a.1.iii"
+            },
+            {
+              "control-id": "_500.13.a.1.iv"
+            },
+            {
+              "control-id": "_500.13.a.1.v"
+            },
+            {
+              "control-id": "_500.13.a.2"
+            },
+            {
+              "control-id": "_500.13.b"
+            },
+            {
+              "control-id": "_500.14.a.1"
+            },
+            {
+              "control-id": "_500.14.a.2"
+            },
+            {
+              "control-id": "_500.14.a.3"
+            },
+            {
+              "control-id": "_500.14.b"
+            },
+            {
+              "control-id": "_500.14.b.1"
+            },
+            {
+              "control-id": "_500.14.b.2"
+            },
+            {
+              "control-id": "_500.15.a"
+            },
+            {
+              "control-id": "_500.15.b"
+            },
+            {
+              "control-id": "_500.16.a"
+            },
+            {
+              "control-id": "_500.16.a.1"
+            },
+            {
+              "control-id": "_500.16.a.1.i"
+            },
+            {
+              "control-id": "_500.16.a.1.ii"
+            },
+            {
+              "control-id": "_500.16.a.1.iii"
+            },
+            {
+              "control-id": "_500.16.a.1.iv"
+            },
+            {
+              "control-id": "_500.16.a.1.ix"
+            },
+            {
+              "control-id": "_500.16.a.1.v"
+            },
+            {
+              "control-id": "_500.16.a.1.vi"
+            },
+            {
+              "control-id": "_500.16.a.1.vii"
+            },
+            {
+              "control-id": "_500.16.a.1.viii"
+            },
+            {
+              "control-id": "_500.16.a.2"
+            },
+            {
+              "control-id": "_500.16.a.2.i"
+            },
+            {
+              "control-id": "_500.16.a.2.ii"
+            },
+            {
+              "control-id": "_500.16.a.2.iii"
+            },
+            {
+              "control-id": "_500.16.a.2.iv"
+            },
+            {
+              "control-id": "_500.16.a.2.v"
+            },
+            {
+              "control-id": "_500.16.a.2.vi"
+            },
+            {
+              "control-id": "_500.16.b"
+            },
+            {
+              "control-id": "_500.16.c"
+            },
+            {
+              "control-id": "_500.16.d"
+            },
+            {
+              "control-id": "_500.16.d.1"
+            },
+            {
+              "control-id": "_500.16.d.2"
+            },
+            {
+              "control-id": "_500.16.e"
+            },
+            {
+              "control-id": "_500.17.a.1"
+            },
+            {
+              "control-id": "_500.17.a.2"
+            },
+            {
+              "control-id": "_500.17.b.1"
+            },
+            {
+              "control-id": "_500.17.b.1.i"
+            },
+            {
+              "control-id": "_500.17.b.1.i.a"
+            },
+            {
+              "control-id": "_500.17.b.1.i.b"
+            },
+            {
+              "control-id": "_500.17.b.1.ii"
+            },
+            {
+              "control-id": "_500.17.b.1.ii.a"
+            },
+            {
+              "control-id": "_500.17.b.1.ii.b"
+            },
+            {
+              "control-id": "_500.17.b.1.ii.c"
+            },
+            {
+              "control-id": "_500.17.b.2"
+            },
+            {
+              "control-id": "_500.17.b.3"
+            },
+            {
+              "control-id": "_500.17.c"
+            },
+            {
+              "control-id": "_500.17.c.1"
+            },
+            {
+              "control-id": "_500.17.c.2"
+            },
+            {
+              "control-id": "_500.19.a"
+            },
+            {
+              "control-id": "_500.19.b"
+            },
+            {
+              "control-id": "_500.19.c"
+            },
+            {
+              "control-id": "_500.19.d"
+            },
+            {
+              "control-id": "_500.19.e"
+            },
+            {
+              "control-id": "_500.19.f"
+            },
+            {
+              "control-id": "_500.19.g"
+            },
+            {
+              "control-id": "_500.19.h"
+            },
+            {
+              "control-id": "_500.2.a"
+            },
+            {
+              "control-id": "_500.2.b"
+            },
+            {
+              "control-id": "_500.2.b.1"
+            },
+            {
+              "control-id": "_500.2.b.2"
+            },
+            {
+              "control-id": "_500.2.b.3"
+            },
+            {
+              "control-id": "_500.2.b.4"
+            },
+            {
+              "control-id": "_500.2.b.5"
+            },
+            {
+              "control-id": "_500.2.b.6"
+            },
+            {
+              "control-id": "_500.2.c"
+            },
+            {
+              "control-id": "_500.2.d"
+            },
+            {
+              "control-id": "_500.2.e"
+            },
+            {
+              "control-id": "_500.24.a"
+            },
+            {
+              "control-id": "_500.24.b.1"
+            },
+            {
+              "control-id": "_500.24.b.2"
+            },
+            {
+              "control-id": "_500.24.b.3"
+            },
+            {
+              "control-id": "_500.24.b.4"
+            },
+            {
+              "control-id": "_500.24.c"
+            },
+            {
+              "control-id": "_500.24.d"
+            },
+            {
+              "control-id": "_500.24.e"
+            },
+            {
+              "control-id": "_500.3.a"
+            },
+            {
+              "control-id": "_500.3.b"
+            },
+            {
+              "control-id": "_500.3.c"
+            },
+            {
+              "control-id": "_500.3.d"
+            },
+            {
+              "control-id": "_500.3.e"
+            },
+            {
+              "control-id": "_500.3.f"
+            },
+            {
+              "control-id": "_500.3.g"
+            },
+            {
+              "control-id": "_500.3.h"
+            },
+            {
+              "control-id": "_500.3.i"
+            },
+            {
+              "control-id": "_500.3.j"
+            },
+            {
+              "control-id": "_500.3.k"
+            },
+            {
+              "control-id": "_500.3.l"
+            },
+            {
+              "control-id": "_500.3.m"
+            },
+            {
+              "control-id": "_500.3.n"
+            },
+            {
+              "control-id": "_500.3.o"
+            },
+            {
+              "control-id": "_500.4.a"
+            },
+            {
+              "control-id": "_500.4.a.1"
+            },
+            {
+              "control-id": "_500.4.a.2"
+            },
+            {
+              "control-id": "_500.4.a.3"
+            },
+            {
+              "control-id": "_500.4.b"
+            },
+            {
+              "control-id": "_500.4.b.1"
+            },
+            {
+              "control-id": "_500.4.b.2"
+            },
+            {
+              "control-id": "_500.4.b.3"
+            },
+            {
+              "control-id": "_500.4.b.4"
+            },
+            {
+              "control-id": "_500.4.b.5"
+            },
+            {
+              "control-id": "_500.4.b.6"
+            },
+            {
+              "control-id": "_500.4.c"
+            },
+            {
+              "control-id": "_500.4.d"
+            },
+            {
+              "control-id": "_500.4.d.1"
+            },
+            {
+              "control-id": "_500.4.d.2"
+            },
+            {
+              "control-id": "_500.4.d.3"
+            },
+            {
+              "control-id": "_500.4.d.4"
+            },
+            {
+              "control-id": "_500.5.a.1"
+            },
+            {
+              "control-id": "_500.5.a.2"
+            },
+            {
+              "control-id": "_500.5.b"
+            },
+            {
+              "control-id": "_500.5.c"
+            },
+            {
+              "control-id": "_500.6.a"
+            },
+            {
+              "control-id": "_500.6.a.1"
+            },
+            {
+              "control-id": "_500.6.a.2"
+            },
+            {
+              "control-id": "_500.6.b"
+            },
+            {
+              "control-id": "_500.7.a"
+            },
+            {
+              "control-id": "_500.7.a.1"
+            },
+            {
+              "control-id": "_500.7.a.2"
+            },
+            {
+              "control-id": "_500.7.a.3"
+            },
+            {
+              "control-id": "_500.7.a.4"
+            },
+            {
+              "control-id": "_500.7.a.5"
+            },
+            {
+              "control-id": "_500.7.a.6"
+            },
+            {
+              "control-id": "_500.7.b"
+            },
+            {
+              "control-id": "_500.7.c"
+            },
+            {
+              "control-id": "_500.7.c.1"
+            },
+            {
+              "control-id": "_500.7.c.2"
+            },
+            {
+              "control-id": "_500.8.a"
+            },
+            {
+              "control-id": "_500.8.b"
+            },
+            {
+              "control-id": "_500.9.a"
+            },
+            {
+              "control-id": "_500.9.b"
+            },
+            {
+              "control-id": "_500.9.b.1"
+            },
+            {
+              "control-id": "_500.9.b.2"
+            },
+            {
+              "control-id": "_500.9.b.3"
+            },
+            {
+              "control-id": "node196"
+            },
+            {
+              "control-id": "node39"
+            },
+            {
+              "control-id": "node40"
+            },
+            {
+              "control-id": "node75"
+            },
+            {
+              "control-id": "node76"
+            }
+          ]
         }
       ]
     },

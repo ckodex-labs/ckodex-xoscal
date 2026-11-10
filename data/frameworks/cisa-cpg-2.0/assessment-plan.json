@@ -4,7 +4,7 @@
       "href": "./system-security-plan.json"
     },
     "metadata": {
-      "last-modified": "2026-11-08T01:42:13Z",
+      "last-modified": "2026-11-08T00:30:45Z",
       "oscal-version": "1.2.3",
       "title": "CISA Cybersecurity Performance Goals v2.0 Security Assessment Plan Template",
       "version": "1"
@@ -13,7 +13,110 @@
       "control-selections": [
         {
           "description": "All controls in CISA Cybersecurity Performance Goals v2.0",
-          "include-all": {}
+          "include-controls": [
+            {
+              "control-id": "_1.a"
+            },
+            {
+              "control-id": "_1.b"
+            },
+            {
+              "control-id": "_1.c"
+            },
+            {
+              "control-id": "_1.d"
+            },
+            {
+              "control-id": "_1.e"
+            },
+            {
+              "control-id": "_2.a"
+            },
+            {
+              "control-id": "_2.b"
+            },
+            {
+              "control-id": "_2.c"
+            },
+            {
+              "control-id": "_2.d"
+            },
+            {
+              "control-id": "_2.e"
+            },
+            {
+              "control-id": "_3.a"
+            },
+            {
+              "control-id": "_3.b"
+            },
+            {
+              "control-id": "_3.c"
+            },
+            {
+              "control-id": "_3.d"
+            },
+            {
+              "control-id": "_3.e"
+            },
+            {
+              "control-id": "_3.f"
+            },
+            {
+              "control-id": "_3.g"
+            },
+            {
+              "control-id": "_3.h"
+            },
+            {
+              "control-id": "_3.i"
+            },
+            {
+              "control-id": "_3.j"
+            },
+            {
+              "control-id": "_3.k"
+            },
+            {
+              "control-id": "_3.l"
+            },
+            {
+              "control-id": "_3.m"
+            },
+            {
+              "control-id": "_3.n"
+            },
+            {
+              "control-id": "_3.o"
+            },
+            {
+              "control-id": "_3.p"
+            },
+            {
+              "control-id": "_3.q"
+            },
+            {
+              "control-id": "_3.r"
+            },
+            {
+              "control-id": "_3.s"
+            },
+            {
+              "control-id": "_4.a"
+            },
+            {
+              "control-id": "_4.b"
+            },
+            {
+              "control-id": "_5.a"
+            },
+            {
+              "control-id": "_5.b"
+            },
+            {
+              "control-id": "_6.a"
+            }
+          ]
         }
       ]
     },

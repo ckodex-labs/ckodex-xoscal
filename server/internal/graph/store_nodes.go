@@ -64,7 +64,7 @@ func (s *SQLiteStore) ListNodes(ctx context.Context, kind, labelFilter string, c
 	if err != nil {
 		return nil, "", fmt.Errorf("list nodes: %w", err)
 	}
-	defer rows.Close()
+	defer func() { _ = rows.Close() }()
 	var out []*Node
 	hasMore := false
 	for rows.Next() {
@@ -90,4 +90,53 @@ func (s *SQLiteStore) ListNodes(ctx context.Context, kind, labelFilter string, c
 		nextToken = strconv.Itoa(offset + limit)
 	}
 	return out, nextToken, nil
+}
+
+// LoadAllGraph loads all persisted nodes and edges from SQLite in deterministic order.
+func (s *SQLiteStore) LoadAllGraph(ctx context.Context) ([]*Node, []*Edge, error) {
+	nodeRows, err := s.db.QueryContext(ctx,
+		`SELECT id, kind, urn, labels_json, created_at FROM kg_graph_nodes ORDER BY urn ASC`)
+	if err != nil {
+		return nil, nil, fmt.Errorf("query all graph nodes: %w", err)
+	}
+	defer func() { _ = nodeRows.Close() }()
+
+	var nodes []*Node
+	for nodeRows.Next() {
+		var n Node
+		var labels sql.NullString
+		if err := nodeRows.Scan(&n.ID, &n.Kind, &n.URN, &labels, &n.CreatedAt); err != nil {
+			return nil, nil, fmt.Errorf("scan graph node: %w", err)
+		}
+		if labels.Valid {
+			n.LabelsJSON = labels.String
+		}
+		nodes = append(nodes, &n)
+	}
+	if err := nodeRows.Err(); err != nil {
+		return nil, nil, fmt.Errorf("iterate graph nodes: %w", err)
+	}
+
+	edgeRows, err := s.db.QueryContext(ctx,
+		`SELECT id, from_node, to_node, relation, qualifier, claim_id, evidence_digest,
+		proof_state_json, valid_from, valid_to, trust_state, weight, extensions_json
+		FROM kg_graph_edges ORDER BY id ASC`)
+	if err != nil {
+		return nil, nil, fmt.Errorf("query all graph edges: %w", err)
+	}
+	defer func() { _ = edgeRows.Close() }()
+
+	var edges []*Edge
+	for edgeRows.Next() {
+		e, err := scanEdge(edgeRows)
+		if err != nil {
+			return nil, nil, err
+		}
+		edges = append(edges, e)
+	}
+	if err := edgeRows.Err(); err != nil {
+		return nil, nil, fmt.Errorf("iterate graph edges: %w", err)
+	}
+
+	return nodes, edges, nil
 }

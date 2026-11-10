@@ -2,61 +2,56 @@ package oscal
 
 import (
 	"context"
-	"encoding/json"
 	"fmt"
-	"strings"
 
 	commonv1 "github.com/mchorfa/xoscal/proto/oscal/common/v1"
 	componentv1 "github.com/mchorfa/xoscal/proto/oscal/component_definition/v1"
-	"github.com/mchorfa/xoscal/server/internal/kg"
 )
 
 func (g *Generator) GenerateComponentDefinition(ctx context.Context, snapshotName string, framework string) (*componentv1.ComponentDefinition, error) {
-	entities, err := g.store.GetSnapshot(ctx, snapshotName)
+	snap, err := g.loadParsedSnapshot(ctx, snapshotName, framework, false)
 	if err != nil {
-		return nil, fmt.Errorf("get snapshot: %w", err)
+		return nil, err
 	}
+	return g.generateComponentDefinitionFromSnapshot(snap, snapshotName, framework), nil
+}
 
+func (g *Generator) generateComponentDefinitionFromSnapshot(snap *parsedSnapshot, snapshotName string, framework string) *componentv1.ComponentDefinition {
 	var components []*componentv1.DefinedComponent
-	for _, e := range entities {
-		if e.Type != "reg:Requirement" {
-			continue
-		}
-		var req kg.Requirement
-		if err := json.Unmarshal(e.Payload, &req); err != nil {
-			continue
-		}
-		if !strings.EqualFold(req.Framework, framework) || !req.Assessable {
-			continue
-		}
-		title := singleLine(req.Title)
-		if title == "" {
-			title = singleLine(req.Citation)
-		}
-		desc := req.Text
-		if desc == "" {
-			desc = title
-		}
-		var controlImplementations []*componentv1.ControlImplementation
-		if req.Citation != "" {
-			controlImplementations = append(controlImplementations, &componentv1.ControlImplementation{
-				Uuid:        newUUID(uuidNamespace, fmt.Sprintf("ctrlimpl-%s", req.Citation)),
-				Source:      &commonv1.URIReference{Value: fmt.Sprintf("catalog-%s-%s", framework, snapshotName)},
-				Description: desc,
-				ImplementedRequirements: []*componentv1.ImplementedRequirement{{
-					Uuid:        newUUID(uuidNamespace, fmt.Sprintf("implreq-%s", req.Citation)),
-					ControlId:   sanitizeToken(req.Citation),
-					Description: desc,
-				}},
+	if len(snap.assessableReqs) > 0 {
+		implReqs := make([]*componentv1.ImplementedRequirement, 0, len(snap.assessableReqs))
+		for _, req := range snap.assessableReqs {
+			ctrlID := sanitizeToken(req.Citation)
+			if ctrlID == "" {
+				ctrlID = sanitizeToken(req.NodeRefID)
+			}
+			if ctrlID == "" {
+				continue
+			}
+			title := singleLine(req.Title)
+			if title == "" {
+				title = singleLine(ctrlID)
+			}
+			implReqs = append(implReqs, &componentv1.ImplementedRequirement{
+				Uuid:        newUUID(uuidNamespace, fmt.Sprintf("implreq-%s", ctrlID)),
+				ControlId:   ctrlID,
+				Description: fmt.Sprintf("Baseline implementation of %s (%s).", ctrlID, title),
 			})
 		}
-		components = append(components, &componentv1.DefinedComponent{
-			Uuid:                   newUUID(uuidNamespace, fmt.Sprintf("comp-%s", req.Citation)),
-			Type:                   "software",
-			Title:                  &commonv1.MarkupLine{Value: title},
-			Description:            &commonv1.MarkupMultiline{Value: desc},
-			ControlImplementations: controlImplementations,
-		})
+		if len(implReqs) > 0 {
+			components = []*componentv1.DefinedComponent{{
+				Uuid:        newUUID(uuidNamespace, fmt.Sprintf("comp-%s-%s", framework, snapshotName)),
+				Type:        "software",
+				Title:       &commonv1.MarkupLine{Value: fmt.Sprintf("%s Reference System Component", framework)},
+				Description: &commonv1.MarkupMultiline{Value: fmt.Sprintf("Reference component implementing %s controls.", framework)},
+				ControlImplementations: []*componentv1.ControlImplementation{{
+					Uuid:                    newUUID(uuidNamespace, fmt.Sprintf("ctrlimpl-%s-%s", framework, snapshotName)),
+					Source:                  &commonv1.URIReference{Value: fmt.Sprintf("catalog-%s-%s", framework, snapshotName)},
+					Description:             fmt.Sprintf("Control implementations for %s.", framework),
+					ImplementedRequirements: implReqs,
+				}},
+			}}
+		}
 	}
 
 	return &componentv1.ComponentDefinition{
@@ -67,7 +62,7 @@ func (g *Generator) GenerateComponentDefinition(ctx context.Context, snapshotNam
 		},
 		BackMatter: buildBackMatter(framework, snapshotName),
 		Components: components,
-	}, nil
+	}
 }
 
 // GenerateMappings builds OSCAL Control Mapping entries from a snapshot.

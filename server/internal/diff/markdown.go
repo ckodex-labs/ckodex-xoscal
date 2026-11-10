@@ -16,20 +16,20 @@ func (d *ComplianceDiff) FormatMarkdown() string {
 	if d.HasRegression {
 		regressionAlert = "[ALERT] **Compliance Regression Detected**"
 	}
-	sb.WriteString(fmt.Sprintf("%s\n\n", regressionAlert))
+	_, _ = fmt.Fprintf(&sb, "%s\n\n", regressionAlert)
 
 	sb.WriteString("| Vector Dimension | Base Baseline | Pull Request (Head) | Impact |\n")
 	sb.WriteString("| :--- | :--- | :--- | :--- |\n")
-	sb.WriteString(fmt.Sprintf("| **Lifecycle Mode** | `%s` | `%s` | %s |\n",
-		d.BaseVector.Lifecycle, d.HeadVector.Lifecycle, formatLifecycleDelta(d.BaseVector.Lifecycle, d.HeadVector.Lifecycle)))
-	sb.WriteString(fmt.Sprintf("| **Coherence** | `%s` | `%s` | %s |\n",
-		d.BaseVector.Coherence, d.HeadVector.Coherence, formatCoherenceDelta(d.BaseVector.Coherence, d.HeadVector.Coherence)))
-	sb.WriteString(fmt.Sprintf("| **Anti-Conflicts** | `%d` | `%d` | %s |\n",
-		d.BaseVector.AntiCount, d.HeadVector.AntiCount, formatAntiDelta(d.BaseVector.AntiCount, d.HeadVector.AntiCount)))
-	sb.WriteString(fmt.Sprintf("| **Passing Controls** | `%d` | `%d` | %+d |\n",
-		d.BaseVector.PassingCount, d.HeadVector.PassingCount, d.HeadVector.PassingCount-d.BaseVector.PassingCount))
-	sb.WriteString(fmt.Sprintf("| **Derogated Controls** | `%d` | `%d` | %+d |\n\n",
-		d.BaseVector.DerogatedCount, d.HeadVector.DerogatedCount, d.HeadVector.DerogatedCount-d.BaseVector.DerogatedCount))
+	_, _ = fmt.Fprintf(&sb, "| **Lifecycle Mode** | `%s` | `%s` | %s |\n",
+		d.BaseVector.Lifecycle, d.HeadVector.Lifecycle, formatLifecycleDelta(d.BaseVector.Lifecycle, d.HeadVector.Lifecycle))
+	_, _ = fmt.Fprintf(&sb, "| **Coherence** | `%s` | `%s` | %s |\n",
+		d.BaseVector.Coherence, d.HeadVector.Coherence, formatCoherenceDelta(d.BaseVector.Coherence, d.HeadVector.Coherence))
+	_, _ = fmt.Fprintf(&sb, "| **Anti-Conflicts** | `%d` | `%d` | %s |\n",
+		d.BaseVector.AntiCount, d.HeadVector.AntiCount, formatAntiDelta(d.BaseVector.AntiCount, d.HeadVector.AntiCount))
+	_, _ = fmt.Fprintf(&sb, "| **Passing Controls** | `%d` | `%d` | %+d |\n",
+		d.BaseVector.PassingCount, d.HeadVector.PassingCount, d.HeadVector.PassingCount-d.BaseVector.PassingCount)
+	_, _ = fmt.Fprintf(&sb, "| **Derogated Controls** | `%d` | `%d` | %+d |\n\n",
+		d.BaseVector.DerogatedCount, d.HeadVector.DerogatedCount, d.HeadVector.DerogatedCount-d.BaseVector.DerogatedCount)
 
 	if len(d.Deltas) == 0 {
 		sb.WriteString("*No control modifications detected. Baseline is identical.*\n")
@@ -47,9 +47,10 @@ func (d *ComplianceDiff) FormatMarkdown() string {
 		}
 
 		statusDelta := fmt.Sprintf("`%s` → `%s`", delta.BaseStatus, delta.HeadStatus)
-		if delta.ChangeType == ChangeAdded {
+		switch delta.ChangeType {
+		case ChangeAdded:
 			statusDelta = fmt.Sprintf("`NEW` → `%s`", delta.HeadStatus)
-		} else if delta.ChangeType == ChangeRemoved {
+		case ChangeRemoved:
 			statusDelta = fmt.Sprintf("`%s` → `DELETED`", delta.BaseStatus)
 		}
 
@@ -63,8 +64,8 @@ func (d *ComplianceDiff) FormatMarkdown() string {
 		// Escape pipes for markdown
 		prose = strings.ReplaceAll(prose, "|", "\\|")
 
-		sb.WriteString(fmt.Sprintf("| **%s** | %s | `%s` | %s | %s |\n",
-			delta.ControlID, delta.Component, changeBadge, statusDelta, prose))
+		_, _ = fmt.Fprintf(&sb, "| **%s** | %s | `%s` | %s | %s |\n",
+			delta.ControlID, delta.Component, changeBadge, statusDelta, prose)
 	}
 
 	sb.WriteString("\n*Report generated deterministically by xOSCAL GitOps Engine.*\n")

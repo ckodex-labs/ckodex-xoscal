@@ -2,7 +2,6 @@ package oscal
 
 import (
 	"context"
-	"encoding/json"
 	"fmt"
 	"strings"
 
@@ -19,40 +18,25 @@ func singleLine(s string) string {
 }
 
 func (g *Generator) GenerateCatalog(ctx context.Context, snapshotName string, framework string) (*catalogv1.Catalog, error) {
-	entities, err := g.store.GetSnapshot(ctx, snapshotName)
+	snap, err := g.loadParsedSnapshot(ctx, snapshotName, framework, false)
 	if err != nil {
-		return nil, fmt.Errorf("get snapshot: %w", err)
+		return nil, err
 	}
+	return g.generateCatalogFromSnapshot(snap, snapshotName, framework), nil
+}
 
+func (g *Generator) generateCatalogFromSnapshot(snap *parsedSnapshot, snapshotName string, framework string) *catalogv1.Catalog {
 	type node struct {
 		req      kg.Requirement
 		children []string
 	}
-	byURN := make(map[string]*node)
-	var orderedURNs []string
+	byURN := make(map[string]*node, len(snap.requirements))
+	orderedURNs := make([]string, 0, len(snap.requirements))
 	var roots []string
-	var fwMeta *kg.Framework
+	fwMeta := snap.fwMeta
 
-	// First pass: index all requirements and framework metadata in deterministic order.
-	for _, e := range entities {
-		if e.Type == "reg:Framework" {
-			var fw kg.Framework
-			if err := json.Unmarshal(e.Payload, &fw); err == nil && strings.EqualFold(fw.RefID, framework) {
-				fwCopy := fw
-				fwMeta = &fwCopy
-			}
-			continue
-		}
-		if e.Type != "reg:Requirement" {
-			continue
-		}
-		var req kg.Requirement
-		if err := json.Unmarshal(e.Payload, &req); err != nil {
-			continue
-		}
-		if !strings.EqualFold(req.Framework, framework) {
-			continue
-		}
+	// First pass: index all requirements in deterministic snapshot order.
+	for _, req := range snap.requirements {
 		if _, exists := byURN[req.URN]; !exists {
 			orderedURNs = append(orderedURNs, req.URN)
 		}
@@ -376,7 +360,7 @@ func (g *Generator) GenerateCatalog(ctx context.Context, snapshotName string, fr
 		Controls:   controls,
 		Groups:     groups,
 		BackMatter: buildBackMatter(framework, snapshotName),
-	}, nil
+	}
 }
 
 // GenerateProfile builds an OSCAL Profile from a snapshot with selected controls.

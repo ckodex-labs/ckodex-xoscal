@@ -109,46 +109,48 @@ func (v *VectorState) FormatTable(useColor bool) string {
 		bold = "\033[1m"
 	}
 
-	sb.WriteString(fmt.Sprintf("\n%s=== xOSCAL GOVERNANCE VECTOR POSTURE ===%s\n", bold, reset))
-	sb.WriteString(fmt.Sprintf("Artifact:  %s (%s)\n", v.ArtifactName, v.ArtifactKind))
-	sb.WriteString(fmt.Sprintf("Timestamp: %s\n\n", v.Epoch.Format(time.RFC3339)))
+	_, _ = fmt.Fprintf(&sb, "\n%s=== xOSCAL GOVERNANCE VECTOR POSTURE ===%s\n", bold, reset)
+	_, _ = fmt.Fprintf(&sb, "Artifact:  %s (%s)\n", v.ArtifactName, v.ArtifactKind)
+	_, _ = fmt.Fprintf(&sb, "Timestamp: %s\n\n", v.Epoch.Format(time.RFC3339))
 
 	// Vector State Header
-	sb.WriteString(fmt.Sprintf("%sVector Product: S(e,t) = <P=%s, V=%s, A=%d, C=%s, E=%s, L=%s>%s\n\n",
-		bold, v.Presence, v.Valence, v.AntiCount, v.Coherence, v.Evidence, v.Lifecycle, reset))
+	_, _ = fmt.Fprintf(&sb, "%sVector Product: S(e,t) = <P=%s, V=%s, A=%d, C=%s, E=%s, L=%s>%s\n\n",
+		bold, v.Presence, v.Valence, v.AntiCount, v.Coherence, v.Evidence, v.Lifecycle, reset)
 
 	// Status line
 	statusColor := green
-	if v.Lifecycle == ModeDegraded || v.Lifecycle == ModeSafeHold {
+	switch v.Lifecycle {
+	case ModeDegraded, ModeSafeHold:
 		statusColor = yellow
-	} else if v.Lifecycle == ModeQuarantined || v.Lifecycle == ModeFailed {
+	case ModeQuarantined, ModeFailed:
 		statusColor = red
 	}
-	sb.WriteString(fmt.Sprintf("Operational Posture: %s%s%s (Coherence: %s)\n",
-		statusColor, v.Lifecycle, reset, v.Coherence))
-	sb.WriteString(fmt.Sprintf("Controls Summary:    %d Total | %s%d Passing%s | %s%d Degraded%s | %s%d Derogated%s | %s%d Anti-Conflicts%s\n\n",
-		v.TotalControls, green, v.PassingCount, reset, yellow, v.DegradedCount, reset, magenta, v.DerogatedCount, reset, red, v.AntiCount, reset))
+	_, _ = fmt.Fprintf(&sb, "Operational Posture: %s%s%s (Coherence: %s)\n",
+		statusColor, v.Lifecycle, reset, v.Coherence)
+	_, _ = fmt.Fprintf(&sb, "Controls Summary:    %d Total | %s%d Passing%s | %s%d Degraded%s | %s%d Derogated%s | %s%d Anti-Conflicts%s\n\n",
+		v.TotalControls, green, v.PassingCount, reset, yellow, v.DegradedCount, reset, magenta, v.DerogatedCount, reset, red, v.AntiCount, reset)
 
-	sb.WriteString(fmt.Sprintf("%s%-14s %-20s %-16s %s%s\n",
-		bold, "CONTROL", "COMPONENT", "POSTURE", "DESCRIPTION / REMEDIATION", reset))
+	_, _ = fmt.Fprintf(&sb, "%s%-14s %-20s %-16s %s%s\n",
+		bold, "CONTROL", "COMPONENT", "POSTURE", "DESCRIPTION / REMEDIATION", reset)
 	sb.WriteString(strings.Repeat("-", 85) + "\n")
 
 	for _, f := range v.Findings {
 		col := green
 		badge := "PASS"
-		if f.Status == "degraded" {
+		switch f.Status {
+		case "degraded":
 			col = yellow
 			badge = "DEGRADED"
-		} else if f.Status == "violation" {
+		case "violation":
 			col = red
 			badge = "VIOLATION"
-		} else if f.Status == "incomplete" {
+		case "incomplete":
 			col = cyan
 			badge = "INCOMPLETE"
-		} else if f.Status == "derogated" {
+		case "derogated":
 			col = magenta
 			badge = "DEROGATED"
-		} else if f.Status == "expired_derogation" {
+		case "expired_derogation":
 			col = red
 			badge = "EXPIRED DEROG"
 		}
@@ -157,11 +159,11 @@ func (v *VectorState) FormatTable(useColor bool) string {
 		if len(desc) > 35 {
 			desc = desc[:32] + "..."
 		}
-		sb.WriteString(fmt.Sprintf("%-14s %-20s %s%-16s%s %s\n",
-			f.ControlID, f.Component, col, badge, reset, desc))
+		_, _ = fmt.Fprintf(&sb, "%-14s %-20s %s%-16s%s %s\n",
+			f.ControlID, f.Component, col, badge, reset, desc)
 
 		if f.Remediation != "" {
-			sb.WriteString(fmt.Sprintf("  └─ %sNotice/Fix:%s %s\n", yellow, reset, f.Remediation))
+			_, _ = fmt.Fprintf(&sb, "  └─ %sNotice/Fix:%s %s\n", yellow, reset, f.Remediation)
 		}
 	}
 

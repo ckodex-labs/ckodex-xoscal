@@ -4,16 +4,2759 @@
       "href": "./system-security-plan.json"
     },
     "metadata": {
-      "last-modified": "2026-11-08T01:42:13Z",
+      "last-modified": "2026-11-08T00:30:54Z",
       "oscal-version": "1.2.3",
       "title": "IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal Plan of Action and Milestones Template",
       "version": "1"
     },
     "poam-items": [
       {
-        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
-        "title": "Compliance Roadmap and Parameter Tailoring for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal",
-        "uuid": "a8caddda-32ed-5c72-83b6-9e7e18cd46fa"
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.1.a1.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.1.a1.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.1.a1.1 (Festlegung von Verantwortlichkeiten und Regelungen — ORP.1.A1.1)",
+        "uuid": "17b26c1b-f5cb-5992-a82d-0013cb116427"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.1.a1.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.1.a1.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.1.a1.2 (Festlegung von Verantwortlichkeiten und Regelungen — ORP.1.A1.2)",
+        "uuid": "7922e1b7-3cb5-5764-aa4c-b11644642999"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.1.a1.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.1.a1.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.1.a1.3 (Festlegung von Verantwortlichkeiten und Regelungen — ORP.1.A1.3)",
+        "uuid": "32c3735f-fad8-5d09-9d35-8ac5d2ecb813"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.1.a1.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.1.a1.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.1.a1.4 (Festlegung von Verantwortlichkeiten und Regelungen — ORP.1.A1.4)",
+        "uuid": "e5a6bfed-032d-5d4b-95be-81e04a9d2e03"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.1.a13.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.1.a13.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.1.a13.1 (Sicherheit bei Umzügen — ORP.1.A13.1)",
+        "uuid": "f2dbf609-2440-5310-93af-72fcc3a61b17"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.1.a13.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.1.a13.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.1.a13.2 (Sicherheit bei Umzügen — ORP.1.A13.2)",
+        "uuid": "5ac99316-5c0c-50b2-b6db-de042a8ff786"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.1.a13.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.1.a13.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.1.a13.3 (Sicherheit bei Umzügen — ORP.1.A13.3)",
+        "uuid": "b8a2df2f-6f8d-54ad-b47b-9c1c639d17e2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.1.a15.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.1.a15.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.1.a15.1 (Ansprechperson zu Informationssicherheitsfragen — ORP.1.A15.1)",
+        "uuid": "9a8a7c50-9574-5d95-ba23-593fae2ef969"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.1.a15.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.1.a15.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.1.a15.2 (Ansprechperson zu Informationssicherheitsfragen — ORP.1.A15.2)",
+        "uuid": "d1711de9-0233-5fe4-a46c-ec67d8eaf36f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.1.a15.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.1.a15.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.1.a15.3 (Ansprechperson zu Informationssicherheitsfragen — ORP.1.A15.3)",
+        "uuid": "5360dbfc-eef7-554a-b806-5d3ab9701d6e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.1.a16.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.1.a16.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.1.a16.1 (Richtlinie zur sicheren IT-Nutzung — ORP.1.A16.1)",
+        "uuid": "42a7b5ae-aefe-5aa4-906b-d705d7868e43"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.1.a16.10 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.1.a16.10"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.1.a16.10 (Richtlinie zur sicheren IT-Nutzung — ORP.1.A16.10)",
+        "uuid": "528b55a5-5af3-5cdc-84a6-0d6461f2e654"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.1.a16.11 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.1.a16.11"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.1.a16.11 (Richtlinie zur sicheren IT-Nutzung — ORP.1.A16.11)",
+        "uuid": "8ad6ded0-0ca7-5767-b900-d1c6b07d4ce8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.1.a16.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.1.a16.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.1.a16.2 (Richtlinie zur sicheren IT-Nutzung — ORP.1.A16.2)",
+        "uuid": "9475a669-9dcf-5036-b4fe-012429686023"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.1.a16.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.1.a16.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.1.a16.3 (Richtlinie zur sicheren IT-Nutzung — ORP.1.A16.3)",
+        "uuid": "90444875-1b46-58eb-af77-0846d89b9f25"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.1.a16.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.1.a16.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.1.a16.4 (Richtlinie zur sicheren IT-Nutzung — ORP.1.A16.4)",
+        "uuid": "f17872cc-dc7d-5da8-9d56-a153e6379043"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.1.a16.5 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.1.a16.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.1.a16.5 (Richtlinie zur sicheren IT-Nutzung — ORP.1.A16.5)",
+        "uuid": "4f614ed0-7172-52e5-b670-79802abd7e62"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.1.a16.6 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.1.a16.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.1.a16.6 (Richtlinie zur sicheren IT-Nutzung — ORP.1.A16.6)",
+        "uuid": "724150ae-30e8-511f-bafa-7671ad25f611"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.1.a16.7 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.1.a16.7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.1.a16.7 (Richtlinie zur sicheren IT-Nutzung — ORP.1.A16.7)",
+        "uuid": "84a8a839-9ca5-5456-a190-9b5826493cc7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.1.a16.8 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.1.a16.8"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.1.a16.8 (Richtlinie zur sicheren IT-Nutzung — ORP.1.A16.8)",
+        "uuid": "59971b63-a7cb-5a7e-b6fd-f0c94697ea03"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.1.a16.9 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.1.a16.9"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.1.a16.9 (Richtlinie zur sicheren IT-Nutzung — ORP.1.A16.9)",
+        "uuid": "b995036d-f7a5-563a-90ef-f8b4f8990f2b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.1.a17.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.1.a17.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.1.a17.1 (Mitführverbot von Mobiltelefonen — ORP.1.A17.1)",
+        "uuid": "bcc4c729-9436-51c8-9fd0-0c74d9ba614b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.1.a17.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.1.a17.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.1.a17.2 (Mitführverbot von Mobiltelefonen — ORP.1.A17.2)",
+        "uuid": "bc5427c7-c4b9-5fe4-b65f-2dc14f53824f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.1.a2.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.1.a2.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.1.a2.1 (Zuweisung der Zuständigkeiten — ORP.1.A2.1)",
+        "uuid": "e97d70d7-c38a-52c8-90cf-bb5bf9f6890d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.1.a2.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.1.a2.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.1.a2.2 (Zuweisung der Zuständigkeiten — ORP.1.A2.2)",
+        "uuid": "858cb658-44a2-58b7-ae80-cb1861cd65dd"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.1.a3.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.1.a3.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.1.a3.1 (Beaufsichtigung oder Begleitung von Fremdpersonen — ORP.1.A3.1)",
+        "uuid": "938d7eb7-fd5e-5fd3-b38c-f57094de91d8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.1.a3.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.1.a3.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.1.a3.2 (Beaufsichtigung oder Begleitung von Fremdpersonen — ORP.1.A3.2)",
+        "uuid": "f10d08bc-98ca-5c13-a27d-07b62c7e4e38"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.1.a3.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.1.a3.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.1.a3.3 (Beaufsichtigung oder Begleitung von Fremdpersonen — ORP.1.A3.3)",
+        "uuid": "2bf9aa87-1106-5718-a8c7-1124a92ff053"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.1.a4.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.1.a4.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.1.a4.1 (Funktionstrennung zwischen unvereinbaren Aufgaben — ORP.1.A4.1)",
+        "uuid": "7cb3987b-1c1a-5757-b243-f7a721b3a484"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.1.a4.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.1.a4.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.1.a4.2 (Funktionstrennung zwischen unvereinbaren Aufgaben — ORP.1.A4.2)",
+        "uuid": "4be60744-60ae-5e73-8dc5-ff3eed2cb501"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.1.a4.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.1.a4.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.1.a4.3 (Funktionstrennung zwischen unvereinbaren Aufgaben — ORP.1.A4.3)",
+        "uuid": "53f80c6f-35f0-5227-a7d7-3e265dc63d61"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.1.a8.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.1.a8.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.1.a8.1 (Betriebsmittel- und Geräteverwaltung — ORP.1.A8.1)",
+        "uuid": "58b4e1ac-a225-5cd1-8f11-efdadfbc26ae"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.1.a8.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.1.a8.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.1.a8.2 (Betriebsmittel- und Geräteverwaltung — ORP.1.A8.2)",
+        "uuid": "cf1bb992-56e8-587c-8d37-be0338b05511"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.1.a8.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.1.a8.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.1.a8.3 (Betriebsmittel- und Geräteverwaltung — ORP.1.A8.3)",
+        "uuid": "9c018dd7-5c5a-557c-88a2-ca8e3793d6f4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.1.a8.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.1.a8.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.1.a8.4 (Betriebsmittel- und Geräteverwaltung — ORP.1.A8.4)",
+        "uuid": "d82dee64-9745-51c9-8a1c-224d209dc1e9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.2.a1.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.2.a1.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.2.a1.1 (Geregelte Einarbeitung neuer Mitarbeitender — ORP.2.A1.1)",
+        "uuid": "365e3f29-b3e4-579b-9f58-c7733453dc09"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.2.a1.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.2.a1.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.2.a1.2 (Geregelte Einarbeitung neuer Mitarbeitender — ORP.2.A1.2)",
+        "uuid": "f23051e5-ddda-5ad7-b77b-e2d5192a299a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.2.a1.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.2.a1.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.2.a1.3 (Geregelte Einarbeitung neuer Mitarbeitender — ORP.2.A1.3)",
+        "uuid": "76c8238a-a5fe-5eaa-b165-ec5b6ca0b9ef"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.2.a13.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.2.a13.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.2.a13.1 (Sicherheitsüberprüfung — ORP.2.A13.1)",
+        "uuid": "e000fec7-9801-5d56-8e62-82737a49e61f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.2.a13.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.2.a13.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.2.a13.2 (Sicherheitsüberprüfung — ORP.2.A13.2)",
+        "uuid": "c0a01189-e926-58b4-8e6d-354891228f05"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.2.a13.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.2.a13.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.2.a13.3 (Sicherheitsüberprüfung — ORP.2.A13.3)",
+        "uuid": "63effb00-3276-5033-b47f-c1a5e34d378a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.2.a14.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.2.a14.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.2.a14.1 (Aufgaben und Zuständigkeiten von Mitarbeitenden — ORP.2.A14.1)",
+        "uuid": "e749669a-9a20-563a-8911-7e416292da8a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.2.a14.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.2.a14.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.2.a14.2 (Aufgaben und Zuständigkeiten von Mitarbeitenden — ORP.2.A14.2)",
+        "uuid": "247f52bd-bb3e-56b1-98ad-93b7661ae199"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.2.a14.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.2.a14.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.2.a14.3 (Aufgaben und Zuständigkeiten von Mitarbeitenden — ORP.2.A14.3)",
+        "uuid": "58148f4b-9d6e-5b77-857f-bb640f589402"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.2.a14.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.2.a14.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.2.a14.4 (Aufgaben und Zuständigkeiten von Mitarbeitenden — ORP.2.A14.4)",
+        "uuid": "2c5ba7ee-35a5-57df-b5f8-1a054473fa7b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.2.a14.5 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.2.a14.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.2.a14.5 (Aufgaben und Zuständigkeiten von Mitarbeitenden — ORP.2.A14.5)",
+        "uuid": "c7e5cd6d-cbf8-5a87-9d0a-5b30b3fbe267"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.2.a15.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.2.a15.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.2.a15.1 (Qualifikation des Personals — ORP.2.A15.1)",
+        "uuid": "4d284729-397e-5107-aab0-32f1106e8e84"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.2.a15.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.2.a15.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.2.a15.2 (Qualifikation des Personals — ORP.2.A15.2)",
+        "uuid": "5be22b06-e7f5-57be-89e3-2ff98eed322a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.2.a15.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.2.a15.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.2.a15.3 (Qualifikation des Personals — ORP.2.A15.3)",
+        "uuid": "e91277fa-f594-55d1-a054-92f4bdfa8f36"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.2.a15.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.2.a15.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.2.a15.4 (Qualifikation des Personals — ORP.2.A15.4)",
+        "uuid": "03f16497-34d1-58e6-9899-6d4f056bc175"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.2.a15.5 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.2.a15.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.2.a15.5 (Qualifikation des Personals — ORP.2.A15.5)",
+        "uuid": "97deeedc-2c8c-57a9-a16c-3fbadea7df0a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.2.a15.6 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.2.a15.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.2.a15.6 (Qualifikation des Personals — ORP.2.A15.6)",
+        "uuid": "68b72e31-948d-5cb6-8c81-c4db939acf4d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.2.a2.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.2.a2.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.2.a2.1 (Geregelte Verfahrensweise beim Weggang von Mitarbeitenden — ORP.2.A2.1)",
+        "uuid": "b42bff2b-056c-5e83-9ca3-f57016edddda"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.2.a2.10 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.2.a2.10"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.2.a2.10 (Geregelte Verfahrensweise beim Weggang von Mitarbeitenden — ORP.2.A2.10)",
+        "uuid": "5ad88aca-4184-5d70-be6d-857375559bc1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.2.a2.11 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.2.a2.11"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.2.a2.11 (Geregelte Verfahrensweise beim Weggang von Mitarbeitenden — ORP.2.A2.11)",
+        "uuid": "118b3746-61db-530f-9d20-e70aa9c9e012"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.2.a2.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.2.a2.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.2.a2.2 (Geregelte Verfahrensweise beim Weggang von Mitarbeitenden — ORP.2.A2.2)",
+        "uuid": "29673704-d441-5c59-91a6-b84a236fd45d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.2.a2.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.2.a2.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.2.a2.3 (Geregelte Verfahrensweise beim Weggang von Mitarbeitenden — ORP.2.A2.3)",
+        "uuid": "3709534d-7f56-58db-8859-a4427d85bd8f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.2.a2.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.2.a2.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.2.a2.4 (Geregelte Verfahrensweise beim Weggang von Mitarbeitenden — ORP.2.A2.4)",
+        "uuid": "b28b638e-935b-5d86-927e-203875055c3c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.2.a2.5 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.2.a2.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.2.a2.5 (Geregelte Verfahrensweise beim Weggang von Mitarbeitenden — ORP.2.A2.5)",
+        "uuid": "2fb5f7e7-e3e6-53bf-b12c-b9a19b958c10"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.2.a2.6 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.2.a2.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.2.a2.6 (Geregelte Verfahrensweise beim Weggang von Mitarbeitenden — ORP.2.A2.6)",
+        "uuid": "c040b3b4-9a97-5335-b390-05955b2cd4ee"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.2.a2.7 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.2.a2.7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.2.a2.7 (Geregelte Verfahrensweise beim Weggang von Mitarbeitenden — ORP.2.A2.7)",
+        "uuid": "24d98f83-db39-5f6a-b3c2-5ed0b6ae5511"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.2.a2.8 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.2.a2.8"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.2.a2.8 (Geregelte Verfahrensweise beim Weggang von Mitarbeitenden — ORP.2.A2.8)",
+        "uuid": "1df69f32-eda8-5037-8164-bdef8d4e405c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.2.a2.9 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.2.a2.9"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.2.a2.9 (Geregelte Verfahrensweise beim Weggang von Mitarbeitenden — ORP.2.A2.9)",
+        "uuid": "e0187def-1546-590a-935e-f289d30c4482"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.2.a3.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.2.a3.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.2.a3.1 (Festlegung von Vertretungsregelungen — ORP.2.A3.1)",
+        "uuid": "53852205-958a-51af-9f77-b77647772c5b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.2.a3.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.2.a3.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.2.a3.2 (Festlegung von Vertretungsregelungen — ORP.2.A3.2)",
+        "uuid": "2b14b117-c971-572f-8fea-56bc5a6c728a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.2.a3.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.2.a3.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.2.a3.3 (Festlegung von Vertretungsregelungen — ORP.2.A3.3)",
+        "uuid": "fddcd4a3-ae06-5a82-b4c6-9bed5057aac8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.2.a3.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.2.a3.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.2.a3.4 (Festlegung von Vertretungsregelungen — ORP.2.A3.4)",
+        "uuid": "9f5a4302-0274-531d-966e-524292868d59"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.2.a3.5 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.2.a3.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.2.a3.5 (Festlegung von Vertretungsregelungen — ORP.2.A3.5)",
+        "uuid": "dd6c5093-6d1e-5e7a-898d-0e00cdcb097a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.2.a3.6 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.2.a3.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.2.a3.6 (Festlegung von Vertretungsregelungen — ORP.2.A3.6)",
+        "uuid": "60a64c15-8e2f-5409-81e6-ce05e14b91f1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.2.a4.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.2.a4.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.2.a4.1 (Festlegung von Regelungen für den Einsatz von Fremdpersonal — ORP.2.A4.1)",
+        "uuid": "2a184760-a73f-517d-bbb0-6da262e02b65"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.2.a4.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.2.a4.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.2.a4.2 (Festlegung von Regelungen für den Einsatz von Fremdpersonal — ORP.2.A4.2)",
+        "uuid": "9fc56912-18a5-5e24-97f8-9544cf3acdc4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.2.a4.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.2.a4.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.2.a4.3 (Festlegung von Regelungen für den Einsatz von Fremdpersonal — ORP.2.A4.3)",
+        "uuid": "dadd9fba-2c4f-5895-a2b4-7de958b370be"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.2.a4.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.2.a4.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.2.a4.4 (Festlegung von Regelungen für den Einsatz von Fremdpersonal — ORP.2.A4.4)",
+        "uuid": "f9cc5b06-b649-509e-90a4-ce1500f5eca7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.2.a4.5 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.2.a4.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.2.a4.5 (Festlegung von Regelungen für den Einsatz von Fremdpersonal — ORP.2.A4.5)",
+        "uuid": "209cb773-8881-51f2-93d8-648e981f26c1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.2.a5.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.2.a5.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.2.a5.1 (Vertraulichkeitsvereinbarungen für den Einsatz von Fremdpersonal — ORP.2.A5.1)",
+        "uuid": "1e4f7e0c-dd16-54a5-9009-1af50987cf96"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.2.a5.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.2.a5.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.2.a5.2 (Vertraulichkeitsvereinbarungen für den Einsatz von Fremdpersonal — ORP.2.A5.2)",
+        "uuid": "b54d64f9-6079-5c9c-a861-59d08a0684c7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.2.a7.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.2.a7.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.2.a7.1 (Überprüfung der Vertrauenswürdigkeit von Mitarbeitenden — ORP.2.A7.1)",
+        "uuid": "ef34ac03-2fef-52a6-86f1-544b24db5dd4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.2.a7.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.2.a7.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.2.a7.2 (Überprüfung der Vertrauenswürdigkeit von Mitarbeitenden — ORP.2.A7.2)",
+        "uuid": "ef8e4d66-14e6-564b-b2fb-44eb12074e9a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.2.a7.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.2.a7.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.2.a7.3 (Überprüfung der Vertrauenswürdigkeit von Mitarbeitenden — ORP.2.A7.3)",
+        "uuid": "46019b81-12d3-5078-b81d-77dce460c8e4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.2.a7.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.2.a7.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.2.a7.4 (Überprüfung der Vertrauenswürdigkeit von Mitarbeitenden — ORP.2.A7.4)",
+        "uuid": "1398c72b-76f1-5e3a-aa38-3de91623ffbe"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.3.a1.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.3.a1.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.3.a1.1 (Sensibilisierung der Institutionsleitung für Informationssicherheit — ORP.3.A1.1)",
+        "uuid": "2bc4d6da-6f42-5c40-ae8a-5bf2bde88de5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.3.a1.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.3.a1.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.3.a1.2 (Sensibilisierung der Institutionsleitung für Informationssicherheit — ORP.3.A1.2)",
+        "uuid": "84416bd2-cfc3-562d-a299-47a3592c7b7f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.3.a1.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.3.a1.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.3.a1.3 (Sensibilisierung der Institutionsleitung für Informationssicherheit — ORP.3.A1.3)",
+        "uuid": "4386e32c-159e-5c21-ab4b-f168ecf2b89b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.3.a1.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.3.a1.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.3.a1.4 (Sensibilisierung der Institutionsleitung für Informationssicherheit — ORP.3.A1.4)",
+        "uuid": "b8c91976-a5b3-5b04-a517-cf5c00fbd3a5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.3.a1.5 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.3.a1.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.3.a1.5 (Sensibilisierung der Institutionsleitung für Informationssicherheit — ORP.3.A1.5)",
+        "uuid": "c7a77867-7bc2-5f94-8ce9-6005239f3029"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.3.a1.6 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.3.a1.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.3.a1.6 (Sensibilisierung der Institutionsleitung für Informationssicherheit — ORP.3.A1.6)",
+        "uuid": "da5a6689-4e92-5592-bef0-1ef9534136be"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.3.a3.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.3.a3.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.3.a3.1 (Einweisung des Personals in den sicheren Umgang mit IT — ORP.3.A3.1)",
+        "uuid": "e894a3d7-5005-51d3-a014-8cf1ebeb4112"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.3.a3.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.3.a3.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.3.a3.2 (Einweisung des Personals in den sicheren Umgang mit IT — ORP.3.A3.2)",
+        "uuid": "a70bfa57-48e4-51e7-b01b-6d291bb91865"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.3.a3.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.3.a3.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.3.a3.3 (Einweisung des Personals in den sicheren Umgang mit IT — ORP.3.A3.3)",
+        "uuid": "7f5f20b0-de79-57a3-a9ff-2dba8c10df5f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.3.a4.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.3.a4.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.3.a4.1 (Konzeption und Planung eines Sensibilisierungs- und Schulungsprogramms zur Informationssicherheit — ORP.3.A4.1)",
+        "uuid": "4825e07f-5bea-5cba-9a85-1626d3ed1f91"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.3.a4.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.3.a4.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.3.a4.2 (Konzeption und Planung eines Sensibilisierungs- und Schulungsprogramms zur Informationssicherheit — ORP.3.A4.2)",
+        "uuid": "af1182f9-a698-56bd-a6c0-4be69cd7867f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.3.a4.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.3.a4.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.3.a4.3 (Konzeption und Planung eines Sensibilisierungs- und Schulungsprogramms zur Informationssicherheit — ORP.3.A4.3)",
+        "uuid": "4304098a-2e15-5692-b5d2-91f11801743e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.3.a4.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.3.a4.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.3.a4.4 (Konzeption und Planung eines Sensibilisierungs- und Schulungsprogramms zur Informationssicherheit — ORP.3.A4.4)",
+        "uuid": "368eaf86-6f38-5d85-9552-da59bdba3bc0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.3.a4.5 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.3.a4.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.3.a4.5 (Konzeption und Planung eines Sensibilisierungs- und Schulungsprogramms zur Informationssicherheit — ORP.3.A4.5)",
+        "uuid": "a920edac-fc89-5ef8-941e-45a6c2761046"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.3.a4.6 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.3.a4.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.3.a4.6 (Konzeption und Planung eines Sensibilisierungs- und Schulungsprogramms zur Informationssicherheit — ORP.3.A4.6)",
+        "uuid": "b6d1cb8a-456e-50ac-8a77-3452ab7440bd"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.3.a6.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.3.a6.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.3.a6.1 (Durchführung von Sensibilisierungen und Schulungen zur Informationssicherheit — ORP.3.A6.1)",
+        "uuid": "e2fa5dc7-2da6-5ec0-ac8e-634b7ad21840"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.3.a7.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.3.a7.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.3.a7.1 (Schulung zur Vorgehensweise nach IT-Grundschutz — ORP.3.A7.1)",
+        "uuid": "f1941671-5409-5c50-9b0b-87bdba101034"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.3.a7.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.3.a7.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.3.a7.2 (Schulung zur Vorgehensweise nach IT-Grundschutz — ORP.3.A7.2)",
+        "uuid": "7da0a475-879b-5eca-b92a-f14bfc368a09"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.3.a7.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.3.a7.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.3.a7.3 (Schulung zur Vorgehensweise nach IT-Grundschutz — ORP.3.A7.3)",
+        "uuid": "98da15f4-2ac5-59d8-975d-0db6d0b1f4bd"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.3.a7.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.3.a7.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.3.a7.4 (Schulung zur Vorgehensweise nach IT-Grundschutz — ORP.3.A7.4)",
+        "uuid": "c0fb58e8-780c-55fd-841a-5f6103a556dc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.3.a7.5 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.3.a7.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.3.a7.5 (Schulung zur Vorgehensweise nach IT-Grundschutz — ORP.3.A7.5)",
+        "uuid": "c30b1cee-83e3-59cf-aac5-d3977a60741f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.3.a8.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.3.a8.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.3.a8.1 (Messung und Auswertung des Lernerfolgs — ORP.3.A8.1)",
+        "uuid": "4e2bba47-08c0-5b2f-b249-d1f3fce03f08"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.3.a8.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.3.a8.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.3.a8.2 (Messung und Auswertung des Lernerfolgs — ORP.3.A8.2)",
+        "uuid": "a32f3b26-2acd-50b7-b561-778effee2144"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.3.a8.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.3.a8.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.3.a8.3 (Messung und Auswertung des Lernerfolgs — ORP.3.A8.3)",
+        "uuid": "c9834165-90da-5aac-8d5d-52683e882853"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.3.a8.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.3.a8.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.3.a8.4 (Messung und Auswertung des Lernerfolgs — ORP.3.A8.4)",
+        "uuid": "88b2c099-895d-5054-aa0a-9a2f82c7d996"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.3.a9.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.3.a9.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.3.a9.1 (Spezielle Schulung von exponierten Personen und Institutionen — ORP.3.A9.1)",
+        "uuid": "29b0c9e7-a9da-5173-bcb6-42792f4deb56"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a1.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a1.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a1.1 (Regelung für die Einrichtung und Löschung von Benutzenden und Benutzendengruppen — ORP.4.A1.1)",
+        "uuid": "99bfc0b9-5bf3-57a2-bffc-a5b96ee2409a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a1.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a1.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a1.2 (Regelung für die Einrichtung und Löschung von Benutzenden und Benutzendengruppen — ORP.4.A1.2)",
+        "uuid": "d0b3ae2c-f2ad-59e3-b66d-b8af66cddf9f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a1.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a1.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a1.3 (Regelung für die Einrichtung und Löschung von Benutzenden und Benutzendengruppen — ORP.4.A1.3)",
+        "uuid": "fc93a98c-605a-5b4b-817b-4dae27607919"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a1.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a1.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a1.4 (Regelung für die Einrichtung und Löschung von Benutzenden und Benutzendengruppen — ORP.4.A1.4)",
+        "uuid": "9940228a-82b2-5996-a539-438fa4c55e70"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a1.5 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a1.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a1.5 (Regelung für die Einrichtung und Löschung von Benutzenden und Benutzendengruppen — ORP.4.A1.5)",
+        "uuid": "89b67e04-f664-59ea-9b86-3b35e6dc9cfa"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a10.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a10.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a10.1 (Schutz von Benutzendenkennungen mit weitreichenden Berechtigungen — ORP.4.A10.1)",
+        "uuid": "4654a83e-67ca-5ec5-af4f-eeb7cb3fb91c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a11.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a11.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a11.1 (Zurücksetzen von Passwörtern — ORP.4.A11.1)",
+        "uuid": "1b4205c2-fe44-5a90-aa79-b70118c258f1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a11.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a11.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a11.2 (Zurücksetzen von Passwörtern — ORP.4.A11.2)",
+        "uuid": "5d85968e-26ef-514c-8b79-e6e5c0fead0b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a11.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a11.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a11.3 (Zurücksetzen von Passwörtern — ORP.4.A11.3)",
+        "uuid": "fc6127a0-0293-5117-a418-2be35fcc4b06"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a12.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a12.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a12.1 (Entwicklung eines Authentisierungskonzeptes für IT-Systeme und Anwendungen — ORP.4.A12.1)",
+        "uuid": "83bdc0d4-d283-5e57-aac9-086fb1402776"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a12.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a12.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a12.2 (Entwicklung eines Authentisierungskonzeptes für IT-Systeme und Anwendungen — ORP.4.A12.2)",
+        "uuid": "9143a255-6ae4-5aa7-9e82-ddb36d32170b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a12.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a12.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a12.3 (Entwicklung eines Authentisierungskonzeptes für IT-Systeme und Anwendungen — ORP.4.A12.3)",
+        "uuid": "e78f5ee0-edeb-57b0-908b-306e3e27f5f3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a12.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a12.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a12.4 (Entwicklung eines Authentisierungskonzeptes für IT-Systeme und Anwendungen — ORP.4.A12.4)",
+        "uuid": "58daea47-d735-54db-9d52-0e97e35a2df2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a13.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a13.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a13.1 (Geeignete Auswahl von Authentisierungsmechanismen — ORP.4.A13.1)",
+        "uuid": "9d25a27f-522b-5279-ad15-b6b7b4bb621e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a13.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a13.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a13.2 (Geeignete Auswahl von Authentisierungsmechanismen — ORP.4.A13.2)",
+        "uuid": "c30f110f-672d-5990-9920-b7c1ad2ae721"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a13.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a13.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a13.3 (Geeignete Auswahl von Authentisierungsmechanismen — ORP.4.A13.3)",
+        "uuid": "16d32aec-ec6e-5303-9f7c-458a327f6b69"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a13.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a13.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a13.4 (Geeignete Auswahl von Authentisierungsmechanismen — ORP.4.A13.4)",
+        "uuid": "2ce5fc32-0ddc-5be3-907f-61f70a974b08"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a13.5 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a13.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a13.5 (Geeignete Auswahl von Authentisierungsmechanismen — ORP.4.A13.5)",
+        "uuid": "2327612e-d7ff-5337-9967-a617bfc915bc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a14.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a14.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a14.1 (Kontrolle der Wirksamkeit der Benutzendentrennung am IT-System bzw. an der Anwendung — ORP.4.A14.1)",
+        "uuid": "a16ae467-d0a0-5f68-8ad5-b8258ccc0148"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a14.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a14.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a14.2 (Kontrolle der Wirksamkeit der Benutzendentrennung am IT-System bzw. an der Anwendung — ORP.4.A14.2)",
+        "uuid": "9c58b1fc-810f-5dff-be67-3e2f05eeaf73"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a15.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a15.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a15.1 (Vorgehensweise und Konzeption der Prozesse beim Identitäts- und Berechtigungsmanagement — ORP.4.A15.1)",
+        "uuid": "aa1257db-d6e1-55fb-be10-aff5e7f5db1a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a15.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a15.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a15.2 (Vorgehensweise und Konzeption der Prozesse beim Identitäts- und Berechtigungsmanagement — ORP.4.A15.2)",
+        "uuid": "f44c5920-689e-5360-9b3f-9b4a181dd2c8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a15.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a15.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a15.3 (Vorgehensweise und Konzeption der Prozesse beim Identitäts- und Berechtigungsmanagement — ORP.4.A15.3)",
+        "uuid": "8bfc1de9-a9de-51c2-8e2e-85a1e4625152"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a15.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a15.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a15.4 (Vorgehensweise und Konzeption der Prozesse beim Identitäts- und Berechtigungsmanagement — ORP.4.A15.4)",
+        "uuid": "db91680a-8413-5166-8ddc-9014619dd84d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a15.5 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a15.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a15.5 (Vorgehensweise und Konzeption der Prozesse beim Identitäts- und Berechtigungsmanagement — ORP.4.A15.5)",
+        "uuid": "016c3bba-1105-5c33-8f2b-23a53702bed1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a15.6 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a15.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a15.6 (Vorgehensweise und Konzeption der Prozesse beim Identitäts- und Berechtigungsmanagement — ORP.4.A15.6)",
+        "uuid": "7dc7d41a-075e-5930-8236-209e8a46ab3a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a16.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a16.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a16.1 (Richtlinien für die Zugriffs- und Zugangskontrolle — ORP.4.A16.1)",
+        "uuid": "65f502f4-3933-5eae-81a0-b3d36d5d011b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a16.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a16.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a16.2 (Richtlinien für die Zugriffs- und Zugangskontrolle — ORP.4.A16.2)",
+        "uuid": "b5350c2e-2fc3-55d3-90b1-e0bd4ecdd588"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a16.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a16.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a16.3 (Richtlinien für die Zugriffs- und Zugangskontrolle — ORP.4.A16.3)",
+        "uuid": "da5a203d-5964-55ef-bb2f-7413b0932ad6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a17.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a17.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a17.1 (Geeignete Auswahl von Identitäts- und Berechtigungsmanagement-Systemen — ORP.4.A17.1)",
+        "uuid": "93ce196e-e1a2-5ee2-bee2-ee726261a5db"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a17.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a17.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a17.2 (Geeignete Auswahl von Identitäts- und Berechtigungsmanagement-Systemen — ORP.4.A17.2)",
+        "uuid": "2c255f0c-bcea-5333-98f1-96af1347a443"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a17.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a17.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a17.3 (Geeignete Auswahl von Identitäts- und Berechtigungsmanagement-Systemen — ORP.4.A17.3)",
+        "uuid": "64dffbfd-b91a-510a-9e58-6604b2e4413c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a17.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a17.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a17.4 (Geeignete Auswahl von Identitäts- und Berechtigungsmanagement-Systemen — ORP.4.A17.4)",
+        "uuid": "1f2f55f3-ba38-58b6-9bf3-4b9b9eb606c9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a18.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a18.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a18.1 (Einsatz eines zentralen Authentisierungsdienstes — ORP.4.A18.1)",
+        "uuid": "156dbfd7-6c85-5ca3-9ee5-8ba4cbc62a8f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a18.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a18.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a18.2 (Einsatz eines zentralen Authentisierungsdienstes — ORP.4.A18.2)",
+        "uuid": "2f8f63f6-8c73-5ecc-932f-3fb364bfaca9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a18.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a18.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a18.3 (Einsatz eines zentralen Authentisierungsdienstes — ORP.4.A18.3)",
+        "uuid": "4884c3df-6563-5237-94a0-6e13f5bd2c59"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a19.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a19.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a19.1 (Einweisung aller Mitarbeitenden in den Umgang mit Authentisierungsverfahren und -mechanismen — ORP.4.A19.1)",
+        "uuid": "4778255c-a32b-53a7-9238-ce305fdae5a6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a19.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a19.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a19.2 (Einweisung aller Mitarbeitenden in den Umgang mit Authentisierungsverfahren und -mechanismen — ORP.4.A19.2)",
+        "uuid": "09a30eeb-aafe-5803-bb00-5e3b1016eddb"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a19.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a19.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a19.3 (Einweisung aller Mitarbeitenden in den Umgang mit Authentisierungsverfahren und -mechanismen — ORP.4.A19.3)",
+        "uuid": "0fe499db-3fd3-5331-a723-4a3a23cb3281"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a2.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a2.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a2.1 (Einrichtung, Änderung und Entzug von Berechtigungen — ORP.4.A2.1)",
+        "uuid": "ed827c66-4d85-5a29-9a1d-8f8d3d3bf860"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a2.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a2.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a2.2 (Einrichtung, Änderung und Entzug von Berechtigungen — ORP.4.A2.2)",
+        "uuid": "cba5a547-8467-5227-922e-7a589b016216"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a2.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a2.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a2.3 (Einrichtung, Änderung und Entzug von Berechtigungen — ORP.4.A2.3)",
+        "uuid": "fe8f1462-2fab-59ec-8c8a-cd4c8003985f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a2.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a2.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a2.4 (Einrichtung, Änderung und Entzug von Berechtigungen — ORP.4.A2.4)",
+        "uuid": "ec410f9c-7024-59f7-87b8-e889f8e44483"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a2.5 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a2.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a2.5 (Einrichtung, Änderung und Entzug von Berechtigungen — ORP.4.A2.5)",
+        "uuid": "3c2b35d6-7d2d-5e0c-896b-1563d9f6d13b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a20.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a20.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a20.1 (Notfallvorsorge für das Identitäts- und Berechtigungsmanagement-System — ORP.4.A20.1)",
+        "uuid": "1b190bb3-0171-576d-a9d1-b78baebc0e70"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a20.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a20.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a20.2 (Notfallvorsorge für das Identitäts- und Berechtigungsmanagement-System — ORP.4.A20.2)",
+        "uuid": "d1cd01dc-9f67-5efa-8989-08d9b9a938b0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a20.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a20.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a20.3 (Notfallvorsorge für das Identitäts- und Berechtigungsmanagement-System — ORP.4.A20.3)",
+        "uuid": "353fcfd2-a851-5a88-a37a-6a5c962241e1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a21.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a21.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a21.1 (Mehr-Faktor-Authentisierung — ORP.4.A21.1)",
+        "uuid": "a62b089c-7b53-51ed-9001-7fe2ddc7247d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a22.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a22.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a22.1 (Regelung zur Passwortqualität — ORP.4.A22.1)",
+        "uuid": "64bdc90e-8186-5046-a12b-84e59640c151"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a22.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a22.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a22.2 (Regelung zur Passwortqualität — ORP.4.A22.2)",
+        "uuid": "6accd6ca-f1ef-5779-8808-b5c0355fff2b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a22.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a22.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a22.3 (Regelung zur Passwortqualität — ORP.4.A22.3)",
+        "uuid": "29019611-9568-5f06-ae21-8f609064cea3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a23.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a23.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a23.1 (Regelung für passwortverarbeitende Anwendungen und IT-Systeme — ORP.4.A23.1)",
+        "uuid": "1fd46a00-f725-5a26-bb01-01d90792e8f3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a23.10 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a23.10"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a23.10 (Regelung für passwortverarbeitende Anwendungen und IT-Systeme — ORP.4.A23.10)",
+        "uuid": "ae206aa8-86ce-5c5f-b787-9ede6f028871"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a23.11 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a23.11"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a23.11 (Regelung für passwortverarbeitende Anwendungen und IT-Systeme — ORP.4.A23.11)",
+        "uuid": "1a6b890b-7e1b-56dd-8c69-13807ab46300"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a23.12 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a23.12"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a23.12 (Regelung für passwortverarbeitende Anwendungen und IT-Systeme — ORP.4.A23.12)",
+        "uuid": "9bdeb62d-05e5-523d-8e0f-cf225c107aa0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a23.13 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a23.13"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a23.13 (Regelung für passwortverarbeitende Anwendungen und IT-Systeme — ORP.4.A23.13)",
+        "uuid": "36271a1a-ea2c-59f7-8b5f-72ac818af014"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a23.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a23.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a23.2 (Regelung für passwortverarbeitende Anwendungen und IT-Systeme — ORP.4.A23.2)",
+        "uuid": "fd9e6074-42f0-55e8-9544-a7727288a55c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a23.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a23.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a23.3 (Regelung für passwortverarbeitende Anwendungen und IT-Systeme — ORP.4.A23.3)",
+        "uuid": "951ec3c3-f605-57f9-90b5-388b642cd581"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a23.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a23.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a23.4 (Regelung für passwortverarbeitende Anwendungen und IT-Systeme — ORP.4.A23.4)",
+        "uuid": "88286816-3f0b-5a68-81b6-02c0213de8fc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a23.5 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a23.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a23.5 (Regelung für passwortverarbeitende Anwendungen und IT-Systeme — ORP.4.A23.5)",
+        "uuid": "ec008e60-cf9f-5c61-85dd-9b3379125015"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a23.6 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a23.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a23.6 (Regelung für passwortverarbeitende Anwendungen und IT-Systeme — ORP.4.A23.6)",
+        "uuid": "15c29c7c-7b0d-5506-8cb8-3ef9f9bfc2be"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a23.7 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a23.7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a23.7 (Regelung für passwortverarbeitende Anwendungen und IT-Systeme — ORP.4.A23.7)",
+        "uuid": "4673340a-2674-561e-8a0e-50dbbca4e1ff"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a23.8 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a23.8"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a23.8 (Regelung für passwortverarbeitende Anwendungen und IT-Systeme — ORP.4.A23.8)",
+        "uuid": "1da5adf6-59cd-5ddd-96ae-fdc54546f81d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a23.9 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a23.9"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a23.9 (Regelung für passwortverarbeitende Anwendungen und IT-Systeme — ORP.4.A23.9)",
+        "uuid": "0e4f2a8c-acd5-51e8-9a39-87cc9f599b39"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a24.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a24.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a24.1 (Vier-Augen-Prinzip für administrative Tätigkeiten — ORP.4.A24.1)",
+        "uuid": "0d8b1fcd-cad4-543a-a453-ecfe02090dcf"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a24.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a24.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a24.2 (Vier-Augen-Prinzip für administrative Tätigkeiten — ORP.4.A24.2)",
+        "uuid": "33b9c0f7-f3a9-5027-b2d6-7542bb81556d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a24.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a24.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a24.3 (Vier-Augen-Prinzip für administrative Tätigkeiten — ORP.4.A24.3)",
+        "uuid": "d87c96b1-3e99-5709-abbd-8592081dbaeb"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a3.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a3.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a3.1 (Dokumentation der Benutzendenkennungen und Rechteprofile — ORP.4.A3.1)",
+        "uuid": "8e4bb492-b74e-5f69-9a60-f4456169dbca"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a3.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a3.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a3.2 (Dokumentation der Benutzendenkennungen und Rechteprofile — ORP.4.A3.2)",
+        "uuid": "438c5891-03d1-576b-8481-ce81a73caa38"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a3.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a3.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a3.3 (Dokumentation der Benutzendenkennungen und Rechteprofile — ORP.4.A3.3)",
+        "uuid": "bc8583a4-b0d7-5080-acdc-487f5b346cf0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a3.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a3.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a3.4 (Dokumentation der Benutzendenkennungen und Rechteprofile — ORP.4.A3.4)",
+        "uuid": "c667db23-1206-50f5-862f-70562b8912c5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a3.5 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a3.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a3.5 (Dokumentation der Benutzendenkennungen und Rechteprofile — ORP.4.A3.5)",
+        "uuid": "9f5ff37d-2503-545d-979f-52610b5006a8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a4.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a4.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a4.1 (Aufgabenverteilung und Funktionstrennung — ORP.4.A4.1)",
+        "uuid": "d2a06d30-7ba5-5dbd-a4f2-25e5c11ed29c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a5.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a5.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a5.1 (Vergabe von Zutrittsberechtigungen — ORP.4.A5.1)",
+        "uuid": "043dd75f-c91a-5fe1-91ba-7d1f69fcfd57"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a5.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a5.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a5.2 (Vergabe von Zutrittsberechtigungen — ORP.4.A5.2)",
+        "uuid": "b7a973ef-55fe-5edc-8c91-240cf8502c50"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a5.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a5.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a5.3 (Vergabe von Zutrittsberechtigungen — ORP.4.A5.3)",
+        "uuid": "cbb1de02-76a2-55b2-884a-2b5109aaa89b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a5.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a5.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a5.4 (Vergabe von Zutrittsberechtigungen — ORP.4.A5.4)",
+        "uuid": "c380e265-9a9e-5252-9662-0ad91556afe3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a5.5 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a5.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a5.5 (Vergabe von Zutrittsberechtigungen — ORP.4.A5.5)",
+        "uuid": "9979d1aa-a1dd-597c-99cf-1054e01033bd"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a6.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a6.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a6.1 (Vergabe von Zugangsberechtigungen — ORP.4.A6.1)",
+        "uuid": "4ee8e147-3ed6-5411-838d-ed10f2394ffc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a6.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a6.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a6.2 (Vergabe von Zugangsberechtigungen — ORP.4.A6.2)",
+        "uuid": "aab1a02e-8bcd-5e36-bb4b-7d97632a32da"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a6.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a6.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a6.3 (Vergabe von Zugangsberechtigungen — ORP.4.A6.3)",
+        "uuid": "4fdbc155-d369-5fad-80cc-5bd885285393"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a6.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a6.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a6.4 (Vergabe von Zugangsberechtigungen — ORP.4.A6.4)",
+        "uuid": "abec3ad5-5b2a-5e4f-9e65-4f606b7d01ae"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a6.5 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a6.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a6.5 (Vergabe von Zugangsberechtigungen — ORP.4.A6.5)",
+        "uuid": "7cab75cf-6843-5db8-a1cd-fc3842dd0c81"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a7.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a7.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a7.1 (Vergabe von Zugriffsrechten — ORP.4.A7.1)",
+        "uuid": "382f50d3-a17d-5132-a459-ddb31bfd85c3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a7.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a7.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a7.2 (Vergabe von Zugriffsrechten — ORP.4.A7.2)",
+        "uuid": "b0304c44-b954-5fa2-8eaf-84a10dd629aa"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a7.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a7.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a7.3 (Vergabe von Zugriffsrechten — ORP.4.A7.3)",
+        "uuid": "7ad8048d-e0d2-5bbd-92d4-e1ccfe27a19c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a7.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a7.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a7.4 (Vergabe von Zugriffsrechten — ORP.4.A7.4)",
+        "uuid": "014174bf-52bb-521e-80ed-605e6b66b833"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a8.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a8.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a8.1 (Regelung des Passwortgebrauchs — ORP.4.A8.1)",
+        "uuid": "e20c45a6-9da9-5ba2-a8eb-be097b14a681"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a8.10 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a8.10"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a8.10 (Regelung des Passwortgebrauchs — ORP.4.A8.10)",
+        "uuid": "82276d25-90cc-5748-a3e1-24d52bf31c04"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a8.11 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a8.11"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a8.11 (Regelung des Passwortgebrauchs — ORP.4.A8.11)",
+        "uuid": "c2f5c0b9-db87-54cc-83db-6b0e419a59ad"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a8.12 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a8.12"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a8.12 (Regelung des Passwortgebrauchs — ORP.4.A8.12)",
+        "uuid": "c19beb3f-3613-59c9-87cb-808b0cfcc183"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a8.13 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a8.13"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a8.13 (Regelung des Passwortgebrauchs — ORP.4.A8.13)",
+        "uuid": "a6880615-a16e-52ca-8252-243d70701fba"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a8.14 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a8.14"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a8.14 (Regelung des Passwortgebrauchs — ORP.4.A8.14)",
+        "uuid": "a1565cd4-57e3-5ff9-ac4b-cdedeefcd7f9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a8.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a8.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a8.2 (Regelung des Passwortgebrauchs — ORP.4.A8.2)",
+        "uuid": "8a8fabeb-066e-5d9d-9ef4-d333bbd6915a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a8.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a8.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a8.3 (Regelung des Passwortgebrauchs — ORP.4.A8.3)",
+        "uuid": "d225845d-8417-593c-bed3-8b87cb017a75"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a8.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a8.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a8.4 (Regelung des Passwortgebrauchs — ORP.4.A8.4)",
+        "uuid": "7fb1f48b-1433-5bc2-86bb-039307bfede9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a8.5 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a8.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a8.5 (Regelung des Passwortgebrauchs — ORP.4.A8.5)",
+        "uuid": "5680ef82-d47e-5667-9f7a-1ef1adb5203f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a8.6 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a8.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a8.6 (Regelung des Passwortgebrauchs — ORP.4.A8.6)",
+        "uuid": "69bfe385-1e67-5401-a982-9e5c31ca33c8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a8.7 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a8.7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a8.7 (Regelung des Passwortgebrauchs — ORP.4.A8.7)",
+        "uuid": "8041755b-cdc6-532e-81a2-a98c37574b74"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a8.8 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a8.8"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a8.8 (Regelung des Passwortgebrauchs — ORP.4.A8.8)",
+        "uuid": "2b36e609-5bbd-5730-97ce-b469b755b20a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a8.9 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a8.9"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a8.9 (Regelung des Passwortgebrauchs — ORP.4.A8.9)",
+        "uuid": "c39897c6-46d4-5f0e-92cb-4f6e2968b697"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a9.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a9.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a9.1 (Identifikation und Authentisierung — ORP.4.A9.1)",
+        "uuid": "4dfe0c6c-0b24-52a7-94e7-66a74b157621"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.4.a9.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.4.a9.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.4.a9.2 (Identifikation und Authentisierung — ORP.4.A9.2)",
+        "uuid": "a4e53a3b-4f2e-5077-a5b6-4cc8eeaf59ab"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.5.a1.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.5.a1.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.5.a1.1 (Identifikation der Rahmenbedingungen — ORP.5.A1.1)",
+        "uuid": "4c48cb4e-93c1-5e0d-a1a7-6efd681658f2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.5.a1.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.5.a1.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.5.a1.2 (Identifikation der Rahmenbedingungen — ORP.5.A1.2)",
+        "uuid": "bafd6a3e-85c6-594f-97a7-b252d74d2112"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.5.a1.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.5.a1.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.5.a1.3 (Identifikation der Rahmenbedingungen — ORP.5.A1.3)",
+        "uuid": "31a79148-07d4-51dc-8fcc-9fe1d1eedfc4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.5.a2.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.5.a2.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.5.a2.1 (Beachtung der Rahmenbedingungen — ORP.5.A2.1)",
+        "uuid": "f0c3be8c-d071-5654-aa3a-b50e06316748"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.5.a2.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.5.a2.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.5.a2.2 (Beachtung der Rahmenbedingungen — ORP.5.A2.2)",
+        "uuid": "6a8b8788-68e0-5e3e-afea-0d06cb69e29f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.5.a2.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.5.a2.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.5.a2.3 (Beachtung der Rahmenbedingungen — ORP.5.A2.3)",
+        "uuid": "8623ebb1-f6de-59d8-9a83-8aa12f9231a4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.5.a2.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.5.a2.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.5.a2.4 (Beachtung der Rahmenbedingungen — ORP.5.A2.4)",
+        "uuid": "118ca819-5bd6-557f-9cac-402823e7d2b5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.5.a2.5 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.5.a2.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.5.a2.5 (Beachtung der Rahmenbedingungen — ORP.5.A2.5)",
+        "uuid": "12dc8615-0435-590d-81ee-7f7d95ffbc5b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.5.a4.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.5.a4.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.5.a4.1 (Konzeption und Organisation des Compliance Managements — ORP.5.A4.1)",
+        "uuid": "72a9309c-0a88-5442-a0db-1f69e305e664"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.5.a4.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.5.a4.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.5.a4.2 (Konzeption und Organisation des Compliance Managements — ORP.5.A4.2)",
+        "uuid": "6e874e4f-873c-53e0-9fbf-9c9d496dd026"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.5.a4.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.5.a4.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.5.a4.3 (Konzeption und Organisation des Compliance Managements — ORP.5.A4.3)",
+        "uuid": "980abae2-d7ba-5f7f-9584-cee931dde267"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.5.a4.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.5.a4.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.5.a4.4 (Konzeption und Organisation des Compliance Managements — ORP.5.A4.4)",
+        "uuid": "ce07c683-6994-5620-8877-fb7856a0b8fe"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.5.a4.5 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.5.a4.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.5.a4.5 (Konzeption und Organisation des Compliance Managements — ORP.5.A4.5)",
+        "uuid": "24fb7022-0fa4-58d2-a7e5-94389aeea8cc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.5.a5.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.5.a5.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.5.a5.1 (Ausnahmegenehmigungen — ORP.5.A5.1)",
+        "uuid": "e72787b3-413d-5068-92c5-e266b8a2e491"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.5.a5.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.5.a5.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.5.a5.2 (Ausnahmegenehmigungen — ORP.5.A5.2)",
+        "uuid": "4485129d-bb9e-5fb5-9273-ced814a2a49c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.5.a5.3 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.5.a5.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.5.a5.3 (Ausnahmegenehmigungen — ORP.5.A5.3)",
+        "uuid": "2d9b8eaf-fea1-5ae5-9bb9-80bca136e5ee"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.5.a5.4 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.5.a5.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.5.a5.4 (Ausnahmegenehmigungen — ORP.5.A5.4)",
+        "uuid": "0ff9b225-985b-50ce-b2bb-215a08f862c8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.5.a5.5 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.5.a5.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.5.a5.5 (Ausnahmegenehmigungen — ORP.5.A5.5)",
+        "uuid": "e58824d9-38c9-5a66-bf3b-7d7b3b87e13e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.5.a8.1 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.5.a8.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.5.a8.1 (Regelmäßige Überprüfungen des Compliance Managements — ORP.5.A8.1)",
+        "uuid": "e53e27a0-bec3-5ef1-b72f-43bd2b66d6ec"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control orp.5.a8.2 in IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ORP: Organisation und Personal.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "orp.5.a8.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: orp.5.a8.2 (Regelmäßige Überprüfungen des Compliance Managements — ORP.5.A8.2)",
+        "uuid": "79b21352-34b7-5f08-af6c-fe8582dfb060"
       }
     ],
     "uuid": "84953337-2ec8-5bef-aeda-04986050dc6a"

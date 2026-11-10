@@ -9,9 +9,12 @@ import (
 	"time"
 
 	"github.com/google/uuid"
-	"github.com/mchorfa/xoscal/server/internal/dbutil"
-	"github.com/mchorfa/xoscal/server/internal/kg"
 	"github.com/mchorfa/xoscal/server/internal/oscal"
+)
+
+const (
+	fallbackOSCALTimestamp = "2026-01-01T00:00:00Z"
+	xoscalPropNS           = "https://ckodex.io/ns/xoscal/props"
 )
 
 var projectUUIDNamespace = uuid.MustParse("6ba7b810-9dad-11d1-80b4-00c04fd430c8")
@@ -19,6 +22,90 @@ var projectUUIDNamespace = uuid.MustParse("6ba7b810-9dad-11d1-80b4-00c04fd430c8"
 func makeProjectUUID(parts ...string) string {
 	val := strings.Join(parts, "/")
 	return uuid.NewSHA1(projectUUIDNamespace, []byte(val)).String()
+}
+
+// deterministicTimestamp extracts a valid RFC3339 timestamp from catalog.metadata.last-modified
+// (or catalog.metadata.published), falling back to "2026-01-01T00:00:00Z" so all 7 projected
+// OSCAL layers are byte-for-byte reproducible across exports.
+func deterministicTimestamp(catData []byte) string {
+	if len(catData) > 0 {
+		var doc struct {
+			Catalog struct {
+				Metadata struct {
+					LastModified string `json:"last-modified"`
+					Published    string `json:"published"`
+				} `json:"metadata"`
+			} `json:"catalog"`
+		}
+		if err := json.Unmarshal(catData, &doc); err == nil {
+			for _, cand := range []string{doc.Catalog.Metadata.LastModified, doc.Catalog.Metadata.Published} {
+				cand = strings.TrimSpace(cand)
+				if cand == "" {
+					continue
+				}
+				if _, err := time.Parse(time.RFC3339, cand); err == nil {
+					return cand
+				}
+				if _, err := time.Parse(time.RFC3339Nano, cand); err == nil {
+					return cand
+				}
+			}
+		}
+	}
+	return fallbackOSCALTimestamp
+}
+
+func frameworkTimestamp(f Framework) string {
+	if f == nil {
+		return fallbackOSCALTimestamp
+	}
+	catData, err := f.CatalogJSON()
+	if err != nil {
+		return fallbackOSCALTimestamp
+	}
+	return deterministicTimestamp(catData)
+}
+
+func sortedUniqueControlIDs(ctrls []ControlInfo) []string {
+	seen := make(map[string]bool, len(ctrls))
+	ids := make([]string, 0, len(ctrls))
+	for _, c := range ctrls {
+		id := strings.TrimSpace(c.ID)
+		if id == "" {
+			continue
+		}
+		key := strings.ToLower(id)
+		if !seen[key] {
+			seen[key] = true
+			ids = append(ids, id)
+		}
+	}
+	sort.Strings(ids)
+	return ids
+}
+
+func sortedUniqueControls(ctrls []ControlInfo) []ControlInfo {
+	seen := make(map[string]bool, len(ctrls))
+	out := make([]ControlInfo, 0, len(ctrls))
+	for _, c := range ctrls {
+		id := strings.TrimSpace(c.ID)
+		if id == "" {
+			continue
+		}
+		key := strings.ToLower(id)
+		if !seen[key] {
+			seen[key] = true
+			out = append(out, c)
+		}
+	}
+	sort.Slice(out, func(i, j int) bool {
+		li, lj := strings.ToLower(out[i].ID), strings.ToLower(out[j].ID)
+		if li != lj {
+			return li < lj
+		}
+		return out[i].ID < out[j].ID
+	})
+	return out
 }
 
 // ProjectedLayers encapsulates all 7 layers of OSCAL artifacts for a framework.
@@ -44,6 +131,7 @@ func ProjectAllLayers(f Framework) (*ProjectedLayers, error) {
 	if err != nil {
 		return nil, fmt.Errorf("get catalog for %s: %w", f.ID(), err)
 	}
+	ts := deterministicTimestamp(catData)
 
 	var profData []byte
 	if f.HasProfile() {
@@ -52,33 +140,33 @@ func ProjectAllLayers(f Framework) (*ProjectedLayers, error) {
 			return nil, fmt.Errorf("get profile for %s: %w", f.ID(), err)
 		}
 	} else {
-		profData, err = ProjectProfile(f, ctrls)
+		profData, err = projectProfileWithTimestamp(f, ctrls, ts)
 		if err != nil {
 			return nil, fmt.Errorf("project profile for %s: %w", f.ID(), err)
 		}
 	}
 
-	cdData, err := ProjectComponentDefinition(f, ctrls)
+	cdData, err := projectComponentDefinitionWithTimestamp(f, ctrls, ts)
 	if err != nil {
 		return nil, fmt.Errorf("project component-definition for %s: %w", f.ID(), err)
 	}
 
-	sspData, err := ProjectSystemSecurityPlan(f, ctrls)
+	sspData, err := projectSystemSecurityPlanWithTimestamp(f, ctrls, ts)
 	if err != nil {
 		return nil, fmt.Errorf("project system-security-plan for %s: %w", f.ID(), err)
 	}
 
-	apData, err := ProjectAssessmentPlan(f, ctrls)
+	apData, err := projectAssessmentPlanWithTimestamp(f, ctrls, ts)
 	if err != nil {
 		return nil, fmt.Errorf("project assessment-plan for %s: %w", f.ID(), err)
 	}
 
-	arData, err := ProjectAssessmentResults(f, ctrls)
+	arData, err := projectAssessmentResultsWithTimestamp(f, ctrls, ts)
 	if err != nil {
 		return nil, fmt.Errorf("project assessment-results for %s: %w", f.ID(), err)
 	}
 
-	poamData, err := ProjectPOAM(f, ctrls)
+	poamData, err := projectPOAMWithTimestamp(f, ctrls, ts)
 	if err != nil {
 		return nil, fmt.Errorf("project poam for %s: %w", f.ID(), err)
 	}
@@ -96,12 +184,11 @@ func ProjectAllLayers(f Framework) (*ProjectedLayers, error) {
 
 // ProjectProfile generates an OSCAL 1.2.3 Profile importing the framework's catalog.
 func ProjectProfile(f Framework, ctrls []ControlInfo) ([]byte, error) {
-	now := time.Now().UTC().Format(time.RFC3339)
-	var withIDs []string
-	for _, c := range ctrls {
-		withIDs = append(withIDs, c.ID)
-	}
-	sort.Strings(withIDs)
+	return projectProfileWithTimestamp(f, ctrls, frameworkTimestamp(f))
+}
+
+func projectProfileWithTimestamp(f Framework, ctrls []ControlInfo, now string) ([]byte, error) {
+	withIDs := sortedUniqueControlIDs(ctrls)
 
 	profDoc := map[string]interface{}{
 		"profile": map[string]interface{}{
@@ -130,12 +217,15 @@ func ProjectProfile(f Framework, ctrls []ControlInfo) ([]byte, error) {
 
 // ProjectComponentDefinition generates an OSCAL 1.2.3 Component Definition.
 func ProjectComponentDefinition(f Framework, ctrls []ControlInfo) ([]byte, error) {
-	now := time.Now().UTC().Format(time.RFC3339)
+	return projectComponentDefinitionWithTimestamp(f, ctrls, frameworkTimestamp(f))
+}
+
+func projectComponentDefinitionWithTimestamp(f Framework, ctrls []ControlInfo, now string) ([]byte, error) {
 	compUUID := makeProjectUUID(f.ID(), "component", "core-platform")
 	implUUID := makeProjectUUID(f.ID(), "component-impl", "baseline")
 
 	var implReqs []map[string]interface{}
-	for _, c := range ctrls {
+	for _, c := range sortedUniqueControls(ctrls) {
 		req := map[string]interface{}{
 			"uuid":        makeProjectUUID(f.ID(), "component-impl-req", c.ID),
 			"control-id":  c.ID,
@@ -177,7 +267,10 @@ func ProjectComponentDefinition(f Framework, ctrls []ControlInfo) ([]byte, error
 
 // ProjectSystemSecurityPlan generates an OSCAL 1.2.3 System Security Plan.
 func ProjectSystemSecurityPlan(f Framework, ctrls []ControlInfo) ([]byte, error) {
-	now := time.Now().UTC().Format(time.RFC3339)
+	return projectSystemSecurityPlanWithTimestamp(f, ctrls, frameworkTimestamp(f))
+}
+
+func projectSystemSecurityPlanWithTimestamp(f Framework, ctrls []ControlInfo, now string) ([]byte, error) {
 	userUUID := makeProjectUUID(f.ID(), "user", "sec-admin")
 	compUUID := makeProjectUUID(f.ID(), "ssp-component", "core-system")
 
@@ -187,7 +280,7 @@ func ProjectSystemSecurityPlan(f Framework, ctrls []ControlInfo) ([]byte, error)
 	}
 
 	var implReqs []map[string]interface{}
-	for _, c := range ctrls {
+	for _, c := range sortedUniqueControls(ctrls) {
 		byCompUUID := makeProjectUUID(f.ID(), "by-comp", c.ID)
 		irUUID := makeProjectUUID(f.ID(), "ssp-impl-req", c.ID)
 
@@ -312,11 +405,13 @@ func ProjectSystemSecurityPlan(f Framework, ctrls []ControlInfo) ([]byte, error)
 
 // ProjectAssessmentPlan generates an OSCAL 1.2.3 Assessment Plan.
 func ProjectAssessmentPlan(f Framework, ctrls []ControlInfo) ([]byte, error) {
-	now := time.Now().UTC().Format(time.RFC3339)
+	return projectAssessmentPlanWithTimestamp(f, ctrls, frameworkTimestamp(f))
+}
 
+func projectAssessmentPlanWithTimestamp(f Framework, ctrls []ControlInfo, now string) ([]byte, error) {
 	// Group tasks by control family
 	famMap := make(map[string][]ControlInfo)
-	for _, c := range ctrls {
+	for _, c := range sortedUniqueControls(ctrls) {
 		fam := c.FamilyID
 		if fam == "" {
 			fam = "GENERAL"
@@ -345,6 +440,32 @@ func ProjectAssessmentPlan(f Framework, ctrls []ControlInfo) ([]byte, error) {
 			"description": fmt.Sprintf("Verify and examine implementation of %d controls in the %s family for %s.", len(famCtrls), famName, f.Title()),
 		})
 	}
+	if len(tasks) == 0 {
+		tasks = []map[string]interface{}{
+			{
+				"uuid":        makeProjectUUID(f.ID(), "ap-task", "baseline"),
+				"type":        "examination",
+				"title":       fmt.Sprintf("Assess Baseline Controls (%s)", f.Title()),
+				"description": fmt.Sprintf("Verify and examine baseline control implementations for %s.", f.Title()),
+			},
+		}
+	}
+
+	sortedIDs := sortedUniqueControlIDs(ctrls)
+	selection := map[string]interface{}{
+		"description": fmt.Sprintf("All controls in %s", f.Title()),
+	}
+	if len(sortedIDs) > 0 {
+		incControls := make([]map[string]interface{}, 0, len(sortedIDs))
+		for _, cid := range sortedIDs {
+			incControls = append(incControls, map[string]interface{}{
+				"control-id": cid,
+			})
+		}
+		selection["include-controls"] = incControls
+	} else {
+		selection["include-all"] = map[string]interface{}{}
+	}
 
 	apDoc := map[string]interface{}{
 		"assessment-plan": map[string]interface{}{
@@ -359,12 +480,7 @@ func ProjectAssessmentPlan(f Framework, ctrls []ControlInfo) ([]byte, error) {
 				"href": "./system-security-plan.json",
 			},
 			"reviewed-controls": map[string]interface{}{
-				"control-selections": []map[string]interface{}{
-					{
-						"description": fmt.Sprintf("All controls in %s", f.Title()),
-						"include-all": map[string]interface{}{},
-					},
-				},
+				"control-selections": []map[string]interface{}{selection},
 			},
 			"tasks": tasks,
 		},
@@ -375,15 +491,18 @@ func ProjectAssessmentPlan(f Framework, ctrls []ControlInfo) ([]byte, error) {
 
 // ProjectAssessmentResults generates an OSCAL 1.2.3 Assessment Results document.
 func ProjectAssessmentResults(f Framework, ctrls []ControlInfo) ([]byte, error) {
-	now := time.Now().UTC().Format(time.RFC3339)
+	return projectAssessmentResultsWithTimestamp(f, ctrls, frameworkTimestamp(f))
+}
+
+func projectAssessmentResultsWithTimestamp(f Framework, ctrls []ControlInfo, now string) ([]byte, error) {
 	resUUID := makeProjectUUID(f.ID(), "ar-result", "baseline")
 
 	var observations []map[string]interface{}
 	var findings []map[string]interface{}
 
-	// Sample representative observations & findings across families
+	// Sample representative observations & findings across families in deterministic order
 	famSeen := make(map[string]bool)
-	for _, c := range ctrls {
+	for _, c := range sortedUniqueControls(ctrls) {
 		if !famSeen[c.FamilyID] {
 			famSeen[c.FamilyID] = true
 			obsUUID := makeProjectUUID(f.ID(), "obs", c.ID)
@@ -415,6 +534,38 @@ func ProjectAssessmentResults(f Framework, ctrls []ControlInfo) ([]byte, error) 
 		}
 	}
 
+	sortedIDs := sortedUniqueControlIDs(ctrls)
+	selection := map[string]interface{}{
+		"description": fmt.Sprintf("All controls evaluated for %s", f.Title()),
+	}
+	if len(sortedIDs) > 0 {
+		incControls := make([]map[string]interface{}, 0, len(sortedIDs))
+		for _, cid := range sortedIDs {
+			incControls = append(incControls, map[string]interface{}{
+				"control-id": cid,
+			})
+		}
+		selection["include-controls"] = incControls
+	} else {
+		selection["include-all"] = map[string]interface{}{}
+	}
+
+	resultEntry := map[string]interface{}{
+		"uuid":        resUUID,
+		"title":       fmt.Sprintf("%s Assessment Results", f.Title()),
+		"description": fmt.Sprintf("Assessment evaluation findings and observations for %s.", f.Title()),
+		"start":       now,
+		"reviewed-controls": map[string]interface{}{
+			"control-selections": []map[string]interface{}{selection},
+		},
+	}
+	if len(observations) > 0 {
+		resultEntry["observations"] = observations
+	}
+	if len(findings) > 0 {
+		resultEntry["findings"] = findings
+	}
+
 	arDoc := map[string]interface{}{
 		"assessment-results": map[string]interface{}{
 			"uuid": makeProjectUUID(f.ID(), "assessment-results"),
@@ -427,24 +578,7 @@ func ProjectAssessmentResults(f Framework, ctrls []ControlInfo) ([]byte, error) 
 			"import-ap": map[string]interface{}{
 				"href": "./assessment-plan.json",
 			},
-			"results": []map[string]interface{}{
-				{
-					"uuid":        resUUID,
-					"title":       fmt.Sprintf("%s Assessment Results", f.Title()),
-					"description": fmt.Sprintf("Assessment evaluation findings and observations for %s.", f.Title()),
-					"start":       now,
-					"reviewed-controls": map[string]interface{}{
-						"control-selections": []map[string]interface{}{
-							{
-								"description": fmt.Sprintf("All controls evaluated for %s", f.Title()),
-								"include-all": map[string]interface{}{},
-							},
-						},
-					},
-					"observations": observations,
-					"findings":     findings,
-				},
-			},
+			"results": []map[string]interface{}{resultEntry},
 		},
 	}
 
@@ -453,11 +587,40 @@ func ProjectAssessmentResults(f Framework, ctrls []ControlInfo) ([]byte, error) 
 
 // ProjectPOAM generates an OSCAL 1.2.3 Plan of Action and Milestones.
 func ProjectPOAM(f Framework, ctrls []ControlInfo) ([]byte, error) {
-	now := time.Now().UTC().Format(time.RFC3339)
+	return projectPOAMWithTimestamp(f, ctrls, frameworkTimestamp(f))
+}
 
-	sampleTitle := "Initial Baseline Tailoring and Continuous Monitoring"
-	if len(ctrls) > 0 {
-		sampleTitle = fmt.Sprintf("Compliance Roadmap and Parameter Tailoring for %s", f.Title())
+func projectPOAMWithTimestamp(f Framework, ctrls []ControlInfo, now string) ([]byte, error) {
+	sortedCtrls := sortedUniqueControls(ctrls)
+	var poamItems []map[string]interface{}
+	if len(sortedCtrls) > 0 {
+		poamItems = make([]map[string]interface{}, 0, len(sortedCtrls))
+		for _, c := range sortedCtrls {
+			title := strings.TrimSpace(c.Title)
+			if title == "" {
+				title = c.ID
+			}
+			poamItems = append(poamItems, map[string]interface{}{
+				"uuid":        makeProjectUUID(f.ID(), "poam-item", c.ID),
+				"title":       fmt.Sprintf("Continuous Monitoring & Tailoring: %s (%s)", c.ID, title),
+				"description": fmt.Sprintf("Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control %s in %s.", c.ID, f.Title()),
+				"props": []map[string]interface{}{
+					{
+						"name":  "control-id",
+						"ns":    xoscalPropNS,
+						"value": c.ID,
+					},
+				},
+			})
+		}
+	} else {
+		poamItems = []map[string]interface{}{
+			{
+				"uuid":        makeProjectUUID(f.ID(), "poam-item", "1"),
+				"title":       "Initial Baseline Tailoring and Continuous Monitoring",
+				"description": fmt.Sprintf("Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for %s.", f.Title()),
+			},
+		}
 	}
 
 	poamDoc := map[string]interface{}{
@@ -472,27 +635,18 @@ func ProjectPOAM(f Framework, ctrls []ControlInfo) ([]byte, error) {
 			"import-ssp": map[string]interface{}{
 				"href": "./system-security-plan.json",
 			},
-			"poam-items": []map[string]interface{}{
-				{
-					"uuid":        makeProjectUUID(f.ID(), "poam-item", "1"),
-					"title":       sampleTitle,
-					"description": fmt.Sprintf("Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for %s.", f.Title()),
-				},
-			},
+			"poam-items": poamItems,
 		},
 	}
 
 	return json.MarshalIndent(poamDoc, "", "  ")
 }
 
-// GenerateAllLayersFromKG seeds the framework into an in-memory SQLite Knowledge Graph
-// and synthesizes all 7 OSCAL 1.2.3 layers via the unified protobuf oscal.Generator pipeline.
+// GenerateAllLayersFromKG seeds the framework into an in-memory Knowledge Graph store
+// and synthesizes all 7 OSCAL 1.2.3 layers via a single snapshot pass in oscal.Generator.
 func GenerateAllLayersFromKG(ctx context.Context, f Framework) (*ProjectedLayers, error) {
-	store, err := kg.NewSQLiteStore(":memory:", dbutil.PoolConfig{})
-	if err != nil {
-		return nil, fmt.Errorf("create in-memory kg store: %w", err)
-	}
-	defer store.Close()
+	store := newMemKGStore()
+	defer func() { _ = store.Close() }()
 
 	if err := SeedFramework(ctx, store, f); err != nil {
 		return nil, fmt.Errorf("seed framework %s: %w", f.ID(), err)
@@ -506,66 +660,36 @@ func GenerateAllLayersFromKG(ctx context.Context, f Framework) (*ProjectedLayers
 	}
 
 	gen := oscal.NewGenerator(store)
-
-	cat, err := gen.GenerateCatalog(ctx, snapName, f.ID())
+	all, err := gen.GenerateAllArtifacts(ctx, snapName, f.ID(), nil)
 	if err != nil {
-		return nil, fmt.Errorf("generate catalog for %s: %w", f.ID(), err)
+		return nil, fmt.Errorf("generate all artifacts for %s: %w", f.ID(), err)
 	}
-	catBytes, err := oscal.ExportCatalogJSON(cat)
+
+	catBytes, err := oscal.ExportCatalogJSON(all.Catalog)
 	if err != nil {
 		return nil, fmt.Errorf("export catalog for %s: %w", f.ID(), err)
 	}
-
-	prof, err := gen.GenerateProfile(ctx, snapName, f.ID(), nil)
-	if err != nil {
-		return nil, fmt.Errorf("generate profile for %s: %w", f.ID(), err)
-	}
-	profBytes, err := oscal.ExportProfileJSON(prof)
+	profBytes, err := oscal.ExportProfileJSON(all.Profile)
 	if err != nil {
 		return nil, fmt.Errorf("export profile for %s: %w", f.ID(), err)
 	}
-
-	cd, err := gen.GenerateComponentDefinition(ctx, snapName, f.ID())
-	if err != nil {
-		return nil, fmt.Errorf("generate component-definition for %s: %w", f.ID(), err)
-	}
-	cdBytes, err := oscal.ExportComponentDefinitionJSON(cd)
+	cdBytes, err := oscal.ExportComponentDefinitionJSON(all.ComponentDefinition)
 	if err != nil {
 		return nil, fmt.Errorf("export component-definition for %s: %w", f.ID(), err)
 	}
-
-	ssp, err := gen.GenerateSSP(ctx, snapName, f.ID())
-	if err != nil {
-		return nil, fmt.Errorf("generate ssp for %s: %w", f.ID(), err)
-	}
-	sspBytes, err := oscal.ExportSSPJSON(ssp)
+	sspBytes, err := oscal.ExportSSPJSON(all.SSP)
 	if err != nil {
 		return nil, fmt.Errorf("export ssp for %s: %w", f.ID(), err)
 	}
-
-	ap, err := gen.GenerateAssessmentPlan(ctx, snapName, f.ID())
-	if err != nil {
-		return nil, fmt.Errorf("generate assessment-plan for %s: %w", f.ID(), err)
-	}
-	apBytes, err := oscal.ExportAssessmentPlanJSON(ap)
+	apBytes, err := oscal.ExportAssessmentPlanJSON(all.AssessmentPlan)
 	if err != nil {
 		return nil, fmt.Errorf("export assessment-plan for %s: %w", f.ID(), err)
 	}
-
-	ar, err := gen.GenerateAssessmentResults(ctx, snapName, f.ID())
-	if err != nil {
-		return nil, fmt.Errorf("generate assessment-results for %s: %w", f.ID(), err)
-	}
-	arBytes, err := oscal.ExportAssessmentResultsJSON(ar)
+	arBytes, err := oscal.ExportAssessmentResultsJSON(all.AssessmentResults)
 	if err != nil {
 		return nil, fmt.Errorf("export assessment-results for %s: %w", f.ID(), err)
 	}
-
-	poam, err := gen.GeneratePOAM(ctx, snapName, f.ID())
-	if err != nil {
-		return nil, fmt.Errorf("generate poam for %s: %w", f.ID(), err)
-	}
-	poamBytes, err := oscal.ExportPOAMJSON(poam)
+	poamBytes, err := oscal.ExportPOAMJSON(all.POAM)
 	if err != nil {
 		return nil, fmt.Errorf("export poam for %s: %w", f.ID(), err)
 	}

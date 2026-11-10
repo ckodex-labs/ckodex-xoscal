@@ -3,11 +3,14 @@ package main
 import (
 	"context"
 	"encoding/json"
+	"errors"
 	"flag"
 	"fmt"
+	"io"
 	"log"
 	"os"
 	"os/exec"
+	"path/filepath"
 	"strings"
 
 	mappingv1 "github.com/mchorfa/xoscal/proto/oscal/mapping/v1"
@@ -18,18 +21,26 @@ import (
 )
 
 func main() {
-	var (
-		dsn                 = flag.String("dsn", "oscal.db", "SQLite DSN")
-		dbAlias             = flag.String("db", "", "Alias for -dsn")
-		snapshot            = flag.String("snapshot", "", "Snapshot name")
-		framework           = flag.String("framework", "eu-ai-act", "Framework identifier")
-		outDir              = flag.String("out", "./oscal-out", "Output directory")
-		arOnly              = flag.Bool("assessment-results-only", false, "Emit only assessment-results (useful for CI)")
-		validate            = flag.Bool("validate", false, "Schema-validate each artifact after generation; fail on non-compliance")
-		validateConstraints = flag.Bool("validate-constraints", false, "Also run oscal-cli Metaschema constraint validation after generation; requires oscal-cli on PATH")
-		oscalCLIPath        = flag.String("oscal-cli", "", "path to oscal-cli binary (default: search PATH)")
-	)
-	flag.Parse()
+	if err := run(os.Args[1:], os.Stdout); err != nil {
+		log.Fatal(err)
+	}
+}
+
+func run(args []string, stdout io.Writer) error {
+	fs := flag.NewFlagSet("xoscal-generate", flag.ContinueOnError)
+	fs.SetOutput(io.Discard)
+	dsn := fs.String("dsn", "oscal.db", "SQLite DSN")
+	dbAlias := fs.String("db", "", "Alias for -dsn")
+	snapshot := fs.String("snapshot", "", "Snapshot name")
+	framework := fs.String("framework", "eu-ai-act", "Framework identifier")
+	outDir := fs.String("out", "./oscal-out", "Output directory")
+	arOnly := fs.Bool("assessment-results-only", false, "Emit only assessment-results (useful for CI)")
+	validate := fs.Bool("validate", false, "Schema-validate each artifact after generation; fail on non-compliance")
+	validateConstraints := fs.Bool("validate-constraints", false, "Also run oscal-cli Metaschema constraint validation after generation; requires oscal-cli on PATH")
+	oscalCLIPath := fs.String("oscal-cli", "", "path to oscal-cli binary (default: search PATH)")
+	if err := fs.Parse(args); err != nil {
+		return err
+	}
 
 	isPlaceholder := func(s string) bool {
 		s = strings.TrimSpace(s)
@@ -56,21 +67,21 @@ func main() {
 	}
 
 	if *snapshot == "" {
-		log.Fatal("-snapshot is required")
+		return errors.New("-snapshot is required")
 	}
 
 	store, err := kg.NewSQLiteStore(*dsn, dbutil.PoolConfig{})
 	if err != nil {
-		log.Fatalf("open store: %v", err)
+		return fmt.Errorf("open store: %w", err)
 	}
-	defer store.Close()
+	defer func() { _ = store.Close() }()
 
 	gen := oscal.NewGenerator(store)
 	ctx := context.Background()
 
 	entities, err := store.GetSnapshot(ctx, *snapshot)
 	if err != nil {
-		log.Fatalf("get snapshot %q: %v", *snapshot, err)
+		return fmt.Errorf("get snapshot %q: %w", *snapshot, err)
 	}
 	reqCount := 0
 	for _, e := range entities {
@@ -83,11 +94,11 @@ func main() {
 		}
 	}
 	if reqCount == 0 {
-		log.Fatalf("snapshot %q contains 0 requirements for framework %q", *snapshot, *framework)
+		return fmt.Errorf("snapshot %q contains 0 requirements for framework %q", *snapshot, *framework)
 	}
 
-	if err := os.MkdirAll(*outDir, 0750); err != nil {
-		log.Fatalf("mkdir: %v", err)
+	if err := os.MkdirAll(*outDir, 0o750); err != nil {
+		return fmt.Errorf("mkdir: %w", err)
 	}
 
 	// Optional schema validator (tier 1)
@@ -95,7 +106,7 @@ func main() {
 	if *validate || *validateConstraints {
 		v, err := schemavalidate.NewValidator()
 		if err != nil {
-			log.Fatalf("init schema validator: %v", err)
+			return fmt.Errorf("init schema validator: %w", err)
 		}
 		validator = v
 	}
@@ -105,7 +116,7 @@ func main() {
 	if *validateConstraints {
 		cp, err := resolveOSCALCLI(*oscalCLIPath)
 		if err != nil {
-			log.Fatalf("constraint validation requested but oscal-cli not found: %v", err)
+			return fmt.Errorf("constraint validation requested but oscal-cli not found: %w", err)
 		}
 		cliPath = cp
 	}
@@ -113,156 +124,138 @@ func main() {
 	if *arOnly {
 		ar, err := gen.GenerateAssessmentResults(ctx, *snapshot, *framework)
 		if err != nil {
-			log.Fatalf("generate assessment-results: %v", err)
+			return fmt.Errorf("generate assessment-results: %w", err)
 		}
-		path := fmt.Sprintf("%s/assessment-results.json", *outDir)
-		writeOSCAL(path, func() ([]byte, error) {
+		path := filepath.Join(*outDir, "assessment-results.json")
+		if err := writeOSCAL(path, func() ([]byte, error) {
 			return oscal.ExportAssessmentResultsJSON(ar)
-		}, validator, schemavalidate.KindAssessmentResults)
-		fmt.Printf("Assessment results written to %s\n", path)
-		if *validateConstraints {
-			runConstraintValidation(cliPath, path, schemavalidate.KindAssessmentResults)
+		}, validator, schemavalidate.KindAssessmentResults); err != nil {
+			return err
 		}
-		return
+		_, _ = fmt.Fprintf(stdout, "Assessment results written to %s\n", path)
+		if *validateConstraints {
+			if err := runConstraintValidation(cliPath, path, schemavalidate.KindAssessmentResults, stdout); err != nil {
+				return err
+			}
+		}
+		return nil
 	}
 
 	res, err := gen.GenerateAllArtifacts(ctx, *snapshot, *framework, nil)
 	if err != nil {
-		log.Fatalf("generate all: %v", err)
+		return fmt.Errorf("generate all: %w", err)
 	}
 
-	// Track written files for tier-2 constraint validation.
-	var writtenFiles []struct {
+	type writtenFile struct {
 		path string
 		kind schemavalidate.ArtifactKind
 	}
+	var writtenFiles []writtenFile
 
 	if res.Catalog != nil {
 		c := res.Catalog
-		path := fmt.Sprintf("%s/catalog.json", *outDir)
-		writeOSCAL(path, func() ([]byte, error) {
-			return oscal.ExportCatalogJSON(c)
-		}, validator, schemavalidate.KindCatalog)
-		writtenFiles = append(writtenFiles, struct {
-			path string
-			kind schemavalidate.ArtifactKind
-		}{path, schemavalidate.KindCatalog})
+		path := filepath.Join(*outDir, "catalog.json")
+		if err := writeOSCAL(path, func() ([]byte, error) { return oscal.ExportCatalogJSON(c) }, validator, schemavalidate.KindCatalog); err != nil {
+			return err
+		}
+		writtenFiles = append(writtenFiles, writtenFile{path, schemavalidate.KindCatalog})
 	}
 	if res.Profile != nil {
 		p := res.Profile
-		path := fmt.Sprintf("%s/profile.json", *outDir)
-		writeOSCAL(path, func() ([]byte, error) {
-			return oscal.ExportProfileJSON(p)
-		}, validator, schemavalidate.KindProfile)
-		writtenFiles = append(writtenFiles, struct {
-			path string
-			kind schemavalidate.ArtifactKind
-		}{path, schemavalidate.KindProfile})
+		path := filepath.Join(*outDir, "profile.json")
+		if err := writeOSCAL(path, func() ([]byte, error) { return oscal.ExportProfileJSON(p) }, validator, schemavalidate.KindProfile); err != nil {
+			return err
+		}
+		writtenFiles = append(writtenFiles, writtenFile{path, schemavalidate.KindProfile})
 	}
 	if res.SSP != nil {
 		s := res.SSP
-		path := fmt.Sprintf("%s/ssp.json", *outDir)
-		writeOSCAL(path, func() ([]byte, error) {
-			return oscal.ExportSSPJSON(s)
-		}, validator, schemavalidate.KindSSP)
-		writtenFiles = append(writtenFiles, struct {
-			path string
-			kind schemavalidate.ArtifactKind
-		}{path, schemavalidate.KindSSP})
+		path := filepath.Join(*outDir, "ssp.json")
+		if err := writeOSCAL(path, func() ([]byte, error) { return oscal.ExportSSPJSON(s) }, validator, schemavalidate.KindSSP); err != nil {
+			return err
+		}
+		writtenFiles = append(writtenFiles, writtenFile{path, schemavalidate.KindSSP})
 	}
 	if res.ComponentDefinition != nil {
 		c := res.ComponentDefinition
-		path := fmt.Sprintf("%s/component-definition.json", *outDir)
-		writeOSCAL(path, func() ([]byte, error) {
-			return oscal.ExportComponentDefinitionJSON(c)
-		}, validator, schemavalidate.KindComponentDefinition)
-		writtenFiles = append(writtenFiles, struct {
-			path string
-			kind schemavalidate.ArtifactKind
-		}{path, schemavalidate.KindComponentDefinition})
+		path := filepath.Join(*outDir, "component-definition.json")
+		if err := writeOSCAL(path, func() ([]byte, error) { return oscal.ExportComponentDefinitionJSON(c) }, validator, schemavalidate.KindComponentDefinition); err != nil {
+			return err
+		}
+		writtenFiles = append(writtenFiles, writtenFile{path, schemavalidate.KindComponentDefinition})
 	}
 	if res.AssessmentPlan != nil {
 		a := res.AssessmentPlan
-		path := fmt.Sprintf("%s/assessment-plan.json", *outDir)
-		writeOSCAL(path, func() ([]byte, error) {
-			return oscal.ExportAssessmentPlanJSON(a)
-		}, validator, schemavalidate.KindAssessmentPlan)
-		writtenFiles = append(writtenFiles, struct {
-			path string
-			kind schemavalidate.ArtifactKind
-		}{path, schemavalidate.KindAssessmentPlan})
+		path := filepath.Join(*outDir, "assessment-plan.json")
+		if err := writeOSCAL(path, func() ([]byte, error) { return oscal.ExportAssessmentPlanJSON(a) }, validator, schemavalidate.KindAssessmentPlan); err != nil {
+			return err
+		}
+		writtenFiles = append(writtenFiles, writtenFile{path, schemavalidate.KindAssessmentPlan})
 	}
 	if res.AssessmentResults != nil {
 		a := res.AssessmentResults
-		path := fmt.Sprintf("%s/assessment-results.json", *outDir)
-		writeOSCAL(path, func() ([]byte, error) {
-			return oscal.ExportAssessmentResultsJSON(a)
-		}, validator, schemavalidate.KindAssessmentResults)
-		writtenFiles = append(writtenFiles, struct {
-			path string
-			kind schemavalidate.ArtifactKind
-		}{path, schemavalidate.KindAssessmentResults})
+		path := filepath.Join(*outDir, "assessment-results.json")
+		if err := writeOSCAL(path, func() ([]byte, error) { return oscal.ExportAssessmentResultsJSON(a) }, validator, schemavalidate.KindAssessmentResults); err != nil {
+			return err
+		}
+		writtenFiles = append(writtenFiles, writtenFile{path, schemavalidate.KindAssessmentResults})
 	}
 	if res.POAM != nil {
 		p := res.POAM
-		path := fmt.Sprintf("%s/poam.json", *outDir)
-		writeOSCAL(path, func() ([]byte, error) {
-			return oscal.ExportPOAMJSON(p)
-		}, validator, schemavalidate.KindPOAM)
-		writtenFiles = append(writtenFiles, struct {
-			path string
-			kind schemavalidate.ArtifactKind
-		}{path, schemavalidate.KindPOAM})
+		path := filepath.Join(*outDir, "poam.json")
+		if err := writeOSCAL(path, func() ([]byte, error) { return oscal.ExportPOAMJSON(p) }, validator, schemavalidate.KindPOAM); err != nil {
+			return err
+		}
+		writtenFiles = append(writtenFiles, writtenFile{path, schemavalidate.KindPOAM})
 	}
 	if len(res.Mappings) > 0 {
 		mappingsData, err := json.MarshalIndent(struct{ Maps []*mappingv1.Map }{Maps: res.Mappings}, "", "  ")
 		if err != nil {
-			log.Fatalf("marshal mappings: %v", err)
+			return fmt.Errorf("marshal mappings: %w", err)
 		}
-		mappingsPath := fmt.Sprintf("%s/mappings.json", *outDir)
+		mappingsPath := filepath.Join(*outDir, "mappings.json")
 		// #nosec G304,G306 -- mappingsPath is beneath the explicit output directory selected by the operator.
-		if err := os.WriteFile(mappingsPath, mappingsData, 0600); err != nil {
-			log.Fatalf("write mappings: %v", err)
+		if err := os.WriteFile(mappingsPath, mappingsData, 0o600); err != nil {
+			return fmt.Errorf("write mappings: %w", err)
 		}
 		if _, err := dbutil.WriteDigestSidecar(mappingsPath); err != nil {
-			log.Fatalf("write digest sidecar for %s: %v", mappingsPath, err)
+			return fmt.Errorf("write digest sidecar for %s: %w", mappingsPath, err)
 		}
 	}
 
-	fmt.Printf("OSCAL artifacts written to %s\n", *outDir)
+	_, _ = fmt.Fprintf(stdout, "OSCAL artifacts written to %s\n", *outDir)
 
-	// Tier 2: Metaschema constraint validation via oscal-cli.
 	if *validateConstraints {
 		for _, wf := range writtenFiles {
-			runConstraintValidation(cliPath, wf.path, wf.kind)
+			if err := runConstraintValidation(cliPath, wf.path, wf.kind, stdout); err != nil {
+				return err
+			}
 		}
-		fmt.Println("All artifacts passed Metaschema constraint validation")
+		_, _ = fmt.Fprintln(stdout, "All artifacts passed Metaschema constraint validation")
 	}
+	return nil
 }
 
-// writeOSCAL writes OSCAL-compliant JSON to the given path. If a validator
-// and kind are provided, the artifact is schema-validated and the command
-// fails on non-compliance.
-func writeOSCAL(path string, marshal func() ([]byte, error), validator *schemavalidate.Validator, kind schemavalidate.ArtifactKind) {
+func writeOSCAL(path string, marshal func() ([]byte, error), validator *schemavalidate.Validator, kind schemavalidate.ArtifactKind) error {
 	b, err := marshal()
 	if err != nil {
-		log.Fatalf("marshal %s: %v", path, err)
+		return fmt.Errorf("marshal %s: %w", path, err)
 	}
 	if validator != nil {
 		if err := validator.Validate(b, kind); err != nil {
-			log.Fatalf("schema validation failed for %s: %v", path, err)
+			return fmt.Errorf("schema validation failed for %s: %w", path, err)
 		}
 	}
 	// #nosec G304,G306 -- path is the explicit output destination selected by the CLI operator.
-	if err := os.WriteFile(path, b, 0600); err != nil {
-		log.Fatalf("write %s: %v", path, err)
+	if err := os.WriteFile(path, b, 0o600); err != nil {
+		return fmt.Errorf("write %s: %w", path, err)
 	}
 	if _, err := dbutil.WriteDigestSidecar(path); err != nil {
-		log.Fatalf("write digest sidecar for %s: %v", path, err)
+		return fmt.Errorf("write digest sidecar for %s: %w", path, err)
 	}
+	return nil
 }
 
-// kindToCLIModel maps an ArtifactKind to the oscal-cli subcommand name.
 var kindToCLIModel = map[schemavalidate.ArtifactKind]string{
 	schemavalidate.KindCatalog:             "catalog",
 	schemavalidate.KindProfile:             "profile",
@@ -273,24 +266,21 @@ var kindToCLIModel = map[schemavalidate.ArtifactKind]string{
 	schemavalidate.KindPOAM:                "poam",
 }
 
-// runConstraintValidation runs oscal-cli <model> validate on the given file.
-// It fails the command (log.Fatal) on any constraint violation.
-func runConstraintValidation(cliPath, filePath string, kind schemavalidate.ArtifactKind) {
+func runConstraintValidation(cliPath, filePath string, kind schemavalidate.ArtifactKind, stdout io.Writer) error {
 	model, ok := kindToCLIModel[kind]
 	if !ok {
-		log.Printf("warning: no oscal-cli subcommand for kind %s, skipping constraint validation", kind.Name)
-		return
+		return nil
 	}
 	// #nosec G204 -- cliPath is resolved from the explicit flag or PATH by resolveOSCALCLI.
 	cmd := exec.Command(cliPath, model, "validate", filePath)
 	output, err := cmd.CombinedOutput()
 	if err != nil {
-		log.Fatalf("Metaschema constraint validation failed for %s:\n%s", filePath, string(output))
+		return fmt.Errorf("metaschema constraint validation failed for %s:\n%s", filePath, string(output))
 	}
-	fmt.Printf("  constraint-valid: %s\n", filePath)
+	_, _ = fmt.Fprintf(stdout, "  constraint-valid: %s\n", filePath)
+	return nil
 }
 
-// resolveOSCALCLI finds the oscal-cli binary: explicit flag > PATH lookup.
 func resolveOSCALCLI(explicit string) (string, error) {
 	if explicit != "" {
 		if _, err := exec.LookPath(explicit); err != nil {

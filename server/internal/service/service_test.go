@@ -7,6 +7,7 @@ import (
 
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
+	"google.golang.org/grpc/credentials/insecure"
 	"google.golang.org/grpc/status"
 	"google.golang.org/grpc/test/bufconn"
 
@@ -33,18 +34,18 @@ func newTestServer(t *testing.T) (servicesv1.OscalServiceClient, func()) {
 		}
 	}()
 
-	conn, err := grpc.Dial("bufnet",
+	conn, err := grpc.NewClient("passthrough:///bufnet",
 		grpc.WithContextDialer(func(context.Context, string) (net.Conn, error) { return lis.Dial() }),
-		grpc.WithInsecure(),
+		grpc.WithTransportCredentials(insecure.NewCredentials()),
 	)
 	if err != nil {
 		t.Fatalf("dial: %v", err)
 	}
 
 	cleanup := func() {
-		conn.Close()
+		_ = conn.Close()
 		grpcServer.GracefulStop()
-		s.Close()
+		_ = s.Close()
 	}
 
 	return servicesv1.NewOscalServiceClient(conn), cleanup

@@ -15,7 +15,7 @@ func TestSeedKG(t *testing.T) {
 	if err != nil {
 		t.Fatalf("create in-memory kg store: %v", err)
 	}
-	defer store.Close()
+	defer func() { _ = store.Close() }()
 
 	if err := SeedKG(ctx, store); err != nil {
 		t.Fatalf("SeedKG failed: %v", err)

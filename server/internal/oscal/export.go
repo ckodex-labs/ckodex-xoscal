@@ -57,6 +57,17 @@ func ExportAssessmentResultsJSON(a *assessment_resultsv1.AssessmentResults) ([]b
 
 // ExportPOAMJSON serializes a plan of action and milestones to OSCAL-compliant JSON.
 func ExportPOAMJSON(p *poamv1.PlanOfActionAndMilestones) ([]byte, error) {
+	if p != nil && len(p.Risks) > 0 { //nolint:staticcheck // SA1019: strip deprecated compatibility field before protojson marshal
+		shallow := &poamv1.PlanOfActionAndMilestones{
+			Uuid:             p.Uuid,
+			Metadata:         p.Metadata,
+			ImportSsp:        p.ImportSsp,
+			LocalDefinitions: p.LocalDefinitions,
+			BackMatter:       p.BackMatter,
+			PoamItems:        p.PoamItems,
+		}
+		return marshalOSCALJSON(shallow, "plan-of-action-and-milestones")
+	}
 	return marshalOSCALJSON(p, "plan-of-action-and-milestones")
 }
 
@@ -102,61 +113,22 @@ type GenerateAllResult struct {
 	Mappings            []*mappingv1.Map
 }
 
-// GenerateAllArtifacts generates every supported artifact from a snapshot.
+// GenerateAllArtifacts generates every supported artifact from a snapshot
+// using a single snapshot read and single-pass entity decode.
 func (g *Generator) GenerateAllArtifacts(ctx context.Context, snapshotName, framework string, selected []string) (*GenerateAllResult, error) {
 	res := &GenerateAllResult{}
-	var errs []error
-
-	if catalog, err := g.GenerateCatalog(ctx, snapshotName, framework); err == nil {
-		res.Catalog = catalog
-	} else {
-		errs = append(errs, fmt.Errorf("catalog: %w", err))
+	snap, err := g.loadParsedSnapshot(ctx, snapshotName, framework, true)
+	if err != nil {
+		return res, fmt.Errorf("generate all: %w", err)
 	}
 
-	if profile, err := g.GenerateProfile(ctx, snapshotName, framework, selected); err == nil {
-		res.Profile = profile
-	} else {
-		errs = append(errs, fmt.Errorf("profile: %w", err))
-	}
-
-	if ssp, err := g.GenerateSSP(ctx, snapshotName, framework); err == nil {
-		res.SSP = ssp
-	} else {
-		errs = append(errs, fmt.Errorf("ssp: %w", err))
-	}
-
-	if compDef, err := g.GenerateComponentDefinition(ctx, snapshotName, framework); err == nil {
-		res.ComponentDefinition = compDef
-	} else {
-		errs = append(errs, fmt.Errorf("component-definition: %w", err))
-	}
-
-	if ap, err := g.GenerateAssessmentPlan(ctx, snapshotName, framework); err == nil {
-		res.AssessmentPlan = ap
-	} else {
-		errs = append(errs, fmt.Errorf("assessment-plan: %w", err))
-	}
-
-	if ar, err := g.GenerateAssessmentResults(ctx, snapshotName, framework); err == nil {
-		res.AssessmentResults = ar
-	} else {
-		errs = append(errs, fmt.Errorf("assessment-results: %w", err))
-	}
-
-	if poam, err := g.GeneratePOAM(ctx, snapshotName, framework); err == nil {
-		res.POAM = poam
-	} else {
-		errs = append(errs, fmt.Errorf("poam: %w", err))
-	}
-
-	if mappings, err := g.GenerateMappings(ctx, snapshotName); err == nil {
-		res.Mappings = mappings
-	} else {
-		errs = append(errs, fmt.Errorf("mappings: %w", err))
-	}
-
-	if len(errs) > 0 {
-		return res, fmt.Errorf("generate all: %d errors", len(errs))
-	}
+	res.Catalog = g.generateCatalogFromSnapshot(snap, snapshotName, framework)
+	res.Profile = g.generateProfileFromSnapshot(snap, snapshotName, framework, selected)
+	res.SSP = g.generateSSPFromSnapshot(snap, snapshotName, framework)
+	res.ComponentDefinition = g.generateComponentDefinitionFromSnapshot(snap, snapshotName, framework)
+	res.AssessmentPlan = g.generateAssessmentPlanFromSnapshot(snap, snapshotName, framework)
+	res.AssessmentResults = g.generateAssessmentResultsFromSnapshot(snap, snapshotName, framework)
+	res.POAM = g.generatePOAMFromSnapshot(snap, snapshotName, framework)
+	res.Mappings = g.generateMappingsFromSnapshot(snap)
 	return res, nil
 }

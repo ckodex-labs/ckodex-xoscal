@@ -127,7 +127,7 @@ func (s *SQLiteVectorStore) Search(ctx context.Context, query string, framework 
 	if err != nil {
 		return nil, fmt.Errorf("search: %w", err)
 	}
-	defer rows.Close()
+	defer func() { _ = rows.Close() }()
 
 	var out []SearchResult
 	for rows.Next() {
@@ -163,7 +163,7 @@ func (s *SQLiteVectorStore) VectorSearch(ctx context.Context, queryVec []float32
 	if err != nil {
 		return nil, fmt.Errorf("vector search: %w", err)
 	}
-	defer rows.Close()
+	defer func() { _ = rows.Close() }()
 
 	type scored struct {
 		result SearchResult

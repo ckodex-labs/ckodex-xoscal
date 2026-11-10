@@ -25,6 +25,9 @@ frameworks:
     filename: dfs-500-2023-11.yaml
 
   # Canada
+  - ref_id: cccs-itsp-10-033
+    jurisdiction: canada
+    filename: cccs-itsp-10-033/catalog.json
   - ref_id: cccs-itsg-33
     jurisdiction: canada
     filename: cccs-itsg-33/catalog.json
@@ -100,8 +103,9 @@ frameworks:
   - ref_id: bsi-externer-cloud-dienste
     jurisdiction: germany
     filename: bsi-externer-cloud-dienste.yaml
+  # Estonia
   - ref_id: e-its-2024
-    jurisdiction: germany
+    jurisdiction: ee
     filename: e-its-2024.yaml
 
   # EU-wide
@@ -114,6 +118,8 @@ frameworks:
   - ref_id: eu-ai-act
     jurisdiction: eu
     filename: ai-act.yaml
+
+  # International
   - ref_id: iso-iec-42001
-    jurisdiction: eu
+    jurisdiction: international
     filename: iso42001-2023.yaml

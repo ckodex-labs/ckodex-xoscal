@@ -4,7 +4,7 @@
       "href": "./system-security-plan.json"
     },
     "metadata": {
-      "last-modified": "2026-11-08T01:42:11Z",
+      "last-modified": "2026-01-01T00:00:00Z",
       "oscal-version": "1.2.3",
       "title": "CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Security Assessment Plan Template",
       "version": "1.2.3"
@@ -13,7 +13,809 @@
       "control-selections": [
         {
           "description": "All controls in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada",
-          "include-all": {}
+          "include-controls": [
+            {
+              "control-id": "_03.01.01.a"
+            },
+            {
+              "control-id": "_03.01.01.b"
+            },
+            {
+              "control-id": "_03.01.01.c.1"
+            },
+            {
+              "control-id": "_03.01.01.c.2"
+            },
+            {
+              "control-id": "_03.01.01.c.3"
+            },
+            {
+              "control-id": "_03.01.01.d.1"
+            },
+            {
+              "control-id": "_03.01.01.d.2"
+            },
+            {
+              "control-id": "_03.01.01.e"
+            },
+            {
+              "control-id": "_03.01.01.f.1"
+            },
+            {
+              "control-id": "_03.01.01.f.2"
+            },
+            {
+              "control-id": "_03.01.01.f.3"
+            },
+            {
+              "control-id": "_03.01.01.f.4"
+            },
+            {
+              "control-id": "_03.01.01.f.5"
+            },
+            {
+              "control-id": "_03.01.01.g.1"
+            },
+            {
+              "control-id": "_03.01.01.g.2"
+            },
+            {
+              "control-id": "_03.01.01.g.3"
+            },
+            {
+              "control-id": "_03.01.01.h"
+            },
+            {
+              "control-id": "_03.01.02.a"
+            },
+            {
+              "control-id": "_03.01.03.a"
+            },
+            {
+              "control-id": "_03.01.04.a"
+            },
+            {
+              "control-id": "_03.01.04.b"
+            },
+            {
+              "control-id": "_03.01.05.a"
+            },
+            {
+              "control-id": "_03.01.05.b"
+            },
+            {
+              "control-id": "_03.01.05.c"
+            },
+            {
+              "control-id": "_03.01.05.d"
+            },
+            {
+              "control-id": "_03.01.06.a"
+            },
+            {
+              "control-id": "_03.01.06.b"
+            },
+            {
+              "control-id": "_03.01.06.c"
+            },
+            {
+              "control-id": "_03.01.07.a"
+            },
+            {
+              "control-id": "_03.01.07.b"
+            },
+            {
+              "control-id": "_03.01.08.a"
+            },
+            {
+              "control-id": "_03.01.08.b"
+            },
+            {
+              "control-id": "_03.01.09.a"
+            },
+            {
+              "control-id": "_03.01.10.a"
+            },
+            {
+              "control-id": "_03.01.10.b"
+            },
+            {
+              "control-id": "_03.01.10.c"
+            },
+            {
+              "control-id": "_03.01.11.a"
+            },
+            {
+              "control-id": "_03.01.12.a"
+            },
+            {
+              "control-id": "_03.01.12.b"
+            },
+            {
+              "control-id": "_03.01.12.c"
+            },
+            {
+              "control-id": "_03.01.12.d"
+            },
+            {
+              "control-id": "_03.01.16.a"
+            },
+            {
+              "control-id": "_03.01.16.b"
+            },
+            {
+              "control-id": "_03.01.16.c"
+            },
+            {
+              "control-id": "_03.01.16.d"
+            },
+            {
+              "control-id": "_03.01.18.a"
+            },
+            {
+              "control-id": "_03.01.18.b"
+            },
+            {
+              "control-id": "_03.01.18.c"
+            },
+            {
+              "control-id": "_03.01.20.a"
+            },
+            {
+              "control-id": "_03.01.20.b"
+            },
+            {
+              "control-id": "_03.01.20.c.1"
+            },
+            {
+              "control-id": "_03.01.20.c.2"
+            },
+            {
+              "control-id": "_03.01.20.d"
+            },
+            {
+              "control-id": "_03.01.22.a"
+            },
+            {
+              "control-id": "_03.01.22.b"
+            },
+            {
+              "control-id": "_03.02.01.a.1"
+            },
+            {
+              "control-id": "_03.02.01.a.2"
+            },
+            {
+              "control-id": "_03.02.01.a.3"
+            },
+            {
+              "control-id": "_03.02.01.b"
+            },
+            {
+              "control-id": "_03.02.02.a.1"
+            },
+            {
+              "control-id": "_03.02.02.a.2"
+            },
+            {
+              "control-id": "_03.02.02.b"
+            },
+            {
+              "control-id": "_03.03.01.a"
+            },
+            {
+              "control-id": "_03.03.01.b"
+            },
+            {
+              "control-id": "_03.03.02.a.1"
+            },
+            {
+              "control-id": "_03.03.02.a.2"
+            },
+            {
+              "control-id": "_03.03.02.a.3"
+            },
+            {
+              "control-id": "_03.03.02.a.4"
+            },
+            {
+              "control-id": "_03.03.02.a.5"
+            },
+            {
+              "control-id": "_03.03.02.a.6"
+            },
+            {
+              "control-id": "_03.03.02.b"
+            },
+            {
+              "control-id": "_03.03.03.a"
+            },
+            {
+              "control-id": "_03.03.03.b"
+            },
+            {
+              "control-id": "_03.03.04.a"
+            },
+            {
+              "control-id": "_03.03.04.b"
+            },
+            {
+              "control-id": "_03.03.05.a"
+            },
+            {
+              "control-id": "_03.03.05.b"
+            },
+            {
+              "control-id": "_03.03.05.c"
+            },
+            {
+              "control-id": "_03.03.06.a"
+            },
+            {
+              "control-id": "_03.03.06.b"
+            },
+            {
+              "control-id": "_03.03.07.a"
+            },
+            {
+              "control-id": "_03.03.07.b"
+            },
+            {
+              "control-id": "_03.03.08.a"
+            },
+            {
+              "control-id": "_03.03.08.b"
+            },
+            {
+              "control-id": "_03.04.01.a"
+            },
+            {
+              "control-id": "_03.04.01.b"
+            },
+            {
+              "control-id": "_03.04.02.a"
+            },
+            {
+              "control-id": "_03.04.02.b"
+            },
+            {
+              "control-id": "_03.04.03.a"
+            },
+            {
+              "control-id": "_03.04.03.b"
+            },
+            {
+              "control-id": "_03.04.03.c"
+            },
+            {
+              "control-id": "_03.04.03.d"
+            },
+            {
+              "control-id": "_03.04.04.a"
+            },
+            {
+              "control-id": "_03.04.04.b"
+            },
+            {
+              "control-id": "_03.04.05.a"
+            },
+            {
+              "control-id": "_03.04.06.a"
+            },
+            {
+              "control-id": "_03.04.06.b"
+            },
+            {
+              "control-id": "_03.04.06.c"
+            },
+            {
+              "control-id": "_03.04.06.d"
+            },
+            {
+              "control-id": "_03.04.08.a"
+            },
+            {
+              "control-id": "_03.04.08.b"
+            },
+            {
+              "control-id": "_03.04.08.c"
+            },
+            {
+              "control-id": "_03.04.10.a"
+            },
+            {
+              "control-id": "_03.04.10.b"
+            },
+            {
+              "control-id": "_03.04.10.c"
+            },
+            {
+              "control-id": "_03.04.11.a"
+            },
+            {
+              "control-id": "_03.04.11.b"
+            },
+            {
+              "control-id": "_03.04.12.a"
+            },
+            {
+              "control-id": "_03.04.12.b"
+            },
+            {
+              "control-id": "_03.05.01.a"
+            },
+            {
+              "control-id": "_03.05.01.b"
+            },
+            {
+              "control-id": "_03.05.02.a"
+            },
+            {
+              "control-id": "_03.05.03.a"
+            },
+            {
+              "control-id": "_03.05.04.a"
+            },
+            {
+              "control-id": "_03.05.05.a"
+            },
+            {
+              "control-id": "_03.05.05.b"
+            },
+            {
+              "control-id": "_03.05.05.c"
+            },
+            {
+              "control-id": "_03.05.05.d"
+            },
+            {
+              "control-id": "_03.05.07.a"
+            },
+            {
+              "control-id": "_03.05.07.b"
+            },
+            {
+              "control-id": "_03.05.07.c"
+            },
+            {
+              "control-id": "_03.05.07.d"
+            },
+            {
+              "control-id": "_03.05.07.e"
+            },
+            {
+              "control-id": "_03.05.07.f"
+            },
+            {
+              "control-id": "_03.05.11.a"
+            },
+            {
+              "control-id": "_03.05.12.a"
+            },
+            {
+              "control-id": "_03.05.12.b"
+            },
+            {
+              "control-id": "_03.05.12.c"
+            },
+            {
+              "control-id": "_03.05.12.d"
+            },
+            {
+              "control-id": "_03.05.12.e"
+            },
+            {
+              "control-id": "_03.05.12.f"
+            },
+            {
+              "control-id": "_03.06.01.a"
+            },
+            {
+              "control-id": "_03.06.02.a"
+            },
+            {
+              "control-id": "_03.06.02.b"
+            },
+            {
+              "control-id": "_03.06.02.c"
+            },
+            {
+              "control-id": "_03.06.02.d"
+            },
+            {
+              "control-id": "_03.06.03.a"
+            },
+            {
+              "control-id": "_03.06.04.a.1"
+            },
+            {
+              "control-id": "_03.06.04.a.2"
+            },
+            {
+              "control-id": "_03.06.04.a.3"
+            },
+            {
+              "control-id": "_03.06.04.b"
+            },
+            {
+              "control-id": "_03.06.05.a.1"
+            },
+            {
+              "control-id": "_03.06.05.a.2"
+            },
+            {
+              "control-id": "_03.06.05.a.3"
+            },
+            {
+              "control-id": "_03.06.05.a.4"
+            },
+            {
+              "control-id": "_03.06.05.a.5"
+            },
+            {
+              "control-id": "_03.06.05.a.6"
+            },
+            {
+              "control-id": "_03.06.05.b"
+            },
+            {
+              "control-id": "_03.06.05.c"
+            },
+            {
+              "control-id": "_03.06.05.d"
+            },
+            {
+              "control-id": "_03.07.04.a"
+            },
+            {
+              "control-id": "_03.07.04.b"
+            },
+            {
+              "control-id": "_03.07.04.c"
+            },
+            {
+              "control-id": "_03.07.05.a"
+            },
+            {
+              "control-id": "_03.07.05.b"
+            },
+            {
+              "control-id": "_03.07.05.c"
+            },
+            {
+              "control-id": "_03.07.06.a"
+            },
+            {
+              "control-id": "_03.07.06.b"
+            },
+            {
+              "control-id": "_03.07.06.c"
+            },
+            {
+              "control-id": "_03.07.06.d"
+            },
+            {
+              "control-id": "_03.08.01.a"
+            },
+            {
+              "control-id": "_03.08.02.a"
+            },
+            {
+              "control-id": "_03.08.03.a"
+            },
+            {
+              "control-id": "_03.08.04.a"
+            },
+            {
+              "control-id": "_03.08.05.a"
+            },
+            {
+              "control-id": "_03.08.05.b"
+            },
+            {
+              "control-id": "_03.08.05.c"
+            },
+            {
+              "control-id": "_03.08.07.a"
+            },
+            {
+              "control-id": "_03.08.07.b"
+            },
+            {
+              "control-id": "_03.08.09.a"
+            },
+            {
+              "control-id": "_03.08.09.b"
+            },
+            {
+              "control-id": "_03.09.01.a"
+            },
+            {
+              "control-id": "_03.09.01.b"
+            },
+            {
+              "control-id": "_03.09.02.a.1"
+            },
+            {
+              "control-id": "_03.09.02.a.2"
+            },
+            {
+              "control-id": "_03.09.02.a.3"
+            },
+            {
+              "control-id": "_03.09.02.b.1"
+            },
+            {
+              "control-id": "_03.09.02.b.2"
+            },
+            {
+              "control-id": "_03.10.01.a"
+            },
+            {
+              "control-id": "_03.10.01.b"
+            },
+            {
+              "control-id": "_03.10.01.c"
+            },
+            {
+              "control-id": "_03.10.01.d"
+            },
+            {
+              "control-id": "_03.10.02.a"
+            },
+            {
+              "control-id": "_03.10.02.b"
+            },
+            {
+              "control-id": "_03.10.06.a"
+            },
+            {
+              "control-id": "_03.10.06.b"
+            },
+            {
+              "control-id": "_03.10.07.a.1"
+            },
+            {
+              "control-id": "_03.10.07.a.2"
+            },
+            {
+              "control-id": "_03.10.07.b"
+            },
+            {
+              "control-id": "_03.10.07.c"
+            },
+            {
+              "control-id": "_03.10.07.d"
+            },
+            {
+              "control-id": "_03.10.07.e"
+            },
+            {
+              "control-id": "_03.10.08.a"
+            },
+            {
+              "control-id": "_03.11.01.a"
+            },
+            {
+              "control-id": "_03.11.01.b"
+            },
+            {
+              "control-id": "_03.11.02.a"
+            },
+            {
+              "control-id": "_03.11.02.b"
+            },
+            {
+              "control-id": "_03.11.02.c"
+            },
+            {
+              "control-id": "_03.11.04.a"
+            },
+            {
+              "control-id": "_03.12.01.a"
+            },
+            {
+              "control-id": "_03.12.02.a.1"
+            },
+            {
+              "control-id": "_03.12.02.a.2"
+            },
+            {
+              "control-id": "_03.12.02.b.1"
+            },
+            {
+              "control-id": "_03.12.02.b.2"
+            },
+            {
+              "control-id": "_03.12.02.b.3"
+            },
+            {
+              "control-id": "_03.12.03.a"
+            },
+            {
+              "control-id": "_03.12.05.a"
+            },
+            {
+              "control-id": "_03.12.05.b"
+            },
+            {
+              "control-id": "_03.12.05.c"
+            },
+            {
+              "control-id": "_03.13.01.a"
+            },
+            {
+              "control-id": "_03.13.01.b"
+            },
+            {
+              "control-id": "_03.13.01.c"
+            },
+            {
+              "control-id": "_03.13.04.a"
+            },
+            {
+              "control-id": "_03.13.06.a"
+            },
+            {
+              "control-id": "_03.13.08.a"
+            },
+            {
+              "control-id": "_03.13.09.a"
+            },
+            {
+              "control-id": "_03.13.10.a"
+            },
+            {
+              "control-id": "_03.13.11.a"
+            },
+            {
+              "control-id": "_03.13.12.a"
+            },
+            {
+              "control-id": "_03.13.12.b"
+            },
+            {
+              "control-id": "_03.13.13.a"
+            },
+            {
+              "control-id": "_03.13.13.b"
+            },
+            {
+              "control-id": "_03.13.15.a"
+            },
+            {
+              "control-id": "_03.14.01.a"
+            },
+            {
+              "control-id": "_03.14.01.b"
+            },
+            {
+              "control-id": "_03.14.02.a"
+            },
+            {
+              "control-id": "_03.14.02.b"
+            },
+            {
+              "control-id": "_03.14.02.c.1"
+            },
+            {
+              "control-id": "_03.14.02.c.2"
+            },
+            {
+              "control-id": "_03.14.03.a"
+            },
+            {
+              "control-id": "_03.14.03.b"
+            },
+            {
+              "control-id": "_03.14.06.a.1"
+            },
+            {
+              "control-id": "_03.14.06.a.2"
+            },
+            {
+              "control-id": "_03.14.06.b"
+            },
+            {
+              "control-id": "_03.14.06.c"
+            },
+            {
+              "control-id": "_03.14.08.a"
+            },
+            {
+              "control-id": "_03.14.09.a"
+            },
+            {
+              "control-id": "_03.14.09.b"
+            },
+            {
+              "control-id": "_03.14.09.c"
+            },
+            {
+              "control-id": "_03.15.01.a"
+            },
+            {
+              "control-id": "_03.15.01.b"
+            },
+            {
+              "control-id": "_03.15.02.a.1"
+            },
+            {
+              "control-id": "_03.15.02.a.2"
+            },
+            {
+              "control-id": "_03.15.02.a.3"
+            },
+            {
+              "control-id": "_03.15.02.a.4"
+            },
+            {
+              "control-id": "_03.15.02.a.5"
+            },
+            {
+              "control-id": "_03.15.02.a.6"
+            },
+            {
+              "control-id": "_03.15.02.a.7"
+            },
+            {
+              "control-id": "_03.15.02.a.8"
+            },
+            {
+              "control-id": "_03.15.02.b"
+            },
+            {
+              "control-id": "_03.15.02.c"
+            },
+            {
+              "control-id": "_03.15.03.a"
+            },
+            {
+              "control-id": "_03.15.03.b"
+            },
+            {
+              "control-id": "_03.15.03.c"
+            },
+            {
+              "control-id": "_03.15.03.d"
+            },
+            {
+              "control-id": "_03.16.01.a"
+            },
+            {
+              "control-id": "_03.16.02.a"
+            },
+            {
+              "control-id": "_03.16.02.b"
+            },
+            {
+              "control-id": "_03.16.03.a"
+            },
+            {
+              "control-id": "_03.16.03.b"
+            },
+            {
+              "control-id": "_03.16.03.c"
+            },
+            {
+              "control-id": "_03.17.01.a"
+            },
+            {
+              "control-id": "_03.17.01.b"
+            },
+            {
+              "control-id": "_03.17.01.c"
+            },
+            {
+              "control-id": "_03.17.02.a"
+            },
+            {
+              "control-id": "_03.17.03.a"
+            },
+            {
+              "control-id": "_03.17.03.b"
+            }
+          ]
         }
       ]
     },

@@ -4,16 +4,1463 @@
       "href": "./system-security-plan.json"
     },
     "metadata": {
-      "last-modified": "2026-11-08T01:42:13Z",
+      "last-modified": "2026-11-08T00:31:00Z",
       "oscal-version": "1.2.3",
       "title": "BSI C5 Library Plan of Action and Milestones Template",
       "version": "1"
     },
     "poam-items": [
       {
-        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for BSI C5 Library.",
-        "title": "Compliance Roadmap and Parameter Tailoring for BSI C5 Library",
-        "uuid": "09c04a6b-06d4-57d2-9b33-7566037e7ee4"
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control am-01 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "am-01"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: am-01 (Asset Inventory)",
+        "uuid": "cf5c0855-cfa1-5c23-9f1b-0d781f8ffcda"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control am-02 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "am-02"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: am-02 (Acceptable Use and Safe Handling of Assets Policy)",
+        "uuid": "36031c73-eddf-5e6d-a7a3-bcd1f9cb566e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control am-03 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "am-03"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: am-03 (Commissioning of Hardware)",
+        "uuid": "461cea2b-e40e-5d1d-a82b-5b4f86878acb"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control am-04 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "am-04"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: am-04 (Decommissioning of Hardware)",
+        "uuid": "e780d065-6606-5441-b277-360a4c883847"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control am-05 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "am-05"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: am-05 (Commitment to Permissible Use, Safe Handling and Return of Assets)",
+        "uuid": "cf247ea9-7652-5df9-9c14-ca5b2ff0b31c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control am-06 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "am-06"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: am-06 (Asset Classification and Labelling)",
+        "uuid": "16f51f54-704d-5f5c-b1d5-59edcc5658e7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control bcm-01 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "bcm-01"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: bcm-01 (Top management responsibility)",
+        "uuid": "5519a6ac-b50c-5a84-8c08-992b933e3995"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control bcm-02 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "bcm-02"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: bcm-02 (Business impact analysis policies and instructions)",
+        "uuid": "ce88dc41-178e-54ae-98f8-efd8c92047f6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control bcm-03 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "bcm-03"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: bcm-03 (Planning business continuity)",
+        "uuid": "d8191a0a-d6df-5493-8121-e49114d21297"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control bcm-04 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "bcm-04"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: bcm-04 (Verification, updating and testing of the business continuity)",
+        "uuid": "88dfa43c-572f-5810-9aaf-87341c234f02"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control com-01 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "com-01"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: com-01 (Identification of applicable legal, regulatory, self-imposed or contractual requirements)",
+        "uuid": "1f86efcf-c505-56e9-ba16-bc4c1fc7c857"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control com-02 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "com-02"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: com-02 (Policy for planning and conducting audits)",
+        "uuid": "e8d601f3-d09e-517b-a050-d9d51cf0e072"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control com-03 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "com-03"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: com-03 (Internal audits of the information security management system)",
+        "uuid": "92fa92c2-a5ca-5029-b06c-cd09f7b5f8f1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control com-04 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "com-04"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: com-04 (Information on information security performance and management assessment of the ISMS)",
+        "uuid": "e1ed3aee-5a04-5f1f-8bce-19dcbb6bba89"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control cos-01 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "cos-01"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: cos-01 (Technical safeguards)",
+        "uuid": "d496dc0e-8227-5890-935b-5426b0265277"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control cos-02 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "cos-02"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: cos-02 (Security requirements for connections in the Cloud Service Provider's network)",
+        "uuid": "1143abfb-34d4-5e1c-81de-dabde02175dd"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control cos-03 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "cos-03"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: cos-03 (Monitoring of connections in the Cloud Service Provider's network)",
+        "uuid": "a16bc64f-925a-5dad-b52f-a3c0f8de9a0c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control cos-04 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "cos-04"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: cos-04 (Cross-network access)",
+        "uuid": "932b44ad-6af3-56fe-9c08-805ff65000f3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control cos-05 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "cos-05"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: cos-05 (Networks for administration)",
+        "uuid": "0192dd5c-3cae-5129-95eb-d5643cfc8c54"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control cos-06 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "cos-06"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: cos-06 (Segregation of data traffic in jointly used network environments)",
+        "uuid": "423d351b-7d04-5b13-93c2-6f4351fc535d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control cos-07 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "cos-07"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: cos-07 (Documentation of the network topology)",
+        "uuid": "f4000acb-51f3-59cb-95de-e196d8946406"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control cos-08 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "cos-08"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: cos-08 (Policies for data transmission)",
+        "uuid": "622818b0-178a-5b2d-9b7f-9cae1790f896"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control cry-01 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "cry-01"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: cry-01 (Policy for the use of encryption procedures and key management)",
+        "uuid": "d2eab1ce-2ca6-5c10-a5c1-cdd68ac6d7df"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control cry-02 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "cry-02"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: cry-02 (Encryption of data for transmission (transport encryption))",
+        "uuid": "171997e8-1085-529f-a005-b1225c6ff280"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control cry-03 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "cry-03"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: cry-03 (Encryption of sensitive data for storage)",
+        "uuid": "e95c66d1-748c-5917-b871-4db1636d7cd0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control cry-04 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "cry-04"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: cry-04 (Secure key management)",
+        "uuid": "02662d3a-daa6-5331-8c7a-d48bca13e444"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control dev-01 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "dev-01"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: dev-01 (Policies for the development/procurement of information systems)",
+        "uuid": "c932c5d4-2f48-572d-b1d7-535f5b75c97b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control dev-02 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "dev-02"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: dev-02 (Outsourcing of the development)",
+        "uuid": "00cf7387-0e15-5d54-bdcf-a152bb1d41df"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control dev-03 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "dev-03"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: dev-03 (Policies for changes to information systems)",
+        "uuid": "9ab96e63-50c0-526d-9521-10fcd67b37eb"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control dev-04 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "dev-04"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: dev-04 (Safety training and awareness programme regarding continuous software delivery and associated systems, components or tools.)",
+        "uuid": "52ecb195-b7f7-5b36-a2f0-b14c795f54fb"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control dev-05 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "dev-05"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: dev-05 (Risk assessment, categorisation and prioritisation of changes)",
+        "uuid": "51b159da-2347-53c8-98ee-dcbfa060320d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control dev-06 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "dev-06"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: dev-06 (Testing changes)",
+        "uuid": "e2da18e3-8d0d-5f29-8b45-733db9349925"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control dev-07 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "dev-07"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: dev-07 (Logging of changes)",
+        "uuid": "7e3595aa-9414-59c5-99da-1b37450a6f45"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control dev-08 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "dev-08"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: dev-08 (Version Control)",
+        "uuid": "2e637f97-c1e9-554f-93dc-dc4fbbc1ab80"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control dev-09 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "dev-09"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: dev-09 (Approvals for provision in the production environment)",
+        "uuid": "77172137-3acc-5a3c-8de7-3bf85dc84cb7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control dev-10 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "dev-10"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: dev-10 (Separation of environments)",
+        "uuid": "f7d885e2-07a0-581d-912d-42cf013b7691"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control hr-01 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "hr-01"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: hr-01 (Verification of qualification and trustworthiness)",
+        "uuid": "52a9ad7c-4b42-52a1-bc27-02f634e85a51"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control hr-02 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "hr-02"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: hr-02 (Employment terms and conditions)",
+        "uuid": "aea16a54-cbdd-5e49-8d4b-a9756bac7065"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control hr-03 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "hr-03"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: hr-03 (Security training and awareness programme)",
+        "uuid": "ae34c643-2255-5c9e-a2d9-a2581718a4b7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control hr-04 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "hr-04"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: hr-04 (Disciplinary measures)",
+        "uuid": "2f004112-7ea4-52e2-baf9-94f2c4d10d3c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control hr-05 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "hr-05"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: hr-05 (Responsibilities in the event of termination or change of employment)",
+        "uuid": "5624dcb8-c0b2-5ffb-8e9f-d5c877c60d54"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control hr-06 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "hr-06"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: hr-06 (Confidentiality agreements)",
+        "uuid": "fffa075f-b235-5e67-85fc-a6ec763a03b0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control idm-01 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "idm-01"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: idm-01 (Policy for user accounts and access rights)",
+        "uuid": "ebd1ba12-f7bf-5316-9cd0-d8b69855000b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control idm-02 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "idm-02"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: idm-02 (Granting and change of user accounts and access rights)",
+        "uuid": "dda586ce-741c-51b6-9518-d146f1284c0f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control idm-03 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "idm-03"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: idm-03 (Locking and withdrawal of user accounts in the event of inactivity or multiple failed logins)",
+        "uuid": "fe697878-fe8b-5301-9145-8020a84bd5f7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control idm-04 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "idm-04"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: idm-04 (Withdraw or adjust access rights as the task area changes)",
+        "uuid": "42fb9c60-8036-5d49-b5ba-f81f09ef92cf"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control idm-05 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "idm-05"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: idm-05 (Regular review of access rights)",
+        "uuid": "c8803a5e-c723-5eda-93ba-1919538962c2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control idm-06 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "idm-06"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: idm-06 (Privileged access rights)",
+        "uuid": "35a1d3b4-11c8-55a5-954e-7ef6f33d8464"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control idm-07 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "idm-07"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: idm-07 (Access to cloud customer data)",
+        "uuid": "5ce244f8-e2be-5f7b-a4fa-68cf5781cc0b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control idm-08 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "idm-08"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: idm-08 (Confidentiality of authentication information)",
+        "uuid": "39c970b2-3ab8-5340-a45b-9b4446f5e019"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control idm-09 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "idm-09"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: idm-09 (Authentication mechanisms)",
+        "uuid": "4ad10399-7d8f-5f35-bd70-94f7c69ffe33"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control inq-01 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "inq-01"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: inq-01 (Legal Assessment of Investigative Inquiries)",
+        "uuid": "ed12b53b-1e71-537a-8889-5a677f4ce4e1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control inq-02 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "inq-02"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: inq-02 (Informing Cloud Customers about Investigation Requests)",
+        "uuid": "fa08a9f1-34d4-5348-8ee0-4121ce916605"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control inq-03 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "inq-03"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: inq-03 (Conditions for Access to or Disclosure of Data in Investigation Requests)",
+        "uuid": "6b36a3d7-480e-586e-9d3c-7a8aba8f6878"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control inq-04 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "inq-04"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: inq-04 (Limiting Access to or Disclosure of Data in Investigation Requests)",
+        "uuid": "7e187040-19cd-57f6-9647-2b5eaf830fd8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ois-01 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ois-01"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ois-01 (Information Security Management System (ISMS))",
+        "uuid": "ea5129d7-2f7c-5b86-b53c-6536dc44ea91"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ois-02 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ois-02"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ois-02 (Information Security Policy)",
+        "uuid": "74538461-8f67-568d-b63a-cb08d9dc0fdd"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ois-03 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ois-03"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ois-03 (Interfaces and Dependencies)",
+        "uuid": "0a5c51ce-2af1-5350-9305-fdc95ee23b1c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ois-04 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ois-04"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ois-04 (Segregation of Duties)",
+        "uuid": "a93164cb-847f-5387-8224-3b8444dff553"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ois-05 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ois-05"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ois-05 (Contact with Relevant Government Agencies and Interest Groups)",
+        "uuid": "13cc1bc6-bba8-50a7-befe-35d79fa80ecc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ois-06 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ois-06"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ois-06 (Risk Management Policy)",
+        "uuid": "f727137d-1e9d-5d12-9fef-468635685c44"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ois-07 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ois-07"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ois-07 (Application of the Risk Management Policy)",
+        "uuid": "98f57621-7ae4-535d-b17e-041d0954728e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ops-01 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ops-01"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ops-01 (Capacity Management - Planning)",
+        "uuid": "2f0792bf-66e7-526b-b4c1-c27e96c9c8fe"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ops-02 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ops-02"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ops-02 (Capacity Management - Monitoring)",
+        "uuid": "5f4f1df6-3308-51aa-bd4d-5a678c4ee965"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ops-03 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ops-03"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ops-03 (Capacity Management - Controlling of Resources)",
+        "uuid": "053111c5-a4e5-5850-bd73-d72346e855b6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ops-04 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ops-04"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ops-04 (Protection Against Malware - Concept)",
+        "uuid": "f341cf3b-d2a3-5e00-b1b0-e4c73419de3e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ops-05 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ops-05"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ops-05 (Protection Against Malware - Implementation)",
+        "uuid": "940bd676-56db-5f2b-b274-13d9dac9fd36"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ops-06 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ops-06"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ops-06 (Data Protection and Recovery - Concept)",
+        "uuid": "9fe38c36-fe1f-543a-93d0-14221267b0e0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ops-07 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ops-07"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ops-07 (Data Backup and Recovery - Monitoring)",
+        "uuid": "8871f628-487e-59f0-bc16-df02405a9038"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ops-08 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ops-08"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ops-08 (Data Backup and Recovery - Regular Testing)",
+        "uuid": "fb7a8ad8-9633-59a7-a3a7-dd7e2bb8eeb9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ops-09 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ops-09"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ops-09 (Data Backup and Recovery - Storage)",
+        "uuid": "a41844d8-b65a-5a07-b1e0-d89c7a28758c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ops-10 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ops-10"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ops-10 (Logging and Monitoring - Concept)",
+        "uuid": "2c96ecc2-f64a-5c3f-bf9d-88b6337bc920"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ops-11 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ops-11"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ops-11 (Logging and Monitoring - Metadata Management Concept)",
+        "uuid": "78ffa139-2a58-5d5b-b509-0c245efb80d0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ops-12 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ops-12"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ops-12 (Logging and Monitoring - Access, Storage and Deletion)",
+        "uuid": "b1a6ea27-cb9f-5885-84e5-7fd97a474434"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ops-13 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ops-13"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ops-13 (Logging and Monitoring - Identification of Events)",
+        "uuid": "27f1ad25-d106-5382-a53e-1e0b677952e9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ops-14 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ops-14"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ops-14 (Logging and Monitoring - Storage of the Logging Data)",
+        "uuid": "b6f532d1-c897-51da-a54d-810f8c699a4c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ops-15 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ops-15"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ops-15 (Logging and Monitoring - Accountability)",
+        "uuid": "d8f09d32-8cb8-573d-98b9-4ee45b489c51"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ops-16 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ops-16"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ops-16 (Logging and Monitoring - Configuration)",
+        "uuid": "dd2d3650-07a5-596a-a2e2-97def2fa2f3b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ops-17 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ops-17"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ops-17 (Logging and Monitoring - Availability of the Monitoring Software)",
+        "uuid": "ba574f73-cc6d-5d29-aa4e-dd77eff15ec4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ops-18 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ops-18"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ops-18 (Managing Vulnerabilities, Malfunctions and Errors - Concept)",
+        "uuid": "6ae52dfd-0d7c-559d-af17-327a0ce46929"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ops-19 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ops-19"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ops-19 (Managing Vulnerabilities, Malfunctions and Errors - Penetration Tests)",
+        "uuid": "a8284360-c435-532f-8e38-bc7487a43fba"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ops-20 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ops-20"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ops-20 (Managing Vulnerabilities, Malfunctions and Errors - Measurements, Analyses and Assessments of Procedures)",
+        "uuid": "3e26b954-09be-5438-ace7-0dad2ba11385"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ops-21 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ops-21"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ops-21 (Involvement of Cloud customers in the event of incidents)",
+        "uuid": "01bd0675-468d-560d-80e6-50b52e7b66dc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ops-22 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ops-22"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ops-22 (Testing and Documentation of known Vulnerabilities)",
+        "uuid": "fabbd480-d7d9-5424-94ca-18847aaee3b9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ops-23 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ops-23"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ops-23 (Managing Vulnerabilities, Malfunctions and Errors - System Hardening)",
+        "uuid": "7131794d-509f-554c-b441-068b121d1dbf"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ops-24 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ops-24"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ops-24 (Separation of Datasets in the Cloud Infrastructure)",
+        "uuid": "437168a5-a219-51b1-a7c6-adde15fd661a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pi-01 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pi-01"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pi-01 (Documentation and safety of input and output interfaces)",
+        "uuid": "a39238f1-f1e1-5e3c-bc8d-a279bd8dd61c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pi-02 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pi-02"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pi-02 (Contractual agreements for the provision of data)",
+        "uuid": "67f65532-f965-557f-925c-4d87fa83c22d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pi-03 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pi-03"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pi-03 (Secure deletion of data)",
+        "uuid": "b8dc1181-ea66-5ef4-a41c-88ca1e03ce51"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ps-01 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ps-01"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ps-01 (Physical Security and Environmental Control Requirements)",
+        "uuid": "5feb0620-7425-5aab-8022-6883014991fd"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ps-02 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ps-02"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ps-02 (Redundancy model)",
+        "uuid": "ce241112-fdf5-57e5-8078-b115648814e9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ps-03 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ps-03"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ps-03 (Perimeter Protection)",
+        "uuid": "cf1fd3a7-f17e-5c0a-b9b4-408709a1694e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ps-04 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ps-04"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ps-04 (Physical site access control)",
+        "uuid": "66b3f21c-80a8-5fda-93c8-825f708d956f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ps-05 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ps-05"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ps-05 (Protection from fire and smoke)",
+        "uuid": "c6809fc5-2ce7-51b2-b7fc-3e03543a5b11"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ps-06 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ps-06"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ps-06 (Protection against interruptions caused by power failures and other such risks)",
+        "uuid": "6a429d84-83ba-5091-b81b-b3b5cbb9b4c9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ps-07 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ps-07"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ps-07 (Surveillance of operational and environmental parameters)",
+        "uuid": "d9522c7f-7907-5c1c-90b1-2ae212811c39"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pss-01 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pss-01"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pss-01 (Guidelines and Recommendations for Cloud Customers)",
+        "uuid": "d1c1d2a3-6e13-5cb4-9190-9b9c55a62972"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pss-02 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pss-02"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pss-02 (Identification of Vulnerabilities of the Cloud Service)",
+        "uuid": "bbfeec1f-7994-53f0-9024-360577b0ad4b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pss-03 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pss-03"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pss-03 (Online Register of Known Vulnerabilities)",
+        "uuid": "8b569eea-eb43-5d81-98e9-29637f0bc54f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pss-04 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pss-04"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pss-04 (Error handling and Logging Mechanisms)",
+        "uuid": "bce27976-ba3a-5b27-9d83-da650ddf64b9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pss-05 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pss-05"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pss-05 (Authentication Mechanisms)",
+        "uuid": "14446ee0-a433-5791-966a-6f9f2ed8a738"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pss-06 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pss-06"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pss-06 (Session Management)",
+        "uuid": "77b4053f-eee7-5209-9ec3-9fdeb9dab698"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pss-07 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pss-07"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pss-07 (Confidentiality of Authentication Information)",
+        "uuid": "b6b44a21-b9e7-50a3-be50-2d1bdc59948c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pss-08 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pss-08"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pss-08 (Roles and Rights Concept)",
+        "uuid": "10740b89-1367-5909-bd71-7cf74bde77a1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pss-09 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pss-09"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pss-09 (Authorisation Mechanisms)",
+        "uuid": "b852a364-0870-5ba7-b97f-5b55c5e292b5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pss-10 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pss-10"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pss-10 (Software Defined Networking)",
+        "uuid": "823c611d-dac1-5e32-bad7-5857c5e5bf3d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pss-11 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pss-11"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pss-11 (Images for Virtual Machines and Containers)",
+        "uuid": "14b27981-1580-5967-96de-daf9f3d21c23"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pss-12 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pss-12"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pss-12 (Locations of Data Processing and Storage)",
+        "uuid": "83a7bddf-9776-5858-9672-b4c5ce2d54fc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sim-01 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sim-01"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sim-01 (Policy for security incident management)",
+        "uuid": "494dc702-085c-5904-9ee3-c2d2a7dccb7f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sim-02 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sim-02"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sim-02 (Processing of security incidents)",
+        "uuid": "28b6523b-1490-5b45-9254-9d210c1c997d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sim-03 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sim-03"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sim-03 (Documentation and reporting of security incidents)",
+        "uuid": "12a70cd2-683c-5cbf-8059-8396a6a7e343"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sim-04 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sim-04"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sim-04 (Duty of the users to report security incidents to a central body)",
+        "uuid": "168616f8-8186-5912-8ec2-d28cb8e9585d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sim-05 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sim-05"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sim-05 (Evaluation and learning process)",
+        "uuid": "592bd5ba-09ab-5502-927b-32e5bef53a38"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sp-01 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sp-01"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sp-01 (Documentation, communication and provision of policies and instructions)",
+        "uuid": "971366e8-bc2e-593e-ab04-ce267d368bdd"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sp-02 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sp-02"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sp-02 (Review and Approval of Policies and Instructions)",
+        "uuid": "ba0ebd43-c54c-5ff6-89ed-774281cf3723"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sp-03 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sp-03"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sp-03 (Exceptions from Existing Policies and Instructions)",
+        "uuid": "2712d5b9-8b28-5273-8b0a-3ba52b26e84f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sso-01 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sso-01"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sso-01 (Policies and instructions for controlling and monitoring third parties)",
+        "uuid": "f47e49d8-cdaa-5300-8e0d-e3a6d35b6922"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sso-02 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sso-02"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sso-02 (Risk assessment of service providers and suppliers)",
+        "uuid": "539cdbb8-d386-5002-a1f0-473c660da482"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sso-03 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sso-03"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sso-03 (Directory of service providers and suppliers)",
+        "uuid": "504f5b39-b6ac-5237-97c0-d87aab0661f3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sso-04 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sso-04"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sso-04 (Monitoring of compliance with requirements)",
+        "uuid": "84bf6683-5814-578e-95ea-94a9f63a5c8c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sso-05 in BSI C5 Library.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sso-05"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sso-05 (Exit strategy for the receipt of benefits)",
+        "uuid": "af73ebb9-4877-5b0e-82f6-9e41c33c34fb"
       }
     ],
     "uuid": "6cc23af6-6cee-5ae8-b2d2-3604827b6941"

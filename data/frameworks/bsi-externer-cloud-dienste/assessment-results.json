@@ -4,7 +4,7 @@
       "href": "./assessment-plan.json"
     },
     "metadata": {
-      "last-modified": "2026-11-08T01:42:13Z",
+      "last-modified": "2026-11-08T00:31:01Z",
       "oscal-version": "1.2.3",
       "title": "Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Assessment Results Template",
       "version": "1"
@@ -339,7 +339,7 @@
         ],
         "observations": [
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:31:01Z",
             "description": "Verified control ncd.2.1.01.a (Strategie für die Cloud-Nutzung — NCD.2.1.01.a) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -351,7 +351,7 @@
             "uuid": "a99f7e05-e1c1-5868-93f0-447e62e589da"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:31:01Z",
             "description": "Verified control ncd.2.1.02.a (Sicherheitsrichtlinie für externe Cloud-Dienste — NCD.2.1.02.a) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -363,7 +363,7 @@
             "uuid": "edbf0aa0-e817-5865-ab1d-1f410424be82"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:31:01Z",
             "description": "Verified control ncd.2.1.03.a (Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.a) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -375,7 +375,7 @@
             "uuid": "f956311b-ea38-5194-b6de-cafd29d80a7b"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:31:01Z",
             "description": "Verified control ncd.2.1.04.a (Notfall- und Kontinuitätsmanagement — NCD.2.1.04.a) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -387,7 +387,7 @@
             "uuid": "fd16f19d-0db0-5273-b0cc-1587ef547569"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:31:01Z",
             "description": "Verified control ncd.2.2.01.a (Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.a) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -399,7 +399,7 @@
             "uuid": "a46ef39f-cf41-5e4c-a4b4-ba890cb1960f"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:31:01Z",
             "description": "Verified control ncd.2.2.02.a (Umgang mit Unterauftragnehmern und anderen externen Dritten vertraglich zusichern — NCD.2.2.02.a) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -411,7 +411,7 @@
             "uuid": "bd6cb4e6-a3d3-5031-bc84-595d6d18e841"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:31:01Z",
             "description": "Verified control ncd.2.2.03.a (Gerichtsbarkeit — NCD.2.2.03.a) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -423,7 +423,7 @@
             "uuid": "d1903e57-8c91-59e1-b523-4c9f795589a1"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:31:01Z",
             "description": "Verified control ncd.2.2.04.a (Lokation der Datenverarbeitung — NCD.2.2.04.a) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -435,7 +435,7 @@
             "uuid": "c0718cec-beba-57bc-ac9e-d2169c1859d8"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:31:01Z",
             "description": "Verified control ncd.2.2.05.a (Meldepflicht sicherheitsrelevanter Vorfälle — NCD.2.2.05.a) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -447,7 +447,7 @@
             "uuid": "6a58968d-3936-5880-a96f-c83845d8e17b"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:31:01Z",
             "description": "Verified control ncd.2.2.06.a (Beendigung des Vertragsverhältnisses — NCD.2.2.06.a) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -459,7 +459,7 @@
             "uuid": "511cf9d5-a1d2-502f-84ff-30485300558d"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:31:01Z",
             "description": "Verified control ncd.2.2.07.a (Regelung der Datenrückgabe und Datenlöschung — NCD.2.2.07.a) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -471,7 +471,7 @@
             "uuid": "3c216356-5036-58fd-b90d-0b8c7811b3c9"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:31:01Z",
             "description": "Verified control ncd.2.3.01.a (Einbindung in das ISMS — NCD.2.3.01.a) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -483,7 +483,7 @@
             "uuid": "bd10a62c-7440-5cfd-ae66-22d79ae3ccc2"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:31:01Z",
             "description": "Verified control ncd.2.3.02.a (Auswertung von Sicherheitsnachweisen — NCD.2.3.02.a) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -495,7 +495,7 @@
             "uuid": "f5188bc9-e883-5caf-8b74-d92ee53bcef5"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:31:01Z",
             "description": "Verified control ncd.2.3.03.a (Prüfung der Leistungsfähigkeit — NCD.2.3.03.a) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -507,7 +507,7 @@
             "uuid": "654cdd74-50a2-51b4-b316-50824ad3e4eb"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:31:01Z",
             "description": "Verified control ncd.2.3.04.a (Informationspflichten — NCD.2.3.04.a) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -519,7 +519,7 @@
             "uuid": "0b9c1a52-351f-58f8-8510-3cbbad30dcfc"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:31:01Z",
             "description": "Verified control ncd.2.3.05.a (Multi-Faktor-Authentisierung — NCD.2.3.05.a) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -531,7 +531,7 @@
             "uuid": "e68cac56-3012-52ff-9222-16f00885e74c"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:31:01Z",
             "description": "Verified control ncd.2.4.01.a (Datenrückgabe bei Beendigung — NCD.2.4.01.a) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -543,7 +543,7 @@
             "uuid": "a71fe2a4-7975-5e1f-a2c3-20a74e5cf4c3"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:31:01Z",
             "description": "Verified control ncd.2.4.02.a (Datenlöschung bei Beendigung — NCD.2.4.02.a) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -555,7 +555,7 @@
             "uuid": "51bc15b7-e64f-539a-9052-c5fd01e67093"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:31:01Z",
             "description": "Verified control ncd.2.5.01.a (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.a) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -571,11 +571,276 @@
           "control-selections": [
             {
               "description": "All controls evaluated for Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1)",
-              "include-all": {}
+              "include-controls": [
+                {
+                  "control-id": "ncd.2.1.01.a"
+                },
+                {
+                  "control-id": "ncd.2.1.01.b"
+                },
+                {
+                  "control-id": "ncd.2.1.01.c"
+                },
+                {
+                  "control-id": "ncd.2.1.01.d"
+                },
+                {
+                  "control-id": "ncd.2.1.02.a"
+                },
+                {
+                  "control-id": "ncd.2.1.02.b"
+                },
+                {
+                  "control-id": "ncd.2.1.02.c"
+                },
+                {
+                  "control-id": "ncd.2.1.03.a"
+                },
+                {
+                  "control-id": "ncd.2.1.03.b"
+                },
+                {
+                  "control-id": "ncd.2.1.03.c"
+                },
+                {
+                  "control-id": "ncd.2.1.03.d"
+                },
+                {
+                  "control-id": "ncd.2.1.03.e"
+                },
+                {
+                  "control-id": "ncd.2.1.03.f"
+                },
+                {
+                  "control-id": "ncd.2.1.03.g"
+                },
+                {
+                  "control-id": "ncd.2.1.03.h"
+                },
+                {
+                  "control-id": "ncd.2.1.03.h.i"
+                },
+                {
+                  "control-id": "ncd.2.1.03.h.ii"
+                },
+                {
+                  "control-id": "ncd.2.1.03.i"
+                },
+                {
+                  "control-id": "ncd.2.1.04.a"
+                },
+                {
+                  "control-id": "ncd.2.1.04.b"
+                },
+                {
+                  "control-id": "ncd.2.1.04.c"
+                },
+                {
+                  "control-id": "ncd.2.2.01.a"
+                },
+                {
+                  "control-id": "ncd.2.2.01.b"
+                },
+                {
+                  "control-id": "ncd.2.2.01.c"
+                },
+                {
+                  "control-id": "ncd.2.2.01.d"
+                },
+                {
+                  "control-id": "ncd.2.2.01.e"
+                },
+                {
+                  "control-id": "ncd.2.2.01.f"
+                },
+                {
+                  "control-id": "ncd.2.2.01.g"
+                },
+                {
+                  "control-id": "ncd.2.2.01.h"
+                },
+                {
+                  "control-id": "ncd.2.2.01.i"
+                },
+                {
+                  "control-id": "ncd.2.2.01.i.i"
+                },
+                {
+                  "control-id": "ncd.2.2.01.i.ii"
+                },
+                {
+                  "control-id": "ncd.2.2.01.j"
+                },
+                {
+                  "control-id": "ncd.2.2.01.j.i"
+                },
+                {
+                  "control-id": "ncd.2.2.01.j.ii"
+                },
+                {
+                  "control-id": "ncd.2.2.01.j.iii"
+                },
+                {
+                  "control-id": "ncd.2.2.01.j.iv"
+                },
+                {
+                  "control-id": "ncd.2.2.02.a"
+                },
+                {
+                  "control-id": "ncd.2.2.02.b"
+                },
+                {
+                  "control-id": "ncd.2.2.02.b.i"
+                },
+                {
+                  "control-id": "ncd.2.2.02.b.ii"
+                },
+                {
+                  "control-id": "ncd.2.2.02.c"
+                },
+                {
+                  "control-id": "ncd.2.2.02.d"
+                },
+                {
+                  "control-id": "ncd.2.2.03.a"
+                },
+                {
+                  "control-id": "ncd.2.2.03.b"
+                },
+                {
+                  "control-id": "ncd.2.2.03.c"
+                },
+                {
+                  "control-id": "ncd.2.2.04.a"
+                },
+                {
+                  "control-id": "ncd.2.2.04.b"
+                },
+                {
+                  "control-id": "ncd.2.2.05.a"
+                },
+                {
+                  "control-id": "ncd.2.2.05.a.i"
+                },
+                {
+                  "control-id": "ncd.2.2.05.a.ii"
+                },
+                {
+                  "control-id": "ncd.2.2.06.a"
+                },
+                {
+                  "control-id": "ncd.2.2.06.b"
+                },
+                {
+                  "control-id": "ncd.2.2.07.a"
+                },
+                {
+                  "control-id": "ncd.2.2.07.b"
+                },
+                {
+                  "control-id": "ncd.2.3.01.a"
+                },
+                {
+                  "control-id": "ncd.2.3.01.b"
+                },
+                {
+                  "control-id": "ncd.2.3.02.a"
+                },
+                {
+                  "control-id": "ncd.2.3.02.a.i"
+                },
+                {
+                  "control-id": "ncd.2.3.02.a.ii"
+                },
+                {
+                  "control-id": "ncd.2.3.02.b"
+                },
+                {
+                  "control-id": "ncd.2.3.03.a"
+                },
+                {
+                  "control-id": "ncd.2.3.03.b"
+                },
+                {
+                  "control-id": "ncd.2.3.03.c"
+                },
+                {
+                  "control-id": "ncd.2.3.04.a"
+                },
+                {
+                  "control-id": "ncd.2.3.04.b"
+                },
+                {
+                  "control-id": "ncd.2.3.05.a"
+                },
+                {
+                  "control-id": "ncd.2.3.05.b"
+                },
+                {
+                  "control-id": "ncd.2.4.01.a"
+                },
+                {
+                  "control-id": "ncd.2.4.01.b"
+                },
+                {
+                  "control-id": "ncd.2.4.02.a"
+                },
+                {
+                  "control-id": "ncd.2.4.02.b"
+                },
+                {
+                  "control-id": "ncd.2.4.02.c"
+                },
+                {
+                  "control-id": "ncd.2.5.01.a"
+                },
+                {
+                  "control-id": "ncd.2.5.01.b"
+                },
+                {
+                  "control-id": "ncd.2.5.01.c"
+                },
+                {
+                  "control-id": "ncd.2.5.01.c.i"
+                },
+                {
+                  "control-id": "ncd.2.5.01.c.ii"
+                },
+                {
+                  "control-id": "ncd.2.5.01.d"
+                },
+                {
+                  "control-id": "ncd.2.5.01.d.i"
+                },
+                {
+                  "control-id": "ncd.2.5.01.d.ii"
+                },
+                {
+                  "control-id": "ncd.2.5.01.e"
+                },
+                {
+                  "control-id": "ncd.2.5.01.e.i"
+                },
+                {
+                  "control-id": "ncd.2.5.01.e.ii"
+                },
+                {
+                  "control-id": "ncd.2.5.01.f"
+                },
+                {
+                  "control-id": "ncd.2.5.01.g"
+                },
+                {
+                  "control-id": "ncd.2.5.01.g.i"
+                },
+                {
+                  "control-id": "ncd.2.5.01.g.ii"
+                }
+              ]
             }
           ]
         },
-        "start": "2026-11-08T01:42:13Z",
+        "start": "2026-11-08T00:31:01Z",
         "title": "Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Assessment Results",
         "uuid": "d9a25cf8-b720-5b03-9e62-2852ad81af53"
       }

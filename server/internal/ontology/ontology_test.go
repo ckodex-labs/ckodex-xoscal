@@ -1,6 +1,8 @@
 package ontology_test
 
 import (
+	"net/url"
+	"strings"
 	"testing"
 
 	"github.com/mchorfa/xoscal/server/internal/ontology"
@@ -27,10 +29,52 @@ func TestOntologyClassesAndPredicates(t *testing.T) {
 		t.Fatalf("expected 64-hex SHA256 digest, got %q", spec.SHA256)
 	}
 
-	// Verify deterministic SHA256
+	// Verify @context sub-namespace IRIs use valid RFC 3986 prefixes (no #.../ fragment-slash)
+	wantPrefixes := map[string]string{
+		"sec":    "https://xoscal.dev/ns/ontology/v1/sec#",
+		"reg":    "https://xoscal.dev/ns/ontology/v1/reg#",
+		"threat": "https://xoscal.dev/ns/ontology/v1/threat#",
+	}
+	for k, want := range wantPrefixes {
+		got, _ := spec.Context[k].(string)
+		if got != want {
+			t.Fatalf("Context[%q] = %q, want %q", k, got, want)
+		}
+	}
+	for k, rawVal := range spec.Context {
+		iri, ok := rawVal.(string)
+		if !ok {
+			t.Fatalf("Context[%q] expected string IRI, got %T", k, rawVal)
+		}
+		if hashIdx := strings.IndexByte(iri, '#'); hashIdx >= 0 && strings.Contains(iri[hashIdx+1:], "/") {
+			t.Fatalf("Context[%q] = %q contains invalid fragment-slash (#.../)", k, iri)
+		}
+		u, err := url.Parse(iri)
+		if err != nil || u.Scheme == "" || u.Host == "" {
+			t.Fatalf("Context[%q] = %q is not a valid absolute IRI: err=%v", k, iri, err)
+		}
+	}
+
+	// Verify deterministic SHA256 across calls
 	spec2 := ontology.CanonicalSpec()
 	if spec.SHA256 != spec2.SHA256 {
 		t.Fatalf("expected deterministic ontology SHA256, got %s != %s", spec.SHA256, spec2.SHA256)
+	}
+	if got := ontology.ComputeSpecSHA256(spec2); got != spec.SHA256 {
+		t.Fatalf("ComputeSpecSHA256 = %s, want %s", got, spec.SHA256)
+	}
+
+	// Verify SHA256 is sensitive to @context and @type mutations
+	mutCtx := ontology.CanonicalSpec()
+	mutCtx.Context["sec"] = "https://xoscal.dev/ns/ontology/v1/tampered#"
+	if mutatedDigest := ontology.ComputeSpecSHA256(mutCtx); mutatedDigest == spec.SHA256 {
+		t.Fatalf("expected SHA256 to change when @context['sec'] mutates, remained %s", mutatedDigest)
+	}
+
+	mutType := ontology.CanonicalSpec()
+	mutType.Type = "owl:TamperedOntology"
+	if mutatedDigest := ontology.ComputeSpecSHA256(mutType); mutatedDigest == spec.SHA256 {
+		t.Fatalf("expected SHA256 to change when @type mutates, remained %s", mutatedDigest)
 	}
 
 	// Verify ANTI predicates per CKODEX Rule 17

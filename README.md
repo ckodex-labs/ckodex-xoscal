@@ -77,7 +77,7 @@ xoscal quickstart
 ### 2. Build Standalone Binaries
 
 ```bash
-# Compiles bin/xoscal, bin/xoscal-ctl, bin/xoscal-server, and bin/xoscal-backup
+# Compiles bin/xoscal, bin/xoscal-ctl, bin/xoscal-server, bin/xoscal-gateway, and bin/xoscal-backup
 make build
 
 # Inspect the unified CLI
@@ -293,7 +293,7 @@ xoscal-ctl frameworks seed -db oscal.db
 | `cccs-itsp-10-171` | Canada (`ca`) | CCCS ITSP.10.171 | Security requirements for non-federal systems and organizations (267 controls) |
 | `cccs-medium-cloud-pbmm`| Canada (`ca`) | TBS / CCCS PBMM Cloud | Protected B, Medium Confidentiality, Medium Availability cloud security profile (384 controls) |
 
-In addition to the 5 Canadian frameworks (`2,179` controls), the registry ships with **31 international and sovereign frameworks** (`14,058` controls) across the United States (`7`, incl. NIST SP 800-53 Rev 5, NIST CSF 2.0, FedRAMP Rev 5, CMMC 2.0), United Kingdom (`1`, Cyber Essentials), France (`6`, ANSSI SecNumCloud, EBIOS RM, RGS, PSSI, Hygiene), Germany (`13`, BSI IT-Grundschutz 2023 & C5:2020), and the European Union (`4`, NIS2, DORA, EUCS, E-ITS), totaling **36 registered frameworks**, **16,237 controls**, and **252 7-layer OSCAL 1.2.3 artifacts**.
+In addition to the 5 Canadian frameworks (`2,179` controls), the registry ships with **31 international and sovereign frameworks** (`14,058` controls) across the United States (`7`, incl. NIST SP 800-53 Rev 5, NIST CSF 2.0, FedRAMP Rev 5, CMMC 2.0), United Kingdom (`1`, Cyber Essentials), France (`6`, ANSSI SecNumCloud, EBIOS RM, RGS, PSSI, Hygiene), Germany (`12`, BSI IT-Grundschutz 2023 & C5:2020), Estonia (`1`, E-ITS 2024), International (`1`, ISO/IEC 42001), and the European Union (`3`, NIS2, DORA, EU AI Act), totaling **36 registered frameworks**, **16,237 controls**, and **252 7-layer OSCAL 1.2.3 artifacts**.
 
 ---
 
@@ -354,7 +354,7 @@ Features:
 
 ### 11. OWL/JSON-LD Ontology, Unified Property Graph, Threat Feeds & UTCP v1.0.1 (`xoscal ontology` / `graph` / `feeds` / `utcp`)
 
-Query the unified **20,109-node / 61,916-edge** regulatory and threat property graph across all **36 frameworks** and **6 sovereign jurisdictions** (`CA`, `US`, `EU`, `DE`, `FR`, `GB`), synchronize air-gapped or live threat feeds with cryptographic flight-recorder receipts, and expose native **UTCP v1.0.1** tool manuals:
+Query the unified **20,111-node / 61,916-edge** regulatory and threat property graph across all **36 frameworks** and **8 jurisdictions** (`CA`, `US`, `EU`, `DE`, `FR`, `GB`, `EE`, `International`), synchronize air-gapped or live threat feeds with cryptographic flight-recorder receipts, and expose native **UTCP v1.0.1** tool manuals:
 
 ```bash
 # Inspect OWL/JSON-LD v1.0.0 ontology classes (12) and typed predicates (16, incl. Rule 17 ANTI relations)

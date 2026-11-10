@@ -4,16 +4,419 @@
       "href": "./system-security-plan.json"
     },
     "metadata": {
-      "last-modified": "2026-11-08T01:42:13Z",
+      "last-modified": "2026-11-08T00:30:45Z",
       "oscal-version": "1.2.3",
       "title": "CISA Cybersecurity Performance Goals v2.0 Plan of Action and Milestones Template",
       "version": "1"
     },
     "poam-items": [
       {
-        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for CISA Cybersecurity Performance Goals v2.0.",
-        "title": "Compliance Roadmap and Parameter Tailoring for CISA Cybersecurity Performance Goals v2.0",
-        "uuid": "96d52e20-c3d5-5939-a092-0fe59817d14b"
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _1.a in CISA Cybersecurity Performance Goals v2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_1.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _1.a (Establish Cybersecurity Responsibilities)",
+        "uuid": "f576c4e4-d31e-5872-8398-687f512e58df"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _1.b in CISA Cybersecurity Performance Goals v2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_1.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _1.b (Manage Cybersecurity Oversight)",
+        "uuid": "d0bd12c8-acde-5a69-933a-d87897464bf8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _1.c in CISA Cybersecurity Performance Goals v2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_1.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _1.c (Manage Incident Response Plans)",
+        "uuid": "807f3220-7f55-5ee0-85b8-587d6a5dd505"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _1.d in CISA Cybersecurity Performance Goals v2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_1.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _1.d (Supply Chain Incident Reporting \u0026 Vulnerability Disclosure)",
+        "uuid": "bff6d34d-12c3-50e4-9b52-30f7dda0d2b4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _1.e in CISA Cybersecurity Performance Goals v2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_1.e"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _1.e (Manage Risks from Managed Service Providers)",
+        "uuid": "6a35810b-7ecd-5e96-b18a-7a33d5de71ad"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.a in CISA Cybersecurity Performance Goals v2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.a (Manage Organizational Assets)",
+        "uuid": "1fb601c5-9bea-5f42-a787-a7047fe5e3bc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.b in CISA Cybersecurity Performance Goals v2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.b (Mitigate Known Vulnerabilities)",
+        "uuid": "61c1f73e-8c0e-58fd-ad76-c4758082fc38"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.c in CISA Cybersecurity Performance Goals v2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.c (Obtain Independent Validation of Cybersecurity Controls)",
+        "uuid": "7960e155-ddc9-58da-8137-8b83d16a8ec1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.d in CISA Cybersecurity Performance Goals v2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.d (Maintain Vulnerability Disclosure/Reporting Process)",
+        "uuid": "39e1e0f9-4bf9-5ce1-a8c4-f4243bbc1777"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.e in CISA Cybersecurity Performance Goals v2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.e"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.e (Document Network Topology)",
+        "uuid": "6451be4a-ac19-5e34-91b6-e075b28a63f2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.a in CISA Cybersecurity Performance Goals v2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.a (Changing Default Passwords)",
+        "uuid": "4f31e5ee-e2c2-5ab2-ba8c-ab345a06db6c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.b in CISA Cybersecurity Performance Goals v2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.b (Establish Minimum Password Strength)",
+        "uuid": "9e615efe-abda-5f78-b28e-92f1bf891f99"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.c in CISA Cybersecurity Performance Goals v2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.c (Create Unique Credentials)",
+        "uuid": "1e91589d-3864-51a7-88da-4fecc3624ab5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.d in CISA Cybersecurity Performance Goals v2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.d (Revoking Credentials for Departing Staff)",
+        "uuid": "5f5c3664-e731-5ef0-8301-10d3dbed3e66"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.e in CISA Cybersecurity Performance Goals v2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.e"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.e (Monitor Unsuccessful (Automated) Login Attempts)",
+        "uuid": "712b75be-390f-5635-974d-449e54195cbe"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.f in CISA Cybersecurity Performance Goals v2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.f"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.f (Implement Multi-factor Authentication)",
+        "uuid": "e73824e5-712c-5c57-9aeb-d990bae70ab5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.g in CISA Cybersecurity Performance Goals v2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.g"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.g (Administrators Maintain Separate User and Privileged Accounts)",
+        "uuid": "c9dfa3fe-2e3b-561f-870c-0a21792409c4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.h in CISA Cybersecurity Performance Goals v2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.h"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.h (Implement the Principles of Least Privilege)",
+        "uuid": "3d4c91cc-31bf-5693-98bb-06ce48ce300d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.i in CISA Cybersecurity Performance Goals v2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.i"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.i (Implement Logical/Physical Network Segmentation)",
+        "uuid": "e6bdcab7-5a64-5744-9645-b0639664b7ba"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.j in CISA Cybersecurity Performance Goals v2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.j"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.j (Implement Cybersecurity Training)",
+        "uuid": "3618b48d-2ce6-5273-a0c5-bc367cd25629"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.k in CISA Cybersecurity Performance Goals v2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.k"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.k (Utilize Strong Encryption)",
+        "uuid": "d366133d-2bac-55b6-82fb-23997808ba0c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.l in CISA Cybersecurity Performance Goals v2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.l"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.l (Enable Email Security)",
+        "uuid": "a50ef941-6a98-57ba-b9d3-2e2b22f6c519"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.m in CISA Cybersecurity Performance Goals v2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.m"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.m (Disable Autorun \u0026 Macros By Default)",
+        "uuid": "977393d9-a2d4-5809-9353-d78854718fc9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.n in CISA Cybersecurity Performance Goals v2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.n"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.n (Establish Change Management Processes)",
+        "uuid": "03a5162a-dd56-53cb-8463-d1eaf97683a5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.o in CISA Cybersecurity Performance Goals v2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.o"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.o (Maintain System Backups \u0026 Restoration Ability)",
+        "uuid": "e18f22e6-d5d1-55b6-92ad-bd2fa1b79d99"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.p in CISA Cybersecurity Performance Goals v2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.p"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.p (Maintain Hardware \u0026 Software Approval Process)",
+        "uuid": "66e6b29b-f7e7-567d-9b22-c80a45f0b7d8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.q in CISA Cybersecurity Performance Goals v2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.q"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.q (Maintain Log Collection \u0026 Storage)",
+        "uuid": "c7013f58-a09d-5325-8ed5-9aa28f90de67"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.r in CISA Cybersecurity Performance Goals v2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.r"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.r (Prohibit Connection of Unauthorized Devices)",
+        "uuid": "baca2920-472f-511d-815a-27c317667553"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.s in CISA Cybersecurity Performance Goals v2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.s"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.s (Secure Internet Facing Devices)",
+        "uuid": "4daee0d2-3f9e-5235-b7b1-49af646ee371"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.a in CISA Cybersecurity Performance Goals v2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.a (Establish Malicious Code Detection)",
+        "uuid": "5543016b-bec1-5050-8d5f-1e6a85a120ed"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.b in CISA Cybersecurity Performance Goals v2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.b (Identify Adverse Events)",
+        "uuid": "13d8192d-fccd-5a64-9e66-e806cf1b4b51"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.a in CISA Cybersecurity Performance Goals v2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.a (Establish Incident Communication Procedures)",
+        "uuid": "672e295e-f6e7-575f-b79d-e99cfd68da65"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.b in CISA Cybersecurity Performance Goals v2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.b (Establish Incident Reporting Procedures)",
+        "uuid": "df16e61c-d7a4-5f6f-a2bd-1f3bbf133e7e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.a in CISA Cybersecurity Performance Goals v2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.a (Incident Planning and Preparedness)",
+        "uuid": "7376b749-3065-5103-b572-436baba7acc3"
       }
     ],
     "uuid": "66ded804-057d-53ae-a97b-807d31ddf21f"

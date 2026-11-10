@@ -13,7 +13,7 @@ func TestStore_NodeEdgeLifecycle(t *testing.T) {
 	if err != nil {
 		t.Fatalf("new store: %v", err)
 	}
-	defer store.Close()
+	defer func() { _ = store.Close() }()
 
 	// Create nodes
 	n1 := &Node{ID: "node:artifact:sha256:abc", Kind: "artifact", URN: "urn:test:artifact:a", CreatedAt: time.Now().UTC()}
@@ -113,12 +113,16 @@ func TestStore_ListNodes(t *testing.T) {
 	if err != nil {
 		t.Fatalf("new store: %v", err)
 	}
-	defer store.Close()
+	defer func() { _ = store.Close() }()
 
 	n1 := &Node{ID: "node:artifact:1", Kind: "artifact", URN: "urn:a", CreatedAt: time.Now().UTC()}
 	n2 := &Node{ID: "node:component:2", Kind: "component", URN: "urn:b", CreatedAt: time.Now().UTC()}
-	store.CreateNode(ctx, n1)
-	store.CreateNode(ctx, n2)
+	if err := store.CreateNode(ctx, n1); err != nil {
+		t.Fatal(err)
+	}
+	if err := store.CreateNode(ctx, n2); err != nil {
+		t.Fatal(err)
+	}
 
 	nodes, _, err := store.ListNodes(ctx, "artifact", "", time.Time{}, 10, "")
 	if err != nil {
@@ -135,7 +139,7 @@ func TestStore_ProjectionAuditIsAppendOnly(t *testing.T) {
 	if err != nil {
 		t.Fatalf("new store: %v", err)
 	}
-	defer store.Close()
+	defer func() { _ = store.Close() }()
 
 	from := &Node{ID: "node:audit:from", Kind: "artifact", URN: "urn:audit:from", CreatedAt: time.Now().UTC()}
 	to := &Node{ID: "node:audit:to", Kind: "component", URN: "urn:audit:to", CreatedAt: time.Now().UTC()}

@@ -53,7 +53,7 @@ func BackupSQLite(ctx context.Context, dsn, destination string) error {
 	if err != nil {
 		return fmt.Errorf("open sqlite source: %w", err)
 	}
-	defer db.Close()
+	defer func() { _ = db.Close() }()
 	if err := db.PingContext(ctx); err != nil {
 		return fmt.Errorf("ping sqlite source: %w", err)
 	}
@@ -80,7 +80,7 @@ func ComputeFileSHA256(filePath string) (string, error) {
 	if err != nil {
 		return "", err
 	}
-	defer f.Close()
+	defer func() { _ = f.Close() }()
 
 	h := sha256.New()
 	if _, err := io.Copy(h, f); err != nil {
@@ -114,7 +114,7 @@ func VerifySQLite(ctx context.Context, filePath string) (string, error) {
 	if err != nil {
 		return "", fmt.Errorf("open database: %w", err)
 	}
-	defer db.Close()
+	defer func() { _ = db.Close() }()
 
 	var result string
 	row := db.QueryRowContext(ctx, "PRAGMA integrity_check;")
@@ -226,7 +226,7 @@ func RestoreSQLite(ctx context.Context, backupFile, targetDSN string, overwrite 
 	if err != nil {
 		return fmt.Errorf("open backup file: %w", err)
 	}
-	defer src.Close()
+	defer func() { _ = src.Close() }()
 
 	// #nosec G304 -- bounded temp target
 	dst, err := os.OpenFile(tmpTarget, os.O_CREATE|os.O_WRONLY|os.O_TRUNC, 0o600)
@@ -255,9 +255,7 @@ func RestoreSQLite(ctx context.Context, backupFile, targetDSN string, overwrite 
 }
 
 func sqliteFilePath(dsn string) string {
-	if strings.HasPrefix(dsn, "file:") {
-		dsn = strings.TrimPrefix(dsn, "file:")
-	}
+	dsn = strings.TrimPrefix(dsn, "file:")
 	if index := strings.IndexByte(dsn, '?'); index >= 0 {
 		dsn = dsn[:index]
 	}

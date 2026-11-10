@@ -4,7 +4,7 @@
       "href": "./assessment-plan.json"
     },
     "metadata": {
-      "last-modified": "2026-11-08T01:42:11Z",
+      "last-modified": "2026-01-01T00:00:00Z",
       "oscal-version": "1.2.3",
       "title": "CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1) Assessment Results Template",
       "version": "ITSP.50.103"
@@ -322,7 +322,7 @@
         ],
         "observations": [
           {
-            "collected": "2026-11-08T01:42:11Z",
+            "collected": "2026-01-01T00:00:00Z",
             "description": "Verified control ac-1 (Access control policy and procedures) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -334,7 +334,7 @@
             "uuid": "1f230dfa-f034-5b9e-b5d8-180ae2624032"
           },
           {
-            "collected": "2026-11-08T01:42:11Z",
+            "collected": "2026-01-01T00:00:00Z",
             "description": "Verified control at-1 (Awareness and training policy and procedures) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -346,7 +346,7 @@
             "uuid": "73140386-9657-5d1d-aca4-195ebab53fac"
           },
           {
-            "collected": "2026-11-08T01:42:11Z",
+            "collected": "2026-01-01T00:00:00Z",
             "description": "Verified control au-1 (Audit and accountability policy and procedures) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -358,7 +358,7 @@
             "uuid": "f119271e-bd3f-5b3a-91e4-49ff2dbdb5f0"
           },
           {
-            "collected": "2026-11-08T01:42:11Z",
+            "collected": "2026-01-01T00:00:00Z",
             "description": "Verified control ca-1 (Assessment, authorization and monitoring policy and procedures) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -370,7 +370,7 @@
             "uuid": "ef446613-064a-5890-92ed-d77fea7b40e7"
           },
           {
-            "collected": "2026-11-08T01:42:11Z",
+            "collected": "2026-01-01T00:00:00Z",
             "description": "Verified control cm-1 (Configuration management policy and procedures) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -382,7 +382,7 @@
             "uuid": "3d167f3d-7fb9-5385-be81-d01436d98b72"
           },
           {
-            "collected": "2026-11-08T01:42:11Z",
+            "collected": "2026-01-01T00:00:00Z",
             "description": "Verified control cp-1 (Contingency planning policy and procedures) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -394,7 +394,7 @@
             "uuid": "b3be53f0-5e45-513c-99d3-370e9039e161"
           },
           {
-            "collected": "2026-11-08T01:42:11Z",
+            "collected": "2026-01-01T00:00:00Z",
             "description": "Verified control ia-1 (Identification and authentication policy and procedures) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -406,7 +406,7 @@
             "uuid": "4cbc96b3-b40b-529e-981f-eb5c867c5a9d"
           },
           {
-            "collected": "2026-11-08T01:42:11Z",
+            "collected": "2026-01-01T00:00:00Z",
             "description": "Verified control ir-1 (Incident response policy and procedures) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -418,7 +418,7 @@
             "uuid": "f34fb190-2dda-5834-b305-ad365765a5fe"
           },
           {
-            "collected": "2026-11-08T01:42:11Z",
+            "collected": "2026-01-01T00:00:00Z",
             "description": "Verified control ma-1 (Maintenance policy and procedures) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -430,7 +430,7 @@
             "uuid": "7c0cee43-a31c-581d-ac6c-5219d77e606e"
           },
           {
-            "collected": "2026-11-08T01:42:11Z",
+            "collected": "2026-01-01T00:00:00Z",
             "description": "Verified control mp-1 (Media protection policy and procedures) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -442,7 +442,7 @@
             "uuid": "88c430f0-96e5-5ad1-ab99-c6c66e899793"
           },
           {
-            "collected": "2026-11-08T01:42:11Z",
+            "collected": "2026-01-01T00:00:00Z",
             "description": "Verified control pe-1 (Physical and environmental protection policy and procedures) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -454,7 +454,7 @@
             "uuid": "4bde7909-1a80-53e9-b3c4-8f39f2a4f428"
           },
           {
-            "collected": "2026-11-08T01:42:11Z",
+            "collected": "2026-01-01T00:00:00Z",
             "description": "Verified control pl-1 (Planning policy and procedures) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -466,7 +466,7 @@
             "uuid": "921b6366-e5ff-564f-b4f9-d2439daa710f"
           },
           {
-            "collected": "2026-11-08T01:42:11Z",
+            "collected": "2026-01-01T00:00:00Z",
             "description": "Verified control ps-1 (Personnel security policy and procedures) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -478,7 +478,7 @@
             "uuid": "0961ac07-52e5-5e85-91e2-0021f743d892"
           },
           {
-            "collected": "2026-11-08T01:42:11Z",
+            "collected": "2026-01-01T00:00:00Z",
             "description": "Verified control ra-1 (Risk assessment policy and procedures) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -490,7 +490,7 @@
             "uuid": "837cea8c-276c-52ac-8be6-0d5c567e3591"
           },
           {
-            "collected": "2026-11-08T01:42:11Z",
+            "collected": "2026-01-01T00:00:00Z",
             "description": "Verified control sa-1 (System and services acquisition policy and procedures) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -502,7 +502,7 @@
             "uuid": "6cffef79-7c4e-5592-a2ec-abde93bc2bce"
           },
           {
-            "collected": "2026-11-08T01:42:11Z",
+            "collected": "2026-01-01T00:00:00Z",
             "description": "Verified control sc-1 (System and communications protection policy and procedures) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -514,7 +514,7 @@
             "uuid": "8a00cbf3-4630-5ec4-8d94-5330d370c370"
           },
           {
-            "collected": "2026-11-08T01:42:11Z",
+            "collected": "2026-01-01T00:00:00Z",
             "description": "Verified control si-1 (System and information integrity policy and procedures) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -526,7 +526,7 @@
             "uuid": "044bfa4d-a96b-5ca2-bd7b-5a98a778e560"
           },
           {
-            "collected": "2026-11-08T01:42:11Z",
+            "collected": "2026-01-01T00:00:00Z",
             "description": "Verified control sr-1 (Supply chain risk management policy and procedures) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -542,11 +542,1164 @@
           "control-selections": [
             {
               "description": "All controls evaluated for CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1)",
-              "include-all": {}
+              "include-controls": [
+                {
+                  "control-id": "ac-1"
+                },
+                {
+                  "control-id": "ac-11"
+                },
+                {
+                  "control-id": "ac-11.1"
+                },
+                {
+                  "control-id": "ac-12"
+                },
+                {
+                  "control-id": "ac-14"
+                },
+                {
+                  "control-id": "ac-16"
+                },
+                {
+                  "control-id": "ac-16.2"
+                },
+                {
+                  "control-id": "ac-16.5"
+                },
+                {
+                  "control-id": "ac-17"
+                },
+                {
+                  "control-id": "ac-17.1"
+                },
+                {
+                  "control-id": "ac-17.2"
+                },
+                {
+                  "control-id": "ac-17.3"
+                },
+                {
+                  "control-id": "ac-17.4"
+                },
+                {
+                  "control-id": "ac-17.400"
+                },
+                {
+                  "control-id": "ac-18"
+                },
+                {
+                  "control-id": "ac-18.1"
+                },
+                {
+                  "control-id": "ac-18.3"
+                },
+                {
+                  "control-id": "ac-18.4"
+                },
+                {
+                  "control-id": "ac-19"
+                },
+                {
+                  "control-id": "ac-19.5"
+                },
+                {
+                  "control-id": "ac-2"
+                },
+                {
+                  "control-id": "ac-2.1"
+                },
+                {
+                  "control-id": "ac-2.10"
+                },
+                {
+                  "control-id": "ac-2.13"
+                },
+                {
+                  "control-id": "ac-2.2"
+                },
+                {
+                  "control-id": "ac-2.3"
+                },
+                {
+                  "control-id": "ac-2.4"
+                },
+                {
+                  "control-id": "ac-2.5"
+                },
+                {
+                  "control-id": "ac-2.7"
+                },
+                {
+                  "control-id": "ac-20"
+                },
+                {
+                  "control-id": "ac-20.1"
+                },
+                {
+                  "control-id": "ac-20.2"
+                },
+                {
+                  "control-id": "ac-20.4"
+                },
+                {
+                  "control-id": "ac-21"
+                },
+                {
+                  "control-id": "ac-21.400"
+                },
+                {
+                  "control-id": "ac-21.401"
+                },
+                {
+                  "control-id": "ac-22"
+                },
+                {
+                  "control-id": "ac-3"
+                },
+                {
+                  "control-id": "ac-3.2"
+                },
+                {
+                  "control-id": "ac-3.4"
+                },
+                {
+                  "control-id": "ac-3.9"
+                },
+                {
+                  "control-id": "ac-4"
+                },
+                {
+                  "control-id": "ac-5"
+                },
+                {
+                  "control-id": "ac-6"
+                },
+                {
+                  "control-id": "ac-6.1"
+                },
+                {
+                  "control-id": "ac-6.10"
+                },
+                {
+                  "control-id": "ac-6.2"
+                },
+                {
+                  "control-id": "ac-6.5"
+                },
+                {
+                  "control-id": "ac-6.7"
+                },
+                {
+                  "control-id": "ac-6.9"
+                },
+                {
+                  "control-id": "ac-7"
+                },
+                {
+                  "control-id": "ac-8"
+                },
+                {
+                  "control-id": "at-1"
+                },
+                {
+                  "control-id": "at-2"
+                },
+                {
+                  "control-id": "at-2.2"
+                },
+                {
+                  "control-id": "at-2.3"
+                },
+                {
+                  "control-id": "at-3"
+                },
+                {
+                  "control-id": "at-4"
+                },
+                {
+                  "control-id": "au-1"
+                },
+                {
+                  "control-id": "au-11"
+                },
+                {
+                  "control-id": "au-12"
+                },
+                {
+                  "control-id": "au-12.1"
+                },
+                {
+                  "control-id": "au-2"
+                },
+                {
+                  "control-id": "au-3"
+                },
+                {
+                  "control-id": "au-3.1"
+                },
+                {
+                  "control-id": "au-4"
+                },
+                {
+                  "control-id": "au-4.1"
+                },
+                {
+                  "control-id": "au-5"
+                },
+                {
+                  "control-id": "au-5.1"
+                },
+                {
+                  "control-id": "au-6"
+                },
+                {
+                  "control-id": "au-6.1"
+                },
+                {
+                  "control-id": "au-6.3"
+                },
+                {
+                  "control-id": "au-6.4"
+                },
+                {
+                  "control-id": "au-7"
+                },
+                {
+                  "control-id": "au-7.1"
+                },
+                {
+                  "control-id": "au-8"
+                },
+                {
+                  "control-id": "au-9"
+                },
+                {
+                  "control-id": "au-9.2"
+                },
+                {
+                  "control-id": "au-9.4"
+                },
+                {
+                  "control-id": "au-9.6"
+                },
+                {
+                  "control-id": "ca-1"
+                },
+                {
+                  "control-id": "ca-2"
+                },
+                {
+                  "control-id": "ca-2.1"
+                },
+                {
+                  "control-id": "ca-3"
+                },
+                {
+                  "control-id": "ca-5"
+                },
+                {
+                  "control-id": "ca-6"
+                },
+                {
+                  "control-id": "ca-7"
+                },
+                {
+                  "control-id": "ca-7.1"
+                },
+                {
+                  "control-id": "ca-7.4"
+                },
+                {
+                  "control-id": "ca-9"
+                },
+                {
+                  "control-id": "ca-9.1"
+                },
+                {
+                  "control-id": "cm-1"
+                },
+                {
+                  "control-id": "cm-10"
+                },
+                {
+                  "control-id": "cm-11"
+                },
+                {
+                  "control-id": "cm-11.2"
+                },
+                {
+                  "control-id": "cm-12"
+                },
+                {
+                  "control-id": "cm-12.1"
+                },
+                {
+                  "control-id": "cm-2"
+                },
+                {
+                  "control-id": "cm-2.2"
+                },
+                {
+                  "control-id": "cm-2.3"
+                },
+                {
+                  "control-id": "cm-2.6"
+                },
+                {
+                  "control-id": "cm-2.7"
+                },
+                {
+                  "control-id": "cm-3"
+                },
+                {
+                  "control-id": "cm-3.2"
+                },
+                {
+                  "control-id": "cm-3.4"
+                },
+                {
+                  "control-id": "cm-4"
+                },
+                {
+                  "control-id": "cm-4.1"
+                },
+                {
+                  "control-id": "cm-4.2"
+                },
+                {
+                  "control-id": "cm-5"
+                },
+                {
+                  "control-id": "cm-6"
+                },
+                {
+                  "control-id": "cm-7"
+                },
+                {
+                  "control-id": "cm-7.1"
+                },
+                {
+                  "control-id": "cm-7.2"
+                },
+                {
+                  "control-id": "cm-7.5"
+                },
+                {
+                  "control-id": "cm-8"
+                },
+                {
+                  "control-id": "cm-8.1"
+                },
+                {
+                  "control-id": "cm-8.3"
+                },
+                {
+                  "control-id": "cm-8.4"
+                },
+                {
+                  "control-id": "cm-8.6"
+                },
+                {
+                  "control-id": "cm-9"
+                },
+                {
+                  "control-id": "cp-1"
+                },
+                {
+                  "control-id": "cp-10"
+                },
+                {
+                  "control-id": "cp-10.2"
+                },
+                {
+                  "control-id": "cp-10.4"
+                },
+                {
+                  "control-id": "cp-10.6"
+                },
+                {
+                  "control-id": "cp-2"
+                },
+                {
+                  "control-id": "cp-2.1"
+                },
+                {
+                  "control-id": "cp-2.2"
+                },
+                {
+                  "control-id": "cp-2.3"
+                },
+                {
+                  "control-id": "cp-2.8"
+                },
+                {
+                  "control-id": "cp-3"
+                },
+                {
+                  "control-id": "cp-4"
+                },
+                {
+                  "control-id": "cp-4.1"
+                },
+                {
+                  "control-id": "cp-6"
+                },
+                {
+                  "control-id": "cp-6.1"
+                },
+                {
+                  "control-id": "cp-6.3"
+                },
+                {
+                  "control-id": "cp-7"
+                },
+                {
+                  "control-id": "cp-7.1"
+                },
+                {
+                  "control-id": "cp-7.2"
+                },
+                {
+                  "control-id": "cp-7.3"
+                },
+                {
+                  "control-id": "cp-7.4"
+                },
+                {
+                  "control-id": "cp-7.6"
+                },
+                {
+                  "control-id": "cp-8"
+                },
+                {
+                  "control-id": "cp-8.1"
+                },
+                {
+                  "control-id": "cp-8.2"
+                },
+                {
+                  "control-id": "cp-8.3"
+                },
+                {
+                  "control-id": "cp-8.5"
+                },
+                {
+                  "control-id": "cp-9"
+                },
+                {
+                  "control-id": "cp-9.1"
+                },
+                {
+                  "control-id": "cp-9.3"
+                },
+                {
+                  "control-id": "cp-9.5"
+                },
+                {
+                  "control-id": "cp-9.7"
+                },
+                {
+                  "control-id": "cp-9.8"
+                },
+                {
+                  "control-id": "ia-1"
+                },
+                {
+                  "control-id": "ia-11"
+                },
+                {
+                  "control-id": "ia-12"
+                },
+                {
+                  "control-id": "ia-12.2"
+                },
+                {
+                  "control-id": "ia-12.3"
+                },
+                {
+                  "control-id": "ia-12.4"
+                },
+                {
+                  "control-id": "ia-12.5"
+                },
+                {
+                  "control-id": "ia-2"
+                },
+                {
+                  "control-id": "ia-2.1"
+                },
+                {
+                  "control-id": "ia-2.10"
+                },
+                {
+                  "control-id": "ia-2.12"
+                },
+                {
+                  "control-id": "ia-2.2"
+                },
+                {
+                  "control-id": "ia-2.8"
+                },
+                {
+                  "control-id": "ia-3"
+                },
+                {
+                  "control-id": "ia-4"
+                },
+                {
+                  "control-id": "ia-4.4"
+                },
+                {
+                  "control-id": "ia-5"
+                },
+                {
+                  "control-id": "ia-5.1"
+                },
+                {
+                  "control-id": "ia-5.13"
+                },
+                {
+                  "control-id": "ia-5.14"
+                },
+                {
+                  "control-id": "ia-5.2"
+                },
+                {
+                  "control-id": "ia-5.6"
+                },
+                {
+                  "control-id": "ia-5.7"
+                },
+                {
+                  "control-id": "ia-5.8"
+                },
+                {
+                  "control-id": "ia-5.9"
+                },
+                {
+                  "control-id": "ia-6"
+                },
+                {
+                  "control-id": "ia-7"
+                },
+                {
+                  "control-id": "ia-8"
+                },
+                {
+                  "control-id": "ia-8.1"
+                },
+                {
+                  "control-id": "ia-8.2"
+                },
+                {
+                  "control-id": "ia-8.4"
+                },
+                {
+                  "control-id": "ir-1"
+                },
+                {
+                  "control-id": "ir-2"
+                },
+                {
+                  "control-id": "ir-3"
+                },
+                {
+                  "control-id": "ir-3.2"
+                },
+                {
+                  "control-id": "ir-4"
+                },
+                {
+                  "control-id": "ir-4.3"
+                },
+                {
+                  "control-id": "ir-4.8"
+                },
+                {
+                  "control-id": "ir-4.9"
+                },
+                {
+                  "control-id": "ir-5"
+                },
+                {
+                  "control-id": "ir-6"
+                },
+                {
+                  "control-id": "ir-6.1"
+                },
+                {
+                  "control-id": "ir-6.2"
+                },
+                {
+                  "control-id": "ir-6.3"
+                },
+                {
+                  "control-id": "ir-7"
+                },
+                {
+                  "control-id": "ir-7.1"
+                },
+                {
+                  "control-id": "ir-8"
+                },
+                {
+                  "control-id": "ma-1"
+                },
+                {
+                  "control-id": "ma-2"
+                },
+                {
+                  "control-id": "ma-3"
+                },
+                {
+                  "control-id": "ma-3.1"
+                },
+                {
+                  "control-id": "ma-3.2"
+                },
+                {
+                  "control-id": "ma-3.3"
+                },
+                {
+                  "control-id": "ma-4"
+                },
+                {
+                  "control-id": "ma-4.1"
+                },
+                {
+                  "control-id": "ma-4.3"
+                },
+                {
+                  "control-id": "ma-4.4"
+                },
+                {
+                  "control-id": "ma-4.6"
+                },
+                {
+                  "control-id": "ma-5"
+                },
+                {
+                  "control-id": "ma-5.1"
+                },
+                {
+                  "control-id": "ma-6"
+                },
+                {
+                  "control-id": "mp-1"
+                },
+                {
+                  "control-id": "mp-2"
+                },
+                {
+                  "control-id": "mp-3"
+                },
+                {
+                  "control-id": "mp-4"
+                },
+                {
+                  "control-id": "mp-5"
+                },
+                {
+                  "control-id": "mp-6"
+                },
+                {
+                  "control-id": "mp-6.3"
+                },
+                {
+                  "control-id": "mp-6.8"
+                },
+                {
+                  "control-id": "mp-7"
+                },
+                {
+                  "control-id": "mp-8"
+                },
+                {
+                  "control-id": "mp-8.3"
+                },
+                {
+                  "control-id": "pe-1"
+                },
+                {
+                  "control-id": "pe-10"
+                },
+                {
+                  "control-id": "pe-11"
+                },
+                {
+                  "control-id": "pe-12"
+                },
+                {
+                  "control-id": "pe-13"
+                },
+                {
+                  "control-id": "pe-13.1"
+                },
+                {
+                  "control-id": "pe-13.4"
+                },
+                {
+                  "control-id": "pe-13.400"
+                },
+                {
+                  "control-id": "pe-14"
+                },
+                {
+                  "control-id": "pe-15"
+                },
+                {
+                  "control-id": "pe-16"
+                },
+                {
+                  "control-id": "pe-17"
+                },
+                {
+                  "control-id": "pe-2"
+                },
+                {
+                  "control-id": "pe-2.400"
+                },
+                {
+                  "control-id": "pe-3"
+                },
+                {
+                  "control-id": "pe-3.400"
+                },
+                {
+                  "control-id": "pe-4"
+                },
+                {
+                  "control-id": "pe-400"
+                },
+                {
+                  "control-id": "pe-400.1"
+                },
+                {
+                  "control-id": "pe-400.2"
+                },
+                {
+                  "control-id": "pe-401"
+                },
+                {
+                  "control-id": "pe-5"
+                },
+                {
+                  "control-id": "pe-6"
+                },
+                {
+                  "control-id": "pe-6.1"
+                },
+                {
+                  "control-id": "pe-8"
+                },
+                {
+                  "control-id": "pe-9"
+                },
+                {
+                  "control-id": "pl-1"
+                },
+                {
+                  "control-id": "pl-10"
+                },
+                {
+                  "control-id": "pl-11"
+                },
+                {
+                  "control-id": "pl-2"
+                },
+                {
+                  "control-id": "pl-4"
+                },
+                {
+                  "control-id": "pl-4.1"
+                },
+                {
+                  "control-id": "pl-8"
+                },
+                {
+                  "control-id": "ps-1"
+                },
+                {
+                  "control-id": "ps-2"
+                },
+                {
+                  "control-id": "ps-3"
+                },
+                {
+                  "control-id": "ps-4"
+                },
+                {
+                  "control-id": "ps-5"
+                },
+                {
+                  "control-id": "ps-6"
+                },
+                {
+                  "control-id": "ps-7"
+                },
+                {
+                  "control-id": "ps-8"
+                },
+                {
+                  "control-id": "ps-9"
+                },
+                {
+                  "control-id": "ra-1"
+                },
+                {
+                  "control-id": "ra-2"
+                },
+                {
+                  "control-id": "ra-3"
+                },
+                {
+                  "control-id": "ra-3.1"
+                },
+                {
+                  "control-id": "ra-5"
+                },
+                {
+                  "control-id": "ra-5.11"
+                },
+                {
+                  "control-id": "ra-5.2"
+                },
+                {
+                  "control-id": "ra-5.5"
+                },
+                {
+                  "control-id": "ra-7"
+                },
+                {
+                  "control-id": "ra-9"
+                },
+                {
+                  "control-id": "sa-1"
+                },
+                {
+                  "control-id": "sa-10"
+                },
+                {
+                  "control-id": "sa-10.1"
+                },
+                {
+                  "control-id": "sa-10.7"
+                },
+                {
+                  "control-id": "sa-11"
+                },
+                {
+                  "control-id": "sa-15"
+                },
+                {
+                  "control-id": "sa-15.3"
+                },
+                {
+                  "control-id": "sa-16"
+                },
+                {
+                  "control-id": "sa-17"
+                },
+                {
+                  "control-id": "sa-2"
+                },
+                {
+                  "control-id": "sa-22"
+                },
+                {
+                  "control-id": "sa-3"
+                },
+                {
+                  "control-id": "sa-4"
+                },
+                {
+                  "control-id": "sa-4.1"
+                },
+                {
+                  "control-id": "sa-4.10"
+                },
+                {
+                  "control-id": "sa-4.12"
+                },
+                {
+                  "control-id": "sa-4.9"
+                },
+                {
+                  "control-id": "sa-400"
+                },
+                {
+                  "control-id": "sa-5"
+                },
+                {
+                  "control-id": "sa-8"
+                },
+                {
+                  "control-id": "sa-9"
+                },
+                {
+                  "control-id": "sa-9.1"
+                },
+                {
+                  "control-id": "sa-9.2"
+                },
+                {
+                  "control-id": "sa-9.8"
+                },
+                {
+                  "control-id": "sc-1"
+                },
+                {
+                  "control-id": "sc-10"
+                },
+                {
+                  "control-id": "sc-12"
+                },
+                {
+                  "control-id": "sc-12.1"
+                },
+                {
+                  "control-id": "sc-13"
+                },
+                {
+                  "control-id": "sc-15"
+                },
+                {
+                  "control-id": "sc-15.3"
+                },
+                {
+                  "control-id": "sc-17"
+                },
+                {
+                  "control-id": "sc-18"
+                },
+                {
+                  "control-id": "sc-18.1"
+                },
+                {
+                  "control-id": "sc-18.2"
+                },
+                {
+                  "control-id": "sc-18.3"
+                },
+                {
+                  "control-id": "sc-18.4"
+                },
+                {
+                  "control-id": "sc-18.5"
+                },
+                {
+                  "control-id": "sc-2"
+                },
+                {
+                  "control-id": "sc-20"
+                },
+                {
+                  "control-id": "sc-21"
+                },
+                {
+                  "control-id": "sc-22"
+                },
+                {
+                  "control-id": "sc-23"
+                },
+                {
+                  "control-id": "sc-23.1"
+                },
+                {
+                  "control-id": "sc-23.3"
+                },
+                {
+                  "control-id": "sc-28"
+                },
+                {
+                  "control-id": "sc-28.1"
+                },
+                {
+                  "control-id": "sc-29"
+                },
+                {
+                  "control-id": "sc-39"
+                },
+                {
+                  "control-id": "sc-4"
+                },
+                {
+                  "control-id": "sc-45"
+                },
+                {
+                  "control-id": "sc-5"
+                },
+                {
+                  "control-id": "sc-5.2"
+                },
+                {
+                  "control-id": "sc-5.3"
+                },
+                {
+                  "control-id": "sc-7"
+                },
+                {
+                  "control-id": "sc-7.11"
+                },
+                {
+                  "control-id": "sc-7.12"
+                },
+                {
+                  "control-id": "sc-7.13"
+                },
+                {
+                  "control-id": "sc-7.3"
+                },
+                {
+                  "control-id": "sc-7.4"
+                },
+                {
+                  "control-id": "sc-7.5"
+                },
+                {
+                  "control-id": "sc-7.7"
+                },
+                {
+                  "control-id": "sc-7.8"
+                },
+                {
+                  "control-id": "sc-7.9"
+                },
+                {
+                  "control-id": "sc-8"
+                },
+                {
+                  "control-id": "sc-8.1"
+                },
+                {
+                  "control-id": "si-1"
+                },
+                {
+                  "control-id": "si-10"
+                },
+                {
+                  "control-id": "si-11"
+                },
+                {
+                  "control-id": "si-12"
+                },
+                {
+                  "control-id": "si-16"
+                },
+                {
+                  "control-id": "si-2"
+                },
+                {
+                  "control-id": "si-2.2"
+                },
+                {
+                  "control-id": "si-2.6"
+                },
+                {
+                  "control-id": "si-3"
+                },
+                {
+                  "control-id": "si-3.4"
+                },
+                {
+                  "control-id": "si-4"
+                },
+                {
+                  "control-id": "si-4.10"
+                },
+                {
+                  "control-id": "si-4.11"
+                },
+                {
+                  "control-id": "si-4.12"
+                },
+                {
+                  "control-id": "si-4.13"
+                },
+                {
+                  "control-id": "si-4.14"
+                },
+                {
+                  "control-id": "si-4.15"
+                },
+                {
+                  "control-id": "si-4.2"
+                },
+                {
+                  "control-id": "si-4.4"
+                },
+                {
+                  "control-id": "si-4.5"
+                },
+                {
+                  "control-id": "si-400"
+                },
+                {
+                  "control-id": "si-5"
+                },
+                {
+                  "control-id": "si-7"
+                },
+                {
+                  "control-id": "si-7.1"
+                },
+                {
+                  "control-id": "si-7.2"
+                },
+                {
+                  "control-id": "si-7.3"
+                },
+                {
+                  "control-id": "si-7.7"
+                },
+                {
+                  "control-id": "si-8"
+                },
+                {
+                  "control-id": "si-8.2"
+                },
+                {
+                  "control-id": "sr-1"
+                },
+                {
+                  "control-id": "sr-10"
+                },
+                {
+                  "control-id": "sr-11"
+                },
+                {
+                  "control-id": "sr-11.1"
+                },
+                {
+                  "control-id": "sr-11.2"
+                },
+                {
+                  "control-id": "sr-12"
+                },
+                {
+                  "control-id": "sr-2"
+                },
+                {
+                  "control-id": "sr-2.1"
+                },
+                {
+                  "control-id": "sr-3"
+                },
+                {
+                  "control-id": "sr-5"
+                },
+                {
+                  "control-id": "sr-6"
+                },
+                {
+                  "control-id": "sr-8"
+                }
+              ]
             }
           ]
         },
-        "start": "2026-11-08T01:42:11Z",
+        "start": "2026-01-01T00:00:00Z",
         "title": "CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1) Assessment Results",
         "uuid": "2a5ab99a-d8c9-5f1d-a4c8-f889854f66da"
       }

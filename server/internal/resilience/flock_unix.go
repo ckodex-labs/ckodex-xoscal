@@ -10,23 +10,57 @@ import (
 	"syscall"
 )
 
-var (
-	dirLockMapMu sync.Mutex
-	dirLocks     = make(map[string]*sync.RWMutex)
-)
-
-func getInProcessDirLock(cleanDir string) *sync.RWMutex {
-	dirLockMapMu.Lock()
-	defer dirLockMapMu.Unlock()
-	if mu, ok := dirLocks[cleanDir]; ok {
-		return mu
-	}
-	mu := &sync.RWMutex{}
-	dirLocks[cleanDir] = mu
-	return mu
+type dirLockEntry struct {
+	mu   sync.RWMutex
+	refs int
 }
 
-// WithDirLock coordinates both in-process goroutines (via sync.RWMutex) and separate OS processes
+var (
+	dirLocksMu sync.Mutex
+	dirLocks   = make(map[string]*dirLockEntry)
+)
+
+func acquireInProcessDirLock(cleanDir string, exclusive bool) *dirLockEntry {
+	dirLocksMu.Lock()
+	entry, ok := dirLocks[cleanDir]
+	if !ok {
+		entry = &dirLockEntry{}
+		dirLocks[cleanDir] = entry
+	}
+	entry.refs++
+	dirLocksMu.Unlock()
+
+	if exclusive {
+		entry.mu.Lock()
+	} else {
+		entry.mu.RLock()
+	}
+	return entry
+}
+
+func releaseInProcessDirLock(cleanDir string, entry *dirLockEntry, exclusive bool) {
+	if exclusive {
+		entry.mu.Unlock()
+	} else {
+		entry.mu.RUnlock()
+	}
+
+	dirLocksMu.Lock()
+	entry.refs--
+	if entry.refs <= 0 && dirLocks[cleanDir] == entry {
+		delete(dirLocks, cleanDir)
+	}
+	dirLocksMu.Unlock()
+}
+
+// ActiveDirLockCount returns the current number of active in-process directory lock entries.
+func ActiveDirLockCount() int {
+	dirLocksMu.Lock()
+	defer dirLocksMu.Unlock()
+	return len(dirLocks)
+}
+
+// WithDirLock coordinates both in-process goroutines (via reference-counted sync.RWMutex) and separate OS processes
 // (via advisory syscall.Flock on <dir>/.checkpoint.lock) before executing fn.
 func WithDirLock(dir string, exclusive bool, fn func() error) error {
 	cleanDir := filepath.Clean(dir)
@@ -34,14 +68,8 @@ func WithDirLock(dir string, exclusive bool, fn func() error) error {
 		cleanDir = absDir
 	}
 
-	procMu := getInProcessDirLock(cleanDir)
-	if exclusive {
-		procMu.Lock()
-		defer procMu.Unlock()
-	} else {
-		procMu.RLock()
-		defer procMu.RUnlock()
-	}
+	entry := acquireInProcessDirLock(cleanDir, exclusive)
+	defer releaseInProcessDirLock(cleanDir, entry, exclusive)
 
 	if exclusive {
 		if err := os.MkdirAll(cleanDir, 0o750); err != nil {

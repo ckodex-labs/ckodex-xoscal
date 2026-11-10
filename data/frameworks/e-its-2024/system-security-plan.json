@@ -27039,7 +27039,7 @@
       "href": "./catalog.json"
     },
     "metadata": {
-      "last-modified": "2026-11-08T01:42:13Z",
+      "last-modified": "2026-11-08T00:31:02Z",
       "oscal-version": "1.2.3",
       "roles": [
         {
@@ -27072,7 +27072,7 @@
       "system-information": {
         "information-types": [
           {
-            "description": "Operational and compliance data processed within the germany jurisdiction boundary.",
+            "description": "Operational and compliance data processed within the ee jurisdiction boundary.",
             "title": "Sovereign Program Data",
             "uuid": "60fa2ffa-934d-5b10-b80f-866e8c5f00cb"
           }

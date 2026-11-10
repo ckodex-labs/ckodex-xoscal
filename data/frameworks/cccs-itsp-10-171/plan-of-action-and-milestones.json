@@ -4,16 +4,3215 @@
       "href": "./system-security-plan.json"
     },
     "metadata": {
-      "last-modified": "2026-11-08T01:42:11Z",
+      "last-modified": "2026-01-01T00:00:00Z",
       "oscal-version": "1.2.3",
       "title": "CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Plan of Action and Milestones Template",
       "version": "1.2.3"
     },
     "poam-items": [
       {
-        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
-        "title": "Compliance Roadmap and Parameter Tailoring for CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada",
-        "uuid": "e297bcf6-bb23-5ff0-b846-0747052b9193"
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.01.01.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.01.01.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.01.01.a (Account Management (Gestion des comptes) — 03.01.01.A)",
+        "uuid": "420a8212-c5e0-5b22-996b-a1cfd7ef4113"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.01.01.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.01.01.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.01.01.b (Account Management (Gestion des comptes) — 03.01.01.B)",
+        "uuid": "e8f4cdb0-bd49-5589-8842-fbe54bc71a0a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.01.01.c.1 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.01.01.c.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.01.01.c.1 (Account Management (Gestion des comptes) — 03.01.01.C.1)",
+        "uuid": "c3c6182d-ac6e-5ec8-a2d6-e44765aab34f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.01.01.c.2 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.01.01.c.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.01.01.c.2 (Account Management (Gestion des comptes) — 03.01.01.C.2)",
+        "uuid": "ce833357-ddbb-5326-97ec-262810752495"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.01.01.c.3 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.01.01.c.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.01.01.c.3 (Account Management (Gestion des comptes) — 03.01.01.C.3)",
+        "uuid": "d8ba4318-98c1-54f4-b620-35a6fbb11395"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.01.01.d.1 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.01.01.d.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.01.01.d.1 (Account Management (Gestion des comptes) — 03.01.01.D.1)",
+        "uuid": "643a50d2-bfe7-5cf7-85ba-8c31b8dfd261"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.01.01.d.2 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.01.01.d.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.01.01.d.2 (Account Management (Gestion des comptes) — 03.01.01.D.2)",
+        "uuid": "54d0edb7-9e88-5ae6-80b8-8c807e549a17"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.01.01.e in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.01.01.e"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.01.01.e (Account Management (Gestion des comptes) — 03.01.01.E)",
+        "uuid": "cceae2cd-81f9-5f34-bab7-676d50286ace"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.01.01.f.1 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.01.01.f.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.01.01.f.1 (Account Management (Gestion des comptes) — 03.01.01.F.1)",
+        "uuid": "0aaa2efe-ca12-54b2-ab04-7973ad8fab08"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.01.01.f.2 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.01.01.f.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.01.01.f.2 (Account Management (Gestion des comptes) — 03.01.01.F.2)",
+        "uuid": "8d346382-9643-5535-9434-9c116d69cb7f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.01.01.f.3 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.01.01.f.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.01.01.f.3 (Account Management (Gestion des comptes) — 03.01.01.F.3)",
+        "uuid": "43a4548a-b81d-572e-a271-3d4bfe74060f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.01.01.f.4 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.01.01.f.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.01.01.f.4 (Account Management (Gestion des comptes) — 03.01.01.F.4)",
+        "uuid": "3b8af623-22ee-562d-a74b-6df654087eb6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.01.01.f.5 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.01.01.f.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.01.01.f.5 (Account Management (Gestion des comptes) — 03.01.01.F.5)",
+        "uuid": "9077966d-c0f6-5001-8a02-ce04be1253ea"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.01.01.g.1 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.01.01.g.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.01.01.g.1 (Account Management (Gestion des comptes) — 03.01.01.G.1)",
+        "uuid": "0323d6d4-1ff2-522e-a313-16266baaf362"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.01.01.g.2 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.01.01.g.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.01.01.g.2 (Account Management (Gestion des comptes) — 03.01.01.G.2)",
+        "uuid": "79295e19-3a13-50a9-8fe1-bd24f10165c7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.01.01.g.3 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.01.01.g.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.01.01.g.3 (Account Management (Gestion des comptes) — 03.01.01.G.3)",
+        "uuid": "85bfdaf8-7eb7-51e3-9bef-5777048e68ff"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.01.01.h in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.01.01.h"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.01.01.h (Account Management (Gestion des comptes) — 03.01.01.H)",
+        "uuid": "1cbfb1ed-c222-5307-8751-7510b251a8b4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.01.02.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.01.02.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.01.02.a (Access Enforcement (Application du contrôle d'accès) — 03.01.02.A)",
+        "uuid": "4a1c26b6-e3e0-52f7-a33d-62f5335e723e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.01.03.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.01.03.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.01.03.a (Information Flow Enforcement (Application du contrôle des flux d'information) — 03.01.03.A)",
+        "uuid": "f8b387ea-9fd9-5fc0-93d7-53e11bff80b7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.01.04.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.01.04.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.01.04.a (Separation of Duties (Séparation des tâches) — 03.01.04.A)",
+        "uuid": "16933cf5-bfe2-553d-979f-c0627a0ff37a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.01.04.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.01.04.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.01.04.b (Separation of Duties (Séparation des tâches) — 03.01.04.B)",
+        "uuid": "60954ef2-6b3f-5e32-a8af-fb903cb971ce"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.01.05.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.01.05.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.01.05.a (Least Privilege (Privilège minimal) — 03.01.05.A)",
+        "uuid": "4ffab12c-3cc1-5f4b-a720-a678d03523a4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.01.05.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.01.05.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.01.05.b (Least Privilege (Privilège minimal) — 03.01.05.B)",
+        "uuid": "d304ed2b-6c2c-5185-baa7-8170344ea4f8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.01.05.c in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.01.05.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.01.05.c (Least Privilege (Privilège minimal) — 03.01.05.C)",
+        "uuid": "6631eb5c-f3ca-5c73-bade-2f81cc78724f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.01.05.d in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.01.05.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.01.05.d (Least Privilege (Privilège minimal) — 03.01.05.D)",
+        "uuid": "b9255ea8-7d32-54fe-8722-12c15a2ee946"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.01.06.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.01.06.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.01.06.a (Least Privilege — Privileged Accounts (Comptes à privilèges) — 03.01.06.A)",
+        "uuid": "8c4c6274-9d33-54b9-a4c4-f27f21d1dc91"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.01.06.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.01.06.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.01.06.b (Least Privilege — Privileged Accounts (Comptes à privilèges) — 03.01.06.B)",
+        "uuid": "4a0c7356-850a-56b7-9777-fc172ae9dfbc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.01.06.c in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.01.06.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.01.06.c (Least Privilege — Privileged Accounts (Comptes à privilèges) — 03.01.06.C)",
+        "uuid": "005989dd-64ee-54c0-956b-0af953985a72"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.01.07.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.01.07.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.01.07.a (Least Privilege — Privileged Functions (Fonctions privilégiées) — 03.01.07.A)",
+        "uuid": "8bf220c7-3009-52d3-aaf8-c5533d257cbe"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.01.07.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.01.07.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.01.07.b (Least Privilege — Privileged Functions (Fonctions privilégiées) — 03.01.07.B)",
+        "uuid": "3e210087-8b34-5b48-acc7-0128426fddeb"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.01.08.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.01.08.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.01.08.a (Unsuccessful Logon Attempts (Tentatives d'ouverture de session infructueuses) — 03.01.08.A)",
+        "uuid": "263ba8e7-d014-5f02-ae0d-e0629e7055fe"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.01.08.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.01.08.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.01.08.b (Unsuccessful Logon Attempts (Tentatives d'ouverture de session infructueuses) — 03.01.08.B)",
+        "uuid": "8914fa1b-889c-5d96-85d0-b446a3d5e92f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.01.09.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.01.09.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.01.09.a (System Use Notification (Avis d'utilisation du système) — 03.01.09.A)",
+        "uuid": "0a789cc9-4a46-58c5-a251-0271962b2a58"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.01.10.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.01.10.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.01.10.a (Device Lock (Verrouillage de l'appareil) — 03.01.10.A)",
+        "uuid": "984d2aa9-ee6b-5cdc-8d90-a5e7e25ebf01"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.01.10.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.01.10.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.01.10.b (Device Lock (Verrouillage de l'appareil) — 03.01.10.B)",
+        "uuid": "88c99343-aa93-5b17-844e-9cb985b3fd43"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.01.10.c in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.01.10.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.01.10.c (Device Lock (Verrouillage de l'appareil) — 03.01.10.C)",
+        "uuid": "78377eb6-24cb-5409-b6d0-ca7a89d0c69b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.01.11.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.01.11.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.01.11.a (Session Termination (Fin de session) — 03.01.11.A)",
+        "uuid": "aa7a16e6-52fd-5111-9a32-7ccaaf1afc85"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.01.12.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.01.12.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.01.12.a (Remote Access (Accès à distance) — 03.01.12.A)",
+        "uuid": "dd2ede1e-a27c-5532-b62d-c8de2d134fc9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.01.12.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.01.12.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.01.12.b (Remote Access (Accès à distance) — 03.01.12.B)",
+        "uuid": "35fdd8b2-ba5a-5e35-a6f3-6608eb63a9ed"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.01.12.c in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.01.12.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.01.12.c (Remote Access (Accès à distance) — 03.01.12.C)",
+        "uuid": "d049b869-b439-5db6-8d56-5e8643186eca"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.01.12.d in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.01.12.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.01.12.d (Remote Access (Accès à distance) — 03.01.12.D)",
+        "uuid": "c9919c61-5e4e-5e33-a8a8-a5511704c936"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.01.16.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.01.16.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.01.16.a (Wireless Access (Accès sans fil) — 03.01.16.A)",
+        "uuid": "18df9786-c158-522a-9650-9de951053968"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.01.16.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.01.16.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.01.16.b (Wireless Access (Accès sans fil) — 03.01.16.B)",
+        "uuid": "e49ce781-5131-589e-a7d4-df20cb68b30e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.01.16.c in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.01.16.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.01.16.c (Wireless Access (Accès sans fil) — 03.01.16.C)",
+        "uuid": "213117db-918f-5149-9510-8d43754c9d5c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.01.16.d in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.01.16.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.01.16.d (Wireless Access (Accès sans fil) — 03.01.16.D)",
+        "uuid": "8b17fdbf-c89d-5b4d-9271-5faca7fb18fd"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.01.18.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.01.18.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.01.18.a (Access Control for Mobile Devices (Contrôle d'accès pour les appareils mobiles) — 03.01.18.A)",
+        "uuid": "a50a51aa-a228-50ad-aa75-ea3976213ded"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.01.18.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.01.18.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.01.18.b (Access Control for Mobile Devices (Contrôle d'accès pour les appareils mobiles) — 03.01.18.B)",
+        "uuid": "b740a35a-f0fe-55e6-8a16-f98f097847d4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.01.18.c in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.01.18.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.01.18.c (Access Control for Mobile Devices (Contrôle d'accès pour les appareils mobiles) — 03.01.18.C)",
+        "uuid": "68dfa006-ae3f-5be1-8815-6b8daccb2340"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.01.20.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.01.20.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.01.20.a (Use of External Systems (Utilisation de systèmes externes) — 03.01.20.A)",
+        "uuid": "9bfda6ad-c58a-595c-a615-9cfdea4bcd1c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.01.20.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.01.20.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.01.20.b (Use of External Systems (Utilisation de systèmes externes) — 03.01.20.B)",
+        "uuid": "5d59841b-8e44-5727-a8dc-c48092cec502"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.01.20.c.1 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.01.20.c.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.01.20.c.1 (Use of External Systems (Utilisation de systèmes externes) — 03.01.20.C.1)",
+        "uuid": "59d8084a-f5ee-5a24-8acd-63fc68d7b8cc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.01.20.c.2 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.01.20.c.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.01.20.c.2 (Use of External Systems (Utilisation de systèmes externes) — 03.01.20.C.2)",
+        "uuid": "708ce7c4-ee50-53dc-8c33-3af39ecf33bc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.01.20.d in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.01.20.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.01.20.d (Use of External Systems (Utilisation de systèmes externes) — 03.01.20.D)",
+        "uuid": "453c8bec-8bc8-509a-9bcc-f6fd0772397e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.01.22.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.01.22.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.01.22.a (Publicly Accessible Content (Contenu accessible au public) — 03.01.22.A)",
+        "uuid": "82603523-2a8b-5ae9-94c0-d3ad8037fdfd"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.01.22.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.01.22.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.01.22.b (Publicly Accessible Content (Contenu accessible au public) — 03.01.22.B)",
+        "uuid": "7d1e7844-f995-5c2a-ab14-154c985ff99a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.02.01.a.1 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.02.01.a.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.02.01.a.1 (Literacy Training and Awareness (Formation de base et sensibilisation) — 03.02.01.A.1)",
+        "uuid": "3c6a76d8-7623-5517-9b02-ff54fd286439"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.02.01.a.2 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.02.01.a.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.02.01.a.2 (Literacy Training and Awareness (Formation de base et sensibilisation) — 03.02.01.A.2)",
+        "uuid": "5b78c586-e31d-5f43-a30b-45a6cee72c9c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.02.01.a.3 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.02.01.a.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.02.01.a.3 (Literacy Training and Awareness (Formation de base et sensibilisation) — 03.02.01.A.3)",
+        "uuid": "95687f3b-3374-54ec-989d-6617444c84f4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.02.01.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.02.01.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.02.01.b (Literacy Training and Awareness (Formation de base et sensibilisation) — 03.02.01.B)",
+        "uuid": "0e2ca1f5-4e20-5229-8e52-74e9be902718"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.02.02.a.1 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.02.02.a.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.02.02.a.1 (Role-Based Training (Formation fondée sur les rôles) — 03.02.02.A.1)",
+        "uuid": "c097e8fd-dd5a-5e55-a345-961935573190"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.02.02.a.2 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.02.02.a.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.02.02.a.2 (Role-Based Training (Formation fondée sur les rôles) — 03.02.02.A.2)",
+        "uuid": "99620d9f-79fd-5b08-b48d-03da850f6e82"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.02.02.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.02.02.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.02.02.b (Role-Based Training (Formation fondée sur les rôles) — 03.02.02.B)",
+        "uuid": "b7d23b95-6933-55ce-914e-792d9e19c9fe"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.03.01.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.03.01.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.03.01.a (Event Logging (Journalisation des événements) — 03.03.01.A)",
+        "uuid": "5a1641d7-7dca-5a36-ad11-8ad15f8105fc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.03.01.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.03.01.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.03.01.b (Event Logging (Journalisation des événements) — 03.03.01.B)",
+        "uuid": "44bcba83-28e3-55fb-896f-1bced7ee51af"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.03.02.a.1 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.03.02.a.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.03.02.a.1 (Audit Record Content (Contenu des enregistrements de vérification) — 03.03.02.A.1)",
+        "uuid": "a40a678c-a2c8-5635-97f6-7565999e6afa"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.03.02.a.2 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.03.02.a.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.03.02.a.2 (Audit Record Content (Contenu des enregistrements de vérification) — 03.03.02.A.2)",
+        "uuid": "39bb39c2-295d-5c42-8fe9-fc86b9090cdd"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.03.02.a.3 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.03.02.a.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.03.02.a.3 (Audit Record Content (Contenu des enregistrements de vérification) — 03.03.02.A.3)",
+        "uuid": "801999ed-a184-549a-9c70-26087733ca51"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.03.02.a.4 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.03.02.a.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.03.02.a.4 (Audit Record Content (Contenu des enregistrements de vérification) — 03.03.02.A.4)",
+        "uuid": "116cbae4-7d48-5815-a134-5a58bcc82751"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.03.02.a.5 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.03.02.a.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.03.02.a.5 (Audit Record Content (Contenu des enregistrements de vérification) — 03.03.02.A.5)",
+        "uuid": "7c3f4a33-f281-58b5-bba9-07b44885466e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.03.02.a.6 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.03.02.a.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.03.02.a.6 (Audit Record Content (Contenu des enregistrements de vérification) — 03.03.02.A.6)",
+        "uuid": "31a70116-1798-5758-b679-6425270dd25b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.03.02.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.03.02.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.03.02.b (Audit Record Content (Contenu des enregistrements de vérification) — 03.03.02.B)",
+        "uuid": "6ad347ae-c555-525e-83e6-2ece67e8524f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.03.03.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.03.03.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.03.03.a (Audit Record Generation (Génération d'enregistrements de vérification) — 03.03.03.A)",
+        "uuid": "3d5496e4-5ec6-5258-911f-3f4cc91a493c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.03.03.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.03.03.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.03.03.b (Audit Record Generation (Génération d'enregistrements de vérification) — 03.03.03.B)",
+        "uuid": "27cf637c-c35d-5128-96a6-374b46f2c734"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.03.04.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.03.04.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.03.04.a (Response to Audit Logging Process Failures (Intervention en cas de défaillance du processus de journalisation) — 03.03.04.A)",
+        "uuid": "fd24ecb5-c899-5e37-a1fb-f783c846bd16"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.03.04.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.03.04.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.03.04.b (Response to Audit Logging Process Failures (Intervention en cas de défaillance du processus de journalisation) — 03.03.04.B)",
+        "uuid": "d9461509-c1d7-5985-a3db-f916b8aec7bf"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.03.05.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.03.05.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.03.05.a (Audit Record Review, Analysis, and Reporting (Examen, analyse et signalement des enregistrements de vérification) — 03.03.05.A)",
+        "uuid": "de7e2099-c1fc-5c2e-81e1-a8d6eabdbd37"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.03.05.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.03.05.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.03.05.b (Audit Record Review, Analysis, and Reporting (Examen, analyse et signalement des enregistrements de vérification) — 03.03.05.B)",
+        "uuid": "07dac7e8-a6d0-5fb2-ba4c-23446362ac00"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.03.05.c in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.03.05.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.03.05.c (Audit Record Review, Analysis, and Reporting (Examen, analyse et signalement des enregistrements de vérification) — 03.03.05.C)",
+        "uuid": "fb1d7e3e-e8da-58a8-97a5-1d17991dc003"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.03.06.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.03.06.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.03.06.a (Audit Record Reduction and Report Generation (Réduction des enregistrements de vérification et production de rapports) — 03.03.06.A)",
+        "uuid": "16eca4fc-c27c-59a0-a2d3-177e8e697607"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.03.06.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.03.06.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.03.06.b (Audit Record Reduction and Report Generation (Réduction des enregistrements de vérification et production de rapports) — 03.03.06.B)",
+        "uuid": "ebcae885-348e-5457-a7ef-6897ea84b3d4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.03.07.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.03.07.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.03.07.a (Time Stamps (Horodatage) — 03.03.07.A)",
+        "uuid": "6238735d-d10d-501c-84f5-04207de524f9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.03.07.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.03.07.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.03.07.b (Time Stamps (Horodatage) — 03.03.07.B)",
+        "uuid": "6633aa4c-e338-579e-98d0-f058eeec07bb"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.03.08.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.03.08.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.03.08.a (Protection of Audit Information (Protection de l'information de vérification) — 03.03.08.A)",
+        "uuid": "9807a965-d81f-5c8c-b443-c0ef4d689d22"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.03.08.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.03.08.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.03.08.b (Protection of Audit Information (Protection de l'information de vérification) — 03.03.08.B)",
+        "uuid": "89f8af12-2018-5afa-9654-d82ba502a765"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.04.01.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.04.01.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.04.01.a (Baseline Configuration (Configuration de référence) — 03.04.01.A)",
+        "uuid": "66c62158-b54e-55e5-8650-8bcbbdf615ef"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.04.01.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.04.01.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.04.01.b (Baseline Configuration (Configuration de référence) — 03.04.01.B)",
+        "uuid": "8c2cfd07-72d2-5b5f-b385-af618874aae4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.04.02.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.04.02.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.04.02.a (Configuration Settings (Paramètres de configuration) — 03.04.02.A)",
+        "uuid": "0c595b52-34ea-5fee-9897-2ed791bc8dad"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.04.02.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.04.02.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.04.02.b (Configuration Settings (Paramètres de configuration) — 03.04.02.B)",
+        "uuid": "264b44a8-8bbe-5a66-913e-e1257c33d24d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.04.03.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.04.03.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.04.03.a (Configuration Change Control (Contrôle des changements de configuration) — 03.04.03.A)",
+        "uuid": "b38dd1ab-506d-5e21-a587-76cb544dbf6c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.04.03.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.04.03.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.04.03.b (Configuration Change Control (Contrôle des changements de configuration) — 03.04.03.B)",
+        "uuid": "7960067b-0b8a-5466-94f3-bc1f70ecb4a6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.04.03.c in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.04.03.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.04.03.c (Configuration Change Control (Contrôle des changements de configuration) — 03.04.03.C)",
+        "uuid": "8aaf0ded-c5be-5bff-961b-bc74d21cb307"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.04.03.d in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.04.03.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.04.03.d (Configuration Change Control (Contrôle des changements de configuration) — 03.04.03.D)",
+        "uuid": "63ad4538-bd97-5da4-8930-426336d7f486"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.04.04.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.04.04.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.04.04.a (Impact Analyses (Analyses d'impact) — 03.04.04.A)",
+        "uuid": "40144a8e-4026-5f0f-a089-d4cc88193f0f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.04.04.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.04.04.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.04.04.b (Impact Analyses (Analyses d'impact) — 03.04.04.B)",
+        "uuid": "a32679c1-4647-53e7-8909-75ac2d8f30d1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.04.05.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.04.05.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.04.05.a (Access Restrictions for Change (Restrictions d'accès pour les changements) — 03.04.05.A)",
+        "uuid": "825f5f85-9ab2-5e69-9c2a-a2071ea7b312"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.04.06.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.04.06.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.04.06.a (Least Functionality (Fonctionnalité minimale) — 03.04.06.A)",
+        "uuid": "ff46cfba-222d-5b0d-8ece-ed61d62b5018"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.04.06.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.04.06.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.04.06.b (Least Functionality (Fonctionnalité minimale) — 03.04.06.B)",
+        "uuid": "42ef78f8-ba5f-5efd-93e4-d6c41fcd22fb"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.04.06.c in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.04.06.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.04.06.c (Least Functionality (Fonctionnalité minimale) — 03.04.06.C)",
+        "uuid": "ab8a01f6-f1f1-5ecf-adae-0d734e90b69a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.04.06.d in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.04.06.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.04.06.d (Least Functionality (Fonctionnalité minimale) — 03.04.06.D)",
+        "uuid": "92be8e35-708a-5a2a-ab6e-151eb6d92671"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.04.08.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.04.08.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.04.08.a (Authorized Software (Logiciels autorisés) — 03.04.08.A)",
+        "uuid": "7fab813b-0f72-555b-887b-af2b9d7ffe86"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.04.08.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.04.08.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.04.08.b (Authorized Software (Logiciels autorisés) — 03.04.08.B)",
+        "uuid": "3b8f9700-8bc9-5a22-b9ad-be2012c61adf"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.04.08.c in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.04.08.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.04.08.c (Authorized Software (Logiciels autorisés) — 03.04.08.C)",
+        "uuid": "2fd290a8-5a89-5d03-89e4-aab608231f1c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.04.10.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.04.10.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.04.10.a (System Component Inventory (Inventaire des composants du système) — 03.04.10.A)",
+        "uuid": "88b3350b-d0f2-5a98-8094-73d7a811a218"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.04.10.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.04.10.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.04.10.b (System Component Inventory (Inventaire des composants du système) — 03.04.10.B)",
+        "uuid": "30820ab9-706c-500a-b65c-d475fb4d38c4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.04.10.c in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.04.10.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.04.10.c (System Component Inventory (Inventaire des composants du système) — 03.04.10.C)",
+        "uuid": "0c562d63-22bf-5ed3-bab0-0d7ca67e709e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.04.11.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.04.11.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.04.11.a (Information Location (Emplacement de l'information) — 03.04.11.A)",
+        "uuid": "390d8f7c-6d5d-502d-a793-36cb06679b4b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.04.11.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.04.11.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.04.11.b (Information Location (Emplacement de l'information) — 03.04.11.B)",
+        "uuid": "a5c7336e-a897-58cd-bf08-00bb141815dd"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.04.12.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.04.12.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.04.12.a (System and Component Configuration for High-Risk Areas (Configuration pour les zones à haut risque) — 03.04.12.A)",
+        "uuid": "33883e93-a669-5c5b-ae0d-539cb52a928e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.04.12.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.04.12.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.04.12.b (System and Component Configuration for High-Risk Areas (Configuration pour les zones à haut risque) — 03.04.12.B)",
+        "uuid": "ec8b418b-d179-5539-bd6f-5b3cdf14930e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.05.01.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.05.01.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.05.01.a (Identification and Authentication — Organizational Users (Identification et authentification des utilisateurs) — 03.05.01.A)",
+        "uuid": "bc12ecc1-4762-572b-b394-b83f6b88fdaa"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.05.01.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.05.01.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.05.01.b (Identification and Authentication — Organizational Users (Identification et authentification des utilisateurs) — 03.05.01.B)",
+        "uuid": "a8541d7d-7d00-58fa-8ad5-bff7fbc2685b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.05.02.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.05.02.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.05.02.a (Device Identification and Authentication (Identification et authentification des appareils) — 03.05.02.A)",
+        "uuid": "0b939fc3-7142-5963-bf95-8c38a234fac6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.05.03.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.05.03.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.05.03.a (Multi-Factor Authentication (Authentification multifacteur) — 03.05.03.A)",
+        "uuid": "4866198c-7499-506f-a2db-5b902028bd10"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.05.04.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.05.04.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.05.04.a (Replay-Resistant Authentication (Authentification résistante à la réexécution) — 03.05.04.A)",
+        "uuid": "ac7f541f-fa9b-5b09-8996-f00f09dd81c9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.05.05.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.05.05.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.05.05.a (Identifier Management (Gestion des identifiants) — 03.05.05.A)",
+        "uuid": "631e56b6-d43b-57dd-af90-d7fd01da8485"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.05.05.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.05.05.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.05.05.b (Identifier Management (Gestion des identifiants) — 03.05.05.B)",
+        "uuid": "74a88d16-3a3b-5616-b8ca-82d77a822b6f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.05.05.c in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.05.05.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.05.05.c (Identifier Management (Gestion des identifiants) — 03.05.05.C)",
+        "uuid": "adcf1c34-dad6-591d-81e4-81eec952845a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.05.05.d in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.05.05.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.05.05.d (Identifier Management (Gestion des identifiants) — 03.05.05.D)",
+        "uuid": "e22cb5a7-e64e-5a69-b23f-3ae5ca5ba83e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.05.07.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.05.07.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.05.07.a (Password Management (Gestion des mots de passe) — 03.05.07.A)",
+        "uuid": "f9b53f99-9ac1-50c0-b2c7-66e382e75b9d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.05.07.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.05.07.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.05.07.b (Password Management (Gestion des mots de passe) — 03.05.07.B)",
+        "uuid": "75c864d9-f5c5-53b7-a2fa-039feea6e931"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.05.07.c in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.05.07.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.05.07.c (Password Management (Gestion des mots de passe) — 03.05.07.C)",
+        "uuid": "5da99fdd-050d-50b9-b87e-6827e3deca07"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.05.07.d in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.05.07.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.05.07.d (Password Management (Gestion des mots de passe) — 03.05.07.D)",
+        "uuid": "7daff9fe-c6b7-581b-8786-7db41af02111"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.05.07.e in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.05.07.e"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.05.07.e (Password Management (Gestion des mots de passe) — 03.05.07.E)",
+        "uuid": "297f55b5-5df6-5fb1-9bb0-563fb02fc920"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.05.07.f in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.05.07.f"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.05.07.f (Password Management (Gestion des mots de passe) — 03.05.07.F)",
+        "uuid": "c01ce887-ddb9-5fb4-93e4-9958149e35fa"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.05.11.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.05.11.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.05.11.a (Authentication Feedback (Rétroaction d'authentification) — 03.05.11.A)",
+        "uuid": "404a60aa-286d-58f4-ba8d-9d65548efc05"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.05.12.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.05.12.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.05.12.a (Authenticator Management (Gestion des authentifiants) — 03.05.12.A)",
+        "uuid": "66279027-b148-5b6b-9031-411099d7a190"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.05.12.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.05.12.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.05.12.b (Authenticator Management (Gestion des authentifiants) — 03.05.12.B)",
+        "uuid": "e3c7fbea-49d3-543b-8c50-6bd5449889a9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.05.12.c in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.05.12.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.05.12.c (Authenticator Management (Gestion des authentifiants) — 03.05.12.C)",
+        "uuid": "54c47421-2d8d-5349-b336-6898d7a75fa5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.05.12.d in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.05.12.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.05.12.d (Authenticator Management (Gestion des authentifiants) — 03.05.12.D)",
+        "uuid": "9c772107-049e-56d2-b468-1eaedb5c5a75"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.05.12.e in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.05.12.e"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.05.12.e (Authenticator Management (Gestion des authentifiants) — 03.05.12.E)",
+        "uuid": "510e0924-bf8d-52a0-9b75-b122159ea6b1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.05.12.f in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.05.12.f"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.05.12.f (Authenticator Management (Gestion des authentifiants) — 03.05.12.F)",
+        "uuid": "258b6d89-d200-504c-8284-202de5e1aa91"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.06.01.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.06.01.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.06.01.a (Incident Handling (Traitement des incidents) — 03.06.01.A)",
+        "uuid": "f47f6a81-9d9c-55e1-8c1e-b63bfb0a765f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.06.02.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.06.02.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.06.02.a (Incident Monitoring, Reporting, and Response Assistance (Surveillance, signalement et assistance en cas d'incident) — 03.06.02.A)",
+        "uuid": "7e383cfa-3fd7-5681-a398-697498d2ea8b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.06.02.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.06.02.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.06.02.b (Incident Monitoring, Reporting, and Response Assistance (Surveillance, signalement et assistance en cas d'incident) — 03.06.02.B)",
+        "uuid": "f3a541b0-ac41-55cb-b5f9-2697c60ca601"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.06.02.c in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.06.02.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.06.02.c (Incident Monitoring, Reporting, and Response Assistance (Surveillance, signalement et assistance en cas d'incident) — 03.06.02.C)",
+        "uuid": "4d61d8d0-8eea-5ca0-8d81-5521d0b19f72"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.06.02.d in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.06.02.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.06.02.d (Incident Monitoring, Reporting, and Response Assistance (Surveillance, signalement et assistance en cas d'incident) — 03.06.02.D)",
+        "uuid": "3d1c0d0d-e335-5e9d-b4a5-1e46a5ae88be"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.06.03.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.06.03.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.06.03.a (Incident Response Testing (Mise à l'essai de l'intervention en cas d'incident) — 03.06.03.A)",
+        "uuid": "954dfe0d-f7aa-56b4-8635-18d24225c011"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.06.04.a.1 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.06.04.a.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.06.04.a.1 (Incident Response Training (Formation sur l'intervention en cas d'incident) — 03.06.04.A.1)",
+        "uuid": "a74d8f37-3cce-5950-9244-0fcb54805f29"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.06.04.a.2 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.06.04.a.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.06.04.a.2 (Incident Response Training (Formation sur l'intervention en cas d'incident) — 03.06.04.A.2)",
+        "uuid": "af1f9e02-5481-5440-a479-5dd70f3aa16a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.06.04.a.3 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.06.04.a.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.06.04.a.3 (Incident Response Training (Formation sur l'intervention en cas d'incident) — 03.06.04.A.3)",
+        "uuid": "d6967790-a61d-5ad1-a521-a060f2829efc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.06.04.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.06.04.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.06.04.b (Incident Response Training (Formation sur l'intervention en cas d'incident) — 03.06.04.B)",
+        "uuid": "86728801-090d-5215-8b9e-bba093aca50a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.06.05.a.1 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.06.05.a.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.06.05.a.1 (Incident Response Plan (Plan d'intervention en cas d'incident) — 03.06.05.A.1)",
+        "uuid": "9a697491-7853-51ae-a4de-67eb29413b3c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.06.05.a.2 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.06.05.a.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.06.05.a.2 (Incident Response Plan (Plan d'intervention en cas d'incident) — 03.06.05.A.2)",
+        "uuid": "a6cc4ab9-cc27-527a-ae4e-3838dabff8d5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.06.05.a.3 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.06.05.a.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.06.05.a.3 (Incident Response Plan (Plan d'intervention en cas d'incident) — 03.06.05.A.3)",
+        "uuid": "6681a311-8565-5632-815e-1b156addee82"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.06.05.a.4 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.06.05.a.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.06.05.a.4 (Incident Response Plan (Plan d'intervention en cas d'incident) — 03.06.05.A.4)",
+        "uuid": "05b848a7-fa44-56c1-a15c-afce3fd8a2bd"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.06.05.a.5 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.06.05.a.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.06.05.a.5 (Incident Response Plan (Plan d'intervention en cas d'incident) — 03.06.05.A.5)",
+        "uuid": "7e64399e-3744-50f6-9710-de78f2d87267"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.06.05.a.6 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.06.05.a.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.06.05.a.6 (Incident Response Plan (Plan d'intervention en cas d'incident) — 03.06.05.A.6)",
+        "uuid": "62bef79a-fdb1-5ee4-892d-9ea044372b0d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.06.05.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.06.05.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.06.05.b (Incident Response Plan (Plan d'intervention en cas d'incident) — 03.06.05.B)",
+        "uuid": "d0df8e4d-cb49-51e9-aa0a-0e723403cf10"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.06.05.c in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.06.05.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.06.05.c (Incident Response Plan (Plan d'intervention en cas d'incident) — 03.06.05.C)",
+        "uuid": "07c84418-31b0-5293-a2d9-e59acac1f7a6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.06.05.d in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.06.05.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.06.05.d (Incident Response Plan (Plan d'intervention en cas d'incident) — 03.06.05.D)",
+        "uuid": "5f1bef02-0240-56ba-9250-1396eee8d109"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.07.04.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.07.04.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.07.04.a (Maintenance Tools (Outils de maintenance) — 03.07.04.A)",
+        "uuid": "b3f6c30f-acc2-5c28-81a0-517cebd57ed5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.07.04.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.07.04.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.07.04.b (Maintenance Tools (Outils de maintenance) — 03.07.04.B)",
+        "uuid": "69e56a7e-2b12-56ba-80ed-1528015758ba"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.07.04.c in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.07.04.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.07.04.c (Maintenance Tools (Outils de maintenance) — 03.07.04.C)",
+        "uuid": "3ae604a9-2c3e-5dc5-b262-caeb416cfbd5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.07.05.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.07.05.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.07.05.a (Nonlocal Maintenance (Maintenance non locale) — 03.07.05.A)",
+        "uuid": "564f45a3-3ce0-51a8-8f7a-0f4ea164c7e6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.07.05.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.07.05.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.07.05.b (Nonlocal Maintenance (Maintenance non locale) — 03.07.05.B)",
+        "uuid": "5cbab755-0d15-5980-95dc-7945050d7784"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.07.05.c in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.07.05.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.07.05.c (Nonlocal Maintenance (Maintenance non locale) — 03.07.05.C)",
+        "uuid": "1a5f0632-89d9-5e26-bd46-ce567f6fc758"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.07.06.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.07.06.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.07.06.a (Maintenance Personnel (Personnel de maintenance) — 03.07.06.A)",
+        "uuid": "31c53477-edca-51b7-97fc-749b872ad1c8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.07.06.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.07.06.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.07.06.b (Maintenance Personnel (Personnel de maintenance) — 03.07.06.B)",
+        "uuid": "74ac2263-c434-59cd-9b75-f2882c3f568d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.07.06.c in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.07.06.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.07.06.c (Maintenance Personnel (Personnel de maintenance) — 03.07.06.C)",
+        "uuid": "3f75f0cd-1822-531d-bf1c-1379138306a6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.07.06.d in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.07.06.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.07.06.d (Maintenance Personnel (Personnel de maintenance) — 03.07.06.D)",
+        "uuid": "5e7bdaaa-d13a-5857-a775-fa0e2ab7692b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.08.01.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.08.01.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.08.01.a (Media Storage (Stockage des supports) — 03.08.01.A)",
+        "uuid": "b1c531a7-1a4c-5b26-903d-917b1b058696"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.08.02.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.08.02.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.08.02.a (Media Access (Accès aux supports) — 03.08.02.A)",
+        "uuid": "b4933f60-3a63-59ed-9682-4c877e423fde"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.08.03.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.08.03.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.08.03.a (Media Sanitization (Nettoyage des supports) — 03.08.03.A)",
+        "uuid": "83b43d2c-fbd7-5cce-aa5d-17eebb2572fc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.08.04.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.08.04.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.08.04.a (Media Marking (Marquage des supports) — 03.08.04.A)",
+        "uuid": "54fc5115-fef2-575d-85ac-6e500018f84c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.08.05.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.08.05.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.08.05.a (Media Transport (Transport des supports) — 03.08.05.A)",
+        "uuid": "631b2f1e-9f01-5603-96c2-87f5b1b850b2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.08.05.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.08.05.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.08.05.b (Media Transport (Transport des supports) — 03.08.05.B)",
+        "uuid": "c1395343-60b2-5276-83e9-fb0ecd0fc22f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.08.05.c in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.08.05.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.08.05.c (Media Transport (Transport des supports) — 03.08.05.C)",
+        "uuid": "013de439-4b91-5502-b0e3-bb71465ea2ff"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.08.07.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.08.07.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.08.07.a (Media Use (Utilisation des supports) — 03.08.07.A)",
+        "uuid": "29ee3dd6-7e5f-5cb4-b7df-75fc4e994a97"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.08.07.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.08.07.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.08.07.b (Media Use (Utilisation des supports) — 03.08.07.B)",
+        "uuid": "abc5c144-dffe-55ea-b463-d9dc9f50ff09"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.08.09.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.08.09.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.08.09.a (System Backup — Cryptographic Protection (Protection cryptographique des sauvegardes) — 03.08.09.A)",
+        "uuid": "97cb7584-913a-5ed3-a904-e91594a5d8f8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.08.09.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.08.09.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.08.09.b (System Backup — Cryptographic Protection (Protection cryptographique des sauvegardes) — 03.08.09.B)",
+        "uuid": "d7e4226a-ce68-5769-bcb7-cbd27a946156"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.09.01.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.09.01.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.09.01.a (Personnel Screening (Filtrage de sécurité du personnel) — 03.09.01.A)",
+        "uuid": "024756ce-461c-51a7-9c4c-d6cefe0960b3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.09.01.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.09.01.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.09.01.b (Personnel Screening (Filtrage de sécurité du personnel) — 03.09.01.B)",
+        "uuid": "645e6dae-5f55-5286-9f9a-bd4d12abd87b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.09.02.a.1 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.09.02.a.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.09.02.a.1 (Personnel Termination and Transfer (Cessation d'emploi et mutation du personnel) — 03.09.02.A.1)",
+        "uuid": "33cc8503-e47b-543e-9b73-4f8cc0680813"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.09.02.a.2 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.09.02.a.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.09.02.a.2 (Personnel Termination and Transfer (Cessation d'emploi et mutation du personnel) — 03.09.02.A.2)",
+        "uuid": "8015f05e-46a3-5ccc-81c8-fc113bb34d6a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.09.02.a.3 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.09.02.a.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.09.02.a.3 (Personnel Termination and Transfer (Cessation d'emploi et mutation du personnel) — 03.09.02.A.3)",
+        "uuid": "146377eb-eaf0-5b2f-a7bc-ebedb38fffb4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.09.02.b.1 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.09.02.b.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.09.02.b.1 (Personnel Termination and Transfer (Cessation d'emploi et mutation du personnel) — 03.09.02.B.1)",
+        "uuid": "1cc5ad3c-e15c-5a25-a47d-3be57d5c1a9f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.09.02.b.2 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.09.02.b.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.09.02.b.2 (Personnel Termination and Transfer (Cessation d'emploi et mutation du personnel) — 03.09.02.B.2)",
+        "uuid": "ea3836c3-6c3e-5d94-81b0-e921e1a2ff36"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.10.01.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.10.01.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.10.01.a (Physical Access Authorizations (Autorisations d'accès physique) — 03.10.01.A)",
+        "uuid": "cc91099f-62ad-5a74-aefe-37dbce559c11"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.10.01.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.10.01.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.10.01.b (Physical Access Authorizations (Autorisations d'accès physique) — 03.10.01.B)",
+        "uuid": "a3c9aa28-9563-5bff-a402-4ab0b193c419"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.10.01.c in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.10.01.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.10.01.c (Physical Access Authorizations (Autorisations d'accès physique) — 03.10.01.C)",
+        "uuid": "103c27f9-3110-5736-94bf-400aaba5416e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.10.01.d in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.10.01.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.10.01.d (Physical Access Authorizations (Autorisations d'accès physique) — 03.10.01.D)",
+        "uuid": "46d573d3-f8a3-50a5-b496-6440565c69d1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.10.02.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.10.02.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.10.02.a (Monitoring Physical Access (Surveillance de l'accès physique) — 03.10.02.A)",
+        "uuid": "e354f560-0b4c-54b5-9a6a-f0fc6f0e4ebd"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.10.02.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.10.02.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.10.02.b (Monitoring Physical Access (Surveillance de l'accès physique) — 03.10.02.B)",
+        "uuid": "4a64a348-e30a-5005-8635-6148c703c1a0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.10.06.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.10.06.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.10.06.a (Alternate Work Site (Lieu de travail auxiliaire) — 03.10.06.A)",
+        "uuid": "5998f6cc-4d4e-59d1-bb76-4ab3419c573a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.10.06.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.10.06.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.10.06.b (Alternate Work Site (Lieu de travail auxiliaire) — 03.10.06.B)",
+        "uuid": "f11e3aef-7607-579b-92c6-58740fbfcb6b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.10.07.a.1 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.10.07.a.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.10.07.a.1 (Physical Access Control (Contrôle de l'accès physique) — 03.10.07.A.1)",
+        "uuid": "3676f0f2-cb97-561f-994d-e740ee0081f2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.10.07.a.2 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.10.07.a.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.10.07.a.2 (Physical Access Control (Contrôle de l'accès physique) — 03.10.07.A.2)",
+        "uuid": "776406f8-e57f-52f2-b4bd-6c876dbf69f2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.10.07.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.10.07.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.10.07.b (Physical Access Control (Contrôle de l'accès physique) — 03.10.07.B)",
+        "uuid": "aeb15bf9-ded1-5bba-997a-31d91ce067dd"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.10.07.c in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.10.07.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.10.07.c (Physical Access Control (Contrôle de l'accès physique) — 03.10.07.C)",
+        "uuid": "39f71ad0-7dc0-59e2-b4c2-0bc30a0663ed"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.10.07.d in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.10.07.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.10.07.d (Physical Access Control (Contrôle de l'accès physique) — 03.10.07.D)",
+        "uuid": "70cac50b-885e-51eb-9bb8-2cfea2d9d79f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.10.07.e in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.10.07.e"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.10.07.e (Physical Access Control (Contrôle de l'accès physique) — 03.10.07.E)",
+        "uuid": "7e396b3f-9b48-52b4-aaff-c404bbb86ed7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.10.08.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.10.08.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.10.08.a (Access Control for Transmission (Contrôle d'accès pour les supports de transmission) — 03.10.08.A)",
+        "uuid": "687bb7c4-2809-5fa0-8e33-eb4b2e8ab3fb"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.11.01.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.11.01.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.11.01.a (Risk Assessment (Évaluation des risques) — 03.11.01.A)",
+        "uuid": "6fd644d4-4e5c-5b9d-8482-7ade9b393651"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.11.01.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.11.01.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.11.01.b (Risk Assessment (Évaluation des risques) — 03.11.01.B)",
+        "uuid": "aa0beb8e-60b2-5fe5-8e43-33bbab24c359"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.11.02.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.11.02.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.11.02.a (Vulnerability Monitoring and Scanning (Surveillance et balayage des vulnérabilités) — 03.11.02.A)",
+        "uuid": "316ba0a2-37c0-5ca2-8f09-3cd8d068da96"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.11.02.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.11.02.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.11.02.b (Vulnerability Monitoring and Scanning (Surveillance et balayage des vulnérabilités) — 03.11.02.B)",
+        "uuid": "9e19cfa2-26a7-5fe7-be72-db753e4faea9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.11.02.c in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.11.02.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.11.02.c (Vulnerability Monitoring and Scanning (Surveillance et balayage des vulnérabilités) — 03.11.02.C)",
+        "uuid": "13c100ff-f079-52b6-83c6-4f9d717bf704"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.11.04.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.11.04.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.11.04.a (Risk Response (Réponse aux risques) — 03.11.04.A)",
+        "uuid": "2f8740ca-86cb-5e57-a3ba-be5068f6217c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.12.01.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.12.01.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.12.01.a (Security Control Assessment (Évaluation des contrôles de sécurité) — 03.12.01.A)",
+        "uuid": "44daffb5-a015-53c9-97c7-68386974bbae"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.12.02.a.1 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.12.02.a.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.12.02.a.1 (Plan of Action and Milestones (Plan d'action et jalons) — 03.12.02.A.1)",
+        "uuid": "103f76b1-79fb-5f40-8ba1-892c6f1e022d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.12.02.a.2 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.12.02.a.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.12.02.a.2 (Plan of Action and Milestones (Plan d'action et jalons) — 03.12.02.A.2)",
+        "uuid": "570b461b-2f0c-5fe7-820e-46642ecdf0e3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.12.02.b.1 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.12.02.b.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.12.02.b.1 (Plan of Action and Milestones (Plan d'action et jalons) — 03.12.02.B.1)",
+        "uuid": "e690a82f-e09a-5ab4-bb8e-54d23407c224"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.12.02.b.2 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.12.02.b.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.12.02.b.2 (Plan of Action and Milestones (Plan d'action et jalons) — 03.12.02.B.2)",
+        "uuid": "bc14dd5e-7ef3-5571-9fa7-8942261bd0f9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.12.02.b.3 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.12.02.b.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.12.02.b.3 (Plan of Action and Milestones (Plan d'action et jalons) — 03.12.02.B.3)",
+        "uuid": "f7d84e0f-848e-58ba-9396-6bddaf8392a5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.12.03.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.12.03.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.12.03.a (Continuous Monitoring (Surveillance continue) — 03.12.03.A)",
+        "uuid": "80f6aea9-ec47-5ec5-abfc-d81c180961b5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.12.05.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.12.05.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.12.05.a (Information Exchange (Échange d'information) — 03.12.05.A)",
+        "uuid": "befee907-790f-569c-916e-ecbd352c0f4a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.12.05.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.12.05.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.12.05.b (Information Exchange (Échange d'information) — 03.12.05.B)",
+        "uuid": "35a935b9-9a16-5b11-a12b-005d5361009c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.12.05.c in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.12.05.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.12.05.c (Information Exchange (Échange d'information) — 03.12.05.C)",
+        "uuid": "2f10fa2f-dd92-51b8-863d-2b82c30edc5e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.13.01.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.13.01.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.13.01.a (Boundary Protection (Protection de la frontière) — 03.13.01.A)",
+        "uuid": "b5e63295-3260-5501-a9c2-53550830401c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.13.01.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.13.01.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.13.01.b (Boundary Protection (Protection de la frontière) — 03.13.01.B)",
+        "uuid": "fc097bd6-50ff-5e16-8049-8fbdfdc1cb6e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.13.01.c in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.13.01.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.13.01.c (Boundary Protection (Protection de la frontière) — 03.13.01.C)",
+        "uuid": "ce471d53-1f9e-52fc-8ea2-4bb9873617fe"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.13.04.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.13.04.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.13.04.a (Information in Shared System Resources (Information dans les ressources système partagées) — 03.13.04.A)",
+        "uuid": "98c6f7ce-dab3-5c6d-8632-ee7d2348e666"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.13.06.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.13.06.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.13.06.a (Network Communications — Traffic Denied by Default (Communications réseau refusées par défaut) — 03.13.06.A)",
+        "uuid": "9da25d16-d164-562d-bac0-81fd665064b7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.13.08.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.13.08.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.13.08.a (Transmission Confidentiality and Integrity (Confidentialité et intégrité des transmissions) — 03.13.08.A)",
+        "uuid": "5c097fee-2b63-581c-81e9-631fde8202c1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.13.09.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.13.09.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.13.09.a (Network Disconnect (Déconnexion du réseau) — 03.13.09.A)",
+        "uuid": "aa4c5a66-d1a1-5ade-a7e2-10695d60c1aa"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.13.10.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.13.10.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.13.10.a (Cryptographic Key Establishment and Management (Établissement et gestion des clés cryptographiques) — 03.13.10.A)",
+        "uuid": "58feab3c-bf9e-53f8-8abd-6dacb60ca6d1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.13.11.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.13.11.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.13.11.a (Cryptographic Protection (Protection cryptographique) — 03.13.11.A)",
+        "uuid": "a435603d-ea3a-5eac-9c27-5f7e9d8a17a8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.13.12.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.13.12.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.13.12.a (Collaborative Computing Devices and Applications (Appareils et applications informatiques collaboratifs) — 03.13.12.A)",
+        "uuid": "27642f84-e159-59a5-a7d0-68cd832fb783"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.13.12.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.13.12.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.13.12.b (Collaborative Computing Devices and Applications (Appareils et applications informatiques collaboratifs) — 03.13.12.B)",
+        "uuid": "3681a2c1-b674-5b5f-b9bc-ede565868eea"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.13.13.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.13.13.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.13.13.a (Mobile Code (Code mobile) — 03.13.13.A)",
+        "uuid": "32662b1c-67ab-5ae7-9bd9-20fc517d58df"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.13.13.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.13.13.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.13.13.b (Mobile Code (Code mobile) — 03.13.13.B)",
+        "uuid": "3274858c-b01c-5dcd-9832-aab62d7eef13"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.13.15.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.13.15.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.13.15.a (Session Authenticity (Authenticité de session) — 03.13.15.A)",
+        "uuid": "c14402bd-ad73-5acc-bdcb-84a0afe999df"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.14.01.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.14.01.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.14.01.a (Flaw Remediation (Correction des défauts) — 03.14.01.A)",
+        "uuid": "75cb4cdf-b278-5da3-b29b-b315208d3c55"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.14.01.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.14.01.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.14.01.b (Flaw Remediation (Correction des défauts) — 03.14.01.B)",
+        "uuid": "8bc8c264-4394-5c51-8900-0d94b8ae2a4b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.14.02.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.14.02.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.14.02.a (Malicious Code Protection (Protection contre les codes malveillants) — 03.14.02.A)",
+        "uuid": "111baa25-fc64-53a5-a8d6-4ec6b22e66ab"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.14.02.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.14.02.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.14.02.b (Malicious Code Protection (Protection contre les codes malveillants) — 03.14.02.B)",
+        "uuid": "2dd4f765-f2ee-5f0a-a480-0b93445da287"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.14.02.c.1 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.14.02.c.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.14.02.c.1 (Malicious Code Protection (Protection contre les codes malveillants) — 03.14.02.C.1)",
+        "uuid": "e15d278e-403c-52a6-b58a-67c2f78f7ebd"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.14.02.c.2 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.14.02.c.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.14.02.c.2 (Malicious Code Protection (Protection contre les codes malveillants) — 03.14.02.C.2)",
+        "uuid": "38a08bf2-2fcd-5da5-a5ab-0689e77d4d54"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.14.03.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.14.03.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.14.03.a (Security Alerts, Advisories, and Directives (Alertes, avis et directives de sécurité) — 03.14.03.A)",
+        "uuid": "59ffd298-3a82-5676-b490-76edbaa67ab3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.14.03.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.14.03.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.14.03.b (Security Alerts, Advisories, and Directives (Alertes, avis et directives de sécurité) — 03.14.03.B)",
+        "uuid": "bacbf28a-0709-52ea-97aa-a4df4293d205"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.14.06.a.1 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.14.06.a.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.14.06.a.1 (System Monitoring (Surveillance du système) — 03.14.06.A.1)",
+        "uuid": "2df81ffe-5bb9-5ce7-96c7-97972176594f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.14.06.a.2 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.14.06.a.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.14.06.a.2 (System Monitoring (Surveillance du système) — 03.14.06.A.2)",
+        "uuid": "29c49d87-c505-5c85-a7bb-b33012d494ce"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.14.06.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.14.06.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.14.06.b (System Monitoring (Surveillance du système) — 03.14.06.B)",
+        "uuid": "e1b84815-7815-5bd1-849e-8886a612f12d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.14.06.c in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.14.06.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.14.06.c (System Monitoring (Surveillance du système) — 03.14.06.C)",
+        "uuid": "7280108a-2dc1-5fe1-a31f-be48075ae518"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.14.08.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.14.08.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.14.08.a (Information Management and Retention (Gestion et conservation de l'information) — 03.14.08.A)",
+        "uuid": "7a27e77c-506e-5f68-9b3d-6269a9f1f8d0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.14.09.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.14.09.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.14.09.a (Out-of-Band Channels (Canaux hors bande) — 03.14.09.A)",
+        "uuid": "21a8edb6-b9ca-5c11-bf72-46cac0549d93"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.14.09.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.14.09.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.14.09.b (Out-of-Band Channels (Canaux hors bande) — 03.14.09.B)",
+        "uuid": "754f07db-295d-59fd-96ad-c2c588ff0e58"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.14.09.c in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.14.09.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.14.09.c (Out-of-Band Channels (Canaux hors bande) — 03.14.09.C)",
+        "uuid": "d9f034ab-dfdd-5768-88ea-72a7ce55076a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.15.01.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.15.01.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.15.01.a (Policy and Procedures (Politiques et procédures) — 03.15.01.A)",
+        "uuid": "e07807a1-a427-54e1-822a-cee14428ed89"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.15.01.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.15.01.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.15.01.b (Policy and Procedures (Politiques et procédures) — 03.15.01.B)",
+        "uuid": "cc8b8bf1-4b6b-5949-b712-901584ff8794"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.15.02.a.1 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.15.02.a.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.15.02.a.1 (System Security Plan (Plan de sécurité du système) — 03.15.02.A.1)",
+        "uuid": "121b9fb9-8cb8-55aa-96eb-2e94bf2577d2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.15.02.a.2 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.15.02.a.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.15.02.a.2 (System Security Plan (Plan de sécurité du système) — 03.15.02.A.2)",
+        "uuid": "278c707e-4f51-5332-b471-b492d0823919"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.15.02.a.3 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.15.02.a.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.15.02.a.3 (System Security Plan (Plan de sécurité du système) — 03.15.02.A.3)",
+        "uuid": "89414aa3-5611-5e95-aeaf-c798d1a0a563"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.15.02.a.4 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.15.02.a.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.15.02.a.4 (System Security Plan (Plan de sécurité du système) — 03.15.02.A.4)",
+        "uuid": "8f8dd623-e825-5a1d-a3db-6c39d51055fe"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.15.02.a.5 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.15.02.a.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.15.02.a.5 (System Security Plan (Plan de sécurité du système) — 03.15.02.A.5)",
+        "uuid": "f6f6af48-f738-5f43-8a55-48c37d044a92"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.15.02.a.6 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.15.02.a.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.15.02.a.6 (System Security Plan (Plan de sécurité du système) — 03.15.02.A.6)",
+        "uuid": "3b03ddda-9b04-553c-81ba-8ded8fc44589"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.15.02.a.7 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.15.02.a.7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.15.02.a.7 (System Security Plan (Plan de sécurité du système) — 03.15.02.A.7)",
+        "uuid": "f94b8c6f-2b8d-5308-ae97-cfb2f287f7cb"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.15.02.a.8 in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.15.02.a.8"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.15.02.a.8 (System Security Plan (Plan de sécurité du système) — 03.15.02.A.8)",
+        "uuid": "04f4e51c-0637-5dad-a472-30fdc30e2083"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.15.02.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.15.02.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.15.02.b (System Security Plan (Plan de sécurité du système) — 03.15.02.B)",
+        "uuid": "9db2d6b3-1253-536e-b0d9-7b827ec64a53"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.15.02.c in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.15.02.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.15.02.c (System Security Plan (Plan de sécurité du système) — 03.15.02.C)",
+        "uuid": "b0365750-6a0a-55d2-8244-79efac48db6c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.15.03.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.15.03.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.15.03.a (Rules of Behavior (Règles de comportement) — 03.15.03.A)",
+        "uuid": "1a1c6069-e50c-5625-abae-ce202ab866a1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.15.03.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.15.03.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.15.03.b (Rules of Behavior (Règles de comportement) — 03.15.03.B)",
+        "uuid": "4d65178b-3252-5a42-992d-861280ed35dd"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.15.03.c in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.15.03.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.15.03.c (Rules of Behavior (Règles de comportement) — 03.15.03.C)",
+        "uuid": "6bc70fca-95cb-5d21-b86f-d53b2e0367db"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.15.03.d in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.15.03.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.15.03.d (Rules of Behavior (Règles de comportement) — 03.15.03.D)",
+        "uuid": "3b7763b9-f36f-516e-a832-41229dbe1670"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.16.01.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.16.01.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.16.01.a (Security Engineering Principles (Principes d'ingénierie de sécurité) — 03.16.01.A)",
+        "uuid": "105bd89a-976c-5abf-96e6-932f11edeea1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.16.02.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.16.02.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.16.02.a (Unsupported System Components (Composants système non pris en charge) — 03.16.02.A)",
+        "uuid": "288ac45f-29dc-51bc-9e2c-bf80b8844283"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.16.02.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.16.02.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.16.02.b (Unsupported System Components (Composants système non pris en charge) — 03.16.02.B)",
+        "uuid": "9146becb-4608-5d39-bf39-49995546205b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.16.03.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.16.03.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.16.03.a (External System Services (Services système externes) — 03.16.03.A)",
+        "uuid": "b884be07-b6d9-563a-a630-621b875eb4de"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.16.03.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.16.03.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.16.03.b (External System Services (Services système externes) — 03.16.03.B)",
+        "uuid": "17e94537-9ff5-5a40-b599-b22eea1070e2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.16.03.c in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.16.03.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.16.03.c (External System Services (Services système externes) — 03.16.03.C)",
+        "uuid": "6fa481a5-fb15-5b6f-b81c-93b6a284c5e7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.17.01.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.17.01.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.17.01.a (Supply Chain Risk Management Plan (Plan de gestion des risques liés à la chaîne d'approvisionnement) — 03.17.01.A)",
+        "uuid": "2bdfba2f-0e2b-5405-8d3b-033626ac30cb"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.17.01.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.17.01.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.17.01.b (Supply Chain Risk Management Plan (Plan de gestion des risques liés à la chaîne d'approvisionnement) — 03.17.01.B)",
+        "uuid": "60c66783-d644-5c6a-8970-6e6c0669ff1d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.17.01.c in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.17.01.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.17.01.c (Supply Chain Risk Management Plan (Plan de gestion des risques liés à la chaîne d'approvisionnement) — 03.17.01.C)",
+        "uuid": "e6cc4e1f-6c08-5ba3-b5d0-c14fda25c36a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.17.02.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.17.02.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.17.02.a (Acquisition Strategies, Tools, and Methods (Stratégies, outils et méthodes d'acquisition) — 03.17.02.A)",
+        "uuid": "33336732-71c9-5ec6-a850-40e804a28762"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.17.03.a in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.17.03.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.17.03.a (Supply Chain Requirements and Processes (Exigences et processus liés à la chaîne d'approvisionnement) — 03.17.03.A)",
+        "uuid": "9e57e0b2-ad62-5099-9ed6-f37e9f29ef19"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _03.17.03.b in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_03.17.03.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _03.17.03.b (Supply Chain Requirements and Processes (Exigences et processus liés à la chaîne d'approvisionnement) — 03.17.03.B)",
+        "uuid": "1e9ef6fc-4971-51b0-aafb-843a108edbc3"
       }
     ],
     "uuid": "0290aca5-a509-55b6-aaf2-f3e9c133bba9"

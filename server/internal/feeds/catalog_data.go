@@ -39,7 +39,11 @@ type KEVAdvisoryEntry struct {
 	AttackedControls   []string `json:"attacked_controls"`
 	MitigatingControls []string `json:"mitigating_controls"`
 	ShortDescription   string   `json:"short_description"`
+	Notes              string   `json:"notes,omitempty"`
 }
+
+// ThreatAdvisory aliases KEVAdvisoryEntry for active threat advisory consumers.
+type ThreatAdvisory = KEVAdvisoryEntry
 
 // AttackTechniqueEntry represents a MITRE ATT&CK v16 Enterprise technique and its
 // mitigating NIST 800-53 Rev 5 / CCCS ITSP.10.033 controls.
@@ -52,6 +56,9 @@ type AttackTechniqueEntry struct {
 	RelatedCWEs        []string `json:"related_cwes"`
 	Description        string   `json:"description"`
 }
+
+// AttackMapping aliases AttackTechniqueEntry for MITRE ATT&CK mapping consumers.
+type AttackMapping = AttackTechniqueEntry
 
 // LifecycleEdgeEntry represents a sovereign regulatory supersession or derivation relationship.
 type LifecycleEdgeEntry struct {
@@ -767,3 +774,9 @@ var BuiltinLifecycleEdges = []LifecycleEdgeEntry{
 		Rationale:     "ANSSI detailed guide expands the 42 essential rules of the ANSSI Guide d'hygiène informatique into 200 granular sub-measures.",
 	},
 }
+
+// Baseline aliases for threat advisory and ATT&CK mapping callers.
+var (
+	BuiltinThreatAdvisories = BuiltinKEVAdvisories
+	BuiltinAttackMappings   = BuiltinAttackTechniques
+)

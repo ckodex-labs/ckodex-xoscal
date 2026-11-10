@@ -2,68 +2,93 @@ package oscal
 
 import (
 	"context"
-	"encoding/json"
 	"fmt"
 	"strings"
 
 	assessment_resultsv1 "github.com/mchorfa/xoscal/proto/oscal/assessment_results/v1"
 	commonv1 "github.com/mchorfa/xoscal/proto/oscal/common/v1"
-	"github.com/mchorfa/xoscal/server/internal/kg"
-	"google.golang.org/protobuf/types/known/timestamppb"
 )
 
 func (g *Generator) GenerateAssessmentResults(ctx context.Context, snapshotName, framework string) (*assessment_resultsv1.AssessmentResults, error) {
-	entities, err := g.store.GetSnapshot(ctx, snapshotName)
+	snap, err := g.loadParsedSnapshot(ctx, snapshotName, framework, false)
 	if err != nil {
-		return nil, fmt.Errorf("get snapshot: %w", err)
+		return nil, err
+	}
+	return g.generateAssessmentResultsFromSnapshot(snap, snapshotName, framework), nil
+}
+
+func (g *Generator) generateAssessmentResultsFromSnapshot(snap *parsedSnapshot, snapshotName, framework string) *assessment_resultsv1.AssessmentResults {
+	ts := deterministicProtoTimestamp()
+	const maxSampleResults = 25
+	sampleCap := len(snap.assessableReqs)
+	if sampleCap > maxSampleResults {
+		sampleCap = maxSampleResults
+	}
+	findings := make([]*assessment_resultsv1.Finding, 0, sampleCap)
+	observations := make([]*assessment_resultsv1.Observation, 0, sampleCap)
+	includeControls := make([]*assessment_resultsv1.SelectedControl, 0, len(snap.assessableReqs))
+	seenControls := make(map[string]bool, len(snap.assessableReqs))
+
+	for _, req := range snap.assessableReqs {
+		ctrlID := sanitizeToken(req.Citation)
+		if ctrlID == "" {
+			ctrlID = sanitizeToken(req.NodeRefID)
+		}
+		if ctrlID != "" {
+			key := strings.ToLower(ctrlID)
+			if !seenControls[key] {
+				seenControls[key] = true
+				includeControls = append(includeControls, &assessment_resultsv1.SelectedControl{
+					ControlId: &commonv1.Token{Value: ctrlID},
+				})
+			}
+		}
+
+		if len(findings) < maxSampleResults {
+			title := singleLine(req.Title)
+			if title == "" {
+				title = singleLine(req.Citation)
+			}
+			if title == "" {
+				title = singleLine(req.NodeRefID)
+			}
+			desc := fmt.Sprintf("Assessment evaluation observation and finding for %s (%s).", ctrlID, title)
+			observations = append(observations, &assessment_resultsv1.Observation{
+				Uuid:        newUUID(uuidNamespace, fmt.Sprintf("obs-%s", req.Citation)),
+				Description: &commonv1.MarkupMultiline{Value: desc},
+				Methods:     []string{"INTERVIEW"},
+				Collected:   &commonv1.DateTime{Value: ts},
+				Subjects: []*assessment_resultsv1.SubjectReference{{
+					SubjectUuid: newUUID(uuidNamespace, fmt.Sprintf("ctrl-%s", req.Citation)),
+					Type:        "component",
+					Title:       &commonv1.MarkupLine{Value: title},
+				}},
+			})
+			targetID := ctrlID
+			if targetID == "" {
+				targetID = "_control"
+			}
+			findings = append(findings, &assessment_resultsv1.Finding{
+				Uuid:        newUUID(uuidNamespace, fmt.Sprintf("finding-%s", req.Citation)),
+				Title:       &commonv1.MarkupLine{Value: fmt.Sprintf("Finding for %s", title)},
+				Description: &commonv1.MarkupMultiline{Value: desc},
+				Target: &assessment_resultsv1.FindingTarget{
+					Type:     "objective-id",
+					TargetId: &commonv1.Token{Value: targetID},
+					Title:    &commonv1.MarkupLine{Value: title},
+					Status:   &assessment_resultsv1.ObjectiveStatus{State: "not-satisfied"},
+				},
+			})
+		}
 	}
 
-	var findings []*assessment_resultsv1.Finding
-	var observations []*assessment_resultsv1.Observation
-	for _, e := range entities {
-		if e.Type != "reg:Requirement" {
-			continue
-		}
-		var req kg.Requirement
-		if err := json.Unmarshal(e.Payload, &req); err != nil {
-			continue
-		}
-		if !strings.EqualFold(req.Framework, framework) || !req.Assessable {
-			continue
-		}
-		title := singleLine(req.Title)
-		if title == "" {
-			title = singleLine(req.Citation)
-		}
-		if title == "" {
-			title = singleLine(req.NodeRefID)
-		}
-		desc := req.Text
-		if desc == "" {
-			desc = title
-		}
-		observations = append(observations, &assessment_resultsv1.Observation{
-			Uuid:        newUUID(uuidNamespace, fmt.Sprintf("obs-%s", req.Citation)),
-			Description: &commonv1.MarkupMultiline{Value: desc},
-			Methods:     []string{"INTERVIEW"},
-			Collected:   &commonv1.DateTime{Value: timestamppb.Now()},
-			Subjects: []*assessment_resultsv1.SubjectReference{{
-				SubjectUuid: newUUID(uuidNamespace, fmt.Sprintf("ctrl-%s", req.Citation)),
-				Type:        "component",
-				Title:       &commonv1.MarkupLine{Value: title},
-			}},
-		})
-		findings = append(findings, &assessment_resultsv1.Finding{
-			Uuid:        newUUID(uuidNamespace, fmt.Sprintf("finding-%s", req.Citation)),
-			Title:       &commonv1.MarkupLine{Value: fmt.Sprintf("Finding for %s", title)},
-			Description: &commonv1.MarkupMultiline{Value: desc},
-			Target: &assessment_resultsv1.FindingTarget{
-				Type:     "objective-id",
-				TargetId: &commonv1.Token{Value: sanitizeToken(req.Citation)},
-				Title:    &commonv1.MarkupLine{Value: title},
-				Status:   &assessment_resultsv1.ObjectiveStatus{State: "not-satisfied"},
-			},
-		})
+	sel := &assessment_resultsv1.ControlSelection{
+		Description: &commonv1.MarkupMultiline{Value: fmt.Sprintf("All controls in %s framework", framework)},
+	}
+	if len(includeControls) > 0 {
+		sel.IncludeControls = includeControls
+	} else {
+		sel.IncludeAll = &assessment_resultsv1.IncludeAll{}
 	}
 
 	return &assessment_resultsv1.AssessmentResults{
@@ -79,18 +104,15 @@ func (g *Generator) GenerateAssessmentResults(ctx context.Context, snapshotName,
 			Uuid:         newUUID(uuidNamespace, fmt.Sprintf("result-%s-%s", framework, snapshotName)),
 			Title:        &commonv1.MarkupLine{Value: fmt.Sprintf("Assessment of %s", framework)},
 			Description:  &commonv1.MarkupMultiline{Value: fmt.Sprintf("Assessment results for %s framework", framework)},
-			Start:        &commonv1.DateTime{Value: timestamppb.Now()},
+			Start:        &commonv1.DateTime{Value: ts},
 			Findings:     findings,
 			Observations: observations,
 			ReviewedControls: &assessment_resultsv1.ReviewedControls{
-				ControlSelections: []*assessment_resultsv1.ControlSelection{{
-					Description: &commonv1.MarkupMultiline{Value: fmt.Sprintf("All controls in %s framework", framework)},
-					IncludeAll:  &assessment_resultsv1.IncludeAll{},
-				}},
+				ControlSelections: []*assessment_resultsv1.ControlSelection{sel},
 			},
 		}},
 		BackMatter: buildBackMatter(framework, snapshotName),
-	}, nil
+	}
 }
 
 // extractGuidance pulls sentences that start with guidance keywords.

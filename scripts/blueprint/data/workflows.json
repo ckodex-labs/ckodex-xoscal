@@ -61,7 +61,7 @@
     "produces": [
       "release/ archives",
       "six SDK bundles and supported packages",
-      "35 catalogs + PBMM profile",
+      "36 catalogs + 2 sovereign profiles",
       "multi-architecture OCI archive",
       "analysis reports",
       "final site",

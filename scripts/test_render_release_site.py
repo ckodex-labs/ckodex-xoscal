@@ -52,15 +52,16 @@ class RenderReleaseSite(unittest.TestCase):
             with zipfile.ZipFile(path, "w") as archive:
                 archive.writestr("README.md", f"{language} static smoke fixture\n")
             Path(str(path) + ".sha256").write_text(digest(path) + "\n")
-        for name in [f"fixture-{i:02}" for i in range(34)] + ["cccs-medium-cloud-pbmm"]:
+        for name in [f"fixture-{i:02}" for i in range(34)] + ["cccs-medium-cloud-pbmm", "cccs-itsp-10-033"]:
             directory = self.root / "frameworks" / name
             directory.mkdir(parents=True, exist_ok=True)
             path = directory / "catalog.json"
             write(path, {"catalog": {"uuid": "fixture", "metadata": {"title": name}}})
             Path(str(path) + ".sha256").write_text(digest(path) + "\n")
-        profile = self.root / "frameworks/cccs-medium-cloud-pbmm/profile.json"
-        write(profile, {"profile": {"uuid": "fixture", "imports": []}})
-        Path(str(profile) + ".sha256").write_text(digest(profile) + "\n")
+        for profile_name in ("cccs-medium-cloud-pbmm", "cccs-itsp-10-033"):
+            profile = self.root / f"frameworks/{profile_name}/profile.json"
+            write(profile, {"profile": {"uuid": "fixture", "imports": []}})
+            Path(str(profile) + ".sha256").write_text(digest(profile) + "\n")
         self.manifest = self.root / "payload-manifest.json"
         self.reset_manifest()
 

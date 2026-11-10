@@ -4,16 +4,587 @@
       "href": "./system-security-plan.json"
     },
     "metadata": {
-      "last-modified": "2026-11-08T01:42:12Z",
+      "last-modified": "2026-11-08T00:30:51Z",
       "oscal-version": "1.2.3",
       "title": "Référentiel Général de Sécurité 2.0 - Annexe B2 Plan of Action and Milestones Template",
       "version": "1"
     },
     "poam-items": [
       {
-        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for Référentiel Général de Sécurité 2.0 - Annexe B2.",
-        "title": "Compliance Roadmap and Parameter Tailoring for Référentiel Général de Sécurité 2.0 - Annexe B2",
-        "uuid": "925d33a6-70ff-5557-867b-b73a581fc11d"
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.1.1 in Référentiel Général de Sécurité 2.0 - Annexe B2.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.1.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.1.1 (RègleImpact-1)",
+        "uuid": "c7010252-a73f-5759-9194-593b99788b1b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.1.2 in Référentiel Général de Sécurité 2.0 - Annexe B2.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.1.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.1.2 (RègleDurée-1)",
+        "uuid": "6eaece81-aa79-5189-a7f6-b8af1ea5e1c4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.1.3 in Référentiel Général de Sécurité 2.0 - Annexe B2.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.1.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.1.3 (RègleImpactSystémique-1)",
+        "uuid": "0a9ee2bd-a4dc-5a64-a2d7-c09a0730320d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.1.4 in Référentiel Général de Sécurité 2.0 - Annexe B2.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.1.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.1.4 (RecomImpactSystémique-1)",
+        "uuid": "e0d3f769-a655-5489-bcd7-c38a02bb41ee"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.3.1.1.1 in Référentiel Général de Sécurité 2.0 - Annexe B2.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.3.1.1.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.3.1.1.1 (RègleAléaLocal-1)",
+        "uuid": "861c64fa-a030-5523-bf36-2424059444b8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.3.1.2.1 in Référentiel Général de Sécurité 2.0 - Annexe B2.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.3.1.2.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.3.1.2.1 (RègleDifférentiation-1)",
+        "uuid": "f5c67c60-cdd3-5b8c-b6e2-9f9b1bb7a5b0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.3.1.3.1 in Référentiel Général de Sécurité 2.0 - Annexe B2.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.3.1.3.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.3.1.3.1 (RègleÉchangeClés-1)",
+        "uuid": "7655f409-84b3-5520-b18c-c6142c1627d3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.3.2.1.1 in Référentiel Général de Sécurité 2.0 - Annexe B2.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.3.2.1.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.3.2.1.1 (RègleAléaCentral-1)",
+        "uuid": "fa6016e6-0893-5423-a736-6462435e7300"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.3.2.1.2 in Référentiel Général de Sécurité 2.0 - Annexe B2.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.3.2.1.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.3.2.1.2 (RecomAléaCentral-1)",
+        "uuid": "14be2e09-6e19-5af2-98c8-be8130869351"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.3.2.1.3 in Référentiel Général de Sécurité 2.0 - Annexe B2.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.3.2.1.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.3.2.1.3 (RègleGénérationCentralisée-1)",
+        "uuid": "b237e3e7-4209-5156-a834-e0084351929e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.3.2.1.4 in Référentiel Général de Sécurité 2.0 - Annexe B2.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.3.2.1.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.3.2.1.4 (RecomGénérationCentralisée-1)",
+        "uuid": "a26ded3c-a500-559c-a834-1fab0bc303cf"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.3.2.2.1 in Référentiel Général de Sécurité 2.0 - Annexe B2.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.3.2.2.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.3.2.2.1 (RègleDérivation-1)",
+        "uuid": "fcead571-02b2-5899-8034-cb702614f879"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.3.2.2.2 in Référentiel Général de Sécurité 2.0 - Annexe B2.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.3.2.2.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.3.2.2.2 (RecomDérivation-1)",
+        "uuid": "3236a0ac-0c61-53dc-b02b-616e96ea97ed"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.3.2.2.3 in Référentiel Général de Sécurité 2.0 - Annexe B2.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.3.2.2.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.3.2.2.3 (RecomDérivation-2)",
+        "uuid": "de3185f2-49db-5211-bedf-579cf45de01c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.3.3.1 in Référentiel Général de Sécurité 2.0 - Annexe B2.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.3.3.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.3.3.1 (RègleDérivationSignature-1)",
+        "uuid": "d741a9be-dab4-5f7b-a2ea-a6b7169f2b1d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.3.3.2 in Référentiel Général de Sécurité 2.0 - Annexe B2.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.3.3.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.3.3.2 (RecomGénérationAléatoireSignature-1)",
+        "uuid": "6f2d14c8-26b0-5da4-a12f-455f4868d0c7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.3.3.3 in Référentiel Général de Sécurité 2.0 - Annexe B2.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.3.3.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.3.3.3 (RecomGénérationAléatoireSignature-2)",
+        "uuid": "63219591-61c4-5733-9e70-fd31744eabca"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.4.1.1 in Référentiel Général de Sécurité 2.0 - Annexe B2.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.4.1.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.4.1.1 (RègleUsage-1)",
+        "uuid": "3560c0a9-1921-515f-88d5-f2e6fd41a872"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.4.2.1 in Référentiel Général de Sécurité 2.0 - Annexe B2.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.4.2.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.4.2.1 (RègleAffectation-1)",
+        "uuid": "2a315e3e-9796-5610-848e-58927e5a8d60"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.4.2.2 in Référentiel Général de Sécurité 2.0 - Annexe B2.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.4.2.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.4.2.2 (RecomAffectation-1)",
+        "uuid": "570d9626-14ab-5ba1-a81d-64eef2a1c1c5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.4.3.1.1.1 in Référentiel Général de Sécurité 2.0 - Annexe B2.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.4.3.1.1.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.4.3.1.1.1 (RègleEnrôlementPrivatif-1)",
+        "uuid": "fb3b118b-af02-5b38-a96f-789d4bb3a43f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.4.3.1.1.2 in Référentiel Général de Sécurité 2.0 - Annexe B2.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.4.3.1.1.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.4.3.1.1.2 (RecomContrôleIndépendant-1)",
+        "uuid": "147afbf8-f8a8-563d-ac0c-4e0abd945eb3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.4.3.1.2.1 in Référentiel Général de Sécurité 2.0 - Annexe B2.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.4.3.1.2.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.4.3.1.2.1 (RègleEnrôlementIGC-1)",
+        "uuid": "c727f423-ef4a-5261-a719-f3aeb2569cc6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.4.3.1.2.2 in Référentiel Général de Sécurité 2.0 - Annexe B2.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.4.3.1.2.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.4.3.1.2.2 (RecomContrôleIndépendant-1)",
+        "uuid": "692fde76-4999-56be-be21-ecb403909e09"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.4.3.2.1.1 in Référentiel Général de Sécurité 2.0 - Annexe B2.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.4.3.2.1.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.4.3.2.1.1 (RègleEnrôlementCntralSécuritéPhysique-1)",
+        "uuid": "4930e087-1304-5d2a-8756-c305b2ddcd92"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.4.3.2.1.2 in Référentiel Général de Sécurité 2.0 - Annexe B2.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.4.3.2.1.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.4.3.2.1.2 (RègleEnrôlementCentral-1)",
+        "uuid": "2b4eeb59-270e-59c2-b2ad-63f80cb2be8e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.4.3.2.2.1 in Référentiel Général de Sécurité 2.0 - Annexe B2.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.4.3.2.2.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.4.3.2.2.1 (RègleEnrôlementDérivationSécuritéPhysique-1)",
+        "uuid": "bf99efda-30db-52f4-81dc-cd27384d836c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.4.3.2.2.2 in Référentiel Général de Sécurité 2.0 - Annexe B2.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.4.3.2.2.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.4.3.2.2.2 (RègleEnrôlementDérivation-1)",
+        "uuid": "32dbeb88-110c-5c31-b2d5-185c3de78117"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.5.1.1.1 in Référentiel Général de Sécurité 2.0 - Annexe B2.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.5.1.1.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.5.1.1.1 (RègleAcheminemementCléCentral-1)",
+        "uuid": "efda610e-87bd-5398-8ec4-64678c294dc6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.5.1.1.2 in Référentiel Général de Sécurité 2.0 - Annexe B2.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.5.1.1.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.5.1.1.2 (RecomAcheminementNoirCentralBout-en-bout-1)",
+        "uuid": "10dda402-cd7e-57a5-91d0-a2e5db49b1eb"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.5.1.2.1 in Référentiel Général de Sécurité 2.0 - Annexe B2.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.5.1.2.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.5.1.2.1 (RègleAcheminemementCléDérivée-1)",
+        "uuid": "0b6bb315-6b95-5f84-b48f-e008aafaa4f8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.5.1.2.2 in Référentiel Général de Sécurité 2.0 - Annexe B2.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.5.1.2.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.5.1.2.2 (RecomAcheminementNoirDérivéeBout-en-bout-1)",
+        "uuid": "f35a0809-0a81-513c-8497-08d041435390"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.5.2.1.1 in Référentiel Général de Sécurité 2.0 - Annexe B2.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.5.2.1.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.5.2.1.1 (RecomInjectionCléLocale-1)",
+        "uuid": "e4cefc09-2fd2-5f04-978d-965de1f00559"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.5.2.1.2 in Référentiel Général de Sécurité 2.0 - Annexe B2.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.5.2.1.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.5.2.1.2 (RègleInjectionCléLocale-1)",
+        "uuid": "9cadf248-e463-5c58-bf8b-5b8cfb24bd60"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.5.2.2.1.1 in Référentiel Général de Sécurité 2.0 - Annexe B2.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.5.2.2.1.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.5.2.2.1.1 (RègleInjectionCléCentral-1)",
+        "uuid": "32bd1bab-f912-50b9-b7c5-3c8631e761dc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.5.2.2.1.2 in Référentiel Général de Sécurité 2.0 - Annexe B2.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.5.2.2.1.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.5.2.2.1.2 (RecomInjectionCléCentral-1)",
+        "uuid": "91533536-7fb0-5f5b-bc36-891a008cbdab"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.5.2.2.2.1 in Référentiel Général de Sécurité 2.0 - Annexe B2.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.5.2.2.2.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.5.2.2.2.1 (RègleInjectionCléDérivée-1)",
+        "uuid": "c17ad04b-818d-53d7-994d-2afc878fde32"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.5.2.2.2.2 in Référentiel Général de Sécurité 2.0 - Annexe B2.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.5.2.2.2.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.5.2.2.2.2 (RecomInjectionCléDérivée-1)",
+        "uuid": "f1a5bb40-4af3-5cd0-bed1-04c71291e0c6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.6.1.1 in Référentiel Général de Sécurité 2.0 - Annexe B2.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.6.1.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.6.1.1 (RecomDiffusion-1)",
+        "uuid": "8dfd6e64-cfd1-5d3e-b91c-bab2c04105bd"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.6.2.1 in Référentiel Général de Sécurité 2.0 - Annexe B2.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.6.2.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.6.2.1 (RègleEnvironnementConfiance-1)",
+        "uuid": "7e3cae81-e35b-54cb-9b7c-594204423445"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.6.2.2 in Référentiel Général de Sécurité 2.0 - Annexe B2.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.6.2.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.6.2.2 (RègleVérificationAuthenticité-1)",
+        "uuid": "2980ebda-c395-5e72-b2fd-8ffe125ab34f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.6.2.3 in Référentiel Général de Sécurité 2.0 - Annexe B2.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.6.2.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.6.2.3 (RègleVérificationUtilisabilité-1)",
+        "uuid": "38706372-3640-5045-af98-3123a8c71e4c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.7.1 in Référentiel Général de Sécurité 2.0 - Annexe B2.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.7.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.7.1 (RègleFinUtilisation-1)",
+        "uuid": "177674e1-adac-5c12-b523-3410856adb8f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.7.2 in Référentiel Général de Sécurité 2.0 - Annexe B2.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.7.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.7.2 (RecomCauseFinUtilisation-1)",
+        "uuid": "54644c10-81ca-55be-8a6d-36931b0acdb1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.7.3 in Référentiel Général de Sécurité 2.0 - Annexe B2.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.7.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.7.3 (RègleEffacement-1)",
+        "uuid": "76ca9023-6a89-58ed-a533-3a09ad408cd0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.8.1 in Référentiel Général de Sécurité 2.0 - Annexe B2.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.8.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.8.1 (RègleRenouvellement-1)",
+        "uuid": "2eb0a08c-7ab7-561a-b93c-72e78c4cd01c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.8.2 in Référentiel Général de Sécurité 2.0 - Annexe B2.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.8.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.8.2 (RègleRenouvellementEnrôlement-1)",
+        "uuid": "d29d1189-b4e0-5c4c-8a74-349dfd69e39a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.9.1 in Référentiel Général de Sécurité 2.0 - Annexe B2.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.9.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.9.1 (RègleRecouvrement-1)",
+        "uuid": "e1d4856a-ba20-5c94-a8a3-b3817b0cfc15"
       }
     ],
     "uuid": "1205af4f-2299-5b86-a6b8-f362250afb6b"

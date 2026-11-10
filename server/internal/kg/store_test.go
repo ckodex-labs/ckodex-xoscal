@@ -13,7 +13,7 @@ func newTestStore(t *testing.T) (Store, func()) {
 	if err != nil {
 		t.Fatalf("new store: %v", err)
 	}
-	return s, func() { s.Close() }
+	return s, func() { _ = s.Close() }
 }
 
 func TestCreateAndGetEntity(t *testing.T) {

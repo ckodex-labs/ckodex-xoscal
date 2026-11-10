@@ -256,6 +256,7 @@ func TestDeprecatedFieldsSuppressed(t *testing.T) {
 			Title:   "Deprecated Field Test POAM",
 			Version: "1.0",
 		},
+		//nolint:staticcheck // SA1019: intentionally populating deprecated Risks field to verify serializer stripping
 		Risks: []*poamv1.Risk{{
 			Uuid:        &commonv1.UUID{Value: validUUID},
 			Title:       &commonv1.MarkupLine{Value: "Old Risk"},

@@ -4,16 +4,1283 @@
       "href": "./system-security-plan.json"
     },
     "metadata": {
-      "last-modified": "2026-11-08T01:42:13Z",
+      "last-modified": "2026-11-08T00:30:43Z",
       "oscal-version": "1.2.3",
       "title": "NIST CSF version 2.0 Plan of Action and Milestones Template",
       "version": "6"
     },
     "poam-items": [
       {
-        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for NIST CSF version 2.0.",
-        "title": "Compliance Roadmap and Parameter Tailoring for NIST CSF version 2.0",
-        "uuid": "0d0a6d9b-70a1-5915-833b-7727c39f9557"
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control de.ae-02 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "de.ae-02"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: de.ae-02 (Adverse Event Analysis — DE.AE-02)",
+        "uuid": "ec9be270-c96e-527a-8e3e-cd93a671d6b1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control de.ae-03 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "de.ae-03"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: de.ae-03 (Adverse Event Analysis — DE.AE-03)",
+        "uuid": "0fce8c12-a613-5c14-96e7-5c0a9bfe65d2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control de.ae-04 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "de.ae-04"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: de.ae-04 (Adverse Event Analysis — DE.AE-04)",
+        "uuid": "858ba5ae-64c6-5611-86c6-7870a63aa95c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control de.ae-06 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "de.ae-06"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: de.ae-06 (Adverse Event Analysis — DE.AE-06)",
+        "uuid": "c0ad9ccc-6982-574f-ab8f-6ffefa67ca52"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control de.ae-07 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "de.ae-07"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: de.ae-07 (Adverse Event Analysis — DE.AE-07)",
+        "uuid": "11780a9c-745a-55d9-8623-5b985ef1dee4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control de.ae-08 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "de.ae-08"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: de.ae-08 (Adverse Event Analysis — DE.AE-08)",
+        "uuid": "c3331b2d-eb87-5d33-9a40-0a52592e1016"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control de.cm-01 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "de.cm-01"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: de.cm-01 (Continuous Monitoring — DE.CM-01)",
+        "uuid": "f510529a-93d2-5217-ae1f-6d0e9230c7f7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control de.cm-02 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "de.cm-02"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: de.cm-02 (Continuous Monitoring — DE.CM-02)",
+        "uuid": "1b576956-6b54-5f5b-87a0-53bdef4a5e66"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control de.cm-03 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "de.cm-03"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: de.cm-03 (Continuous Monitoring — DE.CM-03)",
+        "uuid": "b86b25fb-c279-51fb-8f13-c7fdb6dd4078"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control de.cm-06 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "de.cm-06"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: de.cm-06 (Continuous Monitoring — DE.CM-06)",
+        "uuid": "8db1d51e-8265-540d-8ebc-df5da56a5e4a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control de.cm-09 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "de.cm-09"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: de.cm-09 (Continuous Monitoring — DE.CM-09)",
+        "uuid": "43bf622b-6b0c-5da1-943a-e14fbf19bc5c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control gv.oc-01 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "gv.oc-01"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: gv.oc-01 (Organizational Context — GV.OC-01)",
+        "uuid": "8be75f92-231d-507a-ab41-8967b837dc8c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control gv.oc-02 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "gv.oc-02"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: gv.oc-02 (Organizational Context — GV.OC-02)",
+        "uuid": "bbafc490-8dfd-5609-8554-ba08079ad28c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control gv.oc-03 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "gv.oc-03"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: gv.oc-03 (Organizational Context — GV.OC-03)",
+        "uuid": "e0717977-9f93-50bd-91af-f480cf265cec"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control gv.oc-04 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "gv.oc-04"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: gv.oc-04 (Organizational Context — GV.OC-04)",
+        "uuid": "43f9c7f5-1103-5304-b1f3-ba9438a4d128"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control gv.oc-05 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "gv.oc-05"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: gv.oc-05 (Organizational Context — GV.OC-05)",
+        "uuid": "25f8eb07-bb3e-58fb-b3c2-cf4b61dd1932"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control gv.ov-01 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "gv.ov-01"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: gv.ov-01 (Oversight — GV.OV-01)",
+        "uuid": "8077e228-c302-5138-9efa-476be67c5e69"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control gv.ov-02 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "gv.ov-02"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: gv.ov-02 (Oversight — GV.OV-02)",
+        "uuid": "b06f4a06-44b5-546c-8df7-65268c401ece"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control gv.ov-03 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "gv.ov-03"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: gv.ov-03 (Oversight — GV.OV-03)",
+        "uuid": "862f4cf3-7812-572a-9601-96336ec48690"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control gv.po-01 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "gv.po-01"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: gv.po-01 (Policy — GV.PO-01)",
+        "uuid": "63e9c086-4f62-550e-bb7b-8616413662ad"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control gv.po-02 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "gv.po-02"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: gv.po-02 (Policy — GV.PO-02)",
+        "uuid": "3dd9b0bb-656d-5a9d-b202-731725dac35c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control gv.rm-01 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "gv.rm-01"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: gv.rm-01 (Risk Management Strategy — GV.RM-01)",
+        "uuid": "196e22da-a790-57ef-b3eb-ab974b8197e3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control gv.rm-02 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "gv.rm-02"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: gv.rm-02 (Risk Management Strategy — GV.RM-02)",
+        "uuid": "894c05dc-2095-5ad3-b8bc-3f7152b03fed"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control gv.rm-03 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "gv.rm-03"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: gv.rm-03 (Risk Management Strategy — GV.RM-03)",
+        "uuid": "3a604700-7b93-5259-8be2-ab6de8084b2d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control gv.rm-04 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "gv.rm-04"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: gv.rm-04 (Risk Management Strategy — GV.RM-04)",
+        "uuid": "c7b1ab4c-b153-5f2c-bee2-32ed3a80679a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control gv.rm-05 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "gv.rm-05"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: gv.rm-05 (Risk Management Strategy — GV.RM-05)",
+        "uuid": "47c5ac4e-4e70-5f24-b059-79981760d0fe"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control gv.rm-06 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "gv.rm-06"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: gv.rm-06 (Risk Management Strategy — GV.RM-06)",
+        "uuid": "37fb2d94-0bf8-56a1-b454-c7e6c169d399"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control gv.rm-07 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "gv.rm-07"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: gv.rm-07 (Risk Management Strategy — GV.RM-07)",
+        "uuid": "b30533f4-9130-5e7b-98f3-c10a59e79fdc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control gv.rr-01 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "gv.rr-01"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: gv.rr-01 (Roles, Responsibilities, and Authorities — GV.RR-01)",
+        "uuid": "4b539315-cdbf-5d41-8ebb-f9faac9a2723"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control gv.rr-02 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "gv.rr-02"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: gv.rr-02 (Roles, Responsibilities, and Authorities — GV.RR-02)",
+        "uuid": "1a05dd25-5539-5a53-957a-5d9fceb7245e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control gv.rr-03 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "gv.rr-03"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: gv.rr-03 (Roles, Responsibilities, and Authorities — GV.RR-03)",
+        "uuid": "dc3aa740-1cc8-5321-94be-ff85e9157fac"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control gv.rr-04 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "gv.rr-04"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: gv.rr-04 (Roles, Responsibilities, and Authorities — GV.RR-04)",
+        "uuid": "f35602b3-9eab-517f-826d-02d800776eb4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control gv.sc-01 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "gv.sc-01"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: gv.sc-01 (Cybersecurity Supply Chain Risk Management — GV.SC-01)",
+        "uuid": "6d81eb63-5556-50da-9c63-7e5c7c7b9ed9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control gv.sc-02 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "gv.sc-02"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: gv.sc-02 (Cybersecurity Supply Chain Risk Management — GV.SC-02)",
+        "uuid": "ec9f2b62-b5fc-57a9-8593-d754c5f5b9e0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control gv.sc-03 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "gv.sc-03"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: gv.sc-03 (Cybersecurity Supply Chain Risk Management — GV.SC-03)",
+        "uuid": "2a8baa67-d7d0-5b9d-bc4b-d443804e7368"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control gv.sc-04 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "gv.sc-04"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: gv.sc-04 (Cybersecurity Supply Chain Risk Management — GV.SC-04)",
+        "uuid": "5a8d9cf2-ef16-57a1-85fd-35fa6a3806e1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control gv.sc-05 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "gv.sc-05"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: gv.sc-05 (Cybersecurity Supply Chain Risk Management — GV.SC-05)",
+        "uuid": "dfc6b621-8f04-5074-902d-c32271c3de89"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control gv.sc-06 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "gv.sc-06"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: gv.sc-06 (Cybersecurity Supply Chain Risk Management — GV.SC-06)",
+        "uuid": "f09b407c-59ea-5c89-a907-c437e4011a4d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control gv.sc-07 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "gv.sc-07"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: gv.sc-07 (Cybersecurity Supply Chain Risk Management — GV.SC-07)",
+        "uuid": "8713e99e-ee88-536c-9d25-be3b2ce9c18f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control gv.sc-08 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "gv.sc-08"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: gv.sc-08 (Cybersecurity Supply Chain Risk Management — GV.SC-08)",
+        "uuid": "576f902f-ca46-5402-824d-35b7bbb44f79"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control gv.sc-09 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "gv.sc-09"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: gv.sc-09 (Cybersecurity Supply Chain Risk Management — GV.SC-09)",
+        "uuid": "4b0b0365-8f0e-5788-873f-12afea4a4d88"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control gv.sc-10 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "gv.sc-10"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: gv.sc-10 (Cybersecurity Supply Chain Risk Management — GV.SC-10)",
+        "uuid": "121e1e1a-307e-54b6-b7db-64e9aaca7af9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control id.am-01 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "id.am-01"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: id.am-01 (Asset Management — ID.AM-01)",
+        "uuid": "60967ae0-8132-536c-8a36-aabc76ab046f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control id.am-02 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "id.am-02"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: id.am-02 (Asset Management — ID.AM-02)",
+        "uuid": "52507f04-8079-5f9a-af5e-b022c854bbea"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control id.am-03 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "id.am-03"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: id.am-03 (Asset Management — ID.AM-03)",
+        "uuid": "70a01596-4b28-59a6-9924-6be58ab29813"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control id.am-04 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "id.am-04"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: id.am-04 (Asset Management — ID.AM-04)",
+        "uuid": "74f05837-f9ed-5a44-994b-4f59f4914b56"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control id.am-05 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "id.am-05"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: id.am-05 (Asset Management — ID.AM-05)",
+        "uuid": "fad04bfe-cabe-5f6e-a6fe-0db27ec9f978"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control id.am-07 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "id.am-07"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: id.am-07 (Asset Management — ID.AM-07)",
+        "uuid": "a4b6d5f2-6d47-5380-9307-994e1227b514"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control id.am-08 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "id.am-08"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: id.am-08 (Asset Management — ID.AM-08)",
+        "uuid": "9072103b-02ab-57db-9e69-038611a0185a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control id.im-01 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "id.im-01"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: id.im-01 (Improvement — ID.IM-01)",
+        "uuid": "8af71b6b-56c4-5758-acd5-db929d5f3b34"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control id.im-02 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "id.im-02"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: id.im-02 (Improvement — ID.IM-02)",
+        "uuid": "eb826e02-5ece-5db7-adde-83bb83e4b94a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control id.im-03 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "id.im-03"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: id.im-03 (Improvement — ID.IM-03)",
+        "uuid": "a0002b8b-259c-5cd8-a809-976d2785b2f1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control id.im-04 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "id.im-04"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: id.im-04 (Improvement — ID.IM-04)",
+        "uuid": "30b66c7d-f036-5f9c-8076-c24743df6652"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control id.ra-01 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "id.ra-01"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: id.ra-01 (Risk Assessment — ID.RA-01)",
+        "uuid": "378a3e52-5728-593d-9ce7-7253645dc4bd"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control id.ra-02 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "id.ra-02"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: id.ra-02 (Risk Assessment — ID.RA-02)",
+        "uuid": "3df524fd-3feb-5bf6-89ab-1dd3201ba3d7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control id.ra-03 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "id.ra-03"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: id.ra-03 (Risk Assessment — ID.RA-03)",
+        "uuid": "e9c84c7c-87dc-5672-8920-eac53bec5d2e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control id.ra-04 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "id.ra-04"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: id.ra-04 (Risk Assessment — ID.RA-04)",
+        "uuid": "3b37152b-ae33-5599-8a18-6f23cfc2bdc4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control id.ra-05 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "id.ra-05"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: id.ra-05 (Risk Assessment — ID.RA-05)",
+        "uuid": "4de0907f-a71c-5236-9de5-c26dd2b473c7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control id.ra-06 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "id.ra-06"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: id.ra-06 (Risk Assessment — ID.RA-06)",
+        "uuid": "b65f66d4-eafc-5631-bd78-4b4ba514ba7d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control id.ra-07 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "id.ra-07"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: id.ra-07 (Risk Assessment — ID.RA-07)",
+        "uuid": "a0adfd80-b233-5d0c-af5e-2cf887cced7f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control id.ra-08 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "id.ra-08"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: id.ra-08 (Risk Assessment — ID.RA-08)",
+        "uuid": "75dd76ee-2942-5b0a-b5f5-9f9d6395ab04"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control id.ra-09 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "id.ra-09"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: id.ra-09 (Risk Assessment — ID.RA-09)",
+        "uuid": "db3bbd35-7a27-50ea-b968-a9f259c49c00"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control id.ra-10 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "id.ra-10"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: id.ra-10 (Risk Assessment — ID.RA-10)",
+        "uuid": "505bae68-ca88-58dd-b212-3acf24042d6c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pr.aa-01 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pr.aa-01"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pr.aa-01 (Identity Management, Authentication, and Access Control — PR.AA-01)",
+        "uuid": "1cde84fc-5153-5b7c-9bee-7f538b1d16ea"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pr.aa-02 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pr.aa-02"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pr.aa-02 (Identity Management, Authentication, and Access Control — PR.AA-02)",
+        "uuid": "42f5addb-4cb9-5420-9969-46cf9dc887be"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pr.aa-03 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pr.aa-03"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pr.aa-03 (Identity Management, Authentication, and Access Control — PR.AA-03)",
+        "uuid": "1d62951d-62af-5397-99d3-7b78b18c8ff6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pr.aa-04 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pr.aa-04"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pr.aa-04 (Identity Management, Authentication, and Access Control — PR.AA-04)",
+        "uuid": "09cd7381-19ec-5bed-9b19-7ddc0c7ade63"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pr.aa-05 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pr.aa-05"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pr.aa-05 (Identity Management, Authentication, and Access Control — PR.AA-05)",
+        "uuid": "93e65b7f-dad4-5ab5-884d-2f968a996d4a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pr.aa-06 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pr.aa-06"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pr.aa-06 (Identity Management, Authentication, and Access Control — PR.AA-06)",
+        "uuid": "55cfd0bb-2976-5f66-9a31-3f5c25cfd25b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pr.at-01 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pr.at-01"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pr.at-01 (Awareness and Training — PR.AT-01)",
+        "uuid": "1ea78c57-f2f6-57b5-8d1a-0f8afaff11c5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pr.at-02 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pr.at-02"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pr.at-02 (Awareness and Training — PR.AT-02)",
+        "uuid": "f6c07706-bb9c-5292-9d60-f36ed1af85b8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pr.ds-01 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pr.ds-01"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pr.ds-01 (Data Security — PR.DS-01)",
+        "uuid": "41860e31-11fe-5247-9d51-0bcd8cb034ad"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pr.ds-02 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pr.ds-02"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pr.ds-02 (Data Security — PR.DS-02)",
+        "uuid": "ec67bbc6-439d-563b-87cb-8f59911c40a3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pr.ds-10 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pr.ds-10"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pr.ds-10 (Data Security — PR.DS-10)",
+        "uuid": "3ebb167a-2cbe-562b-bf1c-95c676f141c2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pr.ds-11 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pr.ds-11"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pr.ds-11 (Data Security — PR.DS-11)",
+        "uuid": "659dea64-2ca7-58d6-8365-1418e2262595"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pr.ir-01 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pr.ir-01"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pr.ir-01 (Technology Infrastructure Resilience — PR.IR-01)",
+        "uuid": "ed7b0a27-dc5c-54cc-b39d-cf6b8ede745e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pr.ir-02 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pr.ir-02"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pr.ir-02 (Technology Infrastructure Resilience — PR.IR-02)",
+        "uuid": "4379b877-7cc1-5ce3-8bf8-9b35de3ab64b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pr.ir-03 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pr.ir-03"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pr.ir-03 (Technology Infrastructure Resilience — PR.IR-03)",
+        "uuid": "9b67c4fe-fd43-5915-a26d-2b8d97018e8f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pr.ir-04 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pr.ir-04"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pr.ir-04 (Technology Infrastructure Resilience — PR.IR-04)",
+        "uuid": "c53e4dfb-4e9e-58f9-8537-75fc19810b03"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pr.ps-01 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pr.ps-01"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pr.ps-01 (Platform Security — PR.PS-01)",
+        "uuid": "2efd91ad-e3e2-5b0b-914d-898868c6a43d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pr.ps-02 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pr.ps-02"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pr.ps-02 (Platform Security — PR.PS-02)",
+        "uuid": "45ff01e9-b9e3-5731-adfc-b2dc17a5b595"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pr.ps-03 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pr.ps-03"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pr.ps-03 (Platform Security — PR.PS-03)",
+        "uuid": "6e3c95a0-f31c-5f21-941a-953c6953e0f1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pr.ps-04 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pr.ps-04"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pr.ps-04 (Platform Security — PR.PS-04)",
+        "uuid": "5a2b2478-4eb1-5527-af97-79b2835c13f3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pr.ps-05 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pr.ps-05"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pr.ps-05 (Platform Security — PR.PS-05)",
+        "uuid": "93fafea3-c5b5-5942-85b7-342d91c08cf6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pr.ps-06 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pr.ps-06"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pr.ps-06 (Platform Security — PR.PS-06)",
+        "uuid": "d17524f7-fd13-5ecd-8be4-d1efc7d5fd85"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control rc.co-03 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "rc.co-03"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: rc.co-03 (Incident Recovery Communication — RC.CO-03)",
+        "uuid": "cfeab076-379d-56ec-86e7-8eba297fa095"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control rc.co-04 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "rc.co-04"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: rc.co-04 (Incident Recovery Communication — RC.CO-04)",
+        "uuid": "093e5ffe-d96b-5c12-9691-f008a8e6ba5d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control rc.rp-01 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "rc.rp-01"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: rc.rp-01 (Incident Recovery Plan Execution — RC.RP-01)",
+        "uuid": "a62896c6-60c2-5786-96e8-84c0325932b8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control rc.rp-02 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "rc.rp-02"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: rc.rp-02 (Incident Recovery Plan Execution — RC.RP-02)",
+        "uuid": "db45da8b-4ae7-5797-9f16-eb7c75ff15aa"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control rc.rp-03 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "rc.rp-03"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: rc.rp-03 (Incident Recovery Plan Execution — RC.RP-03)",
+        "uuid": "c713690b-cd01-5e1e-8ffd-4389e0d7b0be"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control rc.rp-04 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "rc.rp-04"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: rc.rp-04 (Incident Recovery Plan Execution — RC.RP-04)",
+        "uuid": "9935d8c6-8fe9-5d92-ac0e-a699bad3eb45"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control rc.rp-05 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "rc.rp-05"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: rc.rp-05 (Incident Recovery Plan Execution — RC.RP-05)",
+        "uuid": "41a98d1e-1326-5a9d-8fa3-6429abaf95fb"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control rc.rp-06 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "rc.rp-06"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: rc.rp-06 (Incident Recovery Plan Execution — RC.RP-06)",
+        "uuid": "25d0a56f-e3f9-5191-be18-cff75ce2e9dd"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control rs.an-03 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "rs.an-03"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: rs.an-03 (Incident Analysis — RS.AN-03)",
+        "uuid": "f1611b1f-a0bc-5402-93f8-945a0bfccd85"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control rs.an-06 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "rs.an-06"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: rs.an-06 (Incident Analysis — RS.AN-06)",
+        "uuid": "e6083784-203a-5c6c-a7ab-218c1f7d9830"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control rs.an-07 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "rs.an-07"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: rs.an-07 (Incident Analysis — RS.AN-07)",
+        "uuid": "8274972f-81e7-5198-85e1-47c290fd538f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control rs.an-08 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "rs.an-08"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: rs.an-08 (Incident Analysis — RS.AN-08)",
+        "uuid": "d66a0d87-debf-5ae7-b15f-b61ad3d334ce"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control rs.co-02 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "rs.co-02"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: rs.co-02 (Incident Response Reporting and Communication — RS.CO-02)",
+        "uuid": "bde00883-48dc-5618-a406-9326246910ed"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control rs.co-03 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "rs.co-03"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: rs.co-03 (Incident Response Reporting and Communication — RS.CO-03)",
+        "uuid": "e4407f32-b600-5885-8ee6-0ca646a240b3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control rs.ma-01 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "rs.ma-01"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: rs.ma-01 (Incident Management — RS.MA-01)",
+        "uuid": "6b34ef3d-5f77-5af6-9d5b-c368374858a0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control rs.ma-02 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "rs.ma-02"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: rs.ma-02 (Incident Management — RS.MA-02)",
+        "uuid": "04001592-3048-529c-b8e9-326fa13898ed"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control rs.ma-03 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "rs.ma-03"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: rs.ma-03 (Incident Management — RS.MA-03)",
+        "uuid": "b1e7ef2d-f0ea-507b-8c43-fe5cf5904de9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control rs.ma-04 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "rs.ma-04"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: rs.ma-04 (Incident Management — RS.MA-04)",
+        "uuid": "f6edc805-4b3c-5086-a6ca-13c4b3968cb1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control rs.ma-05 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "rs.ma-05"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: rs.ma-05 (Incident Management — RS.MA-05)",
+        "uuid": "41a8e1ca-07f6-5331-80ce-24d6e8f1f198"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control rs.mi-01 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "rs.mi-01"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: rs.mi-01 (Incident Mitigation — RS.MI-01)",
+        "uuid": "d8a92b36-3a1b-59a5-9f58-fc48e801f271"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control rs.mi-02 in NIST CSF version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "rs.mi-02"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: rs.mi-02 (Incident Mitigation — RS.MI-02)",
+        "uuid": "8793074d-4e8b-57df-af26-466b525c37ce"
       }
     ],
     "uuid": "538ef78d-4ea1-51ba-8138-2d27fbfe4e15"

@@ -2,34 +2,58 @@ package oscal
 
 import (
 	"context"
-	"encoding/json"
 	"fmt"
-	"strings"
 
 	commonv1 "github.com/mchorfa/xoscal/proto/oscal/common/v1"
 	sspv1 "github.com/mchorfa/xoscal/proto/oscal/ssp/v1"
-	"github.com/mchorfa/xoscal/server/internal/kg"
 )
 
 func (g *Generator) GenerateSSP(ctx context.Context, snapshotName string, framework string) (*sspv1.SystemSecurityPlan, error) {
-	entities, err := g.store.GetSnapshot(ctx, snapshotName)
+	snap, err := g.loadParsedSnapshot(ctx, snapshotName, framework, false)
 	if err != nil {
-		return nil, fmt.Errorf("get snapshot: %w", err)
+		return nil, err
 	}
+	return g.generateSSPFromSnapshot(snap, snapshotName, framework), nil
+}
 
-	var components []*sspv1.SystemComponent
-	var implementedReqs []*sspv1.ImplementedRequirement
-	for _, e := range entities {
-		if e.Type != "reg:Requirement" {
-			continue
+func (g *Generator) generateSSPFromSnapshot(snap *parsedSnapshot, snapshotName string, framework string) *sspv1.SystemSecurityPlan {
+	compUUID := newUUID(uuidNamespace, fmt.Sprintf("component-default-%s", framework))
+	components := []*sspv1.SystemComponent{{
+		Uuid:        compUUID,
+		Type:        "software",
+		Title:       fmt.Sprintf("%s Default System Component", framework),
+		Description: fmt.Sprintf("Default governed component for %s", framework),
+		Status:      &sspv1.Status{State: "operational"},
+	}}
+	implementedReqs := make([]*sspv1.ImplementedRequirement, 0, len(snap.assessableReqs))
+	roles := []*commonv1.Role{{
+		Id:    &commonv1.Token{Value: "sec-admin"},
+		Title: "Security Administrator",
+	}}
+	var parties []*commonv1.Party
+	var responsibleParties []*commonv1.ResponsibleParty
+	roleSeen := map[string]bool{"sec-admin": true}
+
+	for _, req := range snap.assessableReqs {
+		if req.Role != "" && !roleSeen[req.Role] {
+			roleSeen[req.Role] = true
+			roleTok := sanitizeToken(req.Role)
+			partyUUID := newUUID(uuidNamespace, fmt.Sprintf("party-%s-%s", framework, req.Role))
+			roles = append(roles, &commonv1.Role{
+				Id:    &commonv1.Token{Value: roleTok},
+				Title: singleLine(req.Role),
+			})
+			parties = append(parties, &commonv1.Party{
+				Uuid: partyUUID,
+				Type: "organization",
+				Name: singleLine(req.Role),
+			})
+			responsibleParties = append(responsibleParties, &commonv1.ResponsibleParty{
+				RoleId:     &commonv1.Token{Value: roleTok},
+				PartyUuids: []*commonv1.UUID{partyUUID},
+			})
 		}
-		var req kg.Requirement
-		if err := json.Unmarshal(e.Payload, &req); err != nil {
-			continue
-		}
-		if !strings.EqualFold(req.Framework, framework) || !req.Assessable {
-			continue
-		}
+
 		ctrlID := sanitizeToken(req.Citation)
 		if ctrlID == "" {
 			ctrlID = sanitizeToken(req.NodeRefID)
@@ -41,22 +65,10 @@ func (g *Generator) GenerateSSP(ctx context.Context, snapshotName string, framew
 		if title == "" {
 			title = singleLine(ctrlID)
 		}
-		desc := req.Text
-		if desc == "" {
-			desc = title
-		}
-		compUUID := newUUID(uuidNamespace, fmt.Sprintf("component-%s", ctrlID))
-		components = append(components, &sspv1.SystemComponent{
-			Uuid:        compUUID,
-			Type:        "software",
-			Title:       title,
-			Description: desc,
-			Status:      &sspv1.Status{State: "operational"},
-		})
 		byComp := &sspv1.ByComponent{
 			ComponentUuid: compUUID,
 			Uuid:          newUUID(uuidNamespace, fmt.Sprintf("bycomp-%s", ctrlID)),
-			Description:   &commonv1.MarkupMultiline{Value: desc},
+			Description:   &commonv1.MarkupMultiline{Value: fmt.Sprintf("Baseline implementation narrative for %s (%s).", ctrlID, title)},
 		}
 		var sspProps []*commonv1.Property
 		for _, p := range requirementToProps(req) {
@@ -74,21 +86,11 @@ func (g *Generator) GenerateSSP(ctx context.Context, snapshotName string, framew
 				Class: p.Class,
 			})
 		}
-		stmtByComp := &sspv1.ByComponent{
-			ComponentUuid: compUUID,
-			Uuid:          newUUID(uuidNamespace, fmt.Sprintf("stmt-bycomp-%s", ctrlID)),
-			Description:   byComp.Description,
-		}
 		implReq := &sspv1.ImplementedRequirement{
 			Uuid:         newUUID(uuidNamespace, fmt.Sprintf("impl-%s", ctrlID)),
 			ControlId:    &commonv1.Token{Value: ctrlID},
 			Props:        sspProps,
 			ByComponents: []*sspv1.ByComponent{byComp},
-			Statements: []*sspv1.Statement{{
-				Uuid:         newUUID(uuidNamespace, fmt.Sprintf("stmt-%s", ctrlID)),
-				StatementId:  &commonv1.Token{Value: ctrlID + "-stmt"},
-				ByComponents: []*sspv1.ByComponent{stmtByComp},
-			}},
 		}
 		seenParamIDs := make(map[string]bool)
 		for _, p := range req.Params {
@@ -125,16 +127,6 @@ func (g *Generator) GenerateSSP(ctx context.Context, snapshotName string, framew
 		implementedReqs = append(implementedReqs, implReq)
 	}
 
-	if len(components) == 0 {
-		defaultCompUUID := newUUID(uuidNamespace, fmt.Sprintf("component-default-%s", framework))
-		components = append(components, &sspv1.SystemComponent{
-			Uuid:        defaultCompUUID,
-			Type:        "software",
-			Title:       fmt.Sprintf("%s Default System Component", framework),
-			Description: fmt.Sprintf("Default governed component for %s", framework),
-			Status:      &sspv1.Status{State: "operational"},
-		})
-	}
 	if len(implementedReqs) == 0 {
 		implementedReqs = append(implementedReqs, &sspv1.ImplementedRequirement{
 			Uuid:      newUUID(uuidNamespace, fmt.Sprintf("impl-default-%s", framework)),
@@ -150,12 +142,11 @@ func (g *Generator) GenerateSSP(ctx context.Context, snapshotName string, framew
 	ssp := &sspv1.SystemSecurityPlan{
 		Uuid: newUUID(uuidNamespace, fmt.Sprintf("ssp-%s-%s", framework, snapshotName)),
 		Metadata: &commonv1.Metadata{
-			Title:   fmt.Sprintf("%s System Security Plan", framework),
-			Version: snapshotName,
-			Roles: []*commonv1.Role{{
-				Id:    &commonv1.Token{Value: "sec-admin"},
-				Title: "Security Administrator",
-			}},
+			Title:              fmt.Sprintf("%s System Security Plan", framework),
+			Version:            snapshotName,
+			Roles:              roles,
+			Parties:            parties,
+			ResponsibleParties: responsibleParties,
 		},
 		ImportProfile: &sspv1.ImportProfile{
 			Href: &commonv1.URIReference{Value: fmt.Sprintf("profile-%s-%s", framework, snapshotName)},
@@ -200,43 +191,10 @@ func (g *Generator) GenerateSSP(ctx context.Context, snapshotName string, framew
 			Description:             &commonv1.MarkupMultiline{Value: fmt.Sprintf("Control implementation for %s.", framework)},
 			ImplementedRequirements: implementedReqs,
 		},
+		BackMatter: buildBackMatter(framework, snapshotName),
 	}
 
-	// Derive responsible parties from unique roles present in requirements.
-	roleSeen := map[string]bool{"sec-admin": true}
-	for _, e := range entities {
-		if e.Type != "reg:Requirement" {
-			continue
-		}
-		var req kg.Requirement
-		if err := json.Unmarshal(e.Payload, &req); err != nil {
-			continue
-		}
-		if !strings.EqualFold(req.Framework, framework) || !req.Assessable {
-			continue
-		}
-		if req.Role != "" && !roleSeen[req.Role] {
-			roleSeen[req.Role] = true
-			roleTok := sanitizeToken(req.Role)
-			partyUUID := newUUID(uuidNamespace, fmt.Sprintf("party-%s-%s", framework, req.Role))
-			ssp.Metadata.Roles = append(ssp.Metadata.Roles, &commonv1.Role{
-				Id:    &commonv1.Token{Value: roleTok},
-				Title: singleLine(req.Role),
-			})
-			ssp.Metadata.Parties = append(ssp.Metadata.Parties, &commonv1.Party{
-				Uuid: partyUUID,
-				Type: "organization",
-				Name: singleLine(req.Role),
-			})
-			ssp.Metadata.ResponsibleParties = append(ssp.Metadata.ResponsibleParties, &commonv1.ResponsibleParty{
-				RoleId:     &commonv1.Token{Value: roleTok},
-				PartyUuids: []*commonv1.UUID{partyUUID},
-			})
-		}
-	}
-
-	ssp.BackMatter = buildBackMatter(framework, snapshotName)
-	return ssp, nil
+	return ssp
 }
 
 // GenerateComponentDefinition builds an OSCAL Component Definition from a snapshot.

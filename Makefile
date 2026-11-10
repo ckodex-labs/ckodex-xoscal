@@ -13,12 +13,14 @@ build:
 	go build $(GOFLAGS) $(LDFLAGS) -o bin/xoscal ./server/cmd/xoscal
 	go build $(GOFLAGS) $(LDFLAGS) -o bin/xoscal-ctl ./server/cmd/xoscal-ctl
 	go build $(GOFLAGS) $(LDFLAGS) -o bin/xoscal-backup ./server/cmd/xoscal-backup
+	go build $(GOFLAGS) $(LDFLAGS) -o bin/xoscal-gateway ./server/cmd/xoscal-gateway
 
 build-release:
-	CGO_ENABLED=0 go build $(GOFLAGS) $(LDFLAGS) -o bin/$(BINARY) ./server/cmd/xoscal-server
-	CGO_ENABLED=0 go build $(GOFLAGS) $(LDFLAGS) -o bin/xoscal ./server/cmd/xoscal
-	CGO_ENABLED=0 go build $(GOFLAGS) $(LDFLAGS) -o bin/xoscal-ctl ./server/cmd/xoscal-ctl
-	CGO_ENABLED=0 go build $(GOFLAGS) $(LDFLAGS) -o bin/xoscal-backup ./server/cmd/xoscal-backup
+	CGO_ENABLED=0 go build -trimpath $(GOFLAGS) $(LDFLAGS) -o bin/$(BINARY) ./server/cmd/xoscal-server
+	CGO_ENABLED=0 go build -trimpath $(GOFLAGS) $(LDFLAGS) -o bin/xoscal ./server/cmd/xoscal
+	CGO_ENABLED=0 go build -trimpath $(GOFLAGS) $(LDFLAGS) -o bin/xoscal-ctl ./server/cmd/xoscal-ctl
+	CGO_ENABLED=0 go build -trimpath $(GOFLAGS) $(LDFLAGS) -o bin/xoscal-backup ./server/cmd/xoscal-backup
+	CGO_ENABLED=0 go build -trimpath $(GOFLAGS) $(LDFLAGS) -o bin/xoscal-gateway ./server/cmd/xoscal-gateway
 
 doctor:
 	go run $(GOFLAGS) ./server/cmd/xoscal doctor

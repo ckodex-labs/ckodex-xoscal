@@ -4,16 +4,1067 @@
       "href": "./system-security-plan.json"
     },
     "metadata": {
-      "last-modified": "2026-11-08T01:42:13Z",
+      "last-modified": "2026-11-08T00:31:01Z",
       "oscal-version": "1.2.3",
       "title": "Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1) Plan of Action and Milestones Template",
       "version": "1"
     },
     "poam-items": [
       {
-        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
-        "title": "Compliance Roadmap and Parameter Tailoring for Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1)",
-        "uuid": "1a66751d-4442-534f-9027-147caa858744"
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.1.01.a in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.1.01.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.1.01.a (Strategie für die Cloud-Nutzung — NCD.2.1.01.a)",
+        "uuid": "72886f84-c324-575f-befc-641eb31dd9b1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.1.01.b in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.1.01.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.1.01.b (Strategie für die Cloud-Nutzung — NCD.2.1.01.b)",
+        "uuid": "637cb1c5-b90f-5a24-ab60-0395dc68166f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.1.01.c in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.1.01.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.1.01.c (Strategie für die Cloud-Nutzung — NCD.2.1.01.c)",
+        "uuid": "7cabc6a2-4851-51f2-82ac-1de31dece818"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.1.01.d in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.1.01.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.1.01.d (Strategie für die Cloud-Nutzung — NCD.2.1.01.d)",
+        "uuid": "02ef7dae-e370-58e2-88c2-bc725eae8525"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.1.02.a in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.1.02.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.1.02.a (Sicherheitsrichtlinie für externe Cloud-Dienste — NCD.2.1.02.a)",
+        "uuid": "20a15ec4-7e37-5c7b-a461-d17a43468680"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.1.02.b in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.1.02.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.1.02.b (Sicherheitsrichtlinie für externe Cloud-Dienste — NCD.2.1.02.b)",
+        "uuid": "ddb45b7e-c069-5c39-aad7-cbb038fff306"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.1.02.c in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.1.02.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.1.02.c (Sicherheitsrichtlinie für externe Cloud-Dienste — NCD.2.1.02.c)",
+        "uuid": "a786f0c9-1904-5c87-a8ad-297cddb78070"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.1.03.a in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.1.03.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.1.03.a (Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.a)",
+        "uuid": "eac330ea-95df-5412-9053-18878b44c87e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.1.03.b in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.1.03.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.1.03.b (Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.b)",
+        "uuid": "779da092-108b-56bd-a513-4837f91b5904"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.1.03.c in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.1.03.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.1.03.c (Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.c)",
+        "uuid": "b5f01e8d-7f11-5c76-bb30-395e29167525"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.1.03.d in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.1.03.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.1.03.d (Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.d)",
+        "uuid": "402364c2-9960-5175-9a60-a8872b310e74"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.1.03.e in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.1.03.e"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.1.03.e (Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.e)",
+        "uuid": "d641f16e-c868-5eb5-bb45-63d392b6a728"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.1.03.f in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.1.03.f"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.1.03.f (Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.f)",
+        "uuid": "d015ef22-ff63-58d6-a118-4591b0582ade"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.1.03.g in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.1.03.g"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.1.03.g (Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.g)",
+        "uuid": "dd1ebdbb-8fb1-5b66-8d46-2579a2b38612"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.1.03.h in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.1.03.h"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.1.03.h (Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.h)",
+        "uuid": "71e7da97-5931-5a34-905f-72a0a3f88cb2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.1.03.h.i in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.1.03.h.i"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.1.03.h.i (Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.h.i)",
+        "uuid": "998b2f8a-04b9-5316-a8e7-d304ea4f5405"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.1.03.h.ii in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.1.03.h.ii"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.1.03.h.ii (Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.h.ii)",
+        "uuid": "c40d2479-8f41-5d26-a4bf-2f6f308cc299"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.1.03.i in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.1.03.i"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.1.03.i (Sicherheitskonzept für den externen Cloud-Dienst — NCD.2.1.03.i)",
+        "uuid": "62e528d8-822b-5d02-a248-a4c4d80ac875"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.1.04.a in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.1.04.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.1.04.a (Notfall- und Kontinuitätsmanagement — NCD.2.1.04.a)",
+        "uuid": "7ffa815c-802e-55cf-91d6-cb7c6696000a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.1.04.b in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.1.04.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.1.04.b (Notfall- und Kontinuitätsmanagement — NCD.2.1.04.b)",
+        "uuid": "7441b1fa-500e-5e14-ac77-3a6215af9f02"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.1.04.c in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.1.04.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.1.04.c (Notfall- und Kontinuitätsmanagement — NCD.2.1.04.c)",
+        "uuid": "fb338eec-2494-576f-bcea-e190afbfed8d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.2.01.a in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.2.01.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.2.01.a (Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.a)",
+        "uuid": "2942e35c-d5dc-5209-8625-af84fefa790d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.2.01.b in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.2.01.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.2.01.b (Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.b)",
+        "uuid": "c05fc8a7-3385-553c-99db-60394ce8e3e3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.2.01.c in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.2.01.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.2.01.c (Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.c)",
+        "uuid": "31a423e8-dafb-5c5d-ae08-cf1ad5153e77"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.2.01.d in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.2.01.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.2.01.d (Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.d)",
+        "uuid": "00d78121-2861-5ef1-8fba-0be0ae9b8160"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.2.01.e in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.2.01.e"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.2.01.e (Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.e)",
+        "uuid": "76ed3c49-3482-597a-aff4-72ce59fa2c2d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.2.01.f in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.2.01.f"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.2.01.f (Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.f)",
+        "uuid": "6f637510-34c2-5f02-a797-fd047ff20682"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.2.01.g in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.2.01.g"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.2.01.g (Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.g)",
+        "uuid": "6e656212-33c9-5c23-ad51-b19b26d7cb77"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.2.01.h in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.2.01.h"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.2.01.h (Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.h)",
+        "uuid": "53040ed3-15b4-55cc-8b8c-f17404f33f91"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.2.01.i in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.2.01.i"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.2.01.i (Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.i)",
+        "uuid": "e01a91cd-8727-513f-9dc1-6fe4fd8753e2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.2.01.i.i in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.2.01.i.i"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.2.01.i.i (Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.i.i)",
+        "uuid": "a1a831a6-57d9-537f-b4b2-dcb3d5cb8e74"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.2.01.i.ii in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.2.01.i.ii"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.2.01.i.ii (Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.i.ii)",
+        "uuid": "5610e71c-8cfc-524e-ae23-12df9d8f20cf"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.2.01.j in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.2.01.j"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.2.01.j (Umsetzung der Sicherheitsanforderungen — NCD.2.2.01.j)",
+        "uuid": "7f1c65fb-2159-532c-a588-aea829b7e160"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.2.01.j.i in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.2.01.j.i"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.2.01.j.i (Die Einrichtung SOLLTE sich eigene Prüfrechte vertraglich zusichern lassen. — NCD.2.2.01.j.i)",
+        "uuid": "838dd822-37c1-54c7-92b4-3cb3e734e0b6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.2.01.j.ii in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.2.01.j.ii"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.2.01.j.ii (Die Einrichtung SOLLTE sich eigene Prüfrechte vertraglich zusichern lassen. — NCD.2.2.01.j.ii)",
+        "uuid": "63fbf563-7d74-5f67-8c60-b39ccbff8188"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.2.01.j.iii in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.2.01.j.iii"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.2.01.j.iii (Die Einrichtung SOLLTE sich eigene Prüfrechte vertraglich zusichern lassen. — NCD.2.2.01.j.iii)",
+        "uuid": "7ddbf29a-26b6-5fd6-a65c-614f051b4e02"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.2.01.j.iv in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.2.01.j.iv"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.2.01.j.iv (Die Einrichtung SOLLTE sich eigene Prüfrechte vertraglich zusichern lassen. — NCD.2.2.01.j.iv)",
+        "uuid": "b80e45ae-2475-5a9f-91e3-6118b36c5248"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.2.02.a in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.2.02.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.2.02.a (Umgang mit Unterauftragnehmern und anderen externen Dritten vertraglich zusichern — NCD.2.2.02.a)",
+        "uuid": "00b8fe89-a648-54dd-91bf-c4acb2f26eee"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.2.02.b in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.2.02.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.2.02.b (Umgang mit Unterauftragnehmern und anderen externen Dritten vertraglich zusichern — NCD.2.2.02.b)",
+        "uuid": "eb6e933a-c552-5598-9608-4d268b39bbab"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.2.02.b.i in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.2.02.b.i"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.2.02.b.i (Umgang mit Unterauftragnehmern und anderen externen Dritten vertraglich zusichern — NCD.2.2.02.b.i)",
+        "uuid": "160c38aa-4395-5bd2-a5ba-9ad04a1c6cc9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.2.02.b.ii in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.2.02.b.ii"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.2.02.b.ii (Umgang mit Unterauftragnehmern und anderen externen Dritten vertraglich zusichern — NCD.2.2.02.b.ii)",
+        "uuid": "78d9293b-36b2-5eb3-bd9a-50c04f2cb19e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.2.02.c in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.2.02.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.2.02.c (Umgang mit Unterauftragnehmern und anderen externen Dritten vertraglich zusichern — NCD.2.2.02.c)",
+        "uuid": "25602043-710a-5e80-b817-079fcf28b370"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.2.02.d in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.2.02.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.2.02.d (Umgang mit Unterauftragnehmern und anderen externen Dritten vertraglich zusichern — NCD.2.2.02.d)",
+        "uuid": "a14be113-9189-5305-82ce-e9e82d0d54d8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.2.03.a in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.2.03.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.2.03.a (Gerichtsbarkeit — NCD.2.2.03.a)",
+        "uuid": "4853bd70-1d1f-51d4-a27e-06f93e73c7ec"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.2.03.b in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.2.03.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.2.03.b (Gerichtsbarkeit — NCD.2.2.03.b)",
+        "uuid": "333bc045-fec9-5f7c-b9a3-5b21e3e1cfb5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.2.03.c in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.2.03.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.2.03.c (Gerichtsbarkeit — NCD.2.2.03.c)",
+        "uuid": "fb59ec33-6f79-5233-ae89-a99c7fd7e5d0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.2.04.a in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.2.04.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.2.04.a (Lokation der Datenverarbeitung — NCD.2.2.04.a)",
+        "uuid": "ca20549c-53fc-531c-b57a-9be53474a9bf"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.2.04.b in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.2.04.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.2.04.b (Lokation der Datenverarbeitung — NCD.2.2.04.b)",
+        "uuid": "1c2b2cdf-a9fc-54fd-863a-caa734f50a11"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.2.05.a in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.2.05.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.2.05.a (Meldepflicht sicherheitsrelevanter Vorfälle — NCD.2.2.05.a)",
+        "uuid": "c8ebb5f5-d90e-5183-8e8c-3cb5e1b99ae7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.2.05.a.i in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.2.05.a.i"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.2.05.a.i (Meldepflicht sicherheitsrelevanter Vorfälle — NCD.2.2.05.a.i)",
+        "uuid": "e8f864cd-e8a5-504c-85c1-d48294972e39"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.2.05.a.ii in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.2.05.a.ii"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.2.05.a.ii (Meldepflicht sicherheitsrelevanter Vorfälle — NCD.2.2.05.a.ii)",
+        "uuid": "122690c6-8e21-577a-8e6a-96e0a07b5e4b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.2.06.a in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.2.06.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.2.06.a (Beendigung des Vertragsverhältnisses — NCD.2.2.06.a)",
+        "uuid": "888b3d99-f557-503f-952f-dec8c200a450"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.2.06.b in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.2.06.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.2.06.b (Beendigung des Vertragsverhältnisses — NCD.2.2.06.b)",
+        "uuid": "c7fa4c44-7823-5e97-90fc-c90479d45262"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.2.07.a in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.2.07.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.2.07.a (Regelung der Datenrückgabe und Datenlöschung — NCD.2.2.07.a)",
+        "uuid": "0335b549-c1f0-5899-99a7-48cdd25e57ab"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.2.07.b in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.2.07.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.2.07.b (Regelung der Datenrückgabe und Datenlöschung — NCD.2.2.07.b)",
+        "uuid": "c3990658-4c90-5ed5-bf71-f34a8328eab7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.3.01.a in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.3.01.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.3.01.a (Einbindung in das ISMS — NCD.2.3.01.a)",
+        "uuid": "c32827a2-4ab1-5a53-9bc0-9a0030183deb"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.3.01.b in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.3.01.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.3.01.b (Einbindung in das ISMS — NCD.2.3.01.b)",
+        "uuid": "d496d549-71d3-519a-8591-4d45a9fcec8c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.3.02.a in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.3.02.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.3.02.a (Auswertung von Sicherheitsnachweisen — NCD.2.3.02.a)",
+        "uuid": "c07a3202-208b-578f-a8ce-14c22fc8aea5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.3.02.a.i in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.3.02.a.i"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.3.02.a.i (Die Einrichtung MUSS die Nachweise und sonstige Berichte des Cloud-Diensteanbieters auswerten. — NCD.2.3.02.a.i)",
+        "uuid": "56f4a4ca-2a50-55fe-82eb-c8d831b36ba4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.3.02.a.ii in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.3.02.a.ii"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.3.02.a.ii (Die Einrichtung MUSS die Nachweise und sonstige Berichte des Cloud-Diensteanbieters auswerten. — NCD.2.3.02.a.ii)",
+        "uuid": "8af86270-5430-5596-8fa0-4994876c2ebb"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.3.02.b in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.3.02.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.3.02.b (Auswertung von Sicherheitsnachweisen — NCD.2.3.02.b)",
+        "uuid": "59bbca9d-1275-50aa-ad8f-75d2383897e8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.3.03.a in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.3.03.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.3.03.a (Prüfung der Leistungsfähigkeit — NCD.2.3.03.a)",
+        "uuid": "92bf10b3-a7e1-525b-b734-c80791381890"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.3.03.b in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.3.03.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.3.03.b (Prüfung der Leistungsfähigkeit — NCD.2.3.03.b)",
+        "uuid": "9713f072-6c5c-5205-8e55-656e0692ba2b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.3.03.c in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.3.03.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.3.03.c (Prüfung der Leistungsfähigkeit — NCD.2.3.03.c)",
+        "uuid": "d3e2cab5-fb72-563e-b4ca-523446335fbc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.3.04.a in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.3.04.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.3.04.a (Informationspflichten — NCD.2.3.04.a)",
+        "uuid": "b8b3254e-9400-576d-9072-784caec5244b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.3.04.b in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.3.04.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.3.04.b (Informationspflichten — NCD.2.3.04.b)",
+        "uuid": "53c8aa29-65a8-58b9-a825-94b03cc00c22"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.3.05.a in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.3.05.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.3.05.a (Multi-Faktor-Authentisierung — NCD.2.3.05.a)",
+        "uuid": "a74f3ee3-8fe0-5ed6-bf16-357b141a6fd8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.3.05.b in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.3.05.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.3.05.b (Multi-Faktor-Authentisierung — NCD.2.3.05.b)",
+        "uuid": "1781f36b-c3d4-5db4-9e8e-da6c3247f315"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.4.01.a in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.4.01.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.4.01.a (Datenrückgabe bei Beendigung — NCD.2.4.01.a)",
+        "uuid": "3b33f197-ddf7-5546-84d7-8e9d6304534b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.4.01.b in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.4.01.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.4.01.b (Datenrückgabe bei Beendigung — NCD.2.4.01.b)",
+        "uuid": "09b8d012-a965-5ebe-81d5-64f2e5704b0a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.4.02.a in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.4.02.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.4.02.a (Datenlöschung bei Beendigung — NCD.2.4.02.a)",
+        "uuid": "9cecd8c5-489c-5349-99e4-81461f14be3b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.4.02.b in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.4.02.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.4.02.b (Datenlöschung bei Beendigung — NCD.2.4.02.b)",
+        "uuid": "158c74a4-3801-5c49-bf9b-d0643053224e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.4.02.c in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.4.02.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.4.02.c (Datenlöschung bei Beendigung — NCD.2.4.02.c)",
+        "uuid": "b4634ada-e2bc-5179-9c9f-22480ae4e802"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.5.01.a in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.5.01.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.5.01.a (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.a)",
+        "uuid": "b1e3ea42-fdd4-577b-9fef-782a1a0530c4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.5.01.b in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.5.01.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.5.01.b (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.b)",
+        "uuid": "307de4c3-d775-5c63-9b48-6557268d2e01"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.5.01.c in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.5.01.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.5.01.c (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.c)",
+        "uuid": "d1bf2e0e-6f59-5120-9d72-74de02956565"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.5.01.c.i in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.5.01.c.i"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.5.01.c.i (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.c.i)",
+        "uuid": "dcc8087d-612b-545f-be91-02867aa9776f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.5.01.c.ii in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.5.01.c.ii"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.5.01.c.ii (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.c.ii)",
+        "uuid": "fd5f41b7-000d-5742-870d-c898252711f2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.5.01.d in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.5.01.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.5.01.d (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.d)",
+        "uuid": "cbf93d85-b471-5d00-a7e9-1b514f22a16b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.5.01.d.i in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.5.01.d.i"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.5.01.d.i (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.d.i)",
+        "uuid": "93e9054b-8737-5724-bdd1-2a50fda73669"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.5.01.d.ii in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.5.01.d.ii"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.5.01.d.ii (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.d.ii)",
+        "uuid": "7efe2bc6-7878-5e86-a6ac-bf64e393f8ea"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.5.01.e in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.5.01.e"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.5.01.e (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.e)",
+        "uuid": "9c4478cb-f465-5fa1-aa90-c7673d769d94"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.5.01.e.i in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.5.01.e.i"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.5.01.e.i (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.e.i)",
+        "uuid": "1970510c-7fe1-5ae4-80fb-e3459151bf58"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.5.01.e.ii in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.5.01.e.ii"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.5.01.e.ii (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.e.ii)",
+        "uuid": "90663539-9822-5810-afeb-1794bbb9dc05"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.5.01.f in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.5.01.f"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.5.01.f (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.f)",
+        "uuid": "f6631ed0-e0fa-51ae-b585-32de7e5cdb2b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.5.01.g in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.5.01.g"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.5.01.g (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.g)",
+        "uuid": "6da226d0-6771-5e6b-a347-42b8f3a2ce49"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.5.01.g.i in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.5.01.g.i"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.5.01.g.i (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.g.i)",
+        "uuid": "fc4d5e91-b39b-5972-9b3e-9572ac20491e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ncd.2.5.01.g.ii in Mindeststandard-des-BSI-zur-Nutzung-externer-Cloud-Dienste (Version 2.1).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ncd.2.5.01.g.ii"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ncd.2.5.01.g.ii (Mitnutzung externer Cloud-Dienste — NCD.2.5.01.g.ii)",
+        "uuid": "2980b667-2753-57f0-885a-1d5613225848"
       }
     ],
     "uuid": "17b26a00-6394-5f37-af87-60f7cc3a117a"

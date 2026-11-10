@@ -4,7 +4,7 @@
       "href": "./assessment-plan.json"
     },
     "metadata": {
-      "last-modified": "2026-11-08T01:42:12Z",
+      "last-modified": "2026-11-08T00:30:51Z",
       "oscal-version": "1.2.3",
       "title": "CNIL : guide de sécurité des données Assessment Results Template",
       "version": "1"
@@ -441,7 +441,7 @@
         ],
         "observations": [
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:51Z",
             "description": "Verified control _1.1 (Piloter la sécurité des données — 1.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -453,7 +453,7 @@
             "uuid": "d5af5cff-e4b1-5274-99d6-ced40963380c"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:51Z",
             "description": "Verified control _10.1 (Sécuriser les sites web — 10.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -465,7 +465,7 @@
             "uuid": "9325be9d-d656-5a77-93d3-11562afc8261"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:51Z",
             "description": "Verified control _11.1 (Encadrer les développements informatiques — 11.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -477,7 +477,7 @@
             "uuid": "e48a89e6-1219-5ef9-95fb-b5257b078140"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:51Z",
             "description": "Verified control _12.1 (Protéger les locaux — 12.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -489,7 +489,7 @@
             "uuid": "f97424c0-3fd8-5a5c-bbee-4d08ca4c29e6"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:51Z",
             "description": "Verified control _13.1 (Sécuriser les échanges avec l’extérieur — 13.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -501,7 +501,7 @@
             "uuid": "46cb3ca0-1570-586f-b0c2-1aba25046d40"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:51Z",
             "description": "Verified control _14.1 (Gérer la sous-traitance — 14.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -513,7 +513,7 @@
             "uuid": "3fd23258-6561-5d15-a36a-33edfa7f81b6"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:51Z",
             "description": "Verified control _15.1 (Encadrer la maintenance et la fin de vie des matériels et des logiciels — 15.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -525,7 +525,7 @@
             "uuid": "77cde95c-c267-5d30-97ef-e5751f89c19a"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:51Z",
             "description": "Verified control _16.1 (Tracer les opérations — 16.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -537,7 +537,7 @@
             "uuid": "edfbd48a-897c-51fb-b026-535081d72ad4"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:51Z",
             "description": "Verified control _17.1 (Sauvegarder — 17.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -549,7 +549,7 @@
             "uuid": "bba1749a-2c53-555d-890d-bd1ea3674609"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:51Z",
             "description": "Verified control _18.1 (Prévoir la continuité et la reprise d’activité — 18.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -561,7 +561,7 @@
             "uuid": "edcbf639-40b6-5bba-bbd4-faf05c290c1e"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:51Z",
             "description": "Verified control _19.1 (Gérer les incidents et les violations — 19.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -573,7 +573,7 @@
             "uuid": "fdda4b96-1423-5260-b78d-637f2da20284"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:51Z",
             "description": "Verified control _2.1 (Définir un cadre pour les utilisateurs — 2.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -585,7 +585,7 @@
             "uuid": "3adde068-9231-5d1c-91e5-ff23277d6985"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:51Z",
             "description": "Verified control _20.1 (Analyse de risques — 20.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -597,7 +597,7 @@
             "uuid": "c7e2d484-c213-58db-b7c0-db9c106b4204"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:51Z",
             "description": "Verified control _21.1 (Chiffrement, hachage, signature — 21.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -609,7 +609,7 @@
             "uuid": "32cbbeda-48ad-510c-97a0-35171f7414e5"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:51Z",
             "description": "Verified control _22.1 (Cloud : Informatique en nuage — 22.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -621,7 +621,7 @@
             "uuid": "1e266d24-42f1-571d-8f39-b75d3eb9c5d8"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:51Z",
             "description": "Verified control _23.1 (Applications mobiles : Conception et développement — 23.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -633,7 +633,7 @@
             "uuid": "fb1aaca0-7241-58c2-93a0-3c129311d39e"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:51Z",
             "description": "Verified control _24.1 (Intelligence artificielle : Conception et apprentissage — 24.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -645,7 +645,7 @@
             "uuid": "ab09dd1c-0312-5654-b9c7-8274196d883a"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:51Z",
             "description": "Verified control _25.1 (API : Interfaces de programmation applicative — 25.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -657,7 +657,7 @@
             "uuid": "963a7e48-5589-576c-b663-7e1b4c3ef8e3"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:51Z",
             "description": "Verified control _3.1 (Impliquer et former les utilisateurs — 3.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -669,7 +669,7 @@
             "uuid": "9ca1a3f1-d91d-52f3-a721-0ebeaa771838"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:51Z",
             "description": "Verified control _4.1 (Authentifier les utilisateurs — 4.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -681,7 +681,7 @@
             "uuid": "fb11ba37-944f-58a9-99f0-ffd377e7a257"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:51Z",
             "description": "Verified control _5.1 (Gérer les habilitations — 5.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -693,7 +693,7 @@
             "uuid": "cb25a869-4c9c-5e09-848a-d87643bdde19"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:51Z",
             "description": "Verified control _6.1 (Sécuriser les postes de travail — 6.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -705,7 +705,7 @@
             "uuid": "be2643fc-9baf-5aef-b0fa-e87c42b477b9"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:51Z",
             "description": "Verified control _7.1 (Sécuriser l’informatique mobile — 7.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -717,7 +717,7 @@
             "uuid": "f82b283e-f0b8-5f34-acc2-70ceb789ff70"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:51Z",
             "description": "Verified control _8.1 (Protéger le réseau informatique — 8.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -729,7 +729,7 @@
             "uuid": "32e490c7-5bd8-5e7d-879d-e284ac70eda8"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:51Z",
             "description": "Verified control _9.1 (Sécuriser les serveurs — 9.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -745,11 +745,228 @@
           "control-selections": [
             {
               "description": "All controls evaluated for CNIL : guide de sécurité des données",
-              "include-all": {}
+              "include-controls": [
+                {
+                  "control-id": "_1.1"
+                },
+                {
+                  "control-id": "_1.2"
+                },
+                {
+                  "control-id": "_10.1"
+                },
+                {
+                  "control-id": "_10.2"
+                },
+                {
+                  "control-id": "_10.3"
+                },
+                {
+                  "control-id": "_11.1"
+                },
+                {
+                  "control-id": "_11.2"
+                },
+                {
+                  "control-id": "_11.3"
+                },
+                {
+                  "control-id": "_11.4"
+                },
+                {
+                  "control-id": "_12.1"
+                },
+                {
+                  "control-id": "_12.2"
+                },
+                {
+                  "control-id": "_13.1"
+                },
+                {
+                  "control-id": "_13.2"
+                },
+                {
+                  "control-id": "_13.3"
+                },
+                {
+                  "control-id": "_14.1"
+                },
+                {
+                  "control-id": "_14.2"
+                },
+                {
+                  "control-id": "_14.3"
+                },
+                {
+                  "control-id": "_15.1"
+                },
+                {
+                  "control-id": "_15.2"
+                },
+                {
+                  "control-id": "_15.3"
+                },
+                {
+                  "control-id": "_16.1"
+                },
+                {
+                  "control-id": "_16.2"
+                },
+                {
+                  "control-id": "_16.3"
+                },
+                {
+                  "control-id": "_16.4"
+                },
+                {
+                  "control-id": "_17.1"
+                },
+                {
+                  "control-id": "_17.2"
+                },
+                {
+                  "control-id": "_17.3"
+                },
+                {
+                  "control-id": "_18.1"
+                },
+                {
+                  "control-id": "_18.2"
+                },
+                {
+                  "control-id": "_19.1"
+                },
+                {
+                  "control-id": "_19.2"
+                },
+                {
+                  "control-id": "_2.1"
+                },
+                {
+                  "control-id": "_2.2"
+                },
+                {
+                  "control-id": "_20.1"
+                },
+                {
+                  "control-id": "_20.2"
+                },
+                {
+                  "control-id": "_20.3"
+                },
+                {
+                  "control-id": "_21.1"
+                },
+                {
+                  "control-id": "_21.2"
+                },
+                {
+                  "control-id": "_22.1"
+                },
+                {
+                  "control-id": "_22.2"
+                },
+                {
+                  "control-id": "_22.3"
+                },
+                {
+                  "control-id": "_22.4"
+                },
+                {
+                  "control-id": "_23.1"
+                },
+                {
+                  "control-id": "_23.2"
+                },
+                {
+                  "control-id": "_23.3"
+                },
+                {
+                  "control-id": "_24.1"
+                },
+                {
+                  "control-id": "_24.2"
+                },
+                {
+                  "control-id": "_24.3"
+                },
+                {
+                  "control-id": "_25.1"
+                },
+                {
+                  "control-id": "_25.2"
+                },
+                {
+                  "control-id": "_3.1"
+                },
+                {
+                  "control-id": "_3.2"
+                },
+                {
+                  "control-id": "_4.1"
+                },
+                {
+                  "control-id": "_4.2"
+                },
+                {
+                  "control-id": "_4.3"
+                },
+                {
+                  "control-id": "_5.1"
+                },
+                {
+                  "control-id": "_5.2"
+                },
+                {
+                  "control-id": "_5.3"
+                },
+                {
+                  "control-id": "_6.1"
+                },
+                {
+                  "control-id": "_6.2"
+                },
+                {
+                  "control-id": "_6.3"
+                },
+                {
+                  "control-id": "_6.4"
+                },
+                {
+                  "control-id": "_7.1"
+                },
+                {
+                  "control-id": "_7.2"
+                },
+                {
+                  "control-id": "_7.3"
+                },
+                {
+                  "control-id": "_8.1"
+                },
+                {
+                  "control-id": "_8.2"
+                },
+                {
+                  "control-id": "_8.3"
+                },
+                {
+                  "control-id": "_8.4"
+                },
+                {
+                  "control-id": "_9.1"
+                },
+                {
+                  "control-id": "_9.2"
+                },
+                {
+                  "control-id": "_9.3"
+                }
+              ]
             }
           ]
         },
-        "start": "2026-11-08T01:42:12Z",
+        "start": "2026-11-08T00:30:51Z",
         "title": "CNIL : guide de sécurité des données Assessment Results",
         "uuid": "02fc58d7-698f-5fe7-9afc-e143167db1a1"
       }

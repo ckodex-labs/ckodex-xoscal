@@ -180,6 +180,7 @@ dagger/internal/
 # --- Release artifacts ---
 *.tar
 *.gz
+!/server/internal/frameworks/embedded_catalogs.tar.gz
 *.bz2
 *.xz
 release/

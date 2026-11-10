@@ -38,7 +38,7 @@ func TestBackupSQLiteRoundTrip(t *testing.T) {
 	if err != nil {
 		t.Fatalf("open backup: %v", err)
 	}
-	defer backupDB.Close()
+	defer func() { _ = backupDB.Close() }()
 	var trustState string
 	if err := backupDB.QueryRowContext(ctx, "SELECT trust_state FROM claims WHERE id = ?", "claim_backup_1").Scan(&trustState); err != nil {
 		t.Fatalf("read backup: %v", err)
@@ -175,7 +175,7 @@ func TestRestoreSQLiteDisasterRecoveryDrill(t *testing.T) {
 	if err != nil {
 		t.Fatalf("open restored db: %v", err)
 	}
-	defer rdb.Close()
+	defer func() { _ = rdb.Close() }()
 
 	var kind, payload string
 	err = rdb.QueryRowContext(ctx, "SELECT kind, payload FROM oscal_entities WHERE urn = ?", "urn:xoscal:comp:auth-svc").Scan(&kind, &payload)

@@ -165,9 +165,10 @@ def check_generated(root, pages):
                 raise ValueError(f"unsafe SDK archive path: {language}")
         check_sidecar(path)
     catalogs = sorted(root.glob("frameworks/*/catalog.json"))
-    if len(catalogs) != 35:
-        raise ValueError(f"expected 35 catalogs, got {len(catalogs)}")
-    for path in catalogs + [root / "frameworks/cccs-medium-cloud-pbmm/profile.json"]:
+    if len(catalogs) != 36:
+        raise ValueError(f"expected 36 catalogs, got {len(catalogs)}")
+    profiles = [root / "frameworks/cccs-medium-cloud-pbmm/profile.json", root / "frameworks/cccs-itsp-10-033/profile.json"]
+    for path in catalogs + profiles:
         model = "profile" if path.name == "profile.json" else "catalog"
         if model not in json.loads(path.read_text()):
             raise ValueError(f"OSCAL {model} root missing: {path}")

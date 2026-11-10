@@ -83,15 +83,23 @@ func (m *Xoscal) base(source *dagger.Directory) *dagger.Container {
 func (m *Xoscal) Build(source *dagger.Directory) *dagger.File {
 	ldflags := fmt.Sprintf("-ldflags=-s -w -X main.version=%s", m.Version)
 	return m.base(source).
-		WithExec([]string{"go", "build", ldflags, "-o", "/bin/xoscal-server", "./server/cmd/xoscal-server"}).
+		WithExec([]string{"go", "build", "-trimpath", ldflags, "-o", "/bin/xoscal-server", "./server/cmd/xoscal-server"}).
 		File("/bin/xoscal-server")
+}
+
+// BuildCli compiles a static release binary for the unified xoscal CLI and returns it.
+func (m *Xoscal) BuildCli(source *dagger.Directory) *dagger.File {
+	ldflags := fmt.Sprintf("-ldflags=-s -w -X main.version=%s", m.Version)
+	return m.base(source).
+		WithExec([]string{"go", "build", "-trimpath", ldflags, "-o", "/bin/xoscal", "./server/cmd/xoscal"}).
+		File("/bin/xoscal")
 }
 
 // BuildCtl compiles a static release binary for xoscal-ctl CLI and returns it.
 func (m *Xoscal) BuildCtl(source *dagger.Directory) *dagger.File {
 	ldflags := fmt.Sprintf("-ldflags=-s -w -X main.version=%s", m.Version)
 	return m.base(source).
-		WithExec([]string{"go", "build", ldflags, "-o", "/bin/xoscal-ctl", "./server/cmd/xoscal-ctl"}).
+		WithExec([]string{"go", "build", "-trimpath", ldflags, "-o", "/bin/xoscal-ctl", "./server/cmd/xoscal-ctl"}).
 		File("/bin/xoscal-ctl")
 }
 
@@ -99,8 +107,16 @@ func (m *Xoscal) BuildCtl(source *dagger.Directory) *dagger.File {
 func (m *Xoscal) BuildBackup(source *dagger.Directory) *dagger.File {
 	ldflags := fmt.Sprintf("-ldflags=-s -w -X main.version=%s", m.Version)
 	return m.base(source).
-		WithExec([]string{"go", "build", ldflags, "-o", "/bin/xoscal-backup", "./server/cmd/xoscal-backup"}).
+		WithExec([]string{"go", "build", "-trimpath", ldflags, "-o", "/bin/xoscal-backup", "./server/cmd/xoscal-backup"}).
 		File("/bin/xoscal-backup")
+}
+
+// BuildGateway compiles a static release binary for xoscal-gateway and returns it.
+func (m *Xoscal) BuildGateway(source *dagger.Directory) *dagger.File {
+	ldflags := fmt.Sprintf("-ldflags=-s -w -X main.version=%s", m.Version)
+	return m.base(source).
+		WithExec([]string{"go", "build", "-trimpath", ldflags, "-o", "/bin/xoscal-gateway", "./server/cmd/xoscal-gateway"}).
+		File("/bin/xoscal-gateway")
 }
 
 // Test runs unit tests.
@@ -212,12 +228,27 @@ func (m *Xoscal) SdkBundles(source *dagger.Directory) *dagger.Directory {
 }
 
 // OscalFrameworks builds and runs xoscal-export-frameworks over the manifest,
-// emitting one OSCAL catalog per framework. Needs network (fetches upstream).
+// emitting all 36 OSCAL catalogs and 2 authoritative profiles deterministically offline.
 func (m *Xoscal) OscalFrameworks(source *dagger.Directory) *dagger.Directory {
 	return m.base(source).
-		WithExec([]string{"go", "build", "-o", "/bin/export-fw", "./server/cmd/xoscal-export-frameworks"}).
+		WithExec([]string{"go", "build", "-trimpath", "-o", "/bin/export-fw", "./server/cmd/xoscal-export-frameworks"}).
 		WithExec([]string{"/bin/export-fw", "-manifest", "data/frameworks/manifest.yaml", "-out", "/out", "-dsn", "/tmp/fw.db"}).
 		Directory("/out")
+}
+
+// OscalParityValidation exports all 36 frameworks across all 7 OSCAL 1.2.3 layers
+// (252 artifacts) from a standalone -trimpath binary outside /src and enforces
+// strict schema + verbatim parity verification.
+func (m *Xoscal) OscalParityValidation(source *dagger.Directory) *dagger.Container {
+	cliBin := m.BuildCli(source)
+	return dag.Container().
+		From(ubuntuBase).
+		WithFile("/bin/xoscal", cliBin).
+		WithWorkdir("/tmp").
+		WithExec([]string{"/bin/xoscal", "doctor"}).
+		WithExec([]string{"/bin/xoscal", "frameworks", "export", "-out", "/tmp/fw7"}).
+		WithExec([]string{"/bin/xoscal", "verify-parity", "-dir", "/tmp/fw7", "-strict"}).
+		WithExec([]string{"sh", "-ec", "printf 'oscal-parity-ok\\n' > /tmp/parity.ok"})
 }
 
 // OscalSchemaValidation builds and runs xoscal-validate-schema against every

@@ -4,16 +4,935 @@
       "href": "./system-security-plan.json"
     },
     "metadata": {
-      "last-modified": "2026-11-08T01:42:12Z",
+      "last-modified": "2026-11-08T00:30:50Z",
       "oscal-version": "1.2.3",
       "title": "Recommandations relatives à l'administration sécurisée des systèmes d'information Plan of Action and Milestones Template",
       "version": "1"
     },
     "poam-items": [
       {
-        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for Recommandations relatives à l'administration sécurisée des systèmes d'information.",
-        "title": "Compliance Roadmap and Parameter Tailoring for Recommandations relatives à l'administration sécurisée des systèmes d'information",
-        "uuid": "b2c257fc-3e1b-5580-88de-c8565d6114de"
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r1 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r1 (Informer les administrateurs de leurs droits et devoirs)",
+        "uuid": "bd9afa8b-a8b9-53e0-8b9a-bd593c128c73"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r10 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r10"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r10 (Bloquer tout accès à Internet depuis ou vers le poste d'administration)",
+        "uuid": "1b4f0ba3-31e9-5a77-9ac9-2f260d1640cd"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r11 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r11"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r11 (Durcir le système d'exploitation du poste d'administration)",
+        "uuid": "3d96a133-1bc8-5d3a-bd8d-5bd3c0d67865"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r12 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r12"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r12 (Restreindre les droits d'administration sur le poste d'administration)",
+        "uuid": "f399d614-0c76-52dc-8189-47f2f04ed9a0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r13 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r13"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r13 (Limiter les logiciels installés sur le poste d'administration)",
+        "uuid": "4cecd3e0-83d6-549b-aad0-bd790d0e2f51"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r14 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r14"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r14 (Chiffrer l'ensemble des périphériques de stockage utilisés pour l'administration)",
+        "uuid": "801b576d-1af7-5f0a-bc0a-4eb40418f596"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r15 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r15"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r15 (Connecter les ressources d'administration sur un réseau physique dédié)",
+        "uuid": "cde1eedf-5497-5cdc-9818-56b1d4cf53cf"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r15- in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r15-"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r15- (Connecter les ressources d'administration sur un réseau VPN IPsec dédié)",
+        "uuid": "21a8132f-b4e2-588e-a297-f02bcd562401"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r16 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r16"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r16 (Appliquer un filtrage interne et périmétrique au SI d'administration)",
+        "uuid": "e9131b8a-887c-5602-a051-4136b71df216"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r17 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r17"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r17 (Appliquer un filtrage local sur les ressources administrées)",
+        "uuid": "97b5c31e-6d25-509a-a0e2-6b03aaba1022"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r18 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r18"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r18 (Dédier une interface réseau physique d'administration)",
+        "uuid": "6ddbe44c-03ac-5057-8acf-9f7c1604608c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r18- in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r18-"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r18- (Dédier une interface réseau virtuelle d'administration)",
+        "uuid": "154b91fb-4832-5d82-80ba-5670aeae0633"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r19 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r19"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r19 (Appliquer un filtrage entre ressources d'administration et ressources administrées)",
+        "uuid": "865f8935-8304-5811-a600-f2ce1ff54a49"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r2 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r2 (Former les administrateurs à l'état de l'art en matière de SSI)",
+        "uuid": "3908dae3-34a6-5860-8948-41f0c8469d5a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r20 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r20"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r20 (Bloquer toute connexion entre ressources administrées à travers le réseau d'administration)",
+        "uuid": "1cb13f11-f1f4-5a5a-9668-fbe09fd88af9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r21 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r21"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r21 (Protéger les flux d'administration transitant sur un réseau tiers)",
+        "uuid": "06e560b8-edfb-5d66-a225-d4f533e30606"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r22 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r22"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r22 (Déployer les outils d'administration sur des serveurs dédiés par zone d'administration)",
+        "uuid": "900bb04d-bfd4-5247-82d4-3a5bf5d6e68f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r23 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r23"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r23 (Appliquer un filtrage entre les postes d'administration et les serveurs outils d'administration)",
+        "uuid": "16e3335f-8787-5f53-9850-738c0e9ef4bb"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r24 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r24"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r24 (Utiliser des protocoles sécurisés pour les flux d'administration)",
+        "uuid": "8efa016c-9bea-5c79-b546-c077f52cfdc9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r24- in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r24-"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r24- (Protéger le cas échéant les flux d'administration dans un tunnel VPN IPsec)",
+        "uuid": "3c436000-968f-5a62-a40b-e63c7222d485"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r25 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r25"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r25 (Étudier la mise en oeuvre d'une rupture protocolaire des flux d'administration)",
+        "uuid": "c5722ea1-fb75-5dbb-a86b-ee60fb2d6449"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r26 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r26"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r26 (Renoncer à la rupture protocolaire pour les besoins en confidentialité)",
+        "uuid": "d4a7eeee-a4a7-582a-96b7-1efdcfdcc4c6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r27 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r27"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r27 (Utiliser des comptes d'administration dédiés)",
+        "uuid": "efc0a6be-714e-570f-9cb8-6df35f7ad6dd"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r28 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r28"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r28 (Protéger l'accès aux annuaires des comptes d'administration)",
+        "uuid": "a8cfd659-9297-5407-af73-3cbd00bd6812"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r29 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r29"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r29 (Réserver les comptes d'administration aux seules actions d'administration)",
+        "uuid": "5a14597c-234f-5461-854c-062cbaecb8b8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r3 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r3 (Disposer d'une documentation des SI à jour)",
+        "uuid": "f00ec155-a77e-5474-982d-861d7f4ae80c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r30 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r30"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r30 (Utiliser par défaut des comptes d'administration individuels)",
+        "uuid": "1e77aa59-1cd3-50bc-b304-9b324607a7e5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r31 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r31"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r31 (Journaliser les événements liés aux comptes d'administration)",
+        "uuid": "d35e2f96-e48b-55f3-ac19-f45a38574e5b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r32 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r32"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r32 (Prévoir un processus de gestion des comptes d'administration)",
+        "uuid": "a816294d-19b2-59c6-8f34-29f133bc757d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r33 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r33"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r33 (Se référer au RGS pour choisir les mécanismes d'authentification)",
+        "uuid": "74dad383-3e5a-5296-8641-40d02c785c89"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r34 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r34"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r34 (Modifier les mots de passe par défaut des comptes natifs)",
+        "uuid": "b2a1c767-74f3-5989-96bc-606afdcdb0ca"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r35 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r35"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r35 (Stocker les mots de passe dans un coffre-fort de mots de passe)",
+        "uuid": "d85cae96-36a7-5852-82de-c49624296ef6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r36 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r36"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r36 (Privilégier une authentification double facteur pour les actions d'administration)",
+        "uuid": "897fefe0-31ee-5df5-8116-ab3f2f45bc3f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r37 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r37"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r37 (Utiliser des certificats électroniques de confiance pour l'authentification)",
+        "uuid": "c17d610d-bc95-56a8-b999-b965e7800647"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r38 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r38"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r38 (Mettre en œuvre une gestion centralisée de l'authentification)",
+        "uuid": "6b31260c-0f13-5bd9-b378-fe0e604f5abf"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r39 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r39"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r39 (Respecter le principe du moindre privilège dans l'attribution des droits d'administration)",
+        "uuid": "8f005258-b462-55d3-87c7-aa287132036b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r4 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r4 (Mener une analyse de risque sur le SI d'administration et son écosystème)",
+        "uuid": "22eb5e50-569f-5f29-85d1-4e5ffa9d1da7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r40 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r40"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r40 (Attribuer les droits d'administration à des groupes)",
+        "uuid": "09f2462e-fcd7-596f-a21b-6d99634c7035"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r41 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r41"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r41 (Déployer des politiques de sécurité)",
+        "uuid": "39e800c4-698f-5666-a5f8-1ff48fdc1477"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r42 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r42"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r42 (Réaliser scrupuleusement le MCS du SI d'administration)",
+        "uuid": "6fb2028b-c788-50c3-bca0-d291c17ad4ef"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r43 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r43"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r43 (Mettre en place des serveurs relais pour la récupération des mises à jour)",
+        "uuid": "3a6a3513-f6a0-5e36-8178-02e3b2dfce3b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r44 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r44"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r44 (Valider les correctifs de sécurité avant leur généralisation)",
+        "uuid": "3790e19b-6829-5683-b57e-cbd32fae773f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r45 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r45"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r45 (Définir une politique de sauvegarde du SI d'administration)",
+        "uuid": "054dd8a5-59ba-5929-b146-4cce99c9fb05"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r46 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r46"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r46 (Dédier une zone d'administration à la journalisation)",
+        "uuid": "0802bd90-2a14-5e38-b782-f129ad59e662"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r47 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r47"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r47 (Centraliser la collecte des journaux d'événements)",
+        "uuid": "50e64088-6435-5866-b3e2-f30ecfbe66be"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r48 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r48"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r48 (Installer un filtre de confidentialité sur le poste d'administration nomade)",
+        "uuid": "f8edea23-3e7c-5e15-8d07-cb4aca0534c1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r49 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r49"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r49 (Utiliser un tunnel VPN IPsec pour la connexion du poste d'administration à distance)",
+        "uuid": "113a3d93-fd05-531f-ace3-a0bedcc62448"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r5 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r5 (Définir les zones de confiance du SI administré et déduire les zones d'administration)",
+        "uuid": "c461fc49-89ed-5f2b-b371-c647076aaffe"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r50 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r50"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r50 (Empêcher toute modification de la configuration VPN du poste d'administration)",
+        "uuid": "7956bc31-1208-5f4c-a62c-e3f96f3710fb"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r51 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r51"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r51 (Dédier un concentrateur VPN IPsec physique pour l'administration à distance)",
+        "uuid": "37c2aa52-cd2b-5805-a9f4-60b5fe1d5ddf"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r52 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r52"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r52 (Déployer des systèmes d'échanges sécurisés)",
+        "uuid": "69d4ccad-6821-5a23-b9ac-1c8ebb618466"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r53 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r53"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r53 (Dédier le système d'échange interne au SI d'administration)",
+        "uuid": "a792fcea-e502-56bb-808a-3771fba8a67a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r54 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r54"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r54 (N'autoriser que des protocoles de transfert vers le système d'échange externe)",
+        "uuid": "e5b688d5-3224-527c-979a-b24b4aa7e19a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r55 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r55"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r55 (Limiter au strict besoin opérationnel l'accès au système d'échange externe)",
+        "uuid": "6e88c8f7-f40a-5916-a342-e0266351c043"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r56 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r56"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r56 (Ne pas s'authentifier avec un compte d'administration sur le système d'échange externe)",
+        "uuid": "dabbd12e-6592-50e2-a6d6-cfd872e4f7aa"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r57 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r57"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r57 (Ne pas stocker de données de manière permanente dans un système d'échange externe)",
+        "uuid": "26fc8356-82cf-5421-8457-f9858a171c95"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r58 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r58"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r58 (Analyser le contenu des données échangées par le système d'échange externe)",
+        "uuid": "6d48a56d-1820-5135-8931-09de0ecc2224"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r59 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r59"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r59 (Recourir à une prestation d'infogérance qualifiée d'un PAMS)",
+        "uuid": "8f79aff6-8ff0-52d4-8705-fbcdf1d9d9ee"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r6 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r6 (Privilégier l'utilisation de produits qualifiés par l'ANSSI)",
+        "uuid": "f6bb471c-c75b-5425-a374-e7091ac0079a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r60 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r60"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r60 (Intégrer au contrat d'infogérance les exigences de sécurité d'accès à distance)",
+        "uuid": "de3a8e8a-273b-5caf-81ea-4b0478de063c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r61 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r61"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r61 (Imposer une sécurisation à l'état de l'art des postes de travail des administrateurs tiers)",
+        "uuid": "ca3a8883-00e2-56f9-9a48-a59ae5efda7e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r62 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r62"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r62 (Dédier une chaîne d'accès à distance pour les administrateurs tiers)",
+        "uuid": "91fa8dfe-c10b-5ea9-87c2-6666b4635e0d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r63 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r63"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r63 (Utiliser un tunnel VPN IPSec pour la connexion du poste de travail des administrateurs tiers)",
+        "uuid": "a04d8049-c38d-535f-815c-2f2f0f9af961"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r63- in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r63-"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r63- (Utiliser un tunnel VPN TLS pour la connexion du poste de travail des administrateurs tiers)",
+        "uuid": "e3b2012d-8dab-583f-bc75-9f44f767813f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r64 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r64"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r64 (Dédier des comptes d'accès et des comptes d'administration aux administrateurs tiers)",
+        "uuid": "4b724050-b498-5c53-bdfe-cd352dd70ce4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r65_ in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r65_"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r65_ (Dédier un annuaire aux comptes d'accès des administrateurs tiers)",
+        "uuid": "6a5a3654-d074-5294-bad9-026d1cc3e414"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r66 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r66"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r66 (Activer à la demande les comptes des administrateurs tiers)",
+        "uuid": "ab8889bf-547c-5708-ba09-f16911f1800a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r67 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r67"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r67 (Renforcer l'authentification des administrateurs tiers)",
+        "uuid": "61d6d136-0a68-5ebc-9a82-2f995f8ebb41"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r68 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r68"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r68 (Mettre en oeuvre un rebond éphémère en coupure de la terminaison VPN et du SI administré)",
+        "uuid": "bd487097-1c6a-5f20-8adc-8c41cb5599d6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r69 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r69"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r69 (Mettre en oeuvre un contrôle d'accès strict et une traçabilité pour les administrateurs)",
+        "uuid": "8d211d63-cc2c-578f-ab8a-4a42d05e563d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r7 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r7 (Dédier des socles physiques en cas de virtualisation des infrastructures d'administration)",
+        "uuid": "8f4027cb-e5d0-5409-94d2-e31162446265"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r70 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r70"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r70 (Utiliser un boîtier matériel d'acquisition vidéo pour l'assistance à distance)",
+        "uuid": "024a7948-7f8e-568a-95dc-1fbdc47784e5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r71 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r71"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r71 (Mettre en oeuvre une solution logicielle dédiée pour l'assistance à distance)",
+        "uuid": "1f34dea5-50f9-5570-ac53-b93b1260134b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r8 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r8"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r8 (Gérer et configurer le poste d'administration)",
+        "uuid": "bfee523b-159c-5111-a0f6-e23e4126501b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r9 in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r9"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r9 (Utiliser un poste d'administration dédié)",
+        "uuid": "7ac355bd-7c16-551d-9443-f69de6f07ef4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r9- in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r9-"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r9- (Utiliser un poste d'administration multi-niveaux)",
+        "uuid": "531268e1-f594-5695-91f0-dc84be5d3e3e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control r9-- in Recommandations relatives à l'administration sécurisée des systèmes d'information.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "r9--"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: r9-- (Utiliser un poste d’administration avec accès distant au SI bureautique)",
+        "uuid": "129add64-78a5-5831-994c-6d34bbe6f64f"
       }
     ],
     "uuid": "688dad41-bf6b-5d33-a433-65d4e6cb0cb9"

@@ -20,13 +20,13 @@ func TestEndToEnd(t *testing.T) {
 	if err != nil {
 		t.Fatalf("kg store: %v", err)
 	}
-	defer kgStore.Close()
+	defer func() { _ = kgStore.Close() }()
 
 	vectorStore, err := embedding.NewSQLiteVectorStore(":memory:", dbutil.PoolConfig{})
 	if err != nil {
 		t.Fatalf("vector store: %v", err)
 	}
-	defer vectorStore.Close()
+	defer func() { _ = vectorStore.Close() }()
 
 	// Ingest EU AI Act requirements
 	raw := []byte(`[
@@ -152,12 +152,14 @@ func TestEndToEnd(t *testing.T) {
 
 	// Index for semantic search
 	for _, e := range res.Entities {
-		vectorStore.Index(ctx, embedding.Document{
+		if err := vectorStore.Index(ctx, embedding.Document{
 			UUID:      e.URN,
 			ModelType: e.Type,
 			Framework: "eu-ai-act",
 			Content:   string(e.Payload),
-		})
+		}); err != nil {
+			t.Fatalf("index %s: %v", e.URN, err)
+		}
 	}
 
 	searchResults, err := vectorStore.Search(ctx, "risk", "eu-ai-act", 10)

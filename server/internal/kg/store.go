@@ -212,7 +212,7 @@ func (s *SQLiteStore) ListEntities(ctx context.Context, entityType string, statu
 	if err != nil {
 		return nil, fmt.Errorf("list entities: %w", err)
 	}
-	defer rows.Close()
+	defer func() { _ = rows.Close() }()
 	return scanEntities(rows)
 }
 
@@ -226,7 +226,7 @@ func (s *SQLiteStore) Snapshot(ctx context.Context, t time.Time) ([]*Entity, err
 	if err != nil {
 		return nil, fmt.Errorf("snapshot query: %w", err)
 	}
-	defer rows.Close()
+	defer func() { _ = rows.Close() }()
 	return scanEntities(rows)
 }
 
@@ -327,7 +327,7 @@ func (s *SQLiteStore) GetSnapshot(ctx context.Context, name string) ([]*Entity, 
 	if err != nil {
 		return nil, fmt.Errorf("get snapshot: %w", err)
 	}
-	defer rows.Close()
+	defer func() { _ = rows.Close() }()
 	return scanEntities(rows)
 }
 
@@ -336,7 +336,7 @@ func (s *SQLiteStore) ListSnapshots(ctx context.Context) ([]*Snapshot, error) {
 	if err != nil {
 		return nil, fmt.Errorf("list snapshots: %w", err)
 	}
-	defer rows.Close()
+	defer func() { _ = rows.Close() }()
 	var out []*Snapshot
 	for rows.Next() {
 		var sn Snapshot
@@ -383,7 +383,7 @@ func (s *SQLiteStore) ListReleases(ctx context.Context) ([]*Release, error) {
 	if err != nil {
 		return nil, fmt.Errorf("list releases: %w", err)
 	}
-	defer rows.Close()
+	defer func() { _ = rows.Close() }()
 	var out []*Release
 	for rows.Next() {
 		var r Release

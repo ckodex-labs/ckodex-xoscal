@@ -22,7 +22,7 @@ func TestExchangeEvidenceVerificationIsContentAddressed(t *testing.T) {
 	if err != nil {
 		t.Fatalf("new store: %v", err)
 	}
-	defer store.Close()
+	defer func() { _ = store.Close() }()
 
 	server := NewExchangeServer(store)
 	blob := []byte("beta evidence")
@@ -57,7 +57,7 @@ func TestExchangeRejectsEvidenceDigestMismatch(t *testing.T) {
 	if err != nil {
 		t.Fatalf("new store: %v", err)
 	}
-	defer store.Close()
+	defer func() { _ = store.Close() }()
 
 	server := NewExchangeServer(store)
 	_, err = server.UploadEvidence(ctx, &servicesv1.UploadEvidenceRequest{Evidence: &servicesv1.Evidence{
@@ -78,7 +78,7 @@ func TestExchangeVerificationFailsClosedWhenProvidersAreUnavailable(t *testing.T
 	if err != nil {
 		t.Fatalf("new store: %v", err)
 	}
-	defer store.Close()
+	defer func() { _ = store.Close() }()
 
 	server := NewExchangeServer(store)
 	blob := []byte("claim evidence")
@@ -155,7 +155,7 @@ func TestExchangeProvidersVerifySignedClaimAndPolicy(t *testing.T) {
 	if err != nil {
 		t.Fatalf("new store: %v", err)
 	}
-	defer store.Close()
+	defer func() { _ = store.Close() }()
 	server := NewExchangeServer(store)
 
 	publicKey, privateKey, err := ed25519.GenerateKey(rand.Reader)
@@ -228,7 +228,7 @@ func TestExchangeRejectsInvalidClaimSignature(t *testing.T) {
 	if err != nil {
 		t.Fatalf("new store: %v", err)
 	}
-	defer store.Close()
+	defer func() { _ = store.Close() }()
 	server := NewExchangeServer(store)
 
 	publicKey, _, err := ed25519.GenerateKey(rand.Reader)
@@ -266,7 +266,7 @@ func TestExchangeReceiptExportRequiresVerifiedClaim(t *testing.T) {
 	if err != nil {
 		t.Fatalf("new store: %v", err)
 	}
-	defer store.Close()
+	defer func() { _ = store.Close() }()
 	server := NewExchangeServer(store)
 	blob := []byte("receipt gate evidence")
 	digest := digestFor(blob)
@@ -307,7 +307,7 @@ func TestExchangeReceiptExportContainsProofAndAuditDigest(t *testing.T) {
 	if err != nil {
 		t.Fatalf("new store: %v", err)
 	}
-	defer store.Close()
+	defer func() { _ = store.Close() }()
 	server := NewExchangeServer(store)
 	claimID := seedVerifiedProviderClaim(t, ctx, server)
 
@@ -350,7 +350,7 @@ func TestExchangeImportPreflightAndBatchAreAllOrNothing(t *testing.T) {
 	if err != nil {
 		t.Fatalf("new store: %v", err)
 	}
-	defer store.Close()
+	defer func() { _ = store.Close() }()
 	server := NewExchangeServer(store)
 	goodBlob := []byte("good batch evidence")
 	goodDigest := digestFor(goodBlob)
@@ -393,7 +393,7 @@ func TestExchangeImportBatchCommitsAndRepeatsIdempotently(t *testing.T) {
 	if err != nil {
 		t.Fatalf("new store: %v", err)
 	}
-	defer store.Close()
+	defer func() { _ = store.Close() }()
 	server := NewExchangeServer(store)
 	blob := []byte("idempotent batch evidence")
 	digest := digestFor(blob)

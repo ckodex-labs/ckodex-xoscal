@@ -437,41 +437,151 @@ func TestKGRoundTripParity(t *testing.T) {
 	ctx := context.Background()
 
 	// Verify full 7-layer Knowledge Graph -> oscal.Generator round-trip parity
-	// across representative Canadian and international frameworks.
+	// across representative Canadian, US, European, and international frameworks.
 	sampleIDs := []string{
 		"cybersecure-canada",
 		"cccs-itsg-33",
-		"e-its-2024",
 		"nist-csf-2.0",
-		"bs-it-gs-2023-sys",
+		"iso-iec-42001",
+		"cyber_essentials",
 	}
 	for _, id := range sampleIDs {
-		fw, ok := reg.Get(id)
-		if !ok {
-			t.Fatalf("framework %s not found", id)
-		}
-		layers, err := frameworks.GenerateAllLayersFromKG(ctx, fw)
-		if err != nil {
-			t.Fatalf("GenerateAllLayersFromKG(%s): %v", id, err)
-		}
-		layerMap := map[string][]byte{
-			"catalog.json":                       layers.Catalog,
-			"profile.json":                       layers.Profile,
-			"component-definition.json":          layers.ComponentDefinition,
-			"system-security-plan.json":          layers.SystemSecurityPlan,
-			"assessment-plan.json":               layers.AssessmentPlan,
-			"assessment-results.json":            layers.AssessmentResults,
-			"plan-of-action-and-milestones.json": layers.POAM,
-		}
-		for name, data := range layerMap {
-			rep, err := frameworks.VerifyBytesParity(fw, data, "memory://"+id+"/"+name)
+		id := id
+		t.Run(id, func(t *testing.T) {
+			fw, ok := reg.Get(id)
+			if !ok {
+				t.Fatalf("framework %s not found", id)
+			}
+			layers, err := frameworks.GenerateAllLayersFromKG(ctx, fw)
 			if err != nil {
-				t.Fatalf("VerifyBytesParity(%s/%s): %v", id, name, err)
+				t.Fatalf("GenerateAllLayersFromKG(%s): %v", id, err)
 			}
-			if rep.Verdict != frameworks.VerdictVerbatimParity {
-				t.Errorf("%s/%s: expected VERBATIM_PARITY, got %s (discrepancies: %+v, schemaErrors: %v, integrityErrors: %v)",
-					id, name, rep.Verdict, rep.Discrepancies, rep.SchemaErrors, rep.IntegrityErrors)
+			layerMap := map[string][]byte{
+				"catalog.json":                       layers.Catalog,
+				"profile.json":                       layers.Profile,
+				"component-definition.json":          layers.ComponentDefinition,
+				"system-security-plan.json":          layers.SystemSecurityPlan,
+				"assessment-plan.json":               layers.AssessmentPlan,
+				"assessment-results.json":            layers.AssessmentResults,
+				"plan-of-action-and-milestones.json": layers.POAM,
 			}
+			for name, data := range layerMap {
+				rep, err := frameworks.VerifyBytesParity(fw, data, "memory://"+id+"/"+name)
+				if err != nil {
+					t.Fatalf("VerifyBytesParity(%s/%s): %v", id, name, err)
+				}
+				if rep.Verdict != frameworks.VerdictVerbatimParity {
+					t.Errorf("%s/%s: expected VERBATIM_PARITY, got %s (discrepancies: %+v, schemaErrors: %v, integrityErrors: %v)",
+						id, name, rep.Verdict, rep.Discrepancies, rep.SchemaErrors, rep.IntegrityErrors)
+				}
+			}
+		})
+	}
+}
+
+func TestVerifyBytesParity_AP_AR_POAM_TamperDetection(t *testing.T) {
+	reg := frameworks.DefaultRegistry()
+	fw, ok := reg.Get("cybersecure-canada")
+	if !ok {
+		t.Fatalf("framework cybersecure-canada not found")
+	}
+
+	layers, err := frameworks.ProjectAllLayers(fw)
+	if err != nil {
+		t.Fatalf("ProjectAllLayers: %v", err)
+	}
+
+	// Baseline check: AP, AR, and POA&M must match all 46 controls verbatim.
+	for _, tc := range []struct {
+		name string
+		data []byte
+	}{
+		{"assessment-plan.json", layers.AssessmentPlan},
+		{"assessment-results.json", layers.AssessmentResults},
+		{"plan-of-action-and-milestones.json", layers.POAM},
+	} {
+		rep, err := frameworks.VerifyBytesParity(fw, tc.data, "memory://"+tc.name)
+		if err != nil {
+			t.Fatalf("VerifyBytesParity(%s): %v", tc.name, err)
 		}
+		if rep.Verdict != frameworks.VerdictVerbatimParity {
+			t.Fatalf("%s: expected VERBATIM_PARITY, got %s (%+v, schema=%v)", tc.name, rep.Verdict, rep.Discrepancies, rep.SchemaErrors)
+		}
+		if rep.TotalExpectedControls != 46 || rep.TotalActualControls != 46 || rep.MatchedControls != 46 {
+			t.Fatalf("%s: expected 46/46/46 controls, got exp=%d act=%d matched=%d",
+				tc.name, rep.TotalExpectedControls, rep.TotalActualControls, rep.MatchedControls)
+		}
+	}
+
+	// 1. Assessment Plan: omit one control + tamper another control ID
+	var apRoot map[string]interface{}
+	if err := json.Unmarshal(layers.AssessmentPlan, &apRoot); err != nil {
+		t.Fatalf("unmarshal AP: %v", err)
+	}
+	ap := apRoot["assessment-plan"].(map[string]interface{})
+	apRC := ap["reviewed-controls"].(map[string]interface{})
+	apSels := apRC["control-selections"].([]interface{})
+	apSel0 := apSels[0].(map[string]interface{})
+	apInc := apSel0["include-controls"].([]interface{})
+	apInc[0].(map[string]interface{})["control-id"] = "tampered-ap-ctrl"
+	apSel0["include-controls"] = apInc[:len(apInc)-1]
+	apTamperedBytes, _ := json.Marshal(apRoot)
+
+	apRep, err := frameworks.VerifyBytesParity(fw, apTamperedBytes, "memory://tampered-ap.json")
+	if err != nil {
+		t.Fatalf("VerifyBytesParity tampered AP: %v", err)
+	}
+	if apRep.Verdict != frameworks.VerdictDeviationDetected {
+		t.Fatalf("expected DEVIATION_DETECTED for tampered AP, got %s", apRep.Verdict)
+	}
+	if len(apRep.MissingControls) != 2 || len(apRep.ExtraControls) != 1 {
+		t.Fatalf("expected 2 missing and 1 extra control in tampered AP, got missing=%v extra=%v", apRep.MissingControls, apRep.ExtraControls)
+	}
+
+	// 2. Assessment Results: omit one control from reviewed-controls
+	var arRoot map[string]interface{}
+	if err := json.Unmarshal(layers.AssessmentResults, &arRoot); err != nil {
+		t.Fatalf("unmarshal AR: %v", err)
+	}
+	ar := arRoot["assessment-results"].(map[string]interface{})
+	arRes := ar["results"].([]interface{})[0].(map[string]interface{})
+	arRC := arRes["reviewed-controls"].(map[string]interface{})
+	arSel0 := arRC["control-selections"].([]interface{})[0].(map[string]interface{})
+	arInc := arSel0["include-controls"].([]interface{})
+	arSel0["include-controls"] = arInc[1:]
+	arTamperedBytes, _ := json.Marshal(arRoot)
+
+	arRep, err := frameworks.VerifyBytesParity(fw, arTamperedBytes, "memory://tampered-ar.json")
+	if err != nil {
+		t.Fatalf("VerifyBytesParity tampered AR: %v", err)
+	}
+	if arRep.Verdict != frameworks.VerdictDeviationDetected {
+		t.Fatalf("expected DEVIATION_DETECTED for tampered AR, got %s", arRep.Verdict)
+	}
+	if len(arRep.MissingControls) != 1 {
+		t.Fatalf("expected 1 missing control in tampered AR, got %v", arRep.MissingControls)
+	}
+
+	// 3. POA&M: omit one poam-item and tamper control-id prop on another
+	var poamRoot map[string]interface{}
+	if err := json.Unmarshal(layers.POAM, &poamRoot); err != nil {
+		t.Fatalf("unmarshal POAM: %v", err)
+	}
+	poam := poamRoot["plan-of-action-and-milestones"].(map[string]interface{})
+	items := poam["poam-items"].([]interface{})
+	item0Props := items[0].(map[string]interface{})["props"].([]interface{})
+	item0Props[0].(map[string]interface{})["value"] = "tampered-poam-ctrl"
+	poam["poam-items"] = items[:len(items)-1]
+	poamTamperedBytes, _ := json.Marshal(poamRoot)
+
+	poamRep, err := frameworks.VerifyBytesParity(fw, poamTamperedBytes, "memory://tampered-poam.json")
+	if err != nil {
+		t.Fatalf("VerifyBytesParity tampered POAM: %v", err)
+	}
+	if poamRep.Verdict != frameworks.VerdictDeviationDetected {
+		t.Fatalf("expected DEVIATION_DETECTED for tampered POAM, got %s", poamRep.Verdict)
+	}
+	if len(poamRep.MissingControls) != 2 || len(poamRep.ExtraControls) != 1 {
+		t.Fatalf("expected 2 missing and 1 extra control in tampered POAM, got missing=%v extra=%v", poamRep.MissingControls, poamRep.ExtraControls)
 	}
 }

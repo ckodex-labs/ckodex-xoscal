@@ -26,7 +26,7 @@ func TestDirectoryBoundary(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	defer root.Close()
+	defer func() { _ = root.Close() }()
 	links := map[string]string{"inside": "blob", "absolute-inside": filepath.Join(selected, "blob"),
 		"absolute-outside": filepath.Join(outside, "blob"), "relative-outside": "../selected-sibling/blob",
 		"chain": "relative-outside", "broken": "missing"}
@@ -74,7 +74,7 @@ func TestSymlinkSwapDoesNotEscape(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	defer root.Close()
+	defer func() { _ = root.Close() }()
 	if err := root.Symlink("inside", "link"); err != nil {
 		t.Fatal(err)
 	}

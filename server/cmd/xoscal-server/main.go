@@ -120,31 +120,31 @@ func main() {
 	if err != nil {
 		log.Fatalf("open store: %v", err)
 	}
-	defer s.Close()
+	defer func() { _ = s.Close() }()
 
 	kgStore, err := openKGWithRetry(cfg.Store.DSN, pool, 3, logger)
 	if err != nil {
 		log.Fatalf("open kg store: %v", err)
 	}
-	defer kgStore.Close()
+	defer func() { _ = kgStore.Close() }()
 
 	vectorStore, err := openVectorWithRetry(cfg.Vector, pool, 3, logger)
 	if err != nil {
 		log.Fatalf("open vector store: %v", err)
 	}
-	defer vectorStore.Close()
+	defer func() { _ = vectorStore.Close() }()
 
 	transparencyStore, err := transparency.NewSQLiteStore(cfg.Store.DSN)
 	if err != nil {
 		log.Fatalf("open transparency store: %v", err)
 	}
-	defer transparencyStore.Close()
+	defer func() { _ = transparencyStore.Close() }()
 
 	graphStore, err := graph.NewSQLiteStore(cfg.Store.DSN)
 	if err != nil {
 		log.Fatalf("open graph store: %v", err)
 	}
-	defer graphStore.Close()
+	defer func() { _ = graphStore.Close() }()
 
 	// gRPC server with production interceptors and options
 	var metricCollector interceptors.MetricsCollector

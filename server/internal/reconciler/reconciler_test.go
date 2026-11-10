@@ -20,7 +20,7 @@ func newTestStore(t *testing.T) kg.Store {
 func TestPropose_NoConflict(t *testing.T) {
 	ctx := context.Background()
 	store := newTestStore(t)
-	defer store.Close()
+	defer func() { _ = store.Close() }()
 	r := NewReconciler(store)
 
 	payload, _ := json.Marshal(map[string]string{"text": "requirement A"})
@@ -38,7 +38,7 @@ func TestPropose_NoConflict(t *testing.T) {
 func TestPropose_DuplicateConflict(t *testing.T) {
 	ctx := context.Background()
 	store := newTestStore(t)
-	defer store.Close()
+	defer func() { _ = store.Close() }()
 	r := NewReconciler(store)
 
 	payload, _ := json.Marshal(map[string]string{"text": "original"})
@@ -74,7 +74,7 @@ func TestPropose_DuplicateConflict(t *testing.T) {
 func TestPropose_VersionMismatch(t *testing.T) {
 	ctx := context.Background()
 	store := newTestStore(t)
-	defer store.Close()
+	defer func() { _ = store.Close() }()
 	r := NewReconciler(store)
 
 	payload, _ := json.Marshal(map[string]interface{}{"text": "req", "version": "1.0"})
@@ -101,7 +101,7 @@ func TestPropose_VersionMismatch(t *testing.T) {
 func TestPropose_SemanticDrift(t *testing.T) {
 	ctx := context.Background()
 	store := newTestStore(t)
-	defer store.Close()
+	defer func() { _ = store.Close() }()
 	r := NewReconciler(store)
 
 	payload, _ := json.Marshal(map[string]interface{}{"text": "same text", "risk_level": "high", "role": "provider"})
@@ -128,7 +128,7 @@ func TestPropose_SemanticDrift(t *testing.T) {
 func TestEvaluateBatch_MappingGap(t *testing.T) {
 	ctx := context.Background()
 	store := newTestStore(t)
-	defer store.Close()
+	defer func() { _ = store.Close() }()
 	r := NewReconciler(store)
 
 	// Create two mappings to the same control.
@@ -157,7 +157,7 @@ func TestEvaluateBatch_MappingGap(t *testing.T) {
 func TestResolveConflict(t *testing.T) {
 	ctx := context.Background()
 	store := newTestStore(t)
-	defer store.Close()
+	defer func() { _ = store.Close() }()
 	r := NewReconciler(store)
 
 	payload, _ := json.Marshal(map[string]string{"text": "original"})

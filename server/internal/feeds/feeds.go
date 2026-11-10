@@ -15,11 +15,18 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
+	"sync"
 	"time"
 	"unicode/utf8"
 
 	"github.com/mchorfa/xoscal/server/internal/ontology"
 	"github.com/mchorfa/xoscal/server/internal/resilience"
+)
+
+// Synced checkpoint file names persisted inside CheckpointDir on live feed sync.
+const (
+	SyncedCISAKEVFile     = "synced_cisa_kev.json"
+	SyncedMITREAttackFile = "synced_mitre_attack.json"
 )
 
 // Feed IDs for the 4 authoritative built-in intelligence feeds.
@@ -44,7 +51,19 @@ var (
 		FailureThreshold: 3,
 		Cooldown:         30 * time.Second,
 	})
+
+	syncedCacheMu              sync.RWMutex
+	latestSyncedAdvisories     []ThreatAdvisory
+	latestSyncedAttackMappings []AttackMapping
 )
+
+// ResetSyncedCache clears the in-memory live-synced threat advisories and ATT&CK mappings cache.
+func ResetSyncedCache() {
+	syncedCacheMu.Lock()
+	latestSyncedAdvisories = nil
+	latestSyncedAttackMappings = nil
+	syncedCacheMu.Unlock()
+}
 
 // FeedDescriptor describes an authoritative regulatory or threat intelligence feed.
 type FeedDescriptor struct {
@@ -183,8 +202,9 @@ func ListFeeds() []FeedDescriptor {
 	}
 }
 
-// InspectFeed returns the descriptor and full curated dataset for a specific feed ID.
-func InspectFeed(feedID string) (*FeedInspection, error) {
+// InspectFeed returns the descriptor and active dataset (merging verified live-synced records
+// over the air-gap baseline when present) for a specific feed ID.
+func InspectFeed(feedID string, checkpointDirs ...string) (*FeedInspection, error) {
 	id := strings.ToLower(strings.TrimSpace(feedID))
 	for _, desc := range ListFeeds() {
 		if desc.ID == id {
@@ -193,9 +213,11 @@ func InspectFeed(feedID string) (*FeedInspection, error) {
 			case FeedCrosswalk:
 				out.Crosswalks = append([]CrosswalkEntry(nil), BuiltinCrosswalks...)
 			case FeedCISAKEV:
-				out.KEVAdvisories = append([]KEVAdvisoryEntry(nil), BuiltinKEVAdvisories...)
+				out.KEVAdvisories = ActiveKEVAdvisories(checkpointDirs...)
+				out.Descriptor.RecordCount = len(out.KEVAdvisories)
 			case FeedMITREAttack:
-				out.AttackTechniques = append([]AttackTechniqueEntry(nil), BuiltinAttackTechniques...)
+				out.AttackTechniques = ActiveAttackTechniques(checkpointDirs...)
+				out.Descriptor.RecordCount = len(out.AttackTechniques)
 			case FeedSovereignLifecycle:
 				out.LifecycleEdges = append([]LifecycleEdgeEntry(nil), BuiltinLifecycleEdges...)
 			}
@@ -204,6 +226,124 @@ func InspectFeed(feedID string) (*FeedInspection, error) {
 	}
 	return nil, fmt.Errorf("unknown feed %q (expected one of: %s, %s, %s, %s)",
 		feedID, FeedCrosswalk, FeedCISAKEV, FeedMITREAttack, FeedSovereignLifecycle)
+}
+
+func resolveFeedCacheDir(checkpointDirs ...string) string {
+	for _, d := range checkpointDirs {
+		if trimmed := strings.TrimSpace(d); trimmed != "" {
+			return filepath.Clean(trimmed)
+		}
+	}
+	if envDir := strings.TrimSpace(os.Getenv("XOSCAL_FEED_CACHE_DIR")); envDir != "" {
+		return filepath.Clean(envDir)
+	}
+	return ""
+}
+
+func mergeKEVAdvisories(base, synced []KEVAdvisoryEntry) []KEVAdvisoryEntry {
+	out := make([]KEVAdvisoryEntry, len(base))
+	idxByCVE := make(map[string]int, len(base)+len(synced))
+	for i, b := range base {
+		out[i] = b
+		idxByCVE[strings.ToUpper(strings.TrimSpace(b.CVEID))] = i
+	}
+	for _, s := range synced {
+		key := strings.ToUpper(strings.TrimSpace(s.CVEID))
+		if key == "" {
+			continue
+		}
+		if pos, exists := idxByCVE[key]; exists {
+			out[pos] = s
+		} else {
+			idxByCVE[key] = len(out)
+			out = append(out, s)
+		}
+	}
+	return out
+}
+
+func mergeAttackTechniques(base, synced []AttackTechniqueEntry) []AttackTechniqueEntry {
+	out := make([]AttackTechniqueEntry, len(base))
+	idxByTech := make(map[string]int, len(base)+len(synced))
+	for i, b := range base {
+		out[i] = b
+		idxByTech[strings.ToUpper(strings.TrimSpace(b.TechniqueID))] = i
+	}
+	for _, s := range synced {
+		key := strings.ToUpper(strings.TrimSpace(s.TechniqueID))
+		if key == "" {
+			continue
+		}
+		if pos, exists := idxByTech[key]; exists {
+			out[pos] = s
+		} else {
+			idxByTech[key] = len(out)
+			out = append(out, s)
+		}
+	}
+	return out
+}
+
+// ActiveThreatAdvisories returns the active CISA KEV threat advisories, preferring
+// cryptographically verified synced_cisa_kev.json in checkpointDirs / XOSCAL_FEED_CACHE_DIR,
+// then in-memory live-synced advisories, merged onto the air-gap BuiltinKEVAdvisories baseline.
+func ActiveThreatAdvisories(checkpointDirs ...string) []ThreatAdvisory {
+	if dir := resolveFeedCacheDir(checkpointDirs...); dir != "" {
+		var synced []KEVAdvisoryEntry
+		err := resilience.WithDirLock(dir, false, func() error {
+			data, _, readErr := resilience.ReadVerifiedFile(filepath.Join(dir, SyncedCISAKEVFile), DefaultMaxPayloadBytes)
+			if readErr != nil {
+				return readErr
+			}
+			return json.Unmarshal(data, &synced)
+		})
+		if err == nil && len(synced) > 0 {
+			return mergeKEVAdvisories(BuiltinKEVAdvisories, synced)
+		}
+	}
+	syncedCacheMu.RLock()
+	mem := append([]ThreatAdvisory(nil), latestSyncedAdvisories...)
+	syncedCacheMu.RUnlock()
+	if len(mem) > 0 {
+		return mergeKEVAdvisories(BuiltinKEVAdvisories, mem)
+	}
+	return append([]KEVAdvisoryEntry(nil), BuiltinKEVAdvisories...)
+}
+
+// ActiveKEVAdvisories aliases ActiveThreatAdvisories.
+func ActiveKEVAdvisories(checkpointDirs ...string) []KEVAdvisoryEntry {
+	return ActiveThreatAdvisories(checkpointDirs...)
+}
+
+// ActiveAttackMappings returns the active MITRE ATT&CK technique mappings, preferring
+// cryptographically verified synced_mitre_attack.json in checkpointDirs / XOSCAL_FEED_CACHE_DIR,
+// then in-memory live-synced mappings, merged onto the air-gap BuiltinAttackTechniques baseline.
+func ActiveAttackMappings(checkpointDirs ...string) []AttackMapping {
+	if dir := resolveFeedCacheDir(checkpointDirs...); dir != "" {
+		var synced []AttackTechniqueEntry
+		err := resilience.WithDirLock(dir, false, func() error {
+			data, _, readErr := resilience.ReadVerifiedFile(filepath.Join(dir, SyncedMITREAttackFile), DefaultMaxPayloadBytes)
+			if readErr != nil {
+				return readErr
+			}
+			return json.Unmarshal(data, &synced)
+		})
+		if err == nil && len(synced) > 0 {
+			return mergeAttackTechniques(BuiltinAttackTechniques, synced)
+		}
+	}
+	syncedCacheMu.RLock()
+	mem := append([]AttackMapping(nil), latestSyncedAttackMappings...)
+	syncedCacheMu.RUnlock()
+	if len(mem) > 0 {
+		return mergeAttackTechniques(BuiltinAttackTechniques, mem)
+	}
+	return append([]AttackTechniqueEntry(nil), BuiltinAttackTechniques...)
+}
+
+// ActiveAttackTechniques aliases ActiveAttackMappings.
+func ActiveAttackTechniques(checkpointDirs ...string) []AttackTechniqueEntry {
+	return ActiveAttackMappings(checkpointDirs...)
 }
 
 type upstreamKEVCatalog struct {
@@ -327,15 +467,15 @@ func ParseUpstreamCISAKEV(data []byte) ([]KEVAdvisoryEntry, string, error) {
 	return entries, strings.TrimSpace(cat.CatalogVersion), nil
 }
 
-// ParseUpstreamMITREAttackMappings validates a MITRE CTID STIX 2.1 bundle or structured mapping object
-// and returns the number of valid objects parsed.
-func ParseUpstreamMITREAttackMappings(data []byte) (int, error) {
+// ParseUpstreamMITREAttackEntries validates a MITRE CTID STIX 2.1 bundle or structured mapping object
+// and returns extracted AttackTechniqueEntry records alongside the total count of valid upstream objects.
+func ParseUpstreamMITREAttackEntries(data []byte) ([]AttackTechniqueEntry, int, error) {
 	if !json.Valid(data) {
-		return 0, errors.New("invalid JSON in upstream MITRE ATT&CK response")
+		return nil, 0, errors.New("invalid JSON in upstream MITRE ATT&CK response")
 	}
 	var top map[string]json.RawMessage
 	if err := json.Unmarshal(data, &top); err != nil {
-		return 0, fmt.Errorf("upstream MITRE ATT&CK payload must be a top-level JSON object: %w", err)
+		return nil, 0, fmt.Errorf("upstream MITRE ATT&CK payload must be a top-level JSON object: %w", err)
 	}
 
 	if rawType, ok := top["type"]; ok {
@@ -343,24 +483,88 @@ func ParseUpstreamMITREAttackMappings(data []byte) (int, error) {
 		if err := json.Unmarshal(rawType, &bundleType); err == nil && bundleType == "bundle" {
 			rawObjs, hasObjs := top["objects"]
 			if !hasObjs {
-				return 0, errors.New("STIX bundle missing 'objects' array")
+				return nil, 0, errors.New("STIX bundle missing 'objects' array")
 			}
 			var objs []map[string]any
 			if err := json.Unmarshal(rawObjs, &objs); err != nil {
-				return 0, fmt.Errorf("invalid STIX bundle 'objects': %w", err)
+				return nil, 0, fmt.Errorf("invalid STIX bundle 'objects': %w", err)
 			}
 			validCount := 0
+			coaControls := make(map[string]string)
+			mitigatesMap := make(map[string][]string)
+
 			for _, o := range objs {
 				t, _ := o["type"].(string)
 				id, _ := o["id"].(string)
 				if strings.TrimSpace(t) != "" || strings.TrimSpace(id) != "" {
 					validCount++
 				}
+				switch t {
+				case "course-of-action":
+					ctrlID := extractSTIXExternalID(o, "")
+					if ctrlID == "" {
+						if name, _ := o["name"].(string); strings.Contains(name, "-") {
+							ctrlID = strings.Fields(name)[0]
+						}
+					}
+					if ctrlID != "" && id != "" {
+						coaControls[id] = strings.ToLower(strings.TrimSpace(ctrlID))
+					}
+				case "relationship":
+					relType, _ := o["relationship_type"].(string)
+					srcRef, _ := o["source_ref"].(string)
+					tgtRef, _ := o["target_ref"].(string)
+					if relType == "mitigates" && srcRef != "" && tgtRef != "" {
+						mitigatesMap[tgtRef] = append(mitigatesMap[tgtRef], srcRef)
+					}
+				}
 			}
 			if validCount == 0 {
-				return 0, errors.New("STIX bundle contains 0 valid objects")
+				return nil, 0, errors.New("STIX bundle contains 0 valid objects")
 			}
-			return validCount, nil
+
+			var parsed []AttackTechniqueEntry
+			for _, o := range objs {
+				t, _ := o["type"].(string)
+				if t != "attack-pattern" {
+					continue
+				}
+				stixID, _ := o["id"].(string)
+				techID := extractSTIXExternalID(o, "T")
+				if techID == "" {
+					if xid, _ := o["x_mitre_id"].(string); strings.HasPrefix(strings.ToUpper(strings.TrimSpace(xid)), "T") {
+						techID = strings.ToUpper(strings.TrimSpace(xid))
+					}
+				}
+				if techID == "" {
+					continue
+				}
+				name, _ := o["name"].(string)
+				if strings.TrimSpace(name) == "" {
+					name = "MITRE ATT&CK " + techID
+				}
+				desc, _ := o["description"].(string)
+				tactic := extractSTIXTactic(o)
+				var mitCtrls []string
+				for _, coaID := range mitigatesMap[stixID] {
+					if cid := coaControls[coaID]; cid != "" {
+						mitCtrls = append(mitCtrls, cid)
+					}
+				}
+				if len(mitCtrls) == 0 {
+					mitCtrls = []string{"si-2", "cm-6", "sc-7"}
+				}
+				dom := ontology.ClassifyThematicDomain(mitCtrls[0], "", name, desc)
+				parsed = append(parsed, AttackTechniqueEntry{
+					TechniqueID:        techID,
+					Name:               strings.TrimSpace(name),
+					Tactic:             tactic,
+					ThematicDomain:     dom,
+					MitigatingControls: mitCtrls,
+					Description:        strings.TrimSpace(desc),
+				})
+			}
+			return parsed, validCount, nil
 		}
 	}
 
@@ -368,16 +572,82 @@ func ParseUpstreamMITREAttackMappings(data []byte) (int, error) {
 		if rawArr, ok := top[key]; ok {
 			var items []map[string]any
 			if err := json.Unmarshal(rawArr, &items); err != nil {
-				return 0, fmt.Errorf("invalid %q array in MITRE ATT&CK payload: %w", key, err)
+				return nil, 0, fmt.Errorf("invalid %q array in MITRE ATT&CK payload: %w", key, err)
 			}
 			if len(items) == 0 {
-				return 0, fmt.Errorf("upstream MITRE ATT&CK %q array is empty", key)
+				return nil, 0, fmt.Errorf("upstream MITRE ATT&CK %q array is empty", key)
 			}
-			return len(items), nil
+			var typed []AttackTechniqueEntry
+			_ = json.Unmarshal(rawArr, &typed)
+			var parsed []AttackTechniqueEntry
+			for _, entry := range typed {
+				tid := strings.ToUpper(strings.TrimSpace(entry.TechniqueID))
+				if !strings.HasPrefix(tid, "T") {
+					continue
+				}
+				entry.TechniqueID = tid
+				if entry.Name == "" {
+					entry.Name = "MITRE ATT&CK " + tid
+				}
+				if len(entry.MitigatingControls) == 0 {
+					entry.MitigatingControls = []string{"si-2", "cm-6"}
+				}
+				if entry.ThematicDomain == "" {
+					entry.ThematicDomain = ontology.ClassifyThematicDomain(entry.MitigatingControls[0], "", entry.Name, entry.Description)
+				}
+				parsed = append(parsed, entry)
+			}
+			return parsed, len(items), nil
 		}
 	}
 
-	return 0, errors.New("upstream MITRE ATT&CK JSON is neither a STIX bundle nor a mapping collection")
+	return nil, 0, errors.New("upstream MITRE ATT&CK JSON is neither a STIX bundle nor a mapping collection")
+}
+
+func extractSTIXExternalID(obj map[string]any, requiredPrefix string) string {
+	refs, ok := obj["external_references"].([]any)
+	if !ok {
+		return ""
+	}
+	for _, r := range refs {
+		rm, ok := r.(map[string]any)
+		if !ok {
+			continue
+		}
+		extID, _ := rm["external_id"].(string)
+		extID = strings.ToUpper(strings.TrimSpace(extID))
+		if extID == "" {
+			continue
+		}
+		if requiredPrefix == "" || strings.HasPrefix(extID, requiredPrefix) {
+			return extID
+		}
+	}
+	return ""
+}
+
+func extractSTIXTactic(obj map[string]any) string {
+	phases, ok := obj["kill_chain_phases"].([]any)
+	if !ok {
+		return "Enterprise"
+	}
+	for _, p := range phases {
+		pm, ok := p.(map[string]any)
+		if !ok {
+			continue
+		}
+		if pn, _ := pm["phase_name"].(string); strings.TrimSpace(pn) != "" {
+			return strings.TrimSpace(pn)
+		}
+	}
+	return "Enterprise"
+}
+
+// ParseUpstreamMITREAttackMappings validates a MITRE CTID STIX 2.1 bundle or structured mapping object
+// and returns the number of valid objects parsed.
+func ParseUpstreamMITREAttackMappings(data []byte) (int, error) {
+	_, cnt, err := ParseUpstreamMITREAttackEntries(data)
+	return cnt, err
 }
 
 func parseUpstreamCrosswalkJSON(data []byte) (int, error) {
@@ -553,6 +823,8 @@ func SyncFeeds(ctx context.Context, opts SyncOptions) (*FeedSyncReceipt, error) 
 	}
 
 	var entries []FeedDigestEntry
+	var syncedKEV []KEVAdvisoryEntry
+	var syncedAttack []AttackTechniqueEntry
 	totalNodes := 0
 	totalEdges := 0
 	fallbackCount := 0
@@ -565,6 +837,7 @@ func SyncFeeds(ctx context.Context, opts SyncOptions) (*FeedSyncReceipt, error) 
 		attempts := 0
 		var latencyMs int64
 		liveRecords := 0
+		effectiveRecords := f.RecordCount
 		degradedReason := ""
 
 		targetURL := f.UpstreamURL
@@ -639,6 +912,24 @@ func SyncFeeds(ctx context.Context, opts SyncOptions) (*FeedSyncReceipt, error) 
 						digest = hex.EncodeToString(sum[:])
 						feedMode = "live-http"
 						liveRecords = parsedCount
+						switch f.ID {
+						case FeedCISAKEV:
+							if kevParsed, _, kErr := ParseUpstreamCISAKEV(fetchedBody); kErr == nil && len(kevParsed) > 0 {
+								syncedKEV = kevParsed
+								syncedCacheMu.Lock()
+								latestSyncedAdvisories = append([]ThreatAdvisory(nil), kevParsed...)
+								syncedCacheMu.Unlock()
+								effectiveRecords = len(mergeKEVAdvisories(BuiltinKEVAdvisories, kevParsed))
+							}
+						case FeedMITREAttack:
+							if attParsed, _, aErr := ParseUpstreamMITREAttackEntries(fetchedBody); aErr == nil && len(attParsed) > 0 {
+								syncedAttack = attParsed
+								syncedCacheMu.Lock()
+								latestSyncedAttackMappings = append([]AttackMapping(nil), attParsed...)
+								syncedCacheMu.Unlock()
+								effectiveRecords = len(mergeAttackTechniques(BuiltinAttackTechniques, attParsed))
+							}
+						}
 					} else if ctx.Err() != nil {
 						cb.CancelProbe()
 						circuitState = cb.Snapshot().State
@@ -658,14 +949,14 @@ func SyncFeeds(ctx context.Context, opts SyncOptions) (*FeedSyncReceipt, error) 
 			}
 		}
 
-		nodesProj, edgesProj := estimateFeedGraphContribution(f.ID)
+		nodesProj, edgesProj := estimateFeedGraphContributionCount(f.ID, effectiveRecords)
 		totalNodes += nodesProj
 		totalEdges += edgesProj
 
 		entries = append(entries, FeedDigestEntry{
 			FeedID:            f.ID,
 			Mode:              feedMode,
-			RecordCount:       f.RecordCount,
+			RecordCount:       effectiveRecords,
 			NodesProjected:    nodesProj,
 			EdgesProjected:    edgesProj,
 			SHA256:            digest,
@@ -731,7 +1022,7 @@ func SyncFeeds(ctx context.Context, opts SyncOptions) (*FeedSyncReceipt, error) 
 	}
 
 	if strings.TrimSpace(opts.CheckpointDir) != "" {
-		if err := SaveSyncCheckpoint(opts.CheckpointDir, rcpt); err != nil {
+		if err := saveSyncCheckpointWithPayloads(opts.CheckpointDir, rcpt, syncedKEV, syncedAttack); err != nil {
 			return nil, fmt.Errorf("persist feed sync checkpoint: %w", err)
 		}
 	}
@@ -766,6 +1057,10 @@ func computeLedgerEntryHash(e FlightRecorderEntry) string {
 // SaveSyncCheckpoint atomically persists latest_sync_receipt.json + .sha256 and appends a
 // hash-chained FlightRecorderEntry to sync_flight_recorder.jsonl inside dir.
 func SaveSyncCheckpoint(dir string, receipt *FeedSyncReceipt) error {
+	return saveSyncCheckpointWithPayloads(dir, receipt, nil, nil)
+}
+
+func saveSyncCheckpointWithPayloads(dir string, receipt *FeedSyncReceipt, syncedKEV []KEVAdvisoryEntry, syncedAttack []AttackTechniqueEntry) error {
 	if strings.TrimSpace(dir) == "" {
 		return errors.New("checkpoint directory is required")
 	}
@@ -777,6 +1072,28 @@ func SaveSyncCheckpoint(dir string, receipt *FeedSyncReceipt) error {
 	return resilience.WithDirLock(cleanDir, true, func() error {
 		if err := os.MkdirAll(cleanDir, 0o750); err != nil {
 			return fmt.Errorf("create checkpoint dir %s: %w", cleanDir, err)
+		}
+
+		if len(syncedKEV) > 0 {
+			kevBytes, err := json.MarshalIndent(syncedKEV, "", "  ")
+			if err != nil {
+				return fmt.Errorf("marshal synced_cisa_kev.json: %w", err)
+			}
+			kevBytes = append(kevBytes, '\n')
+			if _, err := resilience.WriteFileAtomicWithSHA256(filepath.Join(cleanDir, SyncedCISAKEVFile), kevBytes); err != nil {
+				return fmt.Errorf("write %s: %w", SyncedCISAKEVFile, err)
+			}
+		}
+
+		if len(syncedAttack) > 0 {
+			attBytes, err := json.MarshalIndent(syncedAttack, "", "  ")
+			if err != nil {
+				return fmt.Errorf("marshal synced_mitre_attack.json: %w", err)
+			}
+			attBytes = append(attBytes, '\n')
+			if _, err := resilience.WriteFileAtomicWithSHA256(filepath.Join(cleanDir, SyncedMITREAttackFile), attBytes); err != nil {
+				return fmt.Errorf("write %s: %w", SyncedMITREAttackFile, err)
+			}
 		}
 
 		ledgerPath := filepath.Join(cleanDir, "sync_flight_recorder.jsonl")
@@ -893,7 +1210,7 @@ func readAndVerifyLedger(ledgerPath string) ([]FlightRecorderEntry, error) {
 	if err != nil {
 		return nil, fmt.Errorf("%w: open ledger %s: %v", ErrIntegrityTampered, ledgerPath, err)
 	}
-	defer f.Close()
+	defer func() { _ = f.Close() }()
 
 	info, err := f.Stat()
 	if err != nil {
@@ -986,14 +1303,23 @@ func ontologySpecDigest() string {
 	return ontology.CanonicalSpec().SHA256
 }
 
-func estimateFeedGraphContribution(feedID string) (nodes int, edges int) {
+func estimateFeedGraphContributionCount(feedID string, recordCount int) (nodes int, edges int) {
 	switch feedID {
 	case FeedCrosswalk:
-		return len(BuiltinCrosswalks) * 6, len(BuiltinCrosswalks) * 14
+		if recordCount <= 0 {
+			recordCount = len(BuiltinCrosswalks)
+		}
+		return recordCount * 6, recordCount * 14
 	case FeedCISAKEV:
-		return len(BuiltinKEVAdvisories)*2 + 9, len(BuiltinKEVAdvisories) * 8
+		if recordCount <= 0 {
+			recordCount = len(BuiltinKEVAdvisories)
+		}
+		return recordCount*2 + 9, recordCount * 8
 	case FeedMITREAttack:
-		return len(BuiltinAttackTechniques), len(BuiltinAttackTechniques) * 6
+		if recordCount <= 0 {
+			recordCount = len(BuiltinAttackTechniques)
+		}
+		return recordCount, recordCount * 6
 	case FeedSovereignLifecycle:
 		return 6, len(BuiltinLifecycleEdges) * 2
 	default:

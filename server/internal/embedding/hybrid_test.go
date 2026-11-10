@@ -29,7 +29,7 @@ func TestHybridSearcher_Search(t *testing.T) {
 	if err != nil {
 		t.Fatalf("open sqlite vector store: %v", err)
 	}
-	defer store.Close()
+	defer func() { _ = store.Close() }()
 
 	gen := &mockGenerator{
 		vectorMap: map[string][]float32{

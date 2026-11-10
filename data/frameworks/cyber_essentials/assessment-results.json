@@ -4,7 +4,7 @@
       "href": "./assessment-plan.json"
     },
     "metadata": {
-      "last-modified": "2026-11-08T01:42:13Z",
+      "last-modified": "2026-11-08T00:30:48Z",
       "oscal-version": "1.2.3",
       "title": "Cyber Essentials: Requirements for IT infrastructure v3.1 Assessment Results Template",
       "version": "2"
@@ -67,7 +67,7 @@
         ],
         "observations": [
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:30:48Z",
             "description": "Verified control node128 (Firewalls — node128) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -79,7 +79,7 @@
             "uuid": "2993bce5-67ec-5952-9ab3-59c05510dbb7"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:30:48Z",
             "description": "Verified control node276 (Backing up your data — node276) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -91,7 +91,7 @@
             "uuid": "5f66d320-62e6-5073-aa12-214b81996d11"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:30:48Z",
             "description": "Verified control node85 (Cloud services — node85) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -107,11 +107,312 @@
           "control-selections": [
             {
               "description": "All controls evaluated for Cyber Essentials: Requirements for IT infrastructure v3.1",
-              "include-all": {}
+              "include-controls": [
+                {
+                  "control-id": "node128"
+                },
+                {
+                  "control-id": "node136"
+                },
+                {
+                  "control-id": "node138"
+                },
+                {
+                  "control-id": "node139"
+                },
+                {
+                  "control-id": "node140"
+                },
+                {
+                  "control-id": "node141"
+                },
+                {
+                  "control-id": "node142"
+                },
+                {
+                  "control-id": "node143"
+                },
+                {
+                  "control-id": "node144"
+                },
+                {
+                  "control-id": "node145"
+                },
+                {
+                  "control-id": "node146"
+                },
+                {
+                  "control-id": "node162"
+                },
+                {
+                  "control-id": "node163"
+                },
+                {
+                  "control-id": "node164"
+                },
+                {
+                  "control-id": "node165"
+                },
+                {
+                  "control-id": "node166"
+                },
+                {
+                  "control-id": "node167"
+                },
+                {
+                  "control-id": "node168"
+                },
+                {
+                  "control-id": "node170"
+                },
+                {
+                  "control-id": "node171"
+                },
+                {
+                  "control-id": "node172"
+                },
+                {
+                  "control-id": "node173"
+                },
+                {
+                  "control-id": "node174"
+                },
+                {
+                  "control-id": "node175"
+                },
+                {
+                  "control-id": "node185"
+                },
+                {
+                  "control-id": "node186"
+                },
+                {
+                  "control-id": "node187"
+                },
+                {
+                  "control-id": "node188"
+                },
+                {
+                  "control-id": "node189"
+                },
+                {
+                  "control-id": "node190"
+                },
+                {
+                  "control-id": "node191"
+                },
+                {
+                  "control-id": "node192"
+                },
+                {
+                  "control-id": "node204"
+                },
+                {
+                  "control-id": "node205"
+                },
+                {
+                  "control-id": "node206"
+                },
+                {
+                  "control-id": "node207"
+                },
+                {
+                  "control-id": "node208"
+                },
+                {
+                  "control-id": "node209"
+                },
+                {
+                  "control-id": "node210"
+                },
+                {
+                  "control-id": "node211"
+                },
+                {
+                  "control-id": "node214"
+                },
+                {
+                  "control-id": "node215"
+                },
+                {
+                  "control-id": "node216"
+                },
+                {
+                  "control-id": "node217"
+                },
+                {
+                  "control-id": "node218"
+                },
+                {
+                  "control-id": "node219"
+                },
+                {
+                  "control-id": "node220"
+                },
+                {
+                  "control-id": "node221"
+                },
+                {
+                  "control-id": "node223"
+                },
+                {
+                  "control-id": "node224"
+                },
+                {
+                  "control-id": "node225"
+                },
+                {
+                  "control-id": "node226"
+                },
+                {
+                  "control-id": "node227"
+                },
+                {
+                  "control-id": "node228"
+                },
+                {
+                  "control-id": "node229"
+                },
+                {
+                  "control-id": "node230"
+                },
+                {
+                  "control-id": "node231"
+                },
+                {
+                  "control-id": "node232"
+                },
+                {
+                  "control-id": "node233"
+                },
+                {
+                  "control-id": "node234"
+                },
+                {
+                  "control-id": "node235"
+                },
+                {
+                  "control-id": "node236"
+                },
+                {
+                  "control-id": "node237"
+                },
+                {
+                  "control-id": "node238"
+                },
+                {
+                  "control-id": "node239"
+                },
+                {
+                  "control-id": "node241"
+                },
+                {
+                  "control-id": "node242"
+                },
+                {
+                  "control-id": "node243"
+                },
+                {
+                  "control-id": "node244"
+                },
+                {
+                  "control-id": "node245"
+                },
+                {
+                  "control-id": "node246"
+                },
+                {
+                  "control-id": "node247"
+                },
+                {
+                  "control-id": "node248"
+                },
+                {
+                  "control-id": "node249"
+                },
+                {
+                  "control-id": "node255"
+                },
+                {
+                  "control-id": "node256"
+                },
+                {
+                  "control-id": "node257"
+                },
+                {
+                  "control-id": "node258"
+                },
+                {
+                  "control-id": "node259"
+                },
+                {
+                  "control-id": "node262"
+                },
+                {
+                  "control-id": "node264"
+                },
+                {
+                  "control-id": "node265"
+                },
+                {
+                  "control-id": "node266"
+                },
+                {
+                  "control-id": "node267"
+                },
+                {
+                  "control-id": "node268"
+                },
+                {
+                  "control-id": "node269"
+                },
+                {
+                  "control-id": "node271"
+                },
+                {
+                  "control-id": "node272"
+                },
+                {
+                  "control-id": "node273"
+                },
+                {
+                  "control-id": "node276"
+                },
+                {
+                  "control-id": "node277"
+                },
+                {
+                  "control-id": "node278"
+                },
+                {
+                  "control-id": "node279"
+                },
+                {
+                  "control-id": "node280"
+                },
+                {
+                  "control-id": "node282"
+                },
+                {
+                  "control-id": "node283"
+                },
+                {
+                  "control-id": "node284"
+                },
+                {
+                  "control-id": "node285"
+                },
+                {
+                  "control-id": "node286"
+                },
+                {
+                  "control-id": "node85"
+                }
+              ]
             }
           ]
         },
-        "start": "2026-11-08T01:42:13Z",
+        "start": "2026-11-08T00:30:48Z",
         "title": "Cyber Essentials: Requirements for IT infrastructure v3.1 Assessment Results",
         "uuid": "f9be7542-7116-577e-b04f-7a2557132470"
       }

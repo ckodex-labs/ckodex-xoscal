@@ -4,7 +4,7 @@
       "href": "./system-security-plan.json"
     },
     "metadata": {
-      "last-modified": "2026-11-08T01:42:13Z",
+      "last-modified": "2026-11-08T00:31:00Z",
       "oscal-version": "1.2.3",
       "title": "BSI C5 Library Security Assessment Plan Template",
       "version": "1"
@@ -13,7 +13,371 @@
       "control-selections": [
         {
           "description": "All controls in BSI C5 Library",
-          "include-all": {}
+          "include-controls": [
+            {
+              "control-id": "am-01"
+            },
+            {
+              "control-id": "am-02"
+            },
+            {
+              "control-id": "am-03"
+            },
+            {
+              "control-id": "am-04"
+            },
+            {
+              "control-id": "am-05"
+            },
+            {
+              "control-id": "am-06"
+            },
+            {
+              "control-id": "bcm-01"
+            },
+            {
+              "control-id": "bcm-02"
+            },
+            {
+              "control-id": "bcm-03"
+            },
+            {
+              "control-id": "bcm-04"
+            },
+            {
+              "control-id": "com-01"
+            },
+            {
+              "control-id": "com-02"
+            },
+            {
+              "control-id": "com-03"
+            },
+            {
+              "control-id": "com-04"
+            },
+            {
+              "control-id": "cos-01"
+            },
+            {
+              "control-id": "cos-02"
+            },
+            {
+              "control-id": "cos-03"
+            },
+            {
+              "control-id": "cos-04"
+            },
+            {
+              "control-id": "cos-05"
+            },
+            {
+              "control-id": "cos-06"
+            },
+            {
+              "control-id": "cos-07"
+            },
+            {
+              "control-id": "cos-08"
+            },
+            {
+              "control-id": "cry-01"
+            },
+            {
+              "control-id": "cry-02"
+            },
+            {
+              "control-id": "cry-03"
+            },
+            {
+              "control-id": "cry-04"
+            },
+            {
+              "control-id": "dev-01"
+            },
+            {
+              "control-id": "dev-02"
+            },
+            {
+              "control-id": "dev-03"
+            },
+            {
+              "control-id": "dev-04"
+            },
+            {
+              "control-id": "dev-05"
+            },
+            {
+              "control-id": "dev-06"
+            },
+            {
+              "control-id": "dev-07"
+            },
+            {
+              "control-id": "dev-08"
+            },
+            {
+              "control-id": "dev-09"
+            },
+            {
+              "control-id": "dev-10"
+            },
+            {
+              "control-id": "hr-01"
+            },
+            {
+              "control-id": "hr-02"
+            },
+            {
+              "control-id": "hr-03"
+            },
+            {
+              "control-id": "hr-04"
+            },
+            {
+              "control-id": "hr-05"
+            },
+            {
+              "control-id": "hr-06"
+            },
+            {
+              "control-id": "idm-01"
+            },
+            {
+              "control-id": "idm-02"
+            },
+            {
+              "control-id": "idm-03"
+            },
+            {
+              "control-id": "idm-04"
+            },
+            {
+              "control-id": "idm-05"
+            },
+            {
+              "control-id": "idm-06"
+            },
+            {
+              "control-id": "idm-07"
+            },
+            {
+              "control-id": "idm-08"
+            },
+            {
+              "control-id": "idm-09"
+            },
+            {
+              "control-id": "inq-01"
+            },
+            {
+              "control-id": "inq-02"
+            },
+            {
+              "control-id": "inq-03"
+            },
+            {
+              "control-id": "inq-04"
+            },
+            {
+              "control-id": "ois-01"
+            },
+            {
+              "control-id": "ois-02"
+            },
+            {
+              "control-id": "ois-03"
+            },
+            {
+              "control-id": "ois-04"
+            },
+            {
+              "control-id": "ois-05"
+            },
+            {
+              "control-id": "ois-06"
+            },
+            {
+              "control-id": "ois-07"
+            },
+            {
+              "control-id": "ops-01"
+            },
+            {
+              "control-id": "ops-02"
+            },
+            {
+              "control-id": "ops-03"
+            },
+            {
+              "control-id": "ops-04"
+            },
+            {
+              "control-id": "ops-05"
+            },
+            {
+              "control-id": "ops-06"
+            },
+            {
+              "control-id": "ops-07"
+            },
+            {
+              "control-id": "ops-08"
+            },
+            {
+              "control-id": "ops-09"
+            },
+            {
+              "control-id": "ops-10"
+            },
+            {
+              "control-id": "ops-11"
+            },
+            {
+              "control-id": "ops-12"
+            },
+            {
+              "control-id": "ops-13"
+            },
+            {
+              "control-id": "ops-14"
+            },
+            {
+              "control-id": "ops-15"
+            },
+            {
+              "control-id": "ops-16"
+            },
+            {
+              "control-id": "ops-17"
+            },
+            {
+              "control-id": "ops-18"
+            },
+            {
+              "control-id": "ops-19"
+            },
+            {
+              "control-id": "ops-20"
+            },
+            {
+              "control-id": "ops-21"
+            },
+            {
+              "control-id": "ops-22"
+            },
+            {
+              "control-id": "ops-23"
+            },
+            {
+              "control-id": "ops-24"
+            },
+            {
+              "control-id": "pi-01"
+            },
+            {
+              "control-id": "pi-02"
+            },
+            {
+              "control-id": "pi-03"
+            },
+            {
+              "control-id": "ps-01"
+            },
+            {
+              "control-id": "ps-02"
+            },
+            {
+              "control-id": "ps-03"
+            },
+            {
+              "control-id": "ps-04"
+            },
+            {
+              "control-id": "ps-05"
+            },
+            {
+              "control-id": "ps-06"
+            },
+            {
+              "control-id": "ps-07"
+            },
+            {
+              "control-id": "pss-01"
+            },
+            {
+              "control-id": "pss-02"
+            },
+            {
+              "control-id": "pss-03"
+            },
+            {
+              "control-id": "pss-04"
+            },
+            {
+              "control-id": "pss-05"
+            },
+            {
+              "control-id": "pss-06"
+            },
+            {
+              "control-id": "pss-07"
+            },
+            {
+              "control-id": "pss-08"
+            },
+            {
+              "control-id": "pss-09"
+            },
+            {
+              "control-id": "pss-10"
+            },
+            {
+              "control-id": "pss-11"
+            },
+            {
+              "control-id": "pss-12"
+            },
+            {
+              "control-id": "sim-01"
+            },
+            {
+              "control-id": "sim-02"
+            },
+            {
+              "control-id": "sim-03"
+            },
+            {
+              "control-id": "sim-04"
+            },
+            {
+              "control-id": "sim-05"
+            },
+            {
+              "control-id": "sp-01"
+            },
+            {
+              "control-id": "sp-02"
+            },
+            {
+              "control-id": "sp-03"
+            },
+            {
+              "control-id": "sso-01"
+            },
+            {
+              "control-id": "sso-02"
+            },
+            {
+              "control-id": "sso-03"
+            },
+            {
+              "control-id": "sso-04"
+            },
+            {
+              "control-id": "sso-05"
+            }
+          ]
         }
       ]
     },

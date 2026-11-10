@@ -83,7 +83,7 @@ func (s *SQLiteStore) ListProjectionEvents(ctx context.Context, claimID, edgeID 
 	if err != nil {
 		return nil, fmt.Errorf("list projection events: %w", err)
 	}
-	defer rows.Close()
+	defer func() { _ = rows.Close() }()
 	var events []*ProjectionEvent
 	for rows.Next() {
 		event, err := scanProjectionEvent(rows)
@@ -107,7 +107,7 @@ func (s *SQLiteStore) VerifyProjectionChain(ctx context.Context) error {
 	if err != nil {
 		return fmt.Errorf("read projection chain: %w", err)
 	}
-	defer rows.Close()
+	defer func() { _ = rows.Close() }()
 	previousHash := ""
 	var expectedSequence int64 = 1
 	for rows.Next() {

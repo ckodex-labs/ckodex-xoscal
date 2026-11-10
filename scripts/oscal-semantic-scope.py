@@ -34,6 +34,37 @@ MODEL_DIGESTS = {
 }
 FEATURES = ('hashes', 'locations', 'location-uuids', 'resource-fragment', 'links',
             'status-property', 'with-child-controls')
+COMPATIBLE_LINK_RELS = {'related', 'reference'}
+XOSCAL_PROPS_NS = 'https://ckodex.io/ns/xoscal/props'
+COMPATIBLE_NIST_STATUS = {'operational', 'withdrawn'}
+COMPATIBLE_SOVEREIGN_STATUS = {'active', 'withdrawn'}
+
+
+def _is_compatible_links(value):
+    if not isinstance(value, list) or not value:
+        return False
+    for item in value:
+        if not isinstance(item, dict):
+            return False
+        href = item.get('href')
+        rel = item.get('rel')
+        if not isinstance(href, str) or not href or rel not in COMPATIBLE_LINK_RELS:
+            return False
+        if 'resource-fragment' in item:
+            return False
+    return True
+
+
+def _is_compatible_status_prop(prop):
+    if not isinstance(prop, dict) or prop.get('name') != 'status':
+        return True
+    ns = prop.get('ns', '')
+    val = prop.get('value')
+    if ns == '' and val in COMPATIBLE_NIST_STATUS:
+        return True
+    if ns == XOSCAL_PROPS_NS and val in COMPATIBLE_SOVEREIGN_STATUS:
+        return True
+    return False
 
 
 def model_sources():
@@ -54,10 +85,16 @@ def affected_features(document):
     def visit(value):
         if isinstance(value, dict):
             for key, child in value.items():
-                if key in counts:
+                if key == 'links':
+                    if not _is_compatible_links(child):
+                        counts['links'] += 1
+                elif key in counts:
                     counts[key] += 1
                 if key == 'props' and isinstance(child, list):
-                    counts['status-property'] += sum(isinstance(prop, dict) and prop.get('name') == 'status' for prop in child)
+                    counts['status-property'] += sum(
+                        isinstance(prop, dict) and prop.get('name') == 'status' and not _is_compatible_status_prop(prop)
+                        for prop in child
+                    )
                 visit(child)
         elif isinstance(value, list):
             for child in value:
@@ -92,8 +129,8 @@ def evaluate(root):
         subjects.append({'path': name, 'kind': kind, 'sha256': hashlib.sha256(data).hexdigest(),
                          'size': len(data), 'excluded_feature_counts': counts})
         totals[kind] += 1
-    if totals != {'catalog': 35, 'profile': 1}:
-        findings.append({'reason': 'scope requires exactly 35 catalogs and one profile', 'actual_counts': totals})
+    if totals != {'catalog': 36, 'profile': 2}:
+        findings.append({'reason': 'scope requires exactly 36 catalogs and two profiles', 'actual_counts': totals})
     return {'schema_version': 1, 'scope': SCOPE, 'status': 'failed' if findings else 'passed',
             'producer': dict(PRODUCER), 'model_sources': model_sources(),
             'subject_counts': totals, 'subjects': subjects, 'findings': findings,

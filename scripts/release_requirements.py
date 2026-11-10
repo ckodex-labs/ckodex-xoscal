@@ -117,9 +117,10 @@ def replay_gate(root, evidence_path, kind, gate, exceptions, subject=None):
     return computed
 
 
-def replay_constraints(root, records, framework_ids, profile_path):
+def replay_constraints(root, records, framework_ids, profile_paths):
     expected = {ref + '/catalog.json': 'catalog' for ref in framework_ids}
-    expected[profile_path.removeprefix('frameworks/')] = 'profile'
+    for profile_path in profile_paths:
+        expected[profile_path.removeprefix('frameworks/')] = 'profile'
     directory = root / 'evidence/ci/constraints'
     require((root / 'evidence/ci/constraints.ok').read_text() == 'oscal-constraints-ok\n', 'invalid OSCAL constraints admission marker')
     require((directory / 'result.status').read_text() == '0\n', 'OSCAL constraints aggregate failed')
@@ -162,7 +163,9 @@ def required_payload(root, manifest, policy_path=None, exceptions_path=None):
     require(policy.get('policy_version') == 1, 'unsupported required-output policy')
     require(policy.get('sdk_languages') == list(LANGUAGES), 'incomplete SDK policy')
     ids = policy.get('framework_ids')
-    require(isinstance(ids, list) and len(ids) == len(set(ids)) == 35 and all(isinstance(i, str) and re.fullmatch(r'[A-Za-z0-9_.-]+', i) for i in ids), 'invalid exact framework policy')
+    require(isinstance(ids, list) and len(ids) == len(set(ids)) == 36 and all(isinstance(i, str) and re.fullmatch(r'[A-Za-z0-9_.-]+', i) for i in ids), 'invalid exact framework policy')
+    profile_paths = set(policy.get('profile_paths') or ([policy['profile_path']] if policy.get('profile_path') else []))
+    require(len(profile_paths) == 2 and all(isinstance(p, str) and p.startswith('frameworks/') and p.endswith('/profile.json') for p in profile_paths), 'invalid exact profile policy')
     require(policy.get('framework_manifest_sha256') == digest(staged_frameworks), 'framework manifest changed without updating release policy')
     require({(p['os'], p['arch']) for p in policy.get('cli_platforms', [])} == PLATFORMS, 'incomplete platform policy')
     entries = manifest.get('artifacts')
@@ -187,8 +190,8 @@ def required_payload(root, manifest, policy_path=None, exceptions_path=None):
     paths = set(records)
     mandatory = {'scripts/install.sh', 'openapi.json', 'sbom-assessment-results.json', 'sdk/sdk-contract-check.json', 'sdk/sdk-version.txt', 'sdk/smoke/go-modules.txt', 'release/xoscal-server',
                  'release/image.tar', 'release/image-index.json', 'release/image-digest.txt', 'release/image-platforms.json',
-                 'release/image-amd64.tar', 'release/image-arm64.tar', policy['profile_path'],
-                 'evidence/policy/release-policy.json', 'evidence/policy/analysis-exceptions.json', 'evidence/policy/framework-manifest.yaml'}
+                 'release/image-amd64.tar', 'release/image-arm64.tar',
+                 'evidence/policy/release-policy.json', 'evidence/policy/analysis-exceptions.json', 'evidence/policy/framework-manifest.yaml'} | profile_paths
     mandatory |= set(policy['frontend_assets'])
     mandatory |= {'evidence/frontend/' + f for f in policy['frontend_files']}
     mandatory |= {'evidence/frontend-sbom/' + f for f in policy['frontend_sbom_files']}
@@ -199,7 +202,7 @@ def required_payload(root, manifest, policy_path=None, exceptions_path=None):
     mandatory |= {'evidence/binary-sbom/' + f for f in policy['sbom_files']}
     catalogs = {'frameworks/' + i + '/catalog.json' for i in ids}
     mandatory |= catalogs
-    mandatory |= {path + '.sha256' for path in catalogs | {policy['profile_path']}}
+    mandatory |= {path + '.sha256' for path in catalogs | profile_paths}
     for language in LANGUAGES:
         mandatory |= {'sdk/' + language + '.zip', 'sdk/' + language + '.zip.sha256', 'sdk/smoke/' + language + '.json'}
         mandatory |= {'evidence/sdk-' + language + '/' + f for f in policy['artifact_files']}
@@ -224,17 +227,18 @@ def required_payload(root, manifest, policy_path=None, exceptions_path=None):
             from presentation_browser_verify import verify as verify_browser
             verify_browser(root)
     require({p for p in paths if p.startswith('frameworks/') and p.endswith('/catalog.json')} == catalogs, 'catalog IDs differ from exact policy')
-    require({p for p in paths if p.startswith('frameworks/') and p.endswith('/profile.json')} == {policy['profile_path']}, 'profile set differs from exact policy')
+    require({p for p in paths if p.startswith('frameworks/') and p.endswith('/profile.json')} == profile_paths, 'profile set differs from exact policy')
     for path in mandatory:
         if path.endswith('.sha256') and not path.startswith('evidence/'):
             subject = path[:-len('.sha256')]
             require((root / path).read_text().strip() == 'sha256:' + digest(root / subject), 'digest sidecar differs from actual bytes: ' + path)
-    for path in catalogs | {policy['profile_path']}:
+    for path in catalogs | profile_paths:
         document = read_json(root / path)
         kind = 'profile' if path.endswith('/profile.json') else 'catalog'
         require(isinstance(document.get(kind), dict) and document[kind], 'missing OSCAL root: ' + path)
     require((root / 'evidence/ci/tidy.ok').read_text() == 'module-tidy-ok\n', 'invalid root module tidy admission marker')
-    replay_constraints(root, records, ids, policy['profile_path'])
+    require((root / 'evidence/ci/parity.ok').read_text() == 'oscal-parity-ok\n', 'invalid OSCAL 7-layer parity admission marker')
+    replay_constraints(root, records, ids, profile_paths)
     api = read_json(root / 'openapi.json')
     require(isinstance(api.get('paths'), dict) and api['paths'], 'empty OpenAPI operations')
     archives = [item for item in entries if item['path'].startswith('release/') and item['path'].endswith('.tar.gz')]

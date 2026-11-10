@@ -90,7 +90,7 @@ func ComputeFrameworkBaseline(f Framework) (FrameworkBaseline, error) {
 	}
 	catSum := sha256.Sum256(catBytes)
 
-	ctrls, err := LoadControlsFromBytes(catBytes, f.ID())
+	ctrls, err := loadCachedControlsFromBytes(catBytes, catSum, f.ID())
 	if err != nil {
 		return FrameworkBaseline{}, err
 	}

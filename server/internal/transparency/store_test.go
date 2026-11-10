@@ -12,7 +12,7 @@ func TestStore_ClaimLifecycle(t *testing.T) {
 	if err != nil {
 		t.Fatalf("new store: %v", err)
 	}
-	defer store.Close()
+	defer func() { _ = store.Close() }()
 
 	claim := &Claim{
 		ID:             "claim_01HXTEST",
@@ -68,7 +68,7 @@ func TestStore_EvidenceLifecycle(t *testing.T) {
 	if err != nil {
 		t.Fatalf("new store: %v", err)
 	}
-	defer store.Close()
+	defer func() { _ = store.Close() }()
 
 	ev := &Evidence{
 		ID:          "evidence_01HXTEST",
@@ -107,7 +107,7 @@ func TestStore_ListClaimsFiltersAndPaginates(t *testing.T) {
 	if err != nil {
 		t.Fatalf("new store: %v", err)
 	}
-	defer store.Close()
+	defer func() { _ = store.Close() }()
 
 	base := time.Now().UTC().Add(-3 * time.Minute)
 	claims := []*Claim{
@@ -143,7 +143,7 @@ func TestStore_RecordVerificationIsAtomicIdempotentAndChained(t *testing.T) {
 	if err != nil {
 		t.Fatalf("new store: %v", err)
 	}
-	defer store.Close()
+	defer func() { _ = store.Close() }()
 
 	claim := &Claim{
 		ID:             "claim_audit_1",

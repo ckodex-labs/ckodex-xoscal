@@ -4,7 +4,7 @@
       "href": "./assessment-plan.json"
     },
     "metadata": {
-      "last-modified": "2026-11-08T01:42:12Z",
+      "last-modified": "2026-11-08T00:30:57Z",
       "oscal-version": "1.2.3",
       "title": "IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - NET: Netze und Kommunikation Assessment Results Template",
       "version": "1"
@@ -203,7 +203,7 @@
         ],
         "observations": [
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:57Z",
             "description": "Verified control net.1.1.a1.1 (Sicherheitsrichtlinie für das Netz — NET.1.1.A1.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -215,7 +215,7 @@
             "uuid": "3a9f9ec6-4454-5099-b2b8-336cff3f7b34"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:57Z",
             "description": "Verified control net.1.2.a1.1 (Planung des Netzmanagements — NET.1.2.A1.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -227,7 +227,7 @@
             "uuid": "b7c7d7b2-4e34-56f0-94d9-091d21468190"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:57Z",
             "description": "Verified control net.2.1.a1.1 (Festlegung einer Strategie für den Einsatz von WLANs — NET.2.1.A1.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -239,7 +239,7 @@
             "uuid": "65c32c7a-e20b-5bc2-8692-c108a77a3851"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:57Z",
             "description": "Verified control net.2.2.a1.1 (Erstellung einer Nutzungsrichtlinie für WLAN — NET.2.2.A1.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -251,7 +251,7 @@
             "uuid": "560dfea1-7880-5cb8-bcef-57311fc72e54"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:57Z",
             "description": "Verified control net.3.1.a1.1 (Sichere Grundkonfiguration eines Routers oder Switches — NET.3.1.A1.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -263,7 +263,7 @@
             "uuid": "34b1c300-bf49-5329-8edb-00511b30d16b"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:57Z",
             "description": "Verified control net.3.2.a1.1 (Erstellung einer Sicherheitsrichtlinie — NET.3.2.A1.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -275,7 +275,7 @@
             "uuid": "c057ea3c-4992-51ae-94a7-faa362577fd1"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:57Z",
             "description": "Verified control net.3.3.a1.1 (Planung des VPN-Einsatzes — NET.3.3.A1.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -287,7 +287,7 @@
             "uuid": "7be83709-70ea-5589-a180-056722bde94e"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:57Z",
             "description": "Verified control net.3.4.a1.1 (Begründete Entscheidung für den Einsatz von NAC — NET.3.4.A1.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -299,7 +299,7 @@
             "uuid": "7f902071-a132-5a58-bb04-568e7aeb5870"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:57Z",
             "description": "Verified control net.4.1.a1.1 (Anforderungsanalyse und Planung für TK-Anlagen — NET.4.1.A1.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -311,7 +311,7 @@
             "uuid": "df7e2984-aefa-5f89-afb6-b80b188cfa4f"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:57Z",
             "description": "Verified control net.4.2.a1.1 (Planung des VoIP-Einsatzes — NET.4.2.A1.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -323,7 +323,7 @@
             "uuid": "ed9bc153-90f2-5138-b7aa-4d814e1d3527"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:57Z",
             "description": "Verified control net.4.3.a1.1 (Geeignete Aufstellung eines Faxgerätes — NET.4.3.A1.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -339,11 +339,2688 @@
           "control-selections": [
             {
               "description": "All controls evaluated for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - NET: Netze und Kommunikation",
-              "include-all": {}
+              "include-controls": [
+                {
+                  "control-id": "net.1.1.a1.1"
+                },
+                {
+                  "control-id": "net.1.1.a1.10"
+                },
+                {
+                  "control-id": "net.1.1.a1.11"
+                },
+                {
+                  "control-id": "net.1.1.a1.12"
+                },
+                {
+                  "control-id": "net.1.1.a1.13"
+                },
+                {
+                  "control-id": "net.1.1.a1.2"
+                },
+                {
+                  "control-id": "net.1.1.a1.3"
+                },
+                {
+                  "control-id": "net.1.1.a1.4"
+                },
+                {
+                  "control-id": "net.1.1.a1.5"
+                },
+                {
+                  "control-id": "net.1.1.a1.6"
+                },
+                {
+                  "control-id": "net.1.1.a1.7"
+                },
+                {
+                  "control-id": "net.1.1.a1.8"
+                },
+                {
+                  "control-id": "net.1.1.a1.9"
+                },
+                {
+                  "control-id": "net.1.1.a10.1"
+                },
+                {
+                  "control-id": "net.1.1.a10.2"
+                },
+                {
+                  "control-id": "net.1.1.a10.3"
+                },
+                {
+                  "control-id": "net.1.1.a10.4"
+                },
+                {
+                  "control-id": "net.1.1.a11.1"
+                },
+                {
+                  "control-id": "net.1.1.a11.2"
+                },
+                {
+                  "control-id": "net.1.1.a11.3"
+                },
+                {
+                  "control-id": "net.1.1.a11.4"
+                },
+                {
+                  "control-id": "net.1.1.a11.5"
+                },
+                {
+                  "control-id": "net.1.1.a11.6"
+                },
+                {
+                  "control-id": "net.1.1.a11.7"
+                },
+                {
+                  "control-id": "net.1.1.a12.1"
+                },
+                {
+                  "control-id": "net.1.1.a12.2"
+                },
+                {
+                  "control-id": "net.1.1.a12.3"
+                },
+                {
+                  "control-id": "net.1.1.a13.1"
+                },
+                {
+                  "control-id": "net.1.1.a13.2"
+                },
+                {
+                  "control-id": "net.1.1.a13.3"
+                },
+                {
+                  "control-id": "net.1.1.a13.4"
+                },
+                {
+                  "control-id": "net.1.1.a13.5"
+                },
+                {
+                  "control-id": "net.1.1.a13.6"
+                },
+                {
+                  "control-id": "net.1.1.a13.7"
+                },
+                {
+                  "control-id": "net.1.1.a13.8"
+                },
+                {
+                  "control-id": "net.1.1.a13.9"
+                },
+                {
+                  "control-id": "net.1.1.a14.1"
+                },
+                {
+                  "control-id": "net.1.1.a14.2"
+                },
+                {
+                  "control-id": "net.1.1.a15.1"
+                },
+                {
+                  "control-id": "net.1.1.a15.2"
+                },
+                {
+                  "control-id": "net.1.1.a15.3"
+                },
+                {
+                  "control-id": "net.1.1.a15.4"
+                },
+                {
+                  "control-id": "net.1.1.a16.1"
+                },
+                {
+                  "control-id": "net.1.1.a16.2"
+                },
+                {
+                  "control-id": "net.1.1.a16.3"
+                },
+                {
+                  "control-id": "net.1.1.a16.4"
+                },
+                {
+                  "control-id": "net.1.1.a16.5"
+                },
+                {
+                  "control-id": "net.1.1.a16.6"
+                },
+                {
+                  "control-id": "net.1.1.a16.7"
+                },
+                {
+                  "control-id": "net.1.1.a16.8"
+                },
+                {
+                  "control-id": "net.1.1.a16.9"
+                },
+                {
+                  "control-id": "net.1.1.a17.1"
+                },
+                {
+                  "control-id": "net.1.1.a17.10"
+                },
+                {
+                  "control-id": "net.1.1.a17.2"
+                },
+                {
+                  "control-id": "net.1.1.a17.3"
+                },
+                {
+                  "control-id": "net.1.1.a17.4"
+                },
+                {
+                  "control-id": "net.1.1.a17.5"
+                },
+                {
+                  "control-id": "net.1.1.a17.6"
+                },
+                {
+                  "control-id": "net.1.1.a17.7"
+                },
+                {
+                  "control-id": "net.1.1.a17.8"
+                },
+                {
+                  "control-id": "net.1.1.a17.9"
+                },
+                {
+                  "control-id": "net.1.1.a18.1"
+                },
+                {
+                  "control-id": "net.1.1.a18.10"
+                },
+                {
+                  "control-id": "net.1.1.a18.11"
+                },
+                {
+                  "control-id": "net.1.1.a18.12"
+                },
+                {
+                  "control-id": "net.1.1.a18.13"
+                },
+                {
+                  "control-id": "net.1.1.a18.2"
+                },
+                {
+                  "control-id": "net.1.1.a18.3"
+                },
+                {
+                  "control-id": "net.1.1.a18.4"
+                },
+                {
+                  "control-id": "net.1.1.a18.5"
+                },
+                {
+                  "control-id": "net.1.1.a18.6"
+                },
+                {
+                  "control-id": "net.1.1.a18.7"
+                },
+                {
+                  "control-id": "net.1.1.a18.8"
+                },
+                {
+                  "control-id": "net.1.1.a18.9"
+                },
+                {
+                  "control-id": "net.1.1.a19.1"
+                },
+                {
+                  "control-id": "net.1.1.a19.2"
+                },
+                {
+                  "control-id": "net.1.1.a2.1"
+                },
+                {
+                  "control-id": "net.1.1.a2.2"
+                },
+                {
+                  "control-id": "net.1.1.a2.3"
+                },
+                {
+                  "control-id": "net.1.1.a2.4"
+                },
+                {
+                  "control-id": "net.1.1.a2.5"
+                },
+                {
+                  "control-id": "net.1.1.a20.1"
+                },
+                {
+                  "control-id": "net.1.1.a21.1"
+                },
+                {
+                  "control-id": "net.1.1.a21.10"
+                },
+                {
+                  "control-id": "net.1.1.a21.11"
+                },
+                {
+                  "control-id": "net.1.1.a21.12"
+                },
+                {
+                  "control-id": "net.1.1.a21.13"
+                },
+                {
+                  "control-id": "net.1.1.a21.14"
+                },
+                {
+                  "control-id": "net.1.1.a21.15"
+                },
+                {
+                  "control-id": "net.1.1.a21.16"
+                },
+                {
+                  "control-id": "net.1.1.a21.17"
+                },
+                {
+                  "control-id": "net.1.1.a21.18"
+                },
+                {
+                  "control-id": "net.1.1.a21.19"
+                },
+                {
+                  "control-id": "net.1.1.a21.2"
+                },
+                {
+                  "control-id": "net.1.1.a21.3"
+                },
+                {
+                  "control-id": "net.1.1.a21.4"
+                },
+                {
+                  "control-id": "net.1.1.a21.5"
+                },
+                {
+                  "control-id": "net.1.1.a21.6"
+                },
+                {
+                  "control-id": "net.1.1.a21.7"
+                },
+                {
+                  "control-id": "net.1.1.a21.8"
+                },
+                {
+                  "control-id": "net.1.1.a21.9"
+                },
+                {
+                  "control-id": "net.1.1.a22.1"
+                },
+                {
+                  "control-id": "net.1.1.a22.10"
+                },
+                {
+                  "control-id": "net.1.1.a22.11"
+                },
+                {
+                  "control-id": "net.1.1.a22.12"
+                },
+                {
+                  "control-id": "net.1.1.a22.13"
+                },
+                {
+                  "control-id": "net.1.1.a22.2"
+                },
+                {
+                  "control-id": "net.1.1.a22.3"
+                },
+                {
+                  "control-id": "net.1.1.a22.4"
+                },
+                {
+                  "control-id": "net.1.1.a22.5"
+                },
+                {
+                  "control-id": "net.1.1.a22.6"
+                },
+                {
+                  "control-id": "net.1.1.a22.7"
+                },
+                {
+                  "control-id": "net.1.1.a22.8"
+                },
+                {
+                  "control-id": "net.1.1.a22.9"
+                },
+                {
+                  "control-id": "net.1.1.a23.1"
+                },
+                {
+                  "control-id": "net.1.1.a23.2"
+                },
+                {
+                  "control-id": "net.1.1.a23.3"
+                },
+                {
+                  "control-id": "net.1.1.a23.4"
+                },
+                {
+                  "control-id": "net.1.1.a23.5"
+                },
+                {
+                  "control-id": "net.1.1.a23.6"
+                },
+                {
+                  "control-id": "net.1.1.a24.1"
+                },
+                {
+                  "control-id": "net.1.1.a24.2"
+                },
+                {
+                  "control-id": "net.1.1.a25.1"
+                },
+                {
+                  "control-id": "net.1.1.a26.1"
+                },
+                {
+                  "control-id": "net.1.1.a26.2"
+                },
+                {
+                  "control-id": "net.1.1.a27.1"
+                },
+                {
+                  "control-id": "net.1.1.a28.1"
+                },
+                {
+                  "control-id": "net.1.1.a28.2"
+                },
+                {
+                  "control-id": "net.1.1.a29.1"
+                },
+                {
+                  "control-id": "net.1.1.a29.2"
+                },
+                {
+                  "control-id": "net.1.1.a29.3"
+                },
+                {
+                  "control-id": "net.1.1.a29.4"
+                },
+                {
+                  "control-id": "net.1.1.a3.1"
+                },
+                {
+                  "control-id": "net.1.1.a3.2"
+                },
+                {
+                  "control-id": "net.1.1.a3.3"
+                },
+                {
+                  "control-id": "net.1.1.a30.1"
+                },
+                {
+                  "control-id": "net.1.1.a30.2"
+                },
+                {
+                  "control-id": "net.1.1.a30.3"
+                },
+                {
+                  "control-id": "net.1.1.a31.1"
+                },
+                {
+                  "control-id": "net.1.1.a32.1"
+                },
+                {
+                  "control-id": "net.1.1.a33.1"
+                },
+                {
+                  "control-id": "net.1.1.a33.2"
+                },
+                {
+                  "control-id": "net.1.1.a34.1"
+                },
+                {
+                  "control-id": "net.1.1.a34.2"
+                },
+                {
+                  "control-id": "net.1.1.a34.3"
+                },
+                {
+                  "control-id": "net.1.1.a35.1"
+                },
+                {
+                  "control-id": "net.1.1.a36.1"
+                },
+                {
+                  "control-id": "net.1.1.a4.1"
+                },
+                {
+                  "control-id": "net.1.1.a4.2"
+                },
+                {
+                  "control-id": "net.1.1.a4.3"
+                },
+                {
+                  "control-id": "net.1.1.a4.4"
+                },
+                {
+                  "control-id": "net.1.1.a4.5"
+                },
+                {
+                  "control-id": "net.1.1.a4.6"
+                },
+                {
+                  "control-id": "net.1.1.a4.7"
+                },
+                {
+                  "control-id": "net.1.1.a5.1"
+                },
+                {
+                  "control-id": "net.1.1.a5.2"
+                },
+                {
+                  "control-id": "net.1.1.a5.3"
+                },
+                {
+                  "control-id": "net.1.1.a5.4"
+                },
+                {
+                  "control-id": "net.1.1.a6.1"
+                },
+                {
+                  "control-id": "net.1.1.a7.1"
+                },
+                {
+                  "control-id": "net.1.1.a7.2"
+                },
+                {
+                  "control-id": "net.1.1.a8.1"
+                },
+                {
+                  "control-id": "net.1.1.a8.2"
+                },
+                {
+                  "control-id": "net.1.1.a9.1"
+                },
+                {
+                  "control-id": "net.1.1.a9.2"
+                },
+                {
+                  "control-id": "net.1.2.a1.1"
+                },
+                {
+                  "control-id": "net.1.2.a1.10"
+                },
+                {
+                  "control-id": "net.1.2.a1.11"
+                },
+                {
+                  "control-id": "net.1.2.a1.12"
+                },
+                {
+                  "control-id": "net.1.2.a1.2"
+                },
+                {
+                  "control-id": "net.1.2.a1.3"
+                },
+                {
+                  "control-id": "net.1.2.a1.4"
+                },
+                {
+                  "control-id": "net.1.2.a1.5"
+                },
+                {
+                  "control-id": "net.1.2.a1.6"
+                },
+                {
+                  "control-id": "net.1.2.a1.7"
+                },
+                {
+                  "control-id": "net.1.2.a1.8"
+                },
+                {
+                  "control-id": "net.1.2.a1.9"
+                },
+                {
+                  "control-id": "net.1.2.a10.1"
+                },
+                {
+                  "control-id": "net.1.2.a10.2"
+                },
+                {
+                  "control-id": "net.1.2.a10.3"
+                },
+                {
+                  "control-id": "net.1.2.a10.4"
+                },
+                {
+                  "control-id": "net.1.2.a11.1"
+                },
+                {
+                  "control-id": "net.1.2.a11.2"
+                },
+                {
+                  "control-id": "net.1.2.a11.3"
+                },
+                {
+                  "control-id": "net.1.2.a11.4"
+                },
+                {
+                  "control-id": "net.1.2.a11.5"
+                },
+                {
+                  "control-id": "net.1.2.a11.6"
+                },
+                {
+                  "control-id": "net.1.2.a11.7"
+                },
+                {
+                  "control-id": "net.1.2.a11.8"
+                },
+                {
+                  "control-id": "net.1.2.a11.9"
+                },
+                {
+                  "control-id": "net.1.2.a12.1"
+                },
+                {
+                  "control-id": "net.1.2.a12.2"
+                },
+                {
+                  "control-id": "net.1.2.a12.3"
+                },
+                {
+                  "control-id": "net.1.2.a12.4"
+                },
+                {
+                  "control-id": "net.1.2.a12.5"
+                },
+                {
+                  "control-id": "net.1.2.a12.6"
+                },
+                {
+                  "control-id": "net.1.2.a12.7"
+                },
+                {
+                  "control-id": "net.1.2.a13.1"
+                },
+                {
+                  "control-id": "net.1.2.a13.10"
+                },
+                {
+                  "control-id": "net.1.2.a13.11"
+                },
+                {
+                  "control-id": "net.1.2.a13.2"
+                },
+                {
+                  "control-id": "net.1.2.a13.3"
+                },
+                {
+                  "control-id": "net.1.2.a13.4"
+                },
+                {
+                  "control-id": "net.1.2.a13.5"
+                },
+                {
+                  "control-id": "net.1.2.a13.6"
+                },
+                {
+                  "control-id": "net.1.2.a13.7"
+                },
+                {
+                  "control-id": "net.1.2.a13.8"
+                },
+                {
+                  "control-id": "net.1.2.a13.9"
+                },
+                {
+                  "control-id": "net.1.2.a14.1"
+                },
+                {
+                  "control-id": "net.1.2.a14.2"
+                },
+                {
+                  "control-id": "net.1.2.a15.1"
+                },
+                {
+                  "control-id": "net.1.2.a15.2"
+                },
+                {
+                  "control-id": "net.1.2.a15.3"
+                },
+                {
+                  "control-id": "net.1.2.a16.1"
+                },
+                {
+                  "control-id": "net.1.2.a16.2"
+                },
+                {
+                  "control-id": "net.1.2.a17.1"
+                },
+                {
+                  "control-id": "net.1.2.a17.2"
+                },
+                {
+                  "control-id": "net.1.2.a17.3"
+                },
+                {
+                  "control-id": "net.1.2.a17.4"
+                },
+                {
+                  "control-id": "net.1.2.a18.1"
+                },
+                {
+                  "control-id": "net.1.2.a18.2"
+                },
+                {
+                  "control-id": "net.1.2.a18.3"
+                },
+                {
+                  "control-id": "net.1.2.a2.1"
+                },
+                {
+                  "control-id": "net.1.2.a2.2"
+                },
+                {
+                  "control-id": "net.1.2.a2.3"
+                },
+                {
+                  "control-id": "net.1.2.a21.1"
+                },
+                {
+                  "control-id": "net.1.2.a21.2"
+                },
+                {
+                  "control-id": "net.1.2.a21.3"
+                },
+                {
+                  "control-id": "net.1.2.a22.1"
+                },
+                {
+                  "control-id": "net.1.2.a24.1"
+                },
+                {
+                  "control-id": "net.1.2.a24.2"
+                },
+                {
+                  "control-id": "net.1.2.a24.3"
+                },
+                {
+                  "control-id": "net.1.2.a25.1"
+                },
+                {
+                  "control-id": "net.1.2.a25.2"
+                },
+                {
+                  "control-id": "net.1.2.a26.1"
+                },
+                {
+                  "control-id": "net.1.2.a26.2"
+                },
+                {
+                  "control-id": "net.1.2.a26.3"
+                },
+                {
+                  "control-id": "net.1.2.a26.4"
+                },
+                {
+                  "control-id": "net.1.2.a26.5"
+                },
+                {
+                  "control-id": "net.1.2.a26.6"
+                },
+                {
+                  "control-id": "net.1.2.a26.7"
+                },
+                {
+                  "control-id": "net.1.2.a26.8"
+                },
+                {
+                  "control-id": "net.1.2.a26.9"
+                },
+                {
+                  "control-id": "net.1.2.a27.1"
+                },
+                {
+                  "control-id": "net.1.2.a27.2"
+                },
+                {
+                  "control-id": "net.1.2.a28.1"
+                },
+                {
+                  "control-id": "net.1.2.a28.2"
+                },
+                {
+                  "control-id": "net.1.2.a29.1"
+                },
+                {
+                  "control-id": "net.1.2.a29.2"
+                },
+                {
+                  "control-id": "net.1.2.a30.1"
+                },
+                {
+                  "control-id": "net.1.2.a30.2"
+                },
+                {
+                  "control-id": "net.1.2.a30.3"
+                },
+                {
+                  "control-id": "net.1.2.a31.1"
+                },
+                {
+                  "control-id": "net.1.2.a31.2"
+                },
+                {
+                  "control-id": "net.1.2.a32.1"
+                },
+                {
+                  "control-id": "net.1.2.a33.1"
+                },
+                {
+                  "control-id": "net.1.2.a35.1"
+                },
+                {
+                  "control-id": "net.1.2.a36.1"
+                },
+                {
+                  "control-id": "net.1.2.a36.2"
+                },
+                {
+                  "control-id": "net.1.2.a37.1"
+                },
+                {
+                  "control-id": "net.1.2.a37.2"
+                },
+                {
+                  "control-id": "net.1.2.a38.1"
+                },
+                {
+                  "control-id": "net.1.2.a6.1"
+                },
+                {
+                  "control-id": "net.1.2.a7.1"
+                },
+                {
+                  "control-id": "net.1.2.a7.2"
+                },
+                {
+                  "control-id": "net.1.2.a7.3"
+                },
+                {
+                  "control-id": "net.1.2.a7.4"
+                },
+                {
+                  "control-id": "net.1.2.a7.5"
+                },
+                {
+                  "control-id": "net.1.2.a8.1"
+                },
+                {
+                  "control-id": "net.1.2.a8.2"
+                },
+                {
+                  "control-id": "net.1.2.a8.3"
+                },
+                {
+                  "control-id": "net.1.2.a9.1"
+                },
+                {
+                  "control-id": "net.1.2.a9.2"
+                },
+                {
+                  "control-id": "net.1.2.a9.3"
+                },
+                {
+                  "control-id": "net.2.1.a1.1"
+                },
+                {
+                  "control-id": "net.2.1.a1.2"
+                },
+                {
+                  "control-id": "net.2.1.a1.3"
+                },
+                {
+                  "control-id": "net.2.1.a1.4"
+                },
+                {
+                  "control-id": "net.2.1.a10.1"
+                },
+                {
+                  "control-id": "net.2.1.a10.2"
+                },
+                {
+                  "control-id": "net.2.1.a10.3"
+                },
+                {
+                  "control-id": "net.2.1.a10.4"
+                },
+                {
+                  "control-id": "net.2.1.a10.5"
+                },
+                {
+                  "control-id": "net.2.1.a10.6"
+                },
+                {
+                  "control-id": "net.2.1.a11.1"
+                },
+                {
+                  "control-id": "net.2.1.a11.2"
+                },
+                {
+                  "control-id": "net.2.1.a12.1"
+                },
+                {
+                  "control-id": "net.2.1.a12.2"
+                },
+                {
+                  "control-id": "net.2.1.a13.1"
+                },
+                {
+                  "control-id": "net.2.1.a13.2"
+                },
+                {
+                  "control-id": "net.2.1.a13.3"
+                },
+                {
+                  "control-id": "net.2.1.a13.4"
+                },
+                {
+                  "control-id": "net.2.1.a13.5"
+                },
+                {
+                  "control-id": "net.2.1.a14.1"
+                },
+                {
+                  "control-id": "net.2.1.a14.2"
+                },
+                {
+                  "control-id": "net.2.1.a14.3"
+                },
+                {
+                  "control-id": "net.2.1.a14.4"
+                },
+                {
+                  "control-id": "net.2.1.a14.5"
+                },
+                {
+                  "control-id": "net.2.1.a15.1"
+                },
+                {
+                  "control-id": "net.2.1.a16.1"
+                },
+                {
+                  "control-id": "net.2.1.a17.1"
+                },
+                {
+                  "control-id": "net.2.1.a18.1"
+                },
+                {
+                  "control-id": "net.2.1.a2.1"
+                },
+                {
+                  "control-id": "net.2.1.a2.2"
+                },
+                {
+                  "control-id": "net.2.1.a2.3"
+                },
+                {
+                  "control-id": "net.2.1.a2.4"
+                },
+                {
+                  "control-id": "net.2.1.a2.5"
+                },
+                {
+                  "control-id": "net.2.1.a3.1"
+                },
+                {
+                  "control-id": "net.2.1.a3.2"
+                },
+                {
+                  "control-id": "net.2.1.a3.3"
+                },
+                {
+                  "control-id": "net.2.1.a4.1"
+                },
+                {
+                  "control-id": "net.2.1.a4.2"
+                },
+                {
+                  "control-id": "net.2.1.a4.3"
+                },
+                {
+                  "control-id": "net.2.1.a4.4"
+                },
+                {
+                  "control-id": "net.2.1.a5.1"
+                },
+                {
+                  "control-id": "net.2.1.a5.2"
+                },
+                {
+                  "control-id": "net.2.1.a5.3"
+                },
+                {
+                  "control-id": "net.2.1.a5.4"
+                },
+                {
+                  "control-id": "net.2.1.a6.1"
+                },
+                {
+                  "control-id": "net.2.1.a7.1"
+                },
+                {
+                  "control-id": "net.2.1.a8.1"
+                },
+                {
+                  "control-id": "net.2.1.a8.2"
+                },
+                {
+                  "control-id": "net.2.1.a8.3"
+                },
+                {
+                  "control-id": "net.2.1.a8.4"
+                },
+                {
+                  "control-id": "net.2.1.a8.5"
+                },
+                {
+                  "control-id": "net.2.1.a9.1"
+                },
+                {
+                  "control-id": "net.2.1.a9.2"
+                },
+                {
+                  "control-id": "net.2.2.a1.1"
+                },
+                {
+                  "control-id": "net.2.2.a1.2"
+                },
+                {
+                  "control-id": "net.2.2.a1.3"
+                },
+                {
+                  "control-id": "net.2.2.a1.4"
+                },
+                {
+                  "control-id": "net.2.2.a1.5"
+                },
+                {
+                  "control-id": "net.2.2.a1.6"
+                },
+                {
+                  "control-id": "net.2.2.a1.7"
+                },
+                {
+                  "control-id": "net.2.2.a1.8"
+                },
+                {
+                  "control-id": "net.2.2.a1.9"
+                },
+                {
+                  "control-id": "net.2.2.a2.1"
+                },
+                {
+                  "control-id": "net.2.2.a2.2"
+                },
+                {
+                  "control-id": "net.2.2.a2.3"
+                },
+                {
+                  "control-id": "net.2.2.a2.4"
+                },
+                {
+                  "control-id": "net.2.2.a2.5"
+                },
+                {
+                  "control-id": "net.2.2.a2.6"
+                },
+                {
+                  "control-id": "net.2.2.a2.7"
+                },
+                {
+                  "control-id": "net.2.2.a3.1"
+                },
+                {
+                  "control-id": "net.2.2.a3.10"
+                },
+                {
+                  "control-id": "net.2.2.a3.2"
+                },
+                {
+                  "control-id": "net.2.2.a3.3"
+                },
+                {
+                  "control-id": "net.2.2.a3.4"
+                },
+                {
+                  "control-id": "net.2.2.a3.5"
+                },
+                {
+                  "control-id": "net.2.2.a3.6"
+                },
+                {
+                  "control-id": "net.2.2.a3.7"
+                },
+                {
+                  "control-id": "net.2.2.a3.8"
+                },
+                {
+                  "control-id": "net.2.2.a3.9"
+                },
+                {
+                  "control-id": "net.2.2.a4.1"
+                },
+                {
+                  "control-id": "net.2.2.a4.2"
+                },
+                {
+                  "control-id": "net.2.2.a4.3"
+                },
+                {
+                  "control-id": "net.2.2.a4.4"
+                },
+                {
+                  "control-id": "net.2.2.a4.5"
+                },
+                {
+                  "control-id": "net.2.2.a4.6"
+                },
+                {
+                  "control-id": "net.3.1.a1.1"
+                },
+                {
+                  "control-id": "net.3.1.a1.10"
+                },
+                {
+                  "control-id": "net.3.1.a1.11"
+                },
+                {
+                  "control-id": "net.3.1.a1.12"
+                },
+                {
+                  "control-id": "net.3.1.a1.2"
+                },
+                {
+                  "control-id": "net.3.1.a1.3"
+                },
+                {
+                  "control-id": "net.3.1.a1.4"
+                },
+                {
+                  "control-id": "net.3.1.a1.5"
+                },
+                {
+                  "control-id": "net.3.1.a1.6"
+                },
+                {
+                  "control-id": "net.3.1.a1.7"
+                },
+                {
+                  "control-id": "net.3.1.a1.8"
+                },
+                {
+                  "control-id": "net.3.1.a1.9"
+                },
+                {
+                  "control-id": "net.3.1.a10.1"
+                },
+                {
+                  "control-id": "net.3.1.a10.2"
+                },
+                {
+                  "control-id": "net.3.1.a10.3"
+                },
+                {
+                  "control-id": "net.3.1.a10.4"
+                },
+                {
+                  "control-id": "net.3.1.a10.5"
+                },
+                {
+                  "control-id": "net.3.1.a10.6"
+                },
+                {
+                  "control-id": "net.3.1.a11.1"
+                },
+                {
+                  "control-id": "net.3.1.a11.2"
+                },
+                {
+                  "control-id": "net.3.1.a11.3"
+                },
+                {
+                  "control-id": "net.3.1.a12.1"
+                },
+                {
+                  "control-id": "net.3.1.a12.2"
+                },
+                {
+                  "control-id": "net.3.1.a13.1"
+                },
+                {
+                  "control-id": "net.3.1.a13.2"
+                },
+                {
+                  "control-id": "net.3.1.a13.3"
+                },
+                {
+                  "control-id": "net.3.1.a13.4"
+                },
+                {
+                  "control-id": "net.3.1.a14.1"
+                },
+                {
+                  "control-id": "net.3.1.a15.1"
+                },
+                {
+                  "control-id": "net.3.1.a16.1"
+                },
+                {
+                  "control-id": "net.3.1.a17.1"
+                },
+                {
+                  "control-id": "net.3.1.a18.1"
+                },
+                {
+                  "control-id": "net.3.1.a18.2"
+                },
+                {
+                  "control-id": "net.3.1.a18.3"
+                },
+                {
+                  "control-id": "net.3.1.a19.1"
+                },
+                {
+                  "control-id": "net.3.1.a20.1"
+                },
+                {
+                  "control-id": "net.3.1.a20.2"
+                },
+                {
+                  "control-id": "net.3.1.a20.3"
+                },
+                {
+                  "control-id": "net.3.1.a20.4"
+                },
+                {
+                  "control-id": "net.3.1.a20.5"
+                },
+                {
+                  "control-id": "net.3.1.a21.1"
+                },
+                {
+                  "control-id": "net.3.1.a22.1"
+                },
+                {
+                  "control-id": "net.3.1.a22.2"
+                },
+                {
+                  "control-id": "net.3.1.a22.3"
+                },
+                {
+                  "control-id": "net.3.1.a22.4"
+                },
+                {
+                  "control-id": "net.3.1.a22.5"
+                },
+                {
+                  "control-id": "net.3.1.a22.6"
+                },
+                {
+                  "control-id": "net.3.1.a22.7"
+                },
+                {
+                  "control-id": "net.3.1.a23.1"
+                },
+                {
+                  "control-id": "net.3.1.a23.2"
+                },
+                {
+                  "control-id": "net.3.1.a23.3"
+                },
+                {
+                  "control-id": "net.3.1.a23.4"
+                },
+                {
+                  "control-id": "net.3.1.a23.5"
+                },
+                {
+                  "control-id": "net.3.1.a24.1"
+                },
+                {
+                  "control-id": "net.3.1.a24.2"
+                },
+                {
+                  "control-id": "net.3.1.a25.1"
+                },
+                {
+                  "control-id": "net.3.1.a26.1"
+                },
+                {
+                  "control-id": "net.3.1.a26.2"
+                },
+                {
+                  "control-id": "net.3.1.a26.3"
+                },
+                {
+                  "control-id": "net.3.1.a27.1"
+                },
+                {
+                  "control-id": "net.3.1.a28.1"
+                },
+                {
+                  "control-id": "net.3.1.a4.1"
+                },
+                {
+                  "control-id": "net.3.1.a4.2"
+                },
+                {
+                  "control-id": "net.3.1.a4.3"
+                },
+                {
+                  "control-id": "net.3.1.a4.4"
+                },
+                {
+                  "control-id": "net.3.1.a4.5"
+                },
+                {
+                  "control-id": "net.3.1.a4.6"
+                },
+                {
+                  "control-id": "net.3.1.a4.7"
+                },
+                {
+                  "control-id": "net.3.1.a4.8"
+                },
+                {
+                  "control-id": "net.3.1.a5.1"
+                },
+                {
+                  "control-id": "net.3.1.a6.1"
+                },
+                {
+                  "control-id": "net.3.1.a7.1"
+                },
+                {
+                  "control-id": "net.3.1.a7.2"
+                },
+                {
+                  "control-id": "net.3.1.a7.3"
+                },
+                {
+                  "control-id": "net.3.1.a7.4"
+                },
+                {
+                  "control-id": "net.3.1.a7.5"
+                },
+                {
+                  "control-id": "net.3.1.a7.6"
+                },
+                {
+                  "control-id": "net.3.1.a8.1"
+                },
+                {
+                  "control-id": "net.3.1.a8.2"
+                },
+                {
+                  "control-id": "net.3.1.a9.1"
+                },
+                {
+                  "control-id": "net.3.1.a9.2"
+                },
+                {
+                  "control-id": "net.3.1.a9.3"
+                },
+                {
+                  "control-id": "net.3.2.a1.1"
+                },
+                {
+                  "control-id": "net.3.2.a1.2"
+                },
+                {
+                  "control-id": "net.3.2.a1.3"
+                },
+                {
+                  "control-id": "net.3.2.a1.4"
+                },
+                {
+                  "control-id": "net.3.2.a1.5"
+                },
+                {
+                  "control-id": "net.3.2.a1.6"
+                },
+                {
+                  "control-id": "net.3.2.a10.1"
+                },
+                {
+                  "control-id": "net.3.2.a14.1"
+                },
+                {
+                  "control-id": "net.3.2.a14.2"
+                },
+                {
+                  "control-id": "net.3.2.a14.3"
+                },
+                {
+                  "control-id": "net.3.2.a15.1"
+                },
+                {
+                  "control-id": "net.3.2.a15.2"
+                },
+                {
+                  "control-id": "net.3.2.a15.3"
+                },
+                {
+                  "control-id": "net.3.2.a15.4"
+                },
+                {
+                  "control-id": "net.3.2.a15.5"
+                },
+                {
+                  "control-id": "net.3.2.a16.1"
+                },
+                {
+                  "control-id": "net.3.2.a16.2"
+                },
+                {
+                  "control-id": "net.3.2.a16.3"
+                },
+                {
+                  "control-id": "net.3.2.a16.4"
+                },
+                {
+                  "control-id": "net.3.2.a16.5"
+                },
+                {
+                  "control-id": "net.3.2.a17.1"
+                },
+                {
+                  "control-id": "net.3.2.a17.2"
+                },
+                {
+                  "control-id": "net.3.2.a18.1"
+                },
+                {
+                  "control-id": "net.3.2.a18.2"
+                },
+                {
+                  "control-id": "net.3.2.a18.3"
+                },
+                {
+                  "control-id": "net.3.2.a18.4"
+                },
+                {
+                  "control-id": "net.3.2.a18.5"
+                },
+                {
+                  "control-id": "net.3.2.a19.1"
+                },
+                {
+                  "control-id": "net.3.2.a19.2"
+                },
+                {
+                  "control-id": "net.3.2.a19.3"
+                },
+                {
+                  "control-id": "net.3.2.a2.1"
+                },
+                {
+                  "control-id": "net.3.2.a2.2"
+                },
+                {
+                  "control-id": "net.3.2.a2.3"
+                },
+                {
+                  "control-id": "net.3.2.a2.4"
+                },
+                {
+                  "control-id": "net.3.2.a2.5"
+                },
+                {
+                  "control-id": "net.3.2.a2.6"
+                },
+                {
+                  "control-id": "net.3.2.a2.7"
+                },
+                {
+                  "control-id": "net.3.2.a2.8"
+                },
+                {
+                  "control-id": "net.3.2.a2.9"
+                },
+                {
+                  "control-id": "net.3.2.a20.1"
+                },
+                {
+                  "control-id": "net.3.2.a21.1"
+                },
+                {
+                  "control-id": "net.3.2.a21.2"
+                },
+                {
+                  "control-id": "net.3.2.a21.3"
+                },
+                {
+                  "control-id": "net.3.2.a21.4"
+                },
+                {
+                  "control-id": "net.3.2.a21.5"
+                },
+                {
+                  "control-id": "net.3.2.a21.6"
+                },
+                {
+                  "control-id": "net.3.2.a21.7"
+                },
+                {
+                  "control-id": "net.3.2.a22.1"
+                },
+                {
+                  "control-id": "net.3.2.a22.2"
+                },
+                {
+                  "control-id": "net.3.2.a23.1"
+                },
+                {
+                  "control-id": "net.3.2.a23.2"
+                },
+                {
+                  "control-id": "net.3.2.a23.3"
+                },
+                {
+                  "control-id": "net.3.2.a23.4"
+                },
+                {
+                  "control-id": "net.3.2.a23.5"
+                },
+                {
+                  "control-id": "net.3.2.a24.1"
+                },
+                {
+                  "control-id": "net.3.2.a24.2"
+                },
+                {
+                  "control-id": "net.3.2.a25.1"
+                },
+                {
+                  "control-id": "net.3.2.a25.2"
+                },
+                {
+                  "control-id": "net.3.2.a26.1"
+                },
+                {
+                  "control-id": "net.3.2.a27.1"
+                },
+                {
+                  "control-id": "net.3.2.a28.1"
+                },
+                {
+                  "control-id": "net.3.2.a28.2"
+                },
+                {
+                  "control-id": "net.3.2.a28.3"
+                },
+                {
+                  "control-id": "net.3.2.a29.1"
+                },
+                {
+                  "control-id": "net.3.2.a29.2"
+                },
+                {
+                  "control-id": "net.3.2.a29.3"
+                },
+                {
+                  "control-id": "net.3.2.a29.4"
+                },
+                {
+                  "control-id": "net.3.2.a29.5"
+                },
+                {
+                  "control-id": "net.3.2.a29.6"
+                },
+                {
+                  "control-id": "net.3.2.a29.7"
+                },
+                {
+                  "control-id": "net.3.2.a3.1"
+                },
+                {
+                  "control-id": "net.3.2.a3.2"
+                },
+                {
+                  "control-id": "net.3.2.a3.3"
+                },
+                {
+                  "control-id": "net.3.2.a3.4"
+                },
+                {
+                  "control-id": "net.3.2.a3.5"
+                },
+                {
+                  "control-id": "net.3.2.a30.1"
+                },
+                {
+                  "control-id": "net.3.2.a31.1"
+                },
+                {
+                  "control-id": "net.3.2.a32.1"
+                },
+                {
+                  "control-id": "net.3.2.a32.2"
+                },
+                {
+                  "control-id": "net.3.2.a32.3"
+                },
+                {
+                  "control-id": "net.3.2.a32.4"
+                },
+                {
+                  "control-id": "net.3.2.a32.5"
+                },
+                {
+                  "control-id": "net.3.2.a32.6"
+                },
+                {
+                  "control-id": "net.3.2.a4.1"
+                },
+                {
+                  "control-id": "net.3.2.a4.2"
+                },
+                {
+                  "control-id": "net.3.2.a4.3"
+                },
+                {
+                  "control-id": "net.3.2.a4.4"
+                },
+                {
+                  "control-id": "net.3.2.a4.5"
+                },
+                {
+                  "control-id": "net.3.2.a4.6"
+                },
+                {
+                  "control-id": "net.3.2.a4.7"
+                },
+                {
+                  "control-id": "net.3.2.a4.8"
+                },
+                {
+                  "control-id": "net.3.2.a4.9"
+                },
+                {
+                  "control-id": "net.3.2.a6.1"
+                },
+                {
+                  "control-id": "net.3.2.a6.2"
+                },
+                {
+                  "control-id": "net.3.2.a6.3"
+                },
+                {
+                  "control-id": "net.3.2.a6.4"
+                },
+                {
+                  "control-id": "net.3.2.a6.5"
+                },
+                {
+                  "control-id": "net.3.2.a7.1"
+                },
+                {
+                  "control-id": "net.3.2.a8.1"
+                },
+                {
+                  "control-id": "net.3.2.a9.1"
+                },
+                {
+                  "control-id": "net.3.2.a9.2"
+                },
+                {
+                  "control-id": "net.3.2.a9.3"
+                },
+                {
+                  "control-id": "net.3.2.a9.4"
+                },
+                {
+                  "control-id": "net.3.2.a9.5"
+                },
+                {
+                  "control-id": "net.3.2.a9.6"
+                },
+                {
+                  "control-id": "net.3.2.a9.7"
+                },
+                {
+                  "control-id": "net.3.2.a9.8"
+                },
+                {
+                  "control-id": "net.3.2.a9.9"
+                },
+                {
+                  "control-id": "net.3.3.a1.1"
+                },
+                {
+                  "control-id": "net.3.3.a1.2"
+                },
+                {
+                  "control-id": "net.3.3.a1.3"
+                },
+                {
+                  "control-id": "net.3.3.a1.4"
+                },
+                {
+                  "control-id": "net.3.3.a10.1"
+                },
+                {
+                  "control-id": "net.3.3.a10.2"
+                },
+                {
+                  "control-id": "net.3.3.a11.1"
+                },
+                {
+                  "control-id": "net.3.3.a11.2"
+                },
+                {
+                  "control-id": "net.3.3.a12.1"
+                },
+                {
+                  "control-id": "net.3.3.a13.1"
+                },
+                {
+                  "control-id": "net.3.3.a13.2"
+                },
+                {
+                  "control-id": "net.3.3.a2.1"
+                },
+                {
+                  "control-id": "net.3.3.a2.2"
+                },
+                {
+                  "control-id": "net.3.3.a3.1"
+                },
+                {
+                  "control-id": "net.3.3.a3.2"
+                },
+                {
+                  "control-id": "net.3.3.a3.3"
+                },
+                {
+                  "control-id": "net.3.3.a3.4"
+                },
+                {
+                  "control-id": "net.3.3.a4.1"
+                },
+                {
+                  "control-id": "net.3.3.a4.2"
+                },
+                {
+                  "control-id": "net.3.3.a4.3"
+                },
+                {
+                  "control-id": "net.3.3.a5.1"
+                },
+                {
+                  "control-id": "net.3.3.a5.2"
+                },
+                {
+                  "control-id": "net.3.3.a5.3"
+                },
+                {
+                  "control-id": "net.3.3.a6.1"
+                },
+                {
+                  "control-id": "net.3.3.a6.2"
+                },
+                {
+                  "control-id": "net.3.3.a6.3"
+                },
+                {
+                  "control-id": "net.3.3.a6.4"
+                },
+                {
+                  "control-id": "net.3.3.a6.5"
+                },
+                {
+                  "control-id": "net.3.3.a6.6"
+                },
+                {
+                  "control-id": "net.3.3.a6.7"
+                },
+                {
+                  "control-id": "net.3.3.a6.8"
+                },
+                {
+                  "control-id": "net.3.3.a7.1"
+                },
+                {
+                  "control-id": "net.3.3.a7.2"
+                },
+                {
+                  "control-id": "net.3.3.a7.3"
+                },
+                {
+                  "control-id": "net.3.3.a7.4"
+                },
+                {
+                  "control-id": "net.3.3.a8.1"
+                },
+                {
+                  "control-id": "net.3.3.a8.2"
+                },
+                {
+                  "control-id": "net.3.3.a8.3"
+                },
+                {
+                  "control-id": "net.3.3.a8.4"
+                },
+                {
+                  "control-id": "net.3.3.a8.5"
+                },
+                {
+                  "control-id": "net.3.3.a9.1"
+                },
+                {
+                  "control-id": "net.3.4.a1.1"
+                },
+                {
+                  "control-id": "net.3.4.a1.2"
+                },
+                {
+                  "control-id": "net.3.4.a1.3"
+                },
+                {
+                  "control-id": "net.3.4.a1.4"
+                },
+                {
+                  "control-id": "net.3.4.a1.5"
+                },
+                {
+                  "control-id": "net.3.4.a1.6"
+                },
+                {
+                  "control-id": "net.3.4.a10.1"
+                },
+                {
+                  "control-id": "net.3.4.a10.2"
+                },
+                {
+                  "control-id": "net.3.4.a10.3"
+                },
+                {
+                  "control-id": "net.3.4.a11.1"
+                },
+                {
+                  "control-id": "net.3.4.a11.2"
+                },
+                {
+                  "control-id": "net.3.4.a11.3"
+                },
+                {
+                  "control-id": "net.3.4.a11.4"
+                },
+                {
+                  "control-id": "net.3.4.a11.5"
+                },
+                {
+                  "control-id": "net.3.4.a11.6"
+                },
+                {
+                  "control-id": "net.3.4.a12.1"
+                },
+                {
+                  "control-id": "net.3.4.a12.2"
+                },
+                {
+                  "control-id": "net.3.4.a12.3"
+                },
+                {
+                  "control-id": "net.3.4.a12.4"
+                },
+                {
+                  "control-id": "net.3.4.a12.5"
+                },
+                {
+                  "control-id": "net.3.4.a12.6"
+                },
+                {
+                  "control-id": "net.3.4.a13.1"
+                },
+                {
+                  "control-id": "net.3.4.a13.2"
+                },
+                {
+                  "control-id": "net.3.4.a13.3"
+                },
+                {
+                  "control-id": "net.3.4.a14.1"
+                },
+                {
+                  "control-id": "net.3.4.a14.2"
+                },
+                {
+                  "control-id": "net.3.4.a14.3"
+                },
+                {
+                  "control-id": "net.3.4.a15.1"
+                },
+                {
+                  "control-id": "net.3.4.a15.2"
+                },
+                {
+                  "control-id": "net.3.4.a15.3"
+                },
+                {
+                  "control-id": "net.3.4.a16.1"
+                },
+                {
+                  "control-id": "net.3.4.a16.2"
+                },
+                {
+                  "control-id": "net.3.4.a16.3"
+                },
+                {
+                  "control-id": "net.3.4.a16.4"
+                },
+                {
+                  "control-id": "net.3.4.a16.5"
+                },
+                {
+                  "control-id": "net.3.4.a17.1"
+                },
+                {
+                  "control-id": "net.3.4.a17.2"
+                },
+                {
+                  "control-id": "net.3.4.a17.3"
+                },
+                {
+                  "control-id": "net.3.4.a17.4"
+                },
+                {
+                  "control-id": "net.3.4.a17.5"
+                },
+                {
+                  "control-id": "net.3.4.a18.1"
+                },
+                {
+                  "control-id": "net.3.4.a18.2"
+                },
+                {
+                  "control-id": "net.3.4.a18.3"
+                },
+                {
+                  "control-id": "net.3.4.a18.4"
+                },
+                {
+                  "control-id": "net.3.4.a18.5"
+                },
+                {
+                  "control-id": "net.3.4.a18.6"
+                },
+                {
+                  "control-id": "net.3.4.a19.1"
+                },
+                {
+                  "control-id": "net.3.4.a19.2"
+                },
+                {
+                  "control-id": "net.3.4.a19.3"
+                },
+                {
+                  "control-id": "net.3.4.a19.4"
+                },
+                {
+                  "control-id": "net.3.4.a19.5"
+                },
+                {
+                  "control-id": "net.3.4.a2.1"
+                },
+                {
+                  "control-id": "net.3.4.a2.10"
+                },
+                {
+                  "control-id": "net.3.4.a2.2"
+                },
+                {
+                  "control-id": "net.3.4.a2.3"
+                },
+                {
+                  "control-id": "net.3.4.a2.4"
+                },
+                {
+                  "control-id": "net.3.4.a2.5"
+                },
+                {
+                  "control-id": "net.3.4.a2.6"
+                },
+                {
+                  "control-id": "net.3.4.a2.7"
+                },
+                {
+                  "control-id": "net.3.4.a2.8"
+                },
+                {
+                  "control-id": "net.3.4.a2.9"
+                },
+                {
+                  "control-id": "net.3.4.a20.1"
+                },
+                {
+                  "control-id": "net.3.4.a20.2"
+                },
+                {
+                  "control-id": "net.3.4.a20.3"
+                },
+                {
+                  "control-id": "net.3.4.a20.4"
+                },
+                {
+                  "control-id": "net.3.4.a20.5"
+                },
+                {
+                  "control-id": "net.3.4.a21.1"
+                },
+                {
+                  "control-id": "net.3.4.a21.2"
+                },
+                {
+                  "control-id": "net.3.4.a21.3"
+                },
+                {
+                  "control-id": "net.3.4.a21.4"
+                },
+                {
+                  "control-id": "net.3.4.a21.5"
+                },
+                {
+                  "control-id": "net.3.4.a22.1"
+                },
+                {
+                  "control-id": "net.3.4.a22.2"
+                },
+                {
+                  "control-id": "net.3.4.a23.1"
+                },
+                {
+                  "control-id": "net.3.4.a23.2"
+                },
+                {
+                  "control-id": "net.3.4.a23.3"
+                },
+                {
+                  "control-id": "net.3.4.a23.4"
+                },
+                {
+                  "control-id": "net.3.4.a23.5"
+                },
+                {
+                  "control-id": "net.3.4.a24.1"
+                },
+                {
+                  "control-id": "net.3.4.a24.2"
+                },
+                {
+                  "control-id": "net.3.4.a24.3"
+                },
+                {
+                  "control-id": "net.3.4.a25.1"
+                },
+                {
+                  "control-id": "net.3.4.a25.2"
+                },
+                {
+                  "control-id": "net.3.4.a25.3"
+                },
+                {
+                  "control-id": "net.3.4.a25.4"
+                },
+                {
+                  "control-id": "net.3.4.a26.1"
+                },
+                {
+                  "control-id": "net.3.4.a26.2"
+                },
+                {
+                  "control-id": "net.3.4.a26.3"
+                },
+                {
+                  "control-id": "net.3.4.a26.4"
+                },
+                {
+                  "control-id": "net.3.4.a26.5"
+                },
+                {
+                  "control-id": "net.3.4.a27.1"
+                },
+                {
+                  "control-id": "net.3.4.a27.2"
+                },
+                {
+                  "control-id": "net.3.4.a27.3"
+                },
+                {
+                  "control-id": "net.3.4.a27.4"
+                },
+                {
+                  "control-id": "net.3.4.a27.5"
+                },
+                {
+                  "control-id": "net.3.4.a3.1"
+                },
+                {
+                  "control-id": "net.3.4.a3.2"
+                },
+                {
+                  "control-id": "net.3.4.a3.3"
+                },
+                {
+                  "control-id": "net.3.4.a3.4"
+                },
+                {
+                  "control-id": "net.3.4.a3.5"
+                },
+                {
+                  "control-id": "net.3.4.a3.6"
+                },
+                {
+                  "control-id": "net.3.4.a4.1"
+                },
+                {
+                  "control-id": "net.3.4.a4.10"
+                },
+                {
+                  "control-id": "net.3.4.a4.11"
+                },
+                {
+                  "control-id": "net.3.4.a4.12"
+                },
+                {
+                  "control-id": "net.3.4.a4.2"
+                },
+                {
+                  "control-id": "net.3.4.a4.3"
+                },
+                {
+                  "control-id": "net.3.4.a4.4"
+                },
+                {
+                  "control-id": "net.3.4.a4.5"
+                },
+                {
+                  "control-id": "net.3.4.a4.6"
+                },
+                {
+                  "control-id": "net.3.4.a4.7"
+                },
+                {
+                  "control-id": "net.3.4.a4.8"
+                },
+                {
+                  "control-id": "net.3.4.a4.9"
+                },
+                {
+                  "control-id": "net.3.4.a5.1"
+                },
+                {
+                  "control-id": "net.3.4.a5.2"
+                },
+                {
+                  "control-id": "net.3.4.a5.3"
+                },
+                {
+                  "control-id": "net.3.4.a6.1"
+                },
+                {
+                  "control-id": "net.3.4.a6.2"
+                },
+                {
+                  "control-id": "net.3.4.a6.3"
+                },
+                {
+                  "control-id": "net.3.4.a6.4"
+                },
+                {
+                  "control-id": "net.3.4.a6.5"
+                },
+                {
+                  "control-id": "net.3.4.a6.6"
+                },
+                {
+                  "control-id": "net.3.4.a6.7"
+                },
+                {
+                  "control-id": "net.3.4.a7.1"
+                },
+                {
+                  "control-id": "net.3.4.a7.2"
+                },
+                {
+                  "control-id": "net.3.4.a7.3"
+                },
+                {
+                  "control-id": "net.3.4.a8.1"
+                },
+                {
+                  "control-id": "net.3.4.a8.2"
+                },
+                {
+                  "control-id": "net.3.4.a8.3"
+                },
+                {
+                  "control-id": "net.3.4.a8.4"
+                },
+                {
+                  "control-id": "net.3.4.a8.5"
+                },
+                {
+                  "control-id": "net.3.4.a8.6"
+                },
+                {
+                  "control-id": "net.3.4.a9.1"
+                },
+                {
+                  "control-id": "net.3.4.a9.2"
+                },
+                {
+                  "control-id": "net.3.4.a9.3"
+                },
+                {
+                  "control-id": "net.3.4.a9.4"
+                },
+                {
+                  "control-id": "net.4.1.a1.1"
+                },
+                {
+                  "control-id": "net.4.1.a1.2"
+                },
+                {
+                  "control-id": "net.4.1.a1.3"
+                },
+                {
+                  "control-id": "net.4.1.a1.4"
+                },
+                {
+                  "control-id": "net.4.1.a1.5"
+                },
+                {
+                  "control-id": "net.4.1.a1.6"
+                },
+                {
+                  "control-id": "net.4.1.a1.7"
+                },
+                {
+                  "control-id": "net.4.1.a10.1"
+                },
+                {
+                  "control-id": "net.4.1.a10.2"
+                },
+                {
+                  "control-id": "net.4.1.a10.3"
+                },
+                {
+                  "control-id": "net.4.1.a11.1"
+                },
+                {
+                  "control-id": "net.4.1.a11.2"
+                },
+                {
+                  "control-id": "net.4.1.a12.1"
+                },
+                {
+                  "control-id": "net.4.1.a12.2"
+                },
+                {
+                  "control-id": "net.4.1.a12.3"
+                },
+                {
+                  "control-id": "net.4.1.a13.1"
+                },
+                {
+                  "control-id": "net.4.1.a13.2"
+                },
+                {
+                  "control-id": "net.4.1.a13.3"
+                },
+                {
+                  "control-id": "net.4.1.a14.1"
+                },
+                {
+                  "control-id": "net.4.1.a14.2"
+                },
+                {
+                  "control-id": "net.4.1.a14.3"
+                },
+                {
+                  "control-id": "net.4.1.a15.1"
+                },
+                {
+                  "control-id": "net.4.1.a15.2"
+                },
+                {
+                  "control-id": "net.4.1.a16.1"
+                },
+                {
+                  "control-id": "net.4.1.a16.2"
+                },
+                {
+                  "control-id": "net.4.1.a17.1"
+                },
+                {
+                  "control-id": "net.4.1.a18.1"
+                },
+                {
+                  "control-id": "net.4.1.a18.2"
+                },
+                {
+                  "control-id": "net.4.1.a18.3"
+                },
+                {
+                  "control-id": "net.4.1.a19.1"
+                },
+                {
+                  "control-id": "net.4.1.a19.2"
+                },
+                {
+                  "control-id": "net.4.1.a2.1"
+                },
+                {
+                  "control-id": "net.4.1.a2.2"
+                },
+                {
+                  "control-id": "net.4.1.a2.3"
+                },
+                {
+                  "control-id": "net.4.1.a5.1"
+                },
+                {
+                  "control-id": "net.4.1.a5.2"
+                },
+                {
+                  "control-id": "net.4.1.a5.3"
+                },
+                {
+                  "control-id": "net.4.1.a5.4"
+                },
+                {
+                  "control-id": "net.4.1.a6.1"
+                },
+                {
+                  "control-id": "net.4.1.a6.2"
+                },
+                {
+                  "control-id": "net.4.1.a6.3"
+                },
+                {
+                  "control-id": "net.4.1.a6.4"
+                },
+                {
+                  "control-id": "net.4.1.a7.1"
+                },
+                {
+                  "control-id": "net.4.1.a7.2"
+                },
+                {
+                  "control-id": "net.4.1.a8.1"
+                },
+                {
+                  "control-id": "net.4.1.a8.2"
+                },
+                {
+                  "control-id": "net.4.1.a8.3"
+                },
+                {
+                  "control-id": "net.4.1.a8.4"
+                },
+                {
+                  "control-id": "net.4.1.a9.1"
+                },
+                {
+                  "control-id": "net.4.1.a9.2"
+                },
+                {
+                  "control-id": "net.4.1.a9.3"
+                },
+                {
+                  "control-id": "net.4.2.a1.1"
+                },
+                {
+                  "control-id": "net.4.2.a1.2"
+                },
+                {
+                  "control-id": "net.4.2.a1.3"
+                },
+                {
+                  "control-id": "net.4.2.a1.4"
+                },
+                {
+                  "control-id": "net.4.2.a1.5"
+                },
+                {
+                  "control-id": "net.4.2.a1.6"
+                },
+                {
+                  "control-id": "net.4.2.a11.1"
+                },
+                {
+                  "control-id": "net.4.2.a11.2"
+                },
+                {
+                  "control-id": "net.4.2.a12.1"
+                },
+                {
+                  "control-id": "net.4.2.a12.2"
+                },
+                {
+                  "control-id": "net.4.2.a12.3"
+                },
+                {
+                  "control-id": "net.4.2.a12.4"
+                },
+                {
+                  "control-id": "net.4.2.a12.5"
+                },
+                {
+                  "control-id": "net.4.2.a13.1"
+                },
+                {
+                  "control-id": "net.4.2.a13.2"
+                },
+                {
+                  "control-id": "net.4.2.a14.1"
+                },
+                {
+                  "control-id": "net.4.2.a14.2"
+                },
+                {
+                  "control-id": "net.4.2.a14.3"
+                },
+                {
+                  "control-id": "net.4.2.a14.4"
+                },
+                {
+                  "control-id": "net.4.2.a14.5"
+                },
+                {
+                  "control-id": "net.4.2.a15.1"
+                },
+                {
+                  "control-id": "net.4.2.a15.2"
+                },
+                {
+                  "control-id": "net.4.2.a15.3"
+                },
+                {
+                  "control-id": "net.4.2.a16.1"
+                },
+                {
+                  "control-id": "net.4.2.a16.2"
+                },
+                {
+                  "control-id": "net.4.2.a16.3"
+                },
+                {
+                  "control-id": "net.4.2.a3.1"
+                },
+                {
+                  "control-id": "net.4.2.a3.2"
+                },
+                {
+                  "control-id": "net.4.2.a3.3"
+                },
+                {
+                  "control-id": "net.4.2.a3.4"
+                },
+                {
+                  "control-id": "net.4.2.a4.1"
+                },
+                {
+                  "control-id": "net.4.2.a4.2"
+                },
+                {
+                  "control-id": "net.4.2.a4.3"
+                },
+                {
+                  "control-id": "net.4.2.a5.1"
+                },
+                {
+                  "control-id": "net.4.2.a5.2"
+                },
+                {
+                  "control-id": "net.4.2.a5.3"
+                },
+                {
+                  "control-id": "net.4.2.a5.4"
+                },
+                {
+                  "control-id": "net.4.2.a7.1"
+                },
+                {
+                  "control-id": "net.4.2.a7.2"
+                },
+                {
+                  "control-id": "net.4.2.a7.3"
+                },
+                {
+                  "control-id": "net.4.2.a7.4"
+                },
+                {
+                  "control-id": "net.4.2.a7.5"
+                },
+                {
+                  "control-id": "net.4.2.a8.1"
+                },
+                {
+                  "control-id": "net.4.2.a8.2"
+                },
+                {
+                  "control-id": "net.4.2.a8.3"
+                },
+                {
+                  "control-id": "net.4.2.a9.1"
+                },
+                {
+                  "control-id": "net.4.2.a9.2"
+                },
+                {
+                  "control-id": "net.4.2.a9.3"
+                },
+                {
+                  "control-id": "net.4.2.a9.4"
+                },
+                {
+                  "control-id": "net.4.3.a1.1"
+                },
+                {
+                  "control-id": "net.4.3.a1.2"
+                },
+                {
+                  "control-id": "net.4.3.a1.3"
+                },
+                {
+                  "control-id": "net.4.3.a1.4"
+                },
+                {
+                  "control-id": "net.4.3.a10.1"
+                },
+                {
+                  "control-id": "net.4.3.a10.2"
+                },
+                {
+                  "control-id": "net.4.3.a10.3"
+                },
+                {
+                  "control-id": "net.4.3.a11.1"
+                },
+                {
+                  "control-id": "net.4.3.a11.2"
+                },
+                {
+                  "control-id": "net.4.3.a11.3"
+                },
+                {
+                  "control-id": "net.4.3.a11.4"
+                },
+                {
+                  "control-id": "net.4.3.a11.5"
+                },
+                {
+                  "control-id": "net.4.3.a12.1"
+                },
+                {
+                  "control-id": "net.4.3.a12.2"
+                },
+                {
+                  "control-id": "net.4.3.a12.3"
+                },
+                {
+                  "control-id": "net.4.3.a13.1"
+                },
+                {
+                  "control-id": "net.4.3.a13.2"
+                },
+                {
+                  "control-id": "net.4.3.a13.3"
+                },
+                {
+                  "control-id": "net.4.3.a13.4"
+                },
+                {
+                  "control-id": "net.4.3.a14.1"
+                },
+                {
+                  "control-id": "net.4.3.a14.2"
+                },
+                {
+                  "control-id": "net.4.3.a14.3"
+                },
+                {
+                  "control-id": "net.4.3.a15.1"
+                },
+                {
+                  "control-id": "net.4.3.a15.2"
+                },
+                {
+                  "control-id": "net.4.3.a15.3"
+                },
+                {
+                  "control-id": "net.4.3.a15.4"
+                },
+                {
+                  "control-id": "net.4.3.a15.5"
+                },
+                {
+                  "control-id": "net.4.3.a2.1"
+                },
+                {
+                  "control-id": "net.4.3.a2.2"
+                },
+                {
+                  "control-id": "net.4.3.a2.3"
+                },
+                {
+                  "control-id": "net.4.3.a2.4"
+                },
+                {
+                  "control-id": "net.4.3.a2.5"
+                },
+                {
+                  "control-id": "net.4.3.a3.1"
+                },
+                {
+                  "control-id": "net.4.3.a3.2"
+                },
+                {
+                  "control-id": "net.4.3.a3.3"
+                },
+                {
+                  "control-id": "net.4.3.a3.4"
+                },
+                {
+                  "control-id": "net.4.3.a3.5"
+                },
+                {
+                  "control-id": "net.4.3.a3.6"
+                },
+                {
+                  "control-id": "net.4.3.a4.1"
+                },
+                {
+                  "control-id": "net.4.3.a4.2"
+                },
+                {
+                  "control-id": "net.4.3.a4.3"
+                },
+                {
+                  "control-id": "net.4.3.a4.4"
+                },
+                {
+                  "control-id": "net.4.3.a4.5"
+                },
+                {
+                  "control-id": "net.4.3.a6.1"
+                },
+                {
+                  "control-id": "net.4.3.a6.2"
+                },
+                {
+                  "control-id": "net.4.3.a6.3"
+                },
+                {
+                  "control-id": "net.4.3.a6.4"
+                },
+                {
+                  "control-id": "net.4.3.a6.5"
+                },
+                {
+                  "control-id": "net.4.3.a6.6"
+                },
+                {
+                  "control-id": "net.4.3.a7.1"
+                },
+                {
+                  "control-id": "net.4.3.a7.2"
+                },
+                {
+                  "control-id": "net.4.3.a7.3"
+                },
+                {
+                  "control-id": "net.4.3.a7.4"
+                },
+                {
+                  "control-id": "net.4.3.a7.5"
+                },
+                {
+                  "control-id": "net.4.3.a8.1"
+                },
+                {
+                  "control-id": "net.4.3.a8.2"
+                },
+                {
+                  "control-id": "net.4.3.a8.3"
+                },
+                {
+                  "control-id": "net.4.3.a8.4"
+                },
+                {
+                  "control-id": "net.4.3.a9.1"
+                },
+                {
+                  "control-id": "net.4.3.a9.2"
+                },
+                {
+                  "control-id": "net.4.3.a9.3"
+                },
+                {
+                  "control-id": "net.4.3.a9.4"
+                },
+                {
+                  "control-id": "net.4.3.a9.5"
+                },
+                {
+                  "control-id": "net.4.3.a9.6"
+                },
+                {
+                  "control-id": "net.4.3.a9.7"
+                },
+                {
+                  "control-id": "net.4.3.a9.8"
+                }
+              ]
             }
           ]
         },
-        "start": "2026-11-08T01:42:12Z",
+        "start": "2026-11-08T00:30:57Z",
         "title": "IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - NET: Netze und Kommunikation Assessment Results",
         "uuid": "f55dcbe6-4999-5f26-94a2-d65bb44d06b1"
       }

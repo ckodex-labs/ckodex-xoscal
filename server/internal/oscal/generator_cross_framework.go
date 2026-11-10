@@ -73,7 +73,7 @@ func (g *Generator) GenerateCrossFrameworkMappings(ctx context.Context, snapshot
 			Targets: []*mappingv1.MappingItem{{
 				IdRef: tgtIdRef,
 			}},
-			ConfidenceScore: &mappingv1.ConfidenceScore{Value: confidence},
+			ConfidenceScore: &mappingv1.ConfidenceScore{Value: confidence}, //nolint:staticcheck // SA1019: backward-compatible deprecated proto field
 		})
 	}
 	return maps, nil

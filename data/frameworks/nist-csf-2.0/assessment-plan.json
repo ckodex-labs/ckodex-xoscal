@@ -4,7 +4,7 @@
       "href": "./system-security-plan.json"
     },
     "metadata": {
-      "last-modified": "2026-11-08T01:42:13Z",
+      "last-modified": "2026-11-08T00:30:43Z",
       "oscal-version": "1.2.3",
       "title": "NIST CSF version 2.0 Security Assessment Plan Template",
       "version": "6"
@@ -13,7 +13,326 @@
       "control-selections": [
         {
           "description": "All controls in NIST CSF version 2.0",
-          "include-all": {}
+          "include-controls": [
+            {
+              "control-id": "de.ae-02"
+            },
+            {
+              "control-id": "de.ae-03"
+            },
+            {
+              "control-id": "de.ae-04"
+            },
+            {
+              "control-id": "de.ae-06"
+            },
+            {
+              "control-id": "de.ae-07"
+            },
+            {
+              "control-id": "de.ae-08"
+            },
+            {
+              "control-id": "de.cm-01"
+            },
+            {
+              "control-id": "de.cm-02"
+            },
+            {
+              "control-id": "de.cm-03"
+            },
+            {
+              "control-id": "de.cm-06"
+            },
+            {
+              "control-id": "de.cm-09"
+            },
+            {
+              "control-id": "gv.oc-01"
+            },
+            {
+              "control-id": "gv.oc-02"
+            },
+            {
+              "control-id": "gv.oc-03"
+            },
+            {
+              "control-id": "gv.oc-04"
+            },
+            {
+              "control-id": "gv.oc-05"
+            },
+            {
+              "control-id": "gv.ov-01"
+            },
+            {
+              "control-id": "gv.ov-02"
+            },
+            {
+              "control-id": "gv.ov-03"
+            },
+            {
+              "control-id": "gv.po-01"
+            },
+            {
+              "control-id": "gv.po-02"
+            },
+            {
+              "control-id": "gv.rm-01"
+            },
+            {
+              "control-id": "gv.rm-02"
+            },
+            {
+              "control-id": "gv.rm-03"
+            },
+            {
+              "control-id": "gv.rm-04"
+            },
+            {
+              "control-id": "gv.rm-05"
+            },
+            {
+              "control-id": "gv.rm-06"
+            },
+            {
+              "control-id": "gv.rm-07"
+            },
+            {
+              "control-id": "gv.rr-01"
+            },
+            {
+              "control-id": "gv.rr-02"
+            },
+            {
+              "control-id": "gv.rr-03"
+            },
+            {
+              "control-id": "gv.rr-04"
+            },
+            {
+              "control-id": "gv.sc-01"
+            },
+            {
+              "control-id": "gv.sc-02"
+            },
+            {
+              "control-id": "gv.sc-03"
+            },
+            {
+              "control-id": "gv.sc-04"
+            },
+            {
+              "control-id": "gv.sc-05"
+            },
+            {
+              "control-id": "gv.sc-06"
+            },
+            {
+              "control-id": "gv.sc-07"
+            },
+            {
+              "control-id": "gv.sc-08"
+            },
+            {
+              "control-id": "gv.sc-09"
+            },
+            {
+              "control-id": "gv.sc-10"
+            },
+            {
+              "control-id": "id.am-01"
+            },
+            {
+              "control-id": "id.am-02"
+            },
+            {
+              "control-id": "id.am-03"
+            },
+            {
+              "control-id": "id.am-04"
+            },
+            {
+              "control-id": "id.am-05"
+            },
+            {
+              "control-id": "id.am-07"
+            },
+            {
+              "control-id": "id.am-08"
+            },
+            {
+              "control-id": "id.im-01"
+            },
+            {
+              "control-id": "id.im-02"
+            },
+            {
+              "control-id": "id.im-03"
+            },
+            {
+              "control-id": "id.im-04"
+            },
+            {
+              "control-id": "id.ra-01"
+            },
+            {
+              "control-id": "id.ra-02"
+            },
+            {
+              "control-id": "id.ra-03"
+            },
+            {
+              "control-id": "id.ra-04"
+            },
+            {
+              "control-id": "id.ra-05"
+            },
+            {
+              "control-id": "id.ra-06"
+            },
+            {
+              "control-id": "id.ra-07"
+            },
+            {
+              "control-id": "id.ra-08"
+            },
+            {
+              "control-id": "id.ra-09"
+            },
+            {
+              "control-id": "id.ra-10"
+            },
+            {
+              "control-id": "pr.aa-01"
+            },
+            {
+              "control-id": "pr.aa-02"
+            },
+            {
+              "control-id": "pr.aa-03"
+            },
+            {
+              "control-id": "pr.aa-04"
+            },
+            {
+              "control-id": "pr.aa-05"
+            },
+            {
+              "control-id": "pr.aa-06"
+            },
+            {
+              "control-id": "pr.at-01"
+            },
+            {
+              "control-id": "pr.at-02"
+            },
+            {
+              "control-id": "pr.ds-01"
+            },
+            {
+              "control-id": "pr.ds-02"
+            },
+            {
+              "control-id": "pr.ds-10"
+            },
+            {
+              "control-id": "pr.ds-11"
+            },
+            {
+              "control-id": "pr.ir-01"
+            },
+            {
+              "control-id": "pr.ir-02"
+            },
+            {
+              "control-id": "pr.ir-03"
+            },
+            {
+              "control-id": "pr.ir-04"
+            },
+            {
+              "control-id": "pr.ps-01"
+            },
+            {
+              "control-id": "pr.ps-02"
+            },
+            {
+              "control-id": "pr.ps-03"
+            },
+            {
+              "control-id": "pr.ps-04"
+            },
+            {
+              "control-id": "pr.ps-05"
+            },
+            {
+              "control-id": "pr.ps-06"
+            },
+            {
+              "control-id": "rc.co-03"
+            },
+            {
+              "control-id": "rc.co-04"
+            },
+            {
+              "control-id": "rc.rp-01"
+            },
+            {
+              "control-id": "rc.rp-02"
+            },
+            {
+              "control-id": "rc.rp-03"
+            },
+            {
+              "control-id": "rc.rp-04"
+            },
+            {
+              "control-id": "rc.rp-05"
+            },
+            {
+              "control-id": "rc.rp-06"
+            },
+            {
+              "control-id": "rs.an-03"
+            },
+            {
+              "control-id": "rs.an-06"
+            },
+            {
+              "control-id": "rs.an-07"
+            },
+            {
+              "control-id": "rs.an-08"
+            },
+            {
+              "control-id": "rs.co-02"
+            },
+            {
+              "control-id": "rs.co-03"
+            },
+            {
+              "control-id": "rs.ma-01"
+            },
+            {
+              "control-id": "rs.ma-02"
+            },
+            {
+              "control-id": "rs.ma-03"
+            },
+            {
+              "control-id": "rs.ma-04"
+            },
+            {
+              "control-id": "rs.ma-05"
+            },
+            {
+              "control-id": "rs.mi-01"
+            },
+            {
+              "control-id": "rs.mi-02"
+            }
+          ]
         }
       ]
     },

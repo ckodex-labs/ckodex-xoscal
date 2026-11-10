@@ -4,7 +4,7 @@
       "href": "./system-security-plan.json"
     },
     "metadata": {
-      "last-modified": "2026-11-08T01:42:12Z",
+      "last-modified": "2026-11-08T00:30:49Z",
       "oscal-version": "1.2.3",
       "title": "ANSSI - Guide d'hygiène informatique Security Assessment Plan Template",
       "version": "3"
@@ -13,7 +13,191 @@
       "control-selections": [
         {
           "description": "All controls in ANSSI - Guide d'hygiène informatique",
-          "include-all": {}
+          "include-controls": [
+            {
+              "control-id": "_1"
+            },
+            {
+              "control-id": "_10"
+            },
+            {
+              "control-id": "_11"
+            },
+            {
+              "control-id": "_12"
+            },
+            {
+              "control-id": "_12.r"
+            },
+            {
+              "control-id": "_13"
+            },
+            {
+              "control-id": "_13.r"
+            },
+            {
+              "control-id": "_14"
+            },
+            {
+              "control-id": "_14.r"
+            },
+            {
+              "control-id": "_15"
+            },
+            {
+              "control-id": "_15.r"
+            },
+            {
+              "control-id": "_16"
+            },
+            {
+              "control-id": "_17"
+            },
+            {
+              "control-id": "_17.r"
+            },
+            {
+              "control-id": "_18"
+            },
+            {
+              "control-id": "_19"
+            },
+            {
+              "control-id": "_2"
+            },
+            {
+              "control-id": "_2.r"
+            },
+            {
+              "control-id": "_20"
+            },
+            {
+              "control-id": "_21"
+            },
+            {
+              "control-id": "_22"
+            },
+            {
+              "control-id": "_22.r"
+            },
+            {
+              "control-id": "_23"
+            },
+            {
+              "control-id": "_24"
+            },
+            {
+              "control-id": "_24.r"
+            },
+            {
+              "control-id": "_25"
+            },
+            {
+              "control-id": "_25.r"
+            },
+            {
+              "control-id": "_26"
+            },
+            {
+              "control-id": "_27"
+            },
+            {
+              "control-id": "_27.r"
+            },
+            {
+              "control-id": "_28"
+            },
+            {
+              "control-id": "_28.r"
+            },
+            {
+              "control-id": "_29"
+            },
+            {
+              "control-id": "_3"
+            },
+            {
+              "control-id": "_30"
+            },
+            {
+              "control-id": "_30.r"
+            },
+            {
+              "control-id": "_31"
+            },
+            {
+              "control-id": "_32"
+            },
+            {
+              "control-id": "_32.r"
+            },
+            {
+              "control-id": "_33"
+            },
+            {
+              "control-id": "_33.r"
+            },
+            {
+              "control-id": "_34"
+            },
+            {
+              "control-id": "_35"
+            },
+            {
+              "control-id": "_36"
+            },
+            {
+              "control-id": "_36.r"
+            },
+            {
+              "control-id": "_37"
+            },
+            {
+              "control-id": "_37.r"
+            },
+            {
+              "control-id": "_38.r"
+            },
+            {
+              "control-id": "_39"
+            },
+            {
+              "control-id": "_4"
+            },
+            {
+              "control-id": "_40"
+            },
+            {
+              "control-id": "_41.r"
+            },
+            {
+              "control-id": "_42.r"
+            },
+            {
+              "control-id": "_5"
+            },
+            {
+              "control-id": "_6"
+            },
+            {
+              "control-id": "_6.r"
+            },
+            {
+              "control-id": "_7"
+            },
+            {
+              "control-id": "_7.r"
+            },
+            {
+              "control-id": "_8"
+            },
+            {
+              "control-id": "_8.r"
+            },
+            {
+              "control-id": "_9"
+            }
+          ]
         }
       ]
     },

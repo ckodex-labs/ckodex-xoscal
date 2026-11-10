@@ -5,6 +5,8 @@ builds:
   - id: xoscal-server
     main: ./server/cmd/xoscal-server
     binary: xoscal-server
+    flags:
+      - -trimpath
     env:
       - CGO_ENABLED=0
     goos:
@@ -20,6 +22,8 @@ builds:
   - id: xoscal
     main: ./server/cmd/xoscal
     binary: xoscal
+    flags:
+      - -trimpath
     env:
       - CGO_ENABLED=0
     goos:
@@ -35,6 +39,8 @@ builds:
   - id: xoscal-ctl
     main: ./server/cmd/xoscal-ctl
     binary: xoscal-ctl
+    flags:
+      - -trimpath
     env:
       - CGO_ENABLED=0
     goos:
@@ -50,6 +56,25 @@ builds:
   - id: xoscal-backup
     main: ./server/cmd/xoscal-backup
     binary: xoscal-backup
+    flags:
+      - -trimpath
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - darwin
+    goarch:
+      - amd64
+      - arm64
+    ldflags:
+      - -s -w -X main.version={{.Version}}
+    mod_timestamp: "{{ .CommitTimestamp }}"
+
+  - id: xoscal-gateway
+    main: ./server/cmd/xoscal-gateway
+    binary: xoscal-gateway
+    flags:
+      - -trimpath
     env:
       - CGO_ENABLED=0
     goos:

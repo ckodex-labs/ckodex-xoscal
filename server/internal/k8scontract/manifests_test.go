@@ -90,7 +90,7 @@ func documentByKind(t *testing.T, path, kind string) map[string]any {
 	if err != nil {
 		t.Fatalf("open %s: %v", path, err)
 	}
-	defer file.Close()
+	defer func() { _ = file.Close() }()
 
 	decoder := yaml.NewDecoder(file)
 	for {

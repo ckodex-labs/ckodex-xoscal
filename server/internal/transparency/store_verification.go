@@ -87,7 +87,7 @@ func (s *SQLiteStore) ListVerificationEvents(ctx context.Context, claimID string
 	if err != nil {
 		return nil, fmt.Errorf("list verification events: %w", err)
 	}
-	defer rows.Close()
+	defer func() { _ = rows.Close() }()
 	var events []*VerificationEvent
 	for rows.Next() {
 		event, err := scanVerificationEvent(rows)
@@ -114,7 +114,7 @@ func (s *SQLiteStore) VerifyVerificationChain(ctx context.Context) error {
 	if err != nil {
 		return fmt.Errorf("read verification chain: %w", err)
 	}
-	defer rows.Close()
+	defer func() { _ = rows.Close() }()
 	previousHash := ""
 	for rows.Next() {
 		event, err := scanVerificationEvent(rows)

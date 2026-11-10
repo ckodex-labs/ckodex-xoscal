@@ -173,11 +173,3 @@ func boundedInt32(value int) int32 {
 	// #nosec G115 -- the bounds above prove that value fits in int32.
 	return int32(value)
 }
-
-func toJSON(v interface{}) string {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return ""
-	}
-	return string(b)
-}

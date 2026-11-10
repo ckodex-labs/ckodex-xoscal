@@ -10,43 +10,112 @@ import (
 	servicesv1 "github.com/mchorfa/xoscal/proto/oscal/services/v1"
 )
 
-func TestGenerateAndValidateStandardManual(t *testing.T) {
-	manual := BuildCanonicalManual(ManualOptions{
-		BaseHTTPURL: "http://127.0.0.1:8080",
-		GRPCHost:    "127.0.0.1:50051",
-		BinaryPath:  "xoscal",
-		Version:     "1.0.0",
-	})
-
-	if len(manual.AllowedCommunicationProtocols) == 0 {
-		t.Fatalf("expected AllowedCommunicationProtocols populated on Manual")
-	}
-
-	for _, tool := range manual.Tools {
-		if len(tool.ToolCallTemplate.AllowedCommunicationProtocols) == 0 {
-			t.Errorf("tool %q missing AllowedCommunicationProtocols", tool.Name)
-		}
-		if tool.ToolCallTemplate.CallTemplateType == "cli" {
-			if strings.TrimSpace(tool.ToolCallTemplate.Command) == "" {
-				t.Errorf("cli tool %q missing Command", tool.Name)
-			}
-			if len(tool.ToolCallTemplate.Commands) == 0 || strings.TrimSpace(tool.ToolCallTemplate.Commands[0].Command) == "" {
-				t.Errorf("cli tool %q missing Commands[] entry", tool.Name)
-			} else {
-				cmdEntry := tool.ToolCallTemplate.Commands[0]
-				if !cmdEntry.AppendToFinalOutput {
-					t.Errorf("cli tool %q Commands[0].AppendToFinalOutput = false, want true", tool.Name)
-				}
-				if strings.Contains(cmdEntry.Command, "${") {
-					t.Errorf("cli tool %q Commands[0].Command still contains unexpanded ${...} placeholder: %q", tool.Name, cmdEntry.Command)
-				}
-			}
+func assertOnlyAllowedKeys(t *testing.T, contextLabel string, obj map[string]any, allowed map[string]bool) {
+	t.Helper()
+	for k := range obj {
+		if !allowed[k] {
+			t.Errorf("%s contains non-standard/unknown JSON key %q (allowed: %v)", contextLabel, k, allowed)
 		}
 	}
+}
+
+func TestStrictZodWireSchema_CanonicalHTTPManual(t *testing.T) {
+	manual := BuildCanonicalManual("http://127.0.0.1:8080", "127.0.0.1:50051")
 
 	data, err := json.MarshalIndent(manual, "", "  ")
 	if err != nil {
 		t.Fatalf("MarshalIndent: %v", err)
+	}
+
+	// Verify UtcpManualSchema.strict() exact root keys: ONLY utcp_version, manual_version, tools
+	var rawRoot map[string]any
+	if err := json.Unmarshal(data, &rawRoot); err != nil {
+		t.Fatalf("Unmarshal rawRoot: %v", err)
+	}
+	allowedManualKeys := map[string]bool{
+		"utcp_version":   true,
+		"manual_version": true,
+		"tools":          true,
+	}
+	assertOnlyAllowedKeys(t, "Manual root", rawRoot, allowedManualKeys)
+	if len(rawRoot) != 3 {
+		t.Fatalf("Manual root key count = %d, want exact 3 keys (utcp_version, manual_version, tools): %v", len(rawRoot), rawRoot)
+	}
+
+	allowedToolKeys := map[string]bool{
+		"name":               true,
+		"description":        true,
+		"tags":               true,
+		"inputs":             true,
+		"outputs":            true,
+		"tool_call_template": true,
+	}
+	allowedHTTPCallTemplateKeys := map[string]bool{
+		"name":                            true,
+		"call_template_type":              true,
+		"http_method":                     true,
+		"url":                             true,
+		"content_type":                    true,
+		"auth":                            true,
+		"headers":                         true,
+		"body_field":                      true,
+		"header_fields":                   true,
+		"allowed_communication_protocols": true,
+	}
+
+	rawTools, ok := rawRoot["tools"].([]any)
+	if !ok {
+		t.Fatalf("tools is not an array")
+	}
+	if len(rawTools) != 18 {
+		t.Fatalf("expected 18 HTTP tools in canonical manual, got %d", len(rawTools))
+	}
+
+	expectedHTTPTools := []string{
+		"xoscal_health_check",
+		"xoscal_doctor",
+		"xoscal_frameworks_list",
+		"xoscal_frameworks_get",
+		"xoscal_frameworks_layers",
+		"xoscal_frameworks_parity",
+		"xoscal_controls_list",
+		"xoscal_controls_search",
+		"xoscal_controls_get",
+		"xoscal_ontology_get",
+		"xoscal_graph_stats",
+		"xoscal_graph_crosswalk",
+		"xoscal_graph_blast_radius",
+		"xoscal_graph_reconcile",
+		"xoscal_graph_export",
+		"xoscal_feeds_list",
+		"xoscal_feeds_sync",
+		"xoscal_schema_validate",
+	}
+	seenTools := make(map[string]bool, len(rawTools))
+
+	for i, item := range rawTools {
+		tm, ok := item.(map[string]any)
+		if !ok {
+			t.Fatalf("tool[%d] is not an object", i)
+		}
+		name, _ := tm["name"].(string)
+		seenTools[name] = true
+		assertOnlyAllowedKeys(t, "Tool "+name, tm, allowedToolKeys)
+
+		ct, ok := tm["tool_call_template"].(map[string]any)
+		if !ok {
+			t.Fatalf("tool %q missing tool_call_template object", name)
+		}
+		if ct["call_template_type"] != "http" {
+			t.Errorf("canonical manual tool %q has call_template_type=%v, want \"http\"", name, ct["call_template_type"])
+		}
+		assertOnlyAllowedKeys(t, "HttpCallTemplate "+name, ct, allowedHTTPCallTemplateKeys)
+	}
+
+	for _, wantName := range expectedHTTPTools {
+		if !seenTools[wantName] {
+			t.Errorf("canonical HTTP manual missing required tool %q", wantName)
+		}
 	}
 
 	rep, err := ValidateManual(data)
@@ -56,20 +125,129 @@ func TestGenerateAndValidateStandardManual(t *testing.T) {
 	if !rep.Valid || rep.Verdict != "CONFORMANT" {
 		t.Fatalf("expected CONFORMANT manual, got valid=%t verdict=%s findings=%+v", rep.Valid, rep.Verdict, rep.Findings)
 	}
-	if rep.UTCPVersion != SpecVersion {
-		t.Errorf("UTCPVersion = %q, want %q", rep.UTCPVersion, SpecVersion)
+	if rep.Transports["http"] != 18 || rep.Transports["cli"] != 0 || rep.Transports["grpc"] != 0 {
+		t.Errorf("unexpected transport counts for canonical HTTP-only manual: %+v", rep.Transports)
 	}
-	if rep.ToolCount < 10 {
-		t.Errorf("expected at least 10 tools in xOSCAL UTCP manual, got %d", rep.ToolCount)
+}
+
+func TestStrictZodWireSchema_CLICallTemplateAndQuoting(t *testing.T) {
+	manual := BuildManualWithOptions(ManualOptions{
+		BaseURL:    "http://127.0.0.1:8080",
+		BinaryPath: "xoscal",
+		IncludeCLI: true,
+	})
+
+	data, err := json.Marshal(manual)
+	if err != nil {
+		t.Fatalf("Marshal CLI manual: %v", err)
 	}
-	for _, transport := range []string{"cli", "http", "grpc"} {
-		if rep.Transports[transport] == 0 {
-			t.Errorf("expected at least 1 %q tool in manual, got 0", transport)
+
+	var rawRoot map[string]any
+	if err := json.Unmarshal(data, &rawRoot); err != nil {
+		t.Fatalf("Unmarshal CLI manual: %v", err)
+	}
+
+	allowedCLICallTemplateKeys := map[string]bool{
+		"name":                            true,
+		"call_template_type":              true,
+		"commands":                        true,
+		"working_dir":                     true,
+		"env_vars":                        true,
+		"allowed_communication_protocols": true,
+	}
+	allowedCLICommandKeys := map[string]bool{
+		"command":                true,
+		"append_to_final_output": true,
+	}
+
+	rawTools := rawRoot["tools"].([]any)
+	foundQuotedJurisdiction := false
+	for _, item := range rawTools {
+		tm := item.(map[string]any)
+		name, _ := tm["name"].(string)
+		ct := tm["tool_call_template"].(map[string]any)
+		if ct["call_template_type"] != "cli" {
+			t.Fatalf("expected cli call_template_type for %q, got %v", name, ct["call_template_type"])
+		}
+		// Strictly reject command, args, x_ckodex_governance, x-ckodex-governance
+		assertOnlyAllowedKeys(t, "CliCallTemplate "+name, ct, allowedCLICallTemplateKeys)
+
+		cmds, ok := ct["commands"].([]any)
+		if !ok || len(cmds) == 0 {
+			t.Fatalf("cli tool %q missing commands[]", name)
+		}
+		cmd0 := cmds[0].(map[string]any)
+		assertOnlyAllowedKeys(t, "CLICommand "+name, cmd0, allowedCLICommandKeys)
+		cmdStr, _ := cmd0["command"].(string)
+		if strings.Contains(cmdStr, "${") {
+			t.Errorf("cli tool %q command still contains unexpanded ${...}: %q", name, cmdStr)
+		}
+		if name == "xoscal_frameworks_list" && strings.Contains(cmdStr, `"UTCP_ARG_jurisdiction_UTCP_END" -json`) {
+			foundQuotedJurisdiction = true
+		}
+	}
+	if !foundQuotedJurisdiction {
+		t.Errorf("expected quoted \"UTCP_ARG_jurisdiction_UTCP_END\" placeholder before -json in xoscal_frameworks_list")
+	}
+
+	rep, err := ValidateManual(data)
+	if err != nil {
+		t.Fatalf("ValidateManual CLI: %v", err)
+	}
+	if !rep.Valid || rep.Verdict != "CONFORMANT" {
+		t.Fatalf("CLI manual failed validation: %+v", rep.Findings)
+	}
+}
+
+func TestBearerTokenEnvVarPopulatesApiKeyAuth(t *testing.T) {
+	manual := BuildManualWithOptions(ManualOptions{
+		BaseURL:           "http://127.0.0.1:8080",
+		IncludeHTTP:       true,
+		BearerTokenEnvVar: "XOSCAL_API_TOKEN",
+	})
+
+	data, err := json.Marshal(manual)
+	if err != nil {
+		t.Fatalf("Marshal: %v", err)
+	}
+
+	var rawRoot map[string]any
+	if err := json.Unmarshal(data, &rawRoot); err != nil {
+		t.Fatalf("Unmarshal: %v", err)
+	}
+
+	allowedAuthKeys := map[string]bool{
+		"auth_type": true,
+		"api_key":   true,
+		"var_name":  true,
+		"location":  true,
+	}
+
+	for _, item := range rawRoot["tools"].([]any) {
+		tm := item.(map[string]any)
+		name, _ := tm["name"].(string)
+		ct := tm["tool_call_template"].(map[string]any)
+		if name == "xoscal_health_check" {
+			if _, hasAuth := ct["auth"]; hasAuth {
+				t.Errorf("public probe tool xoscal_health_check should not require auth")
+			}
+			continue
+		}
+		authMap, ok := ct["auth"].(map[string]any)
+		if !ok {
+			t.Fatalf("protected HTTP tool %q missing auth object", name)
+		}
+		assertOnlyAllowedKeys(t, "ApiKeyAuth "+name, authMap, allowedAuthKeys)
+		if authMap["auth_type"] != "api_key" ||
+			authMap["api_key"] != "Bearer ${XOSCAL_API_TOKEN}" ||
+			authMap["var_name"] != "Authorization" ||
+			authMap["location"] != "header" {
+			t.Errorf("unexpected auth block on %q: %+v", name, authMap)
 		}
 	}
 }
 
-func TestGRPCToolsReferenceProtoDefinitions(t *testing.T) {
+func TestFullManualAndGRPCToolsReferenceProtoDefinitions(t *testing.T) {
 	serviceDescs := []grpc.ServiceDesc{
 		servicesv1.GovernanceService_ServiceDesc,
 		servicesv1.OscalService_ServiceDesc,
@@ -86,7 +264,19 @@ func TestGRPCToolsReferenceProtoDefinitions(t *testing.T) {
 		validMethods[sd.ServiceName] = methods
 	}
 
-	manual := BuildCanonicalManual(ManualOptions{})
+	manual := BuildFullManual("http://127.0.0.1:8080", "127.0.0.1:50051")
+	data, err := json.Marshal(manual)
+	if err != nil {
+		t.Fatalf("Marshal full manual: %v", err)
+	}
+	rep, err := ValidateManual(data)
+	if err != nil {
+		t.Fatalf("ValidateManual full manual: %v", err)
+	}
+	if !rep.Valid || rep.Verdict != "CONFORMANT" {
+		t.Fatalf("expected CONFORMANT full manual, got valid=%t findings=%+v", rep.Valid, rep.Findings)
+	}
+
 	grpcCount := 0
 	for _, tool := range manual.Tools {
 		if tool.ToolCallTemplate.CallTemplateType != "grpc" {
@@ -105,93 +295,187 @@ func TestGRPCToolsReferenceProtoDefinitions(t *testing.T) {
 		}
 	}
 	if grpcCount == 0 {
-		t.Fatalf("expected at least 1 gRPC tool in canonical manual")
+		t.Fatalf("expected at least 1 gRPC tool in full manual")
+	}
+
+	ext := manual.ExtendedEnvelope()
+	extBytes, err := json.Marshal(ext)
+	if err != nil {
+		t.Fatalf("Marshal ExtendedEnvelope: %v", err)
+	}
+	if !strings.Contains(string(extBytes), `"metadata"`) || !strings.Contains(string(extBytes), `"allowed_communication_protocols"`) {
+		t.Errorf("ExtendedEnvelope missing expected metadata fields: %s", string(extBytes))
 	}
 }
 
-func TestCLITemplateRequiredInputs(t *testing.T) {
-	manual := BuildCanonicalManual(ManualOptions{})
-	toolMap := make(map[string]Tool)
-	for _, tool := range manual.Tools {
-		toolMap[tool.Name] = tool
-	}
-
-	hasReq := func(reqs []string, want string) bool {
-		for _, r := range reqs {
-			if r == want {
-				return true
-			}
-		}
-		return false
-	}
-
-	vp, ok := toolMap["xoscal_verify_parity"]
-	if !ok {
-		t.Fatalf("missing xoscal_verify_parity tool")
-	}
-	if !hasReq(vp.Inputs.Required, "dir") {
-		t.Errorf("xoscal_verify_parity Required = %v, want 'dir' included", vp.Inputs.Required)
-	}
-
-	seed, ok := toolMap["xoscal_seed_knowledge_graph"]
-	if !ok {
-		t.Fatalf("missing xoscal_seed_knowledge_graph tool")
-	}
-	for _, req := range []string{"dsn", "snapshot"} {
-		if !hasReq(seed.Inputs.Required, req) {
-			t.Errorf("xoscal_seed_knowledge_graph Required = %v, want %q included", seed.Inputs.Required, req)
-		}
-	}
-
-	cw, ok := toolMap["xoscal_graph_crosswalk"]
-	if !ok {
-		t.Fatalf("missing xoscal_graph_crosswalk tool")
-	}
-	if !hasReq(cw.Inputs.Required, "control") {
-		t.Errorf("xoscal_graph_crosswalk Required = %v, want 'control' included", cw.Inputs.Required)
-	}
-
-	br, ok := toolMap["xoscal_graph_blast_radius"]
-	if !ok {
-		t.Fatalf("missing xoscal_graph_blast_radius tool")
-	}
-	if !hasReq(br.Inputs.Required, "target") {
-		t.Errorf("xoscal_graph_blast_radius Required = %v, want 'target' included", br.Inputs.Required)
-	}
-
-	if _, ok := toolMap["xoscal_feeds_sync"]; !ok {
-		t.Fatalf("missing xoscal_feeds_sync tool")
-	}
-}
-
-func TestValidateManualAcceptsCommandsOnlyCLI(t *testing.T) {
-	commandsOnly := Manual{
-		ManualVersion: "1.0.0",
-		UTCPVersion:   SpecVersion,
-		Info:          ManualInfo{Title: "Commands Only CLI", Version: "1.0.0"},
-		Tools: []Tool{
-			{
-				Name:        "cli_commands_tool",
-				Description: "CLI tool using upstream python/ts commands[] array",
-				Inputs:      JSONSchema{Type: "object"},
-				Outputs:     JSONSchema{Type: "object"},
-				ToolCallTemplate: CallTemplate{
-					CallTemplateType: "cli",
-					Commands: []CLICommand{
-						{Command: "xoscal doctor -json", AppendToFinalOutput: true},
+func TestValidateManual_NegativeGovernanceWebSocketAndMCP(t *testing.T) {
+	cases := []struct {
+		name     string
+		manual   Manual
+		wantCode string
+	}{
+		{
+			name: "POST with DISCOVER standing rejected",
+			manual: Manual{
+				UTCPVersion:   SpecVersion,
+				ManualVersion: "1.0.0",
+				Tools: []Tool{{
+					Name:        "bad_post_discover",
+					Description: "Mutating POST falsely tagged as DISCOVER",
+					Tags:        []string{"governance:DISCOVER"},
+					Inputs:      JSONSchema{Type: "object"},
+					Outputs:     JSONSchema{Type: "object"},
+					ToolCallTemplate: CallTemplate{
+						CallTemplateType: "http",
+						HTTPMethod:       "POST",
+						URL:              "http://127.0.0.1:8080/api/v1/feeds/sync",
 					},
-				},
+				}},
 			},
+			wantCode: "ANTI_GOVERNANCE_COLLAPSE",
+		},
+		{
+			name: "PATCH with DISCOVER standing rejected",
+			manual: Manual{
+				UTCPVersion:   SpecVersion,
+				ManualVersion: "1.0.0",
+				Tools: []Tool{{
+					Name:        "bad_patch_discover",
+					Description: "Mutating PATCH falsely tagged as DISCOVER",
+					Governance:  GovernanceDiscover,
+					Inputs:      JSONSchema{Type: "object"},
+					Outputs:     JSONSchema{Type: "object"},
+					ToolCallTemplate: CallTemplate{
+						CallTemplateType: "http",
+						HTTPMethod:       "PATCH",
+						URL:              "http://127.0.0.1:8080/api/v1/resource",
+					},
+				}},
+			},
+			wantCode: "ANTI_GOVERNANCE_COLLAPSE",
+		},
+		{
+			name: "DELETE with TRUST standing rejected",
+			manual: Manual{
+				UTCPVersion:   SpecVersion,
+				ManualVersion: "1.0.0",
+				Tools: []Tool{{
+					Name:        "bad_delete_trust",
+					Description: "Mutating DELETE falsely tagged as TRUST",
+					Tags:        []string{"governance:TRUST"},
+					Inputs:      JSONSchema{Type: "object"},
+					Outputs:     JSONSchema{Type: "object"},
+					ToolCallTemplate: CallTemplate{
+						CallTemplateType: "http",
+						HTTPMethod:       "DELETE",
+						URL:              "http://127.0.0.1:8080/api/v1/resource",
+					},
+				}},
+			},
+			wantCode: "ANTI_GOVERNANCE_COLLAPSE",
+		},
+		{
+			name: "AllowedCommunicationProtocols containing ws rejected",
+			manual: Manual{
+				UTCPVersion:   SpecVersion,
+				ManualVersion: "1.0.0",
+				Tools: []Tool{{
+					Name:        "ws_proto_leak",
+					Description: "HTTP tool advertising ws in allowed_communication_protocols",
+					Tags:        []string{"governance:DISCOVER"},
+					Inputs:      JSONSchema{Type: "object"},
+					Outputs:     JSONSchema{Type: "object"},
+					ToolCallTemplate: CallTemplate{
+						CallTemplateType:              "http",
+						HTTPMethod:                    "GET",
+						URL:                           "http://127.0.0.1:8080/healthz",
+						AllowedCommunicationProtocols: []string{"http", "ws"},
+					},
+				}},
+			},
+			wantCode: "ANTI_WEBSOCKET_FORBIDDEN",
+		},
+		{
+			name: "WebSocket call_template_type and wss URL rejected",
+			manual: Manual{
+				UTCPVersion:   SpecVersion,
+				ManualVersion: "1.0.0",
+				Tools: []Tool{{
+					Name:        "ws_stream_tool",
+					Description: "Forbidden websocket tool",
+					Inputs:      JSONSchema{Type: "object"},
+					Outputs:     JSONSchema{Type: "object"},
+					ToolCallTemplate: CallTemplate{
+						CallTemplateType: "websocket",
+						URL:              "wss://example.com/stream",
+					},
+				}},
+			},
+			wantCode: "ANTI_WEBSOCKET_FORBIDDEN",
+		},
+		{
+			name: "MCP call template with nil config rejected",
+			manual: Manual{
+				UTCPVersion:   SpecVersion,
+				ManualVersion: "1.0.0",
+				Tools: []Tool{{
+					Name:        "empty_mcp_tool",
+					Description: "MCP tool missing config.mcpServers",
+					Tags:        []string{"governance:INVOKE"},
+					Inputs:      JSONSchema{Type: "object"},
+					Outputs:     JSONSchema{Type: "object"},
+					ToolCallTemplate: CallTemplate{
+						CallTemplateType: "mcp",
+					},
+				}},
+			},
+			wantCode: "MISSING_MCP_SERVERS",
+		},
+		{
+			name: "MCP call template with empty mcpServers map rejected",
+			manual: Manual{
+				UTCPVersion:   SpecVersion,
+				ManualVersion: "1.0.0",
+				Tools: []Tool{{
+					Name:        "empty_mcp_servers_map",
+					Description: "MCP tool with empty mcpServers map",
+					Tags:        []string{"governance:INVOKE"},
+					Inputs:      JSONSchema{Type: "object"},
+					Outputs:     JSONSchema{Type: "object"},
+					ToolCallTemplate: CallTemplate{
+						CallTemplateType: "mcp",
+						Config:           &MCPTemplateConfig{MCPServers: map[string]MCPServer{}},
+					},
+				}},
+			},
+			wantCode: "MISSING_MCP_SERVERS",
 		},
 	}
 
-	data, _ := json.Marshal(commandsOnly)
-	rep, err := ValidateManual(data)
-	if err != nil {
-		t.Fatalf("ValidateManual: %v", err)
-	}
-	if !rep.Valid || rep.Verdict != "CONFORMANT" {
-		t.Fatalf("expected CONFORMANT for commands[] CLI tool, got valid=%t findings=%+v", rep.Valid, rep.Findings)
+	for _, tc := range cases {
+		t.Run(tc.name, func(t *testing.T) {
+			data, err := json.Marshal(tc.manual)
+			if err != nil {
+				t.Fatalf("Marshal: %v", err)
+			}
+			rep, err := ValidateManual(data)
+			if err != nil {
+				t.Fatalf("ValidateManual: %v", err)
+			}
+			if rep.Valid || rep.Verdict != "NON_CONFORMANT" {
+				t.Fatalf("expected NON_CONFORMANT, got valid=%t verdict=%s findings=%+v", rep.Valid, rep.Verdict, rep.Findings)
+			}
+			found := false
+			for _, f := range rep.Findings {
+				if f.Code == tc.wantCode {
+					found = true
+					break
+				}
+			}
+			if !found {
+				t.Errorf("expected finding %q, got %+v", tc.wantCode, rep.Findings)
+			}
+		})
 	}
 }
 
@@ -218,76 +502,105 @@ func TestSupportedRepositoriesCoverage(t *testing.T) {
 	}
 }
 
-func TestValidateManualRejectsWebSocketPerRule10(t *testing.T) {
-	badManual := Manual{
-		ManualVersion: "1.0.0",
-		UTCPVersion:   SpecVersion,
-		Info:          ManualInfo{Title: "Bad WS Manual", Version: "1.0.0"},
-		Tools: []Tool{
-			{
-				Name:        "ws_stream_tool",
-				Description: "Forbidden websocket tool",
-				Inputs:      JSONSchema{Type: "object"},
-				Outputs:     JSONSchema{Type: "object"},
-				ToolCallTemplate: CallTemplate{
-					CallTemplateType: "websocket",
-					URL:              "wss://example.com/stream",
-				},
+func TestGenerateSDKHarnessAndMCPBridge_7RepoConformance(t *testing.T) {
+	// 1. Pure .utcp_config.json generator
+	utcpCfgBytes, err := GenerateUTCPClientConfig("http://127.0.0.1:8080")
+	if err != nil {
+		t.Fatalf("GenerateUTCPClientConfig: %v", err)
+	}
+	var rawClientCfg map[string]any
+	if err := json.Unmarshal(utcpCfgBytes, &rawClientCfg); err != nil {
+		t.Fatalf("Unmarshal .utcp_config.json: %v", err)
+	}
+	assertOnlyAllowedKeys(t, ".utcp_config.json", rawClientCfg, map[string]bool{"manual_call_templates": true})
+	if !strings.Contains(string(utcpCfgBytes), `"name": "xoscal"`) ||
+		!strings.Contains(string(utcpCfgBytes), `"url": "http://127.0.0.1:8080/.well-known/utcp"`) ||
+		!strings.Contains(string(utcpCfgBytes), `"allowed_communication_protocols"`) {
+		t.Errorf("unexpected .utcp_config.json output:\n%s", string(utcpCfgBytes))
+	}
+
+	// 2. MCP host config for @utcp/mcp-bridge
+	mcpCfgBytes, err := GenerateMCPBridgeConfig("http://127.0.0.1:8080", "/etc/xoscal/.utcp_config.json")
+	if err != nil {
+		t.Fatalf("GenerateMCPBridgeConfig: %v", err)
+	}
+	var rawMCPCfg map[string]any
+	if err := json.Unmarshal(mcpCfgBytes, &rawMCPCfg); err != nil {
+		t.Fatalf("Unmarshal MCPBridgeConfig: %v", err)
+	}
+	assertOnlyAllowedKeys(t, "MCPBridgeConfig", rawMCPCfg, map[string]bool{"mcpServers": true})
+	for _, want := range []string{`"utcp-xoscal"`, `"@utcp/mcp-bridge"`, `"UTCP_CONFIG_FILE": "/etc/xoscal/.utcp_config.json"`} {
+		if !strings.Contains(string(mcpCfgBytes), want) {
+			t.Errorf("GenerateMCPBridgeConfig missing %s in:\n%s", want, string(mcpCfgBytes))
+		}
+	}
+
+	// 3. SDK Harnesses across all 5 SDK repositories
+	sdkChecks := []struct {
+		target string
+		wants  []string
+	}{
+		{
+			target: "python-utcp",
+			wants: []string{
+				"import utcp_http",
+				"from utcp.utcp_client import UtcpClient",
+				"await UtcpClient.create(\n        config={",
+				`await client.call_tool(`,
+				`"xoscal.xoscal_controls_search"`,
+				`"q": "encryption"`,
+				"await client.close()",
+			},
+		},
+		{
+			target: "typescript-utcp",
+			wants: []string{
+				`import "@utcp/http";`,
+				`import { UtcpClient } from "@utcp/sdk";`,
+				"await UtcpClient.create(process.cwd(), {",
+				`await client.callTool("xoscal.xoscal_controls_search"`,
+				`q: "encryption"`,
+				"await client.close()",
+			},
+		},
+		{
+			target: "go-utcp",
+			wants: []string{
+				`utcp "github.com/universal-tool-calling-protocol/go-utcp"`,
+				`&utcp.UtcpClientConfig{ProvidersFilePath: ".utcp_config.json"}`,
+				`utcp.NewUTCPClient(ctx, cfg, nil, nil)`,
+				`client.CallTool(ctx, "xoscal.xoscal_controls_search"`,
+			},
+		},
+		{
+			target: "rs-utcp",
+			wants: []string{
+				"use std::sync::Arc;",
+				"InMemoryToolRepository",
+				"TagSearchStrategy",
+				`UtcpClientConfig::new().with_providers_file_path(".utcp_config.json".into())`,
+				"UtcpClient::create(config, repo, search).await?",
+				`"xoscal.xoscal_controls_search"`,
+			},
+		},
+		{
+			target: "utcp-mcp",
+			wants: []string{
+				`"@utcp/mcp-bridge"`,
+				`"UTCP_CONFIG_FILE": ".utcp_config.json"`,
 			},
 		},
 	}
 
-	data, _ := json.Marshal(badManual)
-	rep, err := ValidateManual(data)
-	if err != nil {
-		t.Fatalf("ValidateManual: %v", err)
-	}
-	if rep.Valid || rep.Verdict != "NON_CONFORMANT" {
-		t.Fatalf("expected NON_CONFORMANT for websocket tool, got valid=%t verdict=%s", rep.Valid, rep.Verdict)
-	}
-	foundAntiWS := false
-	for _, f := range rep.Findings {
-		if f.Code == "ANTI_WEBSOCKET_FORBIDDEN" {
-			foundAntiWS = true
-			break
-		}
-	}
-	if !foundAntiWS {
-		t.Errorf("expected ANTI_WEBSOCKET_FORBIDDEN finding, got %+v", rep.Findings)
-	}
-}
-
-func TestGenerateSDKHarnessAndMCPBridge(t *testing.T) {
-	targets := []struct {
-		target     string
-		expect     string
-		namespaced bool
-	}{
-		{"go-utcp", "github.com/universal-tool-calling-protocol/go-utcp", true},
-		{"python-utcp", "from utcp.utcp_client import UtcpClient", true},
-		{"typescript-utcp", `from "@utcp/sdk"`, true},
-		{"rs-utcp", "use rs_utcp::{UtcpClient, UtcpClientConfig, CallTemplate};", true},
-		{"utcp-mcp", "https://github.com/universal-tool-calling-protocol/utcp-mcp", false},
-	}
-
-	for _, tc := range targets {
-		code, err := GenerateSDKHarness(tc.target, "http://127.0.0.1:8080/.well-known/utcp", "./utcp.json")
+	for _, tc := range sdkChecks {
+		code, err := GenerateSDKHarness(tc.target, "http://127.0.0.1:8080", ".utcp_config.json")
 		if err != nil {
 			t.Fatalf("GenerateSDKHarness(%q): %v", tc.target, err)
 		}
-		if !strings.Contains(code, tc.expect) {
-			t.Errorf("GenerateSDKHarness(%q) missing %q in output:\n%s", tc.target, tc.expect, code)
+		for _, w := range tc.wants {
+			if !strings.Contains(code, w) {
+				t.Errorf("GenerateSDKHarness(%q) missing %q in:\n%s", tc.target, w, code)
+			}
 		}
-		if tc.namespaced && !strings.Contains(code, "xoscal_http_manual.xoscal_controls_search") {
-			t.Errorf("GenerateSDKHarness(%q) missing namespaced tool 'xoscal_http_manual.xoscal_controls_search' in output:\n%s", tc.target, code)
-		}
-	}
-
-	discCfg, err := BuildDiscoveryConfig("http://127.0.0.1:8080/.well-known/utcp", "./utcp.json")
-	if err != nil {
-		t.Fatalf("BuildDiscoveryConfig: %v", err)
-	}
-	if !strings.Contains(string(discCfg), `"allowed_communication_protocols"`) {
-		t.Errorf("BuildDiscoveryConfig missing allowed_communication_protocols: %s", string(discCfg))
 	}
 }

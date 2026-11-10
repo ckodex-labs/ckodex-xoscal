@@ -372,21 +372,32 @@ func TestGatewayUTCPEndpoints(t *testing.T) {
 		t.Errorf("POST /api/v1/utcp/validate malformed JSON: expected 400, got %d", badRec.Code)
 	}
 
-	// Verify token authentication wrapper on UTCP endpoints
+	// Verify token authentication wrapper: GET /.well-known/utcp is exempt for unauthenticated
+	// UTCP discovery and advertises ApiKeyAuth, whereas /api/v1/utcp/manual and /api/v1/frameworks require Bearer token.
 	authedHandler := withTokenAuth(mux, "secret-token-123")
-	unauthReq := httptest.NewRequest(http.MethodGet, "/.well-known/utcp", nil)
-	unauthRec := httptest.NewRecorder()
-	authedHandler.ServeHTTP(unauthRec, unauthReq)
-	if unauthRec.Code != http.StatusUnauthorized {
-		t.Errorf("unauthenticated GET /.well-known/utcp: expected 401, got %d", unauthRec.Code)
+	unauthWellKnownReq := httptest.NewRequest(http.MethodGet, "/.well-known/utcp", nil)
+	unauthWellKnownRec := httptest.NewRecorder()
+	authedHandler.ServeHTTP(unauthWellKnownRec, unauthWellKnownReq)
+	if unauthWellKnownRec.Code != http.StatusOK {
+		t.Errorf("unauthenticated GET /.well-known/utcp: expected 200 OK, got %d", unauthWellKnownRec.Code)
+	}
+	if !strings.Contains(unauthWellKnownRec.Body.String(), `"auth_type":"api_key"`) {
+		t.Errorf("expected GET /.well-known/utcp under token auth to advertise auth_type=api_key, got %s", unauthWellKnownRec.Body.String())
 	}
 
-	authReq := httptest.NewRequest(http.MethodGet, "/.well-known/utcp", nil)
+	unauthAPIReq := httptest.NewRequest(http.MethodGet, "/api/v1/utcp/manual", nil)
+	unauthAPIRec := httptest.NewRecorder()
+	authedHandler.ServeHTTP(unauthAPIRec, unauthAPIReq)
+	if unauthAPIRec.Code != http.StatusUnauthorized {
+		t.Errorf("unauthenticated GET /api/v1/utcp/manual: expected 401, got %d", unauthAPIRec.Code)
+	}
+
+	authReq := httptest.NewRequest(http.MethodGet, "/api/v1/utcp/manual", nil)
 	authReq.Header.Set("Authorization", "Bearer secret-token-123")
 	authRec := httptest.NewRecorder()
 	authedHandler.ServeHTTP(authRec, authReq)
 	if authRec.Code != http.StatusOK {
-		t.Errorf("authenticated GET /.well-known/utcp: expected 200, got %d", authRec.Code)
+		t.Errorf("authenticated GET /api/v1/utcp/manual: expected 200, got %d", authRec.Code)
 	}
 }
 
@@ -448,14 +459,20 @@ func TestGatewayRouteParityAndObservability(t *testing.T) {
 		t.Fatalf("GET /api/v1/graph/export failed: status=%d body=%s", expRec.Code, expRec.Body.String())
 	}
 
-	// 2. /api/v1/feeds/sync parity (POST & GET)
-	for _, method := range []string{http.MethodPost, http.MethodGet} {
-		syncReq := httptest.NewRequest(method, "/api/v1/feeds/sync?feed=cisa-kev-active-threats", nil)
-		syncRec := httptest.NewRecorder()
-		wrapped.ServeHTTP(syncRec, syncReq)
-		if syncRec.Code != http.StatusOK || !strings.Contains(syncRec.Body.String(), `"bundle_sha256"`) {
-			t.Fatalf("%s /api/v1/feeds/sync failed: status=%d body=%s", method, syncRec.Code, syncRec.Body.String())
-		}
+	// 2. /api/v1/feeds/sync enforces POST-only (GET -> 405, POST -> 200)
+	t.Setenv("XOSCAL_FEED_CACHE_DIR", t.TempDir())
+	getSyncReq := httptest.NewRequest(http.MethodGet, "/api/v1/feeds/sync?feed=cisa-kev-active-threats", nil)
+	getSyncRec := httptest.NewRecorder()
+	wrapped.ServeHTTP(getSyncRec, getSyncReq)
+	if getSyncRec.Code != http.StatusMethodNotAllowed || getSyncRec.Header().Get("Allow") != http.MethodPost {
+		t.Fatalf("GET /api/v1/feeds/sync: expected 405 with Allow=POST, got %d (Allow=%q)", getSyncRec.Code, getSyncRec.Header().Get("Allow"))
+	}
+
+	postSyncReq := httptest.NewRequest(http.MethodPost, "/api/v1/feeds/sync", strings.NewReader(`{"offline":true,"feed_ids":["cisa-kev-active-threats"]}`))
+	postSyncRec := httptest.NewRecorder()
+	wrapped.ServeHTTP(postSyncRec, postSyncReq)
+	if postSyncRec.Code != http.StatusOK || !strings.Contains(postSyncRec.Body.String(), `"bundle_sha256"`) {
+		t.Fatalf("POST /api/v1/feeds/sync failed: status=%d body=%s", postSyncRec.Code, postSyncRec.Body.String())
 	}
 
 	// 3. /api/v1/feeds?feed=cisa-kev-active-threats inspection parity

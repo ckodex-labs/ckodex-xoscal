@@ -4,7 +4,7 @@
       "href": "./assessment-plan.json"
     },
     "metadata": {
-      "last-modified": "2026-11-08T01:42:13Z",
+      "last-modified": "2026-11-08T00:30:47Z",
       "oscal-version": "1.2.3",
       "title": "NY DFS 500 with 2023-11 amendments Assessment Results Template",
       "version": "1"
@@ -339,7 +339,7 @@
         ],
         "observations": [
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:30:47Z",
             "description": "Verified control _500.10.a.1 (In addition to the requirements set forth in section 500.4(a) of this Part, each covered entity shall: — 500.10.a.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -351,7 +351,7 @@
             "uuid": "a5b424f5-f6f0-5339-9c56-6decce655e16"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:30:47Z",
             "description": "Verified control _500.11.a (Third-party service provider security policy — 500.11.a) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -363,7 +363,7 @@
             "uuid": "5bd2d508-b20f-57cd-8dc8-4bb668f6f1ec"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:30:47Z",
             "description": "Verified control _500.12.a (Multi-factor authentication — 500.12.a) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -375,7 +375,7 @@
             "uuid": "1907f7f4-298e-5d8a-848c-2a3310184922"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:30:47Z",
             "description": "Verified control _500.13.a (Asset management and data retention requirements — 500.13.a) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -387,7 +387,7 @@
             "uuid": "5fe406c6-bf9d-588d-952d-ada5a64d4ced"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:30:47Z",
             "description": "Verified control _500.14.a.1 (As part of its cybersecurity program, each covered entity shall: — 500.14.a.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -399,7 +399,7 @@
             "uuid": "7037d4cd-9e6e-5257-ae93-24be7df8c7ea"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:30:47Z",
             "description": "Verified control _500.15.a (Encryption of nonpublic information — 500.15.a) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -411,7 +411,7 @@
             "uuid": "35d25f59-bac6-5586-9138-67f64ca61127"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:30:47Z",
             "description": "Verified control _500.16.a (Incident response and business continuity management — 500.16.a) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -423,7 +423,7 @@
             "uuid": "7e778425-d136-5f20-96d0-de1e46683a90"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:30:47Z",
             "description": "Verified control _500.17.a.1 (Notice of cybersecurity incident — 500.17.a.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -435,7 +435,7 @@
             "uuid": "ceb6bb64-48d0-5efa-b369-9151948990db"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:30:47Z",
             "description": "Verified control _500.19.a (Limited exemption) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -447,7 +447,7 @@
             "uuid": "a41a102e-cc9b-550c-b2e7-b42c5722b45a"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:30:47Z",
             "description": "Verified control _500.2.a (Cybersecurity program — 500.2.a) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -459,7 +459,7 @@
             "uuid": "41ab8d7b-f807-5a6f-b302-895dff3c7cce"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:30:47Z",
             "description": "Verified control _500.24.a (Exemptions from electronic filing and submission requirements — 500.24.a) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -471,7 +471,7 @@
             "uuid": "0a2c848d-b1a0-5d64-af39-1c99fc8f8160"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:30:47Z",
             "description": "Verified control _500.3.a (Procedures — 500.3.a) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -483,7 +483,7 @@
             "uuid": "f7fff4f4-6eae-5b25-a384-eb8f546db4c3"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:30:47Z",
             "description": "Verified control _500.4.a (Chief information security officer) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -495,7 +495,7 @@
             "uuid": "1885e453-3856-59f1-85d1-de27fc027815"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:30:47Z",
             "description": "Verified control _500.5.a.1 (conduct, at a minimum: — 500.5.a.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -507,7 +507,7 @@
             "uuid": "35eea009-f564-5a36-bae4-167cab1253c2"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:30:47Z",
             "description": "Verified control _500.6.a (Audit trail — 500.6.a) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -519,7 +519,7 @@
             "uuid": "314d1c8e-dd17-5fc7-a617-099a8dd610ee"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:30:47Z",
             "description": "Verified control _500.7.a (Access privileges and management — 500.7.a) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -531,7 +531,7 @@
             "uuid": "938a9ed6-866b-51ae-92dc-c989a713f428"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:30:47Z",
             "description": "Verified control _500.8.a (Application security — 500.8.a) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -543,7 +543,7 @@
             "uuid": "2a16286b-e942-5b14-bb70-e5417cba8523"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:30:47Z",
             "description": "Verified control _500.9.a (Risk assessment — 500.9.a) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -555,7 +555,7 @@
             "uuid": "dbf8f83b-6a92-5208-8805-83e50b9afcb4"
           },
           {
-            "collected": "2026-11-08T01:42:13Z",
+            "collected": "2026-11-08T00:30:47Z",
             "description": "Verified control node196 (Confidentiality — node196) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -571,11 +571,507 @@
           "control-selections": [
             {
               "description": "All controls evaluated for NY DFS 500 with 2023-11 amendments",
-              "include-all": {}
+              "include-controls": [
+                {
+                  "control-id": "_500.10.a.1"
+                },
+                {
+                  "control-id": "_500.10.a.2"
+                },
+                {
+                  "control-id": "_500.10.a.3"
+                },
+                {
+                  "control-id": "_500.10.b"
+                },
+                {
+                  "control-id": "_500.11.a"
+                },
+                {
+                  "control-id": "_500.11.a.1"
+                },
+                {
+                  "control-id": "_500.11.a.2"
+                },
+                {
+                  "control-id": "_500.11.a.3"
+                },
+                {
+                  "control-id": "_500.11.a.4"
+                },
+                {
+                  "control-id": "_500.11.b"
+                },
+                {
+                  "control-id": "_500.11.b.1"
+                },
+                {
+                  "control-id": "_500.11.b.2"
+                },
+                {
+                  "control-id": "_500.11.b.3"
+                },
+                {
+                  "control-id": "_500.11.b.4"
+                },
+                {
+                  "control-id": "_500.12.a"
+                },
+                {
+                  "control-id": "_500.12.a.1"
+                },
+                {
+                  "control-id": "_500.12.a.2"
+                },
+                {
+                  "control-id": "_500.12.a.3"
+                },
+                {
+                  "control-id": "_500.12.b"
+                },
+                {
+                  "control-id": "_500.13.a"
+                },
+                {
+                  "control-id": "_500.13.a.1"
+                },
+                {
+                  "control-id": "_500.13.a.1.i"
+                },
+                {
+                  "control-id": "_500.13.a.1.ii"
+                },
+                {
+                  "control-id": "_500.13.a.1.iii"
+                },
+                {
+                  "control-id": "_500.13.a.1.iv"
+                },
+                {
+                  "control-id": "_500.13.a.1.v"
+                },
+                {
+                  "control-id": "_500.13.a.2"
+                },
+                {
+                  "control-id": "_500.13.b"
+                },
+                {
+                  "control-id": "_500.14.a.1"
+                },
+                {
+                  "control-id": "_500.14.a.2"
+                },
+                {
+                  "control-id": "_500.14.a.3"
+                },
+                {
+                  "control-id": "_500.14.b"
+                },
+                {
+                  "control-id": "_500.14.b.1"
+                },
+                {
+                  "control-id": "_500.14.b.2"
+                },
+                {
+                  "control-id": "_500.15.a"
+                },
+                {
+                  "control-id": "_500.15.b"
+                },
+                {
+                  "control-id": "_500.16.a"
+                },
+                {
+                  "control-id": "_500.16.a.1"
+                },
+                {
+                  "control-id": "_500.16.a.1.i"
+                },
+                {
+                  "control-id": "_500.16.a.1.ii"
+                },
+                {
+                  "control-id": "_500.16.a.1.iii"
+                },
+                {
+                  "control-id": "_500.16.a.1.iv"
+                },
+                {
+                  "control-id": "_500.16.a.1.ix"
+                },
+                {
+                  "control-id": "_500.16.a.1.v"
+                },
+                {
+                  "control-id": "_500.16.a.1.vi"
+                },
+                {
+                  "control-id": "_500.16.a.1.vii"
+                },
+                {
+                  "control-id": "_500.16.a.1.viii"
+                },
+                {
+                  "control-id": "_500.16.a.2"
+                },
+                {
+                  "control-id": "_500.16.a.2.i"
+                },
+                {
+                  "control-id": "_500.16.a.2.ii"
+                },
+                {
+                  "control-id": "_500.16.a.2.iii"
+                },
+                {
+                  "control-id": "_500.16.a.2.iv"
+                },
+                {
+                  "control-id": "_500.16.a.2.v"
+                },
+                {
+                  "control-id": "_500.16.a.2.vi"
+                },
+                {
+                  "control-id": "_500.16.b"
+                },
+                {
+                  "control-id": "_500.16.c"
+                },
+                {
+                  "control-id": "_500.16.d"
+                },
+                {
+                  "control-id": "_500.16.d.1"
+                },
+                {
+                  "control-id": "_500.16.d.2"
+                },
+                {
+                  "control-id": "_500.16.e"
+                },
+                {
+                  "control-id": "_500.17.a.1"
+                },
+                {
+                  "control-id": "_500.17.a.2"
+                },
+                {
+                  "control-id": "_500.17.b.1"
+                },
+                {
+                  "control-id": "_500.17.b.1.i"
+                },
+                {
+                  "control-id": "_500.17.b.1.i.a"
+                },
+                {
+                  "control-id": "_500.17.b.1.i.b"
+                },
+                {
+                  "control-id": "_500.17.b.1.ii"
+                },
+                {
+                  "control-id": "_500.17.b.1.ii.a"
+                },
+                {
+                  "control-id": "_500.17.b.1.ii.b"
+                },
+                {
+                  "control-id": "_500.17.b.1.ii.c"
+                },
+                {
+                  "control-id": "_500.17.b.2"
+                },
+                {
+                  "control-id": "_500.17.b.3"
+                },
+                {
+                  "control-id": "_500.17.c"
+                },
+                {
+                  "control-id": "_500.17.c.1"
+                },
+                {
+                  "control-id": "_500.17.c.2"
+                },
+                {
+                  "control-id": "_500.19.a"
+                },
+                {
+                  "control-id": "_500.19.b"
+                },
+                {
+                  "control-id": "_500.19.c"
+                },
+                {
+                  "control-id": "_500.19.d"
+                },
+                {
+                  "control-id": "_500.19.e"
+                },
+                {
+                  "control-id": "_500.19.f"
+                },
+                {
+                  "control-id": "_500.19.g"
+                },
+                {
+                  "control-id": "_500.19.h"
+                },
+                {
+                  "control-id": "_500.2.a"
+                },
+                {
+                  "control-id": "_500.2.b"
+                },
+                {
+                  "control-id": "_500.2.b.1"
+                },
+                {
+                  "control-id": "_500.2.b.2"
+                },
+                {
+                  "control-id": "_500.2.b.3"
+                },
+                {
+                  "control-id": "_500.2.b.4"
+                },
+                {
+                  "control-id": "_500.2.b.5"
+                },
+                {
+                  "control-id": "_500.2.b.6"
+                },
+                {
+                  "control-id": "_500.2.c"
+                },
+                {
+                  "control-id": "_500.2.d"
+                },
+                {
+                  "control-id": "_500.2.e"
+                },
+                {
+                  "control-id": "_500.24.a"
+                },
+                {
+                  "control-id": "_500.24.b.1"
+                },
+                {
+                  "control-id": "_500.24.b.2"
+                },
+                {
+                  "control-id": "_500.24.b.3"
+                },
+                {
+                  "control-id": "_500.24.b.4"
+                },
+                {
+                  "control-id": "_500.24.c"
+                },
+                {
+                  "control-id": "_500.24.d"
+                },
+                {
+                  "control-id": "_500.24.e"
+                },
+                {
+                  "control-id": "_500.3.a"
+                },
+                {
+                  "control-id": "_500.3.b"
+                },
+                {
+                  "control-id": "_500.3.c"
+                },
+                {
+                  "control-id": "_500.3.d"
+                },
+                {
+                  "control-id": "_500.3.e"
+                },
+                {
+                  "control-id": "_500.3.f"
+                },
+                {
+                  "control-id": "_500.3.g"
+                },
+                {
+                  "control-id": "_500.3.h"
+                },
+                {
+                  "control-id": "_500.3.i"
+                },
+                {
+                  "control-id": "_500.3.j"
+                },
+                {
+                  "control-id": "_500.3.k"
+                },
+                {
+                  "control-id": "_500.3.l"
+                },
+                {
+                  "control-id": "_500.3.m"
+                },
+                {
+                  "control-id": "_500.3.n"
+                },
+                {
+                  "control-id": "_500.3.o"
+                },
+                {
+                  "control-id": "_500.4.a"
+                },
+                {
+                  "control-id": "_500.4.a.1"
+                },
+                {
+                  "control-id": "_500.4.a.2"
+                },
+                {
+                  "control-id": "_500.4.a.3"
+                },
+                {
+                  "control-id": "_500.4.b"
+                },
+                {
+                  "control-id": "_500.4.b.1"
+                },
+                {
+                  "control-id": "_500.4.b.2"
+                },
+                {
+                  "control-id": "_500.4.b.3"
+                },
+                {
+                  "control-id": "_500.4.b.4"
+                },
+                {
+                  "control-id": "_500.4.b.5"
+                },
+                {
+                  "control-id": "_500.4.b.6"
+                },
+                {
+                  "control-id": "_500.4.c"
+                },
+                {
+                  "control-id": "_500.4.d"
+                },
+                {
+                  "control-id": "_500.4.d.1"
+                },
+                {
+                  "control-id": "_500.4.d.2"
+                },
+                {
+                  "control-id": "_500.4.d.3"
+                },
+                {
+                  "control-id": "_500.4.d.4"
+                },
+                {
+                  "control-id": "_500.5.a.1"
+                },
+                {
+                  "control-id": "_500.5.a.2"
+                },
+                {
+                  "control-id": "_500.5.b"
+                },
+                {
+                  "control-id": "_500.5.c"
+                },
+                {
+                  "control-id": "_500.6.a"
+                },
+                {
+                  "control-id": "_500.6.a.1"
+                },
+                {
+                  "control-id": "_500.6.a.2"
+                },
+                {
+                  "control-id": "_500.6.b"
+                },
+                {
+                  "control-id": "_500.7.a"
+                },
+                {
+                  "control-id": "_500.7.a.1"
+                },
+                {
+                  "control-id": "_500.7.a.2"
+                },
+                {
+                  "control-id": "_500.7.a.3"
+                },
+                {
+                  "control-id": "_500.7.a.4"
+                },
+                {
+                  "control-id": "_500.7.a.5"
+                },
+                {
+                  "control-id": "_500.7.a.6"
+                },
+                {
+                  "control-id": "_500.7.b"
+                },
+                {
+                  "control-id": "_500.7.c"
+                },
+                {
+                  "control-id": "_500.7.c.1"
+                },
+                {
+                  "control-id": "_500.7.c.2"
+                },
+                {
+                  "control-id": "_500.8.a"
+                },
+                {
+                  "control-id": "_500.8.b"
+                },
+                {
+                  "control-id": "_500.9.a"
+                },
+                {
+                  "control-id": "_500.9.b"
+                },
+                {
+                  "control-id": "_500.9.b.1"
+                },
+                {
+                  "control-id": "_500.9.b.2"
+                },
+                {
+                  "control-id": "_500.9.b.3"
+                },
+                {
+                  "control-id": "node196"
+                },
+                {
+                  "control-id": "node39"
+                },
+                {
+                  "control-id": "node40"
+                },
+                {
+                  "control-id": "node75"
+                },
+                {
+                  "control-id": "node76"
+                }
+              ]
             }
           ]
         },
-        "start": "2026-11-08T01:42:13Z",
+        "start": "2026-11-08T00:30:47Z",
         "title": "NY DFS 500 with 2023-11 amendments Assessment Results",
         "uuid": "b50fd210-2664-53c1-b6df-f4fd2b4967e3"
       }

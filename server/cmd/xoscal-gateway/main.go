@@ -5,10 +5,8 @@ import (
 	"crypto/subtle"
 	"crypto/tls"
 	"crypto/x509"
-	"encoding/json"
 	"flag"
 	"fmt"
-	"io"
 	"log"
 	"log/slog"
 	"net/http"
@@ -29,12 +27,9 @@ import (
 
 	servicesv1 "github.com/mchorfa/xoscal/proto/oscal/services/v1"
 	_ "github.com/mchorfa/xoscal/server/internal/canadianframeworks"
-	"github.com/mchorfa/xoscal/server/internal/feeds"
 	"github.com/mchorfa/xoscal/server/internal/frameworks"
-	"github.com/mchorfa/xoscal/server/internal/graph"
-	"github.com/mchorfa/xoscal/server/internal/ontology"
+	"github.com/mchorfa/xoscal/server/internal/openapiembed"
 	"github.com/mchorfa/xoscal/server/internal/resilience"
-	"github.com/mchorfa/xoscal/server/internal/utcp"
 	"github.com/mchorfa/xoscal/server/internal/webstudio"
 )
 
@@ -80,7 +75,6 @@ func looksDynamicSegment(seg string) bool {
 	if seg == "" {
 		return false
 	}
-	// Numeric IDs
 	allDigits := true
 	for i := 0; i < len(seg); i++ {
 		if seg[i] < '0' || seg[i] > '9' {
@@ -91,12 +85,12 @@ func looksDynamicSegment(seg string) bool {
 	if allDigits {
 		return true
 	}
-	// UUIDs or long hex/random tokens
 	if len(seg) >= 16 {
 		hexOrDash := true
 		for i := 0; i < len(seg); i++ {
 			c := seg[i]
-			if !((c >= '0' && c <= '9') || (c >= 'a' && c <= 'f') || (c >= 'A' && c <= 'F') || c == '-') {
+			isHexOrDash := (c >= '0' && c <= '9') || (c >= 'a' && c <= 'f') || (c >= 'A' && c <= 'F') || c == '-'
+			if !isHexOrDash {
 				hexOrDash = false
 				break
 			}
@@ -135,7 +129,7 @@ func normalizeMetricsRoute(rawPath string) string {
 
 func (m *metricsCollector) record(rawRoute string, status int, d time.Duration) {
 	parts := strings.SplitN(strings.TrimSpace(rawRoute), " ", 2)
-	method := "GET"
+	var method string
 	rawPath := rawRoute
 	if len(parts) == 2 {
 		method = normalizeHTTPMethod(parts[0])
@@ -174,7 +168,6 @@ func (m *metricsCollector) record(rawRoute string, status int, d time.Duration) 
 		}
 	}
 
-	// Bound distinct status codes per route as well
 	if status < 100 || status > 599 {
 		status = 0
 	}
@@ -280,7 +273,13 @@ func (p *healthProber) getConn() (*grpc.ClientConn, error) {
 }
 
 func (p *healthProber) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+	if r.Method != http.MethodGet && r.Method != http.MethodHead {
+		w.Header().Set("Allow", "GET, HEAD")
+		http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
+		return
+	}
 	w.Header().Set("Content-Type", "application/json; charset=utf-8")
+	w.Header().Set("X-Content-Type-Options", "nosniff")
 	conn, err := p.getConn()
 	if err != nil {
 		w.WriteHeader(http.StatusServiceUnavailable)
@@ -312,235 +311,58 @@ func (p *healthProber) Close() error {
 	return err
 }
 
-func sanitizeGatewayHost(raw string) string {
-	s := strings.TrimSpace(raw)
-	if s == "" || len(s) > 255 {
-		return ""
+type gatewayTokenAuthCtxKey struct{}
+
+func hasGatewayTokenAuthContext(ctx context.Context) bool {
+	if ctx == nil {
+		return false
 	}
-	for i := 0; i < len(s); i++ {
-		c := s[i]
-		if !((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9') ||
-			c == '.' || c == '-' || c == ':' || c == '[' || c == ']') {
-			return ""
-		}
-	}
-	return s
+	v, _ := ctx.Value(gatewayTokenAuthCtxKey{}).(bool)
+	return v
 }
 
 func registerUTCPHandlers(mux *http.ServeMux, grpcEndpoint string) {
-	if ws, err := webstudio.NewServer(webstudio.Config{Registry: frameworks.DefaultRegistry()}); err == nil {
-		ws.RegisterFrameworkAndValidationRoutes(mux)
+	registerUTCPHandlersWithAuth(mux, grpcEndpoint, false)
+}
+
+func registerUTCPHandlersWithAuth(mux *http.ServeMux, grpcEndpoint string, tokenConfigured bool) {
+	bearerEnv := ""
+	if tokenConfigured {
+		bearerEnv = "XOSCAL_API_TOKEN" // #nosec G101 -- environment variable name for UTCP bearer auth, not a credential
+	}
+
+	wsMux := http.NewServeMux()
+	if ws, err := webstudio.NewServer(webstudio.Config{
+		Registry:          frameworks.DefaultRegistry(),
+		GRPCAddr:          grpcEndpoint,
+		BearerTokenEnvVar: bearerEnv,
+	}); err == nil {
+		ws.RegisterAPIRoutes(wsMux)
 	}
 
 	handleManual := func(w http.ResponseWriter, r *http.Request) {
-		if r.Method != http.MethodGet {
-			http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
-			return
+		effectiveEnv := bearerEnv
+		if effectiveEnv == "" && hasGatewayTokenAuthContext(r.Context()) {
+			effectiveEnv = "XOSCAL_API_TOKEN"
 		}
-		scheme := "http://"
-		if r.TLS != nil {
-			scheme = "https://"
-		}
-		baseURL := "http://127.0.0.1:8080"
-		if host := sanitizeGatewayHost(r.Host); host != "" {
-			baseURL = scheme + host
-		}
-		manual := utcp.GenerateManual(utcp.ManualOptions{
-			BaseHTTPURL: baseURL,
-			GRPCHost:    grpcEndpoint,
-		})
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(http.StatusOK)
-		_ = json.NewEncoder(w).Encode(manual)
-	}
-
-	handleValidate := func(w http.ResponseWriter, r *http.Request) {
-		if r.Method != http.MethodPost {
-			http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
-			return
-		}
-		body, err := io.ReadAll(http.MaxBytesReader(w, r.Body, 10<<20))
-		if err != nil {
-			w.Header().Set("Content-Type", "application/json; charset=utf-8")
-			w.WriteHeader(http.StatusBadRequest)
-			_ = json.NewEncoder(w).Encode(map[string]any{"error": err.Error()})
-			return
-		}
-		rep, err := utcp.ValidateManual(body)
-		if err != nil {
-			w.Header().Set("Content-Type", "application/json; charset=utf-8")
-			w.WriteHeader(http.StatusBadRequest)
-			_ = json.NewEncoder(w).Encode(map[string]any{"error": err.Error()})
-			return
-		}
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(http.StatusOK)
-		_ = json.NewEncoder(w).Encode(rep)
+		webstudio.ServeUTCPManual(w, r, grpcEndpoint, effectiveEnv)
 	}
 
 	mux.HandleFunc("/.well-known/utcp", handleManual)
 	mux.HandleFunc("/api/v1/utcp", handleManual)
-	mux.HandleFunc("/api/v1/utcp/validate", handleValidate)
+	mux.HandleFunc("/api/v1/utcp/manual", handleManual)
+	mux.Handle("/api/v1/", wsMux)
+}
 
-	mux.HandleFunc("/api/v1/ontology", func(w http.ResponseWriter, r *http.Request) {
-		if r.Method != http.MethodGet {
-			http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
-			return
-		}
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(http.StatusOK)
-		_ = json.NewEncoder(w).Encode(ontology.CanonicalSpec())
-	})
-
-	mux.HandleFunc("/api/v1/graph/stats", func(w http.ResponseWriter, r *http.Request) {
-		if r.Method != http.MethodGet {
-			http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
-			return
-		}
-		ug, err := graph.DefaultUnifiedGraph()
-		if err != nil {
-			http.Error(w, err.Error(), http.StatusInternalServerError)
-			return
-		}
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(http.StatusOK)
-		_ = json.NewEncoder(w).Encode(ug.Stats())
-	})
-
-	mux.HandleFunc("/api/v1/graph/crosswalk", func(w http.ResponseWriter, r *http.Request) {
-		if r.Method != http.MethodGet {
-			http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
-			return
-		}
-		ctrl := strings.TrimSpace(r.URL.Query().Get("control"))
-		if ctrl == "" {
-			ctrl = "ac-2"
-		}
-		ug, err := graph.DefaultUnifiedGraph()
-		if err != nil {
-			http.Error(w, err.Error(), http.StatusInternalServerError)
-			return
-		}
-		rep, err := ug.QueryCrosswalk(ctrl)
-		if err != nil {
-			http.Error(w, err.Error(), http.StatusBadRequest)
-			return
-		}
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(http.StatusOK)
-		_ = json.NewEncoder(w).Encode(rep)
-	})
-
-	mux.HandleFunc("/api/v1/graph/blast-radius", func(w http.ResponseWriter, r *http.Request) {
-		if r.Method != http.MethodGet {
-			http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
-			return
-		}
-		target := strings.TrimSpace(r.URL.Query().Get("target"))
-		if target == "" {
-			target = "CVE-2024-3400"
-		}
-		depth := 2
-		if dStr := strings.TrimSpace(r.URL.Query().Get("depth")); dStr != "" {
-			if dVal, err := strconv.Atoi(dStr); err == nil && dVal > 0 {
-				depth = dVal
-			}
-		}
-		ug, err := graph.DefaultUnifiedGraph()
-		if err != nil {
-			http.Error(w, err.Error(), http.StatusInternalServerError)
-			return
-		}
-		rep, err := ug.ComputeBlastRadius(target, depth)
-		if err != nil {
-			http.Error(w, err.Error(), http.StatusBadRequest)
-			return
-		}
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(http.StatusOK)
-		_ = json.NewEncoder(w).Encode(rep)
-	})
-
-	mux.HandleFunc("/api/v1/graph/export", func(w http.ResponseWriter, r *http.Request) {
-		if r.Method != http.MethodGet {
-			http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
-			return
-		}
-		target := strings.TrimSpace(r.URL.Query().Get("target"))
-		if target == "" {
-			target = "CVE-2024-3400"
-		}
-		format := strings.TrimSpace(r.URL.Query().Get("format"))
-		if format == "" {
-			format = "jsonld"
-		}
-		depth := 2
-		if dStr := strings.TrimSpace(r.URL.Query().Get("depth")); dStr != "" {
-			if dVal, err := strconv.Atoi(dStr); err == nil && dVal > 0 {
-				depth = dVal
-			}
-		}
-		ug, err := graph.DefaultUnifiedGraph()
-		if err != nil {
-			http.Error(w, err.Error(), http.StatusInternalServerError)
-			return
-		}
-		out, err := ug.ExportSubgraph(target, depth, format)
-		if err != nil {
-			http.Error(w, err.Error(), http.StatusBadRequest)
-			return
-		}
-		if strings.EqualFold(format, "cypher") {
-			w.Header().Set("Content-Type", "text/plain; charset=utf-8")
-		} else {
-			w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		}
-		w.Header().Set("X-Content-Type-Options", "nosniff")
-		w.WriteHeader(http.StatusOK)
-		// #nosec G705 -- response is strictly text/plain or application/json with X-Content-Type-Options: nosniff.
-		_, _ = w.Write([]byte(out))
-	})
-
-	mux.HandleFunc("/api/v1/feeds", func(w http.ResponseWriter, r *http.Request) {
-		if r.Method != http.MethodGet {
-			http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
-			return
-		}
-		feedID := strings.TrimSpace(r.URL.Query().Get("feed"))
-		if feedID != "" {
-			insp, err := feeds.InspectFeed(feedID)
-			if err != nil {
-				http.Error(w, err.Error(), http.StatusNotFound)
-				return
-			}
-			w.Header().Set("Content-Type", "application/json; charset=utf-8")
-			w.WriteHeader(http.StatusOK)
-			_ = json.NewEncoder(w).Encode(insp)
-			return
-		}
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(http.StatusOK)
-		_ = json.NewEncoder(w).Encode(feeds.ListFeeds())
-	})
-
-	mux.HandleFunc("/api/v1/feeds/sync", func(w http.ResponseWriter, r *http.Request) {
-		if r.Method != http.MethodPost && r.Method != http.MethodGet {
-			http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
-			return
-		}
-		feedID := strings.TrimSpace(r.URL.Query().Get("feed"))
-		receipt, err := feeds.SyncFeeds(r.Context(), feeds.SyncOptions{
-			FeedID:  feedID,
-			Offline: true,
-		})
-		if err != nil {
-			http.Error(w, err.Error(), http.StatusBadRequest)
-			return
-		}
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		w.WriteHeader(http.StatusOK)
-		_ = json.NewEncoder(w).Encode(receipt)
-	})
+var fallbackDiskOpenAPIFiles = map[string]string{
+	"governance_service.openapi.yaml":            "proto/oscal/gen/openapi/services/v1/governance_service.openapi.yaml",
+	"governance.yaml":                            "proto/oscal/gen/openapi/services/v1/governance_service.openapi.yaml",
+	"oscal_service.openapi.yaml":                 "proto/oscal/gen/openapi/services/v1/oscal_service.openapi.yaml",
+	"oscal.yaml":                                 "proto/oscal/gen/openapi/services/v1/oscal_service.openapi.yaml",
+	"transparency_exchange_service.openapi.yaml": "proto/oscal/gen/openapi/services/v1/transparency_exchange_service.openapi.yaml",
+	"transparency_exchange.yaml":                 "proto/oscal/gen/openapi/services/v1/transparency_exchange_service.openapi.yaml",
+	"transparency_graph_service.openapi.yaml":    "proto/oscal/gen/openapi/services/v1/transparency_graph_service.openapi.yaml",
+	"transparency_graph.yaml":                    "proto/oscal/gen/openapi/services/v1/transparency_graph_service.openapi.yaml",
 }
 
 func registerGatewayObservability(root *http.ServeMux, prober *healthProber, metrics *metricsCollector) {
@@ -549,29 +371,41 @@ func registerGatewayObservability(root *http.ServeMux, prober *healthProber, met
 		root.Handle("/readyz", prober)
 	}
 	if metrics != nil {
-		root.HandleFunc("/metrics", func(w http.ResponseWriter, _ *http.Request) {
+		root.HandleFunc("/metrics", func(w http.ResponseWriter, r *http.Request) {
+			if r.Method != http.MethodGet && r.Method != http.MethodHead {
+				w.Header().Set("Allow", "GET, HEAD")
+				http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
+				return
+			}
 			w.Header().Set("Content-Type", "text/plain; version=0.0.4; charset=utf-8")
 			_, _ = w.Write([]byte(metrics.prometheusText()))
 		})
 	}
 
-	openAPIFiles := map[string]string{
-		"/openapi/governance.yaml": "proto/oscal/gen/openapi/services/v1/governance_service.openapi.yaml",
-		"/openapi/oscal.yaml":      "proto/oscal/gen/openapi/services/v1/oscal_service.openapi.yaml",
-	}
-	for route, relPath := range openAPIFiles {
-		path := relPath
-		root.HandleFunc(route, func(w http.ResponseWriter, _ *http.Request) {
-			// #nosec G304 -- path is selected from the static OpenAPI route map above.
-			data, err := os.ReadFile(path)
-			if err != nil {
-				http.Error(w, "not found", http.StatusNotFound)
-				return
+	root.HandleFunc("/openapi/", func(w http.ResponseWriter, r *http.Request) {
+		if r.Method != http.MethodGet && r.Method != http.MethodHead {
+			w.Header().Set("Allow", "GET, HEAD")
+			http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
+			return
+		}
+		specName := strings.TrimPrefix(r.URL.Path, "/openapi/")
+		data, err := openapiembed.ReadSpec(specName)
+		if err != nil {
+			if diskPath, ok := fallbackDiskOpenAPIFiles[specName]; ok {
+				// #nosec G304 -- diskPath is selected from the static allowlist map above.
+				data, err = os.ReadFile(diskPath)
 			}
-			w.Header().Set("Content-Type", "application/x-yaml")
-			_, _ = w.Write(data)
-		})
-	}
+		}
+		if err != nil {
+			http.Error(w, "not found", http.StatusNotFound)
+			return
+		}
+		w.Header().Set("Content-Type", "application/x-yaml")
+		w.Header().Set("X-Content-Type-Options", "nosniff")
+		w.WriteHeader(http.StatusOK)
+		// #nosec G705 -- data comes from compile-time embedded OpenAPI YAML specs with nosniff.
+		_, _ = w.Write(data)
+	})
 }
 
 func main() {
@@ -620,7 +454,7 @@ func main() {
 	defer func() { _ = prober.Close() }()
 
 	root := http.NewServeMux()
-	registerUTCPHandlers(root, *grpcEndpoint)
+	registerUTCPHandlersWithAuth(root, *grpcEndpoint, strings.TrimSpace(*tokenFile) != "" || token != "")
 	registerGatewayObservability(root, prober, metrics)
 	root.Handle("/", mux)
 
@@ -814,11 +648,31 @@ func withCORS(next http.Handler, allowedOrigins map[string]bool) http.Handler {
 	})
 }
 
+func isTokenAuthExempt(r *http.Request) bool {
+	if r.Method != http.MethodGet && r.Method != http.MethodHead {
+		return false
+	}
+	switch r.URL.Path {
+	case "/healthz", "/readyz", "/.well-known/utcp":
+		return true
+	default:
+		return false
+	}
+}
+
 func withTokenAuth(next http.Handler, token string) http.Handler {
 	if token == "" {
 		return next
 	}
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		ctx := context.WithValue(r.Context(), gatewayTokenAuthCtxKey{}, true)
+		r = r.WithContext(ctx)
+
+		if isTokenAuthExempt(r) {
+			next.ServeHTTP(w, r)
+			return
+		}
+
 		provided := strings.TrimSpace(r.Header.Get("Authorization"))
 		if strings.HasPrefix(provided, "Bearer ") {
 			provided = strings.TrimSpace(strings.TrimPrefix(provided, "Bearer "))

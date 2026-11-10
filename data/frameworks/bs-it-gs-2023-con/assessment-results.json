@@ -4,7 +4,7 @@
       "href": "./assessment-plan.json"
     },
     "metadata": {
-      "last-modified": "2026-11-08T01:42:12Z",
+      "last-modified": "2026-11-08T00:30:54Z",
       "oscal-version": "1.2.3",
       "title": "IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - CON: Konzeption und Vorgehensweisen Assessment Results Template",
       "version": "1"
@@ -169,7 +169,7 @@
         ],
         "observations": [
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:54Z",
             "description": "Verified control con.1.a1.1 (Auswahl geeigneter kryptografischer Verfahren — CON.1.A1.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -181,7 +181,7 @@
             "uuid": "f6015ebc-8cec-5670-8f4d-72ef028278cb"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:54Z",
             "description": "Verified control con.10.a1.1 (Authentisierung bei Webanwendungen — CON.10.A1.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -193,7 +193,7 @@
             "uuid": "bfbb49fa-b140-5488-91fd-d74b1d63df3a"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:54Z",
             "description": "Verified control con.11.1.a1.1 (Einhaltung der Grundsätze zur VS-Verarbeitung mit IT nach § 3, 4 und 6 und Nr. 1 Anlage V zur VSA — CON.11.1.A1.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -205,7 +205,7 @@
             "uuid": "99342cd4-6c8e-5cdd-b052-de414d8757f3"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:54Z",
             "description": "Verified control con.2.a1.1 (Umsetzung Standard-Datenschutzmodell — CON.2.A1.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -217,7 +217,7 @@
             "uuid": "d1c50475-3a77-5693-af36-e3c85236c26a"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:54Z",
             "description": "Verified control con.3.a1.1 (Erhebung der Einflussfaktoren für Datensicherungen — CON.3.A1.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -229,7 +229,7 @@
             "uuid": "12b87e5c-cbba-58b2-a64a-6384be69e924"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:54Z",
             "description": "Verified control con.6.a1.1 (Regelung für die Löschung und Vernichtung von Informationen — CON.6.A1.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -241,7 +241,7 @@
             "uuid": "4e6bb15d-c06f-59f0-a512-cc75c1dfa3c8"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:54Z",
             "description": "Verified control con.7.a1.1 (Sicherheitsrichtlinie zur Informationssicherheit auf Auslandsreisen — CON.7.A1.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -253,7 +253,7 @@
             "uuid": "c3006209-7e0c-5a04-8713-53556582f80f"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:54Z",
             "description": "Verified control con.8.a1.1 (Definition von Rollen und Zuständigkeiten — CON.8.A1.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -265,7 +265,7 @@
             "uuid": "b1787e46-b090-524f-8322-70c0f5bdfe94"
           },
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:54Z",
             "description": "Verified control con.9.a1.1 (Festlegung zulässiger Empfangender — CON.9.A1.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -281,11 +281,1686 @@
           "control-selections": [
             {
               "description": "All controls evaluated for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - CON: Konzeption und Vorgehensweisen",
-              "include-all": {}
+              "include-controls": [
+                {
+                  "control-id": "con.1.a1.1"
+                },
+                {
+                  "control-id": "con.1.a1.2"
+                },
+                {
+                  "control-id": "con.1.a1.3"
+                },
+                {
+                  "control-id": "con.1.a1.4"
+                },
+                {
+                  "control-id": "con.1.a1.5"
+                },
+                {
+                  "control-id": "con.1.a10.1"
+                },
+                {
+                  "control-id": "con.1.a10.10"
+                },
+                {
+                  "control-id": "con.1.a10.11"
+                },
+                {
+                  "control-id": "con.1.a10.12"
+                },
+                {
+                  "control-id": "con.1.a10.2"
+                },
+                {
+                  "control-id": "con.1.a10.3"
+                },
+                {
+                  "control-id": "con.1.a10.4"
+                },
+                {
+                  "control-id": "con.1.a10.5"
+                },
+                {
+                  "control-id": "con.1.a10.6"
+                },
+                {
+                  "control-id": "con.1.a10.7"
+                },
+                {
+                  "control-id": "con.1.a10.8"
+                },
+                {
+                  "control-id": "con.1.a10.9"
+                },
+                {
+                  "control-id": "con.1.a11.1"
+                },
+                {
+                  "control-id": "con.1.a11.2"
+                },
+                {
+                  "control-id": "con.1.a11.3"
+                },
+                {
+                  "control-id": "con.1.a11.4"
+                },
+                {
+                  "control-id": "con.1.a15.1"
+                },
+                {
+                  "control-id": "con.1.a15.2"
+                },
+                {
+                  "control-id": "con.1.a15.3"
+                },
+                {
+                  "control-id": "con.1.a16.1"
+                },
+                {
+                  "control-id": "con.1.a17.1"
+                },
+                {
+                  "control-id": "con.1.a17.2"
+                },
+                {
+                  "control-id": "con.1.a17.3"
+                },
+                {
+                  "control-id": "con.1.a18.1"
+                },
+                {
+                  "control-id": "con.1.a18.2"
+                },
+                {
+                  "control-id": "con.1.a19.1"
+                },
+                {
+                  "control-id": "con.1.a19.2"
+                },
+                {
+                  "control-id": "con.1.a19.3"
+                },
+                {
+                  "control-id": "con.1.a19.4"
+                },
+                {
+                  "control-id": "con.1.a19.5"
+                },
+                {
+                  "control-id": "con.1.a19.6"
+                },
+                {
+                  "control-id": "con.1.a2.1"
+                },
+                {
+                  "control-id": "con.1.a2.2"
+                },
+                {
+                  "control-id": "con.1.a2.3"
+                },
+                {
+                  "control-id": "con.1.a2.4"
+                },
+                {
+                  "control-id": "con.1.a2.5"
+                },
+                {
+                  "control-id": "con.1.a20.1"
+                },
+                {
+                  "control-id": "con.1.a4.1"
+                },
+                {
+                  "control-id": "con.1.a4.10"
+                },
+                {
+                  "control-id": "con.1.a4.11"
+                },
+                {
+                  "control-id": "con.1.a4.12"
+                },
+                {
+                  "control-id": "con.1.a4.13"
+                },
+                {
+                  "control-id": "con.1.a4.14"
+                },
+                {
+                  "control-id": "con.1.a4.2"
+                },
+                {
+                  "control-id": "con.1.a4.3"
+                },
+                {
+                  "control-id": "con.1.a4.4"
+                },
+                {
+                  "control-id": "con.1.a4.5"
+                },
+                {
+                  "control-id": "con.1.a4.6"
+                },
+                {
+                  "control-id": "con.1.a4.7"
+                },
+                {
+                  "control-id": "con.1.a4.8"
+                },
+                {
+                  "control-id": "con.1.a4.9"
+                },
+                {
+                  "control-id": "con.1.a5.1"
+                },
+                {
+                  "control-id": "con.1.a5.2"
+                },
+                {
+                  "control-id": "con.1.a9.1"
+                },
+                {
+                  "control-id": "con.1.a9.10"
+                },
+                {
+                  "control-id": "con.1.a9.11"
+                },
+                {
+                  "control-id": "con.1.a9.12"
+                },
+                {
+                  "control-id": "con.1.a9.13"
+                },
+                {
+                  "control-id": "con.1.a9.2"
+                },
+                {
+                  "control-id": "con.1.a9.3"
+                },
+                {
+                  "control-id": "con.1.a9.4"
+                },
+                {
+                  "control-id": "con.1.a9.5"
+                },
+                {
+                  "control-id": "con.1.a9.6"
+                },
+                {
+                  "control-id": "con.1.a9.7"
+                },
+                {
+                  "control-id": "con.1.a9.8"
+                },
+                {
+                  "control-id": "con.1.a9.9"
+                },
+                {
+                  "control-id": "con.10.a1.1"
+                },
+                {
+                  "control-id": "con.10.a1.2"
+                },
+                {
+                  "control-id": "con.10.a1.3"
+                },
+                {
+                  "control-id": "con.10.a1.4"
+                },
+                {
+                  "control-id": "con.10.a1.5"
+                },
+                {
+                  "control-id": "con.10.a1.6"
+                },
+                {
+                  "control-id": "con.10.a1.7"
+                },
+                {
+                  "control-id": "con.10.a1.8"
+                },
+                {
+                  "control-id": "con.10.a10.1"
+                },
+                {
+                  "control-id": "con.10.a11.1"
+                },
+                {
+                  "control-id": "con.10.a11.2"
+                },
+                {
+                  "control-id": "con.10.a11.3"
+                },
+                {
+                  "control-id": "con.10.a11.4"
+                },
+                {
+                  "control-id": "con.10.a11.5"
+                },
+                {
+                  "control-id": "con.10.a12.1"
+                },
+                {
+                  "control-id": "con.10.a12.2"
+                },
+                {
+                  "control-id": "con.10.a12.3"
+                },
+                {
+                  "control-id": "con.10.a13.1"
+                },
+                {
+                  "control-id": "con.10.a13.2"
+                },
+                {
+                  "control-id": "con.10.a13.3"
+                },
+                {
+                  "control-id": "con.10.a13.4"
+                },
+                {
+                  "control-id": "con.10.a13.5"
+                },
+                {
+                  "control-id": "con.10.a13.6"
+                },
+                {
+                  "control-id": "con.10.a14.1"
+                },
+                {
+                  "control-id": "con.10.a14.2"
+                },
+                {
+                  "control-id": "con.10.a14.3"
+                },
+                {
+                  "control-id": "con.10.a14.4"
+                },
+                {
+                  "control-id": "con.10.a14.5"
+                },
+                {
+                  "control-id": "con.10.a15.1"
+                },
+                {
+                  "control-id": "con.10.a15.2"
+                },
+                {
+                  "control-id": "con.10.a16.1"
+                },
+                {
+                  "control-id": "con.10.a17.1"
+                },
+                {
+                  "control-id": "con.10.a17.2"
+                },
+                {
+                  "control-id": "con.10.a17.3"
+                },
+                {
+                  "control-id": "con.10.a18.1"
+                },
+                {
+                  "control-id": "con.10.a2.1"
+                },
+                {
+                  "control-id": "con.10.a2.2"
+                },
+                {
+                  "control-id": "con.10.a2.3"
+                },
+                {
+                  "control-id": "con.10.a2.4"
+                },
+                {
+                  "control-id": "con.10.a2.5"
+                },
+                {
+                  "control-id": "con.10.a3.1"
+                },
+                {
+                  "control-id": "con.10.a3.10"
+                },
+                {
+                  "control-id": "con.10.a3.2"
+                },
+                {
+                  "control-id": "con.10.a3.3"
+                },
+                {
+                  "control-id": "con.10.a3.4"
+                },
+                {
+                  "control-id": "con.10.a3.5"
+                },
+                {
+                  "control-id": "con.10.a3.6"
+                },
+                {
+                  "control-id": "con.10.a3.7"
+                },
+                {
+                  "control-id": "con.10.a3.8"
+                },
+                {
+                  "control-id": "con.10.a3.9"
+                },
+                {
+                  "control-id": "con.10.a4.1"
+                },
+                {
+                  "control-id": "con.10.a4.2"
+                },
+                {
+                  "control-id": "con.10.a4.3"
+                },
+                {
+                  "control-id": "con.10.a5.1"
+                },
+                {
+                  "control-id": "con.10.a5.2"
+                },
+                {
+                  "control-id": "con.10.a5.3"
+                },
+                {
+                  "control-id": "con.10.a6.1"
+                },
+                {
+                  "control-id": "con.10.a6.2"
+                },
+                {
+                  "control-id": "con.10.a7.1"
+                },
+                {
+                  "control-id": "con.10.a7.2"
+                },
+                {
+                  "control-id": "con.10.a7.3"
+                },
+                {
+                  "control-id": "con.10.a7.4"
+                },
+                {
+                  "control-id": "con.10.a7.5"
+                },
+                {
+                  "control-id": "con.10.a7.6"
+                },
+                {
+                  "control-id": "con.10.a8.1"
+                },
+                {
+                  "control-id": "con.10.a8.2"
+                },
+                {
+                  "control-id": "con.10.a8.3"
+                },
+                {
+                  "control-id": "con.10.a8.4"
+                },
+                {
+                  "control-id": "con.10.a8.5"
+                },
+                {
+                  "control-id": "con.10.a9.1"
+                },
+                {
+                  "control-id": "con.10.a9.2"
+                },
+                {
+                  "control-id": "con.11.1.a1.1"
+                },
+                {
+                  "control-id": "con.11.1.a1.10"
+                },
+                {
+                  "control-id": "con.11.1.a1.11"
+                },
+                {
+                  "control-id": "con.11.1.a1.12"
+                },
+                {
+                  "control-id": "con.11.1.a1.2"
+                },
+                {
+                  "control-id": "con.11.1.a1.3"
+                },
+                {
+                  "control-id": "con.11.1.a1.4"
+                },
+                {
+                  "control-id": "con.11.1.a1.5"
+                },
+                {
+                  "control-id": "con.11.1.a1.6"
+                },
+                {
+                  "control-id": "con.11.1.a1.7"
+                },
+                {
+                  "control-id": "con.11.1.a1.8"
+                },
+                {
+                  "control-id": "con.11.1.a1.9"
+                },
+                {
+                  "control-id": "con.11.1.a10.1"
+                },
+                {
+                  "control-id": "con.11.1.a10.10"
+                },
+                {
+                  "control-id": "con.11.1.a10.11"
+                },
+                {
+                  "control-id": "con.11.1.a10.2"
+                },
+                {
+                  "control-id": "con.11.1.a10.3"
+                },
+                {
+                  "control-id": "con.11.1.a10.4"
+                },
+                {
+                  "control-id": "con.11.1.a10.5"
+                },
+                {
+                  "control-id": "con.11.1.a10.6"
+                },
+                {
+                  "control-id": "con.11.1.a10.7"
+                },
+                {
+                  "control-id": "con.11.1.a10.8"
+                },
+                {
+                  "control-id": "con.11.1.a10.9"
+                },
+                {
+                  "control-id": "con.11.1.a11.1"
+                },
+                {
+                  "control-id": "con.11.1.a11.2"
+                },
+                {
+                  "control-id": "con.11.1.a11.3"
+                },
+                {
+                  "control-id": "con.11.1.a11.4"
+                },
+                {
+                  "control-id": "con.11.1.a11.5"
+                },
+                {
+                  "control-id": "con.11.1.a11.6"
+                },
+                {
+                  "control-id": "con.11.1.a11.7"
+                },
+                {
+                  "control-id": "con.11.1.a12.1"
+                },
+                {
+                  "control-id": "con.11.1.a12.2"
+                },
+                {
+                  "control-id": "con.11.1.a12.3"
+                },
+                {
+                  "control-id": "con.11.1.a13.1"
+                },
+                {
+                  "control-id": "con.11.1.a13.2"
+                },
+                {
+                  "control-id": "con.11.1.a13.3"
+                },
+                {
+                  "control-id": "con.11.1.a13.4"
+                },
+                {
+                  "control-id": "con.11.1.a13.5"
+                },
+                {
+                  "control-id": "con.11.1.a13.6"
+                },
+                {
+                  "control-id": "con.11.1.a14.1"
+                },
+                {
+                  "control-id": "con.11.1.a14.2"
+                },
+                {
+                  "control-id": "con.11.1.a14.3"
+                },
+                {
+                  "control-id": "con.11.1.a14.4"
+                },
+                {
+                  "control-id": "con.11.1.a14.5"
+                },
+                {
+                  "control-id": "con.11.1.a14.6"
+                },
+                {
+                  "control-id": "con.11.1.a14.7"
+                },
+                {
+                  "control-id": "con.11.1.a15.1"
+                },
+                {
+                  "control-id": "con.11.1.a15.2"
+                },
+                {
+                  "control-id": "con.11.1.a15.3"
+                },
+                {
+                  "control-id": "con.11.1.a15.4"
+                },
+                {
+                  "control-id": "con.11.1.a16.1"
+                },
+                {
+                  "control-id": "con.11.1.a16.2"
+                },
+                {
+                  "control-id": "con.11.1.a16.3"
+                },
+                {
+                  "control-id": "con.11.1.a16.4"
+                },
+                {
+                  "control-id": "con.11.1.a16.5"
+                },
+                {
+                  "control-id": "con.11.1.a16.6"
+                },
+                {
+                  "control-id": "con.11.1.a17.1"
+                },
+                {
+                  "control-id": "con.11.1.a17.2"
+                },
+                {
+                  "control-id": "con.11.1.a17.3"
+                },
+                {
+                  "control-id": "con.11.1.a17.4"
+                },
+                {
+                  "control-id": "con.11.1.a17.5"
+                },
+                {
+                  "control-id": "con.11.1.a18.1"
+                },
+                {
+                  "control-id": "con.11.1.a18.2"
+                },
+                {
+                  "control-id": "con.11.1.a18.3"
+                },
+                {
+                  "control-id": "con.11.1.a18.4"
+                },
+                {
+                  "control-id": "con.11.1.a18.5"
+                },
+                {
+                  "control-id": "con.11.1.a18.6"
+                },
+                {
+                  "control-id": "con.11.1.a18.7"
+                },
+                {
+                  "control-id": "con.11.1.a2.1"
+                },
+                {
+                  "control-id": "con.11.1.a2.2"
+                },
+                {
+                  "control-id": "con.11.1.a2.3"
+                },
+                {
+                  "control-id": "con.11.1.a2.4"
+                },
+                {
+                  "control-id": "con.11.1.a3.1"
+                },
+                {
+                  "control-id": "con.11.1.a3.10"
+                },
+                {
+                  "control-id": "con.11.1.a3.11"
+                },
+                {
+                  "control-id": "con.11.1.a3.12"
+                },
+                {
+                  "control-id": "con.11.1.a3.13"
+                },
+                {
+                  "control-id": "con.11.1.a3.14"
+                },
+                {
+                  "control-id": "con.11.1.a3.15"
+                },
+                {
+                  "control-id": "con.11.1.a3.16"
+                },
+                {
+                  "control-id": "con.11.1.a3.17"
+                },
+                {
+                  "control-id": "con.11.1.a3.18"
+                },
+                {
+                  "control-id": "con.11.1.a3.2"
+                },
+                {
+                  "control-id": "con.11.1.a3.3"
+                },
+                {
+                  "control-id": "con.11.1.a3.4"
+                },
+                {
+                  "control-id": "con.11.1.a3.5"
+                },
+                {
+                  "control-id": "con.11.1.a3.6"
+                },
+                {
+                  "control-id": "con.11.1.a3.7"
+                },
+                {
+                  "control-id": "con.11.1.a3.8"
+                },
+                {
+                  "control-id": "con.11.1.a3.9"
+                },
+                {
+                  "control-id": "con.11.1.a4.1"
+                },
+                {
+                  "control-id": "con.11.1.a4.10"
+                },
+                {
+                  "control-id": "con.11.1.a4.11"
+                },
+                {
+                  "control-id": "con.11.1.a4.12"
+                },
+                {
+                  "control-id": "con.11.1.a4.13"
+                },
+                {
+                  "control-id": "con.11.1.a4.2"
+                },
+                {
+                  "control-id": "con.11.1.a4.3"
+                },
+                {
+                  "control-id": "con.11.1.a4.4"
+                },
+                {
+                  "control-id": "con.11.1.a4.5"
+                },
+                {
+                  "control-id": "con.11.1.a4.6"
+                },
+                {
+                  "control-id": "con.11.1.a4.7"
+                },
+                {
+                  "control-id": "con.11.1.a4.8"
+                },
+                {
+                  "control-id": "con.11.1.a4.9"
+                },
+                {
+                  "control-id": "con.11.1.a5.1"
+                },
+                {
+                  "control-id": "con.11.1.a5.2"
+                },
+                {
+                  "control-id": "con.11.1.a5.3"
+                },
+                {
+                  "control-id": "con.11.1.a5.4"
+                },
+                {
+                  "control-id": "con.11.1.a6.1"
+                },
+                {
+                  "control-id": "con.11.1.a6.2"
+                },
+                {
+                  "control-id": "con.11.1.a7.1"
+                },
+                {
+                  "control-id": "con.11.1.a7.2"
+                },
+                {
+                  "control-id": "con.11.1.a7.3"
+                },
+                {
+                  "control-id": "con.11.1.a7.4"
+                },
+                {
+                  "control-id": "con.11.1.a7.5"
+                },
+                {
+                  "control-id": "con.11.1.a7.6"
+                },
+                {
+                  "control-id": "con.11.1.a7.7"
+                },
+                {
+                  "control-id": "con.11.1.a7.8"
+                },
+                {
+                  "control-id": "con.11.1.a7.9"
+                },
+                {
+                  "control-id": "con.11.1.a8.1"
+                },
+                {
+                  "control-id": "con.11.1.a8.2"
+                },
+                {
+                  "control-id": "con.11.1.a9.1"
+                },
+                {
+                  "control-id": "con.2.a1.1"
+                },
+                {
+                  "control-id": "con.2.a1.2"
+                },
+                {
+                  "control-id": "con.3.a1.1"
+                },
+                {
+                  "control-id": "con.3.a1.10"
+                },
+                {
+                  "control-id": "con.3.a1.11"
+                },
+                {
+                  "control-id": "con.3.a1.12"
+                },
+                {
+                  "control-id": "con.3.a1.13"
+                },
+                {
+                  "control-id": "con.3.a1.14"
+                },
+                {
+                  "control-id": "con.3.a1.15"
+                },
+                {
+                  "control-id": "con.3.a1.2"
+                },
+                {
+                  "control-id": "con.3.a1.3"
+                },
+                {
+                  "control-id": "con.3.a1.4"
+                },
+                {
+                  "control-id": "con.3.a1.5"
+                },
+                {
+                  "control-id": "con.3.a1.6"
+                },
+                {
+                  "control-id": "con.3.a1.7"
+                },
+                {
+                  "control-id": "con.3.a1.8"
+                },
+                {
+                  "control-id": "con.3.a1.9"
+                },
+                {
+                  "control-id": "con.3.a12.1"
+                },
+                {
+                  "control-id": "con.3.a12.2"
+                },
+                {
+                  "control-id": "con.3.a12.3"
+                },
+                {
+                  "control-id": "con.3.a13.1"
+                },
+                {
+                  "control-id": "con.3.a13.2"
+                },
+                {
+                  "control-id": "con.3.a13.3"
+                },
+                {
+                  "control-id": "con.3.a14.1"
+                },
+                {
+                  "control-id": "con.3.a14.2"
+                },
+                {
+                  "control-id": "con.3.a14.3"
+                },
+                {
+                  "control-id": "con.3.a14.4"
+                },
+                {
+                  "control-id": "con.3.a15.1"
+                },
+                {
+                  "control-id": "con.3.a2.1"
+                },
+                {
+                  "control-id": "con.3.a2.2"
+                },
+                {
+                  "control-id": "con.3.a2.3"
+                },
+                {
+                  "control-id": "con.3.a2.4"
+                },
+                {
+                  "control-id": "con.3.a2.5"
+                },
+                {
+                  "control-id": "con.3.a2.6"
+                },
+                {
+                  "control-id": "con.3.a2.7"
+                },
+                {
+                  "control-id": "con.3.a4.1"
+                },
+                {
+                  "control-id": "con.3.a4.10"
+                },
+                {
+                  "control-id": "con.3.a4.2"
+                },
+                {
+                  "control-id": "con.3.a4.3"
+                },
+                {
+                  "control-id": "con.3.a4.4"
+                },
+                {
+                  "control-id": "con.3.a4.5"
+                },
+                {
+                  "control-id": "con.3.a4.6"
+                },
+                {
+                  "control-id": "con.3.a4.7"
+                },
+                {
+                  "control-id": "con.3.a4.8"
+                },
+                {
+                  "control-id": "con.3.a4.9"
+                },
+                {
+                  "control-id": "con.3.a5.1"
+                },
+                {
+                  "control-id": "con.3.a5.2"
+                },
+                {
+                  "control-id": "con.3.a5.3"
+                },
+                {
+                  "control-id": "con.3.a6.1"
+                },
+                {
+                  "control-id": "con.3.a6.10"
+                },
+                {
+                  "control-id": "con.3.a6.11"
+                },
+                {
+                  "control-id": "con.3.a6.12"
+                },
+                {
+                  "control-id": "con.3.a6.13"
+                },
+                {
+                  "control-id": "con.3.a6.2"
+                },
+                {
+                  "control-id": "con.3.a6.3"
+                },
+                {
+                  "control-id": "con.3.a6.4"
+                },
+                {
+                  "control-id": "con.3.a6.5"
+                },
+                {
+                  "control-id": "con.3.a6.6"
+                },
+                {
+                  "control-id": "con.3.a6.7"
+                },
+                {
+                  "control-id": "con.3.a6.8"
+                },
+                {
+                  "control-id": "con.3.a6.9"
+                },
+                {
+                  "control-id": "con.3.a7.1"
+                },
+                {
+                  "control-id": "con.3.a7.2"
+                },
+                {
+                  "control-id": "con.3.a9.1"
+                },
+                {
+                  "control-id": "con.3.a9.2"
+                },
+                {
+                  "control-id": "con.3.a9.3"
+                },
+                {
+                  "control-id": "con.3.a9.4"
+                },
+                {
+                  "control-id": "con.3.a9.5"
+                },
+                {
+                  "control-id": "con.3.a9.6"
+                },
+                {
+                  "control-id": "con.3.a9.7"
+                },
+                {
+                  "control-id": "con.3.a9.8"
+                },
+                {
+                  "control-id": "con.6.a1.1"
+                },
+                {
+                  "control-id": "con.6.a1.2"
+                },
+                {
+                  "control-id": "con.6.a1.3"
+                },
+                {
+                  "control-id": "con.6.a1.4"
+                },
+                {
+                  "control-id": "con.6.a1.5"
+                },
+                {
+                  "control-id": "con.6.a1.6"
+                },
+                {
+                  "control-id": "con.6.a1.7"
+                },
+                {
+                  "control-id": "con.6.a11.1"
+                },
+                {
+                  "control-id": "con.6.a11.2"
+                },
+                {
+                  "control-id": "con.6.a11.3"
+                },
+                {
+                  "control-id": "con.6.a12.1"
+                },
+                {
+                  "control-id": "con.6.a12.10"
+                },
+                {
+                  "control-id": "con.6.a12.11"
+                },
+                {
+                  "control-id": "con.6.a12.12"
+                },
+                {
+                  "control-id": "con.6.a12.13"
+                },
+                {
+                  "control-id": "con.6.a12.2"
+                },
+                {
+                  "control-id": "con.6.a12.3"
+                },
+                {
+                  "control-id": "con.6.a12.4"
+                },
+                {
+                  "control-id": "con.6.a12.5"
+                },
+                {
+                  "control-id": "con.6.a12.6"
+                },
+                {
+                  "control-id": "con.6.a12.7"
+                },
+                {
+                  "control-id": "con.6.a12.8"
+                },
+                {
+                  "control-id": "con.6.a12.9"
+                },
+                {
+                  "control-id": "con.6.a13.1"
+                },
+                {
+                  "control-id": "con.6.a13.2"
+                },
+                {
+                  "control-id": "con.6.a13.3"
+                },
+                {
+                  "control-id": "con.6.a14.1"
+                },
+                {
+                  "control-id": "con.6.a14.2"
+                },
+                {
+                  "control-id": "con.6.a2.1"
+                },
+                {
+                  "control-id": "con.6.a2.2"
+                },
+                {
+                  "control-id": "con.6.a2.3"
+                },
+                {
+                  "control-id": "con.6.a2.4"
+                },
+                {
+                  "control-id": "con.6.a2.5"
+                },
+                {
+                  "control-id": "con.6.a2.6"
+                },
+                {
+                  "control-id": "con.6.a2.7"
+                },
+                {
+                  "control-id": "con.6.a4.1"
+                },
+                {
+                  "control-id": "con.6.a4.2"
+                },
+                {
+                  "control-id": "con.6.a4.3"
+                },
+                {
+                  "control-id": "con.6.a4.4"
+                },
+                {
+                  "control-id": "con.6.a4.5"
+                },
+                {
+                  "control-id": "con.6.a8.1"
+                },
+                {
+                  "control-id": "con.6.a8.2"
+                },
+                {
+                  "control-id": "con.6.a8.3"
+                },
+                {
+                  "control-id": "con.6.a8.4"
+                },
+                {
+                  "control-id": "con.6.a8.5"
+                },
+                {
+                  "control-id": "con.7.a1.1"
+                },
+                {
+                  "control-id": "con.7.a1.2"
+                },
+                {
+                  "control-id": "con.7.a1.3"
+                },
+                {
+                  "control-id": "con.7.a1.4"
+                },
+                {
+                  "control-id": "con.7.a1.5"
+                },
+                {
+                  "control-id": "con.7.a10.1"
+                },
+                {
+                  "control-id": "con.7.a10.2"
+                },
+                {
+                  "control-id": "con.7.a10.3"
+                },
+                {
+                  "control-id": "con.7.a10.4"
+                },
+                {
+                  "control-id": "con.7.a10.5"
+                },
+                {
+                  "control-id": "con.7.a11.1"
+                },
+                {
+                  "control-id": "con.7.a11.2"
+                },
+                {
+                  "control-id": "con.7.a12.1"
+                },
+                {
+                  "control-id": "con.7.a12.2"
+                },
+                {
+                  "control-id": "con.7.a12.3"
+                },
+                {
+                  "control-id": "con.7.a12.4"
+                },
+                {
+                  "control-id": "con.7.a13.1"
+                },
+                {
+                  "control-id": "con.7.a13.2"
+                },
+                {
+                  "control-id": "con.7.a13.3"
+                },
+                {
+                  "control-id": "con.7.a13.4"
+                },
+                {
+                  "control-id": "con.7.a13.5"
+                },
+                {
+                  "control-id": "con.7.a13.6"
+                },
+                {
+                  "control-id": "con.7.a14.1"
+                },
+                {
+                  "control-id": "con.7.a14.2"
+                },
+                {
+                  "control-id": "con.7.a14.3"
+                },
+                {
+                  "control-id": "con.7.a14.4"
+                },
+                {
+                  "control-id": "con.7.a14.5"
+                },
+                {
+                  "control-id": "con.7.a15.1"
+                },
+                {
+                  "control-id": "con.7.a15.2"
+                },
+                {
+                  "control-id": "con.7.a16.1"
+                },
+                {
+                  "control-id": "con.7.a16.2"
+                },
+                {
+                  "control-id": "con.7.a17.1"
+                },
+                {
+                  "control-id": "con.7.a17.2"
+                },
+                {
+                  "control-id": "con.7.a18.1"
+                },
+                {
+                  "control-id": "con.7.a18.2"
+                },
+                {
+                  "control-id": "con.7.a2.1"
+                },
+                {
+                  "control-id": "con.7.a2.2"
+                },
+                {
+                  "control-id": "con.7.a2.3"
+                },
+                {
+                  "control-id": "con.7.a2.4"
+                },
+                {
+                  "control-id": "con.7.a2.5"
+                },
+                {
+                  "control-id": "con.7.a2.6"
+                },
+                {
+                  "control-id": "con.7.a3.1"
+                },
+                {
+                  "control-id": "con.7.a3.2"
+                },
+                {
+                  "control-id": "con.7.a3.3"
+                },
+                {
+                  "control-id": "con.7.a3.4"
+                },
+                {
+                  "control-id": "con.7.a4.1"
+                },
+                {
+                  "control-id": "con.7.a4.2"
+                },
+                {
+                  "control-id": "con.7.a5.1"
+                },
+                {
+                  "control-id": "con.7.a5.2"
+                },
+                {
+                  "control-id": "con.7.a5.3"
+                },
+                {
+                  "control-id": "con.7.a6.1"
+                },
+                {
+                  "control-id": "con.7.a6.2"
+                },
+                {
+                  "control-id": "con.7.a6.3"
+                },
+                {
+                  "control-id": "con.7.a7.1"
+                },
+                {
+                  "control-id": "con.7.a7.2"
+                },
+                {
+                  "control-id": "con.7.a7.3"
+                },
+                {
+                  "control-id": "con.7.a7.4"
+                },
+                {
+                  "control-id": "con.7.a7.5"
+                },
+                {
+                  "control-id": "con.7.a7.6"
+                },
+                {
+                  "control-id": "con.7.a8.1"
+                },
+                {
+                  "control-id": "con.7.a8.2"
+                },
+                {
+                  "control-id": "con.7.a8.3"
+                },
+                {
+                  "control-id": "con.7.a9.1"
+                },
+                {
+                  "control-id": "con.7.a9.2"
+                },
+                {
+                  "control-id": "con.7.a9.3"
+                },
+                {
+                  "control-id": "con.7.a9.4"
+                },
+                {
+                  "control-id": "con.8.a1.1"
+                },
+                {
+                  "control-id": "con.8.a1.2"
+                },
+                {
+                  "control-id": "con.8.a1.3"
+                },
+                {
+                  "control-id": "con.8.a1.4"
+                },
+                {
+                  "control-id": "con.8.a1.5"
+                },
+                {
+                  "control-id": "con.8.a1.6"
+                },
+                {
+                  "control-id": "con.8.a1.7"
+                },
+                {
+                  "control-id": "con.8.a1.8"
+                },
+                {
+                  "control-id": "con.8.a1.9"
+                },
+                {
+                  "control-id": "con.8.a10.1"
+                },
+                {
+                  "control-id": "con.8.a10.2"
+                },
+                {
+                  "control-id": "con.8.a10.3"
+                },
+                {
+                  "control-id": "con.8.a10.4"
+                },
+                {
+                  "control-id": "con.8.a10.5"
+                },
+                {
+                  "control-id": "con.8.a11.1"
+                },
+                {
+                  "control-id": "con.8.a11.2"
+                },
+                {
+                  "control-id": "con.8.a11.3"
+                },
+                {
+                  "control-id": "con.8.a11.4"
+                },
+                {
+                  "control-id": "con.8.a12.1"
+                },
+                {
+                  "control-id": "con.8.a12.2"
+                },
+                {
+                  "control-id": "con.8.a12.3"
+                },
+                {
+                  "control-id": "con.8.a12.4"
+                },
+                {
+                  "control-id": "con.8.a12.5"
+                },
+                {
+                  "control-id": "con.8.a14.1"
+                },
+                {
+                  "control-id": "con.8.a14.10"
+                },
+                {
+                  "control-id": "con.8.a14.2"
+                },
+                {
+                  "control-id": "con.8.a14.3"
+                },
+                {
+                  "control-id": "con.8.a14.4"
+                },
+                {
+                  "control-id": "con.8.a14.5"
+                },
+                {
+                  "control-id": "con.8.a14.6"
+                },
+                {
+                  "control-id": "con.8.a14.7"
+                },
+                {
+                  "control-id": "con.8.a14.8"
+                },
+                {
+                  "control-id": "con.8.a14.9"
+                },
+                {
+                  "control-id": "con.8.a16.1"
+                },
+                {
+                  "control-id": "con.8.a16.2"
+                },
+                {
+                  "control-id": "con.8.a16.3"
+                },
+                {
+                  "control-id": "con.8.a16.4"
+                },
+                {
+                  "control-id": "con.8.a16.5"
+                },
+                {
+                  "control-id": "con.8.a17.1"
+                },
+                {
+                  "control-id": "con.8.a17.2"
+                },
+                {
+                  "control-id": "con.8.a18.1"
+                },
+                {
+                  "control-id": "con.8.a19.1"
+                },
+                {
+                  "control-id": "con.8.a19.2"
+                },
+                {
+                  "control-id": "con.8.a19.3"
+                },
+                {
+                  "control-id": "con.8.a2.1"
+                },
+                {
+                  "control-id": "con.8.a2.2"
+                },
+                {
+                  "control-id": "con.8.a2.3"
+                },
+                {
+                  "control-id": "con.8.a2.4"
+                },
+                {
+                  "control-id": "con.8.a2.5"
+                },
+                {
+                  "control-id": "con.8.a20.1"
+                },
+                {
+                  "control-id": "con.8.a20.2"
+                },
+                {
+                  "control-id": "con.8.a20.3"
+                },
+                {
+                  "control-id": "con.8.a20.4"
+                },
+                {
+                  "control-id": "con.8.a21.1"
+                },
+                {
+                  "control-id": "con.8.a21.2"
+                },
+                {
+                  "control-id": "con.8.a21.3"
+                },
+                {
+                  "control-id": "con.8.a22.1"
+                },
+                {
+                  "control-id": "con.8.a22.2"
+                },
+                {
+                  "control-id": "con.8.a22.3"
+                },
+                {
+                  "control-id": "con.8.a3.1"
+                },
+                {
+                  "control-id": "con.8.a3.2"
+                },
+                {
+                  "control-id": "con.8.a5.1"
+                },
+                {
+                  "control-id": "con.8.a5.10"
+                },
+                {
+                  "control-id": "con.8.a5.11"
+                },
+                {
+                  "control-id": "con.8.a5.12"
+                },
+                {
+                  "control-id": "con.8.a5.13"
+                },
+                {
+                  "control-id": "con.8.a5.2"
+                },
+                {
+                  "control-id": "con.8.a5.3"
+                },
+                {
+                  "control-id": "con.8.a5.4"
+                },
+                {
+                  "control-id": "con.8.a5.5"
+                },
+                {
+                  "control-id": "con.8.a5.6"
+                },
+                {
+                  "control-id": "con.8.a5.7"
+                },
+                {
+                  "control-id": "con.8.a5.8"
+                },
+                {
+                  "control-id": "con.8.a5.9"
+                },
+                {
+                  "control-id": "con.8.a6.1"
+                },
+                {
+                  "control-id": "con.8.a6.2"
+                },
+                {
+                  "control-id": "con.8.a7.1"
+                },
+                {
+                  "control-id": "con.8.a7.2"
+                },
+                {
+                  "control-id": "con.8.a7.3"
+                },
+                {
+                  "control-id": "con.8.a7.4"
+                },
+                {
+                  "control-id": "con.8.a7.5"
+                },
+                {
+                  "control-id": "con.8.a7.6"
+                },
+                {
+                  "control-id": "con.8.a7.7"
+                },
+                {
+                  "control-id": "con.8.a7.8"
+                },
+                {
+                  "control-id": "con.8.a7.9"
+                },
+                {
+                  "control-id": "con.8.a8.1"
+                },
+                {
+                  "control-id": "con.8.a8.2"
+                },
+                {
+                  "control-id": "con.8.a8.3"
+                },
+                {
+                  "control-id": "con.9.a1.1"
+                },
+                {
+                  "control-id": "con.9.a1.2"
+                },
+                {
+                  "control-id": "con.9.a1.3"
+                },
+                {
+                  "control-id": "con.9.a1.4"
+                },
+                {
+                  "control-id": "con.9.a2.1"
+                },
+                {
+                  "control-id": "con.9.a2.2"
+                },
+                {
+                  "control-id": "con.9.a2.3"
+                },
+                {
+                  "control-id": "con.9.a2.4"
+                },
+                {
+                  "control-id": "con.9.a3.1"
+                },
+                {
+                  "control-id": "con.9.a3.2"
+                },
+                {
+                  "control-id": "con.9.a4.1"
+                },
+                {
+                  "control-id": "con.9.a4.2"
+                },
+                {
+                  "control-id": "con.9.a5.1"
+                },
+                {
+                  "control-id": "con.9.a5.2"
+                },
+                {
+                  "control-id": "con.9.a5.3"
+                },
+                {
+                  "control-id": "con.9.a5.4"
+                },
+                {
+                  "control-id": "con.9.a5.5"
+                },
+                {
+                  "control-id": "con.9.a6.1"
+                },
+                {
+                  "control-id": "con.9.a7.1"
+                },
+                {
+                  "control-id": "con.9.a8.1"
+                },
+                {
+                  "control-id": "con.9.a8.2"
+                },
+                {
+                  "control-id": "con.9.a9.1"
+                },
+                {
+                  "control-id": "con.9.a9.2"
+                },
+                {
+                  "control-id": "con.9.a9.3"
+                },
+                {
+                  "control-id": "con.9.a9.4"
+                }
+              ]
             }
           ]
         },
-        "start": "2026-11-08T01:42:12Z",
+        "start": "2026-11-08T00:30:54Z",
         "title": "IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - CON: Konzeption und Vorgehensweisen Assessment Results",
         "uuid": "5385c05a-df65-53a0-b3d8-134dd45ea02e"
       }

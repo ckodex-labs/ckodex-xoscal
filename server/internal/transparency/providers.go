@@ -44,7 +44,14 @@ func ed25519Verifier(publicKey ed25519.PublicKey) signatureVerifier {
 
 // ecdsaVerifier builds a verifier for a raw r||s signature over the SHA-256
 // digest of the canonical payload. size is 2*byteLen(curve).
-func ecdsaVerifier(curve elliptic.Curve, publicX, publicY *big.Int) (signatureVerifier, error) {
+func ecdsaVerifier(curve elliptic.Curve, rawPoint []byte) (signatureVerifier, error) {
+	uncompressed := make([]byte, 1+len(rawPoint))
+	uncompressed[0] = 0x04
+	copy(uncompressed[1:], rawPoint)
+	pub, err := ecdsa.ParseUncompressedPublicKey(curve, uncompressed)
+	if err != nil {
+		return signatureVerifier{}, fmt.Errorf("issuer public key is not a valid %s point", curve.Params().Name)
+	}
 	size := (curve.Params().BitSize + 7) / 8 * 2
 	return signatureVerifier{
 		algorithm: curve.Params().Name,
@@ -56,24 +63,9 @@ func ecdsaVerifier(curve elliptic.Curve, publicX, publicY *big.Int) (signatureVe
 			h := sha256.Sum256(payload)
 			r := new(big.Int).SetBytes(sig[:len(sig)/2])
 			s := new(big.Int).SetBytes(sig[len(sig)/2:])
-			return ecdsa.Verify(&ecdsa.PublicKey{Curve: curve, X: publicX, Y: publicY}, h[:][:], r, s)
+			return ecdsa.Verify(pub, h[:], r, s)
 		},
 	}, nil
-}
-
-// verifyClaimSignature verifies the beta detached-signature contract:
-// issuer.key_json contains a public key and the signature proof ref resolves
-// to an evidence blob containing the raw signature bytes.
-func verifyClaimSignature(ctx context.Context, store Store, claim *Claim) providerResult {
-	signature, result := resolveSignatureEvidence(ctx, store, claim)
-	if result != nil {
-		return *result
-	}
-	verifier, retired, err := resolveIssuerVerifier(nil, claim)
-	if err != nil {
-		return providerResult{State: "invalid", Provider: "available", Message: err.Error()}
-	}
-	return verifySignatureAgainstKey(claim, signature, verifier, retired)
 }
 
 // verifyClaimSignatureWithRegistry verifies the claim signature with the
@@ -203,7 +195,7 @@ func verifierFromKeyMaterial(algorithm, encodedKey string) (signatureVerifier, e
 		if algorithm == "ecdsa-p384" {
 			curve = elliptic.P384()
 		}
-		verifier, err := ecdsaVerifier(curve, new(big.Int).SetBytes(publicKey[:size]), new(big.Int).SetBytes(publicKey[size:]))
+		verifier, err := ecdsaVerifier(curve, publicKey)
 		if err != nil {
 			return signatureVerifier{}, err
 		}

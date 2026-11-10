@@ -126,8 +126,12 @@ func normalizeJurisdictionCode(j string) string {
 		return "france"
 	case "de", "deu", "germany":
 		return "germany"
+	case "ee", "est", "estonia":
+		return "ee"
 	case "eu", "european-union", "european union":
 		return "eu"
+	case "int", "intl", "international", "global", "iso":
+		return "international"
 	default:
 		return strings.ToLower(strings.TrimSpace(j))
 	}
@@ -192,10 +196,5 @@ func (r *Registry) ExportJurisdiction(outDir, jurisdiction string) error {
 
 // SeedKG seeds all registered frameworks into the Knowledge Graph store.
 func (r *Registry) SeedKG(ctx context.Context, store kg.Store) error {
-	for _, f := range r.List() {
-		if err := SeedFramework(ctx, store, f); err != nil {
-			return fmt.Errorf("seed framework %s: %w", f.ID(), err)
-		}
-	}
-	return nil
+	return seedFrameworksBatch(ctx, store, r.List())
 }

@@ -4,7 +4,7 @@
       "href": "./assessment-plan.json"
     },
     "metadata": {
-      "last-modified": "2026-11-08T01:42:12Z",
+      "last-modified": "2026-11-08T00:30:53Z",
       "oscal-version": "1.2.3",
       "title": "IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Assessment Results Template",
       "version": "1"
@@ -33,7 +33,7 @@
         ],
         "observations": [
           {
-            "collected": "2026-11-08T01:42:12Z",
+            "collected": "2026-11-08T00:30:53Z",
             "description": "Verified control isms.1.a1.1 (Übernahme der Gesamtverantwortung für Informationssicherheit durch die Leitung — ISMS.1.A1.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -49,11 +49,264 @@
           "control-selections": [
             {
               "description": "All controls evaluated for IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement",
-              "include-all": {}
+              "include-controls": [
+                {
+                  "control-id": "isms.1.a1.1"
+                },
+                {
+                  "control-id": "isms.1.a1.2"
+                },
+                {
+                  "control-id": "isms.1.a1.3"
+                },
+                {
+                  "control-id": "isms.1.a1.4"
+                },
+                {
+                  "control-id": "isms.1.a1.5"
+                },
+                {
+                  "control-id": "isms.1.a1.6"
+                },
+                {
+                  "control-id": "isms.1.a1.7"
+                },
+                {
+                  "control-id": "isms.1.a1.8"
+                },
+                {
+                  "control-id": "isms.1.a10.1"
+                },
+                {
+                  "control-id": "isms.1.a10.2"
+                },
+                {
+                  "control-id": "isms.1.a10.3"
+                },
+                {
+                  "control-id": "isms.1.a10.4"
+                },
+                {
+                  "control-id": "isms.1.a10.5"
+                },
+                {
+                  "control-id": "isms.1.a10.6"
+                },
+                {
+                  "control-id": "isms.1.a11.1"
+                },
+                {
+                  "control-id": "isms.1.a11.2"
+                },
+                {
+                  "control-id": "isms.1.a11.3"
+                },
+                {
+                  "control-id": "isms.1.a11.4"
+                },
+                {
+                  "control-id": "isms.1.a11.5"
+                },
+                {
+                  "control-id": "isms.1.a11.6"
+                },
+                {
+                  "control-id": "isms.1.a11.7"
+                },
+                {
+                  "control-id": "isms.1.a11.8"
+                },
+                {
+                  "control-id": "isms.1.a12.1"
+                },
+                {
+                  "control-id": "isms.1.a12.2"
+                },
+                {
+                  "control-id": "isms.1.a12.3"
+                },
+                {
+                  "control-id": "isms.1.a12.4"
+                },
+                {
+                  "control-id": "isms.1.a12.5"
+                },
+                {
+                  "control-id": "isms.1.a12.6"
+                },
+                {
+                  "control-id": "isms.1.a12.7"
+                },
+                {
+                  "control-id": "isms.1.a13.1"
+                },
+                {
+                  "control-id": "isms.1.a13.2"
+                },
+                {
+                  "control-id": "isms.1.a13.3"
+                },
+                {
+                  "control-id": "isms.1.a13.4"
+                },
+                {
+                  "control-id": "isms.1.a13.5"
+                },
+                {
+                  "control-id": "isms.1.a13.6"
+                },
+                {
+                  "control-id": "isms.1.a15.1"
+                },
+                {
+                  "control-id": "isms.1.a15.2"
+                },
+                {
+                  "control-id": "isms.1.a15.3"
+                },
+                {
+                  "control-id": "isms.1.a15.4"
+                },
+                {
+                  "control-id": "isms.1.a16.1"
+                },
+                {
+                  "control-id": "isms.1.a17.1"
+                },
+                {
+                  "control-id": "isms.1.a17.2"
+                },
+                {
+                  "control-id": "isms.1.a2.1"
+                },
+                {
+                  "control-id": "isms.1.a2.2"
+                },
+                {
+                  "control-id": "isms.1.a2.3"
+                },
+                {
+                  "control-id": "isms.1.a2.4"
+                },
+                {
+                  "control-id": "isms.1.a2.5"
+                },
+                {
+                  "control-id": "isms.1.a3.1"
+                },
+                {
+                  "control-id": "isms.1.a3.2"
+                },
+                {
+                  "control-id": "isms.1.a3.3"
+                },
+                {
+                  "control-id": "isms.1.a3.4"
+                },
+                {
+                  "control-id": "isms.1.a3.5"
+                },
+                {
+                  "control-id": "isms.1.a3.6"
+                },
+                {
+                  "control-id": "isms.1.a4.1"
+                },
+                {
+                  "control-id": "isms.1.a4.2"
+                },
+                {
+                  "control-id": "isms.1.a4.3"
+                },
+                {
+                  "control-id": "isms.1.a4.4"
+                },
+                {
+                  "control-id": "isms.1.a4.5"
+                },
+                {
+                  "control-id": "isms.1.a5.1"
+                },
+                {
+                  "control-id": "isms.1.a5.2"
+                },
+                {
+                  "control-id": "isms.1.a5.3"
+                },
+                {
+                  "control-id": "isms.1.a5.4"
+                },
+                {
+                  "control-id": "isms.1.a6.1"
+                },
+                {
+                  "control-id": "isms.1.a6.2"
+                },
+                {
+                  "control-id": "isms.1.a6.3"
+                },
+                {
+                  "control-id": "isms.1.a6.4"
+                },
+                {
+                  "control-id": "isms.1.a6.5"
+                },
+                {
+                  "control-id": "isms.1.a6.6"
+                },
+                {
+                  "control-id": "isms.1.a6.7"
+                },
+                {
+                  "control-id": "isms.1.a6.8"
+                },
+                {
+                  "control-id": "isms.1.a7.1"
+                },
+                {
+                  "control-id": "isms.1.a7.2"
+                },
+                {
+                  "control-id": "isms.1.a7.3"
+                },
+                {
+                  "control-id": "isms.1.a8.1"
+                },
+                {
+                  "control-id": "isms.1.a8.2"
+                },
+                {
+                  "control-id": "isms.1.a8.3"
+                },
+                {
+                  "control-id": "isms.1.a8.4"
+                },
+                {
+                  "control-id": "isms.1.a8.5"
+                },
+                {
+                  "control-id": "isms.1.a8.6"
+                },
+                {
+                  "control-id": "isms.1.a8.7"
+                },
+                {
+                  "control-id": "isms.1.a9.1"
+                },
+                {
+                  "control-id": "isms.1.a9.2"
+                },
+                {
+                  "control-id": "isms.1.a9.3"
+                },
+                {
+                  "control-id": "isms.1.a9.4"
+                }
+              ]
             }
           ]
         },
-        "start": "2026-11-08T01:42:12Z",
+        "start": "2026-11-08T00:30:53Z",
         "title": "IT-Grundschutz-Kompendium – Werkzeug für Informationssicherheit - ISMS: Sicherheitsmanagement Assessment Results",
         "uuid": "18c6e738-1856-5826-8ba3-cda6be773da8"
       }

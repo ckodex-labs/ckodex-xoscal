@@ -4,16 +4,2819 @@
       "href": "./system-security-plan.json"
     },
     "metadata": {
-      "last-modified": "2026-11-08T01:42:11Z",
+      "last-modified": "2026-01-01T00:00:00Z",
       "oscal-version": "1.2.3",
       "title": "CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3) Plan of Action and Milestones Template",
       "version": "1.2.3"
     },
     "poam-items": [
       {
-        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
-        "title": "Compliance Roadmap and Parameter Tailoring for CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3)",
-        "uuid": "9a4f5fad-99ab-5e3b-959d-1ed855b2d9f5"
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ac-1 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ac-1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ac-1 (Access control policy and procedures)",
+        "uuid": "716ea335-c879-5205-83ad-79cbe829da98"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ac-10 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ac-10"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ac-10 (Concurrent session control)",
+        "uuid": "54435b59-d334-5d2a-98e2-e20ba9143db9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ac-11 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ac-11"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ac-11 (Device lock)",
+        "uuid": "906451b3-26a8-52fa-805f-7d2c6f7188b8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ac-12 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ac-12"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ac-12 (Session termination)",
+        "uuid": "51f6c3ff-2f4e-50ae-a2d9-752af101314e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ac-14 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ac-14"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ac-14 (Permitted actions without identification or authentication)",
+        "uuid": "dc4e3100-e5ed-5b12-b723-134c68b31348"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ac-16 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ac-16"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ac-16 (Security and privacy attributes)",
+        "uuid": "07dc903c-e992-5d32-90c9-bd1c0a97a119"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ac-17 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ac-17"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ac-17 (Remote access)",
+        "uuid": "ec2a6598-d567-58bb-94e2-17609529f4d6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ac-18 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ac-18"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ac-18 (Wireless access)",
+        "uuid": "dc6eb3ba-efc8-5d1a-8e5b-f84250b0983b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ac-19 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ac-19"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ac-19 (Access control for mobile devices)",
+        "uuid": "882c6c8c-a766-55cc-b625-07e99c319a86"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ac-2 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ac-2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ac-2 (Account management)",
+        "uuid": "6334f066-7566-5d44-b241-cf0523c4c386"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ac-20 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ac-20"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ac-20 (Use of external systems)",
+        "uuid": "b296448f-48b3-55cf-9849-212da0012347"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ac-21 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ac-21"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ac-21 (Information sharing)",
+        "uuid": "6037fa4e-7095-51e8-9842-5126faa976a1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ac-22 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ac-22"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ac-22 (Publicly accessible content)",
+        "uuid": "eb32e747-8958-5e4b-9093-d995b6712733"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ac-23 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ac-23"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ac-23 (Data mining protection)",
+        "uuid": "be8129d4-5d01-5ba6-97ef-ef16434f34e8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ac-24 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ac-24"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ac-24 (Access control decisions)",
+        "uuid": "e4a05517-6e5b-54d1-bafd-6de50f31afb6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ac-3 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ac-3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ac-3 (Access enforcement)",
+        "uuid": "e2cb63e9-d655-54f8-a3de-990ec18d3fa5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ac-4 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ac-4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ac-4 (Information flow enforcement)",
+        "uuid": "69155345-a32b-5cff-b35e-7488b1c3ad12"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ac-5 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ac-5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ac-5 (Separation of duties)",
+        "uuid": "5c8ed182-0d9b-508d-a8ec-8fd7e32ac884"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ac-6 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ac-6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ac-6 (Least privilege)",
+        "uuid": "cca75255-f9da-508e-bae5-a37a71f74aaa"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ac-7 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ac-7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ac-7 (Unsuccessful logon attempts)",
+        "uuid": "08041dba-fbd3-5d74-9273-5b375282379b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ac-8 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ac-8"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ac-8 (System use notification)",
+        "uuid": "02941bb2-774b-5684-815a-663213ae76e7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ac-9 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ac-9"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ac-9 (Previous logon notification)",
+        "uuid": "801ab1ae-720b-5080-b876-62f194e6b260"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control at-1 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "at-1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: at-1 (Awareness and training policy and procedures)",
+        "uuid": "bb2938c2-d373-5e37-b49a-04c22ce02c94"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control at-2 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "at-2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: at-2 (Literacy training and awareness)",
+        "uuid": "43bce93f-c438-5cb6-a6ad-e6d9b1387952"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control at-3 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "at-3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: at-3 (Role -based training)",
+        "uuid": "4e5b7280-3907-52df-902c-5046af8ed59c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control at-4 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "at-4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: at-4 (Training records)",
+        "uuid": "f4b4cc39-8b9d-53a8-860c-8b8d86035eaf"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control au-1 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "au-1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: au-1 (Audit and accountability policy and procedures)",
+        "uuid": "1b2ed6ff-1eb8-5fb8-aea1-983ce50329ae"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control au-10 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "au-10"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: au-10 (Non -repudiation)",
+        "uuid": "1ffde0b6-d4b6-5a83-a151-96bb4a08b93a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control au-11 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "au-11"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: au-11 (Audit record retention)",
+        "uuid": "21042d3e-132a-56a1-b453-536c4f588395"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control au-12 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "au-12"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: au-12 (Audit record generation)",
+        "uuid": "3f6629bc-fe88-52fd-911c-81eeb31df0db"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control au-13 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "au-13"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: au-13 (Monitoring for information disclosure)",
+        "uuid": "2880fbbb-a21c-5ecb-9441-0aa97d41026e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control au-14 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "au-14"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: au-14 (Session audit)",
+        "uuid": "e867d17c-948a-5a46-81a3-c1de97707894"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control au-16 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "au-16"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: au-16 (Cross -organizational audit logging)",
+        "uuid": "fd3527b2-998c-5b1e-a432-60773c7c54f4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control au-2 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "au-2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: au-2 (Event logging)",
+        "uuid": "b547c6ba-bb63-5a42-8164-25ba109820f7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control au-3 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "au-3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: au-3 (Content of audit records)",
+        "uuid": "addc0433-ef51-57ef-9489-6d3755a5238e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control au-4 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "au-4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: au-4 (Audit log storage capacity)",
+        "uuid": "560f8ac9-066e-549c-b7d8-5b781223437e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control au-5 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "au-5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: au-5 (Response to audit logging process failures)",
+        "uuid": "9004269d-b298-56bd-a3c4-daa85ab01243"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control au-6 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "au-6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: au-6 (Audit record review, analysis, and reporting)",
+        "uuid": "0e99bb28-42c6-5141-bbda-d9dd4efe2b35"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control au-7 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "au-7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: au-7 (Audit record reduction and report generation)",
+        "uuid": "46401bf7-39a0-5b7d-afd8-f9d1d4d33e03"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control au-8 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "au-8"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: au-8 (Time stamps)",
+        "uuid": "4904b816-27e9-5e08-860f-a41ac553f5a0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control au-9 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "au-9"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: au-9 (Protection of audit information)",
+        "uuid": "d0d3d237-f9e8-598a-97f5-c26544b04975"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ca-1 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ca-1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ca-1 (Assessment, authorization and monitoring policy and procedures)",
+        "uuid": "0d3cd22d-5419-5eab-b785-6076256bcbac"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ca-2 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ca-2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ca-2 (Control assessments)",
+        "uuid": "74b88a88-5c38-5282-a1e5-a20653fb3879"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ca-3 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ca-3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ca-3 (Information exchange)",
+        "uuid": "9a99ffa6-5b52-5abb-9b49-00e9f4d1fd39"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ca-5 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ca-5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ca-5 (Plan of action and milestones)",
+        "uuid": "25070a91-3edc-51dd-9513-2ea172ab72be"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ca-6 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ca-6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ca-6 (Authorization)",
+        "uuid": "b0393141-e8bd-599f-bf9b-6476c4661242"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ca-7 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ca-7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ca-7 (Continuous monitoring)",
+        "uuid": "085e2387-0f05-5693-b65f-9ebffbc87778"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ca-8 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ca-8"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ca-8 (Penetration testing)",
+        "uuid": "42a731a7-8c17-5a7f-8c00-34e4fdc5afde"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ca-9 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ca-9"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ca-9 (Internal system connections)",
+        "uuid": "506ac198-ac54-527a-9905-dbc6f9c381ec"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control cm-1 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "cm-1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: cm-1 (Configuration management policy and procedures)",
+        "uuid": "738bfa52-90ae-59d0-95ca-e7e428e28382"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control cm-10 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "cm-10"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: cm-10 (Software use restrictions)",
+        "uuid": "98d1e73f-e998-5e20-b220-ee6eea36f633"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control cm-11 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "cm-11"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: cm-11 (User -installed software)",
+        "uuid": "6fc0b0e8-35d6-5be3-9b76-2b090823354c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control cm-2 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "cm-2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: cm-2 (Baseline configuration)",
+        "uuid": "04a7a232-a748-5217-ad6f-317c42c3dda1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control cm-3 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "cm-3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: cm-3 (Configuration change control)",
+        "uuid": "ce800b31-bcd1-59f5-8567-576626813af5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control cm-4 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "cm-4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: cm-4 (Impact analyses)",
+        "uuid": "4d8bafec-a7b9-50bc-9d01-3045bb5cce42"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control cm-5 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "cm-5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: cm-5 (Access restrictions for change)",
+        "uuid": "8687b57b-9824-5a3b-9790-b334e1f5e302"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control cm-6 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "cm-6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: cm-6 (Configuration Settings)",
+        "uuid": "8921f9d3-c3f7-5f5a-b682-2921e3f13085"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control cm-7 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "cm-7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: cm-7 (Least functionality)",
+        "uuid": "121b228c-9585-5335-91b0-d12a3ce91eca"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control cm-8 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "cm-8"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: cm-8 (System component inventory)",
+        "uuid": "0367eb93-de95-501a-8c6d-ae0b192f8a51"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control cm-9 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "cm-9"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: cm-9 (Configuration management plan)",
+        "uuid": "cad906eb-9d98-5d6d-b52b-809426fc5f5d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control cp-1 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "cp-1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: cp-1 (Contingency planning policy and procedures)",
+        "uuid": "fcd46bfd-e5c4-55c3-92f0-ffed26c2b36e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control cp-10 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "cp-10"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: cp-10 (System recovery and reconstitution)",
+        "uuid": "4494b51c-7bdb-5179-9761-60b96b10febd"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control cp-11 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "cp-11"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: cp-11 (Alternate communications protocols)",
+        "uuid": "f9cf8423-48c0-5de5-84e5-4475185cd155"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control cp-12 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "cp-12"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: cp-12 (Safe mode)",
+        "uuid": "612c0235-2e78-528e-85f5-69b4aeb6bd67"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control cp-13 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "cp-13"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: cp-13 (Alternative security mechanisms)",
+        "uuid": "1f7b9b5b-509f-504f-ab29-2279d16684a4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control cp-2 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "cp-2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: cp-2 (Contingency plan)",
+        "uuid": "920dfd95-6341-5f50-8afe-dcf0e48e89fd"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control cp-3 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "cp-3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: cp-3 (Contingency training)",
+        "uuid": "c7cbd3b3-d736-53ac-8e8d-6b819f079ac3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control cp-4 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "cp-4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: cp-4 (Contingency plan testing)",
+        "uuid": "e5acf967-0dba-5d30-97c0-d096b1d68c7c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control cp-6 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "cp-6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: cp-6 (Alternate storage site)",
+        "uuid": "42a4c55f-7161-50b0-8e3d-09cce4eb8385"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control cp-7 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "cp-7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: cp-7 (Alternate processing site)",
+        "uuid": "f356db53-37e3-5205-99c5-ae1f78d95dd9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control cp-8 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "cp-8"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: cp-8 (Telecommunications services)",
+        "uuid": "a696352b-3ebd-5f47-a810-5eec5d624add"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control cp-9 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "cp-9"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: cp-9 (System backup)",
+        "uuid": "121a5537-09df-51e7-9b73-949e3f2453c9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ia-1 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ia-1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ia-1 (Identification and authentication policy and procedures)",
+        "uuid": "98f5e39d-58c7-5f13-9fb4-eaf6d9caf28d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ia-10 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ia-10"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ia-10 (Adaptive authentication)",
+        "uuid": "b7eb7a80-5416-5598-9cee-65bfb9b0c25d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ia-11 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ia-11"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ia-11 (Re -authentication)",
+        "uuid": "4485ad15-e4b5-5245-a79b-a8e26a9bb2cf"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ia-13 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ia-13"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ia-13 (Identity providers and authorization servers)",
+        "uuid": "501991cf-86a7-5aa0-9d53-41cc4b737214"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ia-2 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ia-2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ia-2 (Identification and authentication (organizational users))",
+        "uuid": "32dc6208-0548-5ffb-bb71-bc9d8f6b1efc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ia-3 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ia-3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ia-3 (Device identification and authentication)",
+        "uuid": "3dd63867-2576-52aa-9575-b54c6f05289d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ia-4 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ia-4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ia-4 (Identifier management)",
+        "uuid": "fd7d8824-4ffb-585f-be51-e902088cfeba"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ia-5 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ia-5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ia-5 (Authenticator management)",
+        "uuid": "dc056b4b-9f49-5c5b-b158-636684005899"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ia-6 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ia-6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ia-6 (Authentication feedback)",
+        "uuid": "93841c01-91d5-55b0-a17a-90c24d16c0ae"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ia-7 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ia-7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ia-7 (Cryptographic module authentication)",
+        "uuid": "7fc34d6c-eacb-546e-b481-7b7963d2b3d4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ia-8 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ia-8"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ia-8 (Identification and authentication (non -organizational users))",
+        "uuid": "24d6c566-aa32-5bc2-ac72-44a7fe0e6cba"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ia-9 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ia-9"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ia-9 (Service identification and authentication)",
+        "uuid": "ac5e0d91-e48d-5cfe-a7d3-9e37cad64802"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ir-1 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ir-1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ir-1 (Incident response policy and procedures)",
+        "uuid": "c1157808-ba48-59f5-8972-84f65028fdf7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ir-2 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ir-2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ir-2 (Incident response training)",
+        "uuid": "8aed9495-517c-526d-ad14-1d55d438ecca"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ir-3 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ir-3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ir-3 (Incident response testing)",
+        "uuid": "7ee5eda7-700d-5814-a24e-ac44164c07b3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ir-4 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ir-4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ir-4 (Incident handling)",
+        "uuid": "ef0444b7-3f24-5cca-b7eb-edfb0c197b9a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ir-5 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ir-5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ir-5 (Incident monitoring)",
+        "uuid": "61da4f3f-d03e-5314-918d-367b0b062ea9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ir-6 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ir-6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ir-6 (Incident reporting)",
+        "uuid": "65075b37-ff74-5b71-98c5-07fa2d943ad1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ir-7 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ir-7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ir-7 (Incident response assistance)",
+        "uuid": "faadf9e6-c3ea-5a9e-a872-f3357bf49b00"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ir-8 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ir-8"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ir-8 (Incident response plan)",
+        "uuid": "c731a8b0-6321-5b99-bb99-1706409106f5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ir-9 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ir-9"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ir-9 (Information spillage response)",
+        "uuid": "4ea055c9-0c68-5916-adac-9fd242b3ff55"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ma-1 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ma-1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ma-1 (Maintenance policy and procedures)",
+        "uuid": "bc5d2e4f-8422-54e1-8543-8081e7d0f223"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ma-2 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ma-2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ma-2 (Controlled maintenance)",
+        "uuid": "ba4d7b11-7f5b-5cf2-beac-05dde2e33ca9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ma-3 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ma-3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ma-3 (Maintenance tools)",
+        "uuid": "fb2a4c6c-68c0-5cd2-88fe-f2d781987ca7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ma-4 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ma-4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ma-4 (Non -local maintenance)",
+        "uuid": "4c6358d9-5c5e-5632-9dba-4bbccc778501"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ma-5 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ma-5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ma-5 (Maintenance personnel)",
+        "uuid": "3bdfa1ba-7297-5bb5-90b8-4a6f16c0d3cd"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ma-6 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ma-6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ma-6 (Timely maintenance)",
+        "uuid": "56f15dd3-5331-5b93-aaf5-81a677628c2a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control mp-1 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "mp-1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: mp-1 (Media protection policy and procedures)",
+        "uuid": "3d305bfe-a520-5265-bde8-f08c3cab6366"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control mp-2 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "mp-2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: mp-2 (Media access)",
+        "uuid": "712698ba-e2bd-54bb-878d-185f703f6d4c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control mp-3 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "mp-3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: mp-3 (Media marking)",
+        "uuid": "ae566b71-75c0-52a6-a002-acf938032412"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control mp-4 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "mp-4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: mp-4 (Media storage)",
+        "uuid": "d5d326a1-1439-53de-abd7-4e2717a15ecb"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control mp-5 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "mp-5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: mp-5 (Media transport)",
+        "uuid": "d645fd21-c060-55a3-9ebb-44bd84cabbe2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control mp-6 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "mp-6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: mp-6 (Media sanitization)",
+        "uuid": "49d2d03b-f2fe-5bce-b60a-448321e4aaba"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control mp-7 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "mp-7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: mp-7 (Media use)",
+        "uuid": "baf212d5-daff-590f-a792-d5b43da5a81e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control mp-8 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "mp-8"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: mp-8 (Media downgrading)",
+        "uuid": "44f15894-9b8c-5c5f-8106-e6fe1a78e74d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pe-1 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pe-1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pe-1 (Physical and environmental protection policy and procedures)",
+        "uuid": "910ccda1-c24d-5145-97da-11b5d2b71188"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pe-10 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pe-10"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pe-10 (Emergency shutoff)",
+        "uuid": "e9d0d8d0-574d-5b11-a587-1db2372a647c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pe-11 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pe-11"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pe-11 (Emergency power)",
+        "uuid": "424cb486-a77a-5ee5-8ba8-1678e0729e17"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pe-12 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pe-12"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pe-12 (Emergency lighting)",
+        "uuid": "1bb5394a-50e1-55a2-8cc7-308b4c1ed58f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pe-13 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pe-13"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pe-13 (Fire protection)",
+        "uuid": "ddf921ff-be5b-572b-b5b0-d401e2dc7e71"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pe-14 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pe-14"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pe-14 (Environmental controls)",
+        "uuid": "ee27cf81-ea20-580f-ab36-1f27682594d2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pe-15 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pe-15"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pe-15 (Water damage protection)",
+        "uuid": "17cc7b53-f50d-5c71-9bf2-79c7a05bea35"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pe-16 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pe-16"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pe-16 (Delivery and removal)",
+        "uuid": "48505640-68a3-5c9e-9af1-8a05b2bcc7ff"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pe-17 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pe-17"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pe-17 (Alternate work site)",
+        "uuid": "a741946e-ecfd-5959-8d40-8ebb5d455113"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pe-18 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pe-18"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pe-18 (Location of system components)",
+        "uuid": "da6c54df-904e-5855-acb7-77c3088e427a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pe-19 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pe-19"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pe-19 (Information leakage)",
+        "uuid": "c8018fba-9cd7-59d8-a6dd-ffcb3aa3bbfe"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pe-2 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pe-2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pe-2 (Physical access authorizations)",
+        "uuid": "da5926af-c6e9-5399-bfe1-6af423d36019"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pe-20 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pe-20"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pe-20 (Asset monitoring and tracking)",
+        "uuid": "d725f745-98ac-5bb4-81de-646481c0a56e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pe-3 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pe-3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pe-3 (Physical access control)",
+        "uuid": "f9d745ef-8398-5927-9413-144b2406f83b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pe-4 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pe-4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pe-4 (Access control for transmission)",
+        "uuid": "07edd565-0880-5356-8860-b98f052b8fb2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pe-5 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pe-5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pe-5 (Access control for output devices)",
+        "uuid": "6b49a7cd-a338-5fd0-a3d4-1477c114a3b5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pe-6 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pe-6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pe-6 (Monitoring physical access)",
+        "uuid": "697d8046-fd74-52f0-afec-0828e80c4701"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pe-8 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pe-8"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pe-8 (Visitor access records)",
+        "uuid": "69a14009-4ef7-5865-940e-8149b9d8ae3f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pe-9 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pe-9"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pe-9 (Power equipment and cabling)",
+        "uuid": "154ec0c6-dbdb-5bff-9657-471e0f162a15"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pl-1 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pl-1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pl-1 (Planning policy and procedures)",
+        "uuid": "f011952a-3215-56ee-8f86-ea328a539424"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pl-2 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pl-2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pl-2 (System security and privacy plans)",
+        "uuid": "7e19f6cb-abbc-5f08-a9fe-f0a283aaa190"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pl-4 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pl-4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pl-4 (Rules of behaviour)",
+        "uuid": "e30bb62e-eba0-52c1-a5bc-ad7a7d02d6a9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pl-7 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pl-7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pl-7 (Concept of operations)",
+        "uuid": "da77c096-e5f0-5e20-9de5-9e06bf350717"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pl-8 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pl-8"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pl-8 (Security and privacy architecture)",
+        "uuid": "3c522abc-a4d0-5a90-b74a-31a3607297e6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pl-9 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pl-9"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pl-9 (Central management)",
+        "uuid": "b09d1d8f-faab-57c5-a7b5-2f70d6e54d05"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pm-1 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pm-1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pm-1 (Information security program plan)",
+        "uuid": "8d05c0f3-c9a8-563a-a40c-70649f8312d5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pm-10 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pm-10"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pm-10 (Authorization process)",
+        "uuid": "80a0e423-304c-5bf6-ba4a-95e2224b06da"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pm-11 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pm-11"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pm-11 (Mission and business process definition)",
+        "uuid": "cf559035-a475-572d-aa56-50e7321c1e6a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pm-12 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pm-12"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pm-12 (Insider threat program)",
+        "uuid": "ee92e9f5-512b-513c-b813-f4cec9f86580"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pm-13 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pm-13"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pm-13 (Security and privacy workforce)",
+        "uuid": "2e3518a0-8d98-53c8-9bd5-9c07402edf45"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pm-14 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pm-14"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pm-14 (Testing, training, and monitoring)",
+        "uuid": "3f9a30f9-1058-5d3d-9441-a8a5e4caef44"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pm-15 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pm-15"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pm-15 (Security and privacy groups and associations)",
+        "uuid": "b9e2c459-6ce3-5375-b981-907eb8f59053"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pm-16 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pm-16"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pm-16 (Threat awareness program)",
+        "uuid": "4ad27a5e-405b-5060-8a2d-a7f28f057d98"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pm-2 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pm-2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pm-2 (Information security program leadership role)",
+        "uuid": "c3371fb0-9319-52d2-ba25-9b062cf1b647"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pm-3 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pm-3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pm-3 (Information security and privacy resources)",
+        "uuid": "ce591c5d-a0ff-5f64-afd7-b5b9809ca3d6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pm-4 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pm-4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pm-4 (P lan of action and milestones process)",
+        "uuid": "d64f3e5f-01bf-5c42-8ed5-7d1cba89199e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pm-5 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pm-5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pm-5 (S ystem and program inventory)",
+        "uuid": "e2bbae17-430b-5506-bc2b-24783ebb53ee"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pm-6 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pm-6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pm-6 (Measures of performance)",
+        "uuid": "85628e2a-7bfd-551a-80ef-cab30080df47"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pm-7 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pm-7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pm-7 (E nterprise architecture)",
+        "uuid": "3336b5d5-14d7-526d-b772-8b5eb1ff2c06"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pm-8 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pm-8"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pm-8 (C ritical infrastructure plan)",
+        "uuid": "f8451f9e-8372-5293-a6f6-e8460cb6de2a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pm-9 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pm-9"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pm-9 (Risk management strategy)",
+        "uuid": "07ac8ad6-9b88-5146-a11c-f29ab1e70eef"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ps-1 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ps-1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ps-1 (Personnel security policy and procedures)",
+        "uuid": "17146254-cf3e-5791-9897-c3ed2c127e1e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ps-2 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ps-2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ps-2 (Position security analysis)",
+        "uuid": "df3c7447-ea23-5b22-845c-7db19938590a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ps-3 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ps-3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ps-3 (Personnel screening)",
+        "uuid": "7103229d-f401-5e32-917e-781126687da6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ps-4 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ps-4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ps-4 (Personnel termination)",
+        "uuid": "de250791-fe3e-5738-928e-7ce65d74b12f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ps-5 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ps-5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ps-5 (Personnel transfer)",
+        "uuid": "0d9dd596-d96b-5319-80bb-3d1b0ee7cfef"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ps-6 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ps-6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ps-6 (Access agreements)",
+        "uuid": "1b7fab31-fcda-58d8-911d-49f9f6ae68e5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ps-7 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ps-7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ps-7 (External personnel security)",
+        "uuid": "18aa7765-0da8-5913-afea-c28cc8ed6f8f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ps-8 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ps-8"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ps-8 (Personnel sanctions)",
+        "uuid": "14c90ded-9967-5965-91a8-99563e045537"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ra-1 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ra-1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ra-1 (Risk assessment policy and procedures)",
+        "uuid": "eb78285c-a7e4-5275-afe2-3bcdc8926b17"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ra-2 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ra-2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ra-2 (Security categorization)",
+        "uuid": "872ab62a-1293-5ed6-ac9b-d50072488b95"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ra-3 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ra-3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ra-3 (Risk assessment)",
+        "uuid": "9ada0976-4a19-564a-bd64-ad5482880f03"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ra-5 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ra-5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ra-5 (Vulnerability monitoring and scanning)",
+        "uuid": "ac31a8d7-5cac-565c-81dc-b252f523dd7d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ra-6 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ra-6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ra-6 (Technical surveillance countermeasures survey)",
+        "uuid": "a0e26081-2747-5066-bb8b-aa35d4c5ed78"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sa-1 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sa-1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sa-1 (System and services acquisition policy and procedures)",
+        "uuid": "7398e0e9-aef1-570d-a1ab-540030ffd0e0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sa-10 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sa-10"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sa-10 (Developer configuration management)",
+        "uuid": "2e56fdc8-64d7-5c37-9568-163c51260234"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sa-11 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sa-11"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sa-11 (Developer testing and evaluation)",
+        "uuid": "f7d99316-8e86-5eee-8945-20d9efd0412c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sa-15 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sa-15"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sa-15 (Development process, standards, and tools)",
+        "uuid": "b36b7888-427e-5fff-b19b-8a80ad1cf6b5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sa-16 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sa-16"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sa-16 (Developer -provided training)",
+        "uuid": "e8fc5953-6190-514b-b290-42668c40b5cc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sa-17 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sa-17"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sa-17 (Developer security and privacy architecture and design)",
+        "uuid": "49b323db-9f70-5cff-91b1-d928ddf0e959"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sa-2 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sa-2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sa-2 (Allocation of resources)",
+        "uuid": "5c63d557-e552-59c0-a78d-ef3977a04bc4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sa-20 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sa-20"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sa-20 (Customized development of critical components)",
+        "uuid": "21466112-e4fe-5854-a0a2-f74aa3efcb07"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sa-21 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sa-21"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sa-21 (Developer screening)",
+        "uuid": "bffcfaee-f545-53dc-af25-85ec5c2af092"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sa-23 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sa-23"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sa-23 (Specialization)",
+        "uuid": "adef1232-3f03-5fe9-bab5-4b37a103132b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sa-24 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sa-24"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sa-24 (Design for cyber resiliency)",
+        "uuid": "448ee15c-af79-5df0-b2bc-e0d4747e3571"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sa-3 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sa-3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sa-3 (System development lifecycle)",
+        "uuid": "36c3b4f2-f6f2-5407-907a-90c31f59716a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sa-4 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sa-4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sa-4 (Acquisition process)",
+        "uuid": "875ba538-d078-5c26-9410-70706ff21a46"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sa-5 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sa-5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sa-5 (System documentation)",
+        "uuid": "7cb5b22e-3aa3-5f7f-95de-aa768491be79"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sa-8 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sa-8"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sa-8 (Security and privacy engineering principles)",
+        "uuid": "d9d8599f-8e90-5798-ad98-b9d9eb92f9f5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sa-9 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sa-9"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sa-9 (External system services)",
+        "uuid": "c4d69f04-36c0-500a-8282-0faa76196d19"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc-1 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc-1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc-1 (System and communications protection policy and procedures)",
+        "uuid": "418cb39f-b666-5389-b42f-89f6d7374fd8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc-10 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc-10"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc-10 (Network disconnect)",
+        "uuid": "ebe3ae03-136a-50c3-a0fd-234d4f7fdf26"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc-11 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc-11"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc-11 (Trusted path)",
+        "uuid": "39915821-3c4a-5edf-a065-7f883c35b4ec"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc-12 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc-12"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc-12 (Cryptographic key establishment and management)",
+        "uuid": "d11321e2-3106-540b-a6ba-5c08dd030e84"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc-13 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc-13"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc-13 (Cryptographic protection)",
+        "uuid": "c513538f-cfa1-5f53-937c-485345008a94"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc-15 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc-15"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc-15 (Collaborative computing devices and applications)",
+        "uuid": "dc8f748d-0fdb-559b-ab10-7c3f97683919"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc-16 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc-16"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc-16 (Transmission of security and privacy attributes)",
+        "uuid": "7c20339f-5800-5cff-89d1-8ef613468dfa"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc-17 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc-17"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc-17 (Public key infrastructure certificates)",
+        "uuid": "2f3a2714-4bd6-52ee-b9fa-b9a6a01425aa"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc-18 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc-18"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc-18 (Mobile code)",
+        "uuid": "63286d8a-edf8-537c-bfeb-fbc433023470"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc-19 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc-19"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc-19 (Voice over Internet Protocol)",
+        "uuid": "caf58f6e-4da8-5e63-bbbd-f8523410d744"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc-2 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc-2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc-2 (Separation of system and user functionality)",
+        "uuid": "06923fc9-55e0-5e87-9031-08bcf45d18a6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc-20 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc-20"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc-20 (Secure name/address resolution service (authoritative source))",
+        "uuid": "6288f004-5cc1-5a75-b189-53f418d1a25b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc-21 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc-21"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc-21 (Secure name/address resolution service (recursive or caching resolver))",
+        "uuid": "51414570-9851-5957-aab2-586ab99c998a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc-22 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc-22"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc-22 (Architecture and provisioning for name/address resolution service)",
+        "uuid": "f5a49153-474a-522a-a70d-905a4dfb7d87"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc-23 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc-23"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc-23 (Session authenticity)",
+        "uuid": "fb31bdf0-2a7d-51eb-9533-66a9758cfdb4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc-24 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc-24"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc-24 (Fail in known state)",
+        "uuid": "878952c0-c1b1-52e1-94f8-e6a474a3315a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc-25 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc-25"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc-25 (Thin nodes)",
+        "uuid": "69aaf56d-59d4-5f4b-af96-3ecca6b87b4e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc-26 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc-26"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc-26 (Decoys)",
+        "uuid": "0347e8d5-0f36-5462-b551-45c1e47b3683"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc-27 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc-27"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc-27 (Platform -independent applications)",
+        "uuid": "1b780624-f564-5689-91c5-c67dce6df2ee"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc-28 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc-28"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc-28 (Protection of information at rest)",
+        "uuid": "875a7231-996b-5c71-992c-ade2ccd92914"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc-29 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc-29"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc-29 (Heterogeneity)",
+        "uuid": "516b74a8-a903-5741-8f59-c6c935ab7e54"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc-3 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc-3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc-3 (Security function isolation)",
+        "uuid": "aa1b254d-3b74-5462-8b0e-49706c3273bc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc-30 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc-30"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc-30 (Concealment and misdirection)",
+        "uuid": "8e284af7-bc45-517f-9544-bc7d216f10c0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc-31 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc-31"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc-31 (Covert channel analysis)",
+        "uuid": "0143f6fe-2bae-586f-907e-3eb742570373"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc-32 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc-32"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc-32 (System partitioning)",
+        "uuid": "4ac1a955-6f33-503e-a428-f88eab7018bf"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc-34 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc-34"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc-34 (Non -modifiable executable programs)",
+        "uuid": "5201cf5d-6e5d-51d1-8d4f-10c2da887071"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc-35 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc-35"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc-35 (External malicious code identification)",
+        "uuid": "eb7978de-689a-5992-a2b5-8138cec00943"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc-36 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc-36"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc-36 (Distributed processing and storage)",
+        "uuid": "168c8f46-c7b5-54b1-9f9b-0a8b2118fc0d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc-37 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc-37"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc-37 (Out -of-band channels)",
+        "uuid": "01a72bc1-c55d-557c-8a69-4e179ce3caa1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc-38 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc-38"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc-38 (Operations security)",
+        "uuid": "5ee8b968-c15c-5dba-8277-204299ff3f67"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc-39 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc-39"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc-39 (Process isolation)",
+        "uuid": "3d3e288d-9ab5-5a08-ac44-300782410e67"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc-4 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc-4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc-4 (Information in shared system resources)",
+        "uuid": "647eb409-9f48-56ee-9479-47cd5c2482da"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc-40 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc-40"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc-40 (Wireless link protection)",
+        "uuid": "e433f48e-59ad-5159-8010-a1106a30c1e0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc-41 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc-41"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc-41 (Port and input/output device access)",
+        "uuid": "5fc100ad-481f-5034-ae4b-c19c573b0012"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc-42 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc-42"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc-42 (Sensor capability and data)",
+        "uuid": "e968c465-c5d4-56a1-8355-f10533defa0a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc-43 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc-43"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc-43 (Usage restrictions)",
+        "uuid": "72eb4201-cc6f-53e4-9b37-9cb1c17b3935"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc-44 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc-44"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc-44 (Detonation chambers)",
+        "uuid": "cfa6993d-3a72-54c9-9294-b7d8fa64ff50"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc-5 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc-5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc-5 (Denial -of -service protection)",
+        "uuid": "b592f676-79ca-5fa3-97bc-bd37a095b0b9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc-6 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc-6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc-6 (Resource availability)",
+        "uuid": "37e6a33e-8140-5e44-a888-cc5727e88954"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc-7 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc-7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc-7 (Boundary protection)",
+        "uuid": "b7f3de7e-5007-5063-bf98-20af751569cc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc-8 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc-8"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc-8 (Transmission confidentiality and integrity)",
+        "uuid": "b82b368a-13f2-5fd0-864a-f4498d54b0ab"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control si-1 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "si-1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: si-1 (System and information integrity policy and procedures)",
+        "uuid": "fddc5cb6-e5e2-54da-93ea-c3adb12ff21c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control si-10 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "si-10"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: si-10 (Information input validation)",
+        "uuid": "b32317f8-ac7b-5277-8ac5-510a95b5c03d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control si-11 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "si-11"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: si-11 (Error handling)",
+        "uuid": "4a5726c4-ef24-53d7-a4b8-e1fdc4a3df9a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control si-12 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "si-12"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: si-12 (Information management and retention)",
+        "uuid": "482ccc01-adec-5263-89e7-08a2d4e2a664"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control si-13 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "si-13"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: si-13 (Predictable failure prevention)",
+        "uuid": "e6a4a5fa-4b22-5dd1-b938-c4aae732728c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control si-14 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "si-14"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: si-14 (Non -persistence)",
+        "uuid": "174b57b0-030a-5135-8b24-46b4f83991b5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control si-15 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "si-15"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: si-15 (Information output filtering)",
+        "uuid": "623d4784-afe3-5b55-b383-505ee1b01dcd"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control si-16 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "si-16"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: si-16 (Memory protection)",
+        "uuid": "81b9a26b-c244-5f19-ae65-2e98ff094341"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control si-17 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "si-17"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: si-17 (Fail -safe procedures)",
+        "uuid": "93655cd6-7745-50db-8941-41ec3e11f30f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control si-2 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "si-2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: si-2 (Flaw remediation)",
+        "uuid": "f90f52af-a023-5d71-b2b3-56c53300a1ec"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control si-3 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "si-3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: si-3 (Malicious code protection)",
+        "uuid": "5db6b082-5e9f-5366-9e99-e4529a56faf7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control si-4 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "si-4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: si-4 (System monitoring)",
+        "uuid": "7707aadb-4c1b-54ca-9347-11e99d908e40"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control si-5 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "si-5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: si-5 (Security alerts, advisories, and directives)",
+        "uuid": "5b96ab7d-9709-5a43-bf0f-2b31ab3050a8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control si-6 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "si-6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: si-6 (Security and privacy function verification)",
+        "uuid": "097e3464-0245-5601-979e-02779637383b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control si-7 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "si-7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: si-7 (Software, firmware, and information integrity)",
+        "uuid": "7b4e7131-c464-5822-9c37-afa032527b66"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control si-8 in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "si-8"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: si-8 (Spam protection)",
+        "uuid": "f0e99cb2-0d00-5165-8bd7-883de0d4438b"
       }
     ],
     "uuid": "de2dd69f-161b-577b-85b8-90fa50c6d139"

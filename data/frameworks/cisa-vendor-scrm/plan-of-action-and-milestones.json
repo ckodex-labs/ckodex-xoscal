@@ -4,16 +4,3083 @@
       "href": "./system-security-plan.json"
     },
     "metadata": {
-      "last-modified": "2026-11-08T01:42:13Z",
+      "last-modified": "2026-11-08T00:30:46Z",
       "oscal-version": "1.2.3",
       "title": "VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE Plan of Action and Milestones Template",
       "version": "2"
     },
     "poam-items": [
       {
-        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
-        "title": "Compliance Roadmap and Parameter Tailoring for VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE",
-        "uuid": "e330c86f-2007-5249-959a-f8218c9c2bf7"
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _1 (Qualifying Questions)",
+        "uuid": "b9a5b7b0-088e-5077-bb17-a041721a3c80"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _1.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_1.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _1.1 (Qualifying Questions — 1.1)",
+        "uuid": "638d2693-e181-5b1d-b803-6b28c19d51d0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _1.2 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_1.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _1.2 (Qualifying Questions — 1.2)",
+        "uuid": "d9677d5b-dd1b-5898-96c0-b42ba21ae9a1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _1.2.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_1.2.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _1.2.1 (Qualifying Questions — 1.2.1)",
+        "uuid": "4a456190-ddef-55c4-9ea4-9f7d9e0de49a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _1.2.2 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_1.2.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _1.2.2 (Qualifying Questions — 1.2.2)",
+        "uuid": "0a8810e1-1afb-595e-95bc-243a42dcd251"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.1 (General — 2.1)",
+        "uuid": "38a789f3-9f22-5fdb-98dc-ebfeb512c3d7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.1.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.1.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.1.1 (General — 2.1.1)",
+        "uuid": "16a12818-9a55-503c-bdd6-7a19e02543e5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.1.2 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.1.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.1.2 (General — 2.1.2)",
+        "uuid": "4e080f22-232d-52ef-b972-6a65a54cacd1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.10 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.10"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.10 (Supplier Governance — 2.10)",
+        "uuid": "d86ee5b1-c8d8-5d06-aac3-c6bc38848935"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.10.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.10.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.10.1 (Supplier Governance — 2.10.1)",
+        "uuid": "a6b68043-02c6-5736-af07-c63919050739"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.2 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.2 (Information Communications Technology (ICT) Supply Chain Management — 2.2)",
+        "uuid": "5983e146-0ffc-50d6-9a07-15cadc212f1d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.2.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.2.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.2.1 (Information Communications Technology (ICT) Supply Chain Management — 2.2.1)",
+        "uuid": "b889cacb-5c08-5d57-b8eb-77aee53ee6a2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.3 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.3 (Information Communications Technology (ICT) Supply Chain Management — 2.3)",
+        "uuid": "2507f3b8-d6f0-5a74-8d22-8b7c4d909870"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.3.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.3.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.3.1 (Information Communications Technology (ICT) Supply Chain Management — 2.3.1)",
+        "uuid": "276b87e3-c4c0-5a92-8ebc-545e452c9428"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.3.2 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.3.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.3.2 (Information Communications Technology (ICT) Supply Chain Management — 2.3.2)",
+        "uuid": "ec20c764-44a6-51a5-93d7-6d1913cb4460"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.4 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.4 (Authentication and Provenance — 2.4)",
+        "uuid": "e8785870-34f2-5d22-a275-f73b0d6ff4bb"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.5 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.5 (Authentication and Provenance — 2.5)",
+        "uuid": "09acd00a-a510-5bc5-b2e8-c9456c9bbef1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.5.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.5.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.5.1 (Authentication and Provenance — 2.5.1)",
+        "uuid": "61a4339a-4a39-5703-9b72-b3a971081817"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.5.2 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.5.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.5.2 (Authentication and Provenance — 2.5.2)",
+        "uuid": "1c058a56-3c3c-53f3-a126-01be0162e83d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.5.3 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.5.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.5.3 (Authentication and Provenance — 2.5.3)",
+        "uuid": "ede702b0-f218-5bdb-a66d-1efd912e68b5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.6 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.6 (Authentication and Provenance — 2.6)",
+        "uuid": "696a39e2-c504-5f88-ace5-cb8f282b3f5d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.7 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.7 (Authentication and Provenance — 2.7)",
+        "uuid": "1d575f9c-feee-5c68-9bcb-84aa06ba58f1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.7.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.7.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.7.1 (Authentication and Provenance — 2.7.1)",
+        "uuid": "1e55c730-2c70-5052-b779-43f48daba527"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.7.2 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.7.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.7.2 (Authentication and Provenance — 2.7.2)",
+        "uuid": "40dc47a6-49a9-5164-987f-dba1af42efd8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.8 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.8"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.8 (Supplier Governance — 2.8)",
+        "uuid": "b92e2469-32a3-5de3-aa72-6b812078dc59"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.8.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.8.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.8.1 (Supplier Governance — 2.8.1)",
+        "uuid": "ba4256e9-bb8a-507e-9413-d5734284b605"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.8.2 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.8.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.8.2 (Supplier Governance — 2.8.2)",
+        "uuid": "dca83f21-6cb6-5360-9c39-6ce9223b15be"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.8.3 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.8.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.8.3 (Supplier Governance — 2.8.3)",
+        "uuid": "a35e4a37-7b0f-57ce-8554-39f34f7508d6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _2.9 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_2.9"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _2.9 (Supplier Governance — 2.9)",
+        "uuid": "da145a3d-7fe8-5fef-a39d-0ddb130654ab"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.1 (Secure Design and Engineering — 3.1)",
+        "uuid": "0b47da20-a986-5aea-9c54-c89b67b91af1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.1.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.1.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.1.1 (Secure Design and Engineering — 3.1.1)",
+        "uuid": "cc425eab-657a-5a5b-a0b9-6f700b54613c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.10 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.10"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.10 (Secure Coding and Manufacturing Practices — 3.10)",
+        "uuid": "10d43c39-0af9-5302-aeb9-018ddfccfeb9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.10.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.10.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.10.1 (Secure Coding and Manufacturing Practices — 3.10.1)",
+        "uuid": "c2cb2aad-9988-5981-975c-2266f2ea96f3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.10.2 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.10.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.10.2 (Secure Coding and Manufacturing Practices — 3.10.2)",
+        "uuid": "2c72d77b-e831-55d3-b3c1-cbee439804fb"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.10.3 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.10.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.10.3 (Secure Coding and Manufacturing Practices — 3.10.3)",
+        "uuid": "14166246-d345-550e-8918-11bd44206e3c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.10.4 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.10.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.10.4 (Secure Coding and Manufacturing Practices — 3.10.4)",
+        "uuid": "54866b13-acae-530c-965f-5f9d17d32026"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.11 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.11"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.11 (Secure Coding and Manufacturing Practices — 3.11)",
+        "uuid": "f6a4f29e-c408-5584-990c-d1e3f1eb57ee"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.11.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.11.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.11.1 (Secure Coding and Manufacturing Practices — 3.11.1)",
+        "uuid": "beef9ba0-ff4c-5a37-845d-1d63e013e45e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.12 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.12"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.12 (Secure Coding and Manufacturing Practices — 3.12)",
+        "uuid": "74d5f0f2-f7ba-51cb-b8f1-c2ef6427e9b4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.13 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.13"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.13 (Secure Coding and Manufacturing Practices — 3.13)",
+        "uuid": "be18ce35-fc82-5095-a60e-0c69558c32fb"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.13.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.13.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.13.1 (Secure Coding and Manufacturing Practices — 3.13.1)",
+        "uuid": "37b006ff-5721-56c2-b01d-33fafde148d0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.14 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.14"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.14 (Secure Coding and Manufacturing Practices — 3.14)",
+        "uuid": "a712d6bd-bcef-558a-b6d6-10f6a38b422e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.14.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.14.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.14.1 (Secure Coding and Manufacturing Practices — 3.14.1)",
+        "uuid": "9fd3e2db-0ce8-5832-aa9e-2f3b4bfa3632"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.14.2 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.14.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.14.2 (Secure Coding and Manufacturing Practices — 3.14.2)",
+        "uuid": "b8d57931-8d93-552f-8a05-3d0570a568ad"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.15 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.15"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.15 (Secure Coding and Manufacturing Practices — 3.15)",
+        "uuid": "54f06455-777b-5c85-ae60-fc4a5ba9fac7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.15.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.15.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.15.1 (Secure Coding and Manufacturing Practices — 3.15.1)",
+        "uuid": "1993934a-ca2e-5fa7-b241-723268854a0f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.16 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.16"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.16 (Respond to Vulnerabilities (RV) — 3.16)",
+        "uuid": "d8d43fa1-4c4b-5750-b0f7-9376af74e9ef"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.16.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.16.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.16.1 (Respond to Vulnerabilities (RV) — 3.16.1)",
+        "uuid": "70b09f32-d9b0-5519-b7af-da5f7e6f9524"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.16.2 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.16.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.16.2 (Respond to Vulnerabilities (RV) — 3.16.2)",
+        "uuid": "1c58951f-d248-5045-84ad-683bc7ce2d14"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.17 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.17"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.17 (Respond to Vulnerabilities (RV) — 3.17)",
+        "uuid": "b7740808-19c7-5a57-b47d-8b13809a8b40"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.17.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.17.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.17.1 (Respond to Vulnerabilities (RV) — 3.17.1)",
+        "uuid": "6e318ccb-1c34-57f0-9b71-41ebb111c4c5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.2 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.2 (Product Offering Lifecycle Management and Organization — 3.2)",
+        "uuid": "34812600-14dd-58ef-b404-d12574f072ce"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.2.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.2.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.2.1 (Product Offering Lifecycle Management and Organization — 3.2.1)",
+        "uuid": "bd17e198-a70b-5314-8f92-2026138b8fcb"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.3 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.3 (Product Offering Lifecycle Management and Organization — 3.3)",
+        "uuid": "ca30a183-ce1a-5864-ac9d-3ebd51da3a81"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.4 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.4 (Product Offering Lifecycle Management and Organization — 3.4)",
+        "uuid": "60c02f69-52ad-5e75-a908-58969a2cc1d7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.4.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.4.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.4.1 (Product Offering Lifecycle Management and Organization — 3.4.1)",
+        "uuid": "fc4b5cd5-1e02-540c-9bac-b4e449b8e218"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.5 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.5 (Product Offering Lifecycle Management and Organization — 3.5)",
+        "uuid": "3c02aeaa-8dd3-56ca-b556-6b807b88d5dd"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.6 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.6 (Protect IP and Product (Supplier) Offering Assets — 3.6)",
+        "uuid": "574408bc-a046-51cd-aa08-4f710bfc01eb"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.6.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.6.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.6.1 (Protect IP and Product (Supplier) Offering Assets — 3.6.1)",
+        "uuid": "8152d208-b20b-518a-860e-11439b13a686"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.7 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.7 (Protect IP and Product (Supplier) Offering Assets — 3.7)",
+        "uuid": "6ac4f2e2-c6a0-5abd-aaf9-95285055dcf6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.8 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.8"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.8 (Protect IP and Product (Supplier) Offering Assets — 3.8)",
+        "uuid": "47a75488-c2bb-534c-b7a1-ba4e74568c41"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.9 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.9"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.9 (Protect IP and Product (Supplier) Offering Assets — 3.9)",
+        "uuid": "e2d552e6-ac00-5283-ae44-3b77ca90d8aa"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _3.9.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_3.9.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _3.9.1 (Protect IP and Product (Supplier) Offering Assets — 3.9.1)",
+        "uuid": "d923023b-a4a5-563a-8010-7ac3c94048b7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.1 (Information Security — 4.1)",
+        "uuid": "d5323a66-0840-5dd0-bbdb-4ab9f9b4ccb9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.10 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.10"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.10 (Asset Management — 4.10)",
+        "uuid": "130f0253-f00f-5051-a080-7bbf9a01c9a3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.10.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.10.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.10.1 (Asset Management — 4.10.1)",
+        "uuid": "5eaa49e0-2203-567a-ba30-143b5e0c32af"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.10.1.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.10.1.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.10.1.1 (Asset Management — 4.10.1.1)",
+        "uuid": "b03a8ed7-c672-5571-a1a8-be4312b70294"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.11 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.11"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.11 (Identify — 4.11)",
+        "uuid": "45d24c3a-4cdf-5009-9042-406ec409f9a0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.11.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.11.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.11.1 (Identify — 4.11.1)",
+        "uuid": "973c7d98-d5a5-5e23-81ef-8978d31c57a5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.11.1.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.11.1.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.11.1.1 (Identify — 4.11.1.1)",
+        "uuid": "8ba83984-8666-5ce7-a4e5-494a71d0fc99"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.11.1.2 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.11.1.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.11.1.2 (Identify — 4.11.1.2)",
+        "uuid": "4a1071ef-d89a-539c-8022-c0c934405ccd"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.12 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.12"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.12 (Identify — 4.12)",
+        "uuid": "e1c2675e-e0a3-5e55-9194-f3ee224f47b9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.12.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.12.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.12.1 (Identify — 4.12.1)",
+        "uuid": "e0a318a1-857b-52fc-8739-922d6c03eac6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.12.2 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.12.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.12.2 (Identify — 4.12.2)",
+        "uuid": "dbac41f3-fd60-5996-81d0-b7ab3f863758"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.12.3 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.12.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.12.3 (Identify — 4.12.3)",
+        "uuid": "0435cc70-7634-57d8-a45b-41212c435121"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.13 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.13"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.13 (Identify — 4.13)",
+        "uuid": "90f67cc8-4059-5a34-bdc0-63afa00136af"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.13.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.13.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.13.1 (Identify — 4.13.1)",
+        "uuid": "a38a428c-900d-5e65-80a6-7ba907a89d8d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.13.1.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.13.1.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.13.1.1 (Identify — 4.13.1.1)",
+        "uuid": "fc7ee281-d6b3-5eb4-9ef7-5b9c814cd68a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.14 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.14"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.14 (Identify — 4.14)",
+        "uuid": "a919a0f4-4478-5f83-ad42-825adb1d2709"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.14.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.14.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.14.1 (Identify — 4.14.1)",
+        "uuid": "ad128f0a-416c-5023-926f-65085da2459e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.14.1.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.14.1.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.14.1.1 (Identify — 4.14.1.1)",
+        "uuid": "8e2fb9ed-8d07-5340-99cf-e5f9b1529e78"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.14.1.2 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.14.1.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.14.1.2 (Identify — 4.14.1.2)",
+        "uuid": "59909d59-9d08-5f59-9678-5fc30aaec864"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.15 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.15"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.15 (Protect — 4.15)",
+        "uuid": "6f8a7801-391d-5756-b723-bf2f207c8951"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.15.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.15.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.15.1 (Protect — 4.15.1)",
+        "uuid": "2c80ea9a-c3dd-5f14-a803-935a1ea0ac3b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.15.2 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.15.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.15.2 (Protect — 4.15.2)",
+        "uuid": "aa671df9-805e-5ac1-8963-cf8510128fc4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.15.2.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.15.2.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.15.2.1 (Protect — 4.15.2.1)",
+        "uuid": "5ff2a1dc-cf44-589d-88b5-aab01947a246"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.15.2.2 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.15.2.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.15.2.2 (Protect — 4.15.2.2)",
+        "uuid": "9734d2c8-89f7-56a2-b57d-b680604d717d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.16 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.16"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.16 (Protect — 4.16)",
+        "uuid": "10e439b6-f570-5536-9c7a-9d0920d7fb52"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.16.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.16.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.16.1 (Protect — 4.16.1)",
+        "uuid": "29bd5782-58de-53f4-aabb-d94bf56a381d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.16.2 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.16.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.16.2 (Protect — 4.16.2)",
+        "uuid": "f9014b28-e74f-5f6c-8216-e763eb30adf4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.16.2.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.16.2.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.16.2.1 (Protect — 4.16.2.1)",
+        "uuid": "cd7670e9-3901-574a-8a58-eba53bc91d38"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.17 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.17"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.17 (Protect — 4.17)",
+        "uuid": "3c779c67-de9c-50b5-8f18-f6dd4e95b9db"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.17.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.17.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.17.1 (Protect — 4.17.1)",
+        "uuid": "e949306d-d417-5b47-a5ed-b494214e8932"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.18 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.18"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.18 (Protect — 4.18)",
+        "uuid": "92c15171-c0f9-50a6-a46e-73b229d6c0b8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.18.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.18.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.18.1 (Protect — 4.18.1)",
+        "uuid": "2c41bbac-249a-55a7-8d6e-f612d357cb6d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.18.2 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.18.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.18.2 (Protect — 4.18.2)",
+        "uuid": "dfa4a1ae-7d19-5302-9dae-ac56a368ea0e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.18.2.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.18.2.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.18.2.1 (Protect — 4.18.2.1)",
+        "uuid": "62a81c81-1a6e-57be-aaca-1241c5792a1c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.19 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.19"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.19 (Protect — 4.19)",
+        "uuid": "219d6e67-cae6-55ef-beb1-c26c3625871e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.19.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.19.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.19.1 (Protect — 4.19.1)",
+        "uuid": "5e2446f4-f6a6-5938-81c9-29365a87daa4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.19.2 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.19.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.19.2 (Protect — 4.19.2)",
+        "uuid": "7cd78854-ff02-55d1-8360-c55f4f0a3c56"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.19.3 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.19.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.19.3 (Protect — 4.19.3)",
+        "uuid": "9c517806-40c1-535a-a2c2-154da855e843"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.19.4 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.19.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.19.4 (Protect — 4.19.4)",
+        "uuid": "c94e4413-e4e1-5ce8-a742-e251b1b5e7fc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.2 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.2 (Information Security — 4.2)",
+        "uuid": "0d1d064b-515f-5a45-b8b7-9e25a35ea744"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.2.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.2.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.2.1 (Information Security — 4.2.1)",
+        "uuid": "cc86e714-9783-5ac2-b2ff-cb4f1735d2a4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.20 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.20"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.20 (Protect — 4.20)",
+        "uuid": "11e89d58-a9bc-5f16-8bf3-b713a2c6b9b0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.20.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.20.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.20.1 (Protect — 4.20.1)",
+        "uuid": "84d8bc1d-c45b-592a-bc01-12ce3fe8ca6a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.20.1.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.20.1.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.20.1.1 (Protect — 4.20.1.1)",
+        "uuid": "9cc8cdfb-51c9-59da-b583-173ab99eab1d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.21 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.21"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.21 (Detect — 4.21)",
+        "uuid": "83b0a211-a100-5fdc-9d17-4b564e62537a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.21.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.21.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.21.1 (Detect — 4.21.1)",
+        "uuid": "2c67ca1c-2f0d-5b0e-862e-956e92504048"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.21.2 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.21.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.21.2 (Detect — 4.21.2)",
+        "uuid": "1e376d42-fb05-519c-81ac-ea63fd0a2477"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.22 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.22"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.22 (Detect — 4.22)",
+        "uuid": "2256639f-8677-5483-8b8c-bc2a58e138bd"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.22.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.22.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.22.1 (Detect — 4.22.1)",
+        "uuid": "3418a223-4765-5585-9058-b66a7ccd9e5d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.22.2 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.22.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.22.2 (Detect — 4.22.2)",
+        "uuid": "fbed0c9e-9887-5913-9fc9-f706a9f915fc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.23 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.23"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.23 (Detect — 4.23)",
+        "uuid": "d1341c4b-d09a-53c0-8186-f9280484a745"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.23.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.23.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.23.1 (Detect — 4.23.1)",
+        "uuid": "a9eb4dd6-4780-56e7-8af2-91cb0895e0e8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.24 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.24"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.24 (Detect — 4.24)",
+        "uuid": "4383b47e-6399-5e29-9f28-a160bc70a0c2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.24.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.24.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.24.1 (Detect — 4.24.1)",
+        "uuid": "ee1fdb71-8f7f-5ebc-ae7d-1aa084116abf"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.24.1.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.24.1.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.24.1.1 (Detect — 4.24.1.1)",
+        "uuid": "58c1cba9-5fcf-5674-bc17-be1f9b69e7e4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.25 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.25"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.25 (Respond \u0026 Recover — 4.25)",
+        "uuid": "8997329a-6ba9-5c04-9ded-2aac002cfcd1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.25.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.25.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.25.1 (Respond \u0026 Recover — 4.25.1)",
+        "uuid": "5b0d2310-7080-5804-98b9-2175920639c5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.25.2 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.25.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.25.2 (Respond \u0026 Recover — 4.25.2)",
+        "uuid": "d5311c25-55a4-59f5-81c8-7c5eb838268d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.26 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.26"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.26 (Respond \u0026 Recover — 4.26)",
+        "uuid": "788f946d-62b5-5922-8d79-3d9cad583cc7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.26.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.26.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.26.1 (Respond \u0026 Recover — 4.26.1)",
+        "uuid": "2300f9c0-a138-5e7b-ac61-051c0d7b7812"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.27 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.27"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.27 (Respond \u0026 Recover — 4.27)",
+        "uuid": "44ffd80f-a76d-5bf8-976a-54309884fc50"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.27.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.27.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.27.1 (Respond \u0026 Recover — 4.27.1)",
+        "uuid": "e993bd25-ebc9-56c0-b8f4-fdeba0075fba"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.3 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.3 (Information Security — 4.3)",
+        "uuid": "11635087-01fc-5420-be9a-7cba67f50f58"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.3.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.3.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.3.1 (Information Security — 4.3.1)",
+        "uuid": "208ec117-f5cc-5abf-897d-d47f644d6138"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.3.2 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.3.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.3.2 (Information Security — 4.3.2)",
+        "uuid": "9b05c351-1b20-58f6-8873-784aaaf6b8e7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.3.2.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.3.2.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.3.2.1 (Information Security — 4.3.2.1)",
+        "uuid": "bfec1b4b-6ebe-5da7-96d7-eb4a570177d3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.4 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.4 (Asset Management — 4.4)",
+        "uuid": "bc020f41-8254-5581-bedc-39113215ea75"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.4.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.4.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.4.1 (Asset Management — 4.4.1)",
+        "uuid": "68c8cec9-03e4-5178-89db-2b7fcdadb6d3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.5 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.5 (Asset Management — 4.5)",
+        "uuid": "e86e5848-2737-501a-b85a-f5a9022f043d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.6 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.6 (Asset Management — 4.6)",
+        "uuid": "83b3c433-cbc2-5a6f-b287-5edcadfa7301"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.6.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.6.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.6.1 (Asset Management — 4.6.1)",
+        "uuid": "e49610e2-081b-56f1-8a60-3c199cd4f48b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.7 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.7 (Asset Management — 4.7)",
+        "uuid": "c741df7f-6022-521f-8fb1-48c2f4030ea0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.7.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.7.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.7.1 (Asset Management — 4.7.1)",
+        "uuid": "fe3254ab-189b-5d15-8804-f192deaa4eb0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.7.1.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.7.1.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.7.1.1 (Asset Management — 4.7.1.1)",
+        "uuid": "b6cca145-3f41-5167-9803-be45e7169f47"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.7.2 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.7.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.7.2 (Asset Management — 4.7.2)",
+        "uuid": "b0bf042a-9cd6-57b1-a80d-1db176837324"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.8 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.8"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.8 (Asset Management — 4.8)",
+        "uuid": "b5b61422-7036-52ef-b9b2-332b3c2bde13"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.8.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.8.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.8.1 (Asset Management — 4.8.1)",
+        "uuid": "6f4d521a-aa8a-5a30-9e71-a9545ba3f915"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.8.2 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.8.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.8.2 (Asset Management — 4.8.2)",
+        "uuid": "de51df23-47e5-5239-b0bf-d0f0fd5cacbf"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.8.3 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.8.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.8.3 (Asset Management — 4.8.3)",
+        "uuid": "6062c8c1-7bdf-56e3-9903-3ad61864bb8a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.9 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.9"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.9 (Asset Management — 4.9)",
+        "uuid": "79601d2e-b23c-5b0c-9dfb-093191e0d3be"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _4.9.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_4.9.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _4.9.1 (Asset Management — 4.9.1)",
+        "uuid": "77945ffd-430f-5758-9a15-64b175d4ee46"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.1 (Physical Security — 5.1)",
+        "uuid": "4786dc5a-9ca5-5194-89bb-929db25c7b7d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.1.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.1.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.1.1 (Physical Security — 5.1.1)",
+        "uuid": "a271bf9e-0ab1-5b53-a749-a6a5fcfdc5d8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.1.2 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.1.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.1.2 (Physical Security — 5.1.2)",
+        "uuid": "259271b4-dd13-5d2b-81ce-7d72665f0ba7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.10 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.10"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.10 (Physical Security In-transit — 5.10)",
+        "uuid": "111c6251-35c7-5738-9a27-09f467b5a461"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.10.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.10.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.10.1 (Physical Security In-transit — 5.10.1)",
+        "uuid": "bc0af9a7-e0bc-543f-85a8-3ab83f0d43fe"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.10.2 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.10.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.10.2 (Physical Security In-transit — 5.10.2)",
+        "uuid": "faf90faa-96bf-5d29-bd55-cc6bb78ce6b8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.10.2.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.10.2.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.10.2.1 (Physical Security In-transit — 5.10.2.1)",
+        "uuid": "c67865be-1f10-5fd6-8515-e300ea58dfe9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.2 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.2 (Physical Security — 5.2)",
+        "uuid": "ca0faee1-a559-514d-b8cc-5a4f4aaee7b5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.2.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.2.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.2.1 (Physical Security — 5.2.1)",
+        "uuid": "272a9974-74d0-5fe9-895d-e15658512ca5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.2.1.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.2.1.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.2.1.1 (Physical Security — 5.2.1.1)",
+        "uuid": "125f1420-a8fc-54bf-8e61-f14229e95a93"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.2.1.2 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.2.1.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.2.1.2 (Physical Security — 5.2.1.2)",
+        "uuid": "bbf13196-df7d-5ef6-9669-9c1f25e0c945"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.3 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.3 (Physical Security — 5.3)",
+        "uuid": "91283e54-86d1-554d-8895-c9e42094dfdb"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.3.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.3.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.3.1 (Physical Security — 5.3.1)",
+        "uuid": "86f88579-6324-5e5d-b922-68acb25f42c2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.3.2 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.3.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.3.2 (Physical Security — 5.3.2)",
+        "uuid": "ab19f2ec-ec07-51ed-a450-bd4e3f0085ec"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.3.2.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.3.2.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.3.2.1 (Physical Security — 5.3.2.1)",
+        "uuid": "0d8045c0-79dc-5010-8fcf-41b41f781c2e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.3.3 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.3.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.3.3 (Physical Security — 5.3.3)",
+        "uuid": "eb745c68-72e5-56ff-8201-9142047f36d3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.3.3.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.3.3.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.3.3.1 (Physical Security — 5.3.3.1)",
+        "uuid": "76fc5f44-39e5-59e2-a20e-7e597e76ff21"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.4 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.4 (Physical Security — 5.4)",
+        "uuid": "443eb174-f23c-5fd2-b542-3588ca7746d7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.4.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.4.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.4.1 (Physical Security — 5.4.1)",
+        "uuid": "5a43fe75-8bbd-5b00-b48d-f0df84eedad0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.4.1.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.4.1.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.4.1.1 (Physical Security — 5.4.1.1)",
+        "uuid": "87c20531-3dd5-5175-831f-8afab31639ef"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.5 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.5 (Physical Security — 5.5)",
+        "uuid": "c0cd55c0-fd33-5464-b943-2534ddbea46f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.5.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.5.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.5.1 (Physical Security — 5.5.1)",
+        "uuid": "3753ad19-8f80-59cb-8648-e6a835e0d854"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.5.2 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.5.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.5.2 (Physical Security — 5.5.2)",
+        "uuid": "0edccce8-edaa-5900-b92e-83a9c02907d2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.5.2.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.5.2.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.5.2.1 (Physical Security — 5.5.2.1)",
+        "uuid": "4f7ac18a-c58f-56d5-9eee-4149c7bc6097"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.6 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.6 (Physical Security — 5.6)",
+        "uuid": "f5f89fd2-fd0e-5d2d-87ba-3e4f95f111cf"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.6.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.6.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.6.1 (Physical Security — 5.6.1)",
+        "uuid": "1c436278-4bfd-5240-91ae-32c5b6d9dc23"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.7 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.7 (Physical Security — 5.7)",
+        "uuid": "fd83bffc-be48-5cb7-a74d-ede0608646be"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.7.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.7.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.7.1 (Physical Security — 5.7.1)",
+        "uuid": "f9bb00e0-9d4d-51a6-b3f8-c390d4662df9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.8 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.8"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.8 (Physical Security In-transit — 5.8)",
+        "uuid": "af70e7b3-9ccc-5596-9bea-0404da4a2ca0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.8.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.8.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.8.1 (Physical Security In-transit — 5.8.1)",
+        "uuid": "33e3916a-5961-5f22-b9cd-e89446239169"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.9 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.9"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.9 (Physical Security In-transit — 5.9)",
+        "uuid": "91a0705d-2cad-5bad-abe0-8af9630810ce"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.9.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.9.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.9.1 (Physical Security In-transit — 5.9.1)",
+        "uuid": "8acf0265-1eae-5d56-8248-5a8e87b67315"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.9.1.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.9.1.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.9.1.1 (Physical Security In-transit — 5.9.1.1)",
+        "uuid": "8a424c15-d4f7-5d27-bde6-e116fbf27015"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.1 (Personnel Security — 6.1)",
+        "uuid": "3d6fff11-5abb-54a6-8b8a-3aaa45ea8eb5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.1.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.1.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.1.1 (Personnel Security — 6.1.1)",
+        "uuid": "7c9e5bfc-02bb-5109-a032-b159f8ba032a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.1.2 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.1.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.1.2 (Personnel Security — 6.1.2)",
+        "uuid": "fbd439b6-1cf6-561e-a41b-733936de5f61"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.1.3 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.1.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.1.3 (Personnel Security — 6.1.3)",
+        "uuid": "3a1f203b-feea-5f9d-b043-0aa24d3b52f9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.10 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.10"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.10 (Awareness and Training (Security-Specific) — 6.10)",
+        "uuid": "eb947552-8169-51b4-93a5-2e847841e19c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.11 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.11"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.11 (Awareness and Training (Security-Specific) — 6.11)",
+        "uuid": "3e10b090-9ee1-5872-9de4-e67a3fb7319f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.12 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.12"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.12 (Awareness and Training (Security-Specific) — 6.12)",
+        "uuid": "ff6fa8c3-242f-54bf-9ea6-f83ecb1c9bfe"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.12.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.12.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.12.1 (Awareness and Training (Security-Specific) — 6.12.1)",
+        "uuid": "661c44c3-3011-5c81-aabd-1af2f65ecd69"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.13 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.13"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.13 (Awareness and Training (Security-Specific) — 6.13)",
+        "uuid": "35554d54-c2fe-5918-9ab5-1d5b17e8ba13"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.13.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.13.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.13.1 (Awareness and Training (Security-Specific) — 6.13.1)",
+        "uuid": "2f726a9f-315b-5432-bf96-ca628441c634"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.13.2 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.13.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.13.2 (Awareness and Training (Security-Specific) — 6.13.2)",
+        "uuid": "be438aff-11fc-5436-a96c-d72ab1b62ab5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.13.3 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.13.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.13.3 (Awareness and Training (Security-Specific) — 6.13.3)",
+        "uuid": "dae59036-0ae1-5a6f-a03e-820202c60e8e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.13.4 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.13.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.13.4 (Awareness and Training (Security-Specific) — 6.13.4)",
+        "uuid": "ca33b5ed-d8e0-5a18-864c-cec76000a558"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.2 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.2 (Onboarding — 6.2)",
+        "uuid": "fac20963-5356-55f6-b6d3-53e51d0d5caf"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.2.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.2.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.2.1 (Onboarding — 6.2.1)",
+        "uuid": "a56510a6-3d61-502a-ae3f-97bb1527a0e0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.2.2 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.2.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.2.2 (Onboarding — 6.2.2)",
+        "uuid": "55108cc4-440a-54a5-8fcf-a54b05d96a95"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.2.3 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.2.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.2.3 (Onboarding — 6.2.3)",
+        "uuid": "6b2bf79c-1d14-55f4-8d7e-e6ec07497430"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.2.4 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.2.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.2.4 (Onboarding — 6.2.4)",
+        "uuid": "9c0f1241-517c-5238-8107-0e7718138770"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.2.4.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.2.4.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.2.4.1 (Onboarding — 6.2.4.1)",
+        "uuid": "88e0b329-8898-57cc-8359-dd464d6005d6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.3 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.3 (Onboarding — 6.3)",
+        "uuid": "a9571373-6ef4-518b-a11d-4c709ec49990"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.3.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.3.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.3.1 (Onboarding — 6.3.1)",
+        "uuid": "65662ef1-d6d6-53e2-84e8-a2e3af710306"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.3.2 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.3.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.3.2 (Onboarding — 6.3.2)",
+        "uuid": "cafc1483-35c7-5d85-b6af-79a084e10aa6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.4 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.4 (Onboarding — 6.4)",
+        "uuid": "1030ee27-5e90-511c-b742-3370082c932a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.4.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.4.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.4.1 (Onboarding — 6.4.1)",
+        "uuid": "8449e28e-2c9b-5b4d-9088-4ce454c849c3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.4.2 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.4.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.4.2 (Onboarding — 6.4.2)",
+        "uuid": "f1512735-2a3e-5986-8fd5-1bfb4751db8f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.5 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.5 (Onboarding — 6.5)",
+        "uuid": "a962c565-029f-59f0-bfdd-5749ca32b716"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.5.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.5.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.5.1 (Onboarding — 6.5.1)",
+        "uuid": "8df9c700-b64f-55dc-beb5-a4a733bad0bd"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.5.2 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.5.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.5.2 (Onboarding — 6.5.2)",
+        "uuid": "56debece-bd6b-51c5-b068-90d545e0f65b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.6 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.6 (Offboarding — 6.6)",
+        "uuid": "fbc0aa07-512d-59bb-9047-a7d1b31e850f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.6.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.6.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.6.1 (Offboarding — 6.6.1)",
+        "uuid": "e37bc890-21cf-5b8a-a075-ae5a622aec95"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.6.2 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.6.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.6.2 (Offboarding — 6.6.2)",
+        "uuid": "82c4446d-423c-5ae6-bc8f-88187c4b9f16"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.6.3 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.6.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.6.3 (Offboarding — 6.6.3)",
+        "uuid": "4bec84ad-ea8a-5f03-b323-5796e2630199"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.6.4 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.6.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.6.4 (Offboarding — 6.6.4)",
+        "uuid": "2643820a-3a15-555a-af4e-2ccbcda0dea9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.7 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.7 (Awareness and Training (Security-Specific) — 6.7)",
+        "uuid": "1021bc29-f1e5-5aab-829f-3b672adb532a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.8 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.8"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.8 (Awareness and Training (Security-Specific) — 6.8)",
+        "uuid": "48ec781d-cf45-5f8f-9ca9-2a9c85b6e479"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.9 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.9"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.9 (Awareness and Training (Security-Specific) — 6.9)",
+        "uuid": "a01f95e5-63b3-5151-84a0-ce56c2033d31"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _7.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_7.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _7.1 (Supply Chain Integrity — 7.1)",
+        "uuid": "e31cfee8-19d7-5d88-bf8a-e1d947ee23ce"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _7.10 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_7.10"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _7.10 (Supply Chain Integrity — 7.10)",
+        "uuid": "2ecc8b73-abc3-509b-80ce-6ad0420cf33f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _7.10.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_7.10.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _7.10.1 (Supply Chain Integrity — 7.10.1)",
+        "uuid": "b88591f5-357e-5fe4-bb55-9cc03b4b092d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _7.11 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_7.11"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _7.11 (Supply Chain Integrity — 7.11)",
+        "uuid": "7cdbb43e-8c8c-5227-b39a-5ecce60f5073"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _7.11.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_7.11.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _7.11.1 (Supply Chain Integrity — 7.11.1)",
+        "uuid": "a57f8f26-7236-50c4-88c2-0772ea7a6c4f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _7.2 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_7.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _7.2 (Supply Chain Integrity — 7.2)",
+        "uuid": "467f2e99-5d65-5ecd-bea6-192a49dbb05a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _7.2.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_7.2.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _7.2.1 (Supply Chain Integrity — 7.2.1)",
+        "uuid": "afad4063-75f1-50e4-a290-e515d93a530d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _7.3 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_7.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _7.3 (Supply Chain Integrity — 7.3)",
+        "uuid": "428e2bd2-2a52-5f20-8981-48e361e98e81"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _7.3.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_7.3.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _7.3.1 (Supply Chain Integrity — 7.3.1)",
+        "uuid": "d60fcdd3-b00b-5ce8-8407-ec3264ddc083"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _7.3.1.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_7.3.1.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _7.3.1.1 (Supply Chain Integrity — 7.3.1.1)",
+        "uuid": "3d5a689c-bdfc-5212-9b9a-8a928dba1f14"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _7.3.1.2 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_7.3.1.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _7.3.1.2 (Supply Chain Integrity — 7.3.1.2)",
+        "uuid": "26492643-228b-5fa8-bf37-daf5339b398a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _7.3.2 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_7.3.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _7.3.2 (Supply Chain Integrity — 7.3.2)",
+        "uuid": "7a014cf8-b76e-5262-916e-a8f62249a2cd"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _7.3.2.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_7.3.2.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _7.3.2.1 (Supply Chain Integrity — 7.3.2.1)",
+        "uuid": "71853678-2a53-5813-bd9b-0aea1330252b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _7.4 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_7.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _7.4 (Supply Chain Integrity — 7.4)",
+        "uuid": "1a564af8-9917-5c89-a034-ea80697db134"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _7.4.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_7.4.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _7.4.1 (Supply Chain Integrity — 7.4.1)",
+        "uuid": "d129a1ee-481e-548b-982c-aecff29b1a33"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _7.4.1.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_7.4.1.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _7.4.1.1 (Supply Chain Integrity — 7.4.1.1)",
+        "uuid": "53612391-40a5-50e3-8268-9ee2f2acfe41"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _7.5 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_7.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _7.5 (Supply Chain Integrity — 7.5)",
+        "uuid": "87440799-afe2-5ad8-aaad-077990c6a822"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _7.5.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_7.5.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _7.5.1 (Supply Chain Integrity — 7.5.1)",
+        "uuid": "160414f2-dcb8-5b4f-b0ff-35f2fdc43433"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _7.6 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_7.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _7.6 (Supply Chain Integrity — 7.6)",
+        "uuid": "b4f4bcc1-b255-5161-b8ed-abf970ed70e4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _7.6.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_7.6.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _7.6.1 (Supply Chain Integrity — 7.6.1)",
+        "uuid": "bfe931d2-406f-5e3f-b468-e5f987e211cc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _7.6.1.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_7.6.1.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _7.6.1.1 (Supply Chain Integrity — 7.6.1.1)",
+        "uuid": "7682f051-ad15-5510-b91c-bcd63e5eae42"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _7.7 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_7.7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _7.7 (Supply Chain Integrity — 7.7)",
+        "uuid": "d4ced9c4-64bf-5587-a59b-fe68460c8177"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _7.7.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_7.7.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _7.7.1 (Supply Chain Integrity — 7.7.1)",
+        "uuid": "ea3ce27c-6adb-5e80-ac4f-3ea663bcaaec"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _7.7.1.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_7.7.1.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _7.7.1.1 (Supply Chain Integrity — 7.7.1.1)",
+        "uuid": "196ac83d-5a82-5bec-988b-2eb18a00134c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _7.8 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_7.8"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _7.8 (Supply Chain Integrity — 7.8)",
+        "uuid": "48314e73-b5ea-505d-a5bf-a1070f878dec"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _7.8.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_7.8.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _7.8.1 (Supply Chain Integrity — 7.8.1)",
+        "uuid": "eaa16f2d-9195-5faf-975b-3c814a79772b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _7.8.1.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_7.8.1.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _7.8.1.1 (Supply Chain Integrity — 7.8.1.1)",
+        "uuid": "699e69dc-d435-5bc8-8612-8689681d13eb"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _7.9 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_7.9"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _7.9 (Supply Chain Integrity — 7.9)",
+        "uuid": "f20b77e9-5ef7-5118-a370-336b90875da1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _7.9.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_7.9.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _7.9.1 (Supply Chain Integrity — 7.9.1)",
+        "uuid": "33ccb10e-9254-5be0-b553-93907188b2c4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _7.9.2 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_7.9.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _7.9.2 (Supply Chain Integrity — 7.9.2)",
+        "uuid": "85bbd262-831e-54a9-8ab6-18c8d3f2c5fe"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _8.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_8.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _8.1 (General — 8.1)",
+        "uuid": "1037e190-522f-54e2-ada5-756b46a9cb7d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _8.1.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_8.1.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _8.1.1 (General — 8.1.1)",
+        "uuid": "fcf5c2a6-5ea6-567f-967e-9aa298935bd5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _8.2 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_8.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _8.2 (General — 8.2)",
+        "uuid": "e77deed3-11e3-5c55-b945-9d48897b292e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _8.3 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_8.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _8.3 (Supply Chain Disruption Risk Management (Business Continuity) — 8.3)",
+        "uuid": "bf3ab4a4-a6ea-51f2-a6ad-cd2cb696b892"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _8.3.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_8.3.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _8.3.1 (Supply Chain Disruption Risk Management (Business Continuity) — 8.3.1)",
+        "uuid": "7231453b-d8bd-5a1d-9dbb-ff76ba9f26fb"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _8.4 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_8.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _8.4 (Supply Chain Disruption Risk Management (Business Continuity) — 8.4)",
+        "uuid": "b0a4568f-5299-527f-a512-8712089b4f0a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _8.4.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_8.4.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _8.4.1 (Supply Chain Disruption Risk Management (Business Continuity) — 8.4.1)",
+        "uuid": "99e63710-6a7d-5589-99eb-e7ad36204793"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _8.5 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_8.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _8.5 (Supply Chain Disruption Risk Management (Business Continuity) — 8.5)",
+        "uuid": "171e2bfa-238b-5320-8246-60d4aed9a615"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _8.5.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_8.5.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _8.5.1 (Supply Chain Disruption Risk Management (Business Continuity) — 8.5.1)",
+        "uuid": "5f42cfa5-d521-5b34-a611-3e727c09c15a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _8.5.1.1 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_8.5.1.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _8.5.1.1 (Supply Chain Disruption Risk Management (Business Continuity) — 8.5.1.1)",
+        "uuid": "8f215e7f-a27d-5c0c-8942-d1cf6b478c27"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _8.5.1.2 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_8.5.1.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _8.5.1.2 (Supply Chain Disruption Risk Management (Business Continuity) — 8.5.1.2)",
+        "uuid": "06cda0bc-2e66-5933-a814-21b25d5d0743"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _8.6 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_8.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _8.6 (Diversity of Supply Base — 8.6)",
+        "uuid": "ee485ff2-5c02-552e-a5ed-52fe88e3f9a7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _8.7 in VENDOR SUPPLY CHAIN RISK MANAGEMENT (SCRM) TEMPLATE.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_8.7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _8.7 (Diversity of Supply Base — 8.7)",
+        "uuid": "63197fbe-3489-5425-aa69-2cd12cb11122"
       }
     ],
     "uuid": "4639fa4f-a2bc-5c02-b269-995ca4f4ae78"

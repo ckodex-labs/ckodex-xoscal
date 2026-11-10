@@ -259,9 +259,27 @@ func IsRetryable(err error) bool {
 // RetryConfig configures bounded exponential backoff with full jitter.
 type RetryConfig struct {
 	MaxRetries     int
+	MaxAttempts    int
 	BaseDelay      time.Duration
 	MaxDelay       time.Duration
 	DisableRetries bool
+}
+
+// DefaultRetryConfig returns the canonical bounded retry configuration.
+func DefaultRetryConfig() RetryConfig {
+	return RetryConfig{
+		MaxRetries: DefaultMaxRetries,
+		BaseDelay:  DefaultBaseDelay,
+		MaxDelay:   DefaultMaxDelay,
+	}
+}
+
+// NoRetryConfig returns a RetryConfig that executes a single attempt with 0 retries.
+func NoRetryConfig() RetryConfig {
+	return RetryConfig{
+		MaxAttempts:    1,
+		DisableRetries: true,
+	}
 }
 
 // RetryWithBackoff executes fn up to 1 + MaxRetries times when fn returns a RetryableError,
@@ -271,11 +289,16 @@ func RetryWithBackoff(ctx context.Context, cfg RetryConfig, fn func(ctx context.
 		return 0, err
 	}
 
-	maxRetries := cfg.MaxRetries
-	if cfg.DisableRetries || maxRetries < 0 {
+	var maxRetries int
+	switch {
+	case cfg.DisableRetries || cfg.MaxRetries < 0 || cfg.MaxAttempts == 1:
 		maxRetries = 0
-	} else if maxRetries == 0 {
+	case cfg.MaxAttempts > 1:
+		maxRetries = cfg.MaxAttempts - 1
+	case cfg == (RetryConfig{}):
 		maxRetries = DefaultMaxRetries
+	default:
+		maxRetries = cfg.MaxRetries
 	}
 
 	baseDelay := cfg.BaseDelay
@@ -394,6 +417,11 @@ func writeFileAtomic(path string, data []byte) error {
 		cleanup()
 		return fmt.Errorf("close atomic temp file: %w", err)
 	}
+	// #nosec G302 -- atomic artifacts, checkpoints, and .sha256 sidecars must be 0644 readable once published.
+	if err := os.Chmod(tmpPath, 0o644); err != nil {
+		cleanup()
+		return fmt.Errorf("chmod atomic temp file: %w", err)
+	}
 	if err := os.Rename(tmpPath, cleanPath); err != nil {
 		cleanup()
 		return fmt.Errorf("atomic rename to %s: %w", cleanPath, err)
@@ -402,8 +430,8 @@ func writeFileAtomic(path string, data []byte) error {
 	return nil
 }
 
-// WriteFileAtomicWithSHA256 crash-safely writes data to path via fsync + atomic rename (0600)
-// and atomically writes the hex SHA-256 digest to path + ".sha256".
+// WriteFileAtomicWithSHA256 crash-safely writes data to path via fsync + chmod 0644 + atomic rename
+// and atomically writes the hex SHA-256 digest to path + ".sha256" via its own temp file + fsync + chmod 0644 + rename.
 func WriteFileAtomicWithSHA256(path string, data []byte) (string, error) {
 	cleanPath := filepath.Clean(path)
 	sum := sha256.Sum256(data)
@@ -431,7 +459,7 @@ func ReadVerifiedFile(path string, maxBytes int64) ([]byte, string, error) {
 	if err != nil {
 		return nil, "", err
 	}
-	defer f.Close()
+	defer func() { _ = f.Close() }()
 
 	info, err := f.Stat()
 	if err != nil {
@@ -455,7 +483,7 @@ func ReadVerifiedFile(path string, maxBytes int64) ([]byte, string, error) {
 	if err != nil {
 		return nil, "", fmt.Errorf("%w: missing or unreadable sidecar %s: %v", ErrIntegrityTampered, sidecarPath, err)
 	}
-	defer scFile.Close()
+	defer func() { _ = scFile.Close() }()
 
 	scInfo, err := scFile.Stat()
 	if err != nil || !scInfo.Mode().IsRegular() {

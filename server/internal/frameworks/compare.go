@@ -191,33 +191,33 @@ func CompareFrameworks(fromFw, toFw Framework) (*FrameworkComparison, error) {
 func (c *FrameworkComparison) FormatTerminal() string {
 	var sb strings.Builder
 	sb.WriteString("\n=== SOVEREIGN FRAMEWORK TRANSITION DELTA ===\n")
-	sb.WriteString(fmt.Sprintf("From: %s (%s)\n", c.FromFramework, c.FromTitle))
-	sb.WriteString(fmt.Sprintf("To:   %s (%s)\n\n", c.ToFramework, c.ToTitle))
+	fmt.Fprintf(&sb, "From: %s (%s)\n", c.FromFramework, c.FromTitle)
+	fmt.Fprintf(&sb, "To:   %s (%s)\n\n", c.ToFramework, c.ToTitle)
 
 	sign := "+"
 	if c.NetDelta < 0 {
 		sign = ""
 	}
-	sb.WriteString(fmt.Sprintf("Summary: %d Base Controls -> %d Target Controls (Net: %s%d)\n",
-		c.FromTotal, c.ToTotal, sign, c.NetDelta))
-	sb.WriteString(fmt.Sprintf("Delta:   %d Added | %d Retired | %d Modified | %d Unchanged\n\n",
-		c.AddedCount, c.RetiredCount, c.ModifiedCount, c.SharedCount-c.ModifiedCount))
+	fmt.Fprintf(&sb, "Summary: %d Base Controls -> %d Target Controls (Net: %s%d)\n",
+		c.FromTotal, c.ToTotal, sign, c.NetDelta)
+	fmt.Fprintf(&sb, "Delta:   %d Added | %d Retired | %d Modified | %d Unchanged\n\n",
+		c.AddedCount, c.RetiredCount, c.ModifiedCount, c.SharedCount-c.ModifiedCount)
 
 	sb.WriteString("--- FAMILY-LEVEL TRANSITION MATRIX ---\n")
-	sb.WriteString(fmt.Sprintf("%-10s %-28s %-12s %-12s %s\n", "FAMILY", "NAME", "FROM", "TO", "NET CHANGE"))
+	fmt.Fprintf(&sb, "%-10s %-28s %-12s %-12s %s\n", "FAMILY", "NAME", "FROM", "TO", "NET CHANGE")
 	sb.WriteString(strings.Repeat("-", 76) + "\n")
 	for _, f := range c.Families {
 		chSign := "+"
 		if f.NetDelta < 0 {
 			chSign = ""
 		}
-		sb.WriteString(fmt.Sprintf("%-10s %-28s %-12d %-12d %s%d\n",
-			f.FamilyID, truncateStr(f.FamilyName, 26), f.FromCount, f.ToCount, chSign, f.NetDelta))
+		fmt.Fprintf(&sb, "%-10s %-28s %-12d %-12d %s%d\n",
+			f.FamilyID, truncateStr(f.FamilyName, 26), f.FromCount, f.ToCount, chSign, f.NetDelta)
 	}
 	sb.WriteString("\n")
 
 	if len(c.Added) > 0 {
-		sb.WriteString(fmt.Sprintf("--- KEY ADDITIONS IN %s (Showing Top 15 of %d) ---\n", c.ToFramework, len(c.Added)))
+		fmt.Fprintf(&sb, "--- KEY ADDITIONS IN %s (Showing Top 15 of %d) ---\n", c.ToFramework, len(c.Added))
 		limit := 15
 		if len(c.Added) < limit {
 			limit = len(c.Added)
@@ -228,10 +228,10 @@ func (c *FrameworkComparison) FormatTerminal() string {
 			if ctrl.IsCanadian {
 				caTag = " [CA SOVEREIGN]"
 			}
-			sb.WriteString(fmt.Sprintf("  %-14s %s%s\n", ctrl.ID, ctrl.Title, caTag))
+			fmt.Fprintf(&sb, "  %-14s %s%s\n", ctrl.ID, ctrl.Title, caTag)
 		}
 		if len(c.Added) > limit {
-			sb.WriteString(fmt.Sprintf("  ... and %d more added controls\n", len(c.Added)-limit))
+			fmt.Fprintf(&sb, "  ... and %d more added controls\n", len(c.Added)-limit)
 		}
 		sb.WriteString("\n")
 	}
@@ -243,19 +243,19 @@ func (c *FrameworkComparison) FormatTerminal() string {
 func (c *FrameworkComparison) FormatMarkdown() string {
 	var sb strings.Builder
 	sb.WriteString("# Sovereign Framework Transition Report\n\n")
-	sb.WriteString(fmt.Sprintf("**Baseline Framework:** `%s` — %s  \n", c.FromFramework, c.FromTitle))
-	sb.WriteString(fmt.Sprintf("**Target Framework:** `%s` — %s  \n\n", c.ToFramework, c.ToTitle))
+	fmt.Fprintf(&sb, "**Baseline Framework:** `%s` — %s  \n", c.FromFramework, c.FromTitle)
+	fmt.Fprintf(&sb, "**Target Framework:** `%s` — %s  \n\n", c.ToFramework, c.ToTitle)
 
 	sign := "+"
 	if c.NetDelta < 0 {
 		sign = ""
 	}
 	sb.WriteString("## Executive Summary\n\n")
-	sb.WriteString(fmt.Sprintf("- **Total Requirements Delta:** `%d` -> `%d` (`%s%d` net change)\n",
-		c.FromTotal, c.ToTotal, sign, c.NetDelta))
-	sb.WriteString(fmt.Sprintf("- **New Controls / Enhancements:** `%d`\n", c.AddedCount))
-	sb.WriteString(fmt.Sprintf("- **Modified Controls:** `%d`\n", c.ModifiedCount))
-	sb.WriteString(fmt.Sprintf("- **Retired Controls:** `%d`\n\n", c.RetiredCount))
+	fmt.Fprintf(&sb, "- **Total Requirements Delta:** `%d` -> `%d` (`%s%d` net change)\n",
+		c.FromTotal, c.ToTotal, sign, c.NetDelta)
+	fmt.Fprintf(&sb, "- **New Controls / Enhancements:** `%d`\n", c.AddedCount)
+	fmt.Fprintf(&sb, "- **Modified Controls:** `%d`\n", c.ModifiedCount)
+	fmt.Fprintf(&sb, "- **Retired Controls:** `%d`\n\n", c.RetiredCount)
 
 	sb.WriteString("## Family Transition Breakdown\n\n")
 	sb.WriteString("| Family ID | Family Name | Base Count | Target Count | Net Delta |\n")
@@ -265,8 +265,8 @@ func (c *FrameworkComparison) FormatMarkdown() string {
 		if f.NetDelta < 0 {
 			chSign = ""
 		}
-		sb.WriteString(fmt.Sprintf("| `%s` | %s | %d | %d | `%s%d` |\n",
-			f.FamilyID, f.FamilyName, f.FromCount, f.ToCount, chSign, f.NetDelta))
+		fmt.Fprintf(&sb, "| `%s` | %s | %d | %d | `%s%d` |\n",
+			f.FamilyID, f.FamilyName, f.FromCount, f.ToCount, chSign, f.NetDelta)
 	}
 	sb.WriteString("\n")
 

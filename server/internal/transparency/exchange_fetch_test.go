@@ -22,7 +22,7 @@ func newFetchFixture(t *testing.T, handler http.HandlerFunc, policy ...*FetchPol
 	if err != nil {
 		t.Fatalf("new store: %v", err)
 	}
-	t.Cleanup(func() { store.Close() })
+	t.Cleanup(func() { _ = store.Close() })
 
 	var pol *FetchPolicy
 	if len(policy) > 0 {
@@ -31,7 +31,6 @@ func newFetchFixture(t *testing.T, handler http.HandlerFunc, policy ...*FetchPol
 	if pol == nil {
 		pol = &FetchPolicy{Enabled: true, MaxBytes: 1 << 20, Timeout: 5 * time.Second}
 	}
-	policy = nil
 	ts := httptest.NewTLSServer(handler)
 	t.Cleanup(ts.Close)
 
@@ -63,7 +62,7 @@ func TestFetchExternalEvidenceDisabledByDefault(t *testing.T) {
 	if err != nil {
 		t.Fatalf("new store: %v", err)
 	}
-	defer store.Close()
+	defer func() { _ = store.Close() }()
 
 	server := NewExchangeServer(store) // no policy: fail-closed
 	const rawURL = "https://example.com/evidence.json"
@@ -93,7 +92,7 @@ func TestFetchExternalEvidenceHostAllowlist(t *testing.T) {
 	if err != nil {
 		t.Fatalf("new store: %v", err)
 	}
-	defer store.Close()
+	defer func() { _ = store.Close() }()
 	server := NewExchangeServer(store).WithFetchPolicy(&FetchPolicy{
 		Enabled:      true,
 		AllowedHosts: []string{"evidence.example.com"},

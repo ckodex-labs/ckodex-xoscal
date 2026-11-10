@@ -17,6 +17,12 @@ const (
 	OntologyVersion = "1.0.0"
 	// OntologyNamespace is the canonical JSON-LD IRI namespace for the xOSCAL ontology.
 	OntologyNamespace = "https://xoscal.dev/ns/ontology/v1#"
+	// OntologySecNamespace is the canonical JSON-LD IRI prefix for security governance classes.
+	OntologySecNamespace = "https://xoscal.dev/ns/ontology/v1/sec#"
+	// OntologyRegNamespace is the canonical JSON-LD IRI prefix for regulatory compliance classes.
+	OntologyRegNamespace = "https://xoscal.dev/ns/ontology/v1/reg#"
+	// OntologyThreatNamespace is the canonical JSON-LD IRI prefix for threat intelligence classes.
+	OntologyThreatNamespace = "https://xoscal.dev/ns/ontology/v1/threat#"
 )
 
 // Canonical Node Class constants (12 classes).
@@ -30,6 +36,7 @@ const (
 	ClassControlEnhancement = "reg:ControlEnhancement"
 	ClassParameterODP       = "reg:ParameterODP"
 	ClassKEVAdvisory        = "threat:KEVAdvisory"
+	ClassThreatAdvisory     = ClassKEVAdvisory
 	ClassCVE                = "threat:CVE"
 	ClassCWE                = "threat:CWE"
 	ClassAttackTechnique    = "threat:AttackTechnique"
@@ -464,6 +471,20 @@ func ValidateTriple(fromClass, predicate, toClass string) error {
 	return nil
 }
 
+// ComputeSpecSHA256 computes the deterministic SHA-256 hex digest over the complete
+// canonical JSON-LD ontology specification (including @context, @id, @type, version,
+// namespace, classes, predicates, and thematic_domains) with SHA256 zeroed prior to hashing.
+func ComputeSpecSHA256(spec *Spec) string {
+	if spec == nil {
+		return ""
+	}
+	cp := *spec
+	cp.SHA256 = ""
+	raw, _ := json.Marshal(cp)
+	sum := sha256.Sum256(raw)
+	return hex.EncodeToString(sum[:])
+}
+
 // CanonicalSpec builds the complete JSON-LD ontology specification with deterministic SHA-256 digest.
 func CanonicalSpec() *Spec {
 	ctxMap := map[string]any{
@@ -472,9 +493,9 @@ func CanonicalSpec() *Spec {
 		"rdfs":   "http://www.w3.org/2000/01/rdf-schema#",
 		"xsd":    "http://www.w3.org/2001/XMLSchema#",
 		"oscal":  "http://csrc.nist.gov/ns/oscal/1.0/",
-		"sec":    OntologyNamespace + "sec/",
-		"reg":    OntologyNamespace + "reg/",
-		"threat": OntologyNamespace + "threat/",
+		"sec":    OntologySecNamespace,
+		"reg":    OntologyRegNamespace,
+		"threat": OntologyThreatNamespace,
 	}
 
 	spec := &Spec{
@@ -487,24 +508,7 @@ func CanonicalSpec() *Spec {
 		Predicates:      Predicates(),
 		ThematicDomains: append([]string(nil), ThematicDomains...),
 	}
-
-	raw, _ := json.Marshal(struct {
-		ID              string          `json:"@id"`
-		Version         string          `json:"version"`
-		Namespace       string          `json:"namespace"`
-		Classes         []NodeClass     `json:"classes"`
-		Predicates      []PredicateSpec `json:"predicates"`
-		ThematicDomains []string        `json:"thematic_domains"`
-	}{
-		ID:              spec.ID,
-		Version:         spec.Version,
-		Namespace:       spec.Namespace,
-		Classes:         spec.Classes,
-		Predicates:      spec.Predicates,
-		ThematicDomains: spec.ThematicDomains,
-	})
-	sum := sha256.Sum256(raw)
-	spec.SHA256 = hex.EncodeToString(sum[:])
+	spec.SHA256 = ComputeSpecSHA256(spec)
 
 	return spec
 }

@@ -4,7 +4,7 @@
       "href": "./system-security-plan.json"
     },
     "metadata": {
-      "last-modified": "2026-11-08T01:42:11Z",
+      "last-modified": "2026-01-01T00:00:00Z",
       "oscal-version": "1.2.3",
       "title": "CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3) Security Assessment Plan Template",
       "version": "1.2.3"
@@ -13,7 +13,710 @@
       "control-selections": [
         {
           "description": "All controls in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3)",
-          "include-all": {}
+          "include-controls": [
+            {
+              "control-id": "ac-1"
+            },
+            {
+              "control-id": "ac-10"
+            },
+            {
+              "control-id": "ac-11"
+            },
+            {
+              "control-id": "ac-12"
+            },
+            {
+              "control-id": "ac-14"
+            },
+            {
+              "control-id": "ac-16"
+            },
+            {
+              "control-id": "ac-17"
+            },
+            {
+              "control-id": "ac-18"
+            },
+            {
+              "control-id": "ac-19"
+            },
+            {
+              "control-id": "ac-2"
+            },
+            {
+              "control-id": "ac-20"
+            },
+            {
+              "control-id": "ac-21"
+            },
+            {
+              "control-id": "ac-22"
+            },
+            {
+              "control-id": "ac-23"
+            },
+            {
+              "control-id": "ac-24"
+            },
+            {
+              "control-id": "ac-3"
+            },
+            {
+              "control-id": "ac-4"
+            },
+            {
+              "control-id": "ac-5"
+            },
+            {
+              "control-id": "ac-6"
+            },
+            {
+              "control-id": "ac-7"
+            },
+            {
+              "control-id": "ac-8"
+            },
+            {
+              "control-id": "ac-9"
+            },
+            {
+              "control-id": "at-1"
+            },
+            {
+              "control-id": "at-2"
+            },
+            {
+              "control-id": "at-3"
+            },
+            {
+              "control-id": "at-4"
+            },
+            {
+              "control-id": "au-1"
+            },
+            {
+              "control-id": "au-10"
+            },
+            {
+              "control-id": "au-11"
+            },
+            {
+              "control-id": "au-12"
+            },
+            {
+              "control-id": "au-13"
+            },
+            {
+              "control-id": "au-14"
+            },
+            {
+              "control-id": "au-16"
+            },
+            {
+              "control-id": "au-2"
+            },
+            {
+              "control-id": "au-3"
+            },
+            {
+              "control-id": "au-4"
+            },
+            {
+              "control-id": "au-5"
+            },
+            {
+              "control-id": "au-6"
+            },
+            {
+              "control-id": "au-7"
+            },
+            {
+              "control-id": "au-8"
+            },
+            {
+              "control-id": "au-9"
+            },
+            {
+              "control-id": "ca-1"
+            },
+            {
+              "control-id": "ca-2"
+            },
+            {
+              "control-id": "ca-3"
+            },
+            {
+              "control-id": "ca-5"
+            },
+            {
+              "control-id": "ca-6"
+            },
+            {
+              "control-id": "ca-7"
+            },
+            {
+              "control-id": "ca-8"
+            },
+            {
+              "control-id": "ca-9"
+            },
+            {
+              "control-id": "cm-1"
+            },
+            {
+              "control-id": "cm-10"
+            },
+            {
+              "control-id": "cm-11"
+            },
+            {
+              "control-id": "cm-2"
+            },
+            {
+              "control-id": "cm-3"
+            },
+            {
+              "control-id": "cm-4"
+            },
+            {
+              "control-id": "cm-5"
+            },
+            {
+              "control-id": "cm-6"
+            },
+            {
+              "control-id": "cm-7"
+            },
+            {
+              "control-id": "cm-8"
+            },
+            {
+              "control-id": "cm-9"
+            },
+            {
+              "control-id": "cp-1"
+            },
+            {
+              "control-id": "cp-10"
+            },
+            {
+              "control-id": "cp-11"
+            },
+            {
+              "control-id": "cp-12"
+            },
+            {
+              "control-id": "cp-13"
+            },
+            {
+              "control-id": "cp-2"
+            },
+            {
+              "control-id": "cp-3"
+            },
+            {
+              "control-id": "cp-4"
+            },
+            {
+              "control-id": "cp-6"
+            },
+            {
+              "control-id": "cp-7"
+            },
+            {
+              "control-id": "cp-8"
+            },
+            {
+              "control-id": "cp-9"
+            },
+            {
+              "control-id": "ia-1"
+            },
+            {
+              "control-id": "ia-10"
+            },
+            {
+              "control-id": "ia-11"
+            },
+            {
+              "control-id": "ia-13"
+            },
+            {
+              "control-id": "ia-2"
+            },
+            {
+              "control-id": "ia-3"
+            },
+            {
+              "control-id": "ia-4"
+            },
+            {
+              "control-id": "ia-5"
+            },
+            {
+              "control-id": "ia-6"
+            },
+            {
+              "control-id": "ia-7"
+            },
+            {
+              "control-id": "ia-8"
+            },
+            {
+              "control-id": "ia-9"
+            },
+            {
+              "control-id": "ir-1"
+            },
+            {
+              "control-id": "ir-2"
+            },
+            {
+              "control-id": "ir-3"
+            },
+            {
+              "control-id": "ir-4"
+            },
+            {
+              "control-id": "ir-5"
+            },
+            {
+              "control-id": "ir-6"
+            },
+            {
+              "control-id": "ir-7"
+            },
+            {
+              "control-id": "ir-8"
+            },
+            {
+              "control-id": "ir-9"
+            },
+            {
+              "control-id": "ma-1"
+            },
+            {
+              "control-id": "ma-2"
+            },
+            {
+              "control-id": "ma-3"
+            },
+            {
+              "control-id": "ma-4"
+            },
+            {
+              "control-id": "ma-5"
+            },
+            {
+              "control-id": "ma-6"
+            },
+            {
+              "control-id": "mp-1"
+            },
+            {
+              "control-id": "mp-2"
+            },
+            {
+              "control-id": "mp-3"
+            },
+            {
+              "control-id": "mp-4"
+            },
+            {
+              "control-id": "mp-5"
+            },
+            {
+              "control-id": "mp-6"
+            },
+            {
+              "control-id": "mp-7"
+            },
+            {
+              "control-id": "mp-8"
+            },
+            {
+              "control-id": "pe-1"
+            },
+            {
+              "control-id": "pe-10"
+            },
+            {
+              "control-id": "pe-11"
+            },
+            {
+              "control-id": "pe-12"
+            },
+            {
+              "control-id": "pe-13"
+            },
+            {
+              "control-id": "pe-14"
+            },
+            {
+              "control-id": "pe-15"
+            },
+            {
+              "control-id": "pe-16"
+            },
+            {
+              "control-id": "pe-17"
+            },
+            {
+              "control-id": "pe-18"
+            },
+            {
+              "control-id": "pe-19"
+            },
+            {
+              "control-id": "pe-2"
+            },
+            {
+              "control-id": "pe-20"
+            },
+            {
+              "control-id": "pe-3"
+            },
+            {
+              "control-id": "pe-4"
+            },
+            {
+              "control-id": "pe-5"
+            },
+            {
+              "control-id": "pe-6"
+            },
+            {
+              "control-id": "pe-8"
+            },
+            {
+              "control-id": "pe-9"
+            },
+            {
+              "control-id": "pl-1"
+            },
+            {
+              "control-id": "pl-2"
+            },
+            {
+              "control-id": "pl-4"
+            },
+            {
+              "control-id": "pl-7"
+            },
+            {
+              "control-id": "pl-8"
+            },
+            {
+              "control-id": "pl-9"
+            },
+            {
+              "control-id": "pm-1"
+            },
+            {
+              "control-id": "pm-10"
+            },
+            {
+              "control-id": "pm-11"
+            },
+            {
+              "control-id": "pm-12"
+            },
+            {
+              "control-id": "pm-13"
+            },
+            {
+              "control-id": "pm-14"
+            },
+            {
+              "control-id": "pm-15"
+            },
+            {
+              "control-id": "pm-16"
+            },
+            {
+              "control-id": "pm-2"
+            },
+            {
+              "control-id": "pm-3"
+            },
+            {
+              "control-id": "pm-4"
+            },
+            {
+              "control-id": "pm-5"
+            },
+            {
+              "control-id": "pm-6"
+            },
+            {
+              "control-id": "pm-7"
+            },
+            {
+              "control-id": "pm-8"
+            },
+            {
+              "control-id": "pm-9"
+            },
+            {
+              "control-id": "ps-1"
+            },
+            {
+              "control-id": "ps-2"
+            },
+            {
+              "control-id": "ps-3"
+            },
+            {
+              "control-id": "ps-4"
+            },
+            {
+              "control-id": "ps-5"
+            },
+            {
+              "control-id": "ps-6"
+            },
+            {
+              "control-id": "ps-7"
+            },
+            {
+              "control-id": "ps-8"
+            },
+            {
+              "control-id": "ra-1"
+            },
+            {
+              "control-id": "ra-2"
+            },
+            {
+              "control-id": "ra-3"
+            },
+            {
+              "control-id": "ra-5"
+            },
+            {
+              "control-id": "ra-6"
+            },
+            {
+              "control-id": "sa-1"
+            },
+            {
+              "control-id": "sa-10"
+            },
+            {
+              "control-id": "sa-11"
+            },
+            {
+              "control-id": "sa-15"
+            },
+            {
+              "control-id": "sa-16"
+            },
+            {
+              "control-id": "sa-17"
+            },
+            {
+              "control-id": "sa-2"
+            },
+            {
+              "control-id": "sa-20"
+            },
+            {
+              "control-id": "sa-21"
+            },
+            {
+              "control-id": "sa-23"
+            },
+            {
+              "control-id": "sa-24"
+            },
+            {
+              "control-id": "sa-3"
+            },
+            {
+              "control-id": "sa-4"
+            },
+            {
+              "control-id": "sa-5"
+            },
+            {
+              "control-id": "sa-8"
+            },
+            {
+              "control-id": "sa-9"
+            },
+            {
+              "control-id": "sc-1"
+            },
+            {
+              "control-id": "sc-10"
+            },
+            {
+              "control-id": "sc-11"
+            },
+            {
+              "control-id": "sc-12"
+            },
+            {
+              "control-id": "sc-13"
+            },
+            {
+              "control-id": "sc-15"
+            },
+            {
+              "control-id": "sc-16"
+            },
+            {
+              "control-id": "sc-17"
+            },
+            {
+              "control-id": "sc-18"
+            },
+            {
+              "control-id": "sc-19"
+            },
+            {
+              "control-id": "sc-2"
+            },
+            {
+              "control-id": "sc-20"
+            },
+            {
+              "control-id": "sc-21"
+            },
+            {
+              "control-id": "sc-22"
+            },
+            {
+              "control-id": "sc-23"
+            },
+            {
+              "control-id": "sc-24"
+            },
+            {
+              "control-id": "sc-25"
+            },
+            {
+              "control-id": "sc-26"
+            },
+            {
+              "control-id": "sc-27"
+            },
+            {
+              "control-id": "sc-28"
+            },
+            {
+              "control-id": "sc-29"
+            },
+            {
+              "control-id": "sc-3"
+            },
+            {
+              "control-id": "sc-30"
+            },
+            {
+              "control-id": "sc-31"
+            },
+            {
+              "control-id": "sc-32"
+            },
+            {
+              "control-id": "sc-34"
+            },
+            {
+              "control-id": "sc-35"
+            },
+            {
+              "control-id": "sc-36"
+            },
+            {
+              "control-id": "sc-37"
+            },
+            {
+              "control-id": "sc-38"
+            },
+            {
+              "control-id": "sc-39"
+            },
+            {
+              "control-id": "sc-4"
+            },
+            {
+              "control-id": "sc-40"
+            },
+            {
+              "control-id": "sc-41"
+            },
+            {
+              "control-id": "sc-42"
+            },
+            {
+              "control-id": "sc-43"
+            },
+            {
+              "control-id": "sc-44"
+            },
+            {
+              "control-id": "sc-5"
+            },
+            {
+              "control-id": "sc-6"
+            },
+            {
+              "control-id": "sc-7"
+            },
+            {
+              "control-id": "sc-8"
+            },
+            {
+              "control-id": "si-1"
+            },
+            {
+              "control-id": "si-10"
+            },
+            {
+              "control-id": "si-11"
+            },
+            {
+              "control-id": "si-12"
+            },
+            {
+              "control-id": "si-13"
+            },
+            {
+              "control-id": "si-14"
+            },
+            {
+              "control-id": "si-15"
+            },
+            {
+              "control-id": "si-16"
+            },
+            {
+              "control-id": "si-17"
+            },
+            {
+              "control-id": "si-2"
+            },
+            {
+              "control-id": "si-3"
+            },
+            {
+              "control-id": "si-4"
+            },
+            {
+              "control-id": "si-5"
+            },
+            {
+              "control-id": "si-6"
+            },
+            {
+              "control-id": "si-7"
+            },
+            {
+              "control-id": "si-8"
+            }
+          ]
         }
       ]
     },

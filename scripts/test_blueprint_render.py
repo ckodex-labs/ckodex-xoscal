@@ -77,7 +77,7 @@ class BlueprintStaticContract(unittest.TestCase):
 
     def test_all_fifteen_content_containers_have_real_prebuilt_elements(self):
         contracts = {"release-artifacts": ("dl-card", 2), "sdks": ("dl-card", 6),
-                     "frameworks": ("dl-card", 36), "prov": ("dl-card", 2),
+                     "frameworks": ("dl-card", 38), "prov": ("dl-card", 2),
                      "canonical-cards": ("ecard", 10), "interop-cards": ("ecard", 9),
                      "defensive-cards": ("defensive", 6), "ext-cards": ("ecard", 1),
                      "dux-grid": ("dux-item", 12), "persona-grid": ("persona-card", 6),
@@ -244,7 +244,8 @@ class BlueprintStaticContract(unittest.TestCase):
         policy = json.loads((blueprint.ROOT / "docs/release-policy.json").read_text())
         for identifier in policy["framework_ids"]:
             self.assertIn(identifier + "/catalog.json", text)
-        self.assertIn("cccs-medium-cloud-pbmm/profile.json", text)
+        for profile_path in policy.get("profile_paths", [policy["profile_path"]]):
+            self.assertIn(profile_path.removeprefix("frameworks/"), text)
 
 
 class BlueprintRefusal(unittest.TestCase):

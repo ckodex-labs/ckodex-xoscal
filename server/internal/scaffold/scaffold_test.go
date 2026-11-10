@@ -52,7 +52,7 @@ func TestScaffoldWorkspace_TempDir(t *testing.T) {
 	if err != nil {
 		t.Fatalf("create temp dir: %v", err)
 	}
-	defer os.RemoveAll(tmpDir)
+	defer func() { _ = os.RemoveAll(tmpDir) }()
 
 	// Create fake go.mod
 	if err := os.WriteFile(filepath.Join(tmpDir, "go.mod"), []byte("module github.com/test/demo-service\n\ngo 1.24\n"), 0600); err != nil {
@@ -96,7 +96,7 @@ func TestScaffoldWorkspace_CanadianFrameworks(t *testing.T) {
 			if err != nil {
 				t.Fatalf("create temp dir: %v", err)
 			}
-			defer os.RemoveAll(tmpDir)
+			defer func() { _ = os.RemoveAll(tmpDir) }()
 
 			if err := os.WriteFile(filepath.Join(tmpDir, "go.mod"), []byte("module github.com/test/canadian-service\n\ngo 1.24\n"), 0600); err != nil {
 				t.Fatalf("write go.mod: %v", err)

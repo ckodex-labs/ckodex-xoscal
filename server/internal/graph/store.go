@@ -172,6 +172,25 @@ func (s *SQLiteStore) BulkUpsertGraph(ctx context.Context, nodes []*Node, edges 
 	}
 	defer func() { _ = tx.Rollback() }()
 
+	var existingNodes, existingEdges int
+	_ = tx.QueryRowContext(ctx, `SELECT COUNT(*) FROM kg_graph_nodes`).Scan(&existingNodes)
+	_ = tx.QueryRowContext(ctx, `SELECT COUNT(*) FROM kg_graph_edges`).Scan(&existingEdges)
+	isFreshBulk := existingNodes == 0 && existingEdges == 0 && len(edges) >= 1000
+	if isFreshBulk {
+		dropIdxSQL := `
+DROP INDEX IF EXISTS idx_nodes_kind;
+DROP INDEX IF EXISTS idx_nodes_urn;
+DROP INDEX IF EXISTS idx_edges_from;
+DROP INDEX IF EXISTS idx_edges_to;
+DROP INDEX IF EXISTS idx_edges_relation;
+DROP INDEX IF EXISTS idx_edges_trust;
+DROP INDEX IF EXISTS idx_edges_valid;
+`
+		if _, err := tx.ExecContext(ctx, dropIdxSQL); err != nil {
+			return fmt.Errorf("drop secondary graph indexes for bulk load: %w", err)
+		}
+	}
+
 	now := time.Now().UTC()
 	const batchSize = 100
 
@@ -203,7 +222,7 @@ func (s *SQLiteStore) BulkUpsertGraph(ctx context.Context, nodes []*Node, edges 
 		if prepErr != nil {
 			return fmt.Errorf("prepare batch node upsert: %w", prepErr)
 		}
-		defer batchNodeStmt.Close()
+		defer func() { _ = batchNodeStmt.Close() }()
 
 		args := make([]any, 0, batchSize*5)
 		for start := 0; start+batchSize <= len(validNodes); start += batchSize {
@@ -232,7 +251,7 @@ func (s *SQLiteStore) BulkUpsertGraph(ctx context.Context, nodes []*Node, edges 
 		if prepErr != nil {
 			return fmt.Errorf("prepare node upsert: %w", prepErr)
 		}
-		defer nodeStmt.Close()
+		defer func() { _ = nodeStmt.Close() }()
 		for _, n := range validNodes[remStart:] {
 			createdAt := n.CreatedAt
 			if createdAt.IsZero() {
@@ -311,7 +330,7 @@ func (s *SQLiteStore) BulkUpsertGraph(ctx context.Context, nodes []*Node, edges 
 		if prepErr != nil {
 			return fmt.Errorf("prepare batch edge upsert: %w", prepErr)
 		}
-		defer batchEdgeStmt.Close()
+		defer func() { _ = batchEdgeStmt.Close() }()
 
 		args := make([]any, 0, batchSize*13)
 		for start := 0; start+batchSize <= len(validEdges); start += batchSize {
@@ -333,13 +352,28 @@ func (s *SQLiteStore) BulkUpsertGraph(ctx context.Context, nodes []*Node, edges 
 		if prepErr != nil {
 			return fmt.Errorf("prepare edge upsert: %w", prepErr)
 		}
-		defer edgeStmt.Close()
+		defer func() { _ = edgeStmt.Close() }()
 		args := make([]any, 0, 13)
 		for _, e := range validEdges[remStart:] {
 			args = appendEdgeArgs(args[:0], e)
 			if _, err := edgeStmt.ExecContext(ctx, args...); err != nil {
 				return fmt.Errorf("upsert edge %s (%s -> %s): %w", e.ID, e.FromNode, e.ToNode, err)
 			}
+		}
+	}
+
+	if isFreshBulk {
+		recreateIdxSQL := `
+CREATE INDEX IF NOT EXISTS idx_nodes_kind ON kg_graph_nodes(kind);
+CREATE INDEX IF NOT EXISTS idx_nodes_urn ON kg_graph_nodes(urn);
+CREATE INDEX IF NOT EXISTS idx_edges_from ON kg_graph_edges(from_node);
+CREATE INDEX IF NOT EXISTS idx_edges_to ON kg_graph_edges(to_node);
+CREATE INDEX IF NOT EXISTS idx_edges_relation ON kg_graph_edges(relation);
+CREATE INDEX IF NOT EXISTS idx_edges_trust ON kg_graph_edges(trust_state);
+CREATE INDEX IF NOT EXISTS idx_edges_valid ON kg_graph_edges(valid_from, valid_to);
+`
+		if _, err := tx.ExecContext(ctx, recreateIdxSQL); err != nil {
+			return fmt.Errorf("recreate secondary graph indexes after bulk load: %w", err)
 		}
 	}
 
@@ -410,7 +444,7 @@ func (s *SQLiteStore) ListEdges(ctx context.Context, fromNode, toNode, relation,
 	if err != nil {
 		return nil, "", fmt.Errorf("list edges: %w", err)
 	}
-	defer rows.Close()
+	defer func() { _ = rows.Close() }()
 	var out []*Edge
 	hasMore := false
 	for rows.Next() {
@@ -474,7 +508,7 @@ func (s *SQLiteStore) ListEdgesFrom(ctx context.Context, nodeID string, relation
 	if err != nil {
 		return nil, fmt.Errorf("list edges from: %w", err)
 	}
-	defer rows.Close()
+	defer func() { _ = rows.Close() }()
 	var out []*Edge
 	for rows.Next() {
 		e, err := scanEdge(rows)
@@ -515,7 +549,7 @@ func (s *SQLiteStore) ListEdgesTo(ctx context.Context, nodeID string, relations 
 	if err != nil {
 		return nil, fmt.Errorf("list edges to: %w", err)
 	}
-	defer rows.Close()
+	defer func() { _ = rows.Close() }()
 	var out []*Edge
 	for rows.Next() {
 		e, err := scanEdge(rows)

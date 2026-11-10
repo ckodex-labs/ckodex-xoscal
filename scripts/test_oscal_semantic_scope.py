@@ -18,9 +18,10 @@ class SemanticScopeTests(unittest.TestCase):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name) / 'frameworks'
-        for index in range(35):
+        for index in range(36):
             self.write('framework-' + str(index) + '/catalog.json', {'catalog': {'metadata': {'oscal-version': '1.2.3'}}})
         self.write('framework-0/profile.json', {'profile': {'metadata': {'oscal-version': '1.2.3'}}})
+        self.write('framework-1/profile.json', {'profile': {'metadata': {'oscal-version': '1.2.3'}}})
 
     def write(self, name, document):
         path = self.root / name
@@ -31,12 +32,37 @@ class SemanticScopeTests(unittest.TestCase):
     def test_reviewed_subset_binds_every_exact_subject_and_versions(self):
         result = scope.evaluate(self.root)
         self.assertEqual(result['status'], 'passed')
-        self.assertEqual(result['subject_counts'], {'catalog': 35, 'profile': 1})
+        self.assertEqual(result['subject_counts'], {'catalog': 36, 'profile': 2})
         self.assertEqual(result['producer']['semantic_model_version'], '1.1.2')
         self.assertEqual(result['producer']['structural_model_version'], '1.2.3')
-        self.assertEqual(len(result['subjects']), 36)
+        self.assertEqual(len(result['subjects']), 38)
         for subject in result['subjects']:
             self.assertEqual(subject['sha256'], hashlib.sha256((self.root / subject['path']).read_bytes()).hexdigest())
+
+    def test_compatible_itsp_links_and_status_are_admitted_while_divergent_forms_block(self):
+        self.write('framework-0/catalog.json', {
+            'catalog': {
+                'metadata': {'oscal-version': '1.2.3'},
+                'controls': [{
+                    'props': [
+                        {'name': 'status', 'value': 'withdrawn'},
+                        {'name': 'status', 'ns': 'https://ckodex.io/ns/xoscal/props', 'value': 'active'},
+                    ],
+                    'links': [
+                        {'href': '#ac-2', 'rel': 'related'},
+                        {'href': '#uuid-ref', 'rel': 'reference'},
+                    ],
+                }],
+            },
+        })
+        self.assertEqual(scope.evaluate(self.root)['status'], 'passed')
+        self.write('framework-0/catalog.json', {
+            'catalog': {
+                'metadata': {'oscal-version': '1.2.3'},
+                'controls': [{'links': [{'href': '#ac-2', 'rel': 'custom-1.2-only'}]}],
+            },
+        })
+        self.assertEqual(scope.evaluate(self.root)['status'], 'failed')
 
     def test_changed_fields_are_rejected_even_when_empty_or_deeply_nested(self):
         for feature in ('hashes', 'locations', 'location-uuids', 'resource-fragment', 'links', 'with-child-controls'):

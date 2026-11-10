@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"strings"
-	"time"
 
 	"github.com/mchorfa/xoscal/server/internal/oscalversion"
 	"google.golang.org/protobuf/encoding/protojson"
@@ -14,25 +13,13 @@ import (
 // OSCALVersion is the OSCAL version all artifacts conform to.
 var OSCALVersion = oscalversion.Current()
 
-// oscalRootKeys maps protobuf message types to their OSCAL JSON root wrapper key.
-var oscalRootKeys = map[string]string{
-	"Catalog":                   "catalog",
-	"Profile":                   "profile",
-	"SystemSecurityPlan":        "system-security-plan",
-	"ComponentDefinition":       "component-definition",
-	"AssessmentPlan":            "assessment-plan",
-	"AssessmentResults":         "assessment-results",
-	"PlanOfActionAndMilestones": "plan-of-action-and-milestones",
-	"MappingCollection":         "mapping-collection",
-}
-
 // marshalOSCALJSON serializes a protobuf message to OSCAL-compliant JSON.
 // It transforms protojson output (camelCase, {"value":"..."} wrappers) into
 // proper OSCAL JSON (kebab-case, plain strings, root model wrapper, required
 // metadata fields).
 func marshalOSCALJSON(msg proto.Message, rootKey string) ([]byte, error) {
-	// Step 1: Marshal to protojson
-	raw, err := protojson.MarshalOptions{Multiline: true, EmitUnpopulated: false}.Marshal(msg)
+	// Step 1: Marshal to compact protojson (avoiding unnecessary pretty-print before Unmarshal)
+	raw, err := protojson.MarshalOptions{EmitUnpopulated: false}.Marshal(msg)
 	if err != nil {
 		return nil, fmt.Errorf("protojson marshal: %w", err)
 	}
@@ -112,7 +99,7 @@ func transformOSCAL(data interface{}) interface{} {
 			}
 		}
 
-		result := make(map[string]interface{})
+		result := make(map[string]interface{}, len(v))
 		for key, val := range v {
 			// Skip the protojson "@type" field
 			if key == "@type" {
@@ -196,7 +183,10 @@ func transformOSCAL(data interface{}) interface{} {
 		return result
 
 	case []interface{}:
-		var result []interface{}
+		if len(v) == 0 {
+			return nil
+		}
+		result := make([]interface{}, 0, len(v))
 		for _, item := range v {
 			transformed := transformOSCAL(item)
 			if !isEmpty(transformed) {
@@ -232,7 +222,18 @@ func isEmpty(v interface{}) bool {
 // camelToKebab converts a camelCase string to kebab-case.
 // e.g., "backMatter" → "back-matter", "lastModified" → "last-modified"
 func camelToKebab(s string) string {
+	hasUpper := false
+	for i := 0; i < len(s); i++ {
+		if s[i] >= 'A' && s[i] <= 'Z' {
+			hasUpper = true
+			break
+		}
+	}
+	if !hasUpper {
+		return s
+	}
 	var result strings.Builder
+	result.Grow(len(s) + 4)
 	for i, r := range s {
 		if i > 0 && r >= 'A' && r <= 'Z' {
 			result.WriteRune('-')
@@ -257,9 +258,9 @@ func ensureMetadata(data map[string]interface{}) {
 	if _, ok := meta["oscal-version"]; !ok {
 		meta["oscal-version"] = OSCALVersion
 	}
-	// Ensure last-modified is set (RFC 3339 with timezone)
+	// Ensure last-modified is set deterministically (RFC 3339 with timezone)
 	if _, ok := meta["last-modified"]; !ok {
-		meta["last-modified"] = time.Now().UTC().Format(time.RFC3339)
+		meta["last-modified"] = defaultOSCALTimestamp
 	}
 	// Ensure version is set
 	if _, ok := meta["version"]; !ok {

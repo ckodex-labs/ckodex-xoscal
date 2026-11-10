@@ -4,7 +4,7 @@
       "href": "./system-security-plan.json"
     },
     "metadata": {
-      "last-modified": "2026-11-08T01:42:12Z",
+      "last-modified": "2026-11-08T00:30:51Z",
       "oscal-version": "1.2.3",
       "title": "CNIL : guide de sécurité des données Security Assessment Plan Template",
       "version": "1"
@@ -13,7 +13,224 @@
       "control-selections": [
         {
           "description": "All controls in CNIL : guide de sécurité des données",
-          "include-all": {}
+          "include-controls": [
+            {
+              "control-id": "_1.1"
+            },
+            {
+              "control-id": "_1.2"
+            },
+            {
+              "control-id": "_10.1"
+            },
+            {
+              "control-id": "_10.2"
+            },
+            {
+              "control-id": "_10.3"
+            },
+            {
+              "control-id": "_11.1"
+            },
+            {
+              "control-id": "_11.2"
+            },
+            {
+              "control-id": "_11.3"
+            },
+            {
+              "control-id": "_11.4"
+            },
+            {
+              "control-id": "_12.1"
+            },
+            {
+              "control-id": "_12.2"
+            },
+            {
+              "control-id": "_13.1"
+            },
+            {
+              "control-id": "_13.2"
+            },
+            {
+              "control-id": "_13.3"
+            },
+            {
+              "control-id": "_14.1"
+            },
+            {
+              "control-id": "_14.2"
+            },
+            {
+              "control-id": "_14.3"
+            },
+            {
+              "control-id": "_15.1"
+            },
+            {
+              "control-id": "_15.2"
+            },
+            {
+              "control-id": "_15.3"
+            },
+            {
+              "control-id": "_16.1"
+            },
+            {
+              "control-id": "_16.2"
+            },
+            {
+              "control-id": "_16.3"
+            },
+            {
+              "control-id": "_16.4"
+            },
+            {
+              "control-id": "_17.1"
+            },
+            {
+              "control-id": "_17.2"
+            },
+            {
+              "control-id": "_17.3"
+            },
+            {
+              "control-id": "_18.1"
+            },
+            {
+              "control-id": "_18.2"
+            },
+            {
+              "control-id": "_19.1"
+            },
+            {
+              "control-id": "_19.2"
+            },
+            {
+              "control-id": "_2.1"
+            },
+            {
+              "control-id": "_2.2"
+            },
+            {
+              "control-id": "_20.1"
+            },
+            {
+              "control-id": "_20.2"
+            },
+            {
+              "control-id": "_20.3"
+            },
+            {
+              "control-id": "_21.1"
+            },
+            {
+              "control-id": "_21.2"
+            },
+            {
+              "control-id": "_22.1"
+            },
+            {
+              "control-id": "_22.2"
+            },
+            {
+              "control-id": "_22.3"
+            },
+            {
+              "control-id": "_22.4"
+            },
+            {
+              "control-id": "_23.1"
+            },
+            {
+              "control-id": "_23.2"
+            },
+            {
+              "control-id": "_23.3"
+            },
+            {
+              "control-id": "_24.1"
+            },
+            {
+              "control-id": "_24.2"
+            },
+            {
+              "control-id": "_24.3"
+            },
+            {
+              "control-id": "_25.1"
+            },
+            {
+              "control-id": "_25.2"
+            },
+            {
+              "control-id": "_3.1"
+            },
+            {
+              "control-id": "_3.2"
+            },
+            {
+              "control-id": "_4.1"
+            },
+            {
+              "control-id": "_4.2"
+            },
+            {
+              "control-id": "_4.3"
+            },
+            {
+              "control-id": "_5.1"
+            },
+            {
+              "control-id": "_5.2"
+            },
+            {
+              "control-id": "_5.3"
+            },
+            {
+              "control-id": "_6.1"
+            },
+            {
+              "control-id": "_6.2"
+            },
+            {
+              "control-id": "_6.3"
+            },
+            {
+              "control-id": "_6.4"
+            },
+            {
+              "control-id": "_7.1"
+            },
+            {
+              "control-id": "_7.2"
+            },
+            {
+              "control-id": "_7.3"
+            },
+            {
+              "control-id": "_8.1"
+            },
+            {
+              "control-id": "_8.2"
+            },
+            {
+              "control-id": "_8.3"
+            },
+            {
+              "control-id": "_8.4"
+            },
+            {
+              "control-id": "_9.1"
+            },
+            {
+              "control-id": "_9.2"
+            },
+            {
+              "control-id": "_9.3"
+            }
+          ]
         }
       ]
     },

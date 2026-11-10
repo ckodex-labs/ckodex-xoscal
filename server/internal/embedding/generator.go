@@ -140,7 +140,7 @@ func (o *OpenAIGenerator) Embed(ctx context.Context, texts []string) ([][]float3
 	if err != nil {
 		return nil, fmt.Errorf("openai request: %w", err)
 	}
-	defer resp.Body.Close()
+	defer func() { _ = resp.Body.Close() }()
 
 	if resp.StatusCode != http.StatusOK {
 		return nil, fmt.Errorf("openai embeddings API returned %d", resp.StatusCode)

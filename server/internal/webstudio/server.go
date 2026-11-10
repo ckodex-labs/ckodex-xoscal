@@ -1,6 +1,7 @@
 package webstudio
 
 import (
+	"bytes"
 	"context"
 	"crypto/sha256"
 	_ "embed"
@@ -11,6 +12,7 @@ import (
 	"io"
 	"net"
 	"net/http"
+	"net/url"
 	"os"
 	"os/exec"
 	"path/filepath"
@@ -34,21 +36,27 @@ import (
 //go:embed index.html
 var indexHTML []byte
 
-// Server provides the local zero-dependency xOSCAL Web Studio.
+var feedSyncMu sync.Mutex
+
+// Server provides the local zero-dependency xOSCAL Web Studio and shared REST API v1 handlers.
 type Server struct {
-	httpServer  *http.Server
-	registry    *frameworks.Registry
-	validator   *schemavalidate.Validator
-	listener    net.Listener
-	mu          sync.RWMutex
-	cachedCtrls map[string][]frameworks.ControlInfo
+	httpServer        *http.Server
+	registry          *frameworks.Registry
+	validator         *schemavalidate.Validator
+	listener          net.Listener
+	grpcAddr          string
+	bearerTokenEnvVar string
+	mu                sync.RWMutex
+	cachedCtrls       map[string][]frameworks.ControlInfo
 }
 
 // Config configures the Web Studio server.
 type Config struct {
-	Host     string
-	Port     int
-	Registry *frameworks.Registry
+	Host              string
+	Port              int
+	Registry          *frameworks.Registry
+	GRPCAddr          string
+	BearerTokenEnvVar string
 }
 
 // NewServer initializes a new Web Studio server instance.
@@ -64,26 +72,18 @@ func NewServer(cfg Config) (*Server, error) {
 	}
 
 	s := &Server{
-		registry:    reg,
-		validator:   val,
-		cachedCtrls: make(map[string][]frameworks.ControlInfo),
+		registry:          reg,
+		validator:         val,
+		grpcAddr:          strings.TrimSpace(cfg.GRPCAddr),
+		bearerTokenEnvVar: strings.TrimSpace(cfg.BearerTokenEnvVar),
+		cachedCtrls:       make(map[string][]frameworks.ControlInfo),
 	}
 
 	mux := http.NewServeMux()
 	mux.HandleFunc("/", s.handleIndex)
 	mux.HandleFunc("/healthz", s.handleHealthz)
 	mux.HandleFunc("/readyz", s.handleHealthz)
-	s.RegisterFrameworkAndValidationRoutes(mux)
-	mux.HandleFunc("/api/v1/ontology", s.handleOntology)
-	mux.HandleFunc("/api/v1/graph/stats", s.handleGraphStats)
-	mux.HandleFunc("/api/v1/graph/crosswalk", s.handleGraphCrosswalk)
-	mux.HandleFunc("/api/v1/graph/blast-radius", s.handleGraphBlastRadius)
-	mux.HandleFunc("/api/v1/graph/export", s.handleGraphExport)
-	mux.HandleFunc("/api/v1/feeds", s.handleFeeds)
-	mux.HandleFunc("/api/v1/feeds/sync", s.handleFeedsSync)
-	mux.HandleFunc("/.well-known/utcp", s.handleUTCPManual)
-	mux.HandleFunc("/api/v1/utcp", s.handleUTCPManual)
-	mux.HandleFunc("/api/v1/utcp/validate", s.handleUTCPValidate)
+	s.RegisterAPIRoutes(mux)
 
 	addr := fmt.Sprintf("%s:%d", cfg.Host, cfg.Port)
 	s.httpServer = &http.Server{
@@ -107,8 +107,34 @@ func (s *Server) RegisterFrameworkAndValidationRoutes(mux *http.ServeMux) {
 	}
 	mux.HandleFunc("/api/v1/frameworks", s.handleFrameworks)
 	mux.HandleFunc("/api/v1/frameworks/", s.handleFrameworkSubpath)
+	mux.HandleFunc("/api/v1/controls", s.handleControlsList)
+	mux.HandleFunc("/api/v1/controls/search", s.handleControlsSearch)
+	mux.HandleFunc("/api/v1/controls/", s.handleControlsSubpath)
 	mux.HandleFunc("/api/v1/compare", s.handleCompare)
 	mux.HandleFunc("/api/v1/validate", s.handleValidate)
+}
+
+// RegisterAPIRoutes mounts the complete xOSCAL REST v1 and UTCP v1.0.1 route surface onto mux,
+// ensuring 100% route and HTTP-method parity between Web Studio and xoscal-gateway.
+func (s *Server) RegisterAPIRoutes(mux *http.ServeMux) {
+	if s == nil || mux == nil {
+		return
+	}
+	s.RegisterFrameworkAndValidationRoutes(mux)
+	mux.HandleFunc("/api/v1/doctor", s.handleDoctor)
+	mux.HandleFunc("/api/v1/ontology", s.handleOntology)
+	mux.HandleFunc("/api/v1/graph/stats", s.handleGraphStats)
+	mux.HandleFunc("/api/v1/graph/crosswalk", s.handleGraphCrosswalk)
+	mux.HandleFunc("/api/v1/graph/blast-radius", s.handleGraphBlastRadius)
+	mux.HandleFunc("/api/v1/graph/reconcile", s.handleGraphReconcile)
+	mux.HandleFunc("/api/v1/graph/export", s.handleGraphExport)
+	mux.HandleFunc("/api/v1/feeds", s.handleFeeds)
+	mux.HandleFunc("/api/v1/feeds/sync", s.handleFeedsSync)
+	mux.HandleFunc("/.well-known/utcp", s.handleUTCPManual)
+	mux.HandleFunc("/api/v1/utcp", s.handleUTCPManual)
+	mux.HandleFunc("/api/v1/utcp/manual", s.handleUTCPManual)
+	mux.HandleFunc("/api/v1/utcp/ecosystem", s.handleUTCPEcosystem)
+	mux.HandleFunc("/api/v1/utcp/validate", s.handleUTCPValidate)
 }
 
 // Start begins listening on the configured address.
@@ -116,7 +142,6 @@ func (s *Server) RegisterFrameworkAndValidationRoutes(mux *http.ServeMux) {
 func (s *Server) Start() (string, error) {
 	ln, err := net.Listen("tcp", s.httpServer.Addr)
 	if err != nil {
-		// Attempt port fallback if specific port was busy
 		host, portStr, splitErr := net.SplitHostPort(s.httpServer.Addr)
 		if splitErr == nil {
 			if basePort, numErr := strconv.Atoi(portStr); numErr == nil && basePort > 0 {
@@ -154,7 +179,30 @@ func (s *Server) Handler() http.Handler {
 	return s.httpServer.Handler
 }
 
+func requireGET(w http.ResponseWriter, r *http.Request) bool {
+	if r.Method != http.MethodGet {
+		w.Header().Set("Allow", http.MethodGet)
+		http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
+		return false
+	}
+	return true
+}
+
+func requirePOST(w http.ResponseWriter, r *http.Request) bool {
+	if r.Method != http.MethodPost {
+		w.Header().Set("Allow", http.MethodPost)
+		http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
+		return false
+	}
+	return true
+}
+
 func (s *Server) handleHealthz(w http.ResponseWriter, r *http.Request) {
+	if r.Method != http.MethodGet && r.Method != http.MethodHead {
+		w.Header().Set("Allow", "GET, HEAD")
+		http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
+		return
+	}
 	w.Header().Set("Content-Type", "application/json; charset=utf-8")
 	w.Header().Set("X-Content-Type-Options", "nosniff")
 	w.WriteHeader(http.StatusOK)
@@ -165,9 +213,78 @@ func (s *Server) handleHealthz(w http.ResponseWriter, r *http.Request) {
 	})
 }
 
+func (s *Server) handleDoctor(w http.ResponseWriter, r *http.Request) {
+	if !requireGET(w, r) {
+		return
+	}
+
+	infos := s.registry.ListInfo()
+	totalCtrls := 0
+	for _, info := range infos {
+		totalCtrls += info.ControlCount
+	}
+
+	ontSpec := ontology.CanonicalSpec()
+	feedList := feeds.ListFeeds()
+
+	verdict := "SYSTEM_OPERATIONAL"
+	status := "ok"
+	graphSummary := map[string]any{
+		"coherent": false,
+	}
+
+	if ug, err := graph.DefaultUnifiedGraph(); err == nil {
+		st := ug.Stats()
+		rec, recErr := ug.ReconcileInvariants()
+		coherent := recErr == nil && rec != nil && rec.Coherent
+		if !coherent {
+			verdict = "DEGRADED"
+			status = "degraded"
+		}
+		graphSummary = map[string]any{
+			"coherent":         coherent,
+			"total_nodes":      st.TotalNodes,
+			"total_edges":      st.TotalEdges,
+			"frameworks_count": st.FrameworksCount,
+			"feeds_count":      st.FeedsCount,
+			"graph_sha256":     st.GraphSHA256,
+		}
+		if rec != nil && len(rec.Violations) > 0 {
+			graphSummary["violations"] = rec.Violations
+		}
+	} else {
+		verdict = "DEGRADED"
+		status = "degraded"
+		graphSummary["error"] = err.Error()
+	}
+
+	if len(infos) == 0 || s.validator == nil {
+		verdict = "DEGRADED"
+		status = "degraded"
+	}
+
+	writeJSON(w, http.StatusOK, map[string]any{
+		"status":           status,
+		"verdict":          verdict,
+		"timestamp":        time.Now().UTC().Format(time.RFC3339),
+		"go_version":       runtime.Version(),
+		"schema_version":   schemavalidate.SchemaVersion,
+		"utcp_version":     utcp.SpecVersion,
+		"ontology_version": ontSpec.Version,
+		"ontology_sha256":  ontSpec.SHA256,
+		"frameworks_count": len(infos),
+		"controls_count":   totalCtrls,
+		"feeds_count":      len(feedList),
+		"graph":            graphSummary,
+	})
+}
+
 func (s *Server) handleIndex(w http.ResponseWriter, r *http.Request) {
 	if r.URL.Path != "/" {
 		http.NotFound(w, r)
+		return
+	}
+	if !requireGET(w, r) {
 		return
 	}
 	w.Header().Set("Content-Type", "text/html; charset=utf-8")
@@ -176,17 +293,191 @@ func (s *Server) handleIndex(w http.ResponseWriter, r *http.Request) {
 }
 
 func (s *Server) handleFrameworks(w http.ResponseWriter, r *http.Request) {
-	if r.Method != http.MethodGet {
-		http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
+	if !requireGET(w, r) {
+		return
+	}
+
+	jur := strings.TrimSpace(r.URL.Query().Get("jurisdiction"))
+	if jur != "" {
+		fws := s.registry.FindByJurisdiction(jur)
+		infos := make([]frameworks.Info, len(fws))
+		for i, fw := range fws {
+			infos[i] = frameworks.InfoOf(fw)
+		}
+		writeJSON(w, http.StatusOK, infos)
 		return
 	}
 
 	infos := s.registry.ListInfo()
+	if infos == nil {
+		infos = []frameworks.Info{}
+	}
 	writeJSON(w, http.StatusOK, infos)
 }
 
+func (s *Server) handleControlsList(w http.ResponseWriter, r *http.Request) {
+	if !requireGET(w, r) {
+		return
+	}
+
+	fwID := strings.TrimSpace(r.URL.Query().Get("framework"))
+	if fwID == "" {
+		fwID = "cccs-itsp-10-033"
+	}
+	fw, exists := s.registry.Get(fwID)
+	if !exists {
+		http.Error(w, fmt.Sprintf("framework %s not found", fwID), http.StatusNotFound)
+		return
+	}
+
+	controls, err := s.getOrLoadControls(fw)
+	if err != nil {
+		http.Error(w, fmt.Sprintf("load controls: %v", err), http.StatusInternalServerError)
+		return
+	}
+
+	fam := strings.TrimSpace(r.URL.Query().Get("family"))
+	matched := controls
+	if fam != "" {
+		famUpper := strings.ToUpper(fam)
+		famFiltered := make([]frameworks.ControlInfo, 0)
+		for _, c := range matched {
+			if strings.ToUpper(c.FamilyID) == famUpper {
+				famFiltered = append(famFiltered, c)
+			}
+		}
+		matched = famFiltered
+	}
+	if matched == nil {
+		matched = []frameworks.ControlInfo{}
+	}
+
+	writeJSON(w, http.StatusOK, matched)
+}
+
+func (s *Server) handleControlsSearch(w http.ResponseWriter, r *http.Request) {
+	if !requireGET(w, r) {
+		return
+	}
+
+	query := strings.TrimSpace(r.URL.Query().Get("q"))
+	if query == "" {
+		query = strings.TrimSpace(r.URL.Query().Get("query"))
+	}
+	fwID := strings.TrimSpace(r.URL.Query().Get("framework"))
+	if fwID == "" {
+		fwID = "cccs-itsp-10-033"
+	}
+
+	limit := 0
+	if limStr := strings.TrimSpace(r.URL.Query().Get("limit")); limStr != "" {
+		if limVal, err := strconv.Atoi(limStr); err == nil && limVal > 0 {
+			limit = limVal
+		}
+	}
+
+	if fwID == "*" || strings.EqualFold(fwID, "all") {
+		var combined []frameworks.ControlInfo
+		for _, fw := range s.registry.List() {
+			ctrls, err := s.getOrLoadControls(fw)
+			if err != nil {
+				continue
+			}
+			rem := 0
+			if limit > 0 {
+				rem = limit - len(combined)
+				if rem <= 0 {
+					break
+				}
+			}
+			combined = append(combined, frameworks.SearchControls(ctrls, query, rem)...)
+			if limit > 0 && len(combined) >= limit {
+				combined = combined[:limit]
+				break
+			}
+		}
+		if combined == nil {
+			combined = []frameworks.ControlInfo{}
+		}
+		writeJSON(w, http.StatusOK, combined)
+		return
+	}
+
+	fw, exists := s.registry.Get(fwID)
+	if !exists {
+		http.Error(w, fmt.Sprintf("framework %s not found", fwID), http.StatusNotFound)
+		return
+	}
+
+	controls, err := s.getOrLoadControls(fw)
+	if err != nil {
+		http.Error(w, fmt.Sprintf("load controls: %v", err), http.StatusInternalServerError)
+		return
+	}
+
+	matched := frameworks.SearchControls(controls, query, limit)
+	if matched == nil {
+		matched = []frameworks.ControlInfo{}
+	}
+	writeJSON(w, http.StatusOK, matched)
+}
+
+func (s *Server) handleControlsSubpath(w http.ResponseWriter, r *http.Request) {
+	path := strings.TrimPrefix(r.URL.Path, "/api/v1/controls/")
+	if path == "search" {
+		s.handleControlsSearch(w, r)
+		return
+	}
+	if !requireGET(w, r) {
+		return
+	}
+
+	parts := strings.SplitN(path, "/", 2)
+	if len(parts) != 2 || strings.TrimSpace(parts[0]) == "" || strings.TrimSpace(parts[1]) == "" {
+		http.NotFound(w, r)
+		return
+	}
+
+	fwID, err1 := url.PathUnescape(parts[0])
+	if err1 != nil {
+		fwID = parts[0]
+	}
+	ctrlID, err2 := url.PathUnescape(parts[1])
+	if err2 != nil {
+		ctrlID = parts[1]
+	}
+	if strings.Contains(ctrlID, "/") {
+		http.NotFound(w, r)
+		return
+	}
+
+	fw, exists := s.registry.Get(fwID)
+	if !exists {
+		http.Error(w, fmt.Sprintf("framework %s not found", fwID), http.StatusNotFound)
+		return
+	}
+
+	controls, err := s.getOrLoadControls(fw)
+	if err != nil {
+		http.Error(w, fmt.Sprintf("load controls: %v", err), http.StatusInternalServerError)
+		return
+	}
+
+	ctrl, found := frameworks.GetControl(controls, ctrlID)
+	if !found {
+		http.Error(w, fmt.Sprintf("control %s not found in %s", ctrlID, fwID), http.StatusNotFound)
+		return
+	}
+
+	writeJSON(w, http.StatusOK, ctrl)
+}
+
 func (s *Server) handleFrameworkSubpath(w http.ResponseWriter, r *http.Request) {
-	// Pattern: /api/v1/frameworks/{id} or /api/v1/frameworks/{id}/controls
+	if !requireGET(w, r) {
+		return
+	}
+
+	// Pattern: /api/v1/frameworks/{id}, /api/v1/frameworks/{id}/layers, /api/v1/frameworks/{id}/parity, /api/v1/frameworks/{id}/controls
 	path := strings.TrimPrefix(r.URL.Path, "/api/v1/frameworks/")
 	parts := strings.Split(path, "/")
 	if len(parts) == 0 || parts[0] == "" {
@@ -201,8 +492,7 @@ func (s *Server) handleFrameworkSubpath(w http.ResponseWriter, r *http.Request) 
 		return
 	}
 
-	if len(parts) == 1 {
-		// Details of framework
+	if len(parts) == 1 || (len(parts) == 2 && parts[1] == "") {
 		writeJSON(w, http.StatusOK, frameworks.InfoOf(fw))
 		return
 	}
@@ -460,9 +750,14 @@ func (s *Server) handleFrameworkSubpath(w http.ResponseWriter, r *http.Request) 
 			return
 		}
 
-		// Query params: q, family, limit
 		query := r.URL.Query().Get("q")
 		fam := r.URL.Query().Get("family")
+		limit := 0
+		if limStr := strings.TrimSpace(r.URL.Query().Get("limit")); limStr != "" {
+			if limVal, err := strconv.Atoi(limStr); err == nil && limVal > 0 {
+				limit = limVal
+			}
+		}
 
 		matched := controls
 		if fam != "" {
@@ -476,8 +771,11 @@ func (s *Server) handleFrameworkSubpath(w http.ResponseWriter, r *http.Request) 
 			matched = famFiltered
 		}
 
-		if query != "" {
-			matched = frameworks.SearchControls(matched, query, 0)
+		if query != "" || limit > 0 {
+			matched = frameworks.SearchControls(matched, query, limit)
+		}
+		if matched == nil {
+			matched = []frameworks.ControlInfo{}
 		}
 
 		writeJSON(w, http.StatusOK, matched)
@@ -488,6 +786,10 @@ func (s *Server) handleFrameworkSubpath(w http.ResponseWriter, r *http.Request) 
 }
 
 func (s *Server) handleCompare(w http.ResponseWriter, r *http.Request) {
+	if !requireGET(w, r) {
+		return
+	}
+
 	fromID := r.URL.Query().Get("from")
 	toID := r.URL.Query().Get("to")
 
@@ -525,9 +827,49 @@ type validateResponse struct {
 	VectorState   *vectorstate.VectorState `json:"vector_state,omitempty"`
 }
 
+func resolveArtifactKindByName(rawKind string) (schemavalidate.ArtifactKind, bool) {
+	switch strings.ToLower(strings.TrimSpace(rawKind)) {
+	case "catalog":
+		return schemavalidate.KindCatalog, true
+	case "profile":
+		return schemavalidate.KindProfile, true
+	case "ssp", "system-security-plan":
+		return schemavalidate.KindSSP, true
+	case "component-definition", "components", "component":
+		return schemavalidate.KindComponentDefinition, true
+	case "assessment-plan", "ap":
+		return schemavalidate.KindAssessmentPlan, true
+	case "assessment-results", "ar":
+		return schemavalidate.KindAssessmentResults, true
+	case "poam", "plan-of-action-and-milestones":
+		return schemavalidate.KindPOAM, true
+	case "mapping", "mapping-collection":
+		return schemavalidate.KindMapping, true
+	default:
+		return schemavalidate.ArtifactKind{}, false
+	}
+}
+
+func detectArtifactKindFromMap(doc map[string]any) schemavalidate.ArtifactKind {
+	for _, k := range []schemavalidate.ArtifactKind{
+		schemavalidate.KindComponentDefinition,
+		schemavalidate.KindSSP,
+		schemavalidate.KindCatalog,
+		schemavalidate.KindProfile,
+		schemavalidate.KindAssessmentPlan,
+		schemavalidate.KindAssessmentResults,
+		schemavalidate.KindPOAM,
+		schemavalidate.KindMapping,
+	} {
+		if _, ok := doc[k.RootKey]; ok {
+			return k
+		}
+	}
+	return schemavalidate.ArtifactKind{}
+}
+
 func (s *Server) handleValidate(w http.ResponseWriter, r *http.Request) {
-	if r.Method != http.MethodPost {
-		http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
+	if !requirePOST(w, r) {
 		return
 	}
 
@@ -541,7 +883,7 @@ func (s *Server) handleValidate(w http.ResponseWriter, r *http.Request) {
 		SchemaVersion: schemavalidate.SchemaVersion,
 	}
 
-	var raw map[string]interface{}
+	var raw map[string]any
 	if err := json.Unmarshal(body, &raw); err != nil {
 		resp.Valid = false
 		resp.SchemaError = fmt.Sprintf("invalid JSON payload: %v", err)
@@ -549,21 +891,43 @@ func (s *Server) handleValidate(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	var detectedKind schemavalidate.ArtifactKind
-	for _, k := range []schemavalidate.ArtifactKind{
-		schemavalidate.KindComponentDefinition,
-		schemavalidate.KindSSP,
-		schemavalidate.KindCatalog,
-		schemavalidate.KindProfile,
-		schemavalidate.KindAssessmentPlan,
-		schemavalidate.KindAssessmentResults,
-		schemavalidate.KindPOAM,
-		schemavalidate.KindMapping,
-	} {
-		if _, ok := raw[k.RootKey]; ok {
-			detectedKind = k
-			break
+	docBytes := body
+	docMap := raw
+	var explicitKind string
+	if ks, ok := raw["kind"].(string); ok {
+		explicitKind = strings.TrimSpace(ks)
+	}
+	if docVal, hasDoc := raw["document"]; hasDoc {
+		dm, ok := docVal.(map[string]any)
+		if !ok {
+			resp.Valid = false
+			resp.SchemaError = "'document' field must be a JSON object"
+			writeJSON(w, http.StatusOK, resp)
+			return
 		}
+		marshaledDoc, mErr := json.Marshal(dm)
+		if mErr != nil {
+			resp.Valid = false
+			resp.SchemaError = fmt.Sprintf("invalid document object: %v", mErr)
+			writeJSON(w, http.StatusOK, resp)
+			return
+		}
+		docBytes = marshaledDoc
+		docMap = dm
+	}
+
+	var detectedKind schemavalidate.ArtifactKind
+	if explicitKind != "" {
+		resolved, ok := resolveArtifactKindByName(explicitKind)
+		if !ok {
+			resp.Valid = false
+			resp.SchemaError = fmt.Sprintf("unknown OSCAL artifact kind %q", explicitKind)
+			writeJSON(w, http.StatusOK, resp)
+			return
+		}
+		detectedKind = resolved
+	} else {
+		detectedKind = detectArtifactKindFromMap(docMap)
 	}
 
 	if detectedKind.Name == "" {
@@ -574,15 +938,14 @@ func (s *Server) handleValidate(w http.ResponseWriter, r *http.Request) {
 	}
 
 	resp.Kind = detectedKind.Name
-	if err := s.validator.Validate(body, detectedKind); err != nil {
+	if err := s.validator.Validate(docBytes, detectedKind); err != nil {
 		resp.Valid = false
 		resp.SchemaError = err.Error()
 	} else {
 		resp.Valid = true
 	}
 
-	// Compute Vector State
-	st, _ := vectorstate.EvaluateBytes(body, "")
+	st, _ := vectorstate.EvaluateBytes(docBytes, "")
 	resp.VectorState = st
 
 	writeJSON(w, http.StatusOK, resp)
@@ -611,8 +974,9 @@ func (s *Server) getOrLoadControls(fw frameworks.Framework) ([]frameworks.Contro
 	return ctrls, nil
 }
 
-func writeJSON(w http.ResponseWriter, status int, data interface{}) {
+func writeJSON(w http.ResponseWriter, status int, data any) {
 	w.Header().Set("Content-Type", "application/json; charset=utf-8")
+	w.Header().Set("X-Content-Type-Options", "nosniff")
 	w.WriteHeader(status)
 	_ = json.NewEncoder(w).Encode(data)
 }
@@ -624,17 +988,28 @@ func sanitizeHTTPHost(raw string) string {
 	}
 	for i := 0; i < len(s); i++ {
 		c := s[i]
-		if !((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9') ||
-			c == '.' || c == '-' || c == ':' || c == '[' || c == ']') {
+		validHostChar := (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9') ||
+			c == '.' || c == '-' || c == ':' || c == '[' || c == ']'
+		if !validHostChar {
 			return ""
 		}
 	}
 	return s
 }
 
-func (s *Server) handleUTCPManual(w http.ResponseWriter, r *http.Request) {
-	if r.Method != http.MethodGet {
-		http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
+func parseTruthyParam(v string) bool {
+	switch strings.ToLower(strings.TrimSpace(v)) {
+	case "1", "true", "yes":
+		return true
+	default:
+		return false
+	}
+}
+
+// ServeUTCPManual renders the UTCP v1.0.1 manual with query support for ?include_cli=true,
+// ?include_grpc=true, and ?profile=extended, plus optional bearerTokenEnvVar.
+func ServeUTCPManual(w http.ResponseWriter, r *http.Request, grpcAddr, bearerTokenEnvVar string) {
+	if !requireGET(w, r) {
 		return
 	}
 	scheme := "http://"
@@ -645,15 +1020,45 @@ func (s *Server) handleUTCPManual(w http.ResponseWriter, r *http.Request) {
 	if host := sanitizeHTTPHost(r.Host); host != "" {
 		baseURL = scheme + host
 	}
-	manual := utcp.GenerateManual(utcp.ManualOptions{
-		BaseHTTPURL: baseURL,
+
+	q := r.URL.Query()
+	includeCLI := parseTruthyParam(q.Get("include_cli"))
+	includeGRPC := parseTruthyParam(q.Get("include_grpc"))
+
+	manual := utcp.BuildManualWithOptions(utcp.ManualOptions{
+		BaseURL:           baseURL,
+		GRPCAddr:          grpcAddr,
+		IncludeHTTP:       true,
+		IncludeCLI:        includeCLI,
+		IncludeGRPC:       includeGRPC,
+		BearerTokenEnvVar: bearerTokenEnvVar,
 	})
+
+	if strings.EqualFold(strings.TrimSpace(q.Get("profile")), "extended") {
+		writeJSON(w, http.StatusOK, manual.ExtendedEnvelope())
+		return
+	}
 	writeJSON(w, http.StatusOK, manual)
 }
 
+func (s *Server) handleUTCPManual(w http.ResponseWriter, r *http.Request) {
+	ServeUTCPManual(w, r, s.grpcAddr, s.bearerTokenEnvVar)
+}
+
+func (s *Server) handleUTCPEcosystem(w http.ResponseWriter, r *http.Request) {
+	if !requireGET(w, r) {
+		return
+	}
+	writeJSON(w, http.StatusOK, map[string]any{
+		"utcp_version":      utcp.SpecVersion,
+		"organization_url":  utcp.OrganizationURL,
+		"specification_url": utcp.SpecRepositoryURL,
+		"repositories":      utcp.SupportedRepositories,
+	})
+}
+
 func (s *Server) handleUTCPValidate(w http.ResponseWriter, r *http.Request) {
-	if r.Method != http.MethodPost {
-		http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
+	if !requirePOST(w, r) {
 		return
 	}
 	body, err := io.ReadAll(http.MaxBytesReader(w, r.Body, 10<<20))
@@ -670,16 +1075,14 @@ func (s *Server) handleUTCPValidate(w http.ResponseWriter, r *http.Request) {
 }
 
 func (s *Server) handleOntology(w http.ResponseWriter, r *http.Request) {
-	if r.Method != http.MethodGet {
-		http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
+	if !requireGET(w, r) {
 		return
 	}
 	writeJSON(w, http.StatusOK, ontology.CanonicalSpec())
 }
 
 func (s *Server) handleGraphStats(w http.ResponseWriter, r *http.Request) {
-	if r.Method != http.MethodGet {
-		http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
+	if !requireGET(w, r) {
 		return
 	}
 	ug, err := graph.DefaultUnifiedGraph()
@@ -691,14 +1094,17 @@ func (s *Server) handleGraphStats(w http.ResponseWriter, r *http.Request) {
 }
 
 func (s *Server) handleGraphCrosswalk(w http.ResponseWriter, r *http.Request) {
-	if r.Method != http.MethodGet {
-		http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
+	if !requireGET(w, r) {
 		return
 	}
 	ctrl := strings.TrimSpace(r.URL.Query().Get("control"))
 	if ctrl == "" {
 		ctrl = "ac-2"
 	}
+	if fw := strings.TrimSpace(r.URL.Query().Get("framework")); fw != "" && !strings.Contains(ctrl, ":") {
+		ctrl = fw + ":" + ctrl
+	}
+
 	ug, err := graph.DefaultUnifiedGraph()
 	if err != nil {
 		http.Error(w, fmt.Sprintf("unified graph error: %v", err), http.StatusInternalServerError)
@@ -713,11 +1119,13 @@ func (s *Server) handleGraphCrosswalk(w http.ResponseWriter, r *http.Request) {
 }
 
 func (s *Server) handleGraphBlastRadius(w http.ResponseWriter, r *http.Request) {
-	if r.Method != http.MethodGet {
-		http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
+	if !requireGET(w, r) {
 		return
 	}
-	target := strings.TrimSpace(r.URL.Query().Get("target"))
+	target := strings.TrimSpace(r.URL.Query().Get("node"))
+	if target == "" {
+		target = strings.TrimSpace(r.URL.Query().Get("target"))
+	}
 	if target == "" {
 		target = "CVE-2024-3400"
 	}
@@ -740,12 +1148,34 @@ func (s *Server) handleGraphBlastRadius(w http.ResponseWriter, r *http.Request) 
 	writeJSON(w, http.StatusOK, rep)
 }
 
-func (s *Server) handleGraphExport(w http.ResponseWriter, r *http.Request) {
-	if r.Method != http.MethodGet {
-		http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
+func (s *Server) handleGraphReconcile(w http.ResponseWriter, r *http.Request) {
+	if !requireGET(w, r) {
 		return
 	}
-	target := strings.TrimSpace(r.URL.Query().Get("target"))
+	ug, err := graph.DefaultUnifiedGraph()
+	if err != nil {
+		http.Error(w, fmt.Sprintf("unified graph error: %v", err), http.StatusInternalServerError)
+		return
+	}
+	rep, err := ug.ReconcileInvariants()
+	if err != nil {
+		http.Error(w, fmt.Sprintf("reconcile error: %v", err), http.StatusInternalServerError)
+		return
+	}
+	writeJSON(w, http.StatusOK, rep)
+}
+
+func (s *Server) handleGraphExport(w http.ResponseWriter, r *http.Request) {
+	if !requireGET(w, r) {
+		return
+	}
+	target := strings.TrimSpace(r.URL.Query().Get("framework"))
+	if target == "" {
+		target = strings.TrimSpace(r.URL.Query().Get("target"))
+	}
+	if target == "" {
+		target = strings.TrimSpace(r.URL.Query().Get("node"))
+	}
 	if target == "" {
 		target = "CVE-2024-3400"
 	}
@@ -781,8 +1211,7 @@ func (s *Server) handleGraphExport(w http.ResponseWriter, r *http.Request) {
 }
 
 func (s *Server) handleFeeds(w http.ResponseWriter, r *http.Request) {
-	if r.Method != http.MethodGet {
-		http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
+	if !requireGET(w, r) {
 		return
 	}
 	feedID := strings.TrimSpace(r.URL.Query().Get("feed"))
@@ -798,39 +1227,136 @@ func (s *Server) handleFeeds(w http.ResponseWriter, r *http.Request) {
 	writeJSON(w, http.StatusOK, feeds.ListFeeds())
 }
 
+type feedsSyncRequest struct {
+	Offline *bool    `json:"offline"`
+	FeedIDs []string `json:"feed_ids"`
+	FeedID  string   `json:"feed_id"`
+}
+
+func resolveFeedCheckpointDir() string {
+	if envDir := strings.TrimSpace(os.Getenv("XOSCAL_FEED_CACHE_DIR")); envDir != "" {
+		return envDir
+	}
+	return filepath.Join(os.TempDir(), "xoscal-feeds")
+}
+
 func (s *Server) handleFeedsSync(w http.ResponseWriter, r *http.Request) {
-	if r.Method != http.MethodPost && r.Method != http.MethodGet {
-		http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
+	if !requirePOST(w, r) {
 		return
 	}
-	feedID := strings.TrimSpace(r.URL.Query().Get("feed"))
-	receipt, err := feeds.SyncFeeds(r.Context(), feeds.SyncOptions{
-		FeedID:  feedID,
-		Offline: true,
-	})
-	if err != nil {
-		http.Error(w, err.Error(), http.StatusBadRequest)
-		return
+
+	var reqPayload feedsSyncRequest
+	if r.Body != nil {
+		rawBody, err := io.ReadAll(http.MaxBytesReader(w, r.Body, 1<<20))
+		if err != nil {
+			http.Error(w, fmt.Sprintf("read sync body: %v", err), http.StatusBadRequest)
+			return
+		}
+		trimmed := bytes.TrimSpace(rawBody)
+		if len(trimmed) > 0 {
+			if err := json.Unmarshal(trimmed, &reqPayload); err != nil {
+				http.Error(w, fmt.Sprintf("invalid sync JSON body: %v", err), http.StatusBadRequest)
+				return
+			}
+		}
 	}
+
+	offline := true
+	if reqPayload.Offline != nil {
+		offline = *reqPayload.Offline
+	}
+
+	var requestedFeeds []string
+	for _, id := range reqPayload.FeedIDs {
+		if trimmed := strings.TrimSpace(id); trimmed != "" {
+			requestedFeeds = append(requestedFeeds, trimmed)
+		}
+	}
+	if len(requestedFeeds) == 0 {
+		if id := strings.TrimSpace(reqPayload.FeedID); id != "" {
+			requestedFeeds = append(requestedFeeds, id)
+		} else if qFeed := strings.TrimSpace(r.URL.Query().Get("feed")); qFeed != "" {
+			requestedFeeds = append(requestedFeeds, qFeed)
+		}
+	}
+
+	checkpointDir := resolveFeedCheckpointDir()
+
+	feedSyncMu.Lock()
+	defer feedSyncMu.Unlock()
+
+	var receipt *feeds.FeedSyncReceipt
+	if len(requestedFeeds) <= 1 {
+		singleID := ""
+		if len(requestedFeeds) == 1 {
+			singleID = requestedFeeds[0]
+		}
+		rcpt, err := feeds.SyncFeeds(r.Context(), feeds.SyncOptions{
+			FeedID:        singleID,
+			Offline:       offline,
+			CheckpointDir: checkpointDir,
+		})
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusBadRequest)
+			return
+		}
+		receipt = rcpt
+	} else {
+		var combinedEntries []feeds.FeedDigestEntry
+		totalNodes := 0
+		totalEdges := 0
+		fallbackCount := 0
+		var lastRcpt *feeds.FeedSyncReceipt
+		for _, fid := range requestedFeeds {
+			rcpt, err := feeds.SyncFeeds(r.Context(), feeds.SyncOptions{
+				FeedID:        fid,
+				Offline:       offline,
+				CheckpointDir: checkpointDir,
+			})
+			if err != nil {
+				http.Error(w, err.Error(), http.StatusBadRequest)
+				return
+			}
+			lastRcpt = rcpt
+			combinedEntries = append(combinedEntries, rcpt.Feeds...)
+			totalNodes += rcpt.TotalNodes
+			totalEdges += rcpt.TotalEdges
+			fallbackCount += rcpt.FallbackCount
+		}
+		if lastRcpt != nil {
+			cp := *lastRcpt
+			cp.Feeds = combinedEntries
+			cp.TotalNodes = totalNodes
+			cp.TotalEdges = totalEdges
+			cp.FallbackCount = fallbackCount
+			if !offline && fallbackCount > 0 {
+				cp.OperationalMode = "DEGRADED"
+			}
+			receipt = &cp
+		}
+	}
+
+	_, _ = graph.ReloadDefaultUnifiedGraph(r.Context())
+
 	writeJSON(w, http.StatusOK, receipt)
 }
 
 // OpenBrowser attempts to open the specified URL in the system's default browser.
-func OpenBrowser(url string) error {
-	if !strings.HasPrefix(url, "http://127.0.0.1:") && !strings.HasPrefix(url, "http://localhost:") {
-		return fmt.Errorf("refusing to open non-local browser URL: %s", url)
+func OpenBrowser(urlStr string) error {
+	if !strings.HasPrefix(urlStr, "http://127.0.0.1:") && !strings.HasPrefix(urlStr, "http://localhost:") {
+		return fmt.Errorf("refusing to open non-local browser URL: %s", urlStr)
 	}
 	var cmd *exec.Cmd
 	switch runtime.GOOS {
 	case "darwin":
-		// #nosec G204 -- url is verified above to be a local loopback HTTP listener URL.
-		cmd = exec.Command("open", url)
+		// #nosec G204 -- urlStr is verified above to be a local loopback HTTP listener URL.
+		cmd = exec.Command("open", urlStr)
 	case "linux":
-		// #nosec G204 -- url is verified above to be a local loopback HTTP listener URL.
-		cmd = exec.Command("xdg-open", url)
+		// #nosec G204 -- urlStr is verified above to be a local loopback HTTP listener URL.
+		cmd = exec.Command("xdg-open", urlStr)
 	case "windows":
-		// #nosec G204 -- url is verified above to be a local loopback HTTP listener URL.
-		cmd = exec.Command("rundll32", "url.dll,FileProtocolHandler", url)
+		// #nosec G204 -- urlStr is verified above to be a local loopback HTTP listener URL.
+		cmd = exec.Command("rundll32", "url.dll,FileProtocolHandler", urlStr)
 	default:
 		return fmt.Errorf("unsupported platform")
 	}

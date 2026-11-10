@@ -21,7 +21,7 @@ func Export(outDir string, f Framework) error {
 // to outDir/<framework-id>/, validating each document against the official
 // NIST OSCAL 1.2.3 JSON schema and writing cryptographic SHA-256 sidecars.
 func ExportAllLayers(outDir string, f Framework) error {
-	v, err := schemavalidate.NewValidator()
+	v, err := sharedSchemaValidator()
 	if err != nil {
 		return fmt.Errorf("init schema validator: %w", err)
 	}
@@ -77,7 +77,7 @@ func ExportAllLayers(outDir string, f Framework) error {
 // validation and SHA-256 sidecars. This preserves exact 1:1 compatibility with manifest
 // export pipelines and external semantic scope validators.
 func ExportAuthoritative(outDir string, f Framework) error {
-	v, err := schemavalidate.NewValidator()
+	v, err := sharedSchemaValidator()
 	if err != nil {
 		return fmt.Errorf("init schema validator: %w", err)
 	}

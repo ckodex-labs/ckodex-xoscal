@@ -214,9 +214,10 @@ def make_candidate(root):
         target = root / 'frameworks' / ref / 'catalog.json'
         write_json(target, {'catalog': {'uuid': 'fixture-' + ref, 'metadata': {'title': 'Synthetic contract fixture', 'oscal-version': '1.2.3'}}})
         put(root, target.relative_to(root).as_posix() + '.sha256', ('sha256:' + requirements.digest(target) + '\n').encode())
-    profile = root / POLICY['profile_path']
-    write_json(profile, {'profile': {'uuid': 'fixture-profile', 'metadata': {'title': 'Synthetic contract fixture', 'oscal-version': '1.2.3'}}})
-    put(root, POLICY['profile_path'] + '.sha256', ('sha256:' + requirements.digest(profile) + '\n').encode())
+    for prof_rel in POLICY['profile_paths']:
+        profile = root / prof_rel
+        write_json(profile, {'profile': {'uuid': 'fixture-profile-' + Path(prof_rel).parent.name, 'metadata': {'title': 'Synthetic contract fixture', 'oscal-version': '1.2.3'}}})
+        put(root, prof_rel + '.sha256', ('sha256:' + requirements.digest(profile) + '\n').encode())
     write_json(root / 'openapi.json', {'openapi': '3.0.0', 'paths': {'/fixture': {'get': {}}}})
     put(root, 'scripts/install.sh', b'#!/bin/sh\n# fixture script only\n')
     put(root, 'release/xoscal-server', b'fixture standalone binary\n')
@@ -225,7 +226,8 @@ def make_candidate(root):
     for name in POLICY['ci_outputs']:
         put(root, 'evidence/ci/' + name, b'fixture completed gate\n')
     constraint_subjects = {ref + '/catalog.json': 'catalog' for ref in POLICY['framework_ids']}
-    constraint_subjects[POLICY['profile_path'].removeprefix('frameworks/')] = 'profile'
+    for prof_rel in POLICY['profile_paths']:
+        constraint_subjects[prof_rel.removeprefix('frameworks/')] = 'profile'
     rows = []
     for path, kind in sorted(constraint_subjects.items()):
         rows.append('\t'.join((path, kind, '0', requirements.digest(root / 'frameworks' / path))))
@@ -235,6 +237,7 @@ def make_candidate(root):
     semantic = requirements.load_module('fixture_oscal_semantic_scope', 'oscal-semantic-scope.py')
     write_json(root / 'evidence/ci/constraints/semantic-scope.json', semantic.evaluate(root / 'frameworks'))
     put(root, 'evidence/ci/constraints.ok', b'oscal-constraints-ok\n')
+    put(root, 'evidence/ci/parity.ok', b'oscal-parity-ok\n')
     put(root, 'evidence/ci/tidy.ok', b'module-tidy-ok\n')
     stage = 'evidence/security'
     put(root, stage + '/govulncheck.json', (json.dumps({'config': {'scan_level': 'symbol'}}) + '\n' + json.dumps({'progress': {'message': 'fixture completed'}}) + '\n').encode())
@@ -393,7 +396,7 @@ class RequiredOutputTests(unittest.TestCase):
         rows = self.constraint_rows()
         for index, row in enumerate(rows):
             columns = row.split('\t')
-            if columns[1] == 'profile':
+            if columns[0] == POLICY['profile_path'].removeprefix('frameworks/'):
                 columns[3] = requirements.digest(path);rows[index] = '\t'.join(columns)
         self.save_constraint_rows(rows)
         self.reject('semantic tool scope rejected actual framework bytes')

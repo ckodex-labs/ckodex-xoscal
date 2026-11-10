@@ -2,7 +2,7 @@
 ARG LANCEDB=false
 
 # Build stage
-FROM golang:1.25-bookworm@sha256:e401dae1bf814e29204a8cb7915682e1780951e609ca0dd8865ee1937f510c48 AS builder
+FROM golang:1.26.10-bookworm@sha256:632dff7351799a5a9954a48dc06670ade72ee44e8c351cdc0e5a57af2fea21af AS builder
 ARG LANCEDB
 WORKDIR /app
 
@@ -35,11 +35,13 @@ RUN if [ "$LANCEDB" = "true" ]; then \
     && cd /app \
     && CGO_ENABLED=1 go build -tags lancedb -ldflags="-s -w -X main.version=$(git describe --tags --always 2>/dev/null || echo dev)" -o /bin/xoscal-server ./server/cmd/xoscal-server; \
     else \
-    CGO_ENABLED=0 go build -ldflags="-s -w -X main.version=$(git describe --tags --always 2>/dev/null || echo dev)" -o /bin/xoscal-server ./server/cmd/xoscal-server; \
+    CGO_ENABLED=0 go build -trimpath -ldflags="-s -w -X main.version=$(git describe --tags --always 2>/dev/null || echo dev)" -o /bin/xoscal-server ./server/cmd/xoscal-server; \
     fi
 
-RUN CGO_ENABLED=0 go build -ldflags="-s -w" -o /bin/xoscal-backup ./server/cmd/xoscal-backup
-RUN CGO_ENABLED=0 go build -ldflags="-s -w" -o /bin/xoscal-ctl ./server/cmd/xoscal-ctl
+RUN CGO_ENABLED=0 go build -trimpath -ldflags="-s -w" -o /bin/xoscal ./server/cmd/xoscal
+RUN CGO_ENABLED=0 go build -trimpath -ldflags="-s -w" -o /bin/xoscal-backup ./server/cmd/xoscal-backup
+RUN CGO_ENABLED=0 go build -trimpath -ldflags="-s -w" -o /bin/xoscal-ctl ./server/cmd/xoscal-ctl
+RUN CGO_ENABLED=0 go build -trimpath -ldflags="-s -w" -o /bin/xoscal-gateway ./server/cmd/xoscal-gateway
 
 # The default release path is static. The optional native path needs glibc.
 # LanceDB's Rust toolchain/native library are not release-validated here; this
@@ -48,11 +50,13 @@ FROM gcr.io/distroless/static-debian13:nonroot@sha256:e2e927ec666bae08560abb3c55
 FROM gcr.io/distroless/base-debian13:nonroot@sha256:a0d70d6a97cd697d9362bc2aae4a6560dd65817e365d0043b07325a97975dc91 AS runtime-true
 FROM runtime-${LANCEDB} AS runtime
 WORKDIR /data
-ENV XOSCAL_DATA_DIR=/data/frameworks
+ENV XOSCAL_DATA_DIR=/usr/share/xoscal/data/frameworks
 COPY --from=builder /bin/xoscal-server /xoscal-server
+COPY --from=builder /bin/xoscal /xoscal
 COPY --from=builder /bin/xoscal-backup /xoscal-backup
 COPY --from=builder /bin/xoscal-ctl /xoscal-ctl
-COPY --from=builder /app/data/frameworks /data/frameworks
+COPY --from=builder /bin/xoscal-gateway /xoscal-gateway
+COPY --from=builder /app/data/frameworks /usr/share/xoscal/data/frameworks
 # Mount actual application YAML at /etc/xoscal/config.yaml, plus its referenced
 # TLS/auth files. k8s/server/configmap.yaml is a Kubernetes wrapper, not that file.
 EXPOSE 50051 9090

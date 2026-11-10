@@ -33,6 +33,7 @@
     "constraints/cisa-vendor-scrm-catalog.log",
     "constraints/cjis-version-5.9.5-catalog.log",
     "constraints/dfs-500-2023-11-catalog.log",
+    "constraints/cccs-itsp-10-033-catalog.log",
     "constraints/cccs-itsg-33-catalog.log",
     "constraints/cccs-medium-cloud-pbmm-catalog.log",
     "constraints/cybersecure-canada-catalog.log",
@@ -62,6 +63,8 @@
     "constraints/eu-ai-act-catalog.log",
     "constraints/iso-iec-42001-catalog.log",
     "constraints/cccs-medium-cloud-pbmm-profile.log",
+    "constraints/cccs-itsp-10-033-profile.log",
+    "parity.ok",
     "tidy.ok",
     "constraints/semantic-scope.json"
   ],
@@ -91,6 +94,7 @@
     "cisa-vendor-scrm",
     "cjis-version-5.9.5",
     "dfs-500-2023-11",
+    "cccs-itsp-10-033",
     "cccs-itsg-33",
     "cccs-medium-cloud-pbmm",
     "cybersecure-canada",
@@ -120,7 +124,7 @@
     "eu-ai-act",
     "iso-iec-42001"
   ],
-  "framework_manifest_sha256": "ed8c5c6350aca5bdade838a2435d83f1f31d6ccfd4757b9ebcc1e2d92625fed8",
+  "framework_manifest_sha256": "e65a98a0d21b83d989ddb3de039adc9ed0be63540c0a2016a88a0c31a4c0e700",
   "image_arches": [
     "amd64",
     "arm64"
@@ -155,6 +159,10 @@
   ],
   "policy_version": 1,
   "profile_path": "frameworks/cccs-medium-cloud-pbmm/profile.json",
+  "profile_paths": [
+    "frameworks/cccs-medium-cloud-pbmm/profile.json",
+    "frameworks/cccs-itsp-10-033/profile.json"
+  ],
   "sbom_files": [
     "sbom.cyclonedx.json",
     "sbom-assessment-results.oscal.json",

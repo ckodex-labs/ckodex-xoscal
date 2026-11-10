@@ -4,7 +4,7 @@
       "href": "./system-security-plan.json"
     },
     "metadata": {
-      "last-modified": "2026-11-08T01:42:11Z",
+      "last-modified": "2026-11-08T00:31:04Z",
       "oscal-version": "1.2.3",
       "title": "EU Artificial Intelligence Act (AI Act) Security Assessment Plan Template",
       "version": "2"
@@ -13,7 +13,1049 @@
       "control-selections": [
         {
           "description": "All controls in EU Artificial Intelligence Act (AI Act)",
-          "include-all": {}
+          "include-controls": [
+            {
+              "control-id": "_10.2"
+            },
+            {
+              "control-id": "_10.2.a"
+            },
+            {
+              "control-id": "_10.2.b"
+            },
+            {
+              "control-id": "_10.2.c"
+            },
+            {
+              "control-id": "_10.2.d"
+            },
+            {
+              "control-id": "_10.2.e"
+            },
+            {
+              "control-id": "_10.2.f"
+            },
+            {
+              "control-id": "_10.2.g"
+            },
+            {
+              "control-id": "_10.2.h"
+            },
+            {
+              "control-id": "_10.3"
+            },
+            {
+              "control-id": "_10.4"
+            },
+            {
+              "control-id": "_10.5"
+            },
+            {
+              "control-id": "_10.5.a"
+            },
+            {
+              "control-id": "_10.5.b"
+            },
+            {
+              "control-id": "_10.5.c"
+            },
+            {
+              "control-id": "_10.5.d"
+            },
+            {
+              "control-id": "_10.5.e"
+            },
+            {
+              "control-id": "_10.5.f"
+            },
+            {
+              "control-id": "_10.6"
+            },
+            {
+              "control-id": "_11.1"
+            },
+            {
+              "control-id": "_11.2"
+            },
+            {
+              "control-id": "_12.1"
+            },
+            {
+              "control-id": "_12.2"
+            },
+            {
+              "control-id": "_12.2.a"
+            },
+            {
+              "control-id": "_12.2.b"
+            },
+            {
+              "control-id": "_12.2.c"
+            },
+            {
+              "control-id": "_12.3"
+            },
+            {
+              "control-id": "_12.3.a"
+            },
+            {
+              "control-id": "_12.3.b"
+            },
+            {
+              "control-id": "_12.3.c"
+            },
+            {
+              "control-id": "_12.3.d"
+            },
+            {
+              "control-id": "_13.1"
+            },
+            {
+              "control-id": "_13.2"
+            },
+            {
+              "control-id": "_13.3"
+            },
+            {
+              "control-id": "_13.3.a"
+            },
+            {
+              "control-id": "_13.3.b"
+            },
+            {
+              "control-id": "_13.3.b.i"
+            },
+            {
+              "control-id": "_13.3.b.ii"
+            },
+            {
+              "control-id": "_13.3.b.iii"
+            },
+            {
+              "control-id": "_13.3.b.iv"
+            },
+            {
+              "control-id": "_13.3.b.v"
+            },
+            {
+              "control-id": "_13.3.b.vi"
+            },
+            {
+              "control-id": "_13.3.b.vii"
+            },
+            {
+              "control-id": "_13.3.c"
+            },
+            {
+              "control-id": "_13.3.d"
+            },
+            {
+              "control-id": "_13.3.e"
+            },
+            {
+              "control-id": "_13.3.f"
+            },
+            {
+              "control-id": "_14.1"
+            },
+            {
+              "control-id": "_14.2"
+            },
+            {
+              "control-id": "_14.3"
+            },
+            {
+              "control-id": "_14.3.a"
+            },
+            {
+              "control-id": "_14.3.b"
+            },
+            {
+              "control-id": "_14.4"
+            },
+            {
+              "control-id": "_14.4.a"
+            },
+            {
+              "control-id": "_14.4.b"
+            },
+            {
+              "control-id": "_14.4.c"
+            },
+            {
+              "control-id": "_14.4.d"
+            },
+            {
+              "control-id": "_14.4.e"
+            },
+            {
+              "control-id": "_14.5"
+            },
+            {
+              "control-id": "_15.1"
+            },
+            {
+              "control-id": "_15.3"
+            },
+            {
+              "control-id": "_15.4"
+            },
+            {
+              "control-id": "_15.5"
+            },
+            {
+              "control-id": "_16.a"
+            },
+            {
+              "control-id": "_16.b"
+            },
+            {
+              "control-id": "_16.c"
+            },
+            {
+              "control-id": "_16.d"
+            },
+            {
+              "control-id": "_16.e"
+            },
+            {
+              "control-id": "_16.f"
+            },
+            {
+              "control-id": "_16.g"
+            },
+            {
+              "control-id": "_16.h"
+            },
+            {
+              "control-id": "_16.i"
+            },
+            {
+              "control-id": "_16.j"
+            },
+            {
+              "control-id": "_16.k"
+            },
+            {
+              "control-id": "_16.l"
+            },
+            {
+              "control-id": "_17.1"
+            },
+            {
+              "control-id": "_17.1.a"
+            },
+            {
+              "control-id": "_17.1.b"
+            },
+            {
+              "control-id": "_17.1.c"
+            },
+            {
+              "control-id": "_17.1.d"
+            },
+            {
+              "control-id": "_17.1.e"
+            },
+            {
+              "control-id": "_17.1.f"
+            },
+            {
+              "control-id": "_17.1.g"
+            },
+            {
+              "control-id": "_17.1.h"
+            },
+            {
+              "control-id": "_17.1.i"
+            },
+            {
+              "control-id": "_17.1.j"
+            },
+            {
+              "control-id": "_17.1.k"
+            },
+            {
+              "control-id": "_17.1.l"
+            },
+            {
+              "control-id": "_17.1.m"
+            },
+            {
+              "control-id": "_17.2"
+            },
+            {
+              "control-id": "_17.3"
+            },
+            {
+              "control-id": "_17.4"
+            },
+            {
+              "control-id": "_18.1"
+            },
+            {
+              "control-id": "_18.1.a"
+            },
+            {
+              "control-id": "_18.1.b"
+            },
+            {
+              "control-id": "_18.1.c"
+            },
+            {
+              "control-id": "_18.1.d"
+            },
+            {
+              "control-id": "_18.1.e"
+            },
+            {
+              "control-id": "_18.3"
+            },
+            {
+              "control-id": "_20.1"
+            },
+            {
+              "control-id": "_20.2"
+            },
+            {
+              "control-id": "_21.1"
+            },
+            {
+              "control-id": "_21.2"
+            },
+            {
+              "control-id": "_22.1"
+            },
+            {
+              "control-id": "_22.2"
+            },
+            {
+              "control-id": "_22.3"
+            },
+            {
+              "control-id": "_22.3.a"
+            },
+            {
+              "control-id": "_22.3.b"
+            },
+            {
+              "control-id": "_22.3.c"
+            },
+            {
+              "control-id": "_22.3.d"
+            },
+            {
+              "control-id": "_22.3.e"
+            },
+            {
+              "control-id": "_22.4"
+            },
+            {
+              "control-id": "_23.1"
+            },
+            {
+              "control-id": "_23.1.a"
+            },
+            {
+              "control-id": "_23.1.b"
+            },
+            {
+              "control-id": "_23.1.c"
+            },
+            {
+              "control-id": "_23.1.d"
+            },
+            {
+              "control-id": "_23.2"
+            },
+            {
+              "control-id": "_23.3"
+            },
+            {
+              "control-id": "_23.4"
+            },
+            {
+              "control-id": "_23.5"
+            },
+            {
+              "control-id": "_23.6"
+            },
+            {
+              "control-id": "_23.7"
+            },
+            {
+              "control-id": "_24.1"
+            },
+            {
+              "control-id": "_24.2"
+            },
+            {
+              "control-id": "_24.3"
+            },
+            {
+              "control-id": "_24.4"
+            },
+            {
+              "control-id": "_24.5"
+            },
+            {
+              "control-id": "_24.6"
+            },
+            {
+              "control-id": "_25.1"
+            },
+            {
+              "control-id": "_25.1.a"
+            },
+            {
+              "control-id": "_25.1.b"
+            },
+            {
+              "control-id": "_25.1.c"
+            },
+            {
+              "control-id": "_25.2"
+            },
+            {
+              "control-id": "_25.3"
+            },
+            {
+              "control-id": "_25.3.a"
+            },
+            {
+              "control-id": "_25.3.b"
+            },
+            {
+              "control-id": "_25.4"
+            },
+            {
+              "control-id": "_26.1"
+            },
+            {
+              "control-id": "_26.10"
+            },
+            {
+              "control-id": "_26.11"
+            },
+            {
+              "control-id": "_26.12"
+            },
+            {
+              "control-id": "_26.2"
+            },
+            {
+              "control-id": "_26.4"
+            },
+            {
+              "control-id": "_26.5"
+            },
+            {
+              "control-id": "_26.6"
+            },
+            {
+              "control-id": "_26.7"
+            },
+            {
+              "control-id": "_26.8"
+            },
+            {
+              "control-id": "_26.9"
+            },
+            {
+              "control-id": "_27.1"
+            },
+            {
+              "control-id": "_27.1.a"
+            },
+            {
+              "control-id": "_27.1.b"
+            },
+            {
+              "control-id": "_27.1.c"
+            },
+            {
+              "control-id": "_27.1.d"
+            },
+            {
+              "control-id": "_27.1.e"
+            },
+            {
+              "control-id": "_27.1.f"
+            },
+            {
+              "control-id": "_27.2"
+            },
+            {
+              "control-id": "_27.3"
+            },
+            {
+              "control-id": "_27.4"
+            },
+            {
+              "control-id": "_41.5"
+            },
+            {
+              "control-id": "_42.1"
+            },
+            {
+              "control-id": "_42.2"
+            },
+            {
+              "control-id": "_43.1"
+            },
+            {
+              "control-id": "_43.1.a"
+            },
+            {
+              "control-id": "_43.1.b"
+            },
+            {
+              "control-id": "_43.2"
+            },
+            {
+              "control-id": "_43.3"
+            },
+            {
+              "control-id": "_43.4"
+            },
+            {
+              "control-id": "_44.2"
+            },
+            {
+              "control-id": "_44.3"
+            },
+            {
+              "control-id": "_46.7"
+            },
+            {
+              "control-id": "_47.1"
+            },
+            {
+              "control-id": "_47.2"
+            },
+            {
+              "control-id": "_47.3"
+            },
+            {
+              "control-id": "_47.4"
+            },
+            {
+              "control-id": "_48.2"
+            },
+            {
+              "control-id": "_48.3"
+            },
+            {
+              "control-id": "_48.4"
+            },
+            {
+              "control-id": "_48.5"
+            },
+            {
+              "control-id": "_49.1"
+            },
+            {
+              "control-id": "_49.2"
+            },
+            {
+              "control-id": "_49.3"
+            },
+            {
+              "control-id": "_49.5"
+            },
+            {
+              "control-id": "_5.1.a"
+            },
+            {
+              "control-id": "_5.1.b"
+            },
+            {
+              "control-id": "_5.1.c"
+            },
+            {
+              "control-id": "_5.1.c.i"
+            },
+            {
+              "control-id": "_5.1.c.ii"
+            },
+            {
+              "control-id": "_5.1.d"
+            },
+            {
+              "control-id": "_5.1.e"
+            },
+            {
+              "control-id": "_5.1.f"
+            },
+            {
+              "control-id": "_5.1.g"
+            },
+            {
+              "control-id": "_5.1.h"
+            },
+            {
+              "control-id": "_5.1.h.i"
+            },
+            {
+              "control-id": "_5.1.h.ii"
+            },
+            {
+              "control-id": "_5.1.h.iii"
+            },
+            {
+              "control-id": "_5.2"
+            },
+            {
+              "control-id": "_5.2.a"
+            },
+            {
+              "control-id": "_5.2.b"
+            },
+            {
+              "control-id": "_5.3"
+            },
+            {
+              "control-id": "_5.4"
+            },
+            {
+              "control-id": "_50.1"
+            },
+            {
+              "control-id": "_50.2"
+            },
+            {
+              "control-id": "_50.3"
+            },
+            {
+              "control-id": "_50.4"
+            },
+            {
+              "control-id": "_50.5"
+            },
+            {
+              "control-id": "_51.1"
+            },
+            {
+              "control-id": "_51.2"
+            },
+            {
+              "control-id": "_52.1"
+            },
+            {
+              "control-id": "_52.2"
+            },
+            {
+              "control-id": "_53.1.a"
+            },
+            {
+              "control-id": "_53.1.b"
+            },
+            {
+              "control-id": "_53.1.b.i"
+            },
+            {
+              "control-id": "_53.1.b.ii"
+            },
+            {
+              "control-id": "_53.1.c"
+            },
+            {
+              "control-id": "_53.1.d"
+            },
+            {
+              "control-id": "_53.2"
+            },
+            {
+              "control-id": "_53.3"
+            },
+            {
+              "control-id": "_53.4"
+            },
+            {
+              "control-id": "_54.1"
+            },
+            {
+              "control-id": "_54.2"
+            },
+            {
+              "control-id": "_54.3"
+            },
+            {
+              "control-id": "_54.3.a"
+            },
+            {
+              "control-id": "_54.3.b"
+            },
+            {
+              "control-id": "_54.3.c"
+            },
+            {
+              "control-id": "_54.3.d"
+            },
+            {
+              "control-id": "_54.4"
+            },
+            {
+              "control-id": "_54.5"
+            },
+            {
+              "control-id": "_54.6"
+            },
+            {
+              "control-id": "_55.1"
+            },
+            {
+              "control-id": "_55.1.a"
+            },
+            {
+              "control-id": "_55.1.b"
+            },
+            {
+              "control-id": "_55.1.c"
+            },
+            {
+              "control-id": "_55.1.d"
+            },
+            {
+              "control-id": "_55.2"
+            },
+            {
+              "control-id": "_55.3"
+            },
+            {
+              "control-id": "_56.7"
+            },
+            {
+              "control-id": "_59.1"
+            },
+            {
+              "control-id": "_59.1.d"
+            },
+            {
+              "control-id": "_59.1.e"
+            },
+            {
+              "control-id": "_6.1"
+            },
+            {
+              "control-id": "_6.1.a"
+            },
+            {
+              "control-id": "_6.1.b"
+            },
+            {
+              "control-id": "_6.2"
+            },
+            {
+              "control-id": "_6.3"
+            },
+            {
+              "control-id": "_6.3.a"
+            },
+            {
+              "control-id": "_6.3.b"
+            },
+            {
+              "control-id": "_6.3.c"
+            },
+            {
+              "control-id": "_6.3.d"
+            },
+            {
+              "control-id": "_6.4"
+            },
+            {
+              "control-id": "_60.1"
+            },
+            {
+              "control-id": "_60.2"
+            },
+            {
+              "control-id": "_60.4"
+            },
+            {
+              "control-id": "_60.4.a"
+            },
+            {
+              "control-id": "_60.4.b"
+            },
+            {
+              "control-id": "_60.4.c"
+            },
+            {
+              "control-id": "_60.4.d"
+            },
+            {
+              "control-id": "_60.4.e"
+            },
+            {
+              "control-id": "_60.4.f"
+            },
+            {
+              "control-id": "_60.4.g"
+            },
+            {
+              "control-id": "_60.4.h"
+            },
+            {
+              "control-id": "_60.4.i"
+            },
+            {
+              "control-id": "_60.4.j"
+            },
+            {
+              "control-id": "_60.4.k"
+            },
+            {
+              "control-id": "_60.7"
+            },
+            {
+              "control-id": "_60.8"
+            },
+            {
+              "control-id": "_60.9"
+            },
+            {
+              "control-id": "_71.2"
+            },
+            {
+              "control-id": "_71.3"
+            },
+            {
+              "control-id": "_72.1"
+            },
+            {
+              "control-id": "_72.2"
+            },
+            {
+              "control-id": "_72.4"
+            },
+            {
+              "control-id": "_73.1"
+            },
+            {
+              "control-id": "_73.10"
+            },
+            {
+              "control-id": "_73.11"
+            },
+            {
+              "control-id": "_73.2"
+            },
+            {
+              "control-id": "_73.3"
+            },
+            {
+              "control-id": "_73.5"
+            },
+            {
+              "control-id": "_73.6"
+            },
+            {
+              "control-id": "_73.7"
+            },
+            {
+              "control-id": "_8.1"
+            },
+            {
+              "control-id": "_8.2"
+            },
+            {
+              "control-id": "_80.4"
+            },
+            {
+              "control-id": "_80.5"
+            },
+            {
+              "control-id": "_80.6"
+            },
+            {
+              "control-id": "_82.2"
+            },
+            {
+              "control-id": "_83.1.a"
+            },
+            {
+              "control-id": "_83.1.b"
+            },
+            {
+              "control-id": "_83.1.c"
+            },
+            {
+              "control-id": "_83.1.d"
+            },
+            {
+              "control-id": "_83.1.e"
+            },
+            {
+              "control-id": "_83.1.f"
+            },
+            {
+              "control-id": "_83.1.g"
+            },
+            {
+              "control-id": "_9.1"
+            },
+            {
+              "control-id": "_9.10"
+            },
+            {
+              "control-id": "_9.2"
+            },
+            {
+              "control-id": "_9.2.a"
+            },
+            {
+              "control-id": "_9.2.b"
+            },
+            {
+              "control-id": "_9.2.c"
+            },
+            {
+              "control-id": "_9.2.d"
+            },
+            {
+              "control-id": "_9.3"
+            },
+            {
+              "control-id": "_9.4"
+            },
+            {
+              "control-id": "_9.5"
+            },
+            {
+              "control-id": "_9.5.a"
+            },
+            {
+              "control-id": "_9.5.b"
+            },
+            {
+              "control-id": "_9.5.c"
+            },
+            {
+              "control-id": "_9.6"
+            },
+            {
+              "control-id": "_9.7"
+            },
+            {
+              "control-id": "_9.8"
+            },
+            {
+              "control-id": "_9.9"
+            },
+            {
+              "control-id": "_91.5"
+            },
+            {
+              "control-id": "_92.5"
+            },
+            {
+              "control-id": "_93.3"
+            },
+            {
+              "control-id": "a"
+            },
+            {
+              "control-id": "b"
+            },
+            {
+              "control-id": "c"
+            },
+            {
+              "control-id": "d"
+            },
+            {
+              "control-id": "node1020"
+            },
+            {
+              "control-id": "node1131"
+            },
+            {
+              "control-id": "node271"
+            },
+            {
+              "control-id": "node288"
+            },
+            {
+              "control-id": "node292"
+            },
+            {
+              "control-id": "node312"
+            },
+            {
+              "control-id": "node337"
+            },
+            {
+              "control-id": "node409"
+            },
+            {
+              "control-id": "node415"
+            },
+            {
+              "control-id": "node416"
+            },
+            {
+              "control-id": "node418"
+            },
+            {
+              "control-id": "node419"
+            },
+            {
+              "control-id": "node463"
+            },
+            {
+              "control-id": "node464"
+            },
+            {
+              "control-id": "node465"
+            },
+            {
+              "control-id": "node481"
+            },
+            {
+              "control-id": "node520"
+            },
+            {
+              "control-id": "node522"
+            },
+            {
+              "control-id": "node527"
+            },
+            {
+              "control-id": "node528"
+            },
+            {
+              "control-id": "node530"
+            },
+            {
+              "control-id": "node531"
+            },
+            {
+              "control-id": "node653"
+            },
+            {
+              "control-id": "node658"
+            },
+            {
+              "control-id": "node662"
+            },
+            {
+              "control-id": "node664"
+            },
+            {
+              "control-id": "node711"
+            },
+            {
+              "control-id": "node719"
+            },
+            {
+              "control-id": "node720"
+            },
+            {
+              "control-id": "node931"
+            }
+          ]
         }
       ]
     },

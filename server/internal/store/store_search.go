@@ -69,9 +69,10 @@ func (s *SQLiteStore) Search(ctx context.Context, query string, modelTypes []str
 				return nil, "", fmt.Errorf("scan %s: %w", table, err)
 			}
 			r.ModelType = strings.TrimSuffix(table, "s")
-			if r.ModelType == "ssps" {
+			switch r.ModelType {
+			case "ssps":
 				r.ModelType = "ssp"
-			} else if r.ModelType == "poams" {
+			case "poams":
 				r.ModelType = "poam"
 			}
 			// Calculate lexical match relevance score.

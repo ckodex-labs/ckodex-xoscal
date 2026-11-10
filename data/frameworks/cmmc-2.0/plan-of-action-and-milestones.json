@@ -4,16 +4,1331 @@
       "href": "./system-security-plan.json"
     },
     "metadata": {
-      "last-modified": "2026-11-08T01:42:13Z",
+      "last-modified": "2026-11-08T00:30:43Z",
       "oscal-version": "1.2.3",
       "title": "CMMC version 2.0 Plan of Action and Milestones Template",
       "version": "6"
     },
     "poam-items": [
       {
-        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for CMMC version 2.0.",
-        "title": "Compliance Roadmap and Parameter Tailoring for CMMC version 2.0",
-        "uuid": "ecbf377b-6118-5d11-bfd3-1a774c3ca575"
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ac.l1-3.1.1 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ac.l1-3.1.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ac.l1-3.1.1 (Authorized Access Control)",
+        "uuid": "292bc097-9a05-5528-adc4-469188fa4974"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ac.l1-3.1.2 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ac.l1-3.1.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ac.l1-3.1.2 (Transaction \u0026 Function Control)",
+        "uuid": "70180bed-1c86-5141-aece-844b9afe8f56"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ac.l1-3.1.20 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ac.l1-3.1.20"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ac.l1-3.1.20 (External Connections)",
+        "uuid": "4cae22a6-f7c8-593b-a0d6-2af5e8b18959"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ac.l1-3.1.22 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ac.l1-3.1.22"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ac.l1-3.1.22 (Control Public Information)",
+        "uuid": "b6324f13-001c-5e3e-b2b1-63901a62bcfb"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ac.l2-3.1.10 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ac.l2-3.1.10"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ac.l2-3.1.10 (Session Lock)",
+        "uuid": "fc9449c2-4151-5137-9360-9ac17a2ecaf0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ac.l2-3.1.11 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ac.l2-3.1.11"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ac.l2-3.1.11 (Session Termination)",
+        "uuid": "b5987ede-d0a0-59ac-8adb-ac37ffbd176b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ac.l2-3.1.12 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ac.l2-3.1.12"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ac.l2-3.1.12 (ACCESS CONTROL — AC.L2-3.1.12)",
+        "uuid": "7c23e414-ec5c-5930-9d20-e9575d882456"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ac.l2-3.1.13 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ac.l2-3.1.13"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ac.l2-3.1.13 (Remote Access Confidentiality)",
+        "uuid": "38cec43b-ef8b-51fe-a9db-009ef27755b4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ac.l2-3.1.14 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ac.l2-3.1.14"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ac.l2-3.1.14 (Remote Access Routing)",
+        "uuid": "8cb6e0d4-fc2e-5c4e-937e-6e9a2ad1b366"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ac.l2-3.1.15 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ac.l2-3.1.15"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ac.l2-3.1.15 (Privileged Remote Access)",
+        "uuid": "64c11e34-7f5a-5b75-8fbd-bdc4ad4b8c47"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ac.l2-3.1.16 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ac.l2-3.1.16"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ac.l2-3.1.16 (Wireless Access Authorization)",
+        "uuid": "47d9c6cc-c62f-520c-ad36-35363e810295"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ac.l2-3.1.17 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ac.l2-3.1.17"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ac.l2-3.1.17 (Wireless Access Protection)",
+        "uuid": "48a0cd2e-ffb6-53b9-b056-9adbb6714a02"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ac.l2-3.1.18 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ac.l2-3.1.18"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ac.l2-3.1.18 (Mobile Device Connection)",
+        "uuid": "cb67b7cd-47c9-5ae7-9f06-08168af5ae84"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ac.l2-3.1.19 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ac.l2-3.1.19"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ac.l2-3.1.19 (Encrypt CUI on Mobile)",
+        "uuid": "1f9b3945-99fc-5e0b-9c8d-1134f5556dee"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ac.l2-3.1.21 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ac.l2-3.1.21"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ac.l2-3.1.21 (Portable Storage Use)",
+        "uuid": "75fdade6-6bb7-5a0e-b393-1f5e643526f0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ac.l2-3.1.3 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ac.l2-3.1.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ac.l2-3.1.3 (ACCESS CONTROL — AC.L2-3.1.3)",
+        "uuid": "29436bd2-3085-51d2-8937-90d5eeac7ed8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ac.l2-3.1.4 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ac.l2-3.1.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ac.l2-3.1.4 (Separation of Duties)",
+        "uuid": "f89870ef-d18e-5abe-83b9-cc402aa82499"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ac.l2-3.1.5 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ac.l2-3.1.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ac.l2-3.1.5 (Least Privilege)",
+        "uuid": "76fa2d9d-300c-576e-a725-b8a38255ec86"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ac.l2-3.1.6 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ac.l2-3.1.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ac.l2-3.1.6 (Non-Privileged Account Use)",
+        "uuid": "17dc8793-cafb-5f7d-a9a3-a4483b844355"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ac.l2-3.1.7 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ac.l2-3.1.7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ac.l2-3.1.7 (Privileged Functions)",
+        "uuid": "d5aa6d7d-eaa1-5021-8f4d-41f4e3334f89"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ac.l2-3.1.8 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ac.l2-3.1.8"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ac.l2-3.1.8 (Unsuccessful Logon Attempts)",
+        "uuid": "12041ef8-fa85-522a-b87d-ec21eb0d495d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ac.l2-3.1.9 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ac.l2-3.1.9"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ac.l2-3.1.9 (Privacy \u0026 Security Notices)",
+        "uuid": "4830029d-c451-5e97-9e69-0fb65dd0d635"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control at.l2-3.2.1 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "at.l2-3.2.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: at.l2-3.2.1 (Role-Based Risk Awareness)",
+        "uuid": "71d165fc-7609-5a00-8f7a-1752a759d614"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control at.l2-3.2.2 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "at.l2-3.2.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: at.l2-3.2.2 (Role-Based Training)",
+        "uuid": "300f42d1-aa3e-5244-a8bc-cdef869255b1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control at.l2-3.2.3 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "at.l2-3.2.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: at.l2-3.2.3 (Insider Threat Awareness)",
+        "uuid": "93524bd5-a6e9-52bd-b2af-710adb740ade"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control au.l2-3.3.1 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "au.l2-3.3.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: au.l2-3.3.1 (System Auditing)",
+        "uuid": "415dadb1-81ab-511b-94b5-1c780df2e15e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control au.l2-3.3.2 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "au.l2-3.3.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: au.l2-3.3.2 (User Accountability)",
+        "uuid": "a5b9edc8-eafb-5655-b68a-4df46c0c335b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control au.l2-3.3.3 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "au.l2-3.3.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: au.l2-3.3.3 (Event Review)",
+        "uuid": "51d51863-22ff-5491-85ca-504ab3164f5f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control au.l2-3.3.4 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "au.l2-3.3.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: au.l2-3.3.4 (Audit Failure Alerting)",
+        "uuid": "21d58676-a56e-5fd1-9448-851c9782b7ae"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control au.l2-3.3.5 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "au.l2-3.3.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: au.l2-3.3.5 (Audit Correlation)",
+        "uuid": "c7761cd5-e304-50a3-8699-fcc9700d1ae5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control au.l2-3.3.6 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "au.l2-3.3.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: au.l2-3.3.6 (Reduction \u0026 Reporting)",
+        "uuid": "b4bbc2e9-5747-51d1-b2d7-4a6fe96dd50e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control au.l2-3.3.7 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "au.l2-3.3.7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: au.l2-3.3.7 (Authoritative Time Source)",
+        "uuid": "b0cf665c-0af2-5841-86aa-88bdf96ec48d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control au.l2-3.3.8 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "au.l2-3.3.8"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: au.l2-3.3.8 (Audit Protection)",
+        "uuid": "d1d1c7d0-8e8e-514b-addd-2d1336e41805"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control au.l2-3.3.9 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "au.l2-3.3.9"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: au.l2-3.3.9 (Audit Management)",
+        "uuid": "6d266396-eb11-54f5-864f-bbfd3c6ef801"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ca.l2-3.12.1 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ca.l2-3.12.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ca.l2-3.12.1 (Security Control Assessment)",
+        "uuid": "93bbccb0-559e-563e-97ab-daf6de9053ca"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ca.l2-3.12.2 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ca.l2-3.12.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ca.l2-3.12.2 (Plan of Action)",
+        "uuid": "fb026d2e-6e32-5b09-ac0a-12829ca13882"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ca.l2-3.12.3 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ca.l2-3.12.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ca.l2-3.12.3 (Security Control Monitoring)",
+        "uuid": "83315e54-1f8e-5032-8446-c635774639b5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ca.l2-3.12.4 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ca.l2-3.12.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ca.l2-3.12.4 (System Security Plan)",
+        "uuid": "f17060b0-cfde-5ca9-bf5e-7de5dbd8b91d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control cm.l2-3.4.1 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "cm.l2-3.4.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: cm.l2-3.4.1 (System Baselining)",
+        "uuid": "36b4e7b3-6d3b-5815-bbf8-639607c88902"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control cm.l2-3.4.2 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "cm.l2-3.4.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: cm.l2-3.4.2 (Security Configuration Enforcement)",
+        "uuid": "78f63c44-5960-5434-8992-ada13aeeff8f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control cm.l2-3.4.3 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "cm.l2-3.4.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: cm.l2-3.4.3 (System Change Management)",
+        "uuid": "fb4ec08a-4b02-5411-b435-5d92dde5622e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control cm.l2-3.4.4 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "cm.l2-3.4.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: cm.l2-3.4.4 (Security Impact Analysis)",
+        "uuid": "5c0b91fe-d6fa-5b4f-9098-58244f5899f8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control cm.l2-3.4.5 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "cm.l2-3.4.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: cm.l2-3.4.5 (Access Restrictions for Change)",
+        "uuid": "733416a0-9ead-5972-a73b-0911152affa5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control cm.l2-3.4.6 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "cm.l2-3.4.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: cm.l2-3.4.6 (Least Functionality)",
+        "uuid": "df69621d-a65b-5077-ac8c-1193bb5e7a20"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control cm.l2-3.4.7 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "cm.l2-3.4.7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: cm.l2-3.4.7 (Nonessential Functionality)",
+        "uuid": "0345302f-66b5-5f1e-a672-ebb431dc02f1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control cm.l2-3.4.8 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "cm.l2-3.4.8"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: cm.l2-3.4.8 (Application Execution Policy)",
+        "uuid": "1abc33d0-6685-58d3-ac73-705ada8441c5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control cm.l2-3.4.9 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "cm.l2-3.4.9"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: cm.l2-3.4.9 (User-Installed Software)",
+        "uuid": "51aa8408-e5cb-5caa-b272-7c922468146c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ia.l1-3.5.1 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ia.l1-3.5.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ia.l1-3.5.1 (Identification)",
+        "uuid": "60d7654d-a292-52ce-bee0-0e95007dac35"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ia.l1-3.5.2 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ia.l1-3.5.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ia.l1-3.5.2 (Authentication)",
+        "uuid": "e7d0cb90-2169-5d43-b179-463bf2e9f3f4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ia.l2-3.5.10 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ia.l2-3.5.10"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ia.l2-3.5.10 (Cryptographically-Protected Passwords)",
+        "uuid": "04ada83e-fba1-5fc3-abe4-70a41741f455"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ia.l2-3.5.11 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ia.l2-3.5.11"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ia.l2-3.5.11 (Obscure Feedback)",
+        "uuid": "0af5fad5-22b8-5f4a-bf36-bd7d99574ce3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ia.l2-3.5.3 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ia.l2-3.5.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ia.l2-3.5.3 (Multifactor Authentication)",
+        "uuid": "df49e5ab-8f14-5196-b0cb-8e43ac560621"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ia.l2-3.5.4 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ia.l2-3.5.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ia.l2-3.5.4 (Replay-Resistant Authentication)",
+        "uuid": "fddb89eb-768f-5960-a020-6fc8a4515af2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ia.l2-3.5.5 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ia.l2-3.5.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ia.l2-3.5.5 (Identifier Reuse)",
+        "uuid": "a6b9fe2e-10dc-5f69-8e6a-945ad47d47b5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ia.l2-3.5.6 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ia.l2-3.5.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ia.l2-3.5.6 (Identifier Handling)",
+        "uuid": "ab4af24a-8518-5f91-9962-112a149dec3f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ia.l2-3.5.7 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ia.l2-3.5.7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ia.l2-3.5.7 (Password Complexity)",
+        "uuid": "61aaf1af-8389-50cb-88c1-de4e29bed5e1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ia.l2-3.5.8 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ia.l2-3.5.8"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ia.l2-3.5.8 (Password Reuse)",
+        "uuid": "bd5a055d-2189-58fc-af99-ac96f5dcf81c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ia.l2-3.5.9 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ia.l2-3.5.9"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ia.l2-3.5.9 (Temporary Passwords)",
+        "uuid": "596d8bcd-73b7-590f-b5b9-710034dd3d59"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ir.l2-3.6.1 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ir.l2-3.6.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ir.l2-3.6.1 (Incident Handling)",
+        "uuid": "a2deeb5a-1fd2-54a2-a39c-eae0dd9a4654"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ir.l2-3.6.2 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ir.l2-3.6.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ir.l2-3.6.2 (Incident Reporting)",
+        "uuid": "faf1ddb4-2876-5459-be66-0489561cd5a8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ir.l2-3.6.3 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ir.l2-3.6.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ir.l2-3.6.3 (Incident Response Testing)",
+        "uuid": "11ba0005-02b2-5f10-ac79-3a02981f7ba1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ma.l2-3.7.1 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ma.l2-3.7.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ma.l2-3.7.1 (Perform Maintenance)",
+        "uuid": "afa5e62b-43ab-5b8d-9a99-8c8061f44ee6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ma.l2-3.7.2 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ma.l2-3.7.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ma.l2-3.7.2 (System Maintenance Control)",
+        "uuid": "379f0c6e-d856-512d-9fc2-ce4a8b478d13"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ma.l2-3.7.3 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ma.l2-3.7.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ma.l2-3.7.3 (Equipment Sanitization)",
+        "uuid": "91d4ddc6-ef5e-556e-8178-dd385a0847a5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ma.l2-3.7.4 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ma.l2-3.7.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ma.l2-3.7.4 (Media Inspection)",
+        "uuid": "afec1dd7-8f85-550a-80a0-21930471ed79"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ma.l2-3.7.5 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ma.l2-3.7.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ma.l2-3.7.5 (Nonlocal Maintenance)",
+        "uuid": "19046feb-3aec-5593-9192-4fb975198a42"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ma.l2-3.7.6 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ma.l2-3.7.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ma.l2-3.7.6 (Maintenance Personnel)",
+        "uuid": "cf02cbef-f9ad-52ef-84c0-9642ed626526"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control mp.l1-3.8.3 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "mp.l1-3.8.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: mp.l1-3.8.3 (Media Disposal)",
+        "uuid": "58b4fe7e-8fc0-5a30-b1b8-51715ff7eb68"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control mp.l2-3.8.1 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "mp.l2-3.8.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: mp.l2-3.8.1 (Media Protection)",
+        "uuid": "831f92cc-3635-5efe-b3bb-bf878b07912b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control mp.l2-3.8.2 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "mp.l2-3.8.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: mp.l2-3.8.2 (Media Access)",
+        "uuid": "69c05eea-5b46-5fdf-b20e-9580637d83f0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control mp.l2-3.8.4 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "mp.l2-3.8.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: mp.l2-3.8.4 (Media Markings)",
+        "uuid": "27f0925d-bb51-5780-9a01-b05909c498ff"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control mp.l2-3.8.5 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "mp.l2-3.8.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: mp.l2-3.8.5 (Media Accountability)",
+        "uuid": "c04d69a1-e646-5de2-ac46-7083293df523"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control mp.l2-3.8.6 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "mp.l2-3.8.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: mp.l2-3.8.6 (Portable Storage Encryption)",
+        "uuid": "ab5dd7ec-64c9-5121-ac57-8c00692a8344"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control mp.l2-3.8.7 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "mp.l2-3.8.7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: mp.l2-3.8.7 (Removable Media)",
+        "uuid": "f6138f9a-bc53-54b7-8517-7b3b64208951"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control mp.l2-3.8.8 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "mp.l2-3.8.8"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: mp.l2-3.8.8 (Shared Media)",
+        "uuid": "4345f802-d691-5444-9a39-0abd81eeedca"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control mp.l2-3.8.9 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "mp.l2-3.8.9"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: mp.l2-3.8.9 (Protect Backups)",
+        "uuid": "08b095f4-6bdb-5be7-9a9c-6770b30a0cb0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pe.l1-3.10.1 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pe.l1-3.10.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pe.l1-3.10.1 (Limit Physical Access)",
+        "uuid": "215b3ef2-7ef9-5220-a86c-3218c775bedd"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pe.l1-3.10.3 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pe.l1-3.10.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pe.l1-3.10.3 (Escort Visitors)",
+        "uuid": "33e72880-7908-5140-8d8f-5c0fb1ec74a7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pe.l1-3.10.4 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pe.l1-3.10.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pe.l1-3.10.4 (Physical Access Logs)",
+        "uuid": "75a2b096-e660-5c4a-b24b-14204babfdee"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pe.l1-3.10.5 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pe.l1-3.10.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pe.l1-3.10.5 (Manage Physical Access)",
+        "uuid": "06f84732-fda7-5f55-a2a6-ca216f98b0e4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pe.l2-3.10.2 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pe.l2-3.10.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pe.l2-3.10.2 (Monitor Facility)",
+        "uuid": "f89d1dcc-f608-5dc8-91cf-389b88e3ac81"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control pe.l2-3.10.6 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "pe.l2-3.10.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: pe.l2-3.10.6 (Alternative Work Sites)",
+        "uuid": "5c224595-0852-5c1c-81ed-2979587b38e0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ps.l2-3.9.1 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ps.l2-3.9.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ps.l2-3.9.1 (Screen Individuals)",
+        "uuid": "109ec30e-017a-5a51-b2e1-3609819af3b1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ps.l2-3.9.2 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ps.l2-3.9.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ps.l2-3.9.2 (Personnel Actions)",
+        "uuid": "4e79472a-75bb-5efa-8efa-a692abacf4cf"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ra.l2-3.11.1 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ra.l2-3.11.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ra.l2-3.11.1 (Risk Assessments)",
+        "uuid": "92374917-ed33-5bd2-8db0-2b6b8d4d3d96"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ra.l2-3.11.2 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ra.l2-3.11.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ra.l2-3.11.2 (Vulnerability Scan)",
+        "uuid": "73ed5f35-9ead-50f8-b00c-0f692c403db3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control ra.l2-3.11.3 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "ra.l2-3.11.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: ra.l2-3.11.3 (Vulnerability Remediation)",
+        "uuid": "129d5d4b-954d-5999-8a27-bacf3984117b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc.l1-3.13.1 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc.l1-3.13.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc.l1-3.13.1 (Boundary Protection)",
+        "uuid": "f784f761-b3f8-5534-8d52-857e80249f35"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc.l1-3.13.5 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc.l1-3.13.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc.l1-3.13.5 (Public-Access System Separation)",
+        "uuid": "30a6804c-a7dd-5a9d-939f-5edd5155d20a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc.l2-3.13.10 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc.l2-3.13.10"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc.l2-3.13.10 (Key Management)",
+        "uuid": "040982bf-5d12-526b-b183-ff6c6c88c118"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc.l2-3.13.11 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc.l2-3.13.11"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc.l2-3.13.11 (CUI Encryption)",
+        "uuid": "352816f7-4ebd-519e-af5f-d8dea3e7708a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc.l2-3.13.12 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc.l2-3.13.12"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc.l2-3.13.12 (Collaborative Device Control)",
+        "uuid": "2b245b19-4dc6-512d-a616-0d757e10abda"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc.l2-3.13.13 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc.l2-3.13.13"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc.l2-3.13.13 (Mobile Code)",
+        "uuid": "9d07d1ee-5a6a-5429-afae-82859d6cd144"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc.l2-3.13.14 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc.l2-3.13.14"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc.l2-3.13.14 (Voice over Internet Protocol)",
+        "uuid": "6eb508e9-31fd-5353-a10a-8eccd4383db7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc.l2-3.13.15 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc.l2-3.13.15"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc.l2-3.13.15 (Communications Authenticity)",
+        "uuid": "917b2f2d-6512-551f-9198-0749b540d76a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc.l2-3.13.16 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc.l2-3.13.16"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc.l2-3.13.16 (Data at Rest)",
+        "uuid": "a3a4a141-b795-516c-aec7-29e11268f491"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc.l2-3.13.2 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc.l2-3.13.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc.l2-3.13.2 (Security Engineering)",
+        "uuid": "f9220bf4-3171-5ee0-b505-180d46d9abf4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc.l2-3.13.3 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc.l2-3.13.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc.l2-3.13.3 (Role Separation)",
+        "uuid": "b9a20051-2730-586c-88fa-646f03579eb4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc.l2-3.13.4 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc.l2-3.13.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc.l2-3.13.4 (Shared Resource Control)",
+        "uuid": "a2d7759b-433d-5adb-8bf7-aa7c2168ae39"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc.l2-3.13.6 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc.l2-3.13.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc.l2-3.13.6 (Network Communication by Exception)",
+        "uuid": "6fa80f41-141d-56d2-9519-0149d210ca8f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc.l2-3.13.7 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc.l2-3.13.7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc.l2-3.13.7 (Split Tunneling)",
+        "uuid": "9b33d399-80da-5bca-930a-2606417ea521"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc.l2-3.13.8 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc.l2-3.13.8"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc.l2-3.13.8 (Data in Transit)",
+        "uuid": "6455de0a-d690-5b92-b4f1-88cb0e78a480"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control sc.l2-3.13.9 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "sc.l2-3.13.9"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: sc.l2-3.13.9 (Connections Termination)",
+        "uuid": "e3a64d09-55da-5127-9ab9-6f574cbaeed1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control si.l1-3.14.1 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "si.l1-3.14.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: si.l1-3.14.1 (Flaw Remediation)",
+        "uuid": "eb353028-dfa6-5f39-be5b-bc4f62ea8ea9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control si.l1-3.14.2 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "si.l1-3.14.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: si.l1-3.14.2 (Malicious Code Protection)",
+        "uuid": "3db3ea32-7cca-52d9-9f64-663443fb8537"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control si.l1-3.14.4 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "si.l1-3.14.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: si.l1-3.14.4 (Update Malicious Code Protection)",
+        "uuid": "a9181a5d-3f08-5397-bdda-68fda6aebfe2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control si.l1-3.14.5 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "si.l1-3.14.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: si.l1-3.14.5 (System \u0026 File Scanning)",
+        "uuid": "93149dcf-56a3-5adb-b685-bcb6741d7bad"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control si.l2-3.14.3 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "si.l2-3.14.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: si.l2-3.14.3 (Security Alerts \u0026 Advisories)",
+        "uuid": "c0913609-980c-564a-b111-46325e988241"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control si.l2-3.14.6 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "si.l2-3.14.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: si.l2-3.14.6 (Monitor Communications for Attacks)",
+        "uuid": "f325c667-ebb2-53c2-9037-68defad2f702"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control si.l2-3.14.7 in CMMC version 2.0.",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "si.l2-3.14.7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: si.l2-3.14.7 (Identify Unauthorized Use)",
+        "uuid": "e8fc924d-a7f8-544a-ba6e-7f0c39246bbf"
       }
     ],
     "uuid": "b4390dae-20e0-58a6-addb-a6a89d0e122a"

@@ -4,16 +4,4175 @@
       "href": "./system-security-plan.json"
     },
     "metadata": {
-      "last-modified": "2026-11-08T01:42:11Z",
+      "last-modified": "2026-11-08T00:31:04Z",
       "oscal-version": "1.2.3",
       "title": "EU Artificial Intelligence Act (AI Act) Plan of Action and Milestones Template",
       "version": "2"
     },
     "poam-items": [
       {
-        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for EU Artificial Intelligence Act (AI Act).",
-        "title": "Compliance Roadmap and Parameter Tailoring for EU Artificial Intelligence Act (AI Act)",
-        "uuid": "616cb0ac-6aae-5428-916b-861ea6378ad5"
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _10.2 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_10.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _10.2 (Article 10 — 10.2)",
+        "uuid": "87c12c09-4222-5835-a639-9d6c0efa6f37"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _10.2.a in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_10.2.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _10.2.a (Article 10 — 10.2.a)",
+        "uuid": "2398e245-09d4-5a99-9e03-0718bc591cb2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _10.2.b in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_10.2.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _10.2.b (Article 10 — 10.2.b)",
+        "uuid": "48c45190-acac-520b-9c0c-6b1efa038273"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _10.2.c in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_10.2.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _10.2.c (Article 10 — 10.2.c)",
+        "uuid": "16877198-658f-5e57-a5e9-1d8fefd4cadb"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _10.2.d in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_10.2.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _10.2.d (Article 10 — 10.2.d)",
+        "uuid": "56af59be-05a3-5e13-837c-d5d5f4e3a603"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _10.2.e in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_10.2.e"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _10.2.e (Article 10 — 10.2.e)",
+        "uuid": "7cbab033-9731-530a-94d9-6957f30d579c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _10.2.f in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_10.2.f"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _10.2.f (Article 10 — 10.2.f)",
+        "uuid": "3501d357-a4a9-5edb-91e5-2a897ef8ed0d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _10.2.g in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_10.2.g"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _10.2.g (Article 10 — 10.2.g)",
+        "uuid": "65036c6a-4b7e-5649-a378-7c6e81e95e78"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _10.2.h in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_10.2.h"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _10.2.h (Article 10 — 10.2.h)",
+        "uuid": "72d2f3cf-7ad3-554f-9780-acf20c3fc0e2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _10.3 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_10.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _10.3 (Article 10 — 10.3)",
+        "uuid": "5bcdd310-7ccd-5337-98c0-e3fefcbd21be"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _10.4 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_10.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _10.4 (Article 10 — 10.4)",
+        "uuid": "b09af403-5563-522b-b3cf-1229086dc124"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _10.5 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_10.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _10.5 (Article 10 — 10.5)",
+        "uuid": "cd5479f2-a0f0-599d-bf60-fdbc43b4ce2e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _10.5.a in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_10.5.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _10.5.a (Article 10 — 10.5.a)",
+        "uuid": "4ab48ba1-4427-5465-afaa-f421cd15a8e7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _10.5.b in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_10.5.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _10.5.b (Article 10 — 10.5.b)",
+        "uuid": "752c57b9-ad22-55e0-89c2-4b1ca9e34311"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _10.5.c in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_10.5.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _10.5.c (Article 10 — 10.5.c)",
+        "uuid": "f66331b6-1a09-51ba-9fc1-6d64491879af"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _10.5.d in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_10.5.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _10.5.d (Article 10 — 10.5.d)",
+        "uuid": "ab108a0d-557c-5295-ba40-970a124d5297"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _10.5.e in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_10.5.e"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _10.5.e (Article 10 — 10.5.e)",
+        "uuid": "fcd993ba-cce9-5514-b697-a3f7fcc067be"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _10.5.f in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_10.5.f"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _10.5.f (Article 10 — 10.5.f)",
+        "uuid": "ad5af0e7-b30c-56e7-b904-0ab44bcf2984"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _10.6 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_10.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _10.6 (Article 10 — 10.6)",
+        "uuid": "3594e27f-be6f-58e4-b9b6-206c78b3a30c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _11.1 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_11.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _11.1 (Article 11 — 11.1)",
+        "uuid": "6ed01a83-9ac1-54db-9f9a-a18edad216a5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _11.2 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_11.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _11.2 (Article 11 — 11.2)",
+        "uuid": "a8e6a624-611a-5d3e-b8a7-627bf7683179"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _12.1 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_12.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _12.1 (Article 12 — 12.1)",
+        "uuid": "8c0c0783-b7e1-5c05-bf29-043b0c96bc83"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _12.2 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_12.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _12.2 (Article 12 — 12.2)",
+        "uuid": "2e359b2f-db25-5c3c-82e4-bd5ea4e7c3f7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _12.2.a in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_12.2.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _12.2.a (Article 12 — 12.2.a)",
+        "uuid": "c22716d9-cfd8-54e4-b1a0-c88221e3e362"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _12.2.b in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_12.2.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _12.2.b (Article 12 — 12.2.b)",
+        "uuid": "b82d2641-f6b7-552a-a94c-9564b66921d9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _12.2.c in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_12.2.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _12.2.c (Article 12 — 12.2.c)",
+        "uuid": "946aa723-7011-568b-9aaa-73472d19ccb6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _12.3 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_12.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _12.3 (Article 12 — 12.3)",
+        "uuid": "e3be5247-255c-58a2-9766-01ccad2aec9e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _12.3.a in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_12.3.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _12.3.a (For high-risk AI systems referred to in point 1 (a) of Annex III, the logging capabilities shall provide, at a minimum: — 12.3.a)",
+        "uuid": "b294deaa-8ece-5f7c-a84d-75857c1278a1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _12.3.b in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_12.3.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _12.3.b (For high-risk AI systems referred to in point 1 (a) of Annex III, the logging capabilities shall provide, at a minimum: — 12.3.b)",
+        "uuid": "3c454def-c4b4-56de-889c-893bf70a505f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _12.3.c in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_12.3.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _12.3.c (For high-risk AI systems referred to in point 1 (a) of Annex III, the logging capabilities shall provide, at a minimum: — 12.3.c)",
+        "uuid": "5e077028-1417-5415-aff4-761e4ad12ebb"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _12.3.d in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_12.3.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _12.3.d (For high-risk AI systems referred to in point 1 (a) of Annex III, the logging capabilities shall provide, at a minimum: — 12.3.d)",
+        "uuid": "40d1c023-2ba5-549b-9f44-e9598db58f49"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _13.1 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_13.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _13.1 (Article 13 — 13.1)",
+        "uuid": "827f0bb4-6e4d-5fb9-b10a-28a4fddea9fd"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _13.2 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_13.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _13.2 (Article 13 — 13.2)",
+        "uuid": "d244b3cc-f870-582a-99c1-13236b4e4d92"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _13.3 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_13.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _13.3 (Article 13 — 13.3)",
+        "uuid": "9c6b9ff1-b5f8-5f74-8d0b-b2c49bf023aa"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _13.3.a in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_13.3.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _13.3.a (The instructions for use shall contain at least the following information: — 13.3.a)",
+        "uuid": "c8dcf117-46d1-5e23-bcce-97d21aae2b8c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _13.3.b in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_13.3.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _13.3.b (The instructions for use shall contain at least the following information: — 13.3.b)",
+        "uuid": "4816b81c-8cc9-53d8-98e2-63f7ebe86960"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _13.3.b.i in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_13.3.b.i"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _13.3.b.i (the characteristics, capabilities and limitations of performance of the high-risk AI system, including: — 13.3.b.i)",
+        "uuid": "d3959e8b-15bd-5425-86d8-cf6b79906996"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _13.3.b.ii in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_13.3.b.ii"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _13.3.b.ii (the characteristics, capabilities and limitations of performance of the high-risk AI system, including: — 13.3.b.ii)",
+        "uuid": "4fb71161-b1c9-553a-a413-5cdd62502550"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _13.3.b.iii in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_13.3.b.iii"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _13.3.b.iii (the characteristics, capabilities and limitations of performance of the high-risk AI system, including: — 13.3.b.iii)",
+        "uuid": "1071a79c-16a0-5843-b422-d7dafadac8e2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _13.3.b.iv in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_13.3.b.iv"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _13.3.b.iv (the characteristics, capabilities and limitations of performance of the high-risk AI system, including: — 13.3.b.iv)",
+        "uuid": "5e25318f-1f83-58ff-a56b-4828239c8da7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _13.3.b.v in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_13.3.b.v"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _13.3.b.v (the characteristics, capabilities and limitations of performance of the high-risk AI system, including: — 13.3.b.v)",
+        "uuid": "45e17565-647b-5f2c-8f81-0a2a9972f287"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _13.3.b.vi in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_13.3.b.vi"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _13.3.b.vi (the characteristics, capabilities and limitations of performance of the high-risk AI system, including: — 13.3.b.vi)",
+        "uuid": "db03b7f8-e327-583d-9864-7cdd0bc359f8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _13.3.b.vii in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_13.3.b.vii"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _13.3.b.vii (the characteristics, capabilities and limitations of performance of the high-risk AI system, including: — 13.3.b.vii)",
+        "uuid": "d5992be6-8c0c-5f80-a9f4-03f1c60a1c95"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _13.3.c in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_13.3.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _13.3.c (The instructions for use shall contain at least the following information: — 13.3.c)",
+        "uuid": "26a347a9-2e97-5ab9-9301-7148a5b45a31"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _13.3.d in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_13.3.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _13.3.d (The instructions for use shall contain at least the following information: — 13.3.d)",
+        "uuid": "6cad9fe2-99a2-5d6f-aae2-c090f209dd38"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _13.3.e in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_13.3.e"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _13.3.e (The instructions for use shall contain at least the following information: — 13.3.e)",
+        "uuid": "dfa8b87f-a8b7-586b-aac6-9042081f2c0e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _13.3.f in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_13.3.f"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _13.3.f (The instructions for use shall contain at least the following information: — 13.3.f)",
+        "uuid": "b95512d2-ff71-59a0-a01f-34c7d53ba27c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _14.1 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_14.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _14.1 (Article 14 — 14.1)",
+        "uuid": "b6f0da37-1ba3-544b-883c-ace15ee5b17b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _14.2 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_14.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _14.2 (Article 14 — 14.2)",
+        "uuid": "e589d4d9-d41a-5aec-9a2d-7edef93d12df"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _14.3 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_14.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _14.3 (Article 14 — 14.3)",
+        "uuid": "2a90b869-627a-5c35-9173-44c82b2ce886"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _14.3.a in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_14.3.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _14.3.a (Article 14 — 14.3.a)",
+        "uuid": "30232a88-aea9-502f-adbf-cfa1798c142c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _14.3.b in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_14.3.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _14.3.b (Article 14 — 14.3.b)",
+        "uuid": "96b1d9b7-6220-54da-a68c-d411a6053694"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _14.4 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_14.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _14.4 (Article 14 — 14.4)",
+        "uuid": "c698bcab-a59c-5684-9223-5c3d331ae48d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _14.4.a in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_14.4.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _14.4.a (Article 14 — 14.4.a)",
+        "uuid": "450e93db-a7fa-5fbc-bec7-13b4674ee6f1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _14.4.b in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_14.4.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _14.4.b (Article 14 — 14.4.b)",
+        "uuid": "ca4d2d04-0b3a-5e66-8cba-2dd63983ebb0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _14.4.c in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_14.4.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _14.4.c (Article 14 — 14.4.c)",
+        "uuid": "81f103b9-ca31-525d-85b2-6863dcb26150"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _14.4.d in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_14.4.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _14.4.d (Article 14 — 14.4.d)",
+        "uuid": "3b59df99-49ab-559b-8139-eb1a64b63dc8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _14.4.e in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_14.4.e"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _14.4.e (Article 14 — 14.4.e)",
+        "uuid": "6422d966-62b3-58e1-9e3b-cdc80ce36f26"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _14.5 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_14.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _14.5 (Article 14 — 14.5)",
+        "uuid": "e1ea7578-829b-5057-ae3a-0d7766926c0c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _15.1 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_15.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _15.1 (Article 15 — 15.1)",
+        "uuid": "eb14d8c0-0da6-5df6-aeea-8e66c1946ce5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _15.3 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_15.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _15.3 (Article 15 — 15.3)",
+        "uuid": "b83972d5-0402-5efb-a9ca-dd86d1408788"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _15.4 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_15.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _15.4 (Article 15 — 15.4)",
+        "uuid": "9a928a3d-1d68-522a-b992-0c142c6c1e33"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _15.5 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_15.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _15.5 (Article 15 — 15.5)",
+        "uuid": "dcdbb272-febf-5aa8-8015-23e5b66bc3a3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _16.a in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_16.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _16.a (Providers of high-risk AI systems shall: — 16.a)",
+        "uuid": "d7470e5c-523c-54a1-b980-08312a145bef"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _16.b in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_16.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _16.b (Providers of high-risk AI systems shall: — 16.b)",
+        "uuid": "67299aa2-441f-58f1-a936-404f738d995f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _16.c in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_16.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _16.c (Providers of high-risk AI systems shall: — 16.c)",
+        "uuid": "a84847fb-ff13-57f7-984b-ec552c6ed5ea"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _16.d in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_16.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _16.d (Providers of high-risk AI systems shall: — 16.d)",
+        "uuid": "ba796694-a4d7-5d6e-a275-487d86bb32a5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _16.e in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_16.e"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _16.e (Providers of high-risk AI systems shall: — 16.e)",
+        "uuid": "49db367a-3adf-53f4-b9b5-92e7f9e7975e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _16.f in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_16.f"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _16.f (Providers of high-risk AI systems shall: — 16.f)",
+        "uuid": "eaa4953a-5087-5a03-9f89-0cf6a3fdfbf2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _16.g in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_16.g"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _16.g (Providers of high-risk AI systems shall: — 16.g)",
+        "uuid": "258dc07a-c2b4-56c6-99b9-2b2cf1f1e96d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _16.h in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_16.h"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _16.h (Providers of high-risk AI systems shall: — 16.h)",
+        "uuid": "ef16dfa2-b17d-51a6-b7c9-3ffde9c8c080"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _16.i in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_16.i"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _16.i (Providers of high-risk AI systems shall: — 16.i)",
+        "uuid": "ce80593c-6991-57ce-91a5-c0152da494e6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _16.j in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_16.j"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _16.j (Providers of high-risk AI systems shall: — 16.j)",
+        "uuid": "9f41a435-5d18-5b6c-a152-0f3658463665"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _16.k in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_16.k"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _16.k (Providers of high-risk AI systems shall: — 16.k)",
+        "uuid": "83086c13-b6b1-5c7d-bbce-4bc543bc2658"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _16.l in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_16.l"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _16.l (Providers of high-risk AI systems shall: — 16.l)",
+        "uuid": "51aa4fec-6b46-5493-8476-43fcdfe647bc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _17.1 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_17.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _17.1 (Article 17 — 17.1)",
+        "uuid": "6820136f-a591-5379-bf86-85ab6a0506e4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _17.1.a in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_17.1.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _17.1.a (Article 17 — 17.1.a)",
+        "uuid": "c474bc44-59a1-5ca0-b068-a7ba66f55230"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _17.1.b in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_17.1.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _17.1.b (Article 17 — 17.1.b)",
+        "uuid": "82799377-6105-586b-9ee9-0d5a79982b03"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _17.1.c in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_17.1.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _17.1.c (Article 17 — 17.1.c)",
+        "uuid": "94831627-8e81-5e04-93f0-324a57c68e1c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _17.1.d in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_17.1.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _17.1.d (Article 17 — 17.1.d)",
+        "uuid": "8eb686eb-a843-5d11-bfb3-223ff66232c0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _17.1.e in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_17.1.e"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _17.1.e (Article 17 — 17.1.e)",
+        "uuid": "5152ceed-0039-5c0f-bc2b-2c9e29611ae2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _17.1.f in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_17.1.f"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _17.1.f (Article 17 — 17.1.f)",
+        "uuid": "53876b83-b865-5421-9456-09dfc2ab1b42"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _17.1.g in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_17.1.g"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _17.1.g (Article 17 — 17.1.g)",
+        "uuid": "cf0db59c-049e-5882-a52f-47f6758bf42a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _17.1.h in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_17.1.h"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _17.1.h (Article 17 — 17.1.h)",
+        "uuid": "cd15f08a-0664-55b9-80f6-3afd3de4aaa5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _17.1.i in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_17.1.i"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _17.1.i (Article 17 — 17.1.i)",
+        "uuid": "e80969bc-1f85-5a1d-8db4-34f827c1c5d4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _17.1.j in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_17.1.j"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _17.1.j (Article 17 — 17.1.j)",
+        "uuid": "80c22ea2-1504-5920-94e2-d05db0bfc210"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _17.1.k in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_17.1.k"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _17.1.k (Article 17 — 17.1.k)",
+        "uuid": "84c029ff-7264-5006-8781-214c683ac74c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _17.1.l in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_17.1.l"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _17.1.l (Article 17 — 17.1.l)",
+        "uuid": "7b849ab1-881e-5262-ad3b-fb4df8685901"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _17.1.m in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_17.1.m"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _17.1.m (Article 17 — 17.1.m)",
+        "uuid": "eb4e7676-d5b2-5982-94ea-c89daffc0e04"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _17.2 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_17.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _17.2 (Article 17 — 17.2)",
+        "uuid": "6b358cea-201d-5f7c-ab0c-caf156b379ac"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _17.3 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_17.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _17.3 (Article 17 — 17.3)",
+        "uuid": "2e055b52-f324-5195-aca3-5926bd3904a7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _17.4 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_17.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _17.4 (Article 17 — 17.4)",
+        "uuid": "2364cc12-6849-5e1a-963a-e68f74f0b21e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _18.1 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_18.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _18.1 (Article 18 — 18.1)",
+        "uuid": "7aef8548-228e-5dac-a94f-3686ac6dd1ed"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _18.1.a in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_18.1.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _18.1.a (Article 18 — 18.1.a)",
+        "uuid": "42b06449-6ba5-561f-8213-07f151c3767b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _18.1.b in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_18.1.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _18.1.b (Article 18 — 18.1.b)",
+        "uuid": "69283bff-09bc-5cdb-a6b1-6fd82c525fea"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _18.1.c in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_18.1.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _18.1.c (Article 18 — 18.1.c)",
+        "uuid": "5c07dcbf-9bc4-5025-933c-3acde225c6cd"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _18.1.d in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_18.1.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _18.1.d (Article 18 — 18.1.d)",
+        "uuid": "433620ba-9252-5ae6-bebc-c8fb2184c985"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _18.1.e in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_18.1.e"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _18.1.e (Article 18 — 18.1.e)",
+        "uuid": "1e250d29-1a0c-5e55-a706-c40f78b21cb2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _18.3 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_18.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _18.3 (Article 18 — 18.3)",
+        "uuid": "270f9c85-858a-5d91-a3dc-354e438381f5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _20.1 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_20.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _20.1 (Article 20 — 20.1)",
+        "uuid": "549fa6ef-f9a8-5d70-9dc2-2d470104052c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _20.2 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_20.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _20.2 (Article 20 — 20.2)",
+        "uuid": "162f0f34-e109-5713-bb18-4e315becca69"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _21.1 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_21.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _21.1 (Article 21 — 21.1)",
+        "uuid": "2dc1af1f-ed6f-5da7-911c-b58b34a1edbd"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _21.2 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_21.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _21.2 (Article 21 — 21.2)",
+        "uuid": "8bd85d26-a241-5083-954c-a9ed699af515"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _22.1 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_22.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _22.1 (Article 22 — 22.1)",
+        "uuid": "62ce3e37-4ee9-5386-9cbe-a7167b71ddaf"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _22.2 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_22.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _22.2 (Article 22 — 22.2)",
+        "uuid": "f139330f-a4c0-5ff6-801c-0e310269940c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _22.3 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_22.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _22.3 (Article 22 — 22.3)",
+        "uuid": "0da6e48a-6028-5892-84a1-808e0de983d1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _22.3.a in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_22.3.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _22.3.a (Article 22 — 22.3.a)",
+        "uuid": "24eb895e-9700-5b7a-80be-06eecaf92fff"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _22.3.b in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_22.3.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _22.3.b (Article 22 — 22.3.b)",
+        "uuid": "7f8618c8-fdb8-5080-b04d-8e09a039b4eb"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _22.3.c in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_22.3.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _22.3.c (Article 22 — 22.3.c)",
+        "uuid": "0d2b0d4c-0bf0-5e4e-b238-1ec8d7859250"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _22.3.d in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_22.3.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _22.3.d (Article 22 — 22.3.d)",
+        "uuid": "cb37bad7-100f-5856-9987-a79acfbc5363"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _22.3.e in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_22.3.e"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _22.3.e (Article 22 — 22.3.e)",
+        "uuid": "b0514560-af67-5d5a-95e4-022fd00635ee"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _22.4 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_22.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _22.4 (Article 22 — 22.4)",
+        "uuid": "8524625a-5062-5a6f-86af-c8634e41771e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _23.1 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_23.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _23.1 (Article 23 — 23.1)",
+        "uuid": "0d96a4eb-abda-5adb-867e-241ecad995cc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _23.1.a in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_23.1.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _23.1.a (Article 23 — 23.1.a)",
+        "uuid": "7787e890-7ebd-5104-a0f7-24be69e8145e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _23.1.b in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_23.1.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _23.1.b (Article 23 — 23.1.b)",
+        "uuid": "739ebaca-7e44-5836-8ae7-e3ec0b6774cf"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _23.1.c in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_23.1.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _23.1.c (Article 23 — 23.1.c)",
+        "uuid": "ba77b493-a41c-5c15-b997-a07445d575c0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _23.1.d in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_23.1.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _23.1.d (Article 23 — 23.1.d)",
+        "uuid": "3d26bea0-8415-5691-9f4c-07629d89a7e6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _23.2 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_23.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _23.2 (Article 23 — 23.2)",
+        "uuid": "15a911cb-5d0d-5fae-9cf5-7fb6524bb92b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _23.3 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_23.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _23.3 (Article 23 — 23.3)",
+        "uuid": "9d85fc02-165e-5225-8300-cd242b82726c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _23.4 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_23.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _23.4 (Article 23 — 23.4)",
+        "uuid": "995678dc-dcfe-58b8-8184-5b1cf7934311"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _23.5 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_23.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _23.5 (Article 23 — 23.5)",
+        "uuid": "7aea1729-937c-588a-b95a-e607abc25838"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _23.6 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_23.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _23.6 (Article 23 — 23.6)",
+        "uuid": "5fefb0e0-f653-5d26-9783-f69267babc0d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _23.7 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_23.7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _23.7 (Article 23 — 23.7)",
+        "uuid": "61f18a99-d3d3-54c9-a9f3-3f8500e187c9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _24.1 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_24.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _24.1 (Article 24 — 24.1)",
+        "uuid": "8818cfb4-3046-5c2a-be08-02b2159c6bbd"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _24.2 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_24.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _24.2 (Article 24 — 24.2)",
+        "uuid": "a3fd24ee-a539-5705-a5e0-6a5a59bc3c30"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _24.3 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_24.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _24.3 (Article 24 — 24.3)",
+        "uuid": "611273ce-2c26-572f-bd7c-400da75d6daa"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _24.4 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_24.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _24.4 (Article 24 — 24.4)",
+        "uuid": "7ecabb92-18c8-5748-9978-2bad6ad8f066"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _24.5 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_24.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _24.5 (Article 24 — 24.5)",
+        "uuid": "c35b1ccb-9556-5610-833a-c4356659dd13"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _24.6 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_24.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _24.6 (Article 24 — 24.6)",
+        "uuid": "6e0aa363-9e30-54ad-bc57-74b1244d9261"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _25.1 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_25.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _25.1 (Article 25 — 25.1)",
+        "uuid": "4719eacd-9b3e-5322-a473-abc8649ffbfa"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _25.1.a in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_25.1.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _25.1.a (Article 25 — 25.1.a)",
+        "uuid": "e0135ffb-43f0-5ffd-bcdc-c6844f9eb613"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _25.1.b in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_25.1.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _25.1.b (Article 25 — 25.1.b)",
+        "uuid": "321a2535-f55f-5608-9e9d-dd16b4ef02ca"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _25.1.c in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_25.1.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _25.1.c (Article 25 — 25.1.c)",
+        "uuid": "bc86d3de-51f0-554a-a94b-3cbb44eeb15b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _25.2 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_25.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _25.2 (Article 25 — 25.2)",
+        "uuid": "1f2f1c27-2a38-59ba-b2ba-3d88669db8df"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _25.3 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_25.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _25.3 (Article 25 — 25.3)",
+        "uuid": "e0e442ae-a5bb-506a-b60e-a999ace3bcc7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _25.3.a in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_25.3.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _25.3.a (Article 25 — 25.3.a)",
+        "uuid": "51e9ec9c-e44d-5f63-be0c-9136fd24a74e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _25.3.b in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_25.3.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _25.3.b (Article 25 — 25.3.b)",
+        "uuid": "1f7430ac-aa9a-5800-851d-ada82dcce677"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _25.4 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_25.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _25.4 (Article 25 — 25.4)",
+        "uuid": "7d906459-a808-5607-810a-44fcddf8158b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _26.1 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_26.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _26.1 (Article 26 — 26.1)",
+        "uuid": "ebd9259c-85ee-539d-a5a8-bbef3fa50343"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _26.10 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_26.10"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _26.10 (Article 26 — 26.10)",
+        "uuid": "87f9ac9e-f829-599c-8b11-b430b1dd7048"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _26.11 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_26.11"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _26.11 (Article 26 — 26.11)",
+        "uuid": "50adc45d-8c1f-5175-873e-8c700e4d9410"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _26.12 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_26.12"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _26.12 (Article 26 — 26.12)",
+        "uuid": "57dc17d9-606b-5af3-bc36-25d06869949e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _26.2 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_26.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _26.2 (Article 26 — 26.2)",
+        "uuid": "daf7fc24-0a1b-515c-939a-e79050fec47e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _26.4 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_26.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _26.4 (Article 26 — 26.4)",
+        "uuid": "329efd0b-d061-50ba-9e81-808e725e46e5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _26.5 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_26.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _26.5 (Article 26 — 26.5)",
+        "uuid": "b8ed473d-3c9a-5815-8c4c-ed079010627e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _26.6 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_26.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _26.6 (Article 26 — 26.6)",
+        "uuid": "ae78fa5e-d1e8-5853-aa39-847b55343a5a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _26.7 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_26.7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _26.7 (Article 26 — 26.7)",
+        "uuid": "38a7e1b4-0143-5434-b989-6f9182d2b83b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _26.8 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_26.8"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _26.8 (Article 26 — 26.8)",
+        "uuid": "0af9619b-ecbc-501f-9205-d18ea68817ae"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _26.9 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_26.9"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _26.9 (Article 26 — 26.9)",
+        "uuid": "75a92f6d-746f-5fe8-8401-9ccebc5606f3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _27.1 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_27.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _27.1 (Article 27 — 27.1)",
+        "uuid": "af44b33c-6e96-5325-b82c-f1ac0ee6b3c8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _27.1.a in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_27.1.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _27.1.a (Article 27 — 27.1.a)",
+        "uuid": "4c48c006-32d9-5d5d-958e-ef0ff4978c0a"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _27.1.b in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_27.1.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _27.1.b (Article 27 — 27.1.b)",
+        "uuid": "ec1a48a2-92b5-568a-ba9b-b5214f08c5e5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _27.1.c in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_27.1.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _27.1.c (Article 27 — 27.1.c)",
+        "uuid": "7667a5e3-8484-5945-b13b-92d23f75ae4d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _27.1.d in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_27.1.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _27.1.d (Article 27 — 27.1.d)",
+        "uuid": "f3cfe4aa-bd22-5d44-a794-94c1ef466085"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _27.1.e in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_27.1.e"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _27.1.e (Article 27 — 27.1.e)",
+        "uuid": "4cea9a5a-ddd5-5d9a-b252-00613a8729c3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _27.1.f in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_27.1.f"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _27.1.f (Article 27 — 27.1.f)",
+        "uuid": "de50c0ea-5832-54ed-abf1-900c2685be02"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _27.2 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_27.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _27.2 (Article 27 — 27.2)",
+        "uuid": "4d125c66-5446-5ed4-965f-3770ebf883e1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _27.3 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_27.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _27.3 (Article 27 — 27.3)",
+        "uuid": "91e4165e-5886-5e7e-81b7-113206a3abca"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _27.4 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_27.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _27.4 (Article 27 — 27.4)",
+        "uuid": "b8561b26-5182-597b-aacf-81e64bdb8e46"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _41.5 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_41.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _41.5 (Article 41 — 41.5)",
+        "uuid": "95c2932d-951e-53b2-be0c-2ebf2d52b5ae"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _42.1 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_42.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _42.1 (Article 42 — 42.1)",
+        "uuid": "982c3f93-85ee-5cf2-b3c6-6e33d90e0daf"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _42.2 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_42.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _42.2 (Article 42 — 42.2)",
+        "uuid": "b4307ace-f793-5b4e-a792-939c7babf87c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _43.1 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_43.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _43.1 (Article 43 — 43.1)",
+        "uuid": "a6ede091-b6a7-53db-9dc0-07e52513aeb4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _43.1.a in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_43.1.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _43.1.a (Article 43 — 43.1.a)",
+        "uuid": "48c88070-c6f4-5127-9060-87357d8805bc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _43.1.b in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_43.1.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _43.1.b (Article 43 — 43.1.b)",
+        "uuid": "ce56e09d-60b3-5648-b980-a260fd3748c0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _43.2 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_43.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _43.2 (Article 43 — 43.2)",
+        "uuid": "13bbaf62-6a7a-5d30-b0ed-1250486a4449"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _43.3 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_43.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _43.3 (Article 43 — 43.3)",
+        "uuid": "7a89affd-796c-53f4-b7dd-18652c8a63fd"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _43.4 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_43.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _43.4 (Article 43 — 43.4)",
+        "uuid": "0af65172-8a59-511b-ba5a-d1890d33739e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _44.2 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_44.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _44.2 (Article 44 — 44.2)",
+        "uuid": "1c6a46b4-12f6-5757-a711-1a6ca0958fa0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _44.3 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_44.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _44.3 (Article 44 — 44.3)",
+        "uuid": "9eeb53a6-c0f5-57a1-b6c5-97c5800fec62"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _46.7 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_46.7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _46.7 (Article 46 — 46.7)",
+        "uuid": "9e3f6cbd-68ea-55a8-b4d1-b402b7101cd7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _47.1 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_47.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _47.1 (Article 47 — 47.1)",
+        "uuid": "622bc3dc-2e08-5bcd-abc2-15b77e7b2e73"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _47.2 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_47.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _47.2 (Article 47 — 47.2)",
+        "uuid": "da4da72a-6639-565f-a2f6-1751fa5a4ffa"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _47.3 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_47.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _47.3 (Article 47 — 47.3)",
+        "uuid": "e769dddd-646d-5e44-9ca5-844d02f214f8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _47.4 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_47.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _47.4 (Article 47 — 47.4)",
+        "uuid": "3ad2e331-be01-580b-90f3-d14dac3be5e3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _48.2 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_48.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _48.2 (Article 48 — 48.2)",
+        "uuid": "fc16bced-f600-5f51-a7e5-f839c1d2dcf0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _48.3 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_48.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _48.3 (Article 48 — 48.3)",
+        "uuid": "144708b1-04a5-57d9-8437-7e5274be5e0c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _48.4 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_48.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _48.4 (Article 48 — 48.4)",
+        "uuid": "91dcae51-9f2d-5f12-9b9a-0cb1b6e40e74"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _48.5 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_48.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _48.5 (Article 48 — 48.5)",
+        "uuid": "187ad684-3046-5746-872e-440e7cb170f0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _49.1 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_49.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _49.1 (Article 49 — 49.1)",
+        "uuid": "a678de89-187b-5c58-bfa7-071898d62dce"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _49.2 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_49.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _49.2 (Article 49 — 49.2)",
+        "uuid": "d2157d66-d28d-5c2f-a781-f65bd1a45f2c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _49.3 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_49.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _49.3 (Article 49 — 49.3)",
+        "uuid": "86bf0426-0fac-570b-9cb6-6ece8f22fe5f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _49.5 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_49.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _49.5 (Article 49 — 49.5)",
+        "uuid": "876a030c-3a1c-5206-bfbe-1abcaeb406d1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.1.a in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.1.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.1.a (The following AI practices shall be prohibited: — 5.1.a)",
+        "uuid": "c551c1fe-e1aa-58e9-a7c0-594385ec5657"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.1.b in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.1.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.1.b (The following AI practices shall be prohibited: — 5.1.b)",
+        "uuid": "6d7610df-7499-567b-b703-4c6ce6d05085"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.1.c in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.1.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.1.c (The following AI practices shall be prohibited: — 5.1.c)",
+        "uuid": "98597cb5-aec2-567d-9147-2d90ed0d17da"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.1.c.i in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.1.c.i"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.1.c.i (The following AI practices shall be prohibited: — 5.1.c.i)",
+        "uuid": "c12a8cdd-a285-52d2-a949-8afdacf2b707"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.1.c.ii in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.1.c.ii"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.1.c.ii (The following AI practices shall be prohibited: — 5.1.c.ii)",
+        "uuid": "f70e65e1-4d02-533f-ae98-98352e36fdb8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.1.d in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.1.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.1.d (The following AI practices shall be prohibited: — 5.1.d)",
+        "uuid": "370fd0e9-6d38-550e-955c-79bef2d27d27"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.1.e in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.1.e"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.1.e (The following AI practices shall be prohibited: — 5.1.e)",
+        "uuid": "2978d528-f105-54fd-b289-b54f69020b7c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.1.f in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.1.f"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.1.f (The following AI practices shall be prohibited: — 5.1.f)",
+        "uuid": "17406077-7046-52a8-a214-4db5fafde81e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.1.g in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.1.g"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.1.g (The following AI practices shall be prohibited: — 5.1.g)",
+        "uuid": "24614915-1fd0-5ae8-b765-747b1b6b2155"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.1.h in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.1.h"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.1.h (The following AI practices shall be prohibited: — 5.1.h)",
+        "uuid": "9bd38f1c-7fc9-5e63-adaf-3d0b3312e3c2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.1.h.i in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.1.h.i"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.1.h.i (The following AI practices shall be prohibited: — 5.1.h.i)",
+        "uuid": "895f7673-e970-52c6-8cf0-0bc9eb0742f4"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.1.h.ii in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.1.h.ii"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.1.h.ii (The following AI practices shall be prohibited: — 5.1.h.ii)",
+        "uuid": "c7125d76-1405-5ef8-afca-b1a64027b798"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.1.h.iii in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.1.h.iii"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.1.h.iii (The following AI practices shall be prohibited: — 5.1.h.iii)",
+        "uuid": "ee48a511-aa22-566c-af1a-2465a6588216"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.2 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.2 (Article 5 — 5.2)",
+        "uuid": "90436e27-5c5b-540d-a675-9db20927b546"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.2.a in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.2.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.2.a (Article 5 — 5.2.a)",
+        "uuid": "757954bc-4eed-52a6-b026-965f5b979091"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.2.b in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.2.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.2.b (Article 5 — 5.2.b)",
+        "uuid": "2afdb1aa-9a90-560d-8722-850ca0e955d8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.3 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.3 (Article 5 — 5.3)",
+        "uuid": "fd3770a8-8c83-5d47-9d3f-49523f56fb37"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _5.4 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_5.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _5.4 (Article 5 — 5.4)",
+        "uuid": "cc420e1f-365b-542f-9211-618f4f0ad941"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _50.1 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_50.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _50.1 (Article 50 — 50.1)",
+        "uuid": "ee800c7c-a348-5c6a-bc0d-3ef268e13413"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _50.2 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_50.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _50.2 (Article 50 — 50.2)",
+        "uuid": "68db7579-cbb7-5996-bcd0-27912d4f6e72"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _50.3 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_50.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _50.3 (Article 50 — 50.3)",
+        "uuid": "da5d646f-bd86-53a9-806d-606f14216fef"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _50.4 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_50.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _50.4 (Article 50 — 50.4)",
+        "uuid": "9588794c-d3f7-5d3b-84c0-469af7f3ca65"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _50.5 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_50.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _50.5 (Article 50 — 50.5)",
+        "uuid": "ac929402-53fb-58f6-9f44-f904faa2a552"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _51.1 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_51.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _51.1 (Article 51 — 51.1)",
+        "uuid": "8955f6f0-6489-5846-80a8-a4bf1e5e06df"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _51.2 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_51.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _51.2 (Article 51 — 51.2)",
+        "uuid": "b749f1b9-1708-54a1-abf2-5116c579af83"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _52.1 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_52.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _52.1 (Article 52 — 52.1)",
+        "uuid": "beb09a6a-33b0-5983-82d2-d7fa7be66294"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _52.2 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_52.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _52.2 (Article 52 — 52.2)",
+        "uuid": "3ae941ec-5d26-58ce-a7f5-7ec25a6c4490"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _53.1.a in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_53.1.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _53.1.a (Providers of general-purpose AI models shall: — 53.1.a)",
+        "uuid": "e898e2a8-c6cf-54cb-81b6-101837726542"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _53.1.b in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_53.1.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _53.1.b (Providers of general-purpose AI models shall: — 53.1.b)",
+        "uuid": "a22194e0-aff7-5ce3-b1d6-05a546325c66"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _53.1.b.i in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_53.1.b.i"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _53.1.b.i (Providers of general-purpose AI models shall: — 53.1.b.i)",
+        "uuid": "ffdb0d33-8d35-56aa-88fd-214ba93cd176"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _53.1.b.ii in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_53.1.b.ii"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _53.1.b.ii (Providers of general-purpose AI models shall: — 53.1.b.ii)",
+        "uuid": "77a41893-def8-5aca-bfc4-b27bdad0758b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _53.1.c in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_53.1.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _53.1.c (Providers of general-purpose AI models shall: — 53.1.c)",
+        "uuid": "dbc54d93-ecba-59ba-a379-2642e122ce90"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _53.1.d in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_53.1.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _53.1.d (Providers of general-purpose AI models shall: — 53.1.d)",
+        "uuid": "4d2b1015-a9f6-574f-ab8f-43458e217ea1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _53.2 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_53.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _53.2 (Article 53 — 53.2)",
+        "uuid": "ef5cc27e-7d6b-53eb-8f8a-e1ec684f2210"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _53.3 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_53.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _53.3 (Article 53 — 53.3)",
+        "uuid": "2c62e383-2784-51ce-ba79-167e991742c3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _53.4 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_53.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _53.4 (Article 53 — 53.4)",
+        "uuid": "5fc80fd9-1f3a-5a2d-98f7-5bb249b60921"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _54.1 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_54.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _54.1 (Article 54 — 54.1)",
+        "uuid": "34682345-0789-5c7b-bca3-1ad845ab1e7d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _54.2 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_54.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _54.2 (Article 54 — 54.2)",
+        "uuid": "f1bf1ce3-54c8-5b46-928e-c8292d5f9637"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _54.3 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_54.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _54.3 (Article 54 — 54.3)",
+        "uuid": "63ca971c-e9d2-50ba-ba98-d06a5f883681"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _54.3.a in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_54.3.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _54.3.a (Article 54 — 54.3.a)",
+        "uuid": "1d815ee0-a557-5b10-a3f3-fc09b836575b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _54.3.b in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_54.3.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _54.3.b (Article 54 — 54.3.b)",
+        "uuid": "949118f9-31f5-5c9f-8c8d-61c73671a905"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _54.3.c in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_54.3.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _54.3.c (Article 54 — 54.3.c)",
+        "uuid": "76b5abf4-cc91-5f9f-b75a-3d22cf1b0ba5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _54.3.d in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_54.3.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _54.3.d (Article 54 — 54.3.d)",
+        "uuid": "22fdc8ca-0f94-54e8-a30d-7386891ef04c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _54.4 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_54.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _54.4 (Article 54 — 54.4)",
+        "uuid": "c6fe5e01-563d-56a1-a98d-2fb549cb8123"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _54.5 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_54.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _54.5 (Article 54 — 54.5)",
+        "uuid": "e2a269a8-5492-50f7-9246-22075a54c664"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _54.6 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_54.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _54.6 (Article 54 — 54.6)",
+        "uuid": "69c5368b-d7e9-5931-8a36-74601ef9141f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _55.1 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_55.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _55.1 (Article 55 — 55.1)",
+        "uuid": "d5a7c315-3fda-5c38-8866-3c32c39da8a7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _55.1.a in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_55.1.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _55.1.a (In addition to the obligations listed in Article 53, providers of general-purpose AI models with systemic risk shall: — 55.1.a)",
+        "uuid": "7d1a4dca-6bed-5580-9a20-6d0b4857fd6f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _55.1.b in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_55.1.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _55.1.b (In addition to the obligations listed in Article 53, providers of general-purpose AI models with systemic risk shall: — 55.1.b)",
+        "uuid": "53c78f23-b60a-5d0e-8a5a-732af057f37f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _55.1.c in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_55.1.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _55.1.c (In addition to the obligations listed in Article 53, providers of general-purpose AI models with systemic risk shall: — 55.1.c)",
+        "uuid": "a9b7edf2-5962-5b31-9259-90fa1d9b14d8"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _55.1.d in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_55.1.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _55.1.d (In addition to the obligations listed in Article 53, providers of general-purpose AI models with systemic risk shall: — 55.1.d)",
+        "uuid": "b00533a5-42af-5bed-918d-114299e70f4f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _55.2 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_55.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _55.2 (Article 55 — 55.2)",
+        "uuid": "53e82ec1-3fb2-5fc4-8da7-3a4c75658382"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _55.3 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_55.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _55.3 (Article 55 — 55.3)",
+        "uuid": "9860aca7-21f8-52c3-b4e8-2c1136aaa921"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _56.7 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_56.7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _56.7 (Article 56 — 56.7)",
+        "uuid": "ca685112-55b2-5d86-967f-c6b6c8b6a970"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _59.1 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_59.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _59.1 (Article 59 — 59.1)",
+        "uuid": "3917d9a7-a947-5964-9056-509b6fd2a850"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _59.1.d in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_59.1.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _59.1.d (Article 59 — 59.1.d)",
+        "uuid": "532623d3-7749-53b0-8bd4-10c67fc304fd"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _59.1.e in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_59.1.e"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _59.1.e (Article 59 — 59.1.e)",
+        "uuid": "93d7184c-a700-52f0-b709-68b5bcd585f6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.1 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.1 (Article 6 — 6.1)",
+        "uuid": "2e61e7e4-0b1a-543d-b5ee-b570285f1d10"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.1.a in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.1.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.1.a (Article 6 — 6.1.a)",
+        "uuid": "6f7c6507-518a-5147-b11f-87866fb27571"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.1.b in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.1.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.1.b (Article 6 — 6.1.b)",
+        "uuid": "ad680466-44e6-5dd7-871b-57b762cf3246"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.2 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.2 (Article 6 — 6.2)",
+        "uuid": "4891ba09-96a8-502b-a08c-f563fac0bf36"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.3 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.3 (Article 6 — 6.3)",
+        "uuid": "43357b92-9543-5e03-8e4d-50204415cbc5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.3.a in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.3.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.3.a (Article 6 — 6.3.a)",
+        "uuid": "97ebdc17-8d82-5667-bdb6-19076239685c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.3.b in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.3.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.3.b (Article 6 — 6.3.b)",
+        "uuid": "46cd7085-d720-5187-8a80-b114d5ee90f2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.3.c in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.3.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.3.c (Article 6 — 6.3.c)",
+        "uuid": "1b1fefcb-bbee-5008-9241-e5ca86f248fe"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.3.d in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.3.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.3.d (Article 6 — 6.3.d)",
+        "uuid": "db3376ba-eb98-5b6b-ab6e-97822d2ce7f6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _6.4 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_6.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _6.4 (Article 6 — 6.4)",
+        "uuid": "b9ad6583-539d-56d2-af07-1e27a1cc3b45"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _60.1 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_60.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _60.1 (Article 60 — 60.1)",
+        "uuid": "9e7fd26c-c0a8-5df7-b171-ad6ec98db834"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _60.2 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_60.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _60.2 (Article 60 — 60.2)",
+        "uuid": "8803c2ab-0329-5316-ac8a-eba8121c4e0d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _60.4 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_60.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _60.4 (Article 60 — 60.4)",
+        "uuid": "29f24205-4a31-51c9-8c72-bf7f1018a404"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _60.4.a in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_60.4.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _60.4.a (Article 60 — 60.4.a)",
+        "uuid": "1f70a17b-1232-5aa0-89c9-40a6c1126fee"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _60.4.b in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_60.4.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _60.4.b (Article 60 — 60.4.b)",
+        "uuid": "8856949c-1bf7-552f-ba61-aaf228e0aa55"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _60.4.c in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_60.4.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _60.4.c (Article 60 — 60.4.c)",
+        "uuid": "2c3ede7b-5aaf-5de5-a2f3-1bd7680fad1d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _60.4.d in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_60.4.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _60.4.d (Article 60 — 60.4.d)",
+        "uuid": "fd3623c0-6fc8-5389-9089-e160704485c3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _60.4.e in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_60.4.e"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _60.4.e (Article 60 — 60.4.e)",
+        "uuid": "acdf458a-39ab-58b7-bff0-52a97a0f6460"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _60.4.f in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_60.4.f"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _60.4.f (Article 60 — 60.4.f)",
+        "uuid": "2324ee3e-262c-59fb-9c14-c049228b0f09"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _60.4.g in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_60.4.g"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _60.4.g (Article 60 — 60.4.g)",
+        "uuid": "4ba77bc8-5f7e-5e8f-8e2c-9b67094e5e8b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _60.4.h in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_60.4.h"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _60.4.h (Article 60 — 60.4.h)",
+        "uuid": "6adb245b-afc7-54b8-bacc-624080bc77ad"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _60.4.i in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_60.4.i"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _60.4.i (Article 60 — 60.4.i)",
+        "uuid": "ce94e07a-43bf-55fe-9427-3469cadcab9c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _60.4.j in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_60.4.j"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _60.4.j (Article 60 — 60.4.j)",
+        "uuid": "8d6b7ae6-2504-5dcc-a642-2a4cc50d1ae5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _60.4.k in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_60.4.k"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _60.4.k (Article 60 — 60.4.k)",
+        "uuid": "4d1b5b80-1d00-5094-a389-96ed7bb4c026"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _60.7 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_60.7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _60.7 (Article 60 — 60.7)",
+        "uuid": "9399201d-ce1d-56c0-8042-2b6051c68a42"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _60.8 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_60.8"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _60.8 (Article 60 — 60.8)",
+        "uuid": "1e0ba892-e21c-56c7-b9c5-6d52b3f8d7b9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _60.9 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_60.9"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _60.9 (Article 60 — 60.9)",
+        "uuid": "19ca05f7-7f27-5d57-b7e8-c8b03eb4ac22"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _71.2 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_71.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _71.2 (Article 71 — 71.2)",
+        "uuid": "23e35150-4c9e-54c0-8e0f-4ff8e14b3023"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _71.3 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_71.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _71.3 (Article 71 — 71.3)",
+        "uuid": "1499b00f-f147-54a0-85ea-a5a91365e3f3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _72.1 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_72.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _72.1 (Article 72 — 72.1)",
+        "uuid": "6eefa5bf-ccfd-5cf0-b214-7a243f230331"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _72.2 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_72.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _72.2 (Article 72 — 72.2)",
+        "uuid": "ae9f94c0-5c20-5020-aabf-9cb9c8dab20e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _72.4 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_72.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _72.4 (Article 72 — 72.4)",
+        "uuid": "ddce01c5-0ceb-5891-907b-563ab16eafdb"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _73.1 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_73.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _73.1 (Article 73 — 73.1)",
+        "uuid": "fa690e69-c972-57f1-a78c-f120ffdc3145"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _73.10 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_73.10"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _73.10 (Article 73 — 73.10)",
+        "uuid": "b6a34529-3193-5049-b6af-386ac192b5b0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _73.11 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_73.11"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _73.11 (Article 73 — 73.11)",
+        "uuid": "c6891e6a-4860-5186-b341-90bb748be271"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _73.2 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_73.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _73.2 (Article 73 — 73.2)",
+        "uuid": "d898769a-2f8e-5590-8a41-6bbe10d7847b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _73.3 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_73.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _73.3 (Article 73 — 73.3)",
+        "uuid": "2a00da0d-5d84-55b9-95c3-b74158bbb7d7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _73.5 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_73.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _73.5 (Article 73 — 73.5)",
+        "uuid": "d9b80995-bbb2-5ec6-963e-f3c15d9daa68"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _73.6 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_73.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _73.6 (Article 73 — 73.6)",
+        "uuid": "fdfa9388-87f4-549b-8eef-195e1a2e980d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _73.7 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_73.7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _73.7 (Article 73 — 73.7)",
+        "uuid": "3e64a8bf-3c3e-561c-a927-8760e2009ff6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _8.1 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_8.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _8.1 (Article 8 — 8.1)",
+        "uuid": "7a5c6dec-46de-58f9-bf31-a0d411f9b662"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _8.2 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_8.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _8.2 (Article 8 — 8.2)",
+        "uuid": "d7adb93e-136a-51b3-b573-9821b0d6a800"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _80.4 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_80.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _80.4 (Article 80 — 80.4)",
+        "uuid": "f5f66318-1757-5554-985a-9adfc50b0f99"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _80.5 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_80.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _80.5 (Article 80 — 80.5)",
+        "uuid": "db63032a-b655-5e24-9f49-3c37dd40553e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _80.6 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_80.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _80.6 (Article 80 — 80.6)",
+        "uuid": "8b8f2d14-3206-5ec4-9adb-3ab8abe1367f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _82.2 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_82.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _82.2 (Article 82 — 82.2)",
+        "uuid": "93366efa-6c20-5c3e-a8bf-a83b428f7552"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _83.1.a in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_83.1.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _83.1.a (Article 83 — 83.1.a)",
+        "uuid": "49d3dbd9-26ac-55f9-ae60-16eff46c1a81"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _83.1.b in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_83.1.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _83.1.b (Article 83 — 83.1.b)",
+        "uuid": "88f9138e-6fa7-5077-9bb4-362fc137520b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _83.1.c in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_83.1.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _83.1.c (Article 83 — 83.1.c)",
+        "uuid": "ab8e4f38-706e-58b1-87fc-7108c3939aff"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _83.1.d in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_83.1.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _83.1.d (Article 83 — 83.1.d)",
+        "uuid": "7477fd7d-9929-56ce-9efa-c8b6dd1e21e9"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _83.1.e in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_83.1.e"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _83.1.e (Article 83 — 83.1.e)",
+        "uuid": "af7dba0d-2568-58f2-93be-37d10d8f10e0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _83.1.f in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_83.1.f"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _83.1.f (Article 83 — 83.1.f)",
+        "uuid": "890b27e1-dc76-523c-b3a8-4be883a7da65"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _83.1.g in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_83.1.g"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _83.1.g (Article 83 — 83.1.g)",
+        "uuid": "3de7ea4d-5561-544e-a327-03630df07b97"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _9.1 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_9.1"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _9.1 (Article 9 — 9.1)",
+        "uuid": "fdfe1ed8-913b-58a4-a023-c7403c95b643"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _9.10 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_9.10"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _9.10 (Article 9 — 9.10)",
+        "uuid": "69303f4f-2508-5dd2-a058-f331415acb50"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _9.2 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_9.2"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _9.2 (Article 9 — 9.2)",
+        "uuid": "19d5f8e0-9458-58e3-951f-89c5a38ff65c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _9.2.a in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_9.2.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _9.2.a (Article 9 — 9.2.a)",
+        "uuid": "b9d6305e-4608-5245-a34a-bedef7ec0a93"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _9.2.b in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_9.2.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _9.2.b (Article 9 — 9.2.b)",
+        "uuid": "5fe88c55-3744-5dee-a168-59232e85397d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _9.2.c in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_9.2.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _9.2.c (Article 9 — 9.2.c)",
+        "uuid": "2824c709-968b-53f0-8237-8df2691c70b0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _9.2.d in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_9.2.d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _9.2.d (Article 9 — 9.2.d)",
+        "uuid": "c4f2c246-2e5c-5cc6-ae0c-f0781264b3a1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _9.3 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_9.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _9.3 (Article 9 — 9.3)",
+        "uuid": "7b92d8a6-0edd-580c-b12e-92deba2a3363"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _9.4 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_9.4"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _9.4 (Article 9 — 9.4)",
+        "uuid": "9378ecd6-1185-5bdb-8a7d-6427ab4b9b43"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _9.5 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_9.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _9.5 (Article 9 — 9.5)",
+        "uuid": "62c4acb3-d259-584d-bdfa-60a7d80ac4c3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _9.5.a in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_9.5.a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _9.5.a (Article 9 — 9.5.a)",
+        "uuid": "376e7c15-16b9-5c03-9054-d593b93f7ad1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _9.5.b in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_9.5.b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _9.5.b (Article 9 — 9.5.b)",
+        "uuid": "d26b6781-b30d-512f-87b1-2615128f33be"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _9.5.c in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_9.5.c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _9.5.c (Article 9 — 9.5.c)",
+        "uuid": "86f916ef-6271-5d6e-b88a-5e37489c7dd1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _9.6 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_9.6"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _9.6 (Article 9 — 9.6)",
+        "uuid": "928b4225-1064-5f0b-a3b2-c3c82ee58af2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _9.7 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_9.7"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _9.7 (Article 9 — 9.7)",
+        "uuid": "e4dc6c3c-bcc4-5571-9eee-2d68de3acb4b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _9.8 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_9.8"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _9.8 (Article 9 — 9.8)",
+        "uuid": "358672c5-d6d9-5da6-a3fe-986bb458d493"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _9.9 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_9.9"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _9.9 (Article 9 — 9.9)",
+        "uuid": "0d3bb631-6d81-5577-851f-f8211f5f8d2d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _91.5 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_91.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _91.5 (Article 91 — 91.5)",
+        "uuid": "018f1fab-55a1-513a-bdb6-3826d18aef51"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _92.5 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_92.5"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _92.5 (Article 92 — 92.5)",
+        "uuid": "3955cc32-cdc8-5f2c-8e60-05a9d3e1d29d"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control _93.3 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "_93.3"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: _93.3 (Article 93 — 93.3)",
+        "uuid": "fd33b595-775b-5d84-b0bb-2a4fa0428bc5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control a in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "a"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: a (Article 43 — a)",
+        "uuid": "77240caf-aac6-5a6e-ad5a-8a7c539ef02c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control b in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "b"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: b (Article 43 — b)",
+        "uuid": "5bb5ec8f-5e1f-550e-98f0-7449a96d4141"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control c in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "c"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: c (Article 43 — c)",
+        "uuid": "c93ff284-0ad5-5e2f-91e4-31049ec51083"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control d in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "d"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: d (Article 43 — d)",
+        "uuid": "28d414dc-6408-545d-94ed-99dcc0db44d0"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node1020 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node1020"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node1020 (Article 86 — node1020)",
+        "uuid": "a0a132b8-2246-508f-adc6-bb7a45e4ee1b"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node1131 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node1131"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node1131 (Article 113 — node1131)",
+        "uuid": "c814b5f2-88d2-568b-8374-921bc1aedd65"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node271 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node271"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node271 (Article 4 — node271)",
+        "uuid": "a892e976-2068-5db7-bc81-64be7df76b52"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node288 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node288"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node288 (Article 5 — node288)",
+        "uuid": "c5beb366-ca2b-5b5a-a48e-4c2914949298"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node292 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node292"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node292 (Article 5 — node292)",
+        "uuid": "f2f9e835-0828-577e-a46b-b17895180f09"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node312 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node312"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node312 (Article 6 — node312)",
+        "uuid": "a9e9b6df-b314-5182-bb87-50741432dbf7"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node337 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node337"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node337 (Article 9 — node337)",
+        "uuid": "30004d96-8a88-5639-a5ee-6edc3ef4226f"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node409 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node409"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node409 (Article 14 — node409)",
+        "uuid": "ae6a1e37-1698-564d-bcfd-22db0bb81093"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node415 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node415"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node415 (Article 15 — node415)",
+        "uuid": "d62bdff6-f633-5c49-9b09-b525d5ac19f2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node416 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node416"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node416 (Article 15 — node416)",
+        "uuid": "26a7755e-84db-5514-a73a-f2116d513323"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node418 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node418"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node418 (Article 15 — node418)",
+        "uuid": "2bfccf9c-5dcc-5e71-9f73-6f347da539c6"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node419 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node419"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node419 (Article 15 — node419)",
+        "uuid": "4e5b995f-cc2b-52ad-b901-2bde91b6f615"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node463 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node463"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node463 (Article 19 — node463)",
+        "uuid": "6fea72f8-d5ef-51e0-85b9-91a2172f2a13"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node464 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node464"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node464 (Article 19 — node464)",
+        "uuid": "ba28a37b-9a55-5ce8-b9cd-dada2c576ac5"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node465 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node465"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node465 (Article 20)",
+        "uuid": "8816c4c1-1025-5619-8c19-1bfb75dda717"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node481 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node481"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node481 (Article 22 — node481)",
+        "uuid": "07feff19-85b3-5c7b-9639-535df9643360"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node520 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node520"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node520 (Article 26 — node520)",
+        "uuid": "22cd080e-5da0-5681-b5d1-8ea14cd9e9cc"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node522 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node522"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node522 (Article 26 — node522)",
+        "uuid": "c78a1fbf-5697-5487-84fd-22724b2032d3"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node527 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node527"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node527 (Article 26 — node527)",
+        "uuid": "677d6e29-b8ea-5e41-8e3a-09ed3d711690"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node528 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node528"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node528 (Article 26 — node528)",
+        "uuid": "4f67a5a7-901f-5cf6-accc-64b9e6d84d0e"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node530 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node530"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node530 (Article 26 — node530)",
+        "uuid": "92386cc5-d324-50da-80b2-438f17de67af"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node531 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node531"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node531 (Article 26 — node531)",
+        "uuid": "42666a0b-1568-5f8b-b243-4b5e79f3a4a1"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node653 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node653"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node653 (Article 43 — node653)",
+        "uuid": "06935a35-3291-5363-9690-ce0269a54a16"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node658 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node658"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node658 (Article 43 — node658)",
+        "uuid": "80cd1fdf-1042-52e8-8f8d-fa1bea2c4771"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node662 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node662"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node662 (Article 43 — node662)",
+        "uuid": "95ddda6b-b41d-5fb0-9f78-ce7c804e8c8c"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node664 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node664"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node664 (Article 43 — node664)",
+        "uuid": "c28828a9-5caf-5107-a41a-9bcb4ccc7e07"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node711 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node711"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node711 (Article 50 — node711)",
+        "uuid": "088f28b9-e298-5be2-8ff7-ea79289c7138"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node719 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node719"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node719 (Article 51 — node719)",
+        "uuid": "cbdf53f0-cd7b-5005-9586-86ce815ff799"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node720 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node720"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node720 (Article 51 — node720)",
+        "uuid": "f3019a61-b89c-5454-b7f6-91b9d2be84c2"
+      },
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for control node931 in EU Artificial Intelligence Act (AI Act).",
+        "props": [
+          {
+            "name": "control-id",
+            "ns": "https://ckodex.io/ns/xoscal/props",
+            "value": "node931"
+          }
+        ],
+        "title": "Continuous Monitoring \u0026 Tailoring: node931 (Article 73 — node931)",
+        "uuid": "e904077f-1dad-5bd1-94fe-9aec2a68c873"
       }
     ],
     "uuid": "9ac62498-704c-5f95-b2ef-b2f1343da4f6"

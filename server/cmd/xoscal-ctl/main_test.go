@@ -1,14 +1,18 @@
 package main
 
 import (
+	"context"
 	"os"
 	"path/filepath"
+	"runtime"
 	"testing"
 	"time"
 
 	"github.com/mchorfa/xoscal/server/internal/canadianframeworks"
 	"github.com/mchorfa/xoscal/server/internal/dbutil"
 	"github.com/mchorfa/xoscal/server/internal/derogation"
+	"github.com/mchorfa/xoscal/server/internal/frameworks"
+	"github.com/mchorfa/xoscal/server/internal/kg"
 	"github.com/mchorfa/xoscal/server/internal/oscal"
 	"github.com/mchorfa/xoscal/server/internal/scaffold"
 	"github.com/mchorfa/xoscal/server/internal/tabular"
@@ -178,8 +182,8 @@ func TestXoscalCtl_GenerateAndIngest(t *testing.T) {
 	dbPath := filepath.Join(tmpDir, "test-kg.db")
 	outDir := filepath.Join(tmpDir, "generated")
 
-	// 1. Seed database
-	runSeed([]string{"-dsn", dbPath})
+	// 1. Seed single framework into database for fast, deterministic 7-snapshot CLI integration testing
+	runSeed([]string{"-dsn", dbPath, "-framework", "nist-csf-2.0"})
 
 	// 2. Prepare sample requirement JSON to test ingest
 	sampleReq := `[
@@ -218,7 +222,7 @@ func TestXoscalCtl_GenerateAndIngest(t *testing.T) {
 	runGenerate([]string{
 		"-dsn", dbPath,
 		"-snapshot", "baseline",
-		"-framework", "cybersecure-canada",
+		"-framework", "nist-csf-2.0",
 		"-out", fullOutDir,
 		"-validate",
 	})
@@ -238,5 +242,57 @@ func TestXoscalCtl_GenerateAndIngest(t *testing.T) {
 		if err := dbutil.CheckDigestSidecar(artFile); err != nil {
 			t.Fatalf("expected valid .sha256 sidecar for generated %s, got err: %v", f, err)
 		}
+	}
+}
+
+func TestXoscalCtl_FullRegistrySeedAndGenerate(t *testing.T) {
+	prevProcs := runtime.GOMAXPROCS(2)
+	defer runtime.GOMAXPROCS(prevProcs)
+
+	tmpDir := t.TempDir()
+	dbPath := filepath.Join(tmpDir, "full-registry.db")
+	ctx := context.Background()
+
+	start := time.Now()
+	store, err := kg.NewSQLiteStore(dbPath, dbutil.PoolConfig{})
+	if err != nil {
+		t.Fatalf("open sqlite store: %v", err)
+	}
+	defer func() { _ = store.Close() }()
+
+	reg := frameworks.DefaultRegistry()
+	if got := len(reg.List()); got != 36 {
+		t.Fatalf("expected 36 registered frameworks, got %d", got)
+	}
+	t0 := time.Now()
+	if err := reg.SeedKG(ctx, store); err != nil {
+		t.Fatalf("SeedKG failed: %v", err)
+	}
+	seedDur := time.Since(t0)
+
+	t1 := time.Now()
+	if _, err := store.CreateSnapshot(ctx, "baseline"); err != nil {
+		t.Fatalf("CreateSnapshot(baseline) failed: %v", err)
+	}
+	snapDur := time.Since(t1)
+
+	t2 := time.Now()
+	gen := oscal.NewGenerator(store)
+	res, err := gen.GenerateAllArtifacts(ctx, "baseline", "nist_csf_2", nil)
+	if err != nil {
+		t.Fatalf("GenerateAllArtifacts(nist_csf_2) failed: %v", err)
+	}
+	genDur := time.Since(t2)
+	if res.Catalog == nil || (len(res.Catalog.Groups) == 0 && len(res.Catalog.Controls) == 0) {
+		t.Fatalf("expected non-empty catalog generated for nist_csf_2")
+	}
+
+	elapsed := time.Since(start)
+	t.Logf("Timings (GOMAXPROCS=2): SeedKG=%v CreateSnapshot=%v GenerateAllArtifacts=%v Total=%v", seedDur, snapDur, genDur, elapsed)
+	if genDur >= 5*time.Second {
+		t.Fatalf("expected single-pass GenerateAllArtifacts to complete in < 5s under GOMAXPROCS=2, took %v", genDur)
+	}
+	if elapsed >= 25*time.Second {
+		t.Fatalf("expected full registry seed + generate to complete in < 25s under GOMAXPROCS=2, took %v", elapsed)
 	}
 }

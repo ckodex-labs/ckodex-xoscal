@@ -4,7 +4,7 @@
       "href": "./assessment-plan.json"
     },
     "metadata": {
-      "last-modified": "2026-11-08T01:42:11Z",
+      "last-modified": "2026-01-01T00:00:00Z",
       "oscal-version": "1.2.3",
       "title": "CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Assessment Results Template",
       "version": "1.2.3"
@@ -305,7 +305,7 @@
         ],
         "observations": [
           {
-            "collected": "2026-11-08T01:42:11Z",
+            "collected": "2026-01-01T00:00:00Z",
             "description": "Verified control _03.01.01.a (Account Management (Gestion des comptes) — 03.01.01.A) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -317,7 +317,7 @@
             "uuid": "7ba37fe1-5da9-5cc7-a2a0-cc5871d7bbef"
           },
           {
-            "collected": "2026-11-08T01:42:11Z",
+            "collected": "2026-01-01T00:00:00Z",
             "description": "Verified control _03.02.01.a.1 (Literacy Training and Awareness (Formation de base et sensibilisation) — 03.02.01.A.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -329,7 +329,7 @@
             "uuid": "528a9dec-c2bf-5715-9717-846b52dde55d"
           },
           {
-            "collected": "2026-11-08T01:42:11Z",
+            "collected": "2026-01-01T00:00:00Z",
             "description": "Verified control _03.03.01.a (Event Logging (Journalisation des événements) — 03.03.01.A) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -341,7 +341,7 @@
             "uuid": "00cf980d-e8a8-5d30-a421-e78528589e19"
           },
           {
-            "collected": "2026-11-08T01:42:11Z",
+            "collected": "2026-01-01T00:00:00Z",
             "description": "Verified control _03.04.01.a (Baseline Configuration (Configuration de référence) — 03.04.01.A) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -353,7 +353,7 @@
             "uuid": "14f7e4e3-c0bc-5c73-9a6d-8da857831f4e"
           },
           {
-            "collected": "2026-11-08T01:42:11Z",
+            "collected": "2026-01-01T00:00:00Z",
             "description": "Verified control _03.05.01.a (Identification and Authentication — Organizational Users (Identification et authentification des utilisateurs) — 03.05.01.A) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -365,7 +365,7 @@
             "uuid": "78c99760-9cb9-51e9-ac87-4cda127635c9"
           },
           {
-            "collected": "2026-11-08T01:42:11Z",
+            "collected": "2026-01-01T00:00:00Z",
             "description": "Verified control _03.06.01.a (Incident Handling (Traitement des incidents) — 03.06.01.A) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -377,7 +377,7 @@
             "uuid": "80d4dc1d-701b-51d9-8b89-d28366a685b5"
           },
           {
-            "collected": "2026-11-08T01:42:11Z",
+            "collected": "2026-01-01T00:00:00Z",
             "description": "Verified control _03.07.04.a (Maintenance Tools (Outils de maintenance) — 03.07.04.A) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -389,7 +389,7 @@
             "uuid": "c52e1035-b5aa-57ce-bb4c-985bd5678bd4"
           },
           {
-            "collected": "2026-11-08T01:42:11Z",
+            "collected": "2026-01-01T00:00:00Z",
             "description": "Verified control _03.08.01.a (Media Storage (Stockage des supports) — 03.08.01.A) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -401,7 +401,7 @@
             "uuid": "396f2b26-af6c-5453-bae8-4b2e46dcf9ed"
           },
           {
-            "collected": "2026-11-08T01:42:11Z",
+            "collected": "2026-01-01T00:00:00Z",
             "description": "Verified control _03.09.01.a (Personnel Screening (Filtrage de sécurité du personnel) — 03.09.01.A) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -413,7 +413,7 @@
             "uuid": "4aac3c23-2e93-50f4-8f99-254848685ac9"
           },
           {
-            "collected": "2026-11-08T01:42:11Z",
+            "collected": "2026-01-01T00:00:00Z",
             "description": "Verified control _03.10.01.a (Physical Access Authorizations (Autorisations d'accès physique) — 03.10.01.A) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -425,7 +425,7 @@
             "uuid": "9179ca7d-3a7a-5f45-8130-a1c1d96d5da8"
           },
           {
-            "collected": "2026-11-08T01:42:11Z",
+            "collected": "2026-01-01T00:00:00Z",
             "description": "Verified control _03.11.01.a (Risk Assessment (Évaluation des risques) — 03.11.01.A) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -437,7 +437,7 @@
             "uuid": "270bbc53-2e7c-5fba-a43d-211417c789c4"
           },
           {
-            "collected": "2026-11-08T01:42:11Z",
+            "collected": "2026-01-01T00:00:00Z",
             "description": "Verified control _03.12.01.a (Security Control Assessment (Évaluation des contrôles de sécurité) — 03.12.01.A) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -449,7 +449,7 @@
             "uuid": "346eb03d-355c-5286-b450-05498a4b1597"
           },
           {
-            "collected": "2026-11-08T01:42:11Z",
+            "collected": "2026-01-01T00:00:00Z",
             "description": "Verified control _03.13.01.a (Boundary Protection (Protection de la frontière) — 03.13.01.A) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -461,7 +461,7 @@
             "uuid": "a81d9edf-d652-527d-97b6-3f64416b930d"
           },
           {
-            "collected": "2026-11-08T01:42:11Z",
+            "collected": "2026-01-01T00:00:00Z",
             "description": "Verified control _03.14.01.a (Flaw Remediation (Correction des défauts) — 03.14.01.A) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -473,7 +473,7 @@
             "uuid": "159fc494-4554-5592-b2d3-991a728fd070"
           },
           {
-            "collected": "2026-11-08T01:42:11Z",
+            "collected": "2026-01-01T00:00:00Z",
             "description": "Verified control _03.15.01.a (Policy and Procedures (Politiques et procédures) — 03.15.01.A) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -485,7 +485,7 @@
             "uuid": "a65d0f74-4892-5df8-8bd1-41ec98bc1257"
           },
           {
-            "collected": "2026-11-08T01:42:11Z",
+            "collected": "2026-01-01T00:00:00Z",
             "description": "Verified control _03.16.01.a (Security Engineering Principles (Principes d'ingénierie de sécurité) — 03.16.01.A) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -497,7 +497,7 @@
             "uuid": "d8abd90c-0a97-5dd4-b7ca-4c75609ff3b1"
           },
           {
-            "collected": "2026-11-08T01:42:11Z",
+            "collected": "2026-01-01T00:00:00Z",
             "description": "Verified control _03.17.01.a (Supply Chain Risk Management Plan (Plan de gestion des risques liés à la chaîne d'approvisionnement) — 03.17.01.A) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -513,11 +513,813 @@
           "control-selections": [
             {
               "description": "All controls evaluated for CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada",
-              "include-all": {}
+              "include-controls": [
+                {
+                  "control-id": "_03.01.01.a"
+                },
+                {
+                  "control-id": "_03.01.01.b"
+                },
+                {
+                  "control-id": "_03.01.01.c.1"
+                },
+                {
+                  "control-id": "_03.01.01.c.2"
+                },
+                {
+                  "control-id": "_03.01.01.c.3"
+                },
+                {
+                  "control-id": "_03.01.01.d.1"
+                },
+                {
+                  "control-id": "_03.01.01.d.2"
+                },
+                {
+                  "control-id": "_03.01.01.e"
+                },
+                {
+                  "control-id": "_03.01.01.f.1"
+                },
+                {
+                  "control-id": "_03.01.01.f.2"
+                },
+                {
+                  "control-id": "_03.01.01.f.3"
+                },
+                {
+                  "control-id": "_03.01.01.f.4"
+                },
+                {
+                  "control-id": "_03.01.01.f.5"
+                },
+                {
+                  "control-id": "_03.01.01.g.1"
+                },
+                {
+                  "control-id": "_03.01.01.g.2"
+                },
+                {
+                  "control-id": "_03.01.01.g.3"
+                },
+                {
+                  "control-id": "_03.01.01.h"
+                },
+                {
+                  "control-id": "_03.01.02.a"
+                },
+                {
+                  "control-id": "_03.01.03.a"
+                },
+                {
+                  "control-id": "_03.01.04.a"
+                },
+                {
+                  "control-id": "_03.01.04.b"
+                },
+                {
+                  "control-id": "_03.01.05.a"
+                },
+                {
+                  "control-id": "_03.01.05.b"
+                },
+                {
+                  "control-id": "_03.01.05.c"
+                },
+                {
+                  "control-id": "_03.01.05.d"
+                },
+                {
+                  "control-id": "_03.01.06.a"
+                },
+                {
+                  "control-id": "_03.01.06.b"
+                },
+                {
+                  "control-id": "_03.01.06.c"
+                },
+                {
+                  "control-id": "_03.01.07.a"
+                },
+                {
+                  "control-id": "_03.01.07.b"
+                },
+                {
+                  "control-id": "_03.01.08.a"
+                },
+                {
+                  "control-id": "_03.01.08.b"
+                },
+                {
+                  "control-id": "_03.01.09.a"
+                },
+                {
+                  "control-id": "_03.01.10.a"
+                },
+                {
+                  "control-id": "_03.01.10.b"
+                },
+                {
+                  "control-id": "_03.01.10.c"
+                },
+                {
+                  "control-id": "_03.01.11.a"
+                },
+                {
+                  "control-id": "_03.01.12.a"
+                },
+                {
+                  "control-id": "_03.01.12.b"
+                },
+                {
+                  "control-id": "_03.01.12.c"
+                },
+                {
+                  "control-id": "_03.01.12.d"
+                },
+                {
+                  "control-id": "_03.01.16.a"
+                },
+                {
+                  "control-id": "_03.01.16.b"
+                },
+                {
+                  "control-id": "_03.01.16.c"
+                },
+                {
+                  "control-id": "_03.01.16.d"
+                },
+                {
+                  "control-id": "_03.01.18.a"
+                },
+                {
+                  "control-id": "_03.01.18.b"
+                },
+                {
+                  "control-id": "_03.01.18.c"
+                },
+                {
+                  "control-id": "_03.01.20.a"
+                },
+                {
+                  "control-id": "_03.01.20.b"
+                },
+                {
+                  "control-id": "_03.01.20.c.1"
+                },
+                {
+                  "control-id": "_03.01.20.c.2"
+                },
+                {
+                  "control-id": "_03.01.20.d"
+                },
+                {
+                  "control-id": "_03.01.22.a"
+                },
+                {
+                  "control-id": "_03.01.22.b"
+                },
+                {
+                  "control-id": "_03.02.01.a.1"
+                },
+                {
+                  "control-id": "_03.02.01.a.2"
+                },
+                {
+                  "control-id": "_03.02.01.a.3"
+                },
+                {
+                  "control-id": "_03.02.01.b"
+                },
+                {
+                  "control-id": "_03.02.02.a.1"
+                },
+                {
+                  "control-id": "_03.02.02.a.2"
+                },
+                {
+                  "control-id": "_03.02.02.b"
+                },
+                {
+                  "control-id": "_03.03.01.a"
+                },
+                {
+                  "control-id": "_03.03.01.b"
+                },
+                {
+                  "control-id": "_03.03.02.a.1"
+                },
+                {
+                  "control-id": "_03.03.02.a.2"
+                },
+                {
+                  "control-id": "_03.03.02.a.3"
+                },
+                {
+                  "control-id": "_03.03.02.a.4"
+                },
+                {
+                  "control-id": "_03.03.02.a.5"
+                },
+                {
+                  "control-id": "_03.03.02.a.6"
+                },
+                {
+                  "control-id": "_03.03.02.b"
+                },
+                {
+                  "control-id": "_03.03.03.a"
+                },
+                {
+                  "control-id": "_03.03.03.b"
+                },
+                {
+                  "control-id": "_03.03.04.a"
+                },
+                {
+                  "control-id": "_03.03.04.b"
+                },
+                {
+                  "control-id": "_03.03.05.a"
+                },
+                {
+                  "control-id": "_03.03.05.b"
+                },
+                {
+                  "control-id": "_03.03.05.c"
+                },
+                {
+                  "control-id": "_03.03.06.a"
+                },
+                {
+                  "control-id": "_03.03.06.b"
+                },
+                {
+                  "control-id": "_03.03.07.a"
+                },
+                {
+                  "control-id": "_03.03.07.b"
+                },
+                {
+                  "control-id": "_03.03.08.a"
+                },
+                {
+                  "control-id": "_03.03.08.b"
+                },
+                {
+                  "control-id": "_03.04.01.a"
+                },
+                {
+                  "control-id": "_03.04.01.b"
+                },
+                {
+                  "control-id": "_03.04.02.a"
+                },
+                {
+                  "control-id": "_03.04.02.b"
+                },
+                {
+                  "control-id": "_03.04.03.a"
+                },
+                {
+                  "control-id": "_03.04.03.b"
+                },
+                {
+                  "control-id": "_03.04.03.c"
+                },
+                {
+                  "control-id": "_03.04.03.d"
+                },
+                {
+                  "control-id": "_03.04.04.a"
+                },
+                {
+                  "control-id": "_03.04.04.b"
+                },
+                {
+                  "control-id": "_03.04.05.a"
+                },
+                {
+                  "control-id": "_03.04.06.a"
+                },
+                {
+                  "control-id": "_03.04.06.b"
+                },
+                {
+                  "control-id": "_03.04.06.c"
+                },
+                {
+                  "control-id": "_03.04.06.d"
+                },
+                {
+                  "control-id": "_03.04.08.a"
+                },
+                {
+                  "control-id": "_03.04.08.b"
+                },
+                {
+                  "control-id": "_03.04.08.c"
+                },
+                {
+                  "control-id": "_03.04.10.a"
+                },
+                {
+                  "control-id": "_03.04.10.b"
+                },
+                {
+                  "control-id": "_03.04.10.c"
+                },
+                {
+                  "control-id": "_03.04.11.a"
+                },
+                {
+                  "control-id": "_03.04.11.b"
+                },
+                {
+                  "control-id": "_03.04.12.a"
+                },
+                {
+                  "control-id": "_03.04.12.b"
+                },
+                {
+                  "control-id": "_03.05.01.a"
+                },
+                {
+                  "control-id": "_03.05.01.b"
+                },
+                {
+                  "control-id": "_03.05.02.a"
+                },
+                {
+                  "control-id": "_03.05.03.a"
+                },
+                {
+                  "control-id": "_03.05.04.a"
+                },
+                {
+                  "control-id": "_03.05.05.a"
+                },
+                {
+                  "control-id": "_03.05.05.b"
+                },
+                {
+                  "control-id": "_03.05.05.c"
+                },
+                {
+                  "control-id": "_03.05.05.d"
+                },
+                {
+                  "control-id": "_03.05.07.a"
+                },
+                {
+                  "control-id": "_03.05.07.b"
+                },
+                {
+                  "control-id": "_03.05.07.c"
+                },
+                {
+                  "control-id": "_03.05.07.d"
+                },
+                {
+                  "control-id": "_03.05.07.e"
+                },
+                {
+                  "control-id": "_03.05.07.f"
+                },
+                {
+                  "control-id": "_03.05.11.a"
+                },
+                {
+                  "control-id": "_03.05.12.a"
+                },
+                {
+                  "control-id": "_03.05.12.b"
+                },
+                {
+                  "control-id": "_03.05.12.c"
+                },
+                {
+                  "control-id": "_03.05.12.d"
+                },
+                {
+                  "control-id": "_03.05.12.e"
+                },
+                {
+                  "control-id": "_03.05.12.f"
+                },
+                {
+                  "control-id": "_03.06.01.a"
+                },
+                {
+                  "control-id": "_03.06.02.a"
+                },
+                {
+                  "control-id": "_03.06.02.b"
+                },
+                {
+                  "control-id": "_03.06.02.c"
+                },
+                {
+                  "control-id": "_03.06.02.d"
+                },
+                {
+                  "control-id": "_03.06.03.a"
+                },
+                {
+                  "control-id": "_03.06.04.a.1"
+                },
+                {
+                  "control-id": "_03.06.04.a.2"
+                },
+                {
+                  "control-id": "_03.06.04.a.3"
+                },
+                {
+                  "control-id": "_03.06.04.b"
+                },
+                {
+                  "control-id": "_03.06.05.a.1"
+                },
+                {
+                  "control-id": "_03.06.05.a.2"
+                },
+                {
+                  "control-id": "_03.06.05.a.3"
+                },
+                {
+                  "control-id": "_03.06.05.a.4"
+                },
+                {
+                  "control-id": "_03.06.05.a.5"
+                },
+                {
+                  "control-id": "_03.06.05.a.6"
+                },
+                {
+                  "control-id": "_03.06.05.b"
+                },
+                {
+                  "control-id": "_03.06.05.c"
+                },
+                {
+                  "control-id": "_03.06.05.d"
+                },
+                {
+                  "control-id": "_03.07.04.a"
+                },
+                {
+                  "control-id": "_03.07.04.b"
+                },
+                {
+                  "control-id": "_03.07.04.c"
+                },
+                {
+                  "control-id": "_03.07.05.a"
+                },
+                {
+                  "control-id": "_03.07.05.b"
+                },
+                {
+                  "control-id": "_03.07.05.c"
+                },
+                {
+                  "control-id": "_03.07.06.a"
+                },
+                {
+                  "control-id": "_03.07.06.b"
+                },
+                {
+                  "control-id": "_03.07.06.c"
+                },
+                {
+                  "control-id": "_03.07.06.d"
+                },
+                {
+                  "control-id": "_03.08.01.a"
+                },
+                {
+                  "control-id": "_03.08.02.a"
+                },
+                {
+                  "control-id": "_03.08.03.a"
+                },
+                {
+                  "control-id": "_03.08.04.a"
+                },
+                {
+                  "control-id": "_03.08.05.a"
+                },
+                {
+                  "control-id": "_03.08.05.b"
+                },
+                {
+                  "control-id": "_03.08.05.c"
+                },
+                {
+                  "control-id": "_03.08.07.a"
+                },
+                {
+                  "control-id": "_03.08.07.b"
+                },
+                {
+                  "control-id": "_03.08.09.a"
+                },
+                {
+                  "control-id": "_03.08.09.b"
+                },
+                {
+                  "control-id": "_03.09.01.a"
+                },
+                {
+                  "control-id": "_03.09.01.b"
+                },
+                {
+                  "control-id": "_03.09.02.a.1"
+                },
+                {
+                  "control-id": "_03.09.02.a.2"
+                },
+                {
+                  "control-id": "_03.09.02.a.3"
+                },
+                {
+                  "control-id": "_03.09.02.b.1"
+                },
+                {
+                  "control-id": "_03.09.02.b.2"
+                },
+                {
+                  "control-id": "_03.10.01.a"
+                },
+                {
+                  "control-id": "_03.10.01.b"
+                },
+                {
+                  "control-id": "_03.10.01.c"
+                },
+                {
+                  "control-id": "_03.10.01.d"
+                },
+                {
+                  "control-id": "_03.10.02.a"
+                },
+                {
+                  "control-id": "_03.10.02.b"
+                },
+                {
+                  "control-id": "_03.10.06.a"
+                },
+                {
+                  "control-id": "_03.10.06.b"
+                },
+                {
+                  "control-id": "_03.10.07.a.1"
+                },
+                {
+                  "control-id": "_03.10.07.a.2"
+                },
+                {
+                  "control-id": "_03.10.07.b"
+                },
+                {
+                  "control-id": "_03.10.07.c"
+                },
+                {
+                  "control-id": "_03.10.07.d"
+                },
+                {
+                  "control-id": "_03.10.07.e"
+                },
+                {
+                  "control-id": "_03.10.08.a"
+                },
+                {
+                  "control-id": "_03.11.01.a"
+                },
+                {
+                  "control-id": "_03.11.01.b"
+                },
+                {
+                  "control-id": "_03.11.02.a"
+                },
+                {
+                  "control-id": "_03.11.02.b"
+                },
+                {
+                  "control-id": "_03.11.02.c"
+                },
+                {
+                  "control-id": "_03.11.04.a"
+                },
+                {
+                  "control-id": "_03.12.01.a"
+                },
+                {
+                  "control-id": "_03.12.02.a.1"
+                },
+                {
+                  "control-id": "_03.12.02.a.2"
+                },
+                {
+                  "control-id": "_03.12.02.b.1"
+                },
+                {
+                  "control-id": "_03.12.02.b.2"
+                },
+                {
+                  "control-id": "_03.12.02.b.3"
+                },
+                {
+                  "control-id": "_03.12.03.a"
+                },
+                {
+                  "control-id": "_03.12.05.a"
+                },
+                {
+                  "control-id": "_03.12.05.b"
+                },
+                {
+                  "control-id": "_03.12.05.c"
+                },
+                {
+                  "control-id": "_03.13.01.a"
+                },
+                {
+                  "control-id": "_03.13.01.b"
+                },
+                {
+                  "control-id": "_03.13.01.c"
+                },
+                {
+                  "control-id": "_03.13.04.a"
+                },
+                {
+                  "control-id": "_03.13.06.a"
+                },
+                {
+                  "control-id": "_03.13.08.a"
+                },
+                {
+                  "control-id": "_03.13.09.a"
+                },
+                {
+                  "control-id": "_03.13.10.a"
+                },
+                {
+                  "control-id": "_03.13.11.a"
+                },
+                {
+                  "control-id": "_03.13.12.a"
+                },
+                {
+                  "control-id": "_03.13.12.b"
+                },
+                {
+                  "control-id": "_03.13.13.a"
+                },
+                {
+                  "control-id": "_03.13.13.b"
+                },
+                {
+                  "control-id": "_03.13.15.a"
+                },
+                {
+                  "control-id": "_03.14.01.a"
+                },
+                {
+                  "control-id": "_03.14.01.b"
+                },
+                {
+                  "control-id": "_03.14.02.a"
+                },
+                {
+                  "control-id": "_03.14.02.b"
+                },
+                {
+                  "control-id": "_03.14.02.c.1"
+                },
+                {
+                  "control-id": "_03.14.02.c.2"
+                },
+                {
+                  "control-id": "_03.14.03.a"
+                },
+                {
+                  "control-id": "_03.14.03.b"
+                },
+                {
+                  "control-id": "_03.14.06.a.1"
+                },
+                {
+                  "control-id": "_03.14.06.a.2"
+                },
+                {
+                  "control-id": "_03.14.06.b"
+                },
+                {
+                  "control-id": "_03.14.06.c"
+                },
+                {
+                  "control-id": "_03.14.08.a"
+                },
+                {
+                  "control-id": "_03.14.09.a"
+                },
+                {
+                  "control-id": "_03.14.09.b"
+                },
+                {
+                  "control-id": "_03.14.09.c"
+                },
+                {
+                  "control-id": "_03.15.01.a"
+                },
+                {
+                  "control-id": "_03.15.01.b"
+                },
+                {
+                  "control-id": "_03.15.02.a.1"
+                },
+                {
+                  "control-id": "_03.15.02.a.2"
+                },
+                {
+                  "control-id": "_03.15.02.a.3"
+                },
+                {
+                  "control-id": "_03.15.02.a.4"
+                },
+                {
+                  "control-id": "_03.15.02.a.5"
+                },
+                {
+                  "control-id": "_03.15.02.a.6"
+                },
+                {
+                  "control-id": "_03.15.02.a.7"
+                },
+                {
+                  "control-id": "_03.15.02.a.8"
+                },
+                {
+                  "control-id": "_03.15.02.b"
+                },
+                {
+                  "control-id": "_03.15.02.c"
+                },
+                {
+                  "control-id": "_03.15.03.a"
+                },
+                {
+                  "control-id": "_03.15.03.b"
+                },
+                {
+                  "control-id": "_03.15.03.c"
+                },
+                {
+                  "control-id": "_03.15.03.d"
+                },
+                {
+                  "control-id": "_03.16.01.a"
+                },
+                {
+                  "control-id": "_03.16.02.a"
+                },
+                {
+                  "control-id": "_03.16.02.b"
+                },
+                {
+                  "control-id": "_03.16.03.a"
+                },
+                {
+                  "control-id": "_03.16.03.b"
+                },
+                {
+                  "control-id": "_03.16.03.c"
+                },
+                {
+                  "control-id": "_03.17.01.a"
+                },
+                {
+                  "control-id": "_03.17.01.b"
+                },
+                {
+                  "control-id": "_03.17.01.c"
+                },
+                {
+                  "control-id": "_03.17.02.a"
+                },
+                {
+                  "control-id": "_03.17.03.a"
+                },
+                {
+                  "control-id": "_03.17.03.b"
+                }
+              ]
             }
           ]
         },
-        "start": "2026-11-08T01:42:11Z",
+        "start": "2026-01-01T00:00:00Z",
         "title": "CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Assessment Results",
         "uuid": "145b6b35-cb5a-5105-933c-e672bd33ea28"
       }
