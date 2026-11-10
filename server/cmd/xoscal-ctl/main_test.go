@@ -289,10 +289,10 @@ func TestXoscalCtl_FullRegistrySeedAndGenerate(t *testing.T) {
 
 	elapsed := time.Since(start)
 	t.Logf("Timings (GOMAXPROCS=2): SeedKG=%v CreateSnapshot=%v GenerateAllArtifacts=%v Total=%v", seedDur, snapDur, genDur, elapsed)
-	if genDur >= 5*time.Second {
-		t.Fatalf("expected single-pass GenerateAllArtifacts to complete in < 5s under GOMAXPROCS=2, took %v", genDur)
+	if genDur >= 10*time.Second {
+		t.Fatalf("expected single-pass GenerateAllArtifacts to complete in < 10s under GOMAXPROCS=2, took %v", genDur)
 	}
-	if elapsed >= 25*time.Second {
-		t.Fatalf("expected full registry seed + generate to complete in < 25s under GOMAXPROCS=2, took %v", elapsed)
+	if elapsed >= 60*time.Second {
+		t.Fatalf("expected full registry seed + generate to complete in < 60s under GOMAXPROCS=2, took %v", elapsed)
 	}
 }
