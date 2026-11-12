@@ -72,10 +72,11 @@ func (m *Xoscal) SbomArtifactAnalysis(source *dagger.Directory, sbom *dagger.Fil
 
 // SbomValidationReports preserves input bytes, raw findings and exit status.
 func (m *Xoscal) SbomValidationReports(source *dagger.Directory, sbom *dagger.File) *dagger.Directory {
-	return dag.Container().
-		From(ubuntuBase).
-		WithExec([]string{"apt-get", "update"}).
-		WithExec([]string{"apt-get", "install", "-y", "--no-install-recommends", "ca-certificates", "curl", "coreutils", "tar"}).
+	return withAptPackages(
+		dag.Container().From(ubuntuBase),
+		ubuntuBase,
+		"ca-certificates", "curl", "coreutils", "tar",
+	).
 		WithExec([]string{"sh", "-c", fmt.Sprintf("set -eu\n"+
 			"case \"$(uname -m)\" in\n"+
 			"  x86_64) asset_arch=x86_64; expected=%s ;;\n"+

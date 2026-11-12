@@ -5,16 +5,59 @@ import (
 	"crypto/sha256"
 	"os"
 	"path/filepath"
+	"slices"
 	"strings"
 	"testing"
+
+	"github.com/mchorfa/xoscal/server/internal/portal"
 )
 
+func loadManifestFromDisk(t *testing.T) *portal.Manifest {
+	t.Helper()
+	raw, err := os.ReadFile(filepath.Join("..", "..", "..", "data", "frameworks", "manifest.yaml"))
+	if err != nil {
+		t.Fatalf("read manifest.yaml: %v", err)
+	}
+	m, err := portal.ParseManifest(raw)
+	if err != nil {
+		t.Fatalf("parse manifest.yaml: %v", err)
+	}
+	if len(m.Frameworks) == 0 {
+		t.Fatal("manifest.yaml contains no frameworks")
+	}
+	return m
+}
+
 func TestEmbeddedCatalogs_SHA256ParityWithDisk(t *testing.T) {
-	if len(manifestFrameworkSpecs) != 31 {
-		t.Fatalf("expected 31 manifestFrameworkSpecs, got %d", len(manifestFrameworkSpecs))
+	m := loadManifestFromDisk(t)
+	var expectedIDs []string
+	manifestByID := make(map[string]portal.Framework, len(m.Frameworks))
+	for _, entry := range m.Frameworks {
+		if entry.Jurisdiction != "canada" && strings.HasSuffix(entry.Filename, ".yaml") {
+			expectedIDs = append(expectedIDs, entry.RefID)
+			manifestByID[entry.RefID] = entry
+		}
 	}
 
-	for _, spec := range manifestFrameworkSpecs {
+	specs := loadEmbeddedManifestSpecs()
+	if len(specs) != len(expectedIDs) {
+		t.Fatalf("embedded manifest specs count = %d, want %d from manifest.yaml", len(specs), len(expectedIDs))
+	}
+
+	for _, spec := range specs {
+		entry, ok := manifestByID[spec.ID]
+		if !ok {
+			t.Fatalf("embedded spec %q missing from manifest.yaml", spec.ID)
+		}
+		if spec.Jurisdiction != entry.Jurisdiction {
+			t.Errorf("%s jurisdiction = %q, want %q", spec.ID, spec.Jurisdiction, entry.Jurisdiction)
+		}
+		if spec.Authority != entry.Authority {
+			t.Errorf("%s authority = %q, want %q", spec.ID, spec.Authority, entry.Authority)
+		}
+		if !slices.Equal(spec.Aliases, entry.Aliases) {
+			t.Errorf("%s aliases = %v, want %v", spec.ID, spec.Aliases, entry.Aliases)
+		}
 		t.Run(spec.ID, func(t *testing.T) {
 			diskPath := filepath.Join("..", "..", "..", "data", "frameworks", spec.ID, "catalog.json")
 			diskBytes, err := os.ReadFile(diskPath)
@@ -36,7 +79,16 @@ func TestEmbeddedCatalogs_SHA256ParityWithDisk(t *testing.T) {
 	}
 }
 
-func TestEmbeddedCatalogs_StandaloneTempDirAll36Frameworks(t *testing.T) {
+func TestEmbeddedCatalogs_StandaloneTempDirAllFrameworks(t *testing.T) {
+	m := loadManifestFromDisk(t)
+	manifestIDs := m.RefIDs()
+	expectedManifestNonCanadian := 0
+	for _, entry := range m.Frameworks {
+		if entry.Jurisdiction != "canada" && strings.HasSuffix(entry.Filename, ".yaml") {
+			expectedManifestNonCanadian++
+		}
+	}
+
 	t.Setenv("XOSCAL_DATA_DIR", "")
 
 	origDir, err := os.Getwd()
@@ -51,11 +103,11 @@ func TestEmbeddedCatalogs_StandaloneTempDirAll36Frameworks(t *testing.T) {
 		_ = os.Chdir(origDir)
 	})
 
-	// 1. Verify fresh uncached manifest registration loads all 31 frameworks from embedded archive.
+	// 1. Verify fresh uncached manifest registration loads all non-Canadian frameworks from embedded archive.
 	freshReg := NewRegistry()
 	RegisterManifestFrameworks(freshReg)
-	if got := len(freshReg.List()); got != 31 {
-		t.Fatalf("expected 31 manifest frameworks in fresh registry, got %d", got)
+	if got := len(freshReg.List()); got != expectedManifestNonCanadian {
+		t.Fatalf("expected %d manifest frameworks in fresh registry, got %d", expectedManifestNonCanadian, got)
 	}
 	for _, fw := range freshReg.List() {
 		ctrls, err := LoadControls(fw)
@@ -67,12 +119,17 @@ func TestEmbeddedCatalogs_StandaloneTempDirAll36Frameworks(t *testing.T) {
 		}
 	}
 
-	// 2. Verify DefaultRegistry() loads all 36 frameworks (31 manifest + 5 Canadian) from temp cwd.
-	allFws := DefaultRegistry().List()
-	if len(allFws) != 36 {
-		t.Fatalf("expected 36 frameworks in DefaultRegistry (ensure canadianframeworks imported in package tests or check count), got %d", len(allFws))
+	// 2. Verify DefaultRegistry() loads every framework declared in manifest.yaml from temp cwd.
+	reg := DefaultRegistry()
+	allFws := reg.List()
+	if len(allFws) != len(manifestIDs) {
+		t.Fatalf("expected %d frameworks in DefaultRegistry matching manifest.yaml, got %d", len(manifestIDs), len(allFws))
 	}
-	for _, fw := range allFws {
+	for _, id := range manifestIDs {
+		fw, ok := reg.Get(id)
+		if !ok {
+			t.Fatalf("DefaultRegistry missing manifest framework %q", id)
+		}
 		ctrls, err := LoadControls(fw)
 		if err != nil {
 			t.Fatalf("DefaultRegistry LoadControls(%s) from temp cwd failed: %v", fw.ID(), err)

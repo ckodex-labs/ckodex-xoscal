@@ -5,13 +5,10 @@
 ### Kubernetes
 
 ```bash
-kubectl apply -f k8s/server/rbac.yaml
-kubectl apply -f k8s/server/configmap.yaml
-kubectl apply -f k8s/server/deployment.yaml
-kubectl apply -f k8s/server/service.yaml
-kubectl apply -f k8s/server/hpa.yaml
-kubectl apply -f k8s/server/pdb.yaml
-kubectl apply -f k8s/server/networkpolicy.yaml
+kubectl apply -k k8s/server
+# Pin an immutable verified release tag and digest before rollout:
+kubectl -n default set image deployment/xoscal-server \
+  server=ghcr.io/ckodex-labs/ckodex-xoscal:<tag>@sha256:<verified-image-digest>
 ```
 
 ### Local Development

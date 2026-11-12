@@ -49,13 +49,13 @@ def fixture_receipt(root, stage, kind):
     if kind == 'sbom':
         raw = GATE.sbom_gate(directory, root / 'evidence/policy/analysis-exceptions.json')
     elif kind == 'frontend-release':
-        raw = GATE.frontend_gate(directory)
+        raw = GATE.frontend_gate(directory, root / 'evidence/policy/analysis-exceptions.json')
     elif kind == 'security':
         raw = GATE._security_gate(directory)
     elif kind == 'image-release':
-        raw = GATE.image_gate(directory)
+        raw = GATE.image_gate(directory, exceptions_path=root / 'evidence/policy/analysis-exceptions.json')
     else:
-        raw = GATE.artifact_gate(directory)
+        raw = GATE.artifact_gate(directory, root / 'evidence/policy/analysis-exceptions.json')
     write_json(directory / 'analysis-gate.json', {'policy_version': 1, 'kind': kind, 'passed': not raw['blocked'], **raw})
 
 

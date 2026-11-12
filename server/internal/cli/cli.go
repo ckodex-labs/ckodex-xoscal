@@ -46,6 +46,8 @@ func PrintUsage(version string) {
 		binName = "xoscal"
 	}
 
+	fwCount, _ := utcpRegistryCounts()
+
 	fmt.Printf(`%s v%s — Unified xOSCAL Compliance & Governance Engine
 
 USAGE:
@@ -55,7 +57,7 @@ COMMANDS:
   controls       Search and inspect controls across registered frameworks
   compare        Compare two frameworks and compute sovereign transition delta
   ontology       Inspect formal OWL/JSON-LD regulatory & threat ontology (12 classes, 16 predicates)
-  graph          Query 36-framework property graph, multi-jurisdiction crosswalks & 6D blast radius
+  graph          Query %d-framework property graph, multi-jurisdiction crosswalks & 6D blast radius
   feeds          List, sync, and inspect sovereign regulatory & threat intelligence feeds
   serve          Start local zero-dependency xOSCAL Web Studio & Explorer
   ui             Launch local xOSCAL Web Studio in default browser
@@ -78,7 +80,7 @@ COMMANDS:
   version        Print CLI version and exit
 
 Run '%s <command> -h' for details on specific command options.
-`, binName, version, binName, binName)
+`, binName, version, binName, fwCount, binName)
 }
 
 // Execute parses command arguments and runs the appropriate subcommand.
@@ -1836,7 +1838,7 @@ func RunDoctor(args []string, version string) {
 		})
 	}
 
-	// 3. Framework Registry & All 36 Sovereign/International Catalogs
+	// 3. Framework Registry & Sovereign/International Catalogs
 	reg := frameworks.DefaultRegistry()
 	allRegistered := reg.List()
 	expectedSovereign := []string{
@@ -1846,8 +1848,9 @@ func RunDoctor(args []string, version string) {
 		"cccs-itsp-10-171",
 		"cccs-medium-cloud-pbmm",
 	}
+	expectedIDs := append(frameworks.ManifestFrameworkIDs(), expectedSovereign...)
 	missingFws := []string{}
-	for _, expectedID := range expectedSovereign {
+	for _, expectedID := range expectedIDs {
 		if _, found := reg.Get(expectedID); !found {
 			missingFws = append(missingFws, expectedID)
 		}
@@ -1866,13 +1869,13 @@ func RunDoctor(args []string, version string) {
 		}
 		totalVerifiedControls += len(ctrls)
 	}
-	if len(missingFws) > 0 || len(brokenCatalogs) > 0 || len(allRegistered) < 36 {
+	if len(missingFws) > 0 || len(brokenCatalogs) > 0 || len(allRegistered) < len(expectedIDs) {
 		var errParts []string
-		if len(allRegistered) < 36 {
-			errParts = append(errParts, fmt.Sprintf("expected >=36 frameworks, got %d", len(allRegistered)))
+		if len(allRegistered) < len(expectedIDs) {
+			errParts = append(errParts, fmt.Sprintf("expected >=%d frameworks, got %d", len(expectedIDs), len(allRegistered)))
 		}
 		if len(missingFws) > 0 {
-			errParts = append(errParts, "missing Canadian frameworks: "+strings.Join(missingFws, ", "))
+			errParts = append(errParts, "missing expected frameworks: "+strings.Join(missingFws, ", "))
 		}
 		if len(brokenCatalogs) > 0 {
 			errParts = append(errParts, "unreadable/empty catalogs: "+strings.Join(brokenCatalogs, "; "))
@@ -1985,7 +1988,11 @@ func RunDoctor(args []string, version string) {
 	}
 
 	// 7. Universal Tool Calling Protocol (UTCP v1.0.1) & Multi-Language Ecosystem
-	utcpManual := utcp.GenerateManual(utcp.ManualOptions{Version: version})
+	utcpManual := utcp.GenerateManual(utcp.ManualOptions{
+		Version:        version,
+		FrameworkCount: len(allRegistered),
+		ControlCount:   totalVerifiedControls,
+	})
 	utcpBytes, utcpMarshalErr := json.Marshal(utcpManual)
 	if utcpMarshalErr != nil {
 		report.Checks = append(report.Checks, DoctorCheck{
@@ -2126,12 +2133,15 @@ func RunUTCP(args []string) {
 		authEnv := fs.String("auth-env", "XOSCAL_API_TOKEN", "Environment variable name for Bearer API key authentication")
 		parseFlagsInterspersed(fs, rest)
 
+		fwCount, ctrlCount := utcpRegistryCounts()
 		opts := utcp.ManualOptions{
 			BaseHTTPURL:       *baseURL,
 			BaseURL:           *baseURL,
 			GRPCHost:          *grpcHost,
 			GRPCAddr:          *grpcHost,
 			BinaryPath:        *binPath,
+			FrameworkCount:    fwCount,
+			ControlCount:      ctrlCount,
 			BearerTokenEnvVar: *authEnv,
 		}
 		for _, tok := range strings.Split(strings.ToLower(strings.TrimSpace(*protocols)), ",") {
@@ -2192,7 +2202,11 @@ func RunUTCP(args []string) {
 				os.Exit(1)
 			}
 		} else {
-			manual := utcp.GenerateManual(utcp.ManualOptions{})
+			fwCount, ctrlCount := utcpRegistryCounts()
+			manual := utcp.GenerateManual(utcp.ManualOptions{
+				FrameworkCount: fwCount,
+				ControlCount:   ctrlCount,
+			})
 			data, err = json.MarshalIndent(manual, "", "  ")
 			if err != nil {
 				fmt.Fprintf(os.Stderr, "error marshaling built-in manual: %v\n", err)
@@ -2416,7 +2430,7 @@ func RunGraph(args []string) {
 			fmt.Println(string(out))
 			return
 		}
-		fmt.Printf("\n=== xOSCAL UNIFIED 36-FRAMEWORK PROPERTY GRAPH STATS ===\n")
+		fmt.Printf("\n=== xOSCAL UNIFIED %d-FRAMEWORK PROPERTY GRAPH STATS ===\n", stats.FrameworksCount)
 		fmt.Printf("Total Nodes:        %d\n", stats.TotalNodes)
 		fmt.Printf("Total Edges:        %d\n", stats.TotalEdges)
 		fmt.Printf("Frameworks Seeded:  %d\n", stats.FrameworksCount)
@@ -2769,4 +2783,13 @@ func RunFeeds(args []string) {
 		fmt.Fprintf(os.Stderr, "unknown feeds subcommand %q (expected: list, sync, inspect, verify-checkpoint)\n", sub)
 		os.Exit(1)
 	}
+}
+
+func utcpRegistryCounts() (int, int) {
+	infos := frameworks.DefaultRegistry().ListInfo()
+	totalControls := 0
+	for _, info := range infos {
+		totalControls += info.ControlCount
+	}
+	return len(infos), totalControls
 }

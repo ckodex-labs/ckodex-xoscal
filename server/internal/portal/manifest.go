@@ -10,9 +10,11 @@ import (
 
 // Framework is one entry in data/frameworks/manifest.yaml.
 type Framework struct {
-	RefID        string `yaml:"ref_id"`
-	Jurisdiction string `yaml:"jurisdiction"`
-	Filename     string `yaml:"filename"`
+	RefID        string   `yaml:"ref_id"`
+	Jurisdiction string   `yaml:"jurisdiction"`
+	Filename     string   `yaml:"filename"`
+	Authority    string   `yaml:"authority,omitempty"`
+	Aliases      []string `yaml:"aliases,omitempty"`
 }
 
 // Manifest is the parsed framework manifest.

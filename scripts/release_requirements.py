@@ -84,11 +84,11 @@ def replay_gate(root, evidence_path, kind, gate, exceptions, subject=None):
         require((evidence / 'sbom.cyclonedx.json').read_bytes() == (root / 'evidence/frontend/sbom.cyclonedx.json').read_bytes(), 'frontend assessed SBOM differs from replayed runtime inventory')
         computed = gate.sbom_gate(evidence, exceptions)
     elif kind == 'frontend-release':
-        computed = gate.frontend_gate(evidence)
+        computed = gate.frontend_gate(evidence, exceptions)
     elif kind == 'image-release':
-        computed = gate.image_gate(evidence)
+        computed = gate.image_gate(evidence, exceptions_path=exceptions)
     elif kind == 'artifact-release':
-        computed = gate.artifact_gate(evidence)
+        computed = gate.artifact_gate(evidence, exceptions)
     else:
         raise ValueError('unsupported admission stage')
     require(computed.get('blocked') == [], 'analysis policy rejected raw evidence: ' + evidence_path)
@@ -149,6 +149,14 @@ def replay_constraints(root, records, framework_ids, profile_paths):
     require(read_json(directory / 'semantic-scope.json') == semantic, 'OSCAL semantic tool scope receipt differs from exact subjects')
 
 
+def parse_manifest_ids(manifest_path: Path) -> list[str]:
+    """Parse canonical framework ref_ids from framework-manifest.yaml using stdlib only."""
+    ids = re.findall(r'^\s*-\s*ref_id:\s*(\S+)', manifest_path.read_text(), re.M)
+    require(bool(ids) and len(ids) == len(set(ids)) and all(re.fullmatch(r'[A-Za-z0-9_.-]+', i) for i in ids),
+            'invalid framework manifest ref_ids')
+    return ids
+
+
 def required_payload(root, manifest, policy_path=None, exceptions_path=None):
     """Require complete producer outputs, replay policy, and bind their exact subjects."""
     root = Path(root)
@@ -162,11 +170,12 @@ def required_payload(root, manifest, policy_path=None, exceptions_path=None):
     exceptions = Path(exceptions_path or staged_exceptions)
     require(policy.get('policy_version') == 1, 'unsupported required-output policy')
     require(policy.get('sdk_languages') == list(LANGUAGES), 'incomplete SDK policy')
+    require(policy.get('framework_manifest_sha256') == digest(staged_frameworks), 'framework manifest changed without updating release policy')
+    manifest_ids = parse_manifest_ids(staged_frameworks)
     ids = policy.get('framework_ids')
-    require(isinstance(ids, list) and len(ids) == len(set(ids)) == 36 and all(isinstance(i, str) and re.fullmatch(r'[A-Za-z0-9_.-]+', i) for i in ids), 'invalid exact framework policy')
+    require(isinstance(ids, list) and len(ids) == len(set(ids)) and all(isinstance(i, str) and re.fullmatch(r'[A-Za-z0-9_.-]+', i) for i in ids) and set(ids) == set(manifest_ids), 'invalid exact framework policy')
     profile_paths = set(policy.get('profile_paths') or ([policy['profile_path']] if policy.get('profile_path') else []))
     require(len(profile_paths) == 2 and all(isinstance(p, str) and p.startswith('frameworks/') and p.endswith('/profile.json') for p in profile_paths), 'invalid exact profile policy')
-    require(policy.get('framework_manifest_sha256') == digest(staged_frameworks), 'framework manifest changed without updating release policy')
     require({(p['os'], p['arch']) for p in policy.get('cli_platforms', [])} == PLATFORMS, 'incomplete platform policy')
     entries = manifest.get('artifacts')
     require(isinstance(entries, list) and entries, 'missing artifact inventory')

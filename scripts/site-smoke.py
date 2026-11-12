@@ -19,6 +19,7 @@ from pathlib import Path
 
 from release_inventory import digest, safe_path, validate
 
+REPO_ROOT = Path(__file__).resolve().parent.parent
 LANGUAGES = ("go", "python", "java", "csharp", "ts", "swift")
 SERVICE_COUNTS = {"OscalService": 41, "GovernanceService": 28,
                   "TransparencyExchangeService": 14, "TransparencyGraphService": 13}
@@ -103,6 +104,65 @@ def check_openapi(root):
             for child in node:
                 references(child)
     references(document)
+    return len(seen)
+
+
+def _count_controls(obj):
+    if not isinstance(obj, dict):
+        return 0
+    total = 0
+    for ctrl in obj.get("controls") or []:
+        total += 1 + _count_controls(ctrl)
+    for group in obj.get("groups") or []:
+        total += _count_controls(group)
+    return total
+
+
+def _manifest_ref_ids():
+    manifest_text = (REPO_ROOT / "data/frameworks/manifest.yaml").read_text()
+    ref_ids = re.findall(r"^\s*-\s*ref_id:\s*(\S+)", manifest_text, re.M)
+    if not ref_ids:
+        raise ValueError("no framework ref_ids found in data/frameworks/manifest.yaml")
+    return ref_ids
+
+
+def check_portal_metrics(root, op_count):
+    ref_ids = _manifest_ref_ids()
+    fw_count = len(ref_ids)
+    ctrl_count = 0
+    artifact_count = 0
+    for rid in ref_ids:
+        fw_dir = REPO_ROOT / "data/frameworks" / rid
+        catalog = json.loads((fw_dir / "catalog.json").read_text())["catalog"]
+        ctrl_count += _count_controls(catalog)
+        artifact_count += len(list(fw_dir.glob("*.json")))
+    utcp_count = len(re.findall(r'mkHTTPTool\(\s*"(xoscal_[^"]+)"', (REPO_ROOT / "server/internal/utcp/manual.go").read_text()))
+    cli_text = (REPO_ROOT / "server/internal/cli/cli.go").read_text()
+    usage_block = cli_text.split("COMMANDS:\n", 1)[1].split("\n\nRun ", 1)[0]
+    cli_count = len(re.findall(r"^  ([a-z][a-z-]+)\s{2,}", usage_block, re.M))
+
+    index_html = (root / "index.html").read_text()
+    for needle in (
+        f'<div class="num">{fw_count}</div>',
+        f'<div class="num">{ctrl_count:,}</div>',
+        f'<div class="num">{artifact_count}</div>',
+        f'<div class="num">{op_count}</div>',
+        f'<div class="num">{utcp_count}</div>',
+        f"unified {cli_count}-command",
+        f"Ships {fw_count} sovereign and international frameworks ({ctrl_count:,} controls across {artifact_count} 7-layer",
+        f"({utcp_count} native tools)",
+    ):
+        if needle not in index_html:
+            raise ValueError(f"index.html metric drift: missing expected phrase {needle!r}")
+
+    cli_html = (root / "cli.html").read_text()
+    for needle in (
+        f"unified {cli_count}-command CLI",
+        f"{fw_count}-framework sovereign registry",
+        f"UTCP v1.0.1 {utcp_count}-tool manual",
+    ):
+        if needle not in cli_html:
+            raise ValueError(f"cli.html metric drift: missing expected phrase {needle!r}")
 
 
 def check_generated(root, pages):
@@ -165,8 +225,10 @@ def check_generated(root, pages):
                 raise ValueError(f"unsafe SDK archive path: {language}")
         check_sidecar(path)
     catalogs = sorted(root.glob("frameworks/*/catalog.json"))
-    if len(catalogs) != 36:
-        raise ValueError(f"expected 36 catalogs, got {len(catalogs)}")
+    expected_fws = sorted(_manifest_ref_ids())
+    actual_fws = [p.parent.name for p in catalogs]
+    if actual_fws != expected_fws:
+        raise ValueError(f"expected catalogs {expected_fws}, got {actual_fws}")
     profiles = [root / "frameworks/cccs-medium-cloud-pbmm/profile.json", root / "frameworks/cccs-itsp-10-033/profile.json"]
     for path in catalogs + profiles:
         model = "profile" if path.name == "profile.json" else "catalog"
@@ -278,7 +340,8 @@ def main() -> int:
             if "releases/latest" in path.read_text():
                 errors.append(f"{path.name}: mutable latest-release fetch")
         fetch("openapi.json")
-        check_openapi(root)
+        op_count = check_openapi(root)
+        check_portal_metrics(root, op_count)
         docs = fetch("docs.html").decode()
         for marker in ('data-url="./openapi.json"', 'src="./scalar.js"', "port 50051", "port 9090", "/v1/component-definitions", "/v1/transparency/claims/{claim_id}/receipt"):
             if marker not in docs:
@@ -302,7 +365,7 @@ def main() -> int:
         print("site-smoke: FAIL")
         print("\n".join(f"- {error}" for error in errors))
         return 1
-    print(f"site-smoke: PASS ({len(fetched)} HTTP assets; 96 API operations; {'generated inventory' if args.generated else 'source templates'} from {root})")
+    print(f"site-smoke: PASS ({len(fetched)} HTTP assets; {op_count} API operations; {'generated inventory' if args.generated else 'source templates'} from {root})")
     return 0
 
 

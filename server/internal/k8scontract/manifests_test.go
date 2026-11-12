@@ -1,9 +1,11 @@
 package k8scontract
 
 import (
+	"io/fs"
 	"os"
 	"path/filepath"
 	"runtime"
+	"strings"
 	"testing"
 
 	"gopkg.in/yaml.v3"
@@ -26,8 +28,8 @@ func TestBetaManifestsKeepSingleWriterAndSecretBackedRuntime(t *testing.T) {
 		t.Fatalf("beta deployment must have one server container, got %d", len(containers))
 	}
 	container := requiredMapValue(t, containers[0], "server container")
-	if got := requiredString(t, container, "image"); got == "" {
-		t.Fatal("server container image must be declared")
+	if got := requiredString(t, container, "image"); got != "ghcr.io/ckodex-labs/ckodex-xoscal" {
+		t.Fatalf("server container image = %q, want ghcr.io/ckodex-labs/ckodex-xoscal", got)
 	}
 	assertEnv(t, container, "XOSCAL_STORE_DSN", "/data/oscal.db")
 	assertArgPair(t, container, "-config", "/etc/xoscal/config.yaml")
@@ -222,4 +224,53 @@ func assertVolumeSource(t *testing.T, podSpec map[string]any, name, source, key,
 		return
 	}
 	t.Fatalf("volume %s is missing", name)
+}
+
+func TestKubernetesDeploymentsRespectBetaConstraints(t *testing.T) {
+	root := repositoryRoot(t)
+	k8sDir := filepath.Join(root, "k8s")
+	if _, err := os.Stat(filepath.Join(k8sDir, "spire-sidecar.yaml")); err == nil {
+		t.Fatal("k8s/spire-sidecar.yaml must not exist while SPIRE auth is unimplemented")
+	}
+	if _, err := os.Stat(filepath.Join(k8sDir, "server/kustomization.yaml")); err != nil {
+		t.Fatalf("k8s/server/kustomization.yaml missing: %v", err)
+	}
+	err := filepath.WalkDir(k8sDir, func(path string, d fs.DirEntry, walkErr error) error {
+		if walkErr != nil {
+			return walkErr
+		}
+		if d.IsDir() || (filepath.Ext(path) != ".yaml" && filepath.Ext(path) != ".yml") {
+			return nil
+		}
+		raw, err := os.ReadFile(path)
+		if err != nil {
+			return err
+		}
+		if strings.Contains(string(raw), "spire-auth-config") && filepath.Base(path) != "spire-auth-configmap.yaml" {
+			t.Fatalf("%s references spire-auth-config while SPIRE auth is unimplemented", path)
+		}
+		dec := yaml.NewDecoder(strings.NewReader(string(raw)))
+		for {
+			var doc map[string]any
+			if err := dec.Decode(&doc); err != nil {
+				if err.Error() == "EOF" {
+					break
+				}
+				return err
+			}
+			if len(doc) == 0 {
+				continue
+			}
+			if kind, _ := doc["kind"].(string); kind == "Deployment" {
+				spec := requiredMap(t, doc, "spec")
+				if got := requiredInt(t, spec, "replicas"); got != 1 {
+					t.Fatalf("%s Deployment replicas=%d, must be 1 for SQLite", path, got)
+				}
+			}
+		}
+		return nil
+	})
+	if err != nil {
+		t.Fatalf("walk k8s manifests: %v", err)
+	}
 }

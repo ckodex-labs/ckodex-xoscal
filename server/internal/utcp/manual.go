@@ -282,10 +282,55 @@ type ManualOptions struct {
 	GRPCHost          string // Backward-compatible alias for GRPCAddr
 	BinaryPath        string
 	Version           string
+	FrameworkCount    int
+	ControlCount      int
 	IncludeHTTP       bool
 	IncludeCLI        bool
 	IncludeGRPC       bool
 	BearerTokenEnvVar string
+}
+
+func formatCommaInt(n int) string {
+	if n < 0 {
+		return "-" + formatCommaInt(-n)
+	}
+	s := fmt.Sprintf("%d", n)
+	if len(s) <= 3 {
+		return s
+	}
+	var out strings.Builder
+	rem := len(s) % 3
+	if rem > 0 {
+		out.WriteString(s[:rem])
+	}
+	for i := rem; i < len(s); i += 3 {
+		if out.Len() > 0 {
+			out.WriteByte(',')
+		}
+		out.WriteString(s[i : i+3])
+	}
+	return out.String()
+}
+
+func fwCountNoun(opts ManualOptions, noun string) string {
+	if opts.FrameworkCount > 0 {
+		return fmt.Sprintf("%d %s", opts.FrameworkCount, noun)
+	}
+	return "registered " + noun
+}
+
+func fwAdjectivePhrase(opts ManualOptions, noun string) string {
+	if opts.FrameworkCount > 0 {
+		return fmt.Sprintf("the %d-framework %s", opts.FrameworkCount, noun)
+	}
+	return "the unified " + noun
+}
+
+func ctrlCountNoun(opts ManualOptions) string {
+	if opts.ControlCount > 0 {
+		return fmt.Sprintf("%s controls", formatCommaInt(opts.ControlCount))
+	}
+	return "all registered controls"
 }
 
 func normalizeManualOptions(opts ManualOptions) ManualOptions {
@@ -399,7 +444,7 @@ func BuildManualWithOptions(opts ManualOptions) *Manual {
 	info := ManualInfo{
 		Title:       "xOSCAL High-Assurance NIST OSCAL 1.2.3 & Sovereign Compliance Engine",
 		Version:     opts.Version,
-		Description: "Universal Tool Calling Protocol (UTCP) v1.0.1 manual for xOSCAL compliance, ontology, graph, and feed operations across 36 sovereign frameworks (16,237 controls).",
+		Description: fmt.Sprintf("Universal Tool Calling Protocol (UTCP) v1.0.1 manual for xOSCAL compliance, ontology, graph, and feed operations across %s (%s).", fwCountNoun(opts, "sovereign frameworks"), ctrlCountNoun(opts)),
 		SpecURL:     SpecRepositoryURL,
 		Ecosystem:   ecoMap,
 	}
@@ -507,7 +552,7 @@ func buildHTTPTools(opts ManualOptions) []Tool {
 		),
 		mkHTTPTool(
 			"xoscal_doctor",
-			"Run Rule 36 deep diagnostics across runtime substrate, embedded OSCAL 1.2.3 schemas, 36 registered frameworks, and unified property graph.",
+			fmt.Sprintf("Run Rule 36 deep diagnostics across runtime substrate, embedded OSCAL 1.2.3 schemas, %s, and unified property graph.", fwCountNoun(opts, "registered frameworks")),
 			GovernanceDiscover,
 			[]string{"diagnostics", "doctor", "oscal", "http", "read-only"},
 			"GET",
@@ -517,7 +562,7 @@ func buildHTTPTools(opts ManualOptions) []Tool {
 		),
 		mkHTTPTool(
 			"xoscal_frameworks_list",
-			"List all 36 registered sovereign and international compliance frameworks with optional jurisdiction filtering.",
+			fmt.Sprintf("List all %s with optional jurisdiction filtering.", fwCountNoun(opts, "sovereign and international compliance frameworks")),
 			GovernanceDiscover,
 			[]string{"frameworks", "registry", "sovereign", "http", "read-only"},
 			"GET",
@@ -595,7 +640,7 @@ func buildHTTPTools(opts ManualOptions) []Tool {
 		),
 		mkHTTPTool(
 			"xoscal_controls_search",
-			"Full-text search across 16,237 controls, statements, ODP parameters, and sovereign guidance over HTTP.",
+			fmt.Sprintf("Full-text search across %s, statements, ODP parameters, and sovereign guidance over HTTP.", ctrlCountNoun(opts)),
 			GovernanceDiscover,
 			[]string{"controls", "search", "oscal", "itsp-10-033", "http", "read-only"},
 			"GET",
@@ -640,7 +685,7 @@ func buildHTTPTools(opts ManualOptions) []Tool {
 		),
 		mkHTTPTool(
 			"xoscal_graph_stats",
-			"Query node, edge, framework, feed, and anti-invariant statistics of the 36-framework unified property graph.",
+			fmt.Sprintf("Query node, edge, framework, feed, and anti-invariant statistics of %s.", fwAdjectivePhrase(opts, "property graph")),
 			GovernanceDiscover,
 			[]string{"graph", "stats", "telemetry", "http", "read-only"},
 			"GET",
@@ -650,7 +695,7 @@ func buildHTTPTools(opts ManualOptions) []Tool {
 		),
 		mkHTTPTool(
 			"xoscal_graph_crosswalk",
-			"Query the 36-framework property graph for multi-jurisdiction control equivalency, harmonization, active threats, and 6D Vector State.",
+			fmt.Sprintf("Query %s for multi-jurisdiction control equivalency, harmonization, active threats, and 6D Vector State.", fwAdjectivePhrase(opts, "property graph")),
 			GovernanceDiscover,
 			[]string{"graph", "crosswalk", "sovereign", "http", "read-only"},
 			"GET",
@@ -667,7 +712,7 @@ func buildHTTPTools(opts ManualOptions) []Tool {
 		),
 		mkHTTPTool(
 			"xoscal_graph_blast_radius",
-			"Compute multi-hop blast radius and 6D CKODEX Vector State across 36 frameworks for a CVE/KEV advisory, ATT&CK technique, framework, or control.",
+			fmt.Sprintf("Compute multi-hop blast radius and 6D CKODEX Vector State across %s for a CVE/KEV advisory, ATT&CK technique, framework, or control.", fwCountNoun(opts, "frameworks")),
 			GovernanceDiscover,
 			[]string{"graph", "blast-radius", "kev", "attack", "vector-state", "http", "read-only"},
 			"GET",
@@ -805,7 +850,7 @@ func buildCLITools(opts ManualOptions) []Tool {
 		mkCLITool(
 			"xoscal_frameworks_list",
 			true,
-			"List all 36 registered sovereign and international compliance frameworks via CLI.",
+			fmt.Sprintf("List all %s via CLI.", fwCountNoun(opts, "sovereign and international compliance frameworks")),
 			GovernanceDiscover,
 			[]string{"frameworks", "registry", "sovereign", "cli", "read-only"},
 			[]string{"frameworks", "list", "-jurisdiction", "${jurisdiction}", "-json"},
@@ -819,7 +864,7 @@ func buildCLITools(opts ManualOptions) []Tool {
 		mkCLITool(
 			"xoscal_controls_search",
 			true,
-			"Full-text search across 16,237 controls via local xOSCAL CLI.",
+			fmt.Sprintf("Full-text search across %s via local xOSCAL CLI.", ctrlCountNoun(opts)),
 			GovernanceDiscover,
 			[]string{"controls", "search", "oscal", "cli", "read-only"},
 			[]string{"controls", "search", "-framework", "${framework}", "-json", "${query}"},
@@ -907,7 +952,7 @@ func buildCLITools(opts ManualOptions) []Tool {
 				Required: []string{"dsn", "snapshot"},
 				Properties: map[string]JSONSchemaProperty{
 					"dsn":       {Type: "string", Description: "SQLite database path", Default: "oscal.db"},
-					"framework": {Type: "string", Description: "Framework ID to seed (empty for all 36 frameworks)"},
+					"framework": {Type: "string", Description: fmt.Sprintf("Framework ID to seed (empty for all %s)", fwCountNoun(opts, "frameworks"))},
 					"snapshot":  {Type: "string", Description: "Snapshot name to create", Default: "v1"},
 				},
 			},
@@ -933,7 +978,7 @@ func buildCLITools(opts ManualOptions) []Tool {
 		mkCLITool(
 			"xoscal_graph_crosswalk",
 			true,
-			"Query the 36-framework property graph for multi-jurisdiction control equivalency via CLI.",
+			fmt.Sprintf("Query %s for multi-jurisdiction control equivalency via CLI.", fwAdjectivePhrase(opts, "property graph")),
 			GovernanceDiscover,
 			[]string{"graph", "crosswalk", "ontology", "sovereign", "cli", "read-only"},
 			[]string{"graph", "crosswalk", "-control", "${control}", "-json"},

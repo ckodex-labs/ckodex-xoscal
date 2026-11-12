@@ -124,7 +124,7 @@
     "eu-ai-act",
     "iso-iec-42001"
   ],
-  "framework_manifest_sha256": "e65a98a0d21b83d989ddb3de039adc9ed0be63540c0a2016a88a0c31a4c0e700",
+  "framework_manifest_sha256": "d78f1f5e5bd3b4e3607afb0e35bc8b5b9bf5b015c655b4759fa752a4918c103b",
   "image_arches": [
     "amd64",
     "arm64"

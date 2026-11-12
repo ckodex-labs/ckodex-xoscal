@@ -25,14 +25,11 @@ func (m *Xoscal) Dist(source *dagger.Directory) *dagger.Directory {
 
 // goreleaserBase returns a container with GoReleaser tooling pre-installed.
 func (m *Xoscal) goreleaserBase() *dagger.Container {
-	aptCache := dag.CacheVolume("apt-cache")
-	aptLists := dag.CacheVolume("apt-lists")
-	return dag.Container().
-		From(goBuilderImage).
-		WithMountedCache("/var/cache/apt", aptCache, dagger.ContainerWithMountedCacheOpts{Sharing: dagger.CacheSharingModePrivate}).
-		WithMountedCache("/var/lib/apt/lists", aptLists, dagger.ContainerWithMountedCacheOpts{Sharing: dagger.CacheSharingModePrivate}).
-		WithExec([]string{"apt-get", "update"}).
-		WithExec([]string{"apt-get", "install", "-y", "--no-install-recommends", "ca-certificates", "git", "curl"}).
+	return withAptPackages(
+		dag.Container().From(goBuilderImage),
+		goBuilderImage,
+		"ca-certificates", "git", "curl",
+	).
 		WithExec([]string{"sh", "-c", pinnedGoReleaserInstall()}).
 		WithExec([]string{"sh", "-c", pinnedSyftInstall()})
 }

@@ -5,24 +5,37 @@ frameworks:
   - ref_id: nist-csf-2.0
     jurisdiction: usa
     filename: nist-csf-2.0.yaml
+    authority: "NIST"
+    aliases: ["csf-2.0", "nist-csf", "nist_csf_2"]
   - ref_id: cmmc-2.0
     jurisdiction: usa
     filename: cmmc-2.0.yaml
+    authority: "DoD"
+    aliases: ["cmmc"]
   - ref_id: fedramp-rev5
     jurisdiction: usa
     filename: fedramp-rev5.yaml
+    authority: "US General Services Administration"
+    aliases: ["fedramp"]
   - ref_id: cisa-cpg-2.0
     jurisdiction: usa
     filename: cisa-cpg-2.0.yaml
+    authority: "CISA"
+    aliases: ["cisa-cpg"]
   - ref_id: cisa-vendor-scrm
     jurisdiction: usa
     filename: cisa-vendor-scrm.yaml
+    authority: "CISA"
   - ref_id: cjis-version-5.9.5
     jurisdiction: usa
     filename: cjis-version-5.9.5.yaml
+    authority: "US CJIS"
+    aliases: ["cjis"]
   - ref_id: dfs-500-2023-11
     jurisdiction: usa
     filename: dfs-500-2023-11.yaml
+    authority: "NEW YORK STATE"
+    aliases: ["ny-dfs-500"]
 
   # Canada
   - ref_id: cccs-itsp-10-033
@@ -45,81 +58,122 @@ frameworks:
   - ref_id: cyber_essentials
     jurisdiction: uk
     filename: cyber_essentials.yaml
+    authority: "NCSC"
+    aliases: ["cyber-essentials"]
 
   # France
   - ref_id: anssi-guide-hygiene
     jurisdiction: france
     filename: anssi-guide-hygiene.yaml
+    authority: "ANSSI"
   - ref_id: anssi-guide-hygiene-detail
     jurisdiction: france
     filename: anssi-guide-hygiene-detail.yaml
+    authority: "ANSSI"
   - ref_id: anssi-guide-admin-securisee-si
     jurisdiction: france
     filename: anssi-guide-admin-securisee-si.yaml
+    authority: "ANSSI"
   - ref_id: anssi-referentiel-general-de-securite-annexe-b2
     jurisdiction: france
     filename: anssi-referentiel-general-de-securite-annexe-b2.yaml
+    authority: "ANSSI"
+    aliases: ["rgs-b2"]
   - ref_id: cnil-guide-securite
     jurisdiction: france
     filename: cnil-guide-securite.yaml
+    authority: "CNIL"
   - ref_id: 3cf-v2
     jurisdiction: france
     filename: 3cf-v2.yaml
+    authority: "Direction de la sécurité de l'aviation civile"
+    aliases: ["3cf"]
 
   # Germany
   - ref_id: bs-it-gs-2023-isms
     jurisdiction: germany
     filename: bs-it-gs-2023-isms-sicherheitsmanagement.yaml
+    authority: "BSI"
+    aliases: ["bsi-it-gs-2023-isms"]
   - ref_id: bs-it-gs-2023-orp
     jurisdiction: germany
     filename: bs-it-gs-2023-orp-organisation-und-personal.yaml
+    authority: "BSI"
+    aliases: ["bsi-it-gs-2023-orp"]
   - ref_id: bs-it-gs-2023-con
     jurisdiction: germany
     filename: bs-it-gs-2023-con-konzeption-und-vorgehensweisen.yaml
+    authority: "BSI"
+    aliases: ["bsi-it-gs-2023-con"]
   - ref_id: bs-it-gs-2023-sys
     jurisdiction: germany
     filename: bs-it-gs-2023-sys-it-systeme.yaml
+    authority: "BSI"
+    aliases: ["bsi-it-gs-2023-sys"]
   - ref_id: bs-it-gs-2023-app
     jurisdiction: germany
     filename: bs-it-gs-2023-app-anwendungen.yaml
+    authority: "BSI"
+    aliases: ["bsi-it-gs-2023-app"]
   - ref_id: bs-it-gs-2023-inf
     jurisdiction: germany
     filename: bs-it-gs-2023-inf-infrastruktur.yaml
+    authority: "BSI"
+    aliases: ["bsi-it-gs-2023-inf"]
   - ref_id: bs-it-gs-2023-net
     jurisdiction: germany
     filename: bs-it-gs-2023-net-netze-und-kommunikation.yaml
+    authority: "BSI"
+    aliases: ["bsi-it-gs-2023-net"]
   - ref_id: bs-it-gs-2023-ops
     jurisdiction: germany
     filename: bs-it-gs-2023-ops-betrieb.yaml
+    authority: "BSI"
+    aliases: ["bsi-it-gs-2023-ops"]
   - ref_id: bs-it-gs-2023-ind
     jurisdiction: germany
     filename: bs-it-gs-2023-ind-industrielle-it.yaml
+    authority: "BSI"
+    aliases: ["bsi-it-gs-2023-ind"]
   - ref_id: bs-it-gs-2023-der
     jurisdiction: germany
     filename: bs-it-gs-2023-der-detektion-und-reaktion.yaml
+    authority: "BSI"
+    aliases: ["bsi-it-gs-2023-der"]
   - ref_id: bsi-c5-2020
     jurisdiction: germany
     filename: bsi-c5-2020.yaml
+    authority: "BSI"
+    aliases: ["c5-2020"]
   - ref_id: bsi-externer-cloud-dienste
     jurisdiction: germany
     filename: bsi-externer-cloud-dienste.yaml
+    authority: "BSI"
+
   # Estonia
   - ref_id: e-its-2024
     jurisdiction: ee
     filename: e-its-2024.yaml
+    authority: "RIA"
 
   # EU-wide
   - ref_id: nis2
     jurisdiction: eu
     filename: annex-nis2-regulation--2024-2690-with-technical-implementation-guidance-by-enisa.yaml
+    authority: "EUROPEAN COMMISSION + ENISA"
   - ref_id: dora
     jurisdiction: eu
     filename: dora.yaml
+    authority: "EU"
   - ref_id: eu-ai-act
     jurisdiction: eu
     filename: ai-act.yaml
+    authority: "EU"
+    aliases: ["ai-act"]
 
   # International
   - ref_id: iso-iec-42001
     jurisdiction: international
     filename: iso42001-2023.yaml
+    authority: "ISO"
+    aliases: ["iso42001-2023", "iso-42001"]

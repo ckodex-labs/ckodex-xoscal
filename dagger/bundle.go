@@ -31,15 +31,11 @@ func pinnedGhInstall() string {
 // verifyTools returns a container with the pinned gh CLI for attestation
 // verification, plus curl/jq/python3 for release-asset plumbing.
 func (m *Xoscal) verifyTools() *dagger.Container {
-	aptCache := dag.CacheVolume("apt-cache")
-	aptLists := dag.CacheVolume("apt-lists")
-	return dag.Container().
-		From(ubuntuBase).
-		WithMountedCache("/var/cache/apt", aptCache, dagger.ContainerWithMountedCacheOpts{Sharing: dagger.CacheSharingModePrivate}).
-		WithMountedCache("/var/lib/apt/lists", aptLists, dagger.ContainerWithMountedCacheOpts{Sharing: dagger.CacheSharingModePrivate}).
-		WithExec([]string{"apt-get", "update"}).
-		WithExec([]string{"apt-get", "install", "-y", "--no-install-recommends", "ca-certificates", "curl", "jq", "python3", "git"}).
-		WithExec([]string{"sh", "-c", pinnedGhInstall()})
+	return withAptPackages(
+		dag.Container().From(ubuntuBase),
+		ubuntuBase,
+		"ca-certificates", "curl", "jq", "python3", "git",
+	).WithExec([]string{"sh", "-c", pinnedGhInstall()})
 }
 
 // VerifyPublishedRelease retrieves one independently selected tag and revision,

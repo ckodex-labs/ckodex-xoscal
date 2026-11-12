@@ -17,24 +17,34 @@ var sdkImages = map[string][2]string{
 	"swift":  {"swift:6.1-bookworm@sha256:48a6d9c230cd654b262f805978d1d56b2aadf5b3c0d2fc088643296692cbca62", "swift:6.1-bookworm@sha256:c6c5f7130ba5f11177b5c2ca48c4fd085e8a4bc52b14346fa66cc1a0aecbf24c"},
 }
 
-func sdkToolchain(language string) *dagger.Container {
+func sdkImageRef(language string) string {
 	if language == "go" {
-		return dag.Container().From(goBuilderImage).
-			WithEnvVariable("GOFLAGS", "-p=2").WithEnvVariable("GOMAXPROCS", "2")
+		return goBuilderImage
 	}
 	index := 0
 	if runtime.GOARCH == "arm64" {
 		index = 1
 	}
-	return dag.Container(dagger.ContainerOpts{Platform: dagger.Platform("linux/" + runtime.GOARCH)}).From(sdkImages[language][index]).
+	return sdkImages[language][index]
+}
+
+func sdkToolchain(language string) *dagger.Container {
+	if language == "go" {
+		return dag.Container().From(sdkImageRef("go")).
+			WithEnvVariable("GOFLAGS", "-p=2").WithEnvVariable("GOMAXPROCS", "2")
+	}
+	return dag.Container(dagger.ContainerOpts{Platform: dagger.Platform("linux/" + runtime.GOARCH)}).From(sdkImageRef(language)).
 		WithEnvVariable("SOURCE_DATE_EPOCH", "315532800").
 		WithEnvVariable("DOTNET_CLI_TELEMETRY_OPTOUT", "1").
 		WithEnvVariable("DOTNET_SKIP_FIRST_TIME_EXPERIENCE", "1")
 }
 
 func (m *Xoscal) sdkGenerated(source *dagger.Directory) *dagger.Directory {
-	return dag.Container().From(goBuilderImage).
-		WithExec([]string{"sh", "-ec", "apt-get update && apt-get install -y --no-install-recommends ca-certificates curl python3"}).
+	return withAptPackages(
+		dag.Container().From(goBuilderImage),
+		goBuilderImage,
+		"ca-certificates", "curl", "python3",
+	).
 		WithExec([]string{"sh", "-ec", pinnedBufInstall()}).
 		WithDirectory("/src/proto/oscal", source.Directory("proto/oscal"), dagger.ContainerWithDirectoryOpts{Include: []string{"**/*.proto", "buf.yaml", "buf.lock"}}).
 		WithFile("/src/scripts/sdk-buf.gen.yaml", source.File("scripts/sdk-buf.gen.yaml")).
@@ -139,7 +149,8 @@ func sdkConsumer(source, output *dagger.Directory, language string) *dagger.Cont
 		WithWorkdir("/consumer")
 	switch language {
 	case "go":
-		consumer = consumer.WithExec([]string{"sh", "-ec", "apt-get update && apt-get install -y --no-install-recommends unzip; unzip -q /artifacts/go.zip -d /module; cp /checks/go.mod /checks/go-main.go .; mv go-main.go main.go; go mod tidy; go run .; go list -m all > /go-module-graph.txt; grep -Fx 'golang.org/x/net v0.62.0' /go-module-graph.txt; for suffix in '' /metric /trace /sdk /sdk/metric; do grep -Fx \"go.opentelemetry.io/otel${suffix} v1.45.0\" /go-module-graph.txt; done"})
+		consumer = withAptPackages(consumer, sdkImageRef("go"), "unzip").
+			WithExec([]string{"sh", "-ec", "unzip -q /artifacts/go.zip -d /module; cp /checks/go.mod /checks/go-main.go .; mv go-main.go main.go; go mod tidy; go run .; go list -m all > /go-module-graph.txt; grep -Fx 'golang.org/x/net v0.62.0' /go-module-graph.txt; for suffix in '' /metric /trace /sdk /sdk/metric; do grep -Fx \"go.opentelemetry.io/otel${suffix} v1.45.0\" /go-module-graph.txt; done"})
 	case "python":
 		consumer = consumer.WithExec([]string{"sh", "-ec", "python3 -m venv /venv; /venv/bin/pip install /artifacts/packages/python/*.whl; /venv/bin/python /checks/python-smoke.py; /venv/bin/pip check; python3 -m venv /sdist-venv; /sdist-venv/bin/pip install /artifacts/packages/python/*.tar.gz; /sdist-venv/bin/python /checks/python-smoke.py; /sdist-venv/bin/pip check"})
 	case "java":
@@ -149,7 +160,8 @@ func sdkConsumer(source, output *dagger.Directory, language string) *dagger.Cont
 	case "ts":
 		consumer = consumer.WithExec([]string{"sh", "-ec", "npm init -y; npm install --ignore-scripts --no-audit --no-fund /artifacts/packages/ts/*.tgz typescript@5.9.3; cp /checks/node-* .; node node-esm.mjs; node node-cjs.cjs; cp node-types.ts node-types.mts; ./node_modules/.bin/tsc --strict --noEmit --module nodenext --moduleResolution nodenext node-types.ts node-types.mts"})
 	case "swift":
-		consumer = consumer.WithExec([]string{"sh", "-ec", "apt-get update && apt-get install -y --no-install-recommends unzip; unzip -q /artifacts/swift.zip -d /module; cp /checks/SwiftPackage.swift Package.swift; mkdir -p Sources/Smoke; cp /checks/swift-main.swift Sources/Smoke/main.swift; swift run --jobs 2 Smoke"})
+		consumer = withAptPackages(consumer, sdkImageRef("swift"), "unzip").
+			WithExec([]string{"sh", "-ec", "unzip -q /artifacts/swift.zip -d /module; cp /checks/SwiftPackage.swift Package.swift; mkdir -p Sources/Smoke; cp /checks/swift-main.swift Sources/Smoke/main.swift; swift run --jobs 2 Smoke"})
 	}
 	// Written only after consuming succeeds. No network service or hosted signing
 	// claim is established by this deliberately local install/import/build gate.

@@ -261,8 +261,9 @@ func TestXoscalCtl_FullRegistrySeedAndGenerate(t *testing.T) {
 	defer func() { _ = store.Close() }()
 
 	reg := frameworks.DefaultRegistry()
-	if got := len(reg.List()); got != 36 {
-		t.Fatalf("expected 36 registered frameworks, got %d", got)
+	expectedCount := len(frameworks.ManifestFrameworkIDs()) + 5
+	if got := len(reg.List()); got != expectedCount {
+		t.Fatalf("expected %d registered frameworks, got %d", expectedCount, got)
 	}
 	t0 := time.Now()
 	if err := reg.SeedKG(ctx, store); err != nil {

@@ -40,7 +40,8 @@ func (m *Xoscal) FrontendAnalysisReports() *dagger.Directory {
 }
 
 // FrontendAssets admits exact JS/map bytes after producer replay and the
-// existing release CRITICAL/fixed gate. Lower findings remain in raw evidence.
+// HIGH,CRITICAL gate (with time-bounded exact-digest derogations). Lower
+// findings remain in raw evidence.
 func (m *Xoscal) FrontendAssets(source *dagger.Directory) *dagger.Directory {
 	return m.analysisGate(source, m.FrontendAnalysisReports(), "frontend-release").Directory("/evidence")
 }

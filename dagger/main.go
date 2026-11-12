@@ -49,25 +49,22 @@ func (m *Xoscal) WithVersion(version string) *Xoscal {
 func (m *Xoscal) base(source *dagger.Directory) *dagger.Container {
 	modCache := dag.CacheVolume("go-mod")
 	buildCache := dag.CacheVolume("go-build")
-	aptCache := dag.CacheVolume("apt-cache")
-	aptLists := dag.CacheVolume("apt-lists")
 
 	// Phase 1: download modules using only go.mod/go.sum for cache isolation.
-	goBase := dag.Container().
-		From(goBuilderImage).
-		WithMountedCache("/go/pkg/mod", modCache).
-		WithMountedCache("/root/.cache/go-build", buildCache).
-		WithEnvVariable("GOMODCACHE", "/go/pkg/mod").
-		WithEnvVariable("GOCACHE", "/root/.cache/go-build").
-		WithEnvVariable("CGO_ENABLED", "0").
-		WithEnvVariable("GOFLAGS", "-p=2 -mod=readonly").
-		WithEnvVariable("GOWORK", "off").
-		WithEnvVariable("GOMAXPROCS", "2").
-		WithEnvVariable("DEBIAN_FRONTEND", "noninteractive").
-		WithMountedCache("/var/cache/apt", aptCache, dagger.ContainerWithMountedCacheOpts{Sharing: dagger.CacheSharingModePrivate}).
-		WithMountedCache("/var/lib/apt/lists", aptLists, dagger.ContainerWithMountedCacheOpts{Sharing: dagger.CacheSharingModePrivate}).
-		WithExec([]string{"apt-get", "update"}).
-		WithExec([]string{"apt-get", "install", "-y", "--no-install-recommends", "ca-certificates", "git", "curl"}).
+	goBase := withAptPackages(
+		dag.Container().
+			From(goBuilderImage).
+			WithMountedCache("/go/pkg/mod", modCache).
+			WithMountedCache("/root/.cache/go-build", buildCache).
+			WithEnvVariable("GOMODCACHE", "/go/pkg/mod").
+			WithEnvVariable("GOCACHE", "/root/.cache/go-build").
+			WithEnvVariable("CGO_ENABLED", "0").
+			WithEnvVariable("GOFLAGS", "-p=2 -mod=readonly").
+			WithEnvVariable("GOWORK", "off").
+			WithEnvVariable("GOMAXPROCS", "2"),
+		goBuilderImage,
+		"ca-certificates", "git", "curl",
+	).
 		WithFile("/src/go.mod", source.File("go.mod")).
 		WithFile("/src/go.sum", source.File("go.sum")).
 		WithWorkdir("/src").
@@ -145,17 +142,15 @@ func (m *Xoscal) Coverage(source *dagger.Directory) *dagger.File {
 // toolBase returns a container with lint/security tools pre-installed.
 // The layer is cached independently of source changes.
 func (m *Xoscal) toolBase() *dagger.Container {
-	aptCache := dag.CacheVolume("apt-cache")
-	aptLists := dag.CacheVolume("apt-lists")
-	return dag.Container().
-		From(goBuilderImage).
-		WithEnvVariable("GOMAXPROCS", "2").
-		WithEnvVariable("GOFLAGS", "-p=2 -mod=readonly").
-		WithEnvVariable("GOWORK", "off").
-		WithMountedCache("/var/cache/apt", aptCache, dagger.ContainerWithMountedCacheOpts{Sharing: dagger.CacheSharingModePrivate}).
-		WithMountedCache("/var/lib/apt/lists", aptLists, dagger.ContainerWithMountedCacheOpts{Sharing: dagger.CacheSharingModePrivate}).
-		WithExec([]string{"apt-get", "update"}).
-		WithExec([]string{"apt-get", "install", "-y", "--no-install-recommends", "ca-certificates", "git", "curl", "python3"}).
+	return withAptPackages(
+		dag.Container().
+			From(goBuilderImage).
+			WithEnvVariable("GOMAXPROCS", "2").
+			WithEnvVariable("GOFLAGS", "-p=2 -mod=readonly").
+			WithEnvVariable("GOWORK", "off"),
+		goBuilderImage,
+		"ca-certificates", "git", "curl", "python3",
+	).
 		WithExec([]string{"sh", "-c", pinnedBufInstall()}).
 		WithExec([]string{"go", "install", fmt.Sprintf("golang.org/x/vuln/cmd/govulncheck@%s", govulncheckVersion)}).
 		WithExec([]string{"go", "install", fmt.Sprintf("github.com/securego/gosec/v2/cmd/gosec@%s", gosecVersion)})
@@ -285,8 +280,7 @@ func (m *Xoscal) OscalConstraintReports(source *dagger.Directory, frameworks *da
 		WithExec([]string{"go", "build", "-o", "/bin/validate-constraints", "./server/cmd/xoscal-validate-constraints"}).File("/bin/validate-constraints")
 	// Reuse the digest-pinned Java SDK producer rather than installing another
 	// mutable APT runtime. The JDK's jar tool extracts the checksum-pinned CLI.
-	return sdkToolchain("java").
-		WithExec([]string{"sh", "-ec", "apt-get update && apt-get install -y --no-install-recommends python3"}).
+	return withAptPackages(sdkToolchain("java"), sdkImageRef("java"), "python3").
 		WithExec([]string{"sh", "-ec",
 			fmt.Sprintf(
 				"curl -fsSL -o /tmp/oscal-cli.zip "+

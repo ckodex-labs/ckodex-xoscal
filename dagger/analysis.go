@@ -25,9 +25,7 @@ func pinnedTrivyInstall() string {
 }
 
 func (m *Xoscal) analysisGate(source *dagger.Directory, evidence *dagger.Directory, kind string) *dagger.Container {
-	return dag.Container().From(goBuilderImage).
-		WithExec([]string{"apt-get", "update"}).
-		WithExec([]string{"apt-get", "install", "-y", "--no-install-recommends", "python3"}).
+	return withAptPackages(dag.Container().From(goBuilderImage), goBuilderImage, "python3").
 		WithFile("/policy/analysis-gate.py", source.File("scripts/analysis-gate.py")).
 		WithFile("/policy/artifact_inventory.py", dag.CurrentModule().Source().File("artifact_inventory.py")).
 		WithFile("/policy/frontend_inventory.py", dag.CurrentModule().Source().File("frontend_inventory.py")).
@@ -40,8 +38,9 @@ func (m *Xoscal) analysisGate(source *dagger.Directory, evidence *dagger.Directo
 }
 
 // ImageAnalysisReports scans a locally staged image archive before promotion.
-// All severities and unfixed findings remain in the raw report. The release
-// gate retains the existing CRITICAL/fixed threshold; CI also blocks HIGH.
+// All severities and unfixed findings remain in the raw report. Both release
+// and CI gates block HIGH and CRITICAL findings unless waived by an unexpired
+// exact-digest derogation in docs/analysis-exceptions.json.
 func (m *Xoscal) ImageAnalysisReports(archive *dagger.File) *dagger.Directory {
 	c := m.trivyBase().WithFile("/input/image.tar", archive)
 	return m.analysisAttempt(c, "image-vulnerabilities").
@@ -50,9 +49,7 @@ func (m *Xoscal) ImageAnalysisReports(archive *dagger.File) *dagger.Directory {
 }
 
 func (m *Xoscal) trivyBase() *dagger.Container {
-	return dag.Container().From(goBuilderImage).
-		WithExec([]string{"apt-get", "update"}).
-		WithExec([]string{"apt-get", "install", "-y", "--no-install-recommends", "ca-certificates", "curl", "python3"}).
+	return withAptPackages(dag.Container().From(goBuilderImage), goBuilderImage, "ca-certificates", "curl", "python3").
 		WithMountedCache("/root/.cache/trivy", dag.CacheVolume("trivy-db")).
 		WithEnvVariable("GOMAXPROCS", "2").
 		WithExec([]string{"sh", "-c", pinnedTrivyInstall()})
@@ -85,8 +82,9 @@ python3 /tools/artifact_inventory.py --evidence /evidence > /evidence/trivy.log 
 printf '%s\n' "$?" > /evidence/trivy.status`}).Directory("/evidence")
 }
 
-// ArtifactAnalysis applies the existing release CRITICAL/fixed threshold to
-// the exact staged SDK/package or platform binary archive.
+// ArtifactAnalysis applies the aligned HIGH,CRITICAL threshold (with
+// time-bounded exact-digest derogations) to the exact staged SDK/package or
+// platform binary archive.
 func (m *Xoscal) ArtifactAnalysis(source *dagger.Directory, archive *dagger.File) *dagger.Directory {
 	return m.analysisGate(source, m.ArtifactAnalysisReports(archive), "artifact-release").Directory("/evidence")
 }
@@ -160,19 +158,18 @@ func (m *Xoscal) ImageSbomAnalysis(source *dagger.Directory, archive *dagger.Fil
 }
 
 func (m *Xoscal) syftBase() *dagger.Container {
-	return dag.Container().From(goBuilderImage).
-		WithEnvVariable("GOMAXPROCS", "2").
-		WithExec([]string{"apt-get", "update"}).
-		WithExec([]string{"apt-get", "install", "-y", "--no-install-recommends", "ca-certificates", "curl", "python3"}).
+	return withAptPackages(
+		dag.Container().From(goBuilderImage).WithEnvVariable("GOMAXPROCS", "2"),
+		goBuilderImage,
+		"ca-certificates", "curl", "python3",
+	).
 		WithExec([]string{"sh", "-c", pinnedSyftInstall()})
 }
 
 // enrichSbomReports records the distributor only for observed packaged bytes.
 // Original scanner evidence and exact-subject receipt survive admission.
 func (m *Xoscal) enrichSbomReports(source *dagger.Directory, produced *dagger.Directory) *dagger.Directory {
-	c := dag.Container().From(goBuilderImage).
-		WithExec([]string{"apt-get", "update"}).
-		WithExec([]string{"apt-get", "install", "-y", "--no-install-recommends", "python3"}).
+	c := withAptPackages(dag.Container().From(goBuilderImage), goBuilderImage, "python3").
 		WithDirectory("/evidence", produced).
 		WithFile("/evidence/sbom.raw.cyclonedx.json", produced.File("sbom.cyclonedx.json")).
 		WithFile("/evidence/sbom-distributor.json", source.File("docs/SBOM-DISTRIBUTOR.json")).

@@ -1025,9 +1025,17 @@ func ServeUTCPManual(w http.ResponseWriter, r *http.Request, grpcAddr, bearerTok
 	includeCLI := parseTruthyParam(q.Get("include_cli"))
 	includeGRPC := parseTruthyParam(q.Get("include_grpc"))
 
+	regInfos := frameworks.DefaultRegistry().ListInfo()
+	totalControls := 0
+	for _, info := range regInfos {
+		totalControls += info.ControlCount
+	}
+
 	manual := utcp.BuildManualWithOptions(utcp.ManualOptions{
 		BaseURL:           baseURL,
 		GRPCAddr:          grpcAddr,
+		FrameworkCount:    len(regInfos),
+		ControlCount:      totalControls,
 		IncludeHTTP:       true,
 		IncludeCLI:        includeCLI,
 		IncludeGRPC:       includeGRPC,

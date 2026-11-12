@@ -361,8 +361,9 @@ func TestEmptyStringFlag_UTCP_AndGraphSQLiteDSN_CLI(t *testing.T) {
 	if err := json.Unmarshal([]byte(outEmptyJur), &infos); err != nil {
 		t.Fatalf("expected valid JSON when passing empty string flag '-jurisdiction \"\" -json': %v\nout=%s", err, outEmptyJur)
 	}
-	if len(infos) < 36 {
-		t.Errorf("expected >=36 frameworks for empty jurisdiction filter, got %d", len(infos))
+	expectedCount := len(frameworks.ManifestFrameworkIDs()) + 5
+	if len(infos) < expectedCount {
+		t.Errorf("expected >=%d frameworks for empty jurisdiction filter, got %d", expectedCount, len(infos))
 	}
 
 	// 2. UTCP strict wire manual vs extended envelope + mcp-config with -utcp-config-out

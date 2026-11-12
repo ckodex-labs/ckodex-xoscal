@@ -52,7 +52,8 @@ class RenderReleaseSite(unittest.TestCase):
             with zipfile.ZipFile(path, "w") as archive:
                 archive.writestr("README.md", f"{language} static smoke fixture\n")
             Path(str(path) + ".sha256").write_text(digest(path) + "\n")
-        for name in [f"fixture-{i:02}" for i in range(34)] + ["cccs-medium-cloud-pbmm", "cccs-itsp-10-033"]:
+        manifest_ids = re.findall(r"^\s*-\s*ref_id:\s*(\S+)", (REPO / "data/frameworks/manifest.yaml").read_text(), re.M)
+        for name in manifest_ids:
             directory = self.root / "frameworks" / name
             directory.mkdir(parents=True, exist_ok=True)
             path = directory / "catalog.json"
@@ -173,6 +174,17 @@ class RenderReleaseSite(unittest.TestCase):
         self.assertIn("site-smoke: FAIL", result.stdout)
         self.assertIn("HTTP Error 404", result.stdout)
         self.assertRegex(result.stderr, r'"GET /scalar\.js\.map HTTP/1\.[01]" 404')
+
+    def test_site_smoke_rejects_drifted_index_stat(self):
+        result = self.render()
+        self.assertEqual(result.returncode, 0, result.stderr)
+        index_path = self.root / "index.html"
+        text = index_path.read_text()
+        self.assertIn('<div class="num">36</div>', text)
+        index_path.write_text(text.replace('<div class="num">36</div>', '<div class="num">999</div>', 1))
+        smoke_result = self.run_http_smoke()
+        self.assertNotEqual(smoke_result.returncode, 0, smoke_result.stdout + smoke_result.stderr)
+        self.assertIn("site-smoke: FAIL", smoke_result.stdout)
 
     def empty_log_fixture(self, status=b"0\n"):
         log = self.root / "evidence/frontend/build.log"

@@ -47,6 +47,44 @@ def fingerprint(finding):
     return hashlib.sha256(json.dumps(data, sort_keys=True, separators=(",", ":")).encode()).hexdigest()
 
 
+def _load_exceptions(exceptions_path):
+    policy = read_json(exceptions_path)
+    require(policy.get("version") == 1 and isinstance(policy.get("exceptions"), list), "unsupported exception policy")
+    today = dt.datetime.now(dt.timezone.utc).date()
+    ids = set()
+    validated = []
+    for exception in policy["exceptions"]:
+        require(isinstance(exception, dict), "malformed exception")
+        kind = exception.get("kind", "sbom")
+        require(kind in ("sbom", "vuln"), "unsupported exception kind")
+        for key in ("id", "rationale", "approved_by", "expires"):
+            require(isinstance(exception.get(key), str) and exception[key].strip(), f"exception lacks {key}")
+        require(exception["id"] not in ids, "duplicate exception id")
+        ids.add(exception["id"])
+        expiry = dt.date.fromisoformat(exception["expires"])
+        require(expiry >= today, f"exception {exception['id']} expired")
+        if kind == "sbom":
+            for key in ("sbom_sha256", "finding_sha256"):
+                require(isinstance(exception.get(key), str) and exception[key].strip(), f"exception lacks {key}")
+            require(re.fullmatch(r"[0-9a-f]{64}", exception["sbom_sha256"]) and re.fullmatch(r"[0-9a-f]{64}", exception["finding_sha256"]), "exception digest malformed")
+        else:
+            for key in ("artifact_sha256", "vulnerability_id"):
+                require(isinstance(exception.get(key), str) and exception[key].strip(), f"exception lacks {key}")
+            require(re.fullmatch(r"[0-9a-f]{64}", exception["artifact_sha256"]), "exception digest malformed")
+        validated.append(exception)
+    return validated
+
+
+def _approved_vuln_ids(exceptions_path, artifact_sha256):
+    if exceptions_path is None:
+        return set()
+    return {
+        e["vulnerability_id"]
+        for e in _load_exceptions(exceptions_path)
+        if e.get("kind", "sbom") == "vuln" and e["artifact_sha256"] == artifact_sha256
+    }
+
+
 def sbom_gate(root, exceptions_path):
     code = status(root, "sbom-validation", (0, 1))
     sbom_bytes = (root / "sbom.cyclonedx.json").read_bytes()
@@ -101,22 +139,11 @@ def sbom_gate(root, exceptions_path):
     # The tool reports NTIA satisfaction when there are no errors. Its warnings
     # remain unsatisfied targets, and our strict policy still blocks every one.
     require(not (failures and not any(sum(counts) for counts in rollup_counts)), "SBOM findings contradict compliance roll-up")
-    policy = read_json(exceptions_path)
-    require(policy.get("version") == 1 and isinstance(policy.get("exceptions"), list), "unsupported exception policy")
-    approved = set()
-    today = dt.datetime.now(dt.timezone.utc).date()
-    ids = set()
-    for exception in policy["exceptions"]:
-        require(isinstance(exception, dict), "malformed exception")
-        for key in ("id", "rationale", "approved_by", "expires", "sbom_sha256", "finding_sha256"):
-            require(isinstance(exception.get(key), str) and exception[key].strip(), f"exception lacks {key}")
-        require(exception["id"] not in ids, "duplicate exception id")
-        ids.add(exception["id"])
-        require(re.fullmatch(r"[0-9a-f]{64}", exception["sbom_sha256"]) and re.fullmatch(r"[0-9a-f]{64}", exception["finding_sha256"]), "exception digest malformed")
-        expiry = dt.date.fromisoformat(exception["expires"])
-        require(expiry >= today, f"exception {exception['id']} expired")
-        if exception["sbom_sha256"] == digest:
-            approved.add(exception["finding_sha256"])
+    approved = {
+        exception["finding_sha256"]
+        for exception in _load_exceptions(exceptions_path)
+        if exception.get("kind", "sbom") == "sbom" and exception["sbom_sha256"] == digest
+    }
     blocked = [fingerprint(f) for f in failures if fingerprint(f) not in approved]
     result = {"sbom_sha256": digest, "violations": len(failures), "exceptions_used": len(failures) - len(blocked), "blocked": blocked}
     subject_path = root / "subject.sha256"
@@ -197,13 +224,15 @@ def _security_gate(root):
     return {"findings": len(issues), "source_suppressions": suppressed, "called_vulnerabilities": called, "blocked": blocked + called}
 
 
-def image_gate(root, ci=False, artifact=False):
+def image_gate(root, ci=False, artifact=False, exceptions_path=None):
     if artifact:
         status(root, "extraction")
     status(root, "trivy")
     digest_name, input_path = ("artifact.sha256", "/input/artifact") if artifact else ("image.sha256", "/input/image.tar")
     digest_record = (root / digest_name).read_text()
     require(re.fullmatch(r"[0-9a-f]{64}  " + re.escape(input_path) + r"\n?", digest_record), "missing artifact digest")
+    artifact_sha256 = digest_record.split()[0]
+    approved = _approved_vuln_ids(exceptions_path, artifact_sha256)
     report = read_json(root / "trivy-results.json")
     if artifact:
         helper_path = Path(__file__).with_name("artifact_inventory.py")
@@ -217,7 +246,7 @@ def image_gate(root, ci=False, artifact=False):
     require(report.get("SchemaVersion") == 2 and report.get("ArtifactName") and report.get("ArtifactType") == artifact_type, "malformed artifact report")
     require(isinstance(report.get("Results"), list) and report["Results"], "Trivy has no scan targets")
     require(report.get("Trivy", {}).get("Version") == "0.72.0", "unexpected Trivy version")
-    blocked, count, packages = [], 0, 0
+    blocked, count, packages, exceptions_used = [], 0, 0, 0
     unversioned_roots = []
     for result in report["Results"]:
         require(isinstance(result, dict) and result.get("Target"), "malformed Trivy target")
@@ -230,18 +259,21 @@ def image_gate(root, ci=False, artifact=False):
         for vuln in vulnerabilities:
             require(isinstance(vuln, dict) and vuln.get("Severity") in ("UNKNOWN", "LOW", "MEDIUM", "HIGH", "CRITICAL") and vuln.get("VulnerabilityID"), "malformed vulnerability")
             count += 1
-            if (ci and vuln["Severity"] in ("CRITICAL", "HIGH")) or (not ci and vuln["Severity"] == "CRITICAL" and vuln.get("FixedVersion")):
-                blocked.append(vuln["VulnerabilityID"])
+            if vuln["Severity"] in ("CRITICAL", "HIGH"):
+                if vuln["VulnerabilityID"] in approved:
+                    exceptions_used += 1
+                else:
+                    blocked.append(vuln["VulnerabilityID"])
     require(packages > 0, "unsupported artifact: no identifiable versioned package inventory")
-    return {"findings": count, "packages": packages, "unversioned_project_roots": unversioned_roots, "artifact_sha256": digest_record.split()[0], "threshold": "HIGH,CRITICAL" if ci else "CRITICAL/fixed", "blocked": blocked}
+    return {"findings": count, "packages": packages, "unversioned_project_roots": unversioned_roots, "artifact_sha256": artifact_sha256, "threshold": "HIGH,CRITICAL", "exceptions_used": exceptions_used, "blocked": blocked}
 
 
-def artifact_gate(root):
-    return image_gate(root, artifact=True)
+def artifact_gate(root, exceptions_path=None):
+    return image_gate(root, artifact=True, exceptions_path=exceptions_path)
 
 
 
-def frontend_gate(root):
+def frontend_gate(root, exceptions_path=None):
     status(root, "trivy")
     status(root, "npm-ci")
     status(root, "build")
@@ -250,10 +282,11 @@ def frontend_gate(root):
     spec=importlib.util.spec_from_file_location("frontend_inventory",helper_path);helper=importlib.util.module_from_spec(spec);spec.loader.exec_module(helper)
     receipt,sbom=helper.replay(root)
     require(receipt.get("schema_version")==2, "frontend release requires patched published-module rebuild")
+    approved = _approved_vuln_ids(exceptions_path, receipt["js_sha256"])
     report=read_json(root/"trivy-results.json")
     require(report.get("SchemaVersion")==2 and report.get("ArtifactType")=="cyclonedx" and report.get("Trivy",{}).get("Version")=="0.72.0", "unsupported frontend scanner report")
     require(isinstance(report.get("Results"),list) and report["Results"], "frontend scanner has no targets")
-    seen,blocked,findings=set(),[],0
+    seen,blocked,findings,exceptions_used=set(),[],0,0
     for target in report["Results"]:
         require(isinstance(target,dict) and target.get("Target"), "malformed frontend scan target")
         packages=target.get("Packages",[])
@@ -266,10 +299,14 @@ def frontend_gate(root):
         for finding in vulnerabilities:
             require(isinstance(finding,dict) and finding.get("VulnerabilityID") and finding.get("Severity") in ("UNKNOWN","LOW","MEDIUM","HIGH","CRITICAL"),"malformed frontend vulnerability")
             findings+=1
-            if finding["Severity"]=="CRITICAL" and finding.get("FixedVersion"):blocked.append(finding["VulnerabilityID"])
+            if finding["Severity"] in ("CRITICAL","HIGH"):
+                if finding["VulnerabilityID"] in approved:
+                    exceptions_used += 1
+                else:
+                    blocked.append(finding["VulnerabilityID"])
     expected={(c["name"],c["version"]) for c in sbom["components"]}
     require(expected and expected.issubset(seen),"frontend scanner omitted observed source packages")
-    return {"artifact_sha256":receipt["js_sha256"],"source_map_sha256":receipt["source_map_sha256"],"sbom_sha256":receipt["sbom_sha256"],"inventory_sha256":hashlib.sha256((root/"frontend-inventory.json").read_bytes()).hexdigest(),"observed_packages":len(expected),"scanned_packages":len(seen),"findings":findings,"threshold":"CRITICAL/fixed","blocked":blocked}
+    return {"artifact_sha256":receipt["js_sha256"],"source_map_sha256":receipt["source_map_sha256"],"sbom_sha256":receipt["sbom_sha256"],"inventory_sha256":hashlib.sha256((root/"frontend-inventory.json").read_bytes()).hexdigest(),"observed_packages":len(expected),"scanned_packages":len(seen),"findings":findings,"threshold":"HIGH,CRITICAL","exceptions_used":exceptions_used,"blocked":blocked}
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
@@ -283,11 +320,11 @@ def main():
         if args.kind == "security":
             result.update(_security_gate(args.evidence))
         elif args.kind == "frontend-release":
-            result.update(frontend_gate(args.evidence))
+            result.update(frontend_gate(args.evidence, args.exceptions))
         elif args.kind == "sbom":
             result.update(sbom_gate(args.evidence, args.exceptions))
         else:
-            result.update(image_gate(args.evidence, args.kind == "image-ci", args.kind == "artifact-release"))
+            result.update(image_gate(args.evidence, args.kind == "image-ci", args.kind == "artifact-release", args.exceptions))
         result["passed"] = not result["blocked"]
     except (GateError, OSError, ValueError, TypeError, KeyError, AttributeError) as error:
         result["error"] = str(error)

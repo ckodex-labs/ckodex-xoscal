@@ -33,9 +33,9 @@ A source suppression can admit a high finding only with an explicit nonempty
 rationale; external broad suppressions cannot bypass the policy. There are no
 default gosec exclusions beyond the existing generated proto folder exclusion.
 
-Image release policy preserves the existing CRITICAL threshold with
-`ignore-unfixed` semantics: CRITICAL findings with an available fix block.
-Image CI policy preserves HIGH and CRITICAL regardless of fix availability.
+Image release and CI policies both enforce the `HIGH,CRITICAL` threshold
+regardless of fix availability, subject only to time-bounded exact-digest
+derogations in `docs/analysis-exceptions.json`.
 Raw Trivy JSON contains all severities and unfixed findings; no findings are
 removed to render a passing report. Trivy operational failure, unexpected tool
 version, absent scan targets or malformed vulnerability records block both.
@@ -59,7 +59,7 @@ selects regular executable files and reads their embedded Go build metadata;
 stripping those bits would silently omit ELF and MachO inventories. Failed extraction is preserved
 with its status and log. Artifact admission requires actual versioned packages;
 empty or unsupported inventories cannot pass. `ArtifactAnalysis` collects all
-severities and uses the same existing CRITICAL/fixed release threshold.
+severities and enforces the `HIGH,CRITICAL` release threshold.
 
 Artifact collection invokes both `trivy fs` and `trivy rootfs` against the same
 safe extraction. In pinned Trivy 0.72.0, [filesystem mode disables individual
@@ -76,8 +76,8 @@ still blocks. Existing `trivy.status` and `trivy.log` describe the merge operati
 a successful merge alone grants no eligibility. These six additional raw files
 are mandatory release evidence and the helper is integrity-covered. Scan counts
 include observations from both modes, so overlapping packages are not distinct
-component counts. All findings remain raw and the CRITICAL/fixed threshold is
-unchanged.
+component counts. All findings remain raw and the `HIGH,CRITICAL` threshold is
+enforced uniformly.
 
 `ArtifactSbomAnalysis` and `ImageSbomAnalysis` preserve original payload digest in
 `subject.sha256` (one lowercase SHA-256 and newline), pinned Syft producer version
@@ -265,7 +265,8 @@ original author or manufacturer.
 or empty inventories, unreviewed builder/lock inputs, unmapped package sources,
 tampered bytes and incomplete scan coverage. Pinned Trivy 0.72.0 scans the observed
 CycloneDX components and preserves every severity, including unfixed findings.
-Admission uses the existing release `CRITICAL/fixed` threshold; lower findings
+Admission enforces the `HIGH,CRITICAL` release threshold (with time-bounded
+exact-digest derogations in `docs/analysis-exceptions.json`); lower findings
 are not suppressed or waived on guessed browser/Node applicability. Separate
 strict SBOM admission assesses the exact generated frontend SBOM. Required release
 verification replays both analyses and compares the served JS/maps/notices with

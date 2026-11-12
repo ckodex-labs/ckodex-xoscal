@@ -163,11 +163,24 @@ class AdmissionTests(unittest.TestCase):
         self.assertIn('GO-TEST', gate._security_gate(self.root)['blocked'])
 
     def test_image_thresholds_preserved(self):
-        self.image([{'Severity': 'CRITICAL', 'VulnerabilityID': 'UNFIXED'}, {'Severity': 'HIGH', 'VulnerabilityID': 'HIGH', 'FixedVersion': '2'}])
-        self.assertEqual(gate.image_gate(self.root)['blocked'], [])
+        self.image([{'Severity': 'CRITICAL', 'VulnerabilityID': 'UNFIXED'}, {'Severity': 'HIGH', 'VulnerabilityID': 'HIGH', 'FixedVersion': '2'}, {'Severity': 'MEDIUM', 'VulnerabilityID': 'MEDIUM', 'FixedVersion': '2'}])
+        self.assertEqual(gate.image_gate(self.root)['blocked'], ['UNFIXED', 'HIGH'])
         self.assertEqual(gate.image_gate(self.root, ci=True)['blocked'], ['UNFIXED', 'HIGH'])
         self.image([{'Severity': 'CRITICAL', 'VulnerabilityID': 'FIXED', 'FixedVersion': '2'}])
         self.assertEqual(gate.image_gate(self.root)['blocked'], ['FIXED'])
+
+    def test_vuln_exception_requires_exact_artifact_digest_and_unexpired_date(self):
+        self.image([{'Severity': 'HIGH', 'VulnerabilityID': 'CVE-WAIVED'}, {'Severity': 'CRITICAL', 'VulnerabilityID': 'CVE-OTHER'}])
+        expiry = (dt.datetime.now(dt.timezone.utc).date() + dt.timedelta(days=10)).isoformat()
+        self.write('exceptions.json', {'version': 1, 'exceptions': [{'kind': 'vuln', 'id': 'waive-high', 'approved_by': 'test reviewer', 'rationale': 'exact digest waiver', 'expires': expiry, 'artifact_sha256': 'a' * 64, 'vulnerability_id': 'CVE-WAIVED'}]})
+        res = gate.image_gate(self.root, exceptions_path=self.policy)
+        self.assertEqual(res['blocked'], ['CVE-OTHER'])
+        self.assertEqual(res['exceptions_used'], 1)
+        self.write('exceptions.json', {'version': 1, 'exceptions': [{'kind': 'vuln', 'id': 'wrong-digest', 'approved_by': 'test reviewer', 'rationale': 'mismatch', 'expires': expiry, 'artifact_sha256': 'b' * 64, 'vulnerability_id': 'CVE-WAIVED'}]})
+        self.assertEqual(gate.image_gate(self.root, exceptions_path=self.policy)['blocked'], ['CVE-WAIVED', 'CVE-OTHER'])
+        self.write('exceptions.json', {'version': 1, 'exceptions': [{'kind': 'vuln', 'id': 'expired-waiver', 'approved_by': 'test reviewer', 'rationale': 'expired', 'expires': '2000-01-01', 'artifact_sha256': 'a' * 64, 'vulnerability_id': 'CVE-WAIVED'}]})
+        with self.assertRaises(gate.GateError):
+            gate.image_gate(self.root, exceptions_path=self.policy)
 
     def test_malformed_image_blocks(self):
         self.image()

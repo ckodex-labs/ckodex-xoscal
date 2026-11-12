@@ -174,9 +174,9 @@ class FrontendGateTests(unittest.TestCase):
     def write_report(self):(self.root/'trivy-results.json').write_bytes(f.encoded(self.report))
     def test_frontend_report_passes_with_complete_inventory(self):
         receipt=self.g.frontend_gate(self.root);self.assertEqual(receipt['observed_packages'],1);self.assertEqual(receipt['blocked'],[])
-    def test_fixed_critical_blocks_and_all_severities_remain(self):
-        self.report['Results'][0]['Vulnerabilities']=[{'VulnerabilityID':'CVE-fixture','Severity':'CRITICAL','FixedVersion':'3.5.44'},{'VulnerabilityID':'GHSA-fixture','Severity':'HIGH','FixedVersion':'3.5.44'}];self.write_report()
-        receipt=self.g.frontend_gate(self.root);self.assertEqual(receipt['findings'],2);self.assertEqual(receipt['blocked'],['CVE-fixture'])
+    def test_fixed_critical_and_high_block_and_all_severities_remain(self):
+        self.report['Results'][0]['Vulnerabilities']=[{'VulnerabilityID':'CVE-fixture','Severity':'CRITICAL','FixedVersion':'3.5.44'},{'VulnerabilityID':'GHSA-fixture','Severity':'HIGH','FixedVersion':'3.5.44'},{'VulnerabilityID':'LOW-fixture','Severity':'LOW'}];self.write_report()
+        receipt=self.g.frontend_gate(self.root);self.assertEqual(receipt['findings'],3);self.assertEqual(receipt['blocked'],['CVE-fixture','GHSA-fixture'])
     def test_missing_observed_package_blocks(self):
         self.report['Results'][0]['Packages']=[];self.write_report()
         with self.assertRaises(self.g.GateError):self.g.frontend_gate(self.root)

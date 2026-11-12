@@ -163,7 +163,7 @@ The repaired collector preserves only ordinary execute bits, never special
 permissions or archive-controlled write permissions, and scans both fs and
 rootfs over identical safely extracted bytes. Independent replay requires both
 raw reports and successful statuses, their exact combined targets and report
-hashes. The existing empty-inventory and CRITICAL/fixed gates remain strict.
+hashes. The existing empty-inventory and `HIGH,CRITICAL` gates remain strict.
 The actual pinned Dagger 0.21.7 repository method passed all four archives:
 
 | Platform | Exact archive SHA-256 | Versioned observations | Findings |
