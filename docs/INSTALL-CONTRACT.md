@@ -1,6 +1,6 @@
 # Pinned CLI installation contract
 
-`scripts/install.sh` installs **xoscal-ctl** from a reviewed source checkout and a
+`scripts/install.sh` installs **xoscal**, **xoscal-ctl**, **xoscal-backup**, and **xoscal-gateway** from a reviewed source checkout and a
 specific promoted release. It requires Python 3.9+ and a GitHub CLI supporting
 `gh attestation verify` with the source, signer, certificate and runner policy
 flags used by the script. It does not request new credentials or signing keys.
@@ -10,9 +10,11 @@ trusted verification material. An unavailable verifier is a failure, not a bypas
 Supported release targets are Linux and macOS, each with AMD64 or ARM64 archives.
 There is no universal macOS binary or Windows installer. GoReleaser creates
 `<ProjectName>_<Version>_<Linux|Darwin>_<x86_64|arm64>.tar.gz`, containing
-`xoscal-ctl`, `xoscal-server`, and `xoscal-backup`. The installer selects the
-manifest's `cli-archive` entry for the running OS/architecture and installs only
-`xoscal-ctl`; the other binaries remain available in the verified archive.
+`xoscal`, `xoscal-ctl`, `xoscal-server`, `xoscal-backup`, and `xoscal-gateway`.
+The installer selects the manifest's `cli-archive` entry for the running
+OS/architecture and atomically installs the four client/gateway binaries
+(`xoscal`, `xoscal-ctl`, `xoscal-backup`, and `xoscal-gateway`); `xoscal-server`
+remains available in the verified archive.
 Package-manager SDK installation is a separate contract, not part of this script.
 
 ## Consumer command
@@ -39,7 +41,7 @@ sh scripts/install.sh \
 ```
 
 Add the selected prefix's `bin` directory to your shell's PATH, then run
-`xoscal-ctl help`. The installer never invokes sudo or executes the downloaded
+`xoscal help` (or `xoscal-ctl help`). The installer never invokes sudo or executes the downloaded
 binary. An existing destination is preserved unless `--force` is explicit.
 Installation uses an atomic no-clobber operation by default.
 
@@ -64,7 +66,8 @@ invent or substitute a root of trust.
    and SHA-256 to the verified manifest. Signed manifest coverage binds the
    archive transitively; a checksum file alone is insufficient.
 5. Validate every archive member before copying the regular top-level
-   `xoscal-ctl` entry. Reject traversal, absolute paths, duplicate entries,
+   CLI binaries (`xoscal`, `xoscal-ctl`, `xoscal-backup`, `xoscal-gateway`,
+   with `xoscal-ctl` required). Reject traversal, absolute paths, duplicate entries,
    symlinks, hardlinks, devices and excessive expansion. Never use `extractall`.
 6. Atomically install only after every gate succeeds. Remove temporary inputs
    on success or failure; retain any pre-existing installed executable on failure.

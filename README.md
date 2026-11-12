@@ -97,7 +97,7 @@ sh scripts/install.sh \
   --release "$RELEASE_TAG" --source "$SOURCE_REVISION" \
   --manifest release-manifest.json --bundle release-manifest.sigstore.json \
   --prefix "$HOME/.local" --dry-run
-# Omit --dry-run to install xoscal-ctl after the same checks.
+# Omit --dry-run to install xoscal, xoscal-ctl, xoscal-backup, and xoscal-gateway after the same checks.
 ```
 
 The installer supports separate Linux/macOS AMD64 and ARM64 archives, verifies

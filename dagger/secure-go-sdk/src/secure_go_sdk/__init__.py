@@ -6,7 +6,7 @@ from dagger import dag, function, object_type
 
 from .graph import LOG_MODULES, validate_graph
 
-GO_IMAGE = "golang:1.27.3-bookworm@sha256:972b4110ba0f47539a975c31e52c64765e1ff19f2d74469ae4a595c6676e80a5"
+GO_IMAGE = "golang:1.27.4-bookworm@sha256:4fa7c968ba93f1635670522dbb01a2c78150443e1385746924566079f36570ea"
 
 
 @object_type
@@ -53,7 +53,7 @@ class SecureGoSdk:
             .with_env_variable("GOFLAGS", "-p=2")
             .with_env_variable("GOMAXPROCS", "2")
             .with_mounted_cache("/go/pkg/mod", dag.cache_volume("secure-go-sdk-mod-1.45-0.21"))
-            .with_mounted_cache("/root/.cache/go-build", dag.cache_volume("secure-go-sdk-build-1.27.3"))
+            .with_mounted_cache("/root/.cache/go-build", dag.cache_volume("secure-go-sdk-build-1.27.4"))
             .with_exec(command)
             .with_exec(["go", "mod", "tidy"])
             .with_exec(["go", "mod", "verify"])

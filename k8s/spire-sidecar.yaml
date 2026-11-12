@@ -34,7 +34,7 @@ spec:
       containers:
         # OSCAL gRPC Server
         - name: xoscal-server
-          image: xoscal-server:v0.4.1
+          image: xoscal-server:v0.4.2
           ports:
             - containerPort: 50051
           envFrom:

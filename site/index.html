@@ -32,27 +32,65 @@
         <p class="ck-label ck-page-kicker">governed compliance engine</p>
         <h1 class="ck-page-title">xOSCAL Engine &amp; Unified CLI</h1>
       </div>
-      <p class="ck-site-note">A high-assurance, developer-friendly compliance platform for NIST OSCAL (Open Security Controls Assessment Language 1.2.3). Translates codebases and infrastructure into machine-verifiable governance artifacts, multi-dimensional vector state, GitOps pull-request diffs, and air-gapped cryptographic audit packages.</p>
+      <p class="ck-site-note">A high-assurance, developer-friendly compliance, threat-graph, and governance platform for NIST OSCAL 1.2.3 pairing a Go gRPC/HTTP server (<code>xoscal-server</code>, <code>xoscal-gateway</code>) with the unified 24-command <code>xoscal</code> CLI (<code>xoscal-ctl</code> compatibility alias). Ships 36 sovereign and international frameworks (16,237 controls across 252 7-layer parity-verified OSCAL 1.2.3 artifacts), a formal OWL/JSON-LD v1.0.0 regulatory and threat ontology, a 20,111-node / 61,916-edge property graph with 6D Vector-State blast-radius propagation, resilient CISA KEV and MITRE ATT&amp;CK feeds with hash-chained flight-recorder checkpoints, UTCP v1.0.1 zero-wrapper agent tools (18 native tools), an embedded Web Studio, GitOps PR diffs, Rule 23 time-bounded derogations, and air-gapped cryptographic audit bundles.</p>
+
+      <section class="ck-stack ck-stack--tight" aria-labelledby="scale-heading">
+        <h2 id="scale-heading">Verified Platform Footprint</h2>
+        <div class="ck-stat-grid">
+          <div class="ck-stat">
+            <div class="num">36</div>
+            <div class="lbl">Sovereign Frameworks (8 locales)</div>
+          </div>
+          <div class="ck-stat">
+            <div class="num">16,237</div>
+            <div class="lbl">Assessable Controls &amp; Enhancements</div>
+          </div>
+          <div class="ck-stat">
+            <div class="num">252</div>
+            <div class="lbl">7-Layer OSCAL 1.2.3 Artifacts</div>
+          </div>
+          <div class="ck-stat">
+            <div class="num">20,111</div>
+            <div class="lbl">Graph Nodes (61,916 Edges)</div>
+          </div>
+          <div class="ck-stat">
+            <div class="num">96</div>
+            <div class="lbl">gRPC &amp; OpenAPI 3.1 Operations</div>
+          </div>
+          <div class="ck-stat">
+            <div class="num">18</div>
+            <div class="lbl">UTCP v1.0.1 Agent Tools (5 SDKs)</div>
+          </div>
+        </div>
+      </section>
 
       <section class="ck-stack ck-stack--tight" aria-labelledby="quickstart-heading">
         <h2 id="quickstart-heading">60-Second Developer Quickstart</h2>
-        <p>Scaffold a valid OSCAL component definition from any repository in one command without hand-writing XML or JSON:</p>
-        <pre class="ck-quiet ck-code-block"><code># Build standalone binaries
+        <p>Run diagnostics, scaffold an OSCAL 1.2.3 component definition, evaluate 6D vector posture, traverse cross-jurisdiction threat graphs, or launch the embedded Web Studio with unified <code>xoscal</code> commands (<code>xoscal-ctl</code> remains a full alias):</p>
+        <pre class="ck-quiet ck-code-block"><code># Build unified CLI, compatibility alias, server, gateway, and backup binaries
 make build
 
-# Auto-detect stack, map URNs to UUIDv5, and emit OSCAL 1.2.3
-./bin/xoscal-ctl init --framework nist-sp-800-53-rev5
+# Run Rule 36 deep runtime, schema, registry, UTCP, and graph diagnostics
+./bin/xoscal doctor
 
-# Evaluate multi-dimensional vector posture and evidence digests
-./bin/xoscal-ctl verify --file component-definition.json</code></pre>
+# Auto-detect repo stack, map URNs to UUIDv5, and emit OSCAL 1.2.3
+./bin/xoscal init -framework cccs-itsp-10-033
+
+# Evaluate 6D Vector State posture S(e,t) = &lt;P, V, A, C, E, L, tau&gt;
+./bin/xoscal verify -file component-definition.json
+
+# Query 36-framework crosswalks, KEV blast radius, or launch Web Studio
+./bin/xoscal graph crosswalk -control ac-2
+./bin/xoscal graph blast-radius -target CVE-2024-3400
+./bin/xoscal ui</code></pre>
       </section>
 
       <section class="ck-stack ck-stack--tight" aria-labelledby="capabilities-heading">
         <h2 id="capabilities-heading">Core Capabilities</h2>
         <div class="ck-data-grid">
           <article class="ck-quiet ck-padded">
-            <h3>Day-0 Scaffolding</h3>
-            <p>Scans Go, Python, TypeScript, Rust, Docker, and Kubernetes manifests. Deterministically synthesizes virtual URNs into RFC-4122 UUIDv5 identifiers and produces schema-valid OSCAL 1.2.3 Component Definitions.</p>
+            <h3>Day-0 Repository Scaffolding</h3>
+            <p>Scans Go, Python, TypeScript, Rust, Docker, and Kubernetes manifests. Deterministically synthesizes virtual URNs into RFC-4122 UUIDv5 identifiers and emits schema-valid OSCAL 1.2.3 Component Definitions.</p>
             <p><a href="cli.html#init">Inspect init command</a></p>
           </article>
           <article class="ck-quiet ck-padded">
@@ -61,13 +99,43 @@ make build
             <p><a href="cli.html#verify">Inspect verify command</a></p>
           </article>
           <article class="ck-quiet ck-padded">
+            <h3>36-Framework Sovereign Registry &amp; Verbatim Parity</h3>
+            <p>Embeds 36 national and international baselines across 8 jurisdictions (Canada 5 incl. CCCS ITSP.10.033 2026 &amp; PBMM, US 7, Germany 12, France 6, EU 3, UK 1, Estonia 1, International 1) with 252 7-layer artifacts and strict parity checks via <code>verify-parity</code>.</p>
+            <p><a href="cli.html#frameworks">Inspect frameworks &amp; verify-parity</a></p>
+          </article>
+          <article class="ck-quiet ck-padded">
+            <h3>Control Intelligence &amp; Transition Delta</h3>
+            <p>Searches and retrieves control statements, Organization-Defined Parameters (ODPs), and Canadian GC Sovereign Guidance via <code>xoscal controls</code>, and computes baseline migration deltas with <code>xoscal compare cccs-itsg-33 cccs-itsp-10-033</code>.</p>
+            <p><a href="cli.html#controls">Inspect controls &amp; compare</a></p>
+          </article>
+          <article class="ck-quiet ck-padded">
+            <h3>OWL/JSON-LD Ontology &amp; Property Graph</h3>
+            <p>Models 12 semantic classes and 16 predicates including Rule 17 <code>ANTI</code> conflict relations (OWL/JSON-LD v1.0.0) across a 20,111-node / 61,916-edge graph with 6-jurisdiction crosswalks, 6D blast-radius traversal, and Rule 34 invariant reconciliation via <code>graph reconcile</code>.</p>
+            <p><a href="cli.html#ontology-graph">Inspect ontology &amp; graph</a></p>
+          </article>
+          <article class="ck-quiet ck-padded">
+            <h3>Threat Feeds &amp; Flight-Recorder Checkpoints</h3>
+            <p>Synchronizes CISA KEV, MITRE ATT&amp;CK, Crosswalk, and Lifecycle feeds with circuit breakers, jittered retries, offline deterministic bundles, atomic <code>fsync</code> checkpoints, and hash-chained verification via <code>feeds verify-checkpoint</code>.</p>
+            <p><a href="cli.html#feeds">Inspect feeds command</a></p>
+          </article>
+          <article class="ck-quiet ck-padded">
+            <h3>UTCP v1.0.1 Agent Tools &amp; 5 SDK Harnesses</h3>
+            <p>Exposes 18 native zero-wrapper tools across HTTP, CLI, and gRPC transports with <code>.well-known/utcp</code> discovery, <code>utcp-mcp</code> bridge generation, and typed harnesses for <code>go-utcp</code>, <code>python-utcp</code>, <code>typescript-utcp</code>, and <code>rs-utcp</code>.</p>
+            <p><a href="cli.html#utcp">Inspect utcp command</a></p>
+          </article>
+          <article class="ck-quiet ck-padded">
+            <h3>Embedded Web Studio &amp; Deep Diagnostics</h3>
+            <p>Launches a zero-dependency local explorer via <code>xoscal serve</code> / <code>xoscal ui</code>, runs Rule 36 8-domain runtime diagnostics with <code>xoscal doctor -json</code>, and generates <code>bash</code>, <code>zsh</code>, and <code>fish</code> shell completions.</p>
+            <p><a href="cli.html#studio">Inspect serve, ui &amp; doctor</a></p>
+          </article>
+          <article class="ck-quiet ck-padded">
             <h3>GitOps PR Compliance Diff</h3>
             <p>Integrates into GitHub Actions and GitLab CI to catch control drift, modifications, and posture regressions between git branches before merging, formatting Markdown summary tables for pull request comments.</p>
             <p><a href="cli.html#diff">Inspect diff command</a></p>
           </article>
           <article class="ck-quiet ck-padded">
             <h3>GRC Spreadsheet Bridge</h3>
-            <p>Provides bi-directional round-trip conversion between nested OSCAL 1.2.3 documents and flat RFC-4180 CSV tables, enabling non-technical compliance analysts to work in Excel without touching JSON.</p>
+            <p>Provides bi-directional round-trip conversion between nested OSCAL 1.2.3 documents and flat RFC-4180 CSV tables, enabling compliance analysts to review and edit controls in Excel without touching JSON.</p>
             <p><a href="cli.html#tabular">Inspect tabular command</a></p>
           </article>
           <article class="ck-quiet ck-padded">
@@ -77,7 +145,7 @@ make build
           </article>
           <article class="ck-quiet ck-padded">
             <h3>Air-Gapped Audit Bundles</h3>
-            <p>Exports self-contained .tar.gz archives containing canonical OSCAL models, evidence blobs with SHA-256 sidecars, cryptographic manifests, and an embedded zero-dependency WebCrypto offline viewer.</p>
+            <p>Exports self-contained <code>.tar.gz</code> archives containing canonical OSCAL models, evidence blobs with SHA-256 sidecars, cryptographic manifests, and an embedded zero-dependency WebCrypto offline viewer.</p>
             <p><a href="cli.html#bundle-export">Inspect bundle-export command</a></p>
           </article>
         </div>
@@ -85,48 +153,68 @@ make build
 
       <section class="ck-stack ck-stack--tight" aria-labelledby="personas-heading">
         <h2 id="personas-heading">Adoption by Persona</h2>
-        <table class="ck-table">
-          <thead>
-            <tr>
-              <th scope="col">Persona</th>
-              <th scope="col">Primary Need</th>
-              <th scope="col">xOSCAL Solution</th>
-              <th scope="col">Surface</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Application Developer</strong></td>
-              <td>Zero-friction onboarding; no manual compliance toil</td>
-              <td>Automated repo scan and deterministic UUIDv5 generation</td>
-              <td><code>xoscal-ctl init</code></td>
-            </tr>
-            <tr>
-              <td><strong>DevSecOps / Tech Lead</strong></td>
-              <td>Prevent compliance regressions in PRs</td>
-              <td>Continuous semantic diffing and automated gating in CI</td>
-              <td><code>xoscal-ctl diff</code></td>
-            </tr>
-            <tr>
-              <td><strong>GRC Analyst</strong></td>
-              <td>Review controls in familiar spreadsheet formats</td>
-              <td>Round-trip CSV export and import with schema revalidation</td>
-              <td><code>xoscal-ctl tabular</code></td>
-            </tr>
-            <tr>
-              <td><strong>CISO / Risk Officer</strong></td>
-              <td>Accurate risk accounting without history fabrication</td>
-              <td>Rule 23 time-bounded derogations with strict TTL enforcement</td>
-              <td><code>xoscal-ctl derogate</code></td>
-            </tr>
-            <tr>
-              <td><strong>3PAO Auditor</strong></td>
-              <td>Offline verifiable evidence in classified SCIFs</td>
-              <td>Air-gapped bundles with offline browser WebCrypto digest checks</td>
-              <td><code>xoscal-ctl bundle-export</code></td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="ck-table-scroll">
+          <table class="ck-table">
+            <thead>
+              <tr>
+                <th scope="col">Persona</th>
+                <th scope="col">Primary Need</th>
+                <th scope="col">xOSCAL Solution</th>
+                <th scope="col">Surface</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Application Developer</strong></td>
+                <td>Zero-friction onboarding; no manual compliance toil</td>
+                <td>Automated repo scan, Web Studio explorer, and deterministic UUIDv5 generation</td>
+                <td><code>xoscal init</code></td>
+              </tr>
+              <tr>
+                <td><strong>Security / Threat Engineer</strong></td>
+                <td>Quantify active KEV / ATT&amp;CK impact on controls</td>
+                <td>20,111-node property graph traversal and Rule 17 <code>ANTI</code> blast-radius checks</td>
+                <td><code>xoscal graph blast-radius</code></td>
+              </tr>
+              <tr>
+                <td><strong>Sovereign / Cloud Architect</strong></td>
+                <td>Migrate baselines across jurisdictions without drift</td>
+                <td>36-framework control search and baseline transition delta reports</td>
+                <td><code>xoscal compare</code></td>
+              </tr>
+              <tr>
+                <td><strong>DevSecOps / Tech Lead</strong></td>
+                <td>Prevent compliance regressions in PRs</td>
+                <td>Continuous semantic diffing and automated gating in CI</td>
+                <td><code>xoscal diff</code></td>
+              </tr>
+              <tr>
+                <td><strong>AI / Platform Integrator</strong></td>
+                <td>Wire compliance tools into agents safely</td>
+                <td>UTCP v1.0.1 18-tool manual, MCP bridge config, and 5 SDK harnesses</td>
+                <td><code>xoscal utcp</code></td>
+              </tr>
+              <tr>
+                <td><strong>GRC Analyst</strong></td>
+                <td>Review controls in familiar spreadsheet formats</td>
+                <td>Round-trip CSV export and import with schema revalidation</td>
+                <td><code>xoscal tabular</code></td>
+              </tr>
+              <tr>
+                <td><strong>CISO / Risk Officer</strong></td>
+                <td>Accurate risk accounting without history fabrication</td>
+                <td>Rule 23 time-bounded derogations with strict TTL enforcement</td>
+                <td><code>xoscal derogate</code></td>
+              </tr>
+              <tr>
+                <td><strong>3PAO Auditor</strong></td>
+                <td>Offline verifiable evidence in classified SCIFs</td>
+                <td>Air-gapped bundles with offline browser WebCrypto digest checks</td>
+                <td><code>xoscal bundle-export</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
 
       <section class="ck-stack ck-stack--tight" aria-labelledby="resources-heading">
@@ -146,9 +234,11 @@ make build
     <div class="ck-stack ck-stack--tight">
       <div class="ck-margin__head"><h2>Evidence Margin</h2></div>
       <div class="ck-receipt"><span class="ck-receipt__rule"></span><div><div class="ck-receipt__event">NIST OSCAL 1.2.3 schema embedded</div><div class="ck-receipt__detail">Source contract &mdash; oscal_complete_schema.json</div></div></div>
-      <div class="ck-receipt"><span class="ck-receipt__rule"></span><div><div class="ck-receipt__event">Vector state calculus enforced</div><div class="ck-receipt__detail">Source contract &mdash; P, V, A, C, E, L, &tau;</div></div></div>
+      <div class="ck-receipt"><span class="ck-receipt__rule"></span><div><div class="ck-receipt__event">36 sovereign &amp; global frameworks</div><div class="ck-receipt__detail">Source contract &mdash; 16,237 controls; 252 7-layer artifacts</div></div></div>
+      <div class="ck-receipt"><span class="ck-receipt__rule"></span><div><div class="ck-receipt__event">OWL/JSON-LD v1.0.0 &amp; property graph</div><div class="ck-receipt__detail">Source contract &mdash; 20,111 nodes; 61,916 edges; Rule 34 reconciled</div></div></div>
+      <div class="ck-receipt"><span class="ck-receipt__rule"></span><div><div class="ck-receipt__event">UTCP v1.0.1 &amp; OpenAPI 3.1 surface</div><div class="ck-receipt__detail">Source contract &mdash; 18 agent tools; 96 API operations</div></div></div>
+      <div class="ck-receipt"><span class="ck-receipt__rule"></span><div><div class="ck-receipt__event">Vector state &amp; Rule 23 derogations</div><div class="ck-receipt__detail">Source contract &mdash; P, V, A, C, E, L, &tau;; TTL bounded</div></div></div>
       <div class="ck-receipt"><span class="ck-receipt__rule"></span><div><div class="ck-receipt__event">Dual CI verification passed</div><div class="ck-receipt__detail">&#8866; observed &mdash; GitHub Actions &amp; GitLab CI</div></div></div>
-      <div class="ck-receipt"><span class="ck-receipt__rule"></span><div><div class="ck-receipt__event">Rule 23 derogations immutable</div><div class="ck-receipt__detail">&#8866; observed &mdash; TTL bounded</div></div></div>
       <span class="ck-chip ck-chip--observed">&#8866; observed</span>
       <p class="ck-caption">Release delivery requires exact artifact analysis and verified provenance. Missing proof keeps download eligibility incomplete.</p>
     </div>
